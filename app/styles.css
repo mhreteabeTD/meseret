@@ -159,3 +159,13 @@ h2.display { font-size: 20px; margin: 0; }
 .week i.on { background: var(--accent); border-color: var(--accent); }
 .toast { position: fixed; left: 50%; bottom: calc(90px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--fg); color: var(--bg); padding: 10px 16px; border-radius: 99px; font-weight: 700; font-size: 14px; z-index: 20; max-width: 90vw; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* work-it-out panel: half height, question stays visible above */
+.panel { position: fixed; left: 0; right: 0; bottom: 0; z-index: 9; height: 56vh; max-height: 92vh; background: var(--bg); border-top: 2px solid var(--line); border-radius: 20px 20px 0 0; box-shadow: 0 -6px 24px rgba(0,0,0,.12); display: flex; flex-direction: column; transition: height .2s ease; }
+.panel.tall { height: 92vh; }
+.panel .phead { display: flex; align-items: center; gap: 8px; padding: 8px max(12px, env(safe-area-inset-right, 0px)) 6px max(12px, env(safe-area-inset-left, 0px)); border-bottom: 1px solid var(--line); }
+.panel .pq { flex: 1; min-width: 0; font-weight: 800; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.panel .pbody { flex: 1; overflow: auto; padding: 10px max(12px, env(safe-area-inset-right, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px)); display: grid; gap: 10px; align-content: start; }
+.panel .ptabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.panel .ptabs .opt { min-height: 40px; padding: 6px 8px; font-size: 14px; border-bottom-width: 3px; }
+body.panel-open main { padding-bottom: 60vh; }

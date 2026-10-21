@@ -222,11 +222,16 @@ const TOOLS = {
 };
 function workSheet(ctx) {
   const tabs = [['scratch', '✎'], ['calc', '123']]; if (ctx.tool && TOOLS[ctx.tool]) tabs.push([ctx.tool, '⚙']);
-  sheet(`<div style="width:40px;height:5px;border-radius:99px;background:var(--line);justify-self:center"></div><div class="row"><h2 class="display grow">${t('work_it_out')}</h2><button class="iconbtn" id="wclose" aria-label="${t('cancel')}">${svgIcon(CLOSE)}</button></div><div class="opts row3" id="wtabs">${tabs.map(([k, ic], i) => `<button class="opt center" data-tab="${k}" aria-pressed="${i === 0}">${ic} ${t('tool_' + k)}</button>`).join('')}</div><div id="wbody"></div><p class="small muted">${t('work_note')}</p>`);
-  const body = $('#wbody'); const open = k => { body.replaceChildren(TOOLS[k](ctx.key)); $('#wtabs').querySelectorAll('.opt').forEach(b => b.setAttribute('aria-pressed', b.dataset.tab === k)); logEvent({ lesson: ctx.lesson, item: ctx.item, tool: k }); };
-  $('#wtabs').addEventListener('click', e => { const b = e.target.closest('[data-tab]'); if (b) open(b.dataset.tab); });
-  $('#wclose').onclick = () => sheet(''); open(tabs[0][0]);
+  closePanel();
+  const el = document.createElement('div'); el.className = 'panel'; el.id = 'panel';
+  el.innerHTML = `<div class="phead"><button class="iconbtn" id="pgrow" aria-label="resize" style="width:36px;height:36px">⤢</button><span class="pq">${esc(ctx.q || t('work_it_out'))}</span><button class="iconbtn" id="pclose" aria-label="${t('cancel')}" style="width:36px;height:36px">${svgIcon(CLOSE)}</button></div><div class="pbody"><div class="ptabs" id="wtabs">${tabs.map(([k, ic], i) => `<button class="opt center" data-tab="${k}" aria-pressed="${i === 0}">${ic} ${t('tool_' + k)}</button>`).join('')}</div><div id="wbody"></div></div>`;
+  document.body.appendChild(el); document.body.classList.add('panel-open');
+  const body = el.querySelector('#wbody'); const open = k => { body.replaceChildren(TOOLS[k](ctx.key)); el.querySelectorAll('[data-tab]').forEach(b => b.setAttribute('aria-pressed', b.dataset.tab === k)); logEvent({ lesson: ctx.lesson, item: ctx.item, tool: k }); };
+  el.querySelector('#wtabs').addEventListener('click', e => { const b = e.target.closest('[data-tab]'); if (b) open(b.dataset.tab); });
+  el.querySelector('#pgrow').onclick = () => el.classList.toggle('tall');
+  el.querySelector('#pclose').onclick = closePanel; open(tabs[0][0]);
 }
+function closePanel() { const p = $('#panel'); if (p) p.remove(); document.body.classList.remove('panel-open'); }
 
 /* ---------- lesson player ---------- */
 const factors = n => { const f = []; for (let d = 1; d <= n; d++) if (n % d === 0) f.push(d); return f; };
@@ -331,9 +336,9 @@ function runPlayer(cfg) {
     const ex = cur.el.querySelector('#ex-play'); if (ex) ex.onclick = () => speak(cur.el.querySelector('#ex-text').textContent);
     const rf = s.needs && cfg.refreshers && cfg.refreshers[s.needs];
     if (rf) { const a = document.createElement('button'); a.className = 'btn link'; a.style.justifySelf = 'start'; a.textContent = t('need_reminder', { n: rf.name }); a.onclick = () => openRefresher(s.needs); cur.el.appendChild(a); }
-    const old = tray.querySelector('#rfb'); if (old) old.remove();
+    const old = tray.querySelector('#rfb'); if (old) old.remove(); closePanel();
     phase = 'answer'; lastOk = null; setTray('', '', '', cur.label); update();
-    const wb = $('#work'); wb.hidden = !(s.graded || s.kind === 'guess' || s.kind === 'tiles'); wb.onclick = () => workSheet({ key: `${cfg.id || cfg.title}:${k}`, lesson: cfg.id, item: k, tool: s.tool || cfg.tool });
+    const wb = $('#work'); wb.hidden = !(s.graded || s.kind === 'guess' || s.kind === 'tiles'); wb.onclick = () => workSheet({ key: `${cfg.id || cfg.title}:${k}`, lesson: cfg.id, item: k, tool: s.tool || cfg.tool, q: (s.ask || s.text || s.title || '').replace(/\n/g, ' ') });
     const pct = Math.round(pos / order.length * 100);
     setTop(`${cfg.backRoute ? `<a class="iconbtn" href="#${cfg.backRoute}" aria-label="close">${svgIcon(CLOSE)}</a>` : `<button class="iconbtn" id="rback" aria-label="back">${svgIcon(BACK)}</button>`}<span class="mode ${cfg.mode === 'review' || review ? 'review' : cfg.mode === 'book' || cfg.mode === 'test' ? 'book' : ''}">${cfg.mode === 'refresher' ? t('refresher') : review ? t('review') : cfg.mode === 'review' ? t('review') : cfg.mode === 'book' ? t('book_exercise') : cfg.mode === 'test' ? t('unit_test') : t('learn')}</span><div class="bar"><i style="width:${pct}%"></i></div><span class="count">${Math.min(pos + 1, order.length)} / ${order.length}</span><button class="iconbtn" id="rep" aria-label="${t('report')}">${svgIcon(FLAG)}</button>`);
     bindTop(k);
@@ -372,7 +377,7 @@ async function viewLesson(path, mode, exIdx) {
 
 /* ---------- router ---------- */
 async function route() {
-  sheet('');
+  sheet(''); closePanel();
   const h = location.hash.replace(/^#/, ''), [r, a, b] = h.split('/');
   if (!S.lang && r !== 'welcome') { await viewWelcome(); return; }
   if (!T.app) await loadLang(S.lang);
