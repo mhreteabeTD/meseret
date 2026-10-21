@@ -1,0 +1,86 @@
+{
+  "id": "g9.maths.u1.s1-1-4",
+  "book": { "title": "Mathematics Grade 9 Student Textbook", "grade": 9, "subject": "maths", "unit": 1, "unit_title": "The Number System", "section": "1.1.4", "pages": "27–32" },
+  "title": "Greatest common factor",
+  "competency": "Find the GCF of two or more natural numbers and use it to solve problems.",
+  "minutes": 8,
+  "keywords": [
+    { "en": "Factor", "am": "አካፋይ", "def": "A number that divides another number exactly." },
+    { "en": "Common factor", "am": "የጋራ አካፋይ", "def": "A number that divides two numbers exactly." },
+    { "en": "Greatest common factor (GCF)", "am": "ትልቁ የጋራ አካፋይ", "def": "The largest common factor. GCF(50, 20) = 10." },
+    { "en": "Prime factorization", "am": "የብቸኛ ቁጥሮች ውጤት", "def": "Writing a number as a product of primes: 36 = 2 × 2 × 3 × 3." }
+  ],
+  "ideas": [
+    {
+      "id": "math.gcf",
+      "name": "Greatest common factor",
+      "explain": {
+        "en": { "text": "A common factor divides both numbers exactly. The greatest common factor is the largest one. To find it fast, write each number as a product of primes and multiply only the primes they share." },
+        "am": { "text": "የጋራ አካፋይ ሁለቱንም ቁጥሮች ያለ ቀሪ ይካፍላል። ትልቁ የጋራ አካፋይ ከነዚህ ውስጥ ትልቁ ነው። በፍጥነት ለማግኘት እያንዳንዱን ቁጥር በብቸኛ ቁጥሮች ውጤት ጻፍና የሚጋሯቸውን ብቻ አባዛ።", "machine": true }
+      },
+      "screens": [
+        { "kind": "guess", "step": "hook", "title": "Cover the board",
+          "text": "A teacher wants to cover a whiteboard, 50 cm long and 20 cm wide, with square papers. All squares are the same size. No gaps, no overlaps.",
+          "ask": "What is the biggest square she can use? Take a guess.",
+          "opts": ["4 cm", "5 cm", "10 cm", "20 cm"], "after": "Now test your guess on the board.",
+          "figure": { "type": "board", "w": 50, "h": 20 } },
+        { "kind": "tiles", "step": "explore", "title": "Test some sizes",
+          "text": "Before you tap a size, say if it will fit. Then see. Red strips are gaps.",
+          "sizes": [1, 2, 4, 5, 10, 20], "need": 3, "figure": { "type": "board", "w": 50, "h": 20 } },
+        { "kind": "mcq", "step": "notice", "graded": true, "title": "What do the sizes that fit share?",
+          "text": "The sizes that fit exactly are 1, 2, 5 and 10 cm.",
+          "opts": ["Each one divides both 50 and 20", "Each one is an even number", "Each one divides 50 only", "Each one is smaller than 20"],
+          "ans": "Each one divides both 50 and 20",
+          "why": "A square fits only if a whole number of them fits along each edge.",
+          "clue": "Try 5 cm. Is 50 ÷ 5 a whole number? Is 20 ÷ 5?" },
+        { "kind": "name", "step": "name", "title": "Factors they share", "figure": { "type": "factors", "a": 50, "b": 20 }, "ask": "10 cm",
+          "defs": [["Common factor", "A number that divides two numbers exactly. 1, 2, 5 and 10 are common factors of 50 and 20."],
+                   ["Greatest common factor (GCF)", "The largest common factor. We write GCF(50, 20) = 10."]] },
+        { "kind": "pick", "step": "check", "graded": true, "title": "Find the common factors",
+          "text": "Tap every number that divides both 12 and 18 exactly.",
+          "pool": [1, 2, 3, 4, 6, 9, 12, 18], "a": [1, 2, 3, 6],
+          "why": "The common factors are 1, 2, 3 and 6. So GCF(12, 18) = 6.",
+          "clue": "Test each number: does it divide 12 and also 18?" },
+        { "kind": "steps", "step": "method", "title": "A faster way for big numbers",
+          "text": "Listing every factor gets slow. Prime factors give the GCF quickly. Example: 36 and 56.",
+          "figure": { "type": "venn", "a": 36, "b": 56 },
+          "steps": ["Write each number as primes: 36 = 2 × 2 × 3 × 3 and 56 = 2 × 2 × 2 × 7.",
+                    "Two 2s appear in both numbers. Put them in the overlap.",
+                    "Put the rest in their own circle: 3 and 3 for 36, then 2 and 7 for 56.",
+                    "Multiply the overlap: 2 × 2 = 4. So GCF(36, 56) = 4."] },
+        { "kind": "blank", "step": "practise", "graded": true, "title": "Use the overlap",
+          "text": "24 = 2 × 2 × 2 × 3 and 54 = 2 × 3 × 3 × 3.", "ask": "GCF(24, 54) = ___", "a": ["6", "six"],
+          "why": "The shared primes are one 2 and one 3, and 2 × 3 = 6.",
+          "clue": "Find the primes that appear in both lists, then multiply only those.",
+          "worked": "Shared primes: one 2 and one 3. Multiply them: 2 × 3 = 6. So GCF(24, 54) = 6." },
+        { "kind": "tf", "step": "practise", "graded": true, "title": "True or false?",
+          "text": "Two different prime numbers, such as 7 and 11, always have GCF 1.", "a": true,
+          "why": "A prime has only 1 and itself as factors, so 1 is the only factor they share.",
+          "clue": "Write all the factors of 7, then all the factors of 11." },
+        { "kind": "mcq", "step": "practise", "graded": true, "title": "Traffic-safety teams",
+          "text": "A school has 14 girls and 21 boys for traffic-safety duty. Every team gets the same number of girls and the same number of boys, and everyone is in a team.",
+          "ask": "What is the greatest number of teams?",
+          "opts": ["3", "7", "14", "35"], "ans": "7",
+          "why": "GCF(14, 21) = 7, so each of the 7 teams has 2 girls and 3 boys.",
+          "clue": "The number of teams must divide 14 and also divide 21." }
+      ]
+    }
+  ],
+  "exercises": [
+    { "book_name": "Exercise 1.7", "page": 29, "items": [
+      { "kind": "blank", "step": "exercise", "graded": true, "ask": "GCF(12, 18) = ___", "a": ["6"], "why": "Common factors 1, 2, 3, 6.", "clue": "List the factors of 12, then of 18." },
+      { "kind": "blank", "step": "exercise", "graded": true, "ask": "GCF(24, 64) = ___", "a": ["8"], "why": "24 = 2³ × 3, 64 = 2⁶; shared 2³ = 8.", "clue": "Both are powers of 2 times something." },
+      { "kind": "blank", "step": "exercise", "graded": true, "ask": "GCF(45, 63, 99) = ___", "a": ["9"], "why": "45 = 3² × 5, 63 = 3² × 7, 99 = 3² × 11; shared 3² = 9.", "clue": "Every one of them is divisible by 9." }
+    ] }
+  ],
+  "test": [
+    { "kind": "mcq", "step": "test", "graded": true, "text": "What is GCF(24, 36)?", "opts": ["4", "6", "12", "72"], "ans": "12", "why": "24 = 2³ × 3 and 36 = 2² × 3²; the smallest powers give 2² × 3 = 12.", "clue": "" },
+    { "kind": "blank", "step": "test", "graded": true, "ask": "Strings of 78 cm, 117 cm and 351 cm are cut into equal pieces with none left over. The longest piece is ___ cm.", "a": ["39"], "why": "GCF(78, 117, 351) = 39.", "clue": "" },
+    { "kind": "tf", "step": "test", "graded": true, "text": "GCF(8, 15) = 1, so 8 and 15 share no prime factor.", "a": true, "why": "8 = 2³ and 15 = 3 × 5 share no prime. Such numbers are relatively prime.", "clue": "" }
+  ],
+  "notes": [
+    { "kind": "note", "text": "The whiteboard problem is Example 2 in section 1.5 of the book, used here as the hook for 1.1.4." }
+  ],
+  "review": { "status": "validated" },
+  "version": 1
+}

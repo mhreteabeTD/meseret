@@ -1,0 +1,5 @@
+# Stage 2 · Write one section (content session)
+
+Input: the approved `inventory.md`, that section's pages, `schema/lesson.schema.json`, `CLAUDE.md`. Output: ONE file `content/g{grade}/{subject}/u{unit}/s{section}.json`.
+
+For each idea, in this order: hook (`guess`/`tiles`/`sort`/`tap`, a real Ethiopian situation, nothing graded) → explore (predict, then reveal) → `notice` check → `name` (definitions; the first time the term appears) → `check` (graded, with a clue) → `method` (`steps`) when there is a procedure → 3–5 `practise` items of mixed kinds (at least one `blank`, one word problem), each with `why`, `clue`, and `worked` for the hardest. Facts: mechanism ideas get the full loop; vocabulary ideas get `tap` → `check` → `practise`. Keep the book's exercises under `exercises` by their book name; write 3 `test` items without clues. Every key word gets `en`, `am`, `def`. Write `explain.en.text` (≤ 60 words) per idea; add `explain.am` marked `machine: true`. Mark anything not in the book `"added": true`. Run `node scripts/validate.mjs content/` and fix until it passes.

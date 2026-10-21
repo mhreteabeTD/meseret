@@ -1,0 +1,7 @@
+/* Bar added on top of classic chapter pages so they live inside the Meseret app */
+.ms-bar { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; gap: 10px; background: #129B60; color: #fff; padding: 10px max(14px, env(safe-area-inset-left, 0px)) 10px max(14px, env(safe-area-inset-left, 0px)); font-family: 'Nunito Sans', 'Noto Sans Ethiopic', system-ui, sans-serif; font-size: 15px; font-weight: 800; box-shadow: 0 2px 0 #0B6E44; }
+.ms-bar a { color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; min-height: 36px; }
+.ms-bar .ms-title { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 700; opacity: .95; }
+.ms-bar .ms-done { font-size: 13px; background: rgba(255,255,255,.18); border-radius: 99px; padding: 4px 10px; white-space: nowrap; }
+.ms-bar button { font: inherit; color: #fff; background: transparent; border: 1.5px solid rgba(255,255,255,.5); border-radius: 99px; min-height: 36px; padding: 0 12px; font-weight: 800; }
+nav.toc { top: 56px !important; }
