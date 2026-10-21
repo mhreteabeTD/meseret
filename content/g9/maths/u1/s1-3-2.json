@@ -1,0 +1,362 @@
+{
+  "id": "g9.maths.u1.s1-3-2",
+  "book": {
+    "title": "Mathematics Grade 9 Student Textbook",
+    "grade": 9,
+    "subject": "maths",
+    "unit": 1,
+    "unit_title": "The Number System",
+    "section": "1.3.2",
+    "pages": "39–48"
+  },
+  "title": "Operations on irrational numbers",
+  "competency": "Multiply, divide, add and subtract irrational numbers, using the product and quotient rules and like radicals.",
+  "minutes": 12,
+  "keywords": [
+    { "en": "Radicand", "am": "ከሥር ምልክት ስር ያለ ቁጥር", "def": "The number under the radical sign: 5 in √5.", "machine": true },
+    { "en": "Like radicals", "am": "ተመሳሳይ ሥሮች", "def": "Radicals with the same index and the same radicand, such as 2√5 and 7√5. Only like radicals can be added.", "machine": true },
+    { "en": "Irrational number", "am": "ኢ-ምክንያታዊ ቁጥር", "def": "A decimal that neither ends nor repeats, such as √2 or π.", "machine": true },
+    { "en": "Radical sign", "am": "የሥር ምልክት", "def": "The symbol √ used for roots.", "machine": true }
+  ],
+  "ideas": [
+    {
+      "id": "math.radical-rules",
+      "name": "Multiplying and dividing square roots",
+      "requires": ["math.square-roots"],
+      "explain": {
+        "en": { "text": "For positive a and b, √a × √b = √(ab) and √a ÷ √b = √(a/b). So √2 × √3 = √6. A product of two irrational numbers may be rational: √2 × √2 = 2. Also a√b = √(a²b). So 3√2 = √18, and √50 = 5√2." },
+        "am": { "text": "a እና b አዎንታዊ ሲሆኑ √a × √b = √(ab) እና √a ÷ √b = √(a/b) ነው። ስለዚህ √2 × √3 = √6። የሁለት ኢ-ምክንያታዊ ቁጥሮች ብዜት ምክንያታዊ ሊሆን ይችላል፤ √2 × √2 = 2። ደግሞ a√b = √(a²b) ነው። ስለዚህ 3√2 = √18 እና √50 = 5√2።", "machine": true }
+      },
+      "screens": [
+        {
+          "kind": "guess",
+          "step": "hook",
+          "title": "Irrational times irrational",
+          "text": "Activity 1.11. √2 is irrational. √3 and √8 are irrational too.",
+          "ask": "Is the product of two irrational numbers always irrational? Guess.",
+          "opts": ["Yes, always", "No, sometimes it is rational", "It is never irrational"],
+          "after": "Try √2 × √2 and √2 × √8 on your calculator. Then read on."
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "Activity 1.11: what happens?",
+          "paras": [
+            "1 + √2 is irrational. A rational number plus an irrational number is irrational.",
+            "√2 × √3 = √6 is irrational.",
+            "But √2 × √2 = 2 and √2 × √8 = 4 are rational.",
+            "So a product of two irrational numbers is not always irrational."
+          ]
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "The product rule",
+          "paras": [
+            "If a > 0 and b > 0, then √a × √b = √(ab).",
+            "Example 1. (a) √2 × √3 = √6.",
+            "(b) (1/√3) × (2/√3) = 2/(√3 × √3) = 2/3.",
+            "(c) Use the distributive law: (2 + √2)(1 + √5) = 2 + 2√5 + √2 + √10.",
+            "(d) (√5 + √3)² = (√5)² + 2√5√3 + (√3)² = 8 + 2√15."
+          ],
+          "note": "In Example 1(c) the printed book is missing a plus sign: \"(√2 × 1)(√2 × √5)\" should read (√2 × 1) + (√2 × √5)."
+        },
+        {
+          "kind": "name",
+          "step": "name",
+          "title": "Name it",
+          "defs": [
+            ["Radicand", "The number under the radical sign. In √a × √b = √(ab), the radicands multiply."]
+          ]
+        },
+        {
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "Use the product rule",
+          "text": "What is √3 × √5?",
+          "opts": ["√8", "√15", "15", "2√2"],
+          "ans": "√15",
+          "why": "√3 × √5 = √(3 × 5) = √15.",
+          "clue": "Multiply the radicands and keep one √."
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "The quotient rule",
+          "paras": [
+            "Activity 1.12. Divide √2, √3, √5 and √8 by √2.",
+            "√2/√2 = 1, √3/√2 = √(3/2), √5/√2 = √(5/2) and √8/√2 = √4 = 2.",
+            "If a > 0 and b > 0, then √a ÷ √b = √(a/b).",
+            "Example 1. (a) √2/√3 = √(2/3). (b) −√18/√2 = −√9 = −3."
+          ],
+          "note": "The quotient may be rational or irrational."
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "Moving a number inside the root",
+          "paras": [
+            "If a > 0 and b > 0, then a√b = √(a²b) and √(a²b) = a√b.",
+            "Example 2. (a) 3√2 = √(3² × 2) = √18.",
+            "(b) 5√5 = √(5² × 5) = √125."
+          ]
+        },
+        {
+          "kind": "steps",
+          "step": "method",
+          "title": "Write √50 as a√b",
+          "text": "Find the largest perfect square that divides the radicand.",
+          "steps": [
+            "The perfect squares are 1, 4, 9, 16, 25, 36, 49, …",
+            "25 divides 50: 50 = 25 × 2.",
+            "√50 = √25 × √2.",
+            "√25 = 5. So √50 = 5√2."
+          ],
+          "needs": "math.square-roots"
+        },
+        {
+          "kind": "mcq",
+          "step": "practise",
+          "graded": true,
+          "title": "Simplest a√b form",
+          "text": "What is √50 in the form a√b with b as small as possible?",
+          "opts": ["25√2", "5√2", "2√5", "10√5"],
+          "ans": "5√2",
+          "why": "50 = 25 × 2, so √50 = √25 × √2 = 5√2.",
+          "clue": "Find the largest perfect square that divides 50.",
+          "needs": "math.square-roots"
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "graded": true,
+          "title": "Quotient rule",
+          "ask": "√27 ÷ √3 = ___",
+          "a": ["3", "three"],
+          "why": "√27/√3 = √(27/3) = √9 = 3.",
+          "clue": "Divide the radicands first.",
+          "needs": "math.square-roots"
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "graded": true,
+          "added": true,
+          "title": "A square classroom",
+          "text": "A classroom floor in Gondar is a square. Its side is 3√2 m.",
+          "ask": "Its area is ___ m².",
+          "a": ["18", "eighteen"],
+          "why": "(3√2)² = 3² × 2 = 9 × 2 = 18.",
+          "clue": "Area = side × side. Write 3√2 as √18 first.",
+          "worked": "3√2 = √(3² × 2) = √18. Area = √18 × √18 = 18 m²."
+        }
+      ]
+    },
+    {
+      "id": "math.like-radicals",
+      "name": "Adding and subtracting irrational numbers",
+      "requires": ["math.square-roots"],
+      "explain": {
+        "en": { "text": "The sum or difference of two irrational numbers may be rational or irrational. Like radicals have the same radicand, such as 2√3 and 4√3. Add them like like terms: 2√3 + 4√3 = 6√3. First simplify each root, so √8 + √2 becomes 2√2 + √2 = 3√2." },
+        "am": { "text": "የሁለት ኢ-ምክንያታዊ ቁጥሮች ድምር ወይም ልዩነት ምክንያታዊ ወይም ኢ-ምክንያታዊ ሊሆን ይችላል። ተመሳሳይ ሥሮች አንድ አይነት ከሥር ያለ ቁጥር አላቸው፤ ለምሳሌ 2√3 እና 4√3። እንደ ተመሳሳይ ተርሞች ደምራቸው፤ 2√3 + 4√3 = 6√3። መጀመሪያ እያንዳንዱን ሥር አቅልል፤ √8 + √2 = 2√2 + √2 = 3√2 ይሆናል።", "machine": true }
+      },
+      "screens": [
+        {
+          "kind": "guess",
+          "step": "hook",
+          "title": "Does √2 + √3 equal √5?",
+          "text": "Many students write √2 + √3 = √5. Use your calculator: √2 ≈ 1.414 and √3 ≈ 1.732.",
+          "ask": "Is √2 + √3 equal to √5?",
+          "opts": ["Yes", "No", "Only roughly"],
+          "after": "√2 + √3 ≈ 3.15, but √5 ≈ 2.24. Read on to see which roots can be added."
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "Activity 1.13: sums and differences",
+          "paras": [
+            "(a) 0.1010010001… + 0.0101101110… = 0.111…, which is 1/9. The sum is rational.",
+            "(b) √2 + √3 is irrational.",
+            "(c) (1 + √2) − √2 = 1. The difference is rational.",
+            "(d) √5 − √2 is irrational."
+          ]
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "Example 1",
+          "paras": [
+            "(a) 0.131331333… + 0.535335333… = 0.666…",
+            "(b) 0.4747747774… − 0.252552555… = 0.222…",
+            "Both answers are rational."
+          ]
+        },
+        {
+          "kind": "name",
+          "step": "name",
+          "title": "Name it",
+          "defs": [
+            ["Like radicals", "Radicals with the same radicand, such as 2√3 and 4√3. Only like radicals can be added into one radical."]
+          ]
+        },
+        {
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "Why not one radical?",
+          "text": "Why can't √2 + √3 be written as one radical?",
+          "opts": ["They are not like radicals", "Because √2 + √3 = √5", "Because 2 and 3 are prime", "It can: it equals √6"],
+          "ans": "They are not like radicals",
+          "why": "Only like radicals combine. √2 + √3 ≈ 3.15, but √5 ≈ 2.24.",
+          "clue": "Compare the radicands of √2 and √3."
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "Example 2: like radicals",
+          "paras": [
+            "Like radicals add like like terms.",
+            "(a) 2√3 + 4√3 = (2 + 4)√3 = 6√3.",
+            "(b) 3√5 − 2√5 = √5."
+          ]
+        },
+        {
+          "kind": "steps",
+          "step": "method",
+          "title": "Example 3: simplify first",
+          "text": "First write each √(a²b) as a√b. Then add or subtract like radicals.",
+          "steps": [
+            "(a) √8 + √2 = 2√2 + √2 = 3√2.",
+            "(b) √12 − 5√3 = 2√3 − 5√3 = −3√3.",
+            "(c) √18 + √50 = 3√2 + 5√2 = 8√2.",
+            "(d) √72 − √8 = 6√2 − 2√2 = 4√2."
+          ],
+          "needs": "math.square-roots"
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "A correction",
+          "paras": [
+            "Look again at Example 3(d): 6√2 − 2√2 = (6 − 2)√2 = 4√2."
+          ],
+          "note": "Correction: Example 3(d) in the printed book ends \"6√2 − 2√2 = 8√2\". The correct answer is 4√2."
+        },
+        {
+          "kind": "mcq",
+          "step": "practise",
+          "graded": true,
+          "title": "Simplify, then add",
+          "text": "Simplify √12 + √27.",
+          "opts": ["√39", "5√3", "13√3", "6√3"],
+          "ans": "5√3",
+          "why": "√12 = 2√3 and √27 = 3√3, so the sum is 5√3.",
+          "clue": "Simplify each radical first so they become like radicals.",
+          "needs": "math.square-roots"
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "graded": true,
+          "title": "Subtract like radicals",
+          "ask": "2√5 − 4√5 = ___√5",
+          "a": ["-2", "−2"],
+          "why": "(2 − 4)√5 = −2√5.",
+          "clue": "Treat √5 like a letter x: 2x − 4x."
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "graded": true,
+          "added": true,
+          "title": "Fencing two plots",
+          "text": "Two square gardens in Mekelle have sides √8 m and √18 m. Tsegaye walks one side of each.",
+          "ask": "He walks √8 + √18 = ___√2 m.",
+          "a": ["5", "five"],
+          "why": "√8 = 2√2 and √18 = 3√2. The sum is 5√2 m.",
+          "clue": "Write each root as a√2 first.",
+          "worked": "√8 = √(4 × 2) = 2√2. √18 = √(9 × 2) = 3√2. Add: 2√2 + 3√2 = 5√2 m.",
+          "needs": "math.square-roots"
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "book_name": "Exercise 1.19",
+      "items": [
+        { "kind": "mcq", "step": "exercise", "graded": true, "text": "1(b) Calculate 2√5 × √7.", "opts": ["2√35", "√70", "2√12", "10√7"], "ans": "2√35", "why": "2 × √(5 × 7) = 2√35.", "clue": "Keep the 2, multiply the radicands." },
+        { "kind": "mcq", "step": "exercise", "graded": true, "text": "1(c) Calculate −√2 × √6.", "opts": ["−2√3", "−√8", "2√3", "−3√2"], "ans": "−2√3", "why": "−√12 = −√(4 × 3) = −2√3.", "clue": "Multiply to get −√12, then simplify." },
+        { "kind": "blank", "step": "exercise", "graded": true, "ask": "1(d) (1/√5) × (10/√5) = ___", "a": ["2", "two"], "why": "10/(√5 × √5) = 10/5 = 2.", "clue": "√5 × √5 = 5." },
+        { "kind": "blank", "step": "exercise", "graded": true, "ask": "1(e) (2 + √3)(−2 + √3) = ___", "a": ["-1", "−1"], "why": "(√3)² − 2² = 3 − 4 = −1.", "clue": "Use the distributive law. The √3 terms cancel." },
+        { "kind": "blank", "step": "exercise", "graded": true, "ask": "1(g) (√7 + √3)(√7 − √3) = ___", "a": ["4", "four"], "why": "7 − 3 = 4.", "clue": "The middle terms cancel.", "worked": "(√7)² − √7√3 + √3√7 − (√3)² = 7 − 3 = 4." },
+        { "kind": "mcq", "step": "exercise", "graded": true, "text": "2(a) Always, sometimes or never true? The product of two irrational numbers is rational.", "opts": ["Always", "Sometimes", "Never"], "ans": "Sometimes", "why": "√2 × √2 = 2 is rational, but √2 × √3 = √6 is not.", "clue": "Try √2 × √2, then √2 × √3." }
+      ]
+    },
+    {
+      "book_name": "Exercise 1.20",
+      "items": [
+        { "kind": "blank", "step": "exercise", "graded": true, "ask": "1(b) √12/√3 = ___", "a": ["2", "two"], "why": "√(12/3) = √4 = 2.", "clue": "Divide the radicands." },
+        { "kind": "blank", "step": "exercise", "graded": true, "ask": "1(c) √14/√7 = √___", "a": ["2", "two"], "why": "√(14/7) = √2.", "clue": "Divide the radicands." },
+        { "kind": "blank", "step": "exercise", "graded": true, "ask": "1(d) −√15/√3 = −√___", "a": ["5", "five"], "why": "−√(15/3) = −√5.", "clue": "Divide the radicands." },
+        { "kind": "blank", "step": "exercise", "graded": true, "ask": "2(a) 4√2 = √___", "a": ["32"], "why": "√(4² × 2) = √32.", "clue": "a√b = √(a²b)." },
+        { "kind": "blank", "step": "exercise", "graded": true, "ask": "2(b) 5√3 = √___", "a": ["75"], "why": "√(5² × 3) = √75.", "clue": "a√b = √(a²b)." },
+        { "kind": "blank", "step": "exercise", "graded": true, "ask": "2(d) 7√6 = √___", "a": ["294"], "why": "√(7² × 6) = √(49 × 6) = √294.", "clue": "a√b = √(a²b)." }
+      ]
+    },
+    {
+      "book_name": "Exercise 1.21",
+      "items": [
+        { "kind": "blank", "step": "exercise", "graded": true, "ask": "(a) √3 + 4√3 = ___√3", "a": ["5", "five"], "why": "(1 + 4)√3 = 5√3.", "clue": "√3 means 1√3." },
+        { "kind": "blank", "step": "exercise", "graded": true, "ask": "(b) √5 − √45 = ___√5", "a": ["-2", "−2"], "why": "√45 = 3√5, so √5 − 3√5 = −2√5.", "clue": "Simplify √45 first." },
+        { "kind": "blank", "step": "exercise", "graded": true, "ask": "(d) √18 + 2√2 = ___√2", "a": ["5", "five"], "why": "3√2 + 2√2 = 5√2.", "clue": "√18 = √(9 × 2)." },
+        { "kind": "blank", "step": "exercise", "graded": true, "ask": "(f) √80 − √20 = ___√5", "a": ["2", "two"], "why": "4√5 − 2√5 = 2√5.", "clue": "80 = 16 × 5 and 20 = 4 × 5." },
+        { "kind": "blank", "step": "exercise", "graded": true, "ask": "(g) 5√8 + 6√32 = ___√2", "a": ["34"], "why": "10√2 + 24√2 = 34√2.", "clue": "√8 = 2√2 and √32 = 4√2.", "worked": "5√8 = 5 × 2√2 = 10√2. 6√32 = 6 × 4√2 = 24√2. Sum: 34√2." },
+        { "kind": "blank", "step": "exercise", "graded": true, "ask": "(j) 2.1010010001… + 1.0101101110… = ___ as a fraction", "a": ["28/9", "3 1/9"], "why": "The sum is 3.1111… = 3.1̅ = 28/9.", "clue": "Add digit by digit. What repeats?" }
+      ]
+    }
+  ],
+  "test": [
+    { "kind": "mcq", "step": "test", "graded": true, "text": "Simplify √72 − √8.", "opts": ["8√2", "4√2", "√64", "8"], "ans": "4√2", "why": "6√2 − 2√2 = 4√2.", "clue": "" },
+    { "kind": "blank", "step": "test", "graded": true, "ask": "√2 × √8 = ___", "a": ["4", "four"], "why": "√16 = 4.", "clue": "" },
+    { "kind": "tf", "step": "test", "graded": true, "text": "(√3 + √2)² = 5 + 2√6.", "a": true, "why": "3 + 2√6 + 2 = 5 + 2√6.", "clue": "" }
+  ],
+  "notes": [
+    { "kind": "correction", "text": "In Example 1(c) the printed book is missing a plus sign: \"(√2 × 1)(√2 × √5)\" should read (√2 × 1) + (√2 × √5)." },
+    { "kind": "correction", "text": "Example 3(d) in the printed book ends \"6√2 − 2√2 = 8√2\". The correct answer is 4√2." },
+    { "kind": "review", "text": "Exercise 1.21(e) 0.12345… − 0.111… does not say how 0.12345… continues. The source takes it as 0.123456789101112…, giving 0.0123456789… (irrational). Left out of the items until a teacher confirms." },
+    { "kind": "note", "text": "Exercises are trimmed to six items each; the remaining parts of 1.19–1.21 are in the classic page." }
+  ],
+  "review": { "status": "validated" },
+  "version": 1,
+  "refreshers": {
+    "math.square-roots": {
+      "name": "Perfect squares and square roots",
+      "screens": [
+        {
+          "kind": "steps",
+          "step": "method",
+          "title": "Spot a perfect square factor",
+          "text": "Perfect squares: 4, 9, 16, 25, 36, 49, … Their roots are 2, 3, 4, 5, 6, 7, …",
+          "steps": [
+            "Take 12. Which perfect square divides it? 4 does: 12 = 4 × 3.",
+            "√4 = 2.",
+            "So √12 = 2√3."
+          ]
+        },
+        {
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "Your turn",
+          "text": "Which perfect square divides 18?",
+          "opts": ["4", "9", "16", "6"],
+          "ans": "9",
+          "why": "18 = 9 × 2, and 9 = 3².",
+          "clue": "Try 4, 9 and 16. Which one divides 18 exactly?"
+        }
+      ]
+    }
+  }
+}
