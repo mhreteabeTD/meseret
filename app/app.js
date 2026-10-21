@@ -39,7 +39,7 @@ function bumpMastery(idea, ok) {
 }
 function lessonProgress(path) { return store.get('lp', {})[path] || null; }
 function setLessonProgress(path, v) { const lp = store.get('lp', {}); lp[path] = Object.assign(lp[path] || {}, v); store.set('lp', lp); }
-function chapterProgress(id) { return store.get('progress', {})[id] || null; }
+function chapterProgress(id) { const c = S.index && S.index.chapters.find(x => x.id === id); const ls = c ? c.sections.filter(x => x.lesson) : []; if (!ls.length) return store.get('progress', {})[id] || null; const lp = store.get('lp', {}); const done = ls.filter(x => lp[x.lesson] && lp[x.lesson].done).length; const started = ls.some(x => lp[x.lesson]); return started ? { done, total: ls.length } : null; }
 function markStudied() { const d = store.get('days', []); const k = new Date().toISOString().slice(0, 10); if (!d.includes(k)) { d.push(k); store.set('days', d.slice(-60)); } }
 
 /* ---------- ui helpers ---------- */
@@ -135,7 +135,8 @@ async function viewChapter(id) {
   setTop(`<a class="iconbtn" href="#home" aria-label="back">${svgIcon(BACK)}</a><div class="grow"><div class="eyebrow">${t('grade')} ${c.grade} · ${esc(L(idx.subjects[c.subject]))}</div><div class="display" style="font-size:18px">${t('unit')} ${c.unit} · ${esc(L(c.title))}</div></div>`);
   const p = chapterProgress(c.id);
   const rows = c.sections.map(s => {
-    if (s.lesson) { const lp = lessonProgress(s.lesson); return `<a class="item ${lp && !lp.done ? 'current' : ''}" href="#lesson/${encodeURIComponent(s.lesson)}"><div class="dot ${lp && lp.done ? 'done' : lp ? 'now' : ''}">${lp && lp.done ? '✓' : ''}</div><div class="grow"><div class="t">${esc(s.n)} ${esc(s.title)}</div><div class="s">${lp && lp.n && !lp.done ? t('progress_n', { d: Object.keys(lp.got || {}).length, n: lp.n }) : `${s.minutes || 8} ${t('min')}`}${lp && lp.best != null ? ` · ${lp.best}` : ''}</div>${lp && lp.n ? `<div class="mini"><i style="width:${Math.round(Object.keys(lp.got || {}).length / lp.n * 100)}%"></i></div>` : ''}</div>${s.new ? `<span class="pill sky">${t('new')}</span>` : ''}</a>`; }
+    if (s.lesson) { const lp = lessonProgress(s.lesson); return `<a class="item ${(store.get('last', {}) || {}).route === 'lesson/' + encodeURIComponent(s.lesson) ? 'current' : ''}" href="#lesson/${encodeURIComponent(s.lesson)}"><div class="dot ${lp && lp.done ? 'done' : lp ? 'now' : ''}">${lp && lp.done ? '✓' : ''}</div><div class="grow"><div class="t">${esc(s.n)} ${esc(s.title)}</div><div class="s">${lp && lp.n && !lp.done ? t('progress_n', { d: Object.keys(lp.got || {}).length, n: lp.n }) : `${s.minutes || 8} ${t('min')}`}${lp && lp.best != null ? ` · ${lp.best}` : ''}</div>${lp && lp.n ? `<div class="mini"><i style="width:${Math.round(Object.keys(lp.got || {}).length / lp.n * 100)}%"></i></div>` : ''}</div>${s.new ? `<span class="pill sky">${t('new')}</span>` : ''}</a>`; }
+    if (s.head) return `<div class="item head">${esc(s.n)} ${esc(s.title)}</div>`;
     const head = s.book ? `<div class="item head book">${t('from_book')}</div>` : '';
     return head + `<a class="item" href="${c.classic}#${s.anchor}"><div class="dot"></div><div class="grow"><div class="t">${esc(s.n)} ${esc(s.title)}</div><div class="s">${t('read_in_chapter')}</div></div></a>`;
   }).join('');
@@ -269,7 +270,7 @@ function closePanel() { const p = $('#panel'); if (p) p.remove(); document.body.
 /* ---------- lesson player ---------- */
 const factors = n => { const f = []; for (let d = 1; d <= n; d++) if (n % d === 0) f.push(d); return f; };
 const primes = n => { const r = []; let d = 2; while (n > 1) { if (n % d === 0) { r.push(d); n /= d; } else d++; } return r; };
-const norm = s => String(s).toLowerCase().replace(/[^\p{L}\p{N}.\s/-]/gu, '').replace(/\s+/g, ' ').trim();
+const norm = s => String(s).toLowerCase().replace(/[×*·]/g, 'x').replace(/[−–]/g, '-').replace(/[^\p{L}\p{N}.\s/^+=√x-]/gu, '').replace(/\s*([x^+=/])\s*/g, '$1').replace(/\s+/g, ' ').trim();
 const WORDS = { zero: '0', one: '1', two: '2', three: '3', four: '4', five: '5', six: '6', seven: '7', eight: '8', nine: '9', ten: '10', eleven: '11', twelve: '12' };
 function lev(a, b) { const m = a.length, n = b.length, d = Array.from({ length: m + 1 }, (_, i) => [i, ...Array(n).fill(0)]); for (let j = 1; j <= n; j++) d[0][j] = j; for (let i = 1; i <= m; i++) for (let j = 1; j <= n; j++) d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)); return d[m][n]; }
 function matchAnswer(given, accepted) {
@@ -303,7 +304,7 @@ function vennSVG(a, b, k) {
 /* ---------- screen renderers (shared by the step player and the book reader) ---------- */
 function makeR(env) {
   const div = html => { const d = document.createElement('div'); d.className = 'stack'; d.innerHTML = html; return d; };
-  const head = s => `<span class="eyebrow sky">${esc(s._from || s.step || '')}</span>${s.title ? `<h1 class="display" tabindex="-1">${esc(s.title)}</h1>` : ''}${s.text ? `<p class="lead">${esc(s.text)}</p>` : ''}`;
+  const head = s => `<span class="eyebrow sky">${esc(s._from || (['hook', 'explore', 'notice', 'check', 'practise'].includes(s.step) ? t('step_' + s.step) : ''))}</span>${s.title ? `<h1 class="display" tabindex="-1">${esc(s.title)}</h1>` : ''}${s.text ? `<p class="lead">${esc(s.text)}</p>` : ''}`;
   const choice = (s, opts, ans, row2) => {
     const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="opts${row2 ? ' row2' : ''}" role="radiogroup">${opts.map(o => `<button class="opt" role="radio" aria-checked="false">${esc(o)}</button>`).join('')}</div>`);
     let pick = null;

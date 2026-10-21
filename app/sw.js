@@ -1,5 +1,5 @@
 /* Meseret service worker: cache the shell on install, cache chapters and lessons as they are opened, serve cached when offline. */
-const V = 'meseret-v2';
+const V = 'meseret-v3';
 const SHELL = ['./', './index.html', './app.js', './styles.css', './manifest.webmanifest', './icon.svg', './i18n/en.json', './i18n/am.json', './chapter-shell.js', './chapter-shell.css'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(V).then(c => c.addAll(SHELL).catch(() => {})).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== V).map(k => caches.delete(k)))).then(() => self.clients.claim())); });

@@ -210,3 +210,7 @@ body.panel-open main { padding-bottom: 60vh; }
 .tbl th, .tbl td { border: 1.5px solid var(--line); padding: 6px 8px; text-align: left; vertical-align: top; } .tbl th { background: var(--surface-2); }
 .note { font-size: 14px; color: var(--muted); border-left: 4px solid var(--sun-line); padding-left: 10px; }
 .mini { height: 6px; border-radius: 99px; background: var(--surface-2); overflow: hidden; margin-top: 6px; } .mini i { display: block; height: 100%; background: var(--accent); }
+.reader, .blk, .blk .stack { grid-template-columns: minmax(0, 1fr); }
+.reader > *, .blk > *, .blk .stack > * { min-width: 0; }
+.blk { overflow-wrap: anywhere; }
+.eyebrow:empty { display: none; }
