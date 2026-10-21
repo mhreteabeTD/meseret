@@ -1,0 +1,543 @@
+{
+  "id": "g9.maths.u1.s1-5",
+  "book": {
+    "title": "Mathematics Grade 9 Student Textbook",
+    "grade": 9,
+    "subject": "maths",
+    "unit": 1,
+    "unit_title": "The Number System",
+    "section": "1.5",
+    "pages": "79–81"
+  },
+  "title": "Applications",
+  "competency": "Use the division algorithm, GCF and LCM to solve everyday problems.",
+  "minutes": 10,
+  "keywords": [
+    {
+      "en": "Division algorithm",
+      "am": "የማካፈል ስልተ ቀመር",
+      "def": "For whole numbers a ≥ 0 and b > 0 there are unique q and r with a = b × q + r and 0 ≤ r < b.",
+      "machine": true
+    },
+    {
+      "en": "Greatest common factor (GCF)",
+      "am": "ትልቁ የጋራ አካፋይ",
+      "def": "The largest number that is a factor of all the given numbers. Also called HCF.",
+      "machine": true
+    },
+    {
+      "en": "Least common multiple (LCM)",
+      "am": "ትንሹ የጋራ ብዜት",
+      "def": "The smallest number that is a multiple of all the given numbers.",
+      "machine": true
+    }
+  ],
+  "ideas": [
+    {
+      "id": "math.division-algorithm-problems",
+      "name": "Division algorithm problems",
+      "explain": {
+        "en": {
+          "text": "When things are shared into equal groups, use the division algorithm: a = b × q + r. The quotient q tells how many full groups there are. The remainder r tells how many are left over. The remainder is always smaller than the group size."
+        },
+        "am": {
+          "text": "ነገሮች በእኩል ቡድኖች ሲከፋፈሉ የማካፈል ስልተ ቀመርን ተጠቀም፤ a = b × q + r። ድርሻው q ስንት ሙሉ ቡድኖች እንዳሉ ይነግራል። ቀሪው r ስንት እንደቀሩ ይነግራል። ቀሪው ሁልጊዜ ከቡድኑ መጠን ያንሳል።",
+          "machine": true
+        }
+      },
+      "screens": [
+        {
+          "kind": "guess",
+          "step": "hook",
+          "added": true,
+          "title": "Bread money",
+          "text": "Hana has 50 birr. One loaf of bread costs 7 birr.",
+          "ask": "How many loaves can she buy? Take a guess.",
+          "opts": [
+            "6",
+            "7",
+            "8",
+            "50"
+          ],
+          "after": "7 loaves, with 1 birr left: 50 = 7 × 7 + 1. Read on."
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "Applications",
+          "paras": [
+            "Lesson goal: use the division algorithm, GCF and LCM to solve everyday problems.",
+            "Example 1. A small town has 530 flower pots.",
+            "The gardener puts 21 pots in each row.",
+            "How many full rows are there, and how many pots are left over?"
+          ]
+        },
+        {
+          "kind": "name",
+          "step": "name",
+          "title": "The tool to use",
+          "defs": [
+            [
+              "Division algorithm",
+              "For a ≥ 0 and b > 0 there are unique q and r with a = b × q + r and 0 ≤ r < b."
+            ]
+          ]
+        },
+        {
+          "kind": "steps",
+          "step": "method",
+          "title": "Example 1: the working",
+          "text": "Use the division algorithm with a = 530 and b = 21.",
+          "steps": [
+            "Divide: 530 ÷ 21 is 25 and a bit.",
+            "Multiply back: 21 × 25 = 525.",
+            "Subtract: 530 − 525 = 5. This is less than 21.",
+            "So 530 = 21 × 25 + 5.",
+            "There are 25 full rows and 5 pots left over."
+          ]
+        },
+        {
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "Check your understanding",
+          "text": "The gardener wants no pots left over. Which row size would work for 530 pots?",
+          "opts": [
+            "21",
+            "10",
+            "8",
+            "12"
+          ],
+          "ans": "10",
+          "why": "530 = 10 × 53 + 0, so the remainder is 0.",
+          "clue": "Which divisor leaves remainder 0? Use the divisibility tests."
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "graded": true,
+          "added": true,
+          "title": "Sacks of teff",
+          "text": "A farmer near Debre Zeit has 100 kg of teff. He fills sacks of 15 kg each.",
+          "ask": "He fills ___ full sacks.",
+          "a": [
+            "6",
+            "six"
+          ],
+          "why": "100 = 15 × 6 + 10. So 6 full sacks, with 10 kg left over.",
+          "clue": "Find the biggest multiple of 15 that is not more than 100."
+        },
+        {
+          "kind": "mcq",
+          "step": "practise",
+          "graded": true,
+          "title": "Review question 21",
+          "text": "Positive integers a, b and c leave remainders 9, 7 and 10 when divided by 13.",
+          "ask": "Why is a + b + c divisible by 13?",
+          "opts": [
+            "a + b + c = 13(p + q + r) + 26, and 26 = 13 × 2",
+            "9 + 7 + 10 is a prime number",
+            "Each of a, b and c is a multiple of 13",
+            "13 is a prime number"
+          ],
+          "ans": "a + b + c = 13(p + q + r) + 26, and 26 = 13 × 2",
+          "why": "a = 13p + 9, b = 13q + 7, c = 13r + 10. The sum is 13(p + q + r + 2), a multiple of 13.",
+          "clue": "Write each number as 13 × something + remainder. Then add them.",
+          "worked": "a = 13p + 9, b = 13q + 7 and c = 13r + 10. Add: a + b + c = 13(p + q + r) + 26. Since 26 = 13 × 2, this is 13(p + q + r + 2), a multiple of 13."
+        },
+        {
+          "kind": "tf",
+          "step": "practise",
+          "graded": true,
+          "title": "True or false?",
+          "text": "In 530 = 21 × 25 + 5, the remainder 5 must be less than 21.",
+          "a": true,
+          "why": "The division algorithm needs 0 ≤ r < b. Here b = 21.",
+          "clue": "Look at the rule for r in the division algorithm."
+        }
+      ]
+    },
+    {
+      "id": "math.gcf-problems",
+      "name": "GCF problems",
+      "requires": [
+        "math.gcf"
+      ],
+      "explain": {
+        "en": {
+          "text": "Use the GCF when you cut or share things into the largest equal parts with nothing left over. The size must divide every amount exactly. The largest such size is the greatest common factor."
+        },
+        "am": {
+          "text": "ነገሮችን ምንም ሳይተርፍ ወደ ትልቁ እኩል ክፍል ስትቆርጥ ወይም ስታካፍል ትልቁን የጋራ አካፋይ ተጠቀም። መጠኑ እያንዳንዱን መጠን ያለ ቀሪ መካፈል አለበት። ከነዚህ ትልቁ ትልቁ የጋራ አካፋይ ነው።",
+          "machine": true
+        }
+      },
+      "screens": [
+        {
+          "kind": "guess",
+          "step": "hook",
+          "title": "Cover the whiteboard",
+          "text": "A teacher covers a 50 cm by 20 cm whiteboard with equal square papers. No gaps, no overlaps.",
+          "ask": "What is the largest square she can use? Take a guess.",
+          "opts": [
+            "4 cm",
+            "5 cm",
+            "10 cm",
+            "20 cm"
+          ],
+          "after": "Read the book's example to check your guess."
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "Example 2: the whiteboard",
+          "paras": [
+            "A teacher covers a 50 cm by 20 cm whiteboard completely with equal square papers.",
+            "The side of each square is a whole number of centimetres. What is the largest possible side?",
+            "1 cm squares work (Figure 1.11 a). So do 5 cm squares (b) and 10 cm squares (c).",
+            "The side must divide both 50 and 20. So we want GCF(50, 20)."
+          ]
+        },
+        {
+          "kind": "name",
+          "step": "name",
+          "title": "The tool to use",
+          "defs": [
+            [
+              "Greatest common factor (GCF)",
+              "The largest number that is a factor of all the given numbers."
+            ]
+          ],
+          "needs": "math.gcf"
+        },
+        {
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "Check your understanding",
+          "text": "Why must the square's side divide both 50 and 20?",
+          "opts": [
+            "So the squares fit exactly along both edges",
+            "Because 50 and 20 are even",
+            "So the squares overlap",
+            "Because the board is a square"
+          ],
+          "ans": "So the squares fit exactly along both edges",
+          "why": "A common factor fits a whole number of times along each side. The largest is the GCF.",
+          "clue": "Try 4 cm. How many fit along 50 cm?"
+        },
+        {
+          "kind": "steps",
+          "step": "method",
+          "title": "Finding GCF(50, 20)",
+          "text": "Use prime factors.",
+          "steps": [
+            "50 = 2 × 5².",
+            "20 = 2² × 5.",
+            "Shared primes with the smaller powers: 2 and 5.",
+            "GCF(50, 20) = 2 × 5 = 10.",
+            "The largest square is 10 cm."
+          ],
+          "needs": "math.gcf"
+        },
+        {
+          "kind": "tf",
+          "step": "practise",
+          "graded": true,
+          "title": "True or false?",
+          "text": "Squares of side 4 cm can cover the 50 cm × 20 cm board exactly.",
+          "a": false,
+          "why": "4 does not divide 50, so a gap is left.",
+          "clue": "Is 50 ÷ 4 a whole number?",
+          "needs": "math.gcf"
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "graded": true,
+          "title": "Review question 22",
+          "text": "A school has 14 girls and 21 boys for a traffic-safety service. Every team has the same number of girls and of boys. Every student is in a team.",
+          "ask": "The greatest number of teams is ___",
+          "a": [
+            "7",
+            "seven"
+          ],
+          "why": "GCF(14, 21) = 7. Each team has 2 girls and 3 boys.",
+          "clue": "The number of teams must divide 14 and also divide 21.",
+          "worked": "14 = 2 × 7 and 21 = 3 × 7. The shared factor is 7, so GCF(14, 21) = 7. There are 7 teams. Each has 14 ÷ 7 = 2 girls and 21 ÷ 7 = 3 boys.",
+          "needs": "math.gcf"
+        },
+        {
+          "kind": "mcq",
+          "step": "practise",
+          "graded": true,
+          "title": "Each team",
+          "text": "There are 7 traffic-safety teams, made from 14 girls and 21 boys.",
+          "ask": "How many girls and boys are in each team?",
+          "opts": [
+            "2 girls and 3 boys",
+            "3 girls and 2 boys",
+            "7 girls and 7 boys",
+            "2 girls and 7 boys"
+          ],
+          "ans": "2 girls and 3 boys",
+          "why": "14 ÷ 7 = 2 girls and 21 ÷ 7 = 3 boys.",
+          "clue": "Share each group equally among the 7 teams."
+        }
+      ]
+    },
+    {
+      "id": "math.lcm-problems",
+      "name": "LCM problems",
+      "explain": {
+        "en": {
+          "text": "Use the LCM when two things repeat at different rates and you want them to meet again. The meeting time must be a multiple of both times. The first such time is the least common multiple."
+        },
+        "am": {
+          "text": "ሁለት ነገሮች በተለያየ ፍጥነት ሲደጋገሙና እንደገና እንዲገናኙ ስትፈልግ ትንሹን የጋራ ብዜት ተጠቀም። የመገናኛ ጊዜው የሁለቱም ጊዜዎች ብዜት መሆን አለበት። የመጀመሪያው እንዲህ ያለ ጊዜ ትንሹ የጋራ ብዜት ነው።",
+          "machine": true
+        }
+      },
+      "screens": [
+        {
+          "kind": "guess",
+          "step": "hook",
+          "title": "Two runners",
+          "text": "Two Grade 9 students start running round the sports field together. A takes 6 minutes a round. B takes 14 minutes.",
+          "ask": "When are they first side by side at the start again? Take a guess.",
+          "opts": [
+            "20 minutes",
+            "42 minutes",
+            "84 minutes",
+            "2 minutes"
+          ],
+          "after": "Read on to check your guess."
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "The runners problem",
+          "paras": [
+            "Two runners start together. A takes 6 minutes a lap and B takes 14.",
+            "A is at the start after 6, 12, 18, 24, … minutes.",
+            "B is at the start after 14, 28, 42, … minutes.",
+            "They meet at a time that is a multiple of both lap times."
+          ]
+        },
+        {
+          "kind": "name",
+          "step": "name",
+          "title": "The tool to use",
+          "defs": [
+            [
+              "Least common multiple (LCM)",
+              "The smallest number that is a multiple of all the given numbers."
+            ]
+          ]
+        },
+        {
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "Check your understanding",
+          "text": "Is the meeting time in the runners problem a GCF or an LCM?",
+          "opts": [
+            "GCF, because we want the largest number",
+            "LCM, because it must be a multiple of both lap times",
+            "Neither"
+          ],
+          "ans": "LCM, because it must be a multiple of both lap times",
+          "why": "They meet at the start after whole numbers of laps for both: the least common multiple of 6 and 14.",
+          "clue": "At which times is A at the start? And B?"
+        },
+        {
+          "kind": "steps",
+          "step": "method",
+          "title": "Finding LCM(6, 14)",
+          "text": "Use prime factors.",
+          "steps": [
+            "6 = 2 × 3 and 14 = 2 × 7.",
+            "Take every prime with its highest power: 2, 3 and 7.",
+            "LCM(6, 14) = 2 × 3 × 7 = 42.",
+            "They meet after 42 minutes.",
+            "A has run 42 ÷ 6 = 7 rounds. B has run 42 ÷ 14 = 3 rounds."
+          ]
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "graded": true,
+          "title": "Count the rounds",
+          "text": "The runners meet at the start after 42 minutes.",
+          "ask": "By then, A has run ___ rounds.",
+          "a": [
+            "7",
+            "seven"
+          ],
+          "why": "A takes 6 minutes a round, and 42 ÷ 6 = 7.",
+          "clue": "How many 6-minute rounds fit in 42 minutes?"
+        },
+        {
+          "kind": "mcq",
+          "step": "practise",
+          "graded": true,
+          "added": true,
+          "title": "Buses at Meskel Square",
+          "text": "One bus leaves Meskel Square every 10 minutes. Another leaves every 15 minutes. Both leave at 8:00.",
+          "ask": "When do they next leave together?",
+          "opts": [
+            "8:05",
+            "8:25",
+            "8:30",
+            "9:30"
+          ],
+          "ans": "8:30",
+          "why": "LCM(10, 15) = 30, so they leave together again 30 minutes later.",
+          "clue": "List the times for each bus until one appears in both lists.",
+          "worked": "Bus 1: 10, 20, 30, … minutes. Bus 2: 15, 30, … minutes. The first shared time is 30 minutes, so 8:00 + 30 minutes = 8:30."
+        },
+        {
+          "kind": "tf",
+          "step": "practise",
+          "graded": true,
+          "title": "True or false?",
+          "text": "For 6 and 14, LCM × GCF = 42 × 2 = 84, which equals 6 × 14.",
+          "a": true,
+          "why": "For two numbers, LCM(a, b) × GCF(a, b) = a × b. And 6 × 14 = 84.",
+          "clue": "Work out 6 × 14 and compare.",
+          "needs": "math.gcf"
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "book_name": "Exercise 1.38",
+      "items": [
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "ask": "Strings of 78 cm, 117 cm and 351 cm are cut into equal pieces with nothing left over. The greatest possible length of each piece is ___ cm.",
+          "a": [
+            "39",
+            "thirty-nine"
+          ],
+          "why": "GCF(78, 117, 351) = 39 cm.",
+          "clue": "The length must divide all three numbers.",
+          "needs": "math.gcf"
+        },
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "ask": "A takes 6 minutes a round and B takes 14. They start together. They are first side by side at the start again after ___ minutes.",
+          "a": [
+            "42",
+            "forty-two"
+          ],
+          "why": "LCM(6, 14) = 42 minutes. A has run 7 rounds and B 3 rounds.",
+          "clue": "The time must be a multiple of 6 and of 14."
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "kind": "mcq",
+      "step": "test",
+      "graded": true,
+      "text": "530 flower pots are placed 21 to a row. How many full rows are there?",
+      "opts": [
+        "21",
+        "25",
+        "26",
+        "5"
+      ],
+      "ans": "25",
+      "why": "530 = 21 × 25 + 5.",
+      "clue": ""
+    },
+    {
+      "kind": "mcq",
+      "step": "test",
+      "graded": true,
+      "text": "What is the largest square that exactly covers a 50 cm × 20 cm board?",
+      "opts": [
+        "5 cm",
+        "10 cm",
+        "20 cm",
+        "100 cm"
+      ],
+      "ans": "10 cm",
+      "why": "GCF(50, 20) = 10.",
+      "clue": ""
+    },
+    {
+      "kind": "blank",
+      "step": "test",
+      "graded": true,
+      "ask": "Runner A takes 6 minutes a lap and B takes 14. They are first together at the start again after ___ minutes.",
+      "a": [
+        "42",
+        "forty-two"
+      ],
+      "why": "LCM(6, 14) = 42.",
+      "clue": ""
+    }
+  ],
+  "notes": [
+    {
+      "kind": "note",
+      "text": "Review questions 21 and 22 (Review exercise, pages 84–86) are used here as practise items."
+    },
+    {
+      "kind": "note",
+      "text": "The whiteboard problem (Example 2) is also the hook for 1.1.4 (math.gcf)."
+    },
+    {
+      "kind": "review",
+      "text": "math.lcm-problems has no requires: no math.lcm idea id is published yet. math.division-algorithm-problems likewise has no requires."
+    }
+  ],
+  "review": {
+    "status": "validated"
+  },
+  "version": 1,
+  "tool": "factors",
+  "refreshers": {
+    "math.gcf": {
+      "name": "Greatest common factor",
+      "screens": [
+        {
+          "kind": "steps",
+          "step": "method",
+          "title": "Find the GCF",
+          "text": "Example: GCF(12, 18).",
+          "steps": [
+            "List the factors of 12: 1, 2, 3, 4, 6, 12.",
+            "List the factors of 18: 1, 2, 3, 6, 9, 18.",
+            "The common factors are 1, 2, 3 and 6.",
+            "The greatest is 6. So GCF(12, 18) = 6."
+          ]
+        },
+        {
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "Your turn",
+          "text": "What is GCF(24, 36)?",
+          "opts": [
+            "4",
+            "6",
+            "12",
+            "72"
+          ],
+          "ans": "12",
+          "why": "24 = 2³ × 3 and 36 = 2² × 3². The smaller powers give 2² × 3 = 12.",
+          "clue": "List the factors of each. Find the biggest one in both lists."
+        }
+      ]
+    }
+  }
+}

@@ -13,12 +13,42 @@
   "competency": "Write any division as a = (b × q) + r with 0 ≤ r < b and use it to solve problems.",
   "minutes": 8,
   "keywords": [
-    { "en": "Division algorithm", "am": "የማካፈል ስልተ ቀመር", "def": "For a ≥ 0 and b > 0 there are unique q and r with a = b × q + r, 0 ≤ r < b. Also called Euclid's division lemma.", "machine": true },
-    { "en": "Dividend", "am": "ተካፋይ", "def": "The number being divided: a in a = b × q + r.", "machine": true },
-    { "en": "Divisor", "am": "አካፋይ", "def": "The number you divide by: b in a = b × q + r.", "machine": true },
-    { "en": "Quotient", "am": "ድርሻ", "def": "How many whole times the divisor fits: q in a = b × q + r.", "machine": true },
-    { "en": "Remainder", "am": "ቀሪ", "def": "What is left over after dividing: r in a = b × q + r, with 0 ≤ r < b.", "machine": true },
-    { "en": "Divisible", "am": "ያለ ቀሪ የሚካፈል", "def": "a is divisible by b when the remainder is 0.", "machine": true }
+    {
+      "en": "Division algorithm",
+      "am": "የማካፈል ስልተ ቀመር",
+      "def": "For a ≥ 0 and b > 0 there are unique q and r with a = b × q + r, 0 ≤ r < b. Also called Euclid's division lemma.",
+      "machine": true
+    },
+    {
+      "en": "Dividend",
+      "am": "ተካፋይ",
+      "def": "The number being divided: a in a = b × q + r.",
+      "machine": true
+    },
+    {
+      "en": "Divisor",
+      "am": "አካፋይ",
+      "def": "The number you divide by: b in a = b × q + r.",
+      "machine": true
+    },
+    {
+      "en": "Quotient",
+      "am": "ድርሻ",
+      "def": "How many whole times the divisor fits: q in a = b × q + r.",
+      "machine": true
+    },
+    {
+      "en": "Remainder",
+      "am": "ቀሪ",
+      "def": "What is left over after dividing: r in a = b × q + r, with 0 ≤ r < b.",
+      "machine": true
+    },
+    {
+      "en": "Divisible",
+      "am": "ያለ ቀሪ የሚካፈል",
+      "def": "a is divisible by b when the remainder is 0.",
+      "machine": true
+    }
   ],
   "ideas": [
     {
@@ -40,7 +70,12 @@
           "title": "Sharing books",
           "text": "A bookshop shares 115 books equally among 8 students.",
           "ask": "How many books are left over? Take a guess.",
-          "opts": ["0", "3", "7", "14"],
+          "opts": [
+            "0",
+            "3",
+            "7",
+            "14"
+          ],
           "after": "8 × 14 = 112. So each student gets 14 books, and 3 are left."
         },
         {
@@ -50,10 +85,16 @@
           "title": "Guess the remainder first",
           "text": "You will divide 128 by 6. Before you divide, think about what can be left.",
           "ask": "Which remainders are possible?",
-          "opts": ["0, 1, 2, 3, 4 or 5", "0 to 6", "1 to 6", "Any number"],
+          "opts": [
+            "0, 1, 2, 3, 4 or 5",
+            "0 to 6",
+            "1 to 6",
+            "Any number"
+          ],
           "ans": "0, 1, 2, 3, 4 or 5",
           "why": "The remainder is always less than 6. Here 128 = 6 × 21 + 2.",
-          "clue": "If 6 were left, could you make one more group of 6?"
+          "clue": "If 6 were left, could you make one more group of 6?",
+          "id": "g9.maths.u1.s1-1-1.1"
         },
         {
           "kind": "read",
@@ -71,11 +112,26 @@
           "step": "name",
           "title": "Name the parts",
           "defs": [
-            ["Division algorithm", "a = (b × q) + r with 0 ≤ r < b. Also called Euclid's division lemma."],
-            ["Dividend", "a, the number being divided."],
-            ["Divisor", "b, the number you divide by."],
-            ["Quotient", "q, how many whole times b fits in a."],
-            ["Remainder", "r, what is left over. Always 0 ≤ r < b."]
+            [
+              "Division algorithm",
+              "a = (b × q) + r with 0 ≤ r < b. Also called Euclid's division lemma."
+            ],
+            [
+              "Dividend",
+              "a, the number being divided."
+            ],
+            [
+              "Divisor",
+              "b, the number you divide by."
+            ],
+            [
+              "Quotient",
+              "q, how many whole times b fits in a."
+            ],
+            [
+              "Remainder",
+              "r, what is left over. Always 0 ≤ r < b."
+            ]
           ]
         },
         {
@@ -84,10 +140,16 @@
           "graded": true,
           "title": "Find the remainder",
           "text": "In 47 = 6 × 7 + 5, which number is the remainder?",
-          "opts": ["47", "6", "7", "5"],
+          "opts": [
+            "47",
+            "6",
+            "7",
+            "5"
+          ],
           "ans": "5",
           "why": "The remainder is what is left after taking full groups, and 5 < 6.",
-          "clue": "It is the number added at the end, and it is less than the divisor."
+          "clue": "It is the number added at the end, and it is less than the divisor.",
+          "id": "g9.maths.u1.s1-1-1.2"
         },
         {
           "kind": "steps",
@@ -117,10 +179,16 @@
           "graded": true,
           "title": "Why not 6?",
           "text": "Why can the remainder never be 6 when you divide by 6?",
-          "opts": ["Because 6 more makes another full group", "Because 6 is even", "Because the quotient would be 0", "It can be 6"],
+          "opts": [
+            "Because 6 more makes another full group",
+            "Because 6 is even",
+            "Because the quotient would be 0",
+            "It can be 6"
+          ],
           "ans": "Because 6 more makes another full group",
           "why": "If 6 were left, you could make one more group. So r is always less than b.",
-          "clue": "Picture 6 leftover objects. What could you do with them?"
+          "clue": "Picture 6 leftover objects. What could you do with them?",
+          "id": "g9.maths.u1.s1-1-1.3"
         },
         {
           "kind": "blank",
@@ -128,9 +196,13 @@
           "graded": true,
           "title": "Fill the remainder",
           "ask": "100 = 7 × 14 + ___",
-          "a": ["2", "two"],
+          "a": [
+            "2",
+            "two"
+          ],
           "why": "7 × 14 = 98, and 100 − 98 = 2.",
-          "clue": "Work out 7 × 14 first."
+          "clue": "Work out 7 × 14 first.",
+          "id": "g9.maths.u1.s1-1-1.4"
         },
         {
           "kind": "tf",
@@ -141,7 +213,8 @@
           "a": false,
           "why": "The remainder must be less than 5. The right form is 17 = 5 × 3 + 2.",
           "clue": "Check the rule 0 ≤ r < b.",
-          "worked": "7 is not less than 5, so one more 5 fits. 17 = 5 × 3 + 2."
+          "worked": "7 is not less than 5, so one more 5 fits. 17 = 5 × 3 + 2.",
+          "id": "g9.maths.u1.s1-1-1.5"
         },
         {
           "kind": "blank",
@@ -151,10 +224,15 @@
           "title": "Buying bread",
           "text": "Hana has 50 birr. One bread costs 6 birr. She buys as many as she can.",
           "ask": "Hana has ___ birr left.",
-          "a": ["2", "two", "2 birr"],
+          "a": [
+            "2",
+            "two",
+            "2 birr"
+          ],
           "why": "50 = 6 × 8 + 2. She buys 8 breads and 2 birr is left.",
           "clue": "Find the biggest multiple of 6 that is not more than 50.",
-          "worked": "6 × 8 = 48 and 6 × 9 = 54 is too much. 50 − 48 = 2 birr."
+          "worked": "6 × 8 = 48 and 6 × 9 = 54 is too much. 50 − 48 = 2 birr.",
+          "id": "g9.maths.u1.s1-1-1.6"
         }
       ]
     }
@@ -169,18 +247,27 @@
           "graded": true,
           "text": "A bookshop shares 115 books equally among 8 students.",
           "ask": "Each student gets ___ books.",
-          "a": ["14", "fourteen"],
+          "a": [
+            "14",
+            "fourteen"
+          ],
           "why": "115 = 8 × 14 + 3. Each gets 14 books and 3 are left.",
-          "clue": "How many 8s fit in 115?"
+          "clue": "How many 8s fit in 115?",
+          "id": "g9.maths.u1.s1-1-1.7"
         },
         {
           "kind": "blank",
           "step": "exercise",
           "graded": true,
           "ask": "128 = 6 × ___ + 2",
-          "a": ["21", "twenty-one", "twenty one"],
+          "a": [
+            "21",
+            "twenty-one",
+            "twenty one"
+          ],
           "why": "6 × 21 = 126, and 126 + 2 = 128. The quotient is 21.",
-          "clue": "128 − 2 = 126. Divide 126 by 6."
+          "clue": "128 − 2 = 126. Divide 126 by 6.",
+          "id": "g9.maths.u1.s1-1-1.8"
         }
       ]
     },
@@ -193,9 +280,13 @@
           "graded": true,
           "text": "a = 14, b = 3. Find q with 14 = (3 × q) + r and 0 ≤ r < 3.",
           "ask": "14 = 3 × ___ + 2",
-          "a": ["4", "four"],
+          "a": [
+            "4",
+            "four"
+          ],
           "why": "14 = 3 × 4 + 2.",
-          "clue": "How many 3s fit in 14?"
+          "clue": "How many 3s fit in 14?",
+          "id": "g9.maths.u1.s1-1-1.9"
         },
         {
           "kind": "blank",
@@ -203,19 +294,29 @@
           "graded": true,
           "text": "a = 116, b = 7. Find q and r with 0 ≤ r < 7.",
           "ask": "116 = 7 × 16 + ___",
-          "a": ["4", "four"],
+          "a": [
+            "4",
+            "four"
+          ],
           "why": "7 × 16 = 112, and 116 − 112 = 4.",
-          "clue": "Work out 7 × 16 first."
+          "clue": "Work out 7 × 16 first.",
+          "id": "g9.maths.u1.s1-1-1.10"
         },
         {
           "kind": "mcq",
           "step": "exercise",
           "graded": true,
           "text": "a = 25, b = 36. Which is the division in the right form?",
-          "opts": ["25 = 36 × 0 + 25", "25 = 36 × 1 − 11", "25 = 36 × 1 + 11", "It cannot be written"],
+          "opts": [
+            "25 = 36 × 0 + 25",
+            "25 = 36 × 1 − 11",
+            "25 = 36 × 1 + 11",
+            "It cannot be written"
+          ],
           "ans": "25 = 36 × 0 + 25",
           "why": "25 is less than 36, so q = 0 and r = 25.",
-          "clue": "Look again at Example 1(b)."
+          "clue": "Look again at Example 1(b).",
+          "id": "g9.maths.u1.s1-1-1.11"
         },
         {
           "kind": "blank",
@@ -223,19 +324,29 @@
           "graded": true,
           "text": "a = 987, b = 16. Find q and r with 0 ≤ r < 16.",
           "ask": "987 = 16 × 61 + ___",
-          "a": ["11", "eleven"],
+          "a": [
+            "11",
+            "eleven"
+          ],
           "why": "16 × 61 = 976, and 987 − 976 = 11.",
-          "clue": "Work out 16 × 61 first."
+          "clue": "Work out 16 × 61 first.",
+          "id": "g9.maths.u1.s1-1-1.12"
         },
         {
           "kind": "mcq",
           "step": "exercise",
           "graded": true,
           "text": "Which positive integers leave remainder 3 when divided by 4?",
-          "opts": ["3, 7, 11, 15, 19, …", "4, 8, 12, 16, …", "1, 3, 5, 7, …", "7, 11, 15, 19, … but not 3"],
+          "opts": [
+            "3, 7, 11, 15, 19, …",
+            "4, 8, 12, 16, …",
+            "1, 3, 5, 7, …",
+            "7, 11, 15, 19, … but not 3"
+          ],
           "ans": "3, 7, 11, 15, 19, …",
           "why": "They are the numbers 4k + 3 for k = 0, 1, 2, … And 3 = 4 × 0 + 3.",
-          "clue": "Write each number as 4 × q + 3. Can q be 0?"
+          "clue": "Write each number as 4 × q + 3. Can q be 0?",
+          "id": "g9.maths.u1.s1-1-1.13"
         },
         {
           "kind": "blank",
@@ -243,10 +354,14 @@
           "graded": true,
           "text": "A man has 68 Birr. Each item costs 7 Birr. He wants 5 Birr left in his pocket.",
           "ask": "The largest number of items he can buy is ___.",
-          "a": ["9", "nine"],
+          "a": [
+            "9",
+            "nine"
+          ],
           "why": "He can spend 68 − 5 = 63 Birr, and 63 = 7 × 9.",
           "clue": "First take away the 5 Birr he keeps.",
-          "worked": "68 − 5 = 63 Birr to spend. 63 ÷ 7 = 9 with remainder 0. So 9 items."
+          "worked": "68 − 5 = 63 Birr to spend. 63 ÷ 7 = 9 with remainder 0. So 9 items.",
+          "id": "g9.maths.u1.s1-1-1.14"
         }
       ]
     }
@@ -257,19 +372,29 @@
       "step": "test",
       "graded": true,
       "text": "In a = (b × q) + r, which must be true?",
-      "opts": ["0 ≤ r < b", "r > b", "r = b", "q < r"],
+      "opts": [
+        "0 ≤ r < b",
+        "r > b",
+        "r = b",
+        "q < r"
+      ],
       "ans": "0 ≤ r < b",
       "why": "The remainder is never negative and always less than the divisor.",
-      "clue": ""
+      "clue": "",
+      "id": "g9.maths.u1.s1-1-1.15"
     },
     {
       "kind": "blank",
       "step": "test",
       "graded": true,
       "ask": "When 59 is divided by 8, the remainder is ___.",
-      "a": ["3", "three"],
+      "a": [
+        "3",
+        "three"
+      ],
       "why": "59 = 8 × 7 + 3.",
-      "clue": ""
+      "clue": "",
+      "id": "g9.maths.u1.s1-1-1.16"
     },
     {
       "kind": "tf",
@@ -278,13 +403,22 @@
       "text": "45 = 9 × 5 + 0, so 45 is divisible by 9.",
       "a": true,
       "why": "The remainder is 0, so 45 is divisible by 9.",
-      "clue": ""
+      "clue": "",
+      "id": "g9.maths.u1.s1-1-1.17"
     }
   ],
   "notes": [
-    { "kind": "note", "text": "Exercise 1.2 item 1(e) (570 ÷ 6 = 95 remainder 0) is left out to keep the exercise at 6 items." },
-    { "kind": "note", "text": "The bread word problem is an added Ethiopian example, marked added." }
+    {
+      "kind": "note",
+      "text": "Exercise 1.2 item 1(e) (570 ÷ 6 = 95 remainder 0) is left out to keep the exercise at 6 items."
+    },
+    {
+      "kind": "note",
+      "text": "The bread word problem is an added Ethiopian example, marked added."
+    }
   ],
-  "review": { "status": "validated" },
+  "review": {
+    "status": "validated"
+  },
   "version": 1
 }

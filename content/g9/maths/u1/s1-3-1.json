@@ -1,0 +1,436 @@
+{
+  "id": "g9.maths.u1.s1-3-1",
+  "book": {
+    "title": "Mathematics Grade 9 Student Textbook",
+    "grade": 9,
+    "subject": "maths",
+    "unit": 1,
+    "unit_title": "The Number System",
+    "section": "1.3.1",
+    "pages": "39–48"
+  },
+  "title": "Decimals that neither terminate nor repeat",
+  "competency": "Find and compare square roots, recognise irrational numbers and locate √2 on the number line.",
+  "minutes": 11,
+  "keywords": [
+    { "en": "Perfect square", "am": "ፍጹም ካሬ", "def": "A number that is an integer times itself: 1, 4, 9, 16, 25, …", "machine": true },
+    { "en": "Square root", "am": "ካሬ ሥር", "def": "y is a square root of x if y² = x. The positive one is written √x.", "machine": true },
+    { "en": "Radical sign", "am": "የሥር ምልክት", "def": "The symbol √ used for roots.", "machine": true },
+    { "en": "Irrational number", "am": "ኢ-ምክንያታዊ ቁጥር", "def": "A decimal that neither ends nor repeats, such as √2 or π. It cannot be written as a/b.", "machine": true }
+  ],
+  "ideas": [
+    {
+      "id": "math.square-roots",
+      "name": "Square roots",
+      "requires": ["math.squares"],
+      "explain": {
+        "en": { "text": "A perfect square is an integer times itself, like 9 = 3². A square root of x is a number whose square is x. Both 5 and −5 are square roots of 25. The sign √ means the positive root. If a < b, then √a < √b." },
+        "am": { "text": "ፍጹም ካሬ ኢንቲጀር በራሱ ሲባዛ ነው፤ ለምሳሌ 9 = 3²። የx ካሬ ሥር ካሬው x የሆነ ቁጥር ነው። 5 እና −5 ሁለቱም የ25 ካሬ ሥሮች ናቸው። √ ምልክቱ አዎንታዊውን ሥር ያሳያል። a < b ከሆነ √a < √b ነው።", "machine": true }
+      },
+      "screens": [
+        {
+          "kind": "guess",
+          "step": "hook",
+          "title": "A square of area 2",
+          "text": "A square has area 2 cm². Its side is s cm. A square of side 1 has area 1. A square of side 2 has area 4.",
+          "ask": "How long do you think the side s is?",
+          "opts": ["Exactly 1", "Between 1 and 2", "Exactly 2", "More than 2"],
+          "after": "Read on to squeeze s closer and closer."
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "Perfect squares and square roots",
+          "paras": [
+            "A perfect square is an integer times itself: 1 = 1², 4 = 2², 9 = 3², …",
+            "A square root of x is a number y with y² = x.",
+            "For example, 5 and −5 are square roots of 25. This is because 5² = (−5)² = 25."
+          ]
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "Trapping the side s",
+          "paras": [
+            "Since 1² = 1 and 2² = 4, s is between 1 and 2.",
+            "Squeeze further: 1.4² < 2 < 1.5², so 1.4 < s < 1.5.",
+            "Then 1.41 < s < 1.42, then 1.414 < s < 1.415, and so on.",
+            "We write s = √2 = 1.414… The sign √ is the radical sign."
+          ],
+          "note": "Each extra decimal place squeezes √2 into an interval ten times smaller. The digits never end or repeat."
+        },
+        {
+          "kind": "name",
+          "step": "name",
+          "title": "Name it",
+          "defs": [
+            ["Perfect square", "An integer times itself: 1, 4, 9, 16, 25, …"],
+            ["Square root", "y is a square root of x when y² = x. √x is the positive one."],
+            ["Radical sign", "The sign √."]
+          ]
+        },
+        {
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "Square roots of 25",
+          "text": "Which numbers are square roots of 25?",
+          "opts": ["5 only", "5 and −5", "12.5", "625"],
+          "ans": "5 and −5",
+          "why": "5² = 25 and (−5)² = 25.",
+          "clue": "Which numbers give 25 when you square them?",
+          "needs": "math.squares"
+        },
+        {
+          "kind": "steps",
+          "step": "method",
+          "title": "Example 1",
+          "text": "Write each one without the radical sign.",
+          "steps": [
+            "(a) √4 = 2, since 2² = 4.",
+            "(b) √9 = √(3²) = 3 = 3/1.",
+            "(c) −√9 = −3.",
+            "(d) √0.0016 = √(0.04)² = 0.04 = 4/100 = 1/25."
+          ],
+          "needs": "math.squares"
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "Comparing square roots",
+          "paras": [
+            "A square of side √5 cm has area 5 cm².",
+            "A square of side √7 cm has area 7 cm².",
+            "The bigger square has the longer side, so √5 < √7.",
+            "If a > 0, b > 0 and a < b, then √a < √b. Example: 5 < 6, so √5 < √6."
+          ]
+        },
+        {
+          "kind": "mcq",
+          "step": "practise",
+          "graded": true,
+          "title": "√11 or 3.5?",
+          "text": "Which is larger, √11 or 3.5?",
+          "opts": ["√11", "3.5", "They are equal"],
+          "ans": "3.5",
+          "why": "3.5² = 12.25 > 11, so 3.5 > √11.",
+          "clue": "Compare the squares: 11 and 3.5².",
+          "needs": "math.squares"
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "graded": true,
+          "title": "Without the radical",
+          "ask": "√0.09 = ___",
+          "a": ["0.3", ".3", "3/10"],
+          "why": "0.3² = 0.09.",
+          "clue": "Which decimal times itself gives 0.09?",
+          "needs": "math.squares"
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "graded": true,
+          "added": true,
+          "title": "A square teff plot",
+          "text": "A farmer near Debre Markos has a square teff plot. Its area is 400 m².",
+          "ask": "Each side is ___ m long.",
+          "a": ["20", "twenty"],
+          "why": "20² = 400, so the side is √400 = 20 m.",
+          "clue": "Which whole number squared gives 400?",
+          "worked": "Side × side = 400. Try 20: 20 × 20 = 400. So each side is √400 = 20 m."
+        }
+      ]
+    },
+    {
+      "id": "math.irrational-numbers",
+      "name": "Irrational numbers",
+      "requires": ["math.decimals", "math.pythagoras"],
+      "explain": {
+        "en": { "text": "Terminating and repeating decimals are rational. A decimal that neither ends nor repeats is irrational. If a natural number a is not a perfect square, √a is irrational. π is irrational too. We can still mark √2 exactly on the number line using a right triangle with legs 1 and 1." },
+        "am": { "text": "የሚያልቁና የሚደጋገሙ አስርዮሾች ምክንያታዊ ናቸው። የማያልቅም የማይደጋገምም አስርዮሽ ኢ-ምክንያታዊ ነው። a የተፈጥሮ ቁጥር ሆኖ ፍጹም ካሬ ካልሆነ √a ኢ-ምክንያታዊ ነው። π ደግሞ ኢ-ምክንያታዊ ነው። ጎኖቹ 1 እና 1 የሆነ ቀኝ ማዕዘን ሦስት ማዕዘን በመጠቀም √2ን በቁጥር መስመር ላይ በትክክል ማመልከት እንችላለን።", "machine": true }
+      },
+      "screens": [
+        {
+          "kind": "guess",
+          "step": "hook",
+          "title": "Does the calculator lie?",
+          "text": "A calculator shows √2 ≈ 1.4142135624. The screen is now full.",
+          "ask": "What do you think happens after the last digit?",
+          "opts": ["The decimal ends there", "The digits start to repeat", "More digits follow, with no pattern", "The next digits are all 0"],
+          "after": "Read on to find out."
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "Square roots that are not whole",
+          "paras": [
+            "The calculator stops only because its screen is full.",
+            "The true decimal neither ends nor repeats. So √2 is not rational.",
+            "√3 and √7 behave the same way."
+          ]
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "Definition 1.6",
+          "paras": [
+            "A decimal that is neither terminating nor repeating is an irrational number.",
+            "Remark. If a is a natural number that is not a perfect square, then √a is irrational."
+          ]
+        },
+        {
+          "kind": "name",
+          "step": "name",
+          "title": "Name it",
+          "defs": [
+            ["Irrational number", "A decimal that neither terminates nor repeats, such as √2 or π."]
+          ]
+        },
+        {
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "Spot the irrational",
+          "text": "Which number is irrational?",
+          "opts": ["√49", "√0.25", "√12", "0.333… (repeating)"],
+          "ans": "√12",
+          "why": "12 is not a perfect square, so √12 ≈ 3.464… never ends or repeats.",
+          "clue": "Which number under the √ is not a perfect square?",
+          "needs": "math.decimals"
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "Example: rational or irrational?",
+          "paras": [
+            "(a) √25 = 5: rational. (b) √0.09 = 0.3: rational.",
+            "(c) 0.123456789101112… lists the counting numbers in a row. It neither terminates nor repeats, so it is irrational.",
+            "(d) 0.010110111…: irrational. (e) 22/7: a fraction, so rational. (f) π = 3.1415926…: irrational.",
+            "Parts (c), (d) and (f) show that such decimals really exist."
+          ],
+          "note": "Correction: the printed book writes \"0.12345…\" for (c) without saying how it continues. It then says \"(a, b & d)\" show non-repeating decimals. It is (c), (d) and (f); (a) and (b) are rational."
+        },
+        {
+          "kind": "mcq",
+          "step": "practise",
+          "graded": true,
+          "title": "22/7 and π",
+          "text": "Is 22/7 equal to π?",
+          "opts": ["Yes, exactly", "No: 22/7 is rational and π is irrational", "Yes, both are irrational", "No: 22/7 is irrational"],
+          "ans": "No: 22/7 is rational and π is irrational",
+          "why": "22/7 = 3.1̅4̅2̅8̅5̅7̅ repeats. π = 3.14159… does not. 22/7 is only an approximation.",
+          "clue": "Is 22/7 a fraction of integers?"
+        },
+        {
+          "kind": "sort",
+          "step": "practise",
+          "graded": true,
+          "title": "Sort it",
+          "text": "Rational or irrational?",
+          "bins": ["Rational", "Irrational"],
+          "items": [
+            ["√25", "Rational", "√25 = 5."],
+            ["√7", "Irrational", "7 is not a perfect square."],
+            ["22/7", "Rational", "It is a fraction of integers."],
+            ["π", "Irrational", "π = 3.14159… never ends or repeats."],
+            ["0.010110111…", "Irrational", "Each block has one more 1, so it never repeats."],
+            ["√0.09", "Rational", "√0.09 = 0.3."],
+            ["0.2323…", "Rational", "It repeats: 23/99."],
+            ["√18", "Irrational", "√18 = 3√2."]
+          ],
+          "why": "Rational numbers terminate or repeat. Irrational numbers do neither.",
+          "clue": "Is the number under √ a perfect square? Does the decimal end or repeat?"
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "Locating √2 on the number line",
+          "paras": [
+            "Since 1 < 2 < 4, we have √1 < √2 < √4. So 1 < √2 < 2.",
+            "To mark √2 exactly, use a compass and straightedge."
+          ]
+        },
+        {
+          "kind": "steps",
+          "step": "method",
+          "title": "Construct √2",
+          "text": "Figures 1.5 and 1.6.",
+          "steps": [
+            "Draw a number line with 0 and 1 marked.",
+            "At 1, draw a segment of length 1 at right angles to the line.",
+            "Join 0 to the top of that segment. Call its length c.",
+            "By Pythagoras, 1² + 1² = c², so c = √2.",
+            "Open the compass to length c. Put the point at 0. Draw an arc to cut the line at B. Then 0B = √2.",
+            "Repeat on top of the √2 segment to get √3, then √4 = 2, then √5."
+          ],
+          "needs": "math.pythagoras"
+        },
+        {
+          "kind": "mcq",
+          "step": "practise",
+          "graded": true,
+          "title": "Why √2?",
+          "text": "In the construction, why is the slanted line √2 long?",
+          "opts": ["By Pythagoras, 1² + 1² = 2", "Because the compass is opened to 2", "Because it is twice as long as 1", "Because 2 is prime"],
+          "ans": "By Pythagoras, 1² + 1² = 2",
+          "why": "The slanted line is the hypotenuse of a right triangle with legs 1 and 1.",
+          "clue": "Look at step 4 of the construction.",
+          "needs": "math.pythagoras"
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "graded": true,
+          "added": true,
+          "title": "A path across a field",
+          "text": "A school field in Hawassa is a square, 1 km on each side. Selam walks straight from one corner to the opposite corner.",
+          "ask": "Her path is √___ km long.",
+          "a": ["2", "two"],
+          "why": "By Pythagoras, 1² + 1² = 2. So the diagonal is √2 km.",
+          "clue": "The path is the hypotenuse of a right triangle with legs 1 and 1.",
+          "worked": "Legs 1 and 1. c² = 1² + 1² = 2. So c = √2 km, about 1.414 km.",
+          "needs": "math.pythagoras"
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "book_name": "Exercise 1.15",
+      "items": [
+        { "kind": "blank", "step": "exercise", "graded": true, "ask": "(a) √25 = ___", "a": ["5", "five"], "why": "5² = 25.", "clue": "Which number squared is 25?" },
+        { "kind": "blank", "step": "exercise", "graded": true, "ask": "(b) −√36 = ___", "a": ["-6", "−6"], "why": "√36 = 6, so −√36 = −6.", "clue": "Find √36 first, then keep the minus sign." },
+        { "kind": "blank", "step": "exercise", "graded": true, "ask": "(c) √0.04 = ___", "a": ["0.2", ".2", "1/5"], "why": "0.2² = 0.04.", "clue": "Which decimal squared is 0.04?" },
+        { "kind": "blank", "step": "exercise", "graded": true, "ask": "(d) −√0.0081 = ___", "a": ["-0.09", "−0.09", "-.09"], "why": "0.09² = 0.0081.", "clue": "81 = 9². Count the decimal places." }
+      ]
+    },
+    {
+      "book_name": "Exercise 1.16",
+      "items": [
+        { "kind": "mcq", "step": "exercise", "graded": true, "text": "(a) Compare √7 and √8.", "opts": ["√7 < √8", "√7 > √8", "√7 = √8"], "ans": "√7 < √8", "why": "7 < 8, so √7 < √8.", "clue": "Compare the numbers under the √." },
+        { "kind": "mcq", "step": "exercise", "graded": true, "text": "(b) Compare √3 and √9.", "opts": ["√3 < √9", "√3 > √9", "√3 = √9"], "ans": "√3 < √9", "why": "3 < 9, so √3 < √9 = 3.", "clue": "Compare the numbers under the √." },
+        { "kind": "mcq", "step": "exercise", "graded": true, "text": "(c) Compare √0.04 and √0.01.", "opts": ["√0.04 < √0.01", "√0.04 > √0.01", "√0.04 = √0.01"], "ans": "√0.04 > √0.01", "why": "√0.04 = 0.2 and √0.01 = 0.1.", "clue": "Work out each root." },
+        { "kind": "mcq", "step": "exercise", "graded": true, "text": "(d) Compare −√3 and −√4.", "opts": ["−√3 < −√4", "−√3 > −√4", "−√3 = −√4"], "ans": "−√3 > −√4", "why": "√3 < √4, and multiplying by −1 reverses the order.", "clue": "Which is further left on the number line?" }
+      ]
+    },
+    {
+      "book_name": "Exercise 1.17",
+      "items": [
+        { "kind": "mcq", "step": "exercise", "graded": true, "text": "(a) √36", "opts": ["Rational", "Irrational"], "ans": "Rational", "why": "√36 = 6.", "clue": "Is 36 a perfect square?" },
+        { "kind": "mcq", "step": "exercise", "graded": true, "text": "(b) √7", "opts": ["Rational", "Irrational"], "ans": "Irrational", "why": "7 is not a perfect square.", "clue": "Is 7 a perfect square?" },
+        { "kind": "mcq", "step": "exercise", "graded": true, "text": "(c) 6/5", "opts": ["Rational", "Irrational"], "ans": "Rational", "why": "It is a fraction of integers.", "clue": "Is it a/b with integers a and b?" },
+        { "kind": "mcq", "step": "exercise", "graded": true, "text": "(d) √0.01", "opts": ["Rational", "Irrational"], "ans": "Rational", "why": "√0.01 = 0.1.", "clue": "Which decimal squared is 0.01?" },
+        { "kind": "mcq", "step": "exercise", "graded": true, "text": "(e) −√13", "opts": ["Rational", "Irrational"], "ans": "Irrational", "why": "13 is not a perfect square.", "clue": "Is 13 a perfect square?" },
+        { "kind": "mcq", "step": "exercise", "graded": true, "text": "(g) √18", "opts": ["Rational", "Irrational"], "ans": "Irrational", "why": "√18 = 3√2, and √2 is irrational.", "clue": "Is 18 a perfect square?" }
+      ]
+    },
+    {
+      "book_name": "Exercise 1.18",
+      "items": [
+        { "kind": "mcq", "step": "exercise", "graded": true, "text": "1(a) Between which two natural numbers is √3?", "opts": ["1 and 2", "2 and 3", "3 and 4"], "ans": "1 and 2", "why": "1 < 3 < 4, so 1 < √3 < 2.", "clue": "Find the perfect squares on each side of 3." },
+        { "kind": "mcq", "step": "exercise", "graded": true, "text": "1(b) Between which two natural numbers is √5?", "opts": ["1 and 2", "2 and 3", "4 and 5"], "ans": "2 and 3", "why": "4 < 5 < 9, so 2 < √5 < 3.", "clue": "Find the perfect squares on each side of 5." },
+        { "kind": "mcq", "step": "exercise", "graded": true, "text": "1(c) Between which two natural numbers is √6?", "opts": ["1 and 2", "2 and 3", "5 and 6"], "ans": "2 and 3", "why": "4 < 6 < 9, so 2 < √6 < 3.", "clue": "Find the perfect squares on each side of 6." },
+        { "kind": "tf", "step": "exercise", "graded": true, "text": "3(a) Every point on the number line is √n for some natural number n.", "a": false, "why": "For example −1 and 1/2 are not of that form.", "clue": "Can √n ever be negative?" },
+        { "kind": "tf", "step": "exercise", "graded": true, "text": "3(b) The square root of every positive integer is irrational.", "a": false, "why": "√4 = 2 is rational.", "clue": "Try a perfect square." }
+      ]
+    }
+  ],
+  "test": [
+    { "kind": "mcq", "step": "test", "graded": true, "text": "Which number is irrational?", "opts": ["√16", "0.5̅", "√10", "7/3"], "ans": "√10", "why": "10 is not a perfect square, so √10 neither ends nor repeats.", "clue": "" },
+    { "kind": "blank", "step": "test", "graded": true, "ask": "√0.0016 = ___", "a": ["0.04", ".04", "1/25"], "why": "0.04² = 0.0016.", "clue": "" },
+    { "kind": "tf", "step": "test", "graded": true, "text": "√8 lies between 2 and 3.", "a": true, "why": "4 < 8 < 9, so 2 < √8 < 3.", "clue": "" }
+  ],
+  "notes": [
+    { "kind": "correction", "text": "The printed book writes \"0.12345…\" for example (c) without saying how it continues, and then says \"(a, b & d)\" show non-repeating decimals. It is (c), (d) and (f) that show them; (a) and (b) are rational." },
+    { "kind": "note", "text": "The printed book uses the label \"Figure 1.6\" twice: for the square-root construction and for the real-number diagram in lesson 1.4." },
+    { "kind": "note", "text": "Exercise 1.17 (f) √11 and Exercise 1.18 Q2 (constructions with compass) are not turned into items." }
+  ],
+  "review": { "status": "validated" },
+  "version": 1,
+  "refreshers": {
+    "math.squares": {
+      "name": "Squaring numbers",
+      "screens": [
+        {
+          "kind": "steps",
+          "step": "method",
+          "title": "Square a decimal",
+          "text": "To square a number, multiply it by itself.",
+          "steps": [
+            "3² = 3 × 3 = 9.",
+            "(−5)² = (−5) × (−5) = 25. A negative times a negative is positive.",
+            "0.04² = 0.04 × 0.04. First 4 × 4 = 16.",
+            "Count decimal places: 2 + 2 = 4. So 0.04² = 0.0016."
+          ]
+        },
+        {
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "Your turn",
+          "text": "What is 0.3²?",
+          "opts": ["0.9", "0.09", "0.6", "0.009"],
+          "ans": "0.09",
+          "why": "3 × 3 = 9, with 1 + 1 = 2 decimal places: 0.09.",
+          "clue": "Multiply 3 × 3, then count the decimal places."
+        }
+      ]
+    },
+    "math.decimals": {
+      "name": "Terminating and repeating decimals",
+      "screens": [
+        {
+          "kind": "steps",
+          "step": "method",
+          "title": "Rational numbers as decimals",
+          "text": "Divide a by b. One of two things happens.",
+          "steps": [
+            "3/5 = 0.6. The division stops: a terminating decimal.",
+            "5/9 = 0.555… The digits repeat: a repeating decimal.",
+            "Every fraction a/b gives one of these two kinds."
+          ]
+        },
+        {
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "Your turn",
+          "text": "What kind of decimal is 1/3?",
+          "opts": ["Terminating", "Repeating", "Neither"],
+          "ans": "Repeating",
+          "why": "1/3 = 0.333… The 3 repeats for ever.",
+          "clue": "Divide 1 by 3. Does it stop?"
+        }
+      ]
+    },
+    "math.pythagoras": {
+      "name": "Pythagoras' theorem",
+      "screens": [
+        {
+          "kind": "steps",
+          "step": "method",
+          "title": "Find the hypotenuse",
+          "text": "In a right triangle with legs a and b, the longest side c gives c² = a² + b².",
+          "steps": [
+            "Legs 3 and 4: c² = 3² + 4².",
+            "c² = 9 + 16 = 25.",
+            "c = √25 = 5."
+          ]
+        },
+        {
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "Your turn",
+          "text": "A right triangle has legs 2 and 1. What is c²?",
+          "opts": ["3", "5", "4", "9"],
+          "ans": "5",
+          "why": "c² = 2² + 1² = 4 + 1 = 5.",
+          "clue": "Square each leg, then add."
+        }
+      ]
+    }
+  }
+}

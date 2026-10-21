@@ -1,0 +1,888 @@
+{
+  "id": "g9.maths.u1.s1-1-3",
+  "book": {
+    "title": "Mathematics Grade 9 Student Textbook",
+    "grade": 9,
+    "subject": "maths",
+    "unit": 1,
+    "unit_title": "The Number System",
+    "section": "1.1.3",
+    "pages": "18–32"
+  },
+  "title": "Divisibility tests and prime factorization",
+  "competency": "Use divisibility tests to check division quickly, and write any composite number as a product of primes.",
+  "minutes": 12,
+  "tool": "factors",
+  "keywords": [
+    {
+      "en": "Divisibility test",
+      "am": "የመካፈል ፈተና",
+      "def": "A quick rule that tells whether a number divides another without doing the division.",
+      "machine": true
+    },
+    {
+      "en": "Prime factorization",
+      "am": "የብቸኛ ቁጥሮች ውጤት",
+      "def": "Writing a number as a product of primes, for example 72 = 2³ × 3².",
+      "machine": true
+    },
+    {
+      "en": "Factor tree",
+      "am": "የአካፋዮች ዛፍ",
+      "def": "A diagram that splits a number into factors, again and again, until every factor is prime.",
+      "machine": true
+    },
+    {
+      "en": "Fundamental theorem of arithmetic",
+      "am": "የአሪቲሜቲክ መሰረታዊ ቲዎሬም",
+      "def": "Every composite number can be written as a product of primes in exactly one way, apart from the order.",
+      "machine": true
+    }
+  ],
+  "ideas": [
+    {
+      "id": "math.divisibility-tests",
+      "name": "Divisibility tests",
+      "requires": [
+        "math.division-algorithm"
+      ],
+      "explain": {
+        "en": {
+          "text": "A divisibility test tells you if a number divides another, without dividing. For 2, 5 and 10, look at the last digit. For 4, look at the last two digits. For 8, the last three. For 3 and 9, add the digits. For 6, test both 2 and 3."
+        },
+        "am": {
+          "text": "የመካፈል ፈተና አንድ ቁጥር ሌላውን ያለ ቀሪ እንደሚካፍል ሳታካፍል ይነግርሃል። ለ2፣ 5 እና 10 የመጨረሻውን አሃዝ ተመልከት። ለ4 የመጨረሻዎቹን ሁለት አሃዞች፣ ለ8 የመጨረሻዎቹን ሦስት ተመልከት። ለ3 እና 9 አሃዞቹን ደምር። ለ6 በ2 እና በ3 ፈትን።",
+          "machine": true
+        }
+      },
+      "screens": [
+        {
+          "kind": "guess",
+          "step": "hook",
+          "added": true,
+          "title": "Books for nine classes",
+          "text": "A school in Bahir Dar has 765 exercise books. It wants to give 9 classes equal shares, with none left.",
+          "ask": "Is that possible? Guess without dividing.",
+          "opts": [
+            "Yes",
+            "No",
+            "I cannot tell without dividing"
+          ],
+          "after": "Yes! 7 + 6 + 5 = 18, and 18 is divisible by 9. Read on to see why that works."
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "Divisibility tests",
+          "paras": [
+            "Every number is divisible by 1.",
+            "A divisibility test tells you if a number is divisible by 2, 3, 4, 5, 6, 8, 9 or 10.",
+            "You do not need to do the division."
+          ],
+          "note": "A test for 7 exists, but it is beyond this level."
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "The tests",
+          "paras": [
+            "A number is divisible by the number on the left when the test is true."
+          ],
+          "table": [
+            [
+              "Divisible by",
+              "Test"
+            ],
+            [
+              "2",
+              "The units digit is 0, 2, 4, 6 or 8"
+            ],
+            [
+              "3",
+              "The sum of the digits is divisible by 3"
+            ],
+            [
+              "4",
+              "The number formed by the last two digits is divisible by 4"
+            ],
+            [
+              "5",
+              "The units digit is 0 or 5"
+            ],
+            [
+              "6",
+              "It is divisible by both 2 and 3"
+            ],
+            [
+              "8",
+              "The number formed by the last three digits is divisible by 8"
+            ],
+            [
+              "9",
+              "The sum of the digits is divisible by 9"
+            ],
+            [
+              "10",
+              "The units digit is 0"
+            ]
+          ]
+        },
+        {
+          "kind": "name",
+          "step": "name",
+          "title": "A quick rule",
+          "defs": [
+            [
+              "Divisibility test",
+              "A quick rule that tells whether a number divides another, without dividing."
+            ]
+          ]
+        },
+        {
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "Test for 4",
+          "text": "Is 5,412 divisible by 4?",
+          "opts": [
+            "Yes, because 12 is divisible by 4",
+            "No, because it is even",
+            "Yes, because 5 + 4 + 1 + 2 = 12",
+            "No, because it does not end in 4"
+          ],
+          "ans": "Yes, because 12 is divisible by 4",
+          "why": "For 4, only the last two digits matter: 12 ÷ 4 = 3.",
+          "clue": "Which digits does the test for 4 look at?",
+          "id": "g9.maths.u1.s1-1-3.1"
+        },
+        {
+          "kind": "steps",
+          "step": "method",
+          "title": "Example 1",
+          "text": "Test 2,334 with every rule.",
+          "steps": [
+            "It ends in 4, so it is divisible by 2.",
+            "2 + 3 + 3 + 4 = 12, so it is divisible by 3.",
+            "It is divisible by 2 and 3, so it is divisible by 6.",
+            "The last two digits make 34. Not divisible by 4.",
+            "It ends in 4, not 0 or 5. Not divisible by 5 or 10.",
+            "The last three digits make 334. Not divisible by 8.",
+            "The digit sum 12 is not divisible by 9. Not divisible by 9."
+          ]
+        },
+        {
+          "kind": "mcq",
+          "step": "practise",
+          "graded": true,
+          "title": "Two tests at once",
+          "text": "A number is divisible by 2 and by 3. What else must it be divisible by?",
+          "opts": [
+            "6",
+            "5",
+            "9",
+            "4"
+          ],
+          "ans": "6",
+          "why": "Divisible by 2 and 3 is exactly the test for 6.",
+          "clue": "Read the row for 6 in the table.",
+          "id": "g9.maths.u1.s1-1-3.2"
+        },
+        {
+          "kind": "tf",
+          "step": "practise",
+          "graded": true,
+          "title": "Remainder and divisibility",
+          "text": "2,334 = 5 × 466 + 4. So 2,334 is not divisible by 5.",
+          "a": true,
+          "why": "The remainder is 4, not 0. The test agrees: 2,334 does not end in 0 or 5.",
+          "clue": "When is a number divisible by another?",
+          "needs": "math.division-algorithm",
+          "id": "g9.maths.u1.s1-1-3.3"
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "graded": true,
+          "title": "Find the digit",
+          "text": "52x is a three-digit number. x is its units digit.",
+          "ask": "The smallest digit x that makes 52x divisible by 3 is ___.",
+          "a": [
+            "2",
+            "two"
+          ],
+          "why": "5 + 2 + 2 = 9, which is divisible by 3. So 522 works.",
+          "clue": "5 + 2 = 7. What is the smallest digit you can add to reach a multiple of 3?",
+          "worked": "5 + 2 = 7. Try x = 0: 7. x = 1: 8. x = 2: 9, a multiple of 3. So x = 2.",
+          "id": "g9.maths.u1.s1-1-3.4"
+        },
+        {
+          "kind": "mcq",
+          "step": "practise",
+          "graded": true,
+          "added": true,
+          "title": "Sharing birr",
+          "text": "A farmer in Bishoftu shares 1,236 birr equally among his 4 children.",
+          "ask": "Will any birr be left over?",
+          "opts": [
+            "No, because 36 is divisible by 4",
+            "Yes, because 1,236 is not divisible by 4",
+            "No, because 1 + 2 + 3 + 6 = 12",
+            "No, because it ends in 6"
+          ],
+          "ans": "No, because 36 is divisible by 4",
+          "why": "The last two digits make 36, and 36 ÷ 4 = 9. So 1,236 is divisible by 4.",
+          "clue": "Which digits does the test for 4 use?",
+          "id": "g9.maths.u1.s1-1-3.5"
+        }
+      ]
+    },
+    {
+      "id": "math.prime-factorization",
+      "name": "Prime factorization",
+      "requires": [
+        "math.prime-composite"
+      ],
+      "tool": "factors",
+      "explain": {
+        "en": {
+          "text": "Prime factorization writes a number as a product of primes. Split the number into two factors. Keep splitting any factor that is not prime. Stop when every factor is prime. For example, 72 = 2³ × 3². Every composite number has only one prime factorization, apart from order."
+        },
+        "am": {
+          "text": "የብቸኛ ቁጥሮች ውጤት አንድን ቁጥር የብቸኛ ቁጥሮች ብዜት አድርጎ ይጽፋል። ቁጥሩን ለሁለት አካፋዮች ክፈል። ብቸኛ ያልሆነውን አካፋይ መከፋፈል ቀጥል። ሁሉም አካፋዮች ብቸኛ ሲሆኑ አቁም። ለምሳሌ 72 = 2³ × 3²። ማንኛውም ተዋሃጅ ቁጥር ከቅደም ተከተል በስተቀር አንድ ብቻ የብቸኛ ቁጥሮች ውጤት አለው።",
+          "machine": true
+        }
+      },
+      "screens": [
+        {
+          "kind": "guess",
+          "step": "hook",
+          "added": true,
+          "title": "Two ways to start",
+          "text": "Kebede starts with 72 = 8 × 9. Tigist starts with 72 = 2 × 36. Both keep splitting until only primes are left.",
+          "ask": "Will they end with the same primes?",
+          "opts": [
+            "Yes, the same primes",
+            "No, different primes",
+            "Only Kebede ends with primes"
+          ],
+          "after": "Both end with 2 × 2 × 2 × 3 × 3. Read on to see why this always happens."
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "Prime factorization",
+          "paras": [
+            "Definition 1.2: writing a number as a product of prime numbers is called prime factorization.",
+            "To factorize a composite number, split it into two factors.",
+            "If a factor is still composite, split it again.",
+            "Stop when every factor is prime."
+          ]
+        },
+        {
+          "kind": "name",
+          "step": "name",
+          "title": "Products of primes",
+          "defs": [
+            [
+              "Prime factorization",
+              "Writing a number as a product of primes, for example 72 = 2³ × 3²."
+            ],
+            [
+              "Factor tree",
+              "A diagram of the splits, ending when every factor is prime."
+            ]
+          ]
+        },
+        {
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "Factorize 60",
+          "text": "What is the prime factorization of 60?",
+          "opts": [
+            "2 × 30",
+            "2² × 3 × 5",
+            "4 × 15",
+            "2 × 3 × 10"
+          ],
+          "ans": "2² × 3 × 5",
+          "why": "Every factor must be prime: 60 = 2 × 2 × 3 × 5.",
+          "clue": "Are all the factors prime? Check 30, 4, 15 and 10.",
+          "needs": "math.prime-composite",
+          "id": "g9.maths.u1.s1-1-3.6"
+        },
+        {
+          "kind": "steps",
+          "step": "method",
+          "title": "Examples",
+          "text": "Split until every factor is prime.",
+          "steps": [
+            "6 = 2 × 3.",
+            "30 = 2 × 15, and 15 = 3 × 5. So 30 = 2 × 3 × 5.",
+            "72 = 2 × 36, 36 = 2 × 18, 18 = 2 × 9, 9 = 3 × 3.",
+            "So 72 = 2 × 2 × 2 × 3 × 3 = 2³ × 3².",
+            "A factor tree shows these splits."
+          ]
+        },
+        {
+          "kind": "steps",
+          "step": "method",
+          "title": "Example 5: a division ladder",
+          "text": "Divide by the smallest prime that works, until you reach a prime.",
+          "steps": [
+            "456 ÷ 2 = 228.",
+            "228 ÷ 2 = 114.",
+            "114 ÷ 2 = 57.",
+            "57 ÷ 3 = 19, and 19 is prime.",
+            "So 456 = 2³ × 3 × 19."
+          ]
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "Theorem 1.2",
+          "paras": [
+            "Every composite number can be written as a product of primes.",
+            "This factorization is unique, apart from the order of the factors.",
+            "This is the fundamental theorem of arithmetic."
+          ]
+        },
+        {
+          "kind": "name",
+          "step": "name",
+          "title": "Only one answer",
+          "defs": [
+            [
+              "Fundamental theorem of arithmetic",
+              "Every composite number is a product of primes in exactly one way, apart from order."
+            ]
+          ]
+        },
+        {
+          "kind": "mcq",
+          "step": "practise",
+          "graded": true,
+          "title": "Two students, one answer",
+          "text": "Two students factorize 84 in different orders. What does the fundamental theorem say about their answers?",
+          "opts": [
+            "They get the same primes, maybe in a different order",
+            "They always get different primes",
+            "One of them must get 84 = 1 × 84",
+            "Only the first student can be right"
+          ],
+          "ans": "They get the same primes, maybe in a different order",
+          "why": "The prime factorization is unique apart from order.",
+          "clue": "Read Theorem 1.2 again.",
+          "id": "g9.maths.u1.s1-1-3.7"
+        },
+        {
+          "kind": "tf",
+          "step": "practise",
+          "graded": true,
+          "title": "True or false?",
+          "text": "4 × 3 × 7 is the prime factorization of 84.",
+          "a": false,
+          "why": "4 is not prime. The prime factorization is 2² × 3 × 7.",
+          "clue": "Is every factor prime?",
+          "needs": "math.prime-composite",
+          "id": "g9.maths.u1.s1-1-3.8"
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "graded": true,
+          "title": "Missing prime",
+          "ask": "90 = 2 × 3² × ___",
+          "a": [
+            "5",
+            "five"
+          ],
+          "why": "2 × 9 = 18, and 90 ÷ 18 = 5.",
+          "clue": "Multiply 2 × 3² first. Then divide 90 by it.",
+          "id": "g9.maths.u1.s1-1-3.9"
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "graded": true,
+          "added": true,
+          "title": "A box of oranges",
+          "text": "A trader in Hawassa packs 42 oranges in a box. The rows, columns and layers are each a prime number.",
+          "ask": "The three numbers are 2, 3 and ___.",
+          "a": [
+            "7",
+            "seven"
+          ],
+          "why": "42 = 2 × 3 × 7, and 2, 3 and 7 are prime.",
+          "clue": "Write 42 as a product of primes.",
+          "worked": "42 ÷ 2 = 21. 21 ÷ 3 = 7. 7 is prime. So 42 = 2 × 3 × 7.",
+          "needs": "math.prime-composite",
+          "id": "g9.maths.u1.s1-1-3.10"
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "book_name": "Activity 1.4",
+      "items": [
+        {
+          "kind": "tf",
+          "step": "exercise",
+          "graded": true,
+          "text": "2584 is divisible by 2.",
+          "a": true,
+          "why": "It ends in 4.",
+          "clue": "Look at the units digit.",
+          "id": "g9.maths.u1.s1-1-3.11"
+        },
+        {
+          "kind": "tf",
+          "step": "exercise",
+          "graded": true,
+          "text": "765 is divisible by 9.",
+          "a": true,
+          "why": "7 + 6 + 5 = 18, which is divisible by 9.",
+          "clue": "Add the digits.",
+          "id": "g9.maths.u1.s1-1-3.12"
+        },
+        {
+          "kind": "tf",
+          "step": "exercise",
+          "graded": true,
+          "text": "63885 is divisible by 6.",
+          "a": false,
+          "why": "It is odd, so it is not divisible by 2. So not by 6.",
+          "clue": "The test for 6 needs two tests to pass.",
+          "id": "g9.maths.u1.s1-1-3.13"
+        },
+        {
+          "kind": "tf",
+          "step": "exercise",
+          "graded": true,
+          "text": "7964 is divisible by 4.",
+          "a": true,
+          "why": "The last two digits make 64, which is divisible by 4.",
+          "clue": "Look at the last two digits.",
+          "id": "g9.maths.u1.s1-1-3.14"
+        },
+        {
+          "kind": "tf",
+          "step": "exercise",
+          "graded": true,
+          "text": "65475 is divisible by 5.",
+          "a": true,
+          "why": "It ends in 5.",
+          "clue": "Look at the units digit.",
+          "id": "g9.maths.u1.s1-1-3.15"
+        }
+      ]
+    },
+    {
+      "book_name": "Exercise 1.4",
+      "items": [
+        {
+          "kind": "mcq",
+          "step": "exercise",
+          "graded": true,
+          "text": "Test 384 for 2, 3, 4, 5, 6, 8, 9 and 10. It is divisible by:",
+          "opts": [
+            "2, 3, 4, 6, 8",
+            "2, 3, 4, 6, 8, 9",
+            "2, 4, 8",
+            "3, 6, 9"
+          ],
+          "ans": "2, 3, 4, 6, 8",
+          "why": "Even; digit sum 15; 84 ÷ 4 = 21; 384 ÷ 8 = 48. Digit sum 15 is not divisible by 9.",
+          "clue": "Go down the table one row at a time.",
+          "id": "g9.maths.u1.s1-1-3.16"
+        },
+        {
+          "kind": "mcq",
+          "step": "exercise",
+          "graded": true,
+          "text": "Test 3,186 for 2, 3, 4, 5, 6, 8, 9 and 10. It is divisible by:",
+          "opts": [
+            "2, 3, 6, 9",
+            "2, 3, 4, 6, 9",
+            "2, 6",
+            "3, 9"
+          ],
+          "ans": "2, 3, 6, 9",
+          "why": "Even, and digit sum 18. 86 is not divisible by 4, and 186 not by 8.",
+          "clue": "Add the digits, then check the last two and three digits.",
+          "id": "g9.maths.u1.s1-1-3.17"
+        },
+        {
+          "kind": "mcq",
+          "step": "exercise",
+          "graded": true,
+          "text": "Test 42,435 for 2, 3, 4, 5, 6, 8, 9 and 10. It is divisible by:",
+          "opts": [
+            "3, 5, 9",
+            "3, 5",
+            "5, 9, 10",
+            "3, 5, 6, 9"
+          ],
+          "ans": "3, 5, 9",
+          "why": "Digit sum 18, and it ends in 5. It is odd, so not by 2, 4, 6, 8 or 10.",
+          "clue": "Is it odd or even? Then add the digits.",
+          "id": "g9.maths.u1.s1-1-3.18"
+        },
+        {
+          "kind": "mcq",
+          "step": "exercise",
+          "graded": true,
+          "text": "74,3x2 is divisible by 4, where x is the tens digit. What can x be?",
+          "opts": [
+            "1, 3, 5, 7 or 9",
+            "0, 2, 4, 6 or 8",
+            "2 or 6 only",
+            "Any digit"
+          ],
+          "ans": "1, 3, 5, 7 or 9",
+          "why": "x2 must be divisible by 4: 12, 32, 52, 72, 92.",
+          "clue": "Only the last two digits, x2, matter. Try x = 0 and x = 1.",
+          "id": "g9.maths.u1.s1-1-3.19"
+        },
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "text": "3457_40 must be divisible by 4.",
+          "ask": "The smallest digit for the blank is ___.",
+          "a": [
+            "0",
+            "zero"
+          ],
+          "why": "The last two digits are 40, divisible by 4 whatever the blank is.",
+          "clue": "Which digits does the test for 4 use?",
+          "id": "g9.maths.u1.s1-1-3.20"
+        },
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "text": "81231_37 must be divisible by 9.",
+          "ask": "The smallest digit for the blank is ___.",
+          "a": [
+            "2",
+            "two"
+          ],
+          "why": "8 + 1 + 2 + 3 + 1 + 3 + 7 = 25. The next multiple of 9 is 27.",
+          "clue": "Add the digits you know first.",
+          "worked": "Known digits add to 25. 27 is the next multiple of 9. 27 − 25 = 2.",
+          "id": "g9.maths.u1.s1-1-3.21"
+        }
+      ]
+    },
+    {
+      "book_name": "Exercise 1.5",
+      "items": [
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "ask": "21 = ___ (product of primes)",
+          "a": [
+            "3 × 7",
+            "3x7",
+            "3*7",
+            "7 × 3",
+            "3 x 7"
+          ],
+          "why": "21 = 3 × 7, both prime.",
+          "clue": "Try dividing by 3.",
+          "id": "g9.maths.u1.s1-1-3.22"
+        },
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "ask": "70 = ___ (product of primes)",
+          "a": [
+            "2 × 5 × 7",
+            "2x5x7",
+            "2*5*7",
+            "2 x 5 x 7"
+          ],
+          "why": "70 = 2 × 35 = 2 × 5 × 7.",
+          "clue": "70 is even. Start with 2.",
+          "id": "g9.maths.u1.s1-1-3.23"
+        },
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "ask": "105 = ___ (product of primes)",
+          "a": [
+            "3 × 5 × 7",
+            "3x5x7",
+            "3*5*7",
+            "3 x 5 x 7"
+          ],
+          "why": "105 = 3 × 35 = 3 × 5 × 7.",
+          "clue": "It ends in 5, and its digit sum is 6.",
+          "id": "g9.maths.u1.s1-1-3.24"
+        },
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "ask": "252 = ___ (product of primes)",
+          "a": [
+            "2² × 3² × 7",
+            "2^2 × 3^2 × 7",
+            "2^2x3^2x7",
+            "2 × 2 × 3 × 3 × 7",
+            "2x2x3x3x7"
+          ],
+          "why": "252 = 4 × 63 = 2² × 3² × 7.",
+          "clue": "Divide by 2 while you can, then by 3.",
+          "id": "g9.maths.u1.s1-1-3.25"
+        },
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "ask": "360 = ___ (product of primes)",
+          "a": [
+            "2³ × 3² × 5",
+            "2^3 × 3^2 × 5",
+            "2^3x3^2x5",
+            "2 × 2 × 2 × 3 × 3 × 5",
+            "2x2x2x3x3x5"
+          ],
+          "why": "360 = 8 × 45 = 2³ × 3² × 5.",
+          "clue": "Use a division ladder starting with 2.",
+          "worked": "360 ÷ 2 = 180, ÷ 2 = 90, ÷ 2 = 45, ÷ 3 = 15, ÷ 3 = 5. So 2³ × 3² × 5.",
+          "id": "g9.maths.u1.s1-1-3.26"
+        },
+        {
+          "kind": "mcq",
+          "step": "exercise",
+          "graded": true,
+          "text": "180 = 2ᵃ × 3ᵇ × 5ᶜ. Find a, b and c.",
+          "opts": [
+            "a = 2, b = 2, c = 1",
+            "a = 1, b = 2, c = 2",
+            "a = 2, b = 1, c = 1",
+            "a = 3, b = 2, c = 1"
+          ],
+          "ans": "a = 2, b = 2, c = 1",
+          "why": "180 = 2² × 3² × 5.",
+          "clue": "Factorize 180 first, then count each prime.",
+          "id": "g9.maths.u1.s1-1-3.27"
+        }
+      ]
+    },
+    {
+      "book_name": "Exercise 1.6",
+      "items": [
+        {
+          "kind": "mcq",
+          "step": "exercise",
+          "graded": true,
+          "text": "The prime factorization of 1,848 is:",
+          "opts": [
+            "2³ × 3 × 7 × 11",
+            "2² × 3 × 7 × 11",
+            "2³ × 3 × 77",
+            "2 × 3 × 7 × 44"
+          ],
+          "ans": "2³ × 3 × 7 × 11",
+          "why": "1,848 = 8 × 231 = 2³ × 3 × 7 × 11.",
+          "clue": "Divide by 2 three times, then factorize 231.",
+          "id": "g9.maths.u1.s1-1-3.28"
+        },
+        {
+          "kind": "mcq",
+          "step": "exercise",
+          "graded": true,
+          "text": "The prime factorization of 1,890 is:",
+          "opts": [
+            "2 × 3³ × 5 × 7",
+            "2 × 3² × 5 × 7",
+            "2 × 3³ × 35",
+            "2² × 3³ × 5 × 7"
+          ],
+          "ans": "2 × 3³ × 5 × 7",
+          "why": "1,890 = 2 × 945 = 2 × 27 × 35 = 2 × 3³ × 5 × 7.",
+          "clue": "After dividing by 2, the digit sum of 945 is 18.",
+          "id": "g9.maths.u1.s1-1-3.29"
+        },
+        {
+          "kind": "mcq",
+          "step": "exercise",
+          "graded": true,
+          "text": "The prime factorization of 2,070 is:",
+          "opts": [
+            "2 × 3² × 5 × 23",
+            "2 × 3 × 5 × 69",
+            "2 × 3² × 115",
+            "2² × 3² × 5 × 23"
+          ],
+          "ans": "2 × 3² × 5 × 23",
+          "why": "2,070 = 2 × 5 × 207 = 2 × 5 × 9 × 23.",
+          "clue": "It ends in 0, so start with 2 × 5.",
+          "id": "g9.maths.u1.s1-1-3.30"
+        },
+        {
+          "kind": "mcq",
+          "step": "exercise",
+          "graded": true,
+          "text": "The prime factorization of 134,750 is:",
+          "opts": [
+            "2 × 5³ × 7² × 11",
+            "2 × 5² × 7² × 11",
+            "2 × 5³ × 7 × 77",
+            "2² × 5³ × 7² × 11"
+          ],
+          "ans": "2 × 5³ × 7² × 11",
+          "why": "134,750 = 2 × 5³ × 539, and 539 = 7² × 11.",
+          "clue": "Divide by 2, then by 5 three times.",
+          "worked": "134,750 ÷ 2 = 67,375. ÷ 5 three times = 539. 539 = 7 × 77 = 7 × 7 × 11.",
+          "id": "g9.maths.u1.s1-1-3.31"
+        },
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "ask": "Four primes whose product is 462: 2 × 3 × 7 × ___",
+          "a": [
+            "11",
+            "eleven"
+          ],
+          "why": "462 = 2 × 3 × 7 × 11.",
+          "clue": "462 ÷ 42 = ?",
+          "id": "g9.maths.u1.s1-1-3.32"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "kind": "mcq",
+      "step": "test",
+      "graded": true,
+      "text": "Which number is divisible by 9?",
+      "opts": [
+        "4,518",
+        "4,516",
+        "4,519",
+        "4,511"
+      ],
+      "ans": "4,518",
+      "why": "4 + 5 + 1 + 8 = 18, which is divisible by 9.",
+      "clue": "",
+      "id": "g9.maths.u1.s1-1-3.33"
+    },
+    {
+      "kind": "blank",
+      "step": "test",
+      "graded": true,
+      "ask": "48 = 2⁴ × ___",
+      "a": [
+        "3",
+        "three"
+      ],
+      "why": "2⁴ = 16, and 48 ÷ 16 = 3.",
+      "clue": "",
+      "id": "g9.maths.u1.s1-1-3.34"
+    },
+    {
+      "kind": "tf",
+      "step": "test",
+      "graded": true,
+      "text": "36 has two different prime factorizations.",
+      "a": false,
+      "why": "By the fundamental theorem of arithmetic, 36 = 2² × 3² is the only one, apart from order.",
+      "clue": "",
+      "id": "g9.maths.u1.s1-1-3.35"
+    }
+  ],
+  "notes": [
+    {
+      "kind": "note",
+      "text": "In the book, 1.1.3 is headed 'Divisibility tests'; 'Prime factorization' (Definition 1.2, Theorem 1.2) follows as a sub-heading in the same section."
+    },
+    {
+      "kind": "note",
+      "text": "The Bahir Dar hook, the Bishoftu and Hawassa word problems are added Ethiopian examples, marked added."
+    }
+  ],
+  "review": {
+    "status": "validated"
+  },
+  "version": 1,
+  "refreshers": {
+    "math.division-algorithm": {
+      "name": "Remainders",
+      "screens": [
+        {
+          "kind": "steps",
+          "step": "method",
+          "title": "Divide with a remainder",
+          "text": "Write 38 ÷ 4 as a = (b × q) + r.",
+          "steps": [
+            "Find the biggest multiple of 4 not above 38: 4 × 9 = 36.",
+            "38 − 36 = 2 is left over.",
+            "So 38 = (4 × 9) + 2. The quotient is 9, the remainder 2.",
+            "When the remainder is 0, the number is divisible."
+          ]
+        },
+        {
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "Your turn",
+          "text": "What is the remainder when 23 is divided by 5?",
+          "opts": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "ans": "3",
+          "why": "23 = 5 × 4 + 3.",
+          "clue": "Find the biggest multiple of 5 not above 23.",
+          "id": "g9.maths.u1.s1-1-3.36"
+        }
+      ]
+    },
+    "math.prime-composite": {
+      "name": "Prime or composite",
+      "screens": [
+        {
+          "kind": "steps",
+          "step": "method",
+          "title": "Count the factors",
+          "text": "A prime has exactly two factors. A composite has more.",
+          "steps": [
+            "Factors of 18: 1, 2, 3, 6, 9, 18.",
+            "That is more than two, so 18 is composite.",
+            "Factors of 53: 1 and 53 only.",
+            "That is exactly two, so 53 is prime."
+          ]
+        },
+        {
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "Your turn",
+          "text": "Which number is prime?",
+          "opts": [
+            "15",
+            "19",
+            "21",
+            "25"
+          ],
+          "ans": "19",
+          "why": "19 has only the factors 1 and 19.",
+          "clue": "Try dividing each by 3 and by 5.",
+          "id": "g9.maths.u1.s1-1-3.37"
+        }
+      ]
+    }
+  }
+}
