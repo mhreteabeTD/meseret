@@ -1,0 +1,566 @@
+{
+  "id": "g7.social.u1.s1-5",
+  "book": {
+    "title": "Social Studies Grade 7 Student Textbook",
+    "grade": 7,
+    "subject": "social",
+    "unit": 1,
+    "unit_title": "Physical Characteristics of the Earth",
+    "publisher": "Addis Ababa City Administration Education Bureau",
+    "year": 2022,
+    "section": "1.5",
+    "pages": "24–26"
+  },
+  "title": "Distribution and economic value of rock types in Ethiopia",
+  "competency": "Describe where the different rock types are found in Ethiopia and their economic value.",
+  "minutes": 8,
+  "keywords": [
+    {
+      "en": "Distribution",
+      "am": "ስርጭት",
+      "def": "Where something is found across an area, such as which rocks cover which parts of Ethiopia.",
+      "machine": true
+    },
+    {
+      "en": "Mineral fuels",
+      "am": "የማዕድን ነዳጆች",
+      "def": "Fuels found in sedimentary rocks: coal, petroleum and natural gas.",
+      "machine": true
+    },
+    {
+      "en": "Rock salt",
+      "am": "የአለት ጨው",
+      "def": "Sodium chloride from sedimentary rock, used in cooking.",
+      "machine": true
+    },
+    {
+      "en": "Igneous rock",
+      "am": "እሳታዊ አለት",
+      "def": "Rock formed when magma or lava cools and hardens. From the Latin ignis, fire.",
+      "machine": true
+    },
+    {
+      "en": "Sedimentary rock",
+      "am": "ዝቃጭ አለት",
+      "def": "Rock formed in layers from settled sediments. Holds fossils, coal, oil and gas.",
+      "machine": true
+    },
+    {
+      "en": "Metamorphic rock",
+      "am": "ተለዋዋጭ አለት",
+      "def": "Rock formed when heat and pressure change an existing rock. Example: marble.",
+      "machine": true
+    }
+  ],
+  "ideas": [
+    {
+      "id": "soc.ethiopia-rock-distribution",
+      "name": "Where Ethiopia's rocks are found",
+      "requires": [
+        "soc.rock-types"
+      ],
+      "explain": {
+        "en": {
+          "text": "All three rock types are found in Ethiopia. Igneous rocks cover large areas in the centre of the country. Eastern Ethiopia is mainly covered by sedimentary rocks. Metamorphic rocks are found along the northern, western and southern edges."
+        },
+        "am": {
+          "text": "ሦስቱም የአለት ዓይነቶች በኢትዮጵያ ይገኛሉ። እሳታዊ አለቶች የአገሪቱን ማዕከላዊ ክፍል ሰፊ ቦታ ይሸፍናሉ። ምሥራቅ ኢትዮጵያ በአብዛኛው በዝቃጭ አለቶች ተሸፍኗል። ተለዋዋጭ አለቶች በሰሜን፣ በምዕራብና በደቡብ ዳርቻዎች ይገኛሉ።",
+          "machine": true
+        }
+      },
+      "screens": [
+        {
+          "id": "g7.social.u1.s1-5.1",
+          "kind": "guess",
+          "step": "hook",
+          "title": "Rocks across Ethiopia",
+          "text": "Ethiopia has igneous, sedimentary and metamorphic rocks.",
+          "ask": "Where do you think most metamorphic rocks are found?",
+          "opts": [
+            "In the centre",
+            "In the east",
+            "Along the edges of the country"
+          ],
+          "after": "Read the book's map description and check your guess."
+        },
+        {
+          "id": "g7.social.u1.s1-5.2",
+          "kind": "read",
+          "step": "read",
+          "title": "A. Distribution of rocks",
+          "paras": [
+            "All three rock types are found in Ethiopia.",
+            "Igneous rocks cover large areas in the central part of the country.",
+            "Eastern Ethiopia is mainly covered by sedimentary rocks.",
+            "Metamorphic rocks are found along the northern, western and southern edges."
+          ],
+          "table": [
+            [
+              "Part of Ethiopia",
+              "Main rock type"
+            ],
+            [
+              "Central",
+              "Igneous"
+            ],
+            [
+              "East",
+              "Sedimentary"
+            ],
+            [
+              "Northern, western and southern edges",
+              "Metamorphic"
+            ]
+          ],
+          "note": "Figure 1.14 (simplified): main outcropping rocks of Ethiopia by region. The printed book calls this map figure 1.11 on page 24 and figure 1.10 on page 26; it is labelled figure 1.14."
+        },
+        {
+          "id": "g7.social.u1.s1-5.3",
+          "kind": "name",
+          "step": "name",
+          "title": "Where rocks are found",
+          "defs": [
+            [
+              "Distribution",
+              "Where something is found across an area. Here: which rock type covers which part of Ethiopia."
+            ]
+          ]
+        },
+        {
+          "id": "g7.social.u1.s1-5.4",
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "A town in the east",
+          "text": "A town in eastern Ethiopia is most likely built on:",
+          "opts": [
+            "Igneous rock",
+            "Sedimentary rock",
+            "Metamorphic rock"
+          ],
+          "ans": "Sedimentary rock",
+          "why": "Eastern Ethiopia is mainly covered by sedimentary rocks.",
+          "clue": "Find the East row in the table.",
+          "needs": "soc.rock-types"
+        },
+        {
+          "id": "g7.social.u1.s1-5.5",
+          "kind": "match",
+          "step": "practise",
+          "graded": true,
+          "title": "Regions and rocks",
+          "text": "Match each part of Ethiopia to its main rock type.",
+          "pairs": [
+            [
+              "Central Ethiopia",
+              "Igneous"
+            ],
+            [
+              "Eastern Ethiopia",
+              "Sedimentary"
+            ],
+            [
+              "Northern, western and southern edges",
+              "Metamorphic"
+            ]
+          ],
+          "why": "Centre: igneous. East: sedimentary. Edges: metamorphic.",
+          "clue": "Read the distribution paragraph again."
+        },
+        {
+          "id": "g7.social.u1.s1-5.6",
+          "kind": "tf",
+          "step": "practise",
+          "graded": true,
+          "title": "Metamorphic in the centre?",
+          "text": "Metamorphic rocks are found mainly in the centre of Ethiopia.",
+          "a": false,
+          "why": "They are along the northern, western and southern edges.",
+          "clue": "Which rock type covers the centre?"
+        },
+        {
+          "id": "g7.social.u1.s1-5.7",
+          "kind": "blank",
+          "step": "practise",
+          "graded": true,
+          "title": "The centre",
+          "ask": "Igneous rocks cover large areas in the ___ part of Ethiopia.",
+          "a": [
+            "central",
+            "centre",
+            "center",
+            "middle"
+          ],
+          "why": "Igneous rocks cover large areas in the central part of the country.",
+          "clue": "It is not the east and not the edges."
+        }
+      ]
+    },
+    {
+      "id": "soc.rock-economic-value",
+      "name": "Economic value of rocks",
+      "requires": [
+        "soc.rock-types"
+      ],
+      "explain": {
+        "en": {
+          "text": "Rocks are useful to people. Coal from sedimentary rock is fuel for industry. Granite and sandstone are quarried for roads, bridges and buildings. Marble decorates floors and walls. Rock salt is used in cooking. Soils form when rocks break down. Metals like gold and copper are linked with metamorphic rocks."
+        },
+        "am": {
+          "text": "አለቶች ለሰዎች ጠቃሚ ናቸው። ከዝቃጭ አለት የሚገኘው ከሰል ለኢንዱስትሪ ነዳጅ ነው። ግራናይትና አሸዋ ድንጋይ ለመንገድ፣ ለድልድይና ለሕንፃ ይቆፈራሉ። እብነ በረድ ወለልና ግድግዳ ያስጌጣል። የአለት ጨው ለምግብ ማብሰያ ያገለግላል። አለቶች ሲፈራርሱ አፈር ይፈጠራል። እንደ ወርቅና መዳብ ያሉ ብረቶች ከተለዋዋጭ አለቶች ጋር ይገናኛሉ።",
+          "machine": true
+        }
+      },
+      "screens": [
+        {
+          "id": "g7.social.u1.s1-5.8",
+          "kind": "tap",
+          "step": "hook",
+          "graded": false,
+          "title": "Rocks at home and school",
+          "text": "Many everyday things come from rocks.",
+          "ask": "Tap at least three things. Guess which rock type each comes from.",
+          "need": 3,
+          "items": [
+            [
+              "Salt in your shiro",
+              "Rock salt comes from sedimentary rock."
+            ],
+            [
+              "Chalk on the blackboard",
+              "Chalk is a writing material linked with sedimentary rock."
+            ],
+            [
+              "A gold necklace",
+              "Gold is linked with metamorphic rock."
+            ],
+            [
+              "A marble floor",
+              "Marble is metamorphic rock, polished for decoration."
+            ],
+            [
+              "Stone for a road",
+              "Basalt and granite are igneous building stone."
+            ],
+            [
+              "Copper electric wire",
+              "Copper is linked with metamorphic rock."
+            ]
+          ]
+        },
+        {
+          "id": "g7.social.u1.s1-5.9",
+          "kind": "read",
+          "step": "read",
+          "title": "B. Economic importance of rocks in Ethiopia",
+          "paras": [
+            "Rocks have many uses that make them important to people.",
+            "1. Fuel: sedimentary rocks such as coal are a source of fuel for industry.",
+            "2. Construction: granite and sandstone are quarried for roads, bridges and buildings. Marble is polished to decorate floors and walls.",
+            "3. Food: rock salt (sodium chloride) from sedimentary rock is used in cooking.",
+            "4. Soil: soils form when rocks slowly break down."
+          ]
+        },
+        {
+          "id": "g7.social.u1.s1-5.10",
+          "kind": "read",
+          "step": "read",
+          "title": "Table 1.3 Rocks, minerals and uses",
+          "paras": [
+            "Each rock type is linked with different minerals and uses."
+          ],
+          "table": [
+            [
+              "Rock type",
+              "Associated minerals",
+              "Uses"
+            ],
+            [
+              "Metamorphic",
+              "Metals: gold, nickel, copper, uranium, iron, platinum, lead; also diamond",
+              "Jewellery and decoration, construction, electrical wire, industrial machinery"
+            ],
+            [
+              "Sedimentary",
+              "Mineral fuels: coal, petroleum, natural gas; also limestone and gypsum",
+              "Energy, construction, writing materials (chalk)"
+            ],
+            [
+              "Igneous",
+              "Basalt, granite, sand",
+              "Building and construction materials"
+            ]
+          ]
+        },
+        {
+          "id": "g7.social.u1.s1-5.11",
+          "kind": "name",
+          "step": "name",
+          "title": "Useful rock resources",
+          "defs": [
+            [
+              "Mineral fuels",
+              "Coal, petroleum and natural gas, found in sedimentary rocks."
+            ],
+            [
+              "Rock salt",
+              "Sodium chloride from sedimentary rock, used in cooking."
+            ]
+          ]
+        },
+        {
+          "id": "g7.social.u1.s1-5.12",
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "Rock salt",
+          "text": "Rock salt from sedimentary rock is mainly used for:",
+          "opts": [
+            "Fuel",
+            "Cooking",
+            "Jewellery",
+            "Electrical wire"
+          ],
+          "ans": "Cooking",
+          "why": "Rock salt (sodium chloride) provides salt for food.",
+          "clue": "It is listed under food."
+        },
+        {
+          "id": "g7.social.u1.s1-5.13",
+          "kind": "sort",
+          "step": "practise",
+          "graded": true,
+          "title": "Where does it come from?",
+          "text": "Which rock type does each resource come from?",
+          "bins": [
+            "Igneous",
+            "Sedimentary",
+            "Metamorphic"
+          ],
+          "items": [
+            [
+              "Coal for fuel",
+              "Sedimentary",
+              "Mineral fuels come from sedimentary rocks."
+            ],
+            [
+              "Gold",
+              "Metamorphic",
+              "Metals are linked with metamorphic rocks."
+            ],
+            [
+              "Basalt road stone",
+              "Igneous",
+              "Basalt is igneous."
+            ],
+            [
+              "Rock salt",
+              "Sedimentary",
+              "Rock salt forms in sedimentary rock."
+            ],
+            [
+              "Copper wire",
+              "Metamorphic",
+              "Copper is linked with metamorphic rocks."
+            ],
+            [
+              "Petroleum",
+              "Sedimentary",
+              "Oil is a mineral fuel."
+            ]
+          ],
+          "why": "Fuels and salt: sedimentary. Metals: metamorphic. Building stone like basalt: igneous.",
+          "clue": "Use Table 1.3.",
+          "needs": "soc.rock-types"
+        },
+        {
+          "id": "g7.social.u1.s1-5.14",
+          "kind": "mcq",
+          "step": "practise",
+          "graded": true,
+          "title": "Looking for petroleum",
+          "text": "A company wants to search for petroleum in Ethiopia.",
+          "ask": "Based on this lesson, where should it look first?",
+          "opts": [
+            "Eastern Ethiopia",
+            "Central Ethiopia",
+            "The western edge"
+          ],
+          "ans": "Eastern Ethiopia",
+          "why": "Petroleum is found in sedimentary rock, which covers mainly eastern Ethiopia.",
+          "clue": "Which rock type holds petroleum? Where is that rock type found?",
+          "worked": "Table 1.3: petroleum is a mineral fuel in sedimentary rock. Part A: eastern Ethiopia is mainly sedimentary. So look in the east."
+        },
+        {
+          "id": "g7.social.u1.s1-5.15",
+          "kind": "blank",
+          "step": "practise",
+          "graded": true,
+          "title": "Coal",
+          "ask": "Coal is a fuel that comes from ___ rock.",
+          "a": [
+            "sedimentary"
+          ],
+          "why": "Coal is a mineral fuel found in sedimentary rock.",
+          "clue": "Which rock type forms in layers and stores energy resources?"
+        },
+        {
+          "id": "g7.social.u1.s1-5.16",
+          "kind": "tf",
+          "step": "practise",
+          "graded": true,
+          "title": "Soil",
+          "text": "Soils form when rocks slowly break down.",
+          "a": true,
+          "why": "Soil formation is one of the important values of rocks.",
+          "clue": "Read use number 4."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "book_name": "Activity 1.5",
+      "items": [
+        {
+          "id": "g7.social.u1.s1-5.17",
+          "kind": "mcq",
+          "step": "exercise",
+          "graded": true,
+          "text": "1. Which rock type is most common in and around Addis Ababa?",
+          "opts": [
+            "Igneous",
+            "Sedimentary",
+            "Metamorphic"
+          ],
+          "ans": "Igneous",
+          "why": "Addis Ababa is in the centre, which is mostly igneous.",
+          "clue": "Addis Ababa is in central Ethiopia."
+        },
+        {
+          "id": "g7.social.u1.s1-5.18",
+          "kind": "mcq",
+          "step": "exercise",
+          "graded": true,
+          "text": "2. Which of these is NOT a use of rocks given in this lesson?",
+          "opts": [
+            "Producing oxygen for the air",
+            "Fuel",
+            "Construction",
+            "Forming soil"
+          ],
+          "ans": "Producing oxygen for the air",
+          "why": "Uses of rocks: fuel, construction, decoration, food, soil, and metals. Oxygen in the air is made mainly by plants.",
+          "clue": "List the four uses in part B."
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "id": "g7.social.u1.s1-5.19",
+      "kind": "mcq",
+      "step": "test",
+      "graded": true,
+      "text": "Metals such as gold and copper are mainly linked with:",
+      "opts": [
+        "Igneous rocks",
+        "Sedimentary rocks",
+        "Metamorphic rocks"
+      ],
+      "ans": "Metamorphic rocks",
+      "why": "See Table 1.3.",
+      "clue": ""
+    },
+    {
+      "id": "g7.social.u1.s1-5.20",
+      "kind": "blank",
+      "step": "test",
+      "graded": true,
+      "ask": "Marble is a ___ rock used to decorate buildings.",
+      "a": [
+        "metamorphic"
+      ],
+      "why": "Marble forms from limestone through heat and pressure.",
+      "clue": ""
+    },
+    {
+      "id": "g7.social.u1.s1-5.21",
+      "kind": "match",
+      "step": "test",
+      "graded": true,
+      "text": "Match each rock or mineral to its main use.",
+      "pairs": [
+        [
+          "Coal",
+          "Fuel"
+        ],
+        [
+          "Marble",
+          "Decorating floors and walls"
+        ],
+        [
+          "Rock salt",
+          "Cooking"
+        ],
+        [
+          "Granite",
+          "Building roads and houses"
+        ]
+      ],
+      "why": "Rocks are used for fuel, building, decoration and food.",
+      "clue": ""
+    }
+  ],
+  "notes": [
+    {
+      "kind": "correction",
+      "text": "The printed book calls the rock map figure 1.11 on page 24 and figure 1.10 on page 26; it is labelled figure 1.14."
+    },
+    {
+      "kind": "note",
+      "text": "Figure 1.14 is shown as a simple region/rock-type table, not a map. Activity 1.5 item 2 (list the uses) is turned into an mcq; the group discussion and field trip are skipped."
+    },
+    {
+      "kind": "review",
+      "text": "Amharic key-word glosses and explain texts are machine-written; a speaker should review them."
+    }
+  ],
+  "refreshers": {
+    "soc.rock-types": {
+      "name": "Three rock types",
+      "screens": [
+        {
+          "kind": "steps",
+          "step": "method",
+          "title": "How each rock forms",
+          "text": "Rocks are grouped by how they form (Lesson 1.4).",
+          "steps": [
+            "Igneous: magma or lava cools and hardens. Example: basalt, granite.",
+            "Sedimentary: sediments settle in layers. Example: limestone, coal.",
+            "Metamorphic: heat and pressure change an existing rock. Example: marble."
+          ]
+        },
+        {
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "Your turn",
+          "text": "Coal formed from layers of old plants. What type of rock is it?",
+          "opts": [
+            "Igneous",
+            "Sedimentary",
+            "Metamorphic"
+          ],
+          "ans": "Sedimentary",
+          "why": "It formed from settled layers, so it is sedimentary.",
+          "clue": "Did it cool, settle or change?"
+        }
+      ]
+    }
+  },
+  "review": {
+    "status": "validated"
+  },
+  "version": 1
+}
