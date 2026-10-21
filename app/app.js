@@ -181,19 +181,52 @@ async function viewSettings() {
 /* ---------- Work-it-out tools (scratch, calculator, idea explorer) ---------- */
 const TOOLS = {
   scratch(key) {
-    const el = document.createElement('div'); el.className = 'stack';
-    el.innerHTML = `<canvas id="pad" width="640" height="440" style="width:100%;height:auto;background:var(--surface);border:2px solid var(--line);border-radius:14px;touch-action:none"></canvas><div class="row"><button class="opt center grow" id="pen" aria-pressed="true">✎</button><button class="opt center grow" id="eraser" aria-pressed="false">◻</button><button class="opt center grow" id="clear">✕</button></div>`;
-    const c = el.querySelector('#pad'), ctx = c.getContext('2d'); let draw = false, erase = false, last = null;
-    const saved = store.get('scratch', {})[key]; if (saved) { const im = new Image(); im.onload = () => ctx.drawImage(im, 0, 0); im.src = saved; }
-    const pos = e => { const r = c.getBoundingClientRect(), t = e.touches ? e.touches[0] : e; return [(t.clientX - r.left) * c.width / r.width, (t.clientY - r.top) * c.height / r.height]; };
-    const start = e => { draw = true; last = pos(e); e.preventDefault(); };
-    const move = e => { if (!draw) return; const p = pos(e); ctx.strokeStyle = erase ? '#FFFFFF' : '#142019'; ctx.lineWidth = erase ? 28 : 4; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(last[0], last[1]); ctx.lineTo(p[0], p[1]); ctx.stroke(); last = p; e.preventDefault(); };
-    const end = () => { if (!draw) return; draw = false; try { const all = store.get('scratch', {}); all[key] = c.toDataURL('image/png'); store.set('scratch', all); } catch (_) {} };
-    c.addEventListener('pointerdown', start); c.addEventListener('pointermove', move); window.addEventListener('pointerup', end);
-    ctx.fillStyle = '#FFFFFF'; ctx.fillRect(0, 0, c.width, c.height);
-    el.querySelector('#pen').onclick = () => { erase = false; el.querySelector('#pen').setAttribute('aria-pressed', 'true'); el.querySelector('#eraser').setAttribute('aria-pressed', 'false'); };
-    el.querySelector('#eraser').onclick = () => { erase = true; el.querySelector('#pen').setAttribute('aria-pressed', 'false'); el.querySelector('#eraser').setAttribute('aria-pressed', 'true'); };
-    el.querySelector('#clear').onclick = () => { ctx.fillStyle = '#FFFFFF'; ctx.fillRect(0, 0, c.width, c.height); end(); };
+    const el = document.createElement('div'); el.className = 'scratch';
+    const firstTime = !store.get('padHint', false);
+    el.innerHTML = `<div class="padbar" role="toolbar">
+      <button class="opt center" data-m="pen" aria-pressed="true" aria-label="${t('pad_pen')}">✎</button>
+      <button class="opt center" data-m="erase" aria-pressed="false" aria-label="${t('pad_eraser')}">◌</button>
+      <button class="opt center" data-m="hand" aria-pressed="false" aria-label="${t('pad_hand')}">✋</button>
+      <button class="opt center" id="undo" aria-label="${t('pad_undo')}">↶</button>
+      <button class="opt center" id="clear" aria-label="${t('pad_clear')}">✕</button></div>
+      ${firstTime ? `<div class="padhint" id="padhint">${t('pad_hint')}</div>` : ''}
+      <div class="padwrap" id="padwrap"><canvas id="pad"></canvas><button class="padmore" id="more">+ ${t('pad_more')}</button></div>`;
+    const wrap = el.querySelector('#padwrap'), c = el.querySelector('#pad'), ctx = c.getContext('2d');
+    const all = store.get('pads', {}); let strokes = (all[key] && all[key].s) || []; let H = Math.max((all[key] && all[key].h) || 0, 520);
+    let mode = 'pen', cur = null; const ptrs = new Map(); let panY = null;
+    const ink = () => getComputedStyle(document.documentElement).getPropertyValue('--fg').trim() || '#142019';
+    const W = () => wrap.clientWidth || 320, dpr = Math.min(window.devicePixelRatio || 1, 2);
+    function size() { c.width = W() * dpr; c.height = H * dpr; c.style.width = W() + 'px'; c.style.height = H + 'px'; redraw(); }
+    function line(st) { if (st.p.length < 2 && st.p.length) { st.p.push([st.p[0][0] + .1, st.p[0][1]]); } ctx.globalCompositeOperation = st.e ? 'destination-out' : 'source-over'; ctx.strokeStyle = ink(); ctx.lineWidth = (st.e ? 22 : 3) * dpr; ctx.lineCap = ctx.lineJoin = 'round'; ctx.beginPath(); st.p.forEach(([x, y], i) => i ? ctx.lineTo(x * dpr, y * dpr) : ctx.moveTo(x * dpr, y * dpr)); ctx.stroke(); }
+    function redraw() { ctx.clearRect(0, 0, c.width, c.height); strokes.forEach(line); ctx.globalCompositeOperation = 'source-over'; }
+    function save() { try { const a = store.get('pads', {}); a[key] = { s: strokes.slice(-400), h: H }; store.set('pads', a); } catch (_) {} }
+    function grow(n) { if (H >= 4000) return; H = Math.min(H + (n || 360), 4000); size(); save(); }
+    const pt = e => { const r = c.getBoundingClientRect(); return [Math.round((e.clientX - r.left) * 10) / 10, Math.round((e.clientY - r.top) * 10) / 10]; };
+    function hideHint() { const h = el.querySelector('#padhint'); if (h) { h.remove(); store.set('padHint', true); } }
+    c.addEventListener('pointerdown', e => {
+      c.setPointerCapture(e.pointerId); ptrs.set(e.pointerId, e.clientY); hideHint();
+      if (ptrs.size >= 2 || mode === 'hand') { if (cur) { strokes.pop(); cur = null; redraw(); } panY = avgY(); return; }
+      cur = { e: mode === 'erase', p: [pt(e)] }; strokes.push(cur); line(cur); e.preventDefault();
+    });
+    c.addEventListener('pointermove', e => {
+      if (!ptrs.has(e.pointerId)) return; ptrs.set(e.pointerId, e.clientY);
+      if (panY != null) { const y = avgY(); wrap.scrollTop -= (y - panY); panY = y; return; }
+      if (!cur) return; const p = pt(e), q = cur.p[cur.p.length - 1]; if (Math.hypot(p[0] - q[0], p[1] - q[1]) < 1.5) return;
+      cur.p.push(p); ctx.globalCompositeOperation = cur.e ? 'destination-out' : 'source-over'; ctx.strokeStyle = ink(); ctx.lineWidth = (cur.e ? 22 : 3) * dpr; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(q[0] * dpr, q[1] * dpr); ctx.lineTo(p[0] * dpr, p[1] * dpr); ctx.stroke();
+      if (p[1] > H - 90) { grow(); }
+      const vis = wrap.scrollTop + wrap.clientHeight; if (p[1] > vis - 40) wrap.scrollTop += 6;
+    });
+    const end = e => { ptrs.delete(e.pointerId); if (ptrs.size < 2 && mode !== 'hand') panY = null; if (!ptrs.size) panY = null; if (cur && !ptrs.size) { cur = null; ctx.globalCompositeOperation = 'source-over'; save(); } };
+    c.addEventListener('pointerup', end); c.addEventListener('pointercancel', end);
+    function avgY() { let s = 0; ptrs.forEach(v => s += v); return s / ptrs.size; }
+    el.querySelector('.padbar').addEventListener('click', e => {
+      const b = e.target.closest('button'); if (!b) return;
+      if (b.dataset.m) { mode = b.dataset.m; el.querySelectorAll('[data-m]').forEach(x => x.setAttribute('aria-pressed', x === b)); c.style.cursor = mode === 'hand' ? 'grab' : 'crosshair'; return; }
+      if (b.id === 'undo') { strokes.pop(); redraw(); save(); }
+      if (b.id === 'clear') { if (b.dataset.armed) { strokes = []; H = 520; size(); save(); delete b.dataset.armed; b.textContent = '✕'; b.classList.remove('no'); } else { b.dataset.armed = 1; b.textContent = t('pad_sure'); b.classList.add('no'); setTimeout(() => { if (b.dataset.armed) { delete b.dataset.armed; b.textContent = '✕'; b.classList.remove('no'); } }, 2500); } }
+    });
+    el.querySelector('#more').onclick = () => { grow(); wrap.scrollTop = wrap.scrollHeight; };
+    requestAnimationFrame(() => { size(); });
     return el;
   },
   calc() {
