@@ -1,0 +1,542 @@
+{
+  "id": "g7.social.u1.s1-2",
+  "book": {
+    "title": "Social Studies Grade 7 Student Textbook",
+    "grade": 7,
+    "subject": "social",
+    "unit": 1,
+    "unit_title": "Physical Characteristics of the Earth",
+    "section": "1.2",
+    "pages": "8–12",
+    "publisher": "Addis Ababa City Administration Education Bureau",
+    "year": 2022
+  },
+  "title": "Shape and movements of the earth",
+  "competency": "Evaluate the shape and movements of the Earth and their effects.",
+  "minutes": 10,
+  "keywords": [
+    { "en": "Spheroid", "am": "ክብ መሰል ቅርጽ", "def": "A shape that is almost a ball. The Earth is an oblate spheroid: wider at the Equator, flatter at the poles.", "machine": true },
+    { "en": "Oblate spheroid", "am": "ጠፍጣፋ ክብ መሰል ቅርጽ", "def": "Almost round, slightly wider at the Equator and slightly flattened at the poles. The Earth's shape.", "machine": true },
+    { "en": "Geoid", "am": "ጂኦይድ", "def": "The exact, slightly lumpy shape of the Earth, as scientists describe it.", "machine": true },
+    { "en": "Rotation", "am": "ሽክርክሪት (ምድር በዛቢያዋ ላይ መዞሯ)", "def": "The Earth spinning on its axis, west to east, once about every 24 hours.", "machine": true },
+    { "en": "Axis", "am": "ዛቢያ", "def": "The imaginary line through the North and South Poles that the Earth spins around. It is tilted about 23½°.", "machine": true },
+    { "en": "Tide", "am": "የባሕር ሙላትና ቅናሽ", "def": "The regular rise and fall of the sea, caused mainly by the Moon's pull.", "machine": true },
+    { "en": "Revolution", "am": "ዑደት (ምድር በፀሐይ ዙሪያ መዞሯ)", "def": "The Earth travelling around the Sun, once every 365¼ days.", "machine": true },
+    { "en": "Orbit", "am": "ምህዋር", "def": "The oval path the Earth follows around the Sun.", "machine": true },
+    { "en": "Equinox", "am": "የቀንና የሌሊት እኩልነት ቀን", "def": "A day (about March 21 and September 23) when day and night are equal everywhere.", "machine": true },
+    { "en": "Solstice", "am": "ሶልስቲስ (ረጅሙ ቀን ወይም ሌሊት)", "def": "A day (about June 21 and December 21) of the longest day in one hemisphere and the longest night in the other.", "machine": true },
+    { "en": "Season", "am": "ወቅት", "def": "A part of the year with its own weather: Kiremt, Meher, Bega and Belg.", "machine": true }
+  ],
+  "ideas": [
+    {
+      "id": "soc.earth-shape",
+      "name": "The shape of the Earth",
+      "explain": {
+        "en": { "text": "The Earth is almost round, but not perfectly. It bulges at the Equator and is slightly flat at the poles. This shape is an oblate spheroid. The Earth's spin causes it. A ship's mast appears before its body, and eastern places see sunrise first. So the Earth is not flat." },
+        "am": { "text": "ምድር ክብ ትመስላለች፤ ግን ፍጹም ክብ አይደለችም። በምድር ወገብ ትሰፋለች፤ በዋልታዎች ትንሽ ጠፍጣፋ ናት። ይህ ቅርጽ ኦብሌት ስፌሮይድ ይባላል። የሚያመጣው የምድር መሽከርከር ነው። የመርከብ ምሰሶ ከአካሏ በፊት ይታያል፤ ምሥራቃዊ ቦታዎች ፀሐይ መውጣቷን ቀድመው ያያሉ። ስለዚህ ምድር ጠፍጣፋ አይደለችም።", "machine": true }
+      },
+      "screens": [
+        {
+          "kind": "guess",
+          "step": "hook",
+          "title": "A boat on Lake Tana",
+          "text": "You stand on the shore of Lake Tana. A tall boat sails toward you from far away.",
+          "ask": "What part of the boat do you think you see first?",
+          "opts": [
+            "The top of the boat",
+            "The bottom of the boat",
+            "The whole boat at once"
+          ],
+          "after": "Read on to see why the top shows first.",
+          "added": true
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "A. The shape of the earth",
+          "paras": [
+            "Earth is one of the eight planets. Its shape is not perfectly round. It is slightly wider at the Equator.",
+            "This shape is called an oblate spheroid. The Earth's spinning causes it.",
+            "The Earth bulges in the middle. It is slightly flattened at the North and South Poles."
+          ]
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "Evidence of the Earth's shape",
+          "paras": [
+            "If the Earth were a flat disc, everyone would see the rising Sun at the same moment. This does not happen: places in the east see sunrise first.",
+            "When a ship sails toward land, its mast appears before its body. On a flat Earth the whole ship would appear at once. This shows the Earth is not flat.",
+            "Precise measurements show it is an oblate spheroid. Scientists describe the exact, slightly lumpy shape as a geoid."
+          ]
+        },
+        {
+          "kind": "name",
+          "step": "name",
+          "title": "Name it",
+          "defs": [
+            ["Oblate spheroid", "Almost round: slightly wider at the Equator, slightly flattened at the poles."],
+            ["Geoid", "The exact, slightly lumpy shape of the Earth."]
+          ]
+        },
+        {
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "Check your understanding",
+          "text": "What does \"oblate spheroid\" mean?",
+          "opts": [
+            "A perfect ball",
+            "A flat disc",
+            "Almost round, wider at the Equator and flatter at the poles",
+            "Shaped like an egg standing up"
+          ],
+          "ans": "Almost round, wider at the Equator and flatter at the poles",
+          "why": "The Earth's spin makes it bulge at the Equator.",
+          "clue": "Where does the Earth bulge?"
+        },
+        {
+          "kind": "mcq",
+          "step": "practise",
+          "graded": true,
+          "title": "The ship's mast",
+          "text": "Why do you see a ship's mast before its body?",
+          "opts": [
+            "The sea is rough",
+            "The Earth's surface is curved",
+            "The mast is painted brighter",
+            "The ship is sinking"
+          ],
+          "ans": "The Earth's surface is curved",
+          "why": "The ship rises over the curve of the Earth, top first.",
+          "clue": "Picture the ship on a flat sea, then on a curved one."
+        },
+        {
+          "kind": "mcq",
+          "step": "practise",
+          "graded": true,
+          "title": "Sunrise in two towns",
+          "text": "Jijiga is east of Addis Ababa. Which observation shows the Earth is curved?",
+          "opts": [
+            "Jijiga sees sunrise before Addis Ababa",
+            "Both towns see sunrise at the same moment",
+            "The Moon looks round from both towns",
+            "Stars appear at night in both towns"
+          ],
+          "ans": "Jijiga sees sunrise before Addis Ababa",
+          "why": "On a flat Earth everyone would see sunrise at once. Places in the east see it first.",
+          "clue": "What would happen on a flat disc? Is that what we see?",
+          "added": true
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "graded": true,
+          "title": "Name the shape",
+          "ask": "The Earth's shape is called an oblate ___.",
+          "a": ["spheroid", "spheroids"],
+          "why": "Almost round, wider at the Equator and flatter at the poles.",
+          "clue": "It is a word that means \"almost a sphere\".",
+          "worked": "A shape that is almost a ball is a spheroid. The Earth is wider at the Equator, so it is an oblate spheroid."
+        }
+      ]
+    },
+    {
+      "id": "soc.earth-rotation",
+      "name": "Rotation of the Earth",
+      "explain": {
+        "en": { "text": "Rotation is the Earth spinning on its axis. One turn takes about 24 hours. The Earth spins from west to east, so the Sun seems to rise in the east. The axis is tilted about 23½°. Rotation causes day and night. It also carries places through the Moon's pull, giving high and low tides." },
+        "am": { "text": "ሽክርክሪት ምድር በዛቢያዋ ላይ መዞሯ ነው። አንድ ዙር 24 ሰዓት ገደማ ይፈጃል። ምድር ከምዕራብ ወደ ምሥራቅ ትሽከረከራለች፤ ስለዚህ ፀሐይ በምሥራቅ የምትወጣ ትመስላለች። ዛቢያው 23½° ገደማ ያዘነበለ ነው። ሽክርክሪት ቀንና ሌሊትን ያመጣል። ቦታዎችን በጨረቃ ስበት ውስጥ በማሳለፍ የባሕር ሙላትና ቅናሽን ያስከትላል።", "machine": true }
+      },
+      "screens": [
+        {
+          "kind": "guess",
+          "step": "hook",
+          "title": "Noon in Addis Ababa",
+          "text": "It is noon in Addis Ababa. The Sun is high in the sky.",
+          "ask": "What do you think it is like on the opposite side of the Earth right now?",
+          "opts": [
+            "Also noon, bright and sunny",
+            "Night, dark",
+            "Early morning"
+          ],
+          "after": "Read on to see why.",
+          "added": true
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "B. Movements of the earth",
+          "paras": [
+            "Nothing in the universe stands still. Planets, moons and other bodies all spin and travel at different speeds.",
+            "The Earth has two movements: rotation and revolution."
+          ]
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "i. Rotation",
+          "paras": [
+            "Rotation is the Earth spinning on its axis. One rotation takes about 24 hours.",
+            "The Earth spins from west to east. So the Sun appears to rise in the east and set in the west.",
+            "The axis is tilted about 23½°. This tilt affects how much daylight and warmth places get. It also affects the weather from season to season."
+          ],
+          "note": "Correction: the printed book says the axis \"is perpendicular to the Earth's orbit\". The axis is actually tilted 23½° away from the perpendicular."
+        },
+        {
+          "kind": "name",
+          "step": "name",
+          "title": "Name it",
+          "defs": [
+            ["Axis", "The imaginary line through the North and South Poles. The Earth spins around it. It is tilted about 23½°."],
+            ["Rotation", "The Earth spinning on its axis, west to east, once about every 24 hours."]
+          ]
+        },
+        {
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "Check your understanding",
+          "text": "Why does the Sun seem to rise in the east?",
+          "opts": [
+            "The Sun moves around the Earth",
+            "The Earth spins from west to east",
+            "The Earth's axis points east",
+            "The Moon pushes the Sun"
+          ],
+          "ans": "The Earth spins from west to east",
+          "why": "The eastern side turns toward the Sun first, so the Sun appears there.",
+          "clue": "Which one is moving: the Sun or the Earth?"
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "Effects of rotation",
+          "paras": [
+            "1. Day and night. As the Earth spins, half faces the Sun and has day. The other half faces away and has night. This gives a daily cycle of light and darkness, temperature and humidity.",
+            "2. High and low tides. Tides are the regular rise and fall of the sea. They are caused mainly by the Moon's pull, and partly by the Sun's. As the Earth rotates, places pass through these pulls. They get high and low tides."
+          ]
+        },
+        {
+          "kind": "name",
+          "step": "name",
+          "title": "Name it",
+          "defs": [
+            ["Tide", "The regular rise and fall of the sea, caused mainly by the Moon's pull."]
+          ]
+        },
+        {
+          "kind": "steps",
+          "step": "method",
+          "title": "Model day and night",
+          "text": "Activity 1.2 Things to do, in groups of 5 or 6.",
+          "steps": [
+            "Use a ball as the Earth and a lit candle as the Sun.",
+            "Mark a point on the ball as Town X.",
+            "Turn the ball so Town X is in darkness.",
+            "Now rotate the ball slowly from left to right.",
+            "Watch Town X move into the light (day), then back into darkness (night). Write what you observe."
+          ]
+        },
+        {
+          "kind": "mcq",
+          "step": "practise",
+          "graded": true,
+          "title": "What causes tides?",
+          "text": "What mainly causes tides in the sea?",
+          "opts": [
+            "Wind",
+            "The Moon's pull",
+            "Earth's revolution",
+            "Rivers flowing into the sea"
+          ],
+          "ans": "The Moon's pull",
+          "why": "Tides come mainly from the Moon's gravity, with a smaller pull from the Sun.",
+          "clue": "Which nearby body pulls on the oceans most?"
+        },
+        {
+          "kind": "tf",
+          "step": "practise",
+          "graded": true,
+          "title": "True or false?",
+          "text": "The Earth rotates from east to west.",
+          "a": false,
+          "why": "It rotates from west to east, so the Sun appears to rise in the east.",
+          "clue": "Where does the Sun appear to rise? The Earth turns toward it."
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "graded": true,
+          "title": "The tilt",
+          "ask": "The Earth's axis is tilted about ___ degrees.",
+          "a": ["23.5", "23 1/2", "23½", "23,5", "23.5°", "23½°", "twenty-three and a half"],
+          "why": "The tilt is about 23½°.",
+          "clue": "The number is between 23 and 24.",
+          "worked": "The book says the axis is tilted about 23½°. So the answer is 23½ (23.5)."
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "graded": true,
+          "title": "Tsion's day",
+          "text": "Tsion in Hawassa sees sunrise on Monday. The Earth makes one full rotation.",
+          "ask": "She sees sunrise again about ___ hours later.",
+          "a": ["24", "twenty-four", "twenty four"],
+          "why": "One rotation takes about 24 hours, which is one day.",
+          "clue": "How long does one full spin of the Earth take?",
+          "added": true
+        }
+      ]
+    },
+    {
+      "id": "soc.earth-revolution",
+      "name": "Revolution of the Earth and the seasons",
+      "explain": {
+        "en": { "text": "Revolution is the Earth's journey around the Sun. One trip takes 365¼ days, one year. Because the axis is tilted, day length changes. At the equinoxes, March 21 and September 23, day and night are equal. At the solstices, June 21 and December 21, one hemisphere has its longest day. Revolution and tilt cause the seasons: Kiremt, Meher, Bega and Belg." },
+        "am": { "text": "ዑደት ምድር በፀሐይ ዙሪያ የምታደርገው ጉዞ ነው። አንድ ዙር 365¼ ቀናት ማለትም አንድ ዓመት ይፈጃል። ዛቢያው ስላዘነበለ የቀን ርዝመት ይቀያየራል። መጋቢትና መስከረም አካባቢ (March 21 እና September 23) ቀንና ሌሊት እኩል ናቸው። ሰኔና ታኅሣሥ አካባቢ (June 21 እና December 21) አንዱ ንፍቀ ክበብ ረጅሙ ቀን አለው። ዑደትና ዝንባሌ ወቅቶችን ያመጣሉ፤ ክረምት፣ መኸር፣ በጋና በልግ።", "machine": true }
+      },
+      "screens": [
+        {
+          "kind": "guess",
+          "step": "hook",
+          "title": "Why does Kiremt come?",
+          "text": "Every year Kiremt brings heavy rain to the highlands. Then Meher, Bega and Belg follow in turn.",
+          "ask": "What do you think makes the seasons change?",
+          "opts": [
+            "The Earth spinning each day",
+            "The Earth travelling around the Sun with a tilted axis",
+            "The Earth getting much closer to the Sun",
+            "The Moon"
+          ],
+          "after": "Read on and check your guess.",
+          "added": true
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "ii. Revolution of the earth",
+          "paras": [
+            "Revolution is the Earth's journey around the Sun on its orbit. One revolution takes 365¼ days, or one year.",
+            "The Earth moves at about 107,000 km per hour (about 67,000 miles per hour)."
+          ]
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "Effects of revolution",
+          "paras": [
+            "a. Day and night change length. Because the axis is tilted, the Sun seems to move north and south of the Equator during the year.",
+            "On about March 21 and September 23 the Sun is directly over the Equator. Day and night are equal everywhere. These days are equinoxes.",
+            "On about June 21 the Sun is over the Tropic of Cancer. It is the longest day in the Northern Hemisphere and the longest night in the Southern.",
+            "On about December 21 the Sun is over the Tropic of Capricorn. It is the longest day in the Southern Hemisphere and the longest night in the Northern. These days are solstices."
+          ]
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "Seasons",
+          "paras": [
+            "b. Seasons. Revolution together with the tilted axis causes four seasons.",
+            "They are summer (Kiremt), autumn (Meher), winter (Bega) and spring (Belg or Tsedey)."
+          ],
+          "table": [
+            ["", "Rotation", "Revolution"],
+            ["What", "Spinning on its axis", "Travelling around the Sun"],
+            ["Time", "About 24 hours (1 day)", "365¼ days (1 year)"],
+            ["Causes", "Day and night, tides", "Seasons, changing day length"]
+          ]
+        },
+        {
+          "kind": "name",
+          "step": "name",
+          "title": "Name it",
+          "defs": [
+            ["Revolution", "The Earth travelling around the Sun on its orbit, once every 365¼ days."],
+            ["Equinox", "A day (about March 21 and September 23) when day and night are equal everywhere."],
+            ["Solstice", "A day (about June 21 and December 21) of the longest day in one hemisphere."],
+            ["Season", "A part of the year with its own weather: Kiremt, Meher, Bega and Belg."]
+          ]
+        },
+        {
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "Check your understanding",
+          "text": "What causes the seasons?",
+          "opts": [
+            "The Earth's rotation only",
+            "The Earth's revolution together with its tilted axis",
+            "The Moon",
+            "The Earth getting much closer to the Sun"
+          ],
+          "ans": "The Earth's revolution together with its tilted axis",
+          "why": "As the tilted Earth travels around the Sun, each hemisphere leans toward the Sun for part of the year.",
+          "clue": "You need both: the journey and the tilt."
+        },
+        {
+          "kind": "steps",
+          "step": "method",
+          "title": "Follow the Earth for a year",
+          "text": "Figure 1.7: four key dates on the Earth's orbit.",
+          "steps": [
+            "March 21 (equinox): the Sun is directly over the Equator. Day and night are equal everywhere.",
+            "June 21 (June solstice): the Sun is over the Tropic of Cancer. Longest day in the Northern Hemisphere. Kiremt begins in Ethiopia.",
+            "September 23 (equinox): the Sun is again over the Equator. Day and night are equal everywhere.",
+            "December 21 (December solstice): the Sun is over the Tropic of Capricorn. Longest day in the Southern Hemisphere."
+          ]
+        },
+        {
+          "kind": "match",
+          "step": "practise",
+          "graded": true,
+          "title": "Ethiopian seasons",
+          "text": "Match each Ethiopian season to its English name.",
+          "pairs": [
+            ["Kiremt", "Summer"],
+            ["Meher", "Autumn"],
+            ["Bega", "Winter"],
+            ["Belg", "Spring"]
+          ],
+          "why": "Belg is also called Tsedey.",
+          "clue": "Kiremt is the rainy season that starts in June."
+        },
+        {
+          "kind": "mcq",
+          "step": "practise",
+          "graded": true,
+          "title": "December 21",
+          "text": "On about December 21, the longest day is in the:",
+          "opts": [
+            "Northern Hemisphere",
+            "Southern Hemisphere",
+            "Whole world equally"
+          ],
+          "ans": "Southern Hemisphere",
+          "why": "The Sun is over the Tropic of Capricorn, south of the Equator.",
+          "clue": "Is the Tropic of Capricorn north or south of the Equator?"
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "graded": true,
+          "title": "One year",
+          "ask": "One revolution of the Earth around the Sun takes ___ days.",
+          "a": ["365¼", "365 1/4", "365.25", "365,25", "365 and a quarter"],
+          "why": "One trip around the Sun is one year: 365¼ days.",
+          "clue": "Revolution makes a year, not a day."
+        },
+        {
+          "kind": "mcq",
+          "step": "practise",
+          "graded": true,
+          "title": "No tilt?",
+          "text": "Abebe asks: \"What if the Earth's axis were NOT tilted?\" What would most likely happen?",
+          "opts": [
+            "There would be no seasons as we know them",
+            "There would be no day and night",
+            "The year would be shorter",
+            "There would be no tides"
+          ],
+          "ans": "There would be no seasons as we know them",
+          "why": "Seasons come from revolution plus the tilt. Without the tilt, day length and seasons would barely change.",
+          "clue": "Which two things together cause the seasons? Remove one.",
+          "worked": "Seasons need revolution and the tilt together. Take away the tilt, and neither hemisphere leans toward the Sun. So day length and seasons would barely change."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "book_name": "Activity 1.2",
+      "page": 12,
+      "items": [
+        {
+          "kind": "mcq",
+          "step": "exercise",
+          "graded": true,
+          "text": "1. How does the Earth's rotation cause day and night?",
+          "opts": [
+            "The side facing the Sun has day; the side facing away has night",
+            "The Sun switches off at night",
+            "The Moon blocks the Sun every evening",
+            "The Earth moves away from the Sun each night"
+          ],
+          "ans": "The side facing the Sun has day; the side facing away has night",
+          "why": "Each place moves from day into night and back every 24 hours.",
+          "clue": "Think of the ball and the candle."
+        },
+        {
+          "kind": "mcq",
+          "step": "exercise",
+          "graded": true,
+          "text": "2. What effect does the tilt of the Earth's axis have?",
+          "opts": [
+            "It causes the seasons and changes the length of days and nights",
+            "It causes the tides",
+            "It makes the Earth rotate",
+            "It makes the year 365¼ days long"
+          ],
+          "ans": "It causes the seasons and changes the length of days and nights",
+          "why": "Each hemisphere leans toward the Sun for part of the year and away for the other part.",
+          "clue": "What changes from Kiremt to Bega?"
+        },
+        {
+          "kind": "tf",
+          "step": "exercise",
+          "graded": true,
+          "text": "3. Every place on Earth always has 12 hours of day and 12 hours of night.",
+          "a": false,
+          "why": "Only at the equinoxes are day and night equal everywhere. At other times the hemisphere leaning toward the Sun has longer days.",
+          "clue": "Remember the equinoxes and the solstices."
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "kind": "match",
+      "step": "test",
+      "graded": true,
+      "text": "Match each term to its effect or meaning.",
+      "pairs": [
+        ["Rotation", "Causes day and night"],
+        ["Revolution", "Takes one year"],
+        ["Equinox", "Day and night are equal everywhere"],
+        ["Solstice", "Longest day in one hemisphere"]
+      ],
+      "why": "Rotation and revolution are the two movements; equinoxes and solstices are key dates of revolution."
+    },
+    {
+      "kind": "tf",
+      "step": "test",
+      "graded": true,
+      "text": "The Earth's axis is perpendicular to its orbit, with no tilt.",
+      "a": false,
+      "why": "The axis is tilted about 23½° away from the perpendicular.",
+      "clue": ""
+    },
+    {
+      "kind": "mcq",
+      "step": "test",
+      "graded": true,
+      "text": "Which observation shows the Earth is curved?",
+      "opts": [
+        "Places in the east see sunrise first",
+        "All places see sunrise at the same time",
+        "The Moon is round",
+        "Stars appear at night"
+      ],
+      "ans": "Places in the east see sunrise first",
+      "why": "On a flat Earth everyone would see sunrise at once.",
+      "clue": ""
+    }
+  ],
+  "notes": [
+    { "kind": "correction", "text": "The printed book says the axis \"is perpendicular to the Earth's orbit\". The axis is actually tilted 23½° away from the perpendicular." },
+    { "kind": "note", "text": "The ball-and-candle Things to do of Activity 1.2 is shown as a steps screen in the rotation idea. The four orbit dates come from the source's Figure 1.7." },
+    { "kind": "review", "text": "Matching Kiremt, Meher, Bega and Belg to summer, autumn, winter and spring follows the book. A teacher may want to note that Ethiopian seasons are rainfall seasons, not exact matches." }
+  ],
+  "review": { "status": "validated" },
+  "version": 1
+}
