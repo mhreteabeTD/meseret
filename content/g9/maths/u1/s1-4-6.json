@@ -1,0 +1,555 @@
+{
+  "id": "g9.maths.u1.s1-4-6",
+  "book": {
+    "title": "Mathematics Grade 9 Student Textbook",
+    "grade": 9,
+    "subject": "maths",
+    "unit": 1,
+    "unit_title": "The Number System",
+    "section": "1.4.6"
+  },
+  "title": "Rationalization",
+  "competency": "Rationalize denominators that contain a single radical or a sum or difference with radicals.",
+  "minutes": 11,
+  "keywords": [
+    {
+      "en": "Rationalization",
+      "am": "ተከፋይን ምክንያታዊ ማድረግ",
+      "def": "Rewriting a fraction so its denominator has no radicals.",
+      "machine": true
+    },
+    {
+      "en": "Rationalizing factor",
+      "am": "ምክንያታዊ አድራጊ አባዥ",
+      "def": "The expression you multiply the top and bottom by to rationalize a denominator, for example √3/√3.",
+      "machine": true
+    },
+    {
+      "en": "Conjugate",
+      "am": "ተጓዳኝ",
+      "def": "The same two terms with the opposite sign between them: √a + √b and √a − √b are conjugates.",
+      "machine": true
+    }
+  ],
+  "ideas": [
+    {
+      "id": "math.rationalize-denominator",
+      "name": "Rationalizing a single radical",
+      "explain": {
+        "en": {
+          "text": "A fraction like 1/√3 has an irrational denominator. To fix it, multiply by a rationalizing factor equal to 1, such as √3/√3. The value does not change. The denominator becomes √3 × √3 = 3, a rational number."
+        },
+        "am": {
+          "text": "እንደ 1/√3 ያለ ክፍልፋይ ኢ-ምክንያታዊ ተከፋይ አለው። ለማስተካከል ከ1 ጋር እኩል በሆነ አባዥ አባዛ፤ ለምሳሌ √3/√3። እሴቱ አይለወጥም። ተከፋዩ √3 × √3 = 3 ይሆናል፤ ይህም ምክንያታዊ ቁጥር ነው።",
+          "machine": true
+        }
+      },
+      "screens": [
+        {
+          "kind": "guess",
+          "step": "hook",
+          "added": true,
+          "title": "Which is easier?",
+          "text": "√3 ≈ 1.732. You need the value of 1/√3 without a calculator.",
+          "ask": "Which is easier to work out by hand: 1 ÷ 1.732, or 1.732 ÷ 3?",
+          "opts": [
+            "1 ÷ 1.732",
+            "1.732 ÷ 3",
+            "They are equally hard"
+          ],
+          "after": "Dividing by 3 is much easier. And 1/√3 = √3/3, so both give about 0.577. Read on."
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "Rationalization",
+          "paras": [
+            "A fraction such as 1/√3 has an irrational denominator. This makes it hard to work with.",
+            "Rationalizing the denominator means rewriting it with a rational denominator.",
+            "We multiply by a rationalizing factor that equals 1, such as √3/√3.",
+            "Multiplying by 1 does not change the value. For 1/√a, the factor is √a/√a."
+          ]
+        },
+        {
+          "kind": "name",
+          "step": "name",
+          "title": "Name it",
+          "defs": [
+            [
+              "Rationalization",
+              "Rewriting a fraction so its denominator has no radicals."
+            ],
+            [
+              "Rationalizing factor",
+              "What you multiply the top and bottom by, for example √3/√3. It equals 1."
+            ]
+          ]
+        },
+        {
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "Pick the factor",
+          "text": "Which rationalizing factor do you use for 2/√3?",
+          "opts": [
+            "√2/√2",
+            "√3/√3",
+            "3/3",
+            "2/2"
+          ],
+          "ans": "√3/√3",
+          "why": "√3 × √3 = 3, which is rational. The factor equals 1, so the value stays the same.",
+          "clue": "Which radical is in the denominator? Multiply by that over itself."
+        },
+        {
+          "kind": "steps",
+          "step": "method",
+          "title": "Example 1",
+          "text": "Multiply top and bottom by the rationalizing factor.",
+          "steps": [
+            "(a) 2/√3 × √3/√3 = 2√3/3",
+            "(b) √2/√5 × √5/√5 = √10/5",
+            "(c) For a cube root, aim for a perfect cube: 1/∛2 × ∛4/∛4 = ∛4/∛8",
+            "Since ∛8 = 2, the answer is ∛4/2."
+          ]
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "graded": true,
+          "added": true,
+          "title": "Your turn",
+          "text": "Rationalize 10/√5 and simplify.",
+          "ask": "10/√5 = ___√5",
+          "a": [
+            "2",
+            "two"
+          ],
+          "why": "10/√5 × √5/√5 = 10√5/5 = 2√5.",
+          "clue": "Multiply by √5/√5. Then divide 10 by the new denominator."
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "graded": true,
+          "added": true,
+          "title": "Selam's homework",
+          "text": "Selam needs 1/√2 for her homework. She uses √2 ≈ 1.414 and rationalizes first.",
+          "ask": "1/√2 = √2/2 ≈ ___",
+          "a": [
+            "0.707",
+            ".707",
+            "0.71"
+          ],
+          "why": "1/√2 × √2/√2 = √2/2, and 1.414 ÷ 2 = 0.707.",
+          "clue": "After rationalizing, put 1.414 in place of √2 and divide by 2.",
+          "worked": "Multiply by √2/√2: 1/√2 = √2/2. Put in √2 ≈ 1.414: 1.414 ÷ 2 = 0.707."
+        },
+        {
+          "kind": "tf",
+          "step": "practise",
+          "graded": true,
+          "title": "True or false?",
+          "text": "Multiplying 2/√3 by √3/√3 changes its value.",
+          "a": false,
+          "why": "√3/√3 = 1, and multiplying by 1 never changes a value.",
+          "clue": "What is √3 ÷ √3?"
+        }
+      ]
+    },
+    {
+      "id": "math.rationalize-conjugate",
+      "name": "Rationalizing with the conjugate",
+      "explain": {
+        "en": {
+          "text": "When the denominator is a sum or difference like √a − √b, multiply top and bottom by the conjugate, √a + √b. This uses the difference of two squares: (x − y)(x + y) = x² − y². The square roots disappear from the denominator."
+        },
+        "am": {
+          "text": "ተከፋዩ እንደ √a − √b ያለ ድምር ወይም ልዩነት ሲሆን ላይና ታችን በተጓዳኙ √a + √b አባዛ። ይህ የሁለት ካሬዎች ልዩነትን ይጠቀማል፤ (x − y)(x + y) = x² − y²። ካሬ ሥሮቹ ከተከፋዩ ይጠፋሉ።",
+          "machine": true
+        }
+      },
+      "screens": [
+        {
+          "kind": "guess",
+          "step": "hook",
+          "title": "Where do the roots go?",
+          "text": "Activity 1.25 asks for products like this one.",
+          "ask": "What is (√5 − √3)(√5 + √3)? Take a guess.",
+          "opts": [
+            "2",
+            "√2",
+            "8",
+            "2√15"
+          ],
+          "after": "It is 5 − 3 = 2. The square roots disappear! Read on to see why."
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "Activity 1.25",
+          "paras": [
+            "Find the products.",
+            "(1) (√a − √b)(√a + √b) = a − b",
+            "(2) (a + √b)(a − √b) = a² − b",
+            "(3) (√a − b)(√a + b) = a − b²",
+            "Each answer has no radicals left."
+          ]
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "The difference of two squares",
+          "paras": [
+            "This is the difference of two squares: (x − y)(x + y) = x² − y².",
+            "Multiplying by the \"conjugate\" removes the square roots.",
+            "Table 1.3 lists the factor to use for each kind of denominator."
+          ],
+          "table": [
+            [
+              "Given number",
+              "Rationalizing factor"
+            ],
+            [
+              "1/(√a − √b)",
+              "(√a + √b)/(√a + √b)"
+            ],
+            [
+              "1/(a + √b)",
+              "(a − √b)/(a − √b)"
+            ],
+            [
+              "1/(√a − b)",
+              "(√a + b)/(√a + b)"
+            ],
+            [
+              "1/(√a + √b)",
+              "(√a − √b)/(√a − √b)"
+            ]
+          ]
+        },
+        {
+          "kind": "name",
+          "step": "name",
+          "title": "Name it",
+          "defs": [
+            [
+              "Conjugate",
+              "The same two terms with the opposite sign between them. √a + √b and √a − √b are conjugates."
+            ]
+          ]
+        },
+        {
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "Check your understanding",
+          "text": "What do you multiply 5/(3 + √2) by to rationalize it?",
+          "opts": [
+            "(3 + √2)/(3 + √2)",
+            "(3 − √2)/(3 − √2)",
+            "√2/√2",
+            "(√2 − 3)/(3 − √2)"
+          ],
+          "ans": "(3 − √2)/(3 − √2)",
+          "why": "(3 + √2)(3 − √2) = 9 − 2 = 7, which is rational.",
+          "clue": "Use Table 1.3, row 2."
+        },
+        {
+          "kind": "steps",
+          "step": "method",
+          "title": "Example 2 (a) and (b)",
+          "text": "Multiply top and bottom by the conjugate of the denominator.",
+          "steps": [
+            "(a) 1/(√2 + 1): the conjugate is √2 − 1.",
+            "1/(√2 + 1) × (√2 − 1)/(√2 − 1) = (√2 − 1)/(2 − 1)",
+            "2 − 1 = 1, so the answer is √2 − 1.",
+            "(b) 3/(√5 − √3): the conjugate is √5 + √3.",
+            "The denominator becomes 5 − 3 = 2.",
+            "So the answer is 3(√5 + √3)/2."
+          ]
+        },
+        {
+          "kind": "steps",
+          "step": "method",
+          "title": "Example 2 (c): three terms",
+          "text": "Sometimes one multiplication is not enough.",
+          "steps": [
+            "Start with 1/(√3 − √2 + 1). Multiply top and bottom by (√3 − √2 − 1).",
+            "The result is (√3 − √2 − 1)/(2(2 − √6)).",
+            "The denominator still has a radical. So multiply again by (2 + √6).",
+            "The result is (√2 − √6 − 2)/(−4) = (2 + √6 − √2)/4."
+          ]
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "graded": true,
+          "added": true,
+          "title": "Roots disappear",
+          "text": "Use the difference of two squares.",
+          "ask": "(√7 − 2)(√7 + 2) = ___",
+          "a": [
+            "3",
+            "three"
+          ],
+          "why": "(√7)² − 2² = 7 − 4 = 3.",
+          "clue": "Square each term, then subtract."
+        },
+        {
+          "kind": "mcq",
+          "step": "practise",
+          "graded": true,
+          "added": true,
+          "title": "A garden bed",
+          "text": "A school garden bed in Bahir Dar has area 1 m². Its length is (√2 + 1) m.",
+          "ask": "Its width is 1/(√2 + 1) m. Rationalize the width.",
+          "opts": [
+            "(√2 + 1) m",
+            "(√2 − 1) m",
+            "√2 m",
+            "1/3 m"
+          ],
+          "ans": "(√2 − 1) m",
+          "why": "Multiply by (√2 − 1)/(√2 − 1). The denominator is 2 − 1 = 1, so the width is √2 − 1.",
+          "clue": "Multiply top and bottom by the conjugate of √2 + 1.",
+          "worked": "The conjugate of √2 + 1 is √2 − 1. Top: 1 × (√2 − 1) = √2 − 1. Bottom: (√2 + 1)(√2 − 1) = 2 − 1 = 1. So the width is (√2 − 1) m, about 0.414 m."
+        },
+        {
+          "kind": "tf",
+          "step": "practise",
+          "graded": true,
+          "title": "True or false?",
+          "text": "To rationalize 1/(√a + √b), multiply by (√a + √b)/(√a + √b).",
+          "a": false,
+          "why": "Table 1.3 uses the conjugate, (√a − √b)/(√a − √b). The same sign leaves a radical.",
+          "clue": "Look at the last row of Table 1.3. Which sign is in the factor?"
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "book_name": "Exercise 1.36",
+      "items": [
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "ask": "6/√2 = ___√2",
+          "a": [
+            "3",
+            "three"
+          ],
+          "why": "6/√2 × √2/√2 = 6√2/2 = 3√2.",
+          "clue": "Multiply by √2/√2, then simplify 6/2."
+        },
+        {
+          "kind": "mcq",
+          "step": "exercise",
+          "graded": true,
+          "text": "Rationalize and simplify 5√(1/3).",
+          "opts": [
+            "5√3",
+            "5√3/3",
+            "√15/3",
+            "5/3"
+          ],
+          "ans": "5√3/3",
+          "why": "5√(1/3) = 5/√3 = 5√3/3.",
+          "clue": "First write √(1/3) as 1/√3."
+        },
+        {
+          "kind": "mcq",
+          "step": "exercise",
+          "graded": true,
+          "text": "Rationalize and simplify 2√2/√7.",
+          "opts": [
+            "2√14/7",
+            "2√14",
+            "2√2/7",
+            "√14/7"
+          ],
+          "ans": "2√14/7",
+          "why": "2√2/√7 × √7/√7 = 2√14/7.",
+          "clue": "Multiply by √7/√7. What is √2 × √7?"
+        }
+      ]
+    },
+    {
+      "book_name": "Activity 1.25",
+      "items": [
+        {
+          "kind": "mcq",
+          "step": "exercise",
+          "graded": true,
+          "text": "Find the product (√a − √b)(√a + √b).",
+          "opts": [
+            "a − b",
+            "a + b",
+            "a² − b²",
+            "√a − √b"
+          ],
+          "ans": "a − b",
+          "why": "(√a)² − (√b)² = a − b.",
+          "clue": "Use (x − y)(x + y) = x² − y²."
+        },
+        {
+          "kind": "mcq",
+          "step": "exercise",
+          "graded": true,
+          "text": "Find the product (a + √b)(a − √b).",
+          "opts": [
+            "a − b",
+            "a² − b",
+            "a² − b²",
+            "a² + b"
+          ],
+          "ans": "a² − b",
+          "why": "a² − (√b)² = a² − b.",
+          "clue": "Square the first term, square the second, then subtract."
+        },
+        {
+          "kind": "mcq",
+          "step": "exercise",
+          "graded": true,
+          "text": "Find the product (√a − b)(√a + b).",
+          "opts": [
+            "a − b",
+            "a − b²",
+            "a² − b²",
+            "a + b²"
+          ],
+          "ans": "a − b²",
+          "why": "(√a)² − b² = a − b².",
+          "clue": "What is (√a)²? What is b²?"
+        }
+      ]
+    },
+    {
+      "book_name": "Exercise 1.37",
+      "items": [
+        {
+          "kind": "mcq",
+          "step": "exercise",
+          "graded": true,
+          "text": "Rationalize 2/(√3 − √2).",
+          "opts": [
+            "2√3 + 2√2",
+            "2√3 − 2√2",
+            "2(√3 + √2)/5",
+            "2"
+          ],
+          "ans": "2√3 + 2√2",
+          "why": "2(√3 + √2)/(3 − 2) = 2√3 + 2√2.",
+          "clue": "Multiply by the conjugate, √3 + √2."
+        },
+        {
+          "kind": "mcq",
+          "step": "exercise",
+          "graded": true,
+          "text": "Rationalize (1 + √2)/(√3 − 1).",
+          "opts": [
+            "(1 + √3 + √2 + √6)/2",
+            "(1 + √2)(√3 + 1)/4",
+            "(1 + √3 + √2 + √6)/4",
+            "(1 + √2)/2"
+          ],
+          "ans": "(1 + √3 + √2 + √6)/2",
+          "why": "(1 + √2)(√3 + 1)/(3 − 1) = (1 + √3 + √2 + √6)/2.",
+          "clue": "Multiply by (√3 + 1)/(√3 + 1). Expand the top carefully."
+        },
+        {
+          "kind": "mcq",
+          "step": "exercise",
+          "graded": true,
+          "text": "Rationalize 3/(2 + √5).",
+          "opts": [
+            "3√5 − 6",
+            "6 − 3√5",
+            "3(2 − √5)/9",
+            "3√5 + 6"
+          ],
+          "ans": "3√5 − 6",
+          "why": "3(2 − √5)/(4 − 5) = 3(2 − √5)/(−1) = 3√5 − 6.",
+          "clue": "The new denominator is negative. Watch the signs."
+        },
+        {
+          "kind": "mcq",
+          "step": "exercise",
+          "graded": true,
+          "text": "Rationalize 2/(√2 + √3 + 1).",
+          "opts": [
+            "(2 + √2 − √6)/2",
+            "(2 + √6 − √2)/4",
+            "√2 + √3 − 1",
+            "(√2 + √3 − 1)/2"
+          ],
+          "ans": "(2 + √2 − √6)/2",
+          "why": "Multiply by (√2 + √3 − 1) to get 2(√2 + √3 − 1)/(4 + 2√6). Then multiply by (4 − 2√6).",
+          "clue": "Like Example 2(c): you need two steps.",
+          "worked": "Step 1: multiply by (√2 + √3 − 1). The bottom is (√2 + √3)² − 1 = 4 + 2√6. Step 2: multiply by (4 − 2√6). The bottom becomes 16 − 24 = −8. The result is (2 + √2 − √6)/2."
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "kind": "mcq",
+      "step": "test",
+      "graded": true,
+      "text": "Rationalize 6/√3.",
+      "opts": [
+        "6√3",
+        "2√3",
+        "√2",
+        "3√6"
+      ],
+      "ans": "2√3",
+      "why": "6/√3 × √3/√3 = 6√3/3 = 2√3.",
+      "clue": ""
+    },
+    {
+      "kind": "mcq",
+      "step": "test",
+      "graded": true,
+      "text": "Rationalize 4/(3 − √2).",
+      "opts": [
+        "(12 + 4√2)/7",
+        "(12 − 4√2)/7",
+        "(12 + 4√2)/11",
+        "4(3 + √2)"
+      ],
+      "ans": "(12 + 4√2)/7",
+      "why": "4(3 + √2)/(9 − 2) = (12 + 4√2)/7.",
+      "clue": ""
+    },
+    {
+      "kind": "tf",
+      "step": "test",
+      "graded": true,
+      "text": "(a + √b)(a − √b) = a² − b, so it has no radicals left.",
+      "a": true,
+      "why": "This is the difference of two squares: a² − (√b)² = a² − b.",
+      "clue": ""
+    }
+  ],
+  "notes": [
+    {
+      "kind": "correction",
+      "text": "In Example 1(a) the printed book first writes the rationalizing factor as √2/√5, then uses √3/√3. The correct factor is √3/√3."
+    },
+    {
+      "kind": "review",
+      "text": "The source gives pages only for the whole of Lesson 1.4 (pages 48–79), so book.pages is left out for this section."
+    },
+    {
+      "kind": "review",
+      "text": "No requires/refreshers set: the natural prerequisite (simplifying radicals, 1.4.3) has no published idea id yet."
+    }
+  ],
+  "review": {
+    "status": "validated"
+  },
+  "version": 1
+}

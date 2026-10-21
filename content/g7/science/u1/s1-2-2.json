@@ -1,0 +1,443 @@
+{
+  "id": "g7.science.u1.s1-2-2",
+  "book": {
+    "title": "General Science Grade 7 Student Textbook",
+    "grade": 7,
+    "subject": "science",
+    "unit": 1,
+    "unit_title": "Basic Concepts of Science",
+    "section": "1.2.2",
+    "pages": "12–16"
+  },
+  "title": "Laboratory safety rules",
+  "competency": "Follow laboratory safety rules and explain why each rule matters.",
+  "minutes": 8,
+  "keywords": [
+    {
+      "en": "Laboratory",
+      "am": "ቤተ ሙከራ",
+      "def": "A place where science experiments are done.",
+      "machine": true
+    },
+    {
+      "en": "Safety rules",
+      "am": "የደኅንነት ሕጎች",
+      "def": "Rules that lower the risks of lab work, such as tying back hair and never tasting chemicals.",
+      "machine": true
+    },
+    {
+      "en": "Personal protective equipment",
+      "am": "የግል መከላከያ መሣሪያዎች",
+      "def": "Items you wear to protect yourself in the lab, such as goggles, gloves, a lab coat and boots.",
+      "machine": true
+    },
+    {
+      "en": "Concentrated acid",
+      "am": "የተከማቸ አሲድ",
+      "def": "A strong acid with very little water in it.",
+      "machine": true
+    },
+    {
+      "en": "AW! Not WA!",
+      "am": "አ.ው! ው.አ አይደለም!",
+      "def": "A memory aid: A = acid, W = water. Add acid to water, never water to acid.",
+      "machine": true
+    }
+  ],
+  "ideas": [
+    {
+      "id": "sci.lab-safety",
+      "name": "Laboratory safety rules",
+      "explain": {
+        "en": {
+          "text": "A laboratory is a place of learning. It can also be dangerous without the right care. So follow the safety rules. Dress properly and tie back hair. Know where safety equipment is. Never taste or smell chemicals. Do not eat or drink in the lab. Do only the experiments your teacher gives."
+        },
+        "am": {
+          "text": "ቤተ ሙከራ የመማሪያ ቦታ ነው። ጥንቃቄ ካልተደረገ ግን አደገኛ ሊሆን ይችላል። ስለዚህ የደኅንነት ሕጎችን ተከተል። በትክክል ልበስ፣ ፀጉርህን እሰር። ኬሚካል አትቅመስ፣ አታሽትት። በቤተ ሙከራ ውስጥ አትብላ፣ አትጠጣ።",
+          "machine": true
+        }
+      },
+      "screens": [
+        {
+          "kind": "guess",
+          "step": "hook",
+          "added": true,
+          "title": "Lunch in the lab?",
+          "text": "Dawit is in the school lab in Hawassa. He is hungry. He takes out his kolo and wants to eat it at the bench.",
+          "ask": "What do you think could go wrong?",
+          "opts": [
+            "Nothing, kolo is safe food",
+            "Chemicals could get into his food",
+            "The kolo could break the glassware",
+            "The teacher will just be angry"
+          ],
+          "after": "Read the safety rules to check your idea.",
+          "id": "g7.science.u1.s1-2-2.1"
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "1.2.2 Laboratory safety rules",
+          "paras": [
+            "A laboratory is a place of discovery and learning.",
+            "But lab work can also be dangerous. This happens if the right scientific precautions are not taken.",
+            "Follow these safety rules when you do an activity in the laboratory."
+          ],
+          "id": "g7.science.u1.s1-2-2.2"
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "The safety rules",
+          "paras": [
+            "Dress properly: goggles, gloves, shoes and lab coat.",
+            "Tie back loose hair.",
+            "Know where safety equipment, such as the fire extinguisher, is kept.",
+            "Know what to do in case of an accident.",
+            "Do not taste or smell chemicals.",
+            "Do not eat or drink in the laboratory.",
+            "Never add water to concentrated acid. Always add acid to water.",
+            "Carry out only the experiments assigned by your teacher.",
+            "Dispose of all chemical wastes properly."
+          ],
+          "id": "g7.science.u1.s1-2-2.3"
+        },
+        {
+          "kind": "name",
+          "step": "name",
+          "title": "Rules and protection",
+          "defs": [
+            [
+              "Safety rules",
+              "Rules that lower the risks of lab work, such as tying back hair and never tasting chemicals."
+            ],
+            [
+              "Personal protective equipment",
+              "Items you wear to protect yourself: goggles, gloves, a lab coat and boots."
+            ]
+          ],
+          "id": "g7.science.u1.s1-2-2.4"
+        },
+        {
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "Spot the rule",
+          "ask": "Which of these is a laboratory safety rule?",
+          "opts": [
+            "Taste a little to identify the chemical",
+            "Smell each bottle closely",
+            "Work alone when your teacher leaves",
+            "Do not eat or drink in the laboratory"
+          ],
+          "ans": "Do not eat or drink in the laboratory",
+          "why": "Eating and drinking are not allowed in the laboratory.",
+          "clue": "Read the list of rules again.",
+          "id": "g7.science.u1.s1-2-2.5"
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "added": true,
+          "title": "Why each rule matters",
+          "paras": [
+            "Protective clothing guards your eyes, hands, feet, skin and clothes from spills, splashes and heat.",
+            "Loose hair can catch fire or fall into chemicals.",
+            "In an emergency there is no time to search for safety equipment.",
+            "Knowing the accident steps lets you act quickly and tell the teacher at once.",
+            "Many chemicals are poisonous. Some harm your nose, throat and lungs.",
+            "Chemicals could get into your food or drink.",
+            "Your teacher has checked that the assigned experiments are safe.",
+            "Careless waste can harm people and the environment."
+          ],
+          "note": "The book lists the rules only. These reasons are added to help you.",
+          "id": "g7.science.u1.s1-2-2.6"
+        },
+        {
+          "kind": "mcq",
+          "step": "practise",
+          "graded": true,
+          "title": "Why protective clothing?",
+          "ask": "Why do we wear goggles, gloves, closed shoes and a lab coat?",
+          "opts": [
+            "To look like scientists",
+            "To keep the room tidy",
+            "Because the apparatus needs it",
+            "To protect our eyes, hands, feet and clothes from hazards"
+          ],
+          "ans": "To protect our eyes, hands, feet and clothes from hazards",
+          "why": "Protective clothing reduces the risk of injury from chemicals, heat and breakage.",
+          "clue": "What can spill, splash or break in a lab?",
+          "id": "g7.science.u1.s1-2-2.7"
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "graded": true,
+          "title": "Near the flame",
+          "ask": "Before you work near a Bunsen burner, tie back loose ___.",
+          "a": [
+            "hair"
+          ],
+          "why": "Loose hair can catch fire or fall into chemicals.",
+          "clue": "What on your head could catch fire?",
+          "id": "g7.science.u1.s1-2-2.8"
+        },
+        {
+          "kind": "mcq",
+          "step": "practise",
+          "graded": true,
+          "title": "The teacher steps out",
+          "text": "The teacher leaves the lab for a few minutes. Meron wants to mix two chemicals to \"see what happens\".",
+          "ask": "What should Meron do?",
+          "opts": [
+            "Mix them quickly before the teacher returns",
+            "Do only the experiment the teacher assigned",
+            "Smell the chemicals first",
+            "Ask a friend to mix them"
+          ],
+          "ans": "Do only the experiment the teacher assigned",
+          "why": "Carry out only the experiments assigned by your teacher. The teacher has checked they are safe.",
+          "clue": "Which rule is about which experiments you may do?",
+          "worked": "The rule says: carry out only the experiments assigned by your teacher. So Meron waits and does only her assigned work.",
+          "id": "g7.science.u1.s1-2-2.9"
+        }
+      ]
+    },
+    {
+      "id": "sci.lab-safety.acid-into-water",
+      "name": "Add acid to water: AW! Not WA!",
+      "explain": {
+        "en": {
+          "text": "Never add water to concentrated acid. Always add acid to water. Remember the Amharic \"AW! Not WA!\": A is acid, W is water. Water poured into strong acid can heat up and splash out. Acid added slowly to water is safer."
+        },
+        "am": {
+          "text": "በተከማቸ አሲድ ላይ ውሃ በፍጹም አትጨምር። ሁልጊዜ አሲድን ወደ ውሃ ጨምር። \"አው! ዋ አይደለም!\" አስታውስ፤ A አሲድ ነው፣ W ውሃ ነው። ውሃ በጠንካራ አሲድ ላይ ሲፈስ ሊሞቅና ሊረጭ ይችላል።",
+          "machine": true
+        }
+      },
+      "screens": [
+        {
+          "kind": "guess",
+          "step": "hook",
+          "added": true,
+          "title": "Which goes first?",
+          "text": "A teacher in Gondar must make a strong acid weaker. She will mix it with water.",
+          "ask": "Which way do you think is safer?",
+          "opts": [
+            "Pour water into the acid",
+            "Pour the acid slowly into water",
+            "Both ways are the same"
+          ],
+          "after": "Read the rule to check your guess.",
+          "id": "g7.science.u1.s1-2-2.10"
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "title": "Acid into water",
+          "paras": [
+            "Never add water to concentrated acid. Always add acid to water.",
+            "Remember the Amharic \"AW! Not WA!\" (A = acid, W = water)."
+          ],
+          "id": "g7.science.u1.s1-2-2.11"
+        },
+        {
+          "kind": "read",
+          "step": "read",
+          "added": true,
+          "title": "Why acid goes into water",
+          "paras": [
+            "Water poured into strong acid can heat up and splash out. It can burn you.",
+            "Acid added slowly to water is safer."
+          ],
+          "note": "The reason is added to help you. The book gives the rule.",
+          "id": "g7.science.u1.s1-2-2.12"
+        },
+        {
+          "kind": "name",
+          "step": "name",
+          "title": "The AW rule",
+          "defs": [
+            [
+              "Concentrated acid",
+              "A strong acid with very little water in it."
+            ],
+            [
+              "AW! Not WA!",
+              "A = acid, W = water. Add acid to water, never water to acid."
+            ]
+          ],
+          "id": "g7.science.u1.s1-2-2.13"
+        },
+        {
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "title": "Dilute it safely",
+          "ask": "What is the correct way to dilute a concentrated acid?",
+          "opts": [
+            "Pour both together at the same moment",
+            "It does not matter",
+            "Add the acid into the water",
+            "Add water into the acid"
+          ],
+          "ans": "Add the acid into the water",
+          "why": "Always add acid to water: \"AW\", not \"WA\".",
+          "clue": "Remember the Amharic AW! Not WA!",
+          "id": "g7.science.u1.s1-2-2.14"
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "graded": true,
+          "title": "Finish the rule",
+          "ask": "Always add ___ to water. Never add water to concentrated acid.",
+          "a": [
+            "acid",
+            "the acid",
+            "concentrated acid"
+          ],
+          "why": "The rule is AW, not WA: acid into water.",
+          "clue": "In \"AW\", what does the A stand for?",
+          "id": "g7.science.u1.s1-2-2.15"
+        },
+        {
+          "kind": "tf",
+          "step": "practise",
+          "graded": true,
+          "title": "True or false?",
+          "text": "Pouring water into concentrated acid is safe if you pour slowly.",
+          "a": false,
+          "why": "Never add water to concentrated acid. It can heat up and splash out.",
+          "clue": "Which goes into which: A into W, or W into A?",
+          "worked": "The rule is \"AW! Not WA!\". Acid goes into water. Water into acid is never safe, fast or slow.",
+          "id": "g7.science.u1.s1-2-2.16"
+        },
+        {
+          "kind": "sort",
+          "step": "practise",
+          "graded": true,
+          "title": "Safe or unsafe?",
+          "text": "Is each action safe or unsafe in the lab?",
+          "bins": [
+            "Safe",
+            "Unsafe"
+          ],
+          "items": [
+            [
+              "Tie back loose hair",
+              "Safe",
+              "Hair can catch fire or touch chemicals."
+            ],
+            [
+              "Taste a chemical to find out what it is",
+              "Unsafe",
+              "Never taste chemicals."
+            ],
+            [
+              "Pour acid slowly into water",
+              "Safe",
+              "Add acid to water, not water to acid."
+            ],
+            [
+              "Eat your lunch in the lab",
+              "Unsafe",
+              "No eating or drinking in the lab."
+            ],
+            [
+              "Learn where the fire extinguisher is",
+              "Safe",
+              "You must know where safety equipment is."
+            ],
+            [
+              "Try your own experiment while the teacher is out",
+              "Unsafe",
+              "Do only the experiments your teacher assigns."
+            ],
+            [
+              "Wear goggles and a lab coat",
+              "Safe",
+              "Protective clothing is a rule."
+            ],
+            [
+              "Pour water into concentrated acid",
+              "Unsafe",
+              "It can splash and burn. Remember: acid into water."
+            ],
+            [
+              "Dispose of chemical waste properly",
+              "Safe",
+              "All chemical waste must be disposed of properly."
+            ]
+          ],
+          "why": "Each safe action follows a rule. Each unsafe action breaks one.",
+          "clue": "For each action, find the rule in the list it follows or breaks.",
+          "id": "g7.science.u1.s1-2-2.17"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "kind": "tf",
+      "step": "test",
+      "graded": true,
+      "text": "It is safe to taste a chemical to find out what it is.",
+      "a": false,
+      "why": "Never taste chemicals.",
+      "clue": "",
+      "id": "g7.science.u1.s1-2-2.18"
+    },
+    {
+      "kind": "mcq",
+      "step": "test",
+      "graded": true,
+      "text": "Why must you tie back loose hair in the lab?",
+      "opts": [
+        "It could catch fire or touch chemicals",
+        "It looks neat",
+        "Hair makes chemicals dirty",
+        "Your teacher likes it"
+      ],
+      "ans": "It could catch fire or touch chemicals",
+      "why": "Loose hair is a hazard near flames and chemicals.",
+      "clue": "",
+      "id": "g7.science.u1.s1-2-2.19"
+    },
+    {
+      "kind": "mcq",
+      "step": "test",
+      "graded": true,
+      "text": "To dilute a concentrated acid, you should:",
+      "opts": [
+        "Add water to the acid",
+        "Add the acid to water",
+        "Heat the acid first",
+        "Smell the acid first"
+      ],
+      "ans": "Add the acid to water",
+      "why": "AW! Not WA!: acid into water.",
+      "clue": "",
+      "id": "g7.science.u1.s1-2-2.20"
+    }
+  ],
+  "notes": [
+    {
+      "kind": "note",
+      "text": "The book lists the safety rules only. The reason given for each rule is added to help (marked \"added\": true)."
+    },
+    {
+      "kind": "note",
+      "text": "The hooks (Dawit's kolo in Hawassa; a teacher in Gondar diluting acid) are added situations."
+    },
+    {
+      "kind": "review",
+      "text": "\"Concentrated acid\" is not defined in the book; the short definition is standard knowledge. Teacher to confirm wording."
+    }
+  ],
+  "review": {
+    "status": "validated"
+  },
+  "version": 1
+}
