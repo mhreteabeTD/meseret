@@ -177,6 +177,57 @@ async function viewSettings() {
   app.querySelectorAll('[data-l]').forEach(b => { b.setAttribute('aria-pressed', b.dataset.l === S.lang); b.onclick = async () => { await loadLang(b.dataset.l); viewSettings(); }; });
 }
 
+
+/* ---------- Work-it-out tools (scratch, calculator, idea explorer) ---------- */
+const TOOLS = {
+  scratch(key) {
+    const el = document.createElement('div'); el.className = 'stack';
+    el.innerHTML = `<canvas id="pad" width="640" height="440" style="width:100%;height:auto;background:var(--surface);border:2px solid var(--line);border-radius:14px;touch-action:none"></canvas><div class="row"><button class="opt center grow" id="pen" aria-pressed="true">✎</button><button class="opt center grow" id="eraser" aria-pressed="false">◻</button><button class="opt center grow" id="clear">✕</button></div>`;
+    const c = el.querySelector('#pad'), ctx = c.getContext('2d'); let draw = false, erase = false, last = null;
+    const saved = store.get('scratch', {})[key]; if (saved) { const im = new Image(); im.onload = () => ctx.drawImage(im, 0, 0); im.src = saved; }
+    const pos = e => { const r = c.getBoundingClientRect(), t = e.touches ? e.touches[0] : e; return [(t.clientX - r.left) * c.width / r.width, (t.clientY - r.top) * c.height / r.height]; };
+    const start = e => { draw = true; last = pos(e); e.preventDefault(); };
+    const move = e => { if (!draw) return; const p = pos(e); ctx.strokeStyle = erase ? '#FFFFFF' : '#142019'; ctx.lineWidth = erase ? 28 : 4; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(last[0], last[1]); ctx.lineTo(p[0], p[1]); ctx.stroke(); last = p; e.preventDefault(); };
+    const end = () => { if (!draw) return; draw = false; try { const all = store.get('scratch', {}); all[key] = c.toDataURL('image/png'); store.set('scratch', all); } catch (_) {} };
+    c.addEventListener('pointerdown', start); c.addEventListener('pointermove', move); window.addEventListener('pointerup', end);
+    ctx.fillStyle = '#FFFFFF'; ctx.fillRect(0, 0, c.width, c.height);
+    el.querySelector('#pen').onclick = () => { erase = false; el.querySelector('#pen').setAttribute('aria-pressed', 'true'); el.querySelector('#eraser').setAttribute('aria-pressed', 'false'); };
+    el.querySelector('#eraser').onclick = () => { erase = true; el.querySelector('#pen').setAttribute('aria-pressed', 'false'); el.querySelector('#eraser').setAttribute('aria-pressed', 'true'); };
+    el.querySelector('#clear').onclick = () => { ctx.fillStyle = '#FFFFFF'; ctx.fillRect(0, 0, c.width, c.height); end(); };
+    return el;
+  },
+  calc() {
+    const el = document.createElement('div'); el.className = 'stack';
+    el.innerHTML = `<div class="result" style="font-size:22px;font-weight:800;text-align:right;min-height:2.4em;font-variant-numeric:tabular-nums" id="disp">0</div><div class="small muted" id="rem" style="text-align:right;min-height:1.4em"></div><div class="opts" style="grid-template-columns:repeat(4,minmax(0,1fr));gap:8px" id="keys">${['C','÷','×','⌫','7','8','9','−','4','5','6','+','1','2','3','=','0','.','(',')'].map(k => `<button class="opt center" data-k="${k}" style="min-height:52px;padding:0">${k}</button>`).join('')}</div>`;
+    let expr = '';
+    const disp = el.querySelector('#disp'), rem = el.querySelector('#rem');
+    const show = () => { disp.textContent = expr || '0'; rem.textContent = ''; };
+    el.querySelector('#keys').addEventListener('click', e => {
+      const b = e.target.closest('[data-k]'); if (!b) return; const k = b.dataset.k;
+      if (k === 'C') expr = ''; else if (k === '⌫') expr = expr.slice(0, -1);
+      else if (k === '=') { try { const js = expr.replace(/÷/g, '/').replace(/×/g, '*').replace(/−/g, '-'); if (!/^[0-9+\-*/().\s]+$/.test(js)) throw 0; const v = Function('"use strict";return (' + js + ')')(); disp.textContent = Number.isFinite(v) ? String(Math.round(v * 1e6) / 1e6) : '?'; const m = js.match(/^\s*(\d+)\s*\/\s*(\d+)\s*$/); rem.textContent = m && +m[2] ? `${m[1]} ÷ ${m[2]} = ${Math.floor(m[1] / m[2])} r ${m[1] % m[2]}` : ''; expr = Number.isFinite(v) ? String(Math.round(v * 1e6) / 1e6) : ''; return; } catch (_) { disp.textContent = '?'; return; } }
+      else expr += k; show();
+    });
+    return el;
+  },
+  factors() {
+    const el = document.createElement('div'); el.className = 'stack';
+    el.innerHTML = `<p class="small muted">Type a number and see its factors. Type two and compare.</p><div class="row"><input id="fa" inputmode="numeric" placeholder="50" style="min-height:52px;width:50%;text-align:center;font-weight:800;font-size:20px;border-radius:12px;border:2px solid var(--line);background:var(--surface)"><input id="fb" inputmode="numeric" placeholder="20" style="min-height:52px;width:50%;text-align:center;font-weight:800;font-size:20px;border-radius:12px;border:2px solid var(--line);background:var(--surface)"></div><div id="out" class="stack"></div>`;
+    const out = el.querySelector('#out');
+    const row = (n, L, common) => `<div class="frow"><span>${n} → ${L.length} factors · primes: ${primes(n).join(' × ') || n}</span><div class="chips">${L.map(x => `<span class="chip ${common.includes(x) ? 'on' : ''}">${x}</span>`).join('')}</div></div>`;
+    const upd = () => { const a = +el.querySelector('#fa').value, b = +el.querySelector('#fb').value; const fa = a > 0 && a < 10000 ? factors(a) : [], fb = b > 0 && b < 10000 ? factors(b) : []; const common = fa.filter(x => fb.includes(x)); out.innerHTML = (a > 0 ? row(a, fa, common) : '') + (b > 0 ? row(b, fb, common) : ''); };
+    el.querySelectorAll('input').forEach(i => i.addEventListener('input', upd));
+    return el;
+  }
+};
+function workSheet(ctx) {
+  const tabs = [['scratch', '✎'], ['calc', '123']]; if (ctx.tool && TOOLS[ctx.tool]) tabs.push([ctx.tool, '⚙']);
+  sheet(`<div style="width:40px;height:5px;border-radius:99px;background:var(--line);justify-self:center"></div><div class="row"><h2 class="display grow">${t('work_it_out')}</h2><button class="iconbtn" id="wclose" aria-label="${t('cancel')}">${svgIcon(CLOSE)}</button></div><div class="opts row3" id="wtabs">${tabs.map(([k, ic], i) => `<button class="opt center" data-tab="${k}" aria-pressed="${i === 0}">${ic} ${t('tool_' + k)}</button>`).join('')}</div><div id="wbody"></div><p class="small muted">${t('work_note')}</p>`);
+  const body = $('#wbody'); const open = k => { body.replaceChildren(TOOLS[k](ctx.key)); $('#wtabs').querySelectorAll('.opt').forEach(b => b.setAttribute('aria-pressed', b.dataset.tab === k)); logEvent({ lesson: ctx.lesson, item: ctx.item, tool: k }); };
+  $('#wtabs').addEventListener('click', e => { const b = e.target.closest('[data-tab]'); if (b) open(b.dataset.tab); });
+  $('#wclose').onclick = () => sheet(''); open(tabs[0][0]);
+}
+
 /* ---------- lesson player ---------- */
 const factors = n => { const f = []; for (let d = 1; d <= n; d++) if (n % d === 0) f.push(d); return f; };
 const primes = n => { const r = []; let d = 2; while (n > 1) { if (n % d === 0) { r.push(d); n /= d; } else d++; } return r; };
@@ -215,7 +266,10 @@ function runPlayer(cfg) {
   setNav(false); tray.hidden = false;
   const screens = cfg.screens, SUM = screens.length;
   let order = screens.map((_, i) => i), pos = 0, cur = null, phase = 'answer', lastOk = null, review = false, firstTry = {}, missed = new Set(), round = {}, tries = {};
-  const state = { guess: null };
+  const state = { guess: null }; const offered = {};
+  function openRefresher(id) { const rf = cfg.refreshers[id]; logEvent({ lesson: cfg.id, refresher: id, item: order[pos] }); const saved = { app: [...app.childNodes], tray: tray.className, msg: msg.innerHTML, goText: go.textContent, goDis: go.disabled, phase, lastOk, cur, top: topin.innerHTML, work: $('#work').hidden };
+    const extra = tray.querySelector('#rfb'); if (extra) extra.remove();
+    runPlayer({ id: cfg.id + ':' + id, idea: id, title: rf.name, mode: 'refresher', screens: rf.screens, backRoute: null, resume: () => { app.replaceChildren(...saved.app); tray.className = saved.tray; msg.innerHTML = saved.msg; go.textContent = saved.goText; go.disabled = saved.goDis; phase = saved.phase; lastOk = saved.lastOk; cur = saved.cur; topin.innerHTML = saved.top; $('#work').hidden = saved.work; bindTop(order[pos]); go.onclick = onGo; window.scrollTo(0, 0); } }); }
   const div = html => { const d = document.createElement('div'); d.className = 'stack'; d.innerHTML = html; return d; };
   const head = s => `<span class="eyebrow sky">${esc(s._from || s.step || '')}</span>${s.title ? `<h1 class="display" tabindex="-1">${esc(s.title)}</h1>` : ''}${s.text ? `<p class="lead">${esc(s.text)}</p>` : ''}`;
   const choice = (s, opts, ans, row2) => {
@@ -263,39 +317,44 @@ function runPlayer(cfg) {
       el.addEventListener('change', update);
       return { el, label: t('check'), ready: () => [...el.querySelectorAll('select')].every(x => x.value), check() { const ok = [...el.querySelectorAll('select')].every(x => x.value === s.pairs[+x.dataset.j][1]); return ok ? { ok: true, body: s.why } : { ok: false, body: s.clue || s.why }; }, retry() {} }; },
     summary() { const graded = screens.map((x, i) => x.graded ? i : -1).filter(i => i >= 0); const right = graded.filter(i => firstTry[i]).length;
-      const el = div(`<span class="eyebrow sky">${t('done')}</span><h1 class="display" tabindex="-1">${esc(cfg.title)}</h1><div class="score"><span class="big">${right} / ${graded.length}</span><span>${t('first_try')}</span></div><p>${missed.size ? t('replay_note', { n: missed.size }) : t('all_done')}</p>${cfg.learned ? `<div class="defn"><b>${t('learned')}</b><ul class="steps" style="padding-left:20px">${cfg.learned.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}${cfg.mode === 'learn' ? `<div class="card sky"><div class="small">${t('comes_back')}</div></div>` : ''}<a class="btn link" href="#${cfg.backRoute}">${t('back_chapter')}</a>`);
-      return { el, label: missed.size ? t('replay_n', { n: missed.size }) : t('start_again'), ready: () => true, summary: true }; }
+      const el = div(`<span class="eyebrow sky">${t('done')}</span><h1 class="display" tabindex="-1">${esc(cfg.title)}</h1><div class="score"><span class="big">${right} / ${graded.length}</span><span>${t('first_try')}</span></div><p>${missed.size ? t('replay_note', { n: missed.size }) : t('all_done')}</p>${cfg.learned ? `<div class="defn"><b>${t('learned')}</b><ul class="steps" style="padding-left:20px">${cfg.learned.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}${cfg.mode === 'learn' ? `<div class="card sky"><div class="small">${t('comes_back')}</div></div>` : ''}${cfg.backRoute ? `<a class="btn link" href="#${cfg.backRoute}">${t('back_chapter')}</a>` : ''}`);
+      return { el, label: cfg.mode === 'refresher' ? t('back_to_question') : missed.size ? t('replay_n', { n: missed.size }) : t('start_again'), ready: () => true, summary: true }; }
   };
   const explainCard = s => { const ex = cfg.explain; if (!ex) return ''; const txt = (ex[S.lang] && ex[S.lang].text) || (ex.en && ex.en.text) || ''; return txt ? `<div class="explain"><button class="play" id="ex-play" aria-label="${t('explain_me')}"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l12 7-12 7z" fill="#fff"/></svg></button><div class="grow"><div style="font-weight:800">${t('explain_me')}</div><div class="small muted" id="ex-text">${esc(txt)}</div></div></div>` : ''; };
 
   function setTray(kind, title, body, label) { tray.className = 'tray' + (kind ? ' ' + kind : ''); msg.innerHTML = title ? `<strong>${esc(title)}</strong>${body ? `<span>${esc(body)}</span>` : ''}` : ''; go.textContent = label; }
-  function update() { if (phase === 'answer') go.disabled = !cur.ready(); }
+  function update() { if (phase === 'answer' && cur) go.disabled = !cur.ready(); }
+  function bindTop(k) { const rep = $('#rep'); if (rep) rep.onclick = () => reportSheet({ lesson: cfg.id || cfg.title, screen: k, label: `${cfg.title} · ${Math.min(pos + 1, order.length)}/${order.length}` }); const rb = $('#rback'); if (rb) rb.onclick = () => cfg.resume && cfg.resume(); }
   function show() {
     const k = order[pos], s = k === SUM ? { kind: 'summary' } : screens[k];
     cur = (R[s.kind] || R.name)(s); app.replaceChildren(cur.el);
     const ex = cur.el.querySelector('#ex-play'); if (ex) ex.onclick = () => speak(cur.el.querySelector('#ex-text').textContent);
+    const rf = s.needs && cfg.refreshers && cfg.refreshers[s.needs];
+    if (rf) { const a = document.createElement('button'); a.className = 'btn link'; a.style.justifySelf = 'start'; a.textContent = t('need_reminder', { n: rf.name }); a.onclick = () => openRefresher(s.needs); cur.el.appendChild(a); }
+    const old = tray.querySelector('#rfb'); if (old) old.remove();
     phase = 'answer'; lastOk = null; setTray('', '', '', cur.label); update();
+    const wb = $('#work'); wb.hidden = !(s.graded || s.kind === 'guess' || s.kind === 'tiles'); wb.onclick = () => workSheet({ key: `${cfg.id || cfg.title}:${k}`, lesson: cfg.id, item: k, tool: s.tool || cfg.tool });
     const pct = Math.round(pos / order.length * 100);
-    setTop(`<a class="iconbtn" href="#${cfg.backRoute}" aria-label="close">${svgIcon(CLOSE)}</a><span class="mode ${cfg.mode === 'review' || review ? 'review' : cfg.mode === 'book' || cfg.mode === 'test' ? 'book' : ''}">${review ? t('review') : cfg.mode === 'review' ? t('review') : cfg.mode === 'book' ? t('book_exercise') : cfg.mode === 'test' ? t('unit_test') : t('learn')}</span><div class="bar"><i style="width:${pct}%"></i></div><span class="count">${Math.min(pos + 1, order.length)} / ${order.length}</span><button class="iconbtn" id="rep" aria-label="${t('report')}">${svgIcon(FLAG)}</button>`);
-    $('#rep').onclick = () => reportSheet({ lesson: cfg.id || cfg.title, screen: k, label: `${cfg.title} · ${Math.min(pos + 1, order.length)}/${order.length}` });
+    setTop(`${cfg.backRoute ? `<a class="iconbtn" href="#${cfg.backRoute}" aria-label="close">${svgIcon(CLOSE)}</a>` : `<button class="iconbtn" id="rback" aria-label="back">${svgIcon(BACK)}</button>`}<span class="mode ${cfg.mode === 'review' || review ? 'review' : cfg.mode === 'book' || cfg.mode === 'test' ? 'book' : ''}">${cfg.mode === 'refresher' ? t('refresher') : review ? t('review') : cfg.mode === 'review' ? t('review') : cfg.mode === 'book' ? t('book_exercise') : cfg.mode === 'test' ? t('unit_test') : t('learn')}</span><div class="bar"><i style="width:${pct}%"></i></div><span class="count">${Math.min(pos + 1, order.length)} / ${order.length}</span><button class="iconbtn" id="rep" aria-label="${t('report')}">${svgIcon(FLAG)}</button>`);
+    bindTop(k);
     window.scrollTo(0, 0); const h = cur.el.querySelector('h1'); if (h) h.focus({ preventScroll: true });
   }
-  go.onclick = () => {
+  function onGo() {
     const k = order[pos], s = screens[k];
-    if (cur.summary) { if (missed.size) { order = [...missed].sort((a, b) => a - b).concat(SUM); review = true; } else { order = screens.map((_, i) => i).concat(SUM); firstTry = {}; review = false; state.guess = null; } pos = 0; round = {}; tries = {}; show(); return; }
-    if (phase === 'feedback') { if (lastOk === false) { phase = 'answer'; cur.retry && cur.retry(); setTray('', '', '', cur.label); update(); } else { pos++; show(); } return; }
+    if (cur.summary) { if (cfg.mode === 'refresher') { cfg.resume(); return; } if (missed.size) { order = [...missed].sort((a, b) => a - b).concat(SUM); review = true; } else { order = screens.map((_, i) => i).concat(SUM); firstTry = {}; review = false; state.guess = null; } pos = 0; round = {}; tries = {}; show(); return; }
+    if (phase === 'feedback') { if (lastOk === false) { const old = tray.querySelector('#rfb'); if (old) old.remove(); phase = 'answer'; cur.retry && cur.retry(); setTray('', '', '', cur.label); update(); } else { pos++; show(); } return; }
     if (!cur.check) { pos++; show(); return; }
     const r = cur.check(); tries[k] = (tries[k] || 0) + 1;
     if (s.graded && !(k in round)) { round[k] = r.ok; if (!(k in firstTry)) firstTry[k] = r.ok; r.ok ? missed.delete(k) : missed.add(k); logEvent({ lesson: s._lesson || cfg.id, idea: s._idea || cfg.idea, item: k, correct: !!r.ok, attempt: tries[k], mode: cfg.mode }); }
     lastOk = r.ok; phase = 'feedback';
     const noClue = cfg.mode === 'test';
     if (r.ok === true) setTray('ok', t('correct'), r.body, t('continue'));
-    else if (r.ok === false) { if (noClue) { lastOk = true; setTray('no', t('not_yet'), s.why || '', t('continue')); } else if (tries[k] >= 2 && s.worked) { lastOk = true; setTray('no', t('show_worked'), s.worked, t('continue')); } else setTray('no', t('not_yet'), r.body, t('try_again')); }
+    else if (r.ok === false) { if (noClue) { lastOk = true; setTray('no', t('not_yet'), s.why || '', t('continue')); } else if (tries[k] >= 2 && s.worked) { lastOk = true; setTray('no', t('show_worked'), s.worked, t('continue')); } else { setTray('no', t('not_yet'), r.body, t('try_again')); const rf = s.needs && cfg.refreshers && cfg.refreshers[s.needs]; if (rf && !offered[k]) { offered[k] = true; msg.innerHTML += `<span class="small">${esc(t('offer_refresher', { n: rf.name }))}</span>`; const b = document.createElement('button'); b.className = 'btn ghost'; b.id = 'rfb'; b.textContent = t('yes_reminder'); b.onclick = () => openRefresher(s.needs); go.parentNode.insertBefore(b, go); go.textContent = t('no_continue'); } } }
     else setTray('info', r.title, r.body, t('continue'));
     go.disabled = false; go.focus();
     if (pos === order.length - 1 && cfg.onDone && !cfg._done) { cfg._done = true; const byIdea = {}; screens.forEach((x, i) => { if (x.graded) { const id = x._idea || cfg.idea; byIdea[id] = (byIdea[id] !== false) && !!firstTry[i]; } }); cfg.onDone({ byIdea, firstTry, missed }); }
   };
-  order = order.concat(SUM); show();
+  go.onclick = onGo; order = order.concat(SUM); show();
 }
 
 async function viewLesson(path, mode, exIdx) {
@@ -307,7 +366,7 @@ async function viewLesson(path, mode, exIdx) {
   const idx = await loadIndex(); const ch = idx.chapters.find(c => c.sections.some(s => s.lesson === path));
   store.set('last', { route: `lesson/${encodeURIComponent(path)}`, title: `${ls.book.section} · ${ls.title}`, sub: ch ? `${L(idx.subjects[ch.subject])} · ${t('grade')} ${ch.grade}` : '' });
   markStudied();
-  runPlayer({ id: ls.id, idea: idea.id, title, mode: m, screens, explain: m === 'learn' ? idea.explain : null, learned: m === 'learn' ? (ls.keywords || []).map(k => `${k.en}: ${k.def}`) : null, backRoute: ch ? 'chapter/' + ch.id : 'home',
+  runPlayer({ id: ls.id, idea: idea.id, title, mode: m, screens, tool: ls.tool || idea.tool, refreshers: ls.refreshers || {}, explain: m === 'learn' ? idea.explain : null, learned: m === 'learn' ? (ls.keywords || []).map(k => `${k.en}: ${k.def}`) : null, backRoute: ch ? 'chapter/' + ch.id : 'home',
     onDone: res => { if (m === 'learn') { const graded = screens.filter(s => s.graded).length, right = Object.values(res.firstTry).filter(Boolean).length; setLessonProgress(path, { done: true, best: `${right}/${graded}` }); Object.keys(res.byIdea).forEach(id => bumpMastery(id, res.byIdea[id])); } } });
 }
 

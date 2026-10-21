@@ -33,7 +33,9 @@ If a content job needs a screen kind the player lacks, stop and say so; do not f
 6. Keep the book's structure: unit, section numbers, titles, key words, exercises by their book name. Content from the book stays faithful; anything added is marked `"added": true`.
 7. Keep Ethiopian context: local names, places, birr, local examples. Prefer an Ethiopian example when adding one.
 8. Blanks accept meaning, not exact spelling: give an `a` list of accepted answers; the player also tolerates 1–2 letter spelling slips.
-9. Facts, numbers and dates are checked against the pages and standard knowledge. Unsure → keep the book's version and add a note `{"kind":"review", ...}`. Never invent.
+9. Every idea lists what it `requires` (one level down only, e.g. `math.gcf` requires `math.prime-factorization`). For each requirement the lesson carries a `refreshers[id]` mini-lesson of 2–3 screens (one worked `steps`, one graded check). Screens that use the prerequisite carry `"needs": "<id>"`; the player shows a "Need a reminder?" link there and offers the refresher after a wrong answer.
+10. Students can always "work it out": the player gives a scratch canvas and a calculator on every graded screen, and a lesson may name an explorer `tool` (today: `factors`). Tools let students test ideas; they never compute the answer to the question.
+11. Facts, numbers and dates are checked against the pages and standard knowledge. Unsure → keep the book's version and add a note `{"kind":"review", ...}`. Never invent.
 
 ## Language rules
 - Lesson text and questions are in English (the exam's language).
