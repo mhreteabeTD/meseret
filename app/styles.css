@@ -187,3 +187,26 @@ body.panel-open main { padding-bottom: 60vh; }
 .panel .phead { padding-block: 4px 4px; }
 .panel .pbody { gap: 8px; padding-top: 8px; }
 .padbar .opt { min-height: 40px; }
+
+/* book reader: one scrolling page per section */
+.reader { display: grid; gap: 16px; padding-bottom: 40px; }
+.reader > header h1 { font-size: 26px; }
+.ideahead { font-size: 21px; margin-top: 12px; padding-top: 14px; border-top: 2px solid var(--line); }
+.blk { background: var(--surface); border: 2px solid var(--line); border-radius: 18px; padding: 16px; display: grid; gap: 12px; scroll-margin-top: 72px; }
+.blk.plain { background: transparent; border: 0; padding: 4px 2px; }
+.blk.hook { border-color: var(--sky-line); background: var(--sky-soft); }
+.blk.done, .blk.seen { border-color: var(--accent-line); }
+.blk h1.display { font-size: 20px; }
+.blk .fb { border-radius: 12px; padding: 10px 12px; display: grid; gap: 4px; }
+.blk .fb.ok { background: var(--accent-soft); } .blk .fb.ok strong { color: var(--accent-deep); }
+.blk .fb.no { background: var(--sun-soft); } .blk .fb.no strong { color: var(--sun-ink); }
+.blk .fb.info { background: var(--sky-soft); } .blk .fb.info strong { color: var(--sky); }
+.blk .offer { display: grid; gap: 8px; }
+.blkfoot { display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.blkfoot .btn { width: auto; min-height: 44px; padding-inline: 0; }
+.endblk .kw { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.kwam { color: var(--muted); font-weight: 600; }
+.tbl { overflow-x: auto; } .tbl table { border-collapse: collapse; width: 100%; font-size: 15px; }
+.tbl th, .tbl td { border: 1.5px solid var(--line); padding: 6px 8px; text-align: left; vertical-align: top; } .tbl th { background: var(--surface-2); }
+.note { font-size: 14px; color: var(--muted); border-left: 4px solid var(--sun-line); padding-left: 10px; }
+.mini { height: 6px; border-radius: 99px; background: var(--surface-2); overflow: hidden; margin-top: 6px; } .mini i { display: block; height: 100%; background: var(--accent); }

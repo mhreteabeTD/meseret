@@ -1,0 +1,2090 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Meseret Maths 9 Unit 1</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Noto+Sans+Math&family=Nunito+Sans:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: one reading column (max 680px), sticky lesson nav, each section = text + tappable figure + activity. */
+:root {
+  --bg: #FBF7F0; --surface: #FFFFFF; --surface-2: #F2EEE4; --line: #E7E0D2;
+  --fg: #1A1A17; --muted: #6B6457;
+  --accent: #1F6B4A; --accent-ink: #FFFFFF; --accent-soft: #E6EFE9; --accent-line: #C9DFD2;
+  --warm: #C2641B; --warm-soft: #FDF4E7; --warm-ink: #8A4A12; --warm-line: #EBD7B8;
+  --bad-soft: #FBE9E4; --bad-ink: #9C2A12; --bad-line: #EFC3B6;
+  --set-a: rgba(31,107,74,.22); --set-b: rgba(194,100,27,.22); --hi: rgba(194,100,27,.55);
+  --display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --body: 'Nunito Sans', 'Noto Sans Math', 'Segoe UI', system-ui, sans-serif;
+  --math: 'Nunito Sans', 'Noto Sans Math', 'Cambria Math', 'STIX Two Math', sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #151613; --surface: #1F201C; --surface-2: #282923; --line: #383932;
+  --fg: #F1EEE6; --muted: #ABA697;
+  --accent: #6BBF95; --accent-ink: #0E1A13; --accent-soft: #1C3328; --accent-line: #2D4D3C;
+  --warm: #E59152; --warm-soft: #33261A; --warm-ink: #F2B887; --warm-line: #55402A;
+  --bad-soft: #3A211B; --bad-ink: #F2A390; --bad-line: #5A3328;
+  --set-a: rgba(107,191,149,.25); --set-b: rgba(229,145,82,.25); --hi: rgba(229,145,82,.55);
+  color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #151613; --surface: #1F201C; --surface-2: #282923; --line: #383932;
+  --fg: #F1EEE6; --muted: #ABA697;
+  --accent: #6BBF95; --accent-ink: #0E1A13; --accent-soft: #1C3328; --accent-line: #2D4D3C;
+  --warm: #E59152; --warm-soft: #33261A; --warm-ink: #F2B887; --warm-line: #55402A;
+  --bad-soft: #3A211B; --bad-ink: #F2A390; --bad-line: #5A3328;
+  --set-a: rgba(107,191,149,.25); --set-b: rgba(229,145,82,.25); --hi: rgba(229,145,82,.55);
+  color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 17px; line-height: 1.6; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+.wrap { max-width: 680px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 8px 64px; }
+
+nav.toc { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+nav.toc .in { max-width: 680px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 8px; display: flex; gap: 6px; overflow-x: auto; }
+nav.toc a { flex: none; text-decoration: none; color: var(--fg); background: var(--surface); border: 1.5px solid var(--line); border-radius: 99px; padding: 6px 12px; font-size: 14px; font-weight: 800; min-height: 36px; display: inline-flex; align-items: center; gap: 4px; }
+nav.toc a.read { border-color: var(--accent); color: var(--accent); }
+nav.toc a.read::after { content: "✓"; }
+
+header.unit { padding-block: 24px 8px; display: grid; gap: 12px; }
+.eyebrow { font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1, h2, h3 { font-family: var(--display); font-weight: 700; margin: 0; text-wrap: balance; line-height: 1.2; }
+h1 { font-size: 32px; }
+h2 { font-size: 26px; }
+h3 { font-size: 20px; margin-top: 8px; }
+h4 { font-size: 16px; margin: 4px 0 0; font-weight: 800; }
+p { margin: 0; }
+section.lesson { display: grid; gap: 16px; padding-block: 40px 8px; border-top: 2px solid var(--line); margin-top: 32px; scroll-margin-top: 64px; }
+section.lesson > * { min-width: 0; }
+.part { display: grid; gap: 12px; }
+.part > * { min-width: 0; }
+.card { background: var(--surface); border: 1.5px solid var(--line); border-radius: 16px; padding: 16px; }
+.outcomes ul, .card ul { margin: 6px 0 0; padding-left: 20px; }
+.compet { background: var(--accent-soft); border: 1.5px solid var(--accent-line); border-radius: 14px; padding: 12px 14px; font-size: 16px; }
+.compet b { color: var(--accent); }
+
+.kw { display: flex; flex-wrap: wrap; gap: 6px; }
+.kw button { border: 1.5px solid var(--warm-line); background: var(--warm-soft); color: var(--warm-ink); border-radius: 99px; padding: 4px 12px; font-size: 14px; font-weight: 800; min-height: 36px; cursor: pointer; }
+.kw button[aria-pressed="true"] { background: var(--warm); color: #fff; border-color: var(--warm); }
+.kwdef { font-size: 16px; min-height: 1.6em; color: var(--muted); }
+.kwdef strong { color: var(--fg); }
+
+.startup { border: 1.5px dashed var(--accent-line); border-radius: 14px; padding: 12px 14px; }
+.startup summary { cursor: pointer; font-weight: 800; color: var(--accent); min-height: 32px; }
+.startup ul, .startup ol { margin: 6px 0 0; padding-left: 20px; }
+.focus { background: var(--surface-2); border-radius: 14px; padding: 12px 14px; font-size: 16px; }
+.focus > b:first-child { display: block; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--warm-ink); }
+.fix { font-size: 14px; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 8px; }
+.fix b { color: var(--bad-ink); }
+.todo { background: var(--warm-soft); border: 1.5px solid var(--warm-line); border-radius: 16px; padding: 14px 16px; }
+.todo h4 { color: var(--warm-ink); }
+.todo ol { margin: 6px 0 0; padding-left: 22px; }
+.tbl { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; }
+th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+td.n { font-variant-numeric: tabular-nums; text-align: right; }
+
+/* figures */
+figure { margin: 0; display: grid; gap: 10px; }
+figure > * { min-width: 0; }
+figcaption { font-size: 14px; color: var(--muted); }
+.fig { background: var(--surface); border: 1.5px solid var(--line); border-radius: 18px; padding: 14px; display: grid; gap: 12px; }
+.info { background: var(--surface-2); border-radius: 12px; padding: 10px 12px; font-size: 16px; min-height: 3.2em; }
+.info strong { display: block; }
+.hint { font-size: 13px; font-weight: 700; color: var(--accent); }
+.tap { cursor: pointer; }
+svg text { font-family: var(--body); }
+.btnrow { display: flex; flex-wrap: wrap; gap: 8px; }
+.pill { border: 1.5px solid var(--line); background: var(--surface); border-radius: 12px; padding: 8px 14px; font-weight: 800; font-size: 15px; min-height: 44px; cursor: pointer; }
+.pill[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+.chain { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.chain button { border: 1.5px solid var(--line); background: var(--surface); border-radius: 12px; padding: 10px 4px; font-weight: 800; font-size: 14px; cursor: pointer; min-height: 52px; }
+.chain button[aria-pressed="true"] { border-color: var(--warm); background: var(--warm-soft); color: var(--warm-ink); }
+input[type=range] { width: 100%; accent-color: var(--accent); min-height: 32px; }
+.legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 14px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 14px; height: 14px; border-radius: 4px; display: inline-block; }
+
+/* sorter + quiz */
+.sorter { display: grid; gap: 10px; }
+.sorter .item { font-family: var(--display); font-size: 24px; font-weight: 700; text-align: center; padding: 8px; }
+.sorter .bins { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }
+.sorter .bins button { border: 1.5px solid var(--line); background: var(--surface); border-radius: 12px; min-height: 52px; font-weight: 800; cursor: pointer; }
+.fb { font-size: 16px; font-weight: 700; min-height: 1.6em; }
+.fb.ok { color: var(--accent); } .fb.no { color: var(--bad-ink); }
+.activity { background: var(--surface); border: 2px solid var(--accent-line); border-radius: 18px; padding: 16px; display: grid; gap: 12px; }
+.activity > * { min-width: 0; }
+.activity > h3 { margin: 0; color: var(--accent); }
+.qa { border-top: 1px solid var(--line); padding-top: 10px; }
+.qa summary { cursor: pointer; font-weight: 700; min-height: 32px; list-style-position: outside; }
+.qa summary::marker { color: var(--accent); }
+.qa .ans { margin-top: 6px; background: var(--accent-soft); border-radius: 10px; padding: 8px 12px; font-size: 16px; overflow-x: auto; }
+.mcq { display: grid; gap: 8px; }
+.mcq .opts { display: grid; gap: 8px; }
+.mcq button { text-align: left; border: 1.5px solid var(--line); background: var(--surface); border-radius: 12px; padding: 10px 14px; min-height: 48px; font-weight: 700; cursor: pointer; }
+.mcq button.ok { border-color: var(--accent); background: var(--accent-soft); }
+.mcq button.no { border-color: var(--bad-line); background: var(--bad-soft); color: var(--bad-ink); }
+.check { background: var(--surface); border: 1.5px dashed var(--accent); border-radius: 16px; padding: 14px 16px; }
+.ck { font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+.fb small { display: block; font-weight: 600; color: var(--fg); margin-top: 2px; }
+.quiz { background: var(--surface); border: 2px solid var(--warm-line); border-radius: 20px; padding: 18px 16px; display: grid; gap: 14px; scroll-margin-top: 64px; }
+.quiz > * { min-width: 0; }
+.quiz h3 { margin: 4px 0 2px; }
+.qlist { margin: 0; padding-left: 22px; display: grid; gap: 14px; }
+.qi { padding: 12px 12px 10px 4px; border-bottom: 1px solid var(--line); min-width: 0; }
+.qi::marker { font-weight: 800; color: var(--muted); }
+.qi p { margin: 4px 0; }
+.qt { font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--warm-ink); }
+.qi.ok { background: var(--accent-soft); border-radius: 12px; } .qi.no { background: var(--bad-soft); border-radius: 12px; }
+.qopts { display: grid; gap: 6px; margin-top: 6px; } .qopts.row2 { grid-template-columns: 1fr 1fr; }
+.qopts label { display: flex; gap: 10px; align-items: center; border: 1.5px solid var(--line); background: var(--surface); border-radius: 12px; padding: 8px 12px; min-height: 46px; cursor: pointer; font-weight: 600; }
+.qopts label:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
+.qopts input { accent-color: var(--accent); width: 18px; height: 18px; flex: none; }
+.qmatch { display: grid; gap: 8px; margin-top: 6px; }
+.qmatch label { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.3fr); gap: 8px; align-items: center; font-weight: 700; font-size: 15px; }
+.qmatch select, input.blank, input.num { font: inherit; font-size: 15px; color: var(--fg); background: var(--surface); border: 1.5px solid var(--line); border-radius: 10px; min-height: 44px; padding: 0 8px; max-width: 100%; }
+input.blank { width: 9em; margin: 0 6px; font-weight: 800; text-align: center; }
+.qr { font-size: 15px; } .qr b { color: var(--fg); }
+.qerr { color: var(--bad-ink); font-weight: 700; margin: 0; min-height: 0; }
+.qbtn { min-height: 52px; border: 0; border-radius: 14px; background: var(--accent); color: var(--accent-ink); font-weight: 800; font-size: 17px; padding: 0 20px; cursor: pointer; width: 100%; }
+.qbtn.ghost { background: transparent; border: 1.5px solid var(--accent); color: var(--accent); width: auto; }
+.qscore { display: grid; gap: 6px; justify-items: start; }
+.qscore .big { font-family: var(--display); font-size: 40px; font-weight: 700; font-variant-numeric: tabular-nums; }
+@media (max-width: 420px) { .qmatch label { grid-template-columns: 1fr; gap: 4px; } }
+.group { font-size: 16px; color: var(--muted); }
+.group b { color: var(--fg); }
+.done-btn { justify-self: start; border: 1.5px solid var(--accent); background: var(--surface); color: var(--accent); border-radius: 12px; padding: 0 16px; min-height: 48px; font-weight: 800; cursor: pointer; }
+.done-btn[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+dl.gloss { display: grid; grid-template-columns: minmax(110px, 30%) 1fr; gap: 8px 14px; margin: 0; font-size: 16px; }
+dl.gloss dt { font-weight: 800; }
+dl.gloss dd { margin: 0; color: var(--muted); }
+.note { font-size: 13px; color: var(--muted); }
+@media (max-width: 420px) { .chain { grid-template-columns: repeat(2, 1fr); } dl.gloss { grid-template-columns: 1fr; } dl.gloss dd { margin-bottom: 6px; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* maths additions (same style family) */
+.m { font-family: var(--math); }
+.mb { font-family: var(--math); background: var(--surface-2); border-radius: 10px; padding: 8px 12px; overflow-x: auto; white-space: nowrap; font-size: 17px; }
+.ov { text-decoration: overline; }
+.frac { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; font-size: .92em; line-height: 1.15; margin: 0 2px; }
+.frac > span:first-child { border-bottom: 1.5px solid currentColor; padding: 0 2px; }
+.defn { background: var(--surface); border: 1.5px solid var(--accent-line); border-radius: 14px; padding: 12px 14px; font-size: 16px; display: grid; gap: 6px; }
+.defn > b:first-child { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+.ex { background: var(--surface); border: 1.5px solid var(--line); border-radius: 16px; padding: 14px 16px; display: grid; gap: 8px; }
+.ex > * { min-width: 0; }
+.ex > h4 { color: var(--warm-ink); }
+.ex ol { margin: 0; padding-left: 22px; display: grid; gap: 4px; }
+.ex ol[type="a"] { margin-top: 4px; }
+.worked { display: grid; gap: 6px; }
+.steps { margin: 0; padding-left: 22px; display: grid; gap: 4px; }
+.cells { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 4px; }
+.cells button { border: 1.5px solid var(--line); background: var(--surface); border-radius: 8px; min-height: 44px; font-weight: 800; font-size: 14px; cursor: pointer; padding: 0; font-variant-numeric: tabular-nums; }
+.cells button.p { background: var(--accent-soft); border-color: var(--accent-line); color: var(--accent); }
+.cells button.c { background: var(--warm-soft); border-color: var(--warm-line); color: var(--warm-ink); }
+.cells button[aria-pressed="true"] { outline: 3px solid var(--fg); outline-offset: -3px; }
+.svgbox { overflow-x: auto; }
+.svgbox svg { display: block; width: 100%; height: auto; }
+.row2c { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.row2c > * { min-width: 0; }
+.row2c label { font-weight: 700; font-size: 15px; }
+.rules { display: grid; gap: 4px; font-size: 15px; }
+.rules div { display: grid; grid-template-columns: 34px 1fr; gap: 8px; align-items: start; padding: 4px 0; border-bottom: 1px solid var(--line); }
+.rules .y { color: var(--accent); font-weight: 800; } .rules .x { color: var(--bad-ink); font-weight: 800; }
+.digits { font-family: var(--math); font-size: 22px; letter-spacing: .04em; overflow-x: auto; white-space: nowrap; padding: 6px 0; }
+.digits .r { background: var(--hi); border-radius: 4px; }
+.defn > * { min-width: 0; }
+.row2c input[type=range] { display: block; min-width: 0; }
+</style>
+<nav class="toc" aria-label="Lessons"><div class="in">
+  <a href="#l11" data-sec="l11">1.1 Natural numbers &amp; integers</a>
+  <a href="#l12" data-sec="l12">1.2 Rational numbers</a>
+  <a href="#l13" data-sec="l13">1.3 Irrational numbers</a>
+  <a href="#l14" data-sec="l14">1.4 Real numbers</a>
+  <a href="#l15" data-sec="l15">1.5 Applications</a>
+  <a href="#summary">Summary</a>
+  <a href="#review">Review</a>
+  <a href="#gloss">Glossary</a>
+</div></nav>
+<div class="wrap">
+<header class="unit">
+  <div class="eyebrow">Grade 9 · Mathematics · Unit 1</div>
+  <h1>The Number System</h1>
+  <div class="card outcomes"><h4>After this unit you will be able to:</h4>
+    <ul>
+      <li>Describe rational numbers</li>
+      <li>Locate rational numbers on the number line</li>
+      <li>Describe irrational numbers</li>
+      <li>Locate some irrational numbers on the number line</li>
+      <li>Define real numbers</li>
+      <li>Classify real numbers as rational or irrational</li>
+      <li>Solve problems involving real numbers</li>
+    </ul>
+  </div>
+  <p class="note">Interactive edition based on the Grade 9 Mathematics textbook, Unit 1 (pages 17–86 of the supplied PDF). The publisher and year are not shown in the supplied pages. Tap anything that looks like a button. Where the printed book has an error, a short correction note appears.</p>
+  <p>In earlier grades you learned about natural numbers, integers and rational numbers, and how to calculate with them. This unit revises those numbers, then extends them to irrational numbers and real numbers.</p>
+</header>
+<section class="lesson" id="l11">
+<div class="eyebrow">Lesson 1.1 · pages 18–32</div>
+<h2>Revision on natural numbers and integers</h2>
+<div class="compet"><b>Lesson goal:</b> Use the division algorithm, primes, divisibility tests, prime factorization, GCF and LCM.</div>
+<div class="card"><h4>Key words · tap one</h4>
+<div class="kw" data-terms="Natural number,Integer,Division algorithm,Prime number,Composite number,Divisibility test,Prime factorization,Fundamental theorem of arithmetic,Greatest common factor (GCF),Least common multiple (LCM)"></div>
+<p class="kwdef" aria-live="polite">Tap a word to see what it means.</p>
+</div>
+<div class="activity"><h3>Activity 1.1</h3>
+<p>1. List five natural numbers and five integers.</p>
+<p>2. Which of 6, 0 and −25 are natural numbers? Which are integers?</p>
+<p>3. How are natural numbers and integers related?</p>
+<p>4. Always, sometimes or never true? (a) Natural numbers are integers. (b) Integers are natural numbers. (c) −7 is a natural number.</p>
+<p>5. Draw a diagram that shows how natural numbers and integers are related.</p><details class="qa"><summary>Show the answers</summary><div class="ans">1. For example 1, 2, 3, 4, 5 and −2, −1, 0, 4, 9.<br>2. Natural: 6. Integers: 6, 0 and −25.<br>3. Every natural number is an integer: ℕ ⊆ ℤ.<br>4. (a) always (b) sometimes: 5 yes, −5 no (c) never.<br>5. A circle for ℕ drawn inside a bigger circle for ℤ (see Figure 1.2 in lesson 1.2).</div></details>
+</div>
+<div class="part"><p>Recall that a set is a collection of well-defined, <strong>distinct</strong> objects: no object appears twice. From Grade 7:</p>
+<div class="mb">ℕ = {1, 2, 3, …} &nbsp; (natural numbers)</div>
+<div class="mb">ℤ = {…, −2, −1, 0, 1, 2, 3, …} &nbsp; (integers)</div><div class="mcq check" data-ans="0" data-why="ℕ starts at 1, so 0 is an integer but not a natural number." data-clue="Where does ℕ start?"><span class="ck">Check your understanding</span><h4>Which number is an integer but NOT a natural number?</h4><div class="opts"><button>7</button><button>0</button><button>100</button><button>1</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.1</h4><ol><li>Sort 8, −11, 23, 534, 0, −46, −19, 100 into natural numbers and integers.</li><li>What is the last integer before one thousand?</li><li>Take any two natural numbers n₁ and n₂. (a) Is n₁ + n₂ always a natural number? (b) Is n₁ − n₂? (c) What do you conclude?</li><li>A triangle has perimeter 10 and its sides are natural numbers. Find all possible side lengths.</li><li>m and n are positive integers with m + n &lt; 10. How many different values can mn take?</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">1. Natural: 8, 23, 534, 100. Integers: all eight numbers.<br>2. 999.<br>3. (a) yes, e.g. 3 + 5 = 8 (b) not always, e.g. 3 − 5 = −2 (c) ℕ is closed under addition but not under subtraction.<br>4. The longest side must be less than half the perimeter (less than 5), so the sides are 2, 4, 4 or 3, 3, 4.<br>5. 16 values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 15, 16, 18, 20.</div></details>
+</div>
+</div>
+<div class="part">
+<h3>1.1.1 Euclid's division lemma</h3><div class="activity"><h3>Activity 1.2</h3>
+<p>1. A bookshop shares 115 books equally among 8 students. How many does each get, and how many are left?</p>
+<p>2. Divide 128 by 6. What are the quotient and remainder? Can you guess the remainder before dividing?</p><details class="qa"><summary>Show the answers</summary><div class="ans">1. 115 = 8 × 14 + 3: each student gets 14 books and 3 are left.<br>2. 128 = 6 × 21 + 2: quotient 21, remainder 2. The remainder must be one of 0, 1, 2, 3, 4, 5, because it is always less than 6.</div></details>
+</div><div class="defn"><b>Theorem 1.1 · Euclid's division lemma</b><div>Given a non-negative integer a and a positive integer b, there are unique non-negative integers q and r with<div class="mb">a = (b × q) + r, &nbsp; 0 ≤ r &lt; b</div>a is the <strong>dividend</strong>, b the <strong>divisor</strong>, q the <strong>quotient</strong> and r the <strong>remainder</strong>.</div></div>
+<div class="worked"><p><strong>Example 1.</strong> (a) 38 ÷ 4: <span class="m">38 = 4 × 9 + 2</span>. (b) 5 ÷ 14: 5 is less than 14, so <span class="m">5 = 14 × 0 + 5</span>; the quotient is 0 and the remainder is 5. (c) 12 ÷ 3: <span class="m">12 = 3 × 4 + 0</span>. (d) 2,574 ÷ 8 by long division: <span class="m">2,574 = 8 × 321 + 6</span>.</p></div><div class="focus"><b>Note</b>a is <strong>divisible</strong> by b when the remainder is 0. In (c), 12 is divisible by 3.</div>
+<figure class="fig" id="euclid">
+<div class="row2c">
+<label for="ea">Dividend a: <span id="eal"></span><input type="range" id="ea" min="0" max="60" value="38"></label>
+<label for="eb">Divisor b: <span id="ebl"></span><input type="range" id="eb" min="1" max="12" value="4"></label>
+</div>
+<div class="svgbox"><svg viewBox="0 0 330 150" role="img" aria-label="Dots grouped into rows of b"></svg></div>
+<div class="info" aria-live="polite"></div>
+<figcaption>Division as grouping. Each full row holds b dots; the orange dots are the remainder. Drag the sliders.</figcaption>
+</figure>
+<div class="mcq check" data-ans="5" data-why="The remainder is what is left after taking full groups, and 5 &lt; 6." data-clue="It is the number added at the end, and it is less than the divisor."><span class="ck">Check your understanding</span><h4>In 47 = 6 × 7 + 5, which number is the remainder?</h4><div class="opts"><button>47</button><button>6</button><button>7</button><button>5</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="Because 6 more makes another full group" data-why="If 6 were left, you could make one more group, so r is always less than b." data-clue="Set b = 6 in the figure and watch the orange dots."><span class="ck">Check your understanding</span><h4>Why can the remainder never be 6 when you divide by 6?</h4><div class="opts"><button>Because 6 more makes another full group</button><button>Because 6 is even</button><button>Because the quotient would be 0</button><button>It can be 6</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.2</h4><ol><li>For each pair (a, b), find q and r with a = (b × q) + r and 0 ≤ r &lt; b: (a) 14, 3 (b) 116, 7 (c) 25, 36 (d) 987, 16 (e) 570, 6</li><li>Find all positive integers that leave remainder 3 when divided by 4.</li><li>A man has 68 Birr. Each item costs 7 Birr and he wants 5 Birr left in his pocket. What is the largest number of items he can buy?</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) 14 = 3 × 4 + 2 (b) 116 = 7 × 16 + 4 (c) 25 = 36 × 0 + 25 (d) 987 = 16 × 61 + 11 (e) 570 = 6 × 95 + 0<br>2. 3, 7, 11, 15, 19, …: the numbers 4k + 3 for k = 0, 1, 2, …<br>3. He can spend 68 − 5 = 63 Birr, and 63 = 7 × 9, so 9 items.</div></details>
+</div>
+</div>
+<div class="part">
+<h3>1.1.2 Prime numbers and composite numbers</h3><div class="activity"><h3>Activity 1.3</h3>
+<p>1. Use 3 and 12 to fill the blanks: (a) __ is a factor of __ (b) __ is divisible by __ (c) __ is a multiple of __</p>
+<p>2. True or false? Justify each false one. (a) 1 is a factor of every natural number. (b) There is no even prime number. (c) 23 is prime. (d) Every natural number is either prime or composite. (e) 351 is divisible by 3. (f) 2² × 3 × 7 is the prime factorization of 84. (g) 63 is a multiple of 21.</p>
+<p>3. Write the factors of (a) 7 (b) 15.</p><details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) 3 is a factor of 12 (b) 12 is divisible by 3 (c) 12 is a multiple of 3.<br>2. (a) true (b) false: 2 is prime (c) true (d) false: 1 is neither (e) true: 3 + 5 + 1 = 9 (f) true: 4 × 3 × 7 = 84 (g) true: 21 × 3 = 63.<br>3. (a) 1, 7 (b) 1, 3, 5, 15.</div></details>
+</div><p>For natural numbers h and p, h is a <strong>multiple</strong> of p if <span class="m">h = p × q</span> for some natural number q. Then p and q are <strong>factors</strong> (divisors) of h, and h is divisible by p and by q.</p>
+<p><strong>Example 1.</strong> 249 = 3 × 83, so 249 is divisible by 3.</p><div class="defn"><b>Definition 1.1 · Prime and composite numbers</b><div>A natural number with exactly two different factors, 1 and itself, is a <strong>prime number</strong>. A natural number with more than two factors is a <strong>composite number</strong>.</div></div>
+<div class="worked"><p><strong>Example 2.</strong> 18 = 1 × 18 = 2 × 9 = 3 × 6, so its factors are 1, 2, 3, 6, 9, 18. It has more than two factors, so 18 is composite.</p>
+<p><strong>Example 3.</strong> Primes between 50 and 55: 51 = 3 × 17, 52 = 2 × 26 and 54 = 2 × 27 are composite. 53 has only the factors 1 and 53, so 53 is the only prime.</p></div><div class="focus"><b>Note</b>1 is neither prime nor composite. 2 is the only even prime. A factor of a natural number is never larger than the number itself.</div>
+<figure class="fig" id="sieve">
+<div class="btnrow" role="group" aria-label="Show"></div>
+<div class="cells" role="group" aria-label="Numbers 1 to 60"></div>
+<div class="legend"><span><i style="background:var(--accent-soft);border:1.5px solid var(--accent-line)"></i>Prime</span><span><i style="background:var(--warm-soft);border:1.5px solid var(--warm-line)"></i>Composite</span><span><i style="background:var(--surface);border:1.5px solid var(--line)"></i>Neither (1)</span></div>
+<div class="info" aria-live="polite"><span class="hint">Tap a number to see its factors.</span></div>
+<figcaption>Numbers 1 to 60. Tap a number to list its factors and see why it is prime, composite or neither.</figcaption>
+</figure>
+<div class="mcq check" data-ans="29" data-why="29 has only the factors 1 and 29. The others: 21 = 3 × 7, 27 = 3 × 9, 33 = 3 × 11." data-clue="Tap each number in the figure."><span class="ck">Check your understanding</span><h4>Which number is prime?</h4><div class="opts"><button>21</button><button>27</button><button>29</button><button>33</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="It has only one factor" data-why="A prime needs exactly two different factors; 1 has just one." data-clue="Count the factors of 1."><span class="ck">Check your understanding</span><h4>Why is 1 not a prime number?</h4><div class="opts"><button>It has only one factor</button><button>It is odd</button><button>It is too small to divide</button><button>It is composite</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.3</h4><ol><li>List the prime numbers less than 30.</li><li>True or false? (a) There are 7 primes between 1 and 20. (b) 4, 6, 15 and 21 are composite. (c) The smallest composite number is 2. (d) 101 is the prime nearest to 100. (e) No prime greater than 5 ends in 5.</li><li>Is 28 composite? If so, list all its factors.</li><li>Can we say 'if a number is odd, then it is prime'? Why?</li><li>Which is true about composite numbers? (a) They have 3 pairs of factors. (b) They have no factors. (c) They are always prime. (d) They have more than two factors.</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">1. 2, 3, 5, 7, 11, 13, 17, 19, 23, 29.<br>2. (a) false: there are 8 (2, 3, 5, 7, 11, 13, 17, 19) (b) true (c) false: it is 4 (d) true: 101 is 1 away, 97 is 3 away (e) true: such a number is divisible by 5.<br>3. Yes: 1, 2, 4, 7, 14, 28.<br>4. No. 9 is odd but 9 = 3 × 3.<br>5. (d).</div></details>
+</div>
+</div>
+<div class="part">
+<h3>1.1.3 Divisibility tests</h3><div class="activity"><h3>Activity 1.4</h3>
+<p>Without dividing, decide whether the first number is divisible by the second: (a) 2584, 2 (b) 765, 9 (c) 63885, 6 (d) 7964, 4 (e) 65475, 5</p><details class="qa"><summary>Show the answers</summary><div class="ans">(a) yes: ends in 4 (b) yes: 7 + 6 + 5 = 18 (c) no: it is odd, so not divisible by 2 (d) yes: 64 is divisible by 4 (e) yes: ends in 5.</div></details>
+</div><p>Every number is divisible by 1. A <strong>divisibility test</strong> tells you whether a number is divisible by 2, 3, 4, 5, 6, 8, 9 or 10 without doing the division. (A test for 7 exists but is beyond this level.)</p>
+<div class="tbl card"><table><thead><tr><th>Divisible by</th><th>Test</th></tr></thead><tbody>
+<tr><td>2</td><td>The units digit is 0, 2, 4, 6 or 8</td></tr>
+<tr><td>3</td><td>The sum of the digits is divisible by 3</td></tr>
+<tr><td>4</td><td>The number formed by the last two digits is divisible by 4</td></tr>
+<tr><td>5</td><td>The units digit is 0 or 5</td></tr>
+<tr><td>6</td><td>It is divisible by both 2 and 3</td></tr>
+<tr><td>8</td><td>The number formed by the last three digits is divisible by 8</td></tr>
+<tr><td>9</td><td>The sum of the digits is divisible by 9</td></tr>
+<tr><td>10</td><td>The units digit is 0</td></tr></tbody></table></div>
+<p><strong>Example 1.</strong> 2,334: divisible by 2 (ends in 4), by 3 (2 + 3 + 3 + 4 = 12) and so by 6. Not by 4 (34), 5, 8 (334), 9 (12) or 10.</p><figure class="fig" id="divtest">
+<div class="btnrow" role="group" aria-label="Choose a number"></div>
+<label for="dnum" style="font-weight:700">Or type a whole number:</label>
+<input class="num" id="dnum" inputmode="numeric" autocomplete="off" value="2334">
+<div class="rules" aria-live="polite"></div>
+<figcaption>Divisibility tester. Each rule shows the digits it uses and its result.</figcaption>
+</figure>
+<div class="mcq check" data-ans="Yes, because 12 is divisible by 4" data-why="For 4, only the last two digits matter: 12 ÷ 4 = 3." data-clue="Which digits does the test for 4 look at?"><span class="ck">Check your understanding</span><h4>Is 5,412 divisible by 4?</h4><div class="opts"><button>Yes, because 12 is divisible by 4</button><button>No, because it is even</button><button>Yes, because 5 + 4 + 1 + 2 = 12</button><button>No, because it does not end in 4</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="6" data-why="Divisible by 2 and 3 is exactly the test for 6." data-clue="Read the row for 6 in the table."><span class="ck">Check your understanding</span><h4>A number is divisible by 2 and by 3. What else must it be divisible by?</h4><div class="opts"><button>6</button><button>5</button><button>9</button><button>4</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.4</h4><ol><li>Test each number for divisibility by 2, 3, 4, 5, 6, 8, 9 and 10: (a) 384 (b) 3,186 (c) 42,435</li><li>74,3x2 is divisible by 4, where x is the tens digit. Find all possible values of x.</li><li>Find the smallest digit for the blank so that 3457_40 is divisible by 4.</li><li>Fill the blank with the smallest digit that makes 81231_37 divisible by 9.</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) 384: by 2, 3, 4, 6, 8 (b) 3,186: by 2, 3, 6, 9 (c) 42,435: by 3, 5, 9.<br>2. The last two digits x2 must be divisible by 4: 12, 32, 52, 72, 92. So x = 1, 3, 5, 7 or 9.<br>3. The last two digits are 40, which is divisible by 4 whatever the blank is, so the smallest digit is 0.<br>4. Digit sum without the blank: 8 + 1 + 2 + 3 + 1 + 3 + 7 = 25. The next multiple of 9 is 27, so the digit is 2.</div></details>
+</div>
+<h3>Prime factorization</h3><div class="defn"><b>Definition 1.2 · Prime factorization</b><div>Writing a number as a product of prime numbers is called <strong>prime factorization</strong>.</div></div>
+<p>To factorize a composite number, split it into two factors. If a factor is still composite, split it again. Stop when every factor is prime.</p>
+<div class="worked"><p><strong>Examples.</strong> 6 = 2 × 3. 30 = 2 × 15 and 15 = 3 × 5, so <span class="m">30 = 2 × 3 × 5</span>. For 72: 72 = 2 × 36, 36 = 2 × 18, 18 = 2 × 9, 9 = 3 × 3, so <span class="m">72 = 2 × 2 × 2 × 3 × 3 = 2³ × 3²</span>. A <strong>factor tree</strong> shows these splits.</p>
+<p><strong>Example 5.</strong> 456 ÷ 2 = 228, 228 ÷ 2 = 114, 114 ÷ 2 = 57, 57 ÷ 3 = 19, and 19 is prime. So <span class="m">456 = 2³ × 3 × 19</span>.</p></div><div class="defn"><b>Theorem 1.2 · Fundamental theorem of arithmetic</b><div>Every composite number can be written as a product of primes, and this factorization is unique (apart from the order of the factors).</div></div>
+<figure class="fig" id="ladder">
+<div class="btnrow" role="group" aria-label="Choose a number"></div>
+<div class="btnrow"><button class="pill" id="lnext">Next division</button><button class="pill" id="lreset">Start again</button></div>
+<div class="tbl"><table id="ladtbl"></table></div>
+<div class="info" aria-live="polite"></div>
+<figcaption>Division ladder. Divide by the smallest prime that works, step by step, until the quotient is 1.</figcaption>
+</figure>
+<div class="mcq check" data-ans="2² × 3 × 5" data-why="Every factor must be prime: 60 = 2 × 2 × 3 × 5." data-clue="Are all the factors prime? 30, 4, 15 and 10 are not."><span class="ck">Check your understanding</span><h4>What is the prime factorization of 60?</h4><div class="opts"><button>2 × 30</button><button>2² × 3 × 5</button><button>4 × 15</button><button>2 × 3 × 10</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="They get the same primes, maybe in a different order" data-why="The prime factorization is unique apart from order." data-clue="Read Theorem 1.2."><span class="ck">Check your understanding</span><h4>Two students factorize 84 in different orders. What does the fundamental theorem say about their answers?</h4><div class="opts"><button>They get the same primes, maybe in a different order</button><button>They always get different primes</button><button>One of them must get 84 = 1 × 84</button><button>Only the first student can be right</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.5</h4><ol><li>Write the prime factorization of (a) 21 (b) 70 (c) 105 (d) 252 (e) 360.</li><li>180 = 2<sup>a</sup> × 3<sup>b</sup> × 5<sup>c</sup>. Find a, b and c.</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) 3 × 7 (b) 2 × 5 × 7 (c) 3 × 5 × 7 (d) 2² × 3² × 7 (e) 2³ × 3² × 5<br>2. 180 = 2² × 3² × 5, so a = 2, b = 2, c = 1.</div></details>
+</div>
+<div class="ex"><h4>Exercise 1.6</h4><ol><li>Write the prime factorization of (a) 1,848 (b) 1,890 (c) 2,070 (d) 134,750.</li><li>Find four prime numbers whose product is 462.</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) 2³ × 3 × 7 × 11 (b) 2 × 3³ × 5 × 7 (c) 2 × 3² × 5 × 23 (d) 2 × 5³ × 7² × 11<br>2. 462 = 2 × 3 × 7 × 11.</div></details>
+</div>
+</div>
+<div class="part">
+<h3>1.1.4 Greatest common factor and least common multiple</h3><div class="activity"><h3>Activity 1.5</h3>
+<p>1. For 12 and 16, find (a) the common factors (b) the greatest common factor.</p>
+<p>2. For 24, 42 and 56, find (a) the common factors (b) the greatest common factor.</p><details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) 1, 2, 4 (b) 4.<br>2. (a) 1, 2 (b) 2.</div></details>
+</div><div class="defn"><b>Definition 1.3</b><div>(i) A number that is a factor of each of two or more natural numbers is a <strong>common factor</strong>. (ii) The largest common factor is the <strong>greatest common factor (GCF)</strong>, also called the highest common factor (HCF). GCF(a, b) means the GCF of a and b.</div></div>
+<p><strong>Example 1.</strong> Factors of 36: 1, 2, 3, 4, 6, 9, 12, 18, 36. Factors of 56: 1, 2, 4, 7, 8, 14, 28, 56. The common factors are 1, 2, 4, so <span class="m">GCF(36, 56) = 4</span>. Figure 1.1 shows this as a Venn diagram, with the common factors in the overlap.</p>
+<div class="activity"><h3>Activity 1.6</h3><p>For a = 36 and b = 56: (1) write their prime factorizations; (2) find the common prime factors with the smallest power; (3) multiply them; (4) compare with GCF(36, 56).</p><details class="qa"><summary>Show the answers</summary><div class="ans">(1) 36 = 2² × 3², 56 = 2³ × 7. (2) The only common prime is 2; the smaller power is 2². (3) 2² = 4. (4) It matches GCF(36, 56) = 4.</div></details>
+</div><p><strong>GCF by prime factorization:</strong> multiply the common prime factors, each to the <strong>smallest</strong> power it has in the factorizations.</p>
+<p><strong>Example 2.</strong> 12 = 2² × 3, 18 = 2 × 3², 36 = 2² × 3². The common primes are 2 and 3, each with smallest power 1. So <span class="m">GCF(12, 18, 36) = 2 × 3 = 6</span>.</p><div class="ex"><h4>Exercise 1.7</h4><ol><li>Find the GCF using a Venn diagram of factors: (a) 12, 18 (b) 24, 64 (c) 45, 63, 99</li><li>Find the GCF using prime factorization: (a) 24, 54 (b) 108, 104 (c) 180, 270 and 1,080</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) 6 (b) 8 (c) 9<br>2. (a) 24 = 2³ × 3, 54 = 2 × 3³: GCF = 2 × 3 = 6 (b) 108 = 2² × 3³, 104 = 2³ × 13: GCF = 2² = 4 (c) 180 = 2² × 3² × 5, 270 = 2 × 3³ × 5, 1,080 = 2³ × 3³ × 5: GCF = 2 × 3² × 5 = 90</div></details>
+</div>
+<h4>Least common multiple</h4>
+<div class="todo"><h4>Activity 1.7 · Things to do</h4><ol>
+<li>Write the numbers 1 to 60 with a pen.</li>
+<li>With a pencil, circle every multiple of 6.</li>
+<li>With a pencil, underline every multiple of 8.</li></ol>
+<p style="margin-top:8px">(a) Collect the numbers that are both circled and underlined. (b) Which is the smallest? (c) What do we call it for 6 and 8?</p><details class="qa"><summary>Show the answers</summary><div class="ans">(a) {24, 48} (b) 24 (c) the least common multiple: LCM(6, 8) = 24.</div></details>
+</div><div class="defn"><b>Definition 1.4</b><div>The <strong>least common multiple</strong> of natural numbers a and b, written LCM(a, b), is the smallest number that is a multiple of both a and b.</div></div>
+<p><strong>Example 3.</strong> Multiples of 6: 6, 12, 18, 24, 30, … Multiples of 9: 9, 18, 27, 36, … The common multiples are 18, 36, 54, …, so <span class="m">LCM(6, 9) = 18</span>.</p>
+<p><strong>LCM by prime factorization:</strong> take every prime that appears in any of the numbers, each to the <strong>greatest</strong> power it has, and multiply.</p>
+<p><strong>Example 4.</strong> 6 = 2 × 3, 10 = 2 × 5, 16 = 2⁴. The primes are 2, 3 and 5, so <span class="m">LCM(6, 10, 16) = 2⁴ × 3 × 5 = 240</span>.</p><figure class="fig" id="gcfvenn">
+<div class="btnrow" role="group" aria-label="Choose two numbers"></div>
+<div class="svgbox"><svg viewBox="0 0 340 190" role="img" aria-label="Venn diagram of prime factors"></svg></div>
+<div class="btnrow" role="group" aria-label="Show GCF or LCM"></div>
+<div class="info" aria-live="polite"></div>
+<figcaption>Prime factors in a Venn diagram. Shared primes go in the overlap. GCF = product of the overlap; LCM = product of everything.</figcaption>
+</figure>
+<div class="mcq check" data-ans="36" data-why="Take each prime to its greatest power: 2² × 3² = 36." data-clue="For the LCM, use the greatest power of each prime."><span class="ck">Check your understanding</span><h4>12 = 2² × 3 and 18 = 2 × 3². What is LCM(12, 18)?</h4><div class="opts"><button>6</button><button>36</button><button>72</button><button>216</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="8 and 15 have no common prime factor" data-why="8 = 2³ and 15 = 3 × 5 share no prime, so only 1 divides both. Such numbers are called relatively prime." data-clue="Put 8 and 15 in the Venn diagram in your head: what goes in the overlap?"><span class="ck">Check your understanding</span><h4>GCF(8, 15) = 1. What does that tell you?</h4><div class="opts"><button>8 and 15 have no common prime factor</button><button>8 and 15 are both prime</button><button>LCM(8, 15) = 1</button><button>15 is a multiple of 8</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.8</h4><ol><li>Find the LCM: (a) 6, 15 (b) 14, 21 (c) 4, 15, 21 (d) 6, 10, 15, 18</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">(a) 30 (b) 42 (c) 420 (d) 90</div></details>
+</div>
+<div class="activity"><h3>Activity 1.8</h3>
+<p>For 15 and 42: (a) find LCM(15, 42) and GCF(15, 42); (b) find 15 × 42; (c) find GCF × LCM; (d) compare (b) and (c); (e) what do you conclude?</p><details class="qa"><summary>Show the answers</summary><div class="ans">(a) LCM = 210, GCF = 3 (b) 630 (c) 3 × 210 = 630 (d) they are equal (e) GCF(a, b) × LCM(a, b) = a × b.</div></details>
+</div><div class="mb">GCF(a, b) × LCM(a, b) = a × b</div><div class="mcq check" data-ans="24" data-why="LCM = (a × b) ÷ GCF = 96 ÷ 4 = 24." data-clue="Use GCF × LCM = a × b."><span class="ck">Check your understanding</span><h4>GCF(a, b) = 4 and a × b = 96. What is LCM(a, b)?</h4><div class="opts"><button>24</button><button>92</button><button>100</button><button>384</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.9</h4><ol><li>Find the GCF and LCM: (a) 4 and 9 (b) 7 and 48 (c) 12 and 32 (d) 16 and 39 (e) 12, 16 and 24 (f) 4, 18 and 30</li><li>Find GCF(16, 24) × LCM(16, 24).</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) 1, 36 (b) 1, 336 (c) 4, 96 (d) 1, 624 (e) 4, 48 (f) 2, 180<br>2. 16 × 24 = 384 (check: 8 × 48 = 384).</div></details>
+</div>
+</div>
+<div class="quiz" data-quiz="l11"></div>
+<button class="done-btn" data-done="l11" aria-pressed="false">Mark lesson 1.1 as read</button>
+</section>
+<section class="lesson" id="l12">
+<div class="eyebrow">Lesson 1.2 · pages 32–39</div>
+<h2>Rational numbers</h2>
+<div class="compet"><b>Lesson goal:</b> Describe rational numbers, write them as decimals, locate them on the number line, and turn terminating and repeating decimals into fractions.</div>
+<div class="card"><h4>Key words · tap one</h4>
+<div class="kw" data-terms="Rational number,Proper fraction,Improper fraction,Mixed fraction,Relatively prime,Terminating decimal,Repeating decimal,Bar notation"></div>
+<p class="kwdef" aria-live="polite">Tap a word to see what it means.</p>
+</div>
+<div class="activity"><h3>Activity 1.9</h3>
+<p>Take the integers 7, −2, 6, 0 and −3. (a) Divide some of them by others. (b) Which answers are integers? (c) What do you conclude?</p><details class="qa"><summary>Show the answers</summary><div class="ans">For example 6 ÷ (−3) = −2 and 0 ÷ 7 = 0 are integers, but 7 ÷ 6 = 7/6 and −2 ÷ 7 = −2/7 are not. Dividing integers does not always give an integer, so we need a bigger set: the rational numbers. (Division by 0 is not allowed.)</div></details>
+</div>
+<div class="part"><div class="defn"><b>Definition 1.5 · Rational numbers</b><div>A number that can be written as <span class="frac"><span>a</span><span>b</span></span>, where a and b are integers and b ≠ 0, is a <strong>rational number</strong>. The set of rational numbers is<div class="mb">ℚ = {a/b : a, b ∈ ℤ and b ≠ 0}</div></div></div>
+<p><strong>Example 1.</strong> <span class="m">3/4</span>, <span class="m">−13/10</span>, −6 and 0 are rational. −6 = −6/1 and 0 = 0/1, so every integer is rational, and so is every natural number: <span class="m">ℕ ⊆ ℤ ⊆ ℚ</span>.</p><figure class="fig" id="nest">
+<div class="svgbox"><svg viewBox="0 0 330 200" role="img" aria-label="Nested sets of natural numbers, integers and rational numbers. Tap a set."></svg></div>
+<div class="info" aria-live="polite"><span class="hint">Tap ℕ, ℤ or ℚ.</span></div>
+<figcaption>Figure 1.2 Natural numbers sit inside the integers, which sit inside the rational numbers.</figcaption>
+</figure>
+<div class="focus"><b>Note: kinds of fractions</b>Let x = a/b be a fraction with a, b positive. (i) If a &lt; b, x is a <strong>proper fraction</strong>. (ii) If a ≥ b, x is an <strong>improper fraction</strong>. (iii) A whole number with a proper fraction, such as 5¼, is a <strong>mixed fraction</strong>. (iv) x is in <strong>simplest form</strong> (lowest terms) when GCF(a, b) = 1, that is, a and b are <strong>relatively prime</strong>.</div>
+<p class="fix"><b>Note:</b> the book states (i) and (ii) for any integers a and b. They are meant for positive numerators and denominators: by the book's rule, −5/2 would count as "proper" because −5 &lt; 2.</p>
+<div class="worked"><p><strong>Example 2.</strong> 7/8 and 2/9 are proper; 7/3 and 6 (= 6/1) are improper; 5¼ is mixed.</p>
+<p><strong>Example 3.</strong> To change a mixed fraction to an improper fraction: <span class="m">l m/n = l + m/n = (l × n + m)/n</span>. So <span class="m">3¼ = (3 × 4 + 1)/4 = 13/4</span>.</p></div><div class="mcq check" data-ans="5/0" data-why="The denominator of a rational number can never be 0; 5/0 is not a number at all." data-clue="Read the condition on b in Definition 1.5."><span class="ck">Check your understanding</span><h4>Which number is NOT rational?</h4><div class="opts"><button>−6</button><button>0</button><button>5/0</button><button>13/4</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="11/4" data-why="The numerator 11 is larger than the denominator 4." data-clue="Compare the top and bottom numbers."><span class="ck">Check your understanding</span><h4>Which is an improper fraction?</h4><div class="opts"><button>3/7</button><button>11/4</button><button>2⅓</button><button>0.5</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="No, it simplifies to 3/4" data-why="GCF(18, 24) = 6, so 18/24 = 3/4." data-clue="Find GCF(18, 24)."><span class="ck">Check your understanding</span><h4>Is 18/24 in simplest form?</h4><div class="opts"><button>Yes</button><button>No, it simplifies to 3/4</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.10</h4><ol><li>True or false? Justify the false ones. (a) Every integer is a rational number. (b) The simplest form of 35/45 is 9/7. (c) For a, b, c, d ∈ ℤ, a/b + c/d is a rational number. (d) The simplest form of 5 2/4 is 11/2.</li><li>If a/b and c/d are rational numbers, show that (a/b) × (c/d) is rational.</li><li>Zebiba measures a table as 54 cm and 4 mm. Write this in centimetres as a fraction a/b in lowest terms.</li><li>A rope 5⅓ m long is cut into 4 equal pieces. How long is each piece?</li></ol><p class="fix"><b>Note:</b> item (c) in the printed book does not say b ≠ 0 and d ≠ 0. Without that, a/b and c/d might not be numbers.</p>
+<details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) true: n = n/1 (b) false: 35/45 = 7/9 (c) true, as long as b ≠ 0 and d ≠ 0: the sum is (ad + bc)/bd (d) true: 5 2/4 = 22/4 = 11/2.<br>2. (a/b) × (c/d) = ac/bd. ac and bd are integers, and bd ≠ 0 because b ≠ 0 and d ≠ 0.<br>3. 54.4 cm = 544/10 cm = 272/5 cm.<br>4. 5⅓ = 16/3, and 16/3 ÷ 4 = 4/3 m = 1⅓ m.</div></details>
+</div>
+</div>
+<div class="part">
+<h3>1.2.1 Representing rational numbers by decimals</h3><div class="activity"><h3>Activity 1.10</h3>
+<p>1. Work out (a) 3/5 (b) 5/9 (c) −14/15 (d) −2/7.</p>
+<p>2. Write 0.2 and 3.31 as fractions.</p><details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) 0.6 (b) 0.555… (c) −0.9333… (d) −0.285714285714…<br>2. 0.2 = 2/10 = 1/5; 3.31 = 331/100.</div></details>
+</div><p>Any rational number a/b can be written as a decimal by dividing a by b. One of two things happens:</p>
+<ul><li>The division stops with remainder 0. The decimal is a <strong>terminating decimal</strong>, such as 3/5 = 0.6.</li>
+<li>The remainder never becomes 0 and the digits repeat. The decimal is a <strong>repeating decimal</strong>, such as 5/9 = 0.555… and −14/15 = −0.9333…</li></ul>
+<p><strong>Bar notation.</strong> A bar over the repeating digits shows the repetition: <span class="m">1/3 = 0.333… = 0.<span class="ov">3</span></span> and <span class="m">23/99 = 0.2323… = 0.<span class="ov">23</span></span>.</p><figure class="fig" id="longdiv">
+<div class="btnrow" role="group" aria-label="Choose a fraction"></div>
+<div class="btnrow"><button class="pill" id="ldnext">Next digit</button><button class="pill" id="ldall">Finish</button></div>
+<div class="digits" aria-live="polite"></div>
+<div class="tbl"><table id="ldtbl"></table></div>
+<div class="info" aria-live="polite"></div>
+<figcaption>Long division, one digit at a time. When a remainder comes back, the digits must repeat.</figcaption>
+</figure>
+<div class="mcq check" data-ans="The remainders can only be 1 to 6, so one must come back" data-why="Once a remainder repeats, the same digits follow again." data-clue="Step through 1/7 in the figure and watch the remainder column."><span class="ck">Check your understanding</span><h4>Why must the decimal for 1/7 repeat?</h4><div class="opts"><button>The remainders can only be 1 to 6, so one must come back</button><button>7 is an odd number</button><button>1 is smaller than 7</button><button>All fractions repeat</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="3/8" data-why="3/8 = 0.375: the division ends." data-clue="Try each one in the figure."><span class="ck">Check your understanding</span><h4>Which fraction gives a terminating decimal?</h4><div class="opts"><button>1/3</button><button>2/9</button><button>3/8</button><button>5/6</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.11</h4><ol><li>Write with bar notation: (a) 8/9 (b) 5/6 (c) 1/11 (d) 14/9</li><li>Long division gives 1/7 = 0.<span class="ov">142857</span>. Can you predict 2/7, 3/7, 4/7, 5/7 and 6/7 without dividing? How?</li><li>What do you conclude from question 2?</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) 0.<span class="ov">8</span> (b) 0.8<span class="ov">3</span> (c) 0.<span class="ov">09</span> (d) 1.<span class="ov">5</span><br>2. Yes. They use the same six digits in the same cycle, starting at a different place: 2/7 = 0.<span class="ov">285714</span>, 3/7 = 0.<span class="ov">428571</span>, 4/7 = 0.<span class="ov">571428</span>, 5/7 = 0.<span class="ov">714285</span>, 6/7 = 0.<span class="ov">857142</span>.<br>3. All the sevenths repeat with the same cycle of six digits 1, 4, 2, 8, 5, 7.</div></details>
+</div>
+<h4>Converting terminating decimals to fractions</h4>
+<p>A terminating decimal can be written as a fraction with denominator 10, 100, 1000, …: one zero for each digit after the decimal point.</p>
+<div class="worked"><p><strong>Example 1.</strong> (a) 7.3 has one decimal digit: <span class="m">7.3 = 73/10</span>. (b) −0.18 has two: <span class="m">−0.18 = −18/100 = −9/50</span>.</p></div><div class="mcq check" data-ans="9/20" data-why="0.45 = 45/100, and dividing top and bottom by 5 gives 9/20." data-clue="Two decimal digits means a denominator of 100."><span class="ck">Check your understanding</span><h4>Write 0.45 as a fraction in simplest form.</h4><div class="opts"><button>45/10</button><button>9/20</button><button>45/1000</button><button>4/5</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.12</h4><ol><li>Write each as a fraction: (i) (a) 0.3 (b) 3.7 (c) 0.77 (d) −12.369 &nbsp; (ii) (a) 0.6 (b) 9.5 (c) −0.48 (d) −32.125</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">(i) (a) 3/10 (b) 37/10 (c) 77/100 (d) −12369/1000<br>(ii) (a) 3/5 (b) 19/2 (c) −12/25 (d) −257/8</div></details>
+</div>
+<h4>Rational numbers on the number line</h4>
+<p><strong>Example.</strong> Locate −5, 3, 4/3 and −5/2. Integers are easy. For fractions, change to decimals first: <span class="m">4/3 = 1.<span class="ov">3</span></span> and <span class="m">−5/2 = −2.5</span>. Then mark each point (Figure 1.3).</p><figure class="fig" id="numline">
+<div class="btnrow" role="group" aria-label="Choose a number"></div>
+<div class="svgbox"><svg viewBox="0 0 340 90" role="img" aria-label="Number line from −6 to 6"></svg></div>
+<div class="info" aria-live="polite"></div>
+<figcaption>Figure 1.3 Tap a number to place it on the number line.</figcaption>
+</figure>
+<div class="mcq check" data-ans="−3 and −2" data-why="−5/2 = −2.5, halfway between −3 and −2." data-clue="Change −5/2 to a decimal first."><span class="ck">Check your understanding</span><h4>Between which two integers is −5/2?</h4><div class="opts"><button>−2 and −1</button><button>−3 and −2</button><button>2 and 3</button><button>−5 and −4</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.13</h4><ol><li>Locate 3, 4/5, 0.<span class="ov">4</span> and 2⅓ on the number line.</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">3 is three units right of 0. 4/5 = 0.8 is just left of 1. 0.<span class="ov">4</span> = 0.444… is a little left of halfway between 0 and 1. 2⅓ = 2.333… is a third of the way from 2 to 3. Try them in the figure.</div></details>
+</div>
+</div>
+<div class="part">
+<h3>1.2.2 Converting repeating decimals to fractions</h3><p>Multiply the decimal by a power of 10 so that the repeating part lines up, then subtract to remove it.</p><figure class="fig" id="rep2frac">
+<div class="btnrow" role="group" aria-label="Choose a decimal"></div>
+<ol class="steps" aria-live="polite"></ol>
+<div class="btnrow"><button class="pill" id="rfnext">Next step</button><button class="pill" id="rfreset">Start again</button></div>
+<figcaption>Repeating decimal to fraction, one step at a time. Examples 1 and 2 from the book.</figcaption>
+</figure>
+<div class="worked"><p><strong>Example 1.</strong> (a) Let d = 0.<span class="ov">5</span>. One digit repeats, so multiply by 10: 10d = 5.<span class="ov">5</span>. Subtract d: 9d = 5, so <span class="m">d = 5/9</span>. (b) Let d = 2.<span class="ov">12</span>. Two digits repeat, so 100d = 212.<span class="ov">12</span>. Subtract: 99d = 210, so <span class="m">d = 210/99 = 70/33</span>.</p>
+<p><strong>Example 2.</strong> (a) Let d = 0.1<span class="ov">2</span> = 0.1222… Then 100d = 12.<span class="ov">2</span> and 10d = 1.<span class="ov">2</span>. Subtract: 90d = 11, so <span class="m">d = 11/90</span>. (b) Let d = 1.2<span class="ov">16</span>. Then 1000d = 1216.<span class="ov">16</span> and 10d = 12.<span class="ov">16</span>. Subtract: 990d = 1204, so <span class="m">d = 1204/990 = 602/495</span>.</p></div><p class="fix"><b>Correction:</b> in Example 2(a) the printed book divides 90d = 11 "by 99" and gives d = 11/99. Dividing by 90 gives d = 11/90. Check: 11 ÷ 90 = 0.1222…, while 11/99 = 0.1111…</p>
+<div class="mcq check" data-ans="100" data-why="Two digits repeat, so 100d = 47.&lt;span class=&quot;ov&quot;&gt;47&lt;/span&gt; lines up with d." data-clue="Count the digits under the bar."><span class="ck">Check your understanding</span><h4>To convert 0.<span class="ov">47</span> to a fraction, you first multiply d by:</h4><div class="opts"><button>10</button><button>100</button><button>1000</button><button>47</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="4/9" data-why="10d − d = 4, so 9d = 4 and d = 4/9." data-clue="Follow Example 1(a) with 4 in place of 5."><span class="ck">Check your understanding</span><h4>What fraction is 0.<span class="ov">4</span>?</h4><div class="opts"><button>4/10</button><button>4/9</button><button>4/99</button><button>2/5</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.14</h4><ol><li>Write each in simplest fraction form: (a) 2.<span class="ov">6</span> (b) 0.<span class="ov">14</span> (c) 0.7<span class="ov">16</span> (d) 1.32<span class="ov">12</span> (e) −0.53<span class="ov">213</span></li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">(a) 8/3 (b) 14/99 (c) 1000d − 10d = 716.<span class="ov">16</span> − 7.<span class="ov">16</span> = 709, so 709/990 (d) 10000d − 100d = 13212.<span class="ov">12</span> − 132.<span class="ov">12</span> = 13080, so 13080/9900 = 218/165 (e) 100000d − 100d = 53213.<span class="ov">213</span> − 53.<span class="ov">213</span> = 53160, so −53160/99900 = −886/1665</div></details>
+</div>
+</div>
+<div class="quiz" data-quiz="l12"></div>
+<button class="done-btn" data-done="l12" aria-pressed="false">Mark lesson 1.2 as read</button>
+</section>
+<section class="lesson" id="l13">
+<div class="eyebrow">Lesson 1.3 · pages 39–48</div>
+<h2>Irrational numbers</h2>
+<div class="compet"><b>Lesson goal:</b> Recognise decimals that neither terminate nor repeat, locate some of them on the number line, and add, subtract, multiply and divide them.</div>
+<div class="card"><h4>Key words · tap one</h4>
+<div class="kw" data-terms="Perfect square,Square root,Radical sign,Irrational number,Like radicals"></div>
+<p class="kwdef" aria-live="polite">Tap a word to see what it means.</p>
+</div>
+<div class="part">
+<h3>1.3.1 Decimals that neither terminate nor repeat</h3><p>Terminating and repeating decimals are rational. Now we meet decimals that do neither.</p>
+<p>A <strong>perfect square</strong> is an integer times itself: 1 = 1², 4 = 2², 9 = 3², … A <strong>square root</strong> of x is a number y with y² = x. For example, 5 and −5 are square roots of 25, because 5² = (−5)² = 25.</p>
+<p><strong>A square with area 2 cm².</strong> How long is its side s? Since 1² = 1 and 2² = 4, s is between 1 and 2. Squeeze further: 1.4² &lt; 2 &lt; 1.5², so 1.4 &lt; s &lt; 1.5. Then 1.41 &lt; s &lt; 1.42, then 1.414 &lt; s &lt; 1.415, and so on. We write <span class="m">s = √2 = 1.414…</span>. The sign √ is the <strong>radical sign</strong>.</p><figure class="fig" id="sqrt2">
+<label for="sqd" style="font-weight:700">Decimal places: <span id="sqdl"></span></label>
+<input type="range" id="sqd" min="0" max="6" value="1">
+<div class="svgbox"><svg viewBox="0 0 340 70" role="img" aria-label="Interval that traps the square root of 2"></svg></div>
+<div class="info" aria-live="polite"></div>
+<figcaption>Trapping √2. Each extra decimal place squeezes √2 into an interval ten times smaller. The digits never end or repeat.</figcaption>
+</figure>
+<div class="worked"><p><strong>Example 1.</strong> (a) √4 = 2, since 2² = 4. (b) √9 = √(3²) = 3 = 3/1. (c) −√9 = −3. (d) <span class="m">√0.0016 = √(0.04)² = 0.04 = 4/100 = 1/25</span>.</p></div><div class="ex"><h4>Exercise 1.15</h4><ol><li>Write without the radical sign: (a) √25 (b) −√36 (c) √0.04 (d) −√0.0081</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">(a) 5 (b) −6 (c) 0.2 (d) −0.09</div></details>
+</div>
+<p><strong>Comparing square roots.</strong> A square of side √5 cm has area 5 cm²; a square of side √7 cm has area 7 cm². The bigger square has the longer side, so √5 &lt; √7.</p>
+<div class="mb">If a &gt; 0, b &gt; 0 and a &lt; b, then √a &lt; √b.</div>
+<p><strong>Example.</strong> 5 &lt; 6, so √5 &lt; √6.</p><div class="mcq check" data-ans="3.5" data-why="3.5² = 12.25 &gt; 11, so 3.5 &gt; √11." data-clue="Compare the squares: 11 and 3.5²."><span class="ck">Check your understanding</span><h4>Which is larger, √11 or 3.5?</h4><div class="opts"><button>√11</button><button>3.5</button><button>They are equal</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.16</h4><ol><li>Compare: (a) √7, √8 (b) √3, √9 (c) √0.04, √0.01 (d) −√3, −√4</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">(a) √7 &lt; √8 (b) √3 &lt; √9 = 3 (c) √0.04 = 0.2 &gt; √0.01 = 0.1 (d) −√3 &gt; −√4, because √3 &lt; √4 and multiplying by −1 reverses the order.</div></details>
+</div>
+<p><strong>What about square roots that are not whole?</strong> A calculator shows <span class="m">√2 ≈ 1.4142135624</span>. The calculator stops only because its screen is full: the true decimal neither ends nor repeats, so √2 is not rational. √3 and √7 behave the same way.</p><div class="defn"><b>Definition 1.6</b><div>A decimal that is neither terminating nor repeating is an <strong>irrational number</strong>.</div></div>
+<div class="focus"><b>Remark</b>If a is a natural number that is not a perfect square, then √a is irrational.</div>
+<div class="worked"><p><strong>Example.</strong> (a) √25 = 5: rational. (b) √0.09 = 0.3: rational. (c) 0.123456789101112… (the counting numbers written one after another): neither terminates nor repeats, so irrational. (d) 0.010110111…: irrational. (e) 22/7: a fraction, so rational. (f) π = 3.1415926…: irrational.</p>
+<p>Parts (c), (d) and (f) show that decimals which neither terminate nor repeat really exist.</p></div><p class="fix"><b>Correction:</b> the printed book writes "0.12345…" for (c) without saying how it continues, and then says "(a, b & d)" show non-repeating decimals. It is (c), (d) and (f) that show them; (a) and (b) are rational.</p>
+<figure class="fig" id="ratsort">
+<div class="sorter"></div>
+<figcaption>Sort it: rational or irrational?</figcaption>
+</figure>
+<div class="mcq check" data-ans="No: 22/7 is rational and π is irrational" data-why="22/7 = 3.&lt;span class=&quot;ov&quot;&gt;142857&lt;/span&gt; repeats; π = 3.14159… does not. 22/7 is only an approximation." data-clue="Is 22/7 a fraction of integers?"><span class="ck">Check your understanding</span><h4>Is 22/7 equal to π?</h4><div class="opts"><button>Yes, exactly</button><button>No: 22/7 is rational and π is irrational</button><button>Yes, both are irrational</button><button>No: 22/7 is irrational</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="√12" data-why="12 is not a perfect square, so √12 ≈ 3.464… never ends or repeats." data-clue="Which radicand is not a perfect square?"><span class="ck">Check your understanding</span><h4>Which number is irrational?</h4><div class="opts"><button>√49</button><button>√0.25</button><button>√12</button><button>0.333… (repeating)</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.17</h4><ol><li>Rational or irrational? (a) √36 (b) √7 (c) 6/5 (d) √0.01 (e) −√13 (f) √11 (g) √18</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">(a) rational, 6 (b) irrational (c) rational (d) rational, 0.1 (e) irrational (f) irrational (g) irrational: √18 = 3√2</div></details>
+</div>
+<h4>Locating irrational numbers on the number line</h4>
+<p><strong>Example: locate √2.</strong> Since 1 &lt; 2 &lt; 4, we have √1 &lt; √2 &lt; √4, so 1 &lt; √2 &lt; 2. To mark it exactly, use a compass and straightedge:</p>
+<ol class="steps"><li>Draw a number line with 0 and 1 marked. At 1, draw a segment of length 1 at right angles to the line.</li>
+<li>Join 0 to the top of that segment. Call its length c.</li>
+<li>By Pythagoras, 1² + 1² = c², so c = √2.</li>
+<li>Open the compass to length c. With the point at 0, draw an arc to cut the number line at B. Then 0B = √2.</li></ol>
+<p>Repeating the idea on top of the √2 segment gives √3, then √4 = 2, then √5 (Figure 1.6).</p><figure class="fig" id="spiral">
+<div class="btnrow" role="group" aria-label="Construction steps"></div>
+<div class="svgbox"><svg viewBox="0 0 340 200" role="img" aria-label="Constructing square roots on the number line"></svg></div>
+<div class="info" aria-live="polite"></div>
+<figcaption>Figures 1.5 and 1.6 Constructing √2, √3, … on the number line. Tap each step.</figcaption>
+</figure>
+<p class="fix"><b>Note:</b> the printed book uses the label "Figure 1.6" twice: for this square-root construction and for the real-number diagram in lesson 1.4.</p>
+<div class="mcq check" data-ans="By Pythagoras, 1² + 1² = 2" data-why="The slanted line is the hypotenuse of a right triangle with legs 1 and 1." data-clue="Look at step 3 in the figure."><span class="ck">Check your understanding</span><h4>In the construction, why is the slanted line √2 long?</h4><div class="opts"><button>By Pythagoras, 1² + 1² = 2</button><button>Because the compass is opened to 2</button><button>Because it is twice as long as 1</button><button>Because 2 is prime</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.18</h4><ol><li>Between which two natural numbers is (a) √3 (b) √5 (c) √6?</li><li>Locate on the number line: (a) √3 (b) √5 (c) −√3</li><li>True or false? (a) Every point on the number line is √n for some natural number n. (b) The square root of every positive integer is irrational.</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) 1 and 2 (b) 2 and 3 (c) 2 and 3<br>2. (a) Build a right triangle with legs √2 and 1 (step 5 in the figure). (b) Use legs 2 and 1: 2² + 1² = 5. (c) Swing the arc for √3 to the left of 0.<br>3. (a) false: for example −1 and 1/2 are not of that form (b) false: √4 = 2.</div></details>
+</div>
+</div>
+<div class="part">
+<h3>1.3.2 Operations on irrational numbers</h3><div class="activity"><h3>Activity 1.11</h3>
+<p>1. Is 1 + √2 rational or irrational?</p><p>2. Is the product of two irrational numbers always irrational? Give examples.</p><details class="qa"><summary>Show the answers</summary><div class="ans">1. Irrational: a rational number plus an irrational number is irrational.<br>2. No. √2 × √3 = √6 is irrational, but √2 × √2 = 2 and √2 × √8 = 4 are rational.</div></details>
+</div><div class="mb">If a &gt; 0 and b &gt; 0, then √a × √b = √(ab).</div><div class="worked"><p><strong>Example 1.</strong> (a) √2 × √3 = √6. (b) <span class="m">(1/√3) × (2/√3) = 2/(√3 × √3) = 2/3</span>.</p>
+<p>(c) Use the distributive law: <span class="m">(2 + √2)(1 + √5) = 2 + 2√5 + √2 + √10</span>.</p>
+<p>(d) <span class="m">(√5 + √3)² = (√5)² + 2√5√3 + (√3)² = 8 + 2√15</span>.</p></div><p class="fix"><b>Note:</b> in Example 1(c) the printed book is missing a plus sign: "(√2 × 1)(√2 × √5)" should read (√2 × 1) + (√2 × √5).</p>
+<div class="ex"><h4>Exercise 1.19</h4><ol><li>Calculate: (a) √3 × √5 (b) 2√5 × √7 (c) −√2 × √6 (d) (1/√5) × (10/√5) (e) (2 + √3)(−2 + √3) (f) (√3 + √2)² (g) (√7 + √3)(√7 − √3) (h) (√6 − √10)²</li><li>Always, sometimes or never true? (a) The product of two irrational numbers is rational. (b) The product of two irrational numbers is irrational. (c) Any irrational number can be written as a product of two irrational numbers. (d) The irrational numbers are closed under multiplication.</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) √15 (b) 2√35 (c) −√12 = −2√3 (d) 10/5 = 2 (e) 3 − 4 = −1 (f) 5 + 2√6 (g) 7 − 3 = 4 (h) 16 − 2√60 = 16 − 4√15<br>2. (a) sometimes: √2 × √2 = 2 (b) sometimes: √2 × √3 = √6 (c) always: x = (x/√2) × √2, and x/√2 is irrational (d) never true as a general rule: √2 × √2 = 2 is rational, so the set is not closed.</div></details>
+</div>
+<div class="activity"><h3>Activity 1.12</h3><p>Divide each of √2, √3, √5 and √8 by √2. What do you notice?</p><details class="qa"><summary>Show the answers</summary><div class="ans">√2/√2 = 1, √3/√2 = √(3/2), √5/√2 = √(5/2), √8/√2 = √4 = 2. The quotient of two square roots is the square root of the quotient, and it may be rational or irrational.</div></details>
+</div><div class="mb">If a &gt; 0 and b &gt; 0, then √a ÷ √b = √(a/b).</div><div class="worked"><p><strong>Example 1.</strong> (a) √2/√3 = √(2/3). (b) −√18/√2 = −√9 = −3.</p></div>
+<div class="mb">If a &gt; 0 and b &gt; 0, then a√b = √(a²b) and √(a²b) = a√b.</div>
+<div class="worked"><p><strong>Example 2.</strong> (a) 3√2 = √(3² × 2) = √18. (b) 5√5 = √(5² × 5) = √125.</p></div><div class="mcq check" data-ans="5√2" data-why="50 = 25 × 2, so √50 = √25 × √2 = 5√2." data-clue="Find the largest perfect square that divides 50."><span class="ck">Check your understanding</span><h4>What is √50 in the form a√b with b as small as possible?</h4><div class="opts"><button>25√2</button><button>5√2</button><button>2√5</button><button>10√5</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.20</h4><ol><li>Calculate: (a) √27/√3 (b) √12/√3 (c) √14/√7 (d) −√15/√3</li><li>Write in the form √a: (a) 4√2 (b) 5√3 (c) −3√7 (d) 7√6</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) 3 (b) 2 (c) √2 (d) −√5<br>2. (a) √32 (b) √75 (c) −√63 (d) √294</div></details>
+</div>
+<div class="activity"><h3>Activity 1.13</h3><p>Give an example of: (a) two non-terminating, non-repeating decimals whose sum is rational; (b) two whose sum is irrational; (c) two irrational numbers whose difference is rational; (d) two whose difference is irrational.</p><details class="qa"><summary>Show the answers</summary><div class="ans">(a) 0.1010010001… + 0.0101101110… = 0.111…, which is 1/9 (b) √2 + √3 (c) (1 + √2) − √2 = 1 (d) √5 − √2</div></details>
+</div><div class="worked"><p><strong>Example 1.</strong> (a) 0.131331333… + 0.535335333… = 0.666… (b) 0.4747747774… − 0.252552555… = 0.222… Both answers are rational.</p>
+<p><strong>Example 2.</strong> Like radicals add like like terms: (a) 2√3 + 4√3 = (2 + 4)√3 = 6√3. (b) 3√5 − 2√5 = √5.</p>
+<p><strong>Example 3.</strong> First write each √(a²b) as a√b:</p>
+<p>(a) √8 + √2 = 2√2 + √2 = 3√2 &nbsp; (b) √12 − 5√3 = 2√3 − 5√3 = −3√3</p>
+<p>(c) √18 + √50 = 3√2 + 5√2 = 8√2 &nbsp; (d) √72 − √8 = 6√2 − 2√2 = <strong>4√2</strong></p></div><p class="fix"><b>Correction:</b> Example 3(d) in the printed book ends "6√2 − 2√2 = 8√2". The correct answer is 4√2.</p>
+<figure class="fig" id="simp">
+<label for="sn" style="font-weight:700">n = <span id="snl"></span></label>
+<input type="range" id="sn" min="1" max="200" value="72">
+<div class="svgbox"><svg viewBox="0 0 340 74" role="img" aria-label="Largest square factor of n"></svg></div>
+<div class="info" aria-live="polite"></div>
+<figcaption>Simplifying √n. The tool finds the largest perfect square that divides n and pulls its root outside.</figcaption>
+</figure>
+<div class="mcq check" data-ans="5√3" data-why="√12 = 2√3 and √27 = 3√3, so the sum is 5√3." data-clue="Simplify each radical first so they become like radicals."><span class="ck">Check your understanding</span><h4>Simplify √12 + √27.</h4><div class="opts"><button>√39</button><button>5√3</button><button>13√3</button><button>6√3</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="They are not like radicals" data-why="Only like radicals combine. √2 + √3 ≈ 3.15, but √5 ≈ 2.24." data-clue="Check with a calculator: is √2 + √3 equal to √5?"><span class="ck">Check your understanding</span><h4>Why can't √2 + √3 be written as one radical?</h4><div class="opts"><button>They are not like radicals</button><button>Because √2 + √3 = √5</button><button>Because 2 and 3 are prime</button><button>It can: it equals √6</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.21</h4><ol><li>Simplify: (a) √3 + 4√3 (b) √5 − √45 (c) 2√5 − 4√5 (d) √18 + 2√2 (e) 0.12345… − 0.111… (f) √80 − √20 (g) 5√8 + 6√32 (h) √8 + √72 (i) √12 − √48 + √(3/4) (j) 2.1010010001… + 1.0101101110…</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">(a) 5√3 (b) √5 − 3√5 = −2√5 (c) −2√5 (d) 3√2 + 2√2 = 5√2 (e) 0.01234… (taking 0.12345… as 0.123456789101112…, the answer is 0.0123456789…, irrational) (f) 4√5 − 2√5 = 2√5 (g) 10√2 + 24√2 = 34√2 (h) 2√2 + 6√2 = 8√2 (i) 2√3 − 4√3 + √3/2 = −3√3/2 (j) 3.1111… = 3.<span class="ov">1</span> = 28/9</div></details>
+</div>
+</div>
+<div class="quiz" data-quiz="l13"></div>
+<button class="done-btn" data-done="l13" aria-pressed="false">Mark lesson 1.3 as read</button>
+</section>
+<section class="lesson" id="l14">
+<div class="eyebrow">Lesson 1.4 · pages 48–79</div>
+<h2>Real numbers</h2>
+<div class="compet"><b>Lesson goal:</b> Define and compare real numbers; use intervals, absolute value, exponents and radicals; round and give bounds; write numbers in scientific notation; rationalize denominators.</div>
+<div class="card"><h4>Key words · tap one</h4>
+<div class="kw" data-terms="Real number,Interval,Absolute value,Exponent,Base,Principal nth root,Radicand,Index,Additive inverse,Multiplicative inverse,Rounding,Decimal place,Significant figures,Lower bound,Upper bound,Scientific notation,Rationalization,Rationalizing factor"></div>
+<p class="kwdef" aria-live="polite">Tap a word to see what it means.</p>
+</div>
+<div class="activity"><h3>Activity 1.14</h3>
+<p>1. Can you think of a set that contains both the rational and the irrational numbers?</p>
+<p>2. How are points on the number line and decimal numbers related?</p><details class="qa"><summary>Show the answers</summary><div class="ans">1. The real numbers ℝ.<br>2. Every decimal, rational or irrational, is exactly one point on the number line, and every point is exactly one decimal.</div></details>
+</div>
+<div class="part"><div class="defn"><b>Definition 1.7 · Real numbers</b><div>A number is a <strong>real number</strong> if it is either rational or irrational. The set of real numbers, ℝ, is the union of the rational and the irrational numbers:<div class="mb">ℝ = {x : x is rational or x is irrational}</div></div></div>
+<figure class="fig" id="realmap">
+<div class="svgbox"><svg viewBox="0 0 340 210" role="img" aria-label="The real numbers: rational and irrational. Tap a region."></svg></div>
+<div class="info" aria-live="polite"><span class="hint">Tap a region of the diagram.</span></div>
+<figcaption>The real numbers are made of two non-overlapping parts: rational and irrational. Tap a region to see examples.</figcaption>
+</figure>
+<div class="mcq check" data-ans="Every irrational number is real" data-why="ℝ is the union of the rationals and the irrationals." data-clue="Look at how the two regions fill the diagram."><span class="ck">Check your understanding</span><h4>Which statement is true?</h4><div class="opts"><button>Every real number is rational</button><button>Every irrational number is real</button><button>Some numbers are both rational and irrational</button><button>π is not a real number</button></div><p class="fb" aria-live="polite"></p></div>
+<h3>Comparing real numbers</h3>
+<p>Each real number is one point on the number line, so any two real numbers can be compared.</p>
+<ul><li><strong>Trichotomy:</strong> for real a and b, exactly one of a &lt; b, a = b, a &gt; b is true.</li>
+<li><strong>Transitive:</strong> if a &lt; b and b &lt; c, then a &lt; c.</li>
+<li>For non-negative a and b: if a² &lt; b², then a &lt; b.</li></ul>
+<div class="worked"><p><strong>Example 1.</strong> (a) −8 is left of −2, so −8 &lt; −2. (b) 5/8 = 0.625 &lt; 0.8. (c) √2/3 ≈ 0.4714 &gt; 0.34. (d) Compare √3/6 and 2/3 by squaring: (√3/6)² = 3/36 and (2/3)² = 4/9 = 16/36. So √3/6 &lt; 2/3.</p></div><div class="mcq check" data-ans="3√2 &gt; 2√3" data-why="(3√2)² = 18 and (2√3)² = 12, and 18 &gt; 12." data-clue="Square each: (a√b)² = a² × b."><span class="ck">Check your understanding</span><h4>Compare 3√2 and 2√3 by squaring.</h4><div class="opts"><button>3√2 &gt; 2√3</button><button>3√2 &lt; 2√3</button><button>They are equal</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.22</h4><ol><li>Compare with &lt;, &gt; or =: (a) 0.236, 0.256 (b) −0.135, −0.1351 (c) √5/2, 0.234 (d) 22/7, π (e) −7√145, √7 (f) 6√5, 5√7 (g) 2 + √3, 4</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">(a) &lt; (b) &gt; (c) &gt;: √5/2 ≈ 1.118 (d) &gt;: 22/7 ≈ 3.1429 &gt; 3.1416 (e) &lt;: a negative is less than a positive (f) &gt;: 180 &gt; 175 after squaring (g) &lt;: 2 + √3 ≈ 3.73</div></details>
+</div>
+<h3>Real numbers between two numbers</h3>
+<p>Is there a real number between 2 and 4.2? Take the average: (2 + 4.2)/2 = 3.1, and 2 &lt; 3.1 &lt; 4.2. Averaging again gives 2.55 (between 2 and 3.1) and 3.65 (between 3.1 and 4.2). We can keep doing this for ever, so <strong>there are infinitely many real numbers between any two real numbers</strong>.</p><div class="mcq check" data-ans="5/12" data-why="The average is (1/3 + 1/2)/2 = (5/6)/2 = 5/12." data-clue="Take the average of the two numbers."><span class="ck">Check your understanding</span><h4>Which number is between 1/3 and 1/2?</h4><div class="opts"><button>5/12</button><button>1/4</button><button>2/3</button><button>1/6</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.23</h4><ol><li>Find at least two real numbers between: (a) −0.24 and −0.246 (b) 3/5 and 2/7 (c) √2 and √3</li><li>How many real numbers are there between two real numbers?</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) −0.241, −0.245 (b) 2/7 ≈ 0.286 and 3/5 = 0.6, so 0.4 and 0.5 (c) √2 ≈ 1.414 and √3 ≈ 1.732, so 1.5 and 1.6<br>2. Infinitely many.</div></details>
+</div>
+</div>
+<div class="part">
+<h3>1.4.1 Intervals</h3><div class="activity"><h3>Activity 1.15</h3><p>1. List some real numbers between 2 and 6, including 2. 2. List some between √2 and 3, not including either. 3. Can you write these sets with symbols?</p><details class="qa"><summary>Show the answers</summary><div class="ans">1. 2, 2.5, 3, 4.75, 5.9, … 2. 1.5, 2, 2.9, … 3. Yes, with intervals: [2, 6) and (√2, 3).</div></details>
+</div><p>A <strong>real interval</strong> is the set of all real numbers between two numbers. A square bracket [ ] means the end point is <strong>included</strong> (filled circle ●); a round bracket ( ) means it is <strong>not included</strong> (empty circle ○). The symbol ∞ (infinity) means "no end to the right", and −∞ means "no end to the left". ∞ and −∞ are not numbers, so they always take round brackets.</p>
+<div class="tbl card"><table><thead><tr><th>Inequality</th><th>Interval</th><th>Meaning</th></tr></thead><tbody>
+<tr><td>a &lt; x &lt; b</td><td>(a, b)</td><td>strictly between a and b</td></tr>
+<tr><td>a ≤ x &lt; b</td><td>[a, b)</td><td>between, including a</td></tr>
+<tr><td>a &lt; x ≤ b</td><td>(a, b]</td><td>between, including b</td></tr>
+<tr><td>a ≤ x ≤ b</td><td>[a, b]</td><td>between, including a and b</td></tr>
+<tr><td>x &gt; a</td><td>(a, ∞)</td><td>greater than a</td></tr>
+<tr><td>x &lt; a</td><td>(−∞, a)</td><td>less than a</td></tr>
+<tr><td>x ≥ a</td><td>[a, ∞)</td><td>greater than or equal to a</td></tr>
+<tr><td>x ≤ a</td><td>(−∞, a]</td><td>less than or equal to a</td></tr></tbody></table>
+<p class="note" style="margin-top:6px">Tables 1.1 and 1.2 combined.</p></div>
+<p><strong>Examples (Figure 1.7).</strong> (i) [3, 5) holds every real number from 3 up to, but not including, 5. (ii) [−2, 3/2] includes both end points. (iii) (−∞, 2) is every number left of 2. (iv) [0, ∞) is 0 and every number to its right.</p><figure class="fig" id="interval">
+<div class="btnrow" role="group" aria-label="Choose an interval"></div>
+<div class="svgbox"><svg viewBox="0 0 340 80" role="img" aria-label="Interval on the number line"></svg></div>
+<div class="info" aria-live="polite"></div>
+<figcaption>Figure 1.7 Intervals on the number line. Filled circle: included. Empty circle: not included.</figcaption>
+</figure>
+<div class="mcq check" data-ans="[−1, 4)" data-why="−1 is included (square bracket); 4 is not (round bracket)." data-clue="≤ means included; &lt; means not included."><span class="ck">Check your understanding</span><h4>Which interval means −1 ≤ x < 4?</h4><div class="opts"><button>(−1, 4)</button><button>[−1, 4)</button><button>(−1, 4]</button><button>[−1, 4]</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="∞ is not a number, so it can never be included" data-why="The interval has no right end, so it is written [2, ∞)." data-clue="Can x ever equal ∞?"><span class="ck">Check your understanding</span><h4>Why is [2, ∞] wrong?</h4><div class="opts"><button>∞ is not a number, so it can never be included</button><button>2 cannot be included</button><button>Intervals cannot start at 2</button><button>It should be written [∞, 2]</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.24</h4><ol><li>Write in interval notation: (a) real numbers between −3 and 8, including both (b) between 4 and 6, not including either (c) to the right of −1, including −1</li><li>Show each on the number line: (a) [1, 3) (b) (−∞, −5] (c) (1/2, 3) (d) (−2, 4) ∪ [5, ∞)</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) [−3, 8] (b) (4, 6) (c) [−1, ∞)<br>2. (a) ● at 1, ○ at 3, shaded between (b) ● at −5, shaded to the left (c) ○ at 1/2 and at 3, shaded between (d) ○ at −2 and 4 with the part between shaded, then ● at 5 shaded to the right. Try (a)–(c) in the figure.</div></details>
+</div>
+</div>
+<div class="part">
+<h3>1.4.2 Absolute value</h3><div class="defn"><b>Definition 1.8</b><div>The <strong>absolute value</strong> of a real number x, written |x|, is<div class="mb">|x| = x if x ≥ 0, &nbsp; |x| = −x if x &lt; 0</div>It is the distance of x from 0, so it is never negative.</div></div>
+<div class="worked"><p><strong>Example 1.</strong> |4| = 4; |−2| = 2 (it is 2 units from 0); |1/2| = 1/2; |−0.4| = 0.4; |−√2| = √2; |2 − √8| = √8 − 2, because 2 − √8 &lt; 0.</p>
+<p><strong>Example 2.</strong> The distance between −3 and 4 is 7 units: |a − b| = |−3 − 4| = |−7| = 7, and |b − a| = |4 − (−3)| = 7.</p></div>
+<div class="mb">The distance between a and b is |a − b|, and |a − b| = |b − a|.</div><figure class="fig" id="absdist">
+<div class="row2c">
+<label for="aa">a = <span id="aal"></span><input type="range" id="aa" min="-10" max="10" step="0.5" value="-3"></label>
+<label for="ab">b = <span id="abl"></span><input type="range" id="ab" min="-10" max="10" step="0.5" value="4"></label>
+</div>
+<div class="svgbox"><svg viewBox="0 0 340 90" role="img" aria-label="Distance between a and b"></svg></div>
+<div class="info" aria-live="polite"></div>
+<figcaption>Figure 1.8 Distance on the number line. Drag a and b; the distance |a − b| never goes negative.</figcaption>
+</figure>
+<div class="mcq check" data-ans="√10 − 3" data-why="√10 ≈ 3.16 &gt; 3, so 3 − √10 is negative and its absolute value is √10 − 3." data-clue="Is 3 − √10 positive or negative?"><span class="ck">Check your understanding</span><h4>What is |3 − √10|?</h4><div class="opts"><button>3 − √10</button><button>√10 − 3</button><button>3 + √10</button><button>−3 − √10</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="x = 5 or x = −5" data-why="Both 5 and −5 are 5 units from 0." data-clue="Which numbers are 5 units from zero?"><span class="ck">Check your understanding</span><h4>Solve |x| = 5.</h4><div class="opts"><button>x = 5 only</button><button>x = −5 only</button><button>x = 5 or x = −5</button><button>No solution</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.25</h4><ol><li>Find the absolute value: (a) −3/4 (b) −0.<span class="ov">12</span> (c) 4 + √3 (d) 1 − √2 (e) 3 − √5 (f) 7 + √5</li><li>Find the distance between: (a) 2 and 10 (b) 7 and −9 (c) −49 and −100 (d) −50 and 50</li><li>Find x: (a) |x| = 8 (b) |x| = 0 (c) |x| = −4 (d) |x| + 3 = 14 (e) |x| − 3 = −2</li><li>The coldest temperature recorded on Earth is −129 °F, at Vostok Station, Antarctica, in 1983. The book gives the hottest as 136 °F at Al'Aziziyah, Libya. Find the temperature range.</li></ol><p class="fix"><b>Note:</b> item 1(a) in the supplied PDF did not print; −3/4 is used here. The 136 °F reading at Al'Aziziyah (1922) was ruled invalid by the World Meteorological Organization in 2012. The official highest is 134 °F (56.7 °C) at Death Valley, California, in 1913. Teacher review needed.</p>
+<details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) 3/4 (b) 0.<span class="ov">12</span> (c) 4 + √3 (d) √2 − 1 (e) 3 − √5 (since √5 ≈ 2.24) (f) 7 + √5<br>2. (a) 8 (b) 16 (c) 51 (d) 100<br>3. (a) 8 or −8 (b) 0 (c) no solution: an absolute value is never negative (d) 11 or −11 (e) 1 or −1<br>4. Range = 136 − (−129) = 265 °F with the book's figures. With the official record of 134 °F (Death Valley, USA), it is 134 − (−129) = 263 °F.</div></details>
+</div>
+</div>
+<div class="part">
+<h3>1.4.3 Exponents and radicals</h3><p>Writing 14 × 14 × … × 14 twenty times takes time and space. Exponents make this short.</p><div class="defn"><b>Definition 1.9</b><div>If a is a real number and n is a positive integer, then a × a × … × a (n times) = aⁿ. Here a is the <strong>base</strong> and n is the <strong>exponent</strong> (power).</div></div>
+<p>For instance, 2³ = 2 × 2 × 2 = 8; (−3)⁴ = 81; and −2³ = −(2 × 2 × 2) = −8. Notice that (−3)⁴ and −3⁴ are different: the brackets decide what is raised to the power.</p><div class="activity"><h3>Activity 1.16</h3><p>1. Complete the row of values for 2⁴, 2³, 2², 2¹, 2⁰, 2⁻¹, 2⁻², 2⁻³, 2⁻⁴. Hint: moving right lowers the power by 1, so divide by 2 each time. 2. How are 2ⁿ and 2⁻ⁿ related? 3. What about aⁿ and a⁻ⁿ for a ≠ 0?</p><details class="qa"><summary>Show the answers</summary><div class="ans">1. 16, 8, 4, 2, 1, 1/2, 1/4, 1/8, 1/16.<br>2. 2⁻ⁿ = 1/2ⁿ.<br>3. a⁻ⁿ = 1/aⁿ. Drag the slider in the figure below to see the pattern.</div></details>
+</div><figure class="fig" id="pow2">
+<label for="pn" style="font-weight:700">Exponent n = <span id="pnl"></span></label>
+<input type="range" id="pn" min="-4" max="5" value="3">
+<div class="svgbox"><svg viewBox="0 0 340 120" role="img" aria-label="Powers of 2"></svg></div>
+<div class="info" aria-live="polite"></div>
+<figcaption>Powers of 2. Each step left halves the value, which is why 2⁰ = 1 and 2⁻ⁿ = 1/2ⁿ.</figcaption>
+</figure>
+<div class="focus"><b>Note</b>1. Zero exponent: if a ≠ 0, then a⁰ = 1. 2. Negative exponent: if a ≠ 0 and n is a positive integer, then a⁻ⁿ = 1/aⁿ.</div>
+<div class="mcq check" data-ans="1/25" data-why="5⁻² = 1/5² = 1/25. A negative exponent means a reciprocal, not a negative number." data-clue="Use a⁻ⁿ = 1/aⁿ."><span class="ck">Check your understanding</span><h4>What is 5⁻²?</h4><div class="opts"><button>−25</button><button>−10</button><button>1/25</button><button>25</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="defn"><b>Definitions 1.10 and 1.11 · Roots</b><div>If a² = b, a is a <strong>square root</strong> of b. If a³ = b, a is a <strong>cube root</strong> of b. If aⁿ = b, a is an <strong>nth root</strong> of b.<br>For n &gt; 1, the <strong>principal nth root</strong> ⁿ√b is: the positive nth root if b &gt; 0; the negative nth root if b &lt; 0 and n is odd; 0 if b = 0.</div></div>
+<p>In ⁿ√b, √ is the radical sign, n is the <strong>index</strong> and b is the <strong>radicand</strong>. With no index written, √ means square root.</p><div class="defn"><b>Definition 1.12 · The 1/n power</b><div>If n is a positive integer greater than 1, then <span class="m">b<sup>1/n</sup> = ⁿ√b</span>, whenever ⁿ√b is a real number.</div></div>
+<p class="fix"><b>Note:</b> the printed Definition 1.12 says "if b ∈ ℝ" with no condition. When n is even, b must not be negative: (−4)<sup>1/2</sup> is not a real number. The unit summary (item 11) adds the right condition.</p>
+<div class="worked"><p><strong>Example 1.</strong> (a) √9 = 3, since 3² = 9. (b) √0.01 = 0.1. (c) ⁴√81 = 3, since 3⁴ = 81. (d) ⁵√−100,000 = −10, since (−10)⁵ = −100,000.</p>
+<p><strong>Example 2.</strong> (a) √3 = 3<sup>1/2</sup> (b) ∛6 = 6<sup>1/3</sup> (c) 1/⁴√10 = 10<sup>−1/4</sup></p></div><div class="mcq check" data-ans="√(−9)" data-why="No real number squared gives −9. Odd roots of negatives are fine: ∛(−8) = −2." data-clue="Is the index even or odd?"><span class="ck">Check your understanding</span><h4>Which root is NOT a real number?</h4><div class="opts"><button>∛(−8)</button><button>√(−9)</button><button>⁵√(−32)</button><button>√0</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.26</h4><ol><li>Write in exponential form: (a) √5 (b) ⁷√7 (c) ∛(3⁴) (d) (⁴√81)² (e) ∛(2/5)</li><li>Simplify: (a) (−27)<sup>1/3</sup> (b) 32<sup>1/5</sup> (c) ∛125/√625 (d) √0.09</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) 5<sup>1/2</sup> (b) 7<sup>1/7</sup> (c) 3<sup>4/3</sup> (d) 81<sup>2/4</sup> = 81<sup>1/2</sup> = 9 (e) (2/5)<sup>1/3</sup><br>2. (a) −3 (b) 2 (c) 5/25 = 1/5 (d) 0.3</div></details>
+</div>
+<h4>Laws of exponents</h4>
+<div class="activity"><h3>Activity 1.17</h3><p>Simplify both columns and compare: (1) 2³ × 3³ and (2 × 3)³ (2) 2⁵/2³ and 2⁵⁻³ (3) (3²)³ and (3³)² (4) (3 × 4)² and 3² × 4² (5) 2² × 2³ and 2²⁺³</p><details class="qa"><summary>Show the answers</summary><div class="ans">Each pair is equal: (1) 216 (2) 4 (3) 729 (4) 144 (5) 32.</div></details>
+</div><div class="tbl card"><table><thead><tr><th>Law (a, b real; m, n natural)</th><th>Example</th></tr></thead><tbody>
+<tr><td>aⁿ × aᵐ = aⁿ⁺ᵐ</td><td>2² × 2³ = 2⁵</td></tr>
+<tr><td>aⁿ ÷ aᵐ = aⁿ⁻ᵐ (a ≠ 0)</td><td>2⁵ ÷ 2³ = 2²</td></tr>
+<tr><td>(aⁿ)ᵐ = (aᵐ)ⁿ = aⁿᵐ</td><td>(3²)³ = 3⁶</td></tr>
+<tr><td>(a × b)ⁿ = aⁿ × bⁿ</td><td>(3 × 4)² = 3² × 4²</td></tr>
+<tr><td>aⁿ/bⁿ = (a/b)ⁿ (b ≠ 0)</td><td>8<sup>1/3</sup>/27<sup>1/3</sup> = (8/27)<sup>1/3</sup></td></tr></tbody></table></div>
+<p>These laws also work for powers 1/n and for rational powers <span class="m">a<sup>m/n</sup> = (a<sup>1/n</sup>)<sup>m</sup></span>.</p>
+<div class="worked"><p><strong>Example 3.</strong> (a) 7<sup>1/2</sup> × 7<sup>3/2</sup> = 7² = 49 (b) (25 × 9)<sup>1/2</sup> = 5 × 3 = 15 (c) 3<sup>5/2</sup> ÷ 3<sup>1/2</sup> = 3² = 9 (d) (8/27)<sup>1/3</sup> = 2/3 (e) 81<sup>1/4</sup> = (3⁴)<sup>1/4</sup> = 3</p>
+<p><strong>Example 4.</strong> (a) √50 = √25 × √2 = 5√2 (b) 32<sup>1/4</sup> ÷ 162<sup>1/4</sup> = (32/162)<sup>1/4</sup> = (16/81)<sup>1/4</sup> = 2/3 (c) ∛16 × ∛4 = ∛64 = 4 (d) (8 + ∛27)<sup>1/3</sup> = (8 + 3)<sup>1/3</sup> = ∛11</p></div><p class="fix"><b>Note:</b> in Example 4(b) the printed text says "Both numbers 32 and 64 are multiples of 2", but the numbers in the question are 32 and 162.</p>
+<div class="mcq check" data-ans="8" data-why="4&lt;sup&gt;3/2&lt;/sup&gt; = (4&lt;sup&gt;1/2&lt;/sup&gt;)³ = 2³ = 8." data-clue="Take the square root first, then cube."><span class="ck">Check your understanding</span><h4>Simplify 4<sup>3/2</sup>.</h4><div class="opts"><button>6</button><button>8</button><button>12</button><button>64</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.27</h4><ol><li>Simplify: (a) √125 (b) 9<sup>1/3</sup> ÷ 243<sup>1/3</sup> (c) ⁵√0.00032 (d) 2<sup>3/2</sup> × √2 (e) (5√24 ÷ 2√50) ÷ 3√3 (f) ∛0.001 + ⁴√0.0081 (g) (5⁻¹)³ × 5<sup>5/4</sup> × √25 × (∛125)³ (h) √0.64 × (∛(1/64))² × 32<sup>1/5</sup> (i) 3<sup>1/4</sup> × 27<sup>1/4</sup> (j) √(5 + 2√6) + √(8 − 2√15)</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">(a) 5√5 (b) (9/243)<sup>1/3</sup> = (1/27)<sup>1/3</sup> = 1/3 (c) 0.2 (d) 2² = 4 (e) (5 × 2√6) ÷ (2 × 5√2) = √3, then ÷ 3√3 gives 1/3 (f) 0.1 + 0.3 = 0.4 (g) 5⁻³ × 5<sup>5/4</sup> × 5 × 5³ = 5<sup>9/4</sup> = 25 ⁴√5 (h) 0.8 × 1/16 × 2 = 0.1 (i) 81<sup>1/4</sup> = 3 (j) 5 + 2√6 = (√3 + √2)² and 8 − 2√15 = (√5 − √3)², so the sum is √3 + √2 + √5 − √3 = √2 + √5</div></details>
+</div>
+<h4>Adding and subtracting radicals</h4>
+<div class="activity"><h3>Activity 1.18</h3><p>Which are correct? (1) √2 − √2 = 0 (2) √16 − √4 = √12 (3) √2 + √3 = √5 (4) 4√2 − √2 = 3√2</p><details class="qa"><summary>Show the answers</summary><div class="ans">(1) and (4) are correct. (2) is wrong: √16 − √4 = 4 − 2 = 2. (3) is wrong: √2 + √3 ≈ 3.15 but √5 ≈ 2.24.</div></details>
+</div><div class="defn"><b>Definition 1.13</b><div>Radicals with the same index and the same radicand are <strong>like radicals</strong>. For example 2√5, −(2/3)√5 and √5 are like radicals; √2 and √3 are not; √3 and ∛3 are not.</div></div>
+<p>Add or subtract like radicals the way you collect like terms. Sometimes you must simplify first to find like radicals.</p>
+<div class="worked"><p><strong>Example 1.</strong> (a) √3 + √12 = √3 + 2√3 = 3√3 (b) 2√18 − √2 + √8 = 6√2 − √2 + 2√2 = 7√2</p></div><div class="ex"><h4>Exercise 1.28</h4><ol><li>Simplify: (a) √12 − √3 (b) ∛54 − ∛2 (c) 3∛27 − ∛125 + √169</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">(a) 2√3 − √3 = √3 (b) 3∛2 − ∛2 = 2∛2 (c) 9 − 5 + 13 = 17</div></details>
+</div>
+<h4>Operations on real numbers</h4>
+<ul><li>The rational numbers obey the commutative, associative and distributive laws. Adding, subtracting, multiplying or dividing (except by 0) two rational numbers always gives a rational number: ℚ is <strong>closed</strong> under these operations.</li>
+<li>The irrational numbers obey the same laws, but the sum, difference, product or quotient of two irrational numbers is not always irrational.</li></ul>
+<div class="activity"><h3>Activity 1.19</h3><p>1. Rational or irrational? (a) π + 2 (b) √2 − 1 (c) (1 − √3)(1 + √3) (d) √5/2 (e) (22/7) × (22/7) (f) √7(4 − √7) (g) 0.2323… + 0.3232… (h) 8/√2</p>
+<p>2. Give an example, if possible: (a) two irrationals with a rational product (b) a rational and an irrational with a rational sum (c) a rational and an irrational with a rational difference (d) a rational and an irrational with an irrational quotient.</p><details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) irrational (b) irrational (c) 1 − 3 = −2, rational (d) irrational (e) 484/49, rational (f) 4√7 − 7, irrational (g) 0.5555… = 5/9, rational (h) 4√2, irrational.<br>2. (a) √3 × √12 = 6 (b) impossible (c) impossible (d) 2 ÷ √2 = √2.</div></details>
+</div><div class="focus"><b>Conclusions</b>The sum or difference of a rational number and an irrational number is irrational. The product or quotient of a non-zero rational number and an irrational number is irrational.</div>
+<div class="worked"><p><strong>Example 1.</strong> x = 5√3 + 2√2 and y = √2 − 4√3. (a) x + y = (5 − 4)√3 + (2 + 1)√2 = √3 + 3√2. (b) x − y = 5√3 + 2√2 − √2 + 4√3 = 9√3 + √2.</p>
+<p><strong>Example 2.</strong> (a) 3√3 × 2√2 = 6√6 (b) 5√2 × √2/5 = 2</p>
+<p><strong>Example 3.</strong> (a) 6√8 ÷ 3√2 = 2√4 = 4 (b) √3 ÷ (2√2 × 3√3) = √3/(6√6) = (1/6)√(3/6) = 1/(6√2)</p></div>
+<p>Because ℝ contains all the rational and irrational numbers, ℝ is closed under addition, subtraction, multiplication and division (except division by 0).</p><div class="mcq check" data-ans="3 + √5" data-why="A rational number plus an irrational number is irrational. The others equal −2, 4 and 2." data-clue="Work out each one."><span class="ck">Check your understanding</span><h4>Which is irrational?</h4><div class="opts"><button>(1 − √3)(1 + √3)</button><button>√8 × √2</button><button>3 + √5</button><button>√12 ÷ √3</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.29</h4><ol><li>x = 4√2 + 7√5 and y = √2 − 3√5. Find (a) x + y (b) x − y.</li><li>Find the product: (a) 2√5 and 4√3 (b) 3√3 and √3/3 (c) √3 − √2 and 3√3 − 4√2</li><li>Divide: (a) 4√6 by 2√2 (b) 10√2 by 5√18 (c) √5 by (3√2 × 4√5)</li><li>Compute: (a) 5√2 + 2√3 + 3√3 − √2 (b) √145 − √232 + √261</li></ol><p class="fix"><b>Note:</b> 4(b) does not simplify to a single radical: 145 = 5 × 29, 232 = 4 × 58 and 261 = 9 × 29. The numbers may be a printing error. Teacher review needed.</p>
+<details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) 5√2 + 4√5 (b) 3√2 + 10√5<br>2. (a) 8√15 (b) 3 (c) 9 − 4√6 − 3√6 + 8 = 17 − 7√6<br>3. (a) 2√3 (b) 10√2/(15√2) = 2/3 (c) 1/(12√2) = √2/24<br>4. (a) 4√2 + 5√3 (b) √145 − 2√58 + 3√29. These are not like radicals, so this is as simple as it gets.</div></details>
+</div>
+<div class="activity"><h3>Activity 1.20</h3><p>1. Find the opposite of: (a) √3 (b) −π (c) 0.<span class="ov">61</span> (d) 1/(2√5) (e) 0 (f) √3 − √2</p>
+<p>2. Find the reciprocal of: (a) −√3/2 (b) 3.14<span class="ov">34</span> (c) 3√3 − 1 (d) ∛4/(1 − √6) (e) 3<sup>2/3</sup></p><details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) −√3 (b) π (c) −0.<span class="ov">61</span> (d) −1/(2√5) (e) 0 (f) √2 − √3<br>2. (a) −2/√3 = −2√3/3 (b) 3.14<span class="ov">34</span> = 1556/495, so 495/1556 (c) 1/(3√3 − 1) = (3√3 + 1)/26 (d) (1 − √6)/∛4 (e) 3<sup>−2/3</sup></div></details>
+</div><h4>Properties of addition and multiplication of real numbers</h4>
+<div class="tbl card"><table><thead><tr><th>Property</th><th>Addition</th><th>Multiplication</th></tr></thead><tbody>
+<tr><td>Closure</td><td>a + b ∈ ℝ</td><td>ab ∈ ℝ</td></tr>
+<tr><td>Commutative</td><td>a + b = b + a</td><td>ab = ba</td></tr>
+<tr><td>Associative</td><td>(a + b) + c = a + (b + c)</td><td>(ab)c = a(bc)</td></tr>
+<tr><td>Identity</td><td>a + 0 = 0 + a = a</td><td>a × 1 = 1 × a = a</td></tr>
+<tr><td>Inverse</td><td>a + (−a) = 0: −a is the <strong>additive inverse</strong></td><td>a × (1/a) = 1 for a ≠ 0: 1/a is the <strong>multiplicative inverse</strong> (reciprocal)</td></tr>
+<tr><td>Distributive</td><td colspan="2">a(b + c) = ab + ac and (b + c)a = ba + ca</td></tr></tbody></table></div>
+<div class="worked"><p><strong>Example 4.</strong> (a) √2: additive inverse −√2, multiplicative inverse 1/√2. (b) 3/4: −3/4 and 4/3. (c) 0.5: −0.5 and 2, since 0.5 = 1/2.</p></div><figure class="fig" id="propsort">
+<div class="sorter"></div>
+<figcaption>Sort it: which property is being used?</figcaption>
+</figure>
+<div class="mcq check" data-ans="0" data-why="No number times 0 gives 1." data-clue="Try to find 1/0."><span class="ck">Check your understanding</span><h4>Which real number has no multiplicative inverse?</h4><div class="opts"><button>1</button><button>−1</button><button>0</button><button>√2</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.30</h4><ol><li>Find the additive and multiplicative inverse of: (a) √3 (b) −2/5 (c) 1.3 (d) 0.<span class="ov">1</span></li><li>Name the property used: (a) √3(√3 − 2) = 3 − 2√3 (b) 5 + (−8 + 2) = (5 − 8) + 2 (c) 6 × (1/4) × 6 = 6 × 6 × (1/4)</li><li>Does every real number have a multiplicative inverse? Explain.</li><li>A new operation is defined by a ∗ b = 2a + b. (a) Is it commutative? (b) Is it associative?</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) −√3, 1/√3 = √3/3 (b) 2/5, −5/2 (c) −1.3, 10/13 (d) 0.<span class="ov">1</span> = 1/9: −1/9, 9<br>2. (a) distributive (b) associative (addition) (c) commutative (multiplication)<br>3. No: 0 has none. Every other real number does.<br>4. (a) No: 1 ∗ 2 = 4 but 2 ∗ 1 = 5. (b) No: (a ∗ b) ∗ c = 4a + 2b + c but a ∗ (b ∗ c) = 2a + 2b + c.</div></details>
+</div>
+</div>
+<div class="part">
+<h3>1.4.4 Limit of accuracy</h3><p>Measuring a child's temperature, a dose of medicine or the area of a field rarely gives an exact value, so we use approximations. This part covers rounding, decimal places (d.p.), significant figures (s.f.) and accuracy.</p>
+<div class="activity"><h3>Activity 1.21</h3><p>1. Round 45,676 to the nearest (a) 100 (b) 1000. 2. Write 8.426 to (a) 1 d.p. (b) 2 d.p. 3. Write 28.79 to 3 s.f.</p><details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) 45,700 (b) 46,000 2. (a) 8.4 (b) 8.43 3. 28.8</div></details>
+</div><h4>Rounding whole numbers</h4>
+<p>First find the <strong>rounding digit</strong>: the tens digit when rounding to the nearest 10, the hundreds digit for the nearest 100, and so on. Then look at the digit to its right:</p>
+<ul><li>0, 1, 2, 3 or 4: keep the rounding digit. All digits to its right become 0.</li>
+<li>5, 6, 7, 8 or 9: add 1 to the rounding digit. All digits to its right become 0.</li></ul>
+<p><strong>Example 1.</strong> A town has 38,721 people. To the nearest 100 this is <strong>38,700</strong> (the digit after 7 is 2, so 7 stays). To the nearest 1,000 it is 39,000 (the digit after 8 is 7, so 8 becomes 9). To the nearest 10,000 it is 40,000. The rounded numbers are less accurate but easier to use.</p><p class="fix"><b>Correction:</b> the printed book gives 38,721 to the nearest 100 as "36,700" and calls it "rounded up". It is 38,700, and it is rounded down.</p>
+<h4>Decimal places</h4>
+<p>To round to a number of <strong>decimal places</strong>, look at the next digit. <strong>Example 2.</strong> (a) 10.673 to 1 d.p.: the second digit is 7 (5 or more), so round up: 10.7. (b) 3.173 to 2 d.p.: the third digit is 3, so 3.17. Rounding to 1 d.p. means to the nearest tenth; 2 d.p. means to the nearest hundredth.</p>
+<h4>Significant figures</h4>
+<p>In 43.25, the 4 is the most significant figure (it is worth 40) and the 5 the least (worth 5 hundredths). Count significant figures from the <strong>first non-zero digit</strong>. <strong>Example.</strong> (a) 2.364 to 2 s.f. is 2.4. (b) 0.0062 to 1 s.f. is 0.006: the leading zeros are not significant.</p><figure class="fig" id="roundfig">
+<div class="btnrow" role="group" aria-label="Choose a number"></div>
+<div class="btnrow" role="group" aria-label="Choose the accuracy"></div>
+<div class="svgbox"><svg viewBox="0 0 340 90" role="img" aria-label="Rounded value and its bounds"></svg></div>
+<div class="info" aria-live="polite"></div>
+<figcaption>Rounding tool. Choose a number and an accuracy to see the rounded value and the bounds of every number that rounds to it.</figcaption>
+</figure>
+<div class="mcq check" data-ans="0.041" data-why="The first two significant figures are 4 and 0; the next digit is 8, so 0.0408… rounds to 0.041." data-clue="Start counting at the first non-zero digit, 4."><span class="ck">Check your understanding</span><h4>Round 0.04086 to 2 significant figures.</h4><div class="opts"><button>0.04</button><button>0.041</button><button>0.0409</button><button>0.040</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.31</h4><ol><li>Round to the nearest whole number: (a) 35.946 (b) 45.1999 (c) 7/8 (d) √5</li><li>Write to 1 d.p. and to 2 d.p.: (a) 1.936 (b) 4.752 (c) 12.998</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) 36 (b) 45 (c) 0.875 → 1 (d) 2.236… → 2<br>2. (a) 1.9, 1.94 (b) 4.8, 4.75 (c) 13.0, 13.00</div></details>
+</div>
+<div class="ex"><h4>Exercise 1.32</h4><ol><li>Round to the number of significant figures shown: (a) 28,645 (1 s.f.) (b) 41,909 (3 s.f.) (c) 4.5568 (3 s.f.)</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">(a) 30,000 (b) 41,900 (c) 4.56</div></details>
+</div>
+<h4>Accuracy: upper and lower bounds</h4>
+<div class="activity"><h3>Activity 1.22</h3><p>1. Round each to 1 d.p.: 3.51, 3.48, 3.51, 3.53, 3.4999, 3.49, 3.45, 3.47, 3.42, 3.57, 3.41, 3.59, 3.54. 2. Which give 3.5? What are the largest and smallest of these?</p><details class="qa"><summary>Show the answers</summary><div class="ans">1. 3.5, 3.5, 3.5, 3.5, 3.5, 3.5, 3.5, 3.5, 3.4, 3.6, 3.4, 3.6, 3.5.<br>2. All except 3.42, 3.57, 3.41 and 3.59. The smallest is 3.45 and the largest is 3.54.</div></details>
+</div><div class="defn"><b>Definition 1.14 · Lower and upper bound</b><div>The <strong>lower and upper bounds</strong> are the limits of the values a number could have had before it was rounded.</div></div>
+<p>1.5, 1.50 and 1.500 look the same but are written to different accuracies. 1.5 (to 1 d.p.) could be anything from 1.45 up to, but not including, 1.55 (Figure 1.9):</p>
+<div class="mb">1.45 ≤ x &lt; 1.55</div>
+<p>1.45 is the <strong>lower bound</strong> and 1.55 the <strong>upper bound</strong>. To find them:</p>
+<ol class="steps"><li>Find the place value of the accuracy (for example 1, or 0.1).</li><li>Halve it.</li><li>Subtract the half from the value for the lower bound; add it for the upper bound.</li></ol>
+<div class="worked"><p><strong>Example 1.</strong> A tree weighs 872 kg to the nearest kg. Half of 1 is 0.5, so the bounds are 871.5 kg and 872.5 kg: <span class="m">871.5 ≤ w &lt; 872.5</span>.</p>
+<p><strong>Example 2.</strong> 10.7 to 1 d.p.: half of 0.1 is 0.05, so the bounds are 10.65 and 10.75.</p></div><p class="fix"><b>Note:</b> Definition 1.14 says the bounds are "the maximum and minimum values". Strictly, the upper bound itself is not allowed: 1.55 rounds to 1.6, not 1.5. That is why the inequality uses &lt; on the right.</p>
+<div class="mcq check" data-ans="7.5 cm" data-why="Half of 1 cm is 0.5 cm, and 8 − 0.5 = 7.5." data-clue="Halve the accuracy, then subtract."><span class="ck">Check your understanding</span><h4>A length is 8 cm to the nearest cm. Which is its lower bound?</h4><div class="opts"><button>7 cm</button><button>7.5 cm</button><button>7.9 cm</button><button>8.5 cm</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.33</h4><ol><li>A car's speed is 45 m/s to the nearest integer. (a) Find the lower and upper bounds. (b) Write the range for v as an inequality.</li><li>Find the bounds of: (a) 45 to the nearest integer (b) 12.6 to 1 d.p. (c) 4.23 to 2 d.p.</li><li>Write each as an inequality between its bounds: (a) x = 34.7 (b) y = 21.36 (c) z = 154.134</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) 44.5 and 45.5 (b) 44.5 ≤ v &lt; 45.5<br>2. (a) 44.5, 45.5 (b) 12.55, 12.65 (c) 4.225, 4.235<br>3. (a) 34.65 ≤ x &lt; 34.75 (b) 21.355 ≤ y &lt; 21.365 (c) 154.1335 ≤ z &lt; 154.1345</div></details>
+</div>
+<h4>Effect of operations on accuracy</h4>
+<div class="activity"><h3>Activity 1.23</h3><p>1. a = 5 and b = 2 (to the nearest whole number). Add each combination of lower and upper bounds. Which gives the smallest and the largest sum? 2. Do the same for a − b with a = 9 and b = 6.</p><details class="qa"><summary>Show the answers</summary><div class="ans">1. 4.5 + 1.5 = 6, 4.5 + 2.5 = 7, 5.5 + 1.5 = 7, 5.5 + 2.5 = 8. Lowest sum: lower + lower = 6. Highest: upper + upper = 8.<br>2. 8.5 − 5.5 = 3, 8.5 − 6.5 = 2, 9.5 − 5.5 = 4, 9.5 − 6.5 = 3. Lowest difference: lower a − upper b = 2. Highest: upper a − lower b = 4.</div></details>
+</div><p>When rounded numbers are added, subtracted or multiplied, the answer is a range.</p>
+<div class="worked"><p><strong>Example 1.</strong> A rectangular farm is 12 m long and 6 m wide, to the nearest metre. So 11.5 ≤ l &lt; 12.5 and 5.5 ≤ w &lt; 6.5.</p>
+<p>(a) Sum: smallest 11.5 + 5.5 = 17.0 m; largest 12.5 + 6.5 = 19.0 m.</p>
+<p>(b) Area: smallest 11.5 × 5.5 = 63.25 m²; largest 12.5 × 6.5 = 81.25 m², found by <strong>multiplying</strong> the two upper bounds.</p></div><p class="fix"><b>Correction:</b> Example 1(b) in the printed book says the upper bound of the area "is obtained by adding the two upper bounds" and calls it "the maximum sum". It is found by multiplying them, and it is the maximum area.</p>
+<div class="mcq check" data-ans="Lower bound of a − upper bound of b" data-why="Start as small as possible and take away as much as possible." data-clue="Look at Activity 1.23, part 2."><span class="ck">Check your understanding</span><h4>For a − b, which combination gives the smallest possible answer?</h4><div class="opts"><button>Lower bound of a − upper bound of b</button><button>Lower bound of a − lower bound of b</button><button>Upper bound of a − upper bound of b</button><button>Upper bound of a − lower bound of b</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.34</h4><ol><li>Each number is given to 1 d.p. Find the bounds of: (a) 5.4 + 6.2 (b) 4.6 × 2.7 (c) 14.3 − 5.7 (d) 10.8 ÷ 3.1</li><li>A school football field measures 102.6 m by 49.5 m, each to 1 d.p. (Figure 1.10). Find the bounds of its area.</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) 11.5 and 11.7 (b) 4.55 × 2.65 = 12.0575 and 4.65 × 2.75 = 12.7875 (c) 14.25 − 5.75 = 8.5 and 14.35 − 5.65 = 8.7 (d) 10.75 ÷ 3.15 ≈ 3.413 and 10.85 ÷ 3.05 ≈ 3.557 (for division: smallest = lower ÷ upper, largest = upper ÷ lower)<br>2. 102.55 × 49.45 = 5,071.0975 m² and 102.65 × 49.55 = 5,086.3075 m².</div></details>
+</div>
+</div>
+<div class="part">
+<h3>1.4.5 Scientific notation (standard notation)</h3><p>Science uses very large and very small numbers. For example:</p>
+<ul><li>The Abay (Blue Nile) river flows about 1,450,000 m through Ethiopia and Sudan.</li>
+<li>The average distance from the Earth to the Moon is about 384,400 km.</li>
+<li>A hydrogen atom has a mass of about <span style="overflow-wrap:anywhere">0.00000000000000000000000000167</span> kg.</li></ul><p class="fix"><b>Note:</b> the printed book gives the Earth–Moon distance as 382,500 km. The usual value is about 384,400 km.</p>
+<div class="activity"><h3>Activity 1.24</h3><p>Write each as a number times a power of 10: (i) 486.00017 (ii) 14,580,000,000,000 (iii) 0.0006504 (iv) 0.00000000000078436</p><details class="qa"><summary>Show the answers</summary><div class="ans">Many answers are possible (for example 48.600017 × 10), which is why we agree on one standard form: (i) 4.8600017 × 10² (ii) 1.458 × 10¹³ (iii) 6.504 × 10⁻⁴ (iv) 7.8436 × 10⁻¹³</div></details>
+</div><div class="defn"><b>Definition 1.15</b><div>A number is in <strong>scientific notation</strong> (standard notation) if it is written as <span class="m">a × 10ⁿ</span>, where 1 ≤ a &lt; 10 and n is an integer.</div></div>
+<ol class="steps"><li>Move the decimal point until exactly one non-zero digit is in front of it.</li>
+<li>Count the places moved. For a large number the point moves left and n is positive. For a small number it moves right and n is negative.</li>
+<li>Write a × 10ⁿ.</li></ol>
+<div class="worked"><p><strong>Example 1.</strong> (a) 1,856,700,000: the point moves 9 places left, so <span class="m">1.8567 × 10⁹</span>. (b) 0.000000314: the point moves 7 places right, so <span class="m">3.14 × 10⁻⁷</span>.</p>
+<p><strong>Example 2.</strong> (a) 5.37 × 10⁶ = 5,370,000 (b) 1.7 × 10⁻⁷ = 0.00000017</p></div><p class="fix"><b>Note:</b> in Example 1(a), step 3 of the printed solution says "the decimal points will move to the right". For 1,856,700,000 it moves to the left.</p>
+<figure class="fig" id="sci">
+<div class="btnrow" role="group" aria-label="Choose a number"></div>
+<label for="sce" style="font-weight:700">Power of 10: n = <span id="scel"></span></label>
+<input type="range" id="sce" min="-9" max="10" value="9">
+<div class="digits" aria-live="polite"></div>
+<div class="info" aria-live="polite"></div>
+<figcaption>Moving the decimal point. Drag n to slide the point; the number is in scientific notation only when one non-zero digit is in front of the point.</figcaption>
+</figure>
+<div class="mcq check" data-ans="3.06 × 10⁻²" data-why="1 ≤ 3.06 &lt; 10 and the power is of 10. 12.5 and 0.8 are outside 1 to 10." data-clue="Check that the first factor is at least 1 and less than 10."><span class="ck">Check your understanding</span><h4>Which number is written in scientific notation?</h4><div class="opts"><button>12.5 × 10³</button><button>0.8 × 10⁴</button><button>3.06 × 10⁻²</button><button>7 × 100</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.35</h4><ol><li>Write in standard notation: (a) 158.762 (b) 0.000089 (c) 56,897.00547</li><li>Write as ordinary decimals: (a) 1.34 × 10⁶ (b) 3.3 × 10⁻³ (c) (2/5) × 10⁻⁷</li><li>Simplify and give the answer in standard notation: (a) (4.2 × 10³) + (1.6 × 10³) (b) (2.1 × 10³)(1.3 × 10⁴) (c) (1.5 × 10⁻³)(3.1 × 10³) (d) (5.0 × 10⁵) ÷ (2 × 10⁻²)</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">1. (a) 1.58762 × 10² (b) 8.9 × 10⁻⁵ (c) 5.689700547 × 10⁴<br>2. (a) 1,340,000 (b) 0.0033 (c) 0.4 × 10⁻⁷ = 0.00000004<br>3. (a) 5.8 × 10³ (b) 2.73 × 10⁷ (c) 4.65 × 10⁰ (d) 2.5 × 10⁷</div></details>
+</div>
+</div>
+<div class="part">
+<h3>1.4.6 Rationalization</h3><p>A fraction such as 1/√3 has an irrational denominator, which makes it hard to work with. <strong>Rationalizing the denominator</strong> means rewriting it with a rational denominator.</p>
+<p>We multiply by a <strong>rationalizing factor</strong> that equals 1, such as √3/√3. Multiplying by 1 does not change the value. For 1/√a, the factor is √a/√a.</p>
+<div class="worked"><p><strong>Example 1.</strong> (a) 2/√3 × √3/√3 = 2√3/3 (b) √2/√5 × √5/√5 = √10/5 (c) 1/∛2 × ∛4/∛4 = ∛4/∛8 = ∛4/2</p></div><p class="fix"><b>Note:</b> in Example 1(a) the printed book first writes the rationalizing factor as √2/√5, then uses √3/√3. The correct factor is √3/√3.</p>
+<div class="ex"><h4>Exercise 1.36</h4><ol><li>Rationalize the denominator and simplify: (a) 6/√2 (b) 5√(1/3) (c) 2√2/√7</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">(a) 6√2/2 = 3√2 (b) 5/√3 = 5√3/3 (c) 2√14/7</div></details>
+</div>
+<div class="activity"><h3>Activity 1.25</h3><p>Find the products: (1) (√a − √b)(√a + √b) (2) (a + √b)(a − √b) (3) (√a − b)(√a + b)</p><details class="qa"><summary>Show the answers</summary><div class="ans">(1) a − b (2) a² − b (3) a − b². Each answer has no radicals left.</div></details>
+</div><p>This is the difference of two squares: <span class="m">(x − y)(x + y) = x² − y²</span>. Multiplying by the "conjugate" removes the square roots.</p>
+<div class="tbl card"><table><thead><tr><th>Given number</th><th>Rationalizing factor</th></tr></thead><tbody>
+<tr><td>1/(√a − √b)</td><td>(√a + √b)/(√a + √b)</td></tr>
+<tr><td>1/(a + √b)</td><td>(a − √b)/(a − √b)</td></tr>
+<tr><td>1/(√a − b)</td><td>(√a + b)/(√a + b)</td></tr>
+<tr><td>1/(√a + √b)</td><td>(√a − √b)/(√a − √b)</td></tr></tbody></table><p class="note" style="margin-top:6px">Table 1.3</p></div><figure class="fig" id="ratfig">
+<div class="btnrow" role="group" aria-label="Choose an example"></div>
+<ol class="steps" aria-live="polite"></ol>
+<div class="btnrow"><button class="pill" id="rtnext">Next step</button><button class="pill" id="rtreset">Start again</button></div>
+<figcaption>Rationalizing step by step: Example 1(a) and Example 2 from the book.</figcaption>
+</figure>
+<div class="worked"><p><strong>Example 2.</strong> (a) 1/(√2 + 1) × (√2 − 1)/(√2 − 1) = (√2 − 1)/(2 − 1) = √2 − 1. (b) 3/(√5 − √3) × (√5 + √3)/(√5 + √3) = 3(√5 + √3)/2. (c) For 1/(√3 − √2 + 1), multiply by (√3 − √2 − 1) to get (√3 − √2 − 1)/(2(2 − √6)). The denominator still has a radical, so multiply again by (2 + √6): the result is (√2 − √6 − 2)/(−4) = (2 + √6 − √2)/4.</p></div><div class="mcq check" data-ans="(3 − √2)/(3 − √2)" data-why="(3 + √2)(3 − √2) = 9 − 2 = 7, which is rational." data-clue="Use Table 1.3, row 2."><span class="ck">Check your understanding</span><h4>What do you multiply 5/(3 + √2) by to rationalize it?</h4><div class="opts"><button>(3 + √2)/(3 + √2)</button><button>(3 − √2)/(3 − √2)</button><button>√2/√2</button><button>(√2 − 3)/(3 − √2)</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.37</h4><ol><li>Rationalize: (a) 2/(√3 − √2) (b) (1 + √2)/(√3 − 1) (c) 3/(2 + √5) (d) 2/(√2 + √3 + 1)</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">(a) 2(√3 + √2)/(3 − 2) = 2√3 + 2√2 (b) (1 + √2)(√3 + 1)/2 = (1 + √3 + √2 + √6)/2 (c) 3(2 − √5)/(4 − 5) = 3√5 − 6 (d) multiply by (√2 + √3 − 1) to get 2(√2 + √3 − 1)/(4 + 2√6), then by (4 − 2√6): the result is (2 + √2 − √6)/2</div></details>
+</div>
+</div>
+<div class="quiz" data-quiz="l14"></div>
+<button class="done-btn" data-done="l14" aria-pressed="false">Mark lesson 1.4 as read</button>
+</section>
+<section class="lesson" id="l15">
+<div class="eyebrow">Lesson 1.5 · pages 79–81</div>
+<h2>Applications</h2>
+<div class="compet"><b>Lesson goal:</b> Use the division algorithm, GCF and LCM to solve everyday problems.</div>
+<div class="card"><h4>Key words · tap one</h4>
+<div class="kw" data-terms="Division algorithm,Greatest common factor (GCF),Least common multiple (LCM)"></div>
+<p class="kwdef" aria-live="polite">Tap a word to see what it means.</p>
+</div>
+<div class="part"><div class="worked"><p><strong>Example 1.</strong> A small town has 530 flower pots. The gardener puts 21 pots in each row. How many full rows are there, and how many pots are left over?</p></div><details class="qa"><summary>Show the working</summary><div class="ans">Use the division algorithm: 530 = 21 × 25 + 5. So there are <strong>25 full rows</strong> and <strong>5 pots left over</strong>.</div></details>
+<div class="mcq check" data-ans="10" data-why="530 = 10 × 53 + 0, so the remainder is 0." data-clue="Which divisor leaves remainder 0? Use the divisibility tests."><span class="ck">Check your understanding</span><h4>The gardener wants no pots left over. Which row size would work for 530 pots?</h4><div class="opts"><button>21</button><button>10</button><button>8</button><button>12</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="worked"><p><strong>Example 2.</strong> A teacher covers a 50 cm by 20 cm whiteboard completely with equal square papers. The side of each square is a whole number of centimetres. What is the largest possible side?</p>
+<p>1 cm squares work (Figure 1.11 a), so do 5 cm squares (b) and 10 cm squares (c). The side must divide both 50 and 20, so we want GCF(50, 20). Since 50 = 2 × 5² and 20 = 2² × 5, GCF(50, 20) = 2 × 5 = 10. The largest square is <strong>10 cm</strong>.</p></div><figure class="fig" id="tiles">
+<div class="btnrow" role="group" aria-label="Choose the square size"></div>
+<div class="svgbox"><svg viewBox="0 0 340 150" role="img" aria-label="Whiteboard covered with squares"></svg></div>
+<div class="info" aria-live="polite"></div>
+<figcaption>Figure 1.11 Covering a 50 cm × 20 cm board with squares. Only sizes that divide both 50 and 20 fit exactly.</figcaption>
+</figure>
+<div class="mcq check" data-ans="So the squares fit exactly along both edges" data-why="A common factor fits a whole number of times along each side; the largest is the GCF." data-clue="Try 4 cm in the figure."><span class="ck">Check your understanding</span><h4>Why must the square's side divide both 50 and 20?</h4><div class="opts"><button>So the squares fit exactly along both edges</button><button>Because 50 and 20 are even</button><button>So the squares overlap</button><button>Because the board is a square</button></div><p class="fb" aria-live="polite"></p></div>
+<figure class="fig" id="runners">
+<label for="rt" style="font-weight:700">Time: <span id="rtl"></span> minutes</label>
+<input type="range" id="rt" min="0" max="84" value="0">
+<div class="svgbox"><svg viewBox="0 0 340 120" role="img" aria-label="Laps completed by two runners"></svg></div>
+<div class="info" aria-live="polite"></div>
+<figcaption>Two runners start together. A takes 6 minutes a lap and B takes 14. Drag the time to find when they are next at the start together.</figcaption>
+</figure>
+<div class="mcq check" data-ans="LCM, because it must be a multiple of both lap times" data-why="They meet at the start after whole numbers of laps for both: the least common multiple of 6 and 14." data-clue="Drag the slider: at which times is A at the start? And B?"><span class="ck">Check your understanding</span><h4>Is the meeting time in the runners problem a GCF or an LCM?</h4><div class="opts"><button>GCF, because we want the largest number</button><button>LCM, because it must be a multiple of both lap times</button><button>Neither</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="ex"><h4>Exercise 1.38</h4><ol><li>Three strings of 78 cm, 117 cm and 351 cm are cut into pieces that are all the same length, with nothing left over. Find the greatest possible length of each piece.</li><li>Two Grade 9 students, A and B, start running round the sports field together. A takes 6 minutes for one round and B takes 14 minutes. When will they first be side by side again at the start?</li></ol><details class="qa"><summary>Show the answers</summary><div class="ans">1. GCF(78, 117, 351) = 39 cm.<br>2. LCM(6, 14) = 42 minutes. A has run 7 rounds and B 3 rounds.</div></details>
+</div>
+</div>
+<div class="quiz" data-quiz="l15"></div>
+<button class="done-btn" data-done="l15" aria-pressed="false">Mark lesson 1.5 as read</button>
+</section>
+<section class="lesson" id="summary">
+<div class="eyebrow">Unit 1 · pages 82–84</div>
+<h2>Key terms and unit summary</h2>
+<div class="card"><h4>Key terms</h4><p class="group">bar notation · composite number · division algorithm · fundamental theorem of arithmetic · greatest common factor (GCF) · irrational number · least common multiple (LCM) · perfect square · prime factorization · principal nth root · radicand · rationalization · rationalizing factor · real number · repeating decimal · scientific notation · significant figures · terminating decimal</p></div>
+<ol class="steps">
+<li>ℕ = {1, 2, 3, …}, ℤ = {…, −2, −1, 0, 1, 2, …} and ℚ = {a/b : a, b ∈ ℤ, b ≠ 0}.</li>
+<li><strong>Division algorithm:</strong> for a ≥ 0 and b &gt; 0 there are unique q, r ≥ 0 with a = (b × q) + r and 0 ≤ r &lt; b. a is the dividend, b the divisor, q the quotient, r the remainder.</li>
+<li>A <strong>prime</strong> has exactly two factors, 1 and itself; a <strong>composite</strong> number has more than two. <strong>Prime factorization</strong> writes a number as a product of primes, and by the <strong>fundamental theorem of arithmetic</strong> this is unique apart from order.</li>
+<li>A <strong>common factor</strong> divides all the given numbers; the <strong>GCF</strong> is the largest. Numbers with GCF 1 are <strong>relatively prime</strong>. The <strong>LCM</strong> is the smallest common multiple. For two numbers, LCM(a, b) × GCF(a, b) = a × b.</li>
+<li>Dividing a by b turns a rational number into a decimal that either <strong>terminates</strong> or <strong>repeats</strong>. Repeating decimals can be turned back into fractions.</li>
+<li>Terminating and repeating decimals are rational. A decimal that neither terminates nor repeats is <strong>irrational</strong>.</li>
+<li>The sum of a rational number and an irrational number is always irrational.</li>
+<li>The irrational numbers are not closed under addition, subtraction, multiplication or division.</li>
+<li>A <strong>real number</strong> is either rational or irrational: ℝ = {x : x is rational or x is irrational}.</li>
+<li>|x| = x if x ≥ 0, and |x| = −x if x &lt; 0.</li>
+<li>For real b and integer n &gt; 1, b<sup>1/n</sup> = ⁿ√b whenever ⁿ√b is a real number.</li>
+<li>For real a and b (b ≠ 0) where the radicals are defined, and n ≥ 2: ⁿ√a × ⁿ√b = ⁿ√(ab) and ⁿ√(a/b) = ⁿ√a / ⁿ√b.</li>
+<li>A number is in <strong>scientific notation</strong> when written as a × 10ⁿ with 1 ≤ a &lt; 10 and n an integer.</li>
+</ol>
+</section>
+<section class="lesson" id="review">
+<div class="eyebrow">Unit 1 · pages 84–86</div>
+<h2>Review exercise</h2>
+<p class="note">Try each question on paper first, then open the answer.</p>
+<details class="qa"><summary>1. Which of 2, 3, 4, 5, 6, 8, 9, 10 divide (a) 657 (b) 10,222 (c) 64,916?</summary><div class="ans">(a) 3 and 9 (digit sum 18) (b) 2 only (c) 2 and 4 (last two digits 16)</div></details>
+<details class="qa"><summary>2. Fill in: (a) __ is the sum of the smallest prime and the smallest composite number. (b) __ is the smallest composite number.</summary><div class="ans">(a) 2 + 4 = 6 (b) 4</div></details>
+<details class="qa"><summary>3. Write the prime factorization of (a) 57 (b) 168 (c) 536.</summary><div class="ans">(a) 3 × 19 (b) 2³ × 3 × 7 (c) 2³ × 67</div></details>
+<details class="qa"><summary>4. Find the GCF and LCM of (a) 36, 60 (b) 84, 224 (c) 15, 39, 105 (d) 16, 20, 48.</summary><div class="ans">(a) 12, 180 (b) 28, 672 (c) 3, 1,365 (d) 4, 240</div></details>
+<details class="qa"><summary>5. Two numbers have GCF 9 and LCM 54. One is 27. Find the other.</summary><div class="ans">GCF × LCM = product, so the other number is 9 × 54 ÷ 27 = <strong>18</strong>.</div></details>
+<details class="qa"><summary>6. Write as decimals: (a) −2⅕ (b) 11/7 (c) 17/33</summary><div class="ans">(a) −2.2 (b) 1.<span class="ov">571428</span> (c) 0.<span class="ov">51</span></div></details>
+<details class="qa"><summary>7. Write as fractions in simplest form: (a) 0.38 (b) 2.1<span class="ov">2</span> (c) −0.<span class="ov">123</span></summary><div class="ans">(a) 19/50 (b) 100d − 10d = 212.<span class="ov">2</span> − 21.<span class="ov">2</span> = 191, so 191/90 (c) −123/999 = −41/333</div></details>
+<details class="qa"><summary>8. Prove that there is a real number between any two real numbers.</summary><div class="ans">Let a &lt; b. Their average m = (a + b)/2 is real. Since a &lt; b, a + a &lt; a + b &lt; b + b, so 2a &lt; 2m &lt; 2b and a &lt; m &lt; b.</div></details>
+<details class="qa"><summary>9. If a/b and c/d are rational, show that (a/b) ÷ (c/d) is rational (c ≠ 0).</summary><div class="ans">(a/b) ÷ (c/d) = ad/bc. ad and bc are integers and bc ≠ 0 because b, c ≠ 0, so the quotient is rational.</div></details>
+<details class="qa"><summary>10. Find the absolute value of (a) −10.14<span class="ov">18</span> (b) √6 − 2 (c) a/b where a ≥ 0 and b &lt; 0.</summary><div class="ans">(a) 10.14<span class="ov">18</span> (b) √6 − 2, since √6 ≈ 2.45 &gt; 2 (c) a/b ≤ 0, so |a/b| = −a/b</div></details>
+<details class="qa"><summary>11. Write with fractional exponents: (a) √14 (b) √(x + y) (c) ⁵√7 (d) ∛(5/6)</summary><div class="ans">(a) 14<sup>1/2</sup> (b) (x + y)<sup>1/2</sup> (c) 7<sup>1/5</sup> (d) (5/6)<sup>1/3</sup></div></details>
+<details class="qa"><summary>12. Rationalize: (a) −2/√5 (b) 4/(3 − √2) (c) √2/(√3 + √2) (d) 1/(√2 + √5 + 1)</summary><div class="ans">(a) −2√5/5 (b) 4(3 + √2)/7 = (12 + 4√2)/7 (c) √2(√3 − √2)/(3 − 2) = √6 − 2 (d) (3 + 2√2 − √5 − √10)/2</div></details>
+<details class="qa"><summary>13. (√2 + √3)/(4 + √3) = a√2 + b√3 + c√6 + d. Find a, b, c and d.</summary><div class="ans">Multiply top and bottom by 4 − √3: (√2 + √3)(4 − √3)/13 = (4√2 − √6 + 4√3 − 3)/13. So a = 4/13, b = 4/13, c = −1/13, d = −3/13.</div></details>
+<details class="qa"><summary>14. Simplify: (a) 7√2 + √8 − √18 (b) ⅓(√5 − √2)(√5 + √2) (c) 3√28 ÷ 8√7 (d) ⁴√(b²) × ∛(b²), b ≥ 0 (e) (√72 − 3√24)/√2 (f) 2√72/3 − 3√128/4 + 5√(1/2)</summary><div class="ans">(a) 7√2 + 2√2 − 3√2 = 6√2 (b) ⅓ × 3 = 1 (c) 3 × 2√7 ÷ 8√7 = 3/4 (d) b<sup>1/2</sup> × b<sup>2/3</sup> = b<sup>7/6</sup> (e) √36 − 3√12 = 6 − 6√3 (f) 4√2 − 6√2 + 5√2/2 = √2/2</div></details>
+<p class="fix"><b>Note:</b> question 14 in the printed book labels two parts "b". Here the second one is (d).</p>
+<details class="qa"><summary>15. Each number is correct to 1 d.p. Give its bounds as an inequality: (a) 2.4 (b) 10.6 (c) 2.0 (d) −0.5</summary><div class="ans">(a) 2.35 ≤ x &lt; 2.45 (b) 10.55 ≤ x &lt; 10.65 (c) 1.95 ≤ x &lt; 2.05 (d) −0.55 ≤ x &lt; −0.45</div></details>
+<details class="qa"><summary>16. Write in scientific notation: (a) 567,200,000 (b) 0.00000774 (c) 154.6 × 10⁵</summary><div class="ans">(a) 5.672 × 10⁸ (b) 7.74 × 10⁻⁶ (c) 1.546 × 10⁷</div></details>
+<div class="mcq" data-ans="−√3"><h4>17. Which number is farthest from 0 on the number line?</h4><div class="opts"><button>√1.44</button><button>−√3</button><button>√5/7</button><button>−√0.0001</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq" data-ans="61 and 4"><h4>18. By the division algorithm, which q and r give 736 = 12q + r?</h4><div class="opts"><button>60 and −4</button><button>54 and 8</button><button>60 and 4</button><button>61 and 4</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq" data-ans="x − y is irrational"><h4>19. x is rational and y is irrational. Which is always true?</h4><div class="opts"><button>xy is rational</button><button>x/y is irrational</button><button>y/x is a real number</button><button>x − y is irrational</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq" data-ans="−a is the additive inverse of a for every a ∈ ℝ"><h4>20. Which statement about ℝ is true?</h4><div class="opts"><button>Every real number has a multiplicative inverse</button><button>Subtraction is associative</button><button>−a is the additive inverse of a for every a ∈ ℝ</button><button>Division is commutative</button></div><p class="fb" aria-live="polite"></p></div>
+<details class="qa"><summary>Why are the answers to 17–20 correct?</summary><div class="ans">17: |−√3| ≈ 1.73 is the largest distance (the others are 1.2, about 0.32 and 0.01). 18: 12 × 61 = 732 and 736 − 732 = 4. 19: xy, x/y and y/x fail when x = 0; x − y is always irrational. 20: 0 has no inverse, and subtraction and division fail the laws.</div></details>
+<details class="qa"><summary>21. Positive integers a, b and c leave remainders 9, 7 and 10 when divided by 13. Show that a + b + c is divisible by 13.</summary><div class="ans">a = 13p + 9, b = 13q + 7, c = 13r + 10. Then a + b + c = 13(p + q + r) + 26 = 13(p + q + r + 2), a multiple of 13.</div></details>
+<details class="qa"><summary>22. A school has 14 girls and 21 boys for a traffic-safety service. Every team must have the same number of girls and the same number of boys, and every student is in a team. What is the greatest number of teams? How many girls and boys are in each?</summary><div class="ans">GCF(14, 21) = 7 teams, each with 2 girls and 3 boys.</div></details>
+</section>
+<section class="lesson" id="gloss">
+<div class="eyebrow">Unit 1</div>
+<h2>Glossary</h2>
+<dl class="gloss"></dl>
+</section>
+</div>
+<script>
+const UNIT = { key: 'meseret-g9m-u1-read', label: id => id.slice(1, 2) + '.' + id.slice(2) };
+const GL = {
+"Natural number": "A counting number: 1, 2, 3, … The set is written ℕ.",
+"Integer": "A whole number or its negative: …, −2, −1, 0, 1, 2, … The set is written ℤ.",
+"Division algorithm": "For whole numbers a ≥ 0 and b > 0 there are unique q and r with a = b × q + r and 0 ≤ r < b. Also called Euclid's division lemma.",
+"Dividend": "The number being divided: a in a = b × q + r.",
+"Divisor": "The number you divide by: b in a = b × q + r. Also called a factor when the remainder is 0.",
+"Quotient": "How many whole times the divisor fits: q in a = b × q + r.",
+"Remainder": "What is left over after dividing: r in a = b × q + r, with 0 ≤ r < b.",
+"Factor": "p is a factor of h if h = p × q for some natural number q. Then h is divisible by p.",
+"Multiple": "h is a multiple of p if h = p × q for some natural number q.",
+"Prime number": "A natural number with exactly two different factors, 1 and itself, such as 2, 3, 5, 7.",
+"Composite number": "A natural number with more than two factors, such as 4, 6, 9. The number 1 is neither prime nor composite.",
+"Divisibility test": "A quick rule that tells whether a number divides another without doing the division.",
+"Prime factorization": "Writing a number as a product of primes, for example 72 = 2³ × 3².",
+"Fundamental theorem of arithmetic": "Every composite number can be written as a product of primes in exactly one way, apart from the order.",
+"Greatest common factor (GCF)": "The largest number that is a factor of all the given numbers. Also called HCF.",
+"Least common multiple (LCM)": "The smallest number that is a multiple of all the given numbers.",
+"Relatively prime": "Numbers whose GCF is 1, such as 8 and 15.",
+"Rational number": "A number that can be written a/b with integers a, b and b ≠ 0. The set is written ℚ.",
+"Proper fraction": "A fraction whose numerator is smaller than its denominator, such as 3/4.",
+"Improper fraction": "A fraction whose numerator is at least its denominator, such as 7/3.",
+"Mixed fraction": "A whole number with a proper fraction, such as 5¼.",
+"Terminating decimal": "A decimal that ends, such as 0.6 or 2.375.",
+"Repeating decimal": "A decimal in which a block of digits repeats for ever, such as 0.333… or 0.2323…",
+"Bar notation": "A line over the repeating digits of a decimal: 0.3̅ means 0.333…",
+"Perfect square": "A number that is an integer times itself: 1, 4, 9, 16, 25, …",
+"Square root": "y is a square root of x if y² = x. The positive one is written √x.",
+"Radical sign": "The symbol √ used for roots.",
+"Irrational number": "A decimal that neither ends nor repeats, such as √2 or π. It cannot be written as a/b.",
+"Like radicals": "Radicals with the same index and the same radicand, such as 2√5 and 7√5. Only like radicals can be added.",
+"Real number": "Any rational or irrational number. Every point on the number line is a real number. The set is written ℝ.",
+"Interval": "The set of all real numbers between two end points, such as [2, 5) or (−∞, 3].",
+"Absolute value": "The distance of a number from 0 on the number line: |x| is never negative.",
+"Exponent": "In aⁿ, the exponent n says how many times the base a is multiplied by itself.",
+"Base": "In aⁿ, the number a that is multiplied.",
+"Principal nth root": "The real nth root ⁿ√b: positive when b > 0, negative when b < 0 and n is odd, 0 when b = 0.",
+"Radicand": "The number under the radical sign: b in ⁿ√b.",
+"Index": "The small number n in ⁿ√b. No index means square root.",
+"Additive inverse": "The number −a that gives 0 when added to a. Also called the opposite.",
+"Multiplicative inverse": "The number 1/a that gives 1 when multiplied by a (a ≠ 0). Also called the reciprocal.",
+"Rounding": "Replacing a number by a simpler nearby value, such as 38,721 → 38,700 to the nearest hundred.",
+"Decimal place": "A digit after the decimal point. 3.17 is given to 2 decimal places (2 d.p.).",
+"Significant figures": "The digits of a number counted from the first non-zero digit. 0.0062 has 2 significant figures.",
+"Lower bound": "The smallest value a number could have had before it was rounded.",
+"Upper bound": "The value just above the largest a number could have had before rounding. The number is always less than it.",
+"Scientific notation": "Writing a number as a × 10ⁿ with 1 ≤ a < 10 and n an integer. Also called standard notation.",
+"Rationalization": "Rewriting a fraction so its denominator has no radicals.",
+"Rationalizing factor": "The expression you multiply the top and bottom by to rationalize a denominator, for example √3/√3."
+};
+/* ---- key words ---- */
+document.querySelectorAll('.kw').forEach(box => {
+  const def = box.parentElement.querySelector('.kwdef');
+  box.innerHTML = box.dataset.terms.split(',').map(t => `<button aria-pressed="false">${t}</button>`).join('');
+  box.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    box.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b));
+    def.innerHTML = `<strong>${b.textContent}:</strong> ${GL[b.textContent] || ''}`;
+  });
+});
+document.querySelector('dl.gloss').innerHTML = Object.keys(GL).sort((a, b) => a.localeCompare(b)).map(k => `<dt>${k}</dt><dd>${GL[k]}</dd>`).join('');
+
+/* ---- multiple-choice checks ---- */
+document.querySelectorAll('.mcq').forEach(q => {
+  q.addEventListener('click', e => {
+    const b = e.target.closest('.opts button'); if (!b || q.dataset.done) return;
+    const ok = b.textContent.trim() === q.dataset.ans;
+    b.classList.add(ok ? 'ok' : 'no');
+    const fb = q.querySelector('.fb');
+    fb.className = 'fb ' + (ok ? 'ok' : 'no');
+    fb.innerHTML = ok ? 'Correct.' + (q.dataset.why ? `<small>${q.dataset.why}</small>` : '') : 'Not yet.' + `<small>${q.dataset.clue || 'Read the section above and try another option.'}</small>`;
+    if (ok) { q.dataset.done = 1; q.querySelectorAll('.opts button').forEach(x => x.disabled = true); }
+    else b.disabled = true;
+  });
+});
+
+/* ---- sorters ---- */
+function sorter(id, bins, items) {
+  const el = document.querySelector('#' + id + ' .sorter');
+  let i = 0, score = 0;
+  function draw(msg, cls) {
+    if (i >= items.length) { el.innerHTML = `<p class="item">${score} of ${items.length}</p><p class="fb ok" style="text-align:center">${msg || ''} Done.</p><button class="pill" style="justify-self:center">Try again</button>`; return; }
+    el.innerHTML = `<p class="note" style="text-align:center">${i + 1} of ${items.length}</p><p class="item">${items[i][0]}</p><div class="bins">${bins.map(b => `<button>${b}</button>`).join('')}</div><p class="fb ${cls || ''}" aria-live="polite">${msg || ''}</p>`;
+  }
+  el.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    if (i >= items.length) { i = 0; score = 0; draw(); return; }
+    const [name, ans, why] = items[i];
+    if (b.textContent === ans) { score++; i++; draw(`Yes: ${name} → ${ans}. ${why}`, 'ok'); }
+    else { i++; draw(`${name} belongs to ${ans}. ${why}`, 'no'); }
+  });
+  draw();
+}
+
+/* ---- small helper for pressable button rows ---- */
+function pressRow(row, labels, onPick, start) {
+  row.innerHTML = labels.map((s, k) => `<button class="pill" aria-pressed="${k === start}">${s}</button>`).join('');
+  row.addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; const k = [...row.children].indexOf(b); row.querySelectorAll('button').forEach((x, j) => x.setAttribute('aria-pressed', j === k)); onPick(k); });
+  onPick(start);
+}
+/* keyboard support for role="button" shapes inside a container */
+function tapKeys(root, sel, fn) {
+  root.addEventListener('click', e => { const g = e.target.closest(sel); if (g) fn(g); });
+  root.addEventListener('keydown', e => { const g = e.target.closest(sel); if (g && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); fn(g); } });
+}
+
+
+const SUP = n => String(n).replace(/-/g, '⁻').replace(/\d/g, d => '⁰¹²³⁴⁵⁶⁷⁸⁹'[d]);
+const T = (x, y, s, o = {}) => `<text x="${x}" y="${y}" text-anchor="${o.a || 'middle'}" font-size="${o.fs || 13}" font-weight="${o.fw || 700}" style="fill:${o.c || 'var(--fg)'}">${s}</text>`;
+function factorize(n) { const f = {}; let d = 2; while (n > 1 && d * d <= n) { while (n % d === 0) { f[d] = (f[d] || 0) + 1; n /= d; } d++; } if (n > 1) f[n] = (f[n] || 0) + 1; return f; }
+const fstr = f => Object.keys(f).map(p => p + (f[p] > 1 ? SUP(f[p]) : '')).join(' × ');
+const gcd = (a, b) => b ? gcd(b, a % b) : a;
+/* numbers on a number line: x position */
+function nlx(v, lo, hi, x0 = 20, x1 = 320) { return x0 + (v - lo) / (hi - lo) * (x1 - x0); }
+function numberLine(lo, hi, step, y, opts = {}) {
+  let s = `<line x1="12" y1="${y}" x2="328" y2="${y}" style="stroke:var(--muted)" stroke-width="2"/><path d="M328 ${y}l-7 -4v8z" style="fill:var(--muted)"/><path d="M12 ${y}l7 -4v8z" style="fill:var(--muted)"/>`;
+  for (let v = lo; v <= hi + 1e-9; v += step) { const x = nlx(v, lo, hi); s += `<line x1="${x}" y1="${y - 5}" x2="${x}" y2="${y + 5}" style="stroke:var(--muted)" stroke-width="1.5"/>` + T(x, y + 20, Math.round(v * 100) / 100, { fs: 11, c: 'var(--muted)' }); }
+  return s;
+}
+
+/* ---- Euclid division ---- */
+(function () {
+  const fig = document.getElementById('euclid'), svg = fig.querySelector('svg'), info = fig.querySelector('.info');
+  const ra = fig.querySelector('#ea'), rb = fig.querySelector('#eb'), la = fig.querySelector('#eal'), lb = fig.querySelector('#ebl');
+  function draw() {
+    const a = +ra.value, b = +rb.value, q = Math.floor(a / b), r = a % b;
+    la.textContent = a; lb.textContent = b;
+    const rows = Math.min(q, 5); let s = '';
+    for (let row = 0; row < rows; row++) for (let c = 0; c < b; c++) s += `<circle cx="${14 + c * 26}" cy="${12 + row * 22}" r="8" style="fill:var(--accent)"/>`;
+    for (let c = 0; c < r; c++) s += `<circle cx="${14 + c * 26}" cy="${12 + rows * 22}" r="8" style="fill:var(--warm)"/>`;
+    if (q > 5) s += T(4, 146, `…and ${q - 5} more full row${q - 5 > 1 ? 's' : ''} of ${b} not drawn`, { a: 'start', fs: 11, c: 'var(--muted)' });
+    svg.innerHTML = s;
+    info.innerHTML = `<strong class="m">${a} = ${b} × ${q} + ${r}</strong>${q} full row${q === 1 ? '' : 's'} of ${b}, and ${r} left over. The remainder ${r} is less than the divisor ${b}.` + (r === 0 ? ` Remainder 0: ${a} is divisible by ${b}.` : '');
+  }
+  ra.addEventListener('input', draw); rb.addEventListener('input', draw); draw();
+})();
+
+/* ---- sieve 1..60 ---- */
+(function () {
+  const fig = document.getElementById('sieve'), grid = fig.querySelector('.cells'), info = fig.querySelector('.info'), row = fig.querySelector('.btnrow');
+  const facs = n => { const f = []; for (let d = 1; d <= n; d++) if (n % d === 0) f.push(d); return f; };
+  grid.innerHTML = Array.from({ length: 60 }, (_, k) => `<button aria-pressed="false" data-n="${k + 1}">${k + 1}</button>`).join('');
+  function colour(on) { grid.querySelectorAll('button').forEach(b => { const n = +b.dataset.n, f = facs(n).length; b.classList.toggle('p', on && f === 2); b.classList.toggle('c', on && f > 2); }); }
+  pressRow(row, ['Colour primes and composites', 'Plain grid'], k => colour(k === 0), 0);
+  grid.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    grid.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b));
+    const n = +b.dataset.n, f = facs(n);
+    const kind = n === 1 ? 'neither prime nor composite' : f.length === 2 ? 'prime' : 'composite';
+    info.innerHTML = `<strong>${n} is ${kind}</strong>Factors: ${f.join(', ')} (${f.length} factor${f.length > 1 ? 's' : ''}).` + (f.length > 2 ? ` Prime factorization: ${fstr(factorize(n))}.` : '');
+  });
+})();
+
+/* ---- divisibility tester ---- */
+(function () {
+  const fig = document.getElementById('divtest'), row = fig.querySelector('.btnrow'), inp = fig.querySelector('#dnum'), out = fig.querySelector('.rules');
+  const P = ['2334', '384', '3186', '42435', '765', '7964'];
+  function run() {
+    const s = inp.value.replace(/[^0-9]/g, '');
+    if (!s) { out.innerHTML = '<p class="note">Type a whole number using digits only.</p>'; return; }
+    const ds = s.split('').map(Number), sum = ds.reduce((a, b) => a + b, 0), u = ds[ds.length - 1];
+    const l2 = Number(s.slice(-2)), l3 = Number(s.slice(-3));
+    const R = [
+      [2, u % 2 === 0, `units digit ${u}`], [3, sum % 3 === 0, `digit sum ${sum}`], [4, l2 % 4 === 0, `last two digits ${s.slice(-2)}`],
+      [5, u === 0 || u === 5, `units digit ${u}`], [6, u % 2 === 0 && sum % 3 === 0, `divisible by 2 ${u % 2 === 0 ? 'and' : 'but not'} by 3? ${sum % 3 === 0 ? 'yes' : 'no'}`],
+      [8, l3 % 8 === 0, `last three digits ${s.slice(-3)}`], [9, sum % 9 === 0, `digit sum ${sum}`], [10, u === 0, `units digit ${u}`]];
+    out.innerHTML = R.map(([d, ok, why]) => `<div><span class="${ok ? 'y' : 'x'}">${ok ? '✓' : '✗'} ${d}</span><span>${ok ? 'Divisible' : 'Not divisible'}: ${why}.</span></div>`).join('');
+  }
+  row.innerHTML = P.map(p => `<button class="pill">${p}</button>`).join('');
+  row.addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; inp.value = b.textContent; run(); });
+  inp.addEventListener('input', run); run();
+})();
+
+/* ---- division ladder ---- */
+(function () {
+  const fig = document.getElementById('ladder'), row = fig.querySelector('.btnrow'), tbl = fig.querySelector('#ladtbl'), info = fig.querySelector('.info');
+  const nb = fig.querySelector('#lnext'), rb = fig.querySelector('#lreset');
+  const NUMS = [72, 456, 360, 1848, 134750];
+  let n = 72, steps = [], k = 0;
+  function plan(x) { const s = []; let d = 2; while (x > 1) { if (x % d === 0) { s.push([x, d]); x /= d; } else d++; } return s; }
+  function draw() {
+    tbl.innerHTML = '<thead><tr><th>Prime</th><th>Number</th></tr></thead><tbody>' + steps.slice(0, k).map(([x, d]) => `<tr><td class="n"><b>${d}</b></td><td class="n">${x}</td></tr>`).join('') + `<tr><td></td><td class="n">${k < steps.length ? steps[k][0] : 1}</td></tr></tbody>`;
+    if (k < steps.length) { const [x, d] = steps[k]; info.innerHTML = k === 0 ? `<strong>Start with ${n}</strong>Find the smallest prime that divides it. Press "Next division".` : `<strong>So far: ${n} = ${steps.slice(0, k).map(s => s[1]).join(' × ')} × ${x}</strong>${x} still needs factorizing.`; }
+    else info.innerHTML = `<strong class="m">${n} = ${fstr(factorize(n))}</strong>The quotient is 1, so every factor is prime. By the fundamental theorem of arithmetic, no other prime factorization is possible.`;
+    nb.disabled = k >= steps.length;
+  }
+  pressRow(row, NUMS.map(String), j => { n = NUMS[j]; steps = plan(n); k = 0; draw(); }, 0);
+  nb.addEventListener('click', () => { if (k < steps.length) { k++; draw(); } });
+  rb.addEventListener('click', () => { k = 0; draw(); });
+})();
+
+/* ---- GCF / LCM prime-factor Venn ---- */
+(function () {
+  const fig = document.getElementById('gcfvenn'), rows = fig.querySelectorAll('.btnrow'), svg = fig.querySelector('svg'), info = fig.querySelector('.info');
+  const PAIRS = [[36, 56], [12, 18], [6, 8], [15, 42], [24, 54], [50, 20], [8, 15]];
+  let p = 0, mode = 0;
+  const list = n => { const f = factorize(n), L = []; Object.keys(f).forEach(q => { for (let i = 0; i < f[q]; i++) L.push(+q); }); return L; };
+  function split(a, b) { const A = list(a), B = list(b), both = []; const Bc = B.slice(); const onlyA = []; A.forEach(x => { const i = Bc.indexOf(x); if (i >= 0) { both.push(x); Bc.splice(i, 1); } else onlyA.push(x); }); return [onlyA, both, Bc]; }
+  const prod = L => L.reduce((s, x) => s * x, 1);
+  function draw() {
+    const [a, b] = PAIRS[p], [oA, bo, oB] = split(a, b);
+    const hiBoth = true, hiSides = mode === 1;
+    const place = (L, cx) => L.map((x, i) => T(cx + ((i % 2) ? 14 : -14), 70 + Math.floor(i / 2) * 26 + ((L.length === 1) ? 26 : 0), x, { fs: 17, fw: 800 })).join('');
+    svg.innerHTML = `<circle cx="130" cy="98" r="78" style="fill:${hiSides ? 'var(--hi)' : 'var(--set-a)'};stroke:var(--accent)" stroke-width="2.5"/><circle cx="210" cy="98" r="78" style="fill:${hiSides ? 'var(--hi)' : 'var(--set-b)'};stroke:var(--warm)" stroke-width="2.5"/>` +
+      `<clipPath id="gcB"><circle cx="210" cy="98" r="78"/></clipPath><circle cx="130" cy="98" r="78" clip-path="url(#gcB)" style="fill:${hiBoth ? 'var(--hi)' : 'transparent'}"/>` +
+      T(70, 18, `${a}`, { fs: 15, fw: 800, c: 'var(--accent)' }) + T(270, 18, `${b}`, { fs: 15, fw: 800, c: 'var(--warm)' }) +
+      place(oA, 92) + place(bo, 170) + place(oB, 248) + (bo.length === 0 ? T(170, 104, '(none)', { fs: 11, c: 'var(--muted)' }) : '');
+    const g = prod(bo), l = prod(oA) * prod(bo) * prod(oB);
+    info.innerHTML = mode === 0 ? `<strong class="m">GCF(${a}, ${b}) = ${bo.length ? bo.join(' × ') + ' = ' : ''}${g}</strong>Multiply only the shared primes in the overlap.` + (g === 1 ? ` No primes are shared, so ${a} and ${b} are relatively prime.` : '')
+      : `<strong class="m">LCM(${a}, ${b}) = ${[...oA, ...bo, ...oB].join(' × ')} = ${l}</strong>Multiply every prime in the diagram, counting the overlap once. Check: GCF × LCM = ${g} × ${l} = ${g * l} = ${a} × ${b}.`;
+  }
+  pressRow(rows[0], PAIRS.map(x => x.join(' and ')), k => { p = k; draw(); }, 0);
+  pressRow(rows[1], ['Show GCF', 'Show LCM'], k => { mode = k; draw(); }, 0);
+})();
+
+/* ---- nested sets N ⊂ Z ⊂ Q ---- */
+(function () {
+  const fig = document.getElementById('nest'), svg = fig.querySelector('svg'), info = fig.querySelector('.info');
+  const S = [['ℚ', 'Rational numbers', 'Every a/b with integers a, b and b ≠ 0: 3/4, −13/10, 0.25, 0.<span class="ov">3</span>, and all integers.', 165, 100, 155, 92, 'var(--surface-2)'],
+    ['ℤ', 'Integers', 'Whole numbers and their negatives: …, −2, −1, 0, 1, 2, … Each is rational, because n = n/1.', 190, 110, 108, 66, 'var(--set-b)'],
+    ['ℕ', 'Natural numbers', 'The counting numbers 1, 2, 3, … Each is also an integer and a rational number.', 215, 118, 56, 38, 'var(--set-a)']];
+  svg.innerHTML = S.map((s, k) => `<g class="tap" tabindex="0" role="button" aria-label="${s[1]}" data-k="${k}"><ellipse cx="${s[3]}" cy="${s[4]}" rx="${s[5]}" ry="${s[6]}" style="fill:${s[7]};stroke:var(--muted)" stroke-width="1.5"/></g>`).join('') +
+    `<g pointer-events="none">${T(40, 70, 'ℚ', { fs: 20, fw: 800 })}${T(100, 110, 'ℤ', { fs: 18, fw: 800 })}${T(215, 124, 'ℕ', { fs: 18, fw: 800 })}${T(52, 120, '3/4', { fs: 12, c: 'var(--muted)' })}${T(60, 150, '−1.5', { fs: 12, c: 'var(--muted)' })}${T(120, 140, '−7', { fs: 12, c: 'var(--muted)' })}${T(140, 90, '0', { fs: 12, c: 'var(--muted)' })}${T(240, 100, '5', { fs: 12, c: 'var(--muted)' })}${T(195, 140, '1', { fs: 12, c: 'var(--muted)' })}${T(290, 60, '0.<tspan text-decoration="overline">3</tspan>', { fs: 12, c: 'var(--muted)' })}</g>`;
+  tapKeys(svg, '.tap', g => { const s = S[g.dataset.k]; info.innerHTML = `<strong>${s[0]} · ${s[1]}</strong>${s[2]}`; });
+})();
+
+/* ---- long division to decimal ---- */
+(function () {
+  const fig = document.getElementById('longdiv'), row = fig.querySelector('.btnrow'), dig = fig.querySelector('.digits'), tbl = fig.querySelector('#ldtbl'), info = fig.querySelector('.info');
+  const nb = fig.querySelector('#ldnext'), ab = fig.querySelector('#ldall');
+  const F = [[3, 5], [5, 9], [1, 7], [23, 99], [14, 15], [3, 8], [1, 11]];
+  let a, b, ip, steps, k;
+  function plan() { ip = Math.floor(a / b); let r = a % b; const seen = {}, s = []; while (r !== 0 && !(r in seen) && s.length < 30) { seen[r] = s.length; const d = Math.floor(r * 10 / b); s.push([r, d, (r * 10) % b]); r = (r * 10) % b; } return { s, end: r === 0 ? -1 : seen[r] }; }
+  let P;
+  function draw() {
+    const shown = P.s.slice(0, k);
+    const done = k >= P.s.length;
+    let ds = shown.map((x, i) => (done && P.end >= 0 && i >= P.end) ? `<span class="r">${x[1]}</span>` : x[1]).join('');
+    dig.innerHTML = `${a}/${b} = ${ip}.${ds || ''}${done ? (P.end >= 0 ? '…' : '') : '…'}`;
+    tbl.innerHTML = '<thead><tr><th>Step</th><th>Remainder × 10</th><th>Digit</th><th>New remainder</th></tr></thead><tbody>' + shown.map((x, i) => `<tr><td class="n">${i + 1}</td><td class="n">${x[0] * 10}</td><td class="n">${x[1]}</td><td class="n">${x[2]}</td></tr>`).join('') + '</tbody>';
+    if (!done) info.innerHTML = `<strong>Keep dividing</strong>Each step: multiply the remainder by 10, divide by ${b}, write the digit, keep the new remainder.`;
+    else if (P.end < 0) info.innerHTML = `<strong>Terminating: ${a}/${b} = ${ip}.${P.s.map(x => x[1]).join('')}</strong>The remainder reached 0, so the division stops.`;
+    else { const rep = P.s.slice(P.end).map(x => x[1]).join(''), pre = P.s.slice(0, P.end).map(x => x[1]).join(''); info.innerHTML = `<strong>Repeating: ${a}/${b} = ${ip}.${pre}<span class="ov">${rep}</span></strong>Remainder ${P.s[P.end][0]} came back, so the highlighted digits repeat for ever.`; }
+    nb.disabled = done;
+  }
+  pressRow(row, F.map(f => f.join('/')), j => { [a, b] = F[j]; P = plan(); k = 1; draw(); }, 0);
+  nb.addEventListener('click', () => { k++; draw(); });
+  ab.addEventListener('click', () => { k = P.s.length; draw(); });
+})();
+
+/* ---- rational numbers on the number line ---- */
+(function () {
+  const fig = document.getElementById('numline'), row = fig.querySelector('.btnrow'), svg = fig.querySelector('svg'), info = fig.querySelector('.info');
+  const V = [['−5', -5, 'An integer: 5 units left of 0.'], ['3', 3, 'An integer: 3 units right of 0.'], ['4/3', 4 / 3, '4/3 = 1.333…: one third of the way from 1 to 2.'], ['−5/2', -2.5, '−5/2 = −2.5: halfway between −3 and −2.'], ['4/5', 0.8, '4/5 = 0.8: just left of 1.'], ['2⅓', 7 / 3, '2⅓ = 2.333…: one third of the way from 2 to 3.'], ['0.4̅', 4 / 9, '0.444… = 4/9: a little left of 0.5.']];
+  const on = new Set([0, 1, 2, 3]);
+  function draw(last) {
+    let s = numberLine(-6, 6, 1, 50);
+    [...on].forEach(k => { const x = nlx(V[k][1], -6, 6); s += `<circle cx="${x}" cy="50" r="6" style="fill:${k === last ? 'var(--warm)' : 'var(--accent)'}"/>` + T(x, 30, V[k][0], { fs: 12, fw: 800, c: k === last ? 'var(--warm-ink)' : 'var(--accent)' }); });
+    svg.innerHTML = s;
+    if (last != null) info.innerHTML = `<strong>${V[last][0]}</strong>${V[last][2]}`;
+  }
+  row.innerHTML = V.map((v, k) => `<button class="pill" aria-pressed="${on.has(k)}">${v[0]}</button>`).join('');
+  row.addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; const k = [...row.children].indexOf(b); on.add(k); row.querySelectorAll('button').forEach((x, j) => x.setAttribute('aria-pressed', on.has(j))); draw(k); });
+  draw(); info.innerHTML = '<span class="hint">Tap a number to locate it. The four numbers from the book example are already placed.</span>';
+})();
+
+/* ---- repeating decimal to fraction stepper ---- */
+(function () {
+  const fig = document.getElementById('rep2frac'), row = fig.querySelector('.btnrow'), ol = fig.querySelector('.steps');
+  const nb = fig.querySelector('#rfnext'), rb = fig.querySelector('#rfreset');
+  const E = [
+    ['0.5̅', ['Let d = 0.555…', 'One digit repeats, so multiply by 10: 10d = 5.555…', 'Subtract d = 0.555…: the repeating parts cancel.', '10d − d = 9d = 5', 'd = <b>5/9</b>']],
+    ['2.1̅2̅', ['Let d = 2.1212…', 'Two digits repeat, so multiply by 100: 100d = 212.1212…', 'Subtract d = 2.1212…', '99d = 210', 'd = 210/99 = <b>70/33</b>']],
+    ['0.12̅', ['Let d = 0.1222…', 'Move the point past the non-repeating 1: 10d = 1.222…', 'Move it one repeat further: 100d = 12.222…', '100d − 10d = 90d = 11', 'd = <b>11/90</b> (not 11/99: we divide by 90)']],
+    ['1.21̅6̅', ['Let d = 1.21616…', 'Past the non-repeating 2: 10d = 12.1616…', 'One repeat (two digits) further: 1000d = 1216.1616…', '1000d − 10d = 990d = 1204', 'd = 1204/990 = <b>602/495</b>']]];
+  let e = 0, k = 1;
+  function draw() { ol.innerHTML = E[e][1].slice(0, k).map(s => `<li>${s}</li>`).join(''); nb.disabled = k >= E[e][1].length; }
+  pressRow(row, E.map(x => x[0]), j => { e = j; k = 1; draw(); }, 0);
+  nb.addEventListener('click', () => { k++; draw(); }); rb.addEventListener('click', () => { k = 1; draw(); });
+})();
+
+/* ---- squeezing sqrt 2 ---- */
+(function () {
+  const fig = document.getElementById('sqrt2'), rng = fig.querySelector('#sqd'), lbl = fig.querySelector('#sqdl'), svg = fig.querySelector('svg'), info = fig.querySelector('.info');
+  function draw() {
+    const d = +rng.value, st = Math.pow(10, -d), lo = Math.floor(Math.SQRT2 / st) * st, hi = lo + st;
+    lbl.textContent = d;
+    const f = x => x.toFixed(d);
+    const L = lo - st * 0.5, H = hi + st * 0.5;
+    const x0 = nlx(lo, L, H), x1 = nlx(hi, L, H), xs = nlx(Math.SQRT2, L, H);
+    svg.innerHTML = `<line x1="12" y1="34" x2="328" y2="34" style="stroke:var(--muted)" stroke-width="2"/><rect x="${x0}" y="26" width="${x1 - x0}" height="16" rx="4" style="fill:var(--set-a);stroke:var(--accent)" stroke-width="1.5"/>` +
+      `<line x1="${xs}" y1="18" x2="${xs}" y2="50" style="stroke:var(--warm)" stroke-width="2.5"/>` + T(xs, 14, '√2', { fs: 13, fw: 800, c: 'var(--warm-ink)' }) + T(x0, 64, f(lo), { fs: 12 }) + T(x1, 64, f(hi), { fs: 12 });
+    info.innerHTML = `<strong class="m">${f(lo)}² = ${(lo * lo).toFixed(2 * d)} &lt; 2 &lt; ${(hi * hi).toFixed(2 * d)} = ${f(hi)}²</strong>So ${f(lo)} &lt; √2 &lt; ${f(hi)}. The interval is ${st} wide.` + (d >= 5 ? ' A calculator shows √2 ≈ 1.4142135624, but the digits go on for ever without repeating.' : '');
+  }
+  rng.addEventListener('input', draw); draw();
+})();
+
+sorter('ratsort', ['Rational', 'Irrational'], [
+  ['√25', 'Rational', '√25 = 5.'], ['√7', 'Irrational', '7 is not a perfect square.'], ['22/7', 'Rational', 'It is a fraction of integers.'], ['π', 'Irrational', 'π = 3.14159… never ends or repeats.'],
+  ['0.010110111…', 'Irrational', 'Each block has one more 1, so it never repeats.'], ['√0.09', 'Rational', '√0.09 = 0.3.'], ['0.2323…', 'Rational', 'It repeats: 23/99.'], ['−√13', 'Irrational', '13 is not a perfect square.'], ['√18', 'Irrational', '√18 = 3√2.'], ['6/5', 'Rational', 'A fraction: 1.2.']]);
+
+/* ---- sqrt spiral construction ---- */
+(function () {
+  const fig = document.getElementById('spiral'), row = fig.querySelector('.btnrow'), svg = fig.querySelector('svg'), info = fig.querySelector('.info');
+  const U = 70, O = [40, 160];
+  const px = v => O[0] + v * U;
+  const STEPS = [
+    ['1. Number line', 'Draw a number line and mark 0, 1, 2, 3.'],
+    ['2. Unit upright', 'At 1, draw a segment 1 unit long at right angles to the line.'],
+    ['3. Hypotenuse', 'Join 0 to the top of the upright. By Pythagoras, c² = 1² + 1² = 2, so c = √2.'],
+    ['4. Arc to the line', 'With the compass point at 0 and radius c, draw an arc down to the number line. It lands at √2 ≈ 1.414.'],
+    ['5. Build √3', 'At √2 on the line, draw another unit upright. The new hypotenuse from 0 is √(2 + 1) = √3; swing it down to get √3 ≈ 1.732.'],
+    ['6. Keep going', 'Repeat: legs √3 and 1 give 2, legs 2 and 1 give √5. Each new arc lands one square root further along.']];
+  function draw(k) {
+    let s = `<line x1="16" y1="${O[1]}" x2="330" y2="${O[1]}" style="stroke:var(--muted)" stroke-width="2"/>`;
+    [0, 1, 2, 3].forEach(v => s += `<line x1="${px(v)}" y1="${O[1] - 5}" x2="${px(v)}" y2="${O[1] + 5}" style="stroke:var(--muted)" stroke-width="1.5"/>` + T(px(v), O[1] + 22, v, { fs: 12, c: 'var(--muted)' }));
+    const roots = [1, Math.SQRT2, Math.sqrt(3), 2, Math.sqrt(5)];
+    const tri = (base, col) => { const b = px(base), top = O[1] - U, hyp = Math.sqrt(base * base + 1); return `<line x1="${b}" y1="${O[1]}" x2="${b}" y2="${top}" style="stroke:${col}" stroke-width="2.5"/><line x1="${O[0]}" y1="${O[1]}" x2="${b}" y2="${top}" style="stroke:${col}" stroke-width="2.5"/>`; };
+    const arc = (r, col, lbl) => { const R = r * U, a = Math.atan2(1, Math.sqrt(r * r - 1)); return `<path d="M${O[0] + R * Math.cos(a)} ${O[1] - R * Math.sin(a)} A${R} ${R} 0 0 1 ${O[0] + R} ${O[1]}" fill="none" style="stroke:${col}" stroke-width="1.8" stroke-dasharray="5 4"/><circle cx="${O[0] + R}" cy="${O[1]}" r="5" style="fill:${col}"/>` + T(O[0] + R, O[1] + 38, lbl, { fs: 12, fw: 800, c: col }); };
+    if (k >= 1) s += `<line x1="${px(1)}" y1="${O[1]}" x2="${px(1)}" y2="${O[1] - U}" style="stroke:var(--accent)" stroke-width="2.5"/>` + T(px(1) + 10, O[1] - U / 2, '1', { fs: 12, a: 'start', c: 'var(--accent)' });
+    if (k >= 2) s += tri(1, 'var(--accent)') + T(px(0.45), O[1] - U / 2 - 8, 'c = √2', { fs: 12, fw: 800, c: 'var(--accent)' });
+    if (k >= 3) s += arc(Math.SQRT2, 'var(--accent)', '√2');
+    if (k >= 4) s += tri(Math.SQRT2, 'var(--warm)') + arc(Math.sqrt(3), 'var(--warm)', '√3');
+    if (k >= 5) s += tri(Math.sqrt(3), 'var(--muted)') + arc(2, 'var(--muted)', '2') + tri(2, 'var(--muted)') + arc(Math.sqrt(5), 'var(--muted)', '√5');
+    svg.innerHTML = s;
+    info.innerHTML = `<strong>${STEPS[k][0]}</strong>${STEPS[k][1]}`;
+  }
+  pressRow(row, STEPS.map(s => s[0]), draw, 0);
+})();
+
+/* ---- simplify sqrt n ---- */
+(function () {
+  const fig = document.getElementById('simp'), rng = fig.querySelector('#sn'), lbl = fig.querySelector('#snl'), svg = fig.querySelector('svg'), info = fig.querySelector('.info');
+  function draw() {
+    const n = +rng.value; lbl.textContent = n;
+    let a = 1; for (let k = Math.floor(Math.sqrt(n)); k >= 1; k--) if (n % (k * k) === 0) { a = k; break; }
+    const b = n / (a * a), w = 300, sq = (a * a) / n * w;
+    svg.innerHTML = `<rect x="20" y="16" width="${w}" height="26" rx="6" style="fill:var(--surface-2);stroke:var(--line)"/><rect x="20" y="16" width="${Math.max(sq, 2)}" height="26" rx="6" style="fill:var(--set-a);stroke:var(--accent)"/>` + T(20, 62, `${n} = ${a * a} × ${b}`, { a: 'start', fs: 13 }) + T(320, 62, a > 1 ? `${a * a} = ${a}² is the largest square factor` : 'no square factor above 1', { a: 'end', fs: 11, c: 'var(--muted)' });
+    const res = b === 1 ? `${a}` : (a === 1 ? `√${n}` : `${a}√${b}`);
+    info.innerHTML = `<strong class="m">√${n} = ${a > 1 && b > 1 ? `√${a * a} × √${b} = ` : ''}${res}</strong>` + (b === 1 ? `${n} is a perfect square, so √${n} is rational.` : a === 1 ? `√${n} cannot be simplified. It is irrational.` : `√${b} is irrational, so √${n} is irrational too.`);
+  }
+  rng.addEventListener('input', draw); draw();
+})();
+
+/* ---- real number map ---- */
+(function () {
+  const fig = document.getElementById('realmap'), svg = fig.querySelector('svg'), info = fig.querySelector('.info');
+  const R = [['ℝ', 'Real numbers', 'All rational and all irrational numbers together. Every point on the number line is exactly one real number.'],
+    ['ℚ', 'Rational numbers', 'Terminating or repeating decimals: 3/4, −2.5, 0.<span class="ov">3</span>, and all integers.'],
+    ['ℤ', 'Integers', '…, −2, −1, 0, 1, 2, …'], ['ℕ', 'Natural numbers', '1, 2, 3, …'],
+    ['ℚ′', 'Irrational numbers', 'Decimals that neither end nor repeat: √2, √3, π, 0.010110111… No irrational number is rational.']];
+  svg.innerHTML = `<g class="tap" tabindex="0" role="button" aria-label="Real numbers" data-k="0"><rect x="6" y="6" width="328" height="198" rx="12" style="fill:var(--surface);stroke:var(--muted)" stroke-width="1.5"/></g>` +
+    `<g class="tap" tabindex="0" role="button" aria-label="Rational numbers" data-k="1"><rect x="18" y="30" width="200" height="164" rx="10" style="fill:var(--surface-2);stroke:var(--muted)" stroke-width="1.5"/></g>` +
+    `<g class="tap" tabindex="0" role="button" aria-label="Irrational numbers" data-k="4"><rect x="226" y="30" width="98" height="164" rx="10" style="fill:var(--set-b);stroke:var(--warm)" stroke-width="1.5"/></g>` +
+    `<g class="tap" tabindex="0" role="button" aria-label="Integers" data-k="2"><ellipse cx="128" cy="122" rx="82" ry="60" style="fill:var(--warm-soft);stroke:var(--muted)" stroke-width="1.5"/></g>` +
+    `<g class="tap" tabindex="0" role="button" aria-label="Natural numbers" data-k="3"><ellipse cx="150" cy="134" rx="44" ry="32" style="fill:var(--set-a);stroke:var(--accent)" stroke-width="1.5"/></g>` +
+    `<g pointer-events="none">${T(20, 23, 'ℝ', { a: 'start', fs: 15, fw: 800 })}${T(30, 50, 'ℚ', { a: 'start', fs: 15, fw: 800 })}${T(66, 118, 'ℤ', { fs: 15, fw: 800 })}${T(150, 132, 'ℕ', { fs: 15, fw: 800 })}${T(150, 152, '1, 2, 3', { fs: 11, c: 'var(--muted)' })}${T(82, 146, '0, −4', { fs: 11, c: 'var(--muted)' })}${T(150, 56, '3/4 · −2.5 · 0.25', { fs: 11, c: 'var(--muted)' })}${T(275, 50, 'Irrational', { fs: 12, fw: 800, c: 'var(--warm-ink)' })}${T(275, 90, '√2', { fs: 13 })}${T(275, 120, 'π', { fs: 13 })}${T(275, 150, '√5 − 1', { fs: 13 })}</g>`;
+  tapKeys(svg, '.tap', g => { const r = R[g.dataset.k]; info.innerHTML = `<strong>${r[0]} · ${r[1]}</strong>${r[2]}`; });
+})();
+
+/* ---- intervals ---- */
+(function () {
+  const fig = document.getElementById('interval'), row = fig.querySelector('.btnrow'), svg = fig.querySelector('svg'), info = fig.querySelector('.info');
+  const I = [['[3, 5)', 3, 5, 1, 0, '3 ≤ x < 5', 'From 3 (included) up to 5 (not included).'], ['[−2, 3/2]', -2, 1.5, 1, 1, '−2 ≤ x ≤ 3/2', 'Both end points included.'], ['(−∞, 2)', null, 2, 0, 0, 'x < 2', 'Every number to the left of 2; 2 itself is not included.'], ['[0, ∞)', 0, null, 1, 0, 'x ≥ 0', '0 and every number to its right.'],
+    ['(4, 6)', 4, 6, 0, 0, '4 < x < 6', 'Strictly between 4 and 6.'], ['[1, 3)', 1, 3, 1, 0, '1 ≤ x < 3', 'Exercise 1.24, 2(a).'], ['(−∞, −5]', null, -5, 0, 1, 'x ≤ −5', 'Exercise 1.24, 2(b).'], ['(1/2, 3)', 0.5, 3, 0, 0, '1/2 < x < 3', 'Exercise 1.24, 2(c).']];
+  function draw(k) {
+    const [n, a, b, ia, ib, ineq, txt] = I[k], lo = -6, hi = 7;
+    let s = numberLine(lo, hi, 1, 40);
+    const xa = a == null ? 14 : nlx(a, lo, hi), xb = b == null ? 326 : nlx(b, lo, hi);
+    s += `<line x1="${xa}" y1="40" x2="${xb}" y2="40" style="stroke:var(--warm)" stroke-width="6" stroke-linecap="${a == null || b == null ? 'butt' : 'round'}"/>`;
+    if (a == null) s += `<path d="M10 40l12 -8v16z" style="fill:var(--warm)"/>`;
+    if (b == null) s += `<path d="M330 40l-12 -8v16z" style="fill:var(--warm)"/>`;
+    const dot = (x, f) => `<circle cx="${x}" cy="40" r="7" style="fill:${f ? 'var(--warm)' : 'var(--surface)'};stroke:var(--warm)" stroke-width="2.5"/>`;
+    if (a != null) s += dot(xa, ia); if (b != null) s += dot(xb, ib);
+    svg.innerHTML = s;
+    info.innerHTML = `<strong class="m">${n} &nbsp;means&nbsp; ${ineq}</strong>${txt}`;
+  }
+  pressRow(row, I.map(x => x[0]), draw, 0);
+})();
+
+/* ---- absolute value distance ---- */
+(function () {
+  const fig = document.getElementById('absdist'), svg = fig.querySelector('svg'), info = fig.querySelector('.info');
+  const ra = fig.querySelector('#aa'), rb = fig.querySelector('#ab'), la = fig.querySelector('#aal'), lb = fig.querySelector('#abl');
+  function draw() {
+    const a = +ra.value, b = +rb.value; la.textContent = a; lb.textContent = b;
+    const lo = -10, hi = 10, xa = nlx(a, lo, hi), xb = nlx(b, lo, hi);
+    let s = numberLine(lo, hi, 2, 50);
+    s += `<line x1="${Math.min(xa, xb)}" y1="30" x2="${Math.max(xa, xb)}" y2="30" style="stroke:var(--warm)" stroke-width="3"/>` + T((xa + xb) / 2, 22, `|a − b| = ${Math.abs(a - b)}`, { fs: 12, fw: 800, c: 'var(--warm-ink)' });
+    s += `<circle cx="${xa}" cy="50" r="7" style="fill:var(--accent)"/><circle cx="${xb}" cy="50" r="7" style="fill:var(--warm)"/>` + T(xa, 86, 'a', { fs: 12, fw: 800, c: 'var(--accent)' }) + T(xb, 86, 'b', { fs: 12, fw: 800, c: 'var(--warm-ink)' });
+    svg.innerHTML = s;
+    const fmt = v => v < 0 ? `(${v})` : v;
+    info.innerHTML = `<strong class="m">|${a} − ${fmt(b)}| = |${a - b}| = ${Math.abs(a - b)} &nbsp;and&nbsp; |${b} − ${fmt(a)}| = |${b - a}| = ${Math.abs(b - a)}</strong>The order does not matter: distance is never negative. |a| = ${Math.abs(a)} is the distance from a to 0.`;
+  }
+  ra.addEventListener('input', draw); rb.addEventListener('input', draw); draw();
+})();
+
+/* ---- powers of 2 ---- */
+(function () {
+  const fig = document.getElementById('pow2'), rng = fig.querySelector('#pn'), lbl = fig.querySelector('#pnl'), svg = fig.querySelector('svg'), info = fig.querySelector('.info');
+  const fr = n => n >= 0 ? String(2 ** n) : `1/${2 ** -n}`;
+  function draw() {
+    const n = +rng.value; lbl.textContent = n;
+    let s = '';
+    for (let k = -4; k <= 5; k++) { const x = 18 + (k + 4) * 34, h = Math.max(2, Math.log2(2 ** k) + 5) * 10, on = k === n; s += `<rect x="${x - 12}" y="${92 - h}" width="24" height="${h}" rx="4" style="fill:${on ? 'var(--warm)' : 'var(--set-a)'};stroke:${on ? 'var(--warm)' : 'var(--accent-line)'}"/>` + T(x, 108, '2' + SUP(k), { fs: 11, c: on ? 'var(--warm-ink)' : 'var(--muted)' }); }
+    svg.innerHTML = s + T(170, 14, 'bar height grows by one step for each doubling', { fs: 10, c: 'var(--muted)' });
+    info.innerHTML = `<strong class="m">2${SUP(n)} = ${n < 0 ? `1/2${SUP(-n)} = ` : ''}${fr(n)}</strong>` + (n === 0 ? 'Any non-zero number to the power 0 is 1.' : n < 0 ? `Halve ${-n} time${n < -1 ? 's' : ''} starting from 1.` : `Multiply ${n} two${n > 1 ? 's' : ''} together.`);
+  }
+  rng.addEventListener('input', draw); draw();
+})();
+
+sorter('propsort', ['Commutative', 'Associative', 'Distributive', 'Identity', 'Inverse'], [
+  ['√3(√3 − 2) = 3 − 2√3', 'Distributive', 'Multiply √3 by each term in the bracket.'],
+  ['5 + (−8 + 2) = (5 − 8) + 2', 'Associative', 'Only the grouping changes.'],
+  ['6 × ¼ × 6 = 6 × 6 × ¼', 'Commutative', 'Only the order changes.'],
+  ['π + 0 = π', 'Identity', '0 is the additive identity.'],
+  ['√2 × (1/√2) = 1', 'Inverse', '1/√2 is the multiplicative inverse of √2.'],
+  ['(−4) + 4 = 0', 'Inverse', '−4 and 4 are additive inverses.'],
+  ['√5 × 1 = √5', 'Identity', '1 is the multiplicative identity.']]);
+
+/* ---- rounding and bounds ---- */
+(function () {
+  const fig = document.getElementById('roundfig'), rows = fig.querySelectorAll('.btnrow'), svg = fig.querySelector('svg'), info = fig.querySelector('.info');
+  const NUMS = [38721, 10.673, 3.173, 872.3, 2.364, 0.0062];
+  const ACC = [['nearest 1000', 1000, 'p'], ['nearest 100', 100, 'p'], ['nearest 10', 10, 'p'], ['nearest 1', 1, 'p'], ['1 d.p.', 0.1, 'p'], ['2 d.p.', 0.01, 'p'], ['1 s.f.', 1, 's'], ['2 s.f.', 2, 's']];
+  let ni = 0, ai = 1;
+  const dec = s => Math.max(0, -Math.floor(Math.log10(s) + 1e-9));
+  function draw() {
+    const v = NUMS[ni], [name, q, kind] = ACC[ai];
+    let step = q;
+    if (kind === 's') step = Math.pow(10, Math.floor(Math.log10(Math.abs(v))) - q + 1);
+    const r = Math.round(v / step) * step, d = dec(step) + 1;
+    const lo = r - step / 2, hi = r + step / 2, f = x => (+x.toFixed(d)).toLocaleString('en-US', { maximumFractionDigits: d });
+    const L = r - step, H = r + step;
+    const X = x => nlx(x, L, H);
+    svg.innerHTML = `<line x1="12" y1="44" x2="328" y2="44" style="stroke:var(--muted)" stroke-width="2"/><line x1="${X(lo)}" y1="44" x2="${X(hi)}" y2="44" style="stroke:var(--warm)" stroke-width="6"/>` +
+      `<circle cx="${X(lo)}" cy="44" r="6" style="fill:var(--warm)"/><circle cx="${X(hi)}" cy="44" r="6" style="fill:var(--surface);stroke:var(--warm)" stroke-width="2.5"/>` +
+      `<circle cx="${X(v)}" cy="44" r="5" style="fill:var(--accent)"/>` + T(X(v), 26, f(v), { fs: 12, fw: 800, c: 'var(--accent)' }) + T(X(lo), 72, f(lo), { fs: 11 }) + T(X(hi), 72, f(hi), { fs: 11 }) + T(X(r), 86, `rounds to ${f(r)}`, { fs: 11, c: 'var(--muted)' });
+    info.innerHTML = `<strong class="m">${f(v)} ≈ ${f(r)} (${name})</strong>Every number from ${f(lo)} up to, but not including, ${f(hi)} rounds to ${f(r)}: ${f(lo)} ≤ x &lt; ${f(hi)}.`;
+  }
+  pressRow(rows[0], NUMS.map(n => n.toLocaleString('en-US', { maximumFractionDigits: 6 })), k => { ni = k; draw(); }, 0);
+  pressRow(rows[1], ACC.map(a => a[0]), k => { ai = k; draw(); }, 1);
+})();
+
+/* ---- scientific notation ---- */
+(function () {
+  const fig = document.getElementById('sci'), row = fig.querySelector('.btnrow'), rng = fig.querySelector('#sce'), lbl = fig.querySelector('#scel'), dig = fig.querySelector('.digits'), info = fig.querySelector('.info');
+  const NUMS = [['1,856,700,000', '18567', 9], ['0.000000314', '314', -7], ['5,370,000', '537', 6], ['0.00000017', '17', -7], ['567,200,000', '5672', 8]];
+  let ni = 0;
+  function place(digits, n) {
+    const p = n + 1;
+    if (p <= 0) return '0.' + '0'.repeat(-p) + digits;
+    if (p >= digits.length) return digits + '0'.repeat(p - digits.length);
+    return digits.slice(0, p) + '.' + digits.slice(p);
+  }
+  const group = s => { const [i, f] = s.split('.'); return i.replace(/\B(?=(\d{3})+(?!\d))/g, ',') + (f != null ? '.' + f : ''); };
+  function draw() {
+    const [txt, digits, e] = NUMS[ni], n = +rng.value; lbl.textContent = n;
+    const shift = e - n, mant = place(digits, 0 + shift);
+    dig.innerHTML = `${group(mant)} × 10${SUP(n)}`;
+    const ok = n === e;
+    info.innerHTML = ok ? `<strong>Scientific notation: ${place(digits, 0)} × 10${SUP(e)}</strong>One non-zero digit is in front of the point, so 1 ≤ ${place(digits, 0)} &lt; 10. The point moved ${Math.abs(e)} place${Math.abs(e) === 1 ? '' : 's'} to the ${e > 0 ? 'left' : 'right'}, so n = ${e}.` :
+      `<strong>Equal to ${txt}, but not standard form</strong>The first factor must be at least 1 and less than 10. ${n < e ? 'Increase' : 'Decrease'} n.`;
+  }
+  rng.addEventListener('input', draw);
+  pressRow(row, NUMS.map(x => x[0]), k => { ni = k; rng.value = 0; draw(); }, 0);
+})();
+
+/* ---- rationalizing steps ---- */
+(function () {
+  const fig = document.getElementById('ratfig'), row = fig.querySelector('.btnrow'), ol = fig.querySelector('.steps');
+  const nb = fig.querySelector('#rtnext'), rb = fig.querySelector('#rtreset');
+  const E = [
+    ['2/√3', ['The denominator √3 is irrational.', 'Rationalizing factor: √3/√3, which equals 1.', '2/√3 × √3/√3 = 2√3/(√3 × √3)', '√3 × √3 = 3, so the answer is <b>2√3/3</b>.']],
+    ['1/(√2 + 1)', ['The denominator is √2 + 1.', 'Rationalizing factor: (√2 − 1)/(√2 − 1), from Table 1.3.', 'Denominator: (√2 + 1)(√2 − 1) = 2 − 1 = 1.', 'Numerator: 1 × (√2 − 1). Answer: <b>√2 − 1</b>.']],
+    ['3/(√5 − √3)', ['The denominator is √5 − √3.', 'Rationalizing factor: (√5 + √3)/(√5 + √3).', 'Denominator: (√5)² − (√3)² = 5 − 3 = 2.', 'Answer: <b>3(√5 + √3)/2</b>.']],
+    ['1/(√3 − √2 + 1)', ['Group the denominator as (√3 − √2) + 1.', 'Multiply by ((√3 − √2) − 1)/((√3 − √2) − 1).', 'Denominator: (√3 − √2)² − 1 = 5 − 2√6 − 1 = 2(2 − √6). Still irrational.', 'Multiply again by (2 + √6)/(2 + √6): 2(2 − √6)(2 + √6) = 2(4 − 6) = −4.', 'Numerator: (√3 − √2 − 1)(2 + √6) = √2 − √6 − 2.', 'Answer: (√2 − √6 − 2)/(−4) = <b>(2 + √6 − √2)/4</b>.']]];
+  let e = 0, k = 1;
+  function draw() { ol.innerHTML = E[e][1].slice(0, k).map(s => `<li>${s}</li>`).join(''); nb.disabled = k >= E[e][1].length; }
+  pressRow(row, E.map(x => x[0]), j => { e = j; k = 1; draw(); }, 0);
+  nb.addEventListener('click', () => { k++; draw(); }); rb.addEventListener('click', () => { k = 1; draw(); });
+})();
+
+/* ---- tiling the board ---- */
+(function () {
+  const fig = document.getElementById('tiles'), row = fig.querySelector('.btnrow'), svg = fig.querySelector('svg'), info = fig.querySelector('.info');
+  const S = [1, 2, 4, 5, 10, 20];
+  function draw(k) {
+    const s = S[k], sc = 6, W = 50 * sc, H = 20 * sc, x0 = 20, y0 = 14;
+    let g = `<rect x="${x0}" y="${y0}" width="${W}" height="${H}" style="fill:var(--surface-2);stroke:var(--muted)" stroke-width="1.5"/>`;
+    const nx = Math.floor(50 / s), ny = Math.floor(20 / s);
+    for (let i = 0; i < nx; i++) for (let j = 0; j < ny; j++) g += `<rect x="${x0 + i * s * sc + 0.5}" y="${y0 + j * s * sc + 0.5}" width="${s * sc - 1}" height="${s * sc - 1}" style="fill:${(i + j) % 2 ? 'var(--set-a)' : 'var(--set-b)'}"/>`;
+    const fitW = 50 % s === 0, fitH = 20 % s === 0;
+    if (!fitW) g += `<rect x="${x0 + nx * s * sc}" y="${y0}" width="${W - nx * s * sc}" height="${H}" style="fill:var(--bad-soft);stroke:var(--bad-line)"/>`;
+    if (!fitH) g += `<rect x="${x0}" y="${y0 + ny * s * sc}" width="${W}" height="${H - ny * s * sc}" style="fill:var(--bad-soft);stroke:var(--bad-line)"/>`;
+    g += T(x0 + W / 2, y0 + H + 16, '50 cm', { fs: 11, c: 'var(--muted)' }) + T(x0 - 8, y0 + H / 2, '20', { fs: 11, a: 'end', c: 'var(--muted)' });
+    svg.innerHTML = g;
+    info.innerHTML = fitW && fitH ? `<strong>${s} cm squares fit exactly: ${nx} × ${ny} = ${nx * ny} squares</strong>${s} divides both 50 and 20.` + (s === 10 ? ' This is the largest possible: GCF(50, 20) = 10.' : '')
+      : `<strong>${s} cm squares do not fit</strong>${s} does not divide ${!fitW && !fitH ? 'either 50 or 20' : !fitW ? '50' : '20'}, so a gap (shown in red) is left.`;
+  }
+  pressRow(row, S.map(s => s + ' cm'), draw, 3);
+})();
+
+/* ---- runners (LCM) ---- */
+(function () {
+  const fig = document.getElementById('runners'), rng = fig.querySelector('#rt'), lbl = fig.querySelector('#rtl'), svg = fig.querySelector('svg'), info = fig.querySelector('.info');
+  function draw() {
+    const t = +rng.value; lbl.textContent = t;
+    const X = m => 20 + m / 84 * 300;
+    let s = '';
+    [['A · every 6 min', 6, 30, 'var(--accent)'], ['B · every 14 min', 14, 70, 'var(--warm)']].forEach(([n, p, y, c]) => {
+      s += `<line x1="20" y1="${y}" x2="320" y2="${y}" style="stroke:var(--line)" stroke-width="2"/>` + T(20, y - 10, n, { a: 'start', fs: 11, c });
+      for (let m = 0; m <= 84; m += p) s += `<circle cx="${X(m)}" cy="${y}" r="${m <= t ? 6 : 4}" style="fill:${m <= t ? c : 'var(--surface)'};stroke:${c}" stroke-width="2"/>`;
+    });
+    s += `<line x1="${X(t)}" y1="16" x2="${X(t)}" y2="88" style="stroke:var(--fg)" stroke-width="1.5" stroke-dasharray="4 3"/>`;
+    [0, 42, 84].forEach(m => s += T(X(m), 106, m + ' min', { fs: 11, c: 'var(--muted)' }));
+    svg.innerHTML = s;
+    const atA = t % 6 === 0, atB = t % 14 === 0;
+    info.innerHTML = atA && atB ? (t === 0 ? '<strong>Start: both at the line</strong>Drag the slider forward.' : `<strong>${t} minutes: side by side at the start!</strong>A has run ${t / 6} rounds and B ${t / 14}. ${t === 42 ? 'This is the first time: LCM(6, 14) = 42.' : ''}`)
+      : `<strong>${t} minutes</strong>A ${atA ? 'is at the start' : 'is on the track'}; B ${atB ? 'is at the start' : 'is on the track'}. A is at the start at multiples of 6, B at multiples of 14.`;
+  }
+  rng.addEventListener('input', draw); draw();
+})();
+
+const QUIZ = {
+"l11": [
+{
+"t": "blank",
+"q": "By the division algorithm, 53 = 6 × 8 + ___.",
+"a": [
+"5"
+],
+"why": "6 × 8 = 48 and 53 − 48 = 5, which is less than 6."
+},
+{
+"t": "mcq",
+"q": "When a number is divided by 7, which remainder is impossible?",
+"o": [
+"0",
+"3",
+"6",
+"7"
+],
+"a": "7",
+"why": "The remainder is always less than the divisor: 0 ≤ r < 7."
+},
+{
+"t": "tf",
+"q": "2 is the only even prime number.",
+"a": true,
+"why": "Every other even number has 2 as a factor, so it has more than two factors."
+},
+{
+"t": "mcq",
+"q": "Which number is composite?",
+"o": [
+"31",
+"37",
+"39",
+"41"
+],
+"a": "39",
+"why": "39 = 3 × 13."
+},
+{
+"t": "match",
+"q": "Match each divisibility test to its number.",
+"pairs": [
+[
+"Units digit is 0 or 5",
+"5"
+],
+[
+"Digit sum divisible by 9",
+"9"
+],
+[
+"Last two digits divisible by 4",
+"4"
+],
+[
+"Divisible by 2 and by 3",
+"6"
+]
+],
+"why": "These are the rules from the divisibility table."
+},
+{
+"t": "tf",
+"q": "0 is a natural number.",
+"a": false,
+"why": "ℕ = {1, 2, 3, …}. 0 is an integer but not a natural number."
+},
+{
+"t": "blank",
+"q": "The prime factorization of 90 is 2 × 3² × ___.",
+"a": [
+"5"
+],
+"why": "90 = 2 × 45 = 2 × 9 × 5."
+},
+{
+"t": "tf",
+"q": "A number can have two different prime factorizations.",
+"a": false,
+"why": "The fundamental theorem of arithmetic says the factorization is unique, apart from order."
+},
+{
+"t": "mcq",
+"q": "What is GCF(24, 36)?",
+"o": [
+"4",
+"6",
+"12",
+"72"
+],
+"a": "12",
+"why": "24 = 2³ × 3 and 36 = 2² × 3²; the smallest powers give 2² × 3 = 12."
+},
+{
+"t": "mcq",
+"q": "What is LCM(8, 12)?",
+"o": [
+"4",
+"24",
+"48",
+"96"
+],
+"a": "24",
+"why": "8 = 2³ and 12 = 2² × 3; the greatest powers give 2³ × 3 = 24."
+},
+{
+"t": "blank",
+"q": "GCF(a, b) = 6 and LCM(a, b) = 60, so a × b = ___.",
+"a": [
+"360"
+],
+"why": "GCF × LCM = a × b, so 6 × 60 = 360."
+},
+{
+"t": "order",
+"q": "Put the steps for finding the GCF by prime factorization in order.",
+"items": [
+"Write each number as a product of primes",
+"Find the primes common to all the numbers",
+"Take each common prime to its smallest power",
+"Multiply these together"
+],
+"why": "Common primes, smallest powers, then multiply."
+}
+],
+"l12": [
+{
+"t": "mcq",
+"q": "Which number is NOT rational?",
+"o": [
+"−7",
+"0.25",
+"3/0",
+"1⅔"
+],
+"a": "3/0",
+"why": "The denominator can never be 0."
+},
+{
+"t": "tf",
+"q": "Every integer is a rational number.",
+"a": true,
+"why": "Any integer n can be written n/1."
+},
+{
+"t": "match",
+"q": "Match each fraction to its type.",
+"pairs": [
+[
+"5/8",
+"Proper fraction"
+],
+[
+"9/4",
+"Improper fraction"
+],
+[
+"2¼",
+"Mixed fraction"
+]
+],
+"why": "Proper: top < bottom. Improper: top ≥ bottom. Mixed: whole number and proper fraction."
+},
+{
+"t": "blank",
+"q": "4⅔ as an improper fraction is ___/3.",
+"a": [
+"14"
+],
+"why": "(4 × 3 + 2)/3 = 14/3."
+},
+{
+"t": "mcq",
+"q": "Which decimal terminates?",
+"o": [
+"1/3",
+"7/20",
+"2/11",
+"5/6"
+],
+"a": "7/20",
+"why": "7/20 = 0.35: the division ends."
+},
+{
+"t": "mcq",
+"q": "What is 2/11 as a decimal?",
+"o": [
+"0.18",
+"0.1̅8̅",
+"0.2",
+"0.18̅"
+],
+"a": "0.1̅8̅",
+"why": "2 ÷ 11 = 0.181818…, so the block 18 repeats."
+},
+{
+"t": "blank",
+"q": "As a fraction in simplest form, 0.85 = ___/20.",
+"a": [
+"17"
+],
+"why": "0.85 = 85/100 = 17/20."
+},
+{
+"t": "mcq",
+"q": "To change 0.3̅6̅ to a fraction, you should first work out:",
+"o": [
+"10d − d",
+"100d − d",
+"1000d − d",
+"100d − 10d"
+],
+"a": "100d − d",
+"why": "Two digits repeat and none come before them, so 100d lines up with d."
+},
+{
+"t": "mcq",
+"q": "What fraction is 0.1̅?",
+"o": [
+"1/10",
+"1/9",
+"1/11",
+"1/99"
+],
+"a": "1/9",
+"why": "10d − d = 1, so 9d = 1."
+},
+{
+"t": "tf",
+"q": "0.1222… equals 11/99.",
+"a": false,
+"why": "100d − 10d = 11, so 90d = 11 and d = 11/90. 11/99 = 0.111…"
+},
+{
+"t": "order",
+"q": "Put these numbers in order from smallest to largest.",
+"items": [
+"−5/2",
+"−1",
+"4/5",
+"4/3",
+"3"
+],
+"why": "−2.5 < −1 < 0.8 < 1.33… < 3."
+}
+],
+"l13": [
+{
+"t": "blank",
+"q": "√0.0036 = ___.",
+"a": [
+"0.06",
+".06"
+],
+"why": "0.06² = 0.0036."
+},
+{
+"t": "mcq",
+"q": "Between which two whole numbers is √40?",
+"o": [
+"5 and 6",
+"6 and 7",
+"7 and 8",
+"19 and 21"
+],
+"a": "6 and 7",
+"why": "36 < 40 < 49, so 6 < √40 < 7."
+},
+{
+"t": "tf",
+"q": "If a natural number n is not a perfect square, then √n is irrational.",
+"a": true,
+"why": "This is the remark after Definition 1.6."
+},
+{
+"t": "match",
+"q": "Match each number to its type.",
+"pairs": [
+[
+"√16",
+"Rational, an integer"
+],
+[
+"0.4̅",
+"Rational, repeating"
+],
+[
+"√11",
+"Irrational"
+],
+[
+"0.125",
+"Rational, terminating"
+]
+],
+"why": "√16 = 4; 0.4̅ = 4/9; 11 is not a perfect square; 0.125 = 1/8."
+},
+{
+"t": "mcq",
+"q": "In the construction of √2 on the number line, what are the two legs of the right triangle?",
+"o": [
+"1 and 1",
+"1 and 2",
+"2 and 2",
+"√2 and 1"
+],
+"a": "1 and 1",
+"why": "1² + 1² = 2, so the hypotenuse is √2."
+},
+{
+"t": "mcq",
+"q": "√3 × √12 = ?",
+"o": [
+"√15",
+"6",
+"36",
+"3√2"
+],
+"a": "6",
+"why": "√3 × √12 = √36 = 6. Two irrationals can have a rational product."
+},
+{
+"t": "blank",
+"q": "√75 = ___√3.",
+"a": [
+"5"
+],
+"why": "75 = 25 × 3, so √75 = 5√3."
+},
+{
+"t": "mcq",
+"q": "Simplify √72 − √8.",
+"o": [
+"8√2",
+"4√2",
+"√64",
+"8"
+],
+"a": "4√2",
+"why": "6√2 − 2√2 = 4√2. (The printed book gives 8√2, which is wrong.)"
+},
+{
+"t": "tf",
+"q": "√2 + √3 = √5.",
+"a": false,
+"why": "They are not like radicals. √2 + √3 ≈ 3.15 but √5 ≈ 2.24."
+},
+{
+"t": "mcq",
+"q": "Which expression is rational?",
+"o": [
+"√2 + 1",
+"(√5 + √3)²",
+"√18 ÷ √2",
+"2√3"
+],
+"a": "√18 ÷ √2",
+"why": "√18 ÷ √2 = √9 = 3. The others stay irrational: (√5 + √3)² = 8 + 2√15."
+},
+{
+"t": "order",
+"q": "Put these in order from smallest to largest.",
+"items": [
+"√3",
+"1.8",
+"√5",
+"2.5",
+"√7"
+],
+"why": "√3 ≈ 1.73, √5 ≈ 2.24, √7 ≈ 2.65."
+}
+],
+"l14": [
+{
+"t": "tf",
+"q": "Every irrational number is a real number.",
+"a": true,
+"why": "ℝ is the union of the rational and irrational numbers."
+},
+{
+"t": "mcq",
+"q": "Which number is between √2 and √3?",
+"o": [
+"1.3",
+"1.5",
+"1.8",
+"2"
+],
+"a": "1.5",
+"why": "√2 ≈ 1.414 and √3 ≈ 1.732. Check by squaring: 2 < 1.5² = 2.25 < 3."
+},
+{
+"t": "mcq",
+"q": "Which interval means x ≥ −2?",
+"o": [
+"(−2, ∞)",
+"[−2, ∞)",
+"(−∞, −2]",
+"[−2, ∞]"
+],
+"a": "[−2, ∞)",
+"why": "−2 is included (square bracket); ∞ always takes a round bracket."
+},
+{
+"t": "mcq",
+"q": "What is |2 − √8|?",
+"o": [
+"2 − √8",
+"√8 − 2",
+"2 + √8",
+"−2 − √8"
+],
+"a": "√8 − 2",
+"why": "√8 ≈ 2.83 > 2, so 2 − √8 is negative; its absolute value is √8 − 2."
+},
+{
+"t": "match",
+"q": "Match each expression to its value.",
+"pairs": [
+[
+"2⁻³",
+"1/8"
+],
+[
+"7⁰",
+"1"
+],
+[
+"27^(1/3)",
+"3"
+],
+[
+"16^(3/4)",
+"8"
+]
+],
+"why": "2⁻³ = 1/2³; a⁰ = 1; ∛27 = 3; (⁴√16)³ = 2³."
+},
+{
+"t": "tf",
+"q": "The sum of a rational number and an irrational number is always irrational.",
+"a": true,
+"why": "If r + x were rational, then x = (r + x) − r would be rational too."
+},
+{
+"t": "blank",
+"q": "38,721 rounded to the nearest hundred is ___.",
+"a": [
+"38700",
+"38,700"
+],
+"why": "The digit after the hundreds digit is 2, so 7 stays and the rest become 0."
+},
+{
+"t": "mcq",
+"q": "A mass is 6.4 kg to 1 d.p. What are its bounds?",
+"o": [
+"6.3 and 6.5",
+"6.35 and 6.45",
+"6.4 and 6.5",
+"6.39 and 6.41"
+],
+"a": "6.35 and 6.45",
+"why": "Half of 0.1 is 0.05: 6.4 − 0.05 and 6.4 + 0.05."
+},
+{
+"t": "tf",
+"q": "To find the upper bound of an area, multiply the upper bounds of the length and width.",
+"a": true,
+"why": "The largest possible length times the largest possible width gives the largest area."
+},
+{
+"t": "mcq",
+"q": "Which is 0.00052 in scientific notation?",
+"o": [
+"52 × 10⁻⁵",
+"5.2 × 10⁻⁴",
+"5.2 × 10⁴",
+"0.52 × 10⁻³"
+],
+"a": "5.2 × 10⁻⁴",
+"why": "The point moves 4 places right, and 1 ≤ 5.2 < 10."
+},
+{
+"t": "mcq",
+"q": "Rationalize 6/√3.",
+"o": [
+"6√3",
+"2√3",
+"√2",
+"3√6"
+],
+"a": "2√3",
+"why": "6/√3 × √3/√3 = 6√3/3 = 2√3."
+},
+{
+"t": "mcq",
+"q": "Which property is used in 3(x + 2) = 3x + 6?",
+"o": [
+"Commutative",
+"Associative",
+"Distributive",
+"Identity"
+],
+"a": "Distributive",
+"why": "Multiplication is distributed over the addition."
+}
+],
+"l15": [
+{
+"t": "mcq",
+"q": "530 flower pots are placed 21 to a row. How many full rows are there?",
+"o": [
+"21",
+"25",
+"26",
+"5"
+],
+"a": "25",
+"why": "530 = 21 × 25 + 5."
+},
+{
+"t": "blank",
+"q": "In the flower-pot problem, ___ pots are left over.",
+"a": [
+"5",
+"five"
+],
+"why": "530 − 21 × 25 = 5."
+},
+{
+"t": "mcq",
+"q": "What is the largest square that exactly covers a 50 cm × 20 cm board?",
+"o": [
+"5 cm",
+"10 cm",
+"20 cm",
+"100 cm"
+],
+"a": "10 cm",
+"why": "GCF(50, 20) = 10."
+},
+{
+"t": "tf",
+"q": "Squares of side 4 cm can cover the 50 cm × 20 cm board exactly.",
+"a": false,
+"why": "4 does not divide 50, so a gap is left."
+},
+{
+"t": "mcq",
+"q": "Runner A takes 6 minutes a lap and B takes 14. When are they first together at the start again?",
+"o": [
+"20 minutes",
+"42 minutes",
+"84 minutes",
+"2 minutes"
+],
+"a": "42 minutes",
+"why": "LCM(6, 14) = 42."
+},
+{
+"t": "blank",
+"q": "Strings of 78 cm, 117 cm and 351 cm are cut into equal pieces with none left over. The longest piece is ___ cm.",
+"a": [
+"39"
+],
+"why": "GCF(78, 117, 351) = 39."
+},
+{
+"t": "match",
+"q": "Match each problem to the tool you need.",
+"pairs": [
+[
+"Largest equal squares to tile a floor",
+"GCF"
+],
+[
+"When two bells next ring together",
+"LCM"
+],
+[
+"Full boxes and items left over",
+"Division algorithm"
+]
+],
+"why": "Sharing into the largest equal parts uses GCF; repeating cycles use LCM; full groups and leftovers use the division algorithm."
+},
+{
+"t": "mcq",
+"q": "14 girls and 21 boys form teams with equal numbers of girls and of boys. What is the greatest number of teams?",
+"o": [
+"3",
+"7",
+"14",
+"35"
+],
+"a": "7",
+"why": "GCF(14, 21) = 7, giving 2 girls and 3 boys per team."
+},
+{
+"t": "tf",
+"q": "Two buses leave together, one every 8 minutes and one every 12 minutes. They next leave together after 24 minutes.",
+"a": true,
+"why": "LCM(8, 12) = 24."
+},
+{
+"t": "mcq",
+"q": "A man has 68 Birr, items cost 7 Birr each, and he keeps 5 Birr. How many items can he buy?",
+"o": [
+"8",
+"9",
+"10",
+"63"
+],
+"a": "9",
+"why": "He can spend 63 Birr, and 63 = 7 × 9."
+},
+{
+"t": "order",
+"q": "Put the steps for a 'largest equal pieces' problem in order.",
+"items": [
+"Write down the lengths",
+"Write each length as a product of primes",
+"Find the GCF",
+"State the answer with units"
+],
+"why": "Prime factorization leads to the GCF, which is the answer."
+}
+]
+};
+/* ---- end-of-lesson quizzes ---- */
+const norm = s => String(s).toLowerCase().replace(/[°%]/g, '').replace(/\s+/g, ' ').trim();
+const esc2 = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function shuffle(a, seed) { const r = a.slice(); let s = seed; for (let i = r.length - 1; i > 0; i--) { s = (s * 9301 + 49297) % 233280; const j = Math.floor(s / 233280 * (i + 1)); [r[i], r[j]] = [r[j], r[i]]; } return r; }
+const TYPE = { mcq: 'Multiple choice', tf: 'True or false', blank: 'Fill in the blank', match: 'Matching', order: 'Put in order' };
+document.querySelectorAll('.quiz[data-quiz]').forEach(box => {
+  const id = box.dataset.quiz, Q = QUIZ[id];
+  function itemHTML(it, k) {
+    const name = `${id}-${k}`;
+    let body = '';
+    if (it.t === 'mcq') body = `<div class="qopts">${it.o.map(o => `<label><input type="radio" name="${name}" value="${esc2(o)}"><span>${esc2(o)}</span></label>`).join('')}</div>`;
+    if (it.t === 'tf') body = `<div class="qopts row2">${['True', 'False'].map(o => `<label><input type="radio" name="${name}" value="${o}"><span>${o}</span></label>`).join('')}</div>`;
+    if (it.t === 'blank') { const [a, b] = it.q.split('___'); return `<li class="qi" data-k="${k}"><span class="qt">${TYPE[it.t]}</span><p>${esc2(a)}<input class="blank" id="${name}" aria-label="Your answer" autocomplete="off">${esc2(b)}</p><p class="qr"></p></li>`; }
+    if (it.t === 'match') { const rights = shuffle(it.pairs.map(p => p[1]), k + 7); body = `<div class="qmatch">${it.pairs.map((p, j) => `<label><span>${esc2(p[0])}</span><select id="${name}-${j}"><option value="">Choose…</option>${rights.map(r => `<option>${esc2(r)}</option>`).join('')}</select></label>`).join('')}</div>`; }
+    if (it.t === 'order') { const mixed = shuffle(it.items, k + 3); body = `<div class="qmatch">${mixed.map((x, j) => `<label><span>${esc2(x)}</span><select id="${name}-${j}" data-item="${esc2(x)}"><option value="">Position…</option>${it.items.map((_, n) => `<option>${n + 1}</option>`).join('')}</select></label>`).join('')}</div>`; }
+    return `<li class="qi" data-k="${k}"><span class="qt">${TYPE[it.t]}</span><p>${esc2(it.q)}</p>${body}<p class="qr"></p></li>`;
+  }
+  function build() {
+    box.innerHTML = `<div class="qhead"><span class="ck">Lesson quiz</span><h3>Test yourself: lesson ${UNIT.label(id)}</h3><p class="note">${Q.length} questions. Answer them all, then check. No hints in the quiz.</p></div><ol class="qlist">${Q.map(itemHTML).join('')}</ol><p class="qerr" aria-live="polite"></p><div class="qfoot"><button class="qbtn">Check my answers</button></div><div class="qscore" aria-live="polite"></div>`;
+  }
+  function grade() {
+    let score = 0, blank = 0;
+    const res = Q.map((it, k) => {
+      const name = `${id}-${k}`; let ok = false, given = true, right = '';
+      if (it.t === 'mcq' || it.t === 'tf') { const c = box.querySelector(`input[name="${name}"]:checked`); given = !!c; ok = c && (it.t === 'tf' ? (c.value === 'True') === it.a : c.value === it.a); right = it.t === 'tf' ? (it.a ? 'True' : 'False') : it.a; }
+      if (it.t === 'blank') { const v = box.querySelector('#' + CSS.escape(name)).value; given = v.trim() !== ''; ok = it.a.some(a => norm(a) === norm(v)); right = it.a[0]; }
+      if (it.t === 'match') { const sel = it.pairs.map((p, j) => box.querySelector('#' + CSS.escape(`${name}-${j}`))); given = sel.every(s => s.value); ok = sel.every((s, j) => s.value === it.pairs[j][1]); right = it.pairs.map(p => `${p[0]} → ${p[1]}`).join('; '); }
+      if (it.t === 'order') { const sel = [...box.querySelectorAll(`select[id^="${name}-"]`)]; given = sel.every(s => s.value); ok = sel.every(s => it.items.indexOf(s.dataset.item) + 1 === +s.value); right = it.items.join(' → '); }
+      if (!given) blank++;
+      if (ok) score++;
+      return { ok, given, right };
+    });
+    if (blank && !box.dataset.confirm) { box.dataset.confirm = 1; box.querySelector('.qerr').textContent = `${blank} question${blank > 1 ? 's are' : ' is'} not answered yet. Answer ${blank > 1 ? 'them' : 'it'}, or press "Check my answers" again to check anyway.`; return; }
+    box.querySelector('.qerr').textContent = '';
+    res.forEach((r, k) => {
+      const li = box.querySelector(`.qi[data-k="${k}"]`), it = Q[k];
+      li.classList.add(r.ok ? 'ok' : 'no');
+      li.querySelectorAll('input,select').forEach(x => x.disabled = true);
+      li.querySelector('.qr').innerHTML = r.ok ? `<b>Correct.</b> ${esc2(it.why)}` : `<b>${r.given ? 'Not quite.' : 'Not answered.'}</b> Answer: ${esc2(r.right)}. ${esc2(it.why)}`;
+    });
+    const pct = Math.round(score / Q.length * 100);
+    const msg = pct >= 80 ? 'Well done. You understand this lesson.' : pct >= 50 ? 'Good start. Re-read the parts you missed, then try again.' : 'Go back through the lesson and its checks, then try again.';
+    box.querySelector('.qscore').innerHTML = `<span class="big">${score} / ${Q.length}</span><p>${msg}</p><button class="qbtn ghost">Try again</button>`;
+    box.querySelector('.qfoot').hidden = true;
+  }
+  box.addEventListener('click', e => {
+    const b = e.target.closest('.qbtn'); if (!b) return;
+    if (b.classList.contains('ghost')) { delete box.dataset.confirm; build(); box.scrollIntoView({ behavior: 'smooth', block: 'start' }); } else grade();
+  });
+  box.addEventListener('input', () => { if (box.dataset.confirm) { delete box.dataset.confirm; box.querySelector('.qerr').textContent = ''; } });
+  build();
+});
+
+/* ---- reading progress (this browser only) ---- */
+(function () {
+  let read = {};
+  try { read = JSON.parse(localStorage.getItem(UNIT.key) || '{}'); } catch (_) { read = {}; }
+  function sync() {
+    document.querySelectorAll('[data-done]').forEach(b => { const on = !!read[b.dataset.done]; b.setAttribute('aria-pressed', on); b.textContent = (on ? '✓ Read: ' : 'Mark as read: ') + 'lesson ' + UNIT.label(b.dataset.done); });
+    document.querySelectorAll('nav.toc a[data-sec]').forEach(a => a.classList.toggle('read', !!read[a.dataset.sec]));
+  }
+  document.addEventListener('click', e => {
+    const b = e.target.closest('[data-done]'); if (!b) return;
+    read[b.dataset.done] = !read[b.dataset.done];
+    try { localStorage.setItem(UNIT.key, JSON.stringify(read)); } catch (_) {}
+    sync();
+  });
+  sync();
+})();
+</script>
+
+</body></html>

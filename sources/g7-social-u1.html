@@ -1,0 +1,989 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Meseret Interactive Textbook</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: one reading column (max 680px), sticky lesson nav, each section = text + tappable figure + activity. */
+:root {
+  --bg: #FBF7F0; --surface: #FFFFFF; --surface-2: #F2EEE4; --line: #E7E0D2;
+  --fg: #1A1A17; --muted: #6B6457;
+  --accent: #1F6B4A; --accent-ink: #FFFFFF; --accent-soft: #E6EFE9; --accent-line: #C9DFD2;
+  --warm: #C2641B; --warm-soft: #FDF4E7; --warm-ink: #8A4A12; --warm-line: #EBD7B8;
+  --bad-soft: #FBE9E4; --bad-ink: #9C2A12; --bad-line: #EFC3B6;
+  --space: #18233F; --space-ink: #E9ECF5; --night: #2E3A5C;
+  --l-crust: #7B5B3A; --l-mantle: #D9822B; --l-ocore: #E8A93A; --l-icore: #F6D46B;
+  --r-ign: #C2641B; --r-sed: #D8B979; --r-met: #7C6A9C;
+  --display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --body: 'Nunito Sans', 'Segoe UI', system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #151613; --surface: #1F201C; --surface-2: #282923; --line: #383932;
+  --fg: #F1EEE6; --muted: #ABA697;
+  --accent: #6BBF95; --accent-ink: #0E1A13; --accent-soft: #1C3328; --accent-line: #2D4D3C;
+  --warm: #E59152; --warm-soft: #33261A; --warm-ink: #F2B887; --warm-line: #55402A;
+  --bad-soft: #3A211B; --bad-ink: #F2A390; --bad-line: #5A3328;
+  --space: #0E1428; --space-ink: #E9ECF5; --night: #253150;
+  --l-crust: #A98560; --l-mantle: #D9822B; --l-ocore: #E8A93A; --l-icore: #F6D46B;
+  --r-ign: #E59152; --r-sed: #D8B979; --r-met: #A895C9;
+  color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #151613; --surface: #1F201C; --surface-2: #282923; --line: #383932;
+  --fg: #F1EEE6; --muted: #ABA697;
+  --accent: #6BBF95; --accent-ink: #0E1A13; --accent-soft: #1C3328; --accent-line: #2D4D3C;
+  --warm: #E59152; --warm-soft: #33261A; --warm-ink: #F2B887; --warm-line: #55402A;
+  --bad-soft: #3A211B; --bad-ink: #F2A390; --bad-line: #5A3328;
+  --space: #0E1428; --space-ink: #E9ECF5; --night: #253150;
+  --l-crust: #A98560; --l-mantle: #D9822B; --l-ocore: #E8A93A; --l-icore: #F6D46B;
+  --r-ign: #E59152; --r-sed: #D8B979; --r-met: #A895C9;
+  color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 17px; line-height: 1.6; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+.wrap { max-width: 680px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 8px 64px; }
+
+nav.toc { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+nav.toc .in { max-width: 680px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 8px; display: flex; gap: 6px; overflow-x: auto; }
+nav.toc a { flex: none; text-decoration: none; color: var(--fg); background: var(--surface); border: 1.5px solid var(--line); border-radius: 99px; padding: 6px 12px; font-size: 14px; font-weight: 800; min-height: 36px; display: inline-flex; align-items: center; gap: 4px; }
+nav.toc a.read { border-color: var(--accent); color: var(--accent); }
+nav.toc a.read::after { content: "✓"; }
+
+header.unit { padding-block: 24px 8px; display: grid; gap: 12px; }
+.eyebrow { font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1, h2, h3 { font-family: var(--display); font-weight: 700; margin: 0; text-wrap: balance; line-height: 1.2; }
+h1 { font-size: 32px; }
+h2 { font-size: 26px; }
+h3 { font-size: 20px; margin-top: 8px; }
+h4 { font-size: 16px; margin: 4px 0 0; font-weight: 800; }
+p { margin: 0; }
+section.lesson { display: grid; gap: 16px; padding-block: 40px 8px; border-top: 2px solid var(--line); margin-top: 32px; scroll-margin-top: 64px; }
+.part { display: grid; gap: 12px; }
+.card { background: var(--surface); border: 1.5px solid var(--line); border-radius: 16px; padding: 16px; }
+.outcomes ul, .card ul { margin: 6px 0 0; padding-left: 20px; }
+.compet { background: var(--accent-soft); border: 1.5px solid var(--accent-line); border-radius: 14px; padding: 12px 14px; font-size: 16px; }
+.compet b { color: var(--accent); }
+
+.kw { display: flex; flex-wrap: wrap; gap: 6px; }
+.kw button { border: 1.5px solid var(--warm-line); background: var(--warm-soft); color: var(--warm-ink); border-radius: 99px; padding: 4px 12px; font-size: 14px; font-weight: 800; min-height: 36px; cursor: pointer; }
+.kw button[aria-pressed="true"] { background: var(--warm); color: #fff; border-color: var(--warm); }
+.kwdef { font-size: 16px; min-height: 1.6em; color: var(--muted); }
+.kwdef strong { color: var(--fg); }
+
+.startup { border: 1.5px dashed var(--accent-line); border-radius: 14px; padding: 12px 14px; }
+.startup summary { cursor: pointer; font-weight: 800; color: var(--accent); min-height: 32px; }
+.startup ul { margin: 6px 0 0; padding-left: 20px; }
+.focus { background: var(--surface-2); border-radius: 14px; padding: 12px 14px; font-size: 16px; }
+.focus b { display: block; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--warm-ink); }
+.fix { font-size: 14px; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 8px; }
+.fix b { color: var(--bad-ink); }
+.todo { background: var(--warm-soft); border: 1.5px solid var(--warm-line); border-radius: 16px; padding: 14px 16px; }
+.todo h4 { color: var(--warm-ink); }
+.todo ol { margin: 6px 0 0; padding-left: 22px; }
+.tbl { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; }
+th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+td.n { font-variant-numeric: tabular-nums; text-align: right; }
+
+/* figures */
+figure { margin: 0; display: grid; gap: 10px; }
+figcaption { font-size: 14px; color: var(--muted); }
+.fig { background: var(--surface); border: 1.5px solid var(--line); border-radius: 18px; padding: 14px; display: grid; gap: 12px; }
+.info { background: var(--surface-2); border-radius: 12px; padding: 10px 12px; font-size: 16px; min-height: 3.2em; }
+.info strong { display: block; }
+.hint { font-size: 13px; font-weight: 700; color: var(--accent); }
+.space { background: var(--space); color: var(--space-ink); border-radius: 14px; overflow-x: auto; }
+.space svg { display: block; min-width: 560px; width: 100%; height: auto; }
+.tap { cursor: pointer; }
+.tap:hover > circle, .tap:focus-visible > circle { stroke: #fff; stroke-width: 2; }
+svg text { font-family: var(--body); }
+.btnrow { display: flex; flex-wrap: wrap; gap: 8px; }
+.pill { border: 1.5px solid var(--line); background: var(--surface); border-radius: 12px; padding: 8px 14px; font-weight: 800; font-size: 15px; min-height: 44px; cursor: pointer; }
+.pill[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+.chain { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.chain button { border: 1.5px solid var(--line); background: var(--surface); border-radius: 12px; padding: 10px 4px; font-weight: 800; font-size: 14px; cursor: pointer; min-height: 52px; }
+.chain button[aria-pressed="true"] { border-color: var(--warm); background: var(--warm-soft); color: var(--warm-ink); }
+input[type=range] { width: 100%; accent-color: var(--accent); min-height: 32px; }
+.bars { display: grid; gap: 7px; }
+.brow { display: grid; grid-template-columns: 118px 1fr 52px; gap: 8px; align-items: center; font-size: 14px; }
+.brow .track { height: 14px; background: var(--surface-2); border-radius: 99px; overflow: hidden; }
+.brow .fill { display: block; height: 100%; background: var(--accent); border-radius: 99px; }
+.brow b { text-align: right; font-variant-numeric: tabular-nums; }
+.stack { display: flex; height: 34px; border-radius: 10px; overflow: hidden; font-size: 13px; font-weight: 800; }
+.stack span { display: grid; place-items: center; color: #fff; }
+.compass { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; max-width: 360px; margin: 0 auto; width: 100%; }
+.compass div { aspect-ratio: 1.4; border-radius: 10px; display: grid; place-items: center; text-align: center; font-size: 13px; font-weight: 800; color: #1A1A17; padding: 4px; }
+.legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 14px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 14px; height: 14px; border-radius: 4px; display: inline-block; }
+
+/* sorter + quiz */
+.sorter { display: grid; gap: 10px; }
+.sorter .item { font-family: var(--display); font-size: 24px; font-weight: 700; text-align: center; padding: 8px; }
+.sorter .bins { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }
+.sorter .bins button { border: 1.5px solid var(--line); background: var(--surface); border-radius: 12px; min-height: 52px; font-weight: 800; cursor: pointer; }
+.fb { font-size: 16px; font-weight: 700; min-height: 1.6em; }
+.fb.ok { color: var(--accent); } .fb.no { color: var(--bad-ink); }
+.activity { background: var(--surface); border: 2px solid var(--accent-line); border-radius: 18px; padding: 16px; display: grid; gap: 12px; }
+.activity > h3 { margin: 0; color: var(--accent); }
+.qa { border-top: 1px solid var(--line); padding-top: 10px; }
+.qa summary { cursor: pointer; font-weight: 700; min-height: 32px; list-style-position: outside; }
+.qa summary::marker { color: var(--accent); }
+.qa .ans { margin-top: 6px; background: var(--accent-soft); border-radius: 10px; padding: 8px 12px; font-size: 16px; }
+.mcq { display: grid; gap: 8px; }
+.mcq .opts { display: grid; gap: 8px; }
+.mcq button { text-align: left; border: 1.5px solid var(--line); background: var(--surface); border-radius: 12px; padding: 10px 14px; min-height: 48px; font-weight: 700; cursor: pointer; }
+.mcq button.ok { border-color: var(--accent); background: var(--accent-soft); }
+.mcq button.no { border-color: var(--bad-line); background: var(--bad-soft); color: var(--bad-ink); }
+.check { background: var(--surface); border: 1.5px dashed var(--accent); border-radius: 16px; padding: 14px 16px; }
+.ck { font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+.fb small { display: block; font-weight: 600; color: var(--fg); margin-top: 2px; }
+.quiz { background: var(--surface); border: 2px solid var(--warm-line); border-radius: 20px; padding: 18px 16px; display: grid; gap: 14px; scroll-margin-top: 64px; }
+.quiz h3 { margin: 4px 0 2px; }
+.qlist { margin: 0; padding-left: 22px; display: grid; gap: 14px; }
+.qi { padding: 12px 12px 10px 4px; border-bottom: 1px solid var(--line); }
+.qi::marker { font-weight: 800; color: var(--muted); }
+.qi p { margin: 4px 0; }
+.qt { font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--warm-ink); }
+.qi.ok { background: var(--accent-soft); border-radius: 12px; } .qi.no { background: var(--bad-soft); border-radius: 12px; }
+.qopts { display: grid; gap: 6px; margin-top: 6px; } .qopts.row2 { grid-template-columns: 1fr 1fr; }
+.qopts label { display: flex; gap: 10px; align-items: center; border: 1.5px solid var(--line); background: var(--surface); border-radius: 12px; padding: 8px 12px; min-height: 46px; cursor: pointer; font-weight: 600; }
+.qopts label:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
+.qopts input { accent-color: var(--accent); width: 18px; height: 18px; flex: none; }
+.qmatch { display: grid; gap: 8px; margin-top: 6px; }
+.qmatch label { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.3fr); gap: 8px; align-items: center; font-weight: 700; font-size: 15px; }
+.qmatch select, input.blank { font: inherit; font-size: 15px; color: var(--fg); background: var(--surface); border: 1.5px solid var(--line); border-radius: 10px; min-height: 44px; padding: 0 8px; max-width: 100%; }
+input.blank { width: 9em; margin: 0 6px; font-weight: 800; text-align: center; }
+.qr { font-size: 15px; } .qr b { color: var(--fg); }
+.qerr { color: var(--bad-ink); font-weight: 700; margin: 0; min-height: 0; }
+.qbtn { min-height: 52px; border: 0; border-radius: 14px; background: var(--accent); color: var(--accent-ink); font-weight: 800; font-size: 17px; padding: 0 20px; cursor: pointer; width: 100%; }
+.qbtn.ghost { background: transparent; border: 1.5px solid var(--accent); color: var(--accent); width: auto; }
+.qscore { display: grid; gap: 6px; justify-items: start; }
+.qscore .big { font-family: var(--display); font-size: 40px; font-weight: 700; font-variant-numeric: tabular-nums; }
+@media (max-width: 420px) { .qmatch label { grid-template-columns: 1fr; gap: 4px; } }
+.group { font-size: 16px; color: var(--muted); }
+.group b { color: var(--fg); }
+.done-btn { justify-self: start; border: 1.5px solid var(--accent); background: var(--surface); color: var(--accent); border-radius: 12px; padding: 0 16px; min-height: 48px; font-weight: 800; cursor: pointer; }
+.done-btn[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+dl.gloss { display: grid; grid-template-columns: minmax(110px, 30%) 1fr; gap: 8px 14px; margin: 0; font-size: 16px; }
+dl.gloss dt { font-weight: 800; }
+dl.gloss dd { margin: 0; color: var(--muted); }
+.note { font-size: 13px; color: var(--muted); }
+@media (max-width: 420px) { .chain { grid-template-columns: repeat(2, 1fr); } dl.gloss { grid-template-columns: 1fr; } dl.gloss dd { margin-bottom: 6px; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+<nav class="toc" aria-label="Lessons"><div class="in">
+  <a href="#l11" data-sec="l11">1.1 Solar system</a>
+  <a href="#l12" data-sec="l12">1.2 Shape &amp; movement</a>
+  <a href="#l13" data-sec="l13">1.3 Spheres &amp; layers</a>
+  <a href="#l14" data-sec="l14">1.4 Crust materials</a>
+  <a href="#l15" data-sec="l15">1.5 Rocks in Ethiopia</a>
+  <a href="#gloss">Glossary</a>
+</div></nav>
+
+<div class="wrap">
+<header class="unit">
+  <div class="eyebrow">Grade 7 · Social Studies · Unit One</div>
+  <h1>Physical Characteristics of the Earth</h1>
+  <div class="card outcomes"><h4>After this unit you will be able to:</h4>
+    <ul>
+      <li>Explain how the Earth and the solar system began</li>
+      <li>Describe the Earth's shape and movements, and their effects</li>
+      <li>Describe the Earth's four components and how they interact</li>
+      <li>Explain the Earth's inner layers and how we learn about them</li>
+      <li>Name the main elements, minerals and rocks of the crust</li>
+      <li>Describe where Ethiopia's rocks are found and why they are valuable</li>
+    </ul>
+  </div>
+  <p class="note">Interactive edition based on the Addis Ababa City Administration Education Bureau Grade 7 Social Studies textbook (2022), pages 1–26. Tap anything that looks like a button. Where the printed book has an error, a short correction note appears.</p>
+</header>
+
+<!-- ================= 1.1 ================= -->
+<section class="lesson" id="l11">
+  <div class="eyebrow">Lesson 1.1 · pages 2–8</div>
+  <h2>Origin of the earth and the solar system</h2>
+  <div class="compet"><b>Competency:</b> Discuss how the Earth and the other members of the solar system formed and changed to their present state.</div>
+  <div class="card"><h4>Key words · tap one</h4>
+    <div class="kw" data-terms="Solar system,Planet,Sun,Asteroid,Meteoroid,Inner planet,Outer planet,Dwarf planet,Orbit"></div>
+    <p class="kwdef" aria-live="polite">Tap a word to see what it means.</p>
+  </div>
+
+  <div class="part">
+    <h3>A. The origin of the Earth</h3>
+    <details class="startup"><summary>Start-up questions</summary><ul><li>What do you already know about how the Earth and the solar system began?</li><li>Where did the Earth come from, and how did it form?</li></ul></details>
+    <p>The Earth's beginning is tied to the beginning of the whole solar system. Many scientists think the Sun, the planets and the smaller bodies all formed from one huge cloud of hot, swirling gas and dust. This cloud was mostly hydrogen and helium.</p>
+    <p>Slowly, gravity pulled the gas and dust together into a thin, spinning disc. Over time the disc split into rings that kept spinning. The rings at the centre formed the Sun. The outer rings formed the eight planets, including Earth. Geologists estimate the Earth formed about <strong>4.6 billion years ago</strong>.</p>
+    <figure class="fig" id="origin">
+      <div class="btnrow" role="group" aria-label="Formation stages"></div>
+      <svg viewBox="0 0 320 150" role="img" aria-label="Stage of solar system formation" style="width:100%;max-width:420px;justify-self:center"></svg>
+      <div class="info" aria-live="polite"></div>
+      <figcaption>Tap each stage to see how the solar system formed.</figcaption>
+    </figure>
+    <p class="fix"><b>Correction:</b> the printed book says "a large flammable of hot swirling gases". The intended word is cloud (scientists call it a nebula).</p>
+    <div class="focus"><b>Focus</b>Until August 2006 Pluto was counted as a planet. That year the International Astronomical Union decided that Pluto, Ceres and Eris (first called 2003 UB313) should be called <strong>dwarf planets</strong>.</div>
+<div class="mcq check" data-ans="A huge spinning cloud of gas and dust" data-why="Gravity pulled the cloud into a disc; the centre became the Sun and the rings became planets." data-clue="Read part A again: what was there before the disc?"><span class="ck">Check your understanding</span><h4>What did the Sun and the planets form from?</h4><div class="opts"><button>A broken older planet</button><button>A huge spinning cloud of gas and dust</button><button>Ice from comets</button><button>Pieces of the Moon</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="A dwarf planet" data-why="In 2006 Pluto, Ceres and Eris were grouped as dwarf planets." data-clue="Look at the Focus box about 2006."><span class="ck">Check your understanding</span><h4>What is Pluto called today?</h4><div class="opts"><button>The ninth planet</button><button>A dwarf planet</button><button>A star</button><button>An asteroid belt</button></div><p class="fb" aria-live="polite"></p></div>
+
+  </div>
+
+  <div class="part">
+    <h3>B. Members of the solar system</h3>
+    <p>Our solar system is made of one star, eight planets and countless smaller bodies such as dwarf planets, asteroids and meteoroids.</p>
+    <h4>I. The Sun</h4>
+    <p>The Sun is the centre of the solar system. It is huge and made of extremely hot gases. Its pull holds the whole system together, and it is the main source of heat and light. We do not feel its full heat because, although it is our nearest star, it is about <strong>150 million km</strong> away.</p>
+    <div class="focus"><b>Focus</b>The Sun is a star, just like the stars you see at night. It is the largest object in the solar system and holds 99.8% of the system's mass.</div>
+    <div class="todo"><h4>Things to do: how long does sunlight take to reach us?</h4>
+      <p>The Earth is about 150 million km from the Sun. Light travels at about 300,000 km every second. Try it before you open the answer.</p>
+      <details class="qa"><summary>Show the working</summary><div class="ans">Time = distance ÷ speed = 150,000,000 ÷ 300,000 = 500 seconds. That is about <strong>8 minutes 20 seconds</strong>. The sunlight you see left the Sun over 8 minutes ago.</div></details>
+    </div>
+
+    <div class="mcq check" data-ans="The Sun is about 150 million km away" data-why="Even our nearest star is very far away, so its heat spreads out before reaching us." data-clue="Think about distance."><span class="ck">Check your understanding</span><h4>Why don&#x27;t we feel the Sun&#x27;s full heat on Earth?</h4><div class="opts"><button>The Sun is a small star</button><button>The Sun is about 150 million km away</button><button>The Sun is made of cold gas</button><button>The Moon blocks it</button></div><p class="fb" aria-live="polite"></p></div>
+<h4>II. Planets</h4>
+    <details class="startup"><summary>Start-up questions</summary><ul><li>What is a planet?</li><li>What is the name of the planet we live on?</li></ul></details>
+    <p>The word "planet" comes from the Greek word <em>planetai</em>, which means "wanderers". There are eight planets. All of them travel around the Sun on paths called <strong>orbits</strong>, which are oval (elliptical) in shape. By their distance from the Sun they form two groups.</p>
+    <figure class="fig" id="planets">
+      <div class="space"><svg viewBox="0 0 640 170" aria-label="The Sun and eight planets in order. Tap a planet."></svg></div>
+      <div class="info" aria-live="polite"><span class="hint">Tap the Sun, a planet or the asteroid belt.</span></div>
+      <figcaption>Figure 1.1 The planets in order from the Sun (sizes not to scale).</figcaption>
+    </figure>
+    <p><strong>Inner planets.</strong> Mercury, Venus, Earth and Mars are closest to the Sun. They are solid, with rocky surfaces, so astronomers call them the <strong>terrestrial planets</strong>. They are small compared with the outer planets.</p>
+    <p><strong>Outer planets.</strong> Jupiter, Saturn, Uranus and Neptune are farthest from the Sun. They are much larger and made mostly of gases, so they are called <strong>gas giants</strong>.</p>
+
+    <div class="mcq check" data-ans="Outer planets (gas giants)" data-why="They are among the four farthest planets and are made mostly of gas." data-clue="Tap Jupiter in the figure."><span class="ck">Check your understanding</span><h4>Which group are Jupiter and Saturn in?</h4><div class="opts"><button>Inner, rocky planets</button><button>Outer planets (gas giants)</button><button>Dwarf planets</button><button>Asteroids</button></div><p class="fb" aria-live="polite"></p></div>
+<h4>III. Asteroids and IV. Meteoroids</h4>
+    <p>Besides the Sun and planets, many small bodies move around the Sun. An <strong>asteroid</strong> is a fairly small rocky body that orbits the Sun. Most are in the main asteroid belt between the orbits of Mars and Jupiter.</p>
+    <figure class="fig" id="rockchain">
+      <div class="chain" role="group" aria-label="From asteroid to meteorite"></div>
+      <div class="info" aria-live="polite"><span class="hint">Tap each name in order to follow one piece of rock.</span></div>
+      <figcaption>Figure 1.3 One piece of rock, four names.</figcaption>
+    </figure>
+
+    <div class="mcq check" data-ans="Meteor" data-why="A meteor is a meteoroid burning in our atmosphere. If a piece lands, it becomes a meteorite." data-clue="Did it land, or did it burn in the sky?"><span class="ck">Check your understanding</span><h4>A &quot;shooting star&quot; is really a:</h4><div class="opts"><button>Meteor</button><button>Meteorite</button><button>Planet</button><button>Star falling to Earth</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="focus"><b>Interesting fact: constellations</b>Groups of stars that form patterns in the night sky are called constellations. There are 88 of them. Three are named after Ethiopian royalty in Greek myth.</div>
+    <div class="tbl card"><table>
+      <thead><tr><th>Latin name</th><th>English name or meaning</th></tr></thead>
+      <tbody>
+        <tr><td>Andromeda</td><td>Princess of Ethiopia</td></tr>
+        <tr><td>Cassiopeia</td><td>Queen of Ethiopia</td></tr>
+        <tr><td>Cepheus</td><td>King of Ethiopia</td></tr>
+        <tr><td>Apus</td><td>Bird of paradise</td></tr>
+        <tr><td>Aquarius</td><td>Water bearer</td></tr>
+        <tr><td>Cetus</td><td>Sea monster (whale)</td></tr>
+        <tr><td>Gemini</td><td>Twins</td></tr>
+      </tbody></table></div>
+    <div class="todo"><h4>Things to do: why can't we see stars in the daytime?</h4>
+      <p>You need a torch, a sheet of plain paper, a pencil and a needle.</p>
+      <ol><li>Draw a circle on the paper around the front of the torch.</li><li>Make many small holes with the needle inside the circle.</li><li>Fix the paper over the torch glass with a rubber band. Keep the switch clear.</li><li>In a dark room, shine the torch on a wall. You will see many dots of light, like stars.</li><li>Now switch on all the room lights. The dots almost disappear.</li><li>Compare this with what happens to the stars when the Sun rises.</li></ol>
+      <p style="margin-top:8px">Write a short report and present it to the class.</p>
+    </div>
+  </div>
+
+<div class="mcq check" data-ans="The Sun&#x27;s light is far brighter than the stars" data-why="The stars are still there; sunlight drowns them out, like the torch dots when the room lights go on." data-clue="Remember the torch experiment."><span class="ck">Check your understanding</span><h4>Why can&#x27;t we see stars in the daytime?</h4><div class="opts"><button>Stars switch off in the day</button><button>The Sun&#x27;s light is far brighter than the stars</button><button>Clouds always hide them</button><button>Stars move to the other side of the Earth</button></div><p class="fb" aria-live="polite"></p></div>
+  <div class="activity"><h3>Activity 1.1</h3>
+    <h4>A. Individual work</h4>
+    <details class="qa"><summary>1. What is the solar system?</summary><div class="ans">The Sun and everything that orbits it: eight planets, dwarf planets, asteroids, meteoroids and other small bodies.</div></details>
+    <div class="mcq" data-ans="Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune"><h4>2. Which list shows the planets in order from the Sun?</h4><div class="opts">
+      <button>Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune</button>
+      <button>Venus, Mercury, Earth, Mars, Saturn, Jupiter, Neptune, Uranus</button>
+      <button>Earth, Mars, Venus, Mercury, Jupiter, Saturn, Uranus, Neptune</button></div><p class="fb" aria-live="polite"></p></div>
+    <div class="mcq" data-ans="Mercury"><h4>3. Which planet is nearest to the Sun?</h4><div class="opts"><button>Venus</button><button>Mercury</button><button>Mars</button><button>Earth</button></div><p class="fb" aria-live="polite"></p></div>
+    <h4>B. Group discussion</h4>
+    <p class="group"><b>Discuss in small groups:</b> how did the Earth and the other members of the solar system form and change to their present state? Present your answer through a group representative.</p>
+  </div>
+  <div class="quiz" data-quiz="l11"></div>
+  <button class="done-btn" data-done="l11" aria-pressed="false">Mark lesson 1.1 as read</button>
+</section>
+
+<!-- ================= 1.2 ================= -->
+<section class="lesson" id="l12">
+  <div class="eyebrow">Lesson 1.2 · pages 8–12</div>
+  <h2>Shape and movements of the earth</h2>
+  <div class="compet"><b>Competency:</b> Evaluate the shape and movements of the Earth and their effects.</div>
+  <div class="card"><h4>Key words · tap one</h4>
+    <div class="kw" data-terms="Spheroid,Rotation,Revolution,Season,Axis,Orbit,Equinox,Solstice"></div>
+    <p class="kwdef" aria-live="polite">Tap a word to see what it means.</p>
+  </div>
+
+  <div class="part">
+    <h3>A. The shape of the earth</h3>
+    <details class="startup"><summary>Start-up questions</summary><ul><li>What is the shape of the Earth?</li><li>How can we prove the shape of the Earth?</li><li>What evidence shows the Earth is round?</li></ul></details>
+    <p>Earth is one of the eight planets. Its shape is not perfectly round: it is slightly wider at the Equator. This shape is called an <strong>oblate spheroid</strong>. The Earth's spinning causes it: the Earth bulges in the middle and is slightly flattened at the North and South Poles.</p>
+    <div class="mcq check" data-ans="Almost round, wider at the Equator and flatter at the poles" data-why="The Earth&#x27;s spin makes it bulge at the Equator." data-clue="Where does the Earth bulge?"><span class="ck">Check your understanding</span><h4>What does &quot;oblate spheroid&quot; mean?</h4><div class="opts"><button>A perfect ball</button><button>A flat disc</button><button>Almost round, wider at the Equator and flatter at the poles</button><button>Shaped like an egg standing up</button></div><p class="fb" aria-live="polite"></p></div>
+<h4>Evidence of the Earth's shape</h4>
+    <figure class="fig" id="shipfig">
+      <div class="btnrow" role="group" aria-label="Choose an Earth shape"><button class="pill" data-shape="flat" aria-pressed="false">If Earth were flat</button><button class="pill" data-shape="curved" aria-pressed="true">Earth is curved</button></div>
+      <svg viewBox="0 0 320 130" role="img" aria-label="A ship approaching land over the sea" style="width:100%;max-width:440px;justify-self:center"></svg>
+      <input type="range" min="0" max="100" value="20" aria-label="Move the ship closer">
+      <div class="info" aria-live="polite"></div>
+      <figcaption>Drag the slider to bring the ship closer. Then switch between flat and curved.</figcaption>
+    </figure>
+    <p>If the Earth were a flat disc, the rising Sun would be seen everywhere at the same moment. This does not happen: places in the east see sunrise first. And when a ship sails toward land, its mast appears before its body. On a flat Earth the whole ship would appear at once. This shows the Earth is not flat. Precise measurements show it is an oblate spheroid; scientists describe the exact, slightly lumpy shape as a <strong>geoid</strong>.</p>
+  </div>
+
+<div class="mcq check" data-ans="The Earth&#x27;s surface is curved" data-why="The ship rises over the curve of the Earth, top first." data-clue="Try the slider with &quot;flat&quot; and &quot;curved&quot;."><span class="ck">Check your understanding</span><h4>Why do you see a ship&#x27;s mast before its body?</h4><div class="opts"><button>The sea is rough</button><button>The Earth&#x27;s surface is curved</button><button>The mast is painted brighter</button><button>The ship is sinking</button></div><p class="fb" aria-live="polite"></p></div>
+  <div class="part">
+    <h3>B. Movements of the earth</h3>
+    <details class="startup"><summary>Start-up questions</summary><ul><li>How does the Earth move?</li><li>What is the difference between rotation and revolution?</li><li>How do rotation and revolution affect days, years and seasons?</li><li>How long does the Earth take to rotate once?</li></ul></details>
+    <p>Nothing in the universe stands still. Planets, moons and other bodies all spin and travel at different speeds. The Earth has two movements: <strong>rotation</strong> and <strong>revolution</strong>.</p>
+    <h4>i. Rotation</h4>
+    <p>Rotation is the Earth spinning on its axis. One rotation takes about <strong>24 hours</strong>. The Earth spins from west to east, so the Sun appears to rise in the east and set in the west. The axis is tilted about <strong>23½°</strong>. This tilt affects how much daylight and warmth places get, and the weather from season to season.</p>
+    <p class="fix"><b>Correction:</b> the printed book says the axis "is perpendicular to the Earth's orbit". The axis is actually tilted 23½° away from the perpendicular.</p>
+
+    <div class="mcq check" data-ans="The Earth spins from west to east" data-why="The eastern side turns toward the Sun first, so the Sun appears there." data-clue="Which one is moving: the Sun or the Earth?"><span class="ck">Check your understanding</span><h4>Why does the Sun seem to rise in the east?</h4><div class="opts"><button>The Sun moves around the Earth</button><button>The Earth spins from west to east</button><button>The Earth&#x27;s axis points east</button><button>The Moon pushes the Sun</button></div><p class="fb" aria-live="polite"></p></div>
+<figure class="fig" id="dayfig">
+      <svg viewBox="0 0 320 200" role="img" aria-label="Earth seen from above the North Pole, with the Sun on the left" style="width:100%;max-width:420px;justify-self:center"></svg>
+      <label for="hour" style="font-weight:700">Time in Town X: <span id="hourlbl"></span></label>
+      <input type="range" id="hour" min="0" max="24" step="1" value="9">
+      <div class="info" aria-live="polite"></div>
+      <figcaption>Figure 1.6 Day and night. Drag the slider to spin the Earth and follow Town X.</figcaption>
+    </figure>
+    <h4>Effects of rotation</h4>
+    <p><strong>1. Day and night.</strong> As the Earth spins, half faces the Sun and has day while the other half faces away and has night. This gives a daily cycle of light and darkness, temperature and humidity.</p>
+    <p><strong>2. High and low tides.</strong> Tides are the regular rise and fall of the sea. They are caused mainly by the Moon's pull, and partly by the Sun's. As the Earth rotates, places pass through these pulls and get high and low tides.</p>
+
+    <div class="mcq check" data-ans="The Moon&#x27;s pull" data-why="Tides come mainly from the Moon&#x27;s gravity, with a smaller pull from the Sun." data-clue="Which nearby body pulls on the oceans most?"><span class="ck">Check your understanding</span><h4>What mainly causes tides in the sea?</h4><div class="opts"><button>Wind</button><button>The Moon&#x27;s pull</button><button>Earth&#x27;s revolution</button><button>Rivers flowing into the sea</button></div><p class="fb" aria-live="polite"></p></div>
+<h4>ii. Revolution of the earth</h4>
+    <p>Revolution is the Earth's journey around the Sun on its orbit. One revolution takes <strong>365¼ days</strong>, or one year. The Earth moves at about 107,000 km per hour (about 67,000 miles per hour).</p>
+    <figure class="fig" id="orbitfig">
+      <div class="btnrow" role="group" aria-label="Choose a date"></div>
+      <svg viewBox="0 0 320 200" role="img" aria-label="Earth at four points on its orbit around the Sun" style="width:100%;max-width:420px;justify-self:center"></svg>
+      <div class="info" aria-live="polite"></div>
+      <figcaption>Figure 1.7 Tap a date to see where the Earth is and what happens.</figcaption>
+    </figure>
+    <div class="mcq check" data-ans="365¼ days" data-why="One trip around the Sun is one year." data-clue="Revolution makes a year, not a day."><span class="ck">Check your understanding</span><h4>How long does one revolution of the Earth take?</h4><div class="opts"><button>About 24 hours</button><button>About 30 days</button><button>365¼ days</button><button>About 10 years</button></div><p class="fb" aria-live="polite"></p></div>
+<h4>Effects of revolution</h4>
+    <p><strong>a. Day and night change length.</strong> Because the axis is tilted, the Sun seems to move north and south of the Equator during the year. On about <strong>March 21 and September 23</strong> the Sun is directly over the Equator, and day and night are equal everywhere. These days are <strong>equinoxes</strong>. On about <strong>June 21</strong> the Sun is over the Tropic of Cancer: the longest day in the Northern Hemisphere and the longest night in the Southern. On about <strong>December 21</strong> the Sun is over the Tropic of Capricorn: the longest day in the Southern Hemisphere and the longest night in the Northern. These days are <strong>solstices</strong>.</p>
+    <p><strong>b. Seasons.</strong> Revolution together with the tilted axis causes four seasons: summer (<em>Kiremt</em>), autumn (<em>Meher</em>), winter (<em>Bega</em>) and spring (<em>Belg</em> or <em>Tsedey</em>).</p>
+    <div class="tbl card"><table>
+      <thead><tr><th></th><th>Rotation</th><th>Revolution</th></tr></thead>
+      <tbody><tr><td><strong>What</strong></td><td>Spinning on its axis</td><td>Travelling around the Sun</td></tr>
+      <tr><td><strong>Time</strong></td><td>About 24 hours (1 day)</td><td>365¼ days (1 year)</td></tr>
+      <tr><td><strong>Causes</strong></td><td>Day and night, tides</td><td>Seasons, changing day length</td></tr></tbody></table></div>
+  </div>
+
+<div class="mcq check" data-ans="The Earth&#x27;s revolution together with its tilted axis" data-why="As the tilted Earth travels around the Sun, each hemisphere leans toward the Sun for part of the year." data-clue="You need both: the journey and the tilt."><span class="ck">Check your understanding</span><h4>What causes the seasons?</h4><div class="opts"><button>The Earth&#x27;s rotation only</button><button>The Earth&#x27;s revolution together with its tilted axis</button><button>The Moon</button><button>The Earth getting much closer to the Sun</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="Its longest day" data-why="June 21 is the June solstice: the Sun is over the Tropic of Cancer." data-clue="Tap June 21 in the orbit figure."><span class="ck">Check your understanding</span><h4>On about June 21, the Northern Hemisphere has:</h4><div class="opts"><button>Its longest day</button><button>Its longest night</button><button>Equal day and night</button></div><p class="fb" aria-live="polite"></p></div>
+  <div class="activity"><h3>Activity 1.2</h3>
+    <h4>Individual work</h4>
+    <details class="qa"><summary>1. How does the Earth's rotation cause day and night?</summary><div class="ans">As the Earth spins, the side facing the Sun has day and the side facing away has night. Each place moves from day into night and back every 24 hours.</div></details>
+    <details class="qa"><summary>2. What effect does the tilt of the Earth's axis have?</summary><div class="ans">The tilt makes each hemisphere lean toward the Sun for part of the year and away for the other part. This causes the seasons and changes how long days and nights are.</div></details>
+    <details class="qa"><summary>3. Why isn't there always 12 hours of day and 12 hours of night everywhere?</summary><div class="ans">Because the axis is tilted while the Earth travels around the Sun. Only at the equinoxes are day and night equal everywhere. At other times the hemisphere leaning toward the Sun has longer days.</div></details>
+    <div class="todo"><h4>Things to do (groups of 5 or 6)</h4>
+      <ol><li>Use a ball as the Earth and a lit candle as the Sun.</li><li>Mark a point on the ball as Town X.</li><li>Turn the ball so Town X is in darkness.</li><li>Now rotate the ball slowly from left to right.</li></ol>
+      <p style="margin-top:8px">Write what you observe. (You can also try it with the day-and-night slider above.)</p></div>
+  </div>
+  <div class="quiz" data-quiz="l12"></div>
+  <button class="done-btn" data-done="l12" aria-pressed="false">Mark lesson 1.2 as read</button>
+</section>
+
+<!-- ================= 1.3 ================= -->
+<section class="lesson" id="l13">
+  <div class="eyebrow">Lesson 1.3 · pages 12–18</div>
+  <h2>External components and internal structure of the earth</h2>
+  <div class="compet"><b>Competencies:</b> State the four components (subsystems) of the Earth and how they constantly interact. Tell the difference and similarity between direct and indirect sources of information about the inside of the Earth.</div>
+  <div class="card"><h4>Key words · tap one</h4>
+    <div class="kw" data-terms="Atmosphere,Hydrosphere,Biosphere,Lithosphere,Components,Crust,Mantle,Core"></div>
+    <p class="kwdef" aria-live="polite">Tap a word to see what it means.</p>
+  </div>
+
+  <div class="part">
+    <h3>1.3.1 External components of the earth</h3>
+    <details class="startup"><summary>Start-up questions</summary><ul><li>Do you know what the lithosphere, hydrosphere, biosphere and atmosphere are?</li><li>Do these components interact with each other?</li></ul></details>
+    <p>The Earth's physical environment has four components, or subsystems: the <strong>lithosphere</strong> (land), the <strong>hydrosphere</strong> (water), the <strong>biosphere</strong> (living things) and the <strong>atmosphere</strong> (air).</p>
+    <div class="focus"><b>Word origin</b>These names come from Greek: <em>lithos</em> = stone, <em>hydro</em> = water, <em>bio</em> = life, <em>atmos</em> = vapour.</div>
+    <h4>A. The lithosphere</h4>
+    <p>The lithosphere is the solid, rocky part of the Earth. It is the coolest and most rigid part. Its surface is very uneven, with mountains, plateaus, plains and valleys. In Ethiopia it reaches from <strong>Ras Dejen</strong> (Ras Dashen), the highest peak, down to <strong>Dallol</strong>, about 116 m below sea level.</p>
+    <p class="fix"><b>Note:</b> the book gives Ras Dejen's height as 4,620 m. Newer measurements give about 4,550 m.</p>
+    <h4>B. The hydrosphere</h4>
+    <p>The hydrosphere is all the water on Earth, as liquid, ice and water vapour, in oceans, seas, lakes and rivers. Oceans are its biggest part: they cover about <strong>71%</strong> of the Earth's surface and hold about <strong>97%</strong> of its water.</p>
+    <h4>C. The biosphere</h4>
+    <p>The biosphere is the part of the Earth where living things exist. It is a zone near the surface, reaching from the ocean floor up several kilometres into the air.</p>
+    <h4>D. The atmosphere</h4>
+    <p>The atmosphere is the envelope of air around the Earth, a mixture of gases. The most common gas is <strong>nitrogen (78%)</strong>, which enters the air when volcanoes erupt and when dead plants and animals decay. Next is <strong>oxygen (21%)</strong>, made mainly by plants. Together they are about 99% of the air. The rest is argon, carbon dioxide, methane and water vapour.</p>
+    <figure class="fig">
+      <div class="stack" role="img" aria-label="Air: 78 percent nitrogen, 21 percent oxygen, 1 percent other gases"><span style="width:78%;background:var(--accent)">Nitrogen 78%</span><span style="width:21%;background:var(--warm)">O₂ 21%</span><span style="width:1%;background:var(--muted)"></span></div>
+      <figcaption>Figure 1.8 Composition of the atmosphere (other gases: about 1%).</figcaption>
+    </figure>
+    <div class="mcq check" data-ans="Nitrogen" data-why="About 78% of the air is nitrogen; oxygen is about 21%." data-clue="Look at the longest part of the bar."><span class="ck">Check your understanding</span><h4>Which gas makes up most of the air?</h4><div class="opts"><button>Oxygen</button><button>Nitrogen</button><button>Carbon dioxide</button><button>Water vapour</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="About 97%" data-why="Oceans hold 97% of the water and cover about 71% of the surface." data-clue="Two numbers are given: one for surface, one for water."><span class="ck">Check your understanding</span><h4>Oceans hold about how much of Earth&#x27;s water?</h4><div class="opts"><button>About 50%</button><button>About 71%</button><button>About 97%</button><button>All of it</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="todo"><h4>Things to do (groups)</h4><ol><li>List the highest mountains, major rivers and plants in your area.</li><li>Match each feature to the Earth component it belongs to.</li></ol></div>
+
+    <h4>How do the Earth's spheres interact?</h4>
+    <p>The four spheres are closely connected, and their interaction shapes every environment. For example, high mountains are colder than valleys: there the lithosphere meets thinner air and more precipitation, making a cool or icy climate, and plants and animals have adapted to it. Birds (biosphere) fly through the air (atmosphere). Water (hydrosphere) flows through soil (lithosphere). People breathe air, drink water and walk on the ground, so we could not live without any of the four. People build dams from rock, and use flowing water to spin turbines that make electricity.</p>
+    <figure class="fig" id="spheresort">
+      <div class="sorter"></div>
+      <figcaption>Sort it: which sphere does each thing belong to?</figcaption>
+    </figure>
+    <div class="mcq check" data-ans="Biosphere and lithosphere" data-why="People are part of the biosphere; rock is the lithosphere." data-clue="Which sphere are people in? Which is rock in?"><span class="ck">Check your understanding</span><h4>People build a dam from rock. Which two spheres are interacting?</h4><div class="opts"><button>Biosphere and lithosphere</button><button>Atmosphere and hydrosphere</button><button>Hydrosphere and atmosphere</button><button>Lithosphere and atmosphere</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="todo"><h4>Things to do (groups)</h4><p>Name the four external components of the Earth and discuss how they interact.</p></div>
+  </div>
+
+  <div class="part">
+    <h3>1.3.2 Internal structure of the earth</h3>
+    <h4>1.3.2.1 How do we know what is inside the earth?</h4>
+    <details class="startup"><summary>Start-up questions</summary><ul><li>List the sources of information about the inside of the Earth.</li><li>How do we get information about the Earth's interior?</li></ul></details>
+    <p>We live on the surface of a globe with a radius of about 6,400 km, yet nobody has dug more than a few kilometres down. What we know about the inside comes from <strong>direct</strong> and <strong>indirect</strong> sources.</p>
+    <div class="tbl card"><table>
+      <thead><tr><th>Direct sources (real material)</th><th>Indirect sources (clues)</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Mining:</strong> digging out useful materials. Gold mines in South Africa have brought up rock from 3–4 km deep.</td><td><strong>Earthquake waves:</strong> an earthquake is a natural shaking of the ground caused by a sudden release of energy. Its waves travel in all directions and reveal what the materials inside are like.</td></tr>
+        <tr><td><strong>Volcanic eruptions:</strong> molten rock (magma) thrown onto the surface can be studied in laboratories.</td><td><strong>Meteorites:</strong> their materials are similar to Earth's, and many have iron and nickel cores. This suggests the Earth's core is also iron and nickel.</td></tr>
+        <tr><td><strong>Deep drilling:</strong> the deepest hole ever drilled, the Kola well in Russia, reached about 12 km.</td><td></td></tr>
+      </tbody></table></div>
+    <p class="fix"><b>Note:</b> the photo labelled Figure 1.10 in the printed book appears to show an open-pit mine, not the Kola borehole.</p>
+
+    <div class="mcq check" data-ans="Indirect source" data-why="No material is collected; scientists read clues from how the waves travel." data-clue="Do we touch any rock from inside the Earth?"><span class="ck">Check your understanding</span><h4>Studying earthquake waves is which kind of source?</h4><div class="opts"><button>Direct source</button><button>Indirect source</button></div><p class="fb" aria-live="polite"></p></div>
+<h4>1.3.2.2 Internal structure of the earth</h4>
+    <p>The inside of the Earth has three main layers: the <strong>crust</strong>, the <strong>mantle</strong> and the <strong>core</strong>.</p>
+    <div class="focus"><b>Focus</b>Think of the Earth like an apple: skin, flesh and core. In the Earth they are the crust, the mantle and the core.</div>
+    <figure class="fig" id="layers">
+      <svg viewBox="0 0 320 180" style="width:100%;max-width:440px;justify-self:center" aria-label="Cut-away of the Earth's layers. Tap a layer."></svg>
+      <div class="info" aria-live="polite"><span class="hint">Tap a layer.</span></div>
+      <figcaption>Figure 1.11 Structure of the Earth (thicknesses not to scale).</figcaption>
+    </figure>
+    <p><strong>A. Crust.</strong> The outermost and thinnest layer, made of hard rock. It has two parts. <strong>Continental crust</strong> is about 30–40 km thick; its main elements are silicon (Si) and aluminium (Al), so it is called <strong>SIAL</strong>. <strong>Oceanic crust</strong> is about 5–6 km thick; its main elements are silicon and magnesium (Mg), so it is called <strong>SIMA</strong>.</p>
+    <p><strong>B. Mantle.</strong> The layer below the crust, about 2,900 km thick, and the thickest layer: it makes up about 84% of the Earth's volume. Its main elements are silicon and magnesium (SIMA). The mantle is mostly solid rock that can flow very slowly. In some places near its top, rock melts to form magma.</p>
+    <p class="fix"><b>Correction:</b> the printed book says the lower mantle is molten. The lower mantle is solid; melting happens only in limited zones near the top of the mantle. The book also writes "Silica (Si)": Si is the element silicon; silica is a compound of silicon and oxygen.</p>
+    <p><strong>C. Core.</strong> The innermost layer, made mainly of nickel (Ni) and iron (Fe), so it is called <strong>NIFE</strong>. Its temperature is about 6,000°C and it makes up about 15% of the Earth's volume. The <strong>outer core</strong> is liquid. In the <strong>inner core</strong> the pressure is so great that the metal is squeezed solid.</p>
+  </div>
+
+<div class="mcq check" data-ans="Silicon and aluminium" data-why="SI = silicon, AL = aluminium. Oceanic crust is SIMA." data-clue="Split the word: SI + AL."><span class="ck">Check your understanding</span><h4>Continental crust is called SIAL because it is mainly:</h4><div class="opts"><button>Silicon and aluminium</button><button>Silicon and magnesium</button><button>Iron and nickel</button><button>Sand and limestone</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="Huge pressure squeezes the metal solid" data-why="The weight of everything above presses so hard that the iron and nickel cannot melt." data-clue="Think about the weight of the whole Earth above it."><span class="ck">Check your understanding</span><h4>Why is the inner core solid even though it is very hot?</h4><div class="opts"><button>It is made of rock</button><button>Huge pressure squeezes the metal solid</button><button>It is colder than the mantle</button><button>It is frozen water</button></div><p class="fb" aria-live="polite"></p></div>
+  <div class="activity"><h3>Activity 1.3</h3>
+    <h4>A. Individual work</h4>
+    <details class="qa"><summary>1. Name the three layers of the Earth.</summary><div class="ans">Crust, mantle and core.</div></details>
+    <div class="mcq" data-ans="Crust"><h4>2. Which layer is the outermost and the thinnest?</h4><div class="opts"><button>Mantle</button><button>Crust</button><button>Inner core</button></div><p class="fb" aria-live="polite"></p></div>
+    <details class="qa"><summary>3. List the sources of information about the inside of the Earth.</summary><div class="ans">Direct: mining, volcanic eruptions, deep drilling. Indirect: earthquake waves, meteorites.</div></details>
+    <div class="mcq" data-ans="Core"><h4>4. Which layer makes up about 15% of the Earth's volume?</h4><div class="opts"><button>Crust</button><button>Mantle</button><button>Core</button></div><p class="fb" aria-live="polite"></p></div>
+    <details class="qa"><summary>5. Label the layers of the Earth.</summary><div class="ans">From outside in: crust, mantle, outer core, inner core. Use the tappable figure above to check.</div></details>
+    <h4>B. Group discussion</h4>
+    <p class="group"><b>1.</b> Name the four components of the Earth and explain how they constantly interact.<br><b>2.</b> Why is the inner core solid?</p>
+  </div>
+  <div class="quiz" data-quiz="l13"></div>
+  <button class="done-btn" data-done="l13" aria-pressed="false">Mark lesson 1.3 as read</button>
+</section>
+
+<!-- ================= 1.4 ================= -->
+<section class="lesson" id="l14">
+  <div class="eyebrow">Lesson 1.4 · pages 19–23</div>
+  <h2>Materials forming the crust of the earth</h2>
+  <div class="compet"><b>Competencies:</b> Identify the major elements, minerals and rocks that form the crust. Analyse how and why the Earth's materials are separated into layers.</div>
+  <div class="card"><h4>Key words · tap one</h4>
+    <div class="kw" data-terms="Elements,Minerals,Igneous rock,Sedimentary rock,Metamorphic rock,Volcanic rock,Plutonic rock,Metamorphism,Magma,Lava,Basalt,Granite"></div>
+    <p class="kwdef" aria-live="polite">Tap a word to see what it means.</p>
+  </div>
+
+  <div class="part">
+    <h3>1.4.1 Major elements</h3>
+    <details class="startup"><summary>Start-up questions</summary><ul><li>What materials make up the Earth's crust?</li><li>Name the major elements in the crust.</li></ul></details>
+    <p>The crust is made of many elements. Near the surface they are solid; deep inside they are hot and molten. About 98% of the crust is made of just eight elements.</p>
+    <figure class="fig">
+      <div class="bars" id="elbars"></div>
+      <figcaption>Table 1.1 Most common elements in the Earth's crust, % by weight. Source: Fleischer, Data of Geochemistry (1967).</figcaption>
+    </figure>
+  </div>
+
+<div class="mcq check" data-ans="Oxygen and silicon" data-why="46.6% + 27.7% is about 74%." data-clue="Look at the two longest bars."><span class="ck">Check your understanding</span><h4>Which two elements make up about three quarters of the crust?</h4><div class="opts"><button>Iron and nickel</button><button>Oxygen and silicon</button><button>Nitrogen and oxygen</button><button>Calcium and sodium</button></div><p class="fb" aria-live="polite"></p></div>
+  <div class="part">
+    <h3>1.4.2 Major minerals</h3>
+    <details class="startup"><summary>Start-up question</summary><ul><li>What are the major minerals that form the crust?</li></ul></details>
+    <p>The crust is made of rocks, and all rocks are made of minerals. A <strong>mineral</strong> is a natural, non-living solid with a fixed internal structure and a definite chemical make-up. Minerals are the building blocks of rocks. There are many minerals, but most rocks are made of a few common ones, called rock-forming minerals.</p>
+    <div class="tbl card"><table>
+      <thead><tr><th>Mineral group</th><th>Examples</th></tr></thead>
+      <tbody><tr><td>Silicates</td><td>Feldspar, quartz, mica, olivine</td></tr><tr><td>Oxides</td><td>Magnetite</td></tr><tr><td>Carbonates</td><td>Calcite, dolomite</td></tr><tr><td>Sulfides</td><td>Pyrite, galena</td></tr><tr><td>Sulfates</td><td>Gypsum</td></tr><tr><td>Chlorides</td><td>Rock salt</td></tr></tbody></table>
+      <p class="fix" style="margin-top:8px"><b>Correction:</b> the printed Table 1.2 lists quartz under oxides. Quartz is usually classed as a silicate.</p></div>
+  </div>
+
+<div class="mcq check" data-ans="Rocks are made of minerals" data-why="Minerals are the building blocks of rocks." data-clue="Which one is the building block?"><span class="ck">Check your understanding</span><h4>How are minerals and rocks related?</h4><div class="opts"><button>Rocks are made of minerals</button><button>Minerals are made of rocks</button><button>They are not related</button><button>Minerals are only found in the core</button></div><p class="fb" aria-live="polite"></p></div>
+  <div class="part">
+    <h3>1.4.3 Major rocks forming the crust</h3>
+    <details class="startup"><summary>Start-up questions</summary><ul><li>List the major rocks that form the crust.</li><li>How are different rocks formed?</li></ul></details>
+    <p>By how they form, rocks are grouped into three types: <strong>igneous</strong>, <strong>sedimentary</strong> and <strong>metamorphic</strong>.</p>
+    <h4>1. Igneous rock</h4>
+    <p>"Igneous" comes from the Latin <em>ignis</em>, fire. Igneous rocks form when molten rock (magma) cools and becomes solid, either on the surface or inside the Earth. Magma that reaches the surface is called <strong>lava</strong>.</p>
+    <p><strong>A. Extrusive igneous rocks</strong>, also called volcanic rocks, form when lava cools on the Earth's surface. Examples: basalt and obsidian.</p>
+    <p><strong>B. Intrusive igneous rocks</strong>, also called plutonic rocks, form when magma cools and crystallises inside the Earth. Granite is the most common example.</p>
+    <div class="mcq check" data-ans="Intrusive (plutonic) igneous" data-why="It formed from magma (igneous) that cooled inside the Earth (intrusive)." data-clue="Two clues: cooled magma, and inside the Earth."><span class="ck">Check your understanding</span><h4>Granite cooled slowly, deep underground. What kind of rock is it?</h4><div class="opts"><button>Extrusive igneous</button><button>Intrusive (plutonic) igneous</button><button>Sedimentary</button><button>Metamorphic</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="focus"><b>Focus</b><strong>Magma</strong> is molten rock below the surface; it is called lava once it reaches the surface. It forms about 60–200 km deep, where temperatures are between 900°C and 1,600°C.</div>
+    <div class="mcq check" data-ans="Magma that has reached the surface" data-why="Same molten rock, new name once it comes out." data-clue="Read the Focus box."><span class="ck">Check your understanding</span><h4>What is lava?</h4><div class="opts"><button>Magma that has reached the surface</button><button>Rock from the core</button><button>Melted ice</button><button>A type of mineral</button></div><p class="fb" aria-live="polite"></p></div>
+<h4>2. Sedimentary rock</h4>
+    <p>"Sedimentary" comes from the Latin <em>sedimentum</em>, settling. These rocks form when sediments (mud, sand, shells) are carried by erosion and settle in one place, mostly in rivers, seas and oceans. They form in <strong>layers</strong>; each layer is the sediment laid down at one time, and the lower layers are usually older. Sedimentary rocks contain <strong>fossils</strong>, which tell us about the past, and they store energy resources such as coal, petroleum and natural gas.</p>
+    <p class="fix"><b>Correction:</b> the printed book says the bottom layer is always the hardest and the top the softest. Older layers are usually lower, but hardness does not depend on position. The book also numbers this section "2. Metamorphic rock"; it is the third type.</p>
+    <div class="mcq check" data-ans="They form in layers that hold fossils" data-why="Each layer and its fossils record a time in the past." data-clue="What is trapped inside the layers?"><span class="ck">Check your understanding</span><h4>Why do sedimentary rocks help us learn about the past?</h4><div class="opts"><button>They are very hot</button><button>They form in layers that hold fossils</button><button>They come from the core</button><button>They never change</button></div><p class="fb" aria-live="polite"></p></div>
+<h4>3. Metamorphic rock</h4>
+    <details class="startup"><summary>Start-up questions</summary><ul><li>How are metamorphic rocks formed?</li><li>What is metamorphism? What causes it?</li></ul></details>
+    <p>"Metamorphic" comes from the Greek <em>meta</em> (change) and <em>morph</em> (form). Metamorphic rocks are "changed rocks": they form when existing igneous, sedimentary or even metamorphic rocks are changed by <strong>heat and pressure</strong> inside the crust. Marble is an example: it forms from limestone.</p>
+    <div class="focus"><b>Focus</b><strong>Metamorphism</strong> is the change of existing rocks into new rocks. Heat and pressure are its most important agents. Limestone → (heat and pressure) → marble.</div>
+    <div class="mcq check" data-ans="Limestone" data-why="Heat and pressure change limestone into marble." data-clue="Read the Focus box about metamorphism."><span class="ck">Check your understanding</span><h4>Marble forms from which rock?</h4><div class="opts"><button>Granite</button><button>Basalt</button><button>Limestone</button><button>Coal</button></div><p class="fb" aria-live="polite"></p></div>
+<figure class="fig" id="rocksort">
+      <div class="sorter"></div>
+      <figcaption>Sort it: which type is each rock?</figcaption>
+    </figure>
+  </div>
+
+  <div class="activity"><h3>Activity 1.4</h3>
+    <h4>A. Individual work</h4>
+    <details class="qa"><summary>1. How are the different types of rock formed?</summary><div class="ans">Igneous: magma or lava cools and hardens. Sedimentary: layers of sediment settle and harden. Metamorphic: heat and pressure change existing rocks.</div></details>
+    <details class="qa"><summary>2. Name the types of igneous rock.</summary><div class="ans">Extrusive (volcanic), such as basalt and obsidian; intrusive (plutonic), such as granite.</div></details>
+    <details class="qa"><summary>3. List the major elements in the crust.</summary><div class="ans">Oxygen, silicon, aluminium, iron, calcium, sodium, potassium and magnesium.</div></details>
+    <details class="qa"><summary>4. List the major minerals in the crust.</summary><div class="ans">Silicates (feldspar, quartz, mica, olivine), oxides (magnetite), carbonates (calcite, dolomite), sulfides (pyrite, galena), sulfates (gypsum), chlorides (rock salt).</div></details>
+    <div class="mcq" data-ans="Heat and pressure"><h4>5. What are the most important agents of metamorphism?</h4><div class="opts"><button>Wind and rain</button><button>Heat and pressure</button><button>Rivers and seas</button></div><p class="fb" aria-live="polite"></p></div>
+    <h4>B. Group discussion</h4>
+    <p class="group"><b>1.</b> What is the main difference between intrusive and extrusive igneous rocks?<br><b>2.</b> Discuss the major elements, minerals and rocks that form the crust.</p>
+  </div>
+  <div class="quiz" data-quiz="l14"></div>
+  <button class="done-btn" data-done="l14" aria-pressed="false">Mark lesson 1.4 as read</button>
+</section>
+
+<!-- ================= 1.5 ================= -->
+<section class="lesson" id="l15">
+  <div class="eyebrow">Lesson 1.5 · pages 24–26</div>
+  <h2>Distribution and economic value of rock types in Ethiopia</h2>
+  <div class="compet"><b>Competency:</b> Describe where the different rock types are found in Ethiopia and their economic value.</div>
+  <details class="startup"><summary>Start-up questions</summary><ul><li>Which parts of Ethiopia are mostly covered by igneous, sedimentary and metamorphic rocks?</li><li>List the different uses of rocks in your area.</li></ul></details>
+
+  <div class="part">
+    <h3>A. Distribution of rocks</h3>
+    <p>All three rock types are found in Ethiopia. <strong>Igneous rocks</strong> cover large areas in the central part of the country. <strong>Eastern Ethiopia</strong> is mainly covered by sedimentary rocks. <strong>Metamorphic rocks</strong> are found along the northern, western and southern edges.</p>
+    <figure class="fig" id="ethmap">
+      <div class="compass" role="group" aria-label="Rock types by region of Ethiopia"></div>
+      <div class="legend"><span><i style="background:var(--r-ign)"></i>Igneous</span><span><i style="background:var(--r-sed)"></i>Sedimentary</span><span><i style="background:var(--r-met)"></i>Metamorphic</span></div>
+      <div class="info" aria-live="polite"><span class="hint">Tap a region.</span></div>
+      <figcaption>Figure 1.14 (simplified) Main outcropping rocks of Ethiopia by region. A schematic, not a real map.</figcaption>
+    </figure>
+    <p class="fix"><b>Note:</b> the printed book calls this map figure 1.11 on page 24 and figure 1.10 on page 26; it is labelled figure 1.14.</p>
+  </div>
+
+<div class="mcq check" data-ans="Sedimentary rock" data-why="Eastern Ethiopia is mainly covered by sedimentary rocks." data-clue="Tap the East region on the figure."><span class="ck">Check your understanding</span><h4>A town in eastern Ethiopia is most likely built on:</h4><div class="opts"><button>Igneous rock</button><button>Sedimentary rock</button><button>Metamorphic rock</button></div><p class="fb" aria-live="polite"></p></div>
+  <div class="part">
+    <h3>B. Economic importance of rocks in Ethiopia</h3>
+    <p>Rocks have many uses that make them important to people:</p>
+    <ol>
+      <li><strong>Fuel:</strong> sedimentary rocks such as coal are a source of fuel for industry.</li>
+      <li><strong>Construction:</strong> granite and sandstone are quarried for roads, bridges and buildings. Marble is polished to decorate floors and walls.</li>
+      <li><strong>Food:</strong> rock salt (sodium chloride) from sedimentary rock is used in cooking.</li>
+      <li><strong>Soil:</strong> soils form when rocks slowly break down.</li>
+    </ol>
+    <div class="tbl card"><table>
+      <thead><tr><th>Rock type</th><th>Associated minerals</th><th>Uses</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Metamorphic</strong></td><td>Metals: gold, nickel, copper, uranium, iron, platinum, lead; also diamond</td><td>Jewellery and decoration, construction, electrical wire, industrial machinery</td></tr>
+        <tr><td><strong>Sedimentary</strong></td><td>Mineral fuels: coal, petroleum, natural gas; also limestone and gypsum</td><td>Energy, construction, writing materials (chalk)</td></tr>
+        <tr><td><strong>Igneous</strong></td><td>Basalt, granite, sand</td><td>Building and construction materials</td></tr>
+      </tbody></table></div>
+    <div class="mcq check" data-ans="Cooking" data-why="Rock salt (sodium chloride) provides salt for food." data-clue="It is called a source of food nutrient."><span class="ck">Check your understanding</span><h4>Rock salt from sedimentary rock is mainly used for:</h4><div class="opts"><button>Fuel</button><button>Cooking</button><button>Jewellery</button><button>Electrical wire</button></div><p class="fb" aria-live="polite"></p></div>
+<figure class="fig" id="usesort">
+      <div class="sorter"></div>
+      <figcaption>Sort it: which rock type does each resource come from?</figcaption>
+    </figure>
+  </div>
+
+  <div class="activity"><h3>Activity 1.5</h3>
+    <h4>A. Individual work</h4>
+    <div class="mcq" data-ans="Igneous"><h4>1. Which rock type is most common in and around Addis Ababa?</h4><div class="opts"><button>Igneous</button><button>Sedimentary</button><button>Metamorphic</button></div><p class="fb" aria-live="polite"></p></div>
+    <details class="qa"><summary>2. List the uses of rocks.</summary><div class="ans">Fuel (coal), construction (granite, sandstone, basalt), decoration (marble), food (rock salt), soil formation, and metals for jewellery, wire and machinery.</div></details>
+    <h4>B. Group discussion</h4>
+    <p class="group"><b>1.</b> Can we learn about the Earth's past by studying sedimentary rocks? (Think about layers and fossils.)<br><b>2.</b> Walk around your school compound and neighbourhood in a group. Collect samples of different rocks, bring them to class and report on how they are used in your area.</p>
+  </div>
+  <div class="quiz" data-quiz="l15"></div>
+  <button class="done-btn" data-done="l15" aria-pressed="false">Mark lesson 1.5 as read</button>
+</section>
+
+<section class="lesson" id="gloss">
+  <div class="eyebrow">Unit One</div>
+  <h2>Glossary</h2>
+  <dl class="gloss"></dl>
+  <p class="note">The printed book's Unit Summary and Review Exercise were not in the supplied pages.</p>
+</section>
+</div>
+
+<script>
+const GL = {
+  "Solar system": "The Sun and everything that travels around it: planets, dwarf planets, asteroids and meteoroids.",
+  "Planet": "A large body that travels around the Sun on its own orbit. From the Greek planetai, 'wanderers'.",
+  "Sun": "The star at the centre of the solar system; its pull holds the system together and it gives heat and light.",
+  "Asteroid": "A fairly small rocky body that orbits the Sun, mostly between Mars and Jupiter.",
+  "Meteoroid": "A small piece broken off an asteroid. A meteor is a meteoroid burning in our air; a meteorite is one that lands.",
+  "Inner planet": "One of the four planets nearest the Sun (Mercury, Venus, Earth, Mars): small, solid and rocky.",
+  "Outer planet": "One of the four planets farthest from the Sun (Jupiter, Saturn, Uranus, Neptune): large and mostly gas.",
+  "Dwarf planet": "A planet-like body that is not counted as a full planet, such as Pluto, Ceres and Eris.",
+  "Orbit": "The oval path a planet or other body follows around the Sun.",
+  "Spheroid": "A shape that is almost a ball. The Earth is an oblate spheroid: wider at the Equator, flatter at the poles.",
+  "Rotation": "The Earth spinning on its axis, west to east, once about every 24 hours.",
+  "Revolution": "The Earth travelling around the Sun, once every 365¼ days.",
+  "Season": "A part of the year with its own weather: Kiremt, Meher, Bega and Belg.",
+  "Axis": "The imaginary line through the North and South Poles that the Earth spins around. It is tilted about 23½°.",
+  "Equinox": "A day (about March 21 and September 23) when day and night are equal everywhere.",
+  "Solstice": "A day (about June 21 and December 21) of the longest day in one hemisphere and the longest night in the other.",
+  "Atmosphere": "The envelope of air around the Earth.",
+  "Hydrosphere": "All the water on Earth: oceans, seas, lakes, rivers, ice and water vapour.",
+  "Biosphere": "The part of the Earth where living things exist.",
+  "Lithosphere": "The solid, rocky part of the Earth's surface.",
+  "Components": "The four parts (subsystems) of the Earth's environment: lithosphere, hydrosphere, biosphere and atmosphere.",
+  "Crust": "The Earth's outer and thinnest layer: 30–40 km under continents, 5–6 km under oceans.",
+  "Mantle": "The thickest layer, about 2,900 km, below the crust. Mostly solid rock that can flow very slowly.",
+  "Core": "The centre of the Earth, mostly iron and nickel (NIFE). Liquid outer core, solid inner core.",
+  "Elements": "The simplest substances. Eight elements, led by oxygen and silicon, make about 98% of the crust.",
+  "Minerals": "Natural non-living solids with a fixed structure and chemical make-up. The building blocks of rocks.",
+  "Igneous rock": "Rock formed when magma or lava cools and hardens. From the Latin ignis, fire.",
+  "Sedimentary rock": "Rock formed in layers from settled sediments. Holds fossils, coal, oil and gas.",
+  "Metamorphic rock": "Rock formed when heat and pressure change an existing rock. Example: marble.",
+  "Volcanic rock": "Extrusive igneous rock that cooled on the surface, such as basalt.",
+  "Plutonic rock": "Intrusive igneous rock that cooled deep inside the Earth, such as granite.",
+  "Metamorphism": "The change of existing rocks into new rocks by heat and pressure.",
+  "Magma": "Molten rock below the Earth's surface.",
+  "Lava": "Magma that has reached the Earth's surface.",
+  "Basalt": "A dark extrusive igneous rock formed from cooled lava.",
+  "Granite": "The most common intrusive igneous rock, used as building stone."
+};
+
+/* ---- key words ---- */
+document.querySelectorAll('.kw').forEach(box => {
+  const def = box.parentElement.querySelector('.kwdef');
+  box.innerHTML = box.dataset.terms.split(',').map(t => `<button aria-pressed="false">${t}</button>`).join('');
+  box.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    box.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b));
+    def.innerHTML = `<strong>${b.textContent}:</strong> ${GL[b.textContent] || ''}`;
+  });
+});
+document.querySelector('dl.gloss').innerHTML = Object.keys(GL).sort().map(k => `<dt>${k}</dt><dd>${GL[k]}</dd>`).join('');
+
+/* ---- multiple-choice checks ---- */
+document.querySelectorAll('.mcq').forEach(q => {
+  q.addEventListener('click', e => {
+    const b = e.target.closest('.opts button'); if (!b || q.dataset.done) return;
+    const ok = b.textContent.trim() === q.dataset.ans;
+    b.classList.add(ok ? 'ok' : 'no');
+    const fb = q.querySelector('.fb');
+    fb.className = 'fb ' + (ok ? 'ok' : 'no');
+    fb.innerHTML = ok ? 'Correct.' + (q.dataset.why ? `<small>${q.dataset.why}</small>` : '') : 'Not yet.' + `<small>${q.dataset.clue || 'Read the section above and try another option.'}</small>`;
+    if (ok) { q.dataset.done = 1; q.querySelectorAll('.opts button').forEach(x => x.disabled = true); }
+    else b.disabled = true;
+  });
+});
+
+/* ---- sorters ---- */
+function sorter(id, bins, items) {
+  const el = document.querySelector('#' + id + ' .sorter');
+  let i = 0, score = 0;
+  function draw(msg, cls) {
+    if (i >= items.length) { el.innerHTML = `<p class="item">${score} of ${items.length}</p><p class="fb ok" style="text-align:center">${msg || ''} Done.</p><button class="pill" style="justify-self:center">Try again</button>`; return; }
+    el.innerHTML = `<p class="note" style="text-align:center">${i + 1} of ${items.length}</p><p class="item">${items[i][0]}</p><div class="bins">${bins.map(b => `<button>${b}</button>`).join('')}</div><p class="fb ${cls || ''}" aria-live="polite">${msg || ''}</p>`;
+  }
+  el.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    if (i >= items.length) { i = 0; score = 0; draw(); return; }
+    const [name, ans, why] = items[i];
+    if (b.textContent === ans) { score++; i++; draw(`Yes: ${name} → ${ans}. ${why}`, 'ok'); }
+    else { i++; draw(`${name} belongs to ${ans}. ${why}`, 'no'); }
+  });
+  draw();
+}
+sorter('spheresort', ['Lithosphere', 'Hydrosphere', 'Biosphere', 'Atmosphere'], [
+  ['River', 'Hydrosphere', 'It is water.'], ['Eagle', 'Biosphere', 'It is a living thing.'], ['Ras Dejen', 'Lithosphere', 'It is land and rock.'],
+  ['Oxygen', 'Atmosphere', 'It is a gas in the air.'], ['Lake Tana', 'Hydrosphere', 'It is water.'], ['Teff plant', 'Biosphere', 'It is a living thing.'], ['Nitrogen', 'Atmosphere', 'It is the main gas in the air.']]);
+sorter('rocksort', ['Igneous', 'Sedimentary', 'Metamorphic'], [
+  ['Basalt', 'Igneous', 'Lava cooled on the surface.'], ['Granite', 'Igneous', 'Magma cooled deep inside.'], ['Limestone', 'Sedimentary', 'Formed from settled layers.'],
+  ['Marble', 'Metamorphic', 'Limestone changed by heat and pressure.'], ['Obsidian', 'Igneous', 'Lava that cooled very fast.'], ['Coal', 'Sedimentary', 'Formed from layers of old plants.'], ['Sandstone', 'Sedimentary', 'Sand grains settled in layers.']]);
+sorter('usesort', ['Igneous', 'Sedimentary', 'Metamorphic'], [
+  ['Coal for fuel', 'Sedimentary', 'Mineral fuels come from sedimentary rocks.'], ['Gold', 'Metamorphic', 'Metals are linked with metamorphic rocks.'], ['Basalt road stone', 'Igneous', 'Basalt is igneous.'],
+  ['Rock salt', 'Sedimentary', 'Rock salt forms in sedimentary rock.'], ['Copper wire', 'Metamorphic', 'Copper is linked with metamorphic rocks.'], ['Petroleum', 'Sedimentary', 'Oil is a mineral fuel.']]);
+
+/* ---- origin stages ---- */
+(function () {
+  const fig = document.getElementById('origin'), svg = fig.querySelector('svg'), info = fig.querySelector('.info'), row = fig.querySelector('.btnrow');
+  const st = [
+    ['1. Cloud', 'A huge cloud of hot, swirling gas (mostly hydrogen and helium) and dust.'],
+    ['2. Disc', 'Gravity pulls the gas and dust together into a thin, spinning disc.'],
+    ['3. Rings', 'The disc splits into rings that keep spinning.'],
+    ['4. Today', 'The centre becomes the Sun; the outer rings become the planets. Earth formed about 4.6 billion years ago.']];
+  const draw = [
+    () => Array.from({ length: 70 }, (_, k) => { const a = k * 2.4, r = 10 + (k * 37) % 60; return `<circle cx="${160 + Math.cos(a) * r * 1.6}" cy="${75 + Math.sin(a) * r * .9}" r="${1.5 + k % 3}" fill="var(--muted)" opacity=".55"/>`; }).join(''),
+    () => `<ellipse cx="160" cy="75" rx="130" ry="26" fill="var(--warm-soft)" stroke="var(--warm-line)"/><ellipse cx="160" cy="75" rx="40" ry="10" fill="var(--warm)" opacity=".6"/>`,
+    () => [120, 95, 70, 45].map((r, k) => `<ellipse cx="160" cy="75" rx="${r}" ry="${r * .22}" fill="none" stroke="var(--warm)" stroke-width="${4 - k * .6}" opacity=".7"/>`).join('') + `<circle cx="160" cy="75" r="12" fill="var(--warm)"/>`,
+    () => `<circle cx="40" cy="75" r="26" fill="#F2A93B"/>` + [[80, 3], [100, 5], [122, 5], [142, 4], [182, 13], [225, 11], [262, 8], [294, 8]].map(([x, r]) => `<circle cx="${x}" cy="75" r="${r}" fill="var(--accent)"/>`).join('')];
+  row.innerHTML = st.map((s, k) => `<button class="pill" aria-pressed="${k === 0}">${s[0]}</button>`).join('');
+  function show(k) { svg.innerHTML = draw[k](); info.textContent = st[k][1]; row.querySelectorAll('button').forEach((b, j) => b.setAttribute('aria-pressed', j === k)); }
+  row.addEventListener('click', e => { const b = e.target.closest('button'); if (b) show([...row.children].indexOf(b)); });
+  show(0);
+})();
+
+/* ---- planets ---- */
+(function () {
+  const fig = document.getElementById('planets'), svg = fig.querySelector('svg'), info = fig.querySelector('.info');
+  const P = [
+    ['Sun', 60, 46, '#F2A93B', 'The star at the centre. Holds 99.8% of the solar system\'s mass.'],
+    ['Mercury', 142, 6, '#9C9488', '1st planet. Inner, rocky. Nearest to the Sun.'],
+    ['Venus', 172, 10, '#D9B36C', '2nd planet. Inner, rocky.'],
+    ['Earth', 206, 11, '#3E7CB1', '3rd planet. Inner, rocky. Our home.'],
+    ['Mars', 238, 8, '#C1532F', '4th planet. Inner, rocky. The last inner planet.'],
+    ['Jupiter', 330, 30, '#C99A6B', '5th planet. Outer gas giant, the largest planet.'],
+    ['Saturn', 430, 25, '#D8C08A', '6th planet. Outer gas giant, famous for its rings.'],
+    ['Uranus', 512, 17, '#7EC4CF', '7th planet. Outer gas giant.'],
+    ['Neptune', 584, 17, '#5B79D0', '8th planet. Outer gas giant, farthest from the Sun.']];
+  let s = '';
+  for (let k = 0; k < 40; k++) s += `<circle cx="${270 + (k * 13) % 30}" cy="${48 + (k * 29) % 70}" r="1.4" fill="#B9B2A3" opacity=".8"/>`;
+  s += `<g class="tap" tabindex="0" role="button" aria-label="Asteroid belt" data-k="belt"><rect x="262" y="40" width="44" height="86" fill="transparent"/></g>`;
+  P.forEach((p, k) => {
+    s += `<g class="tap" tabindex="0" role="button" aria-label="${p[0]}" data-k="${k}"><circle cx="${p[1]}" cy="85" r="${p[2]}" fill="${p[3]}"/>${p[0] === 'Saturn' ? `<ellipse cx="${p[1]}" cy="85" rx="38" ry="7" fill="none" stroke="${p[3]}" stroke-width="3" opacity=".8"/>` : ''}<text x="${p[1]}" y="${k ? 140 : 152}" text-anchor="middle" font-size="12" font-weight="700" fill="var(--space-ink)">${p[0]}</text></g>`;
+  });
+  s += `<line x1="128" y1="158" x2="252" y2="158" stroke="#7FD1A8" stroke-width="2"/><text x="190" y="168" text-anchor="middle" font-size="11" font-weight="800" fill="#7FD1A8">INNER · ROCKY</text>`;
+  s += `<line x1="300" y1="158" x2="604" y2="158" stroke="#F0B27A" stroke-width="2"/><text x="452" y="168" text-anchor="middle" font-size="11" font-weight="800" fill="#F0B27A">OUTER · GAS GIANTS</text>`;
+  s += `<text x="284" y="34" text-anchor="middle" font-size="11" fill="#B9B2A3">asteroid belt</text>`;
+  svg.innerHTML = s;
+  function pick(g) { const k = g.dataset.k; info.innerHTML = k === 'belt' ? '<strong>Asteroid belt</strong>Most asteroids orbit here, between Mars and Jupiter.' : `<strong>${P[k][0]}</strong>${P[k][4]}`; }
+  svg.addEventListener('click', e => { const g = e.target.closest('.tap'); if (g) pick(g); });
+  svg.addEventListener('keydown', e => { const g = e.target.closest('.tap'); if (g && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); pick(g); } });
+})();
+
+/* ---- asteroid chain ---- */
+(function () {
+  const fig = document.getElementById('rockchain'), row = fig.querySelector('.chain'), info = fig.querySelector('.info');
+  const C = [['Asteroid', 'A small rocky body orbiting the Sun. Sometimes two asteroids crash into each other.'],
+    ['Meteoroid', 'The crash breaks off small pieces. These broken pieces are meteoroids.'],
+    ['Meteor', 'When a meteoroid enters our atmosphere it burns and makes a streak of light: a meteor, or "shooting star".'],
+    ['Meteorite', 'If part of it survives the trip and lands on Earth, it is called a meteorite.']];
+  row.innerHTML = C.map(c => `<button aria-pressed="false">${c[0]}</button>`).join('');
+  row.addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; const k = [...row.children].indexOf(b); row.querySelectorAll('button').forEach((x, j) => x.setAttribute('aria-pressed', j <= k)); info.innerHTML = `<strong>${C[k][0]}</strong>${C[k][1]}`; });
+})();
+
+/* ---- ship and curvature ---- */
+(function () {
+  const fig = document.getElementById('shipfig'), svg = fig.querySelector('svg'), info = fig.querySelector('.info'), rng = fig.querySelector('input');
+  let shape = 'curved';
+  function draw() {
+    const d = +rng.value;
+    const x = 280 - d * 2.1;
+    let sink = 0;
+    if (shape === 'curved') sink = Math.max(0, (100 - d) * 0.42);
+    const sea = shape === 'curved' ? `<path d="M0 108 Q160 84 320 108 L320 130 L0 130 Z" fill="#3E7CB1" opacity=".55"/>` : `<rect x="0" y="96" width="320" height="34" fill="#3E7CB1" opacity=".55"/>`;
+    const baseY = shape === 'curved' ? 96 - 10 * Math.sin(Math.PI * (x / 320)) + 12 : 96;
+    const y = baseY + sink;
+    const clip = `<clipPath id="above"><path d="${shape === 'curved' ? 'M0 0 H320 V108 Q160 84 0 108 Z' : 'M0 0 H320 V96 H0 Z'}"/></clipPath>`;
+    svg.innerHTML = `<defs>${clip}</defs><rect x="0" y="0" width="320" height="130" fill="var(--surface-2)"/>` + sea +
+      `<g clip-path="url(#above)"><rect x="${x - 2}" y="${y - 46}" width="4" height="40" fill="var(--fg)"/><path d="M${x + 2} ${y - 44} L${x + 20} ${y - 18} L${x + 2} ${y - 18} Z" fill="var(--warm)"/><path d="M${x - 24} ${y - 8} L${x + 24} ${y - 8} L${x + 16} ${y + 2} L${x - 16} ${y + 2} Z" fill="var(--fg)"/></g>` +
+      `<circle cx="18" cy="78" r="6" fill="var(--accent)"/><rect x="15" y="84" width="6" height="14" fill="var(--accent)"/><text x="30" y="72" font-size="11" font-weight="700" fill="var(--muted)">you</text>`;
+    const shown = shape === 'flat' ? 'the whole ship' : sink > 26 ? 'only the top of the mast' : sink > 10 ? 'the mast and sail' : 'the whole ship';
+    info.innerHTML = `<strong>You can see ${shown}.</strong>${shape === 'flat' ? 'On a flat Earth, the whole ship would be visible at once, just smaller.' : 'On a curved Earth, the ship rises into view over the curve: mast first, then the body.'}`;
+  }
+  rng.addEventListener('input', draw);
+  fig.querySelector('.btnrow').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; shape = b.dataset.shape; fig.querySelectorAll('.btnrow button').forEach(x => x.setAttribute('aria-pressed', x === b)); draw(); });
+  draw();
+})();
+
+/* ---- day and night ---- */
+(function () {
+  const fig = document.getElementById('dayfig'), svg = fig.querySelector('svg'), info = fig.querySelector('.info'), rng = fig.querySelector('#hour'), lbl = fig.querySelector('#hourlbl');
+  const cx = 200, cy = 100, R = 70;
+  function draw() {
+    const h = +rng.value, th = ((h - 12) * 15 + 180) * Math.PI / 180;
+    const px = cx + R * Math.cos(th), py = cy - R * Math.sin(th);
+    const day = Math.cos(th) < -0.02, edge = Math.abs(Math.cos(th)) <= 0.02;
+    svg.innerHTML = `<circle cx="34" cy="100" r="26" fill="#F2A93B"/><text x="34" y="146" text-anchor="middle" font-size="12" font-weight="700" fill="var(--muted)">Sun</text>` +
+      [70, 100, 130].map(y => `<line x1="64" y1="${y}" x2="120" y2="${y}" stroke="#F2A93B" stroke-width="2" stroke-dasharray="4 4"/>`).join('') +
+      `<circle cx="${cx}" cy="${cy}" r="${R}" fill="#3E7CB1"/><path d="M${cx} ${cy - R} A${R} ${R} 0 0 1 ${cx} ${cy + R} Z" fill="var(--night)" opacity=".85"/>` +
+      `<circle cx="${cx}" cy="${cy}" r="4" fill="#fff"/><text x="${cx}" y="${cy + 18}" text-anchor="middle" font-size="10" fill="#fff">N. Pole</text>` +
+      `<path d="M${cx + 84} ${cy - 30} A90 90 0 0 0 ${cx + 84} ${cy + 30}" fill="none" stroke="var(--muted)" stroke-width="2" marker-end="url(#ah)"/>` +
+      `<defs><marker id="ah" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--muted)"/></marker></defs>` +
+      `<circle cx="${px}" cy="${py}" r="7" fill="var(--warm)" stroke="#fff" stroke-width="2"/><text x="${px + (Math.cos(th) > 0 ? 12 : -12)}" y="${py - 10}" text-anchor="${Math.cos(th) > 0 ? 'start' : 'end'}" font-size="12" font-weight="800" fill="var(--fg)">Town X</text>`;
+    lbl.textContent = String(h % 24).padStart(2, '0') + ':00';
+    const say = edge ? (h === 6 ? 'Sunrise. Town X is turning into the light.' : 'Sunset. Town X is turning away from the Sun.') : day ? (h === 12 ? 'Midday. Town X faces the Sun directly.' : 'Day. Town X faces the Sun.') : (h % 24 === 0 ? 'Midnight. Town X faces directly away from the Sun.' : 'Night. Town X faces away from the Sun.');
+    info.innerHTML = `<strong>${say}</strong>One full turn of the slider is one rotation: 24 hours.`;
+  }
+  rng.addEventListener('input', draw); draw();
+})();
+
+/* ---- orbit dates ---- */
+(function () {
+  const fig = document.getElementById('orbitfig'), svg = fig.querySelector('svg'), info = fig.querySelector('.info'), row = fig.querySelector('.btnrow');
+  const D = [['March 21', 'Equinox', 160, 180, 'The Sun is directly over the Equator. Day and night are equal everywhere.'],
+    ['June 21', 'June solstice', 285, 100, 'The Sun is over the Tropic of Cancer. Longest day in the Northern Hemisphere, longest night in the Southern. Kiremt begins in Ethiopia.'],
+    ['September 23', 'Equinox', 160, 20, 'The Sun is again over the Equator. Day and night are equal everywhere.'],
+    ['December 21', 'December solstice', 35, 100, 'The Sun is over the Tropic of Capricorn. Longest day in the Southern Hemisphere, longest night in the Northern.']];
+  row.innerHTML = D.map((d, k) => `<button class="pill" aria-pressed="${k === 1}">${d[0]}</button>`).join('');
+  function show(k) {
+    svg.innerHTML = `<ellipse cx="160" cy="100" rx="125" ry="80" fill="none" stroke="var(--line)" stroke-width="2" stroke-dasharray="5 5"/><circle cx="160" cy="100" r="22" fill="#F2A93B"/><text x="160" y="104" text-anchor="middle" font-size="11" font-weight="800" fill="#2A1A0C">Sun</text>` +
+      D.map((d, j) => `<g opacity="${j === k ? 1 : .35}"><circle cx="${d[2]}" cy="${d[3]}" r="${j === k ? 13 : 9}" fill="#3E7CB1"/><line x1="${d[2] - 8}" y1="${d[3] - 18}" x2="${d[2] + 8}" y2="${d[3] + 18}" stroke="var(--fg)" stroke-width="2"/></g>`).join('');
+    info.innerHTML = `<strong>${D[k][0]} · ${D[k][1]}</strong>${D[k][4]}`;
+    row.querySelectorAll('button').forEach((b, j) => b.setAttribute('aria-pressed', j === k));
+  }
+  row.addEventListener('click', e => { const b = e.target.closest('button'); if (b) show([...row.children].indexOf(b)); });
+  show(1);
+})();
+
+/* ---- earth layers ---- */
+(function () {
+  const fig = document.getElementById('layers'), svg = fig.querySelector('svg'), info = fig.querySelector('.info');
+  const L = [['Crust', 'var(--l-crust)', 150, 'Outermost and thinnest. Continental crust 30–40 km thick (SIAL); oceanic crust 5–6 km (SIMA).'],
+    ['Mantle', 'var(--l-mantle)', 140, 'About 2,900 km thick; 84% of Earth\'s volume. Mostly solid rock that flows very slowly. Silicon and magnesium (SIMA).'],
+    ['Outer core', 'var(--l-ocore)', 72, 'Liquid iron and nickel.'],
+    ['Inner core', 'var(--l-icore)', 34, 'Solid iron and nickel, about 6,000°C. Pressure squeezes it solid.']];
+  svg.innerHTML = L.map((l, k) => `<g class="tap" tabindex="0" role="button" aria-label="${l[0]}" data-k="${k}"><path d="M${160 - l[2]} 170 A${l[2]} ${l[2]} 0 0 1 ${160 + l[2]} 170 Z" fill="${l[1]}"/></g>`).join('') +
+    `<g pointer-events="none" font-size="12" font-weight="800" text-anchor="middle"><text x="160" y="13" fill="var(--fg)">Crust</text><text x="160" y="62" fill="#2A1A0C">Mantle</text><text x="160" y="126" fill="#2A1A0C">Outer core</text><text x="160" y="160" fill="#2A1A0C">Inner core</text></g>`;
+  function pick(g) { const k = g.dataset.k; info.innerHTML = `<strong>${L[k][0]}</strong>${L[k][3]}`; }
+  svg.addEventListener('click', e => { const g = e.target.closest('.tap'); if (g) pick(g); });
+  svg.addEventListener('keydown', e => { const g = e.target.closest('.tap'); if (g && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); pick(g); } });
+})();
+
+/* ---- element bars ---- */
+(function () {
+  const E = [['Oxygen (O)', 46.6], ['Silicon (Si)', 27.72], ['Aluminium (Al)', 8.13], ['Iron (Fe)', 5.0], ['Calcium (Ca)', 3.63], ['Sodium (Na)', 2.83], ['Potassium (K)', 2.59], ['Magnesium (Mg)', 2.09], ['Others', 0.41]];
+  document.getElementById('elbars').innerHTML = E.map(([n, v]) => `<div class="brow"><span>${n}</span><span class="track"><span class="fill" style="width:${v / 46.6 * 100}%"></span></span><b>${v}%</b></div>`).join('');
+})();
+
+/* ---- Ethiopia rock regions ---- */
+(function () {
+  const fig = document.getElementById('ethmap'), grid = fig.querySelector('.compass'), info = fig.querySelector('.info');
+  const R = { Igneous: 'var(--r-ign)', Sedimentary: 'var(--r-sed)', Metamorphic: 'var(--r-met)' };
+  const cells = [['North-west', 'Metamorphic'], ['North', 'Metamorphic'], ['North-east', 'Sedimentary'], ['West', 'Metamorphic'], ['Centre (Addis Ababa)', 'Igneous'], ['East', 'Sedimentary'], ['South-west', 'Metamorphic'], ['South', 'Metamorphic'], ['South-east', 'Sedimentary']];
+  const why = { Igneous: 'Large central areas are covered by igneous rocks formed from volcanic activity. Used for building stone.', Sedimentary: 'Eastern Ethiopia is mainly sedimentary rock: the place to look for fuels, limestone and salt.', Metamorphic: 'Metamorphic rocks lie along the northern, western and southern edges. Metals such as gold are linked with them.' };
+  grid.innerHTML = cells.map(([n, r]) => `<div role="button" tabindex="0" data-r="${r}" data-n="${n}" style="background:${R[r]};cursor:pointer">${n}</div>`).join('');
+  function pick(d) { info.innerHTML = `<strong>${d.dataset.n}: ${d.dataset.r}</strong>${why[d.dataset.r]}`; }
+  grid.addEventListener('click', e => { const d = e.target.closest('[data-r]'); if (d) pick(d); });
+  grid.addEventListener('keydown', e => { const d = e.target.closest('[data-r]'); if (d && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); pick(d); } });
+})();
+
+/* ---- end-of-lesson quizzes ---- */
+const QUIZ = {
+ l11: [
+  {t:'order', q:'Put these planets in order, starting nearest the Sun.', items:['Mercury','Earth','Mars','Saturn','Neptune'], why:'Mercury, Venus, Earth, Mars are inner; Jupiter, Saturn, Uranus, Neptune are outer.'},
+  {t:'blank', q:'Geologists estimate the Earth formed about ___ billion years ago.', a:['4.6'], why:'The Earth is about 4.6 billion years old.'},
+  {t:'blank', q:'The oval paths that planets follow around the Sun are called ___.', a:['orbits','orbit'], why:'Planets travel around the Sun on elliptical orbits.'},
+  {t:'tf', q:'The Sun is a star.', a:true, why:'The Sun is a star, like the stars we see at night, just much closer.'},
+  {t:'tf', q:'The outer planets are small and rocky.', a:false, why:'The outer planets are large and mostly gas: the gas giants.'},
+  {t:'match', q:'Match each name to what it is.', pairs:[['Asteroid','Small rocky body orbiting the Sun'],['Meteoroid','Piece broken off an asteroid'],['Meteor','Streak of light as a rock burns in our air'],['Meteorite','Rock from space that lands on Earth']], why:'One piece of rock can be all four, as it travels.'},
+  {t:'mcq', q:'Sunlight takes about how long to reach the Earth?', o:['8 seconds','8 minutes','8 hours','8 days'], a:'8 minutes', why:'150,000,000 km ÷ 300,000 km/s = 500 s, about 8 minutes 20 seconds.'},
+  {t:'mcq', q:'Which of these is NOT a member of our solar system?', o:['Mars','Ceres','The Andromeda constellation','An asteroid'], a:'The Andromeda constellation', why:'Constellations are patterns of distant stars, far outside our solar system.'},
+  {t:'mcq', q:'The inner planets are called "terrestrial" because they:', o:['Have solid, rocky surfaces like Earth','Are closest to Earth','All have water','Have many moons'], a:'Have solid, rocky surfaces like Earth', why:'Terrestrial means Earth-like: solid and rocky.'},
+  {t:'blank', q:'The Sun holds about ___% of the solar system\'s mass.', a:['99.8'], why:'Almost all the mass of the solar system is in the Sun.'},
+  {t:'mcq', q:'The word "planet" comes from a Greek word meaning:', o:['Wanderers','Giants','Stones','Lights'], a:'Wanderers', why:'Planetai means wanderers: planets seem to wander across the sky.'},
+  {t:'tf', q:'In 2006 Pluto was reclassified as a dwarf planet.', a:true, why:'The International Astronomical Union made this decision in August 2006.'}
+ ],
+ l12: [
+  {t:'blank', q:'The Earth\'s shape is called an oblate ___.', a:['spheroid'], why:'Almost round, wider at the Equator and flatter at the poles.'},
+  {t:'mcq', q:'Which observation shows the Earth is curved?', o:['Places in the east see sunrise first','All places see sunrise at the same time','The Moon is round','Stars appear at night'], a:'Places in the east see sunrise first', why:'On a flat Earth everyone would see sunrise at once.'},
+  {t:'tf', q:'The Earth rotates from east to west.', a:false, why:'It rotates from west to east, so the Sun appears to rise in the east.'},
+  {t:'blank', q:'One rotation of the Earth takes about ___ hours.', a:['24'], why:'One rotation is one day.'},
+  {t:'blank', q:'The Earth\'s axis is tilted about ___ degrees.', a:['23.5','23 1/2','23½','23,5'], why:'The tilt is about 23½°.'},
+  {t:'match', q:'Match each term to its effect or meaning.', pairs:[['Rotation','Causes day and night'],['Revolution','Takes one year'],['Equinox','Day and night are equal everywhere'],['Solstice','Longest day in one hemisphere']], why:'Rotation and revolution are the two movements; equinoxes and solstices are key dates of revolution.'},
+  {t:'mcq', q:'On about December 21, the longest day is in the:', o:['Northern Hemisphere','Southern Hemisphere','Whole world equally'], a:'Southern Hemisphere', why:'The Sun is over the Tropic of Capricorn, south of the Equator.'},
+  {t:'mcq', q:'If the Earth\'s axis were NOT tilted, what would most likely happen?', o:['There would be no seasons as we know them','There would be no day and night','The year would be shorter','There would be no tides'], a:'There would be no seasons as we know them', why:'Seasons come from revolution plus the tilt. Without the tilt, day length and seasons would barely change.'},
+  {t:'tf', q:'Tides are caused mainly by the Moon\'s pull.', a:true, why:'The Moon\'s gravity is the main cause; the Sun adds a smaller pull.'},
+  {t:'match', q:'Match each Ethiopian season to its English name.', pairs:[['Kiremt','Summer'],['Meher','Autumn'],['Bega','Winter'],['Belg','Spring']], why:'Belg is also called Tsedey.'},
+  {t:'mcq', q:'How long does one revolution take?', o:['24 hours','30 days','365¼ days','12 months and 10 days'], a:'365¼ days', why:'One revolution around the Sun is one year.'}
+ ],
+ l13: [
+  {t:'match', q:'Match each sphere to what it contains.', pairs:[['Lithosphere','Land and rock'],['Hydrosphere','Water'],['Biosphere','Living things'],['Atmosphere','Air']], why:'Lithos = stone, hydro = water, bio = life, atmos = vapour.'},
+  {t:'blank', q:'The most common gas in the atmosphere is ___.', a:['nitrogen'], why:'About 78% of the air is nitrogen.'},
+  {t:'blank', q:'Oceans cover about ___% of the Earth\'s surface.', a:['71'], why:'They also hold about 97% of Earth\'s water.'},
+  {t:'mcq', q:'Which example shows the hydrosphere and lithosphere interacting?', o:['Water flowing through soil','A bird flying','A person breathing','A tree growing'], a:'Water flowing through soil', why:'Water (hydrosphere) moving through soil (lithosphere).'},
+  {t:'order', q:'Put the Earth\'s layers in order, from the surface to the centre.', items:['Crust','Mantle','Outer core','Inner core'], why:'Crust (thinnest), mantle (thickest), liquid outer core, solid inner core.'},
+  {t:'tf', q:'The mantle is the thinnest layer of the Earth.', a:false, why:'The crust is thinnest. The mantle is the thickest, about 2,900 km.'},
+  {t:'blank', q:'The core is called NIFE because it is mainly nickel and ___.', a:['iron'], why:'NI = nickel, FE = iron (from the Latin ferrum).'},
+  {t:'match', q:'Match each name to the part of the Earth it describes.', pairs:[['SIAL','Continental crust'],['SIMA','Oceanic crust'],['NIFE','Core']], why:'SIAL: silicon + aluminium. SIMA: silicon + magnesium. NIFE: nickel + iron.'},
+  {t:'mcq', q:'Which is a DIRECT source of information about the Earth\'s interior?', o:['Volcanic eruptions','Earthquake waves','Meteorites'], a:'Volcanic eruptions', why:'Volcanoes bring real material (magma) to the surface that we can study.'},
+  {t:'mcq', q:'Why do meteorites help us understand the Earth\'s core?', o:['They are made of similar material and many have iron-nickel cores','They come from inside the Earth','They are very hot','They are magnetic stars'], a:'They are made of similar material and many have iron-nickel cores', why:'Since Earth is a similar body, its core is probably iron and nickel too.'},
+  {t:'tf', q:'The inner core is liquid.', a:false, why:'The outer core is liquid; the inner core is solid because of huge pressure.'},
+  {t:'blank', q:'The deepest hole ever drilled, the Kola well, reached about ___ km.', a:['12'], why:'Still tiny compared with the Earth\'s radius of about 6,400 km.'}
+ ],
+ l14: [
+  {t:'blank', q:'About ___% of the crust is made of just eight elements.', a:['98'], why:'Oxygen, silicon, aluminium, iron, calcium, sodium, potassium and magnesium.'},
+  {t:'mcq', q:'The most common element in the Earth\'s crust is:', o:['Iron','Silicon','Oxygen','Aluminium'], a:'Oxygen', why:'Oxygen is 46.6% of the crust by weight, locked inside minerals.'},
+  {t:'match', q:'Match each mineral to its group.', pairs:[['Feldspar','Silicates'],['Magnetite','Oxides'],['Calcite','Carbonates'],['Galena','Sulfides'],['Gypsum','Sulfates']], why:'See Table 1.2.'},
+  {t:'match', q:'Match each rock type to how it forms.', pairs:[['Igneous','Magma or lava cools and hardens'],['Sedimentary','Sediments settle in layers'],['Metamorphic','Heat and pressure change an existing rock']], why:'Rocks are grouped by how they form.'},
+  {t:'tf', q:'Basalt is an intrusive igneous rock.', a:false, why:'Basalt is extrusive (volcanic): it cooled on the surface. Granite is intrusive.'},
+  {t:'blank', q:'Magma that reaches the Earth\'s surface is called ___.', a:['lava'], why:'Same molten rock, new name once it comes out.'},
+  {t:'mcq', q:'Where do most sedimentary rocks form?', o:['In rivers, seas and oceans','Deep in the mantle','Inside volcanoes','In the core'], a:'In rivers, seas and oceans', why:'Sediments carried by erosion settle there in layers.'},
+  {t:'mcq', q:'The Latin word "ignis", which gives "igneous", means:', o:['Fire','Stone','Change','Settling'], a:'Fire', why:'Igneous rocks form from hot molten rock.'},
+  {t:'tf', q:'Coal, petroleum and natural gas are found in sedimentary rocks.', a:true, why:'Sedimentary rocks are a storehouse of energy resources.'},
+  {t:'mcq', q:'A rock has thin layers with tiny shells pressed inside. It is most likely:', o:['Igneous','Sedimentary','Metamorphic'], a:'Sedimentary', why:'Layers and fossils are signs of sedimentary rock.'},
+  {t:'blank', q:'Heat and pressure change limestone into ___.', a:['marble'], why:'Marble is a metamorphic rock.'},
+  {t:'mcq', q:'Magma forms where temperatures are between:', o:['100°C and 300°C','900°C and 1,600°C','5,000°C and 6,000°C','0°C and 100°C'], a:'900°C and 1,600°C', why:'Magma forms about 60–200 km deep at these temperatures.'}
+ ],
+ l15: [
+  {t:'match', q:'Match each part of Ethiopia to its main rock type.', pairs:[['Central Ethiopia','Igneous'],['Eastern Ethiopia','Sedimentary'],['Northern, western and southern edges','Metamorphic']], why:'See the rock regions figure.'},
+  {t:'mcq', q:'Which rock type is most common around Addis Ababa?', o:['Igneous','Sedimentary','Metamorphic'], a:'Igneous', why:'Addis Ababa is in the centre, which is mostly igneous.'},
+  {t:'match', q:'Match each rock or mineral to its main use.', pairs:[['Coal','Fuel'],['Marble','Decorating floors and walls'],['Rock salt','Cooking'],['Granite','Building roads and houses']], why:'Rocks are used for fuel, building, decoration and food.'},
+  {t:'tf', q:'Soils form when rocks slowly break down.', a:true, why:'Soil formation is one of the important values of rocks.'},
+  {t:'mcq', q:'Metals such as gold and copper are mainly linked with:', o:['Igneous rocks','Sedimentary rocks','Metamorphic rocks'], a:'Metamorphic rocks', why:'See Table 1.3.'},
+  {t:'blank', q:'Coal is a fuel that comes from ___ rock.', a:['sedimentary'], why:'Coal formed from layers of ancient plants.'},
+  {t:'mcq', q:'A company wants to search for petroleum in Ethiopia. Based on this lesson, where should it look first?', o:['Eastern Ethiopia','Central Ethiopia','The western edge'], a:'Eastern Ethiopia', why:'Petroleum is found in sedimentary rock, which covers mainly eastern Ethiopia.'},
+  {t:'tf', q:'Metamorphic rocks are found mainly in the centre of Ethiopia.', a:false, why:'They are along the northern, western and southern edges.'},
+  {t:'mcq', q:'Which of these is NOT a use of rocks given in this lesson?', o:['Producing oxygen for the air','Fuel','Construction','Forming soil'], a:'Producing oxygen for the air', why:'Oxygen in the air is produced mainly by plants.'},
+  {t:'blank', q:'Marble is a ___ rock used to decorate buildings.', a:['metamorphic'], why:'Marble forms from limestone through heat and pressure.'}
+ ]
+};
+const norm = s => String(s).toLowerCase().replace(/[°%]/g, '').replace(/\s+/g, ' ').trim();
+const esc2 = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function shuffle(a, seed) { const r = a.slice(); let s = seed; for (let i = r.length - 1; i > 0; i--) { s = (s * 9301 + 49297) % 233280; const j = Math.floor(s / 233280 * (i + 1)); [r[i], r[j]] = [r[j], r[i]]; } return r; }
+const TYPE = { mcq: 'Multiple choice', tf: 'True or false', blank: 'Fill in the blank', match: 'Matching', order: 'Put in order' };
+document.querySelectorAll('.quiz[data-quiz]').forEach(box => {
+  const id = box.dataset.quiz, Q = QUIZ[id];
+  function itemHTML(it, k) {
+    const name = `${id}-${k}`;
+    let body = '';
+    if (it.t === 'mcq') body = `<div class="qopts">${it.o.map(o => `<label><input type="radio" name="${name}" value="${esc2(o)}"><span>${esc2(o)}</span></label>`).join('')}</div>`;
+    if (it.t === 'tf') body = `<div class="qopts row2">${['True', 'False'].map(o => `<label><input type="radio" name="${name}" value="${o}"><span>${o}</span></label>`).join('')}</div>`;
+    if (it.t === 'blank') { const [a, b] = it.q.split('___'); return `<li class="qi" data-k="${k}"><span class="qt">${TYPE[it.t]}</span><p>${esc2(a)}<input class="blank" id="${name}" aria-label="Your answer" autocomplete="off">${esc2(b)}</p><p class="qr"></p></li>`; }
+    if (it.t === 'match') { const rights = shuffle(it.pairs.map(p => p[1]), k + 7); body = `<div class="qmatch">${it.pairs.map((p, j) => `<label><span>${esc2(p[0])}</span><select id="${name}-${j}"><option value="">Choose…</option>${rights.map(r => `<option>${esc2(r)}</option>`).join('')}</select></label>`).join('')}</div>`; }
+    if (it.t === 'order') { const mixed = shuffle(it.items, k + 3); body = `<div class="qmatch">${mixed.map((x, j) => `<label><span>${esc2(x)}</span><select id="${name}-${j}" data-item="${esc2(x)}"><option value="">Position…</option>${it.items.map((_, n) => `<option>${n + 1}</option>`).join('')}</select></label>`).join('')}</div>`; }
+    return `<li class="qi" data-k="${k}"><span class="qt">${TYPE[it.t]}</span><p>${esc2(it.q)}</p>${body}<p class="qr"></p></li>`;
+  }
+  function build() {
+    box.innerHTML = `<div class="qhead"><span class="ck">Lesson quiz</span><h3>Test yourself: lesson ${id.slice(1, 2)}.${id.slice(2)}</h3><p class="note">${Q.length} questions. Answer them all, then check. No hints in the quiz.</p></div><ol class="qlist">${Q.map(itemHTML).join('')}</ol><p class="qerr" aria-live="polite"></p><div class="qfoot"><button class="qbtn">Check my answers</button></div><div class="qscore" aria-live="polite"></div>`;
+  }
+  function grade() {
+    let score = 0, blank = 0;
+    const res = Q.map((it, k) => {
+      const name = `${id}-${k}`; let ok = false, given = true, right = '';
+      if (it.t === 'mcq' || it.t === 'tf') { const c = box.querySelector(`input[name="${name}"]:checked`); given = !!c; ok = c && (it.t === 'tf' ? (c.value === 'True') === it.a : c.value === it.a); right = it.t === 'tf' ? (it.a ? 'True' : 'False') : it.a; }
+      if (it.t === 'blank') { const v = box.querySelector('#' + CSS.escape(name)).value; given = v.trim() !== ''; ok = it.a.some(a => norm(a) === norm(v)); right = it.a[0]; }
+      if (it.t === 'match') { const sel = it.pairs.map((p, j) => box.querySelector('#' + CSS.escape(`${name}-${j}`))); given = sel.every(s => s.value); ok = sel.every((s, j) => s.value === it.pairs[j][1]); right = it.pairs.map(p => `${p[0]} → ${p[1]}`).join('; '); }
+      if (it.t === 'order') { const sel = [...box.querySelectorAll(`select[id^="${name}-"]`)]; given = sel.every(s => s.value); ok = sel.every(s => it.items.indexOf(s.dataset.item) + 1 === +s.value); right = it.items.join(' → '); }
+      if (!given) blank++;
+      if (ok) score++;
+      return { ok, given, right };
+    });
+    if (blank && !box.dataset.confirm) { box.dataset.confirm = 1; box.querySelector('.qerr').textContent = `${blank} question${blank > 1 ? 's are' : ' is'} not answered yet. Answer ${blank > 1 ? 'them' : 'it'}, or press "Check my answers" again to check anyway.`; return; }
+    box.querySelector('.qerr').textContent = '';
+    res.forEach((r, k) => {
+      const li = box.querySelector(`.qi[data-k="${k}"]`), it = Q[k];
+      li.classList.add(r.ok ? 'ok' : 'no');
+      li.querySelectorAll('input,select').forEach(x => x.disabled = true);
+      li.querySelector('.qr').innerHTML = r.ok ? `<b>Correct.</b> ${esc2(it.why)}` : `<b>${r.given ? 'Not quite.' : 'Not answered.'}</b> Answer: ${esc2(r.right)}. ${esc2(it.why)}`;
+    });
+    const pct = Math.round(score / Q.length * 100);
+    const msg = pct >= 80 ? 'Well done. You understand this lesson.' : pct >= 50 ? 'Good start. Re-read the parts you missed, then try again.' : 'Go back through the lesson and its checks, then try again.';
+    box.querySelector('.qscore').innerHTML = `<span class="big">${score} / ${Q.length}</span><p>${msg}</p><button class="qbtn ghost">Try again</button>`;
+    box.querySelector('.qfoot').hidden = true;
+  }
+  box.addEventListener('click', e => {
+    const b = e.target.closest('.qbtn'); if (!b) return;
+    if (b.classList.contains('ghost')) { delete box.dataset.confirm; build(); box.scrollIntoView({ behavior: 'smooth', block: 'start' }); } else grade();
+  });
+  box.addEventListener('input', () => { if (box.dataset.confirm) { delete box.dataset.confirm; box.querySelector('.qerr').textContent = ''; } });
+  build();
+});
+
+/* ---- reading progress (this browser only) ---- */
+(function () {
+  let read = {};
+  try { read = JSON.parse(localStorage.getItem('meseret-u1-read') || '{}'); } catch (_) { read = {}; }
+  function sync() {
+    document.querySelectorAll('[data-done]').forEach(b => { const on = !!read[b.dataset.done]; b.setAttribute('aria-pressed', on); b.textContent = (on ? '✓ Read: ' : 'Mark as read: ') + 'lesson ' + b.dataset.done.slice(1, 2) + '.' + b.dataset.done.slice(2); });
+    document.querySelectorAll('nav.toc a[data-sec]').forEach(a => a.classList.toggle('read', !!read[a.dataset.sec]));
+  }
+  document.addEventListener('click', e => {
+    const b = e.target.closest('[data-done]'); if (!b) return;
+    read[b.dataset.done] = !read[b.dataset.done];
+    try { localStorage.setItem('meseret-u1-read', JSON.stringify(read)); } catch (_) {}
+    sync();
+  });
+  sync();
+})();
+</script>
+
+</body></html>

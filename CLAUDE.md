@@ -22,7 +22,8 @@ If a content job needs a screen kind the player lacks, stop and say so; do not f
 - One JSON file per textbook section: `content/g{grade}/{subject}/u{unit}/s{section-with-dashes}.json` (e.g. `content/g9/maths/u1/s1-1-4.json`).
 - Every file validates against `schema/lesson.schema.json`. Run `node scripts/validate.mjs content/` before finishing. A session that cannot make it pass reports the failure; it never patches around it.
 - IDs: lesson id `g9.maths.u1.s1-1-4`; idea ids are stable slugs `math.gcf`, `sci.lab-safety.acid-into-water`; item ids `{lesson id}.{n}`. IDs never change once published.
-- Screen kinds the player renders (add a kind to the player first, then use it): `guess`, `tiles`, `sort`, `tap`, `steps`, `name`, `mcq`, `tf`, `blank`, `pick`, `match`, `order`.
+- Screen kinds the player renders (add a kind to the player first, then use it): `read`, `guess`, `tiles`, `sort`, `tap`, `steps`, `name`, `mcq`, `tf`, `blank`, `pick`, `match`, `order`.
+- The player shows a lesson as ONE vertical scrolling page, like the textbook (no Next button between screens). Screens are blocks on that page; questions are answered inline. `read` blocks carry the book's own text (`paras`, optional `table`, `note`), so the page reads like the book.
 
 ## Teaching rules (non-negotiable)
 1. Teach before testing. Order inside an idea: hook → explore → name it → check → practise.

@@ -1,0 +1,803 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Meseret General Science Unit 1</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: one reading column (max 680px), sticky lesson nav, each section = text + tappable figure + activity. */
+:root {
+  --bg: #FBF7F0; --surface: #FFFFFF; --surface-2: #F2EEE4; --line: #E7E0D2;
+  --fg: #1A1A17; --muted: #6B6457;
+  --accent: #1F6B4A; --accent-ink: #FFFFFF; --accent-soft: #E6EFE9; --accent-line: #C9DFD2;
+  --warm: #C2641B; --warm-soft: #FDF4E7; --warm-ink: #8A4A12; --warm-line: #EBD7B8;
+  --bad-soft: #FBE9E4; --bad-ink: #9C2A12; --bad-line: #EFC3B6;
+  --space: #18233F; --space-ink: #E9ECF5; --night: #2E3A5C;
+  --l-crust: #7B5B3A; --l-mantle: #D9822B; --l-ocore: #E8A93A; --l-icore: #F6D46B;
+  --r-ign: #C2641B; --r-sed: #D8B979; --r-met: #7C6A9C;
+  --display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --body: 'Nunito Sans', 'Segoe UI', system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #151613; --surface: #1F201C; --surface-2: #282923; --line: #383932;
+  --fg: #F1EEE6; --muted: #ABA697;
+  --accent: #6BBF95; --accent-ink: #0E1A13; --accent-soft: #1C3328; --accent-line: #2D4D3C;
+  --warm: #E59152; --warm-soft: #33261A; --warm-ink: #F2B887; --warm-line: #55402A;
+  --bad-soft: #3A211B; --bad-ink: #F2A390; --bad-line: #5A3328;
+  --space: #0E1428; --space-ink: #E9ECF5; --night: #253150;
+  --l-crust: #A98560; --l-mantle: #D9822B; --l-ocore: #E8A93A; --l-icore: #F6D46B;
+  --r-ign: #E59152; --r-sed: #D8B979; --r-met: #A895C9;
+  color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #151613; --surface: #1F201C; --surface-2: #282923; --line: #383932;
+  --fg: #F1EEE6; --muted: #ABA697;
+  --accent: #6BBF95; --accent-ink: #0E1A13; --accent-soft: #1C3328; --accent-line: #2D4D3C;
+  --warm: #E59152; --warm-soft: #33261A; --warm-ink: #F2B887; --warm-line: #55402A;
+  --bad-soft: #3A211B; --bad-ink: #F2A390; --bad-line: #5A3328;
+  --space: #0E1428; --space-ink: #E9ECF5; --night: #253150;
+  --l-crust: #A98560; --l-mantle: #D9822B; --l-ocore: #E8A93A; --l-icore: #F6D46B;
+  --r-ign: #E59152; --r-sed: #D8B979; --r-met: #A895C9;
+  color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 17px; line-height: 1.6; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+.wrap { max-width: 680px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 8px 64px; }
+
+nav.toc { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+nav.toc .in { max-width: 680px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 8px; display: flex; gap: 6px; overflow-x: auto; }
+nav.toc a { flex: none; text-decoration: none; color: var(--fg); background: var(--surface); border: 1.5px solid var(--line); border-radius: 99px; padding: 6px 12px; font-size: 14px; font-weight: 800; min-height: 36px; display: inline-flex; align-items: center; gap: 4px; }
+nav.toc a.read { border-color: var(--accent); color: var(--accent); }
+nav.toc a.read::after { content: "✓"; }
+
+header.unit { padding-block: 24px 8px; display: grid; gap: 12px; }
+.eyebrow { font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1, h2, h3 { font-family: var(--display); font-weight: 700; margin: 0; text-wrap: balance; line-height: 1.2; }
+h1 { font-size: 32px; }
+h2 { font-size: 26px; }
+h3 { font-size: 20px; margin-top: 8px; }
+h4 { font-size: 16px; margin: 4px 0 0; font-weight: 800; }
+p { margin: 0; }
+section.lesson { display: grid; gap: 16px; padding-block: 40px 8px; border-top: 2px solid var(--line); margin-top: 32px; scroll-margin-top: 64px; }
+.part { display: grid; gap: 12px; }
+.card { background: var(--surface); border: 1.5px solid var(--line); border-radius: 16px; padding: 16px; }
+.outcomes ul, .card ul { margin: 6px 0 0; padding-left: 20px; }
+.compet { background: var(--accent-soft); border: 1.5px solid var(--accent-line); border-radius: 14px; padding: 12px 14px; font-size: 16px; }
+.compet b { color: var(--accent); }
+
+.kw { display: flex; flex-wrap: wrap; gap: 6px; }
+.kw button { border: 1.5px solid var(--warm-line); background: var(--warm-soft); color: var(--warm-ink); border-radius: 99px; padding: 4px 12px; font-size: 14px; font-weight: 800; min-height: 36px; cursor: pointer; }
+.kw button[aria-pressed="true"] { background: var(--warm); color: #fff; border-color: var(--warm); }
+.kwdef { font-size: 16px; min-height: 1.6em; color: var(--muted); }
+.kwdef strong { color: var(--fg); }
+
+.startup { border: 1.5px dashed var(--accent-line); border-radius: 14px; padding: 12px 14px; }
+.startup summary { cursor: pointer; font-weight: 800; color: var(--accent); min-height: 32px; }
+.startup ul { margin: 6px 0 0; padding-left: 20px; }
+.focus { background: var(--surface-2); border-radius: 14px; padding: 12px 14px; font-size: 16px; }
+.focus b { display: block; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--warm-ink); }
+.fix { font-size: 14px; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 8px; }
+.fix b { color: var(--bad-ink); }
+.todo { background: var(--warm-soft); border: 1.5px solid var(--warm-line); border-radius: 16px; padding: 14px 16px; }
+.todo h4 { color: var(--warm-ink); }
+.todo ol { margin: 6px 0 0; padding-left: 22px; }
+.tbl { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; }
+th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+td.n { font-variant-numeric: tabular-nums; text-align: right; }
+
+/* figures */
+figure { margin: 0; display: grid; gap: 10px; }
+figcaption { font-size: 14px; color: var(--muted); }
+.fig { background: var(--surface); border: 1.5px solid var(--line); border-radius: 18px; padding: 14px; display: grid; gap: 12px; }
+.info { background: var(--surface-2); border-radius: 12px; padding: 10px 12px; font-size: 16px; min-height: 3.2em; }
+.info strong { display: block; }
+.hint { font-size: 13px; font-weight: 700; color: var(--accent); }
+.space { background: var(--space); color: var(--space-ink); border-radius: 14px; overflow-x: auto; }
+.space svg { display: block; min-width: 560px; width: 100%; height: auto; }
+.tap { cursor: pointer; }
+.tap:hover > circle, .tap:focus-visible > circle { stroke: #fff; stroke-width: 2; }
+svg text { font-family: var(--body); }
+.btnrow { display: flex; flex-wrap: wrap; gap: 8px; }
+.pill { border: 1.5px solid var(--line); background: var(--surface); border-radius: 12px; padding: 8px 14px; font-weight: 800; font-size: 15px; min-height: 44px; cursor: pointer; }
+.pill[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+.chain { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.chain button { border: 1.5px solid var(--line); background: var(--surface); border-radius: 12px; padding: 10px 4px; font-weight: 800; font-size: 14px; cursor: pointer; min-height: 52px; }
+.chain button[aria-pressed="true"] { border-color: var(--warm); background: var(--warm-soft); color: var(--warm-ink); }
+input[type=range] { width: 100%; accent-color: var(--accent); min-height: 32px; }
+.bars { display: grid; gap: 7px; }
+.brow { display: grid; grid-template-columns: 118px 1fr 52px; gap: 8px; align-items: center; font-size: 14px; }
+.brow .track { height: 14px; background: var(--surface-2); border-radius: 99px; overflow: hidden; }
+.brow .fill { display: block; height: 100%; background: var(--accent); border-radius: 99px; }
+.brow b { text-align: right; font-variant-numeric: tabular-nums; }
+.stack { display: flex; height: 34px; border-radius: 10px; overflow: hidden; font-size: 13px; font-weight: 800; }
+.stack span { display: grid; place-items: center; color: #fff; }
+.compass { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; max-width: 360px; margin: 0 auto; width: 100%; }
+.compass div { aspect-ratio: 1.4; border-radius: 10px; display: grid; place-items: center; text-align: center; font-size: 13px; font-weight: 800; color: #1A1A17; padding: 4px; }
+.legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 14px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 14px; height: 14px; border-radius: 4px; display: inline-block; }
+
+/* sorter + quiz */
+.sorter { display: grid; gap: 10px; }
+.sorter .item { font-family: var(--display); font-size: 24px; font-weight: 700; text-align: center; padding: 8px; }
+.sorter .bins { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }
+.sorter .bins button { border: 1.5px solid var(--line); background: var(--surface); border-radius: 12px; min-height: 52px; font-weight: 800; cursor: pointer; }
+.fb { font-size: 16px; font-weight: 700; min-height: 1.6em; }
+.fb.ok { color: var(--accent); } .fb.no { color: var(--bad-ink); }
+.activity { background: var(--surface); border: 2px solid var(--accent-line); border-radius: 18px; padding: 16px; display: grid; gap: 12px; }
+.activity > h3 { margin: 0; color: var(--accent); }
+.qa { border-top: 1px solid var(--line); padding-top: 10px; }
+.qa summary { cursor: pointer; font-weight: 700; min-height: 32px; list-style-position: outside; }
+.qa summary::marker { color: var(--accent); }
+.qa .ans { margin-top: 6px; background: var(--accent-soft); border-radius: 10px; padding: 8px 12px; font-size: 16px; }
+.mcq { display: grid; gap: 8px; }
+.mcq .opts { display: grid; gap: 8px; }
+.mcq button { text-align: left; border: 1.5px solid var(--line); background: var(--surface); border-radius: 12px; padding: 10px 14px; min-height: 48px; font-weight: 700; cursor: pointer; }
+.mcq button.ok { border-color: var(--accent); background: var(--accent-soft); }
+.mcq button.no { border-color: var(--bad-line); background: var(--bad-soft); color: var(--bad-ink); }
+.check { background: var(--surface); border: 1.5px dashed var(--accent); border-radius: 16px; padding: 14px 16px; }
+.ck { font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+.fb small { display: block; font-weight: 600; color: var(--fg); margin-top: 2px; }
+.quiz { background: var(--surface); border: 2px solid var(--warm-line); border-radius: 20px; padding: 18px 16px; display: grid; gap: 14px; scroll-margin-top: 64px; }
+.quiz h3 { margin: 4px 0 2px; }
+.qlist { margin: 0; padding-left: 22px; display: grid; gap: 14px; }
+.qi { padding: 12px 12px 10px 4px; border-bottom: 1px solid var(--line); }
+.qi::marker { font-weight: 800; color: var(--muted); }
+.qi p { margin: 4px 0; }
+.qt { font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--warm-ink); }
+.qi.ok { background: var(--accent-soft); border-radius: 12px; } .qi.no { background: var(--bad-soft); border-radius: 12px; }
+.qopts { display: grid; gap: 6px; margin-top: 6px; } .qopts.row2 { grid-template-columns: 1fr 1fr; }
+.qopts label { display: flex; gap: 10px; align-items: center; border: 1.5px solid var(--line); background: var(--surface); border-radius: 12px; padding: 8px 12px; min-height: 46px; cursor: pointer; font-weight: 600; }
+.qopts label:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
+.qopts input { accent-color: var(--accent); width: 18px; height: 18px; flex: none; }
+.qmatch { display: grid; gap: 8px; margin-top: 6px; }
+.qmatch label { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.3fr); gap: 8px; align-items: center; font-weight: 700; font-size: 15px; }
+.qmatch select, input.blank { font: inherit; font-size: 15px; color: var(--fg); background: var(--surface); border: 1.5px solid var(--line); border-radius: 10px; min-height: 44px; padding: 0 8px; max-width: 100%; }
+input.blank { width: 9em; margin: 0 6px; font-weight: 800; text-align: center; }
+.qr { font-size: 15px; } .qr b { color: var(--fg); }
+.qerr { color: var(--bad-ink); font-weight: 700; margin: 0; min-height: 0; }
+.qbtn { min-height: 52px; border: 0; border-radius: 14px; background: var(--accent); color: var(--accent-ink); font-weight: 800; font-size: 17px; padding: 0 20px; cursor: pointer; width: 100%; }
+.qbtn.ghost { background: transparent; border: 1.5px solid var(--accent); color: var(--accent); width: auto; }
+.qscore { display: grid; gap: 6px; justify-items: start; }
+.qscore .big { font-family: var(--display); font-size: 40px; font-weight: 700; font-variant-numeric: tabular-nums; }
+@media (max-width: 420px) { .qmatch label { grid-template-columns: 1fr; gap: 4px; } }
+.group { font-size: 16px; color: var(--muted); }
+.group b { color: var(--fg); }
+.done-btn { justify-self: start; border: 1.5px solid var(--accent); background: var(--surface); color: var(--accent); border-radius: 12px; padding: 0 16px; min-height: 48px; font-weight: 800; cursor: pointer; }
+.done-btn[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+dl.gloss { display: grid; grid-template-columns: minmax(110px, 30%) 1fr; gap: 8px 14px; margin: 0; font-size: 16px; }
+dl.gloss dt { font-weight: 800; }
+dl.gloss dd { margin: 0; color: var(--muted); }
+.note { font-size: 13px; color: var(--muted); }
+@media (max-width: 420px) { .chain { grid-template-columns: repeat(2, 1fr); } dl.gloss { grid-template-columns: 1fr; } dl.gloss dd { margin-bottom: 6px; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* additions for this unit (same tokens and style) */
+.tap:hover > rect, .tap:focus-visible > rect { stroke: var(--accent); stroke-width: 3; }
+.tools { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.tools button { border: 1.5px solid var(--line); background: var(--surface); border-radius: 12px; padding: 6px 1px; min-height: 92px; cursor: pointer; display: grid; gap: 2px; justify-items: center; align-content: center; font-weight: 800; font-size: 11px; line-height: 1.2; color: var(--fg); overflow-wrap: break-word; }
+.tools button[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+.tools svg { width: 46px; height: 46px; color: var(--fg); }
+.tools button[aria-pressed="true"] svg { color: var(--fg); }
+section.lesson > *, .part > *, .fig > *, .activity > *, header.unit > * { min-width: 0; }
+.quiz > *, .qlist > *, .qi, .qi > *, .qmatch > *, .qopts > * { min-width: 0; }
+.qmatch select { width: 100%; text-overflow: ellipsis; }
+.qmatch label { grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); }
+@media (max-width: 420px) { .qmatch label { grid-template-columns: minmax(0, 1fr); } }
+</style>
+
+<nav class="toc" aria-label="Lessons"><div class="in">
+  <a href="#l11" data-sec="l11">1.1 Nature of science</a>
+  <a href="#l12" data-sec="l12">1.2 Lab &amp; safety</a>
+  <a href="#review">Review</a>
+  <a href="#gloss">Glossary</a>
+</div></nav>
+
+<div class="wrap">
+<header class="unit">
+  <div class="eyebrow">Grade 7 · General Science · Unit One</div>
+  <h1>Basic Concepts of Science</h1>
+  <div class="card outcomes"><h4>After this unit you will be able to:</h4>
+    <ul>
+      <li>Define science as a body of knowledge and as the ways of working that add to it</li>
+      <li>Describe the main branches of science and explain how they are related</li>
+      <li>Explain how science and technology affect what people believe, do and think</li>
+      <li>Appreciate what outstanding scientists have given to science and technology</li>
+      <li>Explain why scientific values matter when we make decisions and solve problems</li>
+      <li>Name important contributions of Ethiopian scientists</li>
+      <li>Identify common laboratory tools</li>
+      <li>Use laboratory apparatus in a safe way</li>
+      <li>Take precautions when you work in the laboratory</li>
+      <li>Know the laboratory safety rules and procedures</li>
+      <li>Spot possible hazards and follow the right safety steps in the lab</li>
+    </ul>
+  </div>
+  <p class="note">Interactive edition based on the General Science Grade 7 Student Textbook, Unit 1, pages 1–19. The publisher and year are not printed on the supplied pages. Tap anything that looks like a button. Where the printed book has an error or is unclear, a short note appears. The book's photographs are not reproduced; simple drawings are used instead.</p>
+</header>
+<!-- ================= 1.1 ================= -->
+<section class="lesson" id="l11">
+  <div class="eyebrow">Lesson 1.1 · pages 2–11</div>
+  <h2>The nature of science and its branches</h2>
+  <div class="compet"><b>By the end of this lesson you can:</b> define science; tell indigenous science from conventional science; describe the main branches of science and how they overlap; explain how science and technology are linked; appreciate world and Ethiopian scientists; and explain why ethics matter in science.</div>
+<p class="fix"><b>Note:</b> the printed book also lists an aim to "solve the issue of environmental problems in their school compound and its surroundings", and the unit outcomes mention "scientific values in decision making". The supplied pages have no activity or section on these two points, so they are not built here. Please check with the teacher.</p>
+<div class="card"><h4>Key words · tap one</h4><div class="kw" data-terms="Science,Indigenous science,Conventional science,Natural science,Social science,Biology,Chemistry,Physics,Biophysics,Biochemistry,Physical chemistry,Technology,Technologist,Scientist,Ethics"></div><p class="kwdef" aria-live="polite">Tap a word to see what it means.</p></div>
+
+  <div class="part">
+    <h3>1.1.1 What is science?</h3>
+    <p>In the lower grades you learnt about science in general, for example environmental science. In Grade 7 and Grade 8 you study <strong>General Science</strong>, which is about things in your daily life.</p>
+<p class="fix"><b>Note:</b> the printed book has no heading "1.1.1". It jumps from "1.1" to the introduction. The heading is added here so the numbering matches 1.1.2, 1.1.3 and 1.1.4.</p>
+<p>The word <em>science</em> comes from the Latin word <em>scientia</em>, which means "knowledge". But science is not only having knowledge. Science is a <strong>systematic</strong> (orderly) method of gaining knowledge about the physical and natural world and about human society. It is a way of learning what things are like, and it is based on <strong>observation and evidence</strong>.</p>
+    <p>Science can be <strong>indigenous</strong> or <strong>conventional</strong>.</p>
+    <p><strong>Indigenous science</strong> is the process by which indigenous people build up their knowledge from experience of their natural environment. This knowledge rests on social, physical and spiritual understanding.</p>
+    <p><strong>Conventional science</strong> is the system of knowledge that relies on laws established by applying the <strong>scientific method</strong> to events in the world around us. It is commonly called Western science. Indigenous science, by contrast, brings in local people's knowledge and viewpoints.</p>
+<p class="fix"><b>Note:</b> modern science has grown from the work of people in many cultures, so "Western" is only a common label, not the whole story.</p>
+<figure class="fig" id="indigfig"><div class="btnrow" role="group" aria-label="Kinds of science"></div><div class="info" aria-live="polite"></div><figcaption>Figure: the two kinds of science. Tap each one.</figcaption></figure>
+<div class="mcq check" data-ans="It is an orderly way of getting knowledge, based on observation and evidence" data-why="Science is a systematic method, not only a store of facts." data-clue="Look for the words &quot;systematic method&quot; and &quot;evidence&quot; in the text."><span class="ck">Check your understanding</span><h4>Why is science more than &quot;having knowledge&quot;?</h4><div class="opts"><button>It is only memorising facts</button><button>It is only what happens in laboratories</button><button>It is guessing until you are right</button><button>It is an orderly way of getting knowledge, based on observation and evidence</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="Indigenous science" data-why="It is knowledge built from local people&#x27;s long experience of their environment." data-clue="Which kind of science comes from local people and their surroundings?"><span class="ck">Check your understanding</span><h4>A family has kept grain safe for generations using local methods they learnt from their elders. This is mainly an example of:</h4><div class="opts"><button>A law of physics</button><button>Indigenous science</button><button>Conventional science</button><button>Social science</button></div><p class="fb" aria-live="polite"></p></div>
+<h4>Why learn indigenous knowledge in science?</h4>
+    <p>There are two main reasons. First, it makes us more aware of our own culture and identity. Second, it lets us bring indigenous knowledge together with Western science.</p>
+    <p>Ethiopia is one of the countries where a wide variety of indigenous knowledge has been used for a long time to solve practical problems. Two examples:</p>
+    <ul>
+      <li><strong>Making medicine from plants</strong> to treat disease and fight infection.</li>
+      <li><strong>Preserving meat</strong> with salt and by smoke drying.</li>
+    </ul>
+    <p>Some common medicinal plants that people use for treating and curing diseases:</p>
+<div class="tbl card"><table><thead><tr><th>Local name</th><th>Scientific name</th></tr></thead><tbody><tr><td>Kosso tree</td><td><em>Hagenia abyssinica</em></td></tr><tr><td>Bahrzaf</td><td><em>Eucalyptus globulus</em></td></tr><tr><td>Damakese</td><td><em>Ocimum lamiifolium</em> Hochst.</td></tr></tbody></table></div>
+<p class="fix"><b>Note:</b> the book does not say which diseases each plant treats. Never use a plant as medicine unless a health worker or a knowledgeable adult tells you how.</p>
+<div class="mcq check" data-ans="Using kosso, bahrzaf or damakese plants to treat illness" data-why="These plants have been used by local people for a long time to treat disease." data-clue="Think about knowledge that comes from local plants and people."><span class="ck">Check your understanding</span><h4>Which is an example of Ethiopian indigenous knowledge?</h4><div class="opts"><button>Heating liquid with a Bunsen burner</button><button>Writing a laboratory report</button><button>Using kosso, bahrzaf or damakese plants to treat illness</button><button>Using a microscope to see cells</button></div><p class="fb" aria-live="polite"></p></div>
+  </div>
+
+  <div class="part">
+    <h3>1.1.2 Branches of science</h3>
+<p>Science has two major categories: <strong>natural science</strong> and <strong>social science</strong>. Natural science is the study of nature and natural laws. It includes chemistry, biology and physics.</p>
+    <figure class="fig" id="treefig">
+      <svg viewBox="0 0 320 224" role="group" aria-label="Branches of science. Tap a box." style="width:100%;max-width:440px;justify-self:center"></svg>
+      <div class="info" aria-live="polite"><span class="hint">Tap a box.</span></div>
+      <figcaption>Figure 1.1 Branches of science.</figcaption>
+    </figure>
+    <ul>
+      <li><strong>Biology</strong> is the branch of natural science that studies living things.</li>
+      <li><strong>Chemistry</strong> deals with the properties, make-up, structure and changes of substances.</li>
+      <li><strong>Physics</strong> studies the nature of matter and energy and how they interact.</li>
+    </ul>
+<div class="mcq check" data-ans="Natural science and social science" data-why="Natural science and social science are the two major categories." data-clue="Look at the first split under &quot;Science&quot; in Figure 1.1."><span class="ck">Check your understanding</span><h4>Science has two major categories. Which pair is correct?</h4><div class="opts"><button>Biology and chemistry</button><button>Physics and technology</button><button>Indigenous science and ethics</button><button>Natural science and social science</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="Biology" data-why="A plant is a living thing, and biology studies living things." data-clue="Which branch studies living things?"><span class="ck">Check your understanding</span><h4>A student studies how a maize plant grows. Which branch of natural science is this?</h4><div class="opts"><button>Chemistry</button><button>Physics</button><button>Social science</button><button>Biology</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="Physics" data-why="That is the definition of physics." data-clue="Read the three bullet points again."><span class="ck">Check your understanding</span><h4>Which branch studies the nature of matter, energy and how they interact?</h4><div class="opts"><button>Biology</button><button>Chemistry</button><button>Social science</button><button>Physics</button></div><p class="fb" aria-live="polite"></p></div>
+<p>There is no clear border line between the branches of natural science. Their knowledge overlaps. For example, chemistry and physics together are studied as <strong>physical science (physical chemistry)</strong>: the study of the properties of materials and how they interact.</p>
+    <ul>
+      <li><strong>Biophysics</strong> combines biology and physics. It studies physical events and processes in living things, on scales from molecules to cells, tissues and whole organisms.</li>
+      <li><strong>Biochemistry</strong> combines biology and chemistry. It explores the chemical processes inside living things, that is, the chemical reactions in them.</li>
+    </ul>
+<p class="fix"><b>Note:</b> spelling slips in the printed book are corrected here: "Biopysics" is biophysics, "boarder" is border, and a few more in the lab pages.</p>
+<figure class="fig" id="vennfig">
+      <div class="btnrow" role="group" aria-label="Fields of natural science"></div>
+      <svg viewBox="0 0 320 250" role="group" aria-label="Venn diagram of biology, physics and chemistry. Tap a circle." style="width:100%;max-width:400px;justify-self:center"></svg>
+      <div class="info" aria-live="polite"></div>
+      <figcaption>Figure 1.2 How some fields of natural science overlap. Tap a button to see which circles it joins.</figcaption>
+    </figure>
+<div class="mcq check" data-ans="There is no clear border line between them" data-why="Their knowledge overlaps, so new fields combine two of them." data-clue="Read the first sentence after the three bullet points."><span class="ck">Check your understanding</span><h4>Why do the branches of natural science overlap?</h4><div class="opts"><button>They are all the same subject</button><button>Only physics is a real science</button><button>Scientists cannot decide which is which</button><button>There is no clear border line between them</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="Biophysics" data-why="Biophysics = biology + physics: physical processes in living things." data-clue="Look at the Venn diagram: which two circles does it join?"><span class="ck">Check your understanding</span><h4>Studying the physical processes inside living cells belongs to:</h4><div class="opts"><button>Biochemistry</button><button>Physical chemistry</button><button>Social science</button><button>Biophysics</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="activity"><h3>Exercise 1.1</h3>
+<h4>Give short answers.</h4>
+<details class="qa"><summary>1. What is science?</summary><div class="ans">A systematic method of gaining knowledge about the physical and natural world and human society, based on observation and evidence.</div></details>
+<details class="qa"><summary>2. List the three branches of natural science.</summary><div class="ans">Biology, chemistry and physics.</div></details>
+<details class="qa"><summary>3. Which field of science studies matter and energy?</summary><div class="ans">Physics.</div></details>
+<details class="qa"><summary>4. What is the difference between biophysics and biochemistry?</summary><div class="ans">Biophysics combines biology and physics: physical processes in living things. Biochemistry combines biology and chemistry: chemical processes and reactions in living things.</div></details>
+</div>
+  </div>
+
+  <div class="part">
+    <h3>1.1.3 Science and technology</h3>
+    <p>You have seen what science is. Now let us see what technology is.</p>
+    <p><strong>Technology</strong> is the use of scientific knowledge to help people work more easily, live better and enjoy their environment more. It uses materials, tools, techniques and sources of power to make life easier and more pleasant, and work more productive. In short, it puts scientific knowledge into practice.</p>
+    <p>Cars, TV sets, radios, bulbs, microchips, computers, airplanes and home appliances are all products of technology.</p>
+    <p>A person who studies technology is called a <strong>technologist</strong>. Technologists use science and mathematics knowledge and skills to produce very useful tools.</p>
+<figure class="fig" id="scitechfig"><div class="btnrow" role="group" aria-label="Science and technology"></div><div class="info" aria-live="polite"></div><figcaption>Figure 1.3 Science and technology. Tap each button.</figcaption></figure>
+<p>Science and technology are closely connected, but they are different fields driven by different ideas and processes. Science produces knowledge for its own sake, to propose and test explanations. Technology develops human-made solutions to real-world problems. When science uses technology to gain knowledge, technology in turn uses scientific knowledge to make solutions.</p>
+<div class="mcq check" data-ans="It uses scientific knowledge to help people work more easily and live better" data-why="Technology puts scientific knowledge into practice." data-clue="Read the first paragraph of 1.1.3."><span class="ck">Check your understanding</span><h4>Which statement about technology is correct?</h4><div class="opts"><button>It is the study of nature for its own sake</button><button>It only means very old tools</button><button>It has nothing to do with science</button><button>It uses scientific knowledge to help people work more easily and live better</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="How can we solve this real problem or make this job easier?" data-why="Technology develops human-made solutions to real-world problems." data-clue="Compare the aims in the Science and Technology buttons."><span class="ck">Check your understanding</span><h4>Science asks &quot;why does this happen?&quot; What does technology mainly ask?</h4><div class="opts"><button>What date is it?</button><button>How can we solve this real problem or make this job easier?</button><button>Who discovered it first?</button><button>Is this knowledge indigenous?</button></div><p class="fb" aria-live="polite"></p></div>
+<figure class="fig" id="scitechsort"><div class="sorter"></div><figcaption>Sort it: science or technology?</figcaption></figure>
+<h4>Uses of science and technology for society</h4>
+    <p>Science and technology play an important role in our daily life. They are mainly concerned with making new materials with useful properties to meet people's needs. They help in many areas:</p>
+<figure class="fig" id="usesfig"><div class="btnrow" role="group" aria-label="Uses of science and technology"></div><div class="info" aria-live="polite"></div><figcaption>Tap an area to see how science and technology help.</figcaption></figure>
+<div class="mcq check" data-ans="Making new medicines and drugs" data-why="Production of medicines and drugs is one of the listed roles." data-clue="Open the Medicine button."><span class="ck">Check your understanding</span><h4>Which of these shows science and technology helping medicine?</h4><div class="opts"><button>Making car batteries</button><button>Making new medicines and drugs</button><button>Building a road</button><button>Dyeing cloth</button></div><p class="fb" aria-live="polite"></p></div>
+  </div>
+
+  <div class="part">
+    <h3>1.1.4 Scientists and ethical discipline</h3>
+    <h4>Famous scientists in the world and in Ethiopia</h4>
+    <p>A <strong>scientist</strong> is someone who systematically gathers and uses research and evidence to make hypotheses and test them, in order to gain and share understanding and knowledge. Here are some world and Ethiopian scientists and what they gave us.</p>
+<figure class="fig" id="scientistfig"><div class="btnrow" role="group" aria-label="Scientists"></div><div class="info" aria-live="polite"></div><figcaption>Figures 1.4 and 1.5 Some well-known world scientists and Ethiopian scientists. Tap a name.</figcaption></figure>
+<p class="fix"><b>Note:</b> Marie Curie won two Nobel Prizes: Physics in 1903 (shared) and Chemistry in 1911. The 1911 prize was for polonium and radium. The unit summary also names "Engineer Kitew Ejigu", but the supplied pages give no details about him. Details about Prof. Yalemtsehay Mekonnen (birth date and "first female professor") are as printed and need teacher review.</p>
+<div class="mcq check" data-ans="Isaac Newton" data-why="Newton (1643–1727) discovered the laws of motion and gravity." data-clue="Open the Isaac Newton button."><span class="ck">Check your understanding</span><h4>Which scientist discovered the laws of motion and the law of gravity?</h4><div class="opts"><button>Albert Einstein</button><button>Isaac Newton</button><button>Michael Faraday</button><button>Marie Curie</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="Endod berries kill the snails that spread the disease" data-why="The berries are a molluscicide: they kill snails, so the parasitic worm cannot spread." data-clue="What does a molluscicide kill? (Bilharzia is also called snail fever.)"><span class="ck">Check your understanding</span><h4>Dr. Aklilu Lemma&#x27;s endod discovery helps prevent bilharzia. How?</h4><div class="opts"><button>It makes people stronger</button><button>It cleans the air</button><button>It makes rain fall</button><button>Endod berries kill the snails that spread the disease</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="Dr. Tewolde Berhan Gebre Egziabher" data-why="That is the work of Dr. Tewolde Berhan Gebre Egziabher." data-clue="Open the Ethiopian scientists in the figure and compare."><span class="ck">Check your understanding</span><h4>Which Ethiopian scientist worked to protect biodiversity and communities&#x27; rights to their genetic resources?</h4><div class="opts"><button>Dr. Gebisa Ejeta</button><button>Dr. Aklilu Lemma</button><button>Prof. Yalemtsehay Mekonnen</button><button>Dr. Tewolde Berhan Gebre Egziabher</button></div><p class="fb" aria-live="polite"></p></div>
+<h4>Ethical principles in science</h4>
+<p><strong>Ethics</strong> are an essential part of science. Like science itself, ethics must be consistent and justified when we judge what scientists do. Things in front of us can be right or wrong, good or bad, and we must decide what we really want to do from an ethical point of view. These are some of the ethical principles that scientific codes address:</p>
+<figure class="fig" id="ethicsfig"><div class="btnrow" role="group" aria-label="Ethical principles"></div><div class="info" aria-live="polite"></div><figcaption>Tap a principle. (The book only lists the names; the short meanings and school examples are added to help.)</figcaption></figure>
+<div class="mcq check" data-ans="Openness" data-why="Openness means sharing methods and results and listening to others." data-clue="Open the Openness button."><span class="ck">Check your understanding</span><h4>A scientist shares her methods so that others can repeat her experiment. Which principle is this?</h4><div class="opts"><button>Competence</button><button>Openness</button><button>Legality</button><button>Carefulness</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="Carefulness" data-why="Carefulness means working with care and checking to avoid mistakes." data-clue="Which principle is about avoiding mistakes?"><span class="ck">Check your understanding</span><h4>A student double-checks every reading before writing it down. Which principle is this?</h4><div class="opts"><button>Legality</button><button>Openness</button><button>Carefulness</button><button>Non-discrimination</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="activity"><h3>Exercise 1.2</h3>
+<h4>Choose the best answer.</h4>
+<div class="mcq" data-ans="All of the above" data-why="They interact, are interrelated and overlap."><h4>1. The natural science disciplines are:</h4><div class="opts"><button>All of the above</button><button>interacting</button><button>interrelated</button><button>overlapping</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq" data-ans="Chemistry and Biology" data-why="Chemistry studies composition; biology studies living organisms."><h4>2. The branches of natural science that study the composition of compounds and the processes in organisms are:</h4><div class="opts"><button>Biology and Geology</button><button>Chemistry and Biology</button><button>Physics and Geology</button><button>Biology and Physics</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq" data-ans="All are correct" data-why="All three statements are true."><h4>3. Which is true about science?</h4><div class="opts"><button>All are correct</button><button>It is the study of the physical and natural world</button><button>It comes from the Latin word &quot;scientia&quot;, meaning knowledge</button><button>It is a system of gaining knowledge using the scientific method</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq" data-ans="It incorporates local people&#x27;s knowledge" data-why="Indigenous science brings in local people&#x27;s knowledge."><h4>4. Which is true about indigenous knowledge?</h4><div class="opts"><button>It is based on the scientific method</button><button>It is knowledge derived from western countries</button><button>It has a universal view and is commonly recognised as western science</button><button>It incorporates local people&#x27;s knowledge</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq" data-ans="Isaac Newton" data-why="Isaac Newton."><h4>5. Which world-famous scientist discovered the law of motion and gravity?</h4><div class="opts"><button>Marie Curie</button><button>Albert Einstein</button><button>Isaac Newton</button><button>Michael Faraday</button></div><p class="fb" aria-live="polite"></p></div>
+</div>
+  </div>
+  <div class="quiz" data-quiz="l11"></div>
+  <button class="done-btn" data-done="l11" aria-pressed="false">Mark lesson 1.1 as read</button>
+</section>
+
+<!-- ================= 1.2 ================= -->
+<section class="lesson" id="l12">
+  <div class="eyebrow">Lesson 1.2 · pages 12–16</div>
+  <h2>Common laboratory equipment, uses, safety rules and procedures</h2>
+  <div class="compet"><b>By the end of this lesson you can:</b> identify common laboratory tools and describe their uses; follow laboratory safety rules and procedures; take precautions; identify hazards; use the right safety steps; and use protective equipment for a given activity.</div>
+<div class="card"><h4>Key words · tap one</h4><div class="kw" data-terms="Laboratory,Laboratory equipment,Laboratory report,Safety rules,Hazard signs,Personal protective equipment"></div><p class="kwdef" aria-live="polite">Tap a word to see what it means.</p></div>
+
+  <div class="part">
+    <h3>1.2.1 Common laboratory apparatus</h3>
+<p>Laboratory equipment is made up of different sets of apparatus. They are designed for many tasks done in the laboratory by students, teachers and scientists. You can do laboratory work smoothly and efficiently only when you are familiar with the apparatus commonly used. Some of it is shown in Table 1.</p>
+<figure class="fig" id="toolsfig"><div class="tools" role="group" aria-label="Table 1 Different laboratory tools and their use (simple drawings). Tap a tool."></div><div class="info" aria-live="polite"></div><figcaption>Table 1 Different laboratory tools and their use (simple drawings). Tap a tool.</figcaption></figure>
+<div class="tbl card"><table><thead><tr><th>Name</th><th>Uses</th></tr></thead><tbody><tr><td>Triple-beam balance</td><td>Obtaining the mass of an object</td></tr><tr><td>Beaker</td><td>Holding liquids such as water (also used to heat liquids)</td></tr><tr><td>Tongs</td><td>Transporting a hot beaker; removing the lid from a crucible</td></tr><tr><td>Thermometer</td><td>Measuring temperature</td></tr><tr><td>Test tubes</td><td>Holding small amounts of liquid for mixing or heating</td></tr><tr><td>Petri dish</td><td>Growing and counting bacteria</td></tr><tr><td>Graduated cylinder</td><td>Has a millilitre (ml) scale; used to measure volume</td></tr><tr><td>Bunsen burner</td><td>Heating the contents in the lab, with a flame that you control</td></tr></tbody></table></div>
+<p class="fix"><b>Correction:</b> the printed Table 1 says a beaker is for "holding water". A beaker holds any liquid, not only water. Its markings give only approximate volumes, so use a graduated cylinder when you need a more accurate volume. The graduated cylinder is also called a measuring cylinder.</p>
+<div class="mcq check" data-ans="Triple-beam balance" data-why="A triple-beam balance obtains the mass of an object." data-clue="Which tool is for mass, not volume or temperature?"><span class="ck">Check your understanding</span><h4>You want to know the mass of a stone. Which tool do you use?</h4><div class="opts"><button>Thermometer</button><button>Graduated cylinder</button><button>Petri dish</button><button>Triple-beam balance</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="Growing and counting bacteria" data-why="Bacteria are grown and counted in Petri dishes." data-clue="Find Petri dish in Table 1."><span class="ck">Check your understanding</span><h4>What is a Petri dish used for?</h4><div class="opts"><button>Measuring volume</button><button>Carrying hot beakers</button><button>Growing and counting bacteria</button><button>Heating liquids</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="So that we do not touch the hot glass with our hands" data-why="Tongs let you move hot things safely." data-clue="Read the use of tongs in Table 1."><span class="ck">Check your understanding</span><h4>Why do we use tongs to carry a hot beaker?</h4><div class="opts"><button>To weigh it</button><button>To grow bacteria in it</button><button>So that we do not touch the hot glass with our hands</button><button>To measure its temperature</button></div><p class="fb" aria-live="polite"></p></div>
+<figure class="fig" id="toolsort"><div class="sorter"></div><figcaption>Sort it: what does each tool do?</figcaption></figure>
+<div class="mcq check" data-ans="You can work smoothly and efficiently only if you are familiar with it" data-why="Familiarity with apparatus helps you work smoothly and safely." data-clue="Read the paragraph above Table 1."><span class="ck">Check your understanding</span><h4>Why should you learn about the apparatus before you start an experiment?</h4><div class="opts"><button>You can then skip the safety rules</button><button>Apparatus never changes</button><button>It makes experiments shorter</button><button>You can work smoothly and efficiently only if you are familiar with it</button></div><p class="fb" aria-live="polite"></p></div>
+
+  </div>
+
+  <div class="part">
+    <h3>1.2.2 Laboratory safety rules</h3>
+<p>A laboratory is a place of discovery and learning. But because of the nature of lab work, it can also be a place of danger if the right scientific precautions are not taken. Follow these safety rules when you do an activity in the laboratory. Tap a rule to see why it matters (the reasons are added to help).</p>
+<details class="qa"><summary>Dress properly: goggles, gloves, shoes and lab coat.</summary><div class="ans">They protect your eyes, hands, feet, skin and clothes from spills, splashes and heat.</div></details>
+<details class="qa"><summary>Tie back loose hair.</summary><div class="ans">Loose hair can catch fire or fall into chemicals.</div></details>
+<details class="qa"><summary>Know where safety equipment, such as the fire extinguisher, is kept.</summary><div class="ans">In an emergency there is no time to search for it.</div></details>
+<details class="qa"><summary>Know what to do in case of an accident.</summary><div class="ans">Knowing the steps lets you act quickly and tell the teacher at once.</div></details>
+<details class="qa"><summary>Do not taste or smell chemicals.</summary><div class="ans">Many chemicals are poisonous or harm your nose, throat and lungs.</div></details>
+<details class="qa"><summary>Do not eat or drink in the laboratory.</summary><div class="ans">Chemicals could get into your food or drink.</div></details>
+<details class="qa"><summary>Never add water to concentrated acid. Always add acid to water. Remember the Amharic "AW! Not WA!" (A = acid, W = water).</summary><div class="ans">Water poured into strong acid can heat up and splash out, burning you. Acid added slowly to water is safer.</div></details>
+<details class="qa"><summary>Carry out only the experiments assigned by your teacher.</summary><div class="ans">Your teacher has checked that those experiments are safe.</div></details>
+<details class="qa"><summary>Dispose of all chemical wastes properly.</summary><div class="ans">Waste can harm people and the environment if it is thrown away carelessly.</div></details>
+<div class="mcq check" data-ans="Do not eat or drink in the laboratory" data-why="Eating and drinking are not allowed in the laboratory." data-clue="Read the list of rules again."><span class="ck">Check your understanding</span><h4>Which of these is a laboratory safety rule?</h4><div class="opts"><button>Taste a little to identify the chemical</button><button>Smell each bottle closely</button><button>Work alone when your teacher leaves</button><button>Do not eat or drink in the laboratory</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="Add the acid into the water" data-why="Always add acid to water: &quot;AW&quot;, not &quot;WA&quot;." data-clue="Remember the Amharic AW! Not WA!"><span class="ck">Check your understanding</span><h4>What is the correct way to dilute a concentrated acid?</h4><div class="opts"><button>Pour both together at the same moment</button><button>It does not matter</button><button>Add the acid into the water</button><button>Add water into the acid</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="To protect our eyes, hands, feet and clothes from hazards" data-why="Protective clothing reduces the risk of injury from chemicals, heat and breakage." data-clue="What can spill, splash or break in a lab?"><span class="ck">Check your understanding</span><h4>Why do we wear goggles, gloves, closed shoes and a lab coat?</h4><div class="opts"><button>To look like scientists</button><button>To keep the room tidy</button><button>Because the apparatus needs it</button><button>To protect our eyes, hands, feet and clothes from hazards</button></div><p class="fb" aria-live="polite"></p></div>
+<figure class="fig" id="safesort"><div class="sorter"></div><figcaption>Sort it: is each action safe or unsafe in the lab?</figcaption></figure>
+  </div>
+
+  <div class="part">
+    <h3>1.2.3 Science laboratory safety symbols and hazard signs: meanings</h3>
+    <p>Depending on the investigation, a lab can hold dangerous chemicals, biological specimens, sharp instruments and breakable objects. To keep the workplace safe and avoid accidents, lab safety symbols and signs must be posted throughout the workplace. They warn of possible dangers and keep lab users safe and informed.</p>
+<figure class="fig" id="warnfig"><div class="tools" role="group" aria-label="Figure 1.6 A) Hazard signs (simplified drawings). Tap a sign."></div><div class="info" aria-live="polite"></div><figcaption>Figure 1.6 A) Hazard signs (simplified drawings). Tap a sign.</figcaption></figure>
+<figure class="fig" id="ppefig"><div class="tools" role="group" aria-label="Figure 1.6 B) Laboratory safety symbols (simplified drawings). Tap a symbol."></div><div class="info" aria-live="polite"></div><figcaption>Figure 1.6 B) Laboratory safety symbols (simplified drawings). Tap a symbol.</figcaption></figure>
+<p class="fix"><b>Note:</b> the "what to do" advice with each sign is added to help you understand the sign. The book only shows the pictures with their names. Spelling slips in the book's labels ("Saftety glasses", "Hearind protection", "materrials") are corrected here.</p>
+<div class="mcq check" data-ans="Corrosives" data-why="Corrosives burn skin and eyes. The other three are protective symbols." data-clue="Tap the signs in the first figure: which one is about burns?"><span class="ck">Check your understanding</span><h4>Which sign warns that a chemical can burn your skin?</h4><div class="opts"><button>Gloves</button><button>Hand wash</button><button>Hearing protection</button><button>Corrosives</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="Gloves" data-why="Gloves show what to wear. The others warn of a danger." data-clue="Hazard signs warn; safety symbols protect or help."><span class="ck">Check your understanding</span><h4>Which of these is a protective symbol, not a hazard warning?</h4><div class="opts"><button>Toxic materials</button><button>Biological hazard</button><button>High voltage hazard</button><button>Gloves</button></div><p class="fb" aria-live="polite"></p></div>
+<figure class="fig" id="signsort"><div class="sorter"></div><figcaption>Sort it: does each sign warn of a danger, or protect and help you?</figcaption></figure>
+  </div>
+
+  <div class="part">
+    <h3>1.2.4 Writing a laboratory report</h3>
+    <p>The laboratory is the place where science experiments are done. It helps students build their power of observation, their skill in handling different kinds of apparatus and their independent thinking.</p>
+    <p>A <strong>laboratory report</strong> is a written account of the results of an experiment. It should be written precisely and clearly, with good grammar and punctuation. Every report must include these parts:</p>
+<figure class="fig" id="reportfig"><div class="btnrow" role="group" aria-label="Parts of a laboratory report"></div><div class="info" aria-live="polite"></div><figcaption>Tap a part of the report. (The book lists only the names; the short descriptions are added to help.)</figcaption></figure>
+<div class="mcq check" data-ans="A written account of the results of an experiment, written clearly" data-why="It explains what you did, what you learnt and what the results mean." data-clue="Read the first sentence of 1.2.4."><span class="ck">Check your understanding</span><h4>What is a laboratory report?</h4><div class="opts"><button>A list of laboratory rules</button><button>A drawing of the apparatus</button><button>A teacher&#x27;s marks for the class</button><button>A written account of the results of an experiment, written clearly</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq check" data-ans="Observation" data-why="Observations are what you saw and measured during the experiment." data-clue="Tap the parts in the figure."><span class="ck">Check your understanding</span><h4>In which part of a report do you write what you saw and measured?</h4><div class="opts"><button>Theory</button><button>Observation</button><button>Title</button><button>Objective</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="activity"><h3>Exercise 1.3</h3>
+<h4>Choose the best answer.</h4>
+<div class="mcq" data-ans="Wearing any type of clothes and shoes" data-why="You must dress properly for the lab."><h4>1. Which one is NOT allowed in a science laboratory?</h4><div class="opts"><button>Knowing the hazards of the materials being used</button><button>Reading the labels on reagent bottles carefully</button><button>Not using laboratory glassware for eating or drinking</button><button>Wearing any type of clothes and shoes</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq" data-ans="Measuring cylinder" data-why="A measuring (graduated) cylinder has a volume scale."><h4>2. Which laboratory tool is used for approximate measurement of the volume of liquids?</h4><div class="opts"><button>Dropper</button><button>Measuring cylinder</button><button>Test tube</button><button>Thermometer</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq" data-ans="Triple-beam balance" data-why="A balance measures mass."><h4>3. Which laboratory equipment is classed as measuring equipment?</h4><div class="opts"><button>Bunsen burner</button><button>Tongs</button><button>Stand and clamp</button><button>Triple-beam balance</button></div><p class="fb" aria-live="polite"></p></div>
+</div>
+  </div>
+  <div class="quiz" data-quiz="l12"></div>
+  <button class="done-btn" data-done="l12" aria-pressed="false">Mark lesson 1.2 as read</button>
+</section>
+
+<section class="lesson" id="review">
+  <div class="eyebrow">Unit One · pages 16–19</div>
+  <h2>Unit summary and review exercise</h2>
+  <div class="card"><h4>Key terms</h4><p>Conventional science · Ethics · Hazard signs · Indigenous science · Laboratory · Laboratory equipment · Natural science · Safety rules · Science · Scientist · Technologist · Technology. (Tap them in the key-word panels above.)</p></div>
+  <div class="card"><h4>Unit summary</h4>
+    <ul>
+      <li>Science is a systematic method of gaining knowledge about the physical and natural world and human society.</li>
+      <li>Indigenous science is how indigenous people build knowledge of their natural environment.</li>
+      <li>Conventional science relies on laws found by applying the scientific method to the world around us.</li>
+      <li>Science has two major categories: natural science and social science.</li>
+      <li>Natural science has three branches: biology, chemistry and physics.</li>
+      <li>Technology is the use of scientific knowledge to help people work more easily and live better.</li>
+      <li>A person who studies technology is a technologist.</li>
+      <li>Science and technology play an important role in our daily life.</li>
+      <li>Some famous scientists in Ethiopia are Dr. Aklilu Lemma, Engineer Kitew Ejigu, Dr. Gebisa Ejeta and Prof. Yalemtsehay Mekonnen.</li>
+      <li>Famous world scientists include Albert Einstein, Michael Faraday, Marie Curie and Isaac Newton.</li>
+      <li>Laboratory equipment is made up of different sets of apparatus designed for different tasks.</li>
+      <li>Knowing the laboratory safety rules is very important for reducing risks during laboratory work.</li>
+    </ul>
+  </div>
+  <div class="activity"><h3>Review exercise</h3>
+<h4>Part I. True or false?</h4>
+<div class="mcq" data-ans="True" data-why="That is the definition."><h4>1. Natural science is the study of nature and natural laws.</h4><div class="opts"><button>True</button><button>False</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq" data-ans="False" data-why="Their knowledge overlaps."><h4>2. Biology, physics and chemistry do not share common areas of study.</h4><div class="opts"><button>False</button><button>True</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq" data-ans="True" data-why="That is its purpose."><h4>3. Technology makes life easier or more pleasant and work more productive.</h4><div class="opts"><button>False</button><button>True</button></div><p class="fb" aria-live="polite"></p></div>
+<h4>Part II. Choose the best answer.</h4>
+<div class="mcq" data-ans="Biology" data-why="Biology studies living things."><h4>1. The study of living things is the concern of:</h4><div class="opts"><button>Chemistry</button><button>Physics</button><button>Geology</button><button>Biology</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq" data-ans="Physics" data-why="That is physics."><h4>2. Which branch of natural science studies the nature of matter, energy and their interaction?</h4><div class="opts"><button>Geology</button><button>Physics</button><button>Chemistry</button><button>Biology</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq" data-ans="Dr. Aklilu Lemma" data-why="Dr. Aklilu Lemma, with the endod plant."><h4>3. Which famous Ethiopian scientist discovered a natural treatment for schistosomiasis (bilharzia)?</h4><div class="opts"><button>Dr. Aklilu Lemma</button><button>Eng. Kitew Ejigu</button><button>Dr. Gebisa Ejeta</button><button>Prof. Yalemtsehay Mekonnen</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq" data-ans="You should add water to acid" data-why="Acid must be added to water, never water to acid."><h4>4. Which of these is NOT a laboratory safety rule?</h4><div class="opts"><button>Light the match before you turn on the gas of a Bunsen burner</button><button>You should add water to acid</button><button>You should tie back loose hair</button><button>Do not suck solution into a pipette by mouth</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq" data-ans="Science" data-why="That describes science."><h4>5. Which is a branch of knowledge and the systematic study of the universe, based on facts, observation and experiments?</h4><div class="opts"><button>Theory</button><button>Natural law</button><button>Dogma</button><button>Science</button></div><p class="fb" aria-live="polite"></p></div>
+<h4>Part III. Match each field to what it combines.</h4>
+<div class="mcq" data-ans="Biology and Chemistry" data-why="Bio + chemistry."><h4>1. Biochemistry is a combination of:</h4><div class="opts"><button>Biology and Physics</button><button>Geology and Physics</button><button>Chemistry and Physics</button><button>Biology and Chemistry</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq" data-ans="Chemistry and Physics" data-why="Chemistry + physics."><h4>2. Physical chemistry is a combination of:</h4><div class="opts"><button>Geology and Physics</button><button>Chemistry and Physics</button><button>Biology and Chemistry</button><button>Biology and Physics</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq" data-ans="Biology and Physics" data-why="Bio + physics."><h4>3. Biophysics is a combination of:</h4><div class="opts"><button>Chemistry and Physics</button><button>Biology and Physics</button><button>Geology and Physics</button><button>Biology and Chemistry</button></div><p class="fb" aria-live="polite"></p></div>
+<div class="mcq" data-ans="Geology and Physics" data-why="Geo (earth) + physics."><h4>4. Geophysics is a combination of:</h4><div class="opts"><button>Biology and Chemistry</button><button>Geology and Physics</button><button>Chemistry and Physics</button><button>Biology and Physics</button></div><p class="fb" aria-live="polite"></p></div>
+<h4>Part IV. Fill in the blanks.</h4>
+<details class="qa"><summary>1. ______ is the place where experiments in science are performed.</summary><div class="ans">The laboratory.</div></details>
+<details class="qa"><summary>2. A person who studies technology is called a ______.</summary><div class="ans">A technologist.</div></details>
+<details class="qa"><summary>3. The famous Ethiopian scientist involved in developing commercial hybrid strains of sorghum for Africa is ______.</summary><div class="ans">Dr. Gebisa Ejeta.</div></details>
+<h4>Part V. Short answers.</h4>
+<details class="qa"><summary>1. Define technology.</summary><div class="ans">The use of scientific knowledge to help people work more easily and live better; putting scientific knowledge into practice.</div></details>
+<details class="qa"><summary>2. What is the difference between science and technology?</summary><div class="ans">Science produces knowledge for its own sake, to propose and test explanations. Technology uses that knowledge to make human-made solutions to real-world problems. They are linked but are different fields.</div></details>
+<details class="qa"><summary>3. Mention the parts (steps) of a laboratory report.</summary><div class="ans">Date, title, objective, theory, materials or equipment, chemicals used, procedure, observation, result, discussion and conclusion.</div></details>
+<details class="qa"><summary>4. Why is ethics in science important?</summary><div class="ans">Ethics keep scientific work honest, careful and fair, so that results can be trusted and people and the environment are not harmed. Principles include honesty, responsibility, objectivity, openness, competence, legality, non-discrimination and carefulness.</div></details>
+  </div>
+  <p class="note">Sample answers to Part IV and Part V are written from the lesson text. A teacher should check the wording.</p>
+</section>
+
+<section class="lesson" id="gloss">
+  <div class="eyebrow">Unit One</div>
+  <h2>Glossary</h2>
+  <dl class="gloss"></dl>
+  <p class="note">All facts, wording and any exam-related claims in this page need review by a teacher before students rely on them.</p>
+</section>
+</div>
+
+<script>
+const GL = {
+  "Science": "A systematic way of learning about the natural and physical world and human society, based on observation and evidence.",
+  "Indigenous science": "Knowledge that local, native people build from long experience of their environment, based on social, physical and spiritual understanding.",
+  "Conventional science": "Knowledge based on laws found by using the scientific method on events in the world. Often called Western science.",
+  "Natural science": "The study of nature and natural laws. Its main branches are biology, chemistry and physics.",
+  "Social science": "The other major category of science. It studies people and human society.",
+  "Biology": "The branch of natural science that studies living things.",
+  "Chemistry": "The branch of natural science about the properties, make-up, structure and changes of substances.",
+  "Physics": "The branch of natural science that studies matter, energy and how they interact.",
+  "Biophysics": "Biology and physics combined: the study of physical processes in living things, from molecules to whole organisms.",
+  "Biochemistry": "Biology and chemistry combined: the study of chemical processes and reactions in living things.",
+  "Physical chemistry": "Chemistry and physics combined: the study of the properties of materials and how they interact.",
+  "Technology": "Using scientific knowledge to make work easier and life better, with materials, tools, techniques and sources of power.",
+  "Technologist": "A person who studies technology and uses science and mathematics to produce useful tools.",
+  "Scientist": "Someone who gathers evidence in an orderly way, makes hypotheses, tests them, and shares what is learned.",
+  "Ethics": "The principles of right and wrong that guide how scientists behave, such as honesty and responsibility.",
+  "Laboratory": "A place where science experiments are done. It builds observation skills, skill with apparatus and independent thinking.",
+  "Laboratory equipment": "The tools and apparatus used by students, teachers and scientists who work in a laboratory.",
+  "Laboratory report": "A written account of what you did in an experiment, what you learnt and what the results mean.",
+  "Safety rules": "Rules that lower the risks of lab work, such as tying back hair and never tasting chemicals.",
+  "Hazard signs": "Signs posted in a laboratory that warn of dangers such as poison, fire, electricity or germs.",
+  "Personal protective equipment": "Items you wear to protect yourself in the lab, such as goggles, gloves, a lab coat and boots."
+};
+
+/* ---- key words ---- */
+document.querySelectorAll('.kw').forEach(box => {
+  const def = box.parentElement.querySelector('.kwdef');
+  box.innerHTML = box.dataset.terms.split(',').map(t => `<button aria-pressed="false">${t}</button>`).join('');
+  box.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    box.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b));
+    def.innerHTML = `<strong>${b.textContent}:</strong> ${GL[b.textContent] || ''}`;
+  });
+});
+document.querySelector('dl.gloss').innerHTML = Object.keys(GL).sort().map(k => `<dt>${k}</dt><dd>${GL[k]}</dd>`).join('');
+
+/* ---- multiple-choice checks ---- */
+document.querySelectorAll('.mcq').forEach(q => {
+  q.addEventListener('click', e => {
+    const b = e.target.closest('.opts button'); if (!b || q.dataset.done) return;
+    const ok = b.textContent.trim() === q.dataset.ans;
+    b.classList.add(ok ? 'ok' : 'no');
+    const fb = q.querySelector('.fb');
+    fb.className = 'fb ' + (ok ? 'ok' : 'no');
+    fb.innerHTML = ok ? 'Correct.' + (q.dataset.why ? `<small>${q.dataset.why}</small>` : '') : 'Not yet.' + `<small>${q.dataset.clue || 'Read the section above and try another option.'}</small>`;
+    if (ok) { q.dataset.done = 1; q.querySelectorAll('.opts button').forEach(x => x.disabled = true); }
+    else b.disabled = true;
+  });
+});
+
+/* ---- sorters ---- */
+function sorter(id, bins, items) {
+  const el = document.querySelector('#' + id + ' .sorter');
+  let i = 0, score = 0;
+  function draw(msg, cls) {
+    if (i >= items.length) { el.innerHTML = `<p class="item">${score} of ${items.length}</p><p class="fb ok" style="text-align:center">${msg || ''} Done.</p><button class="pill" style="justify-self:center">Try again</button>`; return; }
+    el.innerHTML = `<p class="note" style="text-align:center">${i + 1} of ${items.length}</p><p class="item">${items[i][0]}</p><div class="bins">${bins.map(b => `<button>${b}</button>`).join('')}</div><p class="fb ${cls || ''}" aria-live="polite">${msg || ''}</p>`;
+  }
+  el.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    if (i >= items.length) { i = 0; score = 0; draw(); return; }
+    const [name, ans, why] = items[i];
+    if (b.textContent === ans) { score++; i++; draw(`Yes: ${name} → ${ans}. ${why}`, 'ok'); }
+    else { i++; draw(`${name} belongs to ${ans}. ${why}`, 'no'); }
+  });
+  draw();
+}
+
+/* ---- generic pill + info figure (new, same style as the stage stepper) ---- */
+function pillInfo(id, items) {
+  const fig = document.getElementById(id), row = fig.querySelector('.btnrow'), info = fig.querySelector('.info');
+  row.innerHTML = items.map(it => `<button class="pill" aria-pressed="false">${it[0]}</button>`).join('');
+  row.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    const k = [...row.children].indexOf(b);
+    row.querySelectorAll('button').forEach((x, j) => x.setAttribute('aria-pressed', j === k));
+    info.innerHTML = `<strong>${items[k][0]}</strong>${items[k][1]}`;
+  });
+  info.innerHTML = '<span class="hint">Tap a button to learn more.</span>';
+}
+
+/* ---- generic icon grid: tap a picture, info appears ---- */
+function iconGrid(id, items) {
+  const fig = document.getElementById(id), grid = fig.querySelector('.tools'), info = fig.querySelector('.info');
+  grid.innerHTML = items.map(it => `<button aria-pressed="false"><svg viewBox="0 0 48 48" aria-hidden="true">${it[1]}</svg><span>${it[0]}</span></button>`).join('');
+  grid.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    const k = [...grid.children].indexOf(b);
+    grid.querySelectorAll('button').forEach((x, j) => x.setAttribute('aria-pressed', j === k));
+    info.innerHTML = `<strong>${items[k][0]}</strong>${items[k][2]}`;
+  });
+  info.innerHTML = '<span class="hint">Tap a picture to learn more.</span>';
+}
+
+/* ---- branches of science: tap-to-learn tree ---- */
+(function () {
+  const fig = document.getElementById('treefig'), svg = fig.querySelector('svg'), info = fig.querySelector('.info');
+  const N = [
+    ['Science', 108, 8, 104, 'var(--accent)', 'var(--accent-ink)', 'Science has two major categories: natural science and social science.'],
+    ['Natural science', 24, 88, 140, 'var(--accent-soft)', 'var(--fg)', 'The study of nature and natural laws. Biology, chemistry and physics are its main fields.'],
+    ['Social science', 196, 88, 100, 'var(--accent-soft)', 'var(--fg)', 'The other major category. It studies people and human society. (The book gives no examples here; history, geography and economics are common ones.)'],
+    ['Biology', 6, 168, 96, 'var(--warm-soft)', 'var(--warm-ink)', 'Biology studies living things.'],
+    ['Chemistry', 112, 168, 96, 'var(--warm-soft)', 'var(--warm-ink)', 'Chemistry deals with the properties, make-up, structure and changes of substances.'],
+    ['Physics', 218, 168, 96, 'var(--warm-soft)', 'var(--warm-ink)', 'Physics studies the nature of matter and energy and how they interact.']];
+  const L = [[160, 52, 94, 88], [160, 52, 246, 88], [94, 132, 54, 168], [94, 132, 160, 168], [94, 132, 266, 168]];
+  svg.innerHTML = L.map(l => `<line x1="${l[0]}" y1="${l[1]}" x2="${l[2]}" y2="${l[3]}" stroke="var(--line)" stroke-width="3"/>`).join('') +
+    N.map((n, k) => `<g class="tap" tabindex="0" role="button" aria-label="${n[0]}" data-k="${k}"><rect x="${n[1]}" y="${n[2]}" width="${n[3]}" height="44" rx="12" fill="${n[4]}" stroke="var(--accent-line)" stroke-width="1.5"/><text x="${n[1] + n[3] / 2}" y="${n[2] + 27}" text-anchor="middle" font-size="14" font-weight="800" fill="${n[5]}" pointer-events="none">${n[0]}</text></g>`).join('');
+  function pick(g) { const k = g.dataset.k; info.innerHTML = `<strong>${N[k][0]}</strong>${N[k][6]}`; }
+  svg.addEventListener('click', e => { const g = e.target.closest('.tap'); if (g) pick(g); });
+  svg.addEventListener('keydown', e => { const g = e.target.closest('.tap'); if (g && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); pick(g); } });
+})();
+
+/* ---- overlap of natural sciences: Venn with option buttons ---- */
+(function () {
+  const fig = document.getElementById('vennfig'), svg = fig.querySelector('svg'), info = fig.querySelector('.info'), row = fig.querySelector('.btnrow');
+  const C = [[105, 95, 'var(--accent)'], [215, 95, 'var(--warm)'], [160, 170, '#3E7CB1']];
+  const items = [
+    ['Biology', [0], 'The study of living things.'],
+    ['Chemistry', [2], 'The study of substances: their properties, make-up, structure and changes.'],
+    ['Physics', [1], 'The study of matter, energy and how they interact.'],
+    ['Biophysics', [0, 1], 'Biology + physics. The study of physical events and processes in living things, from molecules and cells to tissues and whole organisms.'],
+    ['Biochemistry', [0, 2], 'Biology + chemistry. The study of chemical processes and reactions in living things.'],
+    ['Physical chemistry', [1, 2], 'Chemistry + physics. The study of the properties of materials and how they interact. Also called physical science.'],
+    ['All three', [0, 1, 2], 'Natural science. In the middle all three fields meet, because there is no clear border line between them.']];
+  const circleItem = [0, 2, 1];
+  let sel = -1;
+  function draw() {
+    svg.innerHTML = C.map((c, i) => { const on = sel >= 0 && items[sel][1].includes(i); return `<g class="tap" tabindex="0" role="button" aria-label="${items[circleItem[i]][0]}" data-k="${circleItem[i]}"><circle cx="${c[0]}" cy="${c[1]}" r="80" fill="${c[2]}" fill-opacity="${on ? .5 : .2}" stroke="${on ? 'var(--fg)' : c[2]}" stroke-width="${on ? 3 : 1.5}"/></g>`; }).join('') +
+      `<g pointer-events="none" font-size="14" font-weight="800" text-anchor="middle" fill="var(--fg)"><text x="68" y="78">Biology</text><text x="252" y="78">Physics</text><text x="160" y="232">Chemistry</text></g>`;
+  }
+  function show(k) { sel = k; draw(); info.innerHTML = `<strong>${items[k][0]}</strong>${items[k][2]}`; row.querySelectorAll('button').forEach((b, j) => b.setAttribute('aria-pressed', j === k)); }
+  row.innerHTML = items.map(it => `<button class="pill" aria-pressed="false">${it[0]}</button>`).join('');
+  row.addEventListener('click', e => { const b = e.target.closest('button'); if (b) show([...row.children].indexOf(b)); });
+  svg.addEventListener('click', e => { const g = e.target.closest('.tap'); if (g) show(+g.dataset.k); });
+  svg.addEventListener('keydown', e => { const g = e.target.closest('.tap'); if (g && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); show(+g.dataset.k); } });
+  draw(); info.innerHTML = '<span class="hint">Tap a button or a circle.</span>';
+})();
+
+/* ---- pill figures ---- */
+pillInfo('indigfig', [
+  ['Indigenous science', `Knowledge that local people build from long experience of the land, plants, animals and weather around them. It rests on social, physical and spiritual understanding. <em>Examples in Ethiopia: medicinal plants; preserving meat with salt and smoke.</em>`],
+  ['Conventional science', `Knowledge based on laws that were found by applying the scientific method to events in the world: observe, test, check the evidence. Commonly called Western science.`]]);
+pillInfo('scitechfig', [
+  ['Science', `<em>Aim:</em> to gain knowledge and to propose and test explanations. <em>Asks:</em> why and how does this happen? <em>Example:</em> finding out how plants make food.`],
+  ['Technology', `<em>Aim:</em> to build human-made solutions to real problems, using scientific knowledge. <em>Asks:</em> how can we make this job easier? <em>Example:</em> a radio, a bulb, a computer, an airplane.`],
+  ['How they connect', `Science uses technology to gain knowledge (a microscope helps us see cells). Technology uses scientific knowledge to make solutions (knowing about electricity helps us make a bulb). They are linked, but they are different fields.`]]);
+pillInfo('usesfig', [
+  ['Agriculture', `New knowledge and tools help farmers grow more food. <em>Ethiopian example: improved sorghum varieties developed by Dr. Gebisa Ejeta.</em>`],
+  ['Medicine', `Science and technology help make medicines and drugs. <em>Ethiopian example: Dr. Aklilu Lemma's research on the endod plant against bilharzia.</em>`],
+  ['Environment and population', `They help people understand and manage environmental problems and population growth.`],
+  ['Construction', `They give us building materials and methods for houses, roads and bridges.`],
+  ['Making products', `Industry makes cosmetics, textiles, dyes, soaps and detergents, plastics, rubber, metals and non-metals, alcoholic drinks, dry cells and car batteries.`]]);
+pillInfo('scientistfig', [
+  ['Marie Curie', `<em>World scientist, 1867–1934.</em> Won the Nobel Prize for discovering the elements polonium and radium.`],
+  ['Isaac Newton', `<em>World scientist, 1643–1727.</em> Discovered the laws of motion and the law of gravity.`],
+  ['Michael Faraday', `<em>World scientist, 1791–1867.</em> Discovered how to make electricity from magnetism. He built the first dynamo.`],
+  ['Albert Einstein', `<em>World scientist, 1879–1955.</em> Developed the theory of special relativity.`],
+  ['Aklilu Lemma', `<em>Ethiopian scientist, 1935–1997.</em> In 1964 he found a natural treatment for schistosomiasis (bilharzia, snail fever). Berries of the endod plant, used for soap and shampoo in many parts of Africa, are a strong, cheap and safe molluscicide (snail killer). This stops the spread of the parasitic worm.`],
+  ['Yalemtsehay Mekonnen', `<em>Ethiopian scientist.</em> Born in Asela on 30 May 1955 (as printed in the book). Works on human physiology, the effect of pesticides on human health, and the use of plants as medicine for people and animals. The first female professor of Addis Ababa University.`],
+  ['Tewolde Berhan', `<em>Ethiopian scientist.</em> Dr. Tewolde Berhan Gebre Egziabher worked to protect biodiversity and the rights of communities to their genetic resources.`],
+  ['Gebisa Ejeta', `<em>Ethiopian scientist, born 1950.</em> A plant breeder and geneticist, Professor at Purdue University. Won the World Food Prize in 2009 for his major contributions to sorghum. He helped develop commercial hybrid sorghum for Africa.`]]);
+pillInfo('ethicsfig', [
+  ['Honesty', `Tell the truth about your methods and results. <em>At school: write the readings you really measured.</em>`],
+  ['Responsibility', `Take care for your work and for how it affects people and the environment. <em>At school: clean up and dispose of waste properly.</em>`],
+  ['Objectivity', `Judge by the evidence, not by what you wish were true. <em>At school: report a result even if it shows your idea was wrong.</em>`],
+  ['Openness', `Share your methods and results and listen to other people's ideas. <em>At school: let classmates check your experiment.</em>`],
+  ['Competence', `Know how to do the work well and keep learning. <em>At school: learn how to use an apparatus before you use it.</em>`],
+  ['Legality', `Follow the rules and laws that apply to your work. <em>At school: follow the lab rules.</em>`],
+  ['Non-discrimination', `Treat everyone fairly. <em>At school: every member of the group gets a turn.</em>`],
+  ['Carefulness', `Work carefully and check your work to avoid mistakes. <em>At school: measure twice and record neatly.</em>`]]);
+pillInfo('reportfig', [
+  ['1 Date', `The day you did the experiment.`], ['2 Title', `A short name for the experiment.`], ['3 Objective', `What you want to find out or show.`],
+  ['4 Theory', `The science ideas behind the experiment.`], ['5 Materials', `The apparatus and equipment you used.`], ['6 Chemicals', `The chemicals you used.`],
+  ['7 Procedure', `The steps you followed, in order.`], ['8 Observation', `What you saw and measured while you worked.`], ['9 Result', `The outcome of the experiment, such as a table of readings.`],
+  ['10 Discussion', `What the results mean and why they came out that way.`], ['11 Conclusion', `A short answer to your objective.`]]);
+
+/* ---- laboratory tools ---- */
+const G0 = '<g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">', G1 = '</g>';
+iconGrid('toolsfig', [
+  ['Triple-beam balance', G0 + '<path d="M8 41h32M24 41V13M6 13h36M8 13v9h11v-9M29 38h11"/>' + G1, 'Finds the <b>mass</b> of an object.'],
+  ['Beaker', G0 + '<path d="M12 8h24M14 8v32h20V8M14 19h7M14 27h7M14 35h7"/>' + G1, 'Holds liquids such as water. It can also be used to heat liquids.'],
+  ['Tongs', G0 + '<path d="M13 8l22 32M35 8L13 40"/><circle cx="24" cy="24" r="3" fill="currentColor"/>' + G1, 'Used to carry a hot beaker and to lift the lid off a crucible.'],
+  ['Thermometer', G0 + '<path d="M24 6a4 4 0 0 1 4 4v17.5a8 8 0 1 1-8 0V10a4 4 0 0 1 4-4z"/><circle cx="24" cy="35" r="4" fill="#C0392B" stroke="none"/><path d="M24 15v20" stroke="#C0392B"/>' + G1, 'Measures <b>temperature</b>.'],
+  ['Test tubes', G0 + '<path d="M13 7v28a4.5 4.5 0 0 0 9 0V7M28 7v28a4.5 4.5 0 0 0 9 0V7M11 7h13M26 7h13M13 27h9M28 23h9"/>' + G1, 'Hold small amounts of liquid for mixing or heating.'],
+  ['Petri dish', G0 + '<ellipse cx="24" cy="30" rx="18" ry="7"/><path d="M6 30v-7M42 30v-7"/><ellipse cx="24" cy="23" rx="18" ry="7"/>' + G1, 'Used to grow and count bacteria.'],
+  ['Graduated cylinder', G0 + '<path d="M15 6h18M18 6v31h12V6M14 41h20M18 37l-3 4M30 37l3 4M18 13h5M18 19h5M18 25h5M18 31h5"/>' + G1, 'Has a millilitre (ml) scale. Used to measure the <b>volume</b> of a liquid. Also called a measuring cylinder.'],
+  ['Bunsen burner', G0 + '<path d="M12 43h24M20 43V25h8v18M17 25h14"/><path d="M24 4c5 6 7 9 7 12a7 7 0 0 1-14 0c0-3 2-6 7-12z" fill="#E8731B" stroke="none"/>' + G1, 'Gives a flame to heat things in the lab. Use it only with your teacher and follow the safety rules.']]);
+
+/* ---- hazard signs and safety symbols ---- */
+const FD = '<path d="M24 3L45 24 24 45 3 24z" fill="#fff" stroke="#C0392B" stroke-width="3" stroke-linejoin="round"/>';
+const FT = '<path d="M24 4L45 41H3z" fill="#F6C21B" stroke="#1A1A17" stroke-width="2.5" stroke-linejoin="round"/>';
+const FC = '<circle cx="24" cy="24" r="21" fill="#1F5FA8"/>';
+const FS = '<rect x="4" y="4" width="40" height="40" rx="4" fill="#D0302B"/>';
+const FY = '<rect x="4" y="10" width="40" height="28" rx="3" fill="#F6C21B" stroke="#1A1A17" stroke-width="2"/>';
+const W3 = 'fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"';
+iconGrid('warnfig', [
+  ['Toxic materials', FD + '<circle cx="24" cy="19" r="7" fill="#1A1A17"/><rect x="21" y="24" width="6" height="5" fill="#1A1A17"/><circle cx="21" cy="18" r="2" fill="#fff"/><circle cx="27" cy="18" r="2" fill="#fff"/><path d="M15 31l18 6M33 31l-18 6" stroke="#1A1A17" stroke-width="2.5" stroke-linecap="round"/>', 'Poisonous. It can harm or kill if swallowed, breathed in or touched. <em>Never taste or smell it. Wear gloves and wash your hands afterwards.</em>'],
+  ['High voltage hazard', FT + '<path d="M27 13L18 28h6l-3 11 10-16h-6z" fill="#1A1A17"/>', 'Very strong electricity that can badly hurt you. <em>Keep away. Only trained people work near it.</em>'],
+  ['Corrosives', FD + '<path d="M17 11c3 4 4 5 4 7a4 4 0 0 1-8 0c0-2 1-3 4-7zM31 11c3 4 4 5 4 7a4 4 0 0 1-8 0c0-2 1-3 4-7z" fill="#1A1A17" transform="translate(-1 2)"/><path d="M12 31h24M13 36l4-3 4 3 4-3 4 3 4-3" fill="none" stroke="#1A1A17" stroke-width="2.2" stroke-linecap="round"/>', 'Chemicals that burn skin and eyes or eat away metals. <em>Wear goggles and gloves. If some touches you, rinse with plenty of water and tell your teacher.</em>'],
+  ['Flammable materials', FD + '<path d="M24 9c6 7 8 10 8 15a8 8 0 0 1-16 0c0-3 2-5 4-8 0 3 1 4 3 5-1-4-1-7 1-12z" fill="#1A1A17"/>', 'Catch fire easily. <em>Keep them away from flames and heat, such as a Bunsen burner.</em>'],
+  ['Electrical hazard', FT + '<rect x="16" y="23" width="16" height="12" rx="2" fill="#1A1A17"/><rect x="20" y="15" width="3" height="8" fill="#1A1A17"/><rect x="26" y="15" width="3" height="8" fill="#1A1A17"/>', 'Danger of electric shock from equipment, wires or sockets. <em>Keep water and wet hands away. Never touch a damaged plug or wire.</em>'],
+  ['Chemical storage area', FY + '<path d="M20 15h8M22 15v7l-6 11h16l-6-11v-7" fill="none" stroke="#1A1A17" stroke-width="2.5" stroke-linejoin="round"/>', 'The place where chemicals are kept. <em>Do not go in or take anything without your teacher.</em>'],
+  ['Biological hazard', FT + '<g fill="none" stroke="#1A1A17" stroke-width="2.5"><circle cx="24" cy="23" r="5"/><circle cx="18" cy="33" r="5"/><circle cx="30" cy="33" r="5"/></g>', 'Living things or samples, such as bacteria, that can spread disease. <em>Handle only as you were taught and wash your hands afterwards.</em>'],
+  ['Health hazard', FD + '<circle cx="24" cy="13" r="4" fill="#1A1A17"/><path d="M14 37c0-9 3-15 10-15s10 6 10 15z" fill="#1A1A17"/><path d="M24 26l1.6 3.4 3.7.4-2.8 2.5.8 3.7-3.3-1.9-3.3 1.9.8-3.7-2.8-2.5 3.7-.4z" fill="#fff"/>', 'A substance that can harm your body, for example your lungs, over time. <em>Use it only as your teacher directs and do not breathe in fumes.</em>']]);
+iconGrid('ppefig', [
+  ['Gloves', FC + '<rect x="15" y="26" width="19" height="12" rx="3" fill="#fff"/><path d="M18 26V15M23 26V11M28 26V12M33 26V17" ' + W3 + '/>', 'Protect your hands from chemicals, heat and sharp things.'],
+  ['Safety glasses', FC + '<g ' + W3 + '><circle cx="17" cy="25" r="6"/><circle cx="31" cy="25" r="6"/><path d="M23 25h2M11 25H8M37 25h3"/></g>', 'Protect your eyes from splashes and flying pieces. Wear them whenever your teacher says so.'],
+  ['Boots', FC + '<path d="M17 10h9v15l9 5v8H17z" fill="#fff"/>', 'Protect your feet from spills and falling objects. Wear proper shoes or boots in the lab.'],
+  ['Face shield', FC + '<g ' + W3 + '><path d="M14 22a10 10 0 0 1 20 0v12H14zM11 34h26"/></g>', 'Protects your whole face from splashes.'],
+  ['Hand wash', FC + '<g ' + W3 + '><path d="M13 14h13a4 4 0 0 1 4 4v3"/></g><path d="M17 26c3 4 4 6 4 8a4 4 0 0 1-8 0c0-2 1-4 4-8zM30 26c3 4 4 6 4 8a4 4 0 0 1-8 0c0-2 1-4 4-8z" fill="#fff"/>', 'Wash your hands after lab work.'],
+  ['Fire extinguisher', FS + '<rect x="14" y="19" width="16" height="21" rx="4" fill="#fff"/><rect x="18" y="11" width="8" height="8" fill="#fff"/><path d="M26 13h8l4 6" ' + W3 + '/>', 'Shows where the fire extinguisher is. Learn its place before you start work.'],
+  ['Protective cloth', FC + '<circle cx="24" cy="12" r="4" fill="#fff"/><path d="M15 20l9-4 9 4 3 19H12z" fill="#fff"/><path d="M24 17v22" stroke="#1F5FA8" stroke-width="2"/>', 'A lab coat or other protective clothing covers your skin and clothes.'],
+  ['Hearing protection', FC + '<path d="M13 28v-4a11 11 0 0 1 22 0v4" ' + W3 + '/><rect x="10" y="26" width="7" height="12" rx="3" fill="#fff"/><rect x="31" y="26" width="7" height="12" rx="3" fill="#fff"/>', 'Protects your ears from very loud noise.']]);
+
+/* ---- sorters ---- */
+sorter('scitechsort', ['Science', 'Technology'], [
+  ['Finding out why plants need light', 'Science', 'It asks a question and tests an explanation.'],
+  ['A radio', 'Technology', 'It is a product made to solve a real need.'],
+  ['Testing an idea about how heat moves', 'Science', 'It gains knowledge and tests explanations.'],
+  ['Building a lamp that runs on solar power', 'Technology', 'It uses scientific knowledge to solve a real problem.'],
+  ['A computer', 'Technology', 'It is a human-made tool.'],
+  ['Asking how bacteria grow in a dish', 'Science', 'It aims to understand something in nature.'],
+  ['An airplane', 'Technology', 'It puts science into practice.']]);
+sorter('toolsort', ['Measures', 'Holds or grows', 'Heats or handles heat'], [
+  ['Triple-beam balance', 'Measures', 'It measures mass.'], ['Beaker', 'Holds or grows', 'It holds liquids.'], ['Bunsen burner', 'Heats or handles heat', 'It gives the flame for heating.'],
+  ['Thermometer', 'Measures', 'It measures temperature.'], ['Petri dish', 'Holds or grows', 'Bacteria are grown in it.'], ['Tongs', 'Heats or handles heat', 'They carry hot things.'],
+  ['Graduated cylinder', 'Measures', 'It measures volume.'], ['Test tube', 'Holds or grows', 'It holds small amounts of liquid.']]);
+sorter('safesort', ['Safe', 'Unsafe'], [
+  ['Tie back loose hair', 'Safe', 'Hair can catch fire or touch chemicals.'],
+  ['Taste a chemical to find out what it is', 'Unsafe', 'Never taste chemicals.'],
+  ['Pour acid slowly into water', 'Safe', 'Add acid to water, not water to acid.'],
+  ['Eat your lunch in the lab', 'Unsafe', 'No eating or drinking in the lab.'],
+  ['Learn where the fire extinguisher is', 'Safe', 'You must know where safety equipment is.'],
+  ['Try your own experiment while the teacher is out', 'Unsafe', 'Do only the experiments your teacher assigns.'],
+  ['Wear goggles and a lab coat', 'Safe', 'Protective clothing is a rule.'],
+  ['Pour water into concentrated acid', 'Unsafe', 'It can splash and burn. Remember: acid into water.'],
+  ['Dispose of chemical waste properly', 'Safe', 'All chemical waste must be disposed of properly.']]);
+sorter('signsort', ['Warns of danger', 'Protects or helps you'], [
+  ['Toxic materials', 'Warns of danger', 'It warns of poison.'], ['Gloves', 'Protects or helps you', 'They protect your hands.'], ['Flammable materials', 'Warns of danger', 'It warns of things that catch fire.'],
+  ['Safety glasses', 'Protects or helps you', 'They protect your eyes.'], ['Biological hazard', 'Warns of danger', 'It warns of germs and living samples.'], ['Fire extinguisher', 'Protects or helps you', 'It shows where help for a fire is.'],
+  ['Corrosives', 'Warns of danger', 'They can burn skin and eyes.'], ['Hand wash', 'Protects or helps you', 'It reminds you to clean your hands.'], ['High voltage hazard', 'Warns of danger', 'It warns of strong electricity.']]);
+
+/* ---- end-of-lesson quizzes ---- */
+const QUIZ = {
+ l11: [
+  {t:'mcq', q:'Which statement best describes science?', o:['A systematic way of learning about the world, based on observation and evidence','A list of facts to memorise','Guessing how nature works','Beliefs that are never tested'], a:'A systematic way of learning about the world, based on observation and evidence', why:'Science is an orderly method of gaining knowledge, based on observation and evidence.'},
+  {t:'tf', q:'Science and technology play a role in agriculture, medicine, construction and the making of soaps and plastics.', a:true, why:'These are all areas of society named in the lesson.'},
+  {t:'match', q:'Match each term to its meaning.', pairs:[['Indigenous science','Knowledge local people build from their environment'],['Conventional science','Knowledge based on laws found with the scientific method'],['Natural science','The study of nature and natural laws'],['Technology','Using scientific knowledge to make life easier']], why:'These four ideas are the key terms of section 1.1.'},
+  {t:'tf', q:'Preserving meat with salt and smoke drying is an example of indigenous knowledge.', a:true, why:'It is practical knowledge that Ethiopian communities have used for a long time.'},
+  {t:'mcq', q:'A student studies the chemical reactions that happen inside the human body. Which field is this?', o:['Biochemistry','Biophysics','Physical chemistry','Geophysics'], a:'Biochemistry', why:'Biochemistry combines biology and chemistry: chemical processes in living things.'},
+  {t:'match', q:'Match each field to the sciences it combines.', pairs:[['Biophysics','Biology and Physics'],['Biochemistry','Biology and Chemistry'],['Physical chemistry','Chemistry and Physics'],['Geophysics','Geology and Physics']], why:'Fields overlap, so new fields combine two older ones.'},
+  {t:'tf', q:'Biology, physics and chemistry do not share any common areas of study.', a:false, why:'There is no clear border line between them. Their knowledge overlaps.'},
+  {t:'mcq', q:'A team uses what it knows about electricity to build a solar lamp for a village. This is:', o:['Technology','Pure science only','Indigenous science only','Ethics'], a:'Technology', why:'Technology uses scientific knowledge to solve a real-world problem.'},
+  {t:'mcq', q:'Who discovered a natural treatment for bilharzia (schistosomiasis) in 1964?', o:['Dr. Aklilu Lemma','Dr. Gebisa Ejeta','Marie Curie','Isaac Newton'], a:'Dr. Aklilu Lemma', why:'He found that endod berries kill the snails that spread the disease.'},
+  {t:'blank', q:'Dr. Gebisa Ejeta won the World Food Prize in 2009 for his work on ___.', a:['sorghum'], why:'He is a plant breeder known for sorghum.'},
+  {t:'mcq', q:'A student changes her results so they match what the book says. Which ethical principle is she breaking?', o:['Honesty','Legality','Competence','Non-discrimination'], a:'Honesty', why:'Honesty means reporting what really happened, even if it differs from the book.'},
+  {t:'mcq', q:'Why did the endod plant become important to scientists around the world?', o:['It is a cheap, safe way to kill the snails that spread bilharzia','It makes electricity','It cures every disease','It grows without water'], a:'It is a cheap, safe way to kill the snails that spread bilharzia', why:'Killing the snails stops the parasitic worm from spreading.'}
+ ],
+ l12: [
+  {t:'match', q:'Match each tool to its use.', pairs:[['Triple-beam balance','Finding the mass of an object'],['Graduated cylinder','Measuring the volume of a liquid'],['Thermometer','Measuring temperature'],['Bunsen burner','Heating things in the lab'],['Petri dish','Growing bacteria']], why:'See Table 1.'},
+  {t:'mcq', q:'Which tool would you use to move a hot beaker?', o:['Tongs','Thermometer','Petri dish','Triple-beam balance'], a:'Tongs', why:'Tongs are used to carry hot things.'},
+  {t:'mcq', q:'You need about 50 ml of water for an experiment. Which tool measures it best?', o:['Graduated cylinder','Triple-beam balance','Tongs','Petri dish'], a:'Graduated cylinder', why:'It has a millilitre scale for measuring volume.'},
+  {t:'tf', q:'It is safe to taste a chemical to find out what it is.', a:false, why:'Never taste chemicals.'},
+  {t:'blank', q:'Always add ___ to water. Never add water to concentrated acid.', a:['acid'], why:'The rule is AW, not WA: acid into water.'},
+  {t:'mcq', q:'Why must you tie back loose hair in the lab?', o:['It could catch fire or touch chemicals','It looks neat','Hair makes chemicals dirty','Your teacher likes it'], a:'It could catch fire or touch chemicals', why:'Loose hair is a hazard near flames and chemicals.'},
+  {t:'order', q:'Put these parts of a laboratory report in order.', items:['Title','Objective','Procedure','Observation','Conclusion'], why:'A report goes from what you planned, to what you did and saw, to what you decided.'},
+  {t:'mcq', q:'Which sign warns that a chemical can burn your skin?', o:['Corrosives','Gloves','Hand wash','Hearing protection'], a:'Corrosives', why:'The corrosives sign is a warning. The others are protective symbols.'},
+  {t:'match', q:'Match each sign to its meaning.', pairs:[['Safety glasses','Protect your eyes'],['Fire extinguisher','Shows where to find help for a fire'],['Biological hazard','Living things that may spread disease'],['High voltage hazard','Very strong electricity']], why:'Signs and symbols keep people safe and informed.'},
+  {t:'tf', q:'You should carry out only the experiments assigned by your teacher.', a:true, why:'This is one of the safety rules.'},
+  {t:'mcq', q:'A bottle has a flame symbol on its label. What should you do?', o:['Keep it away from the Bunsen burner and other flames','Heat it to test it','Smell it carefully','Pour it into the sink'], a:'Keep it away from the Bunsen burner and other flames', why:'The flame symbol means flammable materials.'},
+  {t:'blank', q:'A laboratory report explains what you did, what you learnt and what the ___ mean.', a:['results','result'], why:'A report ends by explaining what the results show.'}
+ ]
+};
+const norm = s => String(s).toLowerCase().replace(/[°%]/g, '').replace(/\s+/g, ' ').trim();
+const esc2 = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function shuffle(a, seed) { const r = a.slice(); let s = seed; for (let i = r.length - 1; i > 0; i--) { s = (s * 9301 + 49297) % 233280; const j = Math.floor(s / 233280 * (i + 1)); [r[i], r[j]] = [r[j], r[i]]; } return r; }
+const TYPE = { mcq: 'Multiple choice', tf: 'True or false', blank: 'Fill in the blank', match: 'Matching', order: 'Put in order' };
+document.querySelectorAll('.quiz[data-quiz]').forEach(box => {
+  const id = box.dataset.quiz, Q = QUIZ[id];
+  function itemHTML(it, k) {
+    const name = `${id}-${k}`;
+    let body = '';
+    if (it.t === 'mcq') body = `<div class="qopts">${it.o.map(o => `<label><input type="radio" name="${name}" value="${esc2(o)}"><span>${esc2(o)}</span></label>`).join('')}</div>`;
+    if (it.t === 'tf') body = `<div class="qopts row2">${['True', 'False'].map(o => `<label><input type="radio" name="${name}" value="${o}"><span>${o}</span></label>`).join('')}</div>`;
+    if (it.t === 'blank') { const [a, b] = it.q.split('___'); return `<li class="qi" data-k="${k}"><span class="qt">${TYPE[it.t]}</span><p>${esc2(a)}<input class="blank" id="${name}" aria-label="Your answer" autocomplete="off">${esc2(b)}</p><p class="qr"></p></li>`; }
+    if (it.t === 'match') { const rights = shuffle(it.pairs.map(p => p[1]), k + 7); body = `<div class="qmatch">${it.pairs.map((p, j) => `<label><span>${esc2(p[0])}</span><select id="${name}-${j}"><option value="">Choose…</option>${rights.map(r => `<option>${esc2(r)}</option>`).join('')}</select></label>`).join('')}</div>`; }
+    if (it.t === 'order') { const mixed = shuffle(it.items, k + 3); body = `<div class="qmatch">${mixed.map((x, j) => `<label><span>${esc2(x)}</span><select id="${name}-${j}" data-item="${esc2(x)}"><option value="">Position…</option>${it.items.map((_, n) => `<option>${n + 1}</option>`).join('')}</select></label>`).join('')}</div>`; }
+    return `<li class="qi" data-k="${k}"><span class="qt">${TYPE[it.t]}</span><p>${esc2(it.q)}</p>${body}<p class="qr"></p></li>`;
+  }
+  function build() {
+    box.innerHTML = `<div class="qhead"><span class="ck">Lesson quiz</span><h3>Test yourself: lesson ${id.slice(1, 2)}.${id.slice(2)}</h3><p class="note">${Q.length} questions. Answer them all, then check. No hints in the quiz.</p></div><ol class="qlist">${Q.map(itemHTML).join('')}</ol><p class="qerr" aria-live="polite"></p><div class="qfoot"><button class="qbtn">Check my answers</button></div><div class="qscore" aria-live="polite"></div>`;
+  }
+  function grade() {
+    let score = 0, blank = 0;
+    const res = Q.map((it, k) => {
+      const name = `${id}-${k}`; let ok = false, given = true, right = '';
+      if (it.t === 'mcq' || it.t === 'tf') { const c = box.querySelector(`input[name="${name}"]:checked`); given = !!c; ok = c && (it.t === 'tf' ? (c.value === 'True') === it.a : c.value === it.a); right = it.t === 'tf' ? (it.a ? 'True' : 'False') : it.a; }
+      if (it.t === 'blank') { const v = box.querySelector('#' + CSS.escape(name)).value; given = v.trim() !== ''; ok = it.a.some(a => norm(a) === norm(v)); right = it.a[0]; }
+      if (it.t === 'match') { const sel = it.pairs.map((p, j) => box.querySelector('#' + CSS.escape(`${name}-${j}`))); given = sel.every(s => s.value); ok = sel.every((s, j) => s.value === it.pairs[j][1]); right = it.pairs.map(p => `${p[0]} → ${p[1]}`).join('; '); }
+      if (it.t === 'order') { const sel = [...box.querySelectorAll(`select[id^="${name}-"]`)]; given = sel.every(s => s.value); ok = sel.every(s => it.items.indexOf(s.dataset.item) + 1 === +s.value); right = it.items.join(' → '); }
+      if (!given) blank++;
+      if (ok) score++;
+      return { ok, given, right };
+    });
+    if (blank && !box.dataset.confirm) { box.dataset.confirm = 1; box.querySelector('.qerr').textContent = `${blank} question${blank > 1 ? 's are' : ' is'} not answered yet. Answer ${blank > 1 ? 'them' : 'it'}, or press "Check my answers" again to check anyway.`; return; }
+    box.querySelector('.qerr').textContent = '';
+    res.forEach((r, k) => {
+      const li = box.querySelector(`.qi[data-k="${k}"]`), it = Q[k];
+      li.classList.add(r.ok ? 'ok' : 'no');
+      li.querySelectorAll('input,select').forEach(x => x.disabled = true);
+      li.querySelector('.qr').innerHTML = r.ok ? `<b>Correct.</b> ${esc2(it.why)}` : `<b>${r.given ? 'Not quite.' : 'Not answered.'}</b> Answer: ${esc2(r.right)}. ${esc2(it.why)}`;
+    });
+    const pct = Math.round(score / Q.length * 100);
+    const msg = pct >= 80 ? 'Well done. You understand this lesson.' : pct >= 50 ? 'Good start. Re-read the parts you missed, then try again.' : 'Go back through the lesson and its checks, then try again.';
+    box.querySelector('.qscore').innerHTML = `<span class="big">${score} / ${Q.length}</span><p>${msg}</p><button class="qbtn ghost">Try again</button>`;
+    box.querySelector('.qfoot').hidden = true;
+  }
+  box.addEventListener('click', e => {
+    const b = e.target.closest('.qbtn'); if (!b) return;
+    if (b.classList.contains('ghost')) { delete box.dataset.confirm; build(); box.scrollIntoView({ behavior: 'smooth', block: 'start' }); } else grade();
+  });
+  box.addEventListener('input', () => { if (box.dataset.confirm) { delete box.dataset.confirm; box.querySelector('.qerr').textContent = ''; } });
+  build();
+});
+
+/* ---- reading progress (this browser only) ---- */
+(function () {
+  let read = {};
+  try { read = JSON.parse(localStorage.getItem('meseret-sci7-u1-read') || '{}'); } catch (_) { read = {}; }
+  function sync() {
+    document.querySelectorAll('[data-done]').forEach(b => { const on = !!read[b.dataset.done]; b.setAttribute('aria-pressed', on); b.textContent = (on ? '✓ Read: ' : 'Mark as read: ') + 'lesson ' + b.dataset.done.slice(1, 2) + '.' + b.dataset.done.slice(2); });
+    document.querySelectorAll('nav.toc a[data-sec]').forEach(a => a.classList.toggle('read', !!read[a.dataset.sec]));
+  }
+  document.addEventListener('click', e => {
+    const b = e.target.closest('[data-done]'); if (!b) return;
+    read[b.dataset.done] = !read[b.dataset.done];
+    try { localStorage.setItem('meseret-sci7-u1-read', JSON.stringify(read)); } catch (_) {}
+    sync();
+  });
+  sync();
+})();
+</script>
+
+</body></html>

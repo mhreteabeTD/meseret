@@ -135,7 +135,7 @@ async function viewChapter(id) {
   setTop(`<a class="iconbtn" href="#home" aria-label="back">${svgIcon(BACK)}</a><div class="grow"><div class="eyebrow">${t('grade')} ${c.grade} · ${esc(L(idx.subjects[c.subject]))}</div><div class="display" style="font-size:18px">${t('unit')} ${c.unit} · ${esc(L(c.title))}</div></div>`);
   const p = chapterProgress(c.id);
   const rows = c.sections.map(s => {
-    if (s.lesson) { const lp = lessonProgress(s.lesson); return `<a class="item ${lp && !lp.done ? 'current' : ''}" href="#lesson/${encodeURIComponent(s.lesson)}"><div class="dot ${lp && lp.done ? 'done' : lp ? 'now' : ''}">${lp && lp.done ? '✓' : ''}</div><div class="grow"><div class="t">${esc(s.n)} ${esc(s.title)}</div><div class="s">${t('interactive')} · ${s.minutes || 8} ${t('min')}${lp && lp.best != null ? ` · ${lp.best}` : ''}</div></div>${s.new ? `<span class="pill sky">${t('new')}</span>` : ''}</a>`; }
+    if (s.lesson) { const lp = lessonProgress(s.lesson); return `<a class="item ${lp && !lp.done ? 'current' : ''}" href="#lesson/${encodeURIComponent(s.lesson)}"><div class="dot ${lp && lp.done ? 'done' : lp ? 'now' : ''}">${lp && lp.done ? '✓' : ''}</div><div class="grow"><div class="t">${esc(s.n)} ${esc(s.title)}</div><div class="s">${lp && lp.n && !lp.done ? t('progress_n', { d: Object.keys(lp.got || {}).length, n: lp.n }) : `${s.minutes || 8} ${t('min')}`}${lp && lp.best != null ? ` · ${lp.best}` : ''}</div>${lp && lp.n ? `<div class="mini"><i style="width:${Math.round(Object.keys(lp.got || {}).length / lp.n * 100)}%"></i></div>` : ''}</div>${s.new ? `<span class="pill sky">${t('new')}</span>` : ''}</a>`; }
     const head = s.book ? `<div class="item head book">${t('from_book')}</div>` : '';
     return head + `<a class="item" href="${c.classic}#${s.anchor}"><div class="dot"></div><div class="grow"><div class="t">${esc(s.n)} ${esc(s.title)}</div><div class="s">${t('read_in_chapter')}</div></div></a>`;
   }).join('');
@@ -300,6 +300,61 @@ function vennSVG(a, b, k) {
   return `<svg viewBox="0 0 330 180" role="img" aria-label="Venn diagram of the prime factors of ${a} and ${b}">${g}</svg>`;
 }
 
+/* ---------- screen renderers (shared by the step player and the book reader) ---------- */
+function makeR(env) {
+  const div = html => { const d = document.createElement('div'); d.className = 'stack'; d.innerHTML = html; return d; };
+  const head = s => `<span class="eyebrow sky">${esc(s._from || s.step || '')}</span>${s.title ? `<h1 class="display" tabindex="-1">${esc(s.title)}</h1>` : ''}${s.text ? `<p class="lead">${esc(s.text)}</p>` : ''}`;
+  const choice = (s, opts, ans, row2) => {
+    const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="opts${row2 ? ' row2' : ''}" role="radiogroup">${opts.map(o => `<button class="opt" role="radio" aria-checked="false">${esc(o)}</button>`).join('')}</div>`);
+    let pick = null;
+    el.querySelector('.opts').addEventListener('click', e => { const b = e.target.closest('.opt'); if (!b || b.disabled || env.phase() !== 'answer') return; pick = b; el.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-checked', x === b)); env.update(); });
+    return { el, label: t('check'), ready: () => !!pick, check() { const ok = pick.textContent === ans; pick.classList.add(ok ? 'ok' : 'no'); if (ok) el.querySelectorAll('.opt').forEach(x => x.disabled = true); else pick.disabled = true; return ok ? { ok: true, body: s.why } : { ok: false, body: s.clue }; }, retry() { pick = null; el.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-checked', 'false')); } };
+  };
+  const R = {
+    guess(s) { const f = s.figure || {}; const el = div(head(s) + (f.type === 'board' ? `<div class="fig">${boardSVG(f.w, f.h, 0)}</div>` : '') + `<p class="ask">${esc(s.ask || '')}</p><div class="opts row2" role="radiogroup">${s.opts.map(o => `<button class="opt center" role="radio" aria-checked="false">${esc(o)}</button>`).join('')}</div><p class="small muted">${t('guess_note')}</p>`);
+      let pick = null; el.querySelector('.opts').addEventListener('click', e => { const b = e.target.closest('.opt'); if (!b || env.phase() !== 'answer') return; pick = b; el.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-checked', x === b)); env.update(); });
+      return { el, label: t('lock_guess'), ready: () => !!pick, check() { env.state.guess = pick.textContent; el.querySelectorAll('.opt').forEach(x => x.disabled = true); return { ok: null, title: t('your_guess', { g: env.state.guess }), body: s.after }; } }; },
+    tiles(s) { const f = s.figure || { w: 50, h: 20 }; const el = div(head(s) + `<div class="fig"><div class="board">${boardSVG(f.w, f.h, 0)}</div><div class="sizes" role="group">${s.sizes.map(z => `<button class="size" aria-pressed="false" data-s="${z}">${z} cm</button>`).join('')}</div><div class="result" aria-live="polite"><strong>${t('pick_size')}</strong>${t('try_more', { n: s.need })}</div></div>`);
+      const tried = new Set(), res = el.querySelector('.result');
+      el.querySelector('.sizes').addEventListener('click', e => { const b = e.target.closest('.size'); if (!b) return; const z = +b.dataset.s, fit = f.w % z === 0 && f.h % z === 0; tried.add(z); b.classList.add(fit ? 'fit' : 'gap'); el.querySelectorAll('.size').forEach(x => x.setAttribute('aria-pressed', x === b)); el.querySelector('.board').innerHTML = boardSVG(f.w, f.h, z); const left = Math.max(0, s.need - tried.size); res.innerHTML = (fit ? `<strong>${t('fits', { s: z, x: f.w / z, y: f.h / z, n: (f.w / z) * (f.h / z) })}</strong>${t('fits_why', { s: z, a: f.w, b: f.h })}` : `<strong>${t('gap', { s: z })}</strong>${t('gap_why', { s: z, n: f.w % z ? f.w : f.h })}`) + (left ? ' ' + t('try_more', { n: left }) : ''); env.update(); });
+      return { el, label: t('continue'), ready: () => tried.size >= s.need }; },
+    read(s) { return { el: div(head(s) + (s.paras || []).map(x => `<p>${esc(x)}</p>`).join('') + (s.defs || []).map(d => `<div class="defn"><b>${esc(d[0])}</b><span>${esc(d[1])}</span></div>`).join('') + (s.table ? `<div class="tbl"><table>${s.table.map((r, i) => `<tr>${r.map(c => i ? `<td>${esc(c)}</td>` : `<th>${esc(c)}</th>`).join('')}</tr>`).join('')}</table></div>` : '') + (s.note ? `<p class="note">${esc(s.note)}</p>` : '')), label: t('continue'), ready: () => true }; },
+    mcq(s) { return choice(s, s.opts, s.ans, false); },
+    tf(s) { return choice(s, [t('true'), t('false')], s.a ? t('true') : t('false'), true); },
+    name(s) { const f = s.figure || {}; let html = head(s);
+      if (f.type === 'factors') { const fa = factors(f.a), fb = factors(f.b), common = fa.filter(x => fb.includes(x)), g = Math.max(...common); const row = (n, L) => `<div class="frow"><span>${t('factors_of', { n })}</span><div class="chips">${L.map(x => `<span class="chip" data-v="${x}">${x}</span>`).join('')}</div></div>`; html += `<div class="fig">${row(f.a, fa)}${row(f.b, fb)}<button class="inner" id="rv">${t('show_shared')}</button></div><div id="after" hidden></div>`;
+        const el = div(html); let shown = false;
+        el.querySelector('#rv').addEventListener('click', e => { shown = true; e.currentTarget.disabled = true; el.querySelectorAll('.chip').forEach(c => c.classList.toggle('on', common.includes(+c.dataset.v))); const a = el.querySelector('#after'); a.innerHTML = `<div class="stack"><p class="ask">${t('shared', { list: common.join(', '), g })}</p>${s.defs.map(d => `<div class="defn"><b>${esc(d[0])}</b><span>${esc(d[1])}</span></div>`).join('')}${s.ask ? `<p>${t('biggest_square', { a: s.ask })} ${env.state.guess ? (env.state.guess === s.ask ? t('spot_on', { g: env.state.guess }) : t('not_quite_guess', { g: env.state.guess, a: s.ask })) : ''}</p>` : ''}${explainCard(s)}</div>`; a.hidden = false; env.update(); });
+        return { el, label: t('continue'), ready: () => shown }; }
+      html += s.defs.map(d => `<div class="defn"><b>${esc(d[0])}</b><span>${esc(d[1])}</span></div>`).join('') + explainCard(s);
+      return { el: div(html), label: t('continue'), ready: () => true }; },
+    pick(s) { const ans = s.a.map(String); const el = div(head(s) + `<div class="fig"><div class="chips" role="group">${s.pool.map(x => `<button class="chip" aria-pressed="false" data-v="${esc(x)}">${esc(x)}</button>`).join('')}</div></div>`); const on = new Set();
+      el.querySelector('.chips').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b || env.phase() !== 'answer') return; const v = b.dataset.v; on.has(v) ? on.delete(v) : on.add(v); b.setAttribute('aria-pressed', on.has(v)); b.classList.remove('no'); env.update(); });
+      return { el, label: t('check'), ready: () => on.size > 0, check() { const wrong = [...on].filter(v => !ans.includes(v)), missing = ans.filter(v => !on.has(v)); el.querySelectorAll('.chip').forEach(c => c.classList.toggle('no', wrong.includes(c.dataset.v))); if (!wrong.length && !missing.length) { el.querySelectorAll('.chip').forEach(c => { if (on.has(c.dataset.v)) c.classList.add('ok'); c.disabled = true; }); return { ok: true, body: s.why }; } if (wrong.length) return { ok: false, body: s.clue || t('wrong_pick', { n: wrong[0], a: '', b: '' }) }; return { ok: false, body: t('missing_pick') }; }, retry() {} }; },
+    steps(s) { const f = s.figure || {}; const el = div(head(s) + `<div class="fig">${f.type === 'venn' ? `<div id="venn">${vennSVG(f.a, f.b, 0)}</div>` : ''}<ol class="steps" aria-live="polite"></ol><button class="inner" id="nx">${t('next_step')}</button></div>`); const ol = el.querySelector('.steps'), nb = el.querySelector('#nx'); let k = 0;
+      const draw = () => { ol.innerHTML = s.steps.slice(0, k + 1).map(x => `<li>${esc(x)}</li>`).join(''); if (f.type === 'venn') el.querySelector('#venn').innerHTML = vennSVG(f.a, f.b, k); nb.disabled = k >= s.steps.length - 1; env.update(); };
+      nb.addEventListener('click', () => { k++; draw(); }); draw();
+      return { el, label: t('continue'), ready: () => k >= s.steps.length - 1 }; },
+    blank(s) { const [a, b] = (s.ask || '___').split('___'); const el = div(head(s) + `<div class="fig"><p class="blank"><span>${esc(a)}</span><input id="bl" autocomplete="off" aria-label="${t('your_answer')}"><span>${esc(b || '')}</span></p><p class="small muted">${t('spelling_note')}</p></div>`); const inp = el.querySelector('#bl'); inp.addEventListener('input', () => env.update()); inp.addEventListener('keydown', e => { if (e.key === 'Enter') env.enter(); });
+      return { el, label: t('check'), ready: () => inp.value.trim() !== '', check() { const r = matchAnswer(inp.value, s.a.map(String)); inp.className = r.ok ? 'ok' : 'no'; inp.disabled = r.ok; return r.ok ? { ok: true, body: (r.near ? t('right_idea', { a: r.near }) + ' ' : '') + (s.why || '') } : { ok: false, body: s.clue }; }, retry() { inp.className = ''; inp.focus(); } }; },
+    sort(s) { const el = div(head(s) + `<div class="fig"><p class="display" id="it" style="text-align:center;font-size:22px"></p><div class="opts" id="bins">${s.bins.map(b => `<button class="opt center">${esc(b)}</button>`).join('')}</div><p class="small muted" id="fb"></p></div>`); let i = 0, wrong = 0; const draw = () => { el.querySelector('#it').textContent = i < s.items.length ? s.items[i][0] : ''; };
+      el.querySelector('#bins').addEventListener('click', e => { const b = e.target.closest('.opt'); if (!b || i >= s.items.length || env.phase() !== 'answer') return; const [name, ans, why] = s.items[i]; const ok = b.textContent === ans; if (!ok) wrong++; el.querySelector('#fb').textContent = (ok ? '✓ ' : '✗ ') + `${name} → ${ans}. ${why || ''}`; i++; draw(); if (i >= s.items.length) { el.querySelector('#bins').querySelectorAll('.opt').forEach(x => x.disabled = true); } env.update(); }); draw();
+      return { el, label: t('check'), ready: () => i >= s.items.length, check() { return wrong ? { ok: false, body: s.clue || `${wrong} / ${s.items.length}` } : { ok: true, body: s.why || '' }; }, retry() { i = 0; wrong = 0; el.querySelector('#bins').querySelectorAll('.opt').forEach(x => x.disabled = false); draw(); } }; },
+    tap(s) { const el = div(head(s) + `<div class="fig"><div class="chips">${s.items.map((it, k) => `<button class="chip" data-k="${k}" aria-pressed="false">${esc(it[0])}</button>`).join('')}</div><div class="result" id="info">${esc(s.ask || '')}</div></div>` + explainCard(s)); const seen = new Set();
+      el.querySelector('.chips').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; const k = +b.dataset.k; seen.add(k); el.querySelectorAll('.chip').forEach(x => x.setAttribute('aria-pressed', x === b)); el.querySelector('#info').innerHTML = `<strong>${esc(s.items[k][0])}</strong>${esc(s.items[k][1])}`; env.update(); });
+      return { el, label: t('continue'), ready: () => seen.size >= Math.min(s.need || s.items.length, s.items.length) }; },
+    order(s) { const mixed = s.items.slice().sort(() => Math.random() - .5); const el = div(head(s) + `<div class="fig"><div class="chips" id="pool">${mixed.map(x => `<button class="chip" data-v="${esc(x)}">${esc(x)}</button>`).join('')}</div><ol class="steps" id="seq"></ol></div>`); let seq = [];
+      el.querySelector('#pool').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b || env.phase() !== 'answer') return; seq.push(b.dataset.v); b.disabled = true; el.querySelector('#seq').innerHTML = seq.map(x => `<li>${esc(x)}</li>`).join(''); env.update(); });
+      return { el, label: t('check'), ready: () => seq.length === s.items.length, check() { const ok = seq.every((x, i) => x === s.items[i]); return ok ? { ok: true, body: s.why } : { ok: false, body: s.clue || s.why }; }, retry() { seq = []; el.querySelector('#seq').innerHTML = ''; el.querySelectorAll('#pool .chip').forEach(x => x.disabled = false); } }; },
+    match(s) { const rights = s.pairs.map(p => p[1]).sort(() => Math.random() - .5); const el = div(head(s) + `<div class="fig"><div class="stack">${s.pairs.map((p, j) => `<label class="row"><span class="grow" style="font-weight:800">${esc(p[0])}</span><select data-j="${j}" style="min-height:44px;border-radius:10px;border:2px solid var(--line);background:var(--surface);max-width:55%"><option value="">…</option>${rights.map(r => `<option>${esc(r)}</option>`).join('')}</select></label>`).join('')}</div></div>`);
+      el.addEventListener('change', () => env.update());
+      return { el, label: t('check'), ready: () => [...el.querySelectorAll('select')].every(x => x.value), check() { const ok = [...el.querySelectorAll('select')].every(x => x.value === s.pairs[+x.dataset.j][1]); return ok ? { ok: true, body: s.why } : { ok: false, body: s.clue || s.why }; }, retry() {} }; },
+  };
+  const explainCard = s => { const ex = s._explain || env.explain; if (!ex) return ''; const txt = (ex[S.lang] && ex[S.lang].text) || (ex.en && ex.en.text) || ''; return txt ? `<div class="explain"><button class="play" id="ex-play" aria-label="${t('explain_me')}"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l12 7-12 7z" fill="#fff"/></svg></button><div class="grow"><div style="font-weight:800">${t('explain_me')}</div><div class="small muted" id="ex-text">${esc(txt)}</div></div></div>` : ''; };
+
+  return { R, div, explainCard };
+}
+
 function runPlayer(cfg) {
   setNav(false); tray.hidden = false;
   const screens = cfg.screens, SUM = screens.length;
@@ -308,58 +363,10 @@ function runPlayer(cfg) {
   function openRefresher(id) { const rf = cfg.refreshers[id]; logEvent({ lesson: cfg.id, refresher: id, item: order[pos] }); const saved = { app: [...app.childNodes], tray: tray.className, msg: msg.innerHTML, goText: go.textContent, goDis: go.disabled, phase, lastOk, cur, top: topin.innerHTML, work: $('#work').hidden };
     const extra = tray.querySelector('#rfb'); if (extra) extra.remove();
     runPlayer({ id: cfg.id + ':' + id, idea: id, title: rf.name, mode: 'refresher', screens: rf.screens, backRoute: null, resume: () => { app.replaceChildren(...saved.app); tray.className = saved.tray; msg.innerHTML = saved.msg; go.textContent = saved.goText; go.disabled = saved.goDis; phase = saved.phase; lastOk = saved.lastOk; cur = saved.cur; topin.innerHTML = saved.top; $('#work').hidden = saved.work; bindTop(order[pos]); go.onclick = onGo; window.scrollTo(0, 0); } }); }
-  const div = html => { const d = document.createElement('div'); d.className = 'stack'; d.innerHTML = html; return d; };
-  const head = s => `<span class="eyebrow sky">${esc(s._from || s.step || '')}</span>${s.title ? `<h1 class="display" tabindex="-1">${esc(s.title)}</h1>` : ''}${s.text ? `<p class="lead">${esc(s.text)}</p>` : ''}`;
-  const choice = (s, opts, ans, row2) => {
-    const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="opts${row2 ? ' row2' : ''}" role="radiogroup">${opts.map(o => `<button class="opt" role="radio" aria-checked="false">${esc(o)}</button>`).join('')}</div>`);
-    let pick = null;
-    el.querySelector('.opts').addEventListener('click', e => { const b = e.target.closest('.opt'); if (!b || b.disabled || phase !== 'answer') return; pick = b; el.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-checked', x === b)); update(); });
-    return { el, label: t('check'), ready: () => !!pick, check() { const ok = pick.textContent === ans; pick.classList.add(ok ? 'ok' : 'no'); if (ok) el.querySelectorAll('.opt').forEach(x => x.disabled = true); else pick.disabled = true; return ok ? { ok: true, body: s.why } : { ok: false, body: s.clue }; }, retry() { pick = null; el.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-checked', 'false')); } };
-  };
-  const R = {
-    guess(s) { const f = s.figure || {}; const el = div(head(s) + (f.type === 'board' ? `<div class="fig">${boardSVG(f.w, f.h, 0)}</div>` : '') + `<p class="ask">${esc(s.ask || '')}</p><div class="opts row2" role="radiogroup">${s.opts.map(o => `<button class="opt center" role="radio" aria-checked="false">${esc(o)}</button>`).join('')}</div><p class="small muted">${t('guess_note')}</p>`);
-      let pick = null; el.querySelector('.opts').addEventListener('click', e => { const b = e.target.closest('.opt'); if (!b || phase !== 'answer') return; pick = b; el.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-checked', x === b)); update(); });
-      return { el, label: t('lock_guess'), ready: () => !!pick, check() { state.guess = pick.textContent; el.querySelectorAll('.opt').forEach(x => x.disabled = true); return { ok: null, title: t('your_guess', { g: state.guess }), body: s.after }; } }; },
-    tiles(s) { const f = s.figure || { w: 50, h: 20 }; const el = div(head(s) + `<div class="fig"><div class="board">${boardSVG(f.w, f.h, 0)}</div><div class="sizes" role="group">${s.sizes.map(z => `<button class="size" aria-pressed="false" data-s="${z}">${z} cm</button>`).join('')}</div><div class="result" aria-live="polite"><strong>${t('pick_size')}</strong>${t('try_more', { n: s.need })}</div></div>`);
-      const tried = new Set(), res = el.querySelector('.result');
-      el.querySelector('.sizes').addEventListener('click', e => { const b = e.target.closest('.size'); if (!b) return; const z = +b.dataset.s, fit = f.w % z === 0 && f.h % z === 0; tried.add(z); b.classList.add(fit ? 'fit' : 'gap'); el.querySelectorAll('.size').forEach(x => x.setAttribute('aria-pressed', x === b)); el.querySelector('.board').innerHTML = boardSVG(f.w, f.h, z); const left = Math.max(0, s.need - tried.size); res.innerHTML = (fit ? `<strong>${t('fits', { s: z, x: f.w / z, y: f.h / z, n: (f.w / z) * (f.h / z) })}</strong>${t('fits_why', { s: z, a: f.w, b: f.h })}` : `<strong>${t('gap', { s: z })}</strong>${t('gap_why', { s: z, n: f.w % z ? f.w : f.h })}`) + (left ? ' ' + t('try_more', { n: left }) : ''); update(); });
-      return { el, label: t('continue'), ready: () => tried.size >= s.need }; },
-    mcq(s) { return choice(s, s.opts, s.ans, false); },
-    tf(s) { return choice(s, [t('true'), t('false')], s.a ? t('true') : t('false'), true); },
-    name(s) { const f = s.figure || {}; let html = head(s);
-      if (f.type === 'factors') { const fa = factors(f.a), fb = factors(f.b), common = fa.filter(x => fb.includes(x)), g = Math.max(...common); const row = (n, L) => `<div class="frow"><span>${t('factors_of', { n })}</span><div class="chips">${L.map(x => `<span class="chip" data-v="${x}">${x}</span>`).join('')}</div></div>`; html += `<div class="fig">${row(f.a, fa)}${row(f.b, fb)}<button class="inner" id="rv">${t('show_shared')}</button></div><div id="after" hidden></div>`;
-        const el = div(html); let shown = false;
-        el.querySelector('#rv').addEventListener('click', e => { shown = true; e.currentTarget.disabled = true; el.querySelectorAll('.chip').forEach(c => c.classList.toggle('on', common.includes(+c.dataset.v))); const a = el.querySelector('#after'); a.innerHTML = `<div class="stack"><p class="ask">${t('shared', { list: common.join(', '), g })}</p>${s.defs.map(d => `<div class="defn"><b>${esc(d[0])}</b><span>${esc(d[1])}</span></div>`).join('')}${s.ask ? `<p>${t('biggest_square', { a: s.ask })} ${state.guess ? (state.guess === s.ask ? t('spot_on', { g: state.guess }) : t('not_quite_guess', { g: state.guess, a: s.ask })) : ''}</p>` : ''}${explainCard(s)}</div>`; a.hidden = false; update(); });
-        return { el, label: t('continue'), ready: () => shown }; }
-      html += s.defs.map(d => `<div class="defn"><b>${esc(d[0])}</b><span>${esc(d[1])}</span></div>`).join('') + explainCard(s);
-      return { el: div(html), label: t('continue'), ready: () => true }; },
-    pick(s) { const ans = s.a.map(String); const el = div(head(s) + `<div class="fig"><div class="chips" role="group">${s.pool.map(x => `<button class="chip" aria-pressed="false" data-v="${esc(x)}">${esc(x)}</button>`).join('')}</div></div>`); const on = new Set();
-      el.querySelector('.chips').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b || phase !== 'answer') return; const v = b.dataset.v; on.has(v) ? on.delete(v) : on.add(v); b.setAttribute('aria-pressed', on.has(v)); b.classList.remove('no'); update(); });
-      return { el, label: t('check'), ready: () => on.size > 0, check() { const wrong = [...on].filter(v => !ans.includes(v)), missing = ans.filter(v => !on.has(v)); el.querySelectorAll('.chip').forEach(c => c.classList.toggle('no', wrong.includes(c.dataset.v))); if (!wrong.length && !missing.length) { el.querySelectorAll('.chip').forEach(c => { if (on.has(c.dataset.v)) c.classList.add('ok'); c.disabled = true; }); return { ok: true, body: s.why }; } if (wrong.length) return { ok: false, body: s.clue || t('wrong_pick', { n: wrong[0], a: '', b: '' }) }; return { ok: false, body: t('missing_pick') }; }, retry() {} }; },
-    steps(s) { const f = s.figure || {}; const el = div(head(s) + `<div class="fig">${f.type === 'venn' ? `<div id="venn">${vennSVG(f.a, f.b, 0)}</div>` : ''}<ol class="steps" aria-live="polite"></ol><button class="inner" id="nx">${t('next_step')}</button></div>`); const ol = el.querySelector('.steps'), nb = el.querySelector('#nx'); let k = 0;
-      const draw = () => { ol.innerHTML = s.steps.slice(0, k + 1).map(x => `<li>${esc(x)}</li>`).join(''); if (f.type === 'venn') el.querySelector('#venn').innerHTML = vennSVG(f.a, f.b, k); nb.disabled = k >= s.steps.length - 1; update(); };
-      nb.addEventListener('click', () => { k++; draw(); }); draw();
-      return { el, label: t('continue'), ready: () => k >= s.steps.length - 1 }; },
-    blank(s) { const [a, b] = (s.ask || '___').split('___'); const el = div(head(s) + `<div class="fig"><p class="blank"><span>${esc(a)}</span><input id="bl" autocomplete="off" aria-label="${t('your_answer')}"><span>${esc(b || '')}</span></p><p class="small muted">${t('spelling_note')}</p></div>`); const inp = el.querySelector('#bl'); inp.addEventListener('input', update); inp.addEventListener('keydown', e => { if (e.key === 'Enter' && !go.disabled) go.click(); });
-      return { el, label: t('check'), ready: () => inp.value.trim() !== '', check() { const r = matchAnswer(inp.value, s.a.map(String)); inp.className = r.ok ? 'ok' : 'no'; inp.disabled = r.ok; return r.ok ? { ok: true, body: (r.near ? t('right_idea', { a: r.near }) + ' ' : '') + (s.why || '') } : { ok: false, body: s.clue }; }, retry() { inp.className = ''; inp.focus(); } }; },
-    sort(s) { const el = div(head(s) + `<div class="fig"><p class="display" id="it" style="text-align:center;font-size:22px"></p><div class="opts" id="bins">${s.bins.map(b => `<button class="opt center">${esc(b)}</button>`).join('')}</div><p class="small muted" id="fb"></p></div>`); let i = 0, wrong = 0; const draw = () => { el.querySelector('#it').textContent = i < s.items.length ? s.items[i][0] : ''; };
-      el.querySelector('#bins').addEventListener('click', e => { const b = e.target.closest('.opt'); if (!b || i >= s.items.length || phase !== 'answer') return; const [name, ans, why] = s.items[i]; const ok = b.textContent === ans; if (!ok) wrong++; el.querySelector('#fb').textContent = (ok ? '✓ ' : '✗ ') + `${name} → ${ans}. ${why || ''}`; i++; draw(); if (i >= s.items.length) { el.querySelector('#bins').querySelectorAll('.opt').forEach(x => x.disabled = true); } update(); }); draw();
-      return { el, label: t('check'), ready: () => i >= s.items.length, check() { return wrong ? { ok: false, body: s.clue || `${wrong} / ${s.items.length}` } : { ok: true, body: s.why || '' }; }, retry() { i = 0; wrong = 0; el.querySelector('#bins').querySelectorAll('.opt').forEach(x => x.disabled = false); draw(); } }; },
-    tap(s) { const el = div(head(s) + `<div class="fig"><div class="chips">${s.items.map((it, k) => `<button class="chip" data-k="${k}" aria-pressed="false">${esc(it[0])}</button>`).join('')}</div><div class="result" id="info">${esc(s.ask || '')}</div></div>` + explainCard(s)); const seen = new Set();
-      el.querySelector('.chips').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; const k = +b.dataset.k; seen.add(k); el.querySelectorAll('.chip').forEach(x => x.setAttribute('aria-pressed', x === b)); el.querySelector('#info').innerHTML = `<strong>${esc(s.items[k][0])}</strong>${esc(s.items[k][1])}`; update(); });
-      return { el, label: t('continue'), ready: () => seen.size >= Math.min(s.need || s.items.length, s.items.length) }; },
-    order(s) { const mixed = s.items.slice().sort(() => Math.random() - .5); const el = div(head(s) + `<div class="fig"><div class="chips" id="pool">${mixed.map(x => `<button class="chip" data-v="${esc(x)}">${esc(x)}</button>`).join('')}</div><ol class="steps" id="seq"></ol></div>`); let seq = [];
-      el.querySelector('#pool').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b || phase !== 'answer') return; seq.push(b.dataset.v); b.disabled = true; el.querySelector('#seq').innerHTML = seq.map(x => `<li>${esc(x)}</li>`).join(''); update(); });
-      return { el, label: t('check'), ready: () => seq.length === s.items.length, check() { const ok = seq.every((x, i) => x === s.items[i]); return ok ? { ok: true, body: s.why } : { ok: false, body: s.clue || s.why }; }, retry() { seq = []; el.querySelector('#seq').innerHTML = ''; el.querySelectorAll('#pool .chip').forEach(x => x.disabled = false); } }; },
-    match(s) { const rights = s.pairs.map(p => p[1]).sort(() => Math.random() - .5); const el = div(head(s) + `<div class="fig"><div class="stack">${s.pairs.map((p, j) => `<label class="row"><span class="grow" style="font-weight:800">${esc(p[0])}</span><select data-j="${j}" style="min-height:44px;border-radius:10px;border:2px solid var(--line);background:var(--surface);max-width:55%"><option value="">…</option>${rights.map(r => `<option>${esc(r)}</option>`).join('')}</select></label>`).join('')}</div></div>`);
-      el.addEventListener('change', update);
-      return { el, label: t('check'), ready: () => [...el.querySelectorAll('select')].every(x => x.value), check() { const ok = [...el.querySelectorAll('select')].every(x => x.value === s.pairs[+x.dataset.j][1]); return ok ? { ok: true, body: s.why } : { ok: false, body: s.clue || s.why }; }, retry() {} }; },
-    summary() { const graded = screens.map((x, i) => x.graded ? i : -1).filter(i => i >= 0); const right = graded.filter(i => firstTry[i]).length;
+  const { R, div, explainCard } = makeR({ phase: () => phase, update: () => update(), state, explain: cfg.explain, enter: () => { if (!go.disabled) go.click(); } });
+  R.summary = () => { const graded = screens.map((x, i) => x.graded ? i : -1).filter(i => i >= 0); const right = graded.filter(i => firstTry[i]).length;
       const el = div(`<span class="eyebrow sky">${t('done')}</span><h1 class="display" tabindex="-1">${esc(cfg.title)}</h1><div class="score"><span class="big">${right} / ${graded.length}</span><span>${t('first_try')}</span></div><p>${missed.size ? t('replay_note', { n: missed.size }) : t('all_done')}</p>${cfg.learned ? `<div class="defn"><b>${t('learned')}</b><ul class="steps" style="padding-left:20px">${cfg.learned.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}${cfg.mode === 'learn' ? `<div class="card sky"><div class="small">${t('comes_back')}</div></div>` : ''}${cfg.backRoute ? `<a class="btn link" href="#${cfg.backRoute}">${t('back_chapter')}</a>` : ''}`);
-      return { el, label: cfg.mode === 'refresher' ? t('back_to_question') : missed.size ? t('replay_n', { n: missed.size }) : t('start_again'), ready: () => true, summary: true }; }
-  };
-  const explainCard = s => { const ex = cfg.explain; if (!ex) return ''; const txt = (ex[S.lang] && ex[S.lang].text) || (ex.en && ex.en.text) || ''; return txt ? `<div class="explain"><button class="play" id="ex-play" aria-label="${t('explain_me')}"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l12 7-12 7z" fill="#fff"/></svg></button><div class="grow"><div style="font-weight:800">${t('explain_me')}</div><div class="small muted" id="ex-text">${esc(txt)}</div></div></div>` : ''; };
-
+      return { el, label: cfg.mode === 'refresher' ? t('back_to_question') : missed.size ? t('replay_n', { n: missed.size }) : t('start_again'), ready: () => true, summary: true }; };
   function setTray(kind, title, body, label) { tray.className = 'tray' + (kind ? ' ' + kind : ''); msg.innerHTML = title ? `<strong>${esc(title)}</strong>${body ? `<span>${esc(body)}</span>` : ''}` : ''; go.textContent = label; }
   function update() { if (phase === 'answer' && cur) go.disabled = !cur.ready(); }
   function bindTop(k) { const rep = $('#rep'); if (rep) rep.onclick = () => reportSheet({ lesson: cfg.id || cfg.title, screen: k, label: `${cfg.title} · ${Math.min(pos + 1, order.length)}/${order.length}` }); const rb = $('#rback'); if (rb) rb.onclick = () => cfg.resume && cfg.resume(); }
@@ -395,17 +402,98 @@ function runPlayer(cfg) {
   go.onclick = onGo; order = order.concat(SUM); show();
 }
 
+/* ---------- book reader: one scrolling page per section, questions inline ---------- */
 async function viewLesson(path, mode, exIdx) {
-  const ls = await loadLesson(path); const idea = ls.ideas[0];
-  let screens, title, m = mode || 'learn';
-  if (m === 'book') { const ex = ls.exercises[exIdx || 0]; screens = ex.items; title = ex.book_name; }
-  else if (m === 'test') { screens = ls.test; title = `${t('unit_test')} · ${ls.title}`; }
-  else { screens = ls.ideas.flatMap(i => i.screens.map(s => Object.assign({ _idea: i.id }, s))); title = ls.title; }
-  const idx = await loadIndex(); const ch = idx.chapters.find(c => c.sections.some(s => s.lesson === path));
-  store.set('last', { route: `lesson/${encodeURIComponent(path)}`, title: `${ls.book.section} · ${ls.title}`, sub: ch ? `${L(idx.subjects[ch.subject])} · ${t('grade')} ${ch.grade}` : '' });
-  markStudied();
-  runPlayer({ id: ls.id, idea: idea.id, title, mode: m, screens, tool: ls.tool || idea.tool, refreshers: ls.refreshers || {}, explain: m === 'learn' ? idea.explain : null, learned: m === 'learn' ? (ls.keywords || []).map(k => `${k.en}: ${k.def}`) : null, backRoute: ch ? 'chapter/' + ch.id : 'home',
-    onDone: res => { if (m === 'learn') { const graded = screens.filter(s => s.graded).length, right = Object.values(res.firstTry).filter(Boolean).length; setLessonProgress(path, { done: true, best: `${right}/${graded}` }); Object.keys(res.byIdea).forEach(id => bumpMastery(id, res.byIdea[id])); } } });
+  const ls = await loadLesson(path), idx = await loadIndex();
+  const ch = idx.chapters.find(c => c.sections.some(x => x.lesson === path));
+  const secs = ch ? ch.sections.filter(x => x.lesson) : [], si = secs.findIndex(x => x.lesson === path), nextSec = si >= 0 ? secs[si + 1] : null;
+  const m = mode || 'learn', idea0 = ls.ideas[0];
+  let blocks = [], title = ls.title;
+  if (m === 'book') { const ex = ls.exercises[exIdx || 0]; blocks = ex.items.map(x => Object.assign({ _idea: idea0.id }, x)); title = ex.book_name; }
+  else if (m === 'test') { blocks = ls.test.map(x => Object.assign({ _idea: idea0.id }, x)); title = `${t('unit_test')} · ${ls.title}`; }
+  else ls.ideas.forEach(i => { if (ls.ideas.length > 1 && i.name) blocks.push({ kind: '_head', name: i.name }); i.screens.forEach(x => blocks.push(Object.assign({ _idea: i.id, _explain: i.explain }, x))); });
+  const key = m === 'learn' ? path : `${path}#${m}${exIdx || ''}`;
+  const saved = lessonProgress(key) || {}; const got = Object.assign({}, saved.got); const first = {};
+  const state = { guess: null }; let tasks = 0, away = false;
+  setNav(false); hideTray(); markStudied();
+  if (m === 'learn') store.set('last', { route: `lesson/${encodeURIComponent(path)}`, title: `${ls.book.section} · ${ls.title}`, sub: ch ? `${L(idx.subjects[ch.subject])} · ${t('grade')} ${ch.grade}` : '' });
+  const back = m === 'learn' ? (ch ? 'chapter/' + ch.id : 'home') : `lesson/${encodeURIComponent(path)}`;
+  setTop(`<a class="iconbtn" href="#${m === 'learn' ? back : 'exams'}" aria-label="back">${svgIcon(BACK)}</a><span class="mode ${m === 'learn' ? '' : 'book'}">${m === 'book' ? t('book_exercise') : m === 'test' ? t('unit_test') : esc(ls.book.section)}</span><div class="bar"><i id="pbar"></i></div><span class="count" id="pcount"></span><button class="iconbtn" id="rep" aria-label="${t('report')}">${svgIcon(FLAG)}</button>`);
+  const page = document.createElement('div'); page.className = 'reader';
+  page.innerHTML = `<header class="stack"><span class="eyebrow">${ch ? `${t('grade')} ${ch.grade} · ${esc(L(idx.subjects[ch.subject]))} · ` : ''}${t('unit')} ${ls.book.unit}</span><h1 class="display">${m === 'learn' ? esc(ls.book.section) + ' ' : ''}${esc(title)}</h1>${m === 'learn' && ls.competency ? `<p class="muted">${esc(ls.competency)}</p>` : ''}${m === 'test' ? `<p class="muted">${t('test_note')}</p>` : ''}</header>`;
+  app.replaceChildren(page);
+  $('#rep').onclick = () => reportSheet({ lesson: ls.id, label: `${ls.book.section} · ${ls.title}` });
+  function progress() { const d = Object.keys(got).length; $('#pbar').style.width = (tasks ? Math.round(d / tasks * 100) : 100) + '%'; $('#pcount').textContent = `${d} / ${tasks}`; }
+  function persist(extra) { setLessonProgress(key, Object.assign({ got, n: tasks }, extra || {})); }
+  function finish(i, ok) {
+    if (!(i in got)) got[i] = ok !== false;
+    progress(); persist();
+    if (Object.keys(got).length >= tasks) complete();
+  }
+  function complete() {
+    const graded = blocks.map((x, i) => x.graded ? i : -1).filter(i => i >= 0), right = graded.filter(i => first[i] !== false && got[i] !== false).length;
+    persist({ done: true, best: `${right}/${graded.length}` });
+    if (m === 'learn' && !complete.did) { complete.did = true; const by = {}; graded.forEach(i => { const id = blocks[i]._idea; by[id] = (by[id] !== false) && first[i] !== false; }); Object.keys(by).forEach(id => bumpMastery(id, by[id])); }
+    const sc = page.querySelector('#score'); if (sc) { sc.hidden = false; sc.innerHTML = `<span class="big">${right} / ${graded.length}</span><span>${t('first_try')}</span>`; }
+  }
+  function openRefresher(id) {
+    const rf = ls.refreshers && ls.refreshers[id]; if (!rf) return; logEvent({ lesson: ls.id, refresher: id });
+    const keep = { app: [...app.childNodes], top: [...topin.childNodes], y: window.scrollY }; away = true; closePanel();
+    runPlayer({ id: ls.id + ':' + id, idea: id, title: rf.name, mode: 'refresher', screens: rf.screens, backRoute: null, resume: () => { app.replaceChildren(...keep.app); topin.replaceChildren(...keep.top); top.hidden = false; hideTray(); setNav(false); away = false; requestAnimationFrame(() => window.scrollTo(0, keep.y)); } });
+  }
+  blocks.forEach((s, i) => {
+    if (s.kind === '_head') { const h = document.createElement('h2'); h.className = 'display ideahead'; h.textContent = s.name; page.appendChild(h); return; }
+    const wrap = document.createElement('section'); wrap.className = 'blk' + (s.step === 'hook' ? ' hook' : s.kind === 'name' || s.kind === 'read' ? ' plain' : '');
+    let phase = 'answer', tries = 0, cur = null; const btn = document.createElement('button'), fb = document.createElement('div');
+    const env = { phase: () => phase, state, explain: null, enter: () => { if (!btn.disabled && !btn.hidden) btn.click(); },
+      update() { if (!cur) return; if (cur.check) btn.disabled = phase !== 'answer' || !cur.ready(); else if (phase === 'answer' && cur.ready() && interactive) { phase = 'done'; wrap.classList.add('done'); finish(i, true); } } };
+    const RR = makeR(env).R; cur = (RR[s.kind] || RR.name)(s);
+    const interactive = !!cur.check || !cur.ready();
+    if (interactive) tasks++;
+    wrap.appendChild(cur.el);
+    const ex = cur.el.querySelector('#ex-play'); if (ex) ex.onclick = () => speak(cur.el.querySelector('#ex-text').textContent);
+    const foot = document.createElement('div'); foot.className = 'blkfoot';
+    const rf = s.needs && ls.refreshers && ls.refreshers[s.needs];
+    if (rf) { const a = document.createElement('button'); a.className = 'btn link small'; a.textContent = t('need_reminder', { n: rf.name }); a.onclick = () => openRefresher(s.needs); foot.appendChild(a); }
+    if (s.graded || s.kind === 'guess') { const w = document.createElement('button'); w.className = 'btn link small'; w.textContent = '✎ ' + t('work_it_out'); w.onclick = () => { workSheet({ key: `${ls.id}:${m}:${i}`, lesson: ls.id, item: i, tool: s.tool || ls.tool || idea0.tool, q: (s.ask || s.text || s.title || '').replace(/\n/g, ' ') }); requestAnimationFrame(() => wrap.scrollIntoView({ block: 'start', behavior: 'smooth' })); }; foot.appendChild(w); }
+    fb.className = 'fb'; fb.setAttribute('aria-live', 'polite'); fb.hidden = true;
+    const say = (kind, head, body) => { fb.hidden = false; fb.className = 'fb ' + kind; fb.innerHTML = `<strong>${esc(head || '')}</strong>${body ? `<span>${esc(body)}</span>` : ''}`; };
+    if (cur.check) {
+      btn.className = 'btn'; btn.textContent = cur.label; btn.disabled = true;
+      btn.onclick = () => {
+        if (phase === 'retry') { phase = 'answer'; fb.hidden = true; const o = fb.nextElementSibling; if (o && o.dataset.offer) o.remove(); cur.retry && cur.retry(); btn.textContent = cur.label; env.update(); return; }
+        const r = cur.check(); tries++;
+        if (s.graded) { if (tries === 1) first[i] = !!r.ok; logEvent({ lesson: ls.id, idea: s._idea, item: i, correct: !!r.ok, attempt: tries, mode: m }); }
+        const end = (ok) => { phase = 'done'; btn.hidden = true; wrap.classList.add('done'); finish(i, ok); };
+        if (r.ok === true) { say('ok', t('correct'), r.body); end(tries === 1); }
+        else if (r.ok === null) { say('info', r.title, r.body); end(true); }
+        else if (m === 'test') { say('no', t('not_yet'), s.why || ''); end(false); }
+        else if (tries >= 2) { say('no', t('show_worked'), s.worked || s.why || ''); end(false); }
+        else {
+          say('no', t('not_yet'), r.body); phase = 'retry'; btn.textContent = t('try_again'); btn.disabled = false;
+          if (rf) { const o = document.createElement('div'); o.className = 'offer'; o.dataset.offer = 1; o.innerHTML = `<span class="small">${esc(t('offer_refresher', { n: rf.name }))}</span>`; const y = document.createElement('button'); y.className = 'btn ghost'; y.textContent = t('yes_reminder'); y.onclick = () => openRefresher(s.needs); o.appendChild(y); fb.after(o); }
+        }
+      };
+      wrap.appendChild(fb); wrap.appendChild(btn);
+    } else wrap.appendChild(fb);
+    if (foot.childNodes.length) wrap.appendChild(foot);
+    if (i in got) wrap.classList.add('seen');
+    page.appendChild(wrap);
+    env.update();
+  });
+  // end of section: what you learned, then where to go next
+  const end = document.createElement('section'); end.className = 'blk endblk';
+  const exLinks = m === 'learn' ? (ls.exercises || []).map((ex, k) => `<a class="item" href="#exercise/${encodeURIComponent(path)}/${k}"><div class="dot"></div><div class="grow"><div class="t">${esc(ex.book_name)}</div><div class="s">${ex.items.length} · ${t('book_exercise')}</div></div></a>`).join('') + (ls.test && ls.test.length ? `<a class="item" href="#test/${encodeURIComponent(path)}"><div class="dot"></div><div class="grow"><div class="t">${t('unit_test')}</div><div class="s">${ls.test.length} · ${t('test_note')}</div></div></a>` : '') : '';
+  end.innerHTML = `<span class="eyebrow sky">${t('done')}</span><div class="score" id="score" hidden></div>
+    ${m === 'learn' && ls.keywords && ls.keywords.length ? `<div class="defn"><b>${t('learned')}</b><ul class="kw">${ls.keywords.map(k => `<li><strong>${esc(k.en)}</strong>${k.am ? ` <span class="kwam" lang="am">${esc(k.am)}</span>` : ''}<br><span class="small">${esc(k.def || '')}</span></li>`).join('')}</ul></div><div class="card sky"><div class="small">${t('comes_back')}</div></div>` : ''}
+    ${exLinks ? `<div class="list">${exLinks}</div>` : ''}
+    ${m === 'learn' && nextSec ? `<a class="btn" href="#lesson/${encodeURIComponent(nextSec.lesson)}">${t('next_section')}: ${esc(nextSec.n)} ${esc(nextSec.title)} ›</a>` : ''}
+    <a class="btn ${m === 'learn' && nextSec ? 'ghost' : ''}" href="#${back}">${m === 'learn' ? t('back_chapter') : t('back_lesson')}</a>`;
+  page.appendChild(end);
+  progress(); if (tasks && Object.keys(got).length >= tasks) complete();
+  if (saved.y && m === 'learn') requestAnimationFrame(() => window.scrollTo(0, saved.y)); else window.scrollTo(0, 0);
+  let tm = null; const onScroll = () => { if (away || !page.isConnected) return; clearTimeout(tm); tm = setTimeout(() => { if (page.isConnected && !away) persist({ y: Math.round(window.scrollY) }); }, 400); };
+  window.removeEventListener('scroll', viewLesson._scroll || (() => {})); viewLesson._scroll = onScroll; window.addEventListener('scroll', onScroll, { passive: true });
 }
 
 /* ---------- router ---------- */

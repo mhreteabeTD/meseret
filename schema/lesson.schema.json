@@ -318,7 +318,8 @@
             "blank",
             "pick",
             "match",
-            "order"
+            "order",
+            "read"
           ]
         },
         "step": {
@@ -331,7 +332,8 @@
             "check",
             "practise",
             "exercise",
-            "test"
+            "test",
+            "read"
           ]
         },
         "id": {
@@ -428,6 +430,27 @@
         },
         "tool": {
           "type": "string"
+        },
+        "paras": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "read: paragraphs of book text, in order"
+        },
+        "table": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "description": "read: a book table; first row is the header"
+        },
+        "note": {
+          "type": "string",
+          "description": "read: a small side note under the text"
         }
       },
       "allOf": [
