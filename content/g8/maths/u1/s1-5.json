@@ -181,30 +181,31 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "Review Q4 a: 3/4 + 9/7 + 2 = ___",
+     "ask": "3/4 + 9/7 + 2 = ___",
      "a": [
       "113/28",
       "4 1/28"
      ],
-     "why": "21/28 + 36/28 + 56/28 = 113/28.",
+     "why": "LCM of 4 and 7 is 28. 3/4 = (3 × 7)/(4 × 7) = 21/28; 9/7 = (9 × 4)/(7 × 4) = 36/28; 2 = 56/28. 21 + 36 + 56 = 113, so 113/28.",
      "clue": "LCM of 4 and 7 is 28.",
      "gen": {
       "t": "op",
       "op": "add",
       "mixed": true
      },
-     "id": "g8.maths.u1.s1-5.6"
+     "id": "g8.maths.u1.s1-5.6",
+     "ref": "Review Q4 a"
     },
     {
      "kind": "blank",
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "Review Q5 a: 2/7 − 3/8 = ___",
+     "ask": "2/7 − 3/8 = ___",
      "a": [
       "-5/56"
      ],
-     "why": "16/56 − 21/56 = −5/56.",
+     "why": "LCM of 7 and 8 is 56. 2/7 = (2 × 8)/(7 × 8) = 16/56 and 3/8 = (3 × 7)/(8 × 7) = 21/56. 16 − 21 = −5, so −5/56.",
      "clue": "LCM of 7 and 8 is 56.",
      "input": "signed",
      "gen": {
@@ -212,36 +213,38 @@
       "op": "sub",
       "signs": true
      },
-     "id": "g8.maths.u1.s1-5.7"
+     "id": "g8.maths.u1.s1-5.7",
+     "ref": "Review Q5 a"
     },
     {
      "kind": "blank",
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "Review Q6 a: 2 3/7 × 1/4 = ___",
+     "ask": "2 3/7 × 1/4 = ___",
      "a": [
       "17/28"
      ],
-     "why": "17/7 × 1/4 = 17/28.",
+     "why": "2 3/7 = (2 × 7 + 3)/7 = 17/7. 17/7 × 1/4 = (17 × 1)/(7 × 4) = 17/28.",
      "clue": "Change 2 3/7 to 17/7.",
      "gen": {
       "t": "op",
       "op": "mul",
       "mixed": true
      },
-     "id": "g8.maths.u1.s1-5.8"
+     "id": "g8.maths.u1.s1-5.8",
+     "ref": "Review Q6 a"
     },
     {
      "kind": "blank",
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "Review Q7 a: 3/4 ÷ (−5/2) = ___",
+     "ask": "3/4 ÷ (−5/2) = ___",
      "a": [
       "-3/10"
      ],
-     "why": "3/4 × (−2/5) = −6/20 = −3/10.",
+     "why": "Flip −5/2 to −2/5. 3/4 × (−2/5) = −6/20. Divide top and bottom by 2: −3/10.",
      "clue": "Multiply by the reciprocal.",
      "input": "signed",
      "gen": {
@@ -249,7 +252,8 @@
       "op": "div",
       "signs": true
      },
-     "id": "g8.maths.u1.s1-5.9"
+     "id": "g8.maths.u1.s1-5.9",
+     "ref": "Review Q7 a"
     }
    ]
   }
@@ -262,27 +266,29 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "Q1 a: −5/3 > −8/11",
+     "text": "−5/3 > −8/11",
      "a": false,
      "why": "−5/3 ≈ −1.67 is left of −8/11 ≈ −0.73.",
      "clue": "Which is further from 0?",
-     "id": "g8.maths.u1.s1-5.10"
+     "id": "g8.maths.u1.s1-5.10",
+     "ref": "Q1 a"
     },
     {
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "Q1 b: 3 5/7 > 23/7 > 19/6",
+     "text": "3 5/7 > 23/7 > 19/6",
      "a": true,
      "why": "26/7 ≈ 3.71 > 3.29 > 3.17.",
      "clue": "Change to decimals.",
-     "id": "g8.maths.u1.s1-5.11"
+     "id": "g8.maths.u1.s1-5.11",
+     "ref": "Q1 b"
     },
     {
      "kind": "pick",
      "step": "exercise",
      "graded": true,
-     "text": "Q2 b: solve |x − 5| = 4.",
+     "text": "Solve |x − 5| = 4.",
      "pool": [
       "9",
       "1",
@@ -295,13 +301,14 @@
      ],
      "why": "x − 5 = 4 or −4, so x = 9 or 1.",
      "clue": "The inside is 4 or −4.",
-     "id": "g8.maths.u1.s1-5.12"
+     "id": "g8.maths.u1.s1-5.12",
+     "ref": "Q2 b"
     },
     {
      "kind": "pick",
      "step": "exercise",
      "graded": true,
-     "text": "Q2 c: solve |2x + 3| = 5.",
+     "text": "Solve |2x + 3| = 5.",
      "pool": [
       "1",
       "−4",
@@ -314,36 +321,39 @@
      ],
      "why": "2x + 3 = 5 gives 1; 2x + 3 = −5 gives −4.",
      "clue": "The inside is 5 or −5.",
-     "id": "g8.maths.u1.s1-5.13"
+     "id": "g8.maths.u1.s1-5.13",
+     "ref": "Q2 c"
     },
     {
      "kind": "blank",
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Q3: if x = −8 and y = 4, (3|x − 5| − |4y|) / |x + y| = ___",
+     "ask": "If x = −8 and y = 4, (3|x − 5| − |4y|) / |x + y| = ___",
      "a": [
       "23/4",
       "5 3/4",
       "5.75"
      ],
-     "why": "(39 − 16)/4 = 23/4.",
+     "why": "x − 5 = −13, so 3|x − 5| = 3 × 13 = 39. 4y = 16, so |4y| = 16. x + y = −4, so |x + y| = 4. (39 − 16)/4 = 23/4.",
      "clue": "|x − 5| = 13, |4y| = 16, |x + y| = 4.",
-     "id": "g8.maths.u1.s1-5.14"
+     "id": "g8.maths.u1.s1-5.14",
+     "ref": "Q3"
     },
     {
      "kind": "blank",
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Q10: how long for Birr 500 to earn Birr 50 at 9.5%? ___ years",
+     "ask": "How long for Birr 500 to earn Birr 50 at 9.5%? ___ years",
      "a": [
       "≈1.05",
       "20/19"
      ],
      "why": "50 ÷ 47.5 ≈ 1.05.",
      "clue": "T = I ÷ (P × R).",
-     "id": "g8.maths.u1.s1-5.15"
+     "id": "g8.maths.u1.s1-5.15",
+     "ref": "Q10"
     }
    ]
   },

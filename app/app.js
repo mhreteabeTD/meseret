@@ -369,19 +369,25 @@ const Gen = (() => {
       if (o.word && t === 'sub' && Q.val(a) === Q.val(b)) a = add(a, Q.mk(1, 1));
       const A = a, B = b, sym = { add: '+', sub: '−', mul: '×', div: '÷' }[t];
       const res = t === 'add' ? add(A, B) : t === 'sub' ? add(A, neg(B)) : t === 'mul' ? mul(A, B) : div(A, B);
-      const pre = [fmix(A) !== fq(A) ? `${fmix(A)} = ${fq(A)}` : '', fmix(B) !== fq(B) ? `${fmix(B)} = ${fq(B)}` : ''].filter(Boolean); const lines = pre.length && (t === 'mul' || t === 'div' || A.d !== B.d) ? [`Change to improper fractions: ${pre.join(', ')}.`] : [];
-      if (t === 'add' || t === 'sub') { const B2 = t === 'sub' ? neg(B) : B, L = lcm(A.d, B2.d); if (t === 'sub') lines.push(`Subtracting ${fq(B)} means adding ${fq(B2)}.`); if (A.d !== B2.d) lines.push(`LCM of ${A.d} and ${B2.d} is ${L}: ${fq(A)} = ${M(A.n * L / A.d)}/${L} and ${fq(B2)} = ${M(B2.n * L / B2.d)}/${L}.`); lines.push(`Add the numerators: ${M(A.n * L / A.d + B2.n * L / B2.d)}/${L}${Q.mk(A.n * L / A.d + B2.n * L / B2.d, L).d !== L ? ` = ${fq(res)}` : ''}.`); }
-      if (t === 'mul') lines.push(`Sign: ${(A.n < 0) === (B.n < 0) ? 'same signs give +' : 'different signs give −'}.`, `Multiply tops and bottoms: ${Math.abs(A.n * B.n)}/${A.d * B.d}${Q.mk(Math.abs(A.n * B.n), A.d * B.d).d !== A.d * B.d ? ` = ${fq(Q.mk(Math.abs(res.n), res.d))}` : ''}.`);
-      if (t === 'div') lines.push(`Multiply by the reciprocal of ${fq(B)}, which is ${fq(Q.mk(B.d, B.n))}.`, `${fq(A)} × ${fq(Q.mk(B.d, B.n))} = ${fq(res)}.`);
+      const imp = q => `${fmix(q)} = (${M(Math.trunc(Math.abs(q.n) / q.d))} × ${q.d} + ${Math.abs(q.n) % q.d})/${q.d} = ${fq(Q.mk(Math.abs(q.n), q.d))}`;
+      const lines = [A, B].filter(q => fmix(q) !== fq(q)).map(q => `Change to an improper fraction: ${imp(q)}${q.n < 0 ? ', so ' + fmix(q) + ' = ' + fq(q) : ''}.`);
+      const simp = (N, D) => { const g = Q.gcd(N, D); return g > 1 ? ` Simplify: the GCF of ${Math.abs(N)} and ${D} is ${g}. ${Math.abs(N)} ÷ ${g} = ${Math.abs(N) / g} and ${D} ÷ ${g} = ${D / g}, so ${M(N)}/${D} = ${fq(Q.mk(N, D))}.` : ''; };
+      const scale = (q, L) => L === q.d ? '' : ` ${L} ÷ ${q.d} = ${L / q.d}, so ${fq(q)} = (${M(q.n)} × ${L / q.d})/(${q.d} × ${L / q.d}) = ${M(q.n * L / q.d)}/${L}.`;
+      if (t === 'add' || t === 'sub') { const B2 = t === 'sub' ? neg(B) : B, L = lcm(A.d, B2.d), N = A.n * L / A.d + B2.n * L / B2.d;
+        if (t === 'sub') lines.push(`Subtracting ${fq(B)} means adding its opposite, ${fq(B2)}.`);
+        if (A.d !== B2.d) lines.push(`The denominators are ${A.d} and ${B2.d}. Their LCM is ${L}.${scale(A, L)}${scale(B2, L)}`);
+        lines.push(`Now add the numerators: ${M(A.n * L / A.d)} + ${B2.n * L / B2.d < 0 ? '(' + M(B2.n * L / B2.d) + ')' : B2.n * L / B2.d} = ${M(N)}. So the sum is ${M(N)}/${L}.${simp(N, L)}`); }
+      if (t === 'mul') { const N = A.n * B.n, D = A.d * B.d; lines.push(`Sign: ${(A.n < 0) === (B.n < 0) ? 'same signs, so the answer is positive' : 'different signs, so the answer is negative'}.`, `Multiply the tops: ${Math.abs(A.n)} × ${Math.abs(B.n)} = ${Math.abs(N)}. Multiply the bottoms: ${A.d} × ${B.d} = ${D}. That gives ${M(N)}/${D}.${simp(N, D)}`); }
+      if (t === 'div') { const R = Q.mk(B.d, B.n), N = A.n * R.n, D = A.d * R.d; lines.push(`To divide, multiply by the reciprocal. Flip ${fq(B)} to get ${fq(R)}.`, `${fq(A)} × ${fq(R)}: tops ${M(A.n)} × ${M(R.n)} = ${M(N)}, bottoms ${A.d} × ${R.d} = ${D}. That gives ${M(N)}/${D}.${simp(N, D)}`); }
       if (fmix(res) !== fq(res)) lines.push(`As a mixed fraction: ${fmix(res)}.`);
       let ask = `${fmix(A)} ${sym} ${par(B)} = ___`;
       if (o.word) { const nm = pick(NAMES); ask = { add: `${nm} walked ${fmix(A)} km to school and ${fmix(B)} km to the market. Total distance = ___ km`, sub: `A rope is ${fmix(A)} m long. ${nm} cuts off ${fmix(B)} m. Length left = ___ m`, mul: `${nm} buys ${fmix(A)} kg of teff. One kg costs ${fmix(B)} hundred Birr. Cost = ___ hundred Birr`, div: `${nm} has ${fmix(A)} kg of coffee. Each bag holds ${fmix(B)} kg. Number of bags = ___` }[t]; }
       return { kind: 'blank', num: true, ask, a: forms(res), why: lines.join(' '), worked: lines.join(' '), clue: { add: 'Use a common denominator, then add the numerators.', sub: 'Add the opposite of the second number.', mul: 'Decide the sign, then multiply tops and bottoms.', div: 'Multiply by the reciprocal of the divisor.' }[t] }; },
     share() { const k = pick([3, 4, 5, 6]), n = pick([2, 3, 4]), rest = Q.mk(k - 1, k), each = div(rest, Q.mk(n, 1)), nm = pick(NAMES);
-      return { kind: 'blank', num: true, ask: `${nm}'s mother takes 1/${k} of a sugarcane. ${n} brothers share the rest equally. Each brother gets ___ of the sugarcane.`, a: forms(each), why: `The rest is 1 − 1/${k} = ${fq(rest)}. ${fq(rest)} ÷ ${n} = ${fq(each)}.`, clue: 'Find what is left first, then divide it equally.' }; },
+      return { kind: 'blank', num: true, ask: `${nm}'s mother takes 1/${k} of a sugarcane. ${n} brothers share the rest equally. Each brother gets ___ of the sugarcane.`, a: forms(each), why: `The whole is 1 = ${k}/${k}. After the mother takes 1/${k}, ${k}/${k} − 1/${k} = ${k - 1}/${k} is left. Share it: ${k - 1}/${k} ÷ ${n} = ${k - 1}/${k} × 1/${n} = ${k - 1}/${k * n}${Q.gcd(k - 1, k * n) > 1 ? ` = ${fq(each)} (divide top and bottom by ${Q.gcd(k - 1, k * n)})` : ''}.`, clue: 'Find what is left first, then divide it equally.' }; },
     interest(o) { const find = o.find || pick(['I', 'I', 'P', 'T', 'R']), nm = pick(NAMES), bank = pick(['CBE', 'a bank', 'a saving association']), P = int(5, 60) * 100, R = int(4, 15), months = find === 'I' && r() < .5, T = months ? int(3, 11) : int(1, 5), Ty = months ? T / 12 : T;
       const I = Math.round(P * R / 100 * Ty * 100) / 100, Ts = months ? `${T}/12` : `${T}`, ex = Math.abs(P * R / 100 * Ty - I) < 1e-9 ? String(I) : '≈' + I.toFixed(2);
-      if (find === 'I') return { kind: 'blank', num: true, ask: `${nm} borrows Birr ${P} from ${bank} at ${R}% simple interest for ${T} ${months ? 'months' : T > 1 ? 'years' : 'year'}. Interest = Birr ___`, a: [ex], why: `I = P × R × T = ${P} × ${R / 100} × ${Ts} = ${I}.`, clue: months ? 'T is in years: divide the months by 12.' : 'Use I = P × R × T with R as a decimal.' };
+      if (find === 'I') return { kind: 'blank', num: true, ask: `${nm} borrows Birr ${P} from ${bank} at ${R}% simple interest for ${T} ${months ? 'months' : T > 1 ? 'years' : 'year'}. Interest = Birr ___`, a: [ex], why: `Change the rate: ${R}% = ${R} ÷ 100 = ${R / 100}.${months ? ` Change the time: ${T} months = ${T}/12 year.` : ''} I = P × R × T = ${P} × ${R / 100} × ${Ts} = ${I}.`, clue: months ? 'T is in years: divide the months by 12.' : 'Use I = P × R × T with R as a decimal.' };
       if (find === 'P') return { kind: 'blank', num: true, ask: `What principal earns Birr ${I} interest in ${T} year${T > 1 ? 's' : ''} at ${R}%? P = Birr ___`, a: [String(P)], why: `P = I ÷ (R × T) = ${I} ÷ (${R / 100} × ${T}) = ${P}.`, clue: 'P = I ÷ (R × T).' };
       if (find === 'T') return { kind: 'blank', num: true, ask: `Birr ${P} earns Birr ${I} simple interest at ${R}% per year. Time = ___ years`, a: [String(T)], why: `T = I ÷ (P × R) = ${I} ÷ (${P} × ${R / 100}) = ${T}.`, clue: 'T = I ÷ (P × R).' };
       return { kind: 'blank', num: true, ask: `Birr ${P} earns Birr ${I} simple interest in ${T} year${T > 1 ? 's' : ''}. Rate = ___ %`, a: [String(R)], why: `R = I ÷ (P × T) = ${I} ÷ (${P} × ${T}) = ${R / 100} = ${R}%.`, clue: 'R = I ÷ (P × T), then change to a percent.' }; },
@@ -391,7 +397,7 @@ const Gen = (() => {
     list: () => Object.keys(T),
     make(s, seed) { if (!api.has(s)) return s; r = seed == null ? Math.random : rng(seed);
       try { const v = T[s.gen.t](s.gen, s); const out = Object.assign({}, s, { title: s.title ? s.title.replace(/^(Example|Exercise|Activity|Group work)[^:]*:\s*/i, '') : s.title }, v, { _gen: true });
-        ['ask', 'text', 'worked', 'opts', 'ans', 'pool', 'items', 'targets', 'min', 'max', 'sub', 'num'].forEach(k => { if (!(k in v)) delete out[k]; }); return out; }
+        ['ask', 'text', 'worked', 'opts', 'ans', 'pool', 'items', 'targets', 'min', 'max', 'sub', 'num'].forEach(k => { if (!(k in v)) delete out[k]; }); delete out.ref; return out; }
       catch (e) { return s; } finally { r = Math.random; } },
   };
   return api;
@@ -432,7 +438,7 @@ function vennSVG(a, b, k) {
 /* ---------- screen renderers (shared by the step player and the book reader) ---------- */
 function makeR(env) {
   const div = html => { const d = document.createElement('div'); d.className = 'stack'; d.innerHTML = html; return d; };
-  const head = s => `<span class="eyebrow sky">${esc(s._from || (['hook', 'explore', 'notice', 'check', 'practise'].includes(s.step) ? t('step_' + s.step) : ''))}</span>${s.title ? `<h1 class="display" tabindex="-1">${esc(s.title)}</h1>` : ''}${s.text ? `<p class="lead">${esc(s.text)}</p>` : ''}`;
+  const head = s => `<span class="eyebrow sky">${esc(s._from || (['hook', 'explore', 'notice', 'check', 'practise'].includes(s.step) ? t('step_' + s.step) : ''))}</span>${s.ref ? `<span class="ref">📖 ${esc(s.ref)}</span>` : ''}${s.title ? `<h1 class="display" tabindex="-1">${esc(s.title)}</h1>` : ''}${s.text ? `<p class="lead">${esc(s.text)}</p>` : ''}`;
   const choice = (s, opts, ans, row2) => {
     const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="opts${row2 ? ' row2' : ''}" role="radiogroup">${opts.map(o => `<button class="opt" role="radio" aria-checked="false">${esc(o)}</button>`).join('')}</div>`);
     let pick = null;
@@ -513,26 +519,32 @@ function makeR(env) {
       return { el, label: graded ? t('check') : t('continue'), ready: () => graded ? on.size > 0 : k >= steps.length,
         check: graded ? () => on.size === s.need ? { ok: true, body: s.why } : { ok: false, body: s.clue || `${on.size} / ${bars[0].parts}` } : undefined, retry() {} };
     },
-    grid(s) { // area model for × (Fig 1.18–1.20) and grouping for ÷ (Fig 1.21). ▶ reveals one step at a time.
-      const say = s.say || [], groups = s.mode === 'groups'; let k = 0; const n = groups ? 2 : 3;
-      const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="fig grd"><svg viewBox="0 0 340 ${groups ? 46 * Math.ceil((s.wholes * s.d + s.part) / s.d) + 10 : 236}" role="img" aria-label="${esc(s.title || 'grid model')}"></svg><button class="inner" id="gnx">▶ ${t('next_step')}</button><p class="small muted gp"></p></div>`);
+    grid(s) { // area model for × (Fig 1.18–1.20) and grouping for ÷ (Fig 1.21). ▶ reveals one small step at a time; "say" explains each step, "intro" the start.
+      const say = s.say || [], groups = s.mode === 'groups'; let k = 0; const n = Math.max(groups ? 4 : 3, say.length);
+      const rowsG = groups ? Math.ceil((s.wholes * s.d + s.part) / s.d) : 0;
+      const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="fig grd"><svg viewBox="0 0 340 ${groups ? 46 * rowsG + 34 : 240}" role="img" aria-label="${esc(s.title || 'grid model')}"></svg><p class="small gp"></p><button class="inner" id="gnx">▶ ${t('next_step')}</button></div>`);
       const svg = el.querySelector('svg'), tip = el.querySelector('.gp');
       const draw = () => { let g = '';
         if (!groups) { const W = 200, x0 = 70, y0 = 6, cw = W / s.cols, rh = W / s.rows;
-          for (let i = 0; i < s.cols; i++) for (let j = 0; j < s.rows; j++) { const inC = i < s.shadeCols, inR = j < s.shadeRows;
-            g += `<rect x="${x0 + i * cw}" y="${y0 + j * rh}" width="${cw}" height="${rh}" style="fill:var(--surface-2);stroke:var(--fg)" stroke-width="1.5"/>`;
-            if (inC && k >= 1) g += `<rect x="${x0 + i * cw}" y="${y0 + j * rh}" width="${cw}" height="${rh}" style="fill:var(--sky)" fill-opacity=".45"/>`;
-            if (inR && k >= 2) g += `<rect x="${x0 + i * cw}" y="${y0 + j * rh}" width="${cw}" height="${rh}" style="fill:var(--sun)" fill-opacity=".5"/>`;
-            if (inC && inR && k >= 3) g += `<rect x="${x0 + i * cw + 3}" y="${y0 + j * rh + 3}" width="${cw - 6}" height="${rh - 6}" fill="none" style="stroke:var(--coral)" stroke-width="3.5" rx="3"/>`; }
-          if (k >= 1) g += svgNum(x0 + s.shadeCols * cw / 2, 226, `${s.shadeCols}/${s.cols}`, 'var(--sky)', 15);
+          if (k === 0) g += `<rect x="${x0}" y="${y0}" width="${W}" height="${W}" style="fill:var(--surface-2);stroke:var(--fg)" stroke-width="2"/><text x="${x0 + W / 2}" y="${y0 + W / 2 + 6}" font-size="18" font-weight="800" text-anchor="middle" style="fill:var(--muted)">1 whole</text>`;
+          else for (let i = 0; i < s.cols; i++) for (let j = 0; j < s.rows; j++) { const inC = i < s.shadeCols, inR = j < s.shadeRows;
+            const rowsOn = k >= 2, x = x0 + i * cw, y = y0 + j * rh;
+            g += `<rect x="${x}" y="${y}" width="${cw}" height="${rh}" style="fill:var(--surface-2);stroke:var(--fg)" stroke-width="${rowsOn ? 1.5 : 0}"/>`;
+            if (inC) g += `<rect x="${x}" y="${y}" width="${cw}" height="${rh}" style="fill:var(--sky)" fill-opacity=".45"/>`;
+            if (inR && rowsOn) g += `<rect x="${x}" y="${y}" width="${cw}" height="${rh}" style="fill:var(--sun)" fill-opacity=".5"/>`;
+            if (inC && inR && k >= 3) g += `<rect x="${x + 3}" y="${y + 3}" width="${cw - 6}" height="${rh - 6}" fill="none" style="stroke:var(--coral)" stroke-width="3.5" rx="3"/><text x="${x + cw / 2}" y="${y + rh / 2 + 6}" font-size="15" font-weight="800" text-anchor="middle" style="fill:var(--coral)">${j + 1}</text>`; }
+          if (k >= 1) { g += `<rect x="${x0}" y="${y0}" width="${W}" height="${W}" fill="none" style="stroke:var(--fg)" stroke-width="2"/>`; for (let i = 1; i < s.cols; i++) g += `<line x1="${x0 + i * cw}" x2="${x0 + i * cw}" y1="${y0}" y2="${y0 + W}" style="stroke:var(--fg)" stroke-width="1.5"/>`; g += svgNum(x0 + s.shadeCols * cw / 2, 230, `${s.shadeCols}/${s.cols}`, 'var(--sky)', 15); }
           if (k >= 2) g += svgNum(x0 - 26, y0 + s.shadeRows * rh / 2 + 4, `${s.shadeRows}/${s.rows}`, 'var(--sun-deep)', 15);
           if (k >= 3) g += svgNum(x0 + W + 36, y0 + W / 2 + 4, `${s.shadeCols * s.shadeRows}/${s.cols * s.rows}`, 'var(--coral)', 17); }
-        else { const d = s.d, cells = s.wholes * d + s.part, rows = Math.ceil(cells / d), cw = Math.min(60, 300 / d), x0 = (340 - cw * d) / 2, gsz = s.group, gc = ['var(--sky)', 'var(--sun)'];
-          for (let rr = 0; rr < rows; rr++) for (let j = 0; j < d; j++) { const i = rr * d + j, shaded = i < cells, gi = Math.floor(i / gsz), full = (gi + 1) * gsz <= cells;
-            const col = !shaded ? 'var(--surface-2)' : k >= 2 ? (full ? gc[gi % 2] : 'var(--coral)') : 'var(--muted)';
-            g += `<rect x="${x0 + j * cw + 1}" y="${6 + rr * 46}" width="${cw - 2}" height="40" rx="4" style="fill:${k >= 1 || !shaded ? col : 'var(--surface-2)'};stroke:var(--line)" fill-opacity="${shaded && k >= 1 ? .7 : 1}" stroke-width="1.5"/>`;
-            if (k >= 2 && shaded && i % gsz === 0) g += `<text x="${x0 + j * cw + cw / 2}" y="${6 + rr * 46 + 26}" font-size="13" font-weight="800" text-anchor="middle" style="fill:var(--fg)">${full ? gi + 1 : '½'}</text>`; } }
-        svg.innerHTML = g; tip.textContent = k ? (say[k - 1] || '') : ''; el.querySelector('#gnx').disabled = k >= n; };
+        else { const d = s.d, cells = s.wholes * d + s.part, cw = Math.min(56, 220 / d), x0 = 340 - 20 - cw * d, gsz = s.group, gc = ['var(--sky)', 'var(--sun)'];
+          for (let rr = 0; rr < rowsG; rr++) { const y = 6 + rr * 46; g += `<text x="${x0 - 10}" y="${y + 26}" font-size="13" font-weight="700" text-anchor="end" style="fill:var(--muted)">1 whole</text>`;
+            for (let j = 0; j < d; j++) { const i = rr * d + j, shaded = i < cells && k >= 2, gi = Math.floor(i / gsz), full = (gi + 1) * gsz <= cells;
+              const col = !shaded ? 'var(--surface-2)' : k >= 3 ? (full ? gc[gi % 2] : 'var(--coral)') : 'var(--accent)';
+              g += `<rect x="${x0 + j * cw + 1}" y="${y}" width="${cw - 2}" height="40" rx="4" style="fill:${col};stroke:var(--line)" fill-opacity="${shaded ? .75 : 1}" stroke-width="1.5"/>`;
+              if (k >= 1 && !(k >= 3 && shaded)) g += svgNum(x0 + j * cw + cw / 2, y + 24, `1/${d}`, shaded ? '#fff' : 'var(--muted)', 12);
+              if (k >= 3 && shaded && i % gsz === 0) g += `<text x="${x0 + j * cw + cw / 2}" y="${y + 26}" font-size="14" font-weight="800" text-anchor="middle" style="fill:var(--fg)">${full ? '#' + (gi + 1) : (k >= 4 ? '½' : '?')}</text>`; } }
+          if (k >= 2) g += `<text x="170" y="${46 * rowsG + 26}" font-size="14" font-weight="800" text-anchor="middle" style="fill:var(--accent-deep)">${cells} × 1/${d} = ${s.wholes} ${s.part}/${d}</text>`; }
+        svg.innerHTML = g; tip.textContent = k ? (say[k - 1] || '') : (s.intro || ''); el.querySelector('#gnx').disabled = k >= n; };
       el.querySelector('#gnx').onclick = () => { if (k < n) k++; draw(); env.update(); };
       draw();
       return { el, label: t('continue'), ready: () => k >= n };
@@ -644,8 +656,8 @@ function runPlayer(cfg) {
     if (s.graded && !(k in round)) { round[k] = r.ok; if (!(k in firstTry)) firstTry[k] = r.ok; r.ok ? missed.delete(k) : missed.add(k); logEvent({ lesson: s._lesson || cfg.id, idea: s._idea || cfg.idea, item: k, correct: !!r.ok, attempt: tries[k], mode: cfg.mode }); }
     lastOk = r.ok; phase = 'feedback';
     const noClue = cfg.mode === 'test';
-    if (r.ok === true) { setTray('ok', t('correct'), r.body, t('continue')); if (cfg.cheer) { const rc = go.getBoundingClientRect(); burst(rc.left + rc.width / 2, rc.top); buzz(25); } }
-    else if (r.ok === false) { if (noClue) { lastOk = true; setTray('no', t('not_yet'), s.why || '', t('continue')); } else if (tries[k] >= 2) { lastOk = true; const shown = s.kind === 'blank' ? s.a[0] : s.kind === 'pick' ? s.a.join(', ') : s.kind === 'mcq' ? s.ans : s.kind === 'tf' ? (s.a ? t('true') : t('false')) : ''; setTray('no', t('show_worked'), answerLine(shown, s), t('continue')); } else { setTray('no', t('not_yet'), r.body, t('try_again')); const rf = s.needs && cfg.refreshers && cfg.refreshers[s.needs]; if (rf && !offered[k]) { offered[k] = true; msg.innerHTML += `<span class="small">${esc(t('offer_refresher', { n: rf.name }))}</span>`; const b = document.createElement('button'); b.className = 'btn ghost'; b.id = 'rfb'; b.textContent = t('yes_reminder'); b.onclick = () => openRefresher(s.needs); go.parentNode.insertBefore(b, go); go.textContent = t('no_continue'); } } }
+    if (r.ok === true) { Fx.verdict('ok'); setTray('ok', t('correct'), r.body, t('continue')); if (cfg.cheer) { const rc = go.getBoundingClientRect(); burst(rc.left + rc.width / 2, rc.top); buzz(25); } }
+    else if (r.ok === false) { Fx.verdict(noClue || tries[k] >= 2 ? 'answer' : 'retry'); if (noClue) { lastOk = true; setTray('no', t('not_yet'), s.why || '', t('continue')); } else if (tries[k] >= 2) { lastOk = true; const shown = s.kind === 'blank' ? s.a[0] : s.kind === 'pick' ? s.a.join(', ') : s.kind === 'mcq' ? s.ans : s.kind === 'tf' ? (s.a ? t('true') : t('false')) : ''; setTray('no', t('show_worked'), answerLine(shown, s), t('continue')); } else { setTray('no', t('not_yet'), r.body, t('try_again')); const rf = s.needs && cfg.refreshers && cfg.refreshers[s.needs]; if (rf && !offered[k]) { offered[k] = true; msg.innerHTML += `<span class="small">${esc(t('offer_refresher', { n: rf.name }))}</span>`; const b = document.createElement('button'); b.className = 'btn ghost'; b.id = 'rfb'; b.textContent = t('yes_reminder'); b.onclick = () => openRefresher(s.needs); go.parentNode.insertBefore(b, go); go.textContent = t('no_continue'); } } }
     else setTray('info', r.title, r.body, t('continue'));
     go.disabled = false; go.focus();
     if (pos === order.length - 1 && cfg.onDone && !cfg._done) { cfg._done = true; const byIdea = {}; screens.forEach((x, i) => { if (x.graded) { const id = x._idea || cfg.idea; byIdea[id] = (byIdea[id] !== false) && !!firstTry[i]; } }); cfg.onDone({ byIdea, firstTry, missed }); }
@@ -716,12 +728,12 @@ async function viewLesson(path, mode, exIdx) {
         const r = cur.check(); tries++;
         if (s.graded) { if (tries === 1) first[i] = !!r.ok; logEvent({ lesson: ls.id, idea: s._idea, item: i, correct: !!r.ok, attempt: tries, mode: m }); }
         const end = (ok) => { phase = 'done'; btn.hidden = true; wrap.classList.add('done'); finish(i, ok); };
-        if (r.ok === true) { say('ok', t('correct'), r.body); end(tries === 1); }
+        if (r.ok === true) { Fx.verdict('ok'); say('ok', t('correct'), r.body); end(tries === 1); }
         else if (r.ok === null) { say('info', r.title, r.body); end(true); }
-        else if (m === 'test') { say('no', t('not_yet'), s.why || ''); end(false); }
-        else if (tries >= 2) { say('no', t('show_worked'), s.worked || s.why || ''); end(false); }
+        else if (m === 'test') { Fx.verdict('answer'); say('no', t('not_yet'), s.why || ''); end(false); }
+        else if (tries >= 2) { Fx.verdict('answer'); say('no', t('show_worked'), s.worked || s.why || ''); end(false); }
         else {
-          say('no', t('not_yet'), r.body); phase = 'retry'; btn.textContent = t('try_again'); btn.disabled = false;
+          Fx.verdict('retry'); say('no', t('not_yet'), r.body); phase = 'retry'; btn.textContent = t('try_again'); btn.disabled = false;
           if (rf) { const o = document.createElement('div'); o.className = 'offer'; o.dataset.offer = 1; o.innerHTML = `<span class="small">${esc(t('offer_refresher', { n: rf.name }))}</span>`; const y = document.createElement('button'); y.className = 'btn ghost'; y.textContent = t('yes_reminder'); y.onclick = () => openRefresher(s.needs); o.appendChild(y); fb.after(o); }
         }
       };
@@ -765,7 +777,13 @@ const Fx = {
   },
   at(el, big) { const r = el.getBoundingClientRect(); Fx.burst(r.left + r.width / 2, r.top + Math.min(r.height / 2, 40), big); },
   float(el, text) { const r = el.getBoundingClientRect(); const f = document.createElement('div'); f.className = 'ptsfloat'; f.textContent = text; f.style.left = (r.left + r.width / 2) + 'px'; f.style.top = r.top + 'px'; document.body.appendChild(f); setTimeout(() => f.remove(), 1100); },
-  buzz(ms) { try { navigator.vibrate && navigator.vibrate(ms); } catch (_) {} }
+  buzz(ms) { try { navigator.vibrate && navigator.vibrate(ms); } catch (_) {} },
+  verdict(kind) { // kind: ok | retry | answer — a short pop-up so the student always knows what happened
+    const old = document.querySelector('.verdict'); if (old) old.remove();
+    const v = document.createElement('div'); v.className = 'verdict ' + kind; v.setAttribute('role', 'status');
+    v.innerHTML = kind === 'ok' ? `<b>✓</b> ${esc(t('v_ok'))}` : kind === 'retry' ? `<b>↻</b> ${esc(t('v_retry'))}` : `<b>💡</b> ${esc(t('v_answer'))}`;
+    document.body.appendChild(v); setTimeout(() => v.classList.add('out'), 1100); setTimeout(() => v.remove(), 1500);
+  }
 };
 const burst = Fx.burst, buzz = Fx.buzz; // used by the step player
 
@@ -859,21 +877,21 @@ const Blocks = {
     ctx.question(el, s, { restore(v) { if (v === 's') return; lock(); say('ok', s.why); } });
     el.querySelector('.qo').onclick = e => { const b = e.target.closest('.qb'); if (!b || b.disabled || el.classList.contains('done')) return; tries++;
       const ok = b.textContent === ans; ctx.log(s, ok, tries);
-      if (ok) { b.classList.add('ok', 'pop'); say('ok', s.why); lock(); ctx.right(b, s, tries); }
+      if (ok) { b.classList.add('ok', 'pop'); say('ok', s.why); lock(); Fx.verdict('ok'); ctx.right(b, s, tries); }
       else { b.classList.add('no', 'shake'); b.disabled = true; setTimeout(() => b.classList.remove('shake'), 500); ctx.wrong(el);
-        if (tries >= 2) { say('no', answerLine(ans, s)); lock(); ctx.done(el, s, 0); } else say('no', `${s.clue || t('not_yet')} ${t('try_again')}.`); } };
+        if (tries >= 2) { say('no', answerLine(ans, s)); lock(); Fx.verdict('answer'); ctx.done(el, s, 0); } else { say('no', `${s.clue || t('not_yet')} ${t('try_again')}.`); Fx.verdict('retry'); } } };
     return el;
   },
   answer(s, ctx) { // blank, pick, sort, order, match: shared renderers plus one Check button
     let phase = 'answer', tries = 0, cur = null; const btn = document.createElement('button'); btn.className = 'btn small'; btn.textContent = t('check'); const f = document.createElement('p'); f.className = 'qf'; f.hidden = true;
     const env = { phase: () => phase, state: {}, explain: null, enter: () => { if (!btn.disabled) btn.click(); }, update() { if (cur) btn.disabled = phase !== 'answer' || !cur.ready(); } };
-    const RR = makeR(env).R; cur = (RR[s.kind] || RR.name)(Object.assign({}, s, { title: '', step: '' }));
+    const RR = makeR(env).R; cur = (RR[s.kind] || RR.name)(Object.assign({}, s, { title: '', step: '', ref: '' }));
     const el = h('quiz', `<div class="ql">✏️ ${t('quick_check')}</div>${s.title ? Text(s.title, null, 'p', 'qq') : ''}`); el.append(cur.el, f, btn); env.update();
     const say = (cls, txt) => { f.hidden = !txt; f.className = 'qf ' + cls; f.textContent = txt || ''; };
     ctx.question(el, s, { restore(v) { if (v === 's') return; btn.hidden = true; say('ok', '✓ ' + (s.why || '')); } });
     btn.onclick = () => { const r = cur.check(); tries++; ctx.log(s, !!r.ok, tries);
-      if (r.ok) { phase = 'done'; btn.hidden = true; say('ok', r.body); ctx.right(btn, s, tries); }
-      else { ctx.wrong(el); if (tries >= 2) { const shown = s.kind === 'blank' ? s.a[0] : s.kind === 'pick' ? s.a.join(', ') : ''; phase = 'done'; btn.hidden = true; say('no', answerLine(shown, s)); ctx.done(el, s, 0); } else { say('no', `${r.body || t('not_yet')} ${t('try_again')}.`); cur.retry && cur.retry(); env.update(); } } };
+      if (r.ok) { phase = 'done'; btn.hidden = true; say('ok', r.body); Fx.verdict('ok'); ctx.right(btn, s, tries); }
+      else { ctx.wrong(el); Fx.verdict(tries >= 2 ? 'answer' : 'retry'); if (tries >= 2) { const shown = s.kind === 'blank' ? s.a[0] : s.kind === 'pick' ? s.a.join(', ') : ''; phase = 'done'; btn.hidden = true; say('no', answerLine(shown, s)); ctx.done(el, s, 0); } else { say('no', `${r.body || t('not_yet')} ${t('try_again')}.`); cur.retry && cur.retry(); env.update(); } } };
     return el;
   },
   reveal(s, ctx) { // a book Activity: think, then tap to see the answer
@@ -915,7 +933,7 @@ const Blocks = {
   },
   explore(s, ctx) { // ungraded sort / tap / steps / tiles
     let cur = null; const env = { phase: () => 'answer', state: {}, explain: null, enter() {}, update() { if (cur && cur.ready()) ctx.complete(s); } };
-    const RR = makeR(env).R; cur = (RR[s.kind] || RR.name)(Object.assign({}, s, { title: '', step: '' }));
+    const RR = makeR(env).R; cur = (RR[s.kind] || RR.name)(Object.assign({}, s, { title: '', step: '', ref: '' }));
     const el = h(s.kind === 'steps' ? 'quiz worked' : 'quiz think', `<div class="ql">${s.kind === 'steps' ? '🧩 ' + t('worked_example') : '🔍 ' + t('step_explore')}</div>${s.title ? Text(s.title, null, 'p', 'qq') : ''}`); el.appendChild(cur.el); return el;
   }
 };
@@ -928,7 +946,9 @@ function answerLine(shown, s) {
 function h(cls, html) { const d = document.createElement('div'); d.className = cls; d.innerHTML = html; return d; }
 function renderBlock(s, ctx) {
   const fn = Blocks[s.kind] || ((s.kind === 'mcq' || s.kind === 'tf') && s.graded ? Blocks.choice : s.graded ? Blocks.answer : Blocks.explore);
-  const el = fn(s, ctx); el.dataset.kind = s.kind; return el;
+  const el = fn(s, ctx); el.dataset.kind = s.kind;
+  if (s.ref) { const ql = el.querySelector('.ql'); if (ql) ql.insertAdjacentHTML('beforeend', `<span class="ref">📖 ${esc(s.ref)}</span>`); }
+  return el;
 }
 
 async function loadPictures() { if (window.PICS) return; await new Promise(r => { const sc = document.createElement('script'); sc.src = 'pictures.js'; sc.onload = sc.onerror = r; document.head.appendChild(sc); }); }

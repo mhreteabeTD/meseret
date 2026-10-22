@@ -46,7 +46,6 @@
     {
      "kind": "guess",
      "step": "hook",
-     "title": "Activity 1.4",
      "ask": "Can 7/9 − 4/3 be written as an addition?",
      "opts": [
       "7/9 + 4/3",
@@ -55,12 +54,13 @@
       "No"
      ],
      "after": "Yes: subtracting 4/3 means adding −4/3.",
-     "id": "g8.maths.u1.s1-3-2.1"
+     "id": "g8.maths.u1.s1-3-2.1",
+     "ref": "Activity 1.4"
     },
     {
      "kind": "fracbar",
      "step": "explore",
-     "title": "Example 1.23: 7/9 − 2/3",
+     "title": "7/9 − 2/3",
      "bars": [
       {
        "parts": 9,
@@ -78,7 +78,8 @@
       }
      ],
      "after": "One shaded part is left: 7/9 − 2/3 = 1/9.",
-     "id": "g8.maths.u1.s1-3-2.2"
+     "id": "g8.maths.u1.s1-3-2.2",
+     "ref": "Example 1.23"
     },
     {
      "kind": "read",
@@ -110,19 +111,22 @@
     {
      "kind": "steps",
      "step": "method",
-     "title": "Example 1.22 a: 7/9 − 4/3",
+     "title": "7/9 − 4/3",
      "steps": [
-      "7/9 − 4/3 = 7/9 + (−4/3).",
-      "−4/3 = −12/9.",
-      "(7 − 12)/9 = −5/9."
+      "Subtracting 4/3 means adding its opposite: 7/9 − 4/3 = 7/9 + (−4/3).",
+      "The denominators are 9 and 3. Their LCM is 9.",
+      "9 ÷ 3 = 3, so multiply top and bottom of −4/3 by 3: (−4 × 3)/(3 × 3) = −12/9.",
+      "Now add: 7/9 + (−12/9) = (7 − 12)/9.",
+      "7 − 12 = −5, so the answer is −5/9."
      ],
-     "id": "g8.maths.u1.s1-3-2.5"
+     "id": "g8.maths.u1.s1-3-2.5",
+     "ref": "Example 1.22 a"
     },
     {
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Activity 1.4 Q2: is 3/7 − 5/9 the same as 5/9 − 3/7?",
+     "text": "Is 3/7 − 5/9 the same as 5/9 − 3/7?",
      "opts": [
       "Yes",
       "No"
@@ -130,7 +134,8 @@
      "ans": "No",
      "why": "One is −8/63 and the other is 8/63. Subtraction is not commutative.",
      "clue": "Try 3 − 5 and 5 − 3.",
-     "id": "g8.maths.u1.s1-3-2.6"
+     "id": "g8.maths.u1.s1-3-2.6",
+     "ref": "Activity 1.4 Q2"
     },
     {
      "kind": "blank",
@@ -141,7 +146,7 @@
      "a": [
       "62/63"
      ],
-     "why": "3/7 + 5/9 = 27/63 + 35/63 = 62/63.",
+     "why": "Subtracting −5/9 means adding 5/9. LCM of 7 and 9 is 63: 3/7 = (3 × 9)/(7 × 9) = 27/63 and 5/9 = (5 × 7)/(9 × 7) = 35/63. 27 + 35 = 62, so 62/63.",
      "clue": "Subtracting a negative means adding.",
      "gen": {
       "t": "op",
@@ -160,10 +165,10 @@
       "-29/24",
       "-1 5/24"
      ],
-     "why": "−2/24 − 27/24 = −29/24.",
+     "why": "LCM of 12 and 8 is 24. −1/12 = (−1 × 2)/(12 × 2) = −2/24 and 9/8 = (9 × 3)/(8 × 3) = 27/24. −2/24 − 27/24 = −29/24.",
      "clue": "Add the opposite of 9/8.",
      "input": "signed",
-     "worked": "−1/12 + (−9/8). LCM 24: −2/24 + (−27/24) = −29/24.",
+     "worked": "Subtracting 9/8 means adding −9/8. LCM of 12 and 8 is 24. −1/12 = (−1 × 2)/(12 × 2) = −2/24. −9/8 = (−9 × 3)/(8 × 3) = −27/24. −2 + (−27) = −29, so −29/24.",
      "gen": {
       "t": "op",
       "op": "sub",
@@ -176,21 +181,22 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "Exercise 1.7 Q3: a rope is 23 m. Pieces of 12/7 m and 7/4 m are cut off. Left = ___ m",
+     "ask": "A rope is 23 m. Pieces of 12/7 m and 7/4 m are cut off. Left = ___ m",
      "a": [
       "547/28",
       "19 15/28",
       "≈19.54"
      ],
-     "why": "23 − 12/7 − 7/4 = 644/28 − 48/28 − 49/28 = 547/28.",
+     "why": "LCM of 7 and 4 is 28. 23 = (23 × 28)/28 = 644/28; 12/7 = (12 × 4)/(7 × 4) = 48/28; 7/4 = (7 × 7)/(4 × 7) = 49/28. 644 − 48 − 49 = 547, so 547/28 m.",
      "clue": "LCM of 7 and 4 is 28.",
-     "worked": "23 = 644/28, 12/7 = 48/28, 7/4 = 49/28. 644 − 48 − 49 = 547. Left: 547/28 m ≈ 19.54 m.",
+     "worked": "LCM of 7 and 4 is 28. 23 = 644/28 (23 × 28 = 644). 12/7 = (12 × 4)/(7 × 4) = 48/28. 7/4 = (7 × 7)/(4 × 7) = 49/28. 644 − 48 − 49 = 547. Left: 547/28 m ≈ 19.54 m.",
      "gen": {
       "t": "op",
       "op": "sub",
       "word": true
      },
-     "id": "g8.maths.u1.s1-3-2.9"
+     "id": "g8.maths.u1.s1-3-2.9",
+     "ref": "Exercise 1.7 Q3"
     }
    ]
   }
@@ -204,82 +210,88 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Q1 a: 4 5/6 − 2 3/4 = ___",
+     "ask": "4 5/6 − 2 3/4 = ___",
      "a": [
       "25/12",
       "2 1/12"
      ],
-     "why": "29/6 − 11/4 = 58/12 − 33/12 = 25/12.",
+     "why": "4 5/6 = (4 × 6 + 5)/6 = 29/6 and 2 3/4 = (2 × 4 + 3)/4 = 11/4. LCM 12: 29/6 = (29 × 2)/(6 × 2) = 58/12 and 11/4 = (11 × 3)/(4 × 3) = 33/12. 58 − 33 = 25, so 25/12.",
      "clue": "Change to improper fractions.",
-     "id": "g8.maths.u1.s1-3-2.10"
+     "id": "g8.maths.u1.s1-3-2.10",
+     "ref": "Q1 a"
     },
     {
      "kind": "blank",
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Q1 b: −5.3 − 3.45 = ___",
+     "ask": "−5.3 − 3.45 = ___",
      "a": [
       "-8.75"
      ],
      "why": "−5.3 + (−3.45) = −8.75.",
      "clue": "Both negative: add the sizes.",
-     "id": "g8.maths.u1.s1-3-2.11"
+     "id": "g8.maths.u1.s1-3-2.11",
+     "ref": "Q1 b"
     },
     {
      "kind": "blank",
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Q1 c: 6/13 − |−7/13| = ___",
+     "ask": "6/13 − |−7/13| = ___",
      "a": [
       "-1/13"
      ],
      "why": "6/13 − 7/13 = −1/13.",
      "clue": "|−7/13| = 7/13.",
-     "id": "g8.maths.u1.s1-3-2.12"
+     "id": "g8.maths.u1.s1-3-2.12",
+     "ref": "Q1 c"
     },
     {
      "kind": "blank",
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Q1 d: |−5/7| − |3/4| = ___",
+     "ask": "|−5/7| − |3/4| = ___",
      "a": [
       "-1/28"
      ],
-     "why": "20/28 − 21/28 = −1/28.",
+     "why": "|−5/7| = 5/7 and |3/4| = 3/4. LCM 28: 5/7 = (5 × 4)/(7 × 4) = 20/28 and 3/4 = (3 × 7)/(4 × 7) = 21/28. 20 − 21 = −1, so −1/28.",
      "clue": "LCM of 7 and 4 is 28.",
-     "id": "g8.maths.u1.s1-3-2.13"
+     "id": "g8.maths.u1.s1-3-2.13",
+     "ref": "Q1 d"
     },
     {
      "kind": "blank",
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Q2 a: y − (2/7 + 5) when y = 9/4: ___",
+     "ask": "Y − (2/7 + 5) when y = 9/4: ___",
      "a": [
       "-85/28",
       "-3 1/28"
      ],
-     "why": "9/4 − 37/7 = 63/28 − 148/28 = −85/28.",
+     "why": "2/7 + 5 = 2/7 + 35/7 = 37/7. LCM of 4 and 7 is 28: 9/4 = (9 × 7)/(4 × 7) = 63/28 and 37/7 = (37 × 4)/(7 × 4) = 148/28. 63 − 148 = −85, so −85/28.",
      "clue": "2/7 + 5 = 37/7.",
-     "id": "g8.maths.u1.s1-3-2.14"
+     "id": "g8.maths.u1.s1-3-2.14",
+     "ref": "Q2 a"
     },
     {
      "kind": "blank",
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Q4: a basket of 58/3 kg has 18/7 kg apples and 11/9 kg oranges. Bananas = ___ kg",
+     "ask": "A basket of 58/3 kg has 18/7 kg apples and 11/9 kg oranges. Bananas = ___ kg",
      "a": [
       "979/63",
       "15 34/63",
       "≈15.54"
      ],
-     "why": "58/3 − 18/7 − 11/9 = 1218/63 − 162/63 − 77/63 = 979/63.",
+     "why": "LCM of 3, 7 and 9 is 63. 58/3 = (58 × 21)/(3 × 21) = 1218/63; 18/7 = (18 × 9)/(7 × 9) = 162/63; 11/9 = (11 × 7)/(9 × 7) = 77/63. 1218 − 162 − 77 = 979, so 979/63 kg.",
      "clue": "LCM of 3, 7 and 9 is 63.",
-     "id": "g8.maths.u1.s1-3-2.15"
+     "id": "g8.maths.u1.s1-3-2.15",
+     "ref": "Q4"
     }
    ]
   }

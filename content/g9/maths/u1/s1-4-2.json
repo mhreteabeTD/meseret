@@ -13,17 +13,34 @@
   "competency": "Find the absolute value of a real number and the distance between two real numbers.",
   "minutes": 8,
   "keywords": [
-    { "en": "Absolute value", "am": "ፍጹም ዋጋ", "machine": true, "def": "The distance of a number from 0 on the number line: |x| is never negative." },
-    { "en": "Distance between a and b", "am": "በ a እና b መካከል ያለ ርቀት", "machine": true, "def": "The distance between two real numbers a and b is |a − b|, and |a − b| = |b − a|." }
+    {
+      "en": "Absolute value",
+      "am": "ፍጹም ዋጋ",
+      "machine": true,
+      "def": "The distance of a number from 0 on the number line: |x| is never negative."
+    },
+    {
+      "en": "Distance between a and b",
+      "am": "በ a እና b መካከል ያለ ርቀት",
+      "machine": true,
+      "def": "The distance between two real numbers a and b is |a − b|, and |a − b| = |b − a|."
+    }
   ],
   "ideas": [
     {
       "id": "math.absolute-value",
       "name": "Absolute value",
-      "requires": ["math.integer-subtraction"],
+      "requires": [
+        "math.integer-subtraction"
+      ],
       "explain": {
-        "en": { "text": "The absolute value of x, written |x|, is its distance from 0. It is never negative. If x is 0 or positive, |x| = x. If x is negative, |x| = −x. The distance between a and b is |a − b|." },
-        "am": { "text": "የ x ፍጹም ዋጋ |x| ተብሎ ይጻፋል። ከዜሮ ያለው ርቀት ነው፤ አሉታዊ አይሆንም። x አዎንታዊ ወይም ዜሮ ከሆነ |x| = x ነው። x አሉታዊ ከሆነ |x| = −x ነው። በ a እና b መካከል ያለው ርቀት |a − b| ነው።", "machine": true }
+        "en": {
+          "text": "The absolute value of x, written |x|, is its distance from 0. It is never negative. If x is 0 or positive, |x| = x. If x is negative, |x| = −x. The distance between a and b is |a − b|."
+        },
+        "am": {
+          "text": "የ x ፍጹም ዋጋ |x| ተብሎ ይጻፋል። ከዜሮ ያለው ርቀት ነው፤ አሉታዊ አይሆንም። x አዎንታዊ ወይም ዜሮ ከሆነ |x| = x ነው። x አሉታዊ ከሆነ |x| = −x ነው። በ a እና b መካከል ያለው ርቀት |a − b| ነው።",
+          "machine": true
+        }
       },
       "screens": [
         {
@@ -33,7 +50,12 @@
           "title": "Who walked farther?",
           "text": "Bekele walks 3 km west of Meskel Square. Tigist walks 3 km east of it. Call east positive: Bekele is at −3, Tigist at 3.",
           "ask": "Who is farther from Meskel Square?",
-          "opts": ["Bekele", "Tigist", "They are the same distance", "We cannot tell"],
+          "opts": [
+            "Bekele",
+            "Tigist",
+            "They are the same distance",
+            "We cannot tell"
+          ],
           "after": "Distance does not care about direction. The book calls it absolute value."
         },
         {
@@ -51,7 +73,10 @@
           "step": "name",
           "title": "Absolute value",
           "defs": [
-            ["Absolute value", "|x| is the distance of x from 0. |x| = x if x ≥ 0, and |x| = −x if x < 0."]
+            [
+              "Absolute value",
+              "|x| is the distance of x from 0. |x| = x if x ≥ 0, and |x| = −x if x < 0."
+            ]
           ]
         },
         {
@@ -60,7 +85,12 @@
           "graded": true,
           "title": "Find the distance from 0",
           "text": "What is |−0.4|?",
-          "opts": ["0.4", "−0.4", "4", "0"],
+          "opts": [
+            "0.4",
+            "−0.4",
+            "4",
+            "0"
+          ],
           "ans": "0.4",
           "why": "−0.4 is 0.4 units from 0. So |−0.4| = 0.4.",
           "clue": "How far is −0.4 from 0 on the number line?"
@@ -68,7 +98,6 @@
         {
           "kind": "steps",
           "step": "method",
-          "title": "Example 1",
           "text": "Absolute values of some real numbers.",
           "steps": [
             "|4| = 4.",
@@ -76,7 +105,8 @@
             "|1/2| = 1/2 and |−0.4| = 0.4.",
             "|−√2| = √2.",
             "|2 − √8| = √8 − 2, because 2 − √8 < 0."
-          ]
+          ],
+          "ref": "Example 1"
         },
         {
           "kind": "mcq",
@@ -84,7 +114,12 @@
           "graded": true,
           "title": "Careful with roots",
           "text": "What is |3 − √10|?",
-          "opts": ["3 − √10", "√10 − 3", "3 + √10", "−3 − √10"],
+          "opts": [
+            "3 − √10",
+            "√10 − 3",
+            "3 + √10",
+            "−3 − √10"
+          ],
           "ans": "√10 − 3",
           "why": "√10 ≈ 3.16 > 3, so 3 − √10 is negative and its absolute value is √10 − 3.",
           "clue": "Is 3 − √10 positive or negative?",
@@ -106,7 +141,10 @@
           "step": "name",
           "title": "Distance on the line",
           "defs": [
-            ["Distance between a and b", "|a − b|. The order does not matter: |a − b| = |b − a|."]
+            [
+              "Distance between a and b",
+              "|a − b|. The order does not matter: |a − b| = |b − a|."
+            ]
           ]
         },
         {
@@ -116,7 +154,11 @@
           "added": true,
           "title": "Find a distance",
           "ask": "The distance between −5 and 2 is ___.",
-          "a": ["7", "seven", "7 units"],
+          "a": [
+            "7",
+            "seven",
+            "7 units"
+          ],
           "why": "|−5 − 2| = |−7| = 7.",
           "clue": "Subtract one number from the other, then take the absolute value.",
           "needs": "math.integer-subtraction"
@@ -127,7 +169,12 @@
           "graded": true,
           "title": "Solve |x| = 5",
           "text": "Solve |x| = 5.",
-          "opts": ["x = 5 only", "x = −5 only", "x = 5 or x = −5", "No solution"],
+          "opts": [
+            "x = 5 only",
+            "x = −5 only",
+            "x = 5 or x = −5",
+            "No solution"
+          ],
           "ans": "x = 5 or x = −5",
           "why": "Both 5 and −5 are 5 units from 0.",
           "clue": "Which numbers are 5 units from zero?"
@@ -140,7 +187,11 @@
           "title": "A cold morning",
           "text": "One morning in Debre Berhan it is −2 °C. By noon it is 9 °C.",
           "ask": "The temperature rose by ___ °C.",
-          "a": ["11", "eleven", "11 °C"],
+          "a": [
+            "11",
+            "eleven",
+            "11 °C"
+          ],
           "why": "|9 − (−2)| = |11| = 11.",
           "clue": "Find the distance between −2 and 9.",
           "needs": "math.integer-subtraction"
@@ -152,26 +203,149 @@
     {
       "book_name": "Exercise 1.25",
       "items": [
-        { "kind": "blank", "step": "exercise", "graded": true, "ask": "|−3/4| = ___", "a": ["3/4", "0.75"], "why": "−3/4 is 3/4 units from 0.", "clue": "Absolute value is never negative." },
-        { "kind": "mcq", "step": "exercise", "graded": true, "text": "Find |1 − √2|.", "opts": ["1 − √2", "√2 − 1", "1 + √2", "−1 − √2"], "ans": "√2 − 1", "why": "√2 ≈ 1.41 > 1, so 1 − √2 is negative.", "clue": "Is 1 − √2 positive or negative?" },
-        { "kind": "blank", "step": "exercise", "graded": true, "ask": "The distance between 7 and −9 is ___.", "a": ["16", "sixteen"], "why": "|7 − (−9)| = |16| = 16.", "clue": "Use |a − b|.", "needs": "math.integer-subtraction" },
-        { "kind": "mcq", "step": "exercise", "graded": true, "text": "Find x: |x| = −4.", "opts": ["x = 4", "x = −4", "x = 4 or x = −4", "No solution"], "ans": "No solution", "why": "An absolute value is never negative.", "clue": "Can a distance be negative?" },
-        { "kind": "mcq", "step": "exercise", "graded": true, "text": "Find x: |x| + 3 = 14.", "opts": ["x = 11 only", "x = 11 or x = −11", "x = 17 or x = −17", "No solution"], "ans": "x = 11 or x = −11", "why": "|x| = 14 − 3 = 11, so x = 11 or x = −11.", "clue": "First get |x| alone." },
-        { "kind": "blank", "step": "exercise", "graded": true, "text": "The coldest temperature recorded on Earth is −129 °F, at Vostok Station, Antarctica, in 1983. The book gives the hottest as 136 °F at Al'Aziziyah, Libya.", "ask": "Using the book's figures, the temperature range is ___ °F.", "a": ["265", "265 °F"], "why": "136 − (−129) = 265 °F. Note: the Al'Aziziyah reading was ruled invalid in 2012. With the official 134 °F (Death Valley), the range is 263 °F.", "clue": "Range = highest − lowest. Subtracting a negative adds.", "needs": "math.integer-subtraction" }
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "ask": "|−3/4| = ___",
+          "a": [
+            "3/4",
+            "0.75"
+          ],
+          "why": "−3/4 is 3/4 units from 0.",
+          "clue": "Absolute value is never negative."
+        },
+        {
+          "kind": "mcq",
+          "step": "exercise",
+          "graded": true,
+          "text": "Find |1 − √2|.",
+          "opts": [
+            "1 − √2",
+            "√2 − 1",
+            "1 + √2",
+            "−1 − √2"
+          ],
+          "ans": "√2 − 1",
+          "why": "√2 ≈ 1.41 > 1, so 1 − √2 is negative.",
+          "clue": "Is 1 − √2 positive or negative?"
+        },
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "ask": "The distance between 7 and −9 is ___.",
+          "a": [
+            "16",
+            "sixteen"
+          ],
+          "why": "|7 − (−9)| = |16| = 16.",
+          "clue": "Use |a − b|.",
+          "needs": "math.integer-subtraction"
+        },
+        {
+          "kind": "mcq",
+          "step": "exercise",
+          "graded": true,
+          "text": "Find x: |x| = −4.",
+          "opts": [
+            "x = 4",
+            "x = −4",
+            "x = 4 or x = −4",
+            "No solution"
+          ],
+          "ans": "No solution",
+          "why": "An absolute value is never negative.",
+          "clue": "Can a distance be negative?"
+        },
+        {
+          "kind": "mcq",
+          "step": "exercise",
+          "graded": true,
+          "text": "Find x: |x| + 3 = 14.",
+          "opts": [
+            "x = 11 only",
+            "x = 11 or x = −11",
+            "x = 17 or x = −17",
+            "No solution"
+          ],
+          "ans": "x = 11 or x = −11",
+          "why": "|x| = 14 − 3 = 11, so x = 11 or x = −11.",
+          "clue": "First get |x| alone."
+        },
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "text": "The coldest temperature recorded on Earth is −129 °F, at Vostok Station, Antarctica, in 1983. The book gives the hottest as 136 °F at Al'Aziziyah, Libya.",
+          "ask": "Using the book's figures, the temperature range is ___ °F.",
+          "a": [
+            "265",
+            "265 °F"
+          ],
+          "why": "136 − (−129) = 265 °F. Note: the Al'Aziziyah reading was ruled invalid in 2012. With the official 134 °F (Death Valley), the range is 263 °F.",
+          "clue": "Range = highest − lowest. Subtracting a negative adds.",
+          "needs": "math.integer-subtraction"
+        }
       ]
     }
   ],
   "test": [
-    { "kind": "mcq", "step": "test", "graded": true, "text": "What is |2 − √8|?", "opts": ["√8 − 2", "2 − √8", "2 + √8", "6"], "ans": "√8 − 2", "why": "2 − √8 < 0, so its absolute value is √8 − 2.", "clue": "" },
-    { "kind": "blank", "step": "test", "graded": true, "ask": "The distance between −49 and −100 is ___.", "a": ["51", "fifty-one", "fifty one"], "why": "|−49 − (−100)| = |51| = 51.", "clue": "" },
-    { "kind": "tf", "step": "test", "graded": true, "text": "|x| = 0 has exactly one solution.", "a": true, "why": "Only 0 is 0 units from 0.", "clue": "" }
+    {
+      "kind": "mcq",
+      "step": "test",
+      "graded": true,
+      "text": "What is |2 − √8|?",
+      "opts": [
+        "√8 − 2",
+        "2 − √8",
+        "2 + √8",
+        "6"
+      ],
+      "ans": "√8 − 2",
+      "why": "2 − √8 < 0, so its absolute value is √8 − 2.",
+      "clue": ""
+    },
+    {
+      "kind": "blank",
+      "step": "test",
+      "graded": true,
+      "ask": "The distance between −49 and −100 is ___.",
+      "a": [
+        "51",
+        "fifty-one",
+        "fifty one"
+      ],
+      "why": "|−49 − (−100)| = |51| = 51.",
+      "clue": ""
+    },
+    {
+      "kind": "tf",
+      "step": "test",
+      "graded": true,
+      "text": "|x| = 0 has exactly one solution.",
+      "a": true,
+      "why": "Only 0 is 0 units from 0.",
+      "clue": ""
+    }
   ],
   "notes": [
-    { "kind": "correction", "text": "Exercise 1.25 item 1(a) did not print in the supplied PDF; −3/4 is used here." },
-    { "kind": "review", "text": "Exercise 1.25 item 4: the 136 °F reading at Al'Aziziyah (1922) was ruled invalid by the World Meteorological Organization in 2012. The official highest is 134 °F (56.7 °C) at Death Valley, California, in 1913. With the book's figures the range is 265 °F; with the official record it is 263 °F. Teacher review needed." },
-    { "kind": "note", "text": "Exercise 1.25 has 16 parts; six are used here. The Meskel Square hook, the distance between −5 and 2 item and the Debre Berhan item are added examples." }
+    {
+      "kind": "correction",
+      "text": "Exercise 1.25 item 1(a) did not print in the supplied PDF; −3/4 is used here."
+    },
+    {
+      "kind": "review",
+      "text": "Exercise 1.25 item 4: the 136 °F reading at Al'Aziziyah (1922) was ruled invalid by the World Meteorological Organization in 2012. The official highest is 134 °F (56.7 °C) at Death Valley, California, in 1913. With the book's figures the range is 265 °F; with the official record it is 263 °F. Teacher review needed."
+    },
+    {
+      "kind": "note",
+      "text": "Exercise 1.25 has 16 parts; six are used here. The Meskel Square hook, the distance between −5 and 2 item and the Debre Berhan item are added examples."
+    }
   ],
-  "review": { "status": "validated" },
+  "review": {
+    "status": "validated"
+  },
   "version": 1,
   "refreshers": {
     "math.integer-subtraction": {
@@ -194,7 +368,12 @@
           "graded": true,
           "title": "Your turn",
           "text": "What is 9 − (−2)?",
-          "opts": ["11", "7", "−11", "−7"],
+          "opts": [
+            "11",
+            "7",
+            "−11",
+            "−7"
+          ],
           "ans": "11",
           "why": "9 − (−2) = 9 + 2 = 11.",
           "clue": "Change 'minus a negative' into 'plus'."

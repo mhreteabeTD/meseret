@@ -15,25 +15,85 @@
   "competency": "Evaluate the shape and movements of the Earth and their effects.",
   "minutes": 10,
   "keywords": [
-    { "en": "Spheroid", "am": "ክብ መሰል ቅርጽ", "def": "A shape that is almost a ball. The Earth is an oblate spheroid: wider at the Equator, flatter at the poles.", "machine": true },
-    { "en": "Oblate spheroid", "am": "ጠፍጣፋ ክብ መሰል ቅርጽ", "def": "Almost round, slightly wider at the Equator and slightly flattened at the poles. The Earth's shape.", "machine": true },
-    { "en": "Geoid", "am": "ጂኦይድ", "def": "The exact, slightly lumpy shape of the Earth, as scientists describe it.", "machine": true },
-    { "en": "Rotation", "am": "ሽክርክሪት (ምድር በዛቢያዋ ላይ መዞሯ)", "def": "The Earth spinning on its axis, west to east, once about every 24 hours.", "machine": true },
-    { "en": "Axis", "am": "ዛቢያ", "def": "The imaginary line through the North and South Poles that the Earth spins around. It is tilted about 23½°.", "machine": true },
-    { "en": "Tide", "am": "የባሕር ሙላትና ቅናሽ", "def": "The regular rise and fall of the sea, caused mainly by the Moon's pull.", "machine": true },
-    { "en": "Revolution", "am": "ዑደት (ምድር በፀሐይ ዙሪያ መዞሯ)", "def": "The Earth travelling around the Sun, once every 365¼ days.", "machine": true },
-    { "en": "Orbit", "am": "ምህዋር", "def": "The oval path the Earth follows around the Sun.", "machine": true },
-    { "en": "Equinox", "am": "የቀንና የሌሊት እኩልነት ቀን", "def": "A day (about March 21 and September 23) when day and night are equal everywhere.", "machine": true },
-    { "en": "Solstice", "am": "ሶልስቲስ (ረጅሙ ቀን ወይም ሌሊት)", "def": "A day (about June 21 and December 21) of the longest day in one hemisphere and the longest night in the other.", "machine": true },
-    { "en": "Season", "am": "ወቅት", "def": "A part of the year with its own weather: Kiremt, Meher, Bega and Belg.", "machine": true }
+    {
+      "en": "Spheroid",
+      "am": "ክብ መሰል ቅርጽ",
+      "def": "A shape that is almost a ball. The Earth is an oblate spheroid: wider at the Equator, flatter at the poles.",
+      "machine": true
+    },
+    {
+      "en": "Oblate spheroid",
+      "am": "ጠፍጣፋ ክብ መሰል ቅርጽ",
+      "def": "Almost round, slightly wider at the Equator and slightly flattened at the poles. The Earth's shape.",
+      "machine": true
+    },
+    {
+      "en": "Geoid",
+      "am": "ጂኦይድ",
+      "def": "The exact, slightly lumpy shape of the Earth, as scientists describe it.",
+      "machine": true
+    },
+    {
+      "en": "Rotation",
+      "am": "ሽክርክሪት (ምድር በዛቢያዋ ላይ መዞሯ)",
+      "def": "The Earth spinning on its axis, west to east, once about every 24 hours.",
+      "machine": true
+    },
+    {
+      "en": "Axis",
+      "am": "ዛቢያ",
+      "def": "The imaginary line through the North and South Poles that the Earth spins around. It is tilted about 23½°.",
+      "machine": true
+    },
+    {
+      "en": "Tide",
+      "am": "የባሕር ሙላትና ቅናሽ",
+      "def": "The regular rise and fall of the sea, caused mainly by the Moon's pull.",
+      "machine": true
+    },
+    {
+      "en": "Revolution",
+      "am": "ዑደት (ምድር በፀሐይ ዙሪያ መዞሯ)",
+      "def": "The Earth travelling around the Sun, once every 365¼ days.",
+      "machine": true
+    },
+    {
+      "en": "Orbit",
+      "am": "ምህዋር",
+      "def": "The oval path the Earth follows around the Sun.",
+      "machine": true
+    },
+    {
+      "en": "Equinox",
+      "am": "የቀንና የሌሊት እኩልነት ቀን",
+      "def": "A day (about March 21 and September 23) when day and night are equal everywhere.",
+      "machine": true
+    },
+    {
+      "en": "Solstice",
+      "am": "ሶልስቲስ (ረጅሙ ቀን ወይም ሌሊት)",
+      "def": "A day (about June 21 and December 21) of the longest day in one hemisphere and the longest night in the other.",
+      "machine": true
+    },
+    {
+      "en": "Season",
+      "am": "ወቅት",
+      "def": "A part of the year with its own weather: Kiremt, Meher, Bega and Belg.",
+      "machine": true
+    }
   ],
   "ideas": [
     {
       "id": "soc.earth-shape",
       "name": "The shape of the Earth",
       "explain": {
-        "en": { "text": "The Earth is almost round, but not perfectly. It bulges at the Equator and is slightly flat at the poles. This shape is an oblate spheroid. The Earth's spin causes it. A ship's mast appears before its body, and eastern places see sunrise first. So the Earth is not flat." },
-        "am": { "text": "ምድር ክብ ትመስላለች፤ ግን ፍጹም ክብ አይደለችም። በምድር ወገብ ትሰፋለች፤ በዋልታዎች ትንሽ ጠፍጣፋ ናት። ይህ ቅርጽ ኦብሌት ስፌሮይድ ይባላል። የሚያመጣው የምድር መሽከርከር ነው። የመርከብ ምሰሶ ከአካሏ በፊት ይታያል፤ ምሥራቃዊ ቦታዎች ፀሐይ መውጣቷን ቀድመው ያያሉ። ስለዚህ ምድር ጠፍጣፋ አይደለችም።", "machine": true }
+        "en": {
+          "text": "The Earth is almost round, but not perfectly. It bulges at the Equator and is slightly flat at the poles. This shape is an oblate spheroid. The Earth's spin causes it. A ship's mast appears before its body, and eastern places see sunrise first. So the Earth is not flat."
+        },
+        "am": {
+          "text": "ምድር ክብ ትመስላለች፤ ግን ፍጹም ክብ አይደለችም። በምድር ወገብ ትሰፋለች፤ በዋልታዎች ትንሽ ጠፍጣፋ ናት። ይህ ቅርጽ ኦብሌት ስፌሮይድ ይባላል። የሚያመጣው የምድር መሽከርከር ነው። የመርከብ ምሰሶ ከአካሏ በፊት ይታያል፤ ምሥራቃዊ ቦታዎች ፀሐይ መውጣቷን ቀድመው ያያሉ። ስለዚህ ምድር ጠፍጣፋ አይደለችም።",
+          "machine": true
+        }
       },
       "screens": [
         {
@@ -75,8 +135,14 @@
           "step": "name",
           "title": "Name it",
           "defs": [
-            ["Oblate spheroid", "Almost round: slightly wider at the Equator, slightly flattened at the poles."],
-            ["Geoid", "The exact, slightly lumpy shape of the Earth."]
+            [
+              "Oblate spheroid",
+              "Almost round: slightly wider at the Equator, slightly flattened at the poles."
+            ],
+            [
+              "Geoid",
+              "The exact, slightly lumpy shape of the Earth."
+            ]
           ]
         },
         {
@@ -134,7 +200,10 @@
           "graded": true,
           "title": "Name the shape",
           "ask": "The Earth's shape is called an oblate ___.",
-          "a": ["spheroid", "spheroids"],
+          "a": [
+            "spheroid",
+            "spheroids"
+          ],
           "why": "Almost round, wider at the Equator and flatter at the poles.",
           "clue": "It is a word that means \"almost a sphere\".",
           "worked": "A shape that is almost a ball is a spheroid. The Earth is wider at the Equator, so it is an oblate spheroid."
@@ -145,8 +214,13 @@
       "id": "soc.earth-rotation",
       "name": "Rotation of the Earth",
       "explain": {
-        "en": { "text": "Rotation is the Earth spinning on its axis. One turn takes about 24 hours. The Earth spins from west to east, so the Sun seems to rise in the east. The axis is tilted about 23½°. Rotation causes day and night. It also carries places through the Moon's pull, giving high and low tides." },
-        "am": { "text": "ሽክርክሪት ምድር በዛቢያዋ ላይ መዞሯ ነው። አንድ ዙር 24 ሰዓት ገደማ ይፈጃል። ምድር ከምዕራብ ወደ ምሥራቅ ትሽከረከራለች፤ ስለዚህ ፀሐይ በምሥራቅ የምትወጣ ትመስላለች። ዛቢያው 23½° ገደማ ያዘነበለ ነው። ሽክርክሪት ቀንና ሌሊትን ያመጣል። ቦታዎችን በጨረቃ ስበት ውስጥ በማሳለፍ የባሕር ሙላትና ቅናሽን ያስከትላል።", "machine": true }
+        "en": {
+          "text": "Rotation is the Earth spinning on its axis. One turn takes about 24 hours. The Earth spins from west to east, so the Sun seems to rise in the east. The axis is tilted about 23½°. Rotation causes day and night. It also carries places through the Moon's pull, giving high and low tides."
+        },
+        "am": {
+          "text": "ሽክርክሪት ምድር በዛቢያዋ ላይ መዞሯ ነው። አንድ ዙር 24 ሰዓት ገደማ ይፈጃል። ምድር ከምዕራብ ወደ ምሥራቅ ትሽከረከራለች፤ ስለዚህ ፀሐይ በምሥራቅ የምትወጣ ትመስላለች። ዛቢያው 23½° ገደማ ያዘነበለ ነው። ሽክርክሪት ቀንና ሌሊትን ያመጣል። ቦታዎችን በጨረቃ ስበት ውስጥ በማሳለፍ የባሕር ሙላትና ቅናሽን ያስከትላል።",
+          "machine": true
+        }
       },
       "screens": [
         {
@@ -188,8 +262,14 @@
           "step": "name",
           "title": "Name it",
           "defs": [
-            ["Axis", "The imaginary line through the North and South Poles. The Earth spins around it. It is tilted about 23½°."],
-            ["Rotation", "The Earth spinning on its axis, west to east, once about every 24 hours."]
+            [
+              "Axis",
+              "The imaginary line through the North and South Poles. The Earth spins around it. It is tilted about 23½°."
+            ],
+            [
+              "Rotation",
+              "The Earth spinning on its axis, west to east, once about every 24 hours."
+            ]
           ]
         },
         {
@@ -222,21 +302,25 @@
           "step": "name",
           "title": "Name it",
           "defs": [
-            ["Tide", "The regular rise and fall of the sea, caused mainly by the Moon's pull."]
+            [
+              "Tide",
+              "The regular rise and fall of the sea, caused mainly by the Moon's pull."
+            ]
           ]
         },
         {
           "kind": "steps",
           "step": "method",
           "title": "Model day and night",
-          "text": "Activity 1.2 Things to do, in groups of 5 or 6.",
+          "text": "Things to do, in groups of 5 or 6.",
           "steps": [
             "Use a ball as the Earth and a lit candle as the Sun.",
             "Mark a point on the ball as Town X.",
             "Turn the ball so Town X is in darkness.",
             "Now rotate the ball slowly from left to right.",
             "Watch Town X move into the light (day), then back into darkness (night). Write what you observe."
-          ]
+          ],
+          "ref": "Activity 1.2"
         },
         {
           "kind": "mcq",
@@ -270,7 +354,15 @@
           "graded": true,
           "title": "The tilt",
           "ask": "The Earth's axis is tilted about ___ degrees.",
-          "a": ["23.5", "23 1/2", "23½", "23,5", "23.5°", "23½°", "twenty-three and a half"],
+          "a": [
+            "23.5",
+            "23 1/2",
+            "23½",
+            "23,5",
+            "23.5°",
+            "23½°",
+            "twenty-three and a half"
+          ],
           "why": "The tilt is about 23½°.",
           "clue": "The number is between 23 and 24.",
           "worked": "The book says the axis is tilted about 23½°. So the answer is 23½ (23.5)."
@@ -282,7 +374,11 @@
           "title": "Tsion's day",
           "text": "Tsion in Hawassa sees sunrise on Monday. The Earth makes one full rotation.",
           "ask": "She sees sunrise again about ___ hours later.",
-          "a": ["24", "twenty-four", "twenty four"],
+          "a": [
+            "24",
+            "twenty-four",
+            "twenty four"
+          ],
           "why": "One rotation takes about 24 hours, which is one day.",
           "clue": "How long does one full spin of the Earth take?",
           "added": true
@@ -293,8 +389,13 @@
       "id": "soc.earth-revolution",
       "name": "Revolution of the Earth and the seasons",
       "explain": {
-        "en": { "text": "Revolution is the Earth's journey around the Sun. One trip takes 365¼ days, one year. Because the axis is tilted, day length changes. At the equinoxes, March 21 and September 23, day and night are equal. At the solstices, June 21 and December 21, one hemisphere has its longest day. Revolution and tilt cause the seasons: Kiremt, Meher, Bega and Belg." },
-        "am": { "text": "ዑደት ምድር በፀሐይ ዙሪያ የምታደርገው ጉዞ ነው። አንድ ዙር 365¼ ቀናት ማለትም አንድ ዓመት ይፈጃል። ዛቢያው ስላዘነበለ የቀን ርዝመት ይቀያየራል። መጋቢትና መስከረም አካባቢ (March 21 እና September 23) ቀንና ሌሊት እኩል ናቸው። ሰኔና ታኅሣሥ አካባቢ (June 21 እና December 21) አንዱ ንፍቀ ክበብ ረጅሙ ቀን አለው። ዑደትና ዝንባሌ ወቅቶችን ያመጣሉ፤ ክረምት፣ መኸር፣ በጋና በልግ።", "machine": true }
+        "en": {
+          "text": "Revolution is the Earth's journey around the Sun. One trip takes 365¼ days, one year. Because the axis is tilted, day length changes. At the equinoxes, March 21 and September 23, day and night are equal. At the solstices, June 21 and December 21, one hemisphere has its longest day. Revolution and tilt cause the seasons: Kiremt, Meher, Bega and Belg."
+        },
+        "am": {
+          "text": "ዑደት ምድር በፀሐይ ዙሪያ የምታደርገው ጉዞ ነው። አንድ ዙር 365¼ ቀናት ማለትም አንድ ዓመት ይፈጃል። ዛቢያው ስላዘነበለ የቀን ርዝመት ይቀያየራል። መጋቢትና መስከረም አካባቢ (March 21 እና September 23) ቀንና ሌሊት እኩል ናቸው። ሰኔና ታኅሣሥ አካባቢ (June 21 እና December 21) አንዱ ንፍቀ ክበብ ረጅሙ ቀን አለው። ዑደትና ዝንባሌ ወቅቶችን ያመጣሉ፤ ክረምት፣ መኸር፣ በጋና በልግ።",
+          "machine": true
+        }
       },
       "screens": [
         {
@@ -341,10 +442,26 @@
             "They are summer (Kiremt), autumn (Meher), winter (Bega) and spring (Belg or Tsedey)."
           ],
           "table": [
-            ["", "Rotation", "Revolution"],
-            ["What", "Spinning on its axis", "Travelling around the Sun"],
-            ["Time", "About 24 hours (1 day)", "365¼ days (1 year)"],
-            ["Causes", "Day and night, tides", "Seasons, changing day length"]
+            [
+              "",
+              "Rotation",
+              "Revolution"
+            ],
+            [
+              "What",
+              "Spinning on its axis",
+              "Travelling around the Sun"
+            ],
+            [
+              "Time",
+              "About 24 hours (1 day)",
+              "365¼ days (1 year)"
+            ],
+            [
+              "Causes",
+              "Day and night, tides",
+              "Seasons, changing day length"
+            ]
           ]
         },
         {
@@ -352,10 +469,22 @@
           "step": "name",
           "title": "Name it",
           "defs": [
-            ["Revolution", "The Earth travelling around the Sun on its orbit, once every 365¼ days."],
-            ["Equinox", "A day (about March 21 and September 23) when day and night are equal everywhere."],
-            ["Solstice", "A day (about June 21 and December 21) of the longest day in one hemisphere."],
-            ["Season", "A part of the year with its own weather: Kiremt, Meher, Bega and Belg."]
+            [
+              "Revolution",
+              "The Earth travelling around the Sun on its orbit, once every 365¼ days."
+            ],
+            [
+              "Equinox",
+              "A day (about March 21 and September 23) when day and night are equal everywhere."
+            ],
+            [
+              "Solstice",
+              "A day (about June 21 and December 21) of the longest day in one hemisphere."
+            ],
+            [
+              "Season",
+              "A part of the year with its own weather: Kiremt, Meher, Bega and Belg."
+            ]
           ]
         },
         {
@@ -378,13 +507,14 @@
           "kind": "steps",
           "step": "method",
           "title": "Follow the Earth for a year",
-          "text": "Figure 1.7: four key dates on the Earth's orbit.",
+          "text": "Four key dates on the Earth's orbit.",
           "steps": [
             "March 21 (equinox): the Sun is directly over the Equator. Day and night are equal everywhere.",
             "June 21 (June solstice): the Sun is over the Tropic of Cancer. Longest day in the Northern Hemisphere. Kiremt begins in Ethiopia.",
             "September 23 (equinox): the Sun is again over the Equator. Day and night are equal everywhere.",
             "December 21 (December solstice): the Sun is over the Tropic of Capricorn. Longest day in the Southern Hemisphere."
-          ]
+          ],
+          "ref": "Figure 1.7"
         },
         {
           "kind": "match",
@@ -393,10 +523,22 @@
           "title": "Ethiopian seasons",
           "text": "Match each Ethiopian season to its English name.",
           "pairs": [
-            ["Kiremt", "Summer"],
-            ["Meher", "Autumn"],
-            ["Bega", "Winter"],
-            ["Belg", "Spring"]
+            [
+              "Kiremt",
+              "Summer"
+            ],
+            [
+              "Meher",
+              "Autumn"
+            ],
+            [
+              "Bega",
+              "Winter"
+            ],
+            [
+              "Belg",
+              "Spring"
+            ]
           ],
           "why": "Belg is also called Tsedey.",
           "clue": "Kiremt is the rainy season that starts in June."
@@ -422,7 +564,13 @@
           "graded": true,
           "title": "One year",
           "ask": "One revolution of the Earth around the Sun takes ___ days.",
-          "a": ["365¼", "365 1/4", "365.25", "365,25", "365 and a quarter"],
+          "a": [
+            "365¼",
+            "365 1/4",
+            "365.25",
+            "365,25",
+            "365 and a quarter"
+          ],
           "why": "One trip around the Sun is one year: 365¼ days.",
           "clue": "Revolution makes a year, not a day."
         },
@@ -500,10 +648,22 @@
       "graded": true,
       "text": "Match each term to its effect or meaning.",
       "pairs": [
-        ["Rotation", "Causes day and night"],
-        ["Revolution", "Takes one year"],
-        ["Equinox", "Day and night are equal everywhere"],
-        ["Solstice", "Longest day in one hemisphere"]
+        [
+          "Rotation",
+          "Causes day and night"
+        ],
+        [
+          "Revolution",
+          "Takes one year"
+        ],
+        [
+          "Equinox",
+          "Day and night are equal everywhere"
+        ],
+        [
+          "Solstice",
+          "Longest day in one hemisphere"
+        ]
       ],
       "why": "Rotation and revolution are the two movements; equinoxes and solstices are key dates of revolution."
     },
@@ -533,10 +693,21 @@
     }
   ],
   "notes": [
-    { "kind": "correction", "text": "The printed book says the axis \"is perpendicular to the Earth's orbit\". The axis is actually tilted 23½° away from the perpendicular." },
-    { "kind": "note", "text": "The ball-and-candle Things to do of Activity 1.2 is shown as a steps screen in the rotation idea. The four orbit dates come from the source's Figure 1.7." },
-    { "kind": "review", "text": "Matching Kiremt, Meher, Bega and Belg to summer, autumn, winter and spring follows the book. A teacher may want to note that Ethiopian seasons are rainfall seasons, not exact matches." }
+    {
+      "kind": "correction",
+      "text": "The printed book says the axis \"is perpendicular to the Earth's orbit\". The axis is actually tilted 23½° away from the perpendicular."
+    },
+    {
+      "kind": "note",
+      "text": "The ball-and-candle Things to do of Activity 1.2 is shown as a steps screen in the rotation idea. The four orbit dates come from the source's Figure 1.7."
+    },
+    {
+      "kind": "review",
+      "text": "Matching Kiremt, Meher, Bega and Belg to summer, autumn, winter and spring follows the book. A teacher may want to note that Ethiopian seasons are rainfall seasons, not exact matches."
+    }
   ],
-  "review": { "status": "validated" },
+  "review": {
+    "status": "validated"
+  },
   "version": 1
 }

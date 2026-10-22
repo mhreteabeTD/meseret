@@ -630,6 +630,14 @@
         "gen": {
           "type": "object",
           "description": "generator {t, ...options}: replays and tests use fresh numbers (app.js Gen)"
+        },
+        "intro": {
+          "type": "string",
+          "description": "grid: text shown before the first ▶ step"
+        },
+        "ref": {
+          "type": "string",
+          "description": "book reference shown as a small label (Example 1.31, Exercise 1.6 Q2); never part of the question"
         }
       },
       "allOf": [

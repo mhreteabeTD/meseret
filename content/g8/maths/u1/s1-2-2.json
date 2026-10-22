@@ -46,7 +46,7 @@
     {
      "kind": "guess",
      "step": "hook",
-     "title": "Exercise 1.5 Q3: Samuel's plants",
+     "title": "Samuel's plants",
      "text": "Differences from the average growth: Rahel 3 1/4 cm, Kassa −2.2 cm, Alemitu 1.7 cm, Munir −1 7/10 cm.",
      "ask": "Whose plant grew the most?",
      "opts": [
@@ -56,7 +56,8 @@
       "Munir"
      ],
      "after": "Rahel: 3 1/4 = 3.25 is the largest difference.",
-     "id": "g8.maths.u1.s1-2-2.1"
+     "id": "g8.maths.u1.s1-2-2.1",
+     "ref": "Exercise 1.5 Q3"
     },
     {
      "kind": "read",
@@ -89,7 +90,7 @@
      "kind": "order",
      "step": "check",
      "graded": true,
-     "title": "Example 1.14 i a: ascending",
+     "title": "Ascending",
      "items": [
       "−45",
       "−25",
@@ -99,19 +100,25 @@
      ],
      "why": "−45 < −25 < 18 < 28 < 30.",
      "clue": "Negatives first; the bigger negative size is smaller.",
-     "id": "g8.maths.u1.s1-2-2.4"
+     "id": "g8.maths.u1.s1-2-2.4",
+     "ref": "Example 1.14 i a"
     },
     {
      "kind": "steps",
      "step": "method",
-     "title": "Example 1.14 i b: 3/5, 4/9, 7/3, 5/6, 11/18",
+     "title": "3/5, 4/9, 7/3, 5/6, 11/18",
      "steps": [
-      "LCM of 5, 9, 3, 6 and 18 is 90.",
-      "54/90, 40/90, 210/90, 75/90, 55/90.",
+      "The denominators are 5, 9, 3, 6 and 18. Their LCM is 90.",
+      "3/5 = (3 × 18)/(5 × 18) = 54/90, because 90 ÷ 5 = 18.",
+      "4/9 = (4 × 10)/(9 × 10) = 40/90, because 90 ÷ 9 = 10.",
+      "7/3 = (7 × 30)/(3 × 30) = 210/90, because 90 ÷ 3 = 30.",
+      "5/6 = (5 × 15)/(6 × 15) = 75/90, because 90 ÷ 6 = 15.",
+      "11/18 = (11 × 5)/(18 × 5) = 55/90, because 90 ÷ 18 = 5.",
       "Order the numerators: 40 < 54 < 55 < 75 < 210.",
       "So 4/9 < 3/5 < 11/18 < 5/6 < 7/3."
      ],
-     "id": "g8.maths.u1.s1-2-2.5"
+     "id": "g8.maths.u1.s1-2-2.5",
+     "ref": "Example 1.14 i b"
     },
     {
      "kind": "order",
@@ -182,7 +189,7 @@
      "kind": "order",
      "step": "exercise",
      "graded": true,
-     "title": "Q1 b: ascending",
+     "title": "Ascending",
      "items": [
       "−12.51",
       "5.24",
@@ -192,13 +199,14 @@
      ],
      "why": "Negative first, then by integer part.",
      "clue": "Smallest first.",
-     "id": "g8.maths.u1.s1-2-2.9"
+     "id": "g8.maths.u1.s1-2-2.9",
+     "ref": "Q1 b"
     },
     {
      "kind": "order",
      "step": "exercise",
      "graded": true,
-     "title": "Q1 a: ascending",
+     "title": "Ascending",
      "items": [
       "−5 2/3",
       "3/25",
@@ -208,13 +216,14 @@
      ],
      "why": "−5.67 < 0.12 < 0.44 < 1.53 < 1.57.",
      "clue": "Change them to decimals.",
-     "id": "g8.maths.u1.s1-2-2.10"
+     "id": "g8.maths.u1.s1-2-2.10",
+     "ref": "Q1 a"
     },
     {
      "kind": "order",
      "step": "exercise",
      "graded": true,
-     "title": "Q2 a: descending",
+     "title": "Descending",
      "items": [
       "23.86",
       "15.02",
@@ -223,13 +232,14 @@
      ],
      "why": "Largest first.",
      "clue": "Compare integer parts, then tenths.",
-     "id": "g8.maths.u1.s1-2-2.11"
+     "id": "g8.maths.u1.s1-2-2.11",
+     "ref": "Q2 a"
     },
     {
      "kind": "order",
      "step": "exercise",
      "graded": true,
-     "title": "Q2 c: descending",
+     "title": "Descending",
      "items": [
       "4.23",
       "3 5/6",
@@ -239,13 +249,14 @@
      ],
      "why": "4.23 > 3.83 > 3.75 > 3.6 > 3.21.",
      "clue": "Change them to decimals.",
-     "id": "g8.maths.u1.s1-2-2.12"
+     "id": "g8.maths.u1.s1-2-2.12",
+     "ref": "Q2 c"
     },
     {
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Q3 a: whose plant grew the most?",
+     "text": "Whose plant grew the most?",
      "opts": [
       "Rahel",
       "Kassa",
@@ -255,13 +266,14 @@
      "ans": "Rahel",
      "why": "3 1/4 is the largest difference.",
      "clue": "Look for the biggest number.",
-     "id": "g8.maths.u1.s1-2-2.13"
+     "id": "g8.maths.u1.s1-2-2.13",
+     "ref": "Q3 a"
     },
     {
      "kind": "order",
      "step": "exercise",
      "graded": true,
-     "title": "Q3 b: lowest to highest",
+     "title": "Lowest to highest",
      "items": [
       "−2.2",
       "−1 7/10",
@@ -270,7 +282,8 @@
      ],
      "why": "−2.2 < −1.7 < 1.7 < 3.25.",
      "clue": "Change them to decimals.",
-     "id": "g8.maths.u1.s1-2-2.14"
+     "id": "g8.maths.u1.s1-2-2.14",
+     "ref": "Q3 b"
     }
    ]
   }

@@ -40,7 +40,6 @@
     {
      "kind": "guess",
      "step": "hook",
-     "title": "Example 1.33",
      "ask": "Four friends share one cake equally. Each gets",
      "opts": [
       "1/4",
@@ -49,7 +48,8 @@
       "4/1"
      ],
      "after": "Each friend gets one fourth: 1/4 of the cake.",
-     "id": "g8.maths.u1.s1-4-1.1"
+     "id": "g8.maths.u1.s1-4-1.1",
+     "ref": "Example 1.33"
     },
     {
      "kind": "read",
@@ -73,7 +73,6 @@
     {
      "kind": "fracbar",
      "step": "explore",
-     "title": "Figure 1.22",
      "bars": [
       {
        "parts": 15,
@@ -102,17 +101,21 @@
       }
      ],
      "after": "Each brother gets 1/5 + 1/15 = 4/15. The mother keeps 3/15 = 1/5.",
-     "id": "g8.maths.u1.s1-4-1.4"
+     "id": "g8.maths.u1.s1-4-1.4",
+     "ref": "Figure 1.22"
     },
     {
      "kind": "steps",
      "step": "method",
      "title": "Solution",
      "steps": [
-      "Each brother takes one big piece: 1/5.",
-      "One big piece is left (not the mother's).",
-      "Split it in 3: 1/5 ÷ 3 = 1/15.",
-      "Each gets 1/5 + 1/15 = 3/15 + 1/15 = 4/15."
+      "Cut the sugarcane into 5 equal big pieces. Each big piece is 1/5.",
+      "The mother takes 1 big piece. 4 big pieces are left.",
+      "Each brother takes 1 big piece: 1/5 each. That uses 3 pieces.",
+      "1 big piece is still left. Cut it into 3 equal parts: 1/5 ÷ 3 = 1/5 × 1/3 = 1/15.",
+      "Each brother gets 1/5 + 1/15.",
+      "LCM of 5 and 15 is 15: 1/5 = (1 × 3)/(5 × 3) = 3/15.",
+      "3/15 + 1/15 = 4/15. Each brother gets 4/15."
      ],
      "id": "g8.maths.u1.s1-4-1.5"
     },
@@ -139,7 +142,7 @@
       "15 − 1 = 14"
      ],
      "ans": "1/5 split into 3 parts is 1/15",
-     "why": "1/5 ÷ 3 = 1/15.",
+     "why": "1/5 ÷ 3 = 1/5 × 1/3 = 1/15.",
      "clue": "Look at the last big piece.",
      "id": "g8.maths.u1.s1-4-1.7"
     },
@@ -168,7 +171,7 @@
       "1/4",
       "0.25"
      ],
-     "why": "3/4 ÷ 3 = 1/4.",
+     "why": "3/4 ÷ 3 = 3/4 × 1/3 = 3/12. Divide top and bottom by 3: 1/4.",
      "clue": "Divide 3/4 by 3.",
      "added": true,
      "gen": {
@@ -181,18 +184,19 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "Review Q9: Eleni baked 32 cupcakes and iced 24. Fraction iced = ___",
+     "ask": "Eleni baked 32 cupcakes and iced 24. Fraction iced = ___",
      "a": [
       "3/4",
       "24/32",
       "0.75"
      ],
-     "why": "24/32 = 3/4.",
+     "why": "24/32: GCF of 24 and 32 is 8. 24 ÷ 8 = 3 and 32 ÷ 8 = 4, so 3/4.",
      "clue": "Iced over total, then reduce.",
      "gen": {
       "t": "share"
      },
-     "id": "g8.maths.u1.s1-4-1.10"
+     "id": "g8.maths.u1.s1-4-1.10",
+     "ref": "Review Q9"
     }
    ]
   }
@@ -210,7 +214,7 @@
      "a": [
       "2/3"
      ],
-     "why": "4 ÷ 6 = 4/6 = 2/3.",
+     "why": "4 ÷ 6 = 4/6. Divide top and bottom by 2: 2/3.",
      "clue": "Divide and reduce.",
      "added": true,
      "id": "g8.maths.u1.s1-4-1.11"
@@ -224,7 +228,7 @@
      "a": [
       "1/4"
      ],
-     "why": "3/4 ÷ 3 = 1/4.",
+     "why": "3/4 ÷ 3 = 3/4 × 1/3 = 3/12. Divide top and bottom by 3: 1/4.",
      "clue": "Find what is left first.",
      "added": true,
      "id": "g8.maths.u1.s1-4-1.12"
@@ -238,7 +242,7 @@
      "a": [
       "3/4"
      ],
-     "why": "24/32 = 3/4.",
+     "why": "24/32: GCF of 24 and 32 is 8. 24 ÷ 8 = 3 and 32 ÷ 8 = 4, so 3/4.",
      "clue": "Reduce 24/32.",
      "id": "g8.maths.u1.s1-4-1.13"
     }
@@ -296,9 +300,10 @@
      "title": "3/4 ÷ 3",
      "text": "Dividing by 3 is multiplying by 1/3.",
      "steps": [
-      "3 = 3/1; its reciprocal is 1/3.",
-      "3/4 × 1/3 = 3/12.",
-      "= 1/4."
+      "Write 3 as 3/1. Its reciprocal is 1/3.",
+      "So 3/4 ÷ 3 = 3/4 × 1/3.",
+      "Multiply: (3 × 1)/(4 × 3) = 3/12.",
+      "Simplify: divide top and bottom by 3. 3 ÷ 3 = 1 and 12 ÷ 3 = 4, so 3/12 = 1/4."
      ]
     },
     {
@@ -313,7 +318,7 @@
       "1/10"
      ],
      "ans": "1/5",
-     "why": "2/5 × 1/2 = 2/10 = 1/5.",
+     "why": "2/5 ÷ 2 = 2/5 × 1/2 = 2/10. Divide top and bottom by 2: 1/5.",
      "clue": "Multiply by 1/2."
     }
    ]

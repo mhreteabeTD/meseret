@@ -104,14 +104,14 @@
         {
           "kind": "steps",
           "step": "method",
-          "title": "Example 1",
           "text": "Multiply top and bottom by the rationalizing factor.",
           "steps": [
             "(a) 2/√3 × √3/√3 = 2√3/3",
             "(b) √2/√5 × √5/√5 = √10/5",
             "(c) For a cube root, aim for a perfect cube: 1/∛2 × ∛4/∛4 = ∛4/∛8",
             "Since ∛8 = 2, the answer is ∛4/2."
-          ]
+          ],
+          "ref": "Example 1"
         },
         {
           "kind": "blank",
@@ -174,7 +174,7 @@
           "kind": "guess",
           "step": "hook",
           "title": "Where do the roots go?",
-          "text": "Activity 1.25 asks for products like this one.",
+          "text": "Asks for products like this one.",
           "ask": "What is (√5 − √3)(√5 + √3)? Take a guess.",
           "opts": [
             "2",
@@ -182,7 +182,8 @@
             "8",
             "2√15"
           ],
-          "after": "It is 5 − 3 = 2. The square roots disappear! Read on to see why."
+          "after": "It is 5 − 3 = 2. The square roots disappear! Read on to see why.",
+          "ref": "Activity 1.25"
         },
         {
           "kind": "read",
@@ -258,7 +259,7 @@
         {
           "kind": "steps",
           "step": "method",
-          "title": "Example 2 (a) and (b)",
+          "title": "(a) and (b)",
           "text": "Multiply top and bottom by the conjugate of the denominator.",
           "steps": [
             "(a) 1/(√2 + 1): the conjugate is √2 − 1.",
@@ -267,19 +268,21 @@
             "(b) 3/(√5 − √3): the conjugate is √5 + √3.",
             "The denominator becomes 5 − 3 = 2.",
             "So the answer is 3(√5 + √3)/2."
-          ]
+          ],
+          "ref": "Example 2"
         },
         {
           "kind": "steps",
           "step": "method",
-          "title": "Example 2 (c): three terms",
+          "title": "(c): three terms",
           "text": "Sometimes one multiplication is not enough.",
           "steps": [
             "Start with 1/(√3 − √2 + 1). Multiply top and bottom by (√3 − √2 − 1).",
             "The result is (√3 − √2 − 1)/(2(2 − √6)).",
             "The denominator still has a radical. So multiply again by (2 + √6).",
             "The result is (√2 − √6 − 2)/(−4) = (2 + √6 − √2)/4."
-          ]
+          ],
+          "ref": "Example 2"
         },
         {
           "kind": "blank",

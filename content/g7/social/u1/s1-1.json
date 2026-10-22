@@ -15,29 +15,109 @@
   "competency": "Discuss how the Earth and the other members of the solar system formed and changed to their present state.",
   "minutes": 10,
   "keywords": [
-    { "en": "Solar system", "am": "ሥርዓተ ፀሐይ", "def": "The Sun and everything that travels around it: planets, dwarf planets, asteroids and meteoroids.", "machine": true },
-    { "en": "Nebula", "am": "ኔቡላ (የጋዝና የአቧራ ደመና)", "def": "A huge cloud of hot, swirling gas and dust. The solar system formed from one.", "machine": true },
-    { "en": "Sun", "am": "ፀሐይ", "def": "The star at the centre of the solar system. Its pull holds the system together; it gives heat and light.", "machine": true },
-    { "en": "Planet", "am": "ፕላኔት", "def": "A large body that travels around the Sun on its own orbit. From the Greek planetai, 'wanderers'.", "machine": true },
-    { "en": "Orbit", "am": "ምህዋር", "def": "The oval path a planet or other body follows around the Sun.", "machine": true },
-    { "en": "Inner planet", "am": "የውስጥ ፕላኔት", "def": "One of the four planets nearest the Sun (Mercury, Venus, Earth, Mars): small, solid and rocky.", "machine": true },
-    { "en": "Outer planet", "am": "የውጭ ፕላኔት", "def": "One of the four planets farthest from the Sun (Jupiter, Saturn, Uranus, Neptune): large and mostly gas.", "machine": true },
-    { "en": "Terrestrial planet", "am": "መሬት መሰል ፕላኔት", "def": "Another name for an inner planet: solid with a rocky surface, like Earth.", "machine": true },
-    { "en": "Gas giant", "am": "ግዙፍ የጋዝ ፕላኔት", "def": "Another name for an outer planet: very large and made mostly of gases.", "machine": true },
-    { "en": "Dwarf planet", "am": "ድንክ ፕላኔት", "def": "A planet-like body that is not counted as a full planet, such as Pluto, Ceres and Eris.", "machine": true },
-    { "en": "Asteroid", "am": "አስትሮይድ", "def": "A fairly small rocky body that orbits the Sun, mostly between Mars and Jupiter.", "machine": true },
-    { "en": "Meteoroid", "am": "ሜቲዮሮይድ", "def": "A small piece broken off an asteroid.", "machine": true },
-    { "en": "Meteor", "am": "ተወርዋሪ ኮከብ", "def": "A meteoroid burning in our atmosphere, seen as a streak of light or 'shooting star'.", "machine": true },
-    { "en": "Meteorite", "am": "ሜቲዮራይት (መሬት ላይ የወደቀ የሰማይ ድንጋይ)", "def": "A piece of a meteoroid that survives the trip through the air and lands on Earth.", "machine": true },
-    { "en": "Constellation", "am": "ኅብረ ከዋክብት", "def": "A group of stars that forms a pattern in the night sky. There are 88.", "machine": true }
+    {
+      "en": "Solar system",
+      "am": "ሥርዓተ ፀሐይ",
+      "def": "The Sun and everything that travels around it: planets, dwarf planets, asteroids and meteoroids.",
+      "machine": true
+    },
+    {
+      "en": "Nebula",
+      "am": "ኔቡላ (የጋዝና የአቧራ ደመና)",
+      "def": "A huge cloud of hot, swirling gas and dust. The solar system formed from one.",
+      "machine": true
+    },
+    {
+      "en": "Sun",
+      "am": "ፀሐይ",
+      "def": "The star at the centre of the solar system. Its pull holds the system together; it gives heat and light.",
+      "machine": true
+    },
+    {
+      "en": "Planet",
+      "am": "ፕላኔት",
+      "def": "A large body that travels around the Sun on its own orbit. From the Greek planetai, 'wanderers'.",
+      "machine": true
+    },
+    {
+      "en": "Orbit",
+      "am": "ምህዋር",
+      "def": "The oval path a planet or other body follows around the Sun.",
+      "machine": true
+    },
+    {
+      "en": "Inner planet",
+      "am": "የውስጥ ፕላኔት",
+      "def": "One of the four planets nearest the Sun (Mercury, Venus, Earth, Mars): small, solid and rocky.",
+      "machine": true
+    },
+    {
+      "en": "Outer planet",
+      "am": "የውጭ ፕላኔት",
+      "def": "One of the four planets farthest from the Sun (Jupiter, Saturn, Uranus, Neptune): large and mostly gas.",
+      "machine": true
+    },
+    {
+      "en": "Terrestrial planet",
+      "am": "መሬት መሰል ፕላኔት",
+      "def": "Another name for an inner planet: solid with a rocky surface, like Earth.",
+      "machine": true
+    },
+    {
+      "en": "Gas giant",
+      "am": "ግዙፍ የጋዝ ፕላኔት",
+      "def": "Another name for an outer planet: very large and made mostly of gases.",
+      "machine": true
+    },
+    {
+      "en": "Dwarf planet",
+      "am": "ድንክ ፕላኔት",
+      "def": "A planet-like body that is not counted as a full planet, such as Pluto, Ceres and Eris.",
+      "machine": true
+    },
+    {
+      "en": "Asteroid",
+      "am": "አስትሮይድ",
+      "def": "A fairly small rocky body that orbits the Sun, mostly between Mars and Jupiter.",
+      "machine": true
+    },
+    {
+      "en": "Meteoroid",
+      "am": "ሜቲዮሮይድ",
+      "def": "A small piece broken off an asteroid.",
+      "machine": true
+    },
+    {
+      "en": "Meteor",
+      "am": "ተወርዋሪ ኮከብ",
+      "def": "A meteoroid burning in our atmosphere, seen as a streak of light or 'shooting star'.",
+      "machine": true
+    },
+    {
+      "en": "Meteorite",
+      "am": "ሜቲዮራይት (መሬት ላይ የወደቀ የሰማይ ድንጋይ)",
+      "def": "A piece of a meteoroid that survives the trip through the air and lands on Earth.",
+      "machine": true
+    },
+    {
+      "en": "Constellation",
+      "am": "ኅብረ ከዋክብት",
+      "def": "A group of stars that forms a pattern in the night sky. There are 88.",
+      "machine": true
+    }
   ],
   "ideas": [
     {
       "id": "soc.solar-system-origin",
       "name": "How the solar system formed",
       "explain": {
-        "en": { "text": "The Sun, the planets and the small bodies formed from one huge cloud of hot, swirling gas and dust. Gravity pulled the cloud into a spinning disc. The disc split into rings. The centre became the Sun and the outer rings became the planets. Earth formed about 4.6 billion years ago." },
-        "am": { "text": "ፀሐይ፣ ፕላኔቶችና ትናንሽ አካላት የተፈጠሩት ከአንድ ግዙፍ የሚሽከረከር የጋዝና የአቧራ ደመና ነው። የስበት ኃይል ደመናውን ወደ ሚሽከረከር ዲስክ ሰበሰበው። ዲስኩ ወደ ቀለበቶች ተከፈለ። መሃሉ ፀሐይ ሆነ፤ የውጭዎቹ ቀለበቶች ፕላኔቶች ሆኑ። ምድር የተፈጠረችው ከ4.6 ቢሊዮን ዓመታት በፊት ገደማ ነው።", "machine": true }
+        "en": {
+          "text": "The Sun, the planets and the small bodies formed from one huge cloud of hot, swirling gas and dust. Gravity pulled the cloud into a spinning disc. The disc split into rings. The centre became the Sun and the outer rings became the planets. Earth formed about 4.6 billion years ago."
+        },
+        "am": {
+          "text": "ፀሐይ፣ ፕላኔቶችና ትናንሽ አካላት የተፈጠሩት ከአንድ ግዙፍ የሚሽከረከር የጋዝና የአቧራ ደመና ነው። የስበት ኃይል ደመናውን ወደ ሚሽከረከር ዲስክ ሰበሰበው። ዲስኩ ወደ ቀለበቶች ተከፈለ። መሃሉ ፀሐይ ሆነ፤ የውጭዎቹ ቀለበቶች ፕላኔቶች ሆኑ። ምድር የተፈጠረችው ከ4.6 ቢሊዮን ዓመታት በፊት ገደማ ነው።",
+          "machine": true
+        }
       },
       "screens": [
         {
@@ -72,8 +152,14 @@
           "step": "name",
           "title": "Name it",
           "defs": [
-            ["Nebula", "A huge cloud of hot, swirling gas and dust. Our solar system formed from one."],
-            ["Solar system", "The Sun and everything that travels around it."]
+            [
+              "Nebula",
+              "A huge cloud of hot, swirling gas and dust. Our solar system formed from one."
+            ],
+            [
+              "Solar system",
+              "The Sun and everything that travels around it."
+            ]
           ]
         },
         {
@@ -125,7 +211,11 @@
           "graded": true,
           "title": "How old is the Earth?",
           "ask": "Geologists estimate the Earth formed about ___ billion years ago.",
-          "a": ["4.6", "4,6", "four point six"],
+          "a": [
+            "4.6",
+            "4,6",
+            "four point six"
+          ],
           "why": "The Earth is about 4.6 billion years old.",
           "clue": "The number is between 4 and 5. Look at the last paragraph of part A.",
           "worked": "Part A says the Earth formed about 4.6 billion years ago. So the answer is 4.6."
@@ -153,8 +243,13 @@
       "id": "soc.sun-and-planets",
       "name": "The Sun and the planets",
       "explain": {
-        "en": { "text": "The Sun is a star at the centre of the solar system. It is about 150 million km away. Eight planets travel around it on oval paths called orbits. Mercury, Venus, Earth and Mars are small rocky inner planets. Jupiter, Saturn, Uranus and Neptune are large outer gas giants. Pluto is now a dwarf planet." },
-        "am": { "text": "ፀሐይ በሥርዓተ ፀሐይ መሃል ያለች ኮከብ ናት። ከምድር 150 ሚሊዮን ኪሎ ሜትር ገደማ ትርቃለች። ስምንት ፕላኔቶች ምህዋር በሚባሉ ሞላላ መንገዶች ይዞሯታል። ሜርኩሪ፣ ቬነስ፣ ምድርና ማርስ ትናንሽ ድንጋያማ የውስጥ ፕላኔቶች ናቸው። ጁፒተር፣ ሳተርን፣ ዩራነስና ኔፕቱን ግዙፍ የጋዝ የውጭ ፕላኔቶች ናቸው። ፕሉቶ አሁን ድንክ ፕላኔት ናት።", "machine": true }
+        "en": {
+          "text": "The Sun is a star at the centre of the solar system. It is about 150 million km away. Eight planets travel around it on oval paths called orbits. Mercury, Venus, Earth and Mars are small rocky inner planets. Jupiter, Saturn, Uranus and Neptune are large outer gas giants. Pluto is now a dwarf planet."
+        },
+        "am": {
+          "text": "ፀሐይ በሥርዓተ ፀሐይ መሃል ያለች ኮከብ ናት። ከምድር 150 ሚሊዮን ኪሎ ሜትር ገደማ ትርቃለች። ስምንት ፕላኔቶች ምህዋር በሚባሉ ሞላላ መንገዶች ይዞሯታል። ሜርኩሪ፣ ቬነስ፣ ምድርና ማርስ ትናንሽ ድንጋያማ የውስጥ ፕላኔቶች ናቸው። ጁፒተር፣ ሳተርን፣ ዩራነስና ኔፕቱን ግዙፍ የጋዝ የውጭ ፕላኔቶች ናቸው። ፕሉቶ አሁን ድንክ ፕላኔት ናት።",
+          "machine": true
+        }
       },
       "screens": [
         {
@@ -202,15 +297,51 @@
             "Outer planets: Jupiter, Saturn, Uranus and Neptune are farthest from the Sun. They are much larger and made mostly of gases. So they are called gas giants."
           ],
           "table": [
-            ["Order from the Sun", "Planet", "Group"],
-            ["1", "Mercury", "Inner, rocky"],
-            ["2", "Venus", "Inner, rocky"],
-            ["3", "Earth", "Inner, rocky"],
-            ["4", "Mars", "Inner, rocky"],
-            ["5", "Jupiter", "Outer gas giant (largest)"],
-            ["6", "Saturn", "Outer gas giant (rings)"],
-            ["7", "Uranus", "Outer gas giant"],
-            ["8", "Neptune", "Outer gas giant (farthest)"]
+            [
+              "Order from the Sun",
+              "Planet",
+              "Group"
+            ],
+            [
+              "1",
+              "Mercury",
+              "Inner, rocky"
+            ],
+            [
+              "2",
+              "Venus",
+              "Inner, rocky"
+            ],
+            [
+              "3",
+              "Earth",
+              "Inner, rocky"
+            ],
+            [
+              "4",
+              "Mars",
+              "Inner, rocky"
+            ],
+            [
+              "5",
+              "Jupiter",
+              "Outer gas giant (largest)"
+            ],
+            [
+              "6",
+              "Saturn",
+              "Outer gas giant (rings)"
+            ],
+            [
+              "7",
+              "Uranus",
+              "Outer gas giant"
+            ],
+            [
+              "8",
+              "Neptune",
+              "Outer gas giant (farthest)"
+            ]
           ],
           "note": "Figure 1.1: the asteroid belt lies between Mars and Jupiter."
         },
@@ -219,10 +350,22 @@
           "step": "name",
           "title": "Name it",
           "defs": [
-            ["Planet", "A large body that travels around the Sun on its own orbit."],
-            ["Orbit", "The oval path a planet follows around the Sun."],
-            ["Inner planet", "Mercury, Venus, Earth or Mars: small, solid and rocky. Also called terrestrial planets."],
-            ["Outer planet", "Jupiter, Saturn, Uranus or Neptune: large and mostly gas. Also called gas giants."]
+            [
+              "Planet",
+              "A large body that travels around the Sun on its own orbit."
+            ],
+            [
+              "Orbit",
+              "The oval path a planet follows around the Sun."
+            ],
+            [
+              "Inner planet",
+              "Mercury, Venus, Earth or Mars: small, solid and rocky. Also called terrestrial planets."
+            ],
+            [
+              "Outer planet",
+              "Jupiter, Saturn, Uranus or Neptune: large and mostly gas. Also called gas giants."
+            ]
           ]
         },
         {
@@ -268,7 +411,10 @@
           "step": "name",
           "title": "Name it",
           "defs": [
-            ["Dwarf planet", "A planet-like body not counted as a full planet, such as Pluto, Ceres and Eris."]
+            [
+              "Dwarf planet",
+              "A planet-like body not counted as a full planet, such as Pluto, Ceres and Eris."
+            ]
           ]
         },
         {
@@ -304,7 +450,10 @@
           "title": "Sunlight at sunrise",
           "text": "Dawit watches sunrise in Gondar at 6:00 a.m. Light takes 500 seconds to arrive from the Sun.",
           "ask": "500 seconds is 8 minutes and ___ seconds.",
-          "a": ["20", "twenty"],
+          "a": [
+            "20",
+            "twenty"
+          ],
           "why": "8 minutes is 8 × 60 = 480 seconds. 500 − 480 = 20 seconds.",
           "clue": "One minute has 60 seconds. How many seconds are in 8 minutes?",
           "worked": "8 × 60 = 480 seconds. 500 − 480 = 20. So 500 seconds = 8 minutes 20 seconds.",
@@ -332,8 +481,13 @@
       "id": "soc.small-bodies-and-stars",
       "name": "Asteroids, meteoroids and constellations",
       "explain": {
-        "en": { "text": "An asteroid is a small rocky body orbiting the Sun, mostly between Mars and Jupiter. When asteroids crash, broken pieces are meteoroids. A meteoroid burning in our air is a meteor, or shooting star. A piece that lands is a meteorite. Patterns of stars are constellations; three are named after Ethiopian royalty." },
-        "am": { "text": "አስትሮይድ ፀሐይን የሚዞር ትንሽ ድንጋያማ አካል ነው፤ አብዛኞቹ በማርስና በጁፒተር መካከል ናቸው። አስትሮይዶች ሲጋጩ የሚሰበሩት ቁርጥራጮች ሜቲዮሮይድ ይባላሉ። በአየራችን ውስጥ የሚቃጠል ሜቲዮሮይድ ተወርዋሪ ኮከብ ነው። መሬት ላይ የሚወድቀው ቁራጭ ሜቲዮራይት ይባላል። የከዋክብት ቅርጾች ኅብረ ከዋክብት ይባላሉ፤ ሦስቱ በኢትዮጵያ ነገሥታት ስም ተሰይመዋል።", "machine": true }
+        "en": {
+          "text": "An asteroid is a small rocky body orbiting the Sun, mostly between Mars and Jupiter. When asteroids crash, broken pieces are meteoroids. A meteoroid burning in our air is a meteor, or shooting star. A piece that lands is a meteorite. Patterns of stars are constellations; three are named after Ethiopian royalty."
+        },
+        "am": {
+          "text": "አስትሮይድ ፀሐይን የሚዞር ትንሽ ድንጋያማ አካል ነው፤ አብዛኞቹ በማርስና በጁፒተር መካከል ናቸው። አስትሮይዶች ሲጋጩ የሚሰበሩት ቁርጥራጮች ሜቲዮሮይድ ይባላሉ። በአየራችን ውስጥ የሚቃጠል ሜቲዮሮይድ ተወርዋሪ ኮከብ ነው። መሬት ላይ የሚወድቀው ቁራጭ ሜቲዮራይት ይባላል። የከዋክብት ቅርጾች ኅብረ ከዋክብት ይባላሉ፤ ሦስቱ በኢትዮጵያ ነገሥታት ስም ተሰይመዋል።",
+          "machine": true
+        }
       },
       "screens": [
         {
@@ -364,23 +518,36 @@
           "kind": "steps",
           "step": "method",
           "title": "One piece of rock, four names",
-          "text": "Figure 1.3: follow one piece of rock.",
+          "text": "Follow one piece of rock.",
           "steps": [
             "Asteroid: a small rocky body orbiting the Sun. Sometimes two asteroids crash into each other.",
             "Meteoroid: the crash breaks off small pieces. These broken pieces are meteoroids.",
             "Meteor: a meteoroid enters our atmosphere and burns. It makes a streak of light, a \"shooting star\".",
             "Meteorite: part of it survives the trip and lands on Earth."
-          ]
+          ],
+          "ref": "Figure 1.3"
         },
         {
           "kind": "name",
           "step": "name",
           "title": "Name it",
           "defs": [
-            ["Asteroid", "A fairly small rocky body that orbits the Sun, mostly between Mars and Jupiter."],
-            ["Meteoroid", "A small piece broken off an asteroid."],
-            ["Meteor", "A meteoroid burning in our atmosphere: a \"shooting star\"."],
-            ["Meteorite", "A piece that survives and lands on Earth."]
+            [
+              "Asteroid",
+              "A fairly small rocky body that orbits the Sun, mostly between Mars and Jupiter."
+            ],
+            [
+              "Meteoroid",
+              "A small piece broken off an asteroid."
+            ],
+            [
+              "Meteor",
+              "A meteoroid burning in our atmosphere: a \"shooting star\"."
+            ],
+            [
+              "Meteorite",
+              "A piece that survives and lands on Earth."
+            ]
           ]
         },
         {
@@ -408,14 +575,38 @@
             "Three are named after Ethiopian royalty in Greek myth."
           ],
           "table": [
-            ["Latin name", "English name or meaning"],
-            ["Andromeda", "Princess of Ethiopia"],
-            ["Cassiopeia", "Queen of Ethiopia"],
-            ["Cepheus", "King of Ethiopia"],
-            ["Apus", "Bird of paradise"],
-            ["Aquarius", "Water bearer"],
-            ["Cetus", "Sea monster (whale)"],
-            ["Gemini", "Twins"]
+            [
+              "Latin name",
+              "English name or meaning"
+            ],
+            [
+              "Andromeda",
+              "Princess of Ethiopia"
+            ],
+            [
+              "Cassiopeia",
+              "Queen of Ethiopia"
+            ],
+            [
+              "Cepheus",
+              "King of Ethiopia"
+            ],
+            [
+              "Apus",
+              "Bird of paradise"
+            ],
+            [
+              "Aquarius",
+              "Water bearer"
+            ],
+            [
+              "Cetus",
+              "Sea monster (whale)"
+            ],
+            [
+              "Gemini",
+              "Twins"
+            ]
           ]
         },
         {
@@ -435,7 +626,10 @@
           "step": "name",
           "title": "Name it",
           "defs": [
-            ["Constellation", "A group of stars that forms a pattern in the night sky."]
+            [
+              "Constellation",
+              "A group of stars that forms a pattern in the night sky."
+            ]
           ]
         },
         {
@@ -445,10 +639,22 @@
           "title": "Four names",
           "text": "Match each name to what it is.",
           "pairs": [
-            ["Asteroid", "Small rocky body orbiting the Sun"],
-            ["Meteoroid", "Piece broken off an asteroid"],
-            ["Meteor", "Streak of light as a rock burns in our air"],
-            ["Meteorite", "Rock from space that lands on Earth"]
+            [
+              "Asteroid",
+              "Small rocky body orbiting the Sun"
+            ],
+            [
+              "Meteoroid",
+              "Piece broken off an asteroid"
+            ],
+            [
+              "Meteor",
+              "Streak of light as a rock burns in our air"
+            ],
+            [
+              "Meteorite",
+              "Rock from space that lands on Earth"
+            ]
           ],
           "why": "One piece of rock can be all four, as it travels.",
           "clue": "Follow the rock: crash, burn, land."
@@ -476,7 +682,10 @@
           "title": "Queen of Ethiopia",
           "text": "Meron finds a W-shaped constellation in a star map. Its Latin name means \"Queen of Ethiopia\".",
           "ask": "The constellation is called ___.",
-          "a": ["Cassiopeia", "Cassiopia"],
+          "a": [
+            "Cassiopeia",
+            "Cassiopia"
+          ],
           "why": "Cassiopeia means Queen of Ethiopia. Andromeda is the princess and Cepheus is the king.",
           "clue": "Look at the constellation table. Find the queen.",
           "worked": "The table lists Andromeda (princess), Cassiopeia (queen) and Cepheus (king). The queen is Cassiopeia."
@@ -523,7 +732,12 @@
           "step": "exercise",
           "graded": true,
           "text": "3. Which planet is nearest to the Sun?",
-          "opts": ["Venus", "Mercury", "Mars", "Earth"],
+          "opts": [
+            "Venus",
+            "Mercury",
+            "Mars",
+            "Earth"
+          ],
           "ans": "Mercury",
           "why": "Mercury is the first planet from the Sun.",
           "clue": "Look at the first row of the planet table."
@@ -537,7 +751,10 @@
       "step": "test",
       "graded": true,
       "ask": "The oval paths that planets follow around the Sun are called ___.",
-      "a": ["orbits", "orbit"],
+      "a": [
+        "orbits",
+        "orbit"
+      ],
       "why": "Planets travel around the Sun on elliptical orbits.",
       "clue": ""
     },
@@ -546,7 +763,12 @@
       "step": "test",
       "graded": true,
       "text": "Which of these is NOT a member of our solar system?",
-      "opts": ["Mars", "Ceres", "The Andromeda constellation", "An asteroid"],
+      "opts": [
+        "Mars",
+        "Ceres",
+        "The Andromeda constellation",
+        "An asteroid"
+      ],
       "ans": "The Andromeda constellation",
       "why": "Constellations are patterns of distant stars, far outside our solar system.",
       "clue": ""
@@ -562,11 +784,25 @@
     }
   ],
   "notes": [
-    { "kind": "correction", "text": "The printed book says \"a large flammable of hot swirling gases\". The intended word is cloud (scientists call it a nebula)." },
-    { "kind": "note", "text": "The Focus box on Pluto and dwarf planets sits in part A of the book. Here it is read in idea 2, after planets are defined." },
-    { "kind": "note", "text": "Activity 1.1 Part B (group discussion on how the solar system formed) is open-ended and is not graded." },
-    { "kind": "note", "text": "The 8 minutes 20 seconds working and the four formation stages come from the source's interactive figures and Things to do." }
+    {
+      "kind": "correction",
+      "text": "The printed book says \"a large flammable of hot swirling gases\". The intended word is cloud (scientists call it a nebula)."
+    },
+    {
+      "kind": "note",
+      "text": "The Focus box on Pluto and dwarf planets sits in part A of the book. Here it is read in idea 2, after planets are defined."
+    },
+    {
+      "kind": "note",
+      "text": "Activity 1.1 Part B (group discussion on how the solar system formed) is open-ended and is not graded."
+    },
+    {
+      "kind": "note",
+      "text": "The 8 minutes 20 seconds working and the four formation stages come from the source's interactive figures and Things to do."
+    }
   ],
-  "review": { "status": "validated" },
+  "review": {
+    "status": "validated"
+  },
   "version": 1
 }

@@ -86,7 +86,7 @@
         {
           "kind": "steps",
           "step": "method",
-          "title": "Example 1: the working",
+          "title": "The working",
           "text": "Use the division algorithm with a = 530 and b = 21.",
           "steps": [
             "Divide: 530 ÷ 21 is 25 and a bit.",
@@ -94,7 +94,8 @@
             "Subtract: 530 − 525 = 5. This is less than 21.",
             "So 530 = 21 × 25 + 5.",
             "There are 25 full rows and 5 pots left over."
-          ]
+          ],
+          "ref": "Example 1"
         },
         {
           "kind": "mcq",
@@ -131,7 +132,7 @@
           "kind": "mcq",
           "step": "practise",
           "graded": true,
-          "title": "Review question 21",
+          "title": "Question 21",
           "text": "Positive integers a, b and c leave remainders 9, 7 and 10 when divided by 13.",
           "ask": "Why is a + b + c divisible by 13?",
           "opts": [
@@ -143,7 +144,8 @@
           "ans": "a + b + c = 13(p + q + r) + 26, and 26 = 13 × 2",
           "why": "a = 13p + 9, b = 13q + 7, c = 13r + 10. The sum is 13(p + q + r + 2), a multiple of 13.",
           "clue": "Write each number as 13 × something + remainder. Then add them.",
-          "worked": "a = 13p + 9, b = 13q + 7 and c = 13r + 10. Add: a + b + c = 13(p + q + r) + 26. Since 26 = 13 × 2, this is 13(p + q + r + 2), a multiple of 13."
+          "worked": "a = 13p + 9, b = 13q + 7 and c = 13r + 10. Add: a + b + c = 13(p + q + r) + 26. Since 26 = 13 × 2, this is 13(p + q + r + 2), a multiple of 13.",
+          "ref": "Review"
         },
         {
           "kind": "tf",
@@ -255,7 +257,7 @@
           "kind": "blank",
           "step": "practise",
           "graded": true,
-          "title": "Review question 22",
+          "title": "Question 22",
           "text": "A school has 14 girls and 21 boys for a traffic-safety service. Every team has the same number of girls and of boys. Every student is in a team.",
           "ask": "The greatest number of teams is ___",
           "a": [
@@ -265,7 +267,8 @@
           "why": "GCF(14, 21) = 7. Each team has 2 girls and 3 boys.",
           "clue": "The number of teams must divide 14 and also divide 21.",
           "worked": "14 = 2 × 7 and 21 = 3 × 7. The shared factor is 7, so GCF(14, 21) = 7. There are 7 teams. Each has 14 ÷ 7 = 2 girls and 21 ÷ 7 = 3 boys.",
-          "needs": "math.gcf"
+          "needs": "math.gcf",
+          "ref": "Review"
         },
         {
           "kind": "mcq",
@@ -513,13 +516,14 @@
           "kind": "steps",
           "step": "method",
           "title": "Find the GCF",
-          "text": "Example: GCF(12, 18).",
+          "text": "GCF(12, 18).",
           "steps": [
             "List the factors of 12: 1, 2, 3, 4, 6, 12.",
             "List the factors of 18: 1, 2, 3, 6, 9, 18.",
             "The common factors are 1, 2, 3 and 6.",
             "The greatest is 6. So GCF(12, 18) = 6."
-          ]
+          ],
+          "ref": "Example"
         },
         {
           "kind": "mcq",

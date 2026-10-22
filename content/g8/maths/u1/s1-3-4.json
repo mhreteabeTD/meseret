@@ -58,7 +58,6 @@
     {
      "kind": "guess",
      "step": "hook",
-     "title": "Activity 1.6 Q1",
      "ask": "How many groups of 3/4 are in 12?",
      "opts": [
       "9",
@@ -67,22 +66,27 @@
       "4"
      ],
      "after": "12 ÷ 3/4 = 12 × 4/3 = 16.",
-     "id": "g8.maths.u1.s1-3-4.1"
+     "id": "g8.maths.u1.s1-3-4.1",
+     "ref": "Activity 1.6 Q1"
     },
     {
      "kind": "grid",
      "step": "explore",
-     "title": "Example 1.30: 4 1/3 ÷ 2/3",
+     "title": "4 1/3 ÷ 2/3",
      "mode": "groups",
      "wholes": 4,
      "d": 3,
      "part": 1,
      "group": 2,
+     "intro": "Question: how many pieces of 2/3 fit into 4 1/3? Tap Next step.",
      "say": [
-      "Shade 4 1/3: four wholes and 1 third.",
-      "Make groups of 2/3: 6 full groups and half a group. 4 1/3 ÷ 2/3 = 6 1/2 = 13/2."
+      "Each row is 1 whole, cut into 3 equal parts. Each part is 1/3.",
+      "Shade 4 1/3: 4 whole rows and 1 more third. 4 wholes are 4 × 3 = 12 thirds. Add 1 third: 13 thirds.",
+      "A piece of 2/3 is 2 thirds. Colour every 2 thirds as one group: #1 to #6. That uses 6 × 2 = 12 thirds.",
+      "1 third is left over. It is half of a 2/3 piece. So 6 groups and a half: 4 1/3 ÷ 2/3 = 6 1/2 = 13/2."
      ],
-     "id": "g8.maths.u1.s1-3-4.2"
+     "id": "g8.maths.u1.s1-3-4.2",
+     "ref": "Example 1.30"
     },
     {
      "kind": "read",
@@ -145,7 +149,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Example 1.31: −324 ÷ (−18) = ?",
+     "text": "−324 ÷ (−18) = ?",
      "opts": [
       "18",
       "−18",
@@ -154,18 +158,21 @@
      "ans": "18",
      "why": "Same signs give +. 324 ÷ 18 = 18.",
      "clue": "Same signs or different?",
-     "id": "g8.maths.u1.s1-3-4.6"
+     "id": "g8.maths.u1.s1-3-4.6",
+     "ref": "Example 1.31"
     },
     {
      "kind": "steps",
      "step": "method",
-     "title": "Example 1.32 a: 6/14 ÷ 3/7",
+     "title": "6/14 ÷ 3/7",
      "steps": [
-      "Multiply by the reciprocal: 6/14 × 7/3.",
-      "= 42/42.",
-      "= 1."
+      "The divisor is 3/7. Its reciprocal is 7/3 (flip it).",
+      "Dividing by 3/7 is the same as multiplying by 7/3: 6/14 ÷ 3/7 = 6/14 × 7/3.",
+      "Multiply the tops: 6 × 7 = 42. Multiply the bottoms: 14 × 3 = 42.",
+      "42/42 = 1, because any number divided by itself is 1."
      ],
-     "id": "g8.maths.u1.s1-3-4.7"
+     "id": "g8.maths.u1.s1-3-4.7",
+     "ref": "Example 1.32 a"
     },
     {
      "kind": "blank",
@@ -176,10 +183,10 @@
      "a": [
       "-5"
      ],
-     "why": "−3 × 15/9 = −45/9 = −5.",
+     "why": "The reciprocal of 9/15 is 15/9. −3 × 15/9 = −45/9. 45 ÷ 9 = 5, so −5.",
      "clue": "Multiply by the reciprocal of 9/15.",
      "input": "signed",
-     "worked": "−3/1 × 15/9 = −45/9 = −5.",
+     "worked": "Write −3 as −3/1. Flip 9/15 to get 15/9. −3/1 × 15/9 = (−3 × 15)/(1 × 9) = −45/9. 45 ÷ 9 = 5, so the answer is −5.",
      "gen": {
       "t": "op",
       "op": "div",
@@ -196,7 +203,7 @@
      "a": [
       "5/28"
      ],
-     "why": "−5/7 × (−1/4) = 5/28.",
+     "why": "The reciprocal of −4 is −1/4. −5/7 × (−1/4) = (5 × 1)/(7 × 4) = 5/28. Two negatives give +.",
      "clue": "The reciprocal of −4 is −1/4.",
      "input": "signed",
      "gen": {
@@ -215,7 +222,7 @@
      "a": [
       "5/6"
      ],
-     "why": "5/8 × 4/3 = 20/24 = 5/6.",
+     "why": "Flip 3/4 to 4/3. 5/8 × 4/3 = (5 × 4)/(8 × 3) = 20/24. GCF of 20 and 24 is 4: 20 ÷ 4 = 5 and 24 ÷ 4 = 6, so 5/6.",
      "clue": "Flip the divisor and multiply.",
      "gen": {
       "t": "op",
@@ -250,7 +257,7 @@
       "1/4",
       "−3/4"
      ],
-     "after": "3/4 × 4/3 = 12/12 = 1.",
+     "after": "3/4 × 4/3 = (3 × 4)/(4 × 3) = 12/12 = 1.",
      "id": "g8.maths.u1.s1-3-4.11"
     },
     {
@@ -307,33 +314,35 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "Exercise 1.9 Q2: Rahel has 3/4 kg of kolo. Each bag holds 3/8 kg. Number of bags = ___",
+     "ask": "Rahel has 3/4 kg of kolo. Each bag holds 3/8 kg. Number of bags = ___",
      "a": [
       "2"
      ],
-     "why": "3/4 ÷ 3/8 = 3/4 × 8/3 = 2.",
+     "why": "3/4 ÷ 3/8 = 3/4 × 8/3 = (3 × 8)/(4 × 3) = 24/12 = 2.",
      "clue": "Divide the total by the bag size.",
      "added": true,
-     "worked": "3/4 × 8/3 = 24/12 = 2 bags.",
+     "worked": "Flip 3/8 to 8/3. 3/4 × 8/3 = (3 × 8)/(4 × 3) = 24/12. 24 ÷ 12 = 2 bags.",
      "gen": {
       "t": "op",
       "op": "div",
       "word": true
      },
-     "id": "g8.maths.u1.s1-3-4.15"
+     "id": "g8.maths.u1.s1-3-4.15",
+     "ref": "Exercise 1.9 Q2"
     },
     {
      "kind": "blank",
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "Activity 1.6 Q2: how many groups of 2/5 are in 3 3/5? ___",
+     "ask": "How many groups of 2/5 are in 3 3/5? ___",
      "a": [
       "9"
      ],
-     "why": "18/5 ÷ 2/5 = 18/5 × 5/2 = 9.",
+     "why": "3 3/5 = (3 × 5 + 3)/5 = 18/5. 18/5 ÷ 2/5 = 18/5 × 5/2 = 90/10 = 9.",
      "clue": "Change 3 3/5 to fifths.",
-     "id": "g8.maths.u1.s1-3-4.16"
+     "id": "g8.maths.u1.s1-3-4.16",
+     "ref": "Activity 1.6 Q2"
     }
    ]
   }
@@ -347,66 +356,71 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Q1 a: 5/8 ÷ 3/4 = ___",
+     "ask": "5/8 ÷ 3/4 = ___",
      "a": [
       "5/6"
      ],
      "why": "5/8 × 4/3 = 5/6.",
      "clue": "Multiply by the reciprocal.",
-     "id": "g8.maths.u1.s1-3-4.17"
+     "id": "g8.maths.u1.s1-3-4.17",
+     "ref": "Q1 a"
     },
     {
      "kind": "blank",
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Q1 b: −3/5 ÷ 6/7 = ___",
+     "ask": "−3/5 ÷ 6/7 = ___",
      "a": [
       "-7/10"
      ],
-     "why": "−3/5 × 7/6 = −21/30 = −7/10.",
+     "why": "Flip 6/7 to 7/6. −3/5 × 7/6 = −21/30. GCF of 21 and 30 is 3: 21 ÷ 3 = 7 and 30 ÷ 3 = 10, so −7/10.",
      "clue": "Multiply by the reciprocal.",
-     "id": "g8.maths.u1.s1-3-4.18"
+     "id": "g8.maths.u1.s1-3-4.18",
+     "ref": "Q1 b"
     },
     {
      "kind": "blank",
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Q1 c: −8/9 ÷ (−5/3) = ___",
+     "ask": "−8/9 ÷ (−5/3) = ___",
      "a": [
       "8/15"
      ],
-     "why": "8/9 × 3/5 = 24/45 = 8/15.",
+     "why": "Two negatives give +. Flip 5/3 to 3/5. 8/9 × 3/5 = 24/45. GCF of 24 and 45 is 3: 24 ÷ 3 = 8 and 45 ÷ 3 = 15, so 8/15.",
      "clue": "Two negatives.",
-     "id": "g8.maths.u1.s1-3-4.19"
+     "id": "g8.maths.u1.s1-3-4.19",
+     "ref": "Q1 c"
     },
     {
      "kind": "blank",
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Q1 d: 2 3/5 ÷ (−4/3) = ___",
+     "ask": "2 3/5 ÷ (−4/3) = ___",
      "a": [
       "-39/20",
       "-1 19/20"
      ],
-     "why": "13/5 × (−3/4) = −39/20.",
+     "why": "2 3/5 = (2 × 5 + 3)/5 = 13/5. Flip −4/3 to −3/4. 13/5 × (−3/4) = −39/20.",
      "clue": "Change 2 3/5 to 13/5.",
-     "id": "g8.maths.u1.s1-3-4.20"
+     "id": "g8.maths.u1.s1-3-4.20",
+     "ref": "Q1 d"
     },
     {
      "kind": "blank",
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Q2: Rahel made 3/4 pound of trail mix and puts 3/8 pound in each bag. Bags = ___",
+     "ask": "Rahel made 3/4 pound of trail mix and puts 3/8 pound in each bag. Bags = ___",
      "a": [
       "2"
      ],
-     "why": "3/4 ÷ 3/8 = 2.",
+     "why": "3/4 ÷ 3/8 = 3/4 × 8/3 = 24/12 = 2.",
      "clue": "Divide.",
-     "id": "g8.maths.u1.s1-3-4.21"
+     "id": "g8.maths.u1.s1-3-4.21",
+     "ref": "Q2"
     }
    ]
   }

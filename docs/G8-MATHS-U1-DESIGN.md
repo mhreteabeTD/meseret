@@ -363,6 +363,12 @@ Every idea: hook ✓ · read ✓ · name ✓ · check ✓ · ≥2 practise ✓ �
 - Engine A + B built: `numline` (place/show/hop/distance/opposites), `fracbar`, `grid` (area and groups), `nest`, `slider`, `"num": true` blanks, `"input": "signed"` (sign first), auto-stacked fractions.
 - Fresh questions (`gen`): see "Generated questions" below.
 
+## Content rules added by the owner (2026-10-22)
+- Never skip a step in worked examples or explanations. Show each LCM conversion as (top × k)/(bottom × k) with why k, every simplification with the GCF used, every mixed → improper change as (whole × denominator + numerator)/denominator. Use judgement, but when in doubt, show it.
+- Picture models go one small step at a time, each with a sentence (grid "intro" + "say").
+- Book references (Example 1.31, Exercise 1.6 Q2, Q1 a) go in a separate "ref" field and show as a small 📖 label, never inside the question.
+- After every answer the student sees a pop-up: ✓ Correct / ↻ Not yet, try again / 💡 Here is the answer.
+
 ## Generated questions (`gen`)
 A screen may carry `"gen": {"t": "<generator>", ...}` (generators in app.js between GEN-START/GEN-END: place, between, mixed, opposite, abs, abseq, classify, compare, order, op (add/sub/mul/div, options same/mixed/signs/word), share, interest).
 When they are used:

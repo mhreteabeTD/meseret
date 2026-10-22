@@ -73,17 +73,19 @@
     {
      "kind": "grid",
      "step": "explore",
-     "title": "Example 1.25 grid model: 1/2 × 3/4",
+     "title": "Grid model: 1/2 × 3/4",
      "cols": 2,
      "rows": 4,
      "shadeCols": 1,
      "shadeRows": 3,
+     "intro": "The square is 1 whole. Tap Next step.",
      "say": [
-      "Shade 1 of 2 columns: 1/2.",
-      "Shade 3 of 4 rows: 3/4.",
-      "3 of 8 parts are shaded twice: 3/4 × 1/2 = 3/8."
+      "Cut the square into 2 equal columns. Shade 1 column (blue). That is 1/2 of the square.",
+      "Now cut it into 4 equal rows. Shade 3 rows (yellow). That is 3/4 of the square.",
+      "The square now has 2 × 4 = 8 equal boxes. 3 boxes are shaded with both colours. So 3/4 of 1/2 is 3/8: 3/4 × 1/2 = 3/8."
      ],
-     "id": "g8.maths.u1.s1-3-3.2"
+     "id": "g8.maths.u1.s1-3-3.2",
+     "ref": "Example 1.25"
     },
     {
      "kind": "read",
@@ -98,12 +100,16 @@
     {
      "kind": "steps",
      "step": "method",
-     "title": "Example 1.25",
      "steps": [
-      "3/2 × 7/8 = (3 × 7)/(2 × 8) = 21/16.",
-      "−5/6 × 4/3 = −20/18 = −10/9."
+      "a) 3/2 × 7/8: multiply the tops, 3 × 7 = 21, and the bottoms, 2 × 8 = 16.",
+      "So 3/2 × 7/8 = 21/16. 21 and 16 share no factor, so it is already in lowest terms.",
+      "b) −5/6 × 4/3: the signs are different, so the product is negative.",
+      "Multiply: 5 × 4 = 20 and 6 × 3 = 18. That gives −20/18.",
+      "Simplify: 20 and 18 are both divisible by 2 (their GCF).",
+      "20 ÷ 2 = 10 and 18 ÷ 2 = 9, so −20/18 = −10/9."
      ],
-     "id": "g8.maths.u1.s1-3-3.4"
+     "id": "g8.maths.u1.s1-3-3.4",
+     "ref": "Example 1.25"
     },
     {
      "kind": "name",
@@ -130,7 +136,7 @@
      "step": "check",
      "graded": true,
      "num": true,
-     "ask": "Activity 1.5 a: 5/7 × 8/11 = ___",
+     "ask": "5/7 × 8/11 = ___",
      "a": [
       "40/77"
      ],
@@ -140,7 +146,8 @@
       "t": "op",
       "op": "mul"
      },
-     "id": "g8.maths.u1.s1-3-3.6"
+     "id": "g8.maths.u1.s1-3-3.6",
+     "ref": "Activity 1.5 a"
     },
     {
      "kind": "blank",
@@ -169,7 +176,7 @@
       "306/35",
       "8 26/35"
      ],
-     "why": "17/5 × 18/7 = 306/35.",
+     "why": "3 2/5 = (3 × 5 + 2)/5 = 17/5 and 2 4/7 = (2 × 7 + 4)/7 = 18/7. 17 × 18 = 306 and 5 × 7 = 35, so 306/35.",
      "clue": "Change the mixed numbers first.",
      "needs": "math.mixed-improper",
      "worked": "3 2/5 = 17/5 and 2 4/7 = 18/7. 17 × 18 = 306 and 5 × 7 = 35.",
@@ -184,13 +191,14 @@
      "kind": "fracbar",
      "step": "practise",
      "graded": true,
-     "title": "Exercise 1.8 Q3 (grid as a bar): 1/3 × 2/5",
+     "title": "(grid as a bar): 1/3 × 2/5",
      "parts": 15,
      "need": 2,
      "ask": "1/3 of 2/5 is how many fifteenths? Shade that many parts.",
      "why": "1/3 × 2/5 = 2/15: 2 of 15 parts.",
      "clue": "Multiply the tops and the bottoms.",
-     "id": "g8.maths.u1.s1-3-3.9"
+     "id": "g8.maths.u1.s1-3-3.9",
+     "ref": "Exercise 1.8 Q3"
     }
    ]
   },
@@ -281,13 +289,16 @@
     {
      "kind": "steps",
      "step": "method",
-     "title": "Example 1.26 a: 4/9 × (−5/2)",
+     "title": "4/9 × (−5/2)",
      "steps": [
-      "Signs differ, so the product is negative.",
-      "4/9 × 5/2 = 20/18 = 10/9.",
-      "Answer: −10/9."
+      "The signs are different (+ and −), so the product is negative.",
+      "Multiply the absolute values: 4/9 × 5/2 = (4 × 5)/(9 × 2) = 20/18.",
+      "Simplify: the GCF of 20 and 18 is 2. 20 ÷ 2 = 10 and 18 ÷ 2 = 9.",
+      "So 20/18 = 10/9.",
+      "Put the sign in front: the answer is −10/9."
      ],
-     "id": "g8.maths.u1.s1-3-3.12"
+     "id": "g8.maths.u1.s1-3-3.12",
+     "ref": "Example 1.26 a"
     },
     {
      "kind": "name",
@@ -365,7 +376,7 @@
       "-1 1/4",
       "-1.25"
      ],
-     "why": "One negative factor: −30/24 = −5/4.",
+     "why": "One negative factor, so the answer is negative. 2 × 5 × 3 = 30 and 3 × 4 × 2 = 24, so 30/24. GCF of 30 and 24 is 6: 30 ÷ 6 = 5 and 24 ÷ 6 = 4. Answer −5/4.",
      "clue": "Count the negative factors.",
      "input": "signed",
      "worked": "1 negative (odd), so negative. 2 × 5 × 3 = 30 and 3 × 4 × 2 = 24. 30/24 = 5/4. Answer −5/4.",
@@ -389,15 +400,15 @@
     {
      "kind": "guess",
      "step": "hook",
-     "title": "Example 1.29",
      "ask": "Cloth costs Birr 162/4 per metre. Roughly how much do 35/9 m cost?",
      "opts": [
       "About Birr 40",
       "About Birr 160",
       "About Birr 600"
      ],
-     "after": "35/9 × 162/4 = 315/2 = Birr 157.50.",
-     "id": "g8.maths.u1.s1-3-3.18"
+     "after": "35/9 × 162/4 = (35 × 162)/(9 × 4) = 5670/36. GCF of 5670 and 36 is 18: 5670 ÷ 18 = 315 and 36 ÷ 18 = 2. 315/2 = Birr 157.50.",
+     "id": "g8.maths.u1.s1-3-3.18",
+     "ref": "Example 1.29"
     },
     {
      "kind": "read",
@@ -437,13 +448,18 @@
     {
      "kind": "steps",
      "step": "method",
-     "title": "Example 1.28 c: 2/5 × (3/7 + 4/3)",
+     "title": "2/5 × (3/7 + 4/3)",
      "steps": [
-      "Distribute: 2/5 × 3/7 + 2/5 × 4/3.",
-      "= 6/35 + 8/15.",
-      "= 18/105 + 56/105 = 74/105."
+      "Distribute: 2/5 × (3/7 + 4/3) = 2/5 × 3/7 + 2/5 × 4/3.",
+      "2/5 × 3/7 = (2 × 3)/(5 × 7) = 6/35.",
+      "2/5 × 4/3 = (2 × 4)/(5 × 3) = 8/15.",
+      "Now add 6/35 + 8/15. The LCM of 35 and 15 is 105.",
+      "6/35 = (6 × 3)/(35 × 3) = 18/105, because 105 ÷ 35 = 3.",
+      "8/15 = (8 × 7)/(15 × 7) = 56/105, because 105 ÷ 15 = 7.",
+      "18/105 + 56/105 = 74/105."
      ],
-     "id": "g8.maths.u1.s1-3-3.20"
+     "id": "g8.maths.u1.s1-3-3.20",
+     "ref": "Example 1.28 c"
     },
     {
      "kind": "name",
@@ -489,13 +505,13 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "Exercise 1.8 Q2: a plane covers 1250 km per hour. In 23/6 hours it covers ___ km",
+     "ask": "A plane covers 1250 km per hour. In 23/6 hours it covers ___ km",
      "a": [
       "14375/3",
       "4791 2/3",
       "≈4791.67"
      ],
-     "why": "1250 × 23/6 = 28750/6 = 14375/3 km.",
+     "why": "1250 × 23/6 = (1250 × 23)/6 = 28750/6. Divide top and bottom by 2: 14375/3 km ≈ 4791.67 km.",
      "clue": "Multiply 1250 by 23/6.",
      "worked": "1250 × 23 = 28750. 28750/6 = 14375/3 ≈ 4791.67 km.",
      "gen": {
@@ -503,22 +519,24 @@
       "op": "mul",
       "word": true
      },
-     "id": "g8.maths.u1.s1-3-3.23"
+     "id": "g8.maths.u1.s1-3-3.23",
+     "ref": "Exercise 1.8 Q2"
     },
     {
      "kind": "blank",
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "Exercise 1.8 Q1 f: −3(5x + 5) when x = 3/4: ___",
+     "ask": "−3(5x + 5) when x = 3/4: ___",
      "a": [
       "-105/4",
       "-26 1/4",
       "-26.25"
      ],
-     "why": "5 × 3/4 + 5 = 35/4. −3 × 35/4 = −105/4.",
+     "why": "5x = 5 × 3/4 = 15/4. 15/4 + 5 = 15/4 + 20/4 = 35/4. −3 × 35/4 = −105/4.",
      "clue": "Work inside the bracket first.",
-     "id": "g8.maths.u1.s1-3-3.24"
+     "id": "g8.maths.u1.s1-3-3.24",
+     "ref": "Exercise 1.8 Q1 f"
     }
    ]
   }
@@ -532,74 +550,79 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Q1 a: 5/8 × 3/4 = ___",
+     "ask": "5/8 × 3/4 = ___",
      "a": [
       "15/32"
      ],
      "why": "15/32.",
      "clue": "Multiply tops and bottoms.",
-     "id": "g8.maths.u1.s1-3-3.25"
+     "id": "g8.maths.u1.s1-3-3.25",
+     "ref": "Q1 a"
     },
     {
      "kind": "blank",
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Q1 b: 3/7 × (−3/4) = ___",
+     "ask": "3/7 × (−3/4) = ___",
      "a": [
       "-9/28"
      ],
      "why": "−9/28.",
      "clue": "Different signs.",
-     "id": "g8.maths.u1.s1-3-3.26"
+     "id": "g8.maths.u1.s1-3-3.26",
+     "ref": "Q1 b"
     },
     {
      "kind": "blank",
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Q1 c: −8/7 × (−3/5) = ___",
+     "ask": "−8/7 × (−3/5) = ___",
      "a": [
       "24/35"
      ],
      "why": "24/35.",
      "clue": "Two negatives.",
-     "id": "g8.maths.u1.s1-3-3.27"
+     "id": "g8.maths.u1.s1-3-3.27",
+     "ref": "Q1 c"
     },
     {
      "kind": "blank",
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Q1 d: 2 3/5 × 4 2/3 = ___",
+     "ask": "2 3/5 × 4 2/3 = ___",
      "a": [
       "182/15",
       "12 2/15"
      ],
      "why": "13/5 × 14/3 = 182/15.",
      "clue": "Change to improper fractions.",
-     "id": "g8.maths.u1.s1-3-3.28"
+     "id": "g8.maths.u1.s1-3-3.28",
+     "ref": "Q1 d"
     },
     {
      "kind": "blank",
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Q1 e: −2/3 × 5/4 × 3/2 = ___",
+     "ask": "−2/3 × 5/4 × 3/2 = ___",
      "a": [
       "-5/4",
       "-1 1/4"
      ],
      "why": "−30/24 = −5/4.",
      "clue": "One negative factor.",
-     "id": "g8.maths.u1.s1-3-3.29"
+     "id": "g8.maths.u1.s1-3-3.29",
+     "ref": "Q1 e"
     },
     {
      "kind": "blank",
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Q2: 1250 km per hour for 23/6 hours = ___ km",
+     "ask": "1250 km per hour for 23/6 hours = ___ km",
      "a": [
       "14375/3",
       "4791 2/3",
@@ -607,7 +630,8 @@
      ],
      "why": "1250 × 23/6.",
      "clue": "Multiply.",
-     "id": "g8.maths.u1.s1-3-3.30"
+     "id": "g8.maths.u1.s1-3-3.30",
+     "ref": "Q2"
     }
    ]
   }
@@ -689,8 +713,8 @@
      "title": "Change 2 5/7 to an improper fraction",
      "text": "Whole × denominator + numerator.",
      "steps": [
-      "2 × 7 = 14.",
-      "14 + 5 = 19.",
+      "2 wholes = 2 × 7 = 14 sevenths.",
+      "Add the 5 sevenths: 14 + 5 = 19 sevenths.",
       "Keep the denominator 7.",
       "So 2 5/7 = 19/7."
      ]
