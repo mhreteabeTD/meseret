@@ -261,7 +261,7 @@ Key words: ሃይላንድ (water bottle), ባልዲ (bucket), ሳጥን (box).
   - Q6 squares of side 2, 7, 10, 6 ሳ.ሜ → 4, 49, 100, 36 (ባለ 1 ሳ.ሜ² ካሬዎች).
   - Q7 ሀ 8 × 3 × 5 = 120 (ባለ 1 ሳ.ሜ³ ኩቦች), ለ 10 ሜ × 5 ሜ × 8 ሜ = 400 ሜ³ = 400,000,000 ሳ.ሜ³ (⚠ the question asks for 1 ሳ.ሜ³ cubes but gives metres; show both: 400 ሜ³ and 400,000,000; accept either with `why` explaining).
   - Q8 ሀ 5 ሳ.ሜ³ = 5,000 ሚ.ሜ³, ለ 10 ሜ³ = 10,000 ሊ, ሐ 0.7 ሜ³ = 700,000 ሳ.ሜ³, መ 8,000,000 ሳ.ሜ³ = 8 ሜ³.
-  - Q9 (figures → `cubes` with the app's own stacks; book pictures read as ⚠ ሀ ≈ 13 (bottom 4 × 2 = 8, top 5), ለ 3 × 2 × 4 = 24, ሐ 4 × 3 × 3 = 36, መ L-shaped 2-high stack ≈ 20, ሠ 5 × 3 × 4 = 60): build ለ, ሐ, ሠ as `cubes` graded with those dimensions; ሀ and መ as `layers` height maps `[[2,1,1,1],[1,1,1,1]]` (= 12) and an L `[[2,2,2],[2,0,0],[2,0,0]]` (= 14) — self-consistent app drawings, `added: true`, teacher note that the book figures are ambiguous.
+  - Q9 (figures → `cubes` with the app's own stacks; book pictures read as ⚠ ሀ ≈ 13 (bottom 4 × 2 = 8, top 5), ለ 3 × 2 × 4 = 24, ሐ 4 × 3 × 3 = 36, መ L-shaped 2-high stack ≈ 20, ሠ 5 × 3 × 4 = 60): build ለ, ሐ, ሠ as `cubes` graded with those dimensions; ሀ and መ as `layers` height maps `[[2,1,1,1],[1,1,1,1]]` (= 9) and an L `[[2,2,2],[2,0,0],[2,0,0]]` (= 10) — self-consistent app drawings, `added: true`, teacher note that the book figures are ambiguous.
   Use Q1 ሀ, Q2 ሐ, Q3 ሐ, Q4 ለ, Q5 ለ, Q6 ለ, Q7 ሀ, Q8 ለ, Q9 ለ, Q9 ሠ as the 10 review items; the rest in "ተጨማሪ ልምምድ" with clues.
 
 ## 4. Book issues to carry as `notes`
@@ -289,5 +289,7 @@ Every idea: hook ✓ · read ✓ · name ✓ · check ✓ · ≥2 practise ✓ �
 ---
 You are a build session for Meseret. Read `CLAUDE.md`, then `docs/G5-MATHS-HANDOFF.md` (Amharic decisions), then `docs/G5-MATHS-U1-DESIGN.md` (this spec), then `content/g8/maths/u1/s1-3-3.json` as the style reference. Source pages: the two attached PDFs (pp. 1–20 and 21–25); read the pages visually — text extraction scrambles Ethiopic. Do ONE job: the engine step or the content lessons named by the owner (section 6 of the spec). Lesson text is Amharic, copied from the book; mark everything you write yourself `"machine": true`. Keep the spec's ids, titles, hooks and verified answers; if the player lacks a block the spec uses, stop and say so. Finish with the validator, a coverage table, and **Done / Current / My one next action.**
 
-## Status (2026-10-22)
-- Design written from all 25 book pages. Nothing built yet. Awaiting the owner's go for Engine session A.
+## Status (2026-10-22, evening)
+- Design written from all 25 book pages.
+- **Engine A built** (this session): `lang`/`main` on lessons; lesson-language UI words (`LESSON_KEYS` in `app.js`, pick from `i18n/<lesson lang>.json`); Amharic key words first with English gloss (cards, highlights incl. 0–2 letter Amharic suffixes, sheet, learn list); reverse select-to-translate (am → en); Grades 1–12 in setup; `Gen.make(screen, seed, lang)` plumbing; `grid` modes `tile` and `shape`; `cubes` (box, cube, height-map `layers`); numeric answers accept Amharic unit text and `2,000` / `2 000`; schema + validator updated; smoke test in `eval/engine-g5-sample/`.
+- Not yet: `ladder`, the five Amharic generators (`area`, `count`, `volume`, `convert`, `litres`) — Engine B. Content sessions follow.

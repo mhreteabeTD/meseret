@@ -30,6 +30,10 @@ html, body { min-height: 100%; }
 body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 17px; line-height: 1.55; }
 html[lang="am"] body, html[lang="om"] body { font-size: 18px; line-height: 1.65; }
 html[lang="am"] .display { font-family: var(--ethiopic); font-weight: 800; }
+/* lesson language (set on #app by setLessonLang): Ethiopic text needs ~10% larger type and more line height */
+#app[lang="am"], #app[lang="om"] { font-size: 18.7px; line-height: 1.7; }
+#app[lang="am"] .display, #app[lang="am"] h1, #app[lang="am"] h2, #app[lang="am"] h3 { font-family: var(--ethiopic); }
+#app[lang="am"] .opt, #app[lang="am"] .qb, #app[lang="am"] .chip, #app[lang="am"] .btn, #app[lang="am"] .qq, #app[lang="am"] .ask, #app[lang="am"] .tx { font-family: var(--ethiopic); line-height: 1.55; }
 button, input, textarea, select { font: inherit; color: inherit; }
 a { color: var(--accent-deep); }
 :focus-visible { outline: 3px solid var(--sky); outline-offset: 2px; border-radius: 8px; }

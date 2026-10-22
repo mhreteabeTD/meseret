@@ -47,6 +47,8 @@ You are continuing work on **Meseret (መሰረት)** with me, Mhreteabe (founde
 ## Next chapter: Grade 5 Mathematics (Amharic)
 - Grades 1–6 books are in Amharic (all subjects); Grade 5 Maths is the first, and its engine work makes Amharic lessons a general capability (`"lang": "am"`).
 - Full handoff with decisions: `docs/G5-MATHS-HANDOFF.md` (Amharic lessons, Amharic generators, Ask Meseret chat).
+- Content design: `docs/G5-MATHS-U1-DESIGN.md` (lesson map, blocks, verified answers, book errors, build order).
+- **Engine A done (2026-10-22):** lesson `lang`/`main`, lesson-language UI words (`LESSON_KEYS`), Amharic-first key words, am→en translate, Grades 1–12 in setup, `grid` modes `tile`/`shape`, `cubes`, Amharic-unit-tolerant numeric answers. Smoke test: `eval/engine-g5-sample/`. **Next: Content session 1 (lessons 1.1–1.3)**, then Engine B (`ladder`, Amharic generators), then Content session 2.
 
 ## Open items / next steps
 - **TODO (on hold, owner): Ask Meseret AI chat.** Design is decided in `docs/G5-MATHS-HANDOFF.md` ("Ask Meseret"). Blocked on payment: the owner will create an Anthropic API key (Default workspace is fine), set up billing and a monthly spend limit, and a free Cloudflare Worker with the key as secret `ANTHROPIC_API_KEY`. Do not build it until the owner says so. Never put the key in the repo or the chat.

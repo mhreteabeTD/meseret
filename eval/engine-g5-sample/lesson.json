@@ -1,0 +1,213 @@
+{
+ "id": "g5.maths.u99.s1",
+ "book": {
+  "title": "Engine test sample (not a real chapter)",
+  "grade": 5,
+  "subject": "maths",
+  "unit": 99,
+  "section": "1"
+ },
+ "title": "ስፋት በካሬ ምድብ",
+ "lang": "am",
+ "main": "am",
+ "minutes": 5,
+ "version": 1,
+ "keywords": [
+  {
+   "en": "area",
+   "am": "ስፋት",
+   "def": "አንድ ምስል የሚሸፍነው የካሬ ምድቦች ብዛት።",
+   "machine": true
+  },
+  {
+   "en": "rectangle",
+   "am": "ሬክታንግል",
+   "def": "ሁለት ጥንድ ተቃራኒ ጎኖቹ እኩል የሆነ ባለ አራት ጎን ምስል።",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.area-demo",
+   "name": "ስፋት",
+   "explain": {
+    "en": {
+     "text": "Area is the number of unit squares that cover a shape."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "ስንት ካሬ?",
+     "ask": "በዚህ ካሬ ውስጥ ስንት ትንንሽ ካሬዎች ይኖራሉ?",
+     "opts": [
+      "16",
+      "32",
+      "64",
+      "80"
+     ],
+     "after": "እንቁጠር።",
+     "machine": true
+    },
+    {
+     "kind": "read",
+     "step": "explore",
+     "title": "ስፋት",
+     "paras": [
+      "ስፋት ማለት ምስሉን የሚሸፍኑት የካሬ ምድቦች ብዛት ነው።",
+      "ሬክታንግል ሁለት ጥንድ ተቃራኒ ጎኖቹ እኩል ነው።"
+     ]
+    },
+    {
+     "kind": "grid",
+     "mode": "tile",
+     "step": "explore",
+     "title": "ምስል 1.4",
+     "w": 9,
+     "h": 7,
+     "unit": "ምድብ",
+     "intro": "ይህ ሬክታንግል ርዝመቱ 9 ምድብ፣ ወርዱ 7 ምድብ ነው።",
+     "say": [
+      "አንድ ረድፍ 9 ትንንሽ ካሬዎች አሉት።",
+      "2 ረድፎች = 18 ካሬዎች።"
+     ],
+     "machine": true
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "defs": [
+      [
+       "ስፋት",
+       "አንድ ምስል የሚሸፍነው የካሬ ምድቦች ብዛት።"
+      ],
+      [
+       "ሬክታንግል",
+       "ሁለት ጥንድ ተቃራኒ ጎኖቹ እኩል የሆነ ባለ አራት ጎን ምስል።"
+      ]
+     ]
+    },
+    {
+     "kind": "grid",
+     "mode": "tile",
+     "step": "check",
+     "graded": true,
+     "title": "ምስል 1.2",
+     "w": 8,
+     "h": 8,
+     "unit": "ምድብ",
+     "ask": "ስንት ትንንሽ ካሬዎች አሉ?",
+     "intro": "8 ረድፎች፣ በእያንዳንዱ 8 ካሬዎች።",
+     "ans": "64",
+     "why": "8 × 8 = 64 ካሬዎች።",
+     "clue": "ረድፎቹን ቁጠር፤ እያንዳንዱ ረድፍ 8 ነው።",
+     "machine": true
+    },
+    {
+     "kind": "grid",
+     "mode": "shape",
+     "step": "practise",
+     "graded": true,
+     "title": "ምስል 1.7 ሀ",
+     "cols": 4,
+     "rows": 4,
+     "poly": [
+      [
+       2,
+       0
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       2,
+       4
+      ],
+      [
+       4,
+       2
+      ]
+     ],
+     "ask": "ስንት ካሬ ምድብ ነው? (ሙሉና ግማሽ ካሬዎችን ቁጠር)",
+     "why": "ሙሉና ግማሽ ካሬዎችን ደምረናል።",
+     "clue": "ሙሉውን በ1፣ ግማሹን በ½ ቁጠር።",
+     "machine": true
+    },
+    {
+     "kind": "cubes",
+     "step": "practise",
+     "graded": true,
+     "title": "ምስል 1.13",
+     "l": 5,
+     "w": 4,
+     "h": 3,
+     "unit": "ምድብ",
+     "ask": "ስንት ትንንሽ ኩቦች አሉ?",
+     "intro": "ርዝመቱ 5፣ ወርዱ 4፣ ከፍታው 3 ምድብ ነው።",
+     "say": [
+      "አንድ ረድፍ 5 ኩቦች አሉት።",
+      "4 ረድፎች = 20 ኩቦች። ይህ አንድ ንብርብር ነው።",
+      "2 ንብርብሮች = 40 ኩቦች።",
+      "3 ንብርብሮች = 60 ኩቦች።"
+     ],
+     "ans": "60",
+     "why": "5 × 4 × 3 = 60።",
+     "clue": "አንድ ንብርብር 20 ኩቦች አሉት።",
+     "machine": true
+    },
+    {
+     "kind": "cubes",
+     "step": "practise",
+     "title": "L",
+     "layers": [
+      [
+       2,
+       1,
+       1,
+       1
+      ],
+      [
+       1,
+       1,
+       1,
+       1
+      ]
+     ],
+     "intro": "ኩቦቹን እንቁጠር።",
+     "machine": true
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "ask": "የካሬ ስፋት ርዝመቱ 5 ምድብ ከሆነ ስንት ነው?",
+     "opts": [
+      "10",
+      "20",
+      "25",
+      "5"
+     ],
+     "ans": "25",
+     "why": "5 × 5 = 25።",
+     "clue": "ርዝመት × ርዝመት።",
+     "machine": true
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "ርዝመቱ 20 ሜ ነው። 20 ሜ = ___ ሳ.ሜ",
+     "a": [
+      "2000"
+     ],
+     "why": "20 × 100 = 2,000።",
+     "clue": "1 ሜ = 100 ሳ.ሜ።",
+     "machine": true
+    }
+   ]
+  }
+ ]
+}

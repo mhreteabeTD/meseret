@@ -279,6 +279,22 @@
           }
         }
       }
+    },
+    "lang": {
+      "enum": [
+        "am",
+        "en",
+        "om"
+      ],
+      "description": "Language of the lesson text. Grades 1-6 follow the book (am); Grades 7-12 are en."
+    },
+    "main": {
+      "enum": [
+        "am",
+        "en",
+        "om"
+      ],
+      "description": "Which key-word term is shown first: am for Grades 1-6 (Amharic main, English gloss)."
     }
   },
   "$defs": {
@@ -334,7 +350,8 @@
             "fracbar",
             "grid",
             "nest",
-            "slider"
+            "slider",
+            "cubes"
           ]
         },
         "step": {
@@ -582,7 +599,7 @@
         },
         "mode": {
           "type": "string",
-          "description": "grid: 'groups' for the division model"
+          "description": "grid: 'groups' (division model), 'tile' (cover a rectangle row by row), 'shape' (count whole/half squares under a shape)"
         },
         "wholes": {
           "type": "integer"
@@ -638,6 +655,57 @@
         "ref": {
           "type": "string",
           "description": "book reference shown as a small label (Example 1.31, Exercise 1.6 Q2); never part of the question"
+        },
+        "w": {
+          "type": "integer"
+        },
+        "h": {
+          "type": "integer"
+        },
+        "l": {
+          "type": "integer"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "big": {
+          "type": "boolean"
+        },
+        "perUnit": {
+          "type": "string"
+        },
+        "poly": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "ellipse": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "estimate": {
+          "type": "boolean"
+        },
+        "tol": {
+          "type": "number"
+        },
+        "cube": {
+          "type": "boolean"
+        },
+        "layers": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
         }
       },
       "allOf": [

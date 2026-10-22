@@ -22,7 +22,14 @@ async function loadLang(l) {
   if (!S.i18n.en) { try { S.i18n.en = await (await fetch('i18n/en.json')).json(); } catch (_) { S.i18n.en = {}; } }
   T = Object.assign({}, S.i18n.en, S.i18n[l]);
 }
-const t = (k, v = {}) => (T[k] || k).replace(/\{(\w+)\}/g, (_, n) => v[n] != null ? v[n] : '');
+/* Lesson language: the words INSIDE a lesson (Quick check, pop-ups, prompts, Practise) follow the lesson's own
+   language ("lang" on the lesson), not the UI language. Page chrome (back, timer, settings) keeps the UI language. */
+let LL = null;
+const LESSON_KEYS = new Set(['continue', 'check', 'not_yet', 'try_again', 'true', 'false', 'tap_explore', 'next_step', 'skipped_note', 'skip', 'quick_check', 'answer_is', 'worked_example', 'undo', 'order_hint', 'match_hint', 'pick_size', 'guess_note', 'step_hook', 'step_explore', 'step_notice', 'step_check', 'step_practise', 'step_name', 'show_answer', 'section_done', 'practise_n', 'practise_sub', 'replay_note', 'replay_n', 'show_worked', 'retry', 'first_try', 'spot_on', 'right_idea', 'correct', 'your_guess', 'your_answer', 'wrong_pick', 'not_quite_guess', 'lock_guess', 'includes', 'activity', 'spelling_note', 'num_note', 'signed_note', 'v_retry', 'v_ok', 'v_answer', 'need_reminder', 'offer_refresher', 'yes_reminder', 'no_continue', 'refresher', 'book_exercise', 'unit_test', 'fresh_test', 'test_note', 'all_done', 'in_a_row', 'back_to_question', 'back_to_book', 'back_lesson', 'start_again', 'missing_pick', 'sign', 'remove', 'learned', 'comes_back', 'try_more', 'next_section', 'nl_place', 'nl_opposites', 'nl_move1', 'nl_move', 'nl_hop', 'nl_between', 'one_whole', 'row_w', 'layer_w', 'cells_w', 'cubes_w', 'whole_w', 'half_w', 'cell_hint', 'count_total', 'tr_btn_back', 'tile_answer']);
+const t = (k, v = {}) => { const src = LL && LESSON_KEYS.has(k) && S.i18n[LL] && S.i18n[LL][k]; return (src || T[k] || k).replace(/\{(\w+)\}/g, (_, n) => v[n] != null ? v[n] : ''); };
+async function loadDict(l) { if (l && !S.i18n[l]) { try { S.i18n[l] = await (await fetch(`i18n/${l}.json`)).json(); } catch (_) { S.i18n[l] = {}; } } }
+// switch the lesson language on/off (also tags the app container so the Ethiopic type rules apply)
+function setLessonLang(l) { LL = l || null; const a = document.getElementById('app'); if (a) { if (LL) a.setAttribute('lang', LL); else a.removeAttribute('lang'); } }
 const L = obj => (obj && typeof obj === 'object') ? (obj[S.lang] || obj.en || '') : (obj || '');
 
 /* ---------- content ---------- */
@@ -87,7 +94,7 @@ async function viewWelcome() {
 
 async function viewSetup() {
   setNav(false); setTop(''); hideTray();
-  const grades = [7, 8, 9, 10, 11, 12];
+  const grades = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   app.innerHTML = `<div class="row"><div class="bar"><i style="width:66%"></i></div><span class="count">2 / 3</span></div>
   <div class="stack"><h1 class="display">${t('which_grade')}</h1><p class="small muted">${t('grades_many')} ${t('change_later')}</p></div>
   <div class="opts row3" role="group">${grades.map(g => `<button class="opt center" data-g="${g}" style="min-height:64px;font-size:22px">${g}</button>`).join('')}</div>
@@ -291,7 +298,7 @@ const Q = {
   dec(s) { const neg = s.startsWith('-'); s = s.replace('-', ''); const [i, f = ''] = s.split('.'); const d = 10 ** f.length; return Q.mk((neg ? -1 : 1) * ((+i || 0) * d + (+f || 0)), d); },
   parse(str) {
     if (str == null) return null;
-    let s = String(str).replace(/[−–—]/g, '-').replace(/½/g, ' 1/2').replace(/¼/g, ' 1/4').replace(/¾/g, ' 3/4').replace(/,/g, '').replace(/[^0-9./%\s-]/g, ' ').replace(/-\s+/g, '-').replace(/\s*\/\s*/g, '/').trim().replace(/\s+/g, ' ');
+    let s = String(str).replace(/[\u1200-\u139F\u2D80-\u2DDF][\u1200-\u139F\u2D80-\u2DDF.²³]*/g, ' ').replace(/(\d) (?=\d{3}(?![\d/]))/g, '$1').replace(/[−–—]/g, '-').replace(/½/g, ' 1/2').replace(/¼/g, ' 1/4').replace(/¾/g, ' 3/4').replace(/,/g, '').replace(/[^0-9./%\s-]/g, ' ').replace(/-\s+/g, '-').replace(/\s*\/\s*/g, '/').trim().replace(/\s+/g, ' ');
     let pct = false; if (s.endsWith('%')) { pct = true; s = s.slice(0, -1).trim(); }
     let m, r = null;
     if ((m = s.match(/^(-?)(\d+) (\d+)\/(\d+)$/))) { const d = +m[4]; if (!d) return null; r = Q.mk((m[1] ? -1 : 1) * (+m[2] * d + +m[3]), d); }
@@ -397,8 +404,8 @@ const Gen = (() => {
   const api = {
     has: s => !!(s && s.gen && T[s.gen.t]),
     list: () => Object.keys(T),
-    make(s, seed) { if (!api.has(s)) return s; r = seed == null ? Math.random : rng(seed);
-      try { const v = T[s.gen.t](s.gen, s); const out = Object.assign({}, s, { title: s.title ? s.title.replace(/^(Example|Exercise|Activity|Group work)[^:]*:\s*/i, '') : s.title }, v, { _gen: true });
+    make(s, seed, lang) { if (!api.has(s)) return s; r = seed == null ? Math.random : rng(seed);
+      try { const v = T[s.gen.t](Object.assign({ lang: lang || (typeof LL !== 'undefined' && LL) || 'en' }, s.gen), s); const out = Object.assign({}, s, { title: s.title ? s.title.replace(/^(Example|Exercise|Activity|Group work)[^:]*:\s*/i, '') : s.title }, v, { _gen: true });
         ['ask', 'text', 'worked', 'opts', 'ans', 'pool', 'items', 'targets', 'min', 'max', 'sub', 'num'].forEach(k => { if (!(k in v)) delete out[k]; }); delete out.ref; return out; }
       catch (e) { return s; } finally { r = Math.random; } },
   };
@@ -447,6 +454,88 @@ function makeR(env) {
     el.querySelector('.opts').addEventListener('click', e => { const b = e.target.closest('.opt'); if (!b || b.disabled || env.phase() !== 'answer') return; pick = b; el.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-checked', x === b)); env.update(); });
     return { el, label: t('check'), ready: () => !!pick, check() { const ok = pick.textContent === ans; pick.classList.add(ok ? 'ok' : 'no'); if (ok) el.querySelectorAll('.opt').forEach(x => x.disabled = true); else pick.disabled = true; return ok ? { ok: true, body: s.why } : { ok: false, body: s.clue }; }, retry() { pick = null; el.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-checked', 'false')); } };
   };
+  /* ---- counting figures (Grade 5 Unit 1): tile a rectangle, count whole/half squares, stack unit cubes ---- */
+  // one number input under a counting figure; used when the screen is graded ("ans")
+  const countInput = (el, s) => { const row = document.createElement('p'); row.className = 'blank'; row.hidden = true; row.innerHTML = `<span>${esc(t('tile_answer'))}</span><input class="cin" inputmode="decimal" autocomplete="off" aria-label="${esc(t('your_answer'))}">`;
+    el.querySelector('.fig').appendChild(row); const inp = row.querySelector('input'); inp.addEventListener('input', () => env.update()); inp.addEventListener('keydown', e => { if (e.key === 'Enter') env.enter(); });
+    return { show() { row.hidden = false; }, val: () => inp.value, filled: () => inp.value.trim() !== '',
+      verdict(ok) { inp.classList.remove('ok', 'no'); inp.classList.add(ok ? 'ok' : 'no'); inp.disabled = ok; }, retry() { inp.classList.remove('ok', 'no'); inp.focus(); } }; };
+  const gradedResult = (s, ci, ready) => ({ label: t('check'), ready: () => ready() && ci.filled(),
+    check() { const nm = numMatch(ci.val(), [String(s.ans)]); const ok = nm === true; ci.verdict(ok); return ok ? { ok: true, body: s.why || '' } : { ok: false, body: s.clue || '' }; }, retry() { ci.retry(); } });
+  const sideLabel = (x, y, str, anchor = 'middle') => `<text x="${x}" y="${y}" font-size="13" font-weight="800" text-anchor="${anchor}" style="fill:var(--muted)">${esc(str)}</text>`;
+
+  // grid mode "tile": ▶ fills the rectangle one row at a time; the count runs under it. ("big" shows 10 × 10 blocks for huge grids)
+  const tileG = s => {
+    const W = s.w, H = s.h, big = W * H > 400 || s.big, dw = big ? Math.min(W, 10) : W, dh = big ? Math.min(H, 10) : H, per = (W / dw) * (H / dh), rowCells = W * H / dh;
+    const cs = Math.max(8, Math.min(34, Math.floor(250 / dw), Math.floor(210 / dh))), x0 = 70, y0 = 26, VH = y0 + cs * dh + 22, unit = s.unit || '';
+    const say = s.say || []; let k = 0; const graded = s.graded && s.ans != null;
+    const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="fig grd"><svg viewBox="0 0 340 ${VH}" role="img" aria-label="${esc(s.title || `${W} × ${H}`)}"></svg><p class="small gp"></p><p class="cnt" aria-live="polite"></p><button class="inner" id="gnx">▶ ${t('next_step')}</button></div>`);
+    const svg = el.querySelector('svg'), tip = el.querySelector('.gp'), cnt = el.querySelector('.cnt'), nx = el.querySelector('#gnx'), ci = graded ? countInput(el, s) : null;
+    const draw = () => { let g = sideLabel(x0 + cs * dw / 2, 16, `${W}${unit ? ' ' + unit : ''}`) + sideLabel(x0 - 6, y0 + cs * dh / 2 + 4, `${H}${unit ? ' ' + unit : ''}`, 'end');
+      for (let r = 0; r < dh; r++) for (let c = 0; c < dw; c++) { const on = r < k, cur = r === k - 1;
+        g += `<rect x="${x0 + c * cs}" y="${y0 + r * cs}" width="${cs}" height="${cs}" style="fill:${on ? (cur ? 'var(--sun)' : 'var(--sky)') : 'var(--surface-2)'};stroke:var(--fg)" fill-opacity="${on ? .55 : 1}" stroke-opacity=".55" stroke-width="1"/>`;
+        if (on && c === 0 && cs >= 18) g += `<text x="${x0 + cs / 2}" y="${y0 + r * cs + cs / 2 + 5}" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--fg)">${r + 1}</text>`; }
+      g += `<rect x="${x0}" y="${y0}" width="${cs * dw}" height="${cs * dh}" fill="none" style="stroke:var(--fg)" stroke-width="2"/>`;
+      if (big) g += sideLabel(x0 + cs * dw / 2, y0 + cs * dh + 16, `▢ = ${per}${s.perUnit ? ' ' + s.perUnit : ''}`);
+      svg.innerHTML = g;
+      tip.textContent = k ? (say[k - 1] || '') : (s.intro || '');
+      cnt.textContent = k ? (big ? `${k} × ${rowCells} = ${k * rowCells}` : `${k} ${t('row_w')} × ${W} = ${k * W}`) : '';
+      nx.disabled = k >= dh; if (k >= dh && ci) ci.show(); };
+    nx.onclick = () => { if (k < dh) k++; draw(); env.update(); };
+    draw();
+    return Object.assign({ el }, graded ? gradedResult(s, ci, () => k >= dh) : { label: t('continue'), ready: () => k >= dh });
+  };
+
+  // grid mode "shape": count whole and half squares under a shape. The answer is the shape's own area, never typed from the book.
+  const shapeG = s => {
+    const C = s.cols, R_ = s.rows, cs = Math.max(14, Math.min(34, Math.floor(300 / C), Math.floor(230 / R_))), x0 = Math.round((340 - cs * C) / 2), y0 = 6, VH = y0 + cs * R_ + 8;
+    const inside = s.ellipse ? (x, y) => ((x - s.ellipse[0]) / s.ellipse[2]) ** 2 + ((y - s.ellipse[1]) / s.ellipse[3]) ** 2 <= 1
+      : (x, y) => { let c = false; const P = s.poly; for (let i = 0, j = P.length - 1; i < P.length; j = i++) { if (((P[i][1] > y) !== (P[j][1] > y)) && (x < (P[j][0] - P[i][0]) * (y - P[i][1]) / (P[j][1] - P[i][1]) + P[i][0])) c = !c; } return c; };
+    let area = 0; if (s.ellipse) area = Math.PI * s.ellipse[2] * s.ellipse[3]; else { const P = s.poly; for (let i = 0; i < P.length; i++) { const a = P[i], b = P[(i + 1) % P.length]; area += a[0] * b[1] - b[0] * a[1]; } area = Math.abs(area) / 2; }
+    const tol = s.tol != null ? s.tol : (s.ellipse || s.estimate ? 2 : 0), mark = Array(C * R_).fill(0); let touched = false;
+    const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="fig grd shp"><svg viewBox="0 0 340 ${VH}" role="img" aria-label="${esc(s.title || 'shape on a grid')}"></svg><p class="cnt" aria-live="polite"></p><p class="small muted">${esc(t('cell_hint'))}</p></div>`);
+    const svg = el.querySelector('svg'), cnt = el.querySelector('.cnt');
+    const total = () => { const a = mark.filter(m => m === 1).length, b = mark.filter(m => m === 2).length; return [a, b, a + b / 2]; };
+    const draw = () => { let g = '';
+      for (let r = 0; r < R_; r++) for (let c = 0; c < C; c++) { const m = mark[r * C + c], x = x0 + c * cs, y = y0 + r * cs;
+        g += `<rect data-i="${r * C + c}" x="${x}" y="${y}" width="${cs}" height="${cs}" style="fill:${m === 1 ? 'var(--accent)' : m === 2 ? 'var(--sun)' : 'var(--surface-2)'};stroke:var(--fg);cursor:pointer" fill-opacity="${m ? .55 : .35}" stroke-opacity=".45" stroke-width="1"/>`;
+        if (m && cs >= 18) g += `<text x="${x + cs / 2}" y="${y + cs / 2 + 5}" font-size="13" font-weight="800" text-anchor="middle" style="fill:var(--fg);pointer-events:none">${m === 1 ? '1' : '½'}</text>`; }
+      const pts = s.ellipse ? '' : s.poly.map(p => `${x0 + p[0] * cs},${y0 + p[1] * cs}`).join(' ');
+      g += s.ellipse ? `<ellipse cx="${x0 + s.ellipse[0] * cs}" cy="${y0 + s.ellipse[1] * cs}" rx="${s.ellipse[2] * cs}" ry="${s.ellipse[3] * cs}" fill="none" style="stroke:var(--coral);pointer-events:none" stroke-width="3"/>` : `<polygon points="${pts}" fill="none" style="stroke:var(--coral);pointer-events:none" stroke-width="3" stroke-linejoin="round"/>`;
+      svg.innerHTML = g; const [a, b, tot] = total(); cnt.textContent = `${t('whole_w')} ${a} + ${t('half_w')} ${b} × ½ = ${tot}`; };
+    svg.addEventListener('click', e => { const c = e.target.closest('[data-i]'); if (!c || env.phase() !== 'answer') return; const i = +c.dataset.i; mark[i] = (mark[i] + 1) % 3; touched = true; draw(); env.update(); });
+    draw();
+    const ok = () => Math.abs(total()[2] - area) <= tol + 1e-9;
+    return { el, label: s.graded ? t('check') : t('continue'), ready: () => touched,
+      check: s.graded ? () => ok() ? { ok: true, body: s.why || '' } : { ok: false, body: s.clue || '' } : undefined, retry() {} };
+  };
+
+  // cubes: a stack of unit cubes built one row, then one layer at a time (oblique drawing, like the book's boxes)
+  const cubesG = s => {
+    const L = s.l, Wd = s.cube ? s.l : (s.w || 1), Ht = s.cube ? s.l : (s.h || 1), map = s.layers || null;
+    const rows = map ? map.length : Wd, cols = map ? Math.max(...map.map(r => r.length)) : L, maxH = map ? Math.max(...map.flat()) : Ht;
+    const hgt = (j, i) => map ? ((map[j] || [])[i] || 0) : Ht;
+    const steps = [{ lv: 1, row: true }, ...Array.from({ length: maxH }, (_, q) => ({ lv: q + 1 }))]; const n = steps.length;
+    const u = Math.min(40, 270 / (cols + .5 * rows), 190 / (maxH + .5 * rows)), dx = .5 * u, dy = .5 * u, bw = cols * u + rows * dx, bh = maxH * u + rows * dy, ox = (340 - bw) / 2, oy = 8 + bh; // oy = y of the front-bottom edge
+    const graded = s.graded && s.ans != null, say = s.say || []; let k = 0;
+    const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="fig grd"><svg viewBox="0 0 340 ${Math.round(bh + 16)}" role="img" aria-label="${esc(s.title || 'cubes')}"></svg><p class="small gp"></p><p class="cnt" aria-live="polite"></p><button class="inner" id="gnx">▶ ${t('next_step')}</button></div>`);
+    const svg = el.querySelector('svg'), tip = el.querySelector('.gp'), cnt = el.querySelector('.cnt'), nx = el.querySelector('#gnx'), ci = graded ? countInput(el, s) : null;
+    const COL = ['var(--sky)', 'var(--sun)', 'var(--coral)', 'var(--accent)', 'var(--violet)', 'var(--sky)'];
+    const showCube = (j, i, z) => { const st = k === 0 ? -1 : k - 1, sp = steps[st]; if (!sp) return false; if (z + 1 < sp.lv) return true; if (z + 1 > sp.lv) return false; return sp.row ? j === 0 : true; };
+    const poly = (pts, fill, op, extra = '') => `<polygon points="${pts.map(p => p.join(',')).join(' ')}" style="fill:${fill}" fill-opacity="${op}" stroke="var(--fg)" stroke-opacity=".55" stroke-width="1" ${extra}/>`;
+    const draw = () => { let g = '', count = 0;
+      if (!map) { const x = ox, y = oy, w = cols * u, h = Ht * u; g += `<path d="M${x} ${y}h${w}v${-h}h${-w}zM${x + w} ${y}l${rows * dx} ${-rows * dy}v${-h}l${-rows * dx} ${rows * dy}M${x} ${y - h}l${rows * dx} ${-rows * dy}h${w}" fill="none" style="stroke:var(--muted)" stroke-width="1.5" stroke-dasharray="4 4"/>`; }
+      for (let j = rows - 1; j >= 0; j--) for (let z = 0; z < maxH; z++) for (let i = 0; i < cols; i++) { if (z >= hgt(j, i) || !showCube(j, i, z)) continue; count++;
+        const x = ox + i * u + j * dx, y = oy - z * u - j * dy, c = COL[z % COL.length];
+        g += poly([[x, y], [x + u, y], [x + u, y - u], [x, y - u]], c, .85) + poly([[x, y - u], [x + u, y - u], [x + u + dx, y - u - dy], [x + dx, y - u - dy]], '#fff', .5) + poly([[x + u, y], [x + u + dx, y - dy], [x + u + dx, y - u - dy], [x + u, y - u]], '#000', .22); }
+      svg.innerHTML = g; tip.textContent = k ? (say[k - 1] || '') : (s.intro || '');
+      const sp = steps[k - 1]; cnt.textContent = !k ? '' : map ? `${t('count_total')}: ${count}` : sp.row ? `${L} ${t('cubes_w')}` : sp.lv === 1 ? `${Wd} ${t('row_w')} × ${L} = ${Wd * L}` : `${sp.lv} ${t('layer_w')} × ${Wd * L} = ${sp.lv * Wd * L}`;
+      nx.disabled = k >= n; if (k >= n && ci) ci.show(); };
+    nx.onclick = () => { if (k < n) k++; draw(); env.update(); };
+    draw();
+    return Object.assign({ el }, graded ? gradedResult(s, ci, () => k >= n) : { label: t('continue'), ready: () => k >= n });
+  };
+
   const R = {
     guess(s) { const f = s.figure || {}; const el = div(head(s) + (f.type === 'board' ? `<div class="fig">${boardSVG(f.w, f.h, 0)}</div>` : '') + `<p class="ask">${esc(s.ask || '')}</p><div class="opts row2" role="radiogroup">${s.opts.map(o => `<button class="opt center" role="radio" aria-checked="false">${esc(o)}</button>`).join('')}</div><p class="small muted">${t('guess_note')}</p>`);
       let pick = null; el.querySelector('.opts').addEventListener('click', e => { const b = e.target.closest('.opt'); if (!b || env.phase() !== 'answer') return; pick = b; el.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-checked', x === b)); env.update(); });
@@ -522,13 +611,14 @@ function makeR(env) {
         check: graded ? () => on.size === s.need ? { ok: true, body: s.why } : { ok: false, body: s.clue || `${on.size} / ${bars[0].parts}` } : undefined, retry() {} };
     },
     grid(s) { // area model for × (Fig 1.18–1.20) and grouping for ÷ (Fig 1.21). ▶ reveals one small step at a time; "say" explains each step, "intro" the start.
+      if (s.mode === 'tile') return tileG(s); if (s.mode === 'shape') return shapeG(s);
       const say = s.say || [], groups = s.mode === 'groups'; let k = 0; const n = Math.max(groups ? 4 : 3, say.length);
       const rowsG = groups ? Math.ceil((s.wholes * s.d + s.part) / s.d) : 0;
       const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="fig grd"><svg viewBox="0 0 340 ${groups ? 46 * rowsG + 34 : 240}" role="img" aria-label="${esc(s.title || 'grid model')}"></svg><p class="small gp"></p><button class="inner" id="gnx">▶ ${t('next_step')}</button></div>`);
       const svg = el.querySelector('svg'), tip = el.querySelector('.gp');
       const draw = () => { let g = '';
         if (!groups) { const W = 200, x0 = 70, y0 = 6, cw = W / s.cols, rh = W / s.rows;
-          if (k === 0) g += `<rect x="${x0}" y="${y0}" width="${W}" height="${W}" style="fill:var(--surface-2);stroke:var(--fg)" stroke-width="2"/><text x="${x0 + W / 2}" y="${y0 + W / 2 + 6}" font-size="18" font-weight="800" text-anchor="middle" style="fill:var(--muted)">1 whole</text>`;
+          if (k === 0) g += `<rect x="${x0}" y="${y0}" width="${W}" height="${W}" style="fill:var(--surface-2);stroke:var(--fg)" stroke-width="2"/><text x="${x0 + W / 2}" y="${y0 + W / 2 + 6}" font-size="18" font-weight="800" text-anchor="middle" style="fill:var(--muted)"><tspan>${t('one_whole')}</tspan></text>`;
           else for (let i = 0; i < s.cols; i++) for (let j = 0; j < s.rows; j++) { const inC = i < s.shadeCols, inR = j < s.shadeRows;
             const rowsOn = k >= 2, x = x0 + i * cw, y = y0 + j * rh;
             g += `<rect x="${x}" y="${y}" width="${cw}" height="${rh}" style="fill:var(--surface-2);stroke:var(--fg)" stroke-width="${rowsOn ? 1.5 : 0}"/>`;
@@ -539,7 +629,7 @@ function makeR(env) {
           if (k >= 2) g += svgNum(x0 - 26, y0 + s.shadeRows * rh / 2 + 4, `${s.shadeRows}/${s.rows}`, 'var(--sun-deep)', 15);
           if (k >= 3) g += svgNum(x0 + W + 36, y0 + W / 2 + 4, `${s.shadeCols * s.shadeRows}/${s.cols * s.rows}`, 'var(--coral)', 17); }
         else { const d = s.d, cells = s.wholes * d + s.part, cw = Math.min(56, 220 / d), x0 = 340 - 20 - cw * d, gsz = s.group, gc = ['var(--sky)', 'var(--sun)'];
-          for (let rr = 0; rr < rowsG; rr++) { const y = 6 + rr * 46; g += `<text x="${x0 - 10}" y="${y + 26}" font-size="13" font-weight="700" text-anchor="end" style="fill:var(--muted)">1 whole</text>`;
+          for (let rr = 0; rr < rowsG; rr++) { const y = 6 + rr * 46; g += `<text x="${x0 - 10}" y="${y + 26}" font-size="13" font-weight="700" text-anchor="end" style="fill:var(--muted)">${t('one_whole')}</text>`;
             for (let j = 0; j < d; j++) { const i = rr * d + j, shaded = i < cells && k >= 2, gi = Math.floor(i / gsz), full = (gi + 1) * gsz <= cells;
               const col = !shaded ? 'var(--surface-2)' : k >= 3 ? (full ? gc[gi % 2] : 'var(--coral)') : 'var(--accent)';
               g += `<rect x="${x0 + j * cw + 1}" y="${y}" width="${cw - 2}" height="40" rx="4" style="fill:${col};stroke:var(--line)" fill-opacity="${shaded ? .75 : 1}" stroke-width="1.5"/>`;
@@ -551,6 +641,7 @@ function makeR(env) {
       draw();
       return { el, label: t('continue'), ready: () => k >= n };
     },
+    cubes(s) { return cubesG(s); },
     nest(s) { // nested sets ℕ ⊂ W ⊂ ℤ ⊂ ℚ (Fig 1.11): tap a ring, or tap a number to see every set it belongs to
       const rings = s.rings, nums = s.numbers || [], cols = ['var(--accent)', 'var(--sky)', 'var(--coral)', 'var(--sun)'], seen = new Set(); let lit = -1, cur = null;
       const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="fig nest"><svg viewBox="0 0 300 250" role="img" aria-label="${esc(s.title || 'nested sets')}"></svg>${nums.length ? `<div class="vchips">${nums.map((x, i) => `<button class="vchip" data-n="${i}">${esc(x[0])}</button>`).join('')}</div>` : ''}<div class="ginfo" hidden data-text></div></div>`);
@@ -670,6 +761,7 @@ function runPlayer(cfg) {
 /* ---------- book reader: one scrolling page per section, questions inline ---------- */
 async function viewLesson(path, mode, exIdx) {
   const ls = await loadLesson(path), idx = await loadIndex();
+  await loadDict(ls.lang); setLessonLang(ls.lang); Translate.dir(ls.lang);
   const ch = idx.chapters.find(c => c.sections.some(x => x.lesson === path));
   const secs = ch ? ch.sections.filter(x => x.lesson) : [], si = secs.findIndex(x => x.lesson === path), nextSec = si >= 0 ? secs[si + 1] : null;
   const m = mode || 'learn', idea0 = ls.ideas[0];
@@ -750,7 +842,7 @@ async function viewLesson(path, mode, exIdx) {
   const end = document.createElement('section'); end.className = 'blk endblk';
   const exLinks = m === 'learn' ? (ls.exercises || []).map((ex, k) => `<a class="item" href="#exercise/${encodeURIComponent(path)}/${k}"><div class="dot"></div><div class="grow"><div class="t">${esc(ex.book_name)}</div><div class="s">${ex.items.length} · ${t('book_exercise')}</div></div></a>`).join('') + (ls.test && ls.test.length ? `<a class="item" href="#test/${encodeURIComponent(path)}"><div class="dot"></div><div class="grow"><div class="t">${t('unit_test')}</div><div class="s">${ls.test.length} · ${t('test_note')}</div></div></a>` : '') : '';
   end.innerHTML = `<span class="eyebrow sky">${t('done')}</span><div class="score" id="score" hidden></div>
-    ${m === 'learn' && ls.keywords && ls.keywords.length ? `<div class="defn"><b>${t('learned')}</b><ul class="kw">${ls.keywords.map(k => `<li><strong>${esc(k.en)}</strong>${k.am ? ` <span class="kwam" lang="am">${esc(k.am)}</span>` : ''}<br><span class="small">${esc(k.def || '')}</span></li>`).join('')}</ul></div><div class="card sky"><div class="small">${t('comes_back')}</div></div>` : ''}
+    ${m === 'learn' && ls.keywords && ls.keywords.length ? `<div class="defn"><b>${t('learned')}</b><ul class="kw">${ls.keywords.map(k => { const mk = kwMain(k, k.en, ls.main); return `<li><strong>${esc(mk[0])}</strong>${mk[1] ? ` <span class="kwam" lang="${ls.main === 'am' ? 'en' : 'am'}">${esc(mk[1])}</span>` : ''}<br><span class="small">${esc(k.def || '')}</span></li>`; }).join('')}</ul></div><div class="card sky"><div class="small">${t('comes_back')}</div></div>` : ''}
     ${exLinks ? `<div class="list">${exLinks}</div>` : ''}
     ${m === 'learn' && nextSec ? `<a class="btn" href="#lesson/${encodeURIComponent(nextSec.lesson)}">${t('next_section')}: ${esc(nextSec.n)} ${esc(nextSec.title)} ›</a>` : ''}
     <a class="btn ${m === 'learn' && nextSec ? 'ghost' : ''}" href="#${back}">${m === 'learn' ? t('back_chapter') : t('back_lesson')}</a>`;
@@ -848,26 +940,27 @@ setInterval(() => Focus.tick(), 1000);
 
 /* ---------- Translate: select text, see it in Amharic. Providers are pluggable. ---------- */
 const Translate = {
-  to: 'am',
+  from: 'en', to: 'am',
+  dir(lessonLang) { Translate.from = lessonLang && lessonLang !== 'en' ? lessonLang : 'en'; Translate.to = Translate.from === 'en' ? 'am' : 'en'; const pill = $('#trpill'); if (pill) pill.textContent = '🌐 ' + t(Translate.from === 'en' ? 'tr_btn' : 'tr_btn_back'); },
   providers: [
-    async (q, tl) => { const r = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=${tl}&dt=t&q=${encodeURIComponent(q)}`); const j = await r.json(); return j[0].map(x => x[0]).join(''); },
-    async (q, tl) => { const r = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(q)}&langpair=en|${tl}`); const j = await r.json(); if (!j.responseData || !j.responseData.translatedText) throw 0; return j.responseData.translatedText; }
+    async (q, tl, sl = 'en') => { const r = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sl}&tl=${tl}&dt=t&q=${encodeURIComponent(q)}`); const j = await r.json(); return j[0].map(x => x[0]).join(''); },
+    async (q, tl, sl = 'en') => { const r = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(q)}&langpair=${sl}|${tl}`); const j = await r.json(); if (!j.responseData || !j.responseData.translatedText) throw 0; return j.responseData.translatedText; }
   ],
-  async run(q, tl) {
-    const key = tl + ':' + q, cache = store.get('tr', {}); if (cache[key]) return cache[key];
-    for (const p of Translate.providers) { try { const out = await p(q, tl); if (out) { const c = store.get('tr', {}); const ks = Object.keys(c); if (ks.length > 300) delete c[ks[0]]; c[key] = out; store.set('tr', c); logEvent({ translate: tl, chars: q.length }); return out; } } catch (_) {} }
+  async run(q, tl, sl = 'en') {
+    const key = sl + '>' + tl + ':' + q, cache = store.get('tr', {}); if (cache[key]) return cache[key];
+    for (const p of Translate.providers) { try { const out = await p(q, tl, sl); if (out) { const c = store.get('tr', {}); const ks = Object.keys(c); if (ks.length > 300) delete c[ks[0]]; c[key] = out; store.set('tr', c); logEvent({ translate: tl, chars: q.length }); return out; } } catch (_) {} }
     throw new Error('offline');
   },
   async show(q) {
     q = q.replace(/\s+/g, ' ').trim().slice(0, 600); if (!q) return;
     sheet(`<div class="trsheet"><div class="trq">${esc(q)}</div><div class="tra" lang="${Translate.to}"><span class="spin"></span></div><p class="small muted">${t('tr_machine')}</p><button class="btn" id="trok">${t('continue')}</button></div>`);
     $('#trok').onclick = () => sheet('');
-    try { const out = await Translate.run(q, Translate.to); const a = $('.tra'); if (a) a.textContent = out; }
+    try { const out = await Translate.run(q, Translate.to, Translate.from); const a = $('.tra'); if (a) a.textContent = out; }
     catch (_) { const a = $('.tra'); if (a) { a.textContent = t('tr_fail'); a.classList.add('muted'); } }
   },
   bind(root) { // a small floating button appears when the student selects lesson text
     let pill = $('#trpill'); if (!pill) { pill = document.createElement('button'); pill.id = 'trpill'; pill.className = 'trpill'; pill.hidden = true; document.body.appendChild(pill); }
-    pill.textContent = '🌐 ' + t('tr_btn');
+    pill.textContent = '🌐 ' + t(Translate.from === 'en' ? 'tr_btn' : 'tr_btn_back');
     pill.onpointerdown = e => e.preventDefault();
     pill.onclick = () => { const q = String(getSelection()); pill.hidden = true; Translate.show(q); };
     const upd = () => { const s = getSelection(); if (!root.isConnected || !s || s.isCollapsed || !String(s).trim()) { pill.hidden = true; return; } const n = s.anchorNode && (s.anchorNode.nodeType === 1 ? s.anchorNode : s.anchorNode.parentElement); if (!n || !n.closest('[data-text]') || !root.contains(n)) { pill.hidden = true; return; } const r = s.getRangeAt(0).getBoundingClientRect(); pill.hidden = false; const w = pill.offsetWidth || 150; pill.style.left = Math.max(8, Math.min(innerWidth - w - 8, r.left + r.width / 2 - w / 2)) + 'px'; pill.style.top = Math.min(innerHeight - 64, r.bottom + 12) + 'px'; };
@@ -878,10 +971,12 @@ const Translate = {
 /* ---------- Text: every piece of lesson prose goes through here ---------- */
 function Text(str, ctx, tag = 'p', cls = '') {
   let html = esc(str);
-  if (ctx && ctx.kws) ctx.kws.forEach((k, j) => { if (ctx.used.has(j) || !k.en) return; const e = esc(k.en).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); const re = new RegExp(`(^|[^\\p{L}])(${e})(?![\\p{L}])`, 'iu'); const parts = html.split(/(<button[^>]*>[^<]*<\/button>)/); for (let q = 0; q < parts.length; q += 2) if (re.test(parts[q])) { parts[q] = parts[q].replace(re, `$1<button class="kwt" data-k="${j}">$2</button>`); ctx.used.add(j); break; } html = parts.join(''); });
+  if (ctx && ctx.kws) ctx.kws.forEach((k, j) => { const term = (ctx.main && k[ctx.main]) || k.en; if (ctx.used.has(j) || !term) return; const e = esc(term).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); const re = new RegExp(`(^|[^\\p{L}])(${e}${ctx.main === 'am' ? '\\p{L}{0,2}' : ''})(?![\\p{L}])`, 'iu'); const parts = html.split(/(<button[^>]*>[^<]*<\/button>)/); for (let q = 0; q < parts.length; q += 2) if (re.test(parts[q])) { parts[q] = parts[q].replace(re, `$1<button class="kwt" data-k="${j}">$2</button>`); ctx.used.add(j); break; } html = parts.join(''); });
   return `<${tag} class="${cls}" data-text>${html}</${tag}>`;
 }
 const pic = (id, label) => (window.PICS && window.PICS[id]) || `<svg viewBox="0 0 120 120" role="img" aria-label="${esc(label || id)}"><rect x="10" y="10" width="100" height="100" rx="20" style="fill:var(--surface-2)"/><text x="60" y="68" text-anchor="middle" font-size="14" style="fill:var(--muted)">${esc(label || id)}</text></svg>`;
+// key word title + gloss: lessons with main "am" show the Amharic term first and the English term as the gloss (Grades 1-6)
+const kwMain = (k, fallback, main) => !k ? [fallback, ''] : main === 'am' && k.am ? [k.am, k.en] : [k.en || fallback, k.am || ''];
 const initials = n => n.replace(/^(Prof\.|Dr\.|Engineer)\s+/i, '').split(/\s+/).map(w => w[0]).slice(0, 2).join('');
 
 /* ---------- Blocks: one builder per kind ---------- */
@@ -898,7 +993,7 @@ const Blocks = {
   people(s, ctx) {
     return h('ppl', (s.title ? `<h3>${esc(s.title)}</h3>` : '') + `<div class="pplgrid">${s.people.map(p => `<div class="person"><div class="face">${p.img ? `<img src="${esc(p.img)}" alt="${esc(p.name)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'${esc(initials(p.name))}'}))">` : `<span>${esc(initials(p.name))}</span>`}</div><div class="pinfo"><b>${esc(p.name)}</b>${p.years || p.from ? `<small>${esc([p.years, p.from].filter(Boolean).join(' · '))}</small>` : ''}${Text(p.did, ctx)}</div></div>`).join('')}</div>`);
   },
-  name(s, ctx) { return h('keys', s.defs.map(d => { const k = ctx.kws.find(x => x.en.toLowerCase() === d[0].toLowerCase()); return `<div class="kcard"><div class="kt">📘 ${esc(d[0])}${k && k.am ? ` <span class="kam" lang="am">${esc(k.am)}</span>` : ''}</div>${Text(d[1], null, 'div', 'kd')}</div>`; }).join('')); },
+  name(s, ctx) { return h('keys', s.defs.map(d => { const k = ctx.kws.find(x => [x.en, x.am].some(v => v && v.toLowerCase() === d[0].toLowerCase())), mk = kwMain(k, d[0], ctx.main); return `<div class="kcard"><div class="kt">📘 ${esc(mk[0])}${mk[1] ? ` <span class="kam" lang="${ctx.main === 'am' ? 'en' : 'am'}">${esc(mk[1])}</span>` : ''}</div>${Text(d[1], null, 'div', 'kd')}</div>`; }).join('')); },
   guess(s, ctx) {
     const el = h('quiz think', `<div class="ql">🤔 ${t('step_hook')}</div>${Text(s.ask || s.text || '', null, 'p', 'qq')}${s.ask && s.text ? Text(s.text, null, 'p', 'small qctx') : ''}<div class="qo">${s.opts.map(o => `<button class="qb">${esc(o)}</button>`).join('')}</div><p class="qf" hidden data-text></p>`);
     el.querySelector('.qo').onclick = e => { const b = e.target.closest('.qb'); if (!b || el.dataset.done) return; el.dataset.done = 1; b.classList.add('pick', 'pop'); el.querySelectorAll('.qb').forEach(x => x.disabled = true); const f = el.querySelector('.qf'); f.hidden = !s.after; f.textContent = s.after || ''; ctx.complete(s); };
@@ -993,6 +1088,7 @@ async function viewBook(id) {
   const idx = await loadIndex(); const c = idx.chapters.find(x => x.id === id); if (!c) { location.hash = 'home'; return; }
   const secs = c.sections.filter(x => x.lesson);
   const [lessons] = await Promise.all([Promise.all(secs.map(x => loadLesson(x.lesson))), loadPictures()]);
+  const bookLang = (lessons.find(x => x.lang) || {}).lang || null; await loadDict(bookLang); setLessonLang(bookLang); Translate.dir(bookLang);
   setNav(false); hideTray(); markStudied();
   const all = store.get('bk', {}), B = all[id] = Object.assign({ got: {}, seen: {}, pts: 0, prac: {} }, all[id]); B.seen = B.seen || {};
   const save = () => { const a = store.get('bk', {}); a[id] = B; store.set('bk', a); };
@@ -1027,7 +1123,7 @@ async function viewBook(id) {
     const qKeys = rows.filter(s => s.graded).map(s => s._key);
     const doneCheck = () => { const ban = box.querySelector('.secdone'); if (!ban || !qKeys.every(k => k in B.got) || box.classList.contains('complete')) return; box.classList.add('complete'); ban.hidden = false;
       if (!B.got['done:' + sec.lesson]) { B.got['done:' + sec.lesson] = 1; setLessonProgress(sec.lesson, { done: true }); const by = {}; qKeys.forEach(k => { const s = rows.find(r => r._key === k); by[s._idea] = (by[s._idea] !== false) && B.got[k] >= 10; }); Object.keys(by).forEach(i => bumpMastery(i, by[i])); B.pts += 20; save(); bumpPts(); Fx.at(ban, true); buzz([20, 40, 20]); } };
-    const ctx = { kws, used: new Set(), hue,
+    const ctx = { kws, used: new Set(), hue, main: ls.main,
       complete(s) { if (B.seen[s._key]) return; B.seen[s._key] = 1; save(); progress(); }, isDone(s) { return !!B.seen[s._key]; }, log(s, ok, attempt) { logEvent({ lesson: ls.id, idea: s._idea, item: s._key, correct: ok, attempt, mode: 'book' }); },
       question(el, s, api) { // shared behaviour for every question: skip, restore, finishing
         const sk = document.createElement('button'); sk.className = 'skip'; sk.textContent = t('skip') + ' ›'; sk.hidden = s.kind === 'mcq' || s.kind === 'tf'; el.appendChild(sk);
@@ -1038,8 +1134,8 @@ async function viewBook(id) {
       wrong(el) { streak = 0; buzz(60); const sk = el && el.querySelector('.skip'); if (sk && !el.classList.contains('done')) sk.hidden = false; },
       done(el, s, pts) { el.classList.add('done'); const sk = el.querySelector('.skip'); if (sk) sk.remove(); if (!(s._key in B.got) || B.got[s._key] === 's') { B.got[s._key] = pts; save(); } progress(); doneCheck(); }
     };
-    rows.forEach(s => { const el = renderBlock(s, ctx); if (s.graded || ['guess', 'reveal', 'sort', 'tap', 'steps', 'tiles', 'order', 'match', 'tree', 'venn', 'gallery', 'numline', 'fracbar', 'grid', 'nest', 'slider'].includes(s.kind)) { const u = { key: s._key, q: !!s.graded }; units.push(u); secUnits[si].push(u); } box.appendChild(el); });
-    box.querySelectorAll('.kwt').forEach(b => b.onclick = () => { const k = kws[+b.dataset.k]; sheet(`<div class="kcard big"><div class="kt">📘 ${esc(k.en)}</div>${k.am ? `<div class="kam" lang="am">${esc(k.am)}</div>` : ''}${k.om ? `<div class="kam" lang="om">${esc(k.om)}</div>` : ''}<div class="kd" data-text>${esc(k.def || '')}</div></div><button class="btn" id="kok">${t('continue')}</button>`); $('#kok').onclick = () => sheet(''); });
+    rows.forEach(s => { const el = renderBlock(s, ctx); if (s.graded || ['guess', 'reveal', 'sort', 'tap', 'steps', 'tiles', 'order', 'match', 'tree', 'venn', 'gallery', 'numline', 'fracbar', 'grid', 'cubes', 'nest', 'slider'].includes(s.kind)) { const u = { key: s._key, q: !!s.graded }; units.push(u); secUnits[si].push(u); } box.appendChild(el); });
+    box.querySelectorAll('.kwt').forEach(b => b.onclick = () => { const k = kws[+b.dataset.k]; const mk = kwMain(k, k.en, ls.main); sheet(`<div class="kcard big"><div class="kt">📘 ${esc(mk[0])}</div>${mk[1] ? `<div class="kam" lang="${ls.main === 'am' ? 'en' : 'am'}">${esc(mk[1])}</div>` : ''}${k.om ? `<div class="kam" lang="om">${esc(k.om)}</div>` : ''}<div class="kd" data-text>${esc(k.def || '')}</div></div><button class="btn" id="kok">${t('continue')}</button>`); $('#kok').onclick = () => sheet(''); });
     // end of section: celebration, practise set, book exercises
     const end = document.createElement('div'); end.className = 'secend';
     end.innerHTML = `<div class="secdone" hidden>🎉 ${t('section_done', { s: esc(sec.n) })} <b>+20 ⭐</b></div><div class="prac"></div>${(ls.exercises || []).map((ex, k) => `<button class="pcard soft" data-a="ex" data-k="${k}"><span class="pi">${ex.test ? '🏁' : '📝'}</span><span class="grow"><b>${esc(ex.book_name)}</b><small>${ex.test ? t('fresh_test') : t('book_exercise')} · ${ex.items.length}</small></span><span>›</span></button>`).join('')}`;
@@ -1070,6 +1166,7 @@ async function route() {
   const h = location.hash.replace(/^#/, ''), [r, a, b] = h.split('/');
   if (!S.lang && r !== 'welcome') { await viewWelcome(); return; }
   if (!T.app) await loadLang(S.lang);
+  if (!/^(book|lesson)\//.test(h)) { setLessonLang(null); Translate.dir(null); }
   if (S.lang && !S.grades.length && !['setup', 'welcome', 'settings'].includes(r) && r) { location.hash = 'setup'; return; }
   switch (r) {
     case '': case 'welcome': return S.lang && S.grades.length && r === '' ? viewHome() : viewWelcome();
