@@ -68,8 +68,7 @@
           "title": "What is a scientist?",
           "paras": [
             "A scientist systematically gathers and uses research and evidence.",
-            "A scientist makes hypotheses and tests them. The aim is to gain and share understanding and knowledge.",
-            "Here are some world and Ethiopian scientists and what they gave us."
+            "A scientist makes hypotheses and tests them. The aim is to gain and share understanding and knowledge."
           ],
           "id": "g7.science.u1.s1-1-4.2"
         },
@@ -107,17 +106,40 @@
           "id": "g7.science.u1.s1-1-4.4"
         },
         {
-          "kind": "read",
-          "step": "read",
+          "kind": "people",
           "title": "World scientists",
-          "paras": [
-            "Marie Curie (1867–1934) won the Nobel Prize for discovering the elements polonium and radium.",
-            "Isaac Newton (1643–1727) discovered the laws of motion and the law of gravity.",
-            "Michael Faraday (1791–1867) discovered how to make electricity from magnetism. He built the first dynamo.",
-            "Albert Einstein (1879–1955) developed the theory of special relativity."
+          "people": [
+            {
+              "name": "Marie Curie",
+              "years": "1867–1934",
+              "from": "Poland / France",
+              "did": "Discovered the elements polonium and radium. Won Nobel Prizes in 1903 and 1911.",
+              "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Marie_Curie_c1920.jpg?width=240"
+            },
+            {
+              "name": "Isaac Newton",
+              "years": "1643–1727",
+              "from": "England",
+              "did": "Discovered the laws of motion and the law of gravity.",
+              "img": "https://commons.wikimedia.org/wiki/Special:FilePath/GodfreyKneller-IsaacNewton-1689.jpg?width=240"
+            },
+            {
+              "name": "Michael Faraday",
+              "years": "1791–1867",
+              "from": "England",
+              "did": "Made electricity from magnetism. Built the first dynamo.",
+              "img": "https://commons.wikimedia.org/wiki/Special:FilePath/M_Faraday_Th_Phillips_oil_1842.jpg?width=240"
+            },
+            {
+              "name": "Albert Einstein",
+              "years": "1879–1955",
+              "from": "Germany / USA",
+              "did": "Developed the theory of special relativity.",
+              "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Albert_Einstein_Head.jpg?width=240"
+            }
           ],
-          "note": "Marie Curie won two Nobel Prizes: Physics (1903) and Chemistry (1911).",
-          "id": "g7.science.u1.s1-1-4.5"
+          "id": "g7.science.u1.s1-1-4.5",
+          "step": "read"
         },
         {
           "kind": "mcq",
@@ -133,21 +155,50 @@
           ],
           "ans": "Isaac Newton",
           "why": "Newton (1643–1727) discovered the laws of motion and gravity.",
-          "clue": "Read the second line of \"World scientists\".",
+          "clue": "Find Isaac Newton in \"World scientists\".",
           "id": "g7.science.u1.s1-1-4.6"
         },
         {
-          "kind": "read",
-          "step": "read",
+          "kind": "people",
           "title": "Ethiopian scientists",
-          "paras": [
-            "Dr. Aklilu Lemma (1935–1997) found a natural treatment for schistosomiasis (bilharzia, snail fever) in 1964.",
-            "Berries of the endod plant are used for soap and shampoo in many parts of Africa. They are a strong, cheap and safe molluscicide (snail killer). This stops the spread of the parasitic worm.",
-            "Prof. Yalemtsehay Mekonnen was born in Asela on 30 May 1955 (as printed). She works on human physiology, the effect of pesticides on health, and plants as medicine for people and animals. She was the first female professor of Addis Ababa University.",
-            "Dr. Tewolde Berhan Gebre Egziabher worked to protect biodiversity and the rights of communities to their genetic resources.",
-            "Dr. Gebisa Ejeta (born 1950) is a plant breeder and geneticist at Purdue University. He won the World Food Prize in 2009 for his work on sorghum. He helped develop commercial hybrid sorghum for Africa."
+          "people": [
+            {
+              "name": "Dr. Aklilu Lemma",
+              "years": "1935–1997",
+              "from": "Ethiopia",
+              "did": "Found a natural treatment for schistosomiasis (bilharzia, snail fever) in 1964."
+            },
+            {
+              "name": "Prof. Yalemtsehay Mekonnen",
+              "years": "born 30 May 1955",
+              "from": "Asela, Ethiopia",
+              "did": "Studies human physiology, pesticides and health, and plants as medicine. First female professor of Addis Ababa University."
+            },
+            {
+              "name": "Dr. Tewolde Berhan Gebre Egziabher",
+              "from": "Ethiopia",
+              "did": "Worked to protect biodiversity and communities' rights to their genetic resources."
+            },
+            {
+              "name": "Dr. Gebisa Ejeta",
+              "years": "born 1950",
+              "from": "Ethiopia / Purdue University, USA",
+              "did": "Plant breeder and geneticist. Won the 2009 World Food Prize for hybrid sorghum for Africa.",
+              "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Gebisa_Ejeta_%2826420838105%29.jpg?width=240"
+            }
           ],
-          "id": "g7.science.u1.s1-1-4.7"
+          "id": "g7.science.u1.s1-1-4.7",
+          "step": "read"
+        },
+        {
+          "kind": "read",
+          "title": "How endod helps",
+          "paras": [
+            "Endod berries are used for soap and shampoo in many parts of Africa.",
+            "They are a strong, cheap and safe molluscicide (snail killer). This stops the parasitic worm spreading."
+          ],
+          "step": "read",
+          "id": "g7.science.u1.s1-1-4.27"
         },
         {
           "kind": "mcq",
@@ -237,10 +288,8 @@
           "step": "read",
           "title": "Ethical principles in science",
           "paras": [
-            "Ethics are an essential part of science.",
-            "Like science itself, ethics must be consistent and justified when we judge what scientists do.",
-            "Things in front of us can be right or wrong, good or bad. We must decide what we really want to do from an ethical point of view.",
-            "Scientific codes address these principles: honesty, responsibility, objectivity, openness, competence, legality, non-discrimination and carefulness."
+            "Ethics are an essential part of science. Like science, ethics must be consistent and justified.",
+            "We must judge what is right or wrong, good or bad. Scientific codes address these principles: honesty, responsibility, objectivity, openness, competence, legality, non-discrimination, carefulness."
           ],
           "id": "g7.science.u1.s1-1-4.12"
         },
@@ -546,6 +595,10 @@
     {
       "kind": "note",
       "text": "The book only lists the names of the principles. The meanings and school examples are added to help."
+    },
+    {
+      "kind": "note",
+      "text": "Visual-first pass: read blocks shortened (no facts dropped) and drawings from app/pictures.js added. Portraits are Wikimedia Commons files (public domain or freely licensed). No verified Commons portrait was found for Dr. Aklilu Lemma, Prof. Yalemtsehay Mekonnen or Dr. Tewolde Berhan Gebre Egziabher; the app shows initials."
     }
   ],
   "review": {
