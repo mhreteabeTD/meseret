@@ -133,39 +133,42 @@
           "id": "g7.science.u1.s1-1-2.2"
         },
         {
-          "kind": "picture",
-          "pic": "branches-tree",
-          "caption": "Figure 1.1 The branches of science",
-          "step": "read",
-          "id": "g7.science.u1.s1-1-2.24"
-        },
-        {
-          "kind": "gallery",
-          "title": "Three branches of natural science",
-          "items": [
-            [
-              "biology",
-              "Biology",
-              "Studies living things."
-            ],
-            [
-              "chemistry",
-              "Chemistry",
-              "Studies the properties, make-up, structure and changes of substances."
-            ],
-            [
-              "physics",
-              "Physics",
-              "Studies matter and energy and how they interact."
-            ],
-            [
-              "social-science",
-              "Social science",
-              "Studies people and human society."
+          "kind": "tree",
+          "step": "explore",
+          "title": "Figure 1.1 The branches of science",
+          "root": {
+            "label": "Science",
+            "info": "A systematic way of gaining knowledge about the world.",
+            "children": [
+              {
+                "label": "Natural science",
+                "info": "Studies nature and natural laws.",
+                "children": [
+                  {
+                    "label": "Biology",
+                    "pic": "biology",
+                    "info": "Studies living things."
+                  },
+                  {
+                    "label": "Chemistry",
+                    "pic": "chemistry",
+                    "info": "Studies the properties, make-up, structure and changes of substances."
+                  },
+                  {
+                    "label": "Physics",
+                    "pic": "physics",
+                    "info": "Studies matter and energy and how they interact."
+                  }
+                ]
+              },
+              {
+                "label": "Social science",
+                "pic": "social-science",
+                "info": "Studies people and human society."
+              }
             ]
-          ],
-          "id": "g7.science.u1.s1-1-2.3",
-          "step": "read"
+          },
+          "id": "g7.science.u1.s1-1-2.24"
         },
         {
           "kind": "name",
@@ -299,10 +302,49 @@
           "id": "g7.science.u1.s1-1-2.10"
         },
         {
-          "kind": "picture",
-          "pic": "venn-sciences",
-          "caption": "Figure 1.2 Where two sciences overlap, a new field is born.",
-          "step": "read",
+          "kind": "venn",
+          "step": "explore",
+          "title": "Figure 1.2 Where two sciences overlap, a new field is born.",
+          "sets": [
+            [
+              "Biology",
+              "Studies living things."
+            ],
+            [
+              "Chemistry",
+              "Studies the properties, make-up, structure and changes of substances."
+            ],
+            [
+              "Physics",
+              "Studies matter and energy and how they interact."
+            ]
+          ],
+          "overlaps": [
+            [
+              [
+                0,
+                1
+              ],
+              "Biochemistry",
+              "Joins biology and chemistry. It explores the chemical reactions inside living things."
+            ],
+            [
+              [
+                1,
+                2
+              ],
+              "Physical chemistry",
+              "Joins chemistry and physics. It studies the properties of materials and how they interact."
+            ],
+            [
+              [
+                0,
+                2
+              ],
+              "Biophysics",
+              "Joins biology and physics. It studies life's physical processes, from molecules to cells."
+            ]
+          ],
           "id": "g7.science.u1.s1-1-2.25"
         },
         {
