@@ -390,3 +390,10 @@ body.panel-open main { padding-bottom: 60vh; }
 /* book reference label (Example 1.31, Exercise 1.6 Q2) kept apart from the question */
 .ref { display: inline-block; margin-left: 8px; font-size: 12px; font-weight: 800; letter-spacing: .02em; color: var(--muted); background: var(--surface-2); border: 1.5px solid var(--line); border-radius: 99px; padding: 2px 10px; vertical-align: middle; }
 .eyebrow + .ref { margin-left: 6px; }
+/* install card and help sheet */
+.card.install { border-color: var(--accent-line); background: var(--accent-soft); display: grid; gap: 10px; }
+.instic { font-size: 22px; background: var(--surface); border-radius: 12px; width: 44px; height: 44px; display: grid; place-items: center; }
+.isteps { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.istep { display: flex; gap: 12px; align-items: flex-start; font-size: 16px; line-height: 1.45; }
+.inum { flex: none; width: 28px; height: 28px; border-radius: 99px; background: var(--accent); color: #fff; font-weight: 800; display: grid; place-items: center; }
+.ishare { width: 20px; height: 20px; vertical-align: -4px; color: var(--sky); }

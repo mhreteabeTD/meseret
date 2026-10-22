@@ -120,13 +120,14 @@ async function viewHome() {
   const chapterCard = c => { const p = chapterProgress(c.id), sub = idx.subjects[c.subject] || {}; return `<a class="item" href="#${c.view === 'book' ? 'book' : 'chapter'}/${c.id}"><div class="icon" style="background:var(--accent-soft);color:var(--accent-deep)">${sub.icon || '•'}</div><div class="grow"><div class="t">${esc(L(sub))} · ${t('grade')} ${c.grade}</div><div class="s">${t('unit')} ${c.unit} · ${esc(L(c.title))}${p ? ` · ${t('lessons_read', { d: p.done, t: p.total })}` : ''}</div></div>${c.free ? `<span class="pill green">${t('free_chapter')}</span>` : ''}</a>`; };
   app.innerHTML = `<div class="row"><div class="grow"><div class="small muted" style="font-weight:700">${t('grade')} ${S.grades.join(' · ')}</div><h1 class="display">${t('hello')}${S.name ? ', ' + esc(S.name) : ''}</h1></div><a class="iconbtn" href="#settings" aria-label="${t('settings')}">${svgIcon('M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM19 12l2-1-1-3-2 .3-1.5-1.5.3-2-3-1-1 2h-2l-1-2-3 1 .3 2L5.6 8.3 3.6 8l-1 3 2 1v2l-2 1 1 3 2-.3 1.5 1.5-.3 2 3 1 1-2h2l1 2 3-1-.3-2 1.5-1.5 2 .3 1-3-2-1z')}</a></div>
   <div class="week">${week.map(([d, on]) => `<div>${d}<i class="${on ? 'on' : ''}"></i></div>`).join('')}</div>
-  ${last ? `<a class="card accent" href="#${last.route}"><span class="eyebrow">${t('continue')}</span><span class="display" style="font-size:22px">${esc(last.title)}</span><span class="small">${esc(last.sub || '')}</span></a>` : ''}
+  ${!last ? Install.card(true) : ''}${last ? `<a class="card accent" href="#${last.route}"><span class="eyebrow">${t('continue')}</span><span class="display" style="font-size:22px">${esc(last.title)}</span><span class="small">${esc(last.sub || '')}</span></a>` : ''}
   <a class="card" href="#review" style="text-decoration:none;color:inherit"><div class="row"><div class="icon" style="background:var(--sky-soft);color:var(--sky)">${svgIcon('M4 12a8 8 0 1 0 2.3-5.7M4 4v4h4')}</div><div class="grow"><div style="font-weight:800">${t('today_review')}</div><div class="small muted">${due.length ? t('review_sub', { n: due.length }) : t('review_empty')}</div></div></div></a>
   <h2 class="display">${t('your_subjects')}</h2>
   <div class="list">${mine.length ? mine.map(chapterCard).join('') : `<div class="item"><div class="s">${t('no_lessons_yet')}</div></div>`}</div>
   ${others.length ? `<h2 class="display">${t('all_grades')}</h2><div class="list">${others.map(chapterCard).join('')}</div>` : ''}
   <h2 class="display">${t('coming')}</h2><div class="list">${idx.coming.filter(c => S.grades.includes(c.grade)).map(c => `<div class="item"><div class="icon" style="background:var(--surface-2);color:var(--muted)">+</div><div class="grow"><div class="t muted">${esc(L(idx.subjects[c.subject] || { en: c.subject }))} · ${t('grade')} ${c.grade} · ${t('unit')} ${c.unit}</div><div class="s">${esc(L(c.title))}</div></div></div>`).join('')}</div>
-  <p class="small muted">${t('install')}. ${t('install_how')}</p>`;
+  ${last ? Install.card(true) : ''}`;
+  Install.bind(app);
 }
 
 async function viewChapter(id) {
@@ -174,8 +175,9 @@ async function viewSettings() {
   setNav(true); hideTray(); setTop(`<a class="iconbtn" href="#home" aria-label="back">${svgIcon(BACK)}</a><div class="display" style="font-size:18px">${t('settings')}</div>`);
   app.innerHTML = `<div class="card"><div style="font-weight:800">${t('language')}</div><div class="opts row3"><button class="opt center" data-l="am" style="font-family:var(--ethiopic)">አማርኛ</button><button class="opt center" data-l="en">English</button><button class="opt center" disabled>Oromoo</button></div></div>
   <div class="card"><div style="font-weight:800">${t('grade')}</div><a class="btn ghost" href="#setup">${S.grades.join(', ') || '?'} ›</a></div>
-  <div class="card"><div style="font-weight:800">${t('install')}</div><div class="small muted">${t('install_how')}</div></div>
+  ${Install.installed() ? `<div class="card"><div style="font-weight:800">✓ ${t('install_done')}</div></div>` : Install.card(false)}
   <p class="small muted">Meseret v0.1 · ${S.code ? 'Class ' + esc(S.code) : ''}</p>`;
+  Install.bind(app);
   app.querySelectorAll('[data-l]').forEach(b => { b.setAttribute('aria-pressed', b.dataset.l === S.lang); b.onclick = async () => { await loadLang(b.dataset.l); viewSettings(); }; });
 }
 
@@ -788,6 +790,40 @@ const Fx = {
 const burst = Fx.burst, buzz = Fx.buzz; // used by the step player
 
 /* ---------- Focus: a simple study timer (Pomodoro-style) ---------- */
+/* ---------- Install: one button that does the right thing on every phone ----------
+   Android Chrome/Edge/Samsung: opens the browser's install window (beforeinstallprompt).
+   iPhone/iPad: shows Share → Add to Home Screen. Inside Telegram/WhatsApp/Facebook: open in a real browser first. */
+const Install = {
+  ev: null,
+  ua: navigator.userAgent || '',
+  installed() { try { return matchMedia('(display-mode: standalone)').matches || navigator.standalone === true; } catch (_) { return false; } },
+  ios() { return /iPhone|iPad|iPod/i.test(Install.ua) || (/Macintosh/.test(Install.ua) && navigator.maxTouchPoints > 1); },
+  android() { return /Android/i.test(Install.ua); },
+  inapp() { return /Telegram|FBAN|FBAV|FB_IAB|Instagram|WhatsApp|Line\/|MicroMessenger|; wv\)/i.test(Install.ua) || !!window.TelegramWebviewProxy; },
+  weak() { return /Opera Mini|OPiOS|UCBrowser|UCWEB/i.test(Install.ua); },
+  card(dismissable) { if (Install.installed()) return '';
+    if (dismissable) { const until = store.get('installHide', 0); if (until > Date.now()) return ''; }
+    return `<div class="card install" id="instcard"><div class="row"><div class="icon instic">📲</div><div class="grow"><div style="font-weight:800">${t('install')}</div><div class="small muted">${t('install_sub')}</div></div>${dismissable ? `<button class="iconbtn" id="insthide" aria-label="${t('close')}">${svgIcon(CLOSE)}</button>` : ''}</div><button class="btn" id="instbtn">${t('install_btn')}</button></div>`; },
+  bind(root) { const b = root.querySelector('#instbtn'); if (b) b.onclick = () => Install.go(); const x = root.querySelector('#insthide'); if (x) x.onclick = () => { store.set('installHide', Date.now() + 7 * DAY); const c = root.querySelector('#instcard'); if (c) c.remove(); }; },
+  async go() {
+    logEvent({ install: 'tap', how: Install.ev ? 'prompt' : Install.inapp() ? 'inapp' : Install.ios() ? 'ios' : 'menu' });
+    if (Install.ev) { const e = Install.ev; Install.ev = null; try { e.prompt(); const r = await e.userChoice; if (r && r.outcome === 'accepted') { toast(t('install_done')); const c = $('#instcard'); if (c) c.remove(); } } catch (_) { Install.help(); } return; }
+    Install.help();
+  },
+  help() { const url = location.href.split('#')[0], step = (n, html) => `<li class="istep"><span class="inum">${n}</span><span>${html}</span></li>`;
+    const share = `<svg class="ishare" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 12v8h14v-8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+    let body;
+    if (Install.inapp()) body = `<p>${t('inapp_why')}</p><ol class="isteps">${step(1, t('inapp_1'))}${step(2, t('inapp_2'))}${step(3, t('inapp_3'))}</ol>${Install.android() ? `<a class="btn" href="intent://${location.host}${location.pathname}#Intent;scheme=https;package=com.android.chrome;end">${t('open_chrome')}</a>` : ''}<button class="btn ghost" id="cpy">${t('copy_link')}</button>`;
+    else if (Install.ios()) body = `<ol class="isteps">${step(1, t('ios_1').replace('{share}', share))}${step(2, t('ios_2'))}${step(3, t('ios_3'))}</ol><p class="small muted">${t('ios_note')}</p>`;
+    else body = `${Install.weak() ? `<p>${t('weak_browser')}</p>` : ''}<ol class="isteps">${step(1, t('menu_1'))}${step(2, t('menu_2'))}${step(3, t('menu_3'))}</ol><p class="small muted">${t('menu_note')}</p>`;
+    sheet(`<div class="stack instsheet"><h2 class="display">📲 ${t('install')}</h2>${body}<button class="btn ghost" id="iok">${t('continue')}</button></div>`);
+    $('#iok').onclick = () => sheet('');
+    const c = $('#cpy'); if (c) c.onclick = async () => { try { await navigator.clipboard.writeText(url); toast(t('link_copied')); } catch (_) { prompt(t('copy_link'), url); } };
+  }
+};
+window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); Install.ev = e; });
+window.addEventListener('appinstalled', () => { Install.ev = null; logEvent({ install: 'done' }); const c = $('#instcard'); if (c) c.remove(); });
+
 const Focus = {
   get() { return store.get('focus', null); },
   start(min) { store.set('focus', { phase: 'focus', min, end: Date.now() + min * 60e3 }); Focus.tick(); },
