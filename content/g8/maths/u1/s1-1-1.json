@@ -184,12 +184,13 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "num": true,
      "needs": "math.mixed-improper",
+     "gen": {
+      "t": "mixed"
+     },
      "ask": "As a mixed fraction, 7/3 = ___",
      "a": [
-      "2 1/3",
-      "7/3"
+      "2 1/3"
      ],
      "why": "7 ÷ 3 = 2 remainder 1.",
      "clue": "Divide 7 by 3.",
@@ -199,12 +200,13 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "num": true,
      "needs": "math.mixed-improper",
+     "gen": {
+      "t": "mixed"
+     },
      "ask": "As a mixed fraction, 27/10 = ___",
      "a": [
-      "2 7/10",
-      "2.7"
+      "2 7/10"
      ],
      "why": "27 ÷ 10 = 2 remainder 7.",
      "clue": "How many tens are in 27?",
@@ -386,6 +388,10 @@
        "label": "−3/4"
       }
      ],
+     "gen": {
+      "t": "place",
+      "signs": true
+     },
      "ask": "Tap where −3/4 goes.",
      "why": "Between −1 and 0. Count 3 quarters left of 0.",
      "clue": "Negative numbers are left of 0.",
@@ -396,6 +402,9 @@
      "step": "practise",
      "graded": true,
      "needs": "math.mixed-improper",
+     "gen": {
+      "t": "between"
+     },
      "text": "Between which two integers does −9/5 lie?",
      "opts": [
       "−1 and 0",
@@ -423,6 +432,10 @@
        "label": "5/6"
       }
      ],
+     "gen": {
+      "t": "place",
+      "improper": true
+     },
      "ask": "Tap where 5/6 goes.",
      "why": "Split 0 to 1 into 6 parts. 5/6 is the 5th mark.",
      "clue": "5/6 is a little less than 1.",
@@ -545,6 +558,9 @@
      "step": "practise",
      "graded": true,
      "num": true,
+     "gen": {
+      "t": "opposite"
+     },
      "ask": "The opposite of −7/2 is ___",
      "a": [
       "7/2",
@@ -680,6 +696,11 @@
      "label": "4/3"
     }
    ],
+   "gen": {
+    "t": "place",
+    "improper": true,
+    "signs": true
+   },
    "ask": "Tap where 4/3 goes.",
    "why": "4/3 = 1 1/3: one third past 1.",
    "clue": "",
@@ -689,6 +710,9 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
+   "gen": {
+    "t": "between"
+   },
    "text": "Between which integers does −3/5 lie?",
    "opts": [
     "−1 and 0",
@@ -705,6 +729,9 @@
    "step": "test",
    "graded": true,
    "num": true,
+   "gen": {
+    "t": "opposite"
+   },
    "ask": "The opposite of 2 3/5 is ___",
    "a": [
     "−2 3/5",

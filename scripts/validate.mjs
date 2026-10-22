@@ -8,7 +8,10 @@ const root = process.argv[2] || 'content';
 const schema = JSON.parse(readFileSync(new URL('../schema/lesson.schema.json', import.meta.url)));
 const KINDS = schema.$defs.screen.properties.kind.enum;
 const STEPS = schema.$defs.screen.properties.step.enum;
-const REQ = { mcq: ['opts', 'ans', 'why', 'clue'], tf: ['text', 'a', 'why', 'clue'], blank: ['ask', 'a', 'why', 'clue'], sort: ['bins', 'items'], match: ['pairs', 'why'], order: ['items', 'why'], name: ['defs'], steps: ['steps'], tap: ['items'], pick: ['pool', 'a', 'why'], guess: ['opts'], tiles: ['sizes', 'need'], read: ['paras'], picture: ['pic'], gallery: ['items'], people: ['people'], reveal: ['ask', 'answer'], tree: ['root'], venn: ['sets'], numline: ['min', 'max'] };
+const REQ = { mcq: ['opts', 'ans', 'why', 'clue'], tf: ['text', 'a', 'why', 'clue'], blank: ['ask', 'a', 'why', 'clue'], sort: ['bins', 'items'], match: ['pairs', 'why'], order: ['items', 'why'], name: ['defs'], steps: ['steps'], tap: ['items'], pick: ['pool', 'a', 'why'], guess: ['opts'], tiles: ['sizes', 'need'], read: ['paras'], picture: ['pic'], gallery: ['items'], people: ['people'], reveal: ['ask', 'answer'], tree: ['root'], venn: ['sets'], numline: ['min', 'max'], nest: ['rings'], slider: ['vars', 'formula'], grid: [], fracbar: [] };
+// generators live in app.js between GEN-START and GEN-END; each item with "gen" is generated many times and checked
+const appSrc = readFileSync(new URL('../app/app.js', import.meta.url), 'utf8'), qa = appSrc.indexOf('const Q = {'), qb = appSrc.indexOf('// a number label in SVG');
+const { Q, numMatch, Gen } = new Function(appSrc.slice(qa, qb) + '; return { Q, numMatch, Gen };')();
 
 const files = [];
 (function walk(d) { for (const f of readdirSync(d)) { const p = join(d, f); if (statSync(p).isDirectory()) walk(p); else if (f.endsWith('.json') && f !== 'index.json') files.push(p); } })(root);
@@ -39,6 +42,13 @@ for (const file of files) {
     if (s.text && s.text.split(/[.!?]\s/).some(x => x.split(/\s+/).length > 28)) errs.push(`${where}: a sentence is over 28 words`);
     if (s.kind === 'numline' && s.graded && !(s.targets || []).length) errs.push(`${where}: graded numline needs targets`);
     if (s.kind === 'blank' && s.num && Array.isArray(s.a) && !s.a.some(x => /^[≈~]?\s*[−-]?[\d.]/.test(String(x)))) errs.push(`${where}: num blank has no numeric accepted answer`);
+    if (s.gen) { if (!Gen.has(s)) errs.push(`${where}: unknown generator "${s.gen.t}"`); else for (let n = 0; n < 60; n++) { const g = Gen.make(s, n * 7919 + 1), bad = m => { errs.push(`${where}: generator ${s.gen.t} seed ${n}: ${m}`); n = 99; };
+      if (g.kind === 'blank' && (!g.ask || !g.ask.includes('___') || !g.a || !g.a.length)) bad('blank without ___ or answers');
+      else if (g.kind === 'blank' && g.num && g.a.some(x => numMatch(String(x).replace(/^[≈~]/, ''), g.a) !== true)) bad('answers do not parse as the same number: ' + g.a.join(' | '));
+      else if (g.kind === 'mcq' && (!g.opts.includes(g.ans) || new Set(g.opts).size !== g.opts.length)) bad('mcq answer missing or duplicate options: ' + g.opts.join(' | '));
+      else if (g.kind === 'pick' && (!g.a.every(x => g.pool.includes(x)) || new Set(g.pool).size !== g.pool.length)) bad('pick answers not in pool or duplicates: ' + g.pool.join(' | '));
+      else if (g.kind === 'order' && new Set(g.items).size !== g.items.length) bad('order items repeat');
+      else if (g.kind === 'numline' && g.targets.some(x => { const q = Q.parse(x.v); return !q || Q.val(q) < g.min || Q.val(q) > g.max; })) bad('target off the line'); } }
     if (s.step === 'test' && s.clue) errs.push(`${where}: test items must not carry a clue`);
   };
   (L.ideas || []).forEach((idea, i) => {

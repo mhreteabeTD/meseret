@@ -1,0 +1,716 @@
+{
+ "id": "g8.maths.u1.s1-3-3",
+ "book": {
+  "title": "Mathematics Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "Rational Numbers",
+  "pages": "28–32",
+  "section": "1.3.3"
+ },
+ "title": "Multiplication of rational numbers",
+ "competency": "Multiply rational numbers and use the properties of multiplication.",
+ "minutes": 14,
+ "keywords": [
+  {
+   "en": "Product",
+   "am": "ብዜት",
+   "def": "The answer to a multiplication.",
+   "machine": true
+  },
+  {
+   "en": "Factor",
+   "am": "አባዢ",
+   "def": "A number being multiplied.",
+   "machine": true
+  },
+  {
+   "en": "Lowest terms",
+   "am": "ቀላሉ መልክ",
+   "def": "A fraction whose top and bottom share no common factor except 1.",
+   "machine": true
+  },
+  {
+   "en": "Distributive property",
+   "am": "የማከፋፈል ባሕሪ",
+   "def": "a × (b + c) = a × b + a × c.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.multiply-rationals",
+   "name": "Multiplying fractions",
+   "requires": [
+    "math.mixed-improper"
+   ],
+   "explain": {
+    "en": {
+     "text": "To multiply fractions, multiply the numerators and multiply the denominators. Then reduce. Change mixed numbers to improper fractions first. On a grid, 3/4 × 1/2 is the part shaded twice."
+    },
+    "am": {
+     "text": "ክፍልፋዮችን ለማባዛት ላዕላዮቹን አባዛ፣ ተካፋዮቹንም አባዛ። ከዚያ አቅልል። ድብልቅ ቁጥሮችን መጀመሪያ ወደ ኢ-ትክክለኛ ቀይር።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "added": true,
+     "title": "Half of three-quarters",
+     "ask": "You eat half of 3/4 of an injera. How much of the injera is that?",
+     "opts": [
+      "3/8",
+      "1/4",
+      "3/4",
+      "1/2"
+     ],
+     "after": "Half of 3/4 is 3/8. Check it on the grid below.",
+     "id": "g8.maths.u1.s1-3-3.1"
+    },
+    {
+     "kind": "grid",
+     "step": "explore",
+     "title": "Example 1.25 grid model: 1/2 × 3/4",
+     "cols": 2,
+     "rows": 4,
+     "shadeCols": 1,
+     "shadeRows": 3,
+     "say": [
+      "Shade 1 of 2 columns: 1/2.",
+      "Shade 3 of 4 rows: 3/4.",
+      "3 of 8 parts are shaded twice: 3/4 × 1/2 = 3/8."
+     ],
+     "id": "g8.maths.u1.s1-3-3.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Multiplying",
+     "paras": [
+      "Multiply the numerator by the numerator. Multiply the denominator by the denominator.",
+      "Then reduce the answer to its lowest terms."
+     ],
+     "id": "g8.maths.u1.s1-3-3.3"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Example 1.25",
+     "steps": [
+      "3/2 × 7/8 = (3 × 7)/(2 × 8) = 21/16.",
+      "−5/6 × 4/3 = −20/18 = −10/9."
+     ],
+     "id": "g8.maths.u1.s1-3-3.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Product",
+       "The answer to a multiplication."
+      ],
+      [
+       "Factor",
+       "A number being multiplied."
+      ],
+      [
+       "Lowest terms",
+       "Top and bottom share no common factor except 1."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-3-3.5"
+    },
+    {
+     "kind": "blank",
+     "step": "check",
+     "graded": true,
+     "num": true,
+     "ask": "Activity 1.5 a: 5/7 × 8/11 = ___",
+     "a": [
+      "40/77"
+     ],
+     "why": "(5 × 8)/(7 × 11) = 40/77.",
+     "clue": "Multiply tops, then bottoms.",
+     "gen": {
+      "t": "op",
+      "op": "mul"
+     },
+     "id": "g8.maths.u1.s1-3-3.6"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "5/8 × 3/4 = ___",
+     "a": [
+      "15/32"
+     ],
+     "why": "15/32.",
+     "clue": "Multiply tops, then bottoms.",
+     "gen": {
+      "t": "op",
+      "op": "mul"
+     },
+     "id": "g8.maths.u1.s1-3-3.7"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "3 2/5 × 2 4/7 = ___",
+     "a": [
+      "306/35",
+      "8 26/35"
+     ],
+     "why": "17/5 × 18/7 = 306/35.",
+     "clue": "Change the mixed numbers first.",
+     "needs": "math.mixed-improper",
+     "worked": "3 2/5 = 17/5 and 2 4/7 = 18/7. 17 × 18 = 306 and 5 × 7 = 35.",
+     "gen": {
+      "t": "op",
+      "op": "mul",
+      "mixed": true
+     },
+     "id": "g8.maths.u1.s1-3-3.8"
+    },
+    {
+     "kind": "fracbar",
+     "step": "practise",
+     "graded": true,
+     "title": "Exercise 1.8 Q3 (grid as a bar): 1/3 × 2/5",
+     "parts": 15,
+     "need": 2,
+     "ask": "1/3 of 2/5 is how many fifteenths? Shade that many parts.",
+     "why": "1/3 × 2/5 = 2/15: 2 of 15 parts.",
+     "clue": "Multiply the tops and the bottoms.",
+     "id": "g8.maths.u1.s1-3-3.9"
+    }
+   ]
+  },
+  {
+   "id": "math.multiply-sign-rules",
+   "name": "Signs in multiplication",
+   "explain": {
+    "en": {
+     "text": "Same signs give a positive product. Different signs give a negative product. Any number times 0 is 0. With many factors, an even number of negatives gives a positive answer; an odd number gives a negative answer."
+    },
+    "am": {
+     "text": "ተመሳሳይ ምልክት አዎንታዊ ብዜት ይሰጣል። የተለያየ ምልክት አሉታዊ ብዜት ይሰጣል። ማንኛውም ቁጥር ከ0 ጋር ሲባዛ 0 ይሆናል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "graded": false,
+     "title": "Predict the sign",
+     "bins": [
+      "Positive",
+      "Negative",
+      "Zero"
+     ],
+     "items": [
+      [
+       "2/3 × 5/11",
+       "Positive",
+       "Both positive."
+      ],
+      [
+       "(−5/4) × (−7/3)",
+       "Positive",
+       "Both negative."
+      ],
+      [
+       "−3 × 5",
+       "Negative",
+       "Different signs."
+      ],
+      [
+       "−7/9 × 0",
+       "Zero",
+       "A factor is 0."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-3-3.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Table 1.1",
+     "table": [
+      [
+       "The two factors",
+       "The product",
+       "Example"
+      ],
+      [
+       "Both positive",
+       "Positive",
+       "2/3 × 5/11 = 10/33"
+      ],
+      [
+       "Both negative",
+       "Positive",
+       "(−5/4) × (−7/3) = 35/12"
+      ],
+      [
+       "Opposite signs",
+       "Negative",
+       "−3 × 5 = −15"
+      ],
+      [
+       "One or both 0",
+       "Zero",
+       "−7/9 × 0 = 0"
+      ]
+     ],
+     "paras": [
+      "Different signs: decide the sign, multiply the absolute values, then put the sign in front."
+     ],
+     "note": "An even number of negative factors gives a positive product. An odd number gives a negative product.",
+     "id": "g8.maths.u1.s1-3-3.11"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Example 1.26 a: 4/9 × (−5/2)",
+     "steps": [
+      "Signs differ, so the product is negative.",
+      "4/9 × 5/2 = 20/18 = 10/9.",
+      "Answer: −10/9."
+     ],
+     "id": "g8.maths.u1.s1-3-3.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Factor",
+     "defs": [
+      [
+       "Factor",
+       "A number being multiplied."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-3-3.13"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "(−2/5) × (−7/3) is",
+     "opts": [
+      "positive",
+      "negative",
+      "zero"
+     ],
+     "ans": "positive",
+     "why": "Two negatives give a positive: 14/15.",
+     "clue": "Same signs or different?",
+     "id": "g8.maths.u1.s1-3-3.14"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "3/7 × (−3/4) = ___",
+     "a": [
+      "-9/28"
+     ],
+     "why": "Different signs: −9/28.",
+     "clue": "Decide the sign first.",
+     "input": "signed",
+     "gen": {
+      "t": "op",
+      "op": "mul",
+      "signs": true
+     },
+     "id": "g8.maths.u1.s1-3-3.15"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "−8/7 × (−3/5) = ___",
+     "a": [
+      "24/35"
+     ],
+     "why": "Same signs: +24/35.",
+     "clue": "Two negatives.",
+     "input": "signed",
+     "gen": {
+      "t": "op",
+      "op": "mul",
+      "signs": true
+     },
+     "id": "g8.maths.u1.s1-3-3.16"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "−2/3 × 5/4 × 3/2 = ___",
+     "a": [
+      "-5/4",
+      "-1 1/4",
+      "-1.25"
+     ],
+     "why": "One negative factor: −30/24 = −5/4.",
+     "clue": "Count the negative factors.",
+     "input": "signed",
+     "worked": "1 negative (odd), so negative. 2 × 5 × 3 = 30 and 3 × 4 × 2 = 24. 30/24 = 5/4. Answer −5/4.",
+     "id": "g8.maths.u1.s1-3-3.17"
+    }
+   ]
+  },
+  {
+   "id": "math.multiplication-properties",
+   "name": "Properties of multiplication",
+   "explain": {
+    "en": {
+     "text": "Multiplication is commutative and associative. It distributes over addition: a × (b + c) = a × b + a × c. Times 0 gives 0. Times 1 keeps the number."
+    },
+    "am": {
+     "text": "ማባዛት የመለዋወጥና የመቧደን ባሕሪ አለው። በመደመር ላይ ይከፋፈላል። በ0 ማባዛት 0 ይሰጣል። በ1 ማባዛት ቁጥሩን አይለውጥም።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Example 1.29",
+     "ask": "Cloth costs Birr 162/4 per metre. Roughly how much do 35/9 m cost?",
+     "opts": [
+      "About Birr 40",
+      "About Birr 160",
+      "About Birr 600"
+     ],
+     "after": "35/9 × 162/4 = 315/2 = Birr 157.50.",
+     "id": "g8.maths.u1.s1-3-3.18"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Properties",
+     "paras": [
+      "For any rational numbers a, b and c:"
+     ],
+     "table": [
+      [
+       "Property",
+       "Rule"
+      ],
+      [
+       "Commutative",
+       "a × b = b × a"
+      ],
+      [
+       "Associative",
+       "a × (b × c) = (a × b) × c"
+      ],
+      [
+       "Distributive",
+       "a × (b + c) = a × b + a × c"
+      ],
+      [
+       "Property of 0",
+       "a × 0 = 0"
+      ],
+      [
+       "Property of 1",
+       "a × 1 = a"
+      ]
+     ],
+     "id": "g8.maths.u1.s1-3-3.19"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Example 1.28 c: 2/5 × (3/7 + 4/3)",
+     "steps": [
+      "Distribute: 2/5 × 3/7 + 2/5 × 4/3.",
+      "= 6/35 + 8/15.",
+      "= 18/105 + 56/105 = 74/105."
+     ],
+     "id": "g8.maths.u1.s1-3-3.20"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Distributive property",
+     "defs": [
+      [
+       "Distributive property",
+       "a × (b + c) = a × b + a × c."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-3-3.21"
+    },
+    {
+     "kind": "match",
+     "step": "check",
+     "graded": true,
+     "title": "Match the property",
+     "pairs": [
+      [
+       "(8/9 × 5/4) × 0 = 0",
+       "Property of 0"
+      ],
+      [
+       "2 3/5 × 1 = 2 3/5",
+       "Property of 1"
+      ],
+      [
+       "3/5 × 6/7 = 6/7 × 3/5",
+       "Commutative"
+      ],
+      [
+       "2/5 × (3/7 + 4/3) = 2/5 × 3/7 + 2/5 × 4/3",
+       "Distributive"
+      ]
+     ],
+     "why": "Each line shows one property.",
+     "clue": "Look for 0, 1, swapped order, or brackets opened.",
+     "id": "g8.maths.u1.s1-3-3.22"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "Exercise 1.8 Q2: a plane covers 1250 km per hour. In 23/6 hours it covers ___ km",
+     "a": [
+      "14375/3",
+      "4791 2/3",
+      "≈4791.67"
+     ],
+     "why": "1250 × 23/6 = 28750/6 = 14375/3 km.",
+     "clue": "Multiply 1250 by 23/6.",
+     "worked": "1250 × 23 = 28750. 28750/6 = 14375/3 ≈ 4791.67 km.",
+     "gen": {
+      "t": "op",
+      "op": "mul",
+      "word": true
+     },
+     "id": "g8.maths.u1.s1-3-3.23"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "Exercise 1.8 Q1 f: −3(5x + 5) when x = 3/4: ___",
+     "a": [
+      "-105/4",
+      "-26 1/4",
+      "-26.25"
+     ],
+     "why": "5 × 3/4 + 5 = 35/4. −3 × 35/4 = −105/4.",
+     "clue": "Work inside the bracket first.",
+     "id": "g8.maths.u1.s1-3-3.24"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 1.8",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Q1 a: 5/8 × 3/4 = ___",
+     "a": [
+      "15/32"
+     ],
+     "why": "15/32.",
+     "clue": "Multiply tops and bottoms.",
+     "id": "g8.maths.u1.s1-3-3.25"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Q1 b: 3/7 × (−3/4) = ___",
+     "a": [
+      "-9/28"
+     ],
+     "why": "−9/28.",
+     "clue": "Different signs.",
+     "id": "g8.maths.u1.s1-3-3.26"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Q1 c: −8/7 × (−3/5) = ___",
+     "a": [
+      "24/35"
+     ],
+     "why": "24/35.",
+     "clue": "Two negatives.",
+     "id": "g8.maths.u1.s1-3-3.27"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Q1 d: 2 3/5 × 4 2/3 = ___",
+     "a": [
+      "182/15",
+      "12 2/15"
+     ],
+     "why": "13/5 × 14/3 = 182/15.",
+     "clue": "Change to improper fractions.",
+     "id": "g8.maths.u1.s1-3-3.28"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Q1 e: −2/3 × 5/4 × 3/2 = ___",
+     "a": [
+      "-5/4",
+      "-1 1/4"
+     ],
+     "why": "−30/24 = −5/4.",
+     "clue": "One negative factor.",
+     "id": "g8.maths.u1.s1-3-3.29"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Q2: 1250 km per hour for 23/6 hours = ___ km",
+     "a": [
+      "14375/3",
+      "4791 2/3",
+      "≈4791.67"
+     ],
+     "why": "1250 × 23/6.",
+     "clue": "Multiply.",
+     "id": "g8.maths.u1.s1-3-3.30"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "2/3 × 9/10 = ___",
+   "a": [
+    "3/5"
+   ],
+   "why": "18/30 = 3/5.",
+   "clue": "",
+   "gen": {
+    "t": "op",
+    "op": "mul"
+   },
+   "id": "g8.maths.u1.s1-3-3.31"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "−4/5 × 15/8 = ___",
+   "a": [
+    "-3/2",
+    "-1 1/2"
+   ],
+   "why": "−60/40.",
+   "clue": "",
+   "gen": {
+    "t": "op",
+    "op": "mul",
+    "signs": true
+   },
+   "id": "g8.maths.u1.s1-3-3.32"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The product of three negative numbers is",
+   "opts": [
+    "positive",
+    "negative",
+    "zero"
+   ],
+   "ans": "negative",
+   "why": "An odd number of negatives.",
+   "clue": "",
+   "id": "g8.maths.u1.s1-3-3.33"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "The book numbers two examples 1.25; kept as printed. Exercise 1.8 Q3 asks for a grid model of 1/3 × 2/5; shown here as a 15-part bar."
+  },
+  {
+   "kind": "note",
+   "text": "Example 1.29 answer: 35/9 × 162/4 = 5670/36 = 315/2 = Birr 157.50 (checked)."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.mixed-improper": {
+   "name": "Mixed ↔ improper",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Change 2 5/7 to an improper fraction",
+     "text": "Whole × denominator + numerator.",
+     "steps": [
+      "2 × 7 = 14.",
+      "14 + 5 = 19.",
+      "Keep the denominator 7.",
+      "So 2 5/7 = 19/7."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "3 2/5 = ?",
+     "opts": [
+      "17/5",
+      "6/5",
+      "32/5",
+      "15/5"
+     ],
+     "ans": "17/5",
+     "why": "3 × 5 + 2 = 17.",
+     "clue": "Whole × denominator + numerator."
+    }
+   ]
+  }
+ }
+}

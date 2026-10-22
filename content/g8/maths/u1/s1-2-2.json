@@ -1,0 +1,377 @@
+{
+ "id": "g8.maths.u1.s1-2-2",
+ "book": {
+  "title": "Mathematics Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "Rational Numbers",
+  "pages": "18–19",
+  "section": "1.2.2"
+ },
+ "title": "Ordering rational numbers",
+ "competency": "Write rational numbers in ascending or descending order.",
+ "minutes": 8,
+ "keywords": [
+  {
+   "en": "Ascending order",
+   "am": "ከትንሽ ወደ ትልቅ ቅደም ተከተል",
+   "def": "From the smallest to the largest.",
+   "machine": true
+  },
+  {
+   "en": "Descending order",
+   "am": "ከትልቅ ወደ ትንሽ ቅደም ተከተል",
+   "def": "From the largest to the smallest.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.order-rationals",
+   "name": "Ordering",
+   "requires": [
+    "math.lcm"
+   ],
+   "explain": {
+    "en": {
+     "text": "To order rational numbers, put them in the same form first: all with one common denominator, or all as decimals. Then line them up from smallest to largest (ascending) or largest to smallest (descending)."
+    },
+    "am": {
+     "text": "ሬሽናል ቁጥሮችን ለመደርደር መጀመሪያ በአንድ ዓይነት መልክ አስቀምጣቸው፤ በጋራ ተካፋይ ወይም በአስርዮሽ። ከዚያ ከትንሽ ወደ ትልቅ ወይም ከትልቅ ወደ ትንሽ ደርድራቸው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Exercise 1.5 Q3: Samuel's plants",
+     "text": "Differences from the average growth: Rahel 3 1/4 cm, Kassa −2.2 cm, Alemitu 1.7 cm, Munir −1 7/10 cm.",
+     "ask": "Whose plant grew the most?",
+     "opts": [
+      "Rahel",
+      "Kassa",
+      "Alemitu",
+      "Munir"
+     ],
+     "after": "Rahel: 3 1/4 = 3.25 is the largest difference.",
+     "id": "g8.maths.u1.s1-2-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Ordering rational numbers",
+     "paras": [
+      "Ordering means writing numbers in ascending or descending order.",
+      "It is like ordering distances in miles and kilometres: use one unit first.",
+      "For fractions, use one common denominator or change them to decimals."
+     ],
+     "id": "g8.maths.u1.s1-2-2.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Ascending order",
+       "From the smallest to the largest."
+      ],
+      [
+       "Descending order",
+       "From the largest to the smallest."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-2-2.3"
+    },
+    {
+     "kind": "order",
+     "step": "check",
+     "graded": true,
+     "title": "Example 1.14 i a: ascending",
+     "items": [
+      "−45",
+      "−25",
+      "18",
+      "28",
+      "30"
+     ],
+     "why": "−45 < −25 < 18 < 28 < 30.",
+     "clue": "Negatives first; the bigger negative size is smaller.",
+     "id": "g8.maths.u1.s1-2-2.4"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Example 1.14 i b: 3/5, 4/9, 7/3, 5/6, 11/18",
+     "steps": [
+      "LCM of 5, 9, 3, 6 and 18 is 90.",
+      "54/90, 40/90, 210/90, 75/90, 55/90.",
+      "Order the numerators: 40 < 54 < 55 < 75 < 210.",
+      "So 4/9 < 3/5 < 11/18 < 5/6 < 7/3."
+     ],
+     "id": "g8.maths.u1.s1-2-2.5"
+    },
+    {
+     "kind": "order",
+     "step": "practise",
+     "graded": true,
+     "title": "Decimals, ascending",
+     "items": [
+      "1.5",
+      "1.53",
+      "2.05",
+      "2.5",
+      "3.21"
+     ],
+     "why": "1.5 < 1.53 < 2.05 < 2.5 < 3.21.",
+     "clue": "Compare place by place.",
+     "gen": {
+      "t": "order",
+      "desc": false
+     },
+     "id": "g8.maths.u1.s1-2-2.6"
+    },
+    {
+     "kind": "order",
+     "step": "practise",
+     "graded": true,
+     "title": "Descending",
+     "items": [
+      "45",
+      "32",
+      "−15",
+      "−23"
+     ],
+     "why": "45 > 32 > −15 > −23.",
+     "clue": "Largest first.",
+     "gen": {
+      "t": "order",
+      "desc": true
+     },
+     "id": "g8.maths.u1.s1-2-2.7"
+    },
+    {
+     "kind": "order",
+     "step": "practise",
+     "graded": true,
+     "title": "Samuel's plants: lowest to highest",
+     "items": [
+      "−2.2",
+      "−1 7/10",
+      "1.7",
+      "3 1/4"
+     ],
+     "why": "−2.2 < −1.7 < 1.7 < 3.25.",
+     "clue": "Change them to decimals.",
+     "gen": {
+      "t": "order",
+      "desc": false
+     },
+     "id": "g8.maths.u1.s1-2-2.8"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 1.5",
+   "items": [
+    {
+     "kind": "order",
+     "step": "exercise",
+     "graded": true,
+     "title": "Q1 b: ascending",
+     "items": [
+      "−12.51",
+      "5.24",
+      "6.75",
+      "8.13",
+      "12.42"
+     ],
+     "why": "Negative first, then by integer part.",
+     "clue": "Smallest first.",
+     "id": "g8.maths.u1.s1-2-2.9"
+    },
+    {
+     "kind": "order",
+     "step": "exercise",
+     "graded": true,
+     "title": "Q1 a: ascending",
+     "items": [
+      "−5 2/3",
+      "3/25",
+      "4/9",
+      "23/15",
+      "11/7"
+     ],
+     "why": "−5.67 < 0.12 < 0.44 < 1.53 < 1.57.",
+     "clue": "Change them to decimals.",
+     "id": "g8.maths.u1.s1-2-2.10"
+    },
+    {
+     "kind": "order",
+     "step": "exercise",
+     "graded": true,
+     "title": "Q2 a: descending",
+     "items": [
+      "23.86",
+      "15.02",
+      "13.72",
+      "13.05"
+     ],
+     "why": "Largest first.",
+     "clue": "Compare integer parts, then tenths.",
+     "id": "g8.maths.u1.s1-2-2.11"
+    },
+    {
+     "kind": "order",
+     "step": "exercise",
+     "graded": true,
+     "title": "Q2 c: descending",
+     "items": [
+      "4.23",
+      "3 5/6",
+      "3.75",
+      "18/5",
+      "3.21"
+     ],
+     "why": "4.23 > 3.83 > 3.75 > 3.6 > 3.21.",
+     "clue": "Change them to decimals.",
+     "id": "g8.maths.u1.s1-2-2.12"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Q3 a: whose plant grew the most?",
+     "opts": [
+      "Rahel",
+      "Kassa",
+      "Alemitu",
+      "Munir"
+     ],
+     "ans": "Rahel",
+     "why": "3 1/4 is the largest difference.",
+     "clue": "Look for the biggest number.",
+     "id": "g8.maths.u1.s1-2-2.13"
+    },
+    {
+     "kind": "order",
+     "step": "exercise",
+     "graded": true,
+     "title": "Q3 b: lowest to highest",
+     "items": [
+      "−2.2",
+      "−1 7/10",
+      "1.7",
+      "3 1/4"
+     ],
+     "why": "−2.2 < −1.7 < 1.7 < 3.25.",
+     "clue": "Change them to decimals.",
+     "id": "g8.maths.u1.s1-2-2.14"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "order",
+   "step": "test",
+   "graded": true,
+   "title": "Ascending",
+   "items": [
+    "−1/2",
+    "1/3",
+    "0.5",
+    "3/4"
+   ],
+   "why": "−0.5 < 0.33 < 0.5 < 0.75.",
+   "clue": "",
+   "gen": {
+    "t": "order",
+    "desc": false
+   },
+   "id": "g8.maths.u1.s1-2-2.15"
+  },
+  {
+   "kind": "order",
+   "step": "test",
+   "graded": true,
+   "title": "Descending",
+   "items": [
+    "2.5",
+    "2 1/4",
+    "−1",
+    "−1.5"
+   ],
+   "why": "2.5 > 2.25 > −1 > −1.5.",
+   "clue": "",
+   "gen": {
+    "t": "order",
+    "desc": true
+   },
+   "id": "g8.maths.u1.s1-2-2.16"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is the smallest: 3/4, 0.7, 5/8?",
+   "opts": [
+    "3/4",
+    "0.7",
+    "5/8"
+   ],
+   "ans": "5/8",
+   "why": "5/8 = 0.625.",
+   "clue": "",
+   "id": "g8.maths.u1.s1-2-2.17"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "Exercise 1.5 Q1 c and Q2 b are long mixed lists; Q2 c and the plant table are used instead. All orders were computed exactly."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.lcm": {
+   "name": "Least common multiple",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "LCM of 4 and 6",
+     "text": "List multiples until one appears in both lists.",
+     "steps": [
+      "Multiples of 4: 4, 8, 12, 16, …",
+      "Multiples of 6: 6, 12, 18, …",
+      "12 is the first one in both lists.",
+      "So LCM(4, 6) = 12."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "What is the LCM of 6 and 8?",
+     "opts": [
+      "24",
+      "48",
+      "14",
+      "12"
+     ],
+     "ans": "24",
+     "why": "Multiples of 8: 8, 16, 24. 24 is also a multiple of 6.",
+     "clue": "List multiples of 8 and stop at the first that 6 divides."
+    }
+   ]
+  }
+ }
+}

@@ -95,31 +95,55 @@
      "id": "g8.maths.u1.s1-1-2.2"
     },
     {
-     "kind": "tree",
+     "kind": "nest",
      "step": "explore",
      "title": "Figure 1.11 Each set sits inside the next",
-     "root": {
-      "label": "ℚ Rational numbers",
-      "info": "Any a/b with a, b integers and b ≠ 0. Contains all the sets below.",
-      "children": [
-       {
-        "label": "ℤ Integers",
-        "info": "…, −2, −1, 0, 1, 2, … Inside ℚ.",
-        "children": [
-         {
-          "label": "W Whole numbers",
-          "info": "0, 1, 2, 3, … Inside ℤ.",
-          "children": [
-           {
-            "label": "ℕ Natural numbers",
-            "info": "1, 2, 3, … Inside W, ℤ and ℚ."
-           }
-          ]
-         }
-        ]
-       }
+     "ask": "Tap a circle, then tap each number.",
+     "rings": [
+      [
+       "ℚ",
+       "Rational numbers",
+       "Any a/b with a, b integers and b ≠ 0."
+      ],
+      [
+       "ℤ",
+       "Integers",
+       "…, −2, −1, 0, 1, 2, …"
+      ],
+      [
+       "W",
+       "Whole numbers",
+       "0, 1, 2, 3, …"
+      ],
+      [
+       "ℕ",
+       "Natural numbers",
+       "1, 2, 3, …"
       ]
-     },
+     ],
+     "numbers": [
+      [
+       "10",
+       3,
+       "A natural number is in every set."
+      ],
+      [
+       "0",
+       2,
+       "0 is whole, but not natural."
+      ],
+      [
+       "−13",
+       1,
+       "A negative integer."
+      ],
+      [
+       "1/7",
+       0,
+       "A fraction that is not an integer."
+      ]
+     ],
+     "need": 4,
      "id": "g8.maths.u1.s1-1-2.3"
     },
     {
@@ -299,6 +323,9 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
+   "gen": {
+    "t": "classify"
+   },
    "text": "What is the smallest set that contains −7?",
    "opts": [
     "ℕ",
@@ -315,6 +342,9 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
+   "gen": {
+    "t": "classify"
+   },
    "text": "What is the smallest set that contains 2/3?",
    "opts": [
     "ℕ",
@@ -341,7 +371,7 @@
  "notes": [
   {
    "kind": "note",
-   "text": "Figure 1.11 (four nested circles) is shown as a tap-to-explore nesting tree; a true nested-rings figure is planned (engine step B: nest block)."
+   "text": "Figure 1.11 (four nested circles) is drawn as tap-to-explore rings with numbers to place."
   },
   {
    "kind": "note",

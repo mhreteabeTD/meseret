@@ -11,7 +11,7 @@ const store = {
   get(k, d) { try { const v = localStorage.getItem('meseret:' + k); return v == null ? d : JSON.parse(v); } catch (_) { return d; } },
   set(k, v) { try { localStorage.setItem('meseret:' + k, JSON.stringify(v)); } catch (_) {} }
 };
-const S = { lang: store.get('lang', null), grade: store.get('grade', null), name: store.get('name', ''), code: store.get('code', ''), i18n: {}, index: null, lessons: {} };
+const S = { lang: store.get('lang', null), grades: store.get('grades', null) || (store.get('grade', null) ? [store.get('grade', null)] : []), name: store.get('name', ''), code: store.get('code', ''), i18n: {}, index: null, lessons: {} };
 if (S.lang) document.documentElement.lang = S.lang;
 
 /* ---------- i18n ---------- */
@@ -79,7 +79,7 @@ async function viewWelcome() {
   const mark = () => app.querySelectorAll('[data-lang]').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === lang));
   mark();
   app.querySelector('.opts').addEventListener('click', e => { const b = e.target.closest('[data-lang]'); if (!b || b.disabled) return; lang = b.dataset.lang; mark(); });
-  const next = async () => { await loadLang(lang); location.hash = S.grade ? 'home' : 'setup'; };
+  const next = async () => { await loadLang(lang); location.hash = S.grades.length ? 'home' : 'setup'; };
   $('#start').onclick = next;
   $('#g').onclick = $('#tg').onclick = async () => { await loadLang(lang); toast(t('signin_soon')); };
   $('#code').onclick = async () => { await loadLang(lang); const c = window.prompt ? window.prompt(t('class_code_prompt'), S.code || '') : null; if (c != null) { S.code = c.trim().toUpperCase(); store.set('code', S.code); } next(); };
@@ -89,17 +89,17 @@ async function viewSetup() {
   setNav(false); setTop(''); hideTray();
   const grades = [7, 8, 9, 10, 11, 12];
   app.innerHTML = `<div class="row"><div class="bar"><i style="width:66%"></i></div><span class="count">2 / 3</span></div>
-  <div class="stack"><h1 class="display">${t('which_grade')}</h1><p class="small muted">${t('change_later')}</p></div>
+  <div class="stack"><h1 class="display">${t('which_grade')}</h1><p class="small muted">${t('grades_many')} ${t('change_later')}</p></div>
   <div class="opts row3" role="group">${grades.map(g => `<button class="opt center" data-g="${g}" style="min-height:64px;font-size:22px">${g}</button>`).join('')}</div>
   <label class="stack"><span class="small" style="font-weight:800">${t('your_name')}</span><input id="nm" value="${esc(S.name)}" style="min-height:52px;padding:0 14px;border-radius:12px;border:2px solid var(--line);background:var(--surface)"></label>
   <div class="card"><div class="row"><button class="play" aria-label="play" id="hear"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l12 7-12 7z" fill="#fff"/></svg></button><div class="grow"><div style="font-weight:800">${t('explain_me')} · 0:35</div><div class="small muted">${t('lang_note')}</div></div></div></div>
   <button class="btn" id="next">${t('continue')} ›</button>`;
-  let g = S.grade;
-  const mark = () => app.querySelectorAll('[data-g]').forEach(b => b.setAttribute('aria-pressed', +b.dataset.g === g));
+  const g = new Set(S.grades);
+  const mark = () => app.querySelectorAll('[data-g]').forEach(b => b.setAttribute('aria-pressed', g.has(+b.dataset.g)));
   mark();
-  app.querySelector('.opts').addEventListener('click', e => { const b = e.target.closest('[data-g]'); if (!b) return; g = +b.dataset.g; mark(); });
+  app.querySelector('.opts').addEventListener('click', e => { const b = e.target.closest('[data-g]'); if (!b) return; const v = +b.dataset.g; g.has(v) ? g.delete(v) : g.add(v); mark(); });
   $('#hear').onclick = () => speak(t('lang_note'));
-  $('#next').onclick = () => { if (!g) { toast(t('which_grade')); return; } S.grade = g; store.set('grade', g); S.name = $('#nm').value.trim(); store.set('name', S.name); location.hash = 'home'; };
+  $('#next').onclick = () => { if (!g.size) { toast(t('which_grade')); return; } S.grades = [...g].sort((a, b) => a - b); store.set('grades', S.grades); S.name = $('#nm').value.trim(); store.set('name', S.name); location.hash = 'home'; };
 }
 
 function speak(text) {
@@ -113,19 +113,19 @@ function dueReview() {
 
 async function viewHome() {
   const idx = await loadIndex(); setTop(''); hideTray(); setNav(true);
-  const mine = idx.chapters.filter(c => c.grade === S.grade), others = idx.chapters.filter(c => c.grade !== S.grade);
+  const mine = idx.chapters.filter(c => S.grades.includes(c.grade)), others = [];
   const last = store.get('last', null);
   const due = dueReview();
   const days = store.get('days', []); const week = []; for (let i = 6; i >= 0; i--) { const d = new Date(Date.now() - i * DAY).toISOString().slice(0, 10); week.push([['S', 'M', 'T', 'W', 'T', 'F', 'S'][new Date(d).getDay()], days.includes(d)]); }
   const chapterCard = c => { const p = chapterProgress(c.id), sub = idx.subjects[c.subject] || {}; return `<a class="item" href="#${c.view === 'book' ? 'book' : 'chapter'}/${c.id}"><div class="icon" style="background:var(--accent-soft);color:var(--accent-deep)">${sub.icon || '•'}</div><div class="grow"><div class="t">${esc(L(sub))} · ${t('grade')} ${c.grade}</div><div class="s">${t('unit')} ${c.unit} · ${esc(L(c.title))}${p ? ` · ${t('lessons_read', { d: p.done, t: p.total })}` : ''}</div></div>${c.free ? `<span class="pill green">${t('free_chapter')}</span>` : ''}</a>`; };
-  app.innerHTML = `<div class="row"><div class="grow"><div class="small muted" style="font-weight:700">${t('grade')} ${S.grade || ''}</div><h1 class="display">${t('hello')}${S.name ? ', ' + esc(S.name) : ''}</h1></div><a class="iconbtn" href="#settings" aria-label="${t('settings')}">${svgIcon('M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM19 12l2-1-1-3-2 .3-1.5-1.5.3-2-3-1-1 2h-2l-1-2-3 1 .3 2L5.6 8.3 3.6 8l-1 3 2 1v2l-2 1 1 3 2-.3 1.5 1.5-.3 2 3 1 1-2h2l1 2 3-1-.3-2 1.5-1.5 2 .3 1-3-2-1z')}</a></div>
+  app.innerHTML = `<div class="row"><div class="grow"><div class="small muted" style="font-weight:700">${t('grade')} ${S.grades.join(' · ')}</div><h1 class="display">${t('hello')}${S.name ? ', ' + esc(S.name) : ''}</h1></div><a class="iconbtn" href="#settings" aria-label="${t('settings')}">${svgIcon('M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM19 12l2-1-1-3-2 .3-1.5-1.5.3-2-3-1-1 2h-2l-1-2-3 1 .3 2L5.6 8.3 3.6 8l-1 3 2 1v2l-2 1 1 3 2-.3 1.5 1.5-.3 2 3 1 1-2h2l1 2 3-1-.3-2 1.5-1.5 2 .3 1-3-2-1z')}</a></div>
   <div class="week">${week.map(([d, on]) => `<div>${d}<i class="${on ? 'on' : ''}"></i></div>`).join('')}</div>
   ${last ? `<a class="card accent" href="#${last.route}"><span class="eyebrow">${t('continue')}</span><span class="display" style="font-size:22px">${esc(last.title)}</span><span class="small">${esc(last.sub || '')}</span></a>` : ''}
   <a class="card" href="#review" style="text-decoration:none;color:inherit"><div class="row"><div class="icon" style="background:var(--sky-soft);color:var(--sky)">${svgIcon('M4 12a8 8 0 1 0 2.3-5.7M4 4v4h4')}</div><div class="grow"><div style="font-weight:800">${t('today_review')}</div><div class="small muted">${due.length ? t('review_sub', { n: due.length }) : t('review_empty')}</div></div></div></a>
   <h2 class="display">${t('your_subjects')}</h2>
   <div class="list">${mine.length ? mine.map(chapterCard).join('') : `<div class="item"><div class="s">${t('no_lessons_yet')}</div></div>`}</div>
   ${others.length ? `<h2 class="display">${t('all_grades')}</h2><div class="list">${others.map(chapterCard).join('')}</div>` : ''}
-  <h2 class="display">${t('coming')}</h2><div class="list">${idx.coming.map(c => `<div class="item"><div class="icon" style="background:var(--surface-2);color:var(--muted)">+</div><div class="grow"><div class="t muted">${esc(L(idx.subjects[c.subject] || { en: c.subject }))} · ${t('grade')} ${c.grade} · ${t('unit')} ${c.unit}</div><div class="s">${esc(L(c.title))}</div></div></div>`).join('')}</div>
+  <h2 class="display">${t('coming')}</h2><div class="list">${idx.coming.filter(c => S.grades.includes(c.grade)).map(c => `<div class="item"><div class="icon" style="background:var(--surface-2);color:var(--muted)">+</div><div class="grow"><div class="t muted">${esc(L(idx.subjects[c.subject] || { en: c.subject }))} · ${t('grade')} ${c.grade} · ${t('unit')} ${c.unit}</div><div class="s">${esc(L(c.title))}</div></div></div>`).join('')}</div>
   <p class="small muted">${t('install')}. ${t('install_how')}</p>`;
 }
 
@@ -173,7 +173,7 @@ async function viewExams() {
 async function viewSettings() {
   setNav(true); hideTray(); setTop(`<a class="iconbtn" href="#home" aria-label="back">${svgIcon(BACK)}</a><div class="display" style="font-size:18px">${t('settings')}</div>`);
   app.innerHTML = `<div class="card"><div style="font-weight:800">${t('language')}</div><div class="opts row3"><button class="opt center" data-l="am" style="font-family:var(--ethiopic)">አማርኛ</button><button class="opt center" data-l="en">English</button><button class="opt center" disabled>Oromoo</button></div></div>
-  <div class="card"><div style="font-weight:800">${t('grade')}</div><a class="btn ghost" href="#setup">${S.grade || '?'} ›</a></div>
+  <div class="card"><div style="font-weight:800">${t('grade')}</div><a class="btn ghost" href="#setup">${S.grades.join(', ') || '?'} ›</a></div>
   <div class="card"><div style="font-weight:800">${t('install')}</div><div class="small muted">${t('install_how')}</div></div>
   <p class="small muted">Meseret v0.1 · ${S.code ? 'Class ' + esc(S.code) : ''}</p>`;
   app.querySelectorAll('[data-l]').forEach(b => { b.setAttribute('aria-pressed', b.dataset.l === S.lang); b.onclick = async () => { await loadLang(b.dataset.l); viewSettings(); }; });
@@ -308,6 +308,96 @@ function numMatch(given, accepted) {
     else if (g.n === q.n && g.d === q.d) return true; }
   return false;
 }
+/* GEN-START ---------- Gen: fresh practice questions from a formula ----------
+   A screen may carry "gen": {"t": "<generator>", ...options}. The screen's own text is the book's version.
+   When a student replays practice, retries a missed question, or takes a test, Gen.make(screen) returns the
+   same kind of question with new numbers (exact answers, worked steps). Book exercises always stay the book's. */
+const Gen = (() => {
+  const rng = seed => () => { seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
+  let r = Math.random;
+  const int = (a, b) => a + Math.floor(r() * (b - a + 1)), pick = a => a[int(0, a.length - 1)], sgn = () => r() < .5 ? -1 : 1;
+  const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = int(0, i); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+  const M = x => String(x).replace(/-/g, '−');
+  const fq = q => M(q.d === 1 ? `${q.n}` : `${q.n}/${q.d}`);
+  const fmix = q => { if (q.d === 1 || Math.abs(q.n) < q.d) return fq(q); const w = Math.trunc(Math.abs(q.n) / q.d), n = Math.abs(q.n) % q.d; return M(`${q.n < 0 ? '-' : ''}${w} ${n}/${q.d}`); };
+  const par = q => q.n < 0 ? `(${fmix(q)})` : fmix(q);
+  const add = (a, b) => Q.mk(a.n * b.d + b.n * a.d, a.d * b.d), mul = (a, b) => Q.mk(a.n * b.n, a.d * b.d), neg = a => Q.mk(-a.n, a.d), div = (a, b) => Q.mk(a.n * b.d, a.d * b.n);
+  const lcm = (a, b) => a / Q.gcd(a, b) * b;
+  const proper = (dens = [2, 3, 4, 5, 6, 7, 8, 9, 10, 12]) => { const d = pick(dens); let n = int(1, d - 1); while (Q.gcd(n, d) !== 1) n = int(1, d - 1); return Q.mk(n, d); };
+  const forms = q => { const L = [fq(q), fmix(q)]; const v = Q.val(q); if (Math.abs(v * 1000 - Math.round(v * 1000)) < 1e-9) L.push(String(+v.toFixed(3))); return [...new Set(L)]; };
+  const pair = k => `${M(k)} and ${M(k + 1)}`;
+  const NAMES = ['Abebe', 'Almaz', 'Kebede', 'Hiwot', 'Tigist', 'Dawit', 'Selam', 'Yonas', 'Meron', 'Bekele'];
+  const T = {
+    place(o) { const d = pick(o.dens || [2, 3, 4, 5, 6]); let n; do n = int(1, d * (o.improper ? 3 : 1) - 1); while (n % d === 0); const q = Q.mk(n * (o.signs ? sgn() : 1), d), lo = Math.floor(Q.val(q));
+      return { kind: 'numline', min: lo - 1, max: lo + 2, sub: q.d, targets: [{ v: fq(q), label: fq(q) }], ask: `Tap where ${fq(q)} goes.`, why: `${fmix(q) !== fq(q) ? `${fq(q)} = ${fmix(q)}. ` : ''}It lies between ${pair(lo)}.`, clue: q.n < 0 ? 'Negative numbers are left of 0.' : 'Split each unit into equal parts.' }; },
+    between() { const d = pick([2, 3, 4, 5, 7]); let n; do n = int(1, d * 3); while (n % d === 0); const q = Q.mk(n * sgn(), d), lo = Math.floor(Q.val(q));
+      const opts = shuffle([pair(lo), ...shuffle([pair(lo - 1), pair(lo + 1), pair(lo + 2)]).slice(0, 2), pair(-lo - 1) === pair(lo) ? pair(lo - 2) : pair(-lo - 1)]);
+      return { kind: 'mcq', text: `Between which two integers does ${fq(q)} lie?`, opts: [...new Set(opts)], ans: pair(lo), why: `${fmix(q) !== fq(q) ? `${fq(q)} = ${fmix(q)}. ` : ''}So it lies between ${pair(lo)}.`, clue: 'Change it to a mixed fraction first.' }; },
+    mixed() { const d = pick([2, 3, 4, 5, 6, 7, 8, 9, 10]); let n; do n = int(d + 1, d * 7); while (n % d === 0); const q = Q.mk(n, d);
+      return { kind: 'blank', num: false, ask: `As a mixed fraction, ${fq(q)} = ___`, a: [fmix(q)], why: `${q.n} ÷ ${q.d} = ${Math.trunc(q.n / q.d)} remainder ${q.n % q.d}. So ${fq(q)} = ${fmix(q)}.`, clue: `Divide ${q.n} by ${q.d}. The remainder is the new numerator.` }; },
+    opposite() { const q = Q.mk(int(1, 30) * sgn(), pick([1, 2, 3, 4, 5, 7])); return { kind: 'blank', num: true, ask: `The opposite of ${fmix(q)} is ___`, a: forms(neg(q)), why: `Change the sign: the opposite of ${fmix(q)} is ${fmix(neg(q))}.`, clue: 'Same distance from 0, other side.' }; },
+    abs(o) { if ((o.form || pick(['in', 'in', 'sum'])) === 'in') { const a = int(-30, 30), b = int(1, 30), plus = r() < .5, v = plus ? a + b : a - b;
+        return { kind: 'blank', num: true, ask: `|${M(a)} ${plus ? '+' : '−'} ${b}| = ___`, a: [String(Math.abs(v))], why: `${M(a)} ${plus ? '+' : '−'} ${b} = ${M(v)}, and |${M(v)}| = ${Math.abs(v)}.`, clue: 'Work inside the bars first.' }; }
+      const a = int(-20, 20), b = int(-20, 20), c = int(-20, 20), v = Math.abs(a) - Math.abs(b) + Math.abs(c);
+      return { kind: 'blank', num: true, ask: `|${M(a)}| − |${M(b)}| + |${M(c)}| = ___`, a: [String(v)], why: `${Math.abs(a)} − ${Math.abs(b)} + ${Math.abs(c)} = ${M(v)}.`, clue: 'Find each absolute value first.' }; },
+    abseq(o) { const a = int(2, 15);
+      if (o.shift) { const c = int(1, 9) * sgn(), s1 = a - c, s2 = -a - c, lhs = `|x ${c < 0 ? '−' : '+'} ${Math.abs(c)}|`; const pool = shuffle([s1, s2, ...shuffle([...new Set([a, -a, c, -c, a + c])].filter(x => x !== s1 && x !== s2)).slice(0, 3)]).map(M);
+        return { kind: 'pick', text: `Tap all solutions of ${lhs} = ${a}.`, pool, a: [M(s1), M(s2)], why: `The inside is ${a} or −${a}. So x = ${M(s1)} or x = ${M(s2)}.`, clue: `x ${c < 0 ? '−' : '+'} ${Math.abs(c)} must be ${a} or −${a}.` }; }
+      if (r() < .25) return { kind: 'mcq', text: `How many solutions does |x| = −${a} have?`, opts: ['0', '1', '2'], ans: '0', why: 'A distance is never negative, so there is no solution.', clue: 'Can a distance be negative?' };
+      const q = r() < .4 ? proper([2, 3, 4, 5, 7]) : Q.mk(a, 1); const pool = shuffle([fq(q), fq(neg(q)), '0', fq(mul(q, Q.mk(2, 1)))]);
+      return { kind: 'pick', text: `Tap all solutions of |x| = ${fq(q)}.`, pool, a: [fq(q), fq(neg(q))], why: `${fq(q)} and ${fq(neg(q))} are both ${fq(q)} from 0.`, clue: 'One on each side of 0.' }; },
+    classify() { const k = int(0, 3), v = [String(int(1, 40)), '0', M(-int(1, 40)), fq(Q.mk(int(1, 9) * sgn(), pick([3, 7, 11])))][k]; const S = ['ℕ', 'W', 'ℤ', 'ℚ'], why = ['A counting number is in every set.', '0 is whole but not natural.', 'A negative integer is in ℤ and ℚ.', 'A fraction that is not an integer is only in ℚ.'][k];
+      return { kind: 'mcq', text: `What is the smallest set that contains ${v}?`, opts: S, ans: S[k], why, clue: 'Is it a fraction? Is it negative? Is it 0?' }; },
+    compare(o) { const kind = o.kind || pick(['frac', 'frac', 'neg', 'dec']); let A, B, fa, fb, why;
+      if (kind === 'dec') { const x = int(100, 999) / 100, y = +(x + pick([-1, 1]) * pick([0.01, 0.1, 0.05, 0.09, 1])).toFixed(2); fa = String(x); fb = String(y); A = Q.parse(fa); B = Q.parse(fb); why = 'Compare the integer parts, then tenths, then hundredths.'; }
+      else { A = proper([2, 3, 4, 5, 6, 7, 8, 9]); let Bd, Bn; if (r() < .2) { const k = int(2, 4); Bn = A.n * k; Bd = A.d * k; } else { const b = proper([2, 3, 4, 5, 6, 7, 8, 9]); Bn = b.n; Bd = b.d; }
+        if (kind === 'neg') { A = neg(A); if (r() < .6) Bn = -Bn; }
+        B = Q.mk(Bn, Bd); fa = fq(A); fb = M(`${Bn}/${Bd}`); why = `Cross-multiply: ${M(A.n)} × ${Bd} = ${M(A.n * Bd)} and ${A.d} × ${M(Bn)} = ${M(A.d * Bn)}.`; }
+      const c = A.n * B.d - B.n * A.d, ans = c < 0 ? '<' : c > 0 ? '>' : '=';
+      return { kind: 'mcq', text: `Which sign is correct? ${fa} ? ${fb}`, opts: ['<', '>', '='], ans, why: `${why} So ${fa} ${ans} ${fb}.`, clue: kind === 'dec' ? 'Compare place by place, left to right.' : 'Cross-multiply, or use a common denominator.' }; },
+    order(o) { const desc = o.desc != null ? o.desc : r() < .5; const qs = [];
+      while (qs.length < (o.n || 4)) { const q = r() < .35 ? Q.mk(int(-60, 99), 10) : Q.mk(int(1, 23) * (o.signs === false ? 1 : sgn()), pick([2, 3, 4, 5, 6, 8])); if (!qs.some(x => x.n * q.d === q.n * x.d)) qs.push(q); }
+      const lab = qs.map(q => q.d === 10 || q.d === 5 || q.d === 1 ? M(+Q.val(q).toFixed(2)) : fmix(q)); const srt = qs.map((q, i) => [Q.val(q), lab[i]]).sort((a, b) => desc ? b[0] - a[0] : a[0] - b[0]).map(x => x[1]);
+      return { kind: 'order', text: `Tap them in ${desc ? 'descending order (largest first)' : 'ascending order (smallest first)'}.`, items: srt, why: srt.join(desc ? ' > ' : ' < '), clue: 'Change them to decimals or to a common denominator.' }; },
+    op(o) { const t = o.op || 'add', dens = o.dens || [2, 3, 4, 5, 6, 8, 9, 10, 12];
+      let a = proper(dens), b;
+      if (o.same) { let n; do n = int(1, a.d * 2); while (Q.gcd(n, a.d) !== 1); b = Q.mk(n, a.d); } else b = proper(dens);
+      if (o.mixed) { a = add(a, Q.mk(int(1, 3), 1)); if (r() < .5) b = add(b, Q.mk(int(1, 2), 1)); }
+      if (o.signs) { if (r() < .6) a = neg(a); if (r() < .5) b = neg(b); }
+      if (o.word && t === 'div') { b = proper([2, 3, 4, 5, 8]); a = mul(b, Q.mk(int(2, 8), 1)); }
+      if (o.word && t === 'sub' && Q.val(a) < Q.val(b)) [a, b] = [b, a];
+      if (o.word && t === 'sub' && Q.val(a) === Q.val(b)) a = add(a, Q.mk(1, 1));
+      const A = a, B = b, sym = { add: '+', sub: '−', mul: '×', div: '÷' }[t];
+      const res = t === 'add' ? add(A, B) : t === 'sub' ? add(A, neg(B)) : t === 'mul' ? mul(A, B) : div(A, B);
+      const pre = [fmix(A) !== fq(A) ? `${fmix(A)} = ${fq(A)}` : '', fmix(B) !== fq(B) ? `${fmix(B)} = ${fq(B)}` : ''].filter(Boolean); const lines = pre.length && (t === 'mul' || t === 'div' || A.d !== B.d) ? [`Change to improper fractions: ${pre.join(', ')}.`] : [];
+      if (t === 'add' || t === 'sub') { const B2 = t === 'sub' ? neg(B) : B, L = lcm(A.d, B2.d); if (t === 'sub') lines.push(`Subtracting ${fq(B)} means adding ${fq(B2)}.`); if (A.d !== B2.d) lines.push(`LCM of ${A.d} and ${B2.d} is ${L}: ${fq(A)} = ${M(A.n * L / A.d)}/${L} and ${fq(B2)} = ${M(B2.n * L / B2.d)}/${L}.`); lines.push(`Add the numerators: ${M(A.n * L / A.d + B2.n * L / B2.d)}/${L}${Q.mk(A.n * L / A.d + B2.n * L / B2.d, L).d !== L ? ` = ${fq(res)}` : ''}.`); }
+      if (t === 'mul') lines.push(`Sign: ${(A.n < 0) === (B.n < 0) ? 'same signs give +' : 'different signs give −'}.`, `Multiply tops and bottoms: ${Math.abs(A.n * B.n)}/${A.d * B.d}${Q.mk(Math.abs(A.n * B.n), A.d * B.d).d !== A.d * B.d ? ` = ${fq(Q.mk(Math.abs(res.n), res.d))}` : ''}.`);
+      if (t === 'div') lines.push(`Multiply by the reciprocal of ${fq(B)}, which is ${fq(Q.mk(B.d, B.n))}.`, `${fq(A)} × ${fq(Q.mk(B.d, B.n))} = ${fq(res)}.`);
+      if (fmix(res) !== fq(res)) lines.push(`As a mixed fraction: ${fmix(res)}.`);
+      let ask = `${fmix(A)} ${sym} ${par(B)} = ___`;
+      if (o.word) { const nm = pick(NAMES); ask = { add: `${nm} walked ${fmix(A)} km to school and ${fmix(B)} km to the market. Total distance = ___ km`, sub: `A rope is ${fmix(A)} m long. ${nm} cuts off ${fmix(B)} m. Length left = ___ m`, mul: `${nm} buys ${fmix(A)} kg of teff. One kg costs ${fmix(B)} hundred Birr. Cost = ___ hundred Birr`, div: `${nm} has ${fmix(A)} kg of coffee. Each bag holds ${fmix(B)} kg. Number of bags = ___` }[t]; }
+      return { kind: 'blank', num: true, ask, a: forms(res), why: lines.join(' '), worked: lines.join(' '), clue: { add: 'Use a common denominator, then add the numerators.', sub: 'Add the opposite of the second number.', mul: 'Decide the sign, then multiply tops and bottoms.', div: 'Multiply by the reciprocal of the divisor.' }[t] }; },
+    share() { const k = pick([3, 4, 5, 6]), n = pick([2, 3, 4]), rest = Q.mk(k - 1, k), each = div(rest, Q.mk(n, 1)), nm = pick(NAMES);
+      return { kind: 'blank', num: true, ask: `${nm}'s mother takes 1/${k} of a sugarcane. ${n} brothers share the rest equally. Each brother gets ___ of the sugarcane.`, a: forms(each), why: `The rest is 1 − 1/${k} = ${fq(rest)}. ${fq(rest)} ÷ ${n} = ${fq(each)}.`, clue: 'Find what is left first, then divide it equally.' }; },
+    interest(o) { const find = o.find || pick(['I', 'I', 'P', 'T', 'R']), nm = pick(NAMES), bank = pick(['CBE', 'a bank', 'a saving association']), P = int(5, 60) * 100, R = int(4, 15), months = find === 'I' && r() < .5, T = months ? int(3, 11) : int(1, 5), Ty = months ? T / 12 : T;
+      const I = Math.round(P * R / 100 * Ty * 100) / 100, Ts = months ? `${T}/12` : `${T}`, ex = Math.abs(P * R / 100 * Ty - I) < 1e-9 ? String(I) : '≈' + I.toFixed(2);
+      if (find === 'I') return { kind: 'blank', num: true, ask: `${nm} borrows Birr ${P} from ${bank} at ${R}% simple interest for ${T} ${months ? 'months' : T > 1 ? 'years' : 'year'}. Interest = Birr ___`, a: [ex], why: `I = P × R × T = ${P} × ${R / 100} × ${Ts} = ${I}.`, clue: months ? 'T is in years: divide the months by 12.' : 'Use I = P × R × T with R as a decimal.' };
+      if (find === 'P') return { kind: 'blank', num: true, ask: `What principal earns Birr ${I} interest in ${T} year${T > 1 ? 's' : ''} at ${R}%? P = Birr ___`, a: [String(P)], why: `P = I ÷ (R × T) = ${I} ÷ (${R / 100} × ${T}) = ${P}.`, clue: 'P = I ÷ (R × T).' };
+      if (find === 'T') return { kind: 'blank', num: true, ask: `Birr ${P} earns Birr ${I} simple interest at ${R}% per year. Time = ___ years`, a: [String(T)], why: `T = I ÷ (P × R) = ${I} ÷ (${P} × ${R / 100}) = ${T}.`, clue: 'T = I ÷ (P × R).' };
+      return { kind: 'blank', num: true, ask: `Birr ${P} earns Birr ${I} simple interest in ${T} year${T > 1 ? 's' : ''}. Rate = ___ %`, a: [String(R)], why: `R = I ÷ (P × T) = ${I} ÷ (${P} × ${T}) = ${R / 100} = ${R}%.`, clue: 'R = I ÷ (P × T), then change to a percent.' }; },
+  };
+  const api = {
+    has: s => !!(s && s.gen && T[s.gen.t]),
+    list: () => Object.keys(T),
+    make(s, seed) { if (!api.has(s)) return s; r = seed == null ? Math.random : rng(seed);
+      try { const v = T[s.gen.t](s.gen, s); const out = Object.assign({}, s, { title: s.title ? s.title.replace(/^(Example|Exercise|Activity|Group work)[^:]*:\s*/i, '') : s.title }, v, { _gen: true });
+        ['ask', 'text', 'worked', 'opts', 'ans', 'pool', 'items', 'targets', 'min', 'max', 'sub', 'num'].forEach(k => { if (!(k in v)) delete out[k]; }); return out; }
+      catch (e) { return s; } finally { r = Math.random; } },
+  };
+  return api;
+})();
+/* GEN-END */
+
 // a number label in SVG: fractions are drawn stacked, like the book
 function svgNum(x, y, str, col, size = 13) {
   const m = String(str).match(/^([−-])?(\d+ )?(\d+)\/(\d+)$/);
@@ -374,8 +464,11 @@ function makeR(env) {
       const draw = () => { ol.innerHTML = s.steps.slice(0, k + 1).map(x => `<li>${esc(x)}</li>`).join(''); if (f.type === 'venn') el.querySelector('#venn').innerHTML = vennSVG(f.a, f.b, k); nb.disabled = k >= s.steps.length - 1; env.update(); };
       nb.addEventListener('click', () => { k++; draw(); }); draw();
       return { el, label: t('continue'), ready: () => k >= s.steps.length - 1 }; },
-    blank(s) { const [a, b] = (s.ask || '___').split('___'); const el = div(head(s) + `<div class="fig"><p class="blank"><span>${esc(a)}</span><input id="bl" autocomplete="off" aria-label="${t('your_answer')}"><span>${esc(b || '')}</span></p><p class="small muted">${t('spelling_note')}</p></div>`); const inp = el.querySelector('#bl'); inp.addEventListener('input', () => env.update()); inp.addEventListener('keydown', e => { if (e.key === 'Enter') env.enter(); });
-      return { el, label: t('check'), ready: () => inp.value.trim() !== '', check() { const nm = s.num ? numMatch(inp.value, s.a.map(String)) : null; const r = nm === true ? { ok: true } : nm === false ? { ok: false } : matchAnswer(inp.value, s.a.map(String)); inp.className = r.ok ? 'ok' : 'no'; inp.disabled = r.ok; return r.ok ? { ok: true, body: (r.near ? t('right_idea', { a: r.near }) + ' ' : '') + (s.why || '') } : { ok: false, body: s.clue }; }, retry() { inp.className = ''; inp.focus(); } }; },
+    blank(s) { const [a, b] = (s.ask || '___').split('___'), signed = s.input === 'signed'; let sign = '';
+      const el = div(head(s) + `<div class="fig"><p class="blank"><span>${esc(a)}</span>${signed ? `<span class="sgn" role="group" aria-label="${t('sign')}"><button type="button" data-s="+">+</button><button type="button" data-s="−">−</button></span>` : ''}<input id="bl" autocomplete="off" aria-label="${t('your_answer')}"><span>${esc(b || '')}</span></p><p class="small muted">${s.num ? t(signed ? 'signed_note' : 'num_note') : t('spelling_note')}</p></div>`); const inp = el.querySelector('#bl'); inp.addEventListener('input', () => env.update()); inp.addEventListener('keydown', e => { if (e.key === 'Enter') env.enter(); });
+      if (signed) el.querySelector('.sgn').onclick = e => { const bt = e.target.closest('button'); if (!bt || inp.disabled) return; sign = bt.dataset.s; el.querySelectorAll('.sgn button').forEach(x => x.setAttribute('aria-pressed', x === bt)); env.update(); };
+      const val = () => signed ? (sign === '−' ? '-' : '') + inp.value.trim().replace(/^[+−-]\s*/, '') : inp.value;
+      return { el, label: t('check'), ready: () => inp.value.trim() !== '' && (!signed || !!sign), check() { const nm = s.num ? numMatch(val(), s.a.map(String)) : null; const r = nm === true ? { ok: true } : nm === false ? { ok: false } : matchAnswer(val(), s.a.map(String)); inp.className = r.ok ? 'ok' : 'no'; inp.disabled = r.ok; return r.ok ? { ok: true, body: (r.near ? t('right_idea', { a: r.near }) + ' ' : '') + (s.why || '') } : { ok: false, body: s.clue }; }, retry() { inp.className = ''; inp.focus(); } }; },
     sort(s) { const el = div(head(s) + `<div class="fig"><p class="display" id="it" style="text-align:center;font-size:22px"></p><div class="opts" id="bins">${s.bins.map(b => `<button class="opt center">${esc(b)}</button>`).join('')}</div><p class="small muted" id="fb"></p></div>`); let i = 0, wrong = 0; const draw = () => { el.querySelector('#it').textContent = i < s.items.length ? s.items[i][0] : ''; };
       el.querySelector('#bins').addEventListener('click', e => { const b = e.target.closest('.opt'); if (!b || i >= s.items.length || env.phase() !== 'answer') return; const [name, ans, why] = s.items[i]; const ok = b.textContent === ans; if (!ok) wrong++; el.querySelector('#fb').textContent = (ok ? '✓ ' : '✗ ') + `${name} → ${ans}. ${why || ''}`; i++; draw(); if (i >= s.items.length) { el.querySelector('#bins').querySelectorAll('.opt').forEach(x => x.disabled = true); } env.update(); }); draw();
       return { el, label: t('check'), ready: () => i >= s.items.length, check() { return wrong ? { ok: false, body: s.clue || `${wrong} / ${s.items.length}` } : { ok: true, body: s.why || '' }; }, retry() { i = 0; wrong = 0; el.querySelector('#bins').querySelectorAll('.opt').forEach(x => x.disabled = false); draw(); } }; },
@@ -393,6 +486,75 @@ function makeR(env) {
         if (r && sel != null) { Object.keys(pair).forEach(k => { if (pair[k] === r.dataset.r) delete pair[k]; }); pair[sel] = r.dataset.r; const next = s.pairs.findIndex((_, j) => pair[j] == null); sel = next >= 0 ? next : null; paint(); } });
       sel = 0; setTimeout(paint);
       return { el, label: t('check'), ready: () => s.pairs.every((_, j) => pair[j] != null), check() { const bad = s.pairs.map((p, j) => pair[j] === p[1] ? -1 : j).filter(j => j >= 0); if (!bad.length) { el.querySelectorAll('.pl,.pr').forEach(b => b.disabled = true); return { ok: true, body: s.why }; } bad.forEach(j => { const b = el.querySelector(`.pl[data-j="${j}"]`); b.classList.add('shake'); setTimeout(() => b.classList.remove('shake'), 500); }); return { ok: false, body: s.clue || s.why }; }, retry() { s.pairs.forEach((p, j) => { if (pair[j] !== p[1]) delete pair[j]; }); sel = s.pairs.findIndex((_, j) => pair[j] == null); paint(); } }; },
+    fracbar(s) { // fraction bars. Explore: ▶ shows each shading step (Fig 1.16, 1.17). Graded ("need"): tap parts to shade that many.
+      const bars = s.bars || [{ parts: s.parts, shade: s.shade || [], mark: s.mark }], graded = s.need != null, on = new Set(); let k = 0;
+      const steps = []; bars.forEach((b, bi) => (b.shade || []).forEach((_, si) => steps.push([bi, si]))); bars.forEach((b, bi) => { if (b.mark) steps.push([bi, 'm']); });
+      const C = { a: 'var(--sky)', b: 'var(--accent)', c: 'var(--sun)', d: 'var(--coral)' }, H = bars.length * 74 + 6;
+      const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="fig fbar"><svg viewBox="0 0 340 ${H}" role="img" aria-label="${esc(s.title || 'fraction bar')}"></svg>${!graded && steps.length ? `<button class="inner" id="fbnx">▶ ${t('next_step')}</button>` : ''}<p class="small muted fbp"></p></div>`);
+      const svg = el.querySelector('svg'), tip = el.querySelector('.fbp');
+      const draw = () => { let g = '';
+        bars.forEach((b, bi) => { const y = 6 + bi * 74, w = 320 / b.parts; let start = 0; const fill = Array(b.parts).fill(null);
+          (b.shade || []).forEach((sh, si) => { if (graded || steps.findIndex(x => x[0] === bi && x[1] === si) < k) for (let j = start; j < start + sh.n && j < b.parts; j++) fill[j] = C[sh.color || 'a']; start += sh.n; });
+          const marked = b.mark && steps.findIndex(x => x[0] === bi && x[1] === 'm') < k ? b.mark.n : 0;
+          for (let j = 0; j < b.parts; j++) { const f = graded ? (on.has(bi + ':' + j) ? C.a : null) : fill[j], x = 10 + j * w;
+            g += `<rect data-c="${bi}:${j}" x="${x + 1}" y="${y}" width="${w - 2}" height="46" rx="4" style="fill:${f || 'var(--surface-2)'};stroke:var(--line);cursor:${graded ? 'pointer' : 'default'}" fill-opacity="${f ? .75 : 1}" stroke-width="1.5"/>`;
+            if (w >= 24) g += `<text x="${x + w / 2}" y="${y + 64}" font-size="11" text-anchor="middle" style="fill:var(--muted)">1/${b.parts}</text>`;
+            if (j < marked) g += `<path d="M${x + w / 2 - 8} ${y + 15}l16 16M${x + w / 2 + 8} ${y + 15}l-16 16" style="stroke:var(--bad)" stroke-width="3.5" stroke-linecap="round"/>`; } });
+        svg.innerHTML = g;
+        if (graded) tip.textContent = `${on.size} / ${bars[0].parts}`;
+        else { const said = steps.slice(0, k).map(([bi, si]) => si === 'm' ? bars[bi].mark.label : bars[bi].shade[si].label).filter(Boolean); tip.textContent = k >= steps.length && s.after ? s.after : said.join(' · '); } };
+      if (graded) svg.addEventListener('click', e => { const c = e.target.closest('[data-c]'); if (!c || env.phase() !== 'answer') return; on.has(c.dataset.c) ? on.delete(c.dataset.c) : on.add(c.dataset.c); draw(); env.update(); });
+      const nx = el.querySelector('#fbnx'); if (nx) nx.onclick = () => { if (k < steps.length) k++; nx.disabled = k >= steps.length; draw(); env.update(); };
+      draw();
+      return { el, label: graded ? t('check') : t('continue'), ready: () => graded ? on.size > 0 : k >= steps.length,
+        check: graded ? () => on.size === s.need ? { ok: true, body: s.why } : { ok: false, body: s.clue || `${on.size} / ${bars[0].parts}` } : undefined, retry() {} };
+    },
+    grid(s) { // area model for × (Fig 1.18–1.20) and grouping for ÷ (Fig 1.21). ▶ reveals one step at a time.
+      const say = s.say || [], groups = s.mode === 'groups'; let k = 0; const n = groups ? 2 : 3;
+      const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="fig grd"><svg viewBox="0 0 340 ${groups ? 46 * Math.ceil((s.wholes * s.d + s.part) / s.d) + 10 : 236}" role="img" aria-label="${esc(s.title || 'grid model')}"></svg><button class="inner" id="gnx">▶ ${t('next_step')}</button><p class="small muted gp"></p></div>`);
+      const svg = el.querySelector('svg'), tip = el.querySelector('.gp');
+      const draw = () => { let g = '';
+        if (!groups) { const W = 200, x0 = 70, y0 = 6, cw = W / s.cols, rh = W / s.rows;
+          for (let i = 0; i < s.cols; i++) for (let j = 0; j < s.rows; j++) { const inC = i < s.shadeCols, inR = j < s.shadeRows;
+            g += `<rect x="${x0 + i * cw}" y="${y0 + j * rh}" width="${cw}" height="${rh}" style="fill:var(--surface-2);stroke:var(--fg)" stroke-width="1.5"/>`;
+            if (inC && k >= 1) g += `<rect x="${x0 + i * cw}" y="${y0 + j * rh}" width="${cw}" height="${rh}" style="fill:var(--sky)" fill-opacity=".45"/>`;
+            if (inR && k >= 2) g += `<rect x="${x0 + i * cw}" y="${y0 + j * rh}" width="${cw}" height="${rh}" style="fill:var(--sun)" fill-opacity=".5"/>`;
+            if (inC && inR && k >= 3) g += `<rect x="${x0 + i * cw + 3}" y="${y0 + j * rh + 3}" width="${cw - 6}" height="${rh - 6}" fill="none" style="stroke:var(--coral)" stroke-width="3.5" rx="3"/>`; }
+          if (k >= 1) g += svgNum(x0 + s.shadeCols * cw / 2, 226, `${s.shadeCols}/${s.cols}`, 'var(--sky)', 15);
+          if (k >= 2) g += svgNum(x0 - 26, y0 + s.shadeRows * rh / 2 + 4, `${s.shadeRows}/${s.rows}`, 'var(--sun-deep)', 15);
+          if (k >= 3) g += svgNum(x0 + W + 36, y0 + W / 2 + 4, `${s.shadeCols * s.shadeRows}/${s.cols * s.rows}`, 'var(--coral)', 17); }
+        else { const d = s.d, cells = s.wholes * d + s.part, rows = Math.ceil(cells / d), cw = Math.min(60, 300 / d), x0 = (340 - cw * d) / 2, gsz = s.group, gc = ['var(--sky)', 'var(--sun)'];
+          for (let rr = 0; rr < rows; rr++) for (let j = 0; j < d; j++) { const i = rr * d + j, shaded = i < cells, gi = Math.floor(i / gsz), full = (gi + 1) * gsz <= cells;
+            const col = !shaded ? 'var(--surface-2)' : k >= 2 ? (full ? gc[gi % 2] : 'var(--coral)') : 'var(--muted)';
+            g += `<rect x="${x0 + j * cw + 1}" y="${6 + rr * 46}" width="${cw - 2}" height="40" rx="4" style="fill:${k >= 1 || !shaded ? col : 'var(--surface-2)'};stroke:var(--line)" fill-opacity="${shaded && k >= 1 ? .7 : 1}" stroke-width="1.5"/>`;
+            if (k >= 2 && shaded && i % gsz === 0) g += `<text x="${x0 + j * cw + cw / 2}" y="${6 + rr * 46 + 26}" font-size="13" font-weight="800" text-anchor="middle" style="fill:var(--fg)">${full ? gi + 1 : '½'}</text>`; } }
+        svg.innerHTML = g; tip.textContent = k ? (say[k - 1] || '') : ''; el.querySelector('#gnx').disabled = k >= n; };
+      el.querySelector('#gnx').onclick = () => { if (k < n) k++; draw(); env.update(); };
+      draw();
+      return { el, label: t('continue'), ready: () => k >= n };
+    },
+    nest(s) { // nested sets ℕ ⊂ W ⊂ ℤ ⊂ ℚ (Fig 1.11): tap a ring, or tap a number to see every set it belongs to
+      const rings = s.rings, nums = s.numbers || [], cols = ['var(--accent)', 'var(--sky)', 'var(--coral)', 'var(--sun)'], seen = new Set(); let lit = -1, cur = null;
+      const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="fig nest"><svg viewBox="0 0 300 250" role="img" aria-label="${esc(s.title || 'nested sets')}"></svg>${nums.length ? `<div class="vchips">${nums.map((x, i) => `<button class="vchip" data-n="${i}">${esc(x[0])}</button>`).join('')}</div>` : ''}<div class="ginfo" hidden data-text></div></div>`);
+      const svg = el.querySelector('svg'), info = el.querySelector('.ginfo');
+      const R = i => 118 - i * 26, cy = i => 244 - R(i);
+      const draw = () => { svg.innerHTML = rings.map((rg, i) => `<circle data-r="${i}" cx="150" cy="${cy(i)}" r="${R(i)}" style="fill:${cols[i % 4]};stroke:${cols[i % 4]};cursor:pointer" fill-opacity="${lit < 0 ? .55 : i <= lit ? .75 : .12}" stroke-width="${i <= lit ? 3 : 1.5}"/><text x="150" y="${cy(i) - R(i) + 20}" font-size="17" font-weight="800" text-anchor="middle" style="fill:var(--fg);pointer-events:none">${esc(rg[0])}</text>`).join('');
+        el.querySelectorAll('.vchip').forEach(b => b.classList.toggle('on', +b.dataset.n === cur)); };
+      const show = html => { info.hidden = false; info.innerHTML = html; info.classList.remove('pop'); void info.offsetWidth; info.classList.add('pop'); env.update(); };
+      svg.addEventListener('click', e => { const c = e.target.closest('[data-r]'); if (!c) return; const i = +c.dataset.r; lit = i; cur = null; seen.add('r' + i); draw(); show(`<b>${esc(rings[i][0])} ${esc(rings[i][1])}</b> ${esc(rings[i][2] || '')}`); });
+      const chips = el.querySelector('.vchips'); if (chips) chips.onclick = e => { const b = e.target.closest('.vchip'); if (!b) return; const i = +b.dataset.n, inner = nums[i][1]; lit = inner; cur = i; seen.add('n' + i); draw();
+        show(`<b>${esc(nums[i][0])}</b> ∈ ${rings.slice(0, inner + 1).reverse().map(x => esc(x[0])).join(', ')}. ${esc(nums[i][2] || '')}`); };
+      draw();
+      return { el, label: t('continue'), ready: () => seen.size >= Math.min(s.need || 3, nums.length + rings.length) };
+    },
+    slider(s) { // explore a formula with sliders (I = PRT). Not graded.
+      const vars = s.vars, f = new Function(...vars.map(v => v.k), `return (${s.formula});`); let moved = false;
+      const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="fig sld">${vars.map((v, i) => `<label class="sl"><span>${esc(v.label)}</span><b id="sv${i}">${v.v}</b><input type="range" min="${v.min}" max="${v.max}" step="${v.step || 1}" value="${v.v}" data-i="${i}"></label>`).join('')}<div class="sout" aria-live="polite"></div>${s.note ? `<p class="small muted">${esc(s.note)}</p>` : ''}</div>`);
+      const calc = () => { const vals = vars.map((v, i) => +el.querySelector(`input[data-i="${i}"]`).value); vars.forEach((_, i) => el.querySelector('#sv' + i).textContent = vals[i]); const out = f(...vals); el.querySelector('.sout').textContent = (s.out || '{v}').replace('{v}', (Math.round(out * 100) / 100).toLocaleString('en-US')); };
+      el.querySelectorAll('input').forEach(inp => inp.addEventListener('input', () => { moved = true; calc(); env.update(); }));
+      calc();
+      return { el, label: t('continue'), ready: () => moved };
+    },
     numline(s) { // number line: show points (tap to explore), place targets (graded, tap snaps to the nearest mark), or hop (arrows for adding)
       const num = v => { const q = Q.parse(v); return q ? Q.val(q) : +v; }, fmt = v => v < 0 ? '−' + -v : String(v);
       const pts = (s.points || []).map(p => Object.assign({ x: num(p.v), label: p.label || String(p.v) }, p)), tgs = (s.targets || []).map(p => Object.assign({ x: num(p.v), label: p.label || String(p.v) }, p)), hops = s.hops || [];
@@ -439,7 +601,7 @@ function makeR(env) {
 
 function runPlayer(cfg) {
   setNav(false); tray.hidden = false;
-  const screens = cfg.screens, SUM = screens.length;
+  const screens = cfg.screens.slice(), SUM = screens.length;
   let order = screens.map((_, i) => i), pos = 0, cur = null, phase = 'answer', lastOk = null, review = false, firstTry = {}, missed = new Set(), round = {}, tries = {};
   const state = { guess: null }; const offered = {};
   function openRefresher(id) { const rf = cfg.refreshers[id]; logEvent({ lesson: cfg.id, refresher: id, item: order[pos] }); const saved = { app: [...app.childNodes], tray: tray.className, msg: msg.innerHTML, goText: go.textContent, goDis: go.disabled, phase, lastOk, cur, top: topin.innerHTML, work: $('#work').hidden };
@@ -464,13 +626,13 @@ function runPlayer(cfg) {
     const wb = $('#work'); wb.hidden = !WORK_TOOLS || !(s.graded || s.kind === 'guess' || s.kind === 'tiles');
     addSkip(); wb.onclick = () => workSheet({ key: `${cfg.id || cfg.title}:${k}`, lesson: cfg.id, item: k, tool: s.tool || cfg.tool, q: (s.ask || s.text || s.title || '').replace(/\n/g, ' ') });
     const pct = Math.round(pos / order.length * 100);
-    setTop(`${cfg.backRoute ? `<a class="iconbtn" href="#${cfg.backRoute}" aria-label="close">${svgIcon(CLOSE)}</a>` : `<button class="iconbtn" id="rback" aria-label="back">${svgIcon(BACK)}</button>`}<span class="mode ${cfg.mode === 'review' || review ? 'review' : cfg.mode === 'book' || cfg.mode === 'test' ? 'book' : ''}">${cfg.mode === 'refresher' ? t('refresher') : cfg.mode === 'practice' ? t('step_practise') : review ? t('review') : cfg.mode === 'review' ? t('review') : cfg.mode === 'book' ? t('book_exercise') : cfg.mode === 'test' ? t('unit_test') : t('learn')}</span><div class="bar"><i style="width:${pct}%"></i></div><span class="count">${Math.min(pos + 1, order.length)} / ${order.length}</span><button class="iconbtn" id="rep" aria-label="${t('report')}">${svgIcon(FLAG)}</button>`);
+    setTop(`${cfg.backRoute ? `<a class="iconbtn" href="#${cfg.backRoute}" aria-label="close">${svgIcon(CLOSE)}</a>` : `<button class="iconbtn" id="rback" aria-label="back">${svgIcon(BACK)}</button>`}<span class="mode ${cfg.mode === 'review' || review ? 'review' : cfg.mode === 'book' || cfg.mode === 'test' ? 'book' : ''}">${cfg.mode === 'refresher' ? t('refresher') : cfg.mode === 'practice' ? t('step_practise') : review ? t('review') : cfg.mode === 'review' ? t('review') : cfg.mode === 'book' ? '📝 ' + t('book_exercise') : cfg.mode === 'test' ? '🏁 ' + t('unit_test') : t('learn')}</span><div class="bar"><i style="width:${pct}%"></i></div><span class="count">${Math.min(pos + 1, order.length)} / ${order.length}</span><button class="iconbtn" id="rep" aria-label="${t('report')}">${svgIcon(FLAG)}</button>`);
     bindTop(k);
     window.scrollTo(0, 0); const h = cur.el.querySelector('h1'); if (h) h.focus({ preventScroll: true });
   }
   function onGo() {
     const k = order[pos], s = screens[k];
-    if (cur.summary) { if (cfg.mode === 'refresher' || (cfg.resume && !missed.size)) { cfg.resume(); return; } if (missed.size) { order = [...missed].sort((a, b) => a - b).concat(SUM); review = true; } else { order = screens.map((_, i) => i).concat(SUM); firstTry = {}; review = false; state.guess = null; } pos = 0; round = {}; tries = {}; show(); return; }
+    if (cur.summary) { if (cfg.mode === 'refresher' || (cfg.resume && !missed.size)) { cfg.resume(); return; } if (missed.size) { if (cfg.vary) missed.forEach(k => { screens[k] = Gen.make(screens[k]); }); order = [...missed].sort((a, b) => a - b).concat(SUM); review = true; } else { if (cfg.vary) screens.forEach((x, k) => { screens[k] = Gen.make(x); }); order = screens.map((_, i) => i).concat(SUM); firstTry = {}; review = false; state.guess = null; } pos = 0; round = {}; tries = {}; show(); return; }
     if (phase === 'feedback') { if (lastOk === false) { const old = tray.querySelector('#rfb'); if (old) old.remove(); phase = 'answer'; cur.retry && cur.retry(); setTray('', '', '', cur.label); update(); addSkip(); } else { pos++; show(); } return; }
     if (!cur.check) { pos++; show(); return; }
     { const sb = $('#skipb'); if (sb) sb.remove(); }
@@ -479,7 +641,7 @@ function runPlayer(cfg) {
     lastOk = r.ok; phase = 'feedback';
     const noClue = cfg.mode === 'test';
     if (r.ok === true) { setTray('ok', t('correct'), r.body, t('continue')); if (cfg.cheer) { const rc = go.getBoundingClientRect(); burst(rc.left + rc.width / 2, rc.top); buzz(25); } }
-    else if (r.ok === false) { if (noClue) { lastOk = true; setTray('no', t('not_yet'), s.why || '', t('continue')); } else if (tries[k] >= 2 && s.worked) { lastOk = true; setTray('no', t('show_worked'), s.worked, t('continue')); } else { setTray('no', t('not_yet'), r.body, t('try_again')); const rf = s.needs && cfg.refreshers && cfg.refreshers[s.needs]; if (rf && !offered[k]) { offered[k] = true; msg.innerHTML += `<span class="small">${esc(t('offer_refresher', { n: rf.name }))}</span>`; const b = document.createElement('button'); b.className = 'btn ghost'; b.id = 'rfb'; b.textContent = t('yes_reminder'); b.onclick = () => openRefresher(s.needs); go.parentNode.insertBefore(b, go); go.textContent = t('no_continue'); } } }
+    else if (r.ok === false) { if (noClue) { lastOk = true; setTray('no', t('not_yet'), s.why || '', t('continue')); } else if (tries[k] >= 2) { lastOk = true; const shown = s.kind === 'blank' ? s.a[0] : s.kind === 'pick' ? s.a.join(', ') : s.kind === 'mcq' ? s.ans : s.kind === 'tf' ? (s.a ? t('true') : t('false')) : ''; setTray('no', t('show_worked'), answerLine(shown, s), t('continue')); } else { setTray('no', t('not_yet'), r.body, t('try_again')); const rf = s.needs && cfg.refreshers && cfg.refreshers[s.needs]; if (rf && !offered[k]) { offered[k] = true; msg.innerHTML += `<span class="small">${esc(t('offer_refresher', { n: rf.name }))}</span>`; const b = document.createElement('button'); b.className = 'btn ghost'; b.id = 'rfb'; b.textContent = t('yes_reminder'); b.onclick = () => openRefresher(s.needs); go.parentNode.insertBefore(b, go); go.textContent = t('no_continue'); } } }
     else setTray('info', r.title, r.body, t('continue'));
     go.disabled = false; go.focus();
     if (pos === order.length - 1 && cfg.onDone && !cfg._done) { cfg._done = true; const byIdea = {}; screens.forEach((x, i) => { if (x.graded) { const id = x._idea || cfg.idea; byIdea[id] = (byIdea[id] !== false) && !!firstTry[i]; } }); cfg.onDone({ byIdea, firstTry, missed }); }
@@ -495,7 +657,7 @@ async function viewLesson(path, mode, exIdx) {
   const m = mode || 'learn', idea0 = ls.ideas[0];
   let blocks = [], title = ls.title;
   if (m === 'book') { const ex = ls.exercises[exIdx || 0]; blocks = ex.items.map(x => Object.assign({ _idea: idea0.id }, x)); title = ex.book_name; }
-  else if (m === 'test') { blocks = ls.test.map(x => Object.assign({ _idea: idea0.id }, x)); title = `${t('unit_test')} · ${ls.title}`; }
+  else if (m === 'test') { blocks = ls.test.map(x => Object.assign({ _idea: idea0.id }, Gen.make(x))); title = `${t('unit_test')} · ${ls.title}`; }
   else ls.ideas.forEach(i => { if (ls.ideas.length > 1 && i.name) blocks.push({ kind: '_head', name: i.name }); i.screens.forEach(x => blocks.push(Object.assign({ _idea: i.id, _explain: i.explain }, x))); });
   const key = m === 'learn' ? path : `${path}#${m}${exIdx || ''}`;
   const saved = lessonProgress(key) || {}; const got = Object.assign({}, saved.got); const first = {};
@@ -667,7 +829,7 @@ const initials = n => n.replace(/^(Prof\.|Dr\.|Engineer)\s+/i, '').split(/\s+/).
 /* ---------- Blocks: one builder per kind ---------- */
 const Blocks = {
   read(s, ctx) { return h('rd', (s.title ? `<h3>${esc(s.title)}</h3>` : '') + (s.paras || []).map(p => Text(p, ctx)).join('') + (s.table ? `<div class="tbl"><table>${s.table.map((r, i) => `<tr>${r.map(x => i ? `<td data-text>${esc(x)}</td>` : `<th>${esc(x)}</th>`).join('')}</tr>`).join('')}</table></div>` : '') + (s.note ? Blocks.tip(s.note) : '')); },
-  tip(note) { return `<button class="tip"><span>💡</span><span class="tx" data-text>${esc(note)}</span></button>`; },
+  tip(note) { return `<div class="tip"><span>💡</span><span class="tx" data-text>${esc(note)}</span></div>`; },
   picture(s, ctx) { return h('picblk', `<div class="pic">${pic(s.pic, s.caption)}</div>${s.caption ? Text(s.caption, null, 'p', 'cap') : ''}${s.text ? Text(s.text, ctx) : ''}`); },
   gallery(s, ctx) {
     const el = h('gal', (s.title ? `<h3>${esc(s.title)}</h3>` : '') + (s.ask ? Text(s.ask, ctx, 'p', 'muted') : '') + `<div class="galgrid">${s.items.map((it, i) => `<button class="gi" data-i="${i}" aria-expanded="false"><span class="pic">${pic(it[0], it[1])}</span><span class="gn">${esc(it[1])}</span></button>`).join('')}</div><div class="ginfo" hidden data-text></div>`);
@@ -695,7 +857,7 @@ const Blocks = {
       const ok = b.textContent === ans; ctx.log(s, ok, tries);
       if (ok) { b.classList.add('ok', 'pop'); say('ok', s.why); lock(); ctx.right(b, s, tries); }
       else { b.classList.add('no', 'shake'); b.disabled = true; setTimeout(() => b.classList.remove('shake'), 500); ctx.wrong(el);
-        if (tries >= 2) { say('no', `${t('answer_is')} ${ans}. ${s.worked || s.why || ''}`); lock(); ctx.done(el, s, 0); } else say('no', `${s.clue || t('not_yet')} ${t('try_again')}.`); } };
+        if (tries >= 2) { say('no', answerLine(ans, s)); lock(); ctx.done(el, s, 0); } else say('no', `${s.clue || t('not_yet')} ${t('try_again')}.`); } };
     return el;
   },
   answer(s, ctx) { // blank, pick, sort, order, match: shared renderers plus one Check button
@@ -707,7 +869,7 @@ const Blocks = {
     ctx.question(el, s, { restore(v) { if (v === 's') return; btn.hidden = true; say('ok', '✓ ' + (s.why || '')); } });
     btn.onclick = () => { const r = cur.check(); tries++; ctx.log(s, !!r.ok, tries);
       if (r.ok) { phase = 'done'; btn.hidden = true; say('ok', r.body); ctx.right(btn, s, tries); }
-      else { ctx.wrong(el); if (tries >= 2) { const shown = s.kind === 'blank' ? s.a[0] : s.kind === 'pick' ? s.a.join(', ') : ''; phase = 'done'; btn.hidden = true; say('no', `${shown ? t('answer_is') + ' ' + shown + '. ' : ''}${s.worked || s.why || ''}`); ctx.done(el, s, 0); } else { say('no', `${r.body || t('not_yet')} ${t('try_again')}.`); cur.retry && cur.retry(); env.update(); } } };
+      else { ctx.wrong(el); if (tries >= 2) { const shown = s.kind === 'blank' ? s.a[0] : s.kind === 'pick' ? s.a.join(', ') : ''; phase = 'done'; btn.hidden = true; say('no', answerLine(shown, s)); ctx.done(el, s, 0); } else { say('no', `${r.body || t('not_yet')} ${t('try_again')}.`); cur.retry && cur.retry(); env.update(); } } };
     return el;
   },
   reveal(s, ctx) { // a book Activity: think, then tap to see the answer
@@ -753,6 +915,12 @@ const Blocks = {
     const el = h(s.kind === 'steps' ? 'quiz worked' : 'quiz think', `<div class="ql">${s.kind === 'steps' ? '🧩 ' + t('worked_example') : '🔍 ' + t('step_explore')}</div>${s.title ? Text(s.title, null, 'p', 'qq') : ''}`); el.appendChild(cur.el); return el;
   }
 };
+// after a second wrong try: say the answer once. Skip "The answer is" when the explanation already states it.
+function answerLine(shown, s) {
+  const ex = s.worked || s.why || '', parts = String(shown || '').split(/,\s*/).filter(Boolean);
+  if (!shown || (parts.length && parts.every(x => ex.includes(x)))) return ex || `${t('answer_is')} ${shown}.`;
+  return `${t('answer_is')} ${shown}. ${ex}`.trim();
+}
 function h(cls, html) { const d = document.createElement('div'); d.className = cls; d.innerHTML = html; return d; }
 function renderBlock(s, ctx) {
   const fn = Blocks[s.kind] || ((s.kind === 'mcq' || s.kind === 'tf') && s.graded ? Blocks.choice : s.graded ? Blocks.answer : Blocks.explore);
@@ -810,23 +978,21 @@ async function viewBook(id) {
       wrong(el) { streak = 0; buzz(60); const sk = el && el.querySelector('.skip'); if (sk && !el.classList.contains('done')) sk.hidden = false; },
       done(el, s, pts) { el.classList.add('done'); const sk = el.querySelector('.skip'); if (sk) sk.remove(); if (!(s._key in B.got) || B.got[s._key] === 's') { B.got[s._key] = pts; save(); } progress(); doneCheck(); }
     };
-    rows.forEach(s => { const el = renderBlock(s, ctx); if (s.graded || ['guess', 'reveal', 'sort', 'tap', 'steps', 'tiles', 'order', 'match', 'tree', 'venn', 'gallery', 'numline'].includes(s.kind)) { const u = { key: s._key, q: !!s.graded }; units.push(u); secUnits[si].push(u); } box.appendChild(el); });
-    box.querySelectorAll('.tip').forEach(b => b.onclick = () => b.classList.toggle('open'));
+    rows.forEach(s => { const el = renderBlock(s, ctx); if (s.graded || ['guess', 'reveal', 'sort', 'tap', 'steps', 'tiles', 'order', 'match', 'tree', 'venn', 'gallery', 'numline', 'fracbar', 'grid', 'nest', 'slider'].includes(s.kind)) { const u = { key: s._key, q: !!s.graded }; units.push(u); secUnits[si].push(u); } box.appendChild(el); });
     box.querySelectorAll('.kwt').forEach(b => b.onclick = () => { const k = kws[+b.dataset.k]; sheet(`<div class="kcard big"><div class="kt">📘 ${esc(k.en)}</div>${k.am ? `<div class="kam" lang="am">${esc(k.am)}</div>` : ''}${k.om ? `<div class="kam" lang="om">${esc(k.om)}</div>` : ''}<div class="kd" data-text>${esc(k.def || '')}</div></div><button class="btn" id="kok">${t('continue')}</button>`); $('#kok').onclick = () => sheet(''); });
     // end of section: celebration, practise set, book exercises
     const end = document.createElement('div'); end.className = 'secend';
-    end.innerHTML = `<div class="secdone" hidden>🎉 ${t('section_done', { s: esc(sec.n) })} <b>+20 ⭐</b></div><div class="prac"></div>${(ls.exercises || []).map((ex, k) => `<button class="pcard soft" data-a="ex" data-k="${k}"><span class="pi">📖</span><span class="grow"><b>${esc(ex.book_name)}</b><small>${t('book_exercise')} · ${ex.items.length}</small></span><span>›</span></button>`).join('')}`;
+    end.innerHTML = `<div class="secdone" hidden>🎉 ${t('section_done', { s: esc(sec.n) })} <b>+20 ⭐</b></div><div class="prac"></div>${(ls.exercises || []).map((ex, k) => `<button class="pcard soft" data-a="ex" data-k="${k}"><span class="pi">${ex.test ? '🏁' : '📝'}</span><span class="grow"><b>${esc(ex.book_name)}</b><small>${ex.test ? t('fresh_test') : t('book_exercise')} · ${ex.items.length}</small></span><span>›</span></button>`).join('')}`;
     function updPrac() { const pr = B.prac[sec.lesson]; end.querySelector('.prac').innerHTML = practise.length ? `<button class="pcard" data-a="prac"><span class="pi">🎯</span><span class="grow"><b>${t('practise_n', { n: practise.length })}</b><small>${pr ? `${t('best')} ${pr}` : t('practise_sub')}</small></span><span>›</span></button>` : ''; }
     updPrac();
     const runHere = cfg => { const keep = { app: [...app.childNodes], top: [...topin.childNodes], y: window.scrollY }; away = true;
       runPlayer(Object.assign({ backRoute: null, refreshers: ls.refreshers || {}, tool: ls.tool, cheer: true, resume: () => { app.replaceChildren(...keep.app); topin.replaceChildren(...keep.top); top.hidden = false; hideTray(); setNav(false); away = false; bumpPts(); Focus.tick(); requestAnimationFrame(() => window.scrollTo(0, keep.y)); } }, cfg)); };
     end.addEventListener('click', e => { const b = e.target.closest('.pcard'); if (!b) return;
-      if (b.dataset.a === 'prac') runHere({ id: ls.id, title: `${sec.n} · ${ls.title}`, mode: 'practice', screens: practise, onDone: res => { const right = Object.values(res.firstTry).filter(Boolean).length; B.prac[sec.lesson] = `${right}/${practise.length}`; B.pts += right * 5; practise.forEach((s, i) => { if (B.got[s._key] === 's' && res.firstTry[i]) B.got[s._key] = 5; }); save(); Object.keys(res.byIdea).forEach(i => bumpMastery(i, res.byIdea[i])); updPrac(); } });
-      else { const ex = ls.exercises[+b.dataset.k]; runHere({ id: ls.id, title: ex.book_name, mode: 'book', screens: ex.items }); } });
+      if (b.dataset.a === 'prac') { B.runs = B.runs || {}; const again = (B.runs[sec.lesson] = (B.runs[sec.lesson] || 0) + 1) > 1; save(); runHere({ id: ls.id, title: `${sec.n} · ${ls.title}`, mode: 'practice', vary: true, screens: again ? practise.map(x => Gen.make(x)) : practise, onDone: res => { const right = Object.values(res.firstTry).filter(Boolean).length; B.prac[sec.lesson] = `${right}/${practise.length}`; B.pts += right * 5; practise.forEach((s, i) => { if (B.got[s._key] === 's' && res.firstTry[i]) B.got[s._key] = 5; }); save(); Object.keys(res.byIdea).forEach(i => bumpMastery(i, res.byIdea[i])); updPrac(); } }); }
+      else { const ex = ls.exercises[+b.dataset.k]; runHere(ex.test ? { id: ls.id, title: ex.book_name, mode: 'test', vary: true, screens: ex.items.map(x => Gen.make(x)) } : { id: ls.id, title: ex.book_name, mode: 'book', screens: ex.items }); } });
     box.appendChild(end); page.appendChild(box); doneCheck();
   });
   const fin = document.createElement('div'); fin.className = 'bookend'; fin.innerHTML = `<div class="display">⭐ ${t('book_points')}</div><a class="btn ghost" href="#exams">${t('exams')} ›</a>`; page.appendChild(fin);
-  page.querySelectorAll('.tip').forEach(b => b.onclick = () => b.classList.toggle('open'));
   progress(); Translate.bind(page);
   page.querySelector('#secnav').addEventListener('click', e => { const a = e.target.closest('[data-go]'); if (!a) return; e.preventDefault(); $('#sec' + a.dataset.go).scrollIntoView({ behavior: 'smooth', block: 'start' }); });
   try {
@@ -844,9 +1010,9 @@ async function route() {
   const h = location.hash.replace(/^#/, ''), [r, a, b] = h.split('/');
   if (!S.lang && r !== 'welcome') { await viewWelcome(); return; }
   if (!T.app) await loadLang(S.lang);
-  if (S.lang && !S.grade && !['setup', 'welcome', 'settings'].includes(r) && r) { location.hash = 'setup'; return; }
+  if (S.lang && !S.grades.length && !['setup', 'welcome', 'settings'].includes(r) && r) { location.hash = 'setup'; return; }
   switch (r) {
-    case '': case 'welcome': return S.lang && S.grade && r === '' ? viewHome() : viewWelcome();
+    case '': case 'welcome': return S.lang && S.grades.length && r === '' ? viewHome() : viewWelcome();
     case 'setup': return viewSetup();
     case 'home': return viewHome();
     case 'chapter': return viewChapter(a);

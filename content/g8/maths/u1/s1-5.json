@@ -1,0 +1,643 @@
+{
+ "id": "g8.maths.u1.s1-5",
+ "book": {
+  "title": "Mathematics Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "Rational Numbers",
+  "pages": "38–40",
+  "section": "Review"
+ },
+ "title": "Summary and review exercise",
+ "competency": "Bring together the ideas of Unit 1.",
+ "minutes": 15,
+ "keywords": [
+  {
+   "en": "Rational number",
+   "am": "ሬሽናል ቁጥር",
+   "def": "A number that can be written as a/b, where a and b are integers and b ≠ 0.",
+   "machine": true
+  },
+  {
+   "en": "Absolute value",
+   "am": "ፍጹም ዋጋ",
+   "def": "The distance of a number from 0. It is never negative.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.rational-review",
+   "name": "Summary for Unit 1",
+   "explain": {
+    "en": {
+     "text": "A rational number is a/b with b not zero. You can place it on a number line, find its absolute value, compare and order it, and add, subtract, multiply and divide with sign rules. You also used rational numbers for sharing and interest."
+    },
+    "am": {
+     "text": "ሬሽናል ቁጥር b ዜሮ ያልሆነበት a/b ነው። በቁጥር መስመር ላይ ማስቀመጥ፣ ፍጹም ዋጋውን ማግኘት፣ ማነፃፀርና በምልክት ሕጎች ማስላት ትችላለህ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "graded": false,
+     "title": "Warm up: what is the sign?",
+     "bins": [
+      "Positive",
+      "Negative"
+     ],
+     "items": [
+      [
+       "(−) + (−)",
+       "Negative",
+       "Two negatives added stay negative."
+      ],
+      [
+       "(−) × (−)",
+       "Positive",
+       "Same signs multiply to +."
+      ],
+      [
+       "(+) ÷ (−)",
+       "Negative",
+       "Different signs give −."
+      ],
+      [
+       "(−) ÷ (−)",
+       "Positive",
+       "Same signs give +."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-5.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Summary for Unit 1",
+     "paras": [
+      "1. A rational number can be written a/b, where a and b are integers and b ≠ 0. The set is ℚ.",
+      "2. Rational numbers can be shown on a number line.",
+      "3. |x| = x if x > 0, 0 if x = 0, and −x if x < 0."
+     ],
+     "table": [
+      [
+       "Compare by",
+       "Example"
+      ],
+      [
+       "Decimals",
+       "0.6 > 0.5"
+      ],
+      [
+       "Same denominators",
+       "6/10 > 5/10"
+      ],
+      [
+       "Cross-product",
+       "3/5 > 1/2 since 6 > 5"
+      ]
+     ],
+     "id": "g8.maths.u1.s1-5.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Sign rules",
+     "paras": [
+      "5. Subtraction is adding the opposite. 6. A number plus its opposite is 0."
+     ],
+     "table": [
+      [
+       "Operation",
+       "Same signs",
+       "Different signs"
+      ],
+      [
+       "Addition",
+       "Keep the sign, add sizes",
+       "Sign of the bigger size, subtract sizes"
+      ],
+      [
+       "Multiplication",
+       "Positive",
+       "Negative"
+      ],
+      [
+       "Division",
+       "Positive",
+       "Negative"
+      ]
+     ],
+     "id": "g8.maths.u1.s1-5.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Rational number",
+       "A number that can be written as a/b, where a and b are integers and b ≠ 0."
+      ],
+      [
+       "Absolute value",
+       "The distance of a number from 0. It is never negative."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-5.4"
+    },
+    {
+     "kind": "match",
+     "step": "check",
+     "graded": true,
+     "title": "Match the rule",
+     "pairs": [
+      [
+       "negative + negative",
+       "negative"
+      ],
+      [
+       "negative × negative",
+       "positive"
+      ],
+      [
+       "positive ÷ negative",
+       "negative"
+      ],
+      [
+       "a + (−a)",
+       "0"
+      ]
+     ],
+     "why": "These are the sign rules of the summary.",
+     "clue": "Same signs multiply to +.",
+     "id": "g8.maths.u1.s1-5.5"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "Review Q4 a: 3/4 + 9/7 + 2 = ___",
+     "a": [
+      "113/28",
+      "4 1/28"
+     ],
+     "why": "21/28 + 36/28 + 56/28 = 113/28.",
+     "clue": "LCM of 4 and 7 is 28.",
+     "gen": {
+      "t": "op",
+      "op": "add",
+      "mixed": true
+     },
+     "id": "g8.maths.u1.s1-5.6"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "Review Q5 a: 2/7 − 3/8 = ___",
+     "a": [
+      "-5/56"
+     ],
+     "why": "16/56 − 21/56 = −5/56.",
+     "clue": "LCM of 7 and 8 is 56.",
+     "input": "signed",
+     "gen": {
+      "t": "op",
+      "op": "sub",
+      "signs": true
+     },
+     "id": "g8.maths.u1.s1-5.7"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "Review Q6 a: 2 3/7 × 1/4 = ___",
+     "a": [
+      "17/28"
+     ],
+     "why": "17/7 × 1/4 = 17/28.",
+     "clue": "Change 2 3/7 to 17/7.",
+     "gen": {
+      "t": "op",
+      "op": "mul",
+      "mixed": true
+     },
+     "id": "g8.maths.u1.s1-5.8"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "Review Q7 a: 3/4 ÷ (−5/2) = ___",
+     "a": [
+      "-3/10"
+     ],
+     "why": "3/4 × (−2/5) = −6/20 = −3/10.",
+     "clue": "Multiply by the reciprocal.",
+     "input": "signed",
+     "gen": {
+      "t": "op",
+      "op": "div",
+      "signs": true
+     },
+     "id": "g8.maths.u1.s1-5.9"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Review Exercise",
+   "items": [
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Q1 a: −5/3 > −8/11",
+     "a": false,
+     "why": "−5/3 ≈ −1.67 is left of −8/11 ≈ −0.73.",
+     "clue": "Which is further from 0?",
+     "id": "g8.maths.u1.s1-5.10"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Q1 b: 3 5/7 > 23/7 > 19/6",
+     "a": true,
+     "why": "26/7 ≈ 3.71 > 3.29 > 3.17.",
+     "clue": "Change to decimals.",
+     "id": "g8.maths.u1.s1-5.11"
+    },
+    {
+     "kind": "pick",
+     "step": "exercise",
+     "graded": true,
+     "text": "Q2 b: solve |x − 5| = 4.",
+     "pool": [
+      "9",
+      "1",
+      "−1",
+      "−9"
+     ],
+     "a": [
+      "9",
+      "1"
+     ],
+     "why": "x − 5 = 4 or −4, so x = 9 or 1.",
+     "clue": "The inside is 4 or −4.",
+     "id": "g8.maths.u1.s1-5.12"
+    },
+    {
+     "kind": "pick",
+     "step": "exercise",
+     "graded": true,
+     "text": "Q2 c: solve |2x + 3| = 5.",
+     "pool": [
+      "1",
+      "−4",
+      "4",
+      "−1"
+     ],
+     "a": [
+      "1",
+      "−4"
+     ],
+     "why": "2x + 3 = 5 gives 1; 2x + 3 = −5 gives −4.",
+     "clue": "The inside is 5 or −5.",
+     "id": "g8.maths.u1.s1-5.13"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Q3: if x = −8 and y = 4, (3|x − 5| − |4y|) / |x + y| = ___",
+     "a": [
+      "23/4",
+      "5 3/4",
+      "5.75"
+     ],
+     "why": "(39 − 16)/4 = 23/4.",
+     "clue": "|x − 5| = 13, |4y| = 16, |x + y| = 4.",
+     "id": "g8.maths.u1.s1-5.14"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Q10: how long for Birr 500 to earn Birr 50 at 9.5%? ___ years",
+     "a": [
+      "≈1.05",
+      "20/19"
+     ],
+     "why": "50 ÷ 47.5 ≈ 1.05.",
+     "clue": "T = I ÷ (P × R).",
+     "id": "g8.maths.u1.s1-5.15"
+    }
+   ]
+  },
+  {
+   "book_name": "Chapter test",
+   "test": true,
+   "items": [
+    {
+     "kind": "numline",
+     "step": "test",
+     "graded": true,
+     "min": -2,
+     "max": 2,
+     "sub": 4,
+     "targets": [
+      {
+       "v": "-3/4",
+       "label": "−3/4"
+      }
+     ],
+     "ask": "Tap where −3/4 goes.",
+     "why": "Three quarters left of 0.",
+     "clue": "",
+     "gen": {
+      "t": "place",
+      "signs": true,
+      "improper": true
+     },
+     "id": "g8.maths.u1.s1-5.16"
+    },
+    {
+     "kind": "mcq",
+     "step": "test",
+     "graded": true,
+     "text": "Smallest set containing −7?",
+     "opts": [
+      "ℕ",
+      "W",
+      "ℤ",
+      "ℚ"
+     ],
+     "ans": "ℤ",
+     "why": "A negative integer.",
+     "clue": "",
+     "gen": {
+      "t": "classify"
+     },
+     "id": "g8.maths.u1.s1-5.17"
+    },
+    {
+     "kind": "blank",
+     "step": "test",
+     "graded": true,
+     "num": true,
+     "ask": "|−9 + 4| = ___",
+     "a": [
+      "5"
+     ],
+     "why": "|−5| = 5.",
+     "clue": "",
+     "gen": {
+      "t": "abs"
+     },
+     "id": "g8.maths.u1.s1-5.18"
+    },
+    {
+     "kind": "pick",
+     "step": "test",
+     "graded": true,
+     "text": "Tap all solutions of |x| = 6.",
+     "pool": [
+      "6",
+      "−6",
+      "0",
+      "12"
+     ],
+     "a": [
+      "6",
+      "−6"
+     ],
+     "why": "6 and −6.",
+     "clue": "",
+     "gen": {
+      "t": "abseq"
+     },
+     "id": "g8.maths.u1.s1-5.19"
+    },
+    {
+     "kind": "mcq",
+     "step": "test",
+     "graded": true,
+     "text": "Which sign is correct? 3/8 ? 2/5",
+     "opts": [
+      "<",
+      ">",
+      "="
+     ],
+     "ans": "<",
+     "why": "15 < 16.",
+     "clue": "",
+     "gen": {
+      "t": "compare"
+     },
+     "id": "g8.maths.u1.s1-5.20"
+    },
+    {
+     "kind": "order",
+     "step": "test",
+     "graded": true,
+     "title": "Ascending",
+     "items": [
+      "−1.5",
+      "−1/2",
+      "2/3",
+      "1.2"
+     ],
+     "why": "Smallest first.",
+     "clue": "",
+     "gen": {
+      "t": "order"
+     },
+     "id": "g8.maths.u1.s1-5.21"
+    },
+    {
+     "kind": "blank",
+     "step": "test",
+     "graded": true,
+     "num": true,
+     "ask": "−2/3 + 3/4 = ___",
+     "a": [
+      "1/12"
+     ],
+     "why": "−8/12 + 9/12.",
+     "clue": "",
+     "gen": {
+      "t": "op",
+      "op": "add",
+      "signs": true
+     },
+     "id": "g8.maths.u1.s1-5.22"
+    },
+    {
+     "kind": "blank",
+     "step": "test",
+     "graded": true,
+     "num": true,
+     "ask": "5/6 − (−1/3) = ___",
+     "a": [
+      "7/6",
+      "1 1/6"
+     ],
+     "why": "5/6 + 2/6.",
+     "clue": "",
+     "gen": {
+      "t": "op",
+      "op": "sub",
+      "signs": true
+     },
+     "id": "g8.maths.u1.s1-5.23"
+    },
+    {
+     "kind": "blank",
+     "step": "test",
+     "graded": true,
+     "num": true,
+     "ask": "−3/5 × 10/9 = ___",
+     "a": [
+      "-2/3"
+     ],
+     "why": "−30/45.",
+     "clue": "",
+     "gen": {
+      "t": "op",
+      "op": "mul",
+      "signs": true
+     },
+     "id": "g8.maths.u1.s1-5.24"
+    },
+    {
+     "kind": "blank",
+     "step": "test",
+     "graded": true,
+     "num": true,
+     "ask": "7/8 ÷ (−7/4) = ___",
+     "a": [
+      "-1/2",
+      "-0.5"
+     ],
+     "why": "7/8 × (−4/7).",
+     "clue": "",
+     "gen": {
+      "t": "op",
+      "op": "div",
+      "signs": true
+     },
+     "id": "g8.maths.u1.s1-5.25"
+    },
+    {
+     "kind": "blank",
+     "step": "test",
+     "graded": true,
+     "num": true,
+     "ask": "Mother takes 1/5; 2 children share the rest. Each gets ___",
+     "a": [
+      "2/5"
+     ],
+     "why": "4/5 ÷ 2.",
+     "clue": "",
+     "gen": {
+      "t": "share"
+     },
+     "id": "g8.maths.u1.s1-5.26"
+    },
+    {
+     "kind": "blank",
+     "step": "test",
+     "graded": true,
+     "num": true,
+     "ask": "Birr 1500 at 8% for 2 years. Interest = Birr ___",
+     "a": [
+      "240"
+     ],
+     "why": "1500 × 0.08 × 2.",
+     "clue": "",
+     "gen": {
+      "t": "interest"
+     },
+     "id": "g8.maths.u1.s1-5.27"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is NOT a rational number?",
+   "opts": [
+    "5/0",
+    "0/5",
+    "−5",
+    "0.5"
+   ],
+   "ans": "5/0",
+   "why": "The denominator cannot be 0.",
+   "clue": "",
+   "id": "g8.maths.u1.s1-5.28"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "The sum of two opposite numbers is 0.",
+   "a": true,
+   "why": "a + (−a) = 0.",
+   "clue": "",
+   "id": "g8.maths.u1.s1-5.29"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "−1/2 × (−1/2) = ___",
+   "a": [
+    "1/4"
+   ],
+   "why": "Same signs give +.",
+   "clue": "",
+   "gen": {
+    "t": "op",
+    "op": "mul",
+    "signs": true
+   },
+   "id": "g8.maths.u1.s1-5.30"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "Review Exercise answers computed exactly: Q2 d x = 7/3 or 1/3; Q2 e no solution; Q4 b −16/21; Q4 c 809/140; Q5 b −271/63; Q6 b 2.73; Q6 c 9/2; Q7 b −135/92; Q7 c 51/49; Q8 a 44/35; Q8 b 56/69; Q8 c 45/833. Six items are used; Q4–Q7 a are in the practise set."
+  },
+  {
+   "kind": "note",
+   "text": "The chapter test is generated fresh on every attempt (no clues), as an unseen test."
+  },
+  {
+   "kind": "review",
+   "text": "Review Q1 c reads |2 3/5| = |−2 3/5| (true) and Q1 d 3 5/6 < 3 4/5 < 2 2/7 (false); the printed layout is unclear. Teacher to confirm."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

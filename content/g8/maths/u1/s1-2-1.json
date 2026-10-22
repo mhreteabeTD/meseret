@@ -1,0 +1,672 @@
+{
+ "id": "g8.maths.u1.s1-2-1",
+ "book": {
+  "title": "Mathematics Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "Rational Numbers",
+  "pages": "14–17",
+  "section": "1.2.1"
+ },
+ "title": "Comparing rational numbers",
+ "competency": "Compare rational numbers using decimals, common denominators, cross-products and the number line.",
+ "minutes": 12,
+ "keywords": [
+  {
+   "en": "Decimal",
+   "am": "አስርዮሽ",
+   "def": "A number written with a decimal point, like 4.25.",
+   "machine": true
+  },
+  {
+   "en": "Place value",
+   "am": "የቦታ ዋጋ",
+   "def": "The value of a digit from its position: ones, tenths, hundredths, …",
+   "machine": true
+  },
+  {
+   "en": "Equivalent fractions",
+   "am": "ተመጣጣኝ ክፍልፋዮች",
+   "def": "Fractions that mark the same point on the number line, like 1/2 and 2/4.",
+   "machine": true
+  },
+  {
+   "en": "LCM",
+   "am": "ትንሹ የጋራ ብዜት",
+   "def": "Least common multiple: the smallest number that two numbers both divide.",
+   "machine": true
+  },
+  {
+   "en": "Cross-product",
+   "am": "መስቀለኛ ብዜት",
+   "def": "To compare a/b and c/d, compare a × d with b × c.",
+   "machine": true
+  },
+  {
+   "en": "Number line",
+   "am": "የቁጥር መስመር",
+   "def": "A line with 0 in the middle. The number further left is smaller.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.compare-decimals",
+   "name": "Comparing decimals",
+   "explain": {
+    "en": {
+     "text": "To compare decimals, start from the left. Compare the integer parts. If they are equal, compare tenths, then hundredths. The first place that differs decides."
+    },
+    "am": {
+     "text": "አስርዮሾችን ለማነፃፀር ከግራ ጀምር። መጀመሪያ ሙሉ ክፍሎቹን አነፃፅር። እኩል ከሆኑ አስረኛዎችን፣ ከዚያ መቶኛዎችን አነፃፅር።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "added": true,
+     "title": "Cold night",
+     "ask": "One night Debre Birhan was −2 °C and Addis Ababa was 8 °C. Which was colder?",
+     "opts": [
+      "Debre Birhan",
+      "Addis Ababa",
+      "The same"
+     ],
+     "after": "−2 is left of 8 on the number line, so −2 < 8. Debre Birhan was colder.",
+     "id": "g8.maths.u1.s1-2-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Comparing decimals",
+     "paras": [
+      "We compare numbers every day: wins and losses, temperatures, profit and loss.",
+      "A rational number a/b becomes a decimal when you divide a by b."
+     ],
+     "note": "Compare decimals place by place from the left: integer part, then tenths, then hundredths.",
+     "id": "g8.maths.u1.s1-2-1.2"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Example 1.10",
+     "steps": [
+      "4.25 and 12.33: integer parts 4 < 12, so 4.25 < 12.33.",
+      "15.52 and 15.05: integers equal; tenths 5 > 0, so 15.52 > 15.05.",
+      "45.667 and 45.684: tenths equal; hundredths 6 < 8, so 45.667 < 45.684."
+     ],
+     "id": "g8.maths.u1.s1-2-1.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Decimal",
+       "A number written with a decimal point, like 4.25."
+      ],
+      [
+       "Place value",
+       "The value of a digit from its position: ones, tenths, hundredths, …"
+      ]
+     ],
+     "id": "g8.maths.u1.s1-2-1.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Which sign is correct? 6.7 ? 6.89",
+     "opts": [
+      "<",
+      ">",
+      "="
+     ],
+     "ans": "<",
+     "why": "Integers equal; tenths 7 < 8. So 6.7 < 6.89.",
+     "clue": "Compare the tenths.",
+     "gen": {
+      "t": "compare",
+      "kind": "dec"
+     },
+     "id": "g8.maths.u1.s1-2-1.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Which sign is correct? −3 ? −5",
+     "opts": [
+      "<",
+      ">",
+      "="
+     ],
+     "ans": ">",
+     "why": "−3 is to the right of −5.",
+     "clue": "Which is closer to 0?",
+     "title": "Activity 1.2",
+     "id": "g8.maths.u1.s1-2-1.6"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "6.53 < 6.053",
+     "a": false,
+     "why": "Tenths: 5 > 0, so 6.53 > 6.053.",
+     "clue": "Compare the tenths digits.",
+     "gen": {
+      "t": "compare",
+      "kind": "dec"
+     },
+     "id": "g8.maths.u1.s1-2-1.7"
+    }
+   ]
+  },
+  {
+   "id": "math.compare-fractions",
+   "name": "Comparing fractions",
+   "requires": [
+    "math.lcm"
+   ],
+   "explain": {
+    "en": {
+     "text": "With the same denominator, the bigger numerator is bigger. With different denominators, change both to the LCM of the denominators and compare numerators. Or cross-multiply: a/b > c/d when a × d > b × c."
+    },
+    "am": {
+     "text": "ተመሳሳይ ተካፋይ ሲኖር ትልቅ ላዕላይ ያለው ይበልጣል። የተለያየ ከሆነ ወደ ትንሹ የጋራ ብዜት ቀይርና ላዕላዮቹን አነፃፅር። ወይም መስቀለኛ አባዛ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "fracbar",
+     "step": "hook",
+     "added": true,
+     "title": "Which is bigger, 3/5 or 1/2?",
+     "bars": [
+      {
+       "parts": 5,
+       "shade": [
+        {
+         "n": 3,
+         "color": "a",
+         "label": "3/5"
+        }
+       ]
+      },
+      {
+       "parts": 2,
+       "shade": [
+        {
+         "n": 1,
+         "color": "b",
+         "label": "1/2"
+        }
+       ]
+      }
+     ],
+     "after": "The 3/5 bar is a little longer. So 3/5 > 1/2.",
+     "id": "g8.maths.u1.s1-2-1.8"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Same denominator",
+     "paras": [
+      "If the denominators are the same, the bigger numerator is the bigger number.",
+      "Example 1.11: 15/7 > 13/7 because 15 > 13."
+     ],
+     "id": "g8.maths.u1.s1-2-1.9"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Different denominators",
+     "paras": [
+      "Equivalent fractions mark the same point on the number line.",
+      "Method 1: find the LCM of the denominators. Rewrite both fractions. Compare the numerators.",
+      "Method 2 (cross-product): a/b < c/d when a × d < b × c."
+     ],
+     "note": "a/b = (a × m)/(b × m) for any non-zero integer m.",
+     "id": "g8.maths.u1.s1-2-1.10"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Equivalent fractions",
+       "Fractions that mark the same point on the number line, like 1/2 and 2/4."
+      ],
+      [
+       "LCM",
+       "The smallest number that two numbers both divide."
+      ],
+      [
+       "Cross-product",
+       "To compare a/b and c/d, compare a × d with b × c."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-2-1.11"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Example 1.12 a: 3/5 and 1/2",
+     "steps": [
+      "LCM of 5 and 2 is 10.",
+      "3/5 = 6/10 and 1/2 = 5/10.",
+      "6 > 5, so 3/5 > 1/2."
+     ],
+     "id": "g8.maths.u1.s1-2-1.12"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Which sign is correct? 11/16 ? 7/8",
+     "opts": [
+      "<",
+      ">",
+      "="
+     ],
+     "ans": "<",
+     "why": "7/8 = 14/16, and 11 < 14.",
+     "clue": "Write 7/8 with denominator 16.",
+     "needs": "math.lcm",
+     "gen": {
+      "t": "compare",
+      "kind": "frac"
+     },
+     "id": "g8.maths.u1.s1-2-1.13"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Which sign is correct? 5/7 ? 8/3",
+     "opts": [
+      "<",
+      ">",
+      "="
+     ],
+     "ans": "<",
+     "why": "5 × 3 = 15 and 7 × 8 = 56. 15 < 56.",
+     "clue": "Cross-multiply.",
+     "title": "Example 1.13 a",
+     "gen": {
+      "t": "compare",
+      "kind": "frac"
+     },
+     "id": "g8.maths.u1.s1-2-1.14"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Which sign is correct? −12/7 ? 6/9",
+     "opts": [
+      "<",
+      ">",
+      "="
+     ],
+     "ans": "<",
+     "why": "A negative number is less than a positive number.",
+     "clue": "Which one is negative?",
+     "gen": {
+      "t": "compare",
+      "kind": "neg"
+     },
+     "id": "g8.maths.u1.s1-2-1.15"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "3/5 = ___/10",
+     "a": [
+      "6"
+     ],
+     "why": "5 × 2 = 10, so 3 × 2 = 6.",
+     "clue": "What times 5 gives 10?",
+     "needs": "math.lcm",
+     "id": "g8.maths.u1.s1-2-1.16"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "12/8 = 10/15",
+     "a": false,
+     "why": "12 × 15 = 180 and 8 × 10 = 80. They are not equal.",
+     "clue": "Cross-multiply.",
+     "id": "g8.maths.u1.s1-2-1.17"
+    }
+   ]
+  },
+  {
+   "id": "math.compare-numberline",
+   "name": "Comparing on the number line",
+   "explain": {
+    "en": {
+     "text": "On a number line the number further left is smaller. Every positive number is greater than every negative number. Of two negatives, the one with the bigger absolute value is smaller."
+    },
+    "am": {
+     "text": "በቁጥር መስመር ላይ በግራ ያለው ያንሳል። ማንኛውም አዎንታዊ ቁጥር ከማንኛውም አሉታዊ ቁጥር ይበልጣል። ከሁለት አሉታዊዎች ፍጹም ዋጋው የሚበልጠው ያንሳል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "numline",
+     "step": "explore",
+     "title": "Figure 1.13",
+     "min": -2,
+     "max": 2,
+     "sub": 2,
+     "points": [
+      {
+       "v": "-1",
+       "label": "−1",
+       "info": "is the smallest here: furthest left."
+      },
+      {
+       "v": "-1/2",
+       "label": "−1/2",
+       "info": "is less than 0 and greater than −1."
+      },
+      {
+       "v": "0",
+       "label": "0",
+       "info": "sits between the negatives and positives."
+      },
+      {
+       "v": "1/2",
+       "label": "1/2",
+       "info": "is greater than 0."
+      }
+     ],
+     "need": 3,
+     "ask": "Tap the points from left to right.",
+     "id": "g8.maths.u1.s1-2-1.18"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Comparing with the number line",
+     "paras": [
+      "Of two numbers on the line, the one on the left is smaller."
+     ],
+     "table": [
+      [
+       "Fact",
+       "Example"
+      ],
+      [
+       "Every positive number is greater than 0.",
+       "1/2 > 0"
+      ],
+      [
+       "Every negative number is less than 0.",
+       "−1/2 < 0"
+      ],
+      [
+       "Positives are greater than negatives.",
+       "1/2 > −1"
+      ],
+      [
+       "Of two negatives, the bigger absolute value is smaller.",
+       "−45 < −23"
+      ]
+     ],
+     "id": "g8.maths.u1.s1-2-1.19"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Left is smaller",
+     "defs": [
+      [
+       "Number line",
+       "A line with 0 in the middle. The number further left is smaller."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-2-1.20"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Which is smaller, −45 or −23?",
+     "opts": [
+      "−45",
+      "−23"
+     ],
+     "ans": "−45",
+     "why": "|−45| > |−23|, so −45 is further left.",
+     "clue": "Which is further from 0?",
+     "id": "g8.maths.u1.s1-2-1.21"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Exercise 1.4 Q3 e: which is to the left on the number line?",
+     "opts": [
+      "−1/3",
+      "−1.5"
+     ],
+     "ans": "−1.5",
+     "why": "−1.5 < −1/3 because 1.5 > 1/3.",
+     "clue": "Which is further from 0?",
+     "id": "g8.maths.u1.s1-2-1.22"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "|−3/5| < 3/5",
+     "a": false,
+     "why": "|−3/5| = 3/5. They are equal.",
+     "clue": "Find |−3/5| first.",
+     "id": "g8.maths.u1.s1-2-1.23"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 1.4",
+   "items": [
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Q1 a: −0.15 < 1.5",
+     "a": true,
+     "why": "A negative is less than a positive.",
+     "clue": "Which one is negative?",
+     "id": "g8.maths.u1.s1-2-1.24"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Q1 b: 23/5 > 32/5",
+     "a": false,
+     "why": "Same denominator: 23 < 32.",
+     "clue": "Compare the numerators.",
+     "id": "g8.maths.u1.s1-2-1.25"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Q1 e: 3 5/7 > 21/6",
+     "a": true,
+     "why": "3 5/7 ≈ 3.71 and 21/6 = 3.5.",
+     "clue": "Change both to decimals.",
+     "id": "g8.maths.u1.s1-2-1.26"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Q1 h: 3 4/7 = 25/7",
+     "a": true,
+     "why": "3 × 7 + 4 = 25.",
+     "clue": "Change the mixed number to an improper fraction.",
+     "id": "g8.maths.u1.s1-2-1.27"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which sign is correct? −21/12 ? −28/16",
+     "opts": [
+      "<",
+      ">",
+      "="
+     ],
+     "ans": "=",
+     "why": "Both equal −7/4.",
+     "clue": "Simplify both fractions.",
+     "id": "g8.maths.u1.s1-2-1.28"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which sign is correct? 8/20 ? 0.35",
+     "opts": [
+      "<",
+      ">",
+      "="
+     ],
+     "ans": ">",
+     "why": "8/20 = 0.4 and 0.4 > 0.35.",
+     "clue": "Change 8/20 to a decimal.",
+     "id": "g8.maths.u1.s1-2-1.29"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which sign is correct? 3/4 ? 5/7",
+   "opts": [
+    "<",
+    ">",
+    "="
+   ],
+   "ans": ">",
+   "why": "3 × 7 = 21 and 4 × 5 = 20.",
+   "clue": "",
+   "gen": {
+    "t": "compare",
+    "kind": "frac"
+   },
+   "id": "g8.maths.u1.s1-2-1.30"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which sign is correct? 4.07 ? 4.7",
+   "opts": [
+    "<",
+    ">",
+    "="
+   ],
+   "ans": "<",
+   "why": "Tenths: 0 < 7.",
+   "clue": "",
+   "gen": {
+    "t": "compare",
+    "kind": "dec"
+   },
+   "id": "g8.maths.u1.s1-2-1.31"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which sign is correct? −2/3 ? −3/4",
+   "opts": [
+    "<",
+    ">",
+    "="
+   ],
+   "ans": ">",
+   "why": "|−2/3| < |−3/4|, so −2/3 is to the right.",
+   "clue": "",
+   "gen": {
+    "t": "compare",
+    "kind": "neg"
+   },
+   "id": "g8.maths.u1.s1-2-1.32"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "correction",
+   "text": "The book's equivalent-fractions note says m is a rational number different from 0; m must be a non-zero integer for a/b = (a × m)/(b × m) to stay a fraction of integers. Shown as an integer here."
+  },
+  {
+   "kind": "review",
+   "text": "Exercise 1.4 Q2 is printed ambiguously. Read as: a 15/9 ? 18/9, b −21/12 ? −28/16, c 8/20 ? 0.35, d 3 5/6 ? 3 7/8, e |−3/10| ? 3/10, f 12/13 ? 13/9. Teacher to confirm."
+  },
+  {
+   "kind": "note",
+   "text": "Exercise 1.4 Q4 (letters on a number line, Figure 1.14) needs the figure; left out."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.lcm": {
+   "name": "Least common multiple",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "LCM of 4 and 6",
+     "text": "List multiples until one appears in both lists.",
+     "steps": [
+      "Multiples of 4: 4, 8, 12, 16, …",
+      "Multiples of 6: 6, 12, 18, …",
+      "12 is the first one in both lists.",
+      "So LCM(4, 6) = 12."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "What is the LCM of 6 and 8?",
+     "opts": [
+      "24",
+      "48",
+      "14",
+      "12"
+     ],
+     "ans": "24",
+     "why": "Multiples of 8: 8, 16, 24. 24 is also a multiple of 6.",
+     "clue": "List multiples of 8 and stop at the first that 6 divides."
+    }
+   ]
+  }
+ }
+}

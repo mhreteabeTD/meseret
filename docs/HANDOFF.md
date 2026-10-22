@@ -37,10 +37,12 @@ You are continuing work on **Meseret (መሰረት)** with me, Mhreteabe (founde
 - Use any real photo found for people; I'll flag problems.
 - Teacher review and Amharic speaker review run in parallel; all Amharic is machine-made (`"machine": true`) and needs a speaker's check.
 
-## Grade 8 Maths Unit 1 (in progress)
-- Design spec: `docs/G8-MATHS-U1-DESIGN.md` (lesson-by-lesson plan, new blocks, verified exercise answers, book issues).
-- Live trial: `#book/g8-maths-u1`, sections 1.1–1.1.3. New engine pieces: `numline` block, numeric blanks (`"num": true`), auto-stacked fractions.
-- Next: engine step B, then sections 1.2.1–1.4.2 and the chapter test.
+## Grade 8 Maths Unit 1 (built 2026-10-22)
+- Spec: `docs/G8-MATHS-U1-DESIGN.md`. Whole unit live at `#book/g8-maths-u1` (13 sections incl. ★ summary, review, chapter test).
+- New blocks: `numline`, `fracbar`, `grid`, `nest`, `slider`; numeric blanks (`num`), sign-first input (`input: signed`); fractions drawn stacked automatically.
+- Fresh questions: `gen` on a screen → new numbers on practice replays and tests (rules in the spec). Book page and book exercises stay the book's.
+- Students choose one or more grades in setup; home shows only those grades (`meseret:grades`).
+- Tips (💡) are now always fully shown, not tappable.
 
 ## Open items / next steps
 1. Get my feedback on the live Science trial and adjust.

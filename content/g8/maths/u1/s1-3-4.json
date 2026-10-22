@@ -1,0 +1,515 @@
+{
+ "id": "g8.maths.u1.s1-3-4",
+ "book": {
+  "title": "Mathematics Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "Rational Numbers",
+  "pages": "32–35",
+  "section": "1.3.4"
+ },
+ "title": "Division of rational numbers",
+ "competency": "Divide rational numbers using the reciprocal.",
+ "minutes": 12,
+ "keywords": [
+  {
+   "en": "Quotient",
+   "am": "ድርሻ",
+   "def": "The answer to a division.",
+   "machine": true
+  },
+  {
+   "en": "Dividend",
+   "am": "ተካፋይ ቁጥር",
+   "def": "The number being divided.",
+   "machine": true
+  },
+  {
+   "en": "Divisor",
+   "am": "አካፋይ ቁጥር",
+   "def": "The number you divide by.",
+   "machine": true
+  },
+  {
+   "en": "Reciprocal",
+   "am": "ተገላቢጦሽ",
+   "def": "The number you multiply by to get 1. The reciprocal of a/b is b/a.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.divide-rationals",
+   "name": "Dividing",
+   "requires": [
+    "math.multiply-rationals"
+   ],
+   "explain": {
+    "en": {
+     "text": "Dividing by a fraction asks how many of it fit. To divide, multiply by the reciprocal of the divisor: a/b ÷ c/d = a/b × d/c. Same signs give a positive quotient; different signs give a negative one."
+    },
+    "am": {
+     "text": "በክፍልፋይ ማካፈል ስንቱ እንደሚገባ ይጠይቃል። ለማካፈል በአካፋዩ ተገላቢጦሽ አባዛ። ተመሳሳይ ምልክት አዎንታዊ፣ የተለያየ ምልክት አሉታዊ ድርሻ ይሰጣል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Activity 1.6 Q1",
+     "ask": "How many groups of 3/4 are in 12?",
+     "opts": [
+      "9",
+      "16",
+      "36",
+      "4"
+     ],
+     "after": "12 ÷ 3/4 = 12 × 4/3 = 16.",
+     "id": "g8.maths.u1.s1-3-4.1"
+    },
+    {
+     "kind": "grid",
+     "step": "explore",
+     "title": "Example 1.30: 4 1/3 ÷ 2/3",
+     "mode": "groups",
+     "wholes": 4,
+     "d": 3,
+     "part": 1,
+     "group": 2,
+     "say": [
+      "Shade 4 1/3: four wholes and 1 third.",
+      "Make groups of 2/3: 6 full groups and half a group. 4 1/3 ÷ 2/3 = 6 1/2 = 13/2."
+     ],
+     "id": "g8.maths.u1.s1-3-4.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Words for division",
+     "paras": [
+      "In a ÷ b = c, c is the quotient, a is the dividend and b is the divisor.",
+      "a ÷ b is also written a/b."
+     ],
+     "id": "g8.maths.u1.s1-3-4.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Rules for division",
+     "table": [
+      [
+       "Step",
+       "Do this"
+      ],
+      [
+       "1 a",
+       "Same signs: the quotient is +."
+      ],
+      [
+       "1 b",
+       "Different signs: the quotient is −."
+      ],
+      [
+       "2",
+       "Divide the absolute values."
+      ]
+     ],
+     "paras": [
+      "a/b ÷ c/d = a/b × d/c, where c ≠ 0."
+     ],
+     "id": "g8.maths.u1.s1-3-4.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Quotient",
+       "The answer to a division."
+      ],
+      [
+       "Dividend",
+       "The number being divided."
+      ],
+      [
+       "Divisor",
+       "The number you divide by."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-3-4.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Example 1.31: −324 ÷ (−18) = ?",
+     "opts": [
+      "18",
+      "−18",
+      "1/18"
+     ],
+     "ans": "18",
+     "why": "Same signs give +. 324 ÷ 18 = 18.",
+     "clue": "Same signs or different?",
+     "id": "g8.maths.u1.s1-3-4.6"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Example 1.32 a: 6/14 ÷ 3/7",
+     "steps": [
+      "Multiply by the reciprocal: 6/14 × 7/3.",
+      "= 42/42.",
+      "= 1."
+     ],
+     "id": "g8.maths.u1.s1-3-4.7"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "−3 ÷ 9/15 = ___",
+     "a": [
+      "-5"
+     ],
+     "why": "−3 × 15/9 = −45/9 = −5.",
+     "clue": "Multiply by the reciprocal of 9/15.",
+     "input": "signed",
+     "worked": "−3/1 × 15/9 = −45/9 = −5.",
+     "gen": {
+      "t": "op",
+      "op": "div",
+      "signs": true
+     },
+     "id": "g8.maths.u1.s1-3-4.8"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "−5/7 ÷ (−4) = ___",
+     "a": [
+      "5/28"
+     ],
+     "why": "−5/7 × (−1/4) = 5/28.",
+     "clue": "The reciprocal of −4 is −1/4.",
+     "input": "signed",
+     "gen": {
+      "t": "op",
+      "op": "div",
+      "signs": true
+     },
+     "id": "g8.maths.u1.s1-3-4.9"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "5/8 ÷ 3/4 = ___",
+     "a": [
+      "5/6"
+     ],
+     "why": "5/8 × 4/3 = 20/24 = 5/6.",
+     "clue": "Flip the divisor and multiply.",
+     "gen": {
+      "t": "op",
+      "op": "div"
+     },
+     "id": "g8.maths.u1.s1-3-4.10"
+    }
+   ]
+  },
+  {
+   "id": "math.reciprocal",
+   "name": "Reciprocals",
+   "explain": {
+    "en": {
+     "text": "Two numbers are reciprocals when their product is 1. The reciprocal of a/b is b/a. Zero has no reciprocal."
+    },
+    "am": {
+     "text": "ሁለት ቁጥሮች ብዜታቸው 1 ሲሆን ተገላቢጦሽ ናቸው። የa/b ተገላቢጦሽ b/a ነው። 0 ተገላቢጦሽ የለውም።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "added": true,
+     "title": "Make 1",
+     "ask": "3/4 × ? = 1",
+     "opts": [
+      "4/3",
+      "3/4",
+      "1/4",
+      "−3/4"
+     ],
+     "after": "3/4 × 4/3 = 12/12 = 1.",
+     "id": "g8.maths.u1.s1-3-4.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Reciprocal",
+     "paras": [
+      "a/b × b/a = ab/ba = 1.",
+      "Then b/a is called the reciprocal of a/b."
+     ],
+     "id": "g8.maths.u1.s1-3-4.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Reciprocal",
+     "defs": [
+      [
+       "Reciprocal",
+       "The number you multiply by to get 1. The reciprocal of a/b is b/a."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-3-4.13"
+    },
+    {
+     "kind": "match",
+     "step": "check",
+     "graded": true,
+     "title": "Match each number to its reciprocal",
+     "pairs": [
+      [
+       "3/4",
+       "4/3"
+      ],
+      [
+       "−2/5",
+       "−5/2"
+      ],
+      [
+       "7",
+       "1/7"
+      ],
+      [
+       "1 1/2",
+       "2/3"
+      ]
+     ],
+     "why": "Each pair multiplies to 1.",
+     "clue": "Flip the fraction. Keep the sign.",
+     "id": "g8.maths.u1.s1-3-4.14"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "Exercise 1.9 Q2: Rahel has 3/4 kg of kolo. Each bag holds 3/8 kg. Number of bags = ___",
+     "a": [
+      "2"
+     ],
+     "why": "3/4 ÷ 3/8 = 3/4 × 8/3 = 2.",
+     "clue": "Divide the total by the bag size.",
+     "added": true,
+     "worked": "3/4 × 8/3 = 24/12 = 2 bags.",
+     "gen": {
+      "t": "op",
+      "op": "div",
+      "word": true
+     },
+     "id": "g8.maths.u1.s1-3-4.15"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "Activity 1.6 Q2: how many groups of 2/5 are in 3 3/5? ___",
+     "a": [
+      "9"
+     ],
+     "why": "18/5 ÷ 2/5 = 18/5 × 5/2 = 9.",
+     "clue": "Change 3 3/5 to fifths.",
+     "id": "g8.maths.u1.s1-3-4.16"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 1.9",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Q1 a: 5/8 ÷ 3/4 = ___",
+     "a": [
+      "5/6"
+     ],
+     "why": "5/8 × 4/3 = 5/6.",
+     "clue": "Multiply by the reciprocal.",
+     "id": "g8.maths.u1.s1-3-4.17"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Q1 b: −3/5 ÷ 6/7 = ___",
+     "a": [
+      "-7/10"
+     ],
+     "why": "−3/5 × 7/6 = −21/30 = −7/10.",
+     "clue": "Multiply by the reciprocal.",
+     "id": "g8.maths.u1.s1-3-4.18"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Q1 c: −8/9 ÷ (−5/3) = ___",
+     "a": [
+      "8/15"
+     ],
+     "why": "8/9 × 3/5 = 24/45 = 8/15.",
+     "clue": "Two negatives.",
+     "id": "g8.maths.u1.s1-3-4.19"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Q1 d: 2 3/5 ÷ (−4/3) = ___",
+     "a": [
+      "-39/20",
+      "-1 19/20"
+     ],
+     "why": "13/5 × (−3/4) = −39/20.",
+     "clue": "Change 2 3/5 to 13/5.",
+     "id": "g8.maths.u1.s1-3-4.20"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Q2: Rahel made 3/4 pound of trail mix and puts 3/8 pound in each bag. Bags = ___",
+     "a": [
+      "2"
+     ],
+     "why": "3/4 ÷ 3/8 = 2.",
+     "clue": "Divide.",
+     "id": "g8.maths.u1.s1-3-4.21"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "2/3 ÷ 4/9 = ___",
+   "a": [
+    "3/2",
+    "1 1/2",
+    "1.5"
+   ],
+   "why": "2/3 × 9/4 = 18/12.",
+   "clue": "",
+   "gen": {
+    "t": "op",
+    "op": "div"
+   },
+   "id": "g8.maths.u1.s1-3-4.22"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "−6/7 ÷ 3/14 = ___",
+   "a": [
+    "-4"
+   ],
+   "why": "−6/7 × 14/3 = −84/21.",
+   "clue": "",
+   "gen": {
+    "t": "op",
+    "op": "div",
+    "signs": true
+   },
+   "id": "g8.maths.u1.s1-3-4.23"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The reciprocal of −5/8 is",
+   "opts": [
+    "−8/5",
+    "8/5",
+    "5/8"
+   ],
+   "ans": "−8/5",
+   "why": "−5/8 × −8/5 = 1.",
+   "clue": "",
+   "id": "g8.maths.u1.s1-3-4.24"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "Exercise 1.9 Q2 uses pounds and trail mix; the exercise keeps the book's words, the practise item uses kolo and kg (added)."
+  },
+  {
+   "kind": "note",
+   "text": "Activity 1.6 Q3 (grid model of 3 1/3 ÷ 2/3 = 5) follows the same idea as Example 1.30."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.multiply-rationals": {
+   "name": "Multiplying fractions",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "2/3 × 4/5",
+     "text": "Multiply tops, multiply bottoms.",
+     "steps": [
+      "2 × 4 = 8.",
+      "3 × 5 = 15.",
+      "So 2/3 × 4/5 = 8/15."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "3/4 × 2/7 = ?",
+     "opts": [
+      "3/14",
+      "6/11",
+      "5/28",
+      "6/7"
+     ],
+     "ans": "3/14",
+     "why": "6/28 = 3/14.",
+     "clue": "Multiply tops and bottoms, then reduce."
+    }
+   ]
+  }
+ }
+}

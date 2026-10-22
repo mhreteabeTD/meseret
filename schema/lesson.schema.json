@@ -186,6 +186,10 @@
             "items": {
               "$ref": "#/$defs/screen"
             }
+          },
+          "test": {
+            "type": "boolean",
+            "description": "a test with fresh generated questions every time, no clues"
           }
         }
       }
@@ -326,7 +330,11 @@
             "reveal",
             "tree",
             "venn",
-            "numline"
+            "numline",
+            "fracbar",
+            "grid",
+            "nest",
+            "slider"
           ]
         },
         "step": {
@@ -545,6 +553,83 @@
         "num": {
           "type": "boolean",
           "description": "blank: compare as numbers (3/8 = 6/16 = 0.375); an accepted answer starting with ≈ allows rounding"
+        },
+        "bars": {
+          "type": "array",
+          "description": "fracbar: [{parts, shade:[{n, color:a|b|c|d, label}], mark:{n,label}}]"
+        },
+        "parts": {
+          "type": "integer"
+        },
+        "shade": {
+          "type": "array"
+        },
+        "mark": {
+          "type": "object"
+        },
+        "cols": {
+          "type": "integer",
+          "description": "grid area model"
+        },
+        "rows": {
+          "type": "integer"
+        },
+        "shadeCols": {
+          "type": "integer"
+        },
+        "shadeRows": {
+          "type": "integer"
+        },
+        "mode": {
+          "type": "string",
+          "description": "grid: 'groups' for the division model"
+        },
+        "wholes": {
+          "type": "integer"
+        },
+        "d": {
+          "type": "integer"
+        },
+        "part": {
+          "type": "integer"
+        },
+        "group": {
+          "type": "integer"
+        },
+        "say": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "grid: one line per ▶ step"
+        },
+        "rings": {
+          "type": "array",
+          "description": "nest: [[symbol, name, info]] outer to inner"
+        },
+        "numbers": {
+          "type": "array",
+          "description": "nest: [[label, innermost ring index, note]]"
+        },
+        "vars": {
+          "type": "array",
+          "description": "slider: [{k,label,min,max,step,v}]"
+        },
+        "formula": {
+          "type": "string"
+        },
+        "out": {
+          "type": "string"
+        },
+        "input": {
+          "enum": [
+            "signed"
+          ],
+          "description": "blank: ask for the sign first, then the size"
+        },
+        "gen": {
+          "type": "object",
+          "description": "generator {t, ...options}: replays and tests use fresh numbers (app.js Gen)"
         }
       },
       "allOf": [

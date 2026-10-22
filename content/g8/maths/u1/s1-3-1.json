@@ -1,0 +1,903 @@
+{
+ "id": "g8.maths.u1.s1-3-1",
+ "book": {
+  "title": "Mathematics Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "Rational Numbers",
+  "pages": "20–25",
+  "section": "1.3.1"
+ },
+ "title": "Addition of rational numbers",
+ "competency": "Add rational numbers and use the properties of addition.",
+ "minutes": 14,
+ "keywords": [
+  {
+   "en": "Sum",
+   "am": "ድምር",
+   "def": "The answer to an addition.",
+   "machine": true
+  },
+  {
+   "en": "Addend",
+   "am": "ተደማሪ",
+   "def": "A number being added.",
+   "machine": true
+  },
+  {
+   "en": "Common denominator",
+   "am": "የጋራ ተካፋይ",
+   "def": "A denominator shared by two or more fractions.",
+   "machine": true
+  },
+  {
+   "en": "Commutative property",
+   "am": "የመለዋወጥ ባሕሪ",
+   "def": "Changing the order does not change the answer: a + b = b + a.",
+   "machine": true
+  },
+  {
+   "en": "Associative property",
+   "am": "የመቧደን ባሕሪ",
+   "def": "Changing the grouping does not change the answer: (a + b) + c = a + (b + c).",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.add-same-denominator",
+   "name": "Same denominators",
+   "explain": {
+    "en": {
+     "text": "To add fractions with the same denominator, add the numerators and keep the denominator. 5/8 + 2/8 = 7/8. On a number line, adding a positive moves right and adding a negative moves left."
+    },
+    "am": {
+     "text": "ተመሳሳይ ተካፋይ ያላቸውን ክፍልፋዮች ለመደመር ላዕላዮቹን ደምርና ተካፋዩን አቆይ። 5/8 + 2/8 = 7/8።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "numline",
+     "step": "hook",
+     "title": "Activity 1.3: 6 + (−3)",
+     "min": -1,
+     "max": 8,
+     "hops": [
+      {
+       "from": 0,
+       "by": 6
+      },
+      {
+       "from": 6,
+       "by": -3
+      }
+     ],
+     "ask": "Tap Hop twice. Where do you land?",
+     "after": "6 + (−3) = 3. Adding a negative number moves left.",
+     "id": "g8.maths.u1.s1-3-1.1"
+    },
+    {
+     "kind": "numline",
+     "step": "explore",
+     "title": "Activity 1.3: −9 + 5",
+     "min": -10,
+     "max": 1,
+     "hops": [
+      {
+       "from": 0,
+       "by": -9
+      },
+      {
+       "from": -9,
+       "by": 5
+      }
+     ],
+     "ask": "Now −9 + 5.",
+     "after": "−9 + 5 = −4.",
+     "id": "g8.maths.u1.s1-3-1.2"
+    },
+    {
+     "kind": "fracbar",
+     "step": "explore",
+     "title": "Example 1.19: 5/8 + 2/8",
+     "bars": [
+      {
+       "parts": 8,
+       "shade": [
+        {
+         "n": 5,
+         "color": "a",
+         "label": "5/8"
+        },
+        {
+         "n": 2,
+         "color": "b",
+         "label": "+ 2/8"
+        }
+       ]
+      }
+     ],
+     "after": "7 of 8 parts are shaded: 5/8 + 2/8 = 7/8.",
+     "id": "g8.maths.u1.s1-3-1.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Same denominators",
+     "paras": [
+      "To add fractions with the same denominator, add the numerators.",
+      "Write the sum over the common denominator: a/b + c/b = (a + c)/b."
+     ],
+     "id": "g8.maths.u1.s1-3-1.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Sum",
+       "The answer to an addition."
+      ],
+      [
+       "Addend",
+       "A number being added."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-3-1.5"
+    },
+    {
+     "kind": "blank",
+     "step": "check",
+     "graded": true,
+     "num": true,
+     "ask": "3/5 + 6/5 = ___",
+     "a": [
+      "9/5",
+      "1 4/5",
+      "1.8"
+     ],
+     "why": "(3 + 6)/5 = 9/5.",
+     "clue": "Add the numerators.",
+     "gen": {
+      "t": "op",
+      "op": "add",
+      "same": true
+     },
+     "id": "g8.maths.u1.s1-3-1.6"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "−3/4 + 11/4 = ___",
+     "a": [
+      "2"
+     ],
+     "why": "(−3 + 11)/4 = 8/4 = 2.",
+     "clue": "Add the numerators.",
+     "worked": "−3 + 11 = 8, and 8/4 = 2.",
+     "gen": {
+      "t": "op",
+      "op": "add",
+      "same": true,
+      "signs": true
+     },
+     "id": "g8.maths.u1.s1-3-1.7"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "8/7 + 5/7 + 6/7 = ___",
+     "a": [
+      "19/7",
+      "2 5/7"
+     ],
+     "why": "(8 + 5 + 6)/7 = 19/7.",
+     "clue": "Add all the numerators.",
+     "id": "g8.maths.u1.s1-3-1.8"
+    }
+   ]
+  },
+  {
+   "id": "math.add-different-denominator",
+   "name": "Different denominators",
+   "requires": [
+    "math.lcm"
+   ],
+   "explain": {
+    "en": {
+     "text": "When denominators differ, find their LCM. Rewrite each fraction with the LCM as the denominator. Then add the numerators. Always reduce the answer."
+    },
+    "am": {
+     "text": "ተካፋዮቹ የተለያዩ ሲሆኑ ትንሹን የጋራ ብዜት ፈልግ። እያንዳንዱን ክፍልፋይ በዚያ ተካፋይ ጻፍ። ከዚያ ላዕላዮቹን ደምር።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "fracbar",
+     "step": "hook",
+     "title": "Example 1.20: 1/6 + 1/2",
+     "bars": [
+      {
+       "parts": 6,
+       "shade": [
+        {
+         "n": 1,
+         "color": "a",
+         "label": "1/6"
+        },
+        {
+         "n": 3,
+         "color": "b",
+         "label": "+ 1/2 = 3/6"
+        }
+       ]
+      }
+     ],
+     "after": "4 of 6 parts: 1/6 + 1/2 = 4/6 = 2/3.",
+     "id": "g8.maths.u1.s1-3-1.9"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Different denominators",
+     "table": [
+      [
+       "Step",
+       "Do this"
+      ],
+      [
+       "I",
+       "Make all denominators positive."
+      ],
+      [
+       "II",
+       "Find the LCM of the denominators."
+      ],
+      [
+       "III",
+       "Write equivalent fractions with that denominator."
+      ],
+      [
+       "IV",
+       "Add the numerators; keep the denominator."
+      ]
+     ],
+     "paras": [
+      "Example 1.16: 3/7 + 5/4 = 12/28 + 35/28 = 47/28."
+     ],
+     "note": "Always reduce your final answer to its lowest terms.",
+     "id": "g8.maths.u1.s1-3-1.10"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Common denominator",
+     "defs": [
+      [
+       "Common denominator",
+       "A denominator shared by two or more fractions."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-3-1.11"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "The LCM of 9, 6 and 4 is",
+     "opts": [
+      "18",
+      "36",
+      "72",
+      "216"
+     ],
+     "ans": "36",
+     "why": "36 is the smallest number that 9, 6 and 4 all divide.",
+     "clue": "List multiples of 9.",
+     "needs": "math.lcm",
+     "id": "g8.maths.u1.s1-3-1.12"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "5/6 + 3/8 = ___",
+     "a": [
+      "29/24",
+      "1 5/24"
+     ],
+     "why": "LCM 24: 20/24 + 9/24 = 29/24.",
+     "clue": "Find the LCM of 6 and 8.",
+     "worked": "LCM of 6 and 8 is 24. 5/6 = 20/24 and 3/8 = 9/24. Sum: 29/24.",
+     "gen": {
+      "t": "op",
+      "op": "add"
+     },
+     "id": "g8.maths.u1.s1-3-1.13"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "11/9 + 5/6 + 3/4 = ___",
+     "a": [
+      "101/36",
+      "2 29/36"
+     ],
+     "why": "LCM 36: 44/36 + 30/36 + 27/36 = 101/36.",
+     "clue": "Find the LCM of 9, 6 and 4.",
+     "gen": {
+      "t": "op",
+      "op": "add",
+      "mixed": true
+     },
+     "id": "g8.maths.u1.s1-3-1.14"
+    }
+   ]
+  },
+  {
+   "id": "math.add-sign-rules",
+   "name": "Adding with signs",
+   "requires": [
+    "math.integer-signs"
+   ],
+   "explain": {
+    "en": {
+     "text": "Both negative: add the absolute values and keep the minus sign. Different signs: subtract the smaller absolute value from the bigger, and take the sign of the number with the bigger absolute value."
+    },
+    "am": {
+     "text": "ሁለቱም አሉታዊ ከሆኑ ፍጹም ዋጋዎቻቸውን ደምርና የመቀነስ ምልክቱን አቆይ። ምልክታቸው የተለያየ ከሆነ ትንሹን ፍጹም ዋጋ ከትልቁ ቀንስና የትልቁን ምልክት ውሰድ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "added": true,
+     "title": "Debts",
+     "ask": "Abebe owes 8 Birr. Then he owes 11 Birr more. Is the total a debt or a gain?",
+     "opts": [
+      "A debt of 19 Birr",
+      "A gain of 19 Birr",
+      "A debt of 3 Birr"
+     ],
+     "after": "−8 + (−11) = −19. Two negatives give a bigger negative.",
+     "id": "g8.maths.u1.s1-3-1.15"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Rule 1: both negative",
+     "table": [
+      [
+       "Step",
+       "Do this"
+      ],
+      [
+       "i",
+       "The sign is negative (−)."
+      ],
+      [
+       "ii",
+       "Add the absolute values."
+      ],
+      [
+       "iii",
+       "Put − in front of the sum."
+      ]
+     ],
+     "paras": [
+      "Example 1.17: −8/6 + (−11/8) = −65/24."
+     ],
+     "id": "g8.maths.u1.s1-3-1.16"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Rule 2: different signs",
+     "paras": [
+      "Example 1.18 b: −5/6 + 3/4 = −1/12."
+     ],
+     "table": [
+      [
+       "Step",
+       "Do this"
+      ],
+      [
+       "i",
+       "Take the sign of the number with the bigger absolute value."
+      ],
+      [
+       "ii",
+       "Subtract the smaller absolute value from the bigger."
+      ],
+      [
+       "iii",
+       "Put that sign in front."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-3-1.17"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Addend",
+     "defs": [
+      [
+       "Addend",
+       "A number being added."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-3-1.18"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "−5/6 + 3/4: the sign of the answer is",
+     "opts": [
+      "+",
+      "−",
+      "0"
+     ],
+     "ans": "−",
+     "why": "|−5/6| = 10/12 is bigger than |3/4| = 9/12.",
+     "clue": "Which number is further from 0?",
+     "needs": "math.integer-signs",
+     "id": "g8.maths.u1.s1-3-1.19"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Example 1.18 a: −9/4 + 5/4",
+     "steps": [
+      "|−9/4| > |5/4|, so the sign is −.",
+      "9/4 − 5/4 = 4/4 = 1.",
+      "So −9/4 + 5/4 = −1."
+     ],
+     "id": "g8.maths.u1.s1-3-1.20"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "−5/6 + 3/4 = ___",
+     "a": [
+      "-1/12"
+     ],
+     "why": "Sign −; 10/12 − 9/12 = 1/12.",
+     "clue": "Decide the sign first.",
+     "input": "signed",
+     "gen": {
+      "t": "op",
+      "op": "add",
+      "signs": true
+     },
+     "id": "g8.maths.u1.s1-3-1.21"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "−8/6 + (−11/8) = ___",
+     "a": [
+      "-65/24",
+      "-2 17/24"
+     ],
+     "why": "Both negative: 32/24 + 33/24 = 65/24, so −65/24.",
+     "clue": "Both negative: add the sizes.",
+     "input": "signed",
+     "worked": "LCM 24: 8/6 = 32/24, 11/8 = 33/24. 32 + 33 = 65. Answer −65/24.",
+     "gen": {
+      "t": "op",
+      "op": "add",
+      "signs": true
+     },
+     "id": "g8.maths.u1.s1-3-1.22"
+    }
+   ]
+  },
+  {
+   "id": "math.addition-properties",
+   "name": "Properties of addition",
+   "explain": {
+    "en": {
+     "text": "Addition is commutative: the order does not matter. It is associative: the grouping does not matter. Adding 0 changes nothing. A number plus its opposite is 0."
+    },
+    "am": {
+     "text": "መደመር የመለዋወጥ ባሕሪ አለው፤ ቅደም ተከተሉ ለውጥ አያመጣም። የመቧደን ባሕሪም አለው። 0 መደመር ምንም አይለውጥም። ቁጥርና ተቃራኒው ሲደመሩ 0 ይሆናል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "added": true,
+     "title": "Does order matter?",
+     "ask": "Is 1/3 + 3/5 the same as 3/5 + 1/3?",
+     "opts": [
+      "Yes",
+      "No"
+     ],
+     "after": "Yes. Both are 14/15. The order of adding does not matter.",
+     "id": "g8.maths.u1.s1-3-1.23"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Properties of addition",
+     "paras": [
+      "For any rational numbers a, b and c:"
+     ],
+     "table": [
+      [
+       "Property",
+       "Rule"
+      ],
+      [
+       "Commutative",
+       "a + b = b + a"
+      ],
+      [
+       "Associative",
+       "a + (b + c) = (a + b) + c"
+      ],
+      [
+       "Property of 0",
+       "a + 0 = a = 0 + a"
+      ],
+      [
+       "Opposites",
+       "a + (−a) = 0"
+      ]
+     ],
+     "id": "g8.maths.u1.s1-3-1.24"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Example 1.21: 1/3 + 3/5 + 7/6",
+     "steps": [
+      "(1/3 + 3/5) + 7/6 = 14/15 + 7/6 = 63/30.",
+      "1/3 + (3/5 + 7/6) = 1/3 + 53/30 = 63/30.",
+      "Both give 63/30 = 21/10."
+     ],
+     "id": "g8.maths.u1.s1-3-1.25"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Commutative property",
+       "Changing the order does not change the answer: a + b = b + a."
+      ],
+      [
+       "Associative property",
+       "Changing the grouping does not change the answer."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-3-1.26"
+    },
+    {
+     "kind": "match",
+     "step": "check",
+     "graded": true,
+     "title": "Match the property",
+     "pairs": [
+      [
+       "Commutative",
+       "a + b = b + a"
+      ],
+      [
+       "Associative",
+       "a + (b + c) = (a + b) + c"
+      ],
+      [
+       "Property of 0",
+       "a + 0 = a"
+      ],
+      [
+       "Opposites",
+       "a + (−a) = 0"
+      ]
+     ],
+     "why": "These are the four properties of addition.",
+     "clue": "Order, grouping, zero, opposite.",
+     "id": "g8.maths.u1.s1-3-1.27"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "3/5 + 2 3/5 = ___",
+     "a": [
+      "16/5",
+      "3 1/5",
+      "3.2"
+     ],
+     "why": "3/5 + 13/5 = 16/5.",
+     "clue": "Change 2 3/5 to an improper fraction.",
+     "gen": {
+      "t": "op",
+      "op": "add",
+      "mixed": true
+     },
+     "id": "g8.maths.u1.s1-3-1.28"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "7/9 + (−7/9) = 0",
+     "a": true,
+     "why": "A number plus its opposite is 0.",
+     "clue": "Are they opposites?",
+     "id": "g8.maths.u1.s1-3-1.29"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "Exercise 1.6 Q2: Monday was 23.72 °C. Thursday was 3.23 °C more. Thursday = ___ °C",
+     "a": [
+      "26.95"
+     ],
+     "why": "23.72 + 3.23 = 26.95.",
+     "clue": "Add the decimals.",
+     "gen": {
+      "t": "op",
+      "op": "add",
+      "word": true
+     },
+     "id": "g8.maths.u1.s1-3-1.30"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 1.6",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Q1 a: 13/5 + 21/5 = ___",
+     "a": [
+      "34/5",
+      "6 4/5",
+      "6.8"
+     ],
+     "why": "(13 + 21)/5 = 34/5.",
+     "clue": "Same denominator.",
+     "id": "g8.maths.u1.s1-3-1.31"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Q1 b: 5/6 + 3/8 = ___",
+     "a": [
+      "29/24",
+      "1 5/24"
+     ],
+     "why": "20/24 + 9/24 = 29/24.",
+     "clue": "LCM of 6 and 8 is 24.",
+     "id": "g8.maths.u1.s1-3-1.32"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Q1 c: 3/5 + 2 3/5 = ___",
+     "a": [
+      "16/5",
+      "3 1/5",
+      "3.2"
+     ],
+     "why": "3/5 + 13/5 = 16/5.",
+     "clue": "Change the mixed number first.",
+     "id": "g8.maths.u1.s1-3-1.33"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Q1 d: 2 1/3 + 3/8 + 3 5/6 = ___",
+     "a": [
+      "157/24",
+      "6 13/24"
+     ],
+     "why": "56/24 + 9/24 + 92/24 = 157/24.",
+     "clue": "LCM of 3, 8 and 6 is 24.",
+     "id": "g8.maths.u1.s1-3-1.34"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Q1 e: |−2/5 + 3/8| + |4/7 + 2/7| = ___",
+     "a": [
+      "247/280"
+     ],
+     "why": "|−1/40| + 6/7 = 1/40 + 6/7 = 247/280.",
+     "clue": "Work inside each pair of bars first.",
+     "id": "g8.maths.u1.s1-3-1.35"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Q2: Monday 23.72 °C; Thursday 3.23 °C more. Thursday = ___ °C",
+     "a": [
+      "26.95"
+     ],
+     "why": "23.72 + 3.23 = 26.95.",
+     "clue": "Add.",
+     "id": "g8.maths.u1.s1-3-1.36"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "2/3 + 1/4 = ___",
+   "a": [
+    "11/12"
+   ],
+   "why": "8/12 + 3/12.",
+   "clue": "",
+   "gen": {
+    "t": "op",
+    "op": "add"
+   },
+   "id": "g8.maths.u1.s1-3-1.37"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "−7/10 + 1/5 = ___",
+   "a": [
+    "-1/2",
+    "-0.5"
+   ],
+   "why": "−7/10 + 2/10 = −5/10.",
+   "clue": "",
+   "gen": {
+    "t": "op",
+    "op": "add",
+    "signs": true
+   },
+   "id": "g8.maths.u1.s1-3-1.38"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "1 1/2 + 2 2/3 = ___",
+   "a": [
+    "25/6",
+    "4 1/6"
+   ],
+   "why": "3/2 + 8/3 = 9/6 + 16/6.",
+   "clue": "",
+   "gen": {
+    "t": "op",
+    "op": "add",
+    "mixed": true
+   },
+   "id": "g8.maths.u1.s1-3-1.39"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "Activity 1.3 c and d (2 + (−4), 6 + (−6)) are the same idea as a and b; a and b are shown as number-line hops."
+  },
+  {
+   "kind": "note",
+   "text": "Example 1.17 result −65/24 checked: 8/6 = 32/24, 11/8 = 33/24."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.lcm": {
+   "name": "Least common multiple",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "LCM of 4 and 6",
+     "text": "List multiples until one appears in both lists.",
+     "steps": [
+      "Multiples of 4: 4, 8, 12, 16, …",
+      "Multiples of 6: 6, 12, 18, …",
+      "12 is the first one in both lists.",
+      "So LCM(4, 6) = 12."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "What is the LCM of 6 and 8?",
+     "opts": [
+      "24",
+      "48",
+      "14",
+      "12"
+     ],
+     "ans": "24",
+     "why": "Multiples of 8: 8, 16, 24. 24 is also a multiple of 6.",
+     "clue": "List multiples of 8 and stop at the first that 6 divides."
+    }
+   ]
+  },
+  "math.integer-signs": {
+   "name": "Integer signs",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Adding integers",
+     "text": "Use the number line.",
+     "steps": [
+      "−9 + 5: start at −9, move 5 right.",
+      "You land on −4.",
+      "Same signs: add the sizes, keep the sign.",
+      "Different signs: subtract the sizes, take the sign of the bigger size."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "−7 + 3 = ?",
+     "opts": [
+      "−4",
+      "4",
+      "−10",
+      "10"
+     ],
+     "ans": "−4",
+     "why": "Different signs: 7 − 3 = 4, and 7 is bigger, so −4.",
+     "clue": "Which number is further from 0?"
+    }
+   ]
+  }
+ }
+}
