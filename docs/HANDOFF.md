@@ -44,6 +44,9 @@ You are continuing work on **Meseret (መሰረት)** with me, Mhreteabe (founde
 - Students choose one or more grades in setup; home shows only those grades (`meseret:grades`).
 - Tips (💡) are now always fully shown, not tappable.
 
+## Next chapter: Grade 5 Mathematics (Amharic)
+- Full handoff with decisions: `docs/G5-MATHS-HANDOFF.md` (Amharic lessons, Amharic generators, Ask Meseret chat).
+
 ## Open items / next steps
 1. Get my feedback on the live Science trial and adjust.
 2. Move G9 Maths U1 and G7 Social Studies U1 to the book design (visual-first rewrite, pictures, interactive figures, faces where relevant).
