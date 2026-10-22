@@ -39,8 +39,9 @@ If a content job needs a screen kind the player lacks, stop and say so; do not f
 11. Facts, numbers and dates are checked against the pages and standard knowledge. Unsure → keep the book's version and add a note `{"kind":"review", ...}`. Never invent.
 
 ## Language rules
-- Lesson text and questions are in English (the exam's language).
-- Every key word has `am` (Amharic) and, when available, `om` (Afaan Oromoo) glosses.
+- **The lesson language follows the textbook, which follows the grade.** Grades 1–6: the book's language (Amharic for Addis Ababa and Amharic-region books; regional books later in Afaan Oromoo, Tigrinya, …). Grades 7–12: English (the exam's language). Every lesson sets `"lang"` (`"am"`, `"en"`, later `"om"`, …); the player shows lesson-internal words (Quick check, pop-ups, generator text) in the lesson language.
+- Grades 1–6 lessons keep the book's own wording (no machine translation needed for book text); key words show the book's term first with the English term as a gloss (to prepare for English from Grade 7). Grades 7–12 lessons are English with `am` (and later `om`) glosses.
+- Every key word has `am` (Amharic) and, when available, `om` (Afaan Oromoo) glosses; in Grades 1–6 lessons it also has `en`.
 - Every idea has an `explain` object: short explanation text per language, used for audio. Write `en` always; `am` when you can; mark machine translations `"machine": true` for a speaker's review.
 - All UI strings live in `app/i18n/*.json`, never hard-coded. Amharic and Oromo text needs ~10% larger type and more line height; the CSS handles it via `[lang]`.
 

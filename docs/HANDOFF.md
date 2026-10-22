@@ -45,6 +45,7 @@ You are continuing work on **Meseret (መሰረት)** with me, Mhreteabe (founde
 - Tips (💡) are now always fully shown, not tappable.
 
 ## Next chapter: Grade 5 Mathematics (Amharic)
+- Grades 1–6 books are in Amharic (all subjects); Grade 5 Maths is the first, and its engine work makes Amharic lessons a general capability (`"lang": "am"`).
 - Full handoff with decisions: `docs/G5-MATHS-HANDOFF.md` (Amharic lessons, Amharic generators, Ask Meseret chat).
 
 ## Open items / next steps
