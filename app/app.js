@@ -477,7 +477,7 @@ function makeR(env) {
       return { el, label: t('continue'), ready: () => seen.size >= Math.min(s.need || s.items.length, s.items.length) }; },
     order(s) { const mixed = s.items.slice().sort(() => Math.random() - .5); const el = div(head(s) + `<div class="fig"><div class="chips" id="pool">${mixed.map(x => `<button class="chip" data-v="${esc(x)}">${esc(x)}</button>`).join('')}</div><ol class="steps oseq" id="seq"></ol><button class="btn ghost small undo" id="undo" hidden>↶ ${t('undo')}</button><p class="small muted">${t('order_hint')}</p></div>`); let seq = [];
       const pool = el.querySelector('#pool'), ol = el.querySelector('#seq'), un = el.querySelector('#undo');
-      const draw = () => { ol.innerHTML = seq.map((x, i) => `<li><button class="oit" data-i="${i}" aria-label="${t('remove')} ${esc(x)}">${esc(x)} <span aria-hidden="true">✕</span></button></li>`).join(''); pool.querySelectorAll('.chip').forEach(c => c.disabled = seq.includes(c.dataset.v)); un.hidden = !seq.length || env.phase() !== 'answer'; env.update(); };
+      const draw = () => { ol.innerHTML = seq.map((x, i) => `<li><button class="oit" data-i="${i}" aria-label="${t('remove')} ${esc(x)}">${esc(x)} <span class="x" aria-hidden="true">✕</span></button></li>`).join(''); pool.querySelectorAll('.chip').forEach(c => c.disabled = seq.includes(c.dataset.v)); un.hidden = !seq.length || env.phase() !== 'answer'; env.update(); };
       pool.addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b || b.disabled || env.phase() !== 'answer') return; seq.push(b.dataset.v); draw(); });
       ol.addEventListener('click', e => { const b = e.target.closest('.oit'); if (!b || env.phase() !== 'answer') return; seq.splice(+b.dataset.i, 1); draw(); });
       un.onclick = () => { if (env.phase() !== 'answer') return; seq.pop(); draw(); };
@@ -1033,9 +1033,11 @@ async function route() {
 /* ---------- fractions: any "3/5" in text is shown stacked like the book; textContent stays "3/5" so answers still compare ---------- */
 function fracify(root) {
   if (!root || !root.ownerDocument) return;
-  const skip = n => { const p = n.nodeType === 3 ? n.parentElement : n; return !p || !!p.closest('svg,script,style,textarea,input,.frac,.nofrac'); };
+  const skip = n => { const p = n.nodeType === 3 ? n.parentElement : n; return !p || !!p.closest('svg,script,style,textarea,input,.frac,.mixed,.fwrap,.nofrac'); };
   const split = n => { const s = n.nodeValue, frag = document.createDocumentFragment(); let last = 0;
-    s.replace(/(\d+)\/(\d+)/g, (m, a, b, i) => { frag.append(s.slice(last, i)); const sp = document.createElement('span'); sp.className = 'frac'; sp.innerHTML = `<span class="fn">${a}</span><span class="fs">/</span><span class="fd">${b}</span>`; frag.append(sp); last = i + m.length; return m; });
+    // a mixed number "2 1/2" is drawn as one tight unit (2½); a plain "3/4" is drawn stacked. Hidden text keeps textContent = "2 1/2".
+    s.replace(/(?<![\d.\/])([−-])?(?:(\d+) )?(\d+)\/(\d+)/g, (m, sg, w, a, b, i) => { frag.append(s.slice(last, i)); const fr = `<span class="frac"><span class="fn">${a}</span><span class="fs">/</span><span class="fd">${b}</span></span>`;
+      const sp = document.createElement('span'); sp.className = w ? 'mixed' : 'fwrap'; sp.innerHTML = (sg ? `<span class="mw">${sg}</span>` : '') + (w ? `<span class="mw">${w}</span><span class="fs"> </span>` : '') + fr; frag.append(sp); last = i + m.length; return m; });
     frag.append(s.slice(last)); n.replaceWith(frag); };
   if (root.nodeType === 3) { if (!skip(root) && /\d\/\d/.test(root.nodeValue)) split(root); return; }
   if (root.nodeType !== 1 || skip(root)) return;

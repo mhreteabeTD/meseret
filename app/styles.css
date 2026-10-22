@@ -369,7 +369,12 @@ body.panel-open main { padding-bottom: 60vh; }
 .fbar svg, .grd svg, .nest svg { touch-action: manipulation; }
 /* order game: placed items can be taken back */
 .oseq .oit { all: unset; cursor: pointer; display: inline-flex; gap: 8px; align-items: center; min-height: 40px; padding: 2px 12px; border-radius: 10px; background: var(--sky-soft); font-weight: 800; }
-.oseq .oit span { color: var(--muted); font-size: 13px; }
-.oseq .oit:disabled { cursor: default; } .oseq .oit:disabled span { display: none; }
+.oseq .oit .x { color: var(--muted); font-size: 13px; }
+.oseq .oit:disabled { cursor: default; } .oseq .oit:disabled .x { display: none; }
 .undo { justify-self: start; width: auto; }
 .fig #pool .chip:disabled { opacity: .3; box-shadow: none; }
+/* mixed numbers: whole part and fraction as one unit, like the book */
+.mixed, .fwrap { display: inline-flex; align-items: center; white-space: nowrap; vertical-align: middle; position: relative; }
+.mixed .mw { margin-right: .06em; }
+.mixed .frac { margin-left: 0; }
+.mixed > .fs, .fwrap > .fs { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
