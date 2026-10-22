@@ -180,7 +180,8 @@ async function viewSettings() {
 }
 
 
-/* ---------- Work-it-out tools (scratch, calculator, idea explorer) ---------- */
+/* ---------- Work-it-out tools (scratch, calculator, idea explorer). Switched off for now; set WORK_TOOLS = true to bring them back. ---------- */
+const WORK_TOOLS = false;
 const TOOLS = {
   scratch(key) {
     const el = document.createElement('div'); el.className = 'scratch';
@@ -380,7 +381,8 @@ function runPlayer(cfg) {
     if (rf) { const a = document.createElement('button'); a.className = 'btn link'; a.style.justifySelf = 'start'; a.textContent = t('need_reminder', { n: rf.name }); a.onclick = () => openRefresher(s.needs); cur.el.appendChild(a); }
     const old = tray.querySelector('#rfb'); if (old) old.remove(); closePanel();
     phase = 'answer'; lastOk = null; setTray('', '', '', cur.label); update();
-    const wb = $('#work'); wb.hidden = !(s.graded || s.kind === 'guess' || s.kind === 'tiles'); wb.onclick = () => workSheet({ key: `${cfg.id || cfg.title}:${k}`, lesson: cfg.id, item: k, tool: s.tool || cfg.tool, q: (s.ask || s.text || s.title || '').replace(/\n/g, ' ') });
+    const wb = $('#work'); wb.hidden = !WORK_TOOLS || !(s.graded || s.kind === 'guess' || s.kind === 'tiles');
+    const osk = $('#skipb'); if (osk) osk.remove(); if (s.graded && order.length - pos > 2) { const sb = document.createElement('button'); sb.className = 'btn ghost'; sb.id = 'skipb'; sb.style.width = 'auto'; sb.textContent = t('skip'); sb.onclick = () => { order.splice(pos, 1); order.splice(order.length - 1, 0, k); show(); }; go.parentNode.insertBefore(sb, go); } wb.onclick = () => workSheet({ key: `${cfg.id || cfg.title}:${k}`, lesson: cfg.id, item: k, tool: s.tool || cfg.tool, q: (s.ask || s.text || s.title || '').replace(/\n/g, ' ') });
     const pct = Math.round(pos / order.length * 100);
     setTop(`${cfg.backRoute ? `<a class="iconbtn" href="#${cfg.backRoute}" aria-label="close">${svgIcon(CLOSE)}</a>` : `<button class="iconbtn" id="rback" aria-label="back">${svgIcon(BACK)}</button>`}<span class="mode ${cfg.mode === 'review' || review ? 'review' : cfg.mode === 'book' || cfg.mode === 'test' ? 'book' : ''}">${cfg.mode === 'refresher' ? t('refresher') : cfg.mode === 'practice' ? t('step_practise') : review ? t('review') : cfg.mode === 'review' ? t('review') : cfg.mode === 'book' ? t('book_exercise') : cfg.mode === 'test' ? t('unit_test') : t('learn')}</span><div class="bar"><i style="width:${pct}%"></i></div><span class="count">${Math.min(pos + 1, order.length)} / ${order.length}</span><button class="iconbtn" id="rep" aria-label="${t('report')}">${svgIcon(FLAG)}</button>`);
     bindTop(k);
@@ -391,6 +393,7 @@ function runPlayer(cfg) {
     if (cur.summary) { if (cfg.mode === 'refresher' || (cfg.resume && !missed.size)) { cfg.resume(); return; } if (missed.size) { order = [...missed].sort((a, b) => a - b).concat(SUM); review = true; } else { order = screens.map((_, i) => i).concat(SUM); firstTry = {}; review = false; state.guess = null; } pos = 0; round = {}; tries = {}; show(); return; }
     if (phase === 'feedback') { if (lastOk === false) { const old = tray.querySelector('#rfb'); if (old) old.remove(); phase = 'answer'; cur.retry && cur.retry(); setTray('', '', '', cur.label); update(); } else { pos++; show(); } return; }
     if (!cur.check) { pos++; show(); return; }
+    { const sb = $('#skipb'); if (sb) sb.remove(); }
     const r = cur.check(); tries[k] = (tries[k] || 0) + 1;
     if (s.graded && !(k in round)) { round[k] = r.ok; if (!(k in firstTry)) firstTry[k] = r.ok; r.ok ? missed.delete(k) : missed.add(k); logEvent({ lesson: s._lesson || cfg.id, idea: s._idea || cfg.idea, item: k, correct: !!r.ok, attempt: tries[k], mode: cfg.mode }); }
     lastOk = r.ok; phase = 'feedback';
@@ -457,7 +460,7 @@ async function viewLesson(path, mode, exIdx) {
     const foot = document.createElement('div'); foot.className = 'blkfoot';
     const rf = s.needs && ls.refreshers && ls.refreshers[s.needs];
     if (rf) { const a = document.createElement('button'); a.className = 'btn link small'; a.textContent = t('need_reminder', { n: rf.name }); a.onclick = () => openRefresher(s.needs); foot.appendChild(a); }
-    if (s.graded || s.kind === 'guess') { const w = document.createElement('button'); w.className = 'btn link small'; w.textContent = '✎ ' + t('work_it_out'); w.onclick = () => { workSheet({ key: `${ls.id}:${m}:${i}`, lesson: ls.id, item: i, tool: s.tool || ls.tool || idea0.tool, q: (s.ask || s.text || s.title || '').replace(/\n/g, ' ') }); requestAnimationFrame(() => wrap.scrollIntoView({ block: 'start', behavior: 'smooth' })); }; foot.appendChild(w); }
+    if (WORK_TOOLS && (s.graded || s.kind === 'guess')) { const w = document.createElement('button'); w.className = 'btn link small'; w.textContent = '✎ ' + t('work_it_out'); w.onclick = () => { workSheet({ key: `${ls.id}:${m}:${i}`, lesson: ls.id, item: i, tool: s.tool || ls.tool || idea0.tool, q: (s.ask || s.text || s.title || '').replace(/\n/g, ' ') }); requestAnimationFrame(() => wrap.scrollIntoView({ block: 'start', behavior: 'smooth' })); }; foot.appendChild(w); }
     fb.className = 'fb'; fb.setAttribute('aria-live', 'polite'); fb.hidden = true;
     const say = (kind, head, body) => { fb.hidden = false; fb.className = 'fb ' + kind; fb.innerHTML = `<strong>${esc(head || '')}</strong>${body ? `<span>${esc(body)}</span>` : ''}`; };
     if (cur.check) {
@@ -498,105 +501,220 @@ async function viewLesson(path, mode, exIdx) {
   window.removeEventListener('scroll', viewLesson._scroll || (() => {})); viewLesson._scroll = onScroll; window.addEventListener('scroll', onScroll, { passive: true });
 }
 
-/* ---------- book view: a whole chapter on one colourful scrolling page ---------- */
-function burst(x, y, big) {
-  try { if (matchMedia('(prefers-reduced-motion: reduce)').matches) return; } catch (_) {}
-  const cols = ['var(--accent)', 'var(--sun)', 'var(--sky)', 'var(--coral)', 'var(--violet)'];
-  for (let i = 0; i < (big ? 28 : 14); i++) { const d = document.createElement('i'); d.className = 'conf'; const a = Math.random() * Math.PI * 2, r = (big ? 120 : 60) + Math.random() * (big ? 120 : 50);
-    d.style.cssText = `left:${x}px;top:${y}px;background:${cols[i % 5]};--dx:${Math.cos(a) * r}px;--dy:${Math.sin(a) * r - 40}px;--rot:${Math.random() * 540}deg`; document.body.appendChild(d); setTimeout(() => d.remove(), 900); }
+/* =====================================================================
+   Book view: a whole chapter on one colourful scrolling page.
+   Built from reusable pieces so a change in one place applies everywhere:
+     Fx        celebrations (confetti, floating points, vibration)
+     Focus     the study timer (focus block, then a short break)
+     Translate select any lesson text → translation (pluggable providers)
+     Text      every piece of lesson prose goes through Text(); text features plug in here
+     Blocks    one builder per block kind (read, picture, gallery, people, name, guess, quick check, …)
+   ===================================================================== */
+const Fx = {
+  calm() { try { return matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (_) { return false; } },
+  burst(x, y, big) {
+    if (Fx.calm()) return; const cols = ['var(--accent)', 'var(--sun)', 'var(--sky)', 'var(--coral)', 'var(--violet)'];
+    for (let i = 0; i < (big ? 30 : 14); i++) { const d = document.createElement('i'); d.className = 'conf' + (i % 3 ? '' : ' round'); const a = Math.random() * Math.PI * 2, r = (big ? 130 : 60) + Math.random() * (big ? 120 : 50);
+      d.style.cssText = `left:${x}px;top:${y}px;background:${cols[i % 5]};--dx:${Math.cos(a) * r}px;--dy:${Math.sin(a) * r - 40}px;--rot:${Math.random() * 540}deg`; document.body.appendChild(d); setTimeout(() => d.remove(), 950); }
+  },
+  at(el, big) { const r = el.getBoundingClientRect(); Fx.burst(r.left + r.width / 2, r.top + Math.min(r.height / 2, 40), big); },
+  float(el, text) { const r = el.getBoundingClientRect(); const f = document.createElement('div'); f.className = 'ptsfloat'; f.textContent = text; f.style.left = (r.left + r.width / 2) + 'px'; f.style.top = r.top + 'px'; document.body.appendChild(f); setTimeout(() => f.remove(), 1100); },
+  buzz(ms) { try { navigator.vibrate && navigator.vibrate(ms); } catch (_) {} }
+};
+const burst = Fx.burst, buzz = Fx.buzz; // used by the step player
+
+/* ---------- Focus: a simple study timer (Pomodoro-style) ---------- */
+const Focus = {
+  get() { return store.get('focus', null); },
+  start(min) { store.set('focus', { phase: 'focus', min, end: Date.now() + min * 60e3 }); Focus.tick(); },
+  stop() { store.set('focus', null); Focus.tick(); },
+  label() { const f = Focus.get(); if (!f) return '⏱'; const s = Math.max(0, Math.round((f.end - Date.now()) / 1000)); return `${f.phase === 'break' ? '☕' : '⏱'} ${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`; },
+  tick() {
+    const f = Focus.get(), b = $('#focus');
+    if (b) { b.textContent = Focus.label(); b.classList.toggle('on', !!f); b.classList.toggle('brk', !!f && f.phase === 'break'); }
+    if (f && Date.now() >= f.end) {
+      if (f.phase === 'focus') { store.set('focus', { phase: 'break', min: 5, end: Date.now() + 5 * 60e3 }); Focus.onDone && Focus.onDone(f.min); }
+      else { store.set('focus', null); toast(t('focus_ready')); }
+    }
+  },
+  sheet() {
+    const f = Focus.get();
+    if (f) { sheet(`<div class="focussheet"><div class="big">${Focus.label()}</div><p>${f.phase === 'break' ? t('focus_break_on') : t('focus_on')}</p><button class="btn ghost" id="fstop">${t('focus_stop')}</button></div>`); $('#fstop').onclick = () => { Focus.stop(); sheet(''); }; return; }
+    sheet(`<div class="focussheet"><div class="big">⏱</div><h2 class="display">${t('focus_title')}</h2><p class="muted">${t('focus_how')}</p><div class="opts row3">${[15, 20, 25].map(m => `<button class="opt center" data-m="${m}">${m} ${t('min')}</button>`).join('')}</div></div>`);
+    $('#sheet').querySelectorAll('[data-m]').forEach(b => b.onclick = () => { Focus.start(+b.dataset.m); sheet(''); toast(t('focus_go')); });
+  }
+};
+setInterval(() => Focus.tick(), 1000);
+
+/* ---------- Translate: select text, see it in Amharic. Providers are pluggable. ---------- */
+const Translate = {
+  to: 'am',
+  providers: [
+    async (q, tl) => { const r = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=${tl}&dt=t&q=${encodeURIComponent(q)}`); const j = await r.json(); return j[0].map(x => x[0]).join(''); },
+    async (q, tl) => { const r = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(q)}&langpair=en|${tl}`); const j = await r.json(); if (!j.responseData || !j.responseData.translatedText) throw 0; return j.responseData.translatedText; }
+  ],
+  async run(q, tl) {
+    const key = tl + ':' + q, cache = store.get('tr', {}); if (cache[key]) return cache[key];
+    for (const p of Translate.providers) { try { const out = await p(q, tl); if (out) { const c = store.get('tr', {}); const ks = Object.keys(c); if (ks.length > 300) delete c[ks[0]]; c[key] = out; store.set('tr', c); logEvent({ translate: tl, chars: q.length }); return out; } } catch (_) {} }
+    throw new Error('offline');
+  },
+  async show(q) {
+    q = q.replace(/\s+/g, ' ').trim().slice(0, 600); if (!q) return;
+    sheet(`<div class="trsheet"><div class="trq">${esc(q)}</div><div class="tra" lang="${Translate.to}"><span class="spin"></span></div><p class="small muted">${t('tr_machine')}</p><button class="btn" id="trok">${t('continue')}</button></div>`);
+    $('#trok').onclick = () => sheet('');
+    try { const out = await Translate.run(q, Translate.to); const a = $('.tra'); if (a) a.textContent = out; }
+    catch (_) { const a = $('.tra'); if (a) { a.textContent = t('tr_fail'); a.classList.add('muted'); } }
+  },
+  bind(root) { // a small floating button appears when the student selects lesson text
+    let pill = $('#trpill'); if (!pill) { pill = document.createElement('button'); pill.id = 'trpill'; pill.className = 'trpill'; pill.hidden = true; document.body.appendChild(pill); }
+    pill.textContent = '🌐 ' + t('tr_btn');
+    pill.onpointerdown = e => e.preventDefault();
+    pill.onclick = () => { const q = String(getSelection()); pill.hidden = true; Translate.show(q); };
+    const upd = () => { const s = getSelection(); if (!root.isConnected || !s || s.isCollapsed || !String(s).trim()) { pill.hidden = true; return; } const n = s.anchorNode && (s.anchorNode.nodeType === 1 ? s.anchorNode : s.anchorNode.parentElement); if (!n || !n.closest('[data-text]') || !root.contains(n)) { pill.hidden = true; return; } const r = s.getRangeAt(0).getBoundingClientRect(); pill.hidden = false; const w = pill.offsetWidth || 150; pill.style.left = Math.max(8, Math.min(innerWidth - w - 8, r.left + r.width / 2 - w / 2)) + 'px'; pill.style.top = Math.min(innerHeight - 64, r.bottom + 12) + 'px'; };
+    document.removeEventListener('selectionchange', Translate._u || (() => {})); Translate._u = upd; document.addEventListener('selectionchange', upd);
+  }
+};
+
+/* ---------- Text: every piece of lesson prose goes through here ---------- */
+function Text(str, ctx, tag = 'p', cls = '') {
+  let html = esc(str);
+  if (ctx && ctx.kws) ctx.kws.forEach((k, j) => { if (ctx.used.has(j) || !k.en) return; const e = esc(k.en).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); const re = new RegExp(`(^|[^\\p{L}])(${e})(?![\\p{L}])`, 'iu'); const parts = html.split(/(<button[^>]*>[^<]*<\/button>)/); for (let q = 0; q < parts.length; q += 2) if (re.test(parts[q])) { parts[q] = parts[q].replace(re, `$1<button class="kwt" data-k="${j}">$2</button>`); ctx.used.add(j); break; } html = parts.join(''); });
+  return `<${tag} class="${cls}" data-text>${html}</${tag}>`;
 }
-function floatPts(el, n) { const r = el.getBoundingClientRect(); const f = document.createElement('div'); f.className = 'ptsfloat'; f.textContent = '+' + n; f.style.left = (r.left + r.width / 2) + 'px'; f.style.top = (r.top) + 'px'; document.body.appendChild(f); setTimeout(() => f.remove(), 1100); }
-function buzz(ms) { try { navigator.vibrate && navigator.vibrate(ms); } catch (_) {} }
+const pic = (id, label) => (window.PICS && window.PICS[id]) || `<svg viewBox="0 0 120 120" role="img" aria-label="${esc(label || id)}"><rect x="10" y="10" width="100" height="100" rx="20" style="fill:var(--surface-2)"/><text x="60" y="68" text-anchor="middle" font-size="14" style="fill:var(--muted)">${esc(label || id)}</text></svg>`;
+const initials = n => n.replace(/^(Prof\.|Dr\.|Engineer)\s+/i, '').split(/\s+/).map(w => w[0]).slice(0, 2).join('');
+
+/* ---------- Blocks: one builder per kind ---------- */
+const Blocks = {
+  read(s, ctx) { return h('rd', (s.title ? `<h3>${esc(s.title)}</h3>` : '') + (s.paras || []).map(p => Text(p, ctx)).join('') + (s.table ? `<div class="tbl"><table>${s.table.map((r, i) => `<tr>${r.map(x => i ? `<td data-text>${esc(x)}</td>` : `<th>${esc(x)}</th>`).join('')}</tr>`).join('')}</table></div>` : '') + (s.note ? Blocks.tip(s.note) : '')); },
+  tip(note) { return `<button class="tip"><span>💡</span><span class="tx" data-text>${esc(note)}</span></button>`; },
+  picture(s, ctx) { return h('picblk', `<div class="pic">${pic(s.pic, s.caption)}</div>${s.caption ? Text(s.caption, null, 'p', 'cap') : ''}${s.text ? Text(s.text, ctx) : ''}`); },
+  gallery(s, ctx) {
+    const el = h('gal', (s.title ? `<h3>${esc(s.title)}</h3>` : '') + (s.ask ? Text(s.ask, ctx, 'p', 'muted') : '') + `<div class="galgrid">${s.items.map((it, i) => `<button class="gi" data-i="${i}" aria-expanded="false"><span class="pic">${pic(it[0], it[1])}</span><span class="gn">${esc(it[1])}</span></button>`).join('')}</div><div class="ginfo" hidden data-text></div>`);
+    const info = el.querySelector('.ginfo');
+    el.querySelector('.galgrid').onclick = e => { const b = e.target.closest('.gi'); if (!b) return; const it = s.items[+b.dataset.i]; const on = b.getAttribute('aria-expanded') !== 'true'; el.querySelectorAll('.gi').forEach(x => x.setAttribute('aria-expanded', x === b && on)); info.hidden = !on; info.innerHTML = on ? `<b>${esc(it[1])}</b> ${esc(it[2] || '')}` : ''; };
+    return el;
+  },
+  people(s, ctx) {
+    return h('ppl', (s.title ? `<h3>${esc(s.title)}</h3>` : '') + `<div class="pplgrid">${s.people.map(p => `<div class="person"><div class="face">${p.img ? `<img src="${esc(p.img)}" alt="${esc(p.name)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'${esc(initials(p.name))}'}))">` : `<span>${esc(initials(p.name))}</span>`}</div><div class="pinfo"><b>${esc(p.name)}</b>${p.years || p.from ? `<small>${esc([p.years, p.from].filter(Boolean).join(' · '))}</small>` : ''}${Text(p.did, ctx)}</div></div>`).join('')}</div>`);
+  },
+  name(s, ctx) { return h('keys', s.defs.map(d => { const k = ctx.kws.find(x => x.en.toLowerCase() === d[0].toLowerCase()); return `<div class="kcard"><div class="kt">📘 ${esc(d[0])}${k && k.am ? ` <span class="kam" lang="am">${esc(k.am)}</span>` : ''}</div>${Text(d[1], null, 'div', 'kd')}</div>`; }).join('')); },
+  guess(s, ctx) {
+    const el = h('quiz think', `<div class="ql">🤔 ${t('step_hook')}</div>${Text(s.ask || s.text || '', null, 'p', 'qq')}${s.ask && s.text ? Text(s.text, null, 'p', 'small qctx') : ''}<div class="qo">${s.opts.map(o => `<button class="qb">${esc(o)}</button>`).join('')}</div><p class="qf" hidden data-text></p>`);
+    el.querySelector('.qo').onclick = e => { const b = e.target.closest('.qb'); if (!b || el.dataset.done) return; el.dataset.done = 1; b.classList.add('pick', 'pop'); el.querySelectorAll('.qb').forEach(x => x.disabled = true); const f = el.querySelector('.qf'); f.hidden = !s.after; f.textContent = s.after || ''; ctx.seen(el); };
+    return el;
+  },
+  choice(s, ctx) { // mcq / tf quick check: tap an answer and it is checked at once
+    const opts = s.kind === 'tf' ? [t('true'), t('false')] : s.opts, ans = s.kind === 'tf' ? (s.a ? t('true') : t('false')) : s.ans; let tries = 0;
+    const el = h('quiz', `<div class="ql">✏️ ${t('quick_check')}</div>${Text(s.kind === 'tf' ? s.text : (s.ask || s.text || s.title || ''), null, 'p', 'qq')}${s.kind !== 'tf' && s.ask && s.text ? Text(s.text, null, 'p', 'small qctx') : ''}<div class="qo ${s.kind === 'tf' ? 'two' : ''}">${opts.map(o => `<button class="qb">${esc(o)}</button>`).join('')}</div><p class="qf" hidden data-text></p>`);
+    const f = el.querySelector('.qf'), say = (cls, txt) => { f.hidden = !txt; f.className = 'qf ' + cls; f.textContent = txt || ''; };
+    const lock = () => el.querySelectorAll('.qb').forEach(x => { x.disabled = true; if (x.textContent === ans) x.classList.add('ok'); });
+    ctx.question(el, s, { restore(v) { if (v === 's') return; lock(); say('ok', s.why); } });
+    el.querySelector('.qo').onclick = e => { const b = e.target.closest('.qb'); if (!b || b.disabled || el.classList.contains('done')) return; tries++;
+      const ok = b.textContent === ans; ctx.log(s, ok, tries);
+      if (ok) { b.classList.add('ok', 'pop'); say('ok', s.why); lock(); ctx.right(b, s, tries); }
+      else { b.classList.add('no', 'shake'); b.disabled = true; setTimeout(() => b.classList.remove('shake'), 500); ctx.wrong();
+        if (tries >= 2) { say('no', `${t('answer_is')} ${ans}. ${s.worked || s.why || ''}`); lock(); ctx.done(el, s, 0); } else say('no', `${s.clue || t('not_yet')} ${t('try_again')}.`); } };
+    return el;
+  },
+  answer(s, ctx) { // blank, pick, sort, order, match: shared renderers plus one Check button
+    let phase = 'answer', tries = 0, cur = null; const btn = document.createElement('button'); btn.className = 'btn small'; btn.textContent = t('check'); const f = document.createElement('p'); f.className = 'qf'; f.hidden = true;
+    const env = { phase: () => phase, state: {}, explain: null, enter: () => { if (!btn.disabled) btn.click(); }, update() { if (cur) btn.disabled = phase !== 'answer' || !cur.ready(); } };
+    const RR = makeR(env).R; cur = (RR[s.kind] || RR.name)(Object.assign({}, s, { title: '', step: '' }));
+    const el = h('quiz', `<div class="ql">✏️ ${t('quick_check')}</div>${s.title ? Text(s.title, null, 'p', 'qq') : ''}`); el.append(cur.el, f, btn); env.update();
+    const say = (cls, txt) => { f.hidden = !txt; f.className = 'qf ' + cls; f.textContent = txt || ''; };
+    ctx.question(el, s, { restore(v) { if (v === 's') return; btn.hidden = true; say('ok', '✓ ' + (s.why || '')); } });
+    btn.onclick = () => { const r = cur.check(); tries++; ctx.log(s, !!r.ok, tries);
+      if (r.ok) { phase = 'done'; btn.hidden = true; say('ok', r.body); ctx.right(btn, s, tries); }
+      else { ctx.wrong(); if (tries >= 2) { const shown = s.kind === 'blank' ? s.a[0] : s.kind === 'pick' ? s.a.join(', ') : ''; phase = 'done'; btn.hidden = true; say('no', `${shown ? t('answer_is') + ' ' + shown + '. ' : ''}${s.worked || s.why || ''}`); ctx.done(el, s, 0); } else { say('no', `${r.body || t('not_yet')} ${t('try_again')}.`); cur.retry && cur.retry(); env.update(); } } };
+    return el;
+  },
+  explore(s, ctx) { // ungraded sort / tap / steps / tiles
+    const env = { phase: () => 'answer', state: {}, explain: null, enter() {}, update() {} };
+    const RR = makeR(env).R, cur = (RR[s.kind] || RR.name)(Object.assign({}, s, { title: '', step: '' }));
+    const el = h(s.kind === 'steps' ? 'quiz worked' : 'quiz think', `<div class="ql">${s.kind === 'steps' ? '🧩 ' + t('worked_example') : '🔍 ' + t('step_explore')}</div>${s.title ? Text(s.title, null, 'p', 'qq') : ''}`); el.appendChild(cur.el); return el;
+  }
+};
+function h(cls, html) { const d = document.createElement('div'); d.className = cls; d.innerHTML = html; return d; }
+function renderBlock(s, ctx) {
+  const fn = Blocks[s.kind] || ((s.kind === 'mcq' || s.kind === 'tf') && s.graded ? Blocks.choice : s.graded ? Blocks.answer : Blocks.explore);
+  const el = fn(s, ctx); el.dataset.kind = s.kind; return el;
+}
+
+async function loadPictures() { if (window.PICS) return; await new Promise(r => { const sc = document.createElement('script'); sc.src = 'pictures.js'; sc.onload = sc.onerror = r; document.head.appendChild(sc); }); }
 
 async function viewBook(id) {
   const idx = await loadIndex(); const c = idx.chapters.find(x => x.id === id); if (!c) { location.hash = 'home'; return; }
   const secs = c.sections.filter(x => x.lesson);
-  const lessons = await Promise.all(secs.map(x => loadLesson(x.lesson)));
+  const [lessons] = await Promise.all([Promise.all(secs.map(x => loadLesson(x.lesson))), loadPictures()]);
   setNav(false); hideTray(); markStudied();
-  const all = store.get('bk', {}), B = all[id] = Object.assign({ got: {}, pts: 0, prac: {} }, all[id]); const save = () => { const a = store.get('bk', {}); a[id] = B; store.set('bk', a); };
+  const all = store.get('bk', {}), B = all[id] = Object.assign({ got: {}, seen: {}, pts: 0, prac: {} }, all[id]); B.seen = B.seen || {};
+  const save = () => { const a = store.get('bk', {}); a[id] = B; store.set('bk', a); };
   store.set('last', { route: 'book/' + id, title: `${t('unit')} ${c.unit} · ${L(c.title)}`, sub: `${L(idx.subjects[c.subject])} · ${t('grade')} ${c.grade}` });
-  let streak = 0, total = 0, away = false;
-  const hues = ['g', 's', 'y', 'c', 'v'];
-  setTop(`<a class="iconbtn" href="#home" aria-label="back">${svgIcon(BACK)}</a><div class="bar"><i id="pbar"></i></div><span class="pts" id="pts" aria-live="polite">⭐ <b>${B.pts}</b></span>`);
+  let streak = 0, away = false; const units = [], secUnits = secs.map(() => []);
+  const hues = ['g', 's', 'y', 'c', 'v'], topOf = n => n.split('.').slice(0, 2).join('.'), tops = [...new Set(secs.map(x => topOf(x.n)))], hueOf = n => hues[tops.indexOf(topOf(n)) % 5];
+  setTop(`<a class="iconbtn" href="#home" aria-label="back">${svgIcon(BACK)}</a><div class="prog"><div class="bar"><i id="pbar"></i></div><span id="ppct">0%</span></div><button class="focus" id="focus" aria-label="${t('focus_title')}">⏱</button><span class="pts" id="pts" aria-live="polite">⭐ <b>${B.pts}</b></span>`);
+  $('#focus').onclick = () => Focus.sheet(); Focus.tick();
+  Focus.onDone = min => { const pts = 15; B.pts += pts; save(); bumpPts(); sheet(`<div class="focussheet"><div class="big">🎉</div><h2 class="display">${t('focus_done', { m: min })}</h2><p>${t('focus_break')}</p><p class="pts">⭐ +${pts}</p><button class="btn" id="fok">${t('continue')}</button></div>`); $('#fok').onclick = () => sheet(''); Fx.burst(innerWidth / 2, innerHeight / 2, true); buzz([30, 60, 30]); };
   const page = document.createElement('div'); page.className = 'book';
-  const tops = []; secs.forEach((x, i) => { const tp = x.n.split('.').slice(0, 2).join('.'); if (!tops.includes(tp)) tops.push(tp); });
-  page.innerHTML = `<header class="hero"><svg class="heroart" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="10" fill="currentColor"/><ellipse cx="60" cy="60" rx="50" ry="18" fill="none" stroke="currentColor" stroke-width="5"/><ellipse cx="60" cy="60" rx="50" ry="18" fill="none" stroke="currentColor" stroke-width="5" transform="rotate(60 60 60)"/><ellipse cx="60" cy="60" rx="50" ry="18" fill="none" stroke="currentColor" stroke-width="5" transform="rotate(120 60 60)"/></svg>
+  page.innerHTML = `<header class="hero h-${hueOf(secs[0].n)}"><div class="heroart" aria-hidden="true">${pic(c.subject === 'science' ? 'chemistry' : 'observe')}</div>
     <span class="eyebrow">${t('grade')} ${c.grade} · ${esc(L(idx.subjects[c.subject]))}</span><h1 class="display">${t('unit')} ${c.unit}<br>${esc(L(c.title))}</h1><p>${t('book_intro', { n: secs.length })}</p></header>
-    <nav class="chips secnav" id="secnav">${secs.map((x, i) => `<a class="chip h-${hues[tops.indexOf(x.n.split('.').slice(0, 2).join('.')) % 5]}" href="#book/${id}" data-go="${i}">${esc(x.n)}</a>`).join('')}</nav>`;
+    <nav class="secnav" id="secnav">${secs.map((x, i) => `<a class="chip h-${hueOf(x.n)}" href="#book/${id}" data-go="${i}"><i></i><span>${esc(x.n)}</span></a>`).join('')}</nav>`;
   app.replaceChildren(page);
-  const bump = n => { B.pts += n; save(); const p = $('#pts'); p.innerHTML = `⭐ <b>${B.pts}</b>`; p.classList.remove('bump'); void p.offsetWidth; p.classList.add('bump'); };
-  const progress = () => { const d = Object.keys(B.got).length; $('#pbar').style.width = (total ? Math.round(d / total * 100) : 0) + '%'; };
-  const kwLink = (html, kws, used) => { kws.forEach((k, j) => { if (used.has(j) || !k.en) return; const e = esc(k.en).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); const re = new RegExp(`(^|[^\\p{L}])(${e})(?![\\p{L}])`, 'iu'); const parts = html.split(/(<button[^>]*>[^<]*<\/button>)/); for (let q = 0; q < parts.length; q += 2) if (re.test(parts[q])) { parts[q] = parts[q].replace(re, `$1<button class="kwt" data-k="${j}">$2</button>`); used.add(j); break; } html = parts.join(''); }); return html; };
+  function bumpPts() { const p = $('#pts'); if (!p) return; p.innerHTML = `⭐ <b>${B.pts}</b>`; p.classList.remove('bump'); void p.offsetWidth; p.classList.add('bump'); }
+  function progress() {
+    const done = u => u.q ? (u.key in B.got) : !!B.seen[u.key];
+    const d = units.filter(done).length, pct = units.length ? Math.round(d / units.length * 100) : 0;
+    $('#pbar').style.width = pct + '%'; $('#ppct').textContent = pct + '%';
+    page.querySelectorAll('#secnav .chip').forEach((ch, i) => { const u = secUnits[i], p = u.length ? Math.round(u.filter(done).length / u.length * 100) : 0; ch.style.setProperty('--p', p + '%'); ch.classList.toggle('full', p === 100); });
+  }
 
   secs.forEach((sec, si) => {
-    const ls = lessons[si], kws = ls.keywords || [], used = new Set(), hue = hues[tops.indexOf(sec.n.split('.').slice(0, 2).join('.')) % 5];
+    const ls = lessons[si], kws = ls.keywords || [], hue = hueOf(sec.n);
     const box = document.createElement('section'); box.className = `sec h-${hue}`; box.id = 'sec' + si; box.dataset.i = si;
     box.innerHTML = `<h2 class="sechead"><span class="num">${esc(sec.n)}</span><span>${esc(ls.title)}</span></h2>`;
     const inline = [], practise = [];
-    ls.ideas.forEach((idea, ii) => idea.screens.forEach((s, k) => {
-      const key = `${sec.lesson}#${ii}.${k}`, sx = Object.assign({ _idea: idea.id, _key: key }, s);
-      if (s.graded && s.step !== 'check' && s.step !== 'notice') { practise.push(sx); return; }
-      inline.push(sx);
-    }));
-    // keep one inline check per idea; the rest join the practise set
+    ls.ideas.forEach((idea, ii) => idea.screens.forEach((s, k) => { const sx = Object.assign({ _idea: idea.id, _key: `${sec.lesson}#${ii}.${k}` }, s); (s.graded && s.step !== 'check' && s.step !== 'notice' ? practise : inline).push(sx); }));
     const seenIdea = new Set(); const rows = inline.filter(s => { if (!s.graded) return true; if (seenIdea.has(s._idea)) { practise.unshift(s); return false; } seenIdea.add(s._idea); return true; });
-    const secKeys = rows.filter(s => s.graded).map(s => s._key); total += secKeys.length;
-    const doneCheck = () => { if (!box.querySelector('.secdone')) return; if (secKeys.every(k => k in B.got) && !box.classList.contains('complete')) { box.classList.add('complete'); const fresh = !B.got['done:' + sec.lesson]; if (fresh) { B.got['done:' + sec.lesson] = 1; save(); setLessonProgress(sec.lesson, { done: true }); const by = {}; secKeys.forEach(k => { const s = rows.find(r => r._key === k); by[s._idea] = (by[s._idea] !== false) && B.got[k] >= 10; }); Object.keys(by).forEach(i => bumpMastery(i, by[i])); const ban = box.querySelector('.secdone'); ban.hidden = false; const r = ban.getBoundingClientRect(); burst(r.left + r.width / 2, r.top + 20, true); bump(20); buzz([20, 40, 20]); } else box.querySelector('.secdone').hidden = false; } };
-    rows.forEach(s => {
-      const el = document.createElement('div');
-      if (s.kind === 'read') { el.className = 'rd'; el.innerHTML = (s.title ? `<h3>${esc(s.title)}</h3>` : '') + (s.paras || []).map(p => `<p>${kwLink(esc(p), kws, used)}</p>`).join('') + (s.table ? `<div class="tbl"><table>${s.table.map((r, i) => `<tr>${r.map(x => i ? `<td>${esc(x)}</td>` : `<th>${esc(x)}</th>`).join('')}</tr>`).join('')}</table></div>` : '') + (s.note ? `<button class="tip"><span>💡</span><span class="tx">${esc(s.note)}</span></button>` : ''); }
-      else if (s.kind === 'name') { el.className = 'keys'; el.innerHTML = s.defs.map(d => { const k = kws.find(x => x.en.toLowerCase() === d[0].toLowerCase()); return `<div class="kcard"><div class="kt">${esc(d[0])}${k && k.am ? ` <span class="kam" lang="am">${esc(k.am)}</span>` : ''}</div><div class="kd">${esc(d[1])}</div></div>`; }).join(''); }
-      else if (s.kind === 'guess') { el.className = 'quiz think'; el.innerHTML = `<div class="ql">🤔 ${t('step_hook')}</div><p class="qq">${esc(s.ask || s.text || '')}</p>${s.ask && s.text ? `<p class="small qctx">${esc(s.text)}</p>` : ''}<div class="qo">${s.opts.map(o => `<button class="qb">${esc(o)}</button>`).join('')}</div><p class="qf" hidden></p>`;
-        el.querySelector('.qo').onclick = e => { const b = e.target.closest('.qb'); if (!b || el.dataset.done) return; el.dataset.done = 1; b.classList.add('pick'); el.querySelectorAll('.qb').forEach(x => x.disabled = true); const f = el.querySelector('.qf'); f.hidden = false; f.textContent = s.after || ''; }; }
-      else if ((s.kind === 'mcq' || s.kind === 'tf') && s.graded) {
-        const opts = s.kind === 'tf' ? [t('true'), t('false')] : s.opts, ans = s.kind === 'tf' ? (s.a ? t('true') : t('false')) : s.ans; let tries = 0;
-        el.className = 'quiz'; el.innerHTML = `<div class="ql">✏️ ${t('quick_check')}</div><p class="qq">${esc(s.kind === 'tf' ? s.text : (s.ask || s.text || s.title || ''))}</p>${s.kind !== 'tf' && s.ask && s.text ? `<p class="small qctx">${esc(s.text)}</p>` : ''}<div class="qo ${s.kind === 'tf' ? 'two' : ''}">${opts.map(o => `<button class="qb">${esc(o)}</button>`).join('')}</div><p class="qf" hidden></p>`;
-        const f = el.querySelector('.qf'), say = (cls, txt) => { f.hidden = false; f.className = 'qf ' + cls; f.textContent = txt || ''; };
-        const settle = (pts) => { el.querySelectorAll('.qb').forEach(x => { x.disabled = true; if (x.textContent === ans) x.classList.add('ok'); }); el.classList.add('done'); if (!(s._key in B.got)) { B.got[s._key] = pts; save(); progress(); } doneCheck(); };
-        if (s._key in B.got) { settle(B.got[s._key]); say('ok', s.why); }
-        el.querySelector('.qo').onclick = e => { const b = e.target.closest('.qb'); if (!b || b.disabled || el.classList.contains('done')) return; tries++;
-          const ok = b.textContent === ans; logEvent({ lesson: ls.id, idea: s._idea, item: s._key, correct: ok, attempt: tries, mode: 'book' });
-          if (ok) { streak++; const pts = tries === 1 ? 10 : 5; b.classList.add('ok', 'pop'); const r = b.getBoundingClientRect(); burst(r.left + r.width / 2, r.top + r.height / 2); floatPts(b, pts); bump(pts); buzz(25); say('ok', (streak >= 3 ? `🔥 ${t('in_a_row', { n: streak })} ` : '') + (s.why || '')); settle(pts); }
-          else { streak = 0; b.classList.add('no', 'shake'); b.disabled = true; setTimeout(() => b.classList.remove('shake'), 500); buzz(60);
-            if (tries >= 2) { say('no', `${t('answer_is')} ${ans}. ${s.worked || s.why || ''}`); settle(0); } else say('no', `${s.clue || t('not_yet')} ${t('try_again')}.`); } };
-      }
-      else { // other kinds: reuse the shared renderers with a small check button
-        let phase = 'answer', tries = 0, cur = null; const btn = document.createElement('button'); btn.className = 'btn small'; const f = document.createElement('p'); f.className = 'qf'; f.hidden = true;
-        const env = { phase: () => phase, state: {}, explain: null, enter: () => { if (!btn.disabled) btn.click(); }, update() { if (!cur) return; if (cur.check && s.graded) btn.disabled = phase !== 'answer' || !cur.ready(); } };
-        const RR = makeR(env).R; cur = (RR[s.kind] || RR.name)(Object.assign({}, s, { title: '', step: '' }));
-        el.className = s.graded ? 'quiz' : 'quiz think'; el.insertAdjacentHTML('beforeend', `<div class="ql">${s.graded ? '✏️ ' + t('quick_check') : '🔍 ' + t('step_explore')}</div>${s.title ? `<p class="qq">${esc(s.title)}</p>` : ''}`);
-        el.appendChild(cur.el); el.appendChild(f);
-        if (cur.check && s.graded) { btn.textContent = t('check'); el.appendChild(btn); env.update();
-          btn.onclick = () => { const r = cur.check(); tries++; logEvent({ lesson: ls.id, idea: s._idea, item: s._key, correct: !!r.ok, attempt: tries, mode: 'book' });
-            const finish = pts => { phase = 'done'; btn.hidden = true; el.classList.add('done'); if (!(s._key in B.got)) { B.got[s._key] = pts; save(); progress(); } doneCheck(); };
-            if (r.ok) { streak++; const pts = tries === 1 ? 10 : 5; const rc = btn.getBoundingClientRect(); burst(rc.left + rc.width / 2, rc.top); floatPts(btn, pts); bump(pts); buzz(25); f.hidden = false; f.className = 'qf ok'; f.textContent = r.body || ''; finish(pts); }
-            else { streak = 0; buzz(60); f.hidden = false; f.className = 'qf no'; if (tries >= 2) { const shown = s.kind === 'blank' ? s.a[0] : s.kind === 'pick' ? s.a.join(', ') : ''; f.textContent = `${shown ? t('answer_is') + ' ' + shown + '. ' : ''}${s.worked || s.why || ''}`; finish(0); } else { f.textContent = `${r.body || t('not_yet')} ${t('try_again')}.`; cur.retry && cur.retry(); env.update(); } } };
-          if (s._key in B.got) { btn.hidden = true; el.classList.add('done'); f.hidden = false; f.className = 'qf ok'; f.textContent = '✓ ' + (s.why || ''); }
-        }
-      }
-      box.appendChild(el);
-    });
+    const qKeys = rows.filter(s => s.graded).map(s => s._key);
+    const doneCheck = () => { const ban = box.querySelector('.secdone'); if (!ban || !qKeys.every(k => k in B.got) || box.classList.contains('complete')) return; box.classList.add('complete'); ban.hidden = false;
+      if (!B.got['done:' + sec.lesson]) { B.got['done:' + sec.lesson] = 1; setLessonProgress(sec.lesson, { done: true }); const by = {}; qKeys.forEach(k => { const s = rows.find(r => r._key === k); by[s._idea] = (by[s._idea] !== false) && B.got[k] >= 10; }); Object.keys(by).forEach(i => bumpMastery(i, by[i])); B.pts += 20; save(); bumpPts(); Fx.at(ban, true); buzz([20, 40, 20]); } };
+    const ctx = { kws, used: new Set(), hue,
+      seen(el) {}, log(s, ok, attempt) { logEvent({ lesson: ls.id, idea: s._idea, item: s._key, correct: ok, attempt, mode: 'book' }); },
+      question(el, s, api) { // shared behaviour for every question: skip, restore, finishing
+        const sk = document.createElement('button'); sk.className = 'skip'; sk.textContent = t('skip') + ' ›'; el.appendChild(sk);
+        sk.onclick = () => { if (s._key in B.got) return; B.got[s._key] = 's'; save(); sk.hidden = true; el.classList.add('skipped'); el.querySelector('.qf') && (el.querySelector('.qf').hidden = true); const n = document.createElement('p'); n.className = 'skipnote'; n.textContent = '↷ ' + t('skipped_note'); el.appendChild(n); if (!practise.includes(s)) practise.unshift(s); updPrac(); streak = 0; progress(); doneCheck(); };
+        if (s._key in B.got) { const v = B.got[s._key]; sk.hidden = true; if (v === 's') { el.classList.add('skipped'); const n = document.createElement('p'); n.className = 'skipnote'; n.textContent = '↷ ' + t('skipped_note'); el.appendChild(n); if (!practise.includes(s)) practise.unshift(s); } else { el.classList.add('done'); api.restore(v); } }
+      },
+      right(target, s, tries) { const pts = tries === 1 ? 10 : 5; streak++; Fx.at(target); Fx.float(target, '+' + pts); buzz(25); B.pts += pts; bumpPts(); if (streak >= 3) Fx.float($('#pts'), `🔥 ${t('in_a_row', { n: streak })}`); ctx.done(target.closest('.quiz'), s, pts); },
+      wrong() { streak = 0; buzz(60); },
+      done(el, s, pts) { el.classList.add('done'); const sk = el.querySelector('.skip'); if (sk) sk.remove(); if (!(s._key in B.got) || B.got[s._key] === 's') { B.got[s._key] = pts; save(); } progress(); doneCheck(); }
+    };
+    rows.forEach(s => { const el = renderBlock(s, ctx); const u = { key: s._key, q: !!s.graded }; units.push(u); secUnits[si].push(u); if (!u.q) el.dataset.unit = s._key; box.appendChild(el); });
     box.querySelectorAll('.tip').forEach(b => b.onclick = () => b.classList.toggle('open'));
-    box.querySelectorAll('.kwt').forEach(b => b.onclick = () => { const k = kws[+b.dataset.k]; sheet(`<div class="kcard big"><div class="kt">${esc(k.en)}</div>${k.am ? `<div class="kam" lang="am">${esc(k.am)}</div>` : ''}${k.om ? `<div class="kam" lang="om">${esc(k.om)}</div>` : ''}<div class="kd">${esc(k.def || '')}</div></div><button class="btn" id="kok">${t('continue')}</button>`); $('#kok').onclick = () => sheet(''); });
+    box.querySelectorAll('.kwt').forEach(b => b.onclick = () => { const k = kws[+b.dataset.k]; sheet(`<div class="kcard big"><div class="kt">📘 ${esc(k.en)}</div>${k.am ? `<div class="kam" lang="am">${esc(k.am)}</div>` : ''}${k.om ? `<div class="kam" lang="om">${esc(k.om)}</div>` : ''}<div class="kd" data-text>${esc(k.def || '')}</div></div><button class="btn" id="kok">${t('continue')}</button>`); $('#kok').onclick = () => sheet(''); });
     // end of section: celebration, practise set, book exercises
     const end = document.createElement('div'); end.className = 'secend';
-    const pr = B.prac[sec.lesson];
-    end.innerHTML = `<div class="secdone" hidden>🎉 ${t('section_done', { s: esc(sec.n) })} <b>+20 ⭐</b></div>
-      ${practise.length ? `<button class="pcard" data-a="prac"><span class="pi">🎯</span><span class="grow"><b>${t('practise_n', { n: practise.length })}</b><small>${pr ? `${t('best')} ${pr}` : t('practise_sub')}</small></span><span>›</span></button>` : ''}
-      ${(ls.exercises || []).map((ex, k) => `<button class="pcard soft" data-a="ex" data-k="${k}"><span class="pi">📖</span><span class="grow"><b>${esc(ex.book_name)}</b><small>${t('book_exercise')} · ${ex.items.length}</small></span><span>›</span></button>`).join('')}`;
-    const runHere = (cfg) => { const keep = { app: [...app.childNodes], top: [...topin.childNodes], y: window.scrollY }; away = true;
-      runPlayer(Object.assign({ backRoute: null, refreshers: ls.refreshers || {}, tool: ls.tool, cheer: true, resume: () => { app.replaceChildren(...keep.app); topin.replaceChildren(...keep.top); top.hidden = false; hideTray(); setNav(false); away = false; $('#pts').innerHTML = `⭐ <b>${B.pts}</b>`; requestAnimationFrame(() => window.scrollTo(0, keep.y)); } }, cfg)); };
+    end.innerHTML = `<div class="secdone" hidden>🎉 ${t('section_done', { s: esc(sec.n) })} <b>+20 ⭐</b></div><div class="prac"></div>${(ls.exercises || []).map((ex, k) => `<button class="pcard soft" data-a="ex" data-k="${k}"><span class="pi">📖</span><span class="grow"><b>${esc(ex.book_name)}</b><small>${t('book_exercise')} · ${ex.items.length}</small></span><span>›</span></button>`).join('')}`;
+    function updPrac() { const pr = B.prac[sec.lesson]; end.querySelector('.prac').innerHTML = practise.length ? `<button class="pcard" data-a="prac"><span class="pi">🎯</span><span class="grow"><b>${t('practise_n', { n: practise.length })}</b><small>${pr ? `${t('best')} ${pr}` : t('practise_sub')}</small></span><span>›</span></button>` : ''; }
+    updPrac();
+    const runHere = cfg => { const keep = { app: [...app.childNodes], top: [...topin.childNodes], y: window.scrollY }; away = true;
+      runPlayer(Object.assign({ backRoute: null, refreshers: ls.refreshers || {}, tool: ls.tool, cheer: true, resume: () => { app.replaceChildren(...keep.app); topin.replaceChildren(...keep.top); top.hidden = false; hideTray(); setNav(false); away = false; bumpPts(); Focus.tick(); requestAnimationFrame(() => window.scrollTo(0, keep.y)); } }, cfg)); };
     end.addEventListener('click', e => { const b = e.target.closest('.pcard'); if (!b) return;
-      if (b.dataset.a === 'prac') runHere({ id: ls.id, title: `${sec.n} · ${ls.title}`, mode: 'practice', screens: practise, onDone: res => { const right = Object.values(res.firstTry).filter(Boolean).length; B.prac[sec.lesson] = `${right}/${practise.length}`; bump(right * 5); Object.keys(res.byIdea).forEach(i => bumpMastery(i, res.byIdea[i])); } });
+      if (b.dataset.a === 'prac') runHere({ id: ls.id, title: `${sec.n} · ${ls.title}`, mode: 'practice', screens: practise, onDone: res => { const right = Object.values(res.firstTry).filter(Boolean).length; B.prac[sec.lesson] = `${right}/${practise.length}`; B.pts += right * 5; practise.forEach((s, i) => { if (B.got[s._key] === 's' && res.firstTry[i]) B.got[s._key] = 5; }); save(); Object.keys(res.byIdea).forEach(i => bumpMastery(i, res.byIdea[i])); updPrac(); } });
       else { const ex = ls.exercises[+b.dataset.k]; runHere({ id: ls.id, title: ex.book_name, mode: 'book', screens: ex.items }); } });
-    box.appendChild(end);
-    page.appendChild(box);
-    doneCheck();
+    box.appendChild(end); page.appendChild(box); doneCheck();
   });
   const fin = document.createElement('div'); fin.className = 'bookend'; fin.innerHTML = `<div class="display">⭐ ${t('book_points')}</div><a class="btn ghost" href="#exams">${t('exams')} ›</a>`; page.appendChild(fin);
-  progress();
+  page.querySelectorAll('.tip').forEach(b => b.onclick = () => b.classList.toggle('open'));
+  progress(); Translate.bind(page);
   page.querySelector('#secnav').addEventListener('click', e => { const a = e.target.closest('[data-go]'); if (!a) return; e.preventDefault(); $('#sec' + a.dataset.go).scrollIntoView({ behavior: 'smooth', block: 'start' }); });
-  try { const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { page.querySelectorAll('#secnav .chip').forEach(ch => ch.classList.toggle('on', ch.dataset.go === en.target.dataset.i)); const on = page.querySelector('#secnav .chip.on'); if (on) on.scrollIntoView({ block: 'nearest', inline: 'center' }); } }), { rootMargin: '-45% 0px -50% 0px' }); page.querySelectorAll('.sec').forEach(s => io.observe(s)); } catch (_) {}
+  try {
+    const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { page.querySelectorAll('#secnav .chip').forEach(ch => ch.classList.toggle('on', ch.dataset.go === en.target.dataset.i)); const on = page.querySelector('#secnav .chip.on'); if (on) on.scrollIntoView({ block: 'nearest', inline: 'center' }); } }), { rootMargin: '-45% 0px -50% 0px' });
+    page.querySelectorAll('.sec').forEach(s => io.observe(s));
+    const seenIO = new IntersectionObserver(es => { let ch = false; es.forEach(en => { if (en.isIntersecting && !B.seen[en.target.dataset.unit]) { B.seen[en.target.dataset.unit] = 1; ch = true; seenIO.unobserve(en.target); } }); if (ch && !away) { save(); progress(); } }, { rootMargin: '0px 0px -35% 0px' });
+    page.querySelectorAll('[data-unit]').forEach(el => { if (!B.seen[el.dataset.unit]) seenIO.observe(el); });
+  } catch (_) {}
   if (B.y) requestAnimationFrame(() => window.scrollTo(0, B.y)); else window.scrollTo(0, 0);
   let tm; const onScroll = () => { if (away || !page.isConnected) return; clearTimeout(tm); tm = setTimeout(() => { if (page.isConnected && !away) { B.y = Math.round(window.scrollY); save(); } }, 400); };
   window.removeEventListener('scroll', viewBook._s || (() => {})); viewBook._s = onScroll; window.addEventListener('scroll', onScroll, { passive: true });

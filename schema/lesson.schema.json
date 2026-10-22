@@ -319,7 +319,10 @@
             "pick",
             "match",
             "order",
-            "read"
+            "read",
+            "picture",
+            "gallery",
+            "people"
           ]
         },
         "step": {
@@ -451,6 +454,41 @@
         "note": {
           "type": "string",
           "description": "read: a small side note under the text"
+        },
+        "pic": {
+          "type": "string",
+          "description": "picture: id of a drawing in app/pictures.js"
+        },
+        "caption": {
+          "type": "string"
+        },
+        "people": {
+          "type": "array",
+          "description": "people: [{name, years?, from?, did, img?}] img is an https Wikimedia Commons Special:FilePath URL",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "did"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "years": {
+                "type": "string"
+              },
+              "from": {
+                "type": "string"
+              },
+              "did": {
+                "type": "string"
+              },
+              "img": {
+                "type": "string"
+              }
+            }
+          }
         }
       },
       "allOf": [
