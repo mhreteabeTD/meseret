@@ -373,6 +373,7 @@ function runPlayer(cfg) {
   function setTray(kind, title, body, label) { tray.className = 'tray' + (kind ? ' ' + kind : ''); msg.innerHTML = title ? `<strong>${esc(title)}</strong>${body ? `<span>${esc(body)}</span>` : ''}` : ''; go.textContent = label; }
   function update() { if (phase === 'answer' && cur) go.disabled = !cur.ready(); }
   function bindTop(k) { const rep = $('#rep'); if (rep) rep.onclick = () => reportSheet({ lesson: cfg.id || cfg.title, screen: k, label: `${cfg.title} · ${Math.min(pos + 1, order.length)}/${order.length}` }); const rb = $('#rback'); if (rb) rb.onclick = () => cfg.resume && cfg.resume(); }
+  function addSkip() { const k = order[pos], s = screens[k] || {}; const osk = $('#skipb'); if (osk) osk.remove(); if (s.graded && order.length - pos > 2 && (!['mcq', 'tf'].includes(s.kind) || tries[k])) { const sb = document.createElement('button'); sb.className = 'btn ghost'; sb.id = 'skipb'; sb.style.width = 'auto'; sb.textContent = t('skip'); sb.onclick = () => { order.splice(pos, 1); order.splice(order.length - 1, 0, k); show(); }; go.parentNode.insertBefore(sb, go); } }
   function show() {
     const k = order[pos], s = k === SUM ? { kind: 'summary' } : screens[k];
     cur = (R[s.kind] || R.name)(s); app.replaceChildren(cur.el);
@@ -382,7 +383,7 @@ function runPlayer(cfg) {
     const old = tray.querySelector('#rfb'); if (old) old.remove(); closePanel();
     phase = 'answer'; lastOk = null; setTray('', '', '', cur.label); update();
     const wb = $('#work'); wb.hidden = !WORK_TOOLS || !(s.graded || s.kind === 'guess' || s.kind === 'tiles');
-    const osk = $('#skipb'); if (osk) osk.remove(); if (s.graded && order.length - pos > 2) { const sb = document.createElement('button'); sb.className = 'btn ghost'; sb.id = 'skipb'; sb.style.width = 'auto'; sb.textContent = t('skip'); sb.onclick = () => { order.splice(pos, 1); order.splice(order.length - 1, 0, k); show(); }; go.parentNode.insertBefore(sb, go); } wb.onclick = () => workSheet({ key: `${cfg.id || cfg.title}:${k}`, lesson: cfg.id, item: k, tool: s.tool || cfg.tool, q: (s.ask || s.text || s.title || '').replace(/\n/g, ' ') });
+    addSkip(); wb.onclick = () => workSheet({ key: `${cfg.id || cfg.title}:${k}`, lesson: cfg.id, item: k, tool: s.tool || cfg.tool, q: (s.ask || s.text || s.title || '').replace(/\n/g, ' ') });
     const pct = Math.round(pos / order.length * 100);
     setTop(`${cfg.backRoute ? `<a class="iconbtn" href="#${cfg.backRoute}" aria-label="close">${svgIcon(CLOSE)}</a>` : `<button class="iconbtn" id="rback" aria-label="back">${svgIcon(BACK)}</button>`}<span class="mode ${cfg.mode === 'review' || review ? 'review' : cfg.mode === 'book' || cfg.mode === 'test' ? 'book' : ''}">${cfg.mode === 'refresher' ? t('refresher') : cfg.mode === 'practice' ? t('step_practise') : review ? t('review') : cfg.mode === 'review' ? t('review') : cfg.mode === 'book' ? t('book_exercise') : cfg.mode === 'test' ? t('unit_test') : t('learn')}</span><div class="bar"><i style="width:${pct}%"></i></div><span class="count">${Math.min(pos + 1, order.length)} / ${order.length}</span><button class="iconbtn" id="rep" aria-label="${t('report')}">${svgIcon(FLAG)}</button>`);
     bindTop(k);
@@ -391,7 +392,7 @@ function runPlayer(cfg) {
   function onGo() {
     const k = order[pos], s = screens[k];
     if (cur.summary) { if (cfg.mode === 'refresher' || (cfg.resume && !missed.size)) { cfg.resume(); return; } if (missed.size) { order = [...missed].sort((a, b) => a - b).concat(SUM); review = true; } else { order = screens.map((_, i) => i).concat(SUM); firstTry = {}; review = false; state.guess = null; } pos = 0; round = {}; tries = {}; show(); return; }
-    if (phase === 'feedback') { if (lastOk === false) { const old = tray.querySelector('#rfb'); if (old) old.remove(); phase = 'answer'; cur.retry && cur.retry(); setTray('', '', '', cur.label); update(); } else { pos++; show(); } return; }
+    if (phase === 'feedback') { if (lastOk === false) { const old = tray.querySelector('#rfb'); if (old) old.remove(); phase = 'answer'; cur.retry && cur.retry(); setTray('', '', '', cur.label); update(); addSkip(); } else { pos++; show(); } return; }
     if (!cur.check) { pos++; show(); return; }
     { const sb = $('#skipb'); if (sb) sb.remove(); }
     const r = cur.check(); tries[k] = (tries[k] || 0) + 1;
@@ -613,7 +614,7 @@ const Blocks = {
     el.querySelector('.qo').onclick = e => { const b = e.target.closest('.qb'); if (!b || b.disabled || el.classList.contains('done')) return; tries++;
       const ok = b.textContent === ans; ctx.log(s, ok, tries);
       if (ok) { b.classList.add('ok', 'pop'); say('ok', s.why); lock(); ctx.right(b, s, tries); }
-      else { b.classList.add('no', 'shake'); b.disabled = true; setTimeout(() => b.classList.remove('shake'), 500); ctx.wrong();
+      else { b.classList.add('no', 'shake'); b.disabled = true; setTimeout(() => b.classList.remove('shake'), 500); ctx.wrong(el);
         if (tries >= 2) { say('no', `${t('answer_is')} ${ans}. ${s.worked || s.why || ''}`); lock(); ctx.done(el, s, 0); } else say('no', `${s.clue || t('not_yet')} ${t('try_again')}.`); } };
     return el;
   },
@@ -626,7 +627,7 @@ const Blocks = {
     ctx.question(el, s, { restore(v) { if (v === 's') return; btn.hidden = true; say('ok', '✓ ' + (s.why || '')); } });
     btn.onclick = () => { const r = cur.check(); tries++; ctx.log(s, !!r.ok, tries);
       if (r.ok) { phase = 'done'; btn.hidden = true; say('ok', r.body); ctx.right(btn, s, tries); }
-      else { ctx.wrong(); if (tries >= 2) { const shown = s.kind === 'blank' ? s.a[0] : s.kind === 'pick' ? s.a.join(', ') : ''; phase = 'done'; btn.hidden = true; say('no', `${shown ? t('answer_is') + ' ' + shown + '. ' : ''}${s.worked || s.why || ''}`); ctx.done(el, s, 0); } else { say('no', `${r.body || t('not_yet')} ${t('try_again')}.`); cur.retry && cur.retry(); env.update(); } } };
+      else { ctx.wrong(el); if (tries >= 2) { const shown = s.kind === 'blank' ? s.a[0] : s.kind === 'pick' ? s.a.join(', ') : ''; phase = 'done'; btn.hidden = true; say('no', `${shown ? t('answer_is') + ' ' + shown + '. ' : ''}${s.worked || s.why || ''}`); ctx.done(el, s, 0); } else { say('no', `${r.body || t('not_yet')} ${t('try_again')}.`); cur.retry && cur.retry(); env.update(); } } };
     return el;
   },
   explore(s, ctx) { // ungraded sort / tap / steps / tiles
@@ -682,12 +683,12 @@ async function viewBook(id) {
     const ctx = { kws, used: new Set(), hue,
       seen(el) {}, log(s, ok, attempt) { logEvent({ lesson: ls.id, idea: s._idea, item: s._key, correct: ok, attempt, mode: 'book' }); },
       question(el, s, api) { // shared behaviour for every question: skip, restore, finishing
-        const sk = document.createElement('button'); sk.className = 'skip'; sk.textContent = t('skip') + ' ›'; el.appendChild(sk);
+        const sk = document.createElement('button'); sk.className = 'skip'; sk.textContent = t('skip') + ' ›'; sk.hidden = s.kind === 'mcq' || s.kind === 'tf'; el.appendChild(sk);
         sk.onclick = () => { if (s._key in B.got) return; B.got[s._key] = 's'; save(); sk.hidden = true; el.classList.add('skipped'); el.querySelector('.qf') && (el.querySelector('.qf').hidden = true); const n = document.createElement('p'); n.className = 'skipnote'; n.textContent = '↷ ' + t('skipped_note'); el.appendChild(n); if (!practise.includes(s)) practise.unshift(s); updPrac(); streak = 0; progress(); doneCheck(); };
         if (s._key in B.got) { const v = B.got[s._key]; sk.hidden = true; if (v === 's') { el.classList.add('skipped'); const n = document.createElement('p'); n.className = 'skipnote'; n.textContent = '↷ ' + t('skipped_note'); el.appendChild(n); if (!practise.includes(s)) practise.unshift(s); } else { el.classList.add('done'); api.restore(v); } }
       },
       right(target, s, tries) { const pts = tries === 1 ? 10 : 5; streak++; Fx.at(target); Fx.float(target, '+' + pts); buzz(25); B.pts += pts; bumpPts(); if (streak >= 3) Fx.float($('#pts'), `🔥 ${t('in_a_row', { n: streak })}`); ctx.done(target.closest('.quiz'), s, pts); },
-      wrong() { streak = 0; buzz(60); },
+      wrong(el) { streak = 0; buzz(60); const sk = el && el.querySelector('.skip'); if (sk && !el.classList.contains('done')) sk.hidden = false; },
       done(el, s, pts) { el.classList.add('done'); const sk = el.querySelector('.skip'); if (sk) sk.remove(); if (!(s._key in B.got) || B.got[s._key] === 's') { B.got[s._key] = pts; save(); } progress(); doneCheck(); }
     };
     rows.forEach(s => { const el = renderBlock(s, ctx); const u = { key: s._key, q: !!s.graded }; units.push(u); secUnits[si].push(u); if (!u.q) el.dataset.unit = s._key; box.appendChild(el); });
