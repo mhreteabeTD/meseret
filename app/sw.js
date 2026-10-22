@@ -1,5 +1,5 @@
 /* Meseret service worker: always try the network first so students get the latest version; fall back to the cache when offline. */
-const V = 'meseret-v5';
+const V = 'meseret-v6';
 const SHELL = ['./', './index.html', './app.js', './styles.css', './manifest.webmanifest', './icon.svg', './i18n/en.json', './i18n/am.json'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(V).then(c => c.addAll(SHELL).catch(() => {})).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== V).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
