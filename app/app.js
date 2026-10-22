@@ -593,7 +593,7 @@ async function viewBook(id) {
     page.appendChild(box);
     doneCheck();
   });
-  const fin = document.createElement('div'); fin.className = 'bookend'; fin.innerHTML = `<div class="display">⭐ ${t('book_points')}</div><a class="btn ghost" href="#exams">${t('exams')} ›</a><a class="btn link" href="${c.classic}">${t('open_chapter')}</a>`; page.appendChild(fin);
+  const fin = document.createElement('div'); fin.className = 'bookend'; fin.innerHTML = `<div class="display">⭐ ${t('book_points')}</div><a class="btn ghost" href="#exams">${t('exams')} ›</a>`; page.appendChild(fin);
   progress();
   page.querySelector('#secnav').addEventListener('click', e => { const a = e.target.closest('[data-go]'); if (!a) return; e.preventDefault(); $('#sec' + a.dataset.go).scrollIntoView({ behavior: 'smooth', block: 'start' }); });
   try { const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { page.querySelectorAll('#secnav .chip').forEach(ch => ch.classList.toggle('on', ch.dataset.go === en.target.dataset.i)); const on = page.querySelector('#secnav .chip.on'); if (on) on.scrollIntoView({ block: 'nearest', inline: 'center' }); } }), { rootMargin: '-45% 0px -50% 0px' }); page.querySelectorAll('.sec').forEach(s => io.observe(s)); } catch (_) {}
@@ -626,6 +626,6 @@ async function route() {
 }
 window.addEventListener('hashchange', route);
 window.addEventListener('online', () => {}); window.addEventListener('offline', () => toast(t('offline')));
-if ('serviceWorker' in navigator) { try { navigator.serviceWorker.register('sw.js'); } catch (_) {} }
+if ('serviceWorker' in navigator) { try { const had = !!navigator.serviceWorker.controller; navigator.serviceWorker.register('sw.js').then(r => r.update()).catch(() => {}); let once = false; navigator.serviceWorker.addEventListener('controllerchange', () => { if (had && !once) { once = true; location.reload(); } }); } catch (_) {} }
 route();
 })();
