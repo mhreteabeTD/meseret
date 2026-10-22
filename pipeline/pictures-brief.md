@@ -9,3 +9,5 @@ Blocks that use them:
 - `{"kind":"picture","step":"read","pic":"beaker","caption":"Beaker"}` — one drawing with a short caption.
 - `{"kind":"gallery","step":"read","title":"...","items":[["beaker","Beaker","Holds and heats liquids."], ...]}` — a grid of drawings; tap one to see its line of text.
 - `{"kind":"people","step":"read","title":"...","people":[{"name":"Marie Curie","years":"1867–1934","from":"Poland / France","did":"...","img":"https://commons.wikimedia.org/wiki/Special:FilePath/<File name>?width=240"}]}` — face cards. `img` only if a real Commons file was verified; otherwise omit it (the app shows initials).
+
+- `{"kind":"reveal","step":"explore","title":"Activity 1.1","ask":"...","answer":"..."}` — a book Activity question: the student thinks, then taps "Show answer". Not graded.

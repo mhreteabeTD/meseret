@@ -322,7 +322,8 @@
             "read",
             "picture",
             "gallery",
-            "people"
+            "people",
+            "reveal"
           ]
         },
         "step": {
@@ -489,6 +490,10 @@
               }
             }
           }
+        },
+        "answer": {
+          "type": "string",
+          "description": "reveal: the answer shown when the student taps Show answer"
         }
       },
       "allOf": [

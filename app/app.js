@@ -349,9 +349,14 @@ function makeR(env) {
     order(s) { const mixed = s.items.slice().sort(() => Math.random() - .5); const el = div(head(s) + `<div class="fig"><div class="chips" id="pool">${mixed.map(x => `<button class="chip" data-v="${esc(x)}">${esc(x)}</button>`).join('')}</div><ol class="steps" id="seq"></ol></div>`); let seq = [];
       el.querySelector('#pool').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b || env.phase() !== 'answer') return; seq.push(b.dataset.v); b.disabled = true; el.querySelector('#seq').innerHTML = seq.map(x => `<li>${esc(x)}</li>`).join(''); env.update(); });
       return { el, label: t('check'), ready: () => seq.length === s.items.length, check() { const ok = seq.every((x, i) => x === s.items[i]); return ok ? { ok: true, body: s.why } : { ok: false, body: s.clue || s.why }; }, retry() { seq = []; el.querySelector('#seq').innerHTML = ''; el.querySelectorAll('#pool .chip').forEach(x => x.disabled = false); } }; },
-    match(s) { const rights = s.pairs.map(p => p[1]).sort(() => Math.random() - .5); const el = div(head(s) + `<div class="fig"><div class="stack">${s.pairs.map((p, j) => `<label class="row"><span class="grow" style="font-weight:800">${esc(p[0])}</span><select data-j="${j}" style="min-height:44px;border-radius:10px;border:2px solid var(--line);background:var(--surface);max-width:55%"><option value="">…</option>${rights.map(r => `<option>${esc(r)}</option>`).join('')}</select></label>`).join('')}</div></div>`);
-      el.addEventListener('change', () => env.update());
-      return { el, label: t('check'), ready: () => [...el.querySelectorAll('select')].every(x => x.value), check() { const ok = [...el.querySelectorAll('select')].every(x => x.value === s.pairs[+x.dataset.j][1]); return ok ? { ok: true, body: s.why } : { ok: false, body: s.clue || s.why }; }, retry() {} }; },
+    match(s) { const rights = s.pairs.map((p, j) => [p[1], j]).sort(() => Math.random() - .5); const el = div(head(s) + `<div class="fig"><p class="small muted">${t('match_hint')}</p><div class="pairs"><div class="pcol">${s.pairs.map((p, j) => `<button class="pl" data-j="${j}">${esc(p[0])}</button>`).join('')}</div><div class="pcol">${rights.map(([r, j]) => `<button class="pr" data-r="${esc(r)}">${esc(r)}</button>`).join('')}</div></div></div>`);
+      const pair = {}, cols = ['g', 's', 'y', 'c', 'v', 'g', 's', 'y']; let sel = null;
+      const paint = () => { el.querySelectorAll('.pl').forEach(b => { const j = +b.dataset.j, r = pair[j]; b.className = 'pl' + (sel === j ? ' sel' : '') + (r != null ? ' on h-' + cols[j] : ''); }); el.querySelectorAll('.pr').forEach(b => { const j = Object.keys(pair).find(k => pair[k] === b.dataset.r); b.className = 'pr' + (j != null ? ' on h-' + cols[+j] : ''); }); env.update(); };
+      el.querySelector('.pairs').addEventListener('click', e => { if (env.phase() !== 'answer') return; const l = e.target.closest('.pl'), r = e.target.closest('.pr');
+        if (l) { const j = +l.dataset.j; if (pair[j] != null && sel !== j) delete pair[j]; sel = j; paint(); }
+        if (r && sel != null) { Object.keys(pair).forEach(k => { if (pair[k] === r.dataset.r) delete pair[k]; }); pair[sel] = r.dataset.r; const next = s.pairs.findIndex((_, j) => pair[j] == null); sel = next >= 0 ? next : null; paint(); } });
+      sel = 0; setTimeout(paint);
+      return { el, label: t('check'), ready: () => s.pairs.every((_, j) => pair[j] != null), check() { const bad = s.pairs.map((p, j) => pair[j] === p[1] ? -1 : j).filter(j => j >= 0); if (!bad.length) { el.querySelectorAll('.pl,.pr').forEach(b => b.disabled = true); return { ok: true, body: s.why }; } bad.forEach(j => { const b = el.querySelector(`.pl[data-j="${j}"]`); b.classList.add('shake'); setTimeout(() => b.classList.remove('shake'), 500); }); return { ok: false, body: s.clue || s.why }; }, retry() { s.pairs.forEach((p, j) => { if (pair[j] !== p[1]) delete pair[j]; }); sel = s.pairs.findIndex((_, j) => pair[j] == null); paint(); } }; },
   };
   const explainCard = s => { const ex = s._explain || env.explain; if (!ex) return ''; const txt = (ex[S.lang] && ex[S.lang].text) || (ex.en && ex.en.text) || ''; return txt ? `<div class="explain"><button class="play" id="ex-play" aria-label="${t('explain_me')}"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l12 7-12 7z" fill="#fff"/></svg></button><div class="grow"><div style="font-weight:800">${t('explain_me')}</div><div class="small muted" id="ex-text">${esc(txt)}</div></div></div>` : ''; };
 
@@ -602,7 +607,8 @@ const Blocks = {
   name(s, ctx) { return h('keys', s.defs.map(d => { const k = ctx.kws.find(x => x.en.toLowerCase() === d[0].toLowerCase()); return `<div class="kcard"><div class="kt">📘 ${esc(d[0])}${k && k.am ? ` <span class="kam" lang="am">${esc(k.am)}</span>` : ''}</div>${Text(d[1], null, 'div', 'kd')}</div>`; }).join('')); },
   guess(s, ctx) {
     const el = h('quiz think', `<div class="ql">🤔 ${t('step_hook')}</div>${Text(s.ask || s.text || '', null, 'p', 'qq')}${s.ask && s.text ? Text(s.text, null, 'p', 'small qctx') : ''}<div class="qo">${s.opts.map(o => `<button class="qb">${esc(o)}</button>`).join('')}</div><p class="qf" hidden data-text></p>`);
-    el.querySelector('.qo').onclick = e => { const b = e.target.closest('.qb'); if (!b || el.dataset.done) return; el.dataset.done = 1; b.classList.add('pick', 'pop'); el.querySelectorAll('.qb').forEach(x => x.disabled = true); const f = el.querySelector('.qf'); f.hidden = !s.after; f.textContent = s.after || ''; ctx.seen(el); };
+    el.querySelector('.qo').onclick = e => { const b = e.target.closest('.qb'); if (!b || el.dataset.done) return; el.dataset.done = 1; b.classList.add('pick', 'pop'); el.querySelectorAll('.qb').forEach(x => x.disabled = true); const f = el.querySelector('.qf'); f.hidden = !s.after; f.textContent = s.after || ''; ctx.complete(s); };
+    if (ctx.isDone(s)) { el.dataset.done = 1; el.querySelectorAll('.qb').forEach(x => x.disabled = true); }
     return el;
   },
   choice(s, ctx) { // mcq / tf quick check: tap an answer and it is checked at once
@@ -630,9 +636,16 @@ const Blocks = {
       else { ctx.wrong(el); if (tries >= 2) { const shown = s.kind === 'blank' ? s.a[0] : s.kind === 'pick' ? s.a.join(', ') : ''; phase = 'done'; btn.hidden = true; say('no', `${shown ? t('answer_is') + ' ' + shown + '. ' : ''}${s.worked || s.why || ''}`); ctx.done(el, s, 0); } else { say('no', `${r.body || t('not_yet')} ${t('try_again')}.`); cur.retry && cur.retry(); env.update(); } } };
     return el;
   },
+  reveal(s, ctx) { // a book Activity: think, then tap to see the answer
+    const el = h('quiz act', `<div class="ql">🧪 ${esc(s.title || t('activity'))}</div>${Text(s.ask, null, 'p', 'qq')}<button class="btn ghost small rv">${t('show_answer')}</button><p class="qf ok" hidden data-text>${esc(s.answer)}</p>`);
+    const b = el.querySelector('.rv'), a = el.querySelector('.qf');
+    const open = anim => { b.hidden = true; a.hidden = false; if (anim) { a.classList.add('pop'); ctx.complete(s); } };
+    b.onclick = () => open(true); if (ctx.isDone(s)) open(false);
+    return el;
+  },
   explore(s, ctx) { // ungraded sort / tap / steps / tiles
-    const env = { phase: () => 'answer', state: {}, explain: null, enter() {}, update() {} };
-    const RR = makeR(env).R, cur = (RR[s.kind] || RR.name)(Object.assign({}, s, { title: '', step: '' }));
+    let cur = null; const env = { phase: () => 'answer', state: {}, explain: null, enter() {}, update() { if (cur && cur.ready()) ctx.complete(s); } };
+    const RR = makeR(env).R; cur = (RR[s.kind] || RR.name)(Object.assign({}, s, { title: '', step: '' }));
     const el = h(s.kind === 'steps' ? 'quiz worked' : 'quiz think', `<div class="ql">${s.kind === 'steps' ? '🧩 ' + t('worked_example') : '🔍 ' + t('step_explore')}</div>${s.title ? Text(s.title, null, 'p', 'qq') : ''}`); el.appendChild(cur.el); return el;
   }
 };
@@ -664,7 +677,7 @@ async function viewBook(id) {
   app.replaceChildren(page);
   function bumpPts() { const p = $('#pts'); if (!p) return; p.innerHTML = `⭐ <b>${B.pts}</b>`; p.classList.remove('bump'); void p.offsetWidth; p.classList.add('bump'); }
   function progress() {
-    const done = u => u.q ? (u.key in B.got) : !!B.seen[u.key];
+    const done = u => u.q ? typeof B.got[u.key] === 'number' : !!B.seen[u.key];
     const d = units.filter(done).length, pct = units.length ? Math.round(d / units.length * 100) : 0;
     $('#pbar').style.width = pct + '%'; $('#ppct').textContent = pct + '%';
     page.querySelectorAll('#secnav .chip').forEach((ch, i) => { const u = secUnits[i], p = u.length ? Math.round(u.filter(done).length / u.length * 100) : 0; ch.style.setProperty('--p', p + '%'); ch.classList.toggle('full', p === 100); });
@@ -677,11 +690,13 @@ async function viewBook(id) {
     const inline = [], practise = [];
     ls.ideas.forEach((idea, ii) => idea.screens.forEach((s, k) => { const sx = Object.assign({ _idea: idea.id, _key: `${sec.lesson}#${ii}.${k}` }, s); (s.graded && s.step !== 'check' && s.step !== 'notice' ? practise : inline).push(sx); }));
     const seenIdea = new Set(); const rows = inline.filter(s => { if (!s.graded) return true; if (seenIdea.has(s._idea)) { practise.unshift(s); return false; } seenIdea.add(s._idea); return true; });
+    // games stay in the reading: they are the hands-on part students enjoy
+    for (let q = practise.length - 1; q >= 0; q--) { const g = practise[q]; if (['sort', 'match', 'order', 'pick'].includes(g.kind)) { practise.splice(q, 1); const at = rows.map(r => r._idea).lastIndexOf(g._idea); rows.splice(at + 1, 0, g); } }
     const qKeys = rows.filter(s => s.graded).map(s => s._key);
     const doneCheck = () => { const ban = box.querySelector('.secdone'); if (!ban || !qKeys.every(k => k in B.got) || box.classList.contains('complete')) return; box.classList.add('complete'); ban.hidden = false;
       if (!B.got['done:' + sec.lesson]) { B.got['done:' + sec.lesson] = 1; setLessonProgress(sec.lesson, { done: true }); const by = {}; qKeys.forEach(k => { const s = rows.find(r => r._key === k); by[s._idea] = (by[s._idea] !== false) && B.got[k] >= 10; }); Object.keys(by).forEach(i => bumpMastery(i, by[i])); B.pts += 20; save(); bumpPts(); Fx.at(ban, true); buzz([20, 40, 20]); } };
     const ctx = { kws, used: new Set(), hue,
-      seen(el) {}, log(s, ok, attempt) { logEvent({ lesson: ls.id, idea: s._idea, item: s._key, correct: ok, attempt, mode: 'book' }); },
+      complete(s) { if (B.seen[s._key]) return; B.seen[s._key] = 1; save(); progress(); }, isDone(s) { return !!B.seen[s._key]; }, log(s, ok, attempt) { logEvent({ lesson: ls.id, idea: s._idea, item: s._key, correct: ok, attempt, mode: 'book' }); },
       question(el, s, api) { // shared behaviour for every question: skip, restore, finishing
         const sk = document.createElement('button'); sk.className = 'skip'; sk.textContent = t('skip') + ' ›'; sk.hidden = s.kind === 'mcq' || s.kind === 'tf'; el.appendChild(sk);
         sk.onclick = () => { if (s._key in B.got) return; B.got[s._key] = 's'; save(); sk.hidden = true; el.classList.add('skipped'); el.querySelector('.qf') && (el.querySelector('.qf').hidden = true); const n = document.createElement('p'); n.className = 'skipnote'; n.textContent = '↷ ' + t('skipped_note'); el.appendChild(n); if (!practise.includes(s)) practise.unshift(s); updPrac(); streak = 0; progress(); doneCheck(); };
@@ -691,7 +706,7 @@ async function viewBook(id) {
       wrong(el) { streak = 0; buzz(60); const sk = el && el.querySelector('.skip'); if (sk && !el.classList.contains('done')) sk.hidden = false; },
       done(el, s, pts) { el.classList.add('done'); const sk = el.querySelector('.skip'); if (sk) sk.remove(); if (!(s._key in B.got) || B.got[s._key] === 's') { B.got[s._key] = pts; save(); } progress(); doneCheck(); }
     };
-    rows.forEach(s => { const el = renderBlock(s, ctx); const u = { key: s._key, q: !!s.graded }; units.push(u); secUnits[si].push(u); if (!u.q) el.dataset.unit = s._key; box.appendChild(el); });
+    rows.forEach(s => { const el = renderBlock(s, ctx); if (s.graded || ['guess', 'reveal', 'sort', 'tap', 'steps', 'tiles', 'order', 'match'].includes(s.kind)) { const u = { key: s._key, q: !!s.graded }; units.push(u); secUnits[si].push(u); } box.appendChild(el); });
     box.querySelectorAll('.tip').forEach(b => b.onclick = () => b.classList.toggle('open'));
     box.querySelectorAll('.kwt').forEach(b => b.onclick = () => { const k = kws[+b.dataset.k]; sheet(`<div class="kcard big"><div class="kt">📘 ${esc(k.en)}</div>${k.am ? `<div class="kam" lang="am">${esc(k.am)}</div>` : ''}${k.om ? `<div class="kam" lang="om">${esc(k.om)}</div>` : ''}<div class="kd" data-text>${esc(k.def || '')}</div></div><button class="btn" id="kok">${t('continue')}</button>`); $('#kok').onclick = () => sheet(''); });
     // end of section: celebration, practise set, book exercises
@@ -713,8 +728,6 @@ async function viewBook(id) {
   try {
     const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { page.querySelectorAll('#secnav .chip').forEach(ch => ch.classList.toggle('on', ch.dataset.go === en.target.dataset.i)); const on = page.querySelector('#secnav .chip.on'); if (on) on.scrollIntoView({ block: 'nearest', inline: 'center' }); } }), { rootMargin: '-45% 0px -50% 0px' });
     page.querySelectorAll('.sec').forEach(s => io.observe(s));
-    const seenIO = new IntersectionObserver(es => { let ch = false; es.forEach(en => { if (en.isIntersecting && !B.seen[en.target.dataset.unit]) { B.seen[en.target.dataset.unit] = 1; ch = true; seenIO.unobserve(en.target); } }); if (ch && !away) { save(); progress(); } }, { rootMargin: '0px 0px -35% 0px' });
-    page.querySelectorAll('[data-unit]').forEach(el => { if (!B.seen[el.dataset.unit]) seenIO.observe(el); });
   } catch (_) {}
   if (B.y) requestAnimationFrame(() => window.scrollTo(0, B.y)); else window.scrollTo(0, 0);
   let tm; const onScroll = () => { if (away || !page.isConnected) return; clearTimeout(tm); tm = setTimeout(() => { if (page.isConnected && !away) { B.y = Math.round(window.scrollY); save(); } }, 400); };
