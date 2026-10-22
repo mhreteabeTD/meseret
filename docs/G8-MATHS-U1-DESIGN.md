@@ -53,7 +53,7 @@ All blocks are reusable, inline SVG, ≥44px targets, CSS-variable colours, repo
 - `hop`: animated arrows for integer addition (Activity 1.3); tap "Hop" to play each arrow; final point pulses. Not graded (explore) unless `ask` + `ans` given.
 - `distance` (graded): student taps a point; the arc to 0 draws and its length shows. Used for absolute value.
 - Values are strings in `a/b`, `-a/b`, `2 1/2`, or decimals; the engine parses them with the same parser as §2.6.
-- Decision pending (owner): tap-to-place with snapping (recommended for low-end phones) vs drag.
+- Decided (owner, 2026-10-22): tap-to-place with snapping; no drag.
 
 ### 2.2 `fracbar` — one bar split into n parts
 ```json
@@ -358,7 +358,7 @@ Key words: interest, principal, rate, time, simple interest, borrower, lender.
 ## 5. Coverage expectations (for the finish checklist)
 Every idea: hook ✓ · read ✓ · name ✓ · check ✓ · ≥2 practise ✓ · refreshers attached where `requires` is set. Every `blank` with a numeric answer carries `"num": true` and an `a` list with fraction, decimal and mixed forms.
 
-## 6. Build order (proposal)
+## 6. Build order (approved by owner, 2026-10-22)
 1. Engine session A: `numline` (show/place/hop/distance), `num` answer checking, `{{frac}}` renderer, scrolling chips. Test at 360px.
 2. Content session 1: lessons 1.1, 1.1.1, 1.1.2, 1.1.3 (number-line heavy). Ship; owner reviews.
 3. Engine session B: `fracbar`, `grid`, `nest`, `slider`, `signed` input.
