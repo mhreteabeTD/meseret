@@ -282,6 +282,42 @@ function matchAnswer(given, accepted) {
   return { ok: false };
 }
 
+/* ---------- Q: rational numbers (parse "3/8", "-2 1/2", "0.375", "60%") ---------- */
+const Q = {
+  gcd(a, b) { a = Math.abs(a); b = Math.abs(b); while (b) [a, b] = [b, a % b]; return a || 1; },
+  mk(n, d) { if (d < 0) { n = -n; d = -d; } const g = Q.gcd(n, d); return { n: n / g, d: d / g }; },
+  dec(s) { const neg = s.startsWith('-'); s = s.replace('-', ''); const [i, f = ''] = s.split('.'); const d = 10 ** f.length; return Q.mk((neg ? -1 : 1) * ((+i || 0) * d + (+f || 0)), d); },
+  parse(str) {
+    if (str == null) return null;
+    let s = String(str).replace(/[−–—]/g, '-').replace(/½/g, ' 1/2').replace(/¼/g, ' 1/4').replace(/¾/g, ' 3/4').replace(/,/g, '').replace(/[^0-9./%\s-]/g, ' ').replace(/-\s+/g, '-').replace(/\s*\/\s*/g, '/').trim().replace(/\s+/g, ' ');
+    let pct = false; if (s.endsWith('%')) { pct = true; s = s.slice(0, -1).trim(); }
+    let m, r = null;
+    if ((m = s.match(/^(-?)(\d+) (\d+)\/(\d+)$/))) { const d = +m[4]; if (!d) return null; r = Q.mk((m[1] ? -1 : 1) * (+m[2] * d + +m[3]), d); }
+    else if ((m = s.match(/^(-?\d*\.?\d+)\/(-?\d*\.?\d+)$/))) { const a = Q.dec(m[1]), b = Q.dec(m[2]); if (!b.n) return null; r = Q.mk(a.n * b.d, a.d * b.n); }
+    else if (/^-?\d*\.?\d+$/.test(s)) r = Q.dec(s);
+    if (r && pct) r = Q.mk(r.n, r.d * 100);
+    return r;
+  },
+  val: q => q.n / q.d,
+};
+// numeric blanks: equal value in any form; an accepted answer starting with ≈ accepts anything that rounds to it
+function numMatch(given, accepted) {
+  const g = Q.parse(given); if (!g) return null;
+  for (const a of accepted) { const approx = /^[≈~]/.test(String(a)), q = Q.parse(String(a).replace(/^[≈~]/, '')); if (!q) continue;
+    if (approx) { const dp = (String(a).match(/\.(\d+)/) || [0, ''])[1].length; if (Math.abs(Q.val(g) - Q.val(q)) <= 0.5 * 10 ** -dp + 1e-9) return true; }
+    else if (g.n === q.n && g.d === q.d) return true; }
+  return false;
+}
+// a number label in SVG: fractions are drawn stacked, like the book
+function svgNum(x, y, str, col, size = 13) {
+  const m = String(str).match(/^([−-])?(\d+ )?(\d+)\/(\d+)$/);
+  const st = `style="fill:${col || 'var(--fg)'}" font-weight="800" text-anchor="middle"`;
+  if (!m) return `<text x="${x}" y="${y}" font-size="${size}" ${st}>${esc(str)}</text>`;
+  const w = Math.max(m[3].length, m[4].length) * size * .58 + 4, sign = m[1] ? '−' : '', whole = m[2] ? m[2].trim() : '';
+  const pre = sign + whole, px = pre ? x - (pre.length * size * .32) : x, fx = pre ? px + pre.length * size * .32 + w / 2 + 1 : x;
+  return (pre ? `<text x="${px}" y="${y - 2}" font-size="${size}" ${st}>${pre}</text>` : '') + `<text x="${fx}" y="${y - 9}" font-size="${size - 2}" ${st}>${m[3]}</text><line x1="${fx - w / 2}" x2="${fx + w / 2}" y1="${y - 5}" y2="${y - 5}" style="stroke:${col || 'var(--fg)'}" stroke-width="1.5"/><text x="${fx}" y="${y + 7}" font-size="${size - 2}" ${st}>${m[4]}</text>`;
+}
+
 function boardSVG(w, h, s) {
   const sc = 300 / w, W = 300, H = h * sc, x0 = 44, y0 = 10;
   let g = `<rect x="${x0}" y="${y0}" width="${W}" height="${H}" rx="3" style="fill:var(--surface-2);stroke:var(--muted)" stroke-width="1.5"/>`;
@@ -339,7 +375,7 @@ function makeR(env) {
       nb.addEventListener('click', () => { k++; draw(); }); draw();
       return { el, label: t('continue'), ready: () => k >= s.steps.length - 1 }; },
     blank(s) { const [a, b] = (s.ask || '___').split('___'); const el = div(head(s) + `<div class="fig"><p class="blank"><span>${esc(a)}</span><input id="bl" autocomplete="off" aria-label="${t('your_answer')}"><span>${esc(b || '')}</span></p><p class="small muted">${t('spelling_note')}</p></div>`); const inp = el.querySelector('#bl'); inp.addEventListener('input', () => env.update()); inp.addEventListener('keydown', e => { if (e.key === 'Enter') env.enter(); });
-      return { el, label: t('check'), ready: () => inp.value.trim() !== '', check() { const r = matchAnswer(inp.value, s.a.map(String)); inp.className = r.ok ? 'ok' : 'no'; inp.disabled = r.ok; return r.ok ? { ok: true, body: (r.near ? t('right_idea', { a: r.near }) + ' ' : '') + (s.why || '') } : { ok: false, body: s.clue }; }, retry() { inp.className = ''; inp.focus(); } }; },
+      return { el, label: t('check'), ready: () => inp.value.trim() !== '', check() { const nm = s.num ? numMatch(inp.value, s.a.map(String)) : null; const r = nm === true ? { ok: true } : nm === false ? { ok: false } : matchAnswer(inp.value, s.a.map(String)); inp.className = r.ok ? 'ok' : 'no'; inp.disabled = r.ok; return r.ok ? { ok: true, body: (r.near ? t('right_idea', { a: r.near }) + ' ' : '') + (s.why || '') } : { ok: false, body: s.clue }; }, retry() { inp.className = ''; inp.focus(); } }; },
     sort(s) { const el = div(head(s) + `<div class="fig"><p class="display" id="it" style="text-align:center;font-size:22px"></p><div class="opts" id="bins">${s.bins.map(b => `<button class="opt center">${esc(b)}</button>`).join('')}</div><p class="small muted" id="fb"></p></div>`); let i = 0, wrong = 0; const draw = () => { el.querySelector('#it').textContent = i < s.items.length ? s.items[i][0] : ''; };
       el.querySelector('#bins').addEventListener('click', e => { const b = e.target.closest('.opt'); if (!b || i >= s.items.length || env.phase() !== 'answer') return; const [name, ans, why] = s.items[i]; const ok = b.textContent === ans; if (!ok) wrong++; el.querySelector('#fb').textContent = (ok ? '✓ ' : '✗ ') + `${name} → ${ans}. ${why || ''}`; i++; draw(); if (i >= s.items.length) { el.querySelector('#bins').querySelectorAll('.opt').forEach(x => x.disabled = true); } env.update(); }); draw();
       return { el, label: t('check'), ready: () => i >= s.items.length, check() { return wrong ? { ok: false, body: s.clue || `${wrong} / ${s.items.length}` } : { ok: true, body: s.why || '' }; }, retry() { i = 0; wrong = 0; el.querySelector('#bins').querySelectorAll('.opt').forEach(x => x.disabled = false); draw(); } }; },
@@ -357,6 +393,44 @@ function makeR(env) {
         if (r && sel != null) { Object.keys(pair).forEach(k => { if (pair[k] === r.dataset.r) delete pair[k]; }); pair[sel] = r.dataset.r; const next = s.pairs.findIndex((_, j) => pair[j] == null); sel = next >= 0 ? next : null; paint(); } });
       sel = 0; setTimeout(paint);
       return { el, label: t('check'), ready: () => s.pairs.every((_, j) => pair[j] != null), check() { const bad = s.pairs.map((p, j) => pair[j] === p[1] ? -1 : j).filter(j => j >= 0); if (!bad.length) { el.querySelectorAll('.pl,.pr').forEach(b => b.disabled = true); return { ok: true, body: s.why }; } bad.forEach(j => { const b = el.querySelector(`.pl[data-j="${j}"]`); b.classList.add('shake'); setTimeout(() => b.classList.remove('shake'), 500); }); return { ok: false, body: s.clue || s.why }; }, retry() { s.pairs.forEach((p, j) => { if (pair[j] !== p[1]) delete pair[j]; }); sel = s.pairs.findIndex((_, j) => pair[j] == null); paint(); } }; },
+    numline(s) { // number line: show points (tap to explore), place targets (graded, tap snaps to the nearest mark), or hop (arrows for adding)
+      const num = v => { const q = Q.parse(v); return q ? Q.val(q) : +v; }, fmt = v => v < 0 ? '−' + -v : String(v);
+      const pts = (s.points || []).map(p => Object.assign({ x: num(p.v), label: p.label || String(p.v) }, p)), tgs = (s.targets || []).map(p => Object.assign({ x: num(p.v), label: p.label || String(p.v) }, p)), hops = s.hops || [];
+      const mode = tgs.length ? 'place' : hops.length ? 'hop' : 'show', min = s.min, max = s.max, sub = s.sub || 1, x0 = 24, x1 = 316, Y = mode === 'hop' ? 92 : s.distance ? 84 : 62, H = mode === 'hop' ? 128 : s.distance ? 126 : 104, ux = (x1 - x0) / (max - min), X = v => x0 + (v - min) * ux;
+      const placed = [], seen = new Set(); let sel = -1, hk = 0, tries = 0, marks = [], last = 0, reveal = false;
+      const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="fig nl"><svg viewBox="0 0 340 ${H}" class="nlsvg" role="img" aria-label="${esc(s.title || s.ask || 'number line')}"></svg>${mode === 'show' && pts.length ? `<div class="vchips">${pts.map((p, k) => `<button class="vchip" data-k="${k}">${esc(p.label)}</button>`).join('')}</div>` : ''}${mode === 'hop' ? `<button class="inner" id="hop">▶ ${t('nl_hop')}</button>` : ''}<p class="small muted nlp"></p><div class="ginfo" hidden data-text></div></div>`);
+      const svg = el.querySelector('svg'), info = el.querySelector('.ginfo'), tip = el.querySelector('.nlp');
+      const dot = (v, col, r = 7, dash) => `<circle cx="${X(v)}" cy="${Y}" r="${r}" style="fill:${dash ? 'none' : col};stroke:${col}" stroke-width="${dash ? 3 : 2}" ${dash ? 'stroke-dasharray="4 3"' : ''}/>`;
+      const draw = () => {
+        let g = `<line x1="6" x2="334" y1="${Y}" y2="${Y}" style="stroke:var(--fg)" stroke-width="2"/><path d="M4 ${Y}l9 -5v10zM336 ${Y}l-9 -5v10z" style="fill:var(--fg)"/>`;
+        const n = max - min, every = n > 12 ? 2 : 1, below = pts.filter(p => mode === 'show' && !Number.isInteger(p.x)).map(p => X(p.x));
+        if (ux / sub >= 5) for (let k = 1; k < n * sub; k++) if (k % sub) g += `<line x1="${X(min + k / sub)}" x2="${X(min + k / sub)}" y1="${Y - 5}" y2="${Y + 5}" style="stroke:var(--muted)" stroke-width="1.3"/>`;
+        for (let v = Math.ceil(min); v <= max; v++) { g += `<line x1="${X(v)}" x2="${X(v)}" y1="${Y - 9}" y2="${Y + 9}" style="stroke:var(--fg)" stroke-width="2"/>`; if ((v - Math.ceil(min)) % every === 0 && !below.some(x => Math.abs(x - X(v)) < 15)) g += `<text x="${X(v)}" y="${Y + 28}" font-size="14" font-weight="700" text-anchor="middle" style="fill:var(--muted)">${fmt(v)}</text>`; }
+        if (s.opposites) pts.forEach(p => { if (p.x > 0 && pts.some(q => Math.abs(q.x + p.x) < 1e-9)) { const yb = Y - 40; g += `<path d="M${X(-p.x)} ${Y - 10}V${yb}H${X(p.x)}V${Y - 10}" fill="none" style="stroke:var(--coral)" stroke-width="2.5"/><text x="${X(0)}" y="${yb - 6}" font-size="12" font-weight="800" text-anchor="middle" style="fill:var(--coral)">${t('nl_opposites')}</text>`; } });
+        if (mode === 'show') pts.forEach((p, k) => { const on = k === sel;
+          if (on && s.distance && p.x !== 0) { const a = X(0), b = X(p.x), top = Y - 12 - Math.min(40, Math.abs(b - a) * .35); g += `<path d="M${a} ${Y - 8}Q${(a + b) / 2} ${2 * top - Y + 8} ${b} ${Y - 8}" fill="none" style="stroke:var(--coral)" stroke-width="2.5" stroke-dasharray="5 4"/>` + svgNum((a + b) / 2, top - 6, (p.label || '').replace(/^[−-]/, ''), 'var(--coral)', 13); }
+          g += dot(p.x, on ? 'var(--coral)' : 'var(--sky)', on ? 9 : 7) + (Number.isInteger(p.x) ? '' : svgNum(X(p.x), Y + 30, p.label, on ? 'var(--coral)' : 'var(--sky)', 14)); });
+        if (mode === 'place') tgs.forEach((tg, k) => { if (reveal && marks[k] === 'no') g += dot(tg.x, 'var(--accent)', 10, true) + svgNum(X(tg.x), Y + 30, tg.label, 'var(--accent)', 14);
+          if (placed[k] == null) return; const col = marks[k] === 'ok' ? 'var(--accent)' : marks[k] === 'no' ? 'var(--bad)' : 'var(--coral)'; g += `<path d="M${X(placed[k])} ${Y - 9}l-7 -12h14z" style="fill:${col}"/>` + dot(placed[k], col, 6) + svgNum(X(placed[k]), Y - 30, tg.label, col, 13); });
+        if (mode === 'hop') { if (hops.length) g += dot(num(hops[0].from), 'var(--sky)', 6);
+          hops.slice(0, hk).forEach((hp, k) => { const a = num(hp.from), by = num(hp.by), b = a + by, xa = X(a), xb = X(b), hh = k % 2 ? 50 : 30, col = by < 0 ? 'var(--coral)' : 'var(--accent)', dir = xb > xa ? -1 : 1;
+            g += `<path d="M${xa} ${Y - 6}Q${(xa + xb) / 2} ${Y - 6 - 2 * hh} ${xb} ${Y - 6}" fill="none" style="stroke:${col}" stroke-width="3"/><path d="M${xb} ${Y - 5}l${dir * 4} -11l${dir * 7} 6z" style="fill:${col}"/><text x="${(xa + xb) / 2}" y="${Y - 12 - hh}" font-size="14" font-weight="800" text-anchor="middle" style="fill:${col}">${by < 0 ? '−' + -by : '+' + by}</text>` + dot(b, k === hk - 1 ? 'var(--coral)' : 'var(--muted)', k === hk - 1 ? 8 : 5); }); }
+        svg.innerHTML = g; el.querySelectorAll('.vchip').forEach(b => b.classList.toggle('on', +b.dataset.k === sel));
+      };
+      const prompt = () => { if (mode !== 'place') return; const i = tgs.findIndex((_, k) => placed[k] == null || marks[k] === 'no'); tip.textContent = i >= 0 ? (tgs.length > 1 || marks.includes('no') ? t('nl_place', { x: tgs[i].label }) : '') : (tgs.length > 1 ? t('nl_move') : t('nl_move1')); };
+      const pick = k => { sel = k; seen.add(k); draw(); const p = pts[k]; info.hidden = false; info.innerHTML = `<b>${s.distance ? `|${esc(p.label)}| = ${esc((p.label || '').replace(/^[−-]/, ''))}.` : esc(p.label)}</b> ${esc(p.info || '')}`; info.classList.remove('pop'); void info.offsetWidth; info.classList.add('pop'); env.update(); };
+      svg.addEventListener('click', e => { const ctm = svg.getScreenCTM(); if (!ctm) return; const pt = svg.createSVGPoint(); pt.x = e.clientX; pt.y = e.clientY; const px = pt.matrixTransform(ctm.inverse()).x;
+        if (mode === 'place') { if (env.phase() !== 'answer' || marks.length && marks.every(m => m === 'ok')) return; const v = Math.max(min, Math.min(max, Math.round((px - x0) / ux * sub) / sub + min)); let i = tgs.findIndex((_, k) => placed[k] == null || marks[k] === 'no'); if (i < 0) i = last; placed[i] = v; last = i; marks[i] = undefined; draw(); prompt(); env.update(); }
+        else if (mode === 'show') { let best = -1, bd = 26; pts.forEach((q, k) => { const d = Math.abs(X(q.x) - px); if (d < bd) { bd = d; best = k; } }); if (best >= 0) pick(best); } });
+      const chips = el.querySelector('.vchips'); if (chips) chips.onclick = e => { const b = e.target.closest('.vchip'); if (b) pick(+b.dataset.k); };
+      const hb = el.querySelector('#hop'); if (hb) hb.onclick = () => { if (hk >= hops.length) return; hk++; draw(); if (hk >= hops.length) { hb.disabled = true; const hp = hops[hops.length - 1]; info.hidden = false; info.innerHTML = s.after ? esc(s.after) : `<b>${fmt(num(hp.from) + num(hp.by))}</b>`; } env.update(); };
+      draw(); prompt();
+      const fails = () => tgs.map((g, k) => placed[k] != null && Math.abs(placed[k] - g.x) < 1e-6 ? -1 : k).filter(k => k >= 0);
+      return { el, label: mode === 'place' ? t('check') : t('continue'),
+        ready: () => mode === 'place' ? tgs.every((_, k) => placed[k] != null && marks[k] !== 'no') : mode === 'hop' ? hk >= hops.length : pts.length ? seen.size >= Math.min(s.need || 2, pts.length) : true,
+        check: mode !== 'place' ? undefined : () => { tries++; const bad = fails(); marks = tgs.map((_, k) => bad.includes(k) ? 'no' : 'ok'); if (!bad.length) { draw(); tip.textContent = ''; return { ok: true, body: s.why }; } if (tries >= 2) reveal = true; draw(); const lo = Math.floor(tgs[bad[0]].x); return { ok: false, body: `${s.clue ? s.clue + ' ' : ''}${tries < 2 ? t('nl_between', { x: tgs[bad[0]].label, a: fmt(lo), b: fmt(lo + 1) }) : ''}`.trim() }; },
+        retry() { prompt(); } };
+    },
   };
   const explainCard = s => { const ex = s._explain || env.explain; if (!ex) return ''; const txt = (ex[S.lang] && ex[S.lang].text) || (ex.en && ex.en.text) || ''; return txt ? `<div class="explain"><button class="play" id="ex-play" aria-label="${t('explain_me')}"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l12 7-12 7z" fill="#fff"/></svg></button><div class="grow"><div style="font-weight:800">${t('explain_me')}</div><div class="small muted" id="ex-text">${esc(txt)}</div></div></div>` : ''; };
 
@@ -736,7 +810,7 @@ async function viewBook(id) {
       wrong(el) { streak = 0; buzz(60); const sk = el && el.querySelector('.skip'); if (sk && !el.classList.contains('done')) sk.hidden = false; },
       done(el, s, pts) { el.classList.add('done'); const sk = el.querySelector('.skip'); if (sk) sk.remove(); if (!(s._key in B.got) || B.got[s._key] === 's') { B.got[s._key] = pts; save(); } progress(); doneCheck(); }
     };
-    rows.forEach(s => { const el = renderBlock(s, ctx); if (s.graded || ['guess', 'reveal', 'sort', 'tap', 'steps', 'tiles', 'order', 'match', 'tree', 'venn', 'gallery'].includes(s.kind)) { const u = { key: s._key, q: !!s.graded }; units.push(u); secUnits[si].push(u); } box.appendChild(el); });
+    rows.forEach(s => { const el = renderBlock(s, ctx); if (s.graded || ['guess', 'reveal', 'sort', 'tap', 'steps', 'tiles', 'order', 'match', 'tree', 'venn', 'gallery', 'numline'].includes(s.kind)) { const u = { key: s._key, q: !!s.graded }; units.push(u); secUnits[si].push(u); } box.appendChild(el); });
     box.querySelectorAll('.tip').forEach(b => b.onclick = () => b.classList.toggle('open'));
     box.querySelectorAll('.kwt').forEach(b => b.onclick = () => { const k = kws[+b.dataset.k]; sheet(`<div class="kcard big"><div class="kt">📘 ${esc(k.en)}</div>${k.am ? `<div class="kam" lang="am">${esc(k.am)}</div>` : ''}${k.om ? `<div class="kam" lang="om">${esc(k.om)}</div>` : ''}<div class="kd" data-text>${esc(k.def || '')}</div></div><button class="btn" id="kok">${t('continue')}</button>`); $('#kok').onclick = () => sheet(''); });
     // end of section: celebration, practise set, book exercises
@@ -786,6 +860,20 @@ async function route() {
     default: return viewHome();
   }
 }
+/* ---------- fractions: any "3/5" in text is shown stacked like the book; textContent stays "3/5" so answers still compare ---------- */
+function fracify(root) {
+  if (!root || !root.ownerDocument) return;
+  const skip = n => { const p = n.nodeType === 3 ? n.parentElement : n; return !p || !!p.closest('svg,script,style,textarea,input,.frac,.nofrac'); };
+  const split = n => { const s = n.nodeValue, frag = document.createDocumentFragment(); let last = 0;
+    s.replace(/(\d+)\/(\d+)/g, (m, a, b, i) => { frag.append(s.slice(last, i)); const sp = document.createElement('span'); sp.className = 'frac'; sp.innerHTML = `<span class="fn">${a}</span><span class="fs">/</span><span class="fd">${b}</span>`; frag.append(sp); last = i + m.length; return m; });
+    frag.append(s.slice(last)); n.replaceWith(frag); };
+  if (root.nodeType === 3) { if (!skip(root) && /\d\/\d/.test(root.nodeValue)) split(root); return; }
+  if (root.nodeType !== 1 || skip(root)) return;
+  const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, { acceptNode: n => skip(n) ? NodeFilter.FILTER_REJECT : /\d\/\d/.test(n.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP });
+  const list = []; while (w.nextNode()) list.push(w.currentNode); list.forEach(split);
+}
+try { new MutationObserver(ms => ms.forEach(m => { if (m.type === 'characterData') fracify(m.target); else m.addedNodes.forEach(fracify); })).observe(document.body, { childList: true, subtree: true, characterData: true }); } catch (_) {}
+
 window.addEventListener('hashchange', route);
 window.addEventListener('online', () => {}); window.addEventListener('offline', () => toast(t('offline')));
 if ('serviceWorker' in navigator) { try { const had = !!navigator.serviceWorker.controller; navigator.serviceWorker.register('sw.js').then(r => r.update()).catch(() => {}); let once = false; navigator.serviceWorker.addEventListener('controllerchange', () => { if (had && !once) { once = true; location.reload(); } }); } catch (_) {} }

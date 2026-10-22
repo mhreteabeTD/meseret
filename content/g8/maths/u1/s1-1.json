@@ -1,0 +1,306 @@
+{
+ "id": "g8.maths.u1.s1-1",
+ "book": {
+  "title": "Mathematics Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "Rational Numbers",
+  "pages": "2",
+  "section": "1.1"
+ },
+ "title": "The concept of rational numbers",
+ "competency": "Describe rational numbers practically and express them as fractions.",
+ "minutes": 8,
+ "keywords": [
+  {
+   "en": "Rational number",
+   "am": "ሬሽናል ቁጥር",
+   "def": "A number that can be written as a/b, where a and b are integers and b ≠ 0.",
+   "machine": true
+  },
+  {
+   "en": "Natural number",
+   "am": "የተፈጥሮ ቁጥር",
+   "def": "A counting number: 1, 2, 3, 4, …",
+   "machine": true
+  },
+  {
+   "en": "Whole number",
+   "am": "ሙሉ ቁጥር",
+   "def": "Zero and the natural numbers: 0, 1, 2, 3, …",
+   "machine": true
+  },
+  {
+   "en": "Integer",
+   "am": "ኢንቲጀር",
+   "def": "The whole numbers and their opposites: …, −2, −1, 0, 1, 2, …",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.rational-number",
+   "name": "What is a rational number?",
+   "explain": {
+    "en": {
+     "text": "You know natural numbers, whole numbers and integers. A rational number is any number you can write as a fraction a/b of two integers, with b not zero. 22 Birr shared by 5 pets gives 22/5 Birr each. That is a rational number."
+    },
+    "am": {
+     "text": "የተፈጥሮ ቁጥሮችን፣ ሙሉ ቁጥሮችንና ኢንቲጀሮችን ታውቃለህ። ሬሽናል ቁጥር በሁለት ኢንቲጀሮች ክፍልፋይ a/b ሊጻፍ የሚችል ቁጥር ነው፤ b ዜሮ መሆን የለበትም። 22 ብር ለ5 የቤት እንስሳት ሲካፈል እያንዳንዱ 22/5 ብር ያገኛል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Group work 1.1",
+     "ask": "Solomon has 3 cats and 2 dogs. He has 22 Birr for toys. How much can he spend on each pet?",
+     "opts": [
+      "4 Birr",
+      "4 Birr 40 cents",
+      "5 Birr",
+      "22 Birr"
+     ],
+     "after": "22 ÷ 5 = 22/5 = 4.40 Birr. That is 4 Birr and 40 cents. A number like 22/5 is a rational number.",
+     "id": "g8.maths.u1.s1-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Introduction",
+     "paras": [
+      "You already know natural numbers, whole numbers and integers.",
+      "In this unit you meet a set that contains them all. It is called the rational numbers."
+     ],
+     "id": "g8.maths.u1.s1-1.2"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "graded": false,
+     "added": true,
+     "title": "Numbers you already know",
+     "need": 3,
+     "items": [
+      [
+       "Natural numbers",
+       "Counting numbers: 1, 2, 3, … For example 7 is a natural number smaller than 10."
+      ],
+      [
+       "Whole numbers",
+       "0, 1, 2, 3, … The number 0 is whole but not natural."
+      ],
+      [
+       "Integers",
+       "…, −2, −1, 0, 1, 2, … The number −4 is an integer but not a whole number."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-1.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Definition 1.1",
+     "defs": [
+      [
+       "Rational number",
+       "A number that can be written as a/b, where a and b are integers and b ≠ 0."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-1.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Which set is biggest?",
+     "text": "Which of these sets includes the other two?",
+     "opts": [
+      "Natural numbers",
+      "Whole numbers",
+      "Integers"
+     ],
+     "ans": "Integers",
+     "why": "Every natural number is whole, and every whole number is an integer.",
+     "clue": "Which set also has the negative numbers?",
+     "id": "g8.maths.u1.s1-1.5"
+    },
+    {
+     "kind": "pick",
+     "step": "practise",
+     "graded": true,
+     "title": "Spot the rational numbers",
+     "text": "Tap every number that is rational.",
+     "pool": [
+      "3/4",
+      "−8/2",
+      "0",
+      "5",
+      "7/0"
+     ],
+     "a": [
+      "3/4",
+      "−8/2",
+      "0",
+      "5"
+     ],
+     "why": "3/4, −8/2, 0 = 0/1 and 5 = 5/1 are all a/b with b ≠ 0. 7/0 is not allowed.",
+     "clue": "Check the bottom number. It must not be 0.",
+     "id": "g8.maths.u1.s1-1.6"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "22/5 is a rational number.",
+     "a": true,
+     "why": "22 and 5 are integers and 5 ≠ 0.",
+     "clue": "Are the top and bottom both integers?",
+     "id": "g8.maths.u1.s1-1.7"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "title": "Solomon's toys",
+     "ask": "22 Birr shared equally by 5 pets gives ___ Birr each.",
+     "a": [
+      "22/5",
+      "4.4",
+      "4.40",
+      "4 2/5"
+     ],
+     "why": "22 ÷ 5 = 4.40 Birr.",
+     "clue": "Divide 22 by 5.",
+     "worked": "22 ÷ 5 = 4 remainder 2. So 22/5 = 4 2/5 = 4.40 Birr.",
+     "id": "g8.maths.u1.s1-1.8"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Group work 1.1",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which is a whole number that is not a natural number?",
+     "opts": [
+      "0",
+      "1",
+      "−1",
+      "10"
+     ],
+     "ans": "0",
+     "why": "0 is whole, but counting starts at 1.",
+     "clue": "Natural numbers start at 1.",
+     "id": "g8.maths.u1.s1-1.9"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which is an integer that is not a whole number?",
+     "opts": [
+      "−3",
+      "0",
+      "3",
+      "1/2"
+     ],
+     "ans": "−3",
+     "why": "Negative integers are not whole numbers.",
+     "clue": "Whole numbers are never negative.",
+     "id": "g8.maths.u1.s1-1.10"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which set of numbers includes the other two sets?",
+     "opts": [
+      "Whole numbers",
+      "Integers",
+      "Natural numbers"
+     ],
+     "ans": "Integers",
+     "why": "Natural ⊂ whole ⊂ integers.",
+     "clue": "Which set is the largest?",
+     "id": "g8.maths.u1.s1-1.11"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Solomon has 22 Birr for 5 pets. Each pet gets ___ Birr.",
+     "a": [
+      "22/5",
+      "4.40",
+      "4.4",
+      "4 2/5"
+     ],
+     "why": "22/5 = 4.40 Birr = 4 Birr 40 cents.",
+     "clue": "3 cats + 2 dogs = 5 pets.",
+     "id": "g8.maths.u1.s1-1.12"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "A rational number can be written as a/b where a and b are integers and",
+   "opts": [
+    "b ≠ 0",
+    "a ≠ 0",
+    "a > b",
+    "b > a"
+   ],
+   "ans": "b ≠ 0",
+   "why": "Dividing by 0 is not allowed.",
+   "clue": "",
+   "id": "g8.maths.u1.s1-1.13"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "−6 is a rational number.",
+   "a": true,
+   "why": "−6 = −6/1.",
+   "clue": "",
+   "id": "g8.maths.u1.s1-1.14"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "5/0 is a rational number.",
+   "a": false,
+   "why": "The denominator cannot be 0.",
+   "clue": "",
+   "id": "g8.maths.u1.s1-1.15"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "correction",
+   "text": "Definition 1.1 and Summary point 1: the PDF text drops \"b ≠ 0\" in places; it is restored here as the book intends."
+  },
+  {
+   "kind": "note",
+   "text": "Group work 1.1 Q3 (define a rational number in your own words) is open discussion and is skipped."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

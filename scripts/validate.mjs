@@ -8,7 +8,7 @@ const root = process.argv[2] || 'content';
 const schema = JSON.parse(readFileSync(new URL('../schema/lesson.schema.json', import.meta.url)));
 const KINDS = schema.$defs.screen.properties.kind.enum;
 const STEPS = schema.$defs.screen.properties.step.enum;
-const REQ = { mcq: ['opts', 'ans', 'why', 'clue'], tf: ['text', 'a', 'why', 'clue'], blank: ['ask', 'a', 'why', 'clue'], sort: ['bins', 'items'], match: ['pairs', 'why'], order: ['items', 'why'], name: ['defs'], steps: ['steps'], tap: ['items'], pick: ['pool', 'a', 'why'], guess: ['opts'], tiles: ['sizes', 'need'], read: ['paras'], picture: ['pic'], gallery: ['items'], people: ['people'], reveal: ['ask', 'answer'], tree: ['root'], venn: ['sets'] };
+const REQ = { mcq: ['opts', 'ans', 'why', 'clue'], tf: ['text', 'a', 'why', 'clue'], blank: ['ask', 'a', 'why', 'clue'], sort: ['bins', 'items'], match: ['pairs', 'why'], order: ['items', 'why'], name: ['defs'], steps: ['steps'], tap: ['items'], pick: ['pool', 'a', 'why'], guess: ['opts'], tiles: ['sizes', 'need'], read: ['paras'], picture: ['pic'], gallery: ['items'], people: ['people'], reveal: ['ask', 'answer'], tree: ['root'], venn: ['sets'], numline: ['min', 'max'] };
 
 const files = [];
 (function walk(d) { for (const f of readdirSync(d)) { const p = join(d, f); if (statSync(p).isDirectory()) walk(p); else if (f.endsWith('.json') && f !== 'index.json') files.push(p); } })(root);
@@ -37,6 +37,8 @@ for (const file of files) {
     if (s.kind === 'pick' && s.a && s.pool && !s.a.every(x => s.pool.map(String).includes(String(x)))) errs.push(`${where}: pick answers not all in pool`);
     if (s.kind === 'sort' && s.items && s.items.some(it => !s.bins.includes(it[1]))) errs.push(`${where}: sort item bin not in bins`);
     if (s.text && s.text.split(/[.!?]\s/).some(x => x.split(/\s+/).length > 28)) errs.push(`${where}: a sentence is over 28 words`);
+    if (s.kind === 'numline' && s.graded && !(s.targets || []).length) errs.push(`${where}: graded numline needs targets`);
+    if (s.kind === 'blank' && s.num && Array.isArray(s.a) && !s.a.some(x => /^[≈~]?\s*[−-]?[\d.]/.test(String(x)))) errs.push(`${where}: num blank has no numeric accepted answer`);
     if (s.step === 'test' && s.clue) errs.push(`${where}: test items must not carry a clue`);
   };
   (L.ideas || []).forEach((idea, i) => {

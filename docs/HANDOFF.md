@@ -37,6 +37,11 @@ You are continuing work on **Meseret (መሰረት)** with me, Mhreteabe (founde
 - Use any real photo found for people; I'll flag problems.
 - Teacher review and Amharic speaker review run in parallel; all Amharic is machine-made (`"machine": true`) and needs a speaker's check.
 
+## Grade 8 Maths Unit 1 (in progress)
+- Design spec: `docs/G8-MATHS-U1-DESIGN.md` (lesson-by-lesson plan, new blocks, verified exercise answers, book issues).
+- Live trial: `#book/g8-maths-u1`, sections 1.1–1.1.3. New engine pieces: `numline` block, numeric blanks (`"num": true`), auto-stacked fractions.
+- Next: engine step B, then sections 1.2.1–1.4.2 and the chapter test.
+
 ## Open items / next steps
 1. Get my feedback on the live Science trial and adjust.
 2. Move G9 Maths U1 and G7 Social Studies U1 to the book design (visual-first rewrite, pictures, interactive figures, faces where relevant).

@@ -1,0 +1,639 @@
+{
+ "id": "g8.maths.u1.s1-1-3",
+ "book": {
+  "title": "Mathematics Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "Rational Numbers",
+  "pages": "9–13",
+  "section": "1.1.3"
+ },
+ "title": "Absolute value of rational numbers",
+ "competency": "Determine the absolute value of a rational number and solve |x| = a.",
+ "minutes": 12,
+ "keywords": [
+  {
+   "en": "Absolute value",
+   "am": "ፍጹም ዋጋ",
+   "def": "The distance of a number from 0 on the number line. It is never negative.",
+   "machine": true
+  },
+  {
+   "en": "Absolute value equation",
+   "am": "የፍጹም ዋጋ እኩልታ",
+   "def": "An equation of the form |x| = a.",
+   "machine": true
+  },
+  {
+   "en": "Solution",
+   "am": "መፍትሔ",
+   "def": "A value that makes an equation true.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.absolute-value",
+   "name": "Absolute value",
+   "requires": [
+    "math.integer-signs"
+   ],
+   "explain": {
+    "en": {
+     "text": "The absolute value of a number is its distance from zero, so it is never negative. We write it with two bars. |5| = 5 and |−5| = 5, because both are 5 steps from zero. For a negative x, |x| = −x, which is positive."
+    },
+    "am": {
+     "text": "የቁጥር ፍጹም ዋጋ ከዜሮ ያለው ርቀት ነው፤ ስለዚህ አሉታዊ አይሆንም። በሁለት ቋሚ መስመሮች እንጽፈዋለን። |5| = 5 እና |−5| = 5 ነው፤ ሁለቱም ከዜሮ 5 እርምጃ ይርቃሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Activity 1.1",
+     "ask": "What is the distance between 0 and 5? Between 0 and −5?",
+     "opts": [
+      "5 and −5",
+      "5 and 5",
+      "0 and 0",
+      "10 and 10"
+     ],
+     "after": "Both are 5 units from 0. Distance has no direction, so it is never negative.",
+     "id": "g8.maths.u1.s1-1-3.1"
+    },
+    {
+     "kind": "numline",
+     "step": "explore",
+     "title": "How far from 0?",
+     "min": -6,
+     "max": 6,
+     "sub": 1,
+     "distance": true,
+     "points": [
+      {
+       "v": "-5",
+       "label": "−5",
+       "info": "5 units to the left."
+      },
+      {
+       "v": "5",
+       "label": "5",
+       "info": "5 units to the right."
+      },
+      {
+       "v": "-2",
+       "label": "−2",
+       "info": "2 units to the left."
+      }
+     ],
+     "ask": "Tap each point to see its distance from 0.",
+     "id": "g8.maths.u1.s1-1-3.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Absolute value",
+     "paras": [
+      "The absolute value of a number is its distance from zero. Direction does not count.",
+      "If the absolute value is 5, the point is 5 units from zero."
+     ],
+     "table": [
+      [
+       "Definition 1.2",
+       "|x| ="
+      ],
+      [
+       "if x ≥ 0",
+       "x"
+      ],
+      [
+       "if x < 0",
+       "−x"
+      ]
+     ],
+     "id": "g8.maths.u1.s1-1-3.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Absolute value",
+     "defs": [
+      [
+       "Absolute value",
+       "The distance of a number from 0, written |x|. It is never negative."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-1-3.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "needs": "math.integer-signs",
+     "title": "Example 1.7",
+     "text": "What is |−15|?",
+     "opts": [
+      "15",
+      "−15",
+      "0",
+      "1/15"
+     ],
+     "ans": "15",
+     "why": "|−15| = −(−15) = 15.",
+     "clue": "Distance is never negative.",
+     "id": "g8.maths.u1.s1-1-3.5"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Example 1.8 b: |−25 + 13|",
+     "steps": [
+      "First work inside the bars: −25 + 13 = −12.",
+      "−12 < 0, so use |x| = −x.",
+      "|−12| = −(−12) = 12."
+     ],
+     "id": "g8.maths.u1.s1-1-3.6"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "|8 − 3| = ___",
+     "a": [
+      "5"
+     ],
+     "why": "8 − 3 = 5 and 5 > 0.",
+     "clue": "Work inside the bars first.",
+     "id": "g8.maths.u1.s1-1-3.7"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "|0 − 10| = ___",
+     "a": [
+      "10"
+     ],
+     "why": "0 − 10 = −10, and |−10| = 10.",
+     "clue": "Work inside the bars first.",
+     "id": "g8.maths.u1.s1-1-3.8"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "|−13| − |−8| + |7| = ___",
+     "a": [
+      "12"
+     ],
+     "why": "13 − 8 + 7 = 12.",
+     "clue": "Find each absolute value first.",
+     "worked": "|−13| = 13, |−8| = 8, |7| = 7. Then 13 − 8 + 7 = 12.",
+     "id": "g8.maths.u1.s1-1-3.9"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "needs": "math.integer-signs",
+     "ask": "If x = −5, then 5x − |x − 3| = ___",
+     "a": [
+      "-33"
+     ],
+     "why": "5(−5) − |−8| = −25 − 8 = −33.",
+     "clue": "Put −5 in for x. Work inside the bars first.",
+     "worked": "5x = 5 × (−5) = −25. x − 3 = −8, and |−8| = 8. So −25 − 8 = −33.",
+     "id": "g8.maths.u1.s1-1-3.10"
+    }
+   ]
+  },
+  {
+   "id": "math.absolute-value-equation",
+   "name": "Absolute value equations",
+   "explain": {
+    "en": {
+     "text": "|x| = 8 asks: which numbers are 8 units from zero? There are two, 8 and −8. If a is positive, |x| = a has two solutions. If a is zero, there is one solution, 0. If a is negative, there is no solution, because a distance cannot be negative."
+    },
+    "am": {
+     "text": "|x| = 8 ከዜሮ 8 ርቀት ላይ ያሉት ቁጥሮች የትኞቹ ናቸው ብሎ ይጠይቃል። ሁለት ናቸው፤ 8 እና −8። a አዎንታዊ ከሆነ ሁለት መፍትሔ፣ ዜሮ ከሆነ አንድ፣ አሉታዊ ከሆነ ምንም መፍትሔ የለም።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "8 steps from 0",
+     "ask": "How many numbers are exactly 8 units from 0?",
+     "opts": [
+      "1",
+      "2",
+      "None",
+      "Many"
+     ],
+     "after": "Two: 8 to the right and −8 to the left.",
+     "id": "g8.maths.u1.s1-1-3.11"
+    },
+    {
+     "kind": "numline",
+     "step": "explore",
+     "title": "Figure 1.12 |x| = 8",
+     "min": -9,
+     "max": 9,
+     "sub": 1,
+     "distance": true,
+     "opposites": true,
+     "points": [
+      {
+       "v": "-8",
+       "label": "−8",
+       "info": "8 units left of 0."
+      },
+      {
+       "v": "8",
+       "label": "8",
+       "info": "8 units right of 0."
+      }
+     ],
+     "ask": "Tap both points.",
+     "id": "g8.maths.u1.s1-1-3.12"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Equations with absolute value",
+     "paras": [
+      "|x| = 8 means x is 8 units from 0.",
+      "The line has two such points. So x = 8 or x = −8."
+     ],
+     "table": [
+      [
+       "|x| = a",
+       "Number of solutions"
+      ],
+      [
+       "a > 0",
+       "Two: x = a and x = −a"
+      ],
+      [
+       "a = 0",
+       "One: x = 0"
+      ],
+      [
+       "a < 0",
+       "None"
+      ]
+     ],
+     "id": "g8.maths.u1.s1-1-3.13"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Definition 1.3",
+     "defs": [
+      [
+       "Absolute value equation",
+       "An equation of the form |x| = a."
+      ],
+      [
+       "Solution",
+       "A value that makes the equation true."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-1-3.14"
+    },
+    {
+     "kind": "sort",
+     "step": "check",
+     "graded": true,
+     "title": "Example 1.9: how many solutions?",
+     "bins": [
+      "Two",
+      "One",
+      "None"
+     ],
+     "items": [
+      [
+       "|x| = 13",
+       "Two",
+       "13 > 0: x = 13 or −13."
+      ],
+      [
+       "|x| = 0",
+       "One",
+       "Only x = 0."
+      ],
+      [
+       "|x| = −6",
+       "None",
+       "A distance is never negative."
+      ],
+      [
+       "|x| = 3/5",
+       "Two",
+       "3/5 > 0."
+      ],
+      [
+       "|x| = −1/2",
+       "None",
+       "−1/2 < 0."
+      ]
+     ],
+     "why": "Look at the sign of the number after the =.",
+     "clue": "Can a distance be negative?",
+     "id": "g8.maths.u1.s1-1-3.15"
+    },
+    {
+     "kind": "pick",
+     "step": "practise",
+     "graded": true,
+     "text": "Tap all solutions of |x| = 8.",
+     "pool": [
+      "8",
+      "−8",
+      "0",
+      "16",
+      "−16"
+     ],
+     "a": [
+      "8",
+      "−8"
+     ],
+     "why": "8 and −8 are both 8 units from 0.",
+     "clue": "There are two of them.",
+     "id": "g8.maths.u1.s1-1-3.16"
+    },
+    {
+     "kind": "pick",
+     "step": "practise",
+     "graded": true,
+     "text": "Exercise 1.3 Q2 a: tap all numbers whose absolute value is 3.5.",
+     "pool": [
+      "3.5",
+      "−3.5",
+      "0",
+      "7"
+     ],
+     "a": [
+      "3.5",
+      "−3.5"
+     ],
+     "why": "|3.5| = |−3.5| = 3.5.",
+     "clue": "One on each side of 0.",
+     "id": "g8.maths.u1.s1-1-3.17"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Solve |x| = −6.",
+     "opts": [
+      "x = 6",
+      "x = −6",
+      "x = 6 or −6",
+      "No solution"
+     ],
+     "ans": "No solution",
+     "why": "Absolute value is never negative.",
+     "clue": "Is −6 a possible distance?",
+     "id": "g8.maths.u1.s1-1-3.18"
+    },
+    {
+     "kind": "pick",
+     "step": "practise",
+     "graded": true,
+     "text": "Challenge, Exercise 1.3 Q6 a: tap all solutions of |x + 4| = 10.",
+     "pool": [
+      "6",
+      "−6",
+      "14",
+      "−14"
+     ],
+     "a": [
+      "6",
+      "−14"
+     ],
+     "why": "x + 4 = 10 gives 6; x + 4 = −10 gives −14.",
+     "clue": "x + 4 must be 10 or −10.",
+     "worked": "x + 4 = 10, so x = 6. Or x + 4 = −10, so x = −14.",
+     "id": "g8.maths.u1.s1-1-3.19"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 1.3",
+   "items": [
+    {
+     "kind": "match",
+     "step": "exercise",
+     "graded": true,
+     "title": "Q1: match x with |x|",
+     "pairs": [
+      [
+       "−7",
+       "7"
+      ],
+      [
+       "3/5",
+       "3/5"
+      ],
+      [
+       "0",
+       "0"
+      ],
+      [
+       "−2/3",
+       "2/3"
+      ]
+     ],
+     "why": "|x| is the distance from 0.",
+     "clue": "Drop the minus sign.",
+     "id": "g8.maths.u1.s1-1-3.20"
+    },
+    {
+     "kind": "pick",
+     "step": "exercise",
+     "graded": true,
+     "text": "Q2 b: all rational numbers with absolute value 4/7.",
+     "pool": [
+      "4/7",
+      "−4/7",
+      "7/4",
+      "0"
+     ],
+     "a": [
+      "4/7",
+      "−4/7"
+     ],
+     "why": "4/7 and −4/7 are both 4/7 from 0.",
+     "clue": "One on each side of 0.",
+     "id": "g8.maths.u1.s1-1-3.21"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Q3 a: |−5| + |5| = ___",
+     "a": [
+      "10"
+     ],
+     "why": "5 + 5 = 10.",
+     "clue": "Find each absolute value.",
+     "id": "g8.maths.u1.s1-1-3.22"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Q3 d: |−8 + 5| = ___",
+     "a": [
+      "3"
+     ],
+     "why": "−8 + 5 = −3 and |−3| = 3.",
+     "clue": "Add inside the bars first.",
+     "id": "g8.maths.u1.s1-1-3.23"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Q4 b: if x = 3, |x| − x + 9 = ___",
+     "a": [
+      "9"
+     ],
+     "why": "3 − 3 + 9 = 9.",
+     "clue": "Put 3 in for x.",
+     "id": "g8.maths.u1.s1-1-3.24"
+    },
+    {
+     "kind": "pick",
+     "step": "exercise",
+     "graded": true,
+     "text": "Q5 b: solve |x| = 3/5.",
+     "pool": [
+      "3/5",
+      "−3/5",
+      "5/3",
+      "0"
+     ],
+     "a": [
+      "3/5",
+      "−3/5"
+     ],
+     "why": "3/5 > 0, so two solutions.",
+     "clue": "Two numbers, 3/5 from 0.",
+     "id": "g8.maths.u1.s1-1-3.25"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "|−3 + 6| − |−3| = ___",
+   "a": [
+    "0"
+   ],
+   "why": "|3| − 3 = 0.",
+   "clue": "",
+   "id": "g8.maths.u1.s1-1-3.26"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "How many solutions does |x| = −2 have?",
+   "opts": [
+    "0",
+    "1",
+    "2"
+   ],
+   "ans": "0",
+   "why": "A distance is never negative.",
+   "clue": "",
+   "id": "g8.maths.u1.s1-1-3.27"
+  },
+  {
+   "kind": "pick",
+   "step": "test",
+   "graded": true,
+   "text": "Tap all solutions of |x| = 7.",
+   "pool": [
+    "7",
+    "−7",
+    "0",
+    "49"
+   ],
+   "a": [
+    "7",
+    "−7"
+   ],
+   "why": "7 and −7.",
+   "clue": "",
+   "id": "g8.maths.u1.s1-1-3.28"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Exercise 1.3 Q6 b reads 4|x + 3| = 123 (gives x = 111/4 or −135/4) and Q6 c reads 3 − 2|x − 5| = 9 (no solution). Both look like print errors; left out of graded items. Teacher to confirm."
+  },
+  {
+   "kind": "note",
+   "text": "Summary point 3 gives |x| in three cases (x > 0, x = 0, x < 0); Definition 1.2 uses two (x ≥ 0, x < 0). Both are equivalent; the definition is shown."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.integer-signs": {
+   "name": "Negative numbers",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "What −(−15) means",
+     "text": "A minus sign in front means \"the opposite of\".",
+     "steps": [
+      "The opposite of 15 is −15.",
+      "The opposite of −15 is 15.",
+      "So −(−15) = 15.",
+      "Two minus signs together make a plus."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Your turn",
+     "text": "What is −(−8)?",
+     "opts": [
+      "8",
+      "−8",
+      "0",
+      "16"
+     ],
+     "ans": "8",
+     "why": "The opposite of −8 is 8.",
+     "clue": "Find the opposite of −8."
+    }
+   ]
+  }
+ }
+}

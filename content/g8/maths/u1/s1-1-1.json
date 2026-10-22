@@ -1,0 +1,768 @@
+{
+ "id": "g8.maths.u1.s1-1-1",
+ "book": {
+  "title": "Mathematics Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "Rational Numbers",
+  "pages": "3–7",
+  "section": "1.1.1"
+ },
+ "title": "Rational numbers on a number line",
+ "competency": "Represent rational numbers as fractions on a number line.",
+ "minutes": 12,
+ "keywords": [
+  {
+   "en": "Fraction",
+   "am": "ክፍልፋይ",
+   "def": "A number that shows a part of a whole, like one-half or three-quarters.",
+   "machine": true
+  },
+  {
+   "en": "Numerator",
+   "am": "አካፋይ ላይ (ላዕላይ)",
+   "def": "The number on top of a fraction.",
+   "machine": true
+  },
+  {
+   "en": "Denominator",
+   "am": "አካፋይ ታች (ታህታይ)",
+   "def": "The number on the bottom of a fraction. It tells how many equal parts.",
+   "machine": true
+  },
+  {
+   "en": "Proper fraction",
+   "am": "ትክክለኛ ክፍልፋይ",
+   "def": "A fraction whose numerator is less than its denominator.",
+   "machine": true
+  },
+  {
+   "en": "Improper fraction",
+   "am": "ኢ-ትክክለኛ ክፍልፋይ",
+   "def": "A fraction whose numerator is greater than or equal to its denominator.",
+   "machine": true
+  },
+  {
+   "en": "Mixed fraction",
+   "am": "ድብልቅ ክፍልፋይ",
+   "def": "A whole number and a proper fraction together, like 1 1/2.",
+   "machine": true
+  },
+  {
+   "en": "Number line",
+   "am": "የቁጥር መስመር",
+   "def": "A line with 0 in the middle. Positive numbers go right, negative numbers go left.",
+   "machine": true
+  },
+  {
+   "en": "Opposite",
+   "am": "ተቃራኒ",
+   "def": "Two numbers the same distance from 0 but on different sides of 0.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.fraction-revision",
+   "name": "Revision on fractions",
+   "explain": {
+    "en": {
+     "text": "A fraction shows a part of a whole. The bottom number, the denominator, tells how many equal parts. The top number, the numerator, tells how many parts we take. In a proper fraction the top is smaller. In an improper fraction the top is bigger or equal."
+    },
+    "am": {
+     "text": "ክፍልፋይ የአንድ ሙሉ ነገር ክፍልን ያሳያል። ታችኛው ቁጥር ሙሉው በስንት እኩል ክፍሎች እንደተከፈለ ይነግራል። ላይኛው ቁጥር ስንት ክፍሎች እንደወሰድን ይነግራል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "added": true,
+     "title": "Injera for breakfast",
+     "ask": "An injera is cut into 9 equal pieces. 7 pieces are eaten. What part is eaten?",
+     "opts": [
+      "7/9",
+      "9/7",
+      "2/9",
+      "7"
+     ],
+     "after": "7 of 9 equal parts is 7/9. The book shows the same idea with a DVD cut into 8 parts.",
+     "id": "g8.maths.u1.s1-1-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Revision on fractions",
+     "paras": [
+      "A fraction represents a part of a whole. Examples are one-half and three-quarters.",
+      "A fraction has two parts. The numerator is on top. The denominator is on the bottom."
+     ],
+     "note": "Example 1.2: three-fifths of a green area has indigenous plants. The covered part is 3/5: numerator 3, denominator 5.",
+     "id": "g8.maths.u1.s1-1-1.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Kinds of fractions",
+     "defs": [
+      [
+       "Proper fraction",
+       "The numerator is less than the denominator, like 3/7."
+      ],
+      [
+       "Improper fraction",
+       "The numerator is greater than or equal to the denominator, like 8/5."
+      ],
+      [
+       "Mixed fraction",
+       "A whole number with a proper fraction, like 2 2/5."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-1-1.3"
+    },
+    {
+     "kind": "sort",
+     "step": "check",
+     "graded": true,
+     "title": "Sort the fractions",
+     "bins": [
+      "Proper",
+      "Improper",
+      "Mixed"
+     ],
+     "items": [
+      [
+       "3/7",
+       "Proper",
+       "3 < 7."
+      ],
+      [
+       "8/5",
+       "Improper",
+       "8 > 5."
+      ],
+      [
+       "2 2/5",
+       "Mixed",
+       "A whole number and a fraction."
+      ],
+      [
+       "7/3",
+       "Improper",
+       "7 > 3."
+      ],
+      [
+       "1/2",
+       "Proper",
+       "1 < 2."
+      ],
+      [
+       "3 4/7",
+       "Mixed",
+       "A whole number and a fraction."
+      ]
+     ],
+     "why": "Compare top and bottom. A whole number in front makes it mixed.",
+     "clue": "Is the top smaller than the bottom?",
+     "id": "g8.maths.u1.s1-1-1.4"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Improper to mixed: 32/5",
+     "steps": [
+      "32 ÷ 5 = 6, remainder 2.",
+      "6 is the whole number.",
+      "2 is the new numerator; the denominator stays 5.",
+      "So 32/5 = 6 2/5."
+     ],
+     "id": "g8.maths.u1.s1-1-1.5"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "needs": "math.mixed-improper",
+     "ask": "As a mixed fraction, 7/3 = ___",
+     "a": [
+      "2 1/3",
+      "7/3"
+     ],
+     "why": "7 ÷ 3 = 2 remainder 1.",
+     "clue": "Divide 7 by 3.",
+     "id": "g8.maths.u1.s1-1-1.6"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "needs": "math.mixed-improper",
+     "ask": "As a mixed fraction, 27/10 = ___",
+     "a": [
+      "2 7/10",
+      "2.7"
+     ],
+     "why": "27 ÷ 10 = 2 remainder 7.",
+     "clue": "How many tens are in 27?",
+     "id": "g8.maths.u1.s1-1-1.7"
+    }
+   ]
+  },
+  {
+   "id": "math.rational-on-numberline",
+   "name": "Locating rational numbers",
+   "requires": [
+    "math.mixed-improper"
+   ],
+   "explain": {
+    "en": {
+     "text": "Positive numbers sit to the right of zero and negative numbers to the left. A proper fraction like 2/5 lies between 0 and 1: split that gap into 5 equal parts and count 2. For an improper fraction, change it to a mixed fraction first to find its two whole numbers."
+    },
+    "am": {
+     "text": "አዎንታዊ ቁጥሮች ከዜሮ በቀኝ፣ አሉታዊ ቁጥሮች በግራ ይገኛሉ። 2/5 በ0 እና በ1 መካከል ነው፤ ክፍተቱን በ5 እኩል ክፍሎች ከፍለህ 2 ቁጠር። ኢ-ትክክለኛ ክፍልፋይን መጀመሪያ ወደ ድብልቅ ቀይር።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "numline",
+     "step": "hook",
+     "title": "Figure 1.4 What is x?",
+     "min": -3,
+     "max": 4,
+     "sub": 2,
+     "points": [
+      {
+       "v": "5/2",
+       "label": "x",
+       "info": "is greater than 2 but less than 3. It is not a natural number, whole number or integer."
+      },
+      {
+       "v": "2",
+       "label": "2",
+       "info": "is an integer."
+      },
+      {
+       "v": "3",
+       "label": "3",
+       "info": "is an integer."
+      }
+     ],
+     "ask": "Tap x. Which numbers is it between?",
+     "id": "g8.maths.u1.s1-1-1.8"
+    },
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "What kind of number is x?",
+     "ask": "x lies between 2 and 3. What kind of number is it?",
+     "opts": [
+      "Natural number",
+      "Integer",
+      "None of these: it is between them"
+     ],
+     "after": "x is not an integer. It is a rational number, like 5/2.",
+     "id": "g8.maths.u1.s1-1-1.9"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Locating rational numbers",
+     "paras": [
+      "The set of rational numbers is written ℚ.",
+      "Example 1.3: 1/5, 3/7, −8/4 and 5/9 are rational numbers."
+     ],
+     "table": [
+      [
+       "Fact",
+       "What it means"
+      ],
+      [
+       "I",
+       "Positive numbers are right of 0. Negative numbers are left of 0."
+      ],
+      [
+       "II",
+       "Positive proper fractions lie between 0 and 1."
+      ],
+      [
+       "III",
+       "Change an improper fraction to a mixed fraction first."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-1-1.10"
+    },
+    {
+     "kind": "numline",
+     "step": "explore",
+     "title": "Example 1.4",
+     "min": -3,
+     "max": 2,
+     "sub": 4,
+     "points": [
+      {
+       "v": "2/5",
+       "label": "2/5",
+       "info": "is proper, so it is between 0 and 1. Split 0 to 1 into 5 parts; take the 2nd mark."
+      },
+      {
+       "v": "3/2",
+       "label": "3/2",
+       "info": "= 1 1/2. Between 1 and 2: split into 2 parts, take the 1st mark."
+      },
+      {
+       "v": "-3/4",
+       "label": "−3/4",
+       "info": "is between −1 and 0. Split into 4 parts; count 3 to the left of 0."
+      },
+      {
+       "v": "-5/2",
+       "label": "−5/2",
+       "info": "= −2 1/2. Between −3 and −2, halfway."
+      }
+     ],
+     "need": 3,
+     "ask": "Tap each number to see how it was placed.",
+     "id": "g8.maths.u1.s1-1-1.11"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "The number line",
+     "defs": [
+      [
+       "Number line",
+       "A line with 0 in the middle. Positive numbers go right, negative numbers go left."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-1-1.12"
+    },
+    {
+     "kind": "numline",
+     "step": "check",
+     "graded": true,
+     "title": "Place 2/5",
+     "min": -1,
+     "max": 2,
+     "sub": 5,
+     "targets": [
+      {
+       "v": "2/5",
+       "label": "2/5"
+      }
+     ],
+     "ask": "Tap where 2/5 goes.",
+     "why": "Split 0 to 1 into 5 equal parts. 2/5 is the 2nd mark.",
+     "clue": "It is a proper fraction.",
+     "id": "g8.maths.u1.s1-1-1.13"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Example 1.4 b: place 3/2",
+     "steps": [
+      "3/2 is improper. Change it: 3/2 = 1 1/2.",
+      "So it lies between 1 and 2.",
+      "Split the gap from 1 to 2 into 2 equal parts.",
+      "The first mark is 3/2."
+     ],
+     "id": "g8.maths.u1.s1-1-1.14"
+    },
+    {
+     "kind": "numline",
+     "step": "practise",
+     "graded": true,
+     "title": "Place −3/4",
+     "min": -2,
+     "max": 1,
+     "sub": 4,
+     "targets": [
+      {
+       "v": "-3/4",
+       "label": "−3/4"
+      }
+     ],
+     "ask": "Tap where −3/4 goes.",
+     "why": "Between −1 and 0. Count 3 quarters left of 0.",
+     "clue": "Negative numbers are left of 0.",
+     "id": "g8.maths.u1.s1-1-1.15"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "needs": "math.mixed-improper",
+     "text": "Between which two integers does −9/5 lie?",
+     "opts": [
+      "−1 and 0",
+      "−2 and −1",
+      "1 and 2",
+      "−3 and −2"
+     ],
+     "ans": "−2 and −1",
+     "why": "−9/5 = −1 4/5. That is between −2 and −1.",
+     "clue": "Change −9/5 to a mixed fraction first.",
+     "worked": "9 ÷ 5 = 1 remainder 4, so −9/5 = −1 4/5. It is past −1 but not yet −2.",
+     "id": "g8.maths.u1.s1-1-1.16"
+    },
+    {
+     "kind": "numline",
+     "step": "practise",
+     "graded": true,
+     "title": "Place 5/6",
+     "min": -1,
+     "max": 2,
+     "sub": 6,
+     "targets": [
+      {
+       "v": "5/6",
+       "label": "5/6"
+      }
+     ],
+     "ask": "Tap where 5/6 goes.",
+     "why": "Split 0 to 1 into 6 parts. 5/6 is the 5th mark.",
+     "clue": "5/6 is a little less than 1.",
+     "id": "g8.maths.u1.s1-1-1.17"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "On a number line, −8.85 lies to the left of −8.8.",
+     "a": true,
+     "why": "−8.85 is further from 0 on the negative side, so it is further left.",
+     "clue": "Compare 8.85 and 8.80. Which is further from 0?",
+     "id": "g8.maths.u1.s1-1-1.18"
+    }
+   ]
+  },
+  {
+   "id": "math.opposites",
+   "name": "Opposites",
+   "explain": {
+    "en": {
+     "text": "Two numbers are opposites when they are the same distance from zero but on different sides. 3/2 and −3/2 are opposites. To find the opposite of a number, change its sign."
+    },
+    "am": {
+     "text": "ሁለት ቁጥሮች ከዜሮ እኩል ርቀት ላይ ሆነው በተለያየ ጎን ሲገኙ ተቃራኒዎች ናቸው። 3/2 እና −3/2 ተቃራኒዎች ናቸው። የቁጥርን ተቃራኒ ለማግኘት ምልክቱን ቀይር።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "added": true,
+     "title": "Above and below the sea",
+     "ask": "A place 125 m above sea level is +125 m. The Danakil Depression is 125 m below. Which number is it?",
+     "opts": [
+      "−125 m",
+      "125 m",
+      "0 m",
+      "−250 m"
+     ],
+     "after": "−125 is the same distance from 0 as 125, on the other side. They are opposites.",
+     "id": "g8.maths.u1.s1-1-1.19"
+    },
+    {
+     "kind": "numline",
+     "step": "explore",
+     "title": "Figure 1.8 Opposites",
+     "min": -2,
+     "max": 2,
+     "sub": 2,
+     "opposites": true,
+     "points": [
+      {
+       "v": "-3/2",
+       "label": "−3/2",
+       "info": "is 1 1/2 units left of 0."
+      },
+      {
+       "v": "3/2",
+       "label": "3/2",
+       "info": "is 1 1/2 units right of 0."
+      }
+     ],
+     "ask": "Tap both points. How far is each from 0?",
+     "id": "g8.maths.u1.s1-1-1.20"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Opposites",
+     "paras": [
+      "Two rational numbers are opposite if they are the same distance from 0, on different sides of 0.",
+      "For instance, 3/2 and −3/2 are opposites."
+     ],
+     "id": "g8.maths.u1.s1-1-1.21"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Opposite",
+     "defs": [
+      [
+       "Opposite",
+       "Two numbers the same distance from 0 but on different sides of 0."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-1-1.22"
+    },
+    {
+     "kind": "match",
+     "step": "check",
+     "graded": true,
+     "title": "Exercise 1.1 Q6: match each number to its opposite",
+     "pairs": [
+      [
+       "4/5",
+       "−4/5"
+      ],
+      [
+       "−2/3",
+       "2/3"
+      ],
+      [
+       "2 3/5",
+       "−2 3/5"
+      ],
+      [
+       "−3 4/7",
+       "3 4/7"
+      ]
+     ],
+     "why": "Change the sign to get the opposite.",
+     "clue": "The opposite has the same size but the other sign.",
+     "id": "g8.maths.u1.s1-1-1.23"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "The opposite of −7/2 is ___",
+     "a": [
+      "7/2",
+      "3 1/2",
+      "3.5"
+     ],
+     "why": "Change the sign: −7/2 becomes 7/2.",
+     "clue": "Same distance from 0, other side.",
+     "id": "g8.maths.u1.s1-1-1.24"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "The opposite of 0 is 0.",
+     "a": true,
+     "added": true,
+     "why": "0 is no distance from itself, so it is its own opposite.",
+     "clue": "How far is 0 from 0?",
+     "id": "g8.maths.u1.s1-1-1.25"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 1.1",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Figure 1.10: on a number line, B is between 1 and 3.5, closer to 1. Select a reasonable value for B.",
+     "opts": [
+      "0.5",
+      "3.6",
+      "−0.2",
+      "2"
+     ],
+     "ans": "2",
+     "why": "Only 2 lies between 1 and 3.5.",
+     "clue": "B must be bigger than 1 and smaller than 3.5.",
+     "id": "g8.maths.u1.s1-1-1.26"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Between what consecutive integers does 8/5 lie?",
+     "opts": [
+      "0 and 1",
+      "1 and 2",
+      "2 and 3",
+      "−2 and −1"
+     ],
+     "ans": "1 and 2",
+     "why": "8/5 = 1 3/5.",
+     "clue": "Change 8/5 to a mixed fraction.",
+     "id": "g8.maths.u1.s1-1-1.27"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Between what consecutive integers does −9/5 lie?",
+     "opts": [
+      "−1 and 0",
+      "−2 and −1",
+      "1 and 2",
+      "−3 and −2"
+     ],
+     "ans": "−2 and −1",
+     "why": "−9/5 = −1 4/5.",
+     "clue": "Change −9/5 to a mixed fraction.",
+     "id": "g8.maths.u1.s1-1-1.28"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "As a mixed fraction, 32/5 = ___",
+     "a": [
+      "6 2/5",
+      "6.4"
+     ],
+     "why": "32 ÷ 5 = 6 remainder 2.",
+     "clue": "How many 5s are in 32?",
+     "id": "g8.maths.u1.s1-1-1.29"
+    },
+    {
+     "kind": "numline",
+     "step": "exercise",
+     "graded": true,
+     "min": -2,
+     "max": 2,
+     "sub": 6,
+     "targets": [
+      {
+       "v": "-5/6",
+       "label": "−5/6"
+      }
+     ],
+     "ask": "Q4 c: tap where −5/6 goes.",
+     "why": "Between −1 and 0, 5 sixths left of 0.",
+     "clue": "It is negative and proper.",
+     "id": "g8.maths.u1.s1-1-1.30"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Q5: −8.85 is to the left of −8.8 on the number line.",
+     "a": true,
+     "why": "−8.85 < −8.8 because it is further from 0 on the negative side.",
+     "clue": "Which is further from 0?",
+     "id": "g8.maths.u1.s1-1-1.31"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "numline",
+   "step": "test",
+   "graded": true,
+   "min": -1,
+   "max": 3,
+   "sub": 3,
+   "targets": [
+    {
+     "v": "4/3",
+     "label": "4/3"
+    }
+   ],
+   "ask": "Tap where 4/3 goes.",
+   "why": "4/3 = 1 1/3: one third past 1.",
+   "clue": "",
+   "id": "g8.maths.u1.s1-1-1.32"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Between which integers does −3/5 lie?",
+   "opts": [
+    "−1 and 0",
+    "0 and 1",
+    "−2 and −1"
+   ],
+   "ans": "−1 and 0",
+   "why": "−3/5 is a negative proper fraction.",
+   "clue": "",
+   "id": "g8.maths.u1.s1-1-1.33"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "The opposite of 2 3/5 is ___",
+   "a": [
+    "−2 3/5",
+    "-13/5",
+    "-2.6"
+   ],
+   "why": "Change the sign.",
+   "clue": "",
+   "id": "g8.maths.u1.s1-1-1.34"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "Example 1.1 uses a DVD with 7/8 shaded and a field split into 9 parts; the hook uses injera (added). Exercise 1.1 Q1 figure 1.10 is described in words."
+  },
+  {
+   "kind": "note",
+   "text": "Exercise 1.1 Q4 asks to plot five numbers; one (−5/6) is used as a tap-to-place item; the rest appear in the practise set."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.mixed-improper": {
+   "name": "Improper ↔ mixed fractions",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Change 32/5 to a mixed fraction",
+     "text": "Divide the numerator by the denominator.",
+     "steps": [
+      "32 ÷ 5 = 6, remainder 2.",
+      "The 6 is the whole number.",
+      "The remainder 2 is the new numerator. Keep the denominator 5.",
+      "So 32/5 = 6 2/5."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Your turn",
+     "text": "Which mixed fraction equals 7/3?",
+     "opts": [
+      "2 1/3",
+      "1 2/3",
+      "3 1/7",
+      "2 2/3"
+     ],
+     "ans": "2 1/3",
+     "why": "7 ÷ 3 = 2, remainder 1. So 7/3 = 2 1/3.",
+     "clue": "Divide 7 by 3. What is the remainder?"
+    }
+   ]
+  }
+ }
+}

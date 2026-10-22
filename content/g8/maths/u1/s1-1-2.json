@@ -1,0 +1,355 @@
+{
+ "id": "g8.maths.u1.s1-1-2",
+ "book": {
+  "title": "Mathematics Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "Rational Numbers",
+  "pages": "8–9",
+  "section": "1.1.2"
+ },
+ "title": "Relationship among ℕ, W, ℤ and ℚ",
+ "competency": "Describe the relationship among the sets ℕ, W, ℤ and ℚ.",
+ "minutes": 8,
+ "keywords": [
+  {
+   "en": "Set",
+   "am": "ስብስብ",
+   "def": "A collection of items.",
+   "machine": true
+  },
+  {
+   "en": "Element",
+   "am": "አባል",
+   "def": "An item in a set. We write ∈ for \"is an element of\".",
+   "machine": true
+  },
+  {
+   "en": "Venn diagram",
+   "am": "ቬን ዲያግራም",
+   "def": "A drawing of circles that shows how sets are related.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.number-sets-nested",
+   "name": "Sets inside sets",
+   "explain": {
+    "en": {
+     "text": "Natural numbers sit inside the whole numbers. Whole numbers sit inside the integers. Integers sit inside the rational numbers. So a natural number like 10 is also whole, an integer and rational. A fraction like 1/7 is only rational."
+    },
+    "am": {
+     "text": "የተፈጥሮ ቁጥሮች በሙሉ ቁጥሮች ውስጥ ናቸው። ሙሉ ቁጥሮች በኢንቲጀሮች ውስጥ ናቸው። ኢንቲጀሮች በሬሽናል ቁጥሮች ውስጥ ናቸው። ስለዚህ 10 ሙሉ፣ ኢንቲጀርና ሬሽናል ነው። 1/7 ግን ሬሽናል ብቻ ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "graded": false,
+     "added": true,
+     "title": "Guess the smallest set",
+     "text": "Put each number in the smallest set it belongs to. Check against the figure after.",
+     "bins": [
+      "Natural ℕ",
+      "Whole W",
+      "Integers ℤ",
+      "Rational ℚ"
+     ],
+     "items": [
+      [
+       "10",
+       "Natural ℕ",
+       "10 is a counting number."
+      ],
+      [
+       "0",
+       "Whole W",
+       "0 is whole but not natural."
+      ],
+      [
+       "−13",
+       "Integers ℤ",
+       "Negative, but no fraction part."
+      ],
+      [
+       "1/7",
+       "Rational ℚ",
+       "A fraction that is not an integer."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-1-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Recall",
+     "paras": [
+      "A collection of items is called a set.",
+      "The items in a set are called elements. We use the sign ∈.",
+      "A Venn diagram uses circles to show how sets are related."
+     ],
+     "id": "g8.maths.u1.s1-1-2.2"
+    },
+    {
+     "kind": "tree",
+     "step": "explore",
+     "title": "Figure 1.11 Each set sits inside the next",
+     "root": {
+      "label": "ℚ Rational numbers",
+      "info": "Any a/b with a, b integers and b ≠ 0. Contains all the sets below.",
+      "children": [
+       {
+        "label": "ℤ Integers",
+        "info": "…, −2, −1, 0, 1, 2, … Inside ℚ.",
+        "children": [
+         {
+          "label": "W Whole numbers",
+          "info": "0, 1, 2, 3, … Inside ℤ.",
+          "children": [
+           {
+            "label": "ℕ Natural numbers",
+            "info": "1, 2, 3, … Inside W, ℤ and ℚ."
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     "id": "g8.maths.u1.s1-1-2.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Classifying a number",
+     "paras": [
+      "When a set is inside a larger set, its numbers belong to the larger set too.",
+      "To classify a number, find its smallest set. It also belongs to every set around it."
+     ],
+     "id": "g8.maths.u1.s1-1-2.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Set",
+       "A collection of items."
+      ],
+      [
+       "Element",
+       "An item in a set, shown with ∈."
+      ],
+      [
+       "Venn diagram",
+       "A drawing of circles that shows how sets are related."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-1-2.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Example 1.6",
+     "text": "Can a number be rational and whole, but not an integer?",
+     "opts": [
+      "Yes",
+      "No"
+     ],
+     "ans": "No",
+     "why": "Every whole number is an integer.",
+     "clue": "Look at Figure 1.11. Where is the W circle?",
+     "id": "g8.maths.u1.s1-1-2.6"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "title": "Example 1.5: classify",
+     "bins": [
+      "Only ℚ",
+      "ℤ and ℚ",
+      "ℕ, W, ℤ and ℚ"
+     ],
+     "items": [
+      [
+       "−13",
+       "ℤ and ℚ",
+       "An integer, so also rational."
+      ],
+      [
+       "1/7",
+       "Only ℚ",
+       "A fraction."
+      ],
+      [
+       "−5/76",
+       "Only ℚ",
+       "A fraction."
+      ],
+      [
+       "10",
+       "ℕ, W, ℤ and ℚ",
+       "A natural number is in every set."
+      ]
+     ],
+     "why": "Find the smallest set, then add every set around it.",
+     "clue": "Is the number a fraction? Is it negative?",
+     "id": "g8.maths.u1.s1-1-2.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "Exercise 1.2 Q1",
+     "text": "Solomon says 0 belongs only to the rational numbers. What is his error?",
+     "opts": [
+      "0 is also whole and an integer",
+      "0 is not rational at all",
+      "0 is a natural number only"
+     ],
+     "ans": "0 is also whole and an integer",
+     "why": "0 ∈ W, 0 ∈ ℤ and 0 ∈ ℚ.",
+     "clue": "Is 0 in the whole numbers?",
+     "id": "g8.maths.u1.s1-1-2.8"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Every natural number is a whole number.",
+     "a": true,
+     "why": "ℕ is inside W.",
+     "clue": "Look at the circles.",
+     "id": "g8.maths.u1.s1-1-2.9"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "The number −3 2/7 belongs to the negative integers.",
+     "a": false,
+     "why": "−3 2/7 has a fraction part, so it is not an integer. It is a negative rational number.",
+     "clue": "Integers have no fraction part.",
+     "id": "g8.maths.u1.s1-1-2.10"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 1.2",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Q1: Solomon says 0 belongs only to ℚ. Which is correct?",
+     "opts": [
+      "0 belongs to W, ℤ and ℚ",
+      "0 belongs only to ℚ",
+      "0 belongs only to ℕ"
+     ],
+     "ans": "0 belongs to W, ℤ and ℚ",
+     "why": "0 is whole, so it is also an integer and rational.",
+     "clue": "Start with the whole numbers.",
+     "id": "g8.maths.u1.s1-1-2.11"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Q2 a: The whole numbers and their opposites are called integers.",
+     "a": true,
+     "why": "That is the meaning of integers.",
+     "clue": "Think of …, −2, −1, 0, 1, 2, …",
+     "id": "g8.maths.u1.s1-1-2.12"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Q2 b: Every natural number is a whole number.",
+     "a": true,
+     "why": "ℕ ⊂ W.",
+     "clue": "Look at Figure 1.11.",
+     "id": "g8.maths.u1.s1-1-2.13"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Q2 c: The number −3 2/7 belongs to the negative integers.",
+     "a": false,
+     "why": "It has a fraction part, so it is rational, not an integer.",
+     "clue": "Integers have no fraction part.",
+     "id": "g8.maths.u1.s1-1-2.14"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "What is the smallest set that contains −7?",
+   "opts": [
+    "ℕ",
+    "W",
+    "ℤ",
+    "ℚ"
+   ],
+   "ans": "ℤ",
+   "why": "−7 is a negative integer.",
+   "clue": "",
+   "id": "g8.maths.u1.s1-1-2.15"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "What is the smallest set that contains 2/3?",
+   "opts": [
+    "ℕ",
+    "W",
+    "ℤ",
+    "ℚ"
+   ],
+   "ans": "ℚ",
+   "why": "2/3 is not an integer.",
+   "clue": "",
+   "id": "g8.maths.u1.s1-1-2.16"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Every integer is a rational number.",
+   "a": true,
+   "why": "Any integer n = n/1.",
+   "clue": "",
+   "id": "g8.maths.u1.s1-1-2.17"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "Figure 1.11 (four nested circles) is shown as a tap-to-explore nesting tree; a true nested-rings figure is planned (engine step B: nest block)."
+  },
+  {
+   "kind": "note",
+   "text": "Exercise 1.2 Q1 asks for an explanation; it is turned into a multiple choice. Q2 c is meant to be false; kept."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

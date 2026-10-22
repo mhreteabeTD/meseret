@@ -325,7 +325,8 @@
             "people",
             "reveal",
             "tree",
-            "venn"
+            "venn",
+            "numline"
           ]
         },
         "step": {
@@ -508,6 +509,42 @@
         "overlaps": {
           "type": "array",
           "description": "venn: [[[i, j], label, info], ...]"
+        },
+        "min": {
+          "type": "number",
+          "description": "numline: left end"
+        },
+        "max": {
+          "type": "number",
+          "description": "numline: right end"
+        },
+        "sub": {
+          "type": "integer",
+          "description": "numline: marks per unit; taps snap to them"
+        },
+        "points": {
+          "type": "array",
+          "description": "numline show: [{v:'-3/2', label?, info?}] tap to explore"
+        },
+        "targets": {
+          "type": "array",
+          "description": "numline place (graded): [{v:'2/5', label?}] the student taps where each goes"
+        },
+        "hops": {
+          "type": "array",
+          "description": "numline hop: [{from:6, by:-3}] arrows played one by one"
+        },
+        "opposites": {
+          "type": "boolean",
+          "description": "numline: draw a bracket joining each point to its opposite"
+        },
+        "distance": {
+          "type": "boolean",
+          "description": "numline: tapping a point draws its distance from 0"
+        },
+        "num": {
+          "type": "boolean",
+          "description": "blank: compare as numbers (3/8 = 6/16 = 0.375); an accepted answer starting with ≈ allows rounding"
         }
       },
       "allOf": [
