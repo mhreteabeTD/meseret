@@ -25,7 +25,7 @@ async function loadLang(l) {
 /* Lesson language: the words INSIDE a lesson (Quick check, pop-ups, prompts, Practise) follow the lesson's own
    language ("lang" on the lesson), not the UI language. Page chrome (back, timer, settings) keeps the UI language. */
 let LL = null;
-const LESSON_KEYS = new Set(['continue', 'check', 'not_yet', 'try_again', 'true', 'false', 'tap_explore', 'next_step', 'skipped_note', 'skip', 'quick_check', 'answer_is', 'worked_example', 'undo', 'order_hint', 'match_hint', 'pick_size', 'guess_note', 'step_hook', 'step_explore', 'step_notice', 'step_check', 'step_practise', 'step_name', 'show_answer', 'section_done', 'practise_n', 'practise_sub', 'replay_note', 'replay_n', 'show_worked', 'retry', 'first_try', 'spot_on', 'right_idea', 'correct', 'your_guess', 'your_answer', 'wrong_pick', 'not_quite_guess', 'lock_guess', 'includes', 'activity', 'spelling_note', 'num_note', 'signed_note', 'v_retry', 'v_ok', 'v_answer', 'need_reminder', 'offer_refresher', 'yes_reminder', 'no_continue', 'refresher', 'book_exercise', 'unit_test', 'fresh_test', 'test_note', 'all_done', 'in_a_row', 'back_to_question', 'back_to_book', 'back_lesson', 'start_again', 'missing_pick', 'sign', 'remove', 'learned', 'comes_back', 'try_more', 'next_section', 'nl_place', 'nl_opposites', 'nl_move1', 'nl_move', 'nl_hop', 'nl_between', 'one_whole', 'row_w', 'layer_w', 'cells_w', 'cubes_w', 'whole_w', 'half_w', 'cell_hint', 'count_total', 'tr_btn_back', 'tile_answer']);
+const LESSON_KEYS = new Set(['ladder_tap', 'continue', 'check', 'not_yet', 'try_again', 'true', 'false', 'tap_explore', 'next_step', 'skipped_note', 'skip', 'quick_check', 'answer_is', 'worked_example', 'undo', 'order_hint', 'match_hint', 'pick_size', 'guess_note', 'step_hook', 'step_explore', 'step_notice', 'step_check', 'step_practise', 'step_name', 'show_answer', 'section_done', 'practise_n', 'practise_sub', 'replay_note', 'replay_n', 'show_worked', 'retry', 'first_try', 'spot_on', 'right_idea', 'correct', 'your_guess', 'your_answer', 'wrong_pick', 'not_quite_guess', 'lock_guess', 'includes', 'activity', 'spelling_note', 'num_note', 'signed_note', 'v_retry', 'v_ok', 'v_answer', 'need_reminder', 'offer_refresher', 'yes_reminder', 'no_continue', 'refresher', 'book_exercise', 'unit_test', 'fresh_test', 'test_note', 'all_done', 'in_a_row', 'back_to_question', 'back_to_book', 'back_lesson', 'start_again', 'missing_pick', 'sign', 'remove', 'learned', 'comes_back', 'try_more', 'next_section', 'nl_place', 'nl_opposites', 'nl_move1', 'nl_move', 'nl_hop', 'nl_between', 'one_whole', 'row_w', 'layer_w', 'cells_w', 'cubes_w', 'whole_w', 'half_w', 'cell_hint', 'count_total', 'tr_btn_back', 'tile_answer']);
 const t = (k, v = {}) => { const src = LL && LESSON_KEYS.has(k) && S.i18n[LL] && S.i18n[LL][k]; return (src || T[k] || k).replace(/\{(\w+)\}/g, (_, n) => v[n] != null ? v[n] : ''); };
 async function loadDict(l) { if (l && !S.i18n[l]) { try { S.i18n[l] = await (await fetch(`i18n/${l}.json`)).json(); } catch (_) { S.i18n[l] = {}; } } }
 // switch the lesson language on/off (also tags the app container so the Ethiopic type rules apply)
@@ -327,6 +327,7 @@ const Gen = (() => {
   const int = (a, b) => a + Math.floor(r() * (b - a + 1)), pick = a => a[int(0, a.length - 1)], sgn = () => r() < .5 ? -1 : 1;
   const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = int(0, i); [a[i], a[j]] = [a[j], a[i]]; } return a; };
   const M = x => String(x).replace(/-/g, '−');
+  const nf = n => { const v = Math.round(n * 1e9) / 1e9, [i, d] = String(v).split('.'); return i.replace(/\B(?=(\d{3})+$)/g, ',') + (d ? '.' + d : ''); };
   const fq = q => M(q.d === 1 ? `${q.n}` : `${q.n}/${q.d}`);
   const fmix = q => { if (q.d === 1 || Math.abs(q.n) < q.d) return fq(q); const w = Math.trunc(Math.abs(q.n) / q.d), n = Math.abs(q.n) % q.d; return M(`${q.n < 0 ? '-' : ''}${w} ${n}/${q.d}`); };
   const par = q => q.n < 0 ? `(${fmix(q)})` : fmix(q);
@@ -400,13 +401,54 @@ const Gen = (() => {
       if (find === 'P') return { kind: 'blank', num: true, ask: `What principal earns Birr ${I} interest in ${T} year${T > 1 ? 's' : ''} at ${R}%? P = Birr ___`, a: [String(P)], why: `P = I ÷ (R × T) = ${I} ÷ (${R / 100} × ${T}) = ${P}.`, clue: 'P = I ÷ (R × T).' };
       if (find === 'T') return { kind: 'blank', num: true, ask: `Birr ${P} earns Birr ${I} simple interest at ${R}% per year. Time = ___ years`, a: [String(T)], why: `T = I ÷ (P × R) = ${I} ÷ (${P} × ${R / 100}) = ${T}.`, clue: 'T = I ÷ (P × R).' };
       return { kind: 'blank', num: true, ask: `Birr ${P} earns Birr ${I} simple interest in ${T} year${T > 1 ? 's' : ''}. Rate = ___ %`, a: [String(R)], why: `R = I ÷ (P × T) = ${I} ÷ (${P} × ${T}) = ${R / 100} = ${R}%.`, clue: 'R = I ÷ (P × T), then change to a percent.' }; },
+
+    /* ---- Grade 5 Unit 1: area, counting, volume, unit conversion. Amharic (am) and English templates ---- */
+    area(o) { const am = o.lang === 'am', u = o.unit || 'ምድብ', max = o.max || 12, sq = o.shape === 'square' || (o.shape !== 'rect' && r() < .3);
+      const a = int(2, max); let b = a; if (!sq) { b = int(2, max); while (b === a) b = int(2, max); } const l = Math.max(a, b), w = Math.min(a, b), area = l * w;
+      const u2 = am ? { 'ምድብ': 'ካሬ ምድብ', 'ሳ.ሜ': 'ሳ.ሜ²', 'ሜ': 'ሜ²' }[u] : { 'ምድብ': 'square units', 'ሳ.ሜ': 'cm²', 'ሜ': 'm²' }[u], uw = am ? u : { 'ምድብ': 'units', 'ሳ.ሜ': 'cm', 'ሜ': 'm' }[u];
+      const why = sq ? `${a} × ${a} = ${area} ${u2}` + (am ? '።' : '.') : `${l} × ${w} = ${area} ${u2}` + (am ? '።' : '.'), clue = am ? (sq ? 'ርዝመት × ርዝመት።' : 'ርዝመት × ወርድ።') : (sq ? 'Side × side.' : 'Length × width.');
+      if (o.pic && u === 'ምድብ' && l <= 12) return { kind: 'grid', mode: 'tile', graded: true, w: sq ? a : l, h: sq ? a : w, unit: uw, ask: am ? 'ስፋቱ ስንት ካሬ ምድብ ነው?' : 'How many square units is the area?', intro: am ? 'ረድፍ በረድፍ ሙላ፤ ከዚያ ቁጥሩን ጻፍ።' : 'Fill row by row, then type the number.', ans: String(area), why, clue, machine: true };
+      const ask = am ? (sq ? `የጎን ርዝመቱ ${a} ${uw} የሆነ ካሬ ስፋት ___ ${u2} ነው።` : `ርዝመቱ ${l} ${uw}፣ ወርዱ ${w} ${uw} የሆነ ሬክታንግል ስፋት ___ ${u2} ነው።`)
+        : (sq ? `A square has sides of ${a} ${uw}. Area = ___ ${u2}` : `A rectangle is ${l} ${uw} long and ${w} ${uw} wide. Area = ___ ${u2}`);
+      return { kind: 'blank', num: true, ask, a: [String(area)], why, clue, machine: true }; },
+    count(o) { const am = o.lang === 'am', cubes = o.kind === 'cubes', max = Math.min(o.max || 8, cubes ? 6 : 12);
+      if (!cubes) { const w = int(3, max), h = int(2, Math.min(max, 8)); return { kind: 'grid', mode: 'tile', graded: true, w, h, unit: am ? 'ምድብ' : 'units', ask: am ? 'ስንት ትንንሽ ካሬዎች አሉ?' : 'How many small squares are there?', intro: am ? 'ረድፍ በረድፍ ሙላ።' : 'Fill row by row.', ans: String(w * h), why: `${h} × ${w} = ${w * h}` + (am ? '።' : '.'), clue: am ? `${h} ረድፎች፣ እያንዳንዳቸው ${w} ካሬ።` : `${h} rows with ${w} squares each.`, machine: true }; }
+      const l = int(2, max), w = int(2, Math.min(max, 5)), h = int(2, Math.min(max, 4));
+      return { kind: 'cubes', graded: true, l, w, h, unit: am ? 'ምድብ' : 'units', ask: am ? 'ስንት ትንንሽ ኩቦች አሉ?' : 'How many small cubes are there?', intro: am ? `ርዝመቱ ${l}፣ ወርዱ ${w}፣ ከፍታው ${h} ምድብ ነው።` : `Length ${l}, width ${w}, height ${h}.`, ans: String(l * w * h), why: `${l} × ${w} × ${h} = ${l * w * h}` + (am ? '።' : '.'), clue: am ? `አንድ ንብርብር ${l} × ${w} = ${l * w} ኩቦች አሉት።` : `One layer has ${l} × ${w} = ${l * w} cubes.`, machine: true }; },
+    volume(o) { const am = o.lang === 'am', u = o.unit || 'ምድብ', max = o.max || 10, cube = o.shape === 'cube';
+      const u3 = am ? { 'ምድብ': 'ኩቢክ ምድብ', 'ሳ.ሜ': 'ሳ.ሜ³', 'ሜ': 'ሜ³' }[u] : { 'ምድብ': 'cubic units', 'ሳ.ሜ': 'cm³', 'ሜ': 'm³' }[u], uw = am ? u : { 'ምድብ': 'units', 'ሳ.ሜ': 'cm', 'ሜ': 'm' }[u], dot = am ? '።' : '.';
+      const l = int(2, max), w = cube ? l : int(2, max), h = cube ? l : int(2, Math.min(max, 6)), V = l * w * h;
+      if (o.word) { const item = pick(am ? ['የሳሙና ሳጥኖች', 'የጫማ ሳጥኖች', 'የሻይ ካርቶኖች'] : ['soap boxes', 'shoe boxes', 'tea cartons']);
+        return { kind: 'blank', num: true, ask: am ? `${item} በ${l} ረድፍ ርዝመት፣ በ${w} ረድፍ ወርድ፣ በ${h} ንብርብር ተደራርበዋል። በሙሉ ___ ሳጥኖች አሉ።` : `${item} are stacked ${l} long, ${w} wide and ${h} layers high. There are ___ in all.`, a: [String(V)], why: `${l} × ${w} = ${l * w}፤ ${l * w} × ${h} = ${V}` + dot, clue: am ? 'አንድ ንብርብር ርዝመት × ወርድ ነው። ከዚያ በንብርብሮች ብዛት አባዛ።' : 'One layer is length × width. Then multiply by the layers.', machine: true }; }
+      const ask = am ? (cube ? `የጎን ርዝመቱ ${l} ${uw} የሆነ ኩብ ይዘት ___ ${u3} ነው።` : `ርዝመቱ ${l} ${uw}፣ ወርዱ ${w} ${uw}፣ ከፍታው ${h} ${uw} የሆነ ሳጥን ይዘት ___ ${u3} ነው።`)
+        : (cube ? `A cube has sides of ${l} ${uw}. Volume = ___ ${u3}` : `A box is ${l} ${uw} long, ${w} ${uw} wide and ${h} ${uw} high. Volume = ___ ${u3}`);
+      return { kind: 'blank', num: true, ask, a: [String(V)], why: `${l} × ${w} = ${l * w}፤ ${l * w} × ${h} = ${V}` + dot, clue: am ? 'ርዝመት × ወርድ × ከፍታ። መጀመሪያ ሁለቱን አባዛ።' : 'Length × width × height. Multiply two first.', machine: true }; },
+    convert(o) { const am = o.lang === 'am', dim = o.dim || 1, dot = am ? '።' : '.';
+      const TB = { 1: [['ኪ.ሜ', 0], ['ሜ', 3], ['ሳ.ሜ', 5], ['ሚ.ሜ', 6]], 2: [['ኪ.ሜ²', 0], ['ሄክታር', 2], ['ሜ²', 6], ['ሳ.ሜ²', 10], ['ሚ.ሜ²', 12]], 3: [['ኪ.ሜ³', 0], ['ሜ³', 9], ['ሊ', 12], ['ሳ.ሜ³', 15], ['ሚ.ሊ', 15], ['ሚ.ሜ³', 18]] }[dim];
+      let pool = TB.filter(x => !o.units || o.units.includes(x[0])); if (dim === 3 && !o.units) pool = pool.filter(x => x[0] !== 'ሊ' && x[0] !== 'ሚ.ሊ');
+      for (let tries = 0; tries < 60; tries++) { const A = pick(pool), B = pick(pool), diff = B[1] - A[1]; if (!diff) continue; const down = diff > 0, k = Math.abs(diff);
+        if (o.dir === 'down' && !down) continue; if (o.dir === 'up' && down) continue; if (k > 9) continue;
+        const nice = down ? pick([1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 15, 25, 50]) : pick(o.nice ? [1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 15, 25, 50] : [1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 15, 25, 50, .5, 2.5, 1.5, .25]);
+        const v = down ? nice : Math.round(nice * Math.pow(10, k)), ans = down ? Math.round(nice * Math.pow(10, k)) : nice;
+        if (v >= 1e10 || ans >= 1e10 || (ans < 1 && ans < .001) || v < 1 || v !== Math.round(v * 1000) / 1000) continue;
+        const ten = Math.pow(10, k), why = down ? `1 ${A[0]} = ${nf(ten)} ${B[0]}፤ ${nf(v)} × ${nf(ten)} = ${nf(ans)}` + dot : `1 ${B[0]} = ${nf(ten)} ${A[0]}፤ ${nf(v)} ÷ ${nf(ten)} = ${nf(ans)}` + dot;
+        const clue = am ? (down ? 'ከትልቅ ወደ ትንሽ ምድብ ስንቀይር እናባዛለን።' : 'ከትንሽ ወደ ትልቅ ምድብ ስንቀይር እናካፍላለን።') : (down ? 'Big unit to small unit: multiply.' : 'Small unit to big unit: divide.');
+        if (o.ladder && dim !== 3 && !o.units && Math.abs(TB.indexOf(B) - TB.indexOf(A)) <= 3) return { kind: 'ladder', graded: true, power: dim, from: A[0], to: B[0], value: v, ask: `${nf(v)} ${A[0]} = ___ ${B[0]}`, ans: String(ans), why, clue, machine: true };
+        return { kind: 'blank', num: true, ask: `${nf(v)} ${A[0]} = ___ ${B[0]}`, a: [String(ans), nf(ans)], why, clue, machine: true }; }
+      return { kind: 'blank', num: true, ask: '1 ሜ = ___ ሳ.ሜ', a: ['100'], why: '1 ሜ = 100 ሳ.ሜ' + dot, clue: am ? 'ከትልቅ ወደ ትንሽ እናባዛለን።' : 'Multiply.', machine: true }; },
+    litres(o) { const am = o.lang === 'am', k = pick([1, 2, 5]), n = int(2, 8), L = n * k, dot = am ? '።' : '.', thing = pick(am ? [['ሃይላንዶች', 'ሃይላንድ'], ['ጀሪካኖች', 'ጀሪካን'], ['ባልዲዎች', 'ባልዲ']] : [['bottles', 'bottle'], ['jerrycans', 'jerrycan'], ['buckets', 'bucket']]), st = o.step || 'l';
+      const base = am ? `${n} ባለ ${k} ሊትር ${thing[0]}` : `${n} ${thing[0]} of ${k} litres`;
+      if (st === 'cm3') return { kind: 'blank', num: true, ask: am ? `${base} በሙሉ ___ ሳ.ሜ³ ይይዛሉ።` : `${base} hold ___ cm³ in all.`, a: [String(L * 1000), nf(L * 1000)], why: `${n} × ${k} = ${L} ሊ፤ ${L} × 1,000 = ${nf(L * 1000)} ሳ.ሜ³` + dot, clue: am ? '1 ሊ = 1,000 ሳ.ሜ³። መጀመሪያ ሊትሩን ደምር።' : '1 litre = 1,000 cm³. Find the litres first.', machine: true };
+      if (st === 'm3') return { kind: 'blank', num: true, ask: am ? `${base} በሙሉ ___ ሜ³ ይይዛሉ።` : `${base} hold ___ m³ in all.`, a: [String(L / 1000)], why: `${n} × ${k} = ${L} ሊ፤ ${L} ÷ 1,000 = ${L / 1000} ሜ³` + dot, clue: am ? '1 ሊ = 1/1000 ሜ³። ሊትሩን በ1,000 አካፍል።' : '1 litre = 1/1000 m³. Divide the litres by 1,000.', machine: true };
+      return { kind: 'blank', num: true, ask: am ? `${base} በሙሉ ___ ሊትር ነው።` : `${base} hold ___ litres in all.`, a: [String(L)], why: `${n} × ${k} = ${L}` + dot, clue: am ? 'ብዛቱን በአንዱ ሊትር አባዛ።' : 'Multiply the number by the litres of one.', machine: true }; },
   };
   const api = {
     has: s => !!(s && s.gen && T[s.gen.t]),
     list: () => Object.keys(T),
     make(s, seed, lang) { if (!api.has(s)) return s; r = seed == null ? Math.random : rng(seed);
       try { const v = T[s.gen.t](Object.assign({ lang: lang || (typeof LL !== 'undefined' && LL) || 'en' }, s.gen), s); const out = Object.assign({}, s, { title: s.title ? s.title.replace(/^(Example|Exercise|Activity|Group work)[^:]*:\s*/i, '') : s.title }, v, { _gen: true });
-        ['ask', 'text', 'worked', 'opts', 'ans', 'pool', 'items', 'targets', 'min', 'max', 'sub', 'num'].forEach(k => { if (!(k in v)) delete out[k]; }); delete out.ref; return out; }
+        ['ask', 'text', 'worked', 'opts', 'ans', 'pool', 'items', 'targets', 'min', 'max', 'sub', 'num'].forEach(k => { if (!(k in v)) delete out[k]; });
+        if (['grid', 'cubes', 'ladder', 'blank'].includes(v.kind) && ['area', 'count', 'volume', 'convert', 'litres'].includes(s.gen.t)) ['say', 'intro', 'w', 'h', 'l', 'cube', 'layers', 'from', 'to', 'value', 'mode', 'unit', 'a', 'poly', 'cols', 'rows', 'graded'].forEach(k => { if (!(k in v)) delete out[k]; }); delete out.ref; return out; }
       catch (e) { return s; } finally { r = Math.random; } },
   };
   return api;
@@ -449,10 +491,10 @@ function makeR(env) {
   const div = html => { const d = document.createElement('div'); d.className = 'stack'; d.innerHTML = html; return d; };
   const head = s => `<span class="eyebrow sky">${esc(s._from || (['hook', 'explore', 'notice', 'check', 'practise'].includes(s.step) ? t('step_' + s.step) : ''))}</span>${s.ref ? `<span class="ref">📖 ${esc(s.ref)}</span>` : ''}${s.title ? `<h1 class="display" tabindex="-1">${esc(s.title)}</h1>` : ''}${s.text ? `<p class="lead">${esc(s.text)}</p>` : ''}`;
   const choice = (s, opts, ans, row2) => {
-    const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="opts${row2 ? ' row2' : ''}" role="radiogroup">${opts.map(o => `<button class="opt" role="radio" aria-checked="false">${esc(o)}</button>`).join('')}</div>`);
+    const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="opts${row2 ? ' row2' : ''}" role="radiogroup">${opts.map(o => `<button class="opt" role="radio" aria-checked="false" data-v="${esc(o)}">${fig(o)}</button>`).join('')}</div>`);
     let pick = null;
     el.querySelector('.opts').addEventListener('click', e => { const b = e.target.closest('.opt'); if (!b || b.disabled || env.phase() !== 'answer') return; pick = b; el.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-checked', x === b)); env.update(); });
-    return { el, label: t('check'), ready: () => !!pick, check() { const ok = pick.textContent === ans; pick.classList.add(ok ? 'ok' : 'no'); if (ok) el.querySelectorAll('.opt').forEach(x => x.disabled = true); else pick.disabled = true; return ok ? { ok: true, body: s.why } : { ok: false, body: s.clue }; }, retry() { pick = null; el.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-checked', 'false')); } };
+    return { el, label: t('check'), ready: () => !!pick, check() { const ok = pick.dataset.v === ans; pick.classList.add(ok ? 'ok' : 'no'); if (ok) el.querySelectorAll('.opt').forEach(x => x.disabled = true); else pick.disabled = true; return ok ? { ok: true, body: s.why } : { ok: false, body: s.clue }; }, retry() { pick = null; el.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-checked', 'false')); } };
   };
   /* ---- counting figures (Grade 5 Unit 1): tile a rectangle, count whole/half squares, stack unit cubes ---- */
   // one number input under a counting figure; used when the screen is graded ("ans")
@@ -508,6 +550,33 @@ function makeR(env) {
     const ok = () => Math.abs(total()[2] - area) <= tol + 1e-9;
     return { el, label: s.graded ? t('check') : t('continue'), ready: () => touched,
       check: s.graded ? () => ok() ? { ok: true, body: s.why || '' } : { ok: false, body: s.clue || '' } : undefined, retry() {} };
+  };
+
+  // ladder: the unit staircase (km · m · cm · mm, or the area / volume versions). Explore: tap a rung. Convert: ▶ hops one rung at a time.
+  const LAD = { 1: [['ኪ.ሜ', 'ሜ', 'ሳ.ሜ', 'ሚ.ሜ'], [1000, 100, 10]], 2: [['ኪ.ሜ²', 'ሄክታር', 'ሜ²', 'ሳ.ሜ²', 'ሚ.ሜ²'], [100, 10000, 10000, 100]], 3: [['ኪ.ሜ³', 'ሜ³', 'ሳ.ሜ³', 'ሚ.ሜ³'], [1e9, 1e6, 1000]] };
+  const nf = n => { const v = Math.round(n * 1e9) / 1e9, [i, d] = String(v).split('.'); return i.replace(/\B(?=(\d{3})+$)/g, ',') + (d ? '.' + d : ''); };
+  const ladderG = s => {
+    const [dU, dF] = LAD[s.power || 1] || LAD[1], U = s.units || dU, F = s.factors || dF, n = U.length;
+    const fi = s.from != null ? U.indexOf(s.from) : -1, ti = s.to != null ? U.indexOf(s.to) : -1, conv = fi >= 0 && ti >= 0 && fi !== ti, dir = ti > fi ? 1 : -1, hops = conv ? Math.abs(ti - fi) : 0;
+    const vals = [s.value]; for (let j = 0; j < hops; j++) { const a = fi + dir * j; vals.push(dir > 0 ? vals[j] * F[a] : vals[j] / F[a - 1]); }
+    const say = s.say || [], graded = s.graded && s.ans != null; let k = 0, sel = -1; const picked = new Set();
+    const wide = F.some(f => nf(f).length > 9), RH = 30, GAP = 24, VH = 12 + n * RH + (n - 1) * GAP + 8, x0 = wide ? 118 : 100, rw = wide ? 104 : 150, lf = wide ? 10.5 : 13;
+    const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="fig grd lad"><svg viewBox="0 0 340 ${VH}" role="img" aria-label="${esc(s.title || U.join(' · '))}"></svg><p class="small gp"></p>${s.power === 3 && s.litre !== false && !s.units ? `<p class="small muted">1 ሜ³ = 1,000 ሊ · 1 ሊ = 1,000 ሳ.ሜ³ · 1 ሚ.ሊ = 1 ሳ.ሜ³</p>` : ''}${conv ? `<button class="inner" id="gnx">▶ ${t('next_step')}</button>` : ''}</div>`);
+    const svg = el.querySelector('svg'), tip = el.querySelector('.gp'), nx = el.querySelector('#gnx'), ci = graded ? countInput(el, s) : null;
+    const at = i => { const j = (i - fi) * dir; return conv && j >= 0 && j <= k ? vals[j] : null; };
+    const draw = () => { let g = '';
+      for (let i = 0; i < n; i++) { const y = 12 + i * (RH + GAP), v = at(i), now = conv && i === fi + dir * k, hot = now ? 'var(--sun)' : v != null ? 'var(--sky-soft, var(--sky))' : sel === i ? 'var(--sun-soft, var(--sun))' : 'var(--surface-2)';
+        g += `<g data-i="${i}" style="cursor:pointer"><rect x="${x0}" y="${y}" width="${rw}" height="${RH}" rx="8" style="fill:${hot};stroke:var(--fg)" stroke-width="${now ? 3 : 1.5}"/><text x="${x0 + rw / 2}" y="${y + 20}" font-size="${v != null ? 15 : 14}" font-weight="800" text-anchor="middle" style="fill:var(--fg)">${v != null ? esc(nf(v) + ' ' + U[i]) : esc(U[i])}</text></g>`;
+        if (i < n - 1) { const my = y + RH + GAP / 2 + 5; g += `<text x="${x0 - 8}" y="${my}" font-size="${lf}" font-weight="800" text-anchor="end" style="fill:var(--coral)">↓ ×${wide ? "" : " "}${nf(F[i])}</text><text x="${x0 + rw + 8}" y="${my}" font-size="${lf}" font-weight="800" style="fill:var(--sky)">↑ ÷${wide ? "" : " "}${nf(F[i])}</text>`; } }
+      svg.innerHTML = g;
+      if (conv) { const a = fi + dir * (k - 1), f = dir > 0 ? F[a] : F[a - 1]; tip.textContent = k ? (say[k - 1] || (dir > 0 ? `${nf(vals[k - 1])} ${U[a]} × ${nf(f)} = ${nf(vals[k])} ${U[a + 1]}` : `${nf(vals[k - 1])} ${U[a]} ÷ ${nf(f)} = ${nf(vals[k])} ${U[a - 1]}`)) : (s.intro || ''); nx.disabled = k >= hops; if (k >= hops && ci) ci.show(); }
+      else if (sel >= 0) tip.textContent = [sel < n - 1 ? `1 ${U[sel]} = ${nf(F[sel])} ${U[sel + 1]}` : '', sel > 0 ? `${nf(F[sel - 1])} ${U[sel]} = 1 ${U[sel - 1]}` : ''].filter(Boolean).join(' · ');
+      else tip.textContent = s.intro || t('ladder_tap'); };
+    svg.addEventListener('click', e => { const c = e.target.closest('[data-i]'); if (!c || conv) return; sel = +c.dataset.i; picked.add(sel); draw(); env.update(); });
+    if (nx) nx.onclick = () => { if (k < hops) k++; draw(); env.update(); };
+    draw();
+    const done = () => conv ? k >= hops : picked.size >= (s.need != null ? s.need : 2);
+    return Object.assign({ el }, graded ? gradedResult(s, ci, done) : { label: t('continue'), ready: done });
   };
 
   // cubes: a stack of unit cubes built one row, then one layer at a time (oblique drawing, like the book's boxes)
@@ -566,11 +635,11 @@ function makeR(env) {
       if (signed) el.querySelector('.sgn').onclick = e => { const bt = e.target.closest('button'); if (!bt || inp.disabled) return; sign = bt.dataset.s; el.querySelectorAll('.sgn button').forEach(x => x.setAttribute('aria-pressed', x === bt)); env.update(); };
       const val = () => signed ? (sign === '−' ? '-' : '') + inp.value.trim().replace(/^[+−-]\s*/, '') : inp.value;
       return { el, label: t('check'), ready: () => inp.value.trim() !== '' && (!signed || !!sign), check() { const nm = s.num ? numMatch(val(), s.a.map(String)) : null; const r = nm === true ? { ok: true } : nm === false ? { ok: false } : matchAnswer(val(), s.a.map(String)); inp.className = r.ok ? 'ok' : 'no'; inp.disabled = r.ok; return r.ok ? { ok: true, body: (r.near ? t('right_idea', { a: r.near }) + ' ' : '') + (s.why || '') } : { ok: false, body: s.clue }; }, retry() { inp.className = ''; inp.focus(); } }; },
-    sort(s) { const el = div(head(s) + `<div class="fig"><p class="display" id="it" style="text-align:center;font-size:22px"></p><div class="opts" id="bins">${s.bins.map(b => `<button class="opt center">${esc(b)}</button>`).join('')}</div><p class="small muted" id="fb"></p></div>`); let i = 0, wrong = 0; const draw = () => { el.querySelector('#it').textContent = i < s.items.length ? s.items[i][0] : ''; };
-      el.querySelector('#bins').addEventListener('click', e => { const b = e.target.closest('.opt'); if (!b || i >= s.items.length || env.phase() !== 'answer') return; const [name, ans, why] = s.items[i]; const ok = b.textContent === ans; if (!ok) wrong++; el.querySelector('#fb').textContent = (ok ? '✓ ' : '✗ ') + `${name} → ${ans}. ${why || ''}`; i++; draw(); if (i >= s.items.length) { el.querySelector('#bins').querySelectorAll('.opt').forEach(x => x.disabled = true); } env.update(); }); draw();
+    sort(s) { const el = div(head(s) + `<div class="fig"><p class="display" id="it" style="text-align:center;font-size:22px"></p><div class="opts" id="bins">${s.bins.map(b => `<button class="opt center">${esc(b)}</button>`).join('')}</div><p class="small muted" id="fb"></p></div>`); let i = 0, wrong = 0; const draw = () => { el.querySelector('#it').innerHTML = i < s.items.length ? fig(s.items[i][0]) : ''; };
+      el.querySelector('#bins').addEventListener('click', e => { const b = e.target.closest('.opt'); if (!b || i >= s.items.length || env.phase() !== 'answer') return; const [name, ans, why] = s.items[i]; const ok = b.textContent === ans; if (!ok) wrong++; el.querySelector('#fb').textContent = (ok ? '✓ ' : '✗ ') + `${String(name)[0] === '@' ? '' : name + ' → '}${ans}. ${why || ''}`; i++; draw(); if (i >= s.items.length) { el.querySelector('#bins').querySelectorAll('.opt').forEach(x => x.disabled = true); } env.update(); }); draw();
       return { el, label: t('check'), ready: () => i >= s.items.length, check() { return wrong ? { ok: false, body: s.clue || `${wrong} / ${s.items.length}` } : { ok: true, body: s.why || '' }; }, retry() { i = 0; wrong = 0; el.querySelector('#bins').querySelectorAll('.opt').forEach(x => x.disabled = false); draw(); } }; },
-    tap(s) { const el = div(head(s) + `<div class="fig"><div class="chips">${s.items.map((it, k) => `<button class="chip" data-k="${k}" aria-pressed="false">${esc(it[0])}</button>`).join('')}</div><div class="result" id="info">${esc(s.ask || '')}</div></div>` + explainCard(s)); const seen = new Set();
-      el.querySelector('.chips').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; const k = +b.dataset.k; seen.add(k); el.querySelectorAll('.chip').forEach(x => x.setAttribute('aria-pressed', x === b)); el.querySelector('#info').innerHTML = `<strong>${esc(s.items[k][0])}</strong>${esc(s.items[k][1])}`; env.update(); });
+    tap(s) { const el = div(head(s) + `<div class="fig"><div class="chips">${s.items.map((it, k) => `<button class="chip" data-k="${k}" aria-pressed="false">${fig(it[0])}</button>`).join('')}</div><div class="result" id="info">${esc(s.ask || '')}</div></div>` + explainCard(s)); const seen = new Set();
+      el.querySelector('.chips').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; const k = +b.dataset.k; seen.add(k); el.querySelectorAll('.chip').forEach(x => x.setAttribute('aria-pressed', x === b)); el.querySelector('#info').innerHTML = `${String(s.items[k][0])[0] === '@' ? '' : `<strong>${esc(s.items[k][0])}</strong>`}${esc(s.items[k][1])}`; env.update(); });
       return { el, label: t('continue'), ready: () => seen.size >= Math.min(s.need || s.items.length, s.items.length) }; },
     order(s) { const mixed = s.items.slice().sort(() => Math.random() - .5); const el = div(head(s) + `<div class="fig"><div class="chips" id="pool">${mixed.map(x => `<button class="chip" data-v="${esc(x)}">${esc(x)}</button>`).join('')}</div><ol class="steps oseq" id="seq"></ol><button class="btn ghost small undo" id="undo" hidden>↶ ${t('undo')}</button><p class="small muted">${t('order_hint')}</p></div>`); let seq = [];
       const pool = el.querySelector('#pool'), ol = el.querySelector('#seq'), un = el.querySelector('#undo');
@@ -579,14 +648,14 @@ function makeR(env) {
       ol.addEventListener('click', e => { const b = e.target.closest('.oit'); if (!b || env.phase() !== 'answer') return; seq.splice(+b.dataset.i, 1); draw(); });
       un.onclick = () => { if (env.phase() !== 'answer') return; seq.pop(); draw(); };
       return { el, label: t('check'), ready: () => seq.length === s.items.length, check() { const ok = seq.every((x, i) => x === s.items[i]); if (ok) { un.hidden = true; ol.querySelectorAll('.oit').forEach(x => x.disabled = true); } return ok ? { ok: true, body: s.why } : { ok: false, body: s.clue || s.why }; }, retry() { draw(); } }; },
-    match(s) { const rights = s.pairs.map((p, j) => [p[1], j]).sort(() => Math.random() - .5); const el = div(head(s) + `<div class="fig"><p class="small muted">${t('match_hint')}</p><div class="pairs"><div class="pcol">${s.pairs.map((p, j) => `<button class="pl" data-j="${j}">${esc(p[0])}</button>`).join('')}</div><div class="pcol">${rights.map(([r, j]) => `<button class="pr" data-r="${esc(r)}">${esc(r)}</button>`).join('')}</div></div></div>`);
+    match(s) { const rights = s.pairs.map((p, j) => [p[1], j]).sort(() => Math.random() - .5); const el = div(head(s) + `<div class="fig"><p class="small muted">${t('match_hint')}</p><div class="pairs"><div class="pcol">${s.pairs.map((p, j) => `<button class="pl" data-j="${j}">${fig(p[0])}</button>`).join('')}</div><div class="pcol">${rights.map(([r, j]) => `<button class="pr" data-x="${j}" data-r="${esc(r)}">${fig(r)}</button>`).join('')}</div></div></div>`);
       const pair = {}, cols = ['g', 's', 'y', 'c', 'v', 'g', 's', 'y']; let sel = null;
-      const paint = () => { el.querySelectorAll('.pl').forEach(b => { const j = +b.dataset.j, r = pair[j]; b.className = 'pl' + (sel === j ? ' sel' : '') + (r != null ? ' on h-' + cols[j] : ''); }); el.querySelectorAll('.pr').forEach(b => { const j = Object.keys(pair).find(k => pair[k] === b.dataset.r); b.className = 'pr' + (j != null ? ' on h-' + cols[+j] : ''); }); env.update(); };
+      const paint = () => { el.querySelectorAll('.pl').forEach(b => { const j = +b.dataset.j, r = pair[j]; b.className = 'pl' + (sel === j ? ' sel' : '') + (r != null ? ' on h-' + cols[j] : ''); }); el.querySelectorAll('.pr').forEach(b => { const j = Object.keys(pair).find(k => pair[k] === +b.dataset.x); b.className = 'pr' + (j != null ? ' on h-' + cols[+j] : ''); }); env.update(); };
       el.querySelector('.pairs').addEventListener('click', e => { if (env.phase() !== 'answer') return; const l = e.target.closest('.pl'), r = e.target.closest('.pr');
         if (l) { const j = +l.dataset.j; if (pair[j] != null && sel !== j) delete pair[j]; sel = j; paint(); }
-        if (r && sel != null) { Object.keys(pair).forEach(k => { if (pair[k] === r.dataset.r) delete pair[k]; }); pair[sel] = r.dataset.r; const next = s.pairs.findIndex((_, j) => pair[j] == null); sel = next >= 0 ? next : null; paint(); } });
+        if (r && sel != null) { Object.keys(pair).forEach(k => { if (pair[k] === +r.dataset.x) delete pair[k]; }); pair[sel] = +r.dataset.x; const next = s.pairs.findIndex((_, j) => pair[j] == null); sel = next >= 0 ? next : null; paint(); } });
       sel = 0; setTimeout(paint);
-      return { el, label: t('check'), ready: () => s.pairs.every((_, j) => pair[j] != null), check() { const bad = s.pairs.map((p, j) => pair[j] === p[1] ? -1 : j).filter(j => j >= 0); if (!bad.length) { el.querySelectorAll('.pl,.pr').forEach(b => b.disabled = true); return { ok: true, body: s.why }; } bad.forEach(j => { const b = el.querySelector(`.pl[data-j="${j}"]`); b.classList.add('shake'); setTimeout(() => b.classList.remove('shake'), 500); }); return { ok: false, body: s.clue || s.why }; }, retry() { s.pairs.forEach((p, j) => { if (pair[j] !== p[1]) delete pair[j]; }); sel = s.pairs.findIndex((_, j) => pair[j] == null); paint(); } }; },
+      return { el, label: t('check'), ready: () => s.pairs.every((_, j) => pair[j] != null), check() { const val = j => pair[j] != null ? s.pairs[pair[j]][1] : null, bad = s.pairs.map((p, j) => val(j) === p[1] ? -1 : j).filter(j => j >= 0); if (!bad.length) { el.querySelectorAll('.pl,.pr').forEach(b => b.disabled = true); return { ok: true, body: s.why }; } bad.forEach(j => { const b = el.querySelector(`.pl[data-j="${j}"]`); b.classList.add('shake'); setTimeout(() => b.classList.remove('shake'), 500); }); return { ok: false, body: s.clue || s.why }; }, retry() { s.pairs.forEach((p, j) => { if (pair[j] == null || s.pairs[pair[j]][1] !== p[1]) delete pair[j]; }); sel = s.pairs.findIndex((_, j) => pair[j] == null); paint(); } }; },
     fracbar(s) { // fraction bars. Explore: ▶ shows each shading step (Fig 1.16, 1.17). Graded ("need"): tap parts to shade that many.
       const bars = s.bars || [{ parts: s.parts, shade: s.shade || [], mark: s.mark }], graded = s.need != null, on = new Set(); let k = 0;
       const steps = []; bars.forEach((b, bi) => (b.shade || []).forEach((_, si) => steps.push([bi, si]))); bars.forEach((b, bi) => { if (b.mark) steps.push([bi, 'm']); });
@@ -642,6 +711,13 @@ function makeR(env) {
       return { el, label: t('continue'), ready: () => k >= n };
     },
     cubes(s) { return cubesG(s); },
+    ladder(s) { return ladderG(s); },
+    figure(s) { // a row of drawn pictures (shapes or everyday objects). Tap one to read about it. Not graded.
+      const it = s.items || [], need = s.need || 0, seen = new Set();
+      const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="fig"><div class="figrow" role="group">${it.map((x, k) => `<button class="figbtn" data-k="${k}" aria-pressed="false">${miniFig(x.f) || ''}${x.cap ? `<span class="cap">${esc(x.cap)}</span>` : ''}${x.chip ? `<span class="pill">${esc(x.chip)}</span>` : ''}</button>`).join('')}</div><div class="result" id="info" ${s.note ? '' : 'hidden'}>${esc(s.note || '')}</div></div>`);
+      el.querySelector('.figrow').addEventListener('click', e => { const b = e.target.closest('.figbtn'); if (!b) return; const k = +b.dataset.k; seen.add(k); el.querySelectorAll('.figbtn').forEach(x => x.setAttribute('aria-pressed', x === b)); const inf = el.querySelector('#info'); if (it[k].info) { inf.hidden = false; inf.textContent = it[k].info; } env.update(); });
+      return { el, label: t('continue'), ready: () => seen.size >= Math.min(need, it.length) };
+    },
     nest(s) { // nested sets ℕ ⊂ W ⊂ ℤ ⊂ ℚ (Fig 1.11): tap a ring, or tap a number to see every set it belongs to
       const rings = s.rings, nums = s.numbers || [], cols = ['var(--accent)', 'var(--sky)', 'var(--coral)', 'var(--sun)'], seen = new Set(); let lit = -1, cur = null;
       const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="fig nest"><svg viewBox="0 0 300 250" role="img" aria-label="${esc(s.title || 'nested sets')}"></svg>${nums.length ? `<div class="vchips">${nums.map((x, i) => `<button class="vchip" data-n="${i}">${esc(x[0])}</button>`).join('')}</div>` : ''}<div class="ginfo" hidden data-text></div></div>`);
@@ -975,6 +1051,44 @@ function Text(str, ctx, tag = 'p', cls = '') {
   return `<${tag} class="${cls}" data-text>${html}</${tag}>`;
 }
 const pic = (id, label) => (window.PICS && window.PICS[id]) || `<svg viewBox="0 0 120 120" role="img" aria-label="${esc(label || id)}"><rect x="10" y="10" width="100" height="100" rx="20" style="fill:var(--surface-2)"/><text x="60" y="68" text-anchor="middle" font-size="14" style="fill:var(--muted)">${esc(label || id)}</text></svg>`;
+/* ---------- drawn figures: any text slot (sort item, match side, option, tap chip) may hold "@rect:5x5" or "@obj:door" ---------- */
+const FS = (f, w = 2) => `style="fill:${f};stroke:var(--fg)" stroke-width="${w}" stroke-linejoin="round" stroke-linecap="round"`, FN = `style="fill:none;stroke:var(--fg)" stroke-width="2" stroke-linecap="round"`;
+const OBJ = {
+  door: `<rect x="18" y="6" width="28" height="52" rx="2" ${FS('var(--sun)')}/><rect x="23" y="12" width="18" height="17" rx="1" style="fill:none;stroke:var(--fg)" stroke-opacity=".45"/><rect x="23" y="34" width="18" height="17" rx="1" style="fill:none;stroke:var(--fg)" stroke-opacity=".45"/><circle cx="41" cy="33" r="2.2" style="fill:var(--fg)"/>`,
+  page: `<rect x="14" y="6" width="36" height="52" rx="2" ${FS('var(--surface-2)')}/><path d="M20 18h24M20 26h24M20 34h24M20 42h24" ${FN} stroke-opacity=".4"/><path d="M24 8v48" style="stroke:var(--coral)" stroke-width="1.5"/>`,
+  field: `<rect x="3" y="14" width="58" height="36" rx="2" ${FS('var(--accent)')}/><path d="M32 14v36" style="stroke:#fff" stroke-width="2"/><circle cx="32" cy="32" r="7" style="fill:none;stroke:#fff" stroke-width="2"/><rect x="3" y="24" width="9" height="16" style="fill:none;stroke:#fff" stroke-width="2"/><rect x="52" y="24" width="9" height="16" style="fill:none;stroke:#fff" stroke-width="2"/>`,
+  note: `<rect x="5" y="18" width="54" height="28" rx="3" ${FS('var(--sun)')}/><circle cx="32" cy="32" r="8" style="fill:none;stroke:var(--fg)" stroke-width="2"/><path d="M11 24h8M45 40h8" ${FN}/>`,
+  eraser: `<rect x="12" y="24" width="40" height="18" rx="4" ${FS('var(--surface-2)')}/><path d="M34 24h14a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H34z" ${FS('var(--coral)')}/>`,
+  house: `<rect x="12" y="30" width="40" height="26" ${FS('var(--surface-2)')}/><path d="M7 32L32 10l25 22z" ${FS('var(--coral)')}/><rect x="27" y="40" width="10" height="16" ${FS('var(--sun)')}/><rect x="15" y="36" width="8" height="8" style="fill:var(--sky);stroke:var(--fg)" stroke-width="1.5"/>`,
+  park: `<path d="M3 54h58" ${FN}/><rect x="18" y="36" width="5" height="18" style="fill:var(--sun);stroke:var(--fg)" stroke-width="1.5"/><circle cx="20" cy="26" r="13" ${FS('var(--accent)')}/><rect x="42" y="40" width="4" height="14" style="fill:var(--sun);stroke:var(--fg)" stroke-width="1.5"/><circle cx="44" cy="32" r="10" ${FS('var(--accent)')}/>`,
+  city: `<rect x="5" y="26" width="16" height="30" ${FS('var(--sky)')}/><rect x="24" y="10" width="16" height="46" ${FS('var(--surface-2)')}/><rect x="43" y="20" width="16" height="36" ${FS('var(--sun)')}/><path d="M9 32h3M14 32h3M9 40h3M14 40h3M28 18h3M33 18h3M28 28h3M33 28h3M28 38h3M33 38h3M47 28h3M52 28h3M47 38h3M52 38h3" ${FN} stroke-width="3"/>`,
+  table: `<rect x="5" y="22" width="54" height="9" rx="2" ${FS('var(--sun)')}/><rect x="10" y="31" width="5" height="24" ${FS('var(--sun)')}/><rect x="49" y="31" width="5" height="24" ${FS('var(--sun)')}/>`,
+  coin: `<circle cx="32" cy="32" r="17" ${FS('var(--sun)')}/><circle cx="32" cy="32" r="11" style="fill:none;stroke:var(--fg)" stroke-width="1.5" stroke-opacity=".6"/>`,
+  bottle: `<rect x="27" y="4" width="10" height="7" rx="2" ${FS('var(--coral)')}/><path d="M27 11h10v7c8 5 10 11 10 20v16a4 4 0 0 1-4 4H21a4 4 0 0 1-4-4V38c0-9 2-15 10-20z" style="fill:var(--sky);stroke:var(--fg)" fill-opacity=".45" stroke-width="2" stroke-linejoin="round"/><rect x="17" y="30" width="30" height="14" style="fill:var(--surface-2);stroke:var(--fg)" stroke-width="1.5"/><path d="M19 52h26" style="stroke:#fff" stroke-width="2" stroke-opacity=".7"/>`,
+  bucket: `<path d="M14 22h36l-6 34H20z" ${FS('var(--coral)')}/><ellipse cx="32" cy="22" rx="18" ry="4" ${FS('var(--surface-2)')}/><path d="M14 22C18 4 46 4 50 22" ${FN}/>`,
+  jerrycan: `<rect x="12" y="16" width="38" height="42" rx="5" ${FS('var(--sun)')}/><rect x="14" y="8" width="11" height="8" rx="2" ${FS('var(--coral)')}/><path d="M34 16v-5a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v5" ${FN}/><rect x="19" y="28" width="24" height="14" rx="2" style="fill:var(--surface-2);stroke:var(--fg)" stroke-width="1.5"/>`,
+  cup: `<ellipse cx="30" cy="54" rx="22" ry="4" ${FS('var(--surface-2)')}/><path d="M14 24h32v14a12 12 0 0 1-12 12h-8a12 12 0 0 1-12-12z" ${FS('var(--surface-2)')}/><path d="M46 28c10 0 10 14 0 14" ${FN}/><ellipse cx="30" cy="24" rx="16" ry="3.5" style="fill:var(--coral);stroke:var(--fg)" stroke-width="1.5"/>`,
+  tank: `<path d="M12 14v34a20 6 0 0 0 40 0V14" style="fill:var(--sky);stroke:var(--fg)" fill-opacity=".5" stroke-width="2"/><ellipse cx="32" cy="14" rx="20" ry="6" ${FS('var(--surface-2)')}/><path d="M16 56v5M48 56v5M12 30a20 6 0 0 0 40 0" ${FN}/>`,
+  lunchbox: `<rect x="8" y="24" width="48" height="30" rx="5" ${FS('var(--accent)')}/><path d="M8 34h48" ${FN}/><path d="M24 24v-5a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v5" ${FN}/><rect x="28" y="31" width="8" height="6" rx="1" ${FS('var(--surface-2)', 1.5)}/>`,
+  soapbox: `<path d="M12 22l9-9h36l-9 9z" ${FS('var(--surface-2)')}/><rect x="12" y="22" width="36" height="30" ${FS('var(--sun)')}/><path d="M48 22l9-9v30l-9 9z" ${FS('var(--coral)')}/><path d="M18 36h24" ${FN} stroke-opacity=".5"/>`,
+  wardrobe: `<rect x="14" y="5" width="36" height="52" rx="2" ${FS('var(--sun)')}/><path d="M32 5v52" ${FN} stroke-width="1.5"/><circle cx="28" cy="32" r="1.8" style="fill:var(--fg)"/><circle cx="36" cy="32" r="1.8" style="fill:var(--fg)"/><path d="M17 57v4M47 57v4" ${FN}/>`,
+  spoon: `<ellipse cx="32" cy="17" rx="10" ry="13" ${FS('var(--surface-2)')}/><rect x="29.5" y="29" width="5" height="30" rx="2.5" ${FS('var(--surface-2)')}/>`,
+  sugar: `<path d="M32 12l20 10-20 10-20-10z" ${FS('var(--surface-2)')}/><path d="M12 22l20 10v22L12 44z" ${FS('var(--sky)')}/><path d="M52 22L32 32v22l20-10z" ${FS('var(--sun)')}/>`,
+  room: `<path d="M6 20l20-8h34v32L40 56H6z" style="fill:var(--surface-2);stroke:var(--fg)" stroke-width="2" stroke-linejoin="round"/><path d="M6 20h34v36M40 20l20-8" ${FN}/><rect x="12" y="26" width="22" height="12" ${FS('var(--accent)', 1.5)}/>`
+};
+function miniFig(tok) {
+  const m = String(tok).match(/^@(rect|obj):(.+)$/); if (!m) return null;
+  if (m[1] === 'obj') return OBJ[m[2]] ? `<svg class="mf" viewBox="0 0 64 64" role="img" aria-label="${esc(m[2])}">${OBJ[m[2]]}</svg>` : null;
+  const [w, h] = m[2].split('x').map(Number); if (!(w > 0 && h > 0)) return null;
+  const k = Math.min(92 / w, 62 / h), pw = w * k, ph = h * k, x0 = 34 + (92 - pw) / 2, y0 = 18 + (62 - ph) / 2, sq = w === h, cx = x0 + pw / 2, cy = y0 + ph / 2;
+  const tk = (x, y, vert, n) => Array.from({ length: n }, (_, i) => { const o = (i - (n - 1) / 2) * 5; return vert ? `<path d="M${x - 4} ${y + o}h8" style="stroke:var(--fg)" stroke-width="2"/>` : `<path d="M${x + o} ${y - 4}v8" style="stroke:var(--fg)" stroke-width="2"/>`; }).join('');
+  const ra = (x, y, dx, dy) => `<path d="M${x + dx * 7} ${y}v${dy * 7}h${-dx * 7}" style="fill:none;stroke:var(--fg)" stroke-width="1.2" stroke-opacity=".6"/>`;
+  const g = `<rect x="${x0}" y="${y0}" width="${pw}" height="${ph}" ${FS(sq ? 'var(--sky-soft, var(--sky))' : 'var(--sun-soft, var(--sun))')}/>` + ra(x0, y0, 1, 1) + ra(x0 + pw, y0, -1, 1) + ra(x0, y0 + ph, 1, -1) + ra(x0 + pw, y0 + ph, -1, -1)
+    + tk(cx, y0, false, 1) + tk(cx, y0 + ph, false, 1) + tk(x0, cy, true, sq ? 1 : 2) + tk(x0 + pw, cy, true, sq ? 1 : 2)
+    + `<text x="${cx}" y="${y0 - 6}" font-size="13" font-weight="800" text-anchor="middle" style="fill:var(--muted)">${w}</text><text x="${x0 - 8}" y="${cy + 5}" font-size="13" font-weight="800" text-anchor="end" style="fill:var(--muted)">${h}</text>`;
+  return `<svg class="mf" viewBox="0 0 140 104" role="img" aria-label="${w} × ${h}">${g}</svg>`;
+}
+const fig = x => (typeof x === 'string' && x[0] === '@' && miniFig(x)) || esc(x);
 // key word title + gloss: lessons with main "am" show the Amharic term first and the English term as the gloss (Grades 1-6)
 const kwMain = (k, fallback, main) => !k ? [fallback, ''] : main === 'am' && k.am ? [k.am, k.en] : [k.en || fallback, k.am || ''];
 const initials = n => n.replace(/^(Prof\.|Dr\.|Engineer)\s+/i, '').split(/\s+/).map(w => w[0]).slice(0, 2).join('');
@@ -1070,6 +1184,7 @@ const Blocks = {
 };
 // after a second wrong try: say the answer once. Skip "The answer is" when the explanation already states it.
 function answerLine(shown, s) {
+  shown = String(shown == null ? '' : shown).replace(/@rect:(\d+)x(\d+)/g, '$1 × $2').replace(/@obj:([a-z]+)/g, '$1');
   const ex = s.worked || s.why || '', parts = String(shown || '').split(/,\s*/).filter(Boolean);
   if (!shown || (parts.length && parts.every(x => ex.includes(x)))) return ex || `${t('answer_is')} ${shown}.`;
   return `${t('answer_is')} ${shown}. ${ex}`.trim();
@@ -1134,7 +1249,7 @@ async function viewBook(id) {
       wrong(el) { streak = 0; buzz(60); const sk = el && el.querySelector('.skip'); if (sk && !el.classList.contains('done')) sk.hidden = false; },
       done(el, s, pts) { el.classList.add('done'); const sk = el.querySelector('.skip'); if (sk) sk.remove(); if (!(s._key in B.got) || B.got[s._key] === 's') { B.got[s._key] = pts; save(); } progress(); doneCheck(); }
     };
-    rows.forEach(s => { const el = renderBlock(s, ctx); if (s.graded || ['guess', 'reveal', 'sort', 'tap', 'steps', 'tiles', 'order', 'match', 'tree', 'venn', 'gallery', 'numline', 'fracbar', 'grid', 'cubes', 'nest', 'slider'].includes(s.kind)) { const u = { key: s._key, q: !!s.graded }; units.push(u); secUnits[si].push(u); } box.appendChild(el); });
+    rows.forEach(s => { const el = renderBlock(s, ctx); if (s.graded || ['guess', 'reveal', 'sort', 'tap', 'steps', 'tiles', 'order', 'match', 'tree', 'venn', 'gallery', 'numline', 'fracbar', 'grid', 'cubes', 'ladder', 'figure', 'nest', 'slider'].includes(s.kind)) { const u = { key: s._key, q: !!s.graded }; units.push(u); secUnits[si].push(u); } box.appendChild(el); });
     box.querySelectorAll('.kwt').forEach(b => b.onclick = () => { const k = kws[+b.dataset.k]; const mk = kwMain(k, k.en, ls.main); sheet(`<div class="kcard big"><div class="kt">📘 ${esc(mk[0])}</div>${mk[1] ? `<div class="kam" lang="${ls.main === 'am' ? 'en' : 'am'}">${esc(mk[1])}</div>` : ''}${k.om ? `<div class="kam" lang="om">${esc(k.om)}</div>` : ''}<div class="kd" data-text>${esc(k.def || '')}</div></div><button class="btn" id="kok">${t('continue')}</button>`); $('#kok').onclick = () => sheet(''); });
     // end of section: celebration, practise set, book exercises
     const end = document.createElement('div'); end.className = 'secend';

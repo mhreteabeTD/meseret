@@ -8,7 +8,7 @@ const root = process.argv[2] || 'content';
 const schema = JSON.parse(readFileSync(new URL('../schema/lesson.schema.json', import.meta.url)));
 const KINDS = schema.$defs.screen.properties.kind.enum;
 const STEPS = schema.$defs.screen.properties.step.enum;
-const REQ = { mcq: ['opts', 'ans', 'why', 'clue'], tf: ['text', 'a', 'why', 'clue'], blank: ['ask', 'a', 'why', 'clue'], sort: ['bins', 'items'], match: ['pairs', 'why'], order: ['items', 'why'], name: ['defs'], steps: ['steps'], tap: ['items'], pick: ['pool', 'a', 'why'], guess: ['opts'], tiles: ['sizes', 'need'], read: ['paras'], picture: ['pic'], gallery: ['items'], people: ['people'], reveal: ['ask', 'answer'], tree: ['root'], venn: ['sets'], numline: ['min', 'max'], nest: ['rings'], slider: ['vars', 'formula'], grid: [], fracbar: [] };
+const REQ = { mcq: ['opts', 'ans', 'why', 'clue'], tf: ['text', 'a', 'why', 'clue'], blank: ['ask', 'a', 'why', 'clue'], sort: ['bins', 'items'], match: ['pairs', 'why'], order: ['items', 'why'], name: ['defs'], steps: ['steps'], tap: ['items'], pick: ['pool', 'a', 'why'], guess: ['opts'], tiles: ['sizes', 'need'], read: ['paras'], picture: ['pic'], gallery: ['items'], people: ['people'], reveal: ['ask', 'answer'], tree: ['root'], venn: ['sets'], numline: ['min', 'max'], nest: ['rings'], slider: ['vars', 'formula'], figure: ['items'], grid: [], fracbar: [] };
 // generators live in app.js between GEN-START and GEN-END; each item with "gen" is generated many times and checked
 const appSrc = readFileSync(new URL('../app/app.js', import.meta.url), 'utf8'), qa = appSrc.indexOf('const Q = {'), qb = appSrc.indexOf('// a number label in SVG');
 const { Q, numMatch, Gen } = new Function(appSrc.slice(qa, qb) + '; return { Q, numMatch, Gen };')();
@@ -42,6 +42,10 @@ for (const file of files) {
     if (s.kind === 'pick' && s.a && s.pool && !s.a.every(x => s.pool.map(String).includes(String(x)))) errs.push(`${where}: pick answers not all in pool`);
     if (s.kind === 'sort' && s.items && s.items.some(it => !s.bins.includes(it[1]))) errs.push(`${where}: sort item bin not in bins`);
     if (s.text && s.text.split(/[.!?]\s/).some(x => x.split(/\s+/).length > 28)) errs.push(`${where}: a sentence is over 28 words`);
+    if (s.kind === 'match' && s.pairs && new Set(s.pairs.map(x => x[0])).size !== s.pairs.length) errs.push(`${where}: match left-hand items must be unique`);
+    if (s.kind === 'ladder' && !s.power && !s.units) errs.push(`${where}: ladder needs power (1, 2 or 3) or units + factors`);
+    if (s.kind === 'ladder' && s.graded && s.ans == null) errs.push(`${where}: graded ladder needs ans`);
+    if (s.kind === 'figure' && (s.items || []).some(x => !x.f || !/^@(rect:\d+x\d+|obj:[a-z]+)$/.test(x.f))) errs.push(`${where}: figure items need f like @rect:5x5 or @obj:door`);
     if (s.kind === 'cubes' && !s.cube && !s.layers && !(s.l && s.w && s.h)) errs.push(`${where}: cubes needs l, w, h (or cube + l, or layers)`);
     if (s.kind === 'cubes' && s.graded && s.ans == null) errs.push(`${where}: graded cubes needs ans`);
     if (s.kind === 'cubes' && !s.layers && Math.max(s.l || 0, s.w || 0, s.h || 0) > 6) errs.push(`${where}: draw boxes up to 6 × 6 × 6 only; use steps for bigger ones`);

@@ -1,0 +1,634 @@
+{
+  "id": "g5.maths.u1.s1-5",
+  "book": {
+    "title": "የ5ኛ ክፍል ሒሳብ የተማሪ መጽሐፍ",
+    "grade": 5,
+    "subject": "maths",
+    "unit": 1,
+    "unit_title": "ልኬት፣ ስፋት እና ይዘት",
+    "pages": "18–21",
+    "section": "1.5"
+  },
+  "title": "የይዘት ምድቦችን በችግር ላይ መጠቀም",
+  "lang": "am",
+  "main": "am",
+  "competency": "የይዘትና የስፋት ምድቦችን በዕለት ተዕለት ችግሮች ላይ መጠቀም።",
+  "minutes": 25,
+  "keywords": [
+    {
+      "en": "water bottle",
+      "am": "ሃይላንድ",
+      "def": "ውሃ ወይም ሌላ ፈሳሽ የሚይዝ የፕላስቲክ ጠርሙስ።"
+    },
+    {
+      "en": "bucket",
+      "am": "ባልዲ",
+      "def": "ውሃ ለመቅዳት የምንጠቀምበት ዕቃ።"
+    }
+  ],
+  "ideas": [
+    {
+      "id": "math.volume-word-problems",
+      "name": "የይዘት ችግሮችን መፍታት",
+      "explain": {
+        "en": {
+          "text": "To solve volume problems, find the total litres or the box volume first. Then change units if the question asks."
+        },
+        "am": {
+          "text": "የይዘት ችግሮችን ስንፈታ መጀመሪያ ጠቅላላ ሊትሩን ወይም የሳጥኑን ይዘት እናገኛለን። ከዚያ ጥያቄው ከጠየቀ ምድቡን እንቀይራለን።",
+          "machine": true
+        }
+      },
+      "screens": [
+        {
+          "kind": "guess",
+          "step": "hook",
+          "added": true,
+          "machine": true,
+          "title": "ሃይላንዶች ወደ ባልዲ",
+          "ask": "6 ባለ 2 ሊትር ሃይላንዶችን ባልዲ ውስጥ ብንገለብጥ ስንት ሊትር ይሆናል?",
+          "opts": [
+            "8",
+            "12",
+            "26",
+            "62"
+          ],
+          "after": "እንቆጥር።",
+          "id": "g5.maths.u1.s1-5.1"
+        },
+        {
+          "kind": "figure",
+          "step": "explore",
+          "added": true,
+          "machine": true,
+          "title": "ሃይላንድና ባልዲ",
+          "need": 2,
+          "ask": "እያንዳንዱን ንካ።",
+          "items": [
+            {
+              "f": "@obj:bottle",
+              "cap": "ሃይላንድ",
+              "chip": "2 ሊ",
+              "info": "አንድ ሃይላንድ 2 ሊትር ይይዛል።"
+            },
+            {
+              "f": "@obj:bucket",
+              "cap": "ባልዲ",
+              "chip": "ባልዲ",
+              "info": "6 ሃይላንዶች ውሃ ባልዲ ውስጥ ይገባል።"
+            }
+          ],
+          "id": "g5.maths.u1.s1-5.2"
+        },
+        {
+          "kind": "steps",
+          "step": "method",
+          "ref": "ምሳሌ 10 ሀ",
+          "machine": true,
+          "title": "ስንት ሊትር ነው?",
+          "steps": [
+            "6 ሃይላንዶች አሉ፤ እያንዳንዱ 2 ሊትር ይይዛል።",
+            "በሙሉ 6 × 2 ሊትር ነው።",
+            "6 × 2 = 12 ሊትር።"
+          ],
+          "id": "g5.maths.u1.s1-5.3"
+        },
+        {
+          "kind": "steps",
+          "step": "method",
+          "ref": "ምሳሌ 10 ለ",
+          "machine": true,
+          "title": "ወደ ሳ.ሜ³",
+          "steps": [
+            "12 ሊትር ወደ ሳ.ሜ³ እንቀይር።",
+            "1 ሊ = 1,000 ሳ.ሜ³።",
+            "12 × 1,000 = 12,000 ሳ.ሜ³።"
+          ],
+          "id": "g5.maths.u1.s1-5.4"
+        },
+        {
+          "kind": "steps",
+          "step": "method",
+          "ref": "ምሳሌ 10 ሐ",
+          "machine": true,
+          "title": "ወደ ሜ³",
+          "steps": [
+            "12 ሊትር ወደ ሜ³ እንቀይር።",
+            "1,000 ሊ = 1 ሜ³።",
+            "12 ÷ 1,000 = 0.012 ሜ³።"
+          ],
+          "id": "g5.maths.u1.s1-5.5"
+        },
+        {
+          "kind": "cubes",
+          "step": "explore",
+          "ref": "ምሳሌ 11",
+          "title": "ሳጥኖች በሳጥን ውስጥ",
+          "l": 4,
+          "w": 5,
+          "h": 2,
+          "unit": "ምድብ",
+          "machine": true,
+          "intro": "ትልቅ ሳጥን ውስጥ ትናንሽ ሳጥኖች ተደርድረዋል።",
+          "say": [
+            "አንድ ረድፍ 4 ሳጥኖች አሉት።",
+            "5 ረድፎች = 4 × 5 = 20 ሳጥኖች።",
+            "2 ንብርብሮች = 20 × 2 = 40 ሳጥኖች።"
+          ],
+          "id": "g5.maths.u1.s1-5.6"
+        },
+        {
+          "kind": "steps",
+          "step": "method",
+          "ref": "ምሳሌ 12",
+          "machine": true,
+          "title": "90 ሊትር ውሃ",
+          "steps": [
+            "90 ሊ ወደ ሚ.ሊ እንቀይር።",
+            "90 × 1,000 = 90,000 ሚ.ሊ።",
+            "አሁን ወደ ሜ³ እንቀይር።",
+            "90 ÷ 1,000 = 0.09 ሜ³።"
+          ],
+          "id": "g5.maths.u1.s1-5.7"
+        },
+        {
+          "kind": "name",
+          "step": "name",
+          "title": "ቃላቱን እንወቅ",
+          "defs": [
+            [
+              "ሃይላንድ",
+              "ውሃ ወይም ሌላ ፈሳሽ የሚይዝ የፕላስቲክ ጠርሙስ።"
+            ],
+            [
+              "ባልዲ",
+              "ውሃ ለመቅዳት የምንጠቀምበት ዕቃ።"
+            ]
+          ],
+          "id": "g5.maths.u1.s1-5.8"
+        },
+        {
+          "kind": "blank",
+          "step": "check",
+          "needs": "math.multiply-three-numbers",
+          "gen": {
+            "t": "litres"
+          },
+          "graded": true,
+          "num": true,
+          "ask": "ሄለን 4 ባለ 5 ሊትር ጀሪካኖች ውሃ አመጣች። በሙሉ ___ ሊትር ነው።",
+          "a": [
+            "20"
+          ],
+          "why": "4 × 5 = 20 ሊትር።",
+          "clue": "ብዛቱን በአንዱ ሊትር አባዛ።",
+          "machine": true,
+          "ref": "ምሳሌ 10",
+          "id": "g5.maths.u1.s1-5.9"
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "needs": "math.multiply-three-numbers",
+          "gen": {
+            "t": "litres",
+            "step": "cm3"
+          },
+          "graded": true,
+          "num": true,
+          "ask": "5 ባለ 2 ሊትር ሃይላንዶች በሙሉ ___ ሳ.ሜ³ ይይዛሉ።",
+          "a": [
+            "10000"
+          ],
+          "why": "5 × 2 = 10 ሊ፤ 10 × 1,000 = 10,000 ሳ.ሜ³።",
+          "clue": "1 ሊ = 1,000 ሳ.ሜ³። መጀመሪያ ሊትሩን ደምር።",
+          "machine": true,
+          "ref": "ምሳሌ 10 ለ",
+          "id": "g5.maths.u1.s1-5.10"
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "needs": "math.multiply-three-numbers",
+          "gen": {
+            "t": "litres",
+            "step": "m3"
+          },
+          "graded": true,
+          "num": true,
+          "ask": "6 ባለ 5 ሊትር ባልዲዎች በሙሉ ___ ሜ³ ይይዛሉ።",
+          "a": [
+            "0.03"
+          ],
+          "why": "6 × 5 = 30 ሊ፤ 30 ÷ 1,000 = 0.03 ሜ³።",
+          "clue": "1 ሊ = 1/1000 ሜ³። ሊትሩን በ1,000 አካፍል።",
+          "machine": true,
+          "ref": "ምሳሌ 10 ሐ",
+          "id": "g5.maths.u1.s1-5.11"
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "needs": "math.multiply-three-numbers",
+          "gen": {
+            "t": "volume",
+            "word": true,
+            "max": 6
+          },
+          "graded": true,
+          "num": true,
+          "ask": "ሳጥኖች በ4 ረድፍ ርዝመት፣ በ3 ረድፍ ወርድ፣ በ5 ንብርብር ተደራርበዋል። በሙሉ ___ ሳጥኖች አሉ።",
+          "a": [
+            "60"
+          ],
+          "why": "4 × 3 = 12፤ 12 × 5 = 60።",
+          "clue": "አንድ ንብርብር 4 × 3 ሳጥኖች አሉት።",
+          "machine": true,
+          "ref": "ምሳሌ 11",
+          "id": "g5.maths.u1.s1-5.12"
+        },
+        {
+          "kind": "blank",
+          "step": "practise",
+          "added": true,
+          "needs": "math.multiply-three-numbers",
+          "gen": {
+            "t": "volume",
+            "unit": "ሜ",
+            "max": 8
+          },
+          "graded": true,
+          "num": true,
+          "ask": "ርዝመቱ 6 ሜ፣ ወርዱ 4 ሜ፣ ከፍታው 3 ሜ የሆነ ታንከር ይዘት ___ ሜ³ ነው።",
+          "a": [
+            "72"
+          ],
+          "why": "6 × 4 = 24፤ 24 × 3 = 72 ሜ³።",
+          "clue": "ርዝመት × ወርድ × ከፍታ።",
+          "machine": true,
+          "id": "g5.maths.u1.s1-5.13"
+        }
+      ],
+      "requires": [
+        "math.multiply-three-numbers"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "book_name": "የቡድን ስራ 1.5",
+      "items": [
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "num": true,
+          "machine": true,
+          "ask": "ወርዱ 3 ሜ፣ ርዝመቱ 6 ሜ የሆነ አራት ማዕዘን ስፋት = ___ ሜ²",
+          "a": [
+            "18"
+          ],
+          "why": "3 × 6 = 18 ሜ²።",
+          "clue": "ርዝመት × ወርድ።",
+          "ref": "Q1 ሀ",
+          "id": "g5.maths.u1.s1-5.14"
+        },
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "num": true,
+          "machine": true,
+          "ask": "ወርዱ 5 ሜ፣ ርዝመቱ 12 ሜ የሆነ አራት ማዕዘን ስፋት = ___ ሜ²",
+          "a": [
+            "60"
+          ],
+          "why": "5 × 12 = 60 ሜ²።",
+          "clue": "ርዝመት × ወርድ።",
+          "ref": "Q1 ለ",
+          "id": "g5.maths.u1.s1-5.15"
+        },
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "num": true,
+          "machine": true,
+          "ask": "ጎኑ 8 ሳ.ሜ የሆነ ካሬ ስፋት = ___ ሳ.ሜ²",
+          "a": [
+            "64"
+          ],
+          "why": "8 × 8 = 64።",
+          "clue": "ጎን × ጎን።",
+          "ref": "Q2 (8)",
+          "id": "g5.maths.u1.s1-5.16"
+        },
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "num": true,
+          "machine": true,
+          "ask": "ጎኑ 5 ሳ.ሜ የሆነ ካሬ ስፋት = ___ ሳ.ሜ²",
+          "a": [
+            "25"
+          ],
+          "why": "5 × 5 = 25።",
+          "clue": "ጎን × ጎን።",
+          "ref": "Q2 (5)",
+          "id": "g5.maths.u1.s1-5.17"
+        },
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "num": true,
+          "machine": true,
+          "ask": "ጎኑ 2 ሳ.ሜ የሆነ ካሬ ስፋት = ___ ሳ.ሜ²",
+          "a": [
+            "4"
+          ],
+          "why": "2 × 2 = 4።",
+          "clue": "ጎን × ጎን።",
+          "ref": "Q2 (2)",
+          "id": "g5.maths.u1.s1-5.18"
+        },
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "num": true,
+          "machine": true,
+          "ask": "ጎኑ 10 ሳ.ሜ የሆነ ካሬ ስፋት = ___ ሳ.ሜ²",
+          "a": [
+            "100"
+          ],
+          "why": "10 × 10 = 100።",
+          "clue": "ጎን × ጎን።",
+          "ref": "Q2 (10)",
+          "id": "g5.maths.u1.s1-5.19"
+        },
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "num": true,
+          "machine": true,
+          "ref": "Q3 ሀ",
+          "ask": "1,000 ሜ² = ___ ሄክታር",
+          "a": [
+            "0.1"
+          ],
+          "why": "1 ሄክታር = 10,000 ሜ²፤ 1,000 ÷ 10,000 = 0.1 ሄክታር።",
+          "clue": "ከትንሽ ወደ ትልቅ ምድብ ስንቀይር እናካፍላለን።",
+          "id": "g5.maths.u1.s1-5.20"
+        },
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "num": true,
+          "machine": true,
+          "ref": "Q3 ለ",
+          "ask": "2,000 ሜ² = ___ ኪ.ሜ²",
+          "a": [
+            "0.002"
+          ],
+          "why": "1 ኪ.ሜ² = 1,000,000 ሜ²፤ 2,000 ÷ 1,000,000 = 0.002 ኪ.ሜ²።",
+          "clue": "ከትንሽ ወደ ትልቅ ምድብ ስንቀይር እናካፍላለን።",
+          "id": "g5.maths.u1.s1-5.21"
+        },
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "num": true,
+          "machine": true,
+          "ref": "Q3 ሐ",
+          "ask": "50 ሜ² = ___ ሳ.ሜ²",
+          "a": [
+            "500000"
+          ],
+          "why": "1 ሜ² = 10,000 ሳ.ሜ²፤ 50 × 10,000 = 500,000 ሳ.ሜ²።",
+          "clue": "ከትልቅ ወደ ትንሽ ምድብ ስንቀይር እናባዛለን።",
+          "id": "g5.maths.u1.s1-5.22"
+        },
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "num": true,
+          "machine": true,
+          "ask": "ርዝመት 5፣ ወርድ 6፣ ከፍታ 3 ሳ.ሜ ሳጥን። ስንት 1 ሳ.ሜ³ ኩቦች ይይዛል? ___",
+          "a": [
+            "90"
+          ],
+          "why": "5 × 6 = 30፤ 30 × 3 = 90።",
+          "clue": "ርዝመት × ወርድ × ከፍታ።",
+          "ref": "Q4 ሀ",
+          "needs": "math.multiply-three-numbers",
+          "id": "g5.maths.u1.s1-5.23"
+        },
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "num": true,
+          "machine": true,
+          "ask": "ርዝመት 12 ሜ፣ ወርድ 4 ሜ፣ ከፍታ 8 ሜ ሳጥን። ይዘቱ = ___ ሜ³",
+          "a": [
+            "384",
+            "384000000"
+          ],
+          "why": "12 × 4 = 48፤ 48 × 8 = 384 ሜ³ (= 384,000,000 ሳ.ሜ³)።",
+          "clue": "ርዝመት × ወርድ × ከፍታ።",
+          "ref": "Q4 ለ",
+          "needs": "math.multiply-three-numbers",
+          "id": "g5.maths.u1.s1-5.24"
+        },
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "num": true,
+          "machine": true,
+          "ref": "Q5 ሀ",
+          "ask": "5 ሳ.ሜ³ = ___ ሚ.ሜ³",
+          "a": [
+            "5000"
+          ],
+          "why": "1 ሳ.ሜ³ = 1,000 ሚ.ሜ³፤ 5 × 1,000 = 5,000 ሚ.ሜ³።",
+          "clue": "ከትልቅ ወደ ትንሽ ምድብ ስንቀይር እናባዛለን።",
+          "id": "g5.maths.u1.s1-5.25"
+        },
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "num": true,
+          "machine": true,
+          "ref": "Q5 ለ",
+          "ask": "0.699999999999999955591079015 ሜ³ = ___ ሳ.ሜ³",
+          "a": [
+            "700000"
+          ],
+          "why": "1 ሜ³ = 1,000,000 ሳ.ሜ³፤ 0.7 × 1,000,000 = 700,000 ሳ.ሜ³።",
+          "clue": "ከትልቅ ወደ ትንሽ ምድብ ስንቀይር እናባዛለን።",
+          "id": "g5.maths.u1.s1-5.26"
+        },
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "num": true,
+          "machine": true,
+          "ref": "Q5 ሐ",
+          "ask": "64,000 ሳ.ሜ³ = ___ ሜ³",
+          "a": [
+            "0.064"
+          ],
+          "why": "1 ሜ³ = 1,000,000 ሳ.ሜ³፤ 64,000 ÷ 1,000,000 = 0.064 ሜ³።",
+          "clue": "ከትንሽ ወደ ትልቅ ምድብ ስንቀይር እናካፍላለን።",
+          "id": "g5.maths.u1.s1-5.27"
+        },
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "num": true,
+          "machine": true,
+          "ask": "ጎኑ 10 ሳ.ሜ የሆነ ኩብ ይዘት = ___ ሳ.ሜ³",
+          "a": [
+            "1000"
+          ],
+          "why": "10 × 10 × 10 = 1,000 ሳ.ሜ³።",
+          "clue": "ጎን × ጎን × ጎን።",
+          "ref": "Q6 (ሳ.ሜ³)",
+          "needs": "math.multiply-three-numbers",
+          "id": "g5.maths.u1.s1-5.28"
+        },
+        {
+          "kind": "blank",
+          "step": "exercise",
+          "graded": true,
+          "num": true,
+          "machine": true,
+          "ask": "ጎኑ 10 ሳ.ሜ የሆነ ኩብ ይዘት = ___ ሚ.ሊ",
+          "a": [
+            "1000"
+          ],
+          "why": "1 ሳ.ሜ³ = 1 ሚ.ሊ፤ 1,000 ሳ.ሜ³ = 1,000 ሚ.ሊ።",
+          "clue": "1 ሚ.ሊ = 1 ሳ.ሜ³።",
+          "ref": "Q6 (ሚ.ሊ)",
+          "id": "g5.maths.u1.s1-5.29"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "kind": "blank",
+      "step": "test",
+      "graded": true,
+      "num": true,
+      "machine": true,
+      "ask": "3 ባለ 5 ሊትር ጀሪካኖች በሙሉ ___ ሊትር ይይዛሉ።",
+      "a": [
+        "15"
+      ],
+      "why": "3 × 5 = 15።",
+      "clue": "",
+      "gen": {
+        "t": "litres"
+      },
+      "id": "g5.maths.u1.s1-5.30"
+    },
+    {
+      "kind": "blank",
+      "step": "test",
+      "graded": true,
+      "num": true,
+      "machine": true,
+      "ask": "4 ባለ 2 ሊትር ሃይላንዶች በሙሉ ___ ሳ.ሜ³ ይይዛሉ።",
+      "a": [
+        "8000"
+      ],
+      "why": "4 × 2 = 8 ሊ፤ 8 × 1,000 = 8,000።",
+      "clue": "",
+      "gen": {
+        "t": "litres",
+        "step": "cm3"
+      },
+      "id": "g5.maths.u1.s1-5.31"
+    },
+    {
+      "kind": "blank",
+      "step": "test",
+      "graded": true,
+      "num": true,
+      "machine": true,
+      "ask": "ርዝመት 5፣ ወርድ 4፣ ከፍታ 3 ሜ። ይዘት = ___ ሜ³",
+      "a": [
+        "60"
+      ],
+      "why": "5 × 4 × 3 = 60።",
+      "clue": "",
+      "gen": {
+        "t": "volume",
+        "unit": "ሜ",
+        "max": 8
+      },
+      "id": "g5.maths.u1.s1-5.32"
+    }
+  ],
+  "notes": [
+    {
+      "kind": "correction",
+      "text": "ምሳሌ 12 «90 ሊ = 9,000 ሚ.ሊ» ብሎ ታትሟል፤ ትክክለኛው 90,000 ሚ.ሊ ነው። በትምህርቱ ትክክለኛው ተጽፏል።"
+    },
+    {
+      "kind": "review",
+      "text": "የቡድን ስራ 1.5 Q4 ለ እና Q5 ሐ፦ መጽሐፉ «6,4000» ብሎ ታትሟል፤ እንደ 64,000 ተነብቧል። Q4 ለ በሜትር ሳጥን ውስጥ 1 ሳ.ሜ³ ኩቦችን ይጠይቃል፤ ሁለቱም መልሶች (384 ሜ³ እና 384,000,000 ሳ.ሜ³) ይቀበላሉ። አስተማሪ ይመልከተው።"
+    }
+  ],
+  "review": {
+    "status": "draft"
+  },
+  "version": 1,
+  "refreshers": {
+    "math.multiply-three-numbers": {
+      "name": "ሦስት ቁጥሮችን ማባዛት",
+      "screens": [
+        {
+          "kind": "steps",
+          "step": "method",
+          "title": "2 × 3 × 4",
+          "text": "ሦስት ቁጥሮችን ስናባዛ በሁለት እንጀምራለን።",
+          "steps": [
+            "2 × 3 × 4 እንፈልጋለን።",
+            "መጀመሪያ 2 × 3 = 6።",
+            "ከዚያ 6 × 4 = 24።",
+            "2 × 3 × 4 = 24።"
+          ],
+          "machine": true
+        },
+        {
+          "kind": "mcq",
+          "step": "check",
+          "graded": true,
+          "ask": "3 × 2 × 5 ስንት ነው?",
+          "opts": [
+            "10",
+            "25",
+            "30",
+            "35"
+          ],
+          "ans": "30",
+          "why": "3 × 2 = 6፤ 6 × 5 = 30።",
+          "clue": "መጀመሪያ 3 × 2 አስላ።",
+          "machine": true
+        }
+      ]
+    }
+  }
+}

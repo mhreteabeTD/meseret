@@ -100,6 +100,36 @@
           "id": "g5.maths.u1.s1-3.1"
         },
         {
+          "kind": "figure",
+          "step": "explore",
+          "added": true,
+          "machine": true,
+          "title": "ዕቃዎቹን አወዳድር",
+          "need": 3,
+          "ask": "እያንዳንዱን ንካ።",
+          "items": [
+            {
+              "f": "@obj:bottle",
+              "cap": "ሃይላንድ",
+              "chip": "ትንሽ",
+              "info": "ሃይላንድ ወደ 1 ሊትር ይይዛል።"
+            },
+            {
+              "f": "@obj:bucket",
+              "cap": "ባልዲ",
+              "chip": "መካከለኛ",
+              "info": "ባልዲ ከሃይላንድ ብዙ ይይዛል።"
+            },
+            {
+              "f": "@obj:jerrycan",
+              "cap": "ጀሪካን",
+              "chip": "ትልቅ",
+              "info": "ጀሪካን ከሁሉም ይበልጣል፤ ወደ 20 ሊትር ይይዛል።"
+            }
+          ],
+          "id": "g5.maths.u1.s1-3.2"
+        },
+        {
           "kind": "read",
           "step": "read",
           "ref": "ማስታወሻ p. 9",
@@ -108,7 +138,7 @@
             "ይዘት ማለት ማንኛውም ነገር ሊይዘው የሚችል ቦታ ልኬት ነው።",
             "ይዘት የሚለካው በኩቢክ ምድብ ነው።"
           ],
-          "id": "g5.maths.u1.s1-3.2"
+          "id": "g5.maths.u1.s1-3.3"
         },
         {
           "kind": "cubes",
@@ -124,7 +154,7 @@
             "አንድ ኩብ እንዲህ ነው።",
             "ይዘቱ 1 ምድብ × 1 ምድብ × 1 ምድብ = 1 ኩቢክ ምድብ ነው።"
           ],
-          "id": "g5.maths.u1.s1-3.3"
+          "id": "g5.maths.u1.s1-3.4"
         },
         {
           "kind": "read",
@@ -164,7 +194,7 @@
               "ሚ.ሊ"
             ]
           ],
-          "id": "g5.maths.u1.s1-3.4"
+          "id": "g5.maths.u1.s1-3.5"
         },
         {
           "kind": "name",
@@ -184,7 +214,7 @@
               "ጎኑ 1 ምድብ የሆነ ኩብ ይዘት 1 ኩቢክ ምድብ ነው።"
             ]
           ],
-          "id": "g5.maths.u1.s1-3.5"
+          "id": "g5.maths.u1.s1-3.6"
         },
         {
           "kind": "mcq",
@@ -200,7 +230,7 @@
           "why": "ይዘት በኩቢክ ምድብ ይለካል።",
           "clue": "ይዘት የሚለካው በካሬ ነው ወይስ በኩብ?",
           "machine": true,
-          "id": "g5.maths.u1.s1-3.6"
+          "id": "g5.maths.u1.s1-3.7"
         },
         {
           "kind": "mcq",
@@ -216,7 +246,7 @@
           "why": "ይዘት ነገሩ ሊይዘው የሚችል ቦታ ልኬት ነው።",
           "clue": "ሃይላንድ፣ ባልዲ ወይም ጀሪካን ምን ይይዛሉ?",
           "machine": true,
-          "id": "g5.maths.u1.s1-3.7"
+          "id": "g5.maths.u1.s1-3.8"
         }
       ]
     },
@@ -247,7 +277,7 @@
             "64"
           ],
           "after": "እንቁጠር። አንድ ረድፍ፣ ከዚያ አንድ ንብርብር።",
-          "id": "g5.maths.u1.s1-3.8"
+          "id": "g5.maths.u1.s1-3.9"
         },
         {
           "kind": "cubes",
@@ -266,7 +296,7 @@
             "3 ንብርብሮች = 48 ኩቦች።",
             "4 ንብርብሮች = 64 ኩቦች። 4 × 4 × 4 = 64።"
           ],
-          "id": "g5.maths.u1.s1-3.9"
+          "id": "g5.maths.u1.s1-3.10"
         },
         {
           "kind": "name",
@@ -278,7 +308,7 @@
               "የሳጥን ቁመት፤ ከታች እስከ ላይ ያለው ርቀት።"
             ]
           ],
-          "id": "g5.maths.u1.s1-3.10"
+          "id": "g5.maths.u1.s1-3.11"
         },
         {
           "kind": "cubes",
@@ -303,7 +333,7 @@
           "why": "5 × 4 × 3 = 60 ኩቦች።",
           "clue": "አንድ ንብርብር 5 × 4 ኩቦች አሉት። ስንት ንብርብሮች አሉ?",
           "needs": "math.multiply-three-numbers",
-          "id": "g5.maths.u1.s1-3.11"
+          "id": "g5.maths.u1.s1-3.12"
         },
         {
           "kind": "mcq",
@@ -319,7 +349,7 @@
           "why": "5 × 4 × 3 = 60፤ ሦስቱ ሲባዙ ይዘቱ ይገኛል።",
           "clue": "አንድ ንብርብር ርዝመት × ወርድ ነው። ከዚያስ?",
           "machine": true,
-          "id": "g5.maths.u1.s1-3.12"
+          "id": "g5.maths.u1.s1-3.13"
         },
         {
           "kind": "cubes",
@@ -343,7 +373,11 @@
           "why": "3 × 3 × 3 = 27 ኩቦች።",
           "clue": "አንድ ንብርብር 3 × 3 = 9 ኩቦች አሉት።",
           "needs": "math.multiply-three-numbers",
-          "id": "g5.maths.u1.s1-3.13"
+          "gen": {
+            "t": "count",
+            "kind": "cubes"
+          },
+          "id": "g5.maths.u1.s1-3.14"
         },
         {
           "kind": "steps",
@@ -358,12 +392,17 @@
             "ይዘቱ 1331 ኩቢክ ምድብ ነው።"
           ],
           "needs": "math.multiply-three-numbers",
-          "id": "g5.maths.u1.s1-3.14"
+          "id": "g5.maths.u1.s1-3.15"
         },
         {
           "kind": "blank",
           "step": "practise",
           "needs": "math.multiply-three-numbers",
+          "gen": {
+            "t": "volume",
+            "shape": "cube",
+            "max": 9
+          },
           "graded": true,
           "num": true,
           "ask": "ጎኑ 7 ምድብ የሆነ ኩብ ይዘት = ___ ኩቢክ ምድብ",
@@ -374,7 +413,7 @@
           "clue": "መጀመሪያ 7 × 7 አስላ፤ ከዚያ በ7 አባዛ።",
           "machine": true,
           "ref": "መልመጃ 1ሐ Q3 ለ",
-          "id": "g5.maths.u1.s1-3.15"
+          "id": "g5.maths.u1.s1-3.16"
         },
         {
           "kind": "steps",
@@ -389,7 +428,7 @@
             "ይዘቱ 720 ኩቢክ ምድብ ነው።"
           ],
           "needs": "math.multiply-three-numbers",
-          "id": "g5.maths.u1.s1-3.16"
+          "id": "g5.maths.u1.s1-3.17"
         }
       ],
       "requires": [
@@ -434,7 +473,7 @@
               "ርዝመት × ርዝመት × ርዝመት"
             ]
           ],
-          "id": "g5.maths.u1.s1-3.17"
+          "id": "g5.maths.u1.s1-3.18"
         },
         {
           "kind": "cubes",
@@ -452,7 +491,7 @@
             "3 ረድፎች = 6 × 3 = 18 ሳጥኖች። ይህ አንድ ንብርብር ነው።",
             "2 ንብርብሮች = 18 × 2 = 36 ሳጥኖች።"
           ],
-          "id": "g5.maths.u1.s1-3.18"
+          "id": "g5.maths.u1.s1-3.19"
         },
         {
           "kind": "steps",
@@ -468,7 +507,7 @@
             "በአጭሩ፦ 6 × 3 × 2 = 36።"
           ],
           "needs": "math.multiply-three-numbers",
-          "id": "g5.maths.u1.s1-3.19"
+          "id": "g5.maths.u1.s1-3.20"
         },
         {
           "kind": "slider",
@@ -505,7 +544,7 @@
           ],
           "formula": "L * W * H",
           "out": "ይዘት = {v} ኩቢክ ምድብ",
-          "id": "g5.maths.u1.s1-3.20"
+          "id": "g5.maths.u1.s1-3.21"
         },
         {
           "kind": "name",
@@ -517,7 +556,7 @@
               "እንደ ሳጥን ቅርጽ ያለው ጠጣር ምስል። ርዝመት፣ ወርድና ከፍታ አለው።"
             ]
           ],
-          "id": "g5.maths.u1.s1-3.21"
+          "id": "g5.maths.u1.s1-3.22"
         },
         {
           "kind": "cubes",
@@ -536,12 +575,17 @@
             "2 ንብርብሮች = 50።",
             "3 ንብርብሮች = 75።"
           ],
-          "id": "g5.maths.u1.s1-3.22"
+          "id": "g5.maths.u1.s1-3.23"
         },
         {
           "kind": "blank",
           "step": "check",
           "needs": "math.multiply-three-numbers",
+          "gen": {
+            "t": "volume",
+            "unit": "ምድብ",
+            "max": 6
+          },
           "graded": true,
           "num": true,
           "ask": "ርዝመቱ 5 ኩቦች፣ ወርዱ 5 ኩቦች፣ ከፍታው 3 ኩቦች የሆነ ሳጥን ይዘቱ ___ ኩቦች ነው።",
@@ -552,7 +596,7 @@
           "clue": "ርዝመት × ወርድ × ከፍታ። መጀመሪያ 5 × 5።",
           "machine": true,
           "ref": "መልመጃ 1ሐ Q3",
-          "id": "g5.maths.u1.s1-3.23"
+          "id": "g5.maths.u1.s1-3.24"
         },
         {
           "kind": "cubes",
@@ -577,7 +621,7 @@
           "why": "5 ኩቦች ከታች + 1 ከላይ = 6 ኩቦች።",
           "clue": "መጀመሪያ የታችኛውን ንብርብር ቁጠር፤ ከዚያ የላይኛውን።",
           "needs": "math.multiply-three-numbers",
-          "id": "g5.maths.u1.s1-3.24"
+          "id": "g5.maths.u1.s1-3.25"
         },
         {
           "kind": "cubes",
@@ -601,7 +645,11 @@
           "why": "5 × 3 × 2 = 30 ኩቦች።",
           "clue": "አንድ ንብርብር 5 × 3 ኩቦች አሉት።",
           "needs": "math.multiply-three-numbers",
-          "id": "g5.maths.u1.s1-3.25"
+          "gen": {
+            "t": "count",
+            "kind": "cubes"
+          },
+          "id": "g5.maths.u1.s1-3.26"
         },
         {
           "kind": "cubes",
@@ -627,7 +675,11 @@
           "why": "5 × 5 × 5 = 125 ኩቦች።",
           "clue": "አንድ ንብርብር 5 × 5 = 25 ኩቦች አሉት።",
           "needs": "math.multiply-three-numbers",
-          "id": "g5.maths.u1.s1-3.26"
+          "gen": {
+            "t": "count",
+            "kind": "cubes"
+          },
+          "id": "g5.maths.u1.s1-3.27"
         }
       ],
       "requires": [
@@ -648,18 +700,40 @@
       },
       "screens": [
         {
-          "kind": "read",
-          "step": "read",
+          "kind": "figure",
+          "step": "explore",
           "added": true,
           "machine": true,
           "title": "የይዘት ምድቦች በዕለት ተዕለት ኑሮ",
-          "paras": [
-            "ሚ.ሊ፦ አንድ የመድሃኒት ማንኪያ።",
-            "ሊ፦ አንድ የውሃ ጠርሙስ።",
-            "ሳ.ሜ³፦ አንድ የስኳር ኩብ።",
-            "ሜ³፦ አንድ የውሃ ታንከር።"
+          "need": 3,
+          "ask": "እያንዳንዱን ንካ።",
+          "items": [
+            {
+              "f": "@obj:spoon",
+              "cap": "የመድሃኒት ማንኪያ",
+              "chip": "ሚ.ሊ",
+              "info": "ትንሽ ፈሳሽ በሚሊ ሊትር ይለካል።"
+            },
+            {
+              "f": "@obj:bottle",
+              "cap": "የውሃ ጠርሙስ",
+              "chip": "ሊ",
+              "info": "ፈሳሽ በሊትር ይለካል።"
+            },
+            {
+              "f": "@obj:sugar",
+              "cap": "የስኳር ኩብ",
+              "chip": "ሳ.ሜ³",
+              "info": "ትንሽ ኩብ ይዘቱ በሳ.ሜ³ ይለካል።"
+            },
+            {
+              "f": "@obj:tank",
+              "cap": "የውሃ ታንከር",
+              "chip": "ሜ³",
+              "info": "ትልቅ ይዘት በሜ³ ይለካል።"
+            }
           ],
-          "id": "g5.maths.u1.s1-3.27"
+          "id": "g5.maths.u1.s1-3.28"
         },
         {
           "kind": "name",
@@ -683,7 +757,7 @@
               "ጎኑ 1 ሳንቲ ሜትር የሆነ ኩብ ይዘት (ሳ.ሜ³)።"
             ]
           ],
-          "id": "g5.maths.u1.s1-3.28"
+          "id": "g5.maths.u1.s1-3.29"
         },
         {
           "kind": "match",
@@ -694,53 +768,53 @@
           "title": "ዕቃውን ከምድቡ ጋር አዛምድ",
           "pairs": [
             [
-              "የውሃ ማጠራቀሚያ ታንከር",
+              "@obj:tank",
               "ሜ³"
             ],
             [
-              "የሳጥን ቅርጽ ያለው የምሳ ዕቃ",
+              "@obj:lunchbox",
               "ሳ.ሜ³"
             ],
             [
-              "በሰኒ ውስጥ ያለ ቡና",
+              "@obj:cup",
               "ሚ.ሊ"
             ],
             [
-              "በጀሪካን ውስጥ ያለ ፈሳሽ",
+              "@obj:jerrycan",
               "ሊ"
             ],
             [
-              "የመማሪያ ክፍል ይዘት",
+              "@obj:room",
               "ሜ³"
             ]
           ],
           "why": "ትልቅ ዕቃ ሜ³፤ ፈሳሽ በሊ ወይም ሚ.ሊ፤ ትንሽ ሳጥን ሳ.ሜ³።",
           "clue": "ዕቃው ፈሳሽ ነው ወይስ ጠጣር? ምን ያህል ትልቅ ነው?",
-          "id": "g5.maths.u1.s1-3.29"
+          "id": "g5.maths.u1.s1-3.30"
         },
         {
-          "kind": "tap",
+          "kind": "figure",
           "step": "explore",
-          "graded": false,
           "machine": true,
           "ref": "መልመጃ 1ሐ Q1",
           "title": "ሌሎች ዕቃዎች",
           "need": 2,
+          "ask": "እያንዳንዱን ንካ።",
           "items": [
-            [
-              "የሳሙና ካርቶን",
-              "ሳ.ሜ³"
-            ],
-            [
-              "የልብስ ቁም ሳጥን",
-              "ሜ³"
-            ],
-            [
-              "በሆስፒታል ውስጥ ያለ ውሃ",
-              "ሊ ወይም ሜ³"
-            ]
+            {
+              "f": "@obj:soapbox",
+              "cap": "የሳሙና ካርቶን",
+              "chip": "ሳ.ሜ³",
+              "info": "ትንሽ ሳጥን ይዘቱ በሳ.ሜ³ ይለካል።"
+            },
+            {
+              "f": "@obj:wardrobe",
+              "cap": "የልብስ ቁም ሳጥን",
+              "chip": "ሜ³",
+              "info": "ትልቅ ሳጥን ይዘቱ በሜ³ ይለካል።"
+            }
           ],
-          "id": "g5.maths.u1.s1-3.30"
+          "id": "g5.maths.u1.s1-3.31"
         },
         {
           "kind": "steps",
@@ -754,11 +828,14 @@
             "የሚያስፈልገው = 20 − 13።",
             "20 − 13 = 7 ሊትር።"
           ],
-          "id": "g5.maths.u1.s1-3.31"
+          "id": "g5.maths.u1.s1-3.32"
         },
         {
           "kind": "blank",
           "step": "practise",
+          "gen": {
+            "t": "litres"
+          },
           "graded": true,
           "num": true,
           "ask": "ጀሪካኑ 20 ሊትር ይይዛል። 13 ሊትር አለ። ጀሪካኑ እንዲሞላ ___ ሊትር ያስፈልጋል።",
@@ -769,7 +846,7 @@
           "clue": "ሙሉ ይዘቱን ከያዘው ቀንስ።",
           "machine": true,
           "ref": "መልመጃ 1ሐ Q2",
-          "id": "g5.maths.u1.s1-3.32"
+          "id": "g5.maths.u1.s1-3.33"
         }
       ]
     }
@@ -809,7 +886,7 @@
           "clue": "ዕቃው ፈሳሽ ነው ወይስ ጠጣር?",
           "ref": "Q1",
           "step": "exercise",
-          "id": "g5.maths.u1.s1-3.33"
+          "id": "g5.maths.u1.s1-3.34"
         },
         {
           "kind": "blank",
@@ -824,7 +901,7 @@
           "clue": "ከሙሉው ይዘት ቀንስ።",
           "ref": "Q2",
           "step": "exercise",
-          "id": "g5.maths.u1.s1-3.34"
+          "id": "g5.maths.u1.s1-3.35"
         },
         {
           "kind": "blank",
@@ -839,7 +916,7 @@
           "clue": "ርዝመት × ወርድ × ከፍታ።",
           "ref": "Q3",
           "step": "exercise",
-          "id": "g5.maths.u1.s1-3.35"
+          "id": "g5.maths.u1.s1-3.36"
         },
         {
           "kind": "cubes",
@@ -863,7 +940,7 @@
           "clue": "መጀመሪያ የታችኛውን ቁጠር።",
           "ref": "Q4 ሀ",
           "step": "exercise",
-          "id": "g5.maths.u1.s1-3.36"
+          "id": "g5.maths.u1.s1-3.37"
         },
         {
           "kind": "cubes",
@@ -886,7 +963,7 @@
           "clue": "አንድ ንብርብር 15 ኩቦች አሉት።",
           "ref": "Q4 ለ",
           "step": "exercise",
-          "id": "g5.maths.u1.s1-3.37"
+          "id": "g5.maths.u1.s1-3.38"
         },
         {
           "kind": "cubes",
@@ -903,7 +980,7 @@
           "clue": "አንድ ንብርብር 25 ኩቦች አሉት።",
           "ref": "Q4 ሐ",
           "step": "exercise",
-          "id": "g5.maths.u1.s1-3.38"
+          "id": "g5.maths.u1.s1-3.39"
         }
       ]
     }
@@ -922,8 +999,12 @@
       "ans": "24",
       "why": "3 × 4 × 2 = 24 ኩቦች።",
       "clue": "",
+      "gen": {
+        "t": "count",
+        "kind": "cubes"
+      },
       "step": "test",
-      "id": "g5.maths.u1.s1-3.39"
+      "id": "g5.maths.u1.s1-3.40"
     },
     {
       "kind": "blank",
@@ -936,8 +1017,11 @@
       ],
       "why": "6 × 5 × 4 = 120።",
       "clue": "",
+      "gen": {
+        "t": "volume"
+      },
       "step": "test",
-      "id": "g5.maths.u1.s1-3.40"
+      "id": "g5.maths.u1.s1-3.41"
     },
     {
       "kind": "mcq",
@@ -954,7 +1038,7 @@
       "why": "ፈሳሽ በሊትር ይለካል።",
       "clue": "",
       "step": "test",
-      "id": "g5.maths.u1.s1-3.41"
+      "id": "g5.maths.u1.s1-3.42"
     }
   ],
   "notes": [

@@ -123,6 +123,16 @@
           "id": "g5.maths.u1.s1-2.2"
         },
         {
+          "kind": "ladder",
+          "step": "explore",
+          "machine": true,
+          "title": "የርዝመት መሰላል",
+          "power": 1,
+          "ask": "እያንዳንዱን ምድብ ንካ።",
+          "need": 3,
+          "id": "g5.maths.u1.s1-2.3"
+        },
+        {
           "kind": "name",
           "step": "name",
           "title": "ቃላቱን እንወቅ",
@@ -148,22 +158,24 @@
               "በጣም አጭር ርዝመትን የምንለካበት ምድብ።"
             ]
           ],
-          "id": "g5.maths.u1.s1-2.3"
+          "id": "g5.maths.u1.s1-2.4"
         },
         {
-          "kind": "steps",
+          "kind": "ladder",
           "step": "method",
           "ref": "ምሳሌ 2 ሀ",
           "machine": true,
           "title": "20 ሜ ወደ ሳ.ሜ",
-          "steps": [
-            "1 ሜ = 100 ሳ.ሜ ነው።",
-            "20 ሜ = 20 × 100 ሳ.ሜ፣ ምክንያቱም 1 ሜ = 100 ሳ.ሜ።",
-            "20 × 100 = 2000።",
-            "20 ሜ = 2000 ሳ.ሜ።"
+          "power": 1,
+          "from": "ሜ",
+          "to": "ሳ.ሜ",
+          "value": 20,
+          "intro": "ከትልቅ ወደ ትንሽ ምድብ ስንወርድ እናባዛለን።",
+          "say": [
+            "20 ሜ = 20 × 100 ሳ.ሜ፣ ምክንያቱም 1 ሜ = 100 ሳ.ሜ። 20 × 100 = 2,000። ስለዚህ 20 ሜ = 2,000 ሳ.ሜ።"
           ],
           "needs": "math.multiply-by-10-100-1000",
-          "id": "g5.maths.u1.s1-2.4"
+          "id": "g5.maths.u1.s1-2.5"
         },
         {
           "kind": "steps",
@@ -178,7 +190,7 @@
             "4.5 ኪ.ሜ = 4500 ሜ።"
           ],
           "needs": "math.multiply-by-10-100-1000",
-          "id": "g5.maths.u1.s1-2.5"
+          "id": "g5.maths.u1.s1-2.6"
         },
         {
           "kind": "steps",
@@ -194,7 +206,7 @@
             "24000 ሚ.ሜ = 24 ሜ።"
           ],
           "needs": "math.multiply-by-10-100-1000",
-          "id": "g5.maths.u1.s1-2.6"
+          "id": "g5.maths.u1.s1-2.7"
         },
         {
           "kind": "mcq",
@@ -211,12 +223,18 @@
           "why": "1 ሜ = 100 ሳ.ሜ፣ ስለዚህ በ100 እናባዛለን።",
           "clue": "ሜትር ከሳንቲ ሜትር ይበልጣል። ቁጥሩ ይበዛል ወይስ ይቀንሳል?",
           "machine": true,
-          "id": "g5.maths.u1.s1-2.7"
+          "id": "g5.maths.u1.s1-2.8"
         },
         {
           "kind": "blank",
           "step": "practise",
           "needs": "math.multiply-by-10-100-1000",
+          "gen": {
+            "t": "convert",
+            "dim": 1,
+            "dir": "down",
+            "ladder": true
+          },
           "graded": true,
           "num": true,
           "ask": "3 ሜ = ___ ሚ.ሜ",
@@ -227,12 +245,17 @@
           "clue": "1 ሜ = 1000 ሚ.ሜ ነው።",
           "machine": true,
           "ref": "ተግባር 1.4 Q1 ሀ",
-          "id": "g5.maths.u1.s1-2.8"
+          "id": "g5.maths.u1.s1-2.9"
         },
         {
           "kind": "blank",
           "step": "practise",
           "needs": "math.multiply-by-10-100-1000",
+          "gen": {
+            "t": "convert",
+            "dim": 1,
+            "dir": "up"
+          },
           "graded": true,
           "num": true,
           "ask": "200 ሳ.ሜ = ___ ሜ",
@@ -243,7 +266,7 @@
           "clue": "ሳ.ሜ ወደ ሜ ስንቀይር በ100 እናካፍላለን።",
           "machine": true,
           "ref": "ተግባር 1.4 Q2 ሀ",
-          "id": "g5.maths.u1.s1-2.9"
+          "id": "g5.maths.u1.s1-2.10"
         }
       ],
       "requires": [
@@ -277,7 +300,7 @@
             "ሚ.ሜ²"
           ],
           "after": "ትልቅ ቦታ በሄክታር፣ ክፍል በሜ²፣ ትንንሽ ነገሮች በሳ.ሜ² ይለካሉ።",
-          "id": "g5.maths.u1.s1-2.10"
+          "id": "g5.maths.u1.s1-2.11"
         },
         {
           "kind": "read",
@@ -314,7 +337,42 @@
               "ሚ.ሜ²"
             ]
           ],
-          "id": "g5.maths.u1.s1-2.11"
+          "id": "g5.maths.u1.s1-2.12"
+        },
+        {
+          "kind": "figure",
+          "step": "explore",
+          "machine": true,
+          "title": "የትኛው ምድብ ለየትኛው ዕቃ?",
+          "need": 2,
+          "ask": "እያንዳንዱን ንካ።",
+          "items": [
+            {
+              "f": "@obj:door",
+              "cap": "የክፍል በር",
+              "chip": "ሜ²",
+              "info": "በር ትልቅ ዕቃ ነው፤ ስፋቱ በሜ² ይለካል።"
+            },
+            {
+              "f": "@obj:page",
+              "cap": "የደብተር ገጽ",
+              "chip": "ሳ.ሜ²",
+              "info": "ገጹ ትንሽ ነው፤ ስፋቱ በሳ.ሜ² ይለካል።"
+            },
+            {
+              "f": "@obj:field",
+              "cap": "የእግር ኳስ ሜዳ",
+              "chip": "ሄክታር",
+              "info": "ሜዳ ሰፊ ነው፤ ስፋቱ በሄክታር ይለካል።"
+            },
+            {
+              "f": "@obj:city",
+              "cap": "የአዲስ አበባ ከተማ",
+              "chip": "ኪ.ሜ²",
+              "info": "ከተማ በጣም ሰፊ ነው፤ ስፋቱ በኪ.ሜ² ይለካል።"
+            }
+          ],
+          "id": "g5.maths.u1.s1-2.13"
         },
         {
           "kind": "grid",
@@ -334,7 +392,7 @@
             "",
             "5 ረድፎች ሞልተዋል። 25 × 1 ሳ.ሜ² = 25 ሳ.ሜ²።"
           ],
-          "id": "g5.maths.u1.s1-2.12"
+          "id": "g5.maths.u1.s1-2.14"
         },
         {
           "kind": "name",
@@ -354,7 +412,7 @@
               "ጎኑ 100 ሜትር የሆነ ካሬ ስፋት። 1 ሄክታር = 10,000 ሜ²።"
             ]
           ],
-          "id": "g5.maths.u1.s1-2.13"
+          "id": "g5.maths.u1.s1-2.15"
         },
         {
           "kind": "steps",
@@ -369,7 +427,7 @@
             "100 × 100 = 10,000።",
             "1 ሜ² = 10,000 ሳ.ሜ²።"
           ],
-          "id": "g5.maths.u1.s1-2.14"
+          "id": "g5.maths.u1.s1-2.16"
         },
         {
           "kind": "steps",
@@ -383,7 +441,7 @@
             "100 × 100 = 10,000።",
             "1 ሄክታር = 10,000 ሜ²።"
           ],
-          "id": "g5.maths.u1.s1-2.15"
+          "id": "g5.maths.u1.s1-2.17"
         },
         {
           "kind": "steps",
@@ -398,7 +456,17 @@
             "10 × 10 = 100።",
             "1 ሳ.ሜ² = 100 ሚ.ሜ²።"
           ],
-          "id": "g5.maths.u1.s1-2.16"
+          "id": "g5.maths.u1.s1-2.18"
+        },
+        {
+          "kind": "ladder",
+          "step": "explore",
+          "machine": true,
+          "title": "የስፋት መሰላል",
+          "power": 2,
+          "ask": "እያንዳንዱን ምድብ ንካ።",
+          "need": 3,
+          "id": "g5.maths.u1.s1-2.19"
         },
         {
           "kind": "grid",
@@ -424,7 +492,7 @@
             "",
             "10 ረድፎች ሞልተዋል። 100 ካሬዎች አሉ፤ እያንዳንዱ 100 ሳ.ሜ² ነው።"
           ],
-          "id": "g5.maths.u1.s1-2.17"
+          "id": "g5.maths.u1.s1-2.20"
         },
         {
           "kind": "match",
@@ -435,61 +503,59 @@
           "ref": "ፕሮጀክት 1",
           "pairs": [
             [
-              "የመማሪያ ክፍል በር",
+              "@obj:door",
               "ሜ²"
             ],
             [
-              "የደብተራችሁ ገጽ",
+              "@obj:page",
               "ሳ.ሜ²"
             ],
             [
-              "የእንጦጦ ፓርክ",
+              "@obj:park",
               "ሄክታር"
             ],
             [
-              "የብር ኖት",
-              "ሳ.ሜ²"
-            ],
-            [
-              "የላጲስ ገጽ",
-              "ሚ.ሜ²"
-            ],
-            [
-              "የመኖሪያ ቤታችሁ",
+              "@obj:house",
               "ሜ²"
+            ],
+            [
+              "@obj:note",
+              "ሳ.ሜ²"
             ]
           ],
-          "why": "ትልቅ ቦታ ሄክታር፤ ክፍል ሜ²፤ ትንንሽ ዕቃዎች ሳ.ሜ² ወይም ሚ.ሜ²።",
+          "why": "ትልቅ ቦታ ሄክታር፤ ክፍልና ቤት ሜ²፤ ትንንሽ ዕቃዎች ሳ.ሜ²።",
           "clue": "ዕቃው ምን ያህል ትልቅ ነው? ትልቅ ከሆነ ትልቅ ምድብ ይመርጣል።",
-          "id": "g5.maths.u1.s1-2.18"
+          "id": "g5.maths.u1.s1-2.21"
         },
         {
-          "kind": "tap",
+          "kind": "figure",
           "step": "explore",
-          "graded": false,
           "machine": true,
           "ref": "ፕሮጀክት 1",
           "title": "ሌሎች ዕቃዎች",
           "need": 2,
+          "ask": "እያንዳንዱን ንካ።",
           "items": [
-            [
-              "የእግር ኳስ ሜዳ",
-              "ሄክታር ወይም ሜ²"
-            ],
-            [
-              "የጠረጴዛ ገጽ",
-              "ሜ² ወይም ሳ.ሜ²"
-            ],
-            [
-              "የሳንቲም ገጽ",
-              "ሚ.ሜ² ወይም ሳ.ሜ²"
-            ],
-            [
-              "የአዲስ አበባ ከተማ",
-              "ኪ.ሜ²"
-            ]
+            {
+              "f": "@obj:table",
+              "cap": "የጠረጴዛ ገጽ",
+              "chip": "ሜ² ወይም ሳ.ሜ²",
+              "info": "ጠረጴዛው ለአንድ ሰው ትንሽ ነው፤ ሜ² ወይም ሳ.ሜ² ሊሆን ይችላል።"
+            },
+            {
+              "f": "@obj:coin",
+              "cap": "የሳንቲም ገጽ",
+              "chip": "ሳ.ሜ²",
+              "info": "ሳንቲም ትንሽ ነው፤ ሳ.ሜ² ተስማሚ ነው።"
+            },
+            {
+              "f": "@obj:eraser",
+              "cap": "የላጲስ ገጽ",
+              "chip": "ሳ.ሜ² ወይም ሚ.ሜ²",
+              "info": "ላጲስ በጣም ትንሽ ነው።"
+            }
           ],
-          "id": "g5.maths.u1.s1-2.19"
+          "id": "g5.maths.u1.s1-2.22"
         },
         {
           "kind": "steps",
@@ -505,7 +571,7 @@
             "40,000 ÷ 10,000 = 4።",
             "ስፋቱ 4 ሄክታር ነው።"
           ],
-          "id": "g5.maths.u1.s1-2.20"
+          "id": "g5.maths.u1.s1-2.23"
         },
         {
           "kind": "grid",
@@ -523,11 +589,21 @@
           "ans": "9",
           "why": "3 × 3 = 9 ካሬዎች።",
           "clue": "3 ረድፎች፣ እያንዳንዳቸው 3 ካሬ።",
-          "id": "g5.maths.u1.s1-2.21"
+          "gen": {
+            "t": "count",
+            "kind": "squares"
+          },
+          "id": "g5.maths.u1.s1-2.24"
         },
         {
           "kind": "blank",
           "step": "practise",
+          "gen": {
+            "t": "area",
+            "shape": "square",
+            "unit": "ሳ.ሜ",
+            "max": 9
+          },
           "graded": true,
           "num": true,
           "ask": "ጎኑ 3 ሳ.ሜ የሆነ ካሬ ስፋት ___ ሳ.ሜ² ነው።",
@@ -538,11 +614,17 @@
           "clue": "ርዝመት × ርዝመት።",
           "machine": true,
           "ref": "መልመጃ 1ለ Q1 ሐ",
-          "id": "g5.maths.u1.s1-2.22"
+          "id": "g5.maths.u1.s1-2.25"
         },
         {
           "kind": "blank",
           "step": "practise",
+          "gen": {
+            "t": "area",
+            "shape": "square",
+            "unit": "ሳ.ሜ",
+            "max": 12
+          },
           "graded": true,
           "num": true,
           "ask": "ጎኑ 8 ሳ.ሜ የሆነ ካሬ ስፋት ___ ሳ.ሜ² ነው።",
@@ -553,11 +635,17 @@
           "clue": "ርዝመት × ርዝመት።",
           "machine": true,
           "ref": "መልመጃ 1ለ Q2",
-          "id": "g5.maths.u1.s1-2.23"
+          "id": "g5.maths.u1.s1-2.26"
         },
         {
           "kind": "blank",
           "step": "practise",
+          "gen": {
+            "t": "area",
+            "shape": "square",
+            "unit": "ሜ",
+            "max": 12
+          },
           "graded": true,
           "num": true,
           "ask": "ጎኑ 200 ሜ የሆነ ካሬ ስፋት ___ ሜ² ነው።",
@@ -568,11 +656,20 @@
           "clue": "200 × 200 = 2 × 2 እና አራት ዜሮ።",
           "machine": true,
           "ref": "መልመጃ 1ለ Q3 ሀ",
-          "id": "g5.maths.u1.s1-2.24"
+          "id": "g5.maths.u1.s1-2.27"
         },
         {
           "kind": "blank",
           "step": "practise",
+          "gen": {
+            "t": "convert",
+            "dim": 2,
+            "units": [
+              "ሜ²",
+              "ሄክታር"
+            ],
+            "dir": "up"
+          },
           "graded": true,
           "num": true,
           "ask": "40,000 ሜ² = ___ ሄክታር",
@@ -583,7 +680,7 @@
           "clue": "1 ሄክታር = 10,000 ሜ² ነው።",
           "machine": true,
           "ref": "መልመጃ 1ለ Q3 ለ",
-          "id": "g5.maths.u1.s1-2.25"
+          "id": "g5.maths.u1.s1-2.28"
         },
         {
           "kind": "read",
@@ -597,7 +694,7 @@
             "ስፋቱን አስሉ፤ ወደ ሄክታር ቀይሩ።",
             "የክፍላችሁን ስፋትም በሜ² ለኩ።"
           ],
-          "id": "g5.maths.u1.s1-2.26"
+          "id": "g5.maths.u1.s1-2.29"
         }
       ]
     }
@@ -622,7 +719,7 @@
           "clue": "3 ረድፎች፣ እያንዳንዳቸው 3 ካሬ።",
           "ref": "Q1 ለ",
           "step": "exercise",
-          "id": "g5.maths.u1.s1-2.27"
+          "id": "g5.maths.u1.s1-2.30"
         },
         {
           "kind": "blank",
@@ -637,7 +734,7 @@
           "clue": "ርዝመት × ርዝመት።",
           "ref": "Q1 ሐ",
           "step": "exercise",
-          "id": "g5.maths.u1.s1-2.28"
+          "id": "g5.maths.u1.s1-2.31"
         },
         {
           "kind": "blank",
@@ -652,7 +749,7 @@
           "clue": "ርዝመት × ርዝመት።",
           "ref": "Q2",
           "step": "exercise",
-          "id": "g5.maths.u1.s1-2.29"
+          "id": "g5.maths.u1.s1-2.32"
         },
         {
           "kind": "blank",
@@ -667,7 +764,7 @@
           "clue": "ርዝመት × ርዝመት።",
           "ref": "Q3 ሀ",
           "step": "exercise",
-          "id": "g5.maths.u1.s1-2.30"
+          "id": "g5.maths.u1.s1-2.33"
         },
         {
           "kind": "blank",
@@ -682,7 +779,7 @@
           "clue": "1 ሄክታር = 10,000 ሜ²።",
           "ref": "Q3 ለ",
           "step": "exercise",
-          "id": "g5.maths.u1.s1-2.31"
+          "id": "g5.maths.u1.s1-2.34"
         }
       ]
     }
@@ -692,18 +789,18 @@
       "kind": "mcq",
       "graded": true,
       "machine": true,
-      "ask": "የአንድ ሳንቲም ገጽ ስፋት በየትኛው ምድብ ቢለካ ይሻላል?",
+      "ask": "የአንድ ደብተር ገጽ ስፋት በየትኛው ምድብ ቢለካ ይሻላል?",
       "opts": [
         "ሄክታር",
         "ሜ²",
-        "ሚ.ሜ²",
+        "ሳ.ሜ²",
         "ኪ.ሜ²"
       ],
-      "ans": "ሚ.ሜ²",
-      "why": "ሳንቲም በጣም ትንሽ ነው፤ ትንሽ ምድብ ይሻላል።",
+      "ans": "ሳ.ሜ²",
+      "why": "ደብተር ትንሽ ነው፤ ትንሽ ምድብ ይሻላል።",
       "clue": "",
       "step": "test",
-      "id": "g5.maths.u1.s1-2.32"
+      "id": "g5.maths.u1.s1-2.35"
     },
     {
       "kind": "blank",
@@ -716,8 +813,14 @@
       ],
       "why": "12 × 12 = 144 ሳ.ሜ²።",
       "clue": "",
+      "gen": {
+        "t": "area",
+        "shape": "square",
+        "unit": "ሳ.ሜ",
+        "max": 12
+      },
       "step": "test",
-      "id": "g5.maths.u1.s1-2.33"
+      "id": "g5.maths.u1.s1-2.36"
     },
     {
       "kind": "blank",
@@ -730,8 +833,12 @@
       ],
       "why": "5 × 100 = 500 ሳ.ሜ።",
       "clue": "",
+      "gen": {
+        "t": "convert",
+        "dim": 1
+      },
       "step": "test",
-      "id": "g5.maths.u1.s1-2.34"
+      "id": "g5.maths.u1.s1-2.37"
     }
   ],
   "notes": [

@@ -401,3 +401,14 @@ body.panel-open main { padding-bottom: 60vh; }
 .istep { display: flex; gap: 12px; align-items: flex-start; font-size: 16px; line-height: 1.45; }
 .inum { flex: none; width: 28px; height: 28px; border-radius: 99px; background: var(--accent); color: #fff; font-weight: 800; display: grid; place-items: center; }
 .ishare { width: 20px; height: 20px; vertical-align: -4px; color: var(--sky); }
+
+/* drawn figures (shapes and everyday objects) */
+.mf { width: 100%; max-width: 140px; height: auto; display: block; margin: 0 auto; }
+.figrow { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.figbtn { display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 96px; flex: 1 1 96px; max-width: 160px; min-height: 44px; padding: 8px 6px; border: 2px solid var(--line); border-radius: 14px; background: var(--surface); color: var(--fg); font: inherit; cursor: pointer; }
+.figbtn[aria-pressed="true"] { border-color: var(--accent); background: var(--surface-2); }
+.figbtn .cap { font-weight: 800; font-size: 15px; text-align: center; }
+.figbtn .pill { font-weight: 800; font-size: 14px; padding: 2px 10px; border-radius: 99px; background: var(--sun-soft, var(--surface-2)); border: 1.5px solid var(--sun, var(--line)); }
+.opt .mf, .chip .mf, .pl .mf, .pr .mf { max-width: 96px; }
+#it .mf { max-width: 150px; }
+.lad svg g[data-i] { cursor: pointer; }
