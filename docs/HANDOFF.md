@@ -48,6 +48,7 @@ You are continuing work on **Meseret (መሰረት)** with me, Mhreteabe (founde
 - Full handoff with decisions: `docs/G5-MATHS-HANDOFF.md` (Amharic lessons, Amharic generators, Ask Meseret chat).
 
 ## Open items / next steps
+- **TODO (on hold, owner): Ask Meseret AI chat.** Design is decided in `docs/G5-MATHS-HANDOFF.md` ("Ask Meseret"). Blocked on payment: the owner will create an Anthropic API key (Default workspace is fine), set up billing and a monthly spend limit, and a free Cloudflare Worker with the key as secret `ANTHROPIC_API_KEY`. Do not build it until the owner says so. Never put the key in the repo or the chat.
 1. Get my feedback on the live Science trial and adjust.
 2. Move G9 Maths U1 and G7 Social Studies U1 to the book design (visual-first rewrite, pictures, interactive figures, faces where relevant).
 3. Possible full code split of app.js into modules (blocks/, views/, core/) — discuss first.

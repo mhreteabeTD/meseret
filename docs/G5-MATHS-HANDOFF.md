@@ -47,7 +47,9 @@ Decisions made (build them, don't ask again):
 - **Machine Amharic** is not needed for the book's own text (it is original Amharic). Anything Claude writes in Amharic (hooks, clues, added practise, generator templates) is marked `"machine": true` for a speaker to check.
 - **Grade 5 level:** shorter sentences (under 12 words), more pictures, more counting/visual models (fraction bars, number lines, place-value charts, arrays), fewer symbols. Expect topics like whole numbers to millions, place value, the four operations, fractions and decimals, measurement, geometry and data. Add new blocks only where the existing ones can't show the idea (e.g. a place-value chart or a column-arithmetic block with carrying); propose each new block in one line, then build it.
 
-## The new engine feature: "Ask Meseret" (context-aware help chat)
+## Later feature (ON HOLD — do not build until the owner says): "Ask Meseret" (context-aware help chat)
+On hold because API billing is not set up yet. The design below is decided; keep it for when the owner unblocks it.
+
 Decisions made:
 - **What:** a "🙋 Ask Meseret" button on every question card and section heading, plus one floating button on the book page. It opens a chat panel (bottom sheet) that already knows: chapter, section, the read text around the student, the current question, the student's answers and tries, the lesson language and the UI language.
 - **How it teaches:** Socratic. Hints and guiding questions first, never the answer to a graded question before the student has tried twice (same rule as the player). It explains in the student's language (Amharic or English). It stays on the lesson and the subject and politely refuses anything else. One-tap chips: "Explain this step", "Give me a hint", "Show another example" (the last uses `Gen` locally: free and instant).
@@ -62,8 +64,7 @@ Decisions made:
 1. **Read and plan Grade 5.** Read every PDF page. Write `docs/G5-MATHS-U<n>-DESIGN.md` in the style of the G8 design doc: lesson map, ideas per section, hooks, which blocks, which generators, new blocks needed, verified exercise answers, book issues. Show me a short summary. Because this handoff already decides the approach, go straight on unless something in the book contradicts it.
 2. **Engine: Amharic lessons** (`lang`, `main` key words, lesson-language UI words, Amharic generator templates, reverse translation, Grade 5 in setup) + any new blocks the design needs.
 3. **Content:** all sections of the chapter, plus summary, review exercise and a generated chapter test. Add the chapter to `content/index.json` with `"view": "book"`, `"free": true`.
-4. **Engine: Ask Meseret** front end + Worker code + deploy steps for me.
-5. Update `docs/HANDOFF.md` and the design doc's status section.
+4. Update `docs/HANDOFF.md` and the design doc's status section.
 
 ## Testing and finishing (every session)
 - `node scripts/validate.mjs content/` must pass (it also stress-tests generators).
