@@ -85,67 +85,58 @@
           "step": "read",
           "title": "1.2.3 Safety symbols and hazard signs",
           "paras": [
-            "A lab can hold dangerous chemicals and biological specimens. It can also hold sharp instruments and breakable objects.",
-            "So lab safety symbols and signs must be posted throughout the workplace.",
-            "They warn of possible dangers. They keep lab users safe and informed."
+            "A lab can hold dangerous chemicals and biological specimens. It can also hold sharp or breakable objects.",
+            "So safety symbols and signs are posted throughout the lab. They warn of dangers and keep users safe."
           ],
           "id": "g7.science.u1.s1-2-3.2"
         },
         {
-          "kind": "read",
-          "step": "read",
+          "kind": "gallery",
           "title": "Figure 1.6 A) Hazard signs",
-          "paras": [
-            "Each hazard sign warns of one kind of danger."
-          ],
-          "table": [
+          "items": [
             [
-              "Sign",
-              "What it means",
-              "What to do (added)"
-            ],
-            [
+              "toxic",
               "Toxic materials",
-              "Poisonous. Can harm or kill if swallowed, breathed in or touched.",
-              "Never taste or smell it. Wear gloves. Wash your hands afterwards."
+              "Poison if swallowed, breathed in or touched. Never taste or smell; wear gloves."
             ],
             [
+              "high-voltage",
               "High voltage hazard",
-              "Very strong electricity that can badly hurt you.",
-              "Keep away. Only trained people work near it."
+              "Very strong electricity. Keep away; only trained people work near it."
             ],
             [
+              "corrosive",
               "Corrosives",
-              "Chemicals that burn skin and eyes or eat away metals.",
-              "Wear goggles and gloves. If it touches you, rinse with plenty of water and tell your teacher."
+              "Burn skin and eyes, eat away metals. Wear goggles and gloves; rinse spills with water."
             ],
             [
+              "flammable",
               "Flammable materials",
-              "Catch fire easily.",
-              "Keep them away from flames and heat, such as a Bunsen burner."
+              "Catch fire easily. Keep away from flames and heat."
             ],
             [
+              "electrical",
               "Electrical hazard",
-              "Danger of electric shock from equipment, wires or sockets.",
-              "Keep water and wet hands away. Never touch a damaged plug or wire."
+              "Risk of electric shock. Keep water away; never touch damaged wires."
             ],
             [
+              "chemical-storage",
               "Chemical storage area",
-              "The place where chemicals are kept.",
-              "Do not go in or take anything without your teacher."
+              "Where chemicals are kept. Enter only with your teacher."
             ],
             [
+              "biohazard",
               "Biological hazard",
-              "Living things or samples, such as bacteria, that can spread disease.",
-              "Handle only as taught. Wash your hands afterwards."
+              "Living things, like bacteria, that spread disease. Handle as taught; wash hands."
             ],
             [
+              "health-hazard",
               "Health hazard",
-              "A substance that can harm your body, for example your lungs, over time.",
-              "Use it only as your teacher directs. Do not breathe in fumes."
+              "Harms the body, like the lungs, over time. Do not breathe in fumes."
             ]
           ],
-          "id": "g7.science.u1.s1-2-3.3"
+          "id": "g7.science.u1.s1-2-3.3",
+          "step": "read"
         },
         {
           "kind": "name",
@@ -185,7 +176,7 @@
           ],
           "ans": "Corrosives",
           "why": "Corrosives burn skin and eyes. The other three are protective symbols.",
-          "clue": "Look at the hazard signs table: which one is about burns?",
+          "clue": "Look at the hazard signs: which one is about burns?",
           "id": "g7.science.u1.s1-2-3.5"
         },
         {
@@ -213,7 +204,7 @@
             ]
           ],
           "why": "Each hazard sign warns of one kind of danger.",
-          "clue": "Use the \"What it means\" column of the table.",
+          "clue": "Tap each hazard sign to see what it means.",
           "id": "g7.science.u1.s1-2-3.6"
         },
         {
@@ -248,7 +239,7 @@
             "corrosive materials"
           ],
           "why": "Corrosives burn skin and eyes or eat away metals.",
-          "clue": "Look at the hazard signs table for burns and metals.",
+          "clue": "Look at the hazard signs for burns and metals.",
           "id": "g7.science.u1.s1-2-3.8"
         }
       ]
@@ -283,51 +274,52 @@
           "id": "g7.science.u1.s1-2-3.9"
         },
         {
-          "kind": "read",
-          "step": "read",
+          "kind": "gallery",
           "title": "Figure 1.6 B) Laboratory safety symbols",
-          "paras": [
-            "Safety symbols show what to wear or do, or where to find help."
-          ],
-          "table": [
+          "items": [
             [
-              "Symbol",
-              "What it means (added)"
-            ],
-            [
+              "gloves",
               "Gloves",
               "Protect your hands from chemicals, heat and sharp things."
             ],
             [
+              "safety-glasses",
               "Safety glasses",
               "Protect your eyes from splashes and flying pieces."
             ],
             [
+              "boots",
               "Boots",
               "Protect your feet from spills and falling objects."
             ],
             [
+              "face-shield",
               "Face shield",
               "Protects your whole face from splashes."
             ],
             [
+              "hand-wash",
               "Hand wash",
               "Wash your hands after lab work."
             ],
             [
+              "fire-extinguisher",
               "Fire extinguisher",
-              "Shows where the fire extinguisher is. Learn its place before you start."
+              "Shows where it is. Learn its place before you start."
             ],
             [
+              "lab-coat",
               "Protective cloth",
-              "A lab coat or other protective clothing covers your skin and clothes."
+              "A lab coat covers your skin and clothes."
             ],
             [
+              "ear-protection",
               "Hearing protection",
               "Protects your ears from very loud noise."
             ]
           ],
-          "id": "g7.science.u1.s1-2-3.10"
+          "id": "g7.science.u1.s1-2-3.10",
+          "step": "read"
         },
         {
           "kind": "name",
@@ -534,6 +526,10 @@
     {
       "kind": "note",
       "text": "The book shows only the pictures with their names. The meanings are added. Spelling slips in the book's labels (\"Saftety glasses\", \"Hearind protection\", \"materrials\") are corrected here."
+    },
+    {
+      "kind": "note",
+      "text": "Visual-first pass: read blocks shortened (no facts dropped) and drawings from app/pictures.js added. The Figure 1.6 tables are shown as picture galleries; the meanings and \"what to do\" lines remain added text."
     }
   ],
   "review": {

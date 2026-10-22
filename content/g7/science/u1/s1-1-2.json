@@ -128,20 +128,44 @@
           "title": "Two major categories",
           "paras": [
             "Science has two major categories: natural science and social science.",
-            "Natural science is the study of nature and natural laws. It includes chemistry, biology and physics."
+            "Natural science studies nature and natural laws. It includes chemistry, biology and physics."
           ],
           "id": "g7.science.u1.s1-1-2.2"
         },
         {
-          "kind": "read",
+          "kind": "picture",
+          "pic": "branches-tree",
+          "caption": "Figure 1.1 The branches of science",
           "step": "read",
+          "id": "g7.science.u1.s1-1-2.24"
+        },
+        {
+          "kind": "gallery",
           "title": "Three branches of natural science",
-          "paras": [
-            "Biology is the branch of natural science that studies living things.",
-            "Chemistry deals with the properties, make-up, structure and changes of substances.",
-            "Physics studies the nature of matter and energy and how they interact."
+          "items": [
+            [
+              "biology",
+              "Biology",
+              "Studies living things."
+            ],
+            [
+              "chemistry",
+              "Chemistry",
+              "Studies the properties, make-up, structure and changes of substances."
+            ],
+            [
+              "physics",
+              "Physics",
+              "Studies matter and energy and how they interact."
+            ],
+            [
+              "social-science",
+              "Social science",
+              "Studies people and human society."
+            ]
           ],
-          "id": "g7.science.u1.s1-1-2.3"
+          "id": "g7.science.u1.s1-1-2.3",
+          "step": "read"
         },
         {
           "kind": "name",
@@ -219,7 +243,7 @@
             "physic"
           ],
           "why": "That is the definition of physics.",
-          "clue": "Read the three branches again.",
+          "clue": "Look at the three branches again.",
           "id": "g7.science.u1.s1-1-2.7"
         },
         {
@@ -269,18 +293,25 @@
           "step": "read",
           "title": "No clear border line",
           "paras": [
-            "There is no clear border line between the branches of natural science. Their knowledge overlaps.",
-            "For example, chemistry and physics together are studied as physical science (physical chemistry). It is the study of the properties of materials and how they interact."
+            "There is no clear border line between the natural sciences. Their knowledge overlaps.",
+            "Chemistry and physics together are studied as physical science (physical chemistry). It studies the properties of materials and how they interact."
           ],
           "id": "g7.science.u1.s1-1-2.10"
+        },
+        {
+          "kind": "picture",
+          "pic": "venn-sciences",
+          "caption": "Figure 1.2 Where two sciences overlap, a new field is born.",
+          "step": "read",
+          "id": "g7.science.u1.s1-1-2.25"
         },
         {
           "kind": "read",
           "step": "read",
           "title": "Fields that join two sciences",
           "paras": [
-            "Biophysics combines biology and physics. It studies physical events and processes in living things. Its scale goes from molecules to cells, tissues and whole organisms.",
-            "Biochemistry combines biology and chemistry. It explores the chemical processes inside living things, that is, the chemical reactions in them."
+            "Biophysics joins biology and physics. It studies life's physical processes, from molecules to cells, tissues and organisms.",
+            "Biochemistry joins biology and chemistry. It explores the chemical reactions inside living things."
           ],
           "id": "g7.science.u1.s1-1-2.11"
         },
@@ -506,6 +537,10 @@
     {
       "kind": "note",
       "text": "Figure 1.2 is a Venn diagram of three circles: biology, physics and chemistry. Where two circles overlap, a new field is born. Spelling slips in the printed book are corrected here: \"Biopysics\" is biophysics, \"boarder\" is border."
+    },
+    {
+      "kind": "note",
+      "text": "Visual-first pass: read blocks shortened (no facts dropped) and drawings from app/pictures.js added."
     }
   ],
   "review": {
