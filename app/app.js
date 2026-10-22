@@ -598,7 +598,7 @@ const Blocks = {
   gallery(s, ctx) {
     const el = h('gal', (s.title ? `<h3>${esc(s.title)}</h3>` : '') + (s.ask ? Text(s.ask, ctx, 'p', 'muted') : '') + `<div class="galgrid">${s.items.map((it, i) => `<button class="gi" data-i="${i}" aria-expanded="false"><span class="pic">${pic(it[0], it[1])}</span><span class="gn">${esc(it[1])}</span></button>`).join('')}</div><div class="ginfo" hidden data-text></div>`);
     const info = el.querySelector('.ginfo');
-    el.querySelector('.galgrid').onclick = e => { const b = e.target.closest('.gi'); if (!b) return; const it = s.items[+b.dataset.i]; const on = b.getAttribute('aria-expanded') !== 'true'; el.querySelectorAll('.gi').forEach(x => x.setAttribute('aria-expanded', x === b && on)); info.hidden = !on; info.innerHTML = on ? `<b>${esc(it[1])}</b> ${esc(it[2] || '')}` : ''; };
+    const gseen = new Set(); el.querySelector('.galgrid').onclick = e => { const b = e.target.closest('.gi'); if (!b) return; const it = s.items[+b.dataset.i]; gseen.add(b.dataset.i); b.classList.add('seen'); if (gseen.size >= Math.min(3, s.items.length)) ctx.complete(s); const on = b.getAttribute('aria-expanded') !== 'true'; el.querySelectorAll('.gi').forEach(x => x.setAttribute('aria-expanded', x === b && on)); info.hidden = !on; info.innerHTML = on ? `<b>${esc(it[1])}</b> ${esc(it[2] || '')}` : ''; };
     return el;
   },
   people(s, ctx) {
@@ -641,6 +641,36 @@ const Blocks = {
     const b = el.querySelector('.rv'), a = el.querySelector('.qf');
     const open = anim => { b.hidden = true; a.hidden = false; if (anim) { a.classList.add('pop'); ctx.complete(s); } };
     b.onclick = () => open(true); if (ctx.isDone(s)) open(false);
+    return el;
+  },
+  tree(s, ctx) { // interactive tree diagram: tap a box to see what it covers
+    const nodes = []; const walk = (n, d, parent) => { const i = nodes.length; nodes.push({ n, d, parent }); (n.children || []).forEach(c => walk(c, d + 1, i)); }; walk(s.root, 0, -1);
+    const depth = Math.max(...nodes.map(x => x.d)); const rows = []; for (let d = 0; d <= depth; d++) rows.push(nodes.map((x, i) => [x, i]).filter(([x]) => x.d === d));
+    const el = h('quiz fig tree', `<div class="ql">👆 ${t('tap_explore')}</div>${s.title ? Text(s.title, null, 'p', 'qq') : ''}<div class="treebox">${rows.map(r => `<div class="trow">${r.map(([x, i]) => `<button class="tnode" data-i="${i}">${x.n.pic ? `<span class="pic">${pic(x.n.pic, x.n.label)}</span>` : ''}<span>${esc(x.n.label)}</span></button>`).join('')}</div>`).join('')}</div><div class="ginfo" hidden data-text></div>`);
+    const info = el.querySelector('.ginfo'), seen = new Set();
+    el.querySelector('.treebox').onclick = e => { const b = e.target.closest('.tnode'); if (!b) return; const i = +b.dataset.i, path = new Set(); for (let k = i; k >= 0; k = nodes[k].parent) path.add(k);
+      el.querySelectorAll('.tnode').forEach(x => { x.classList.toggle('on', +x.dataset.i === i); x.classList.toggle('path', path.has(+x.dataset.i) && +x.dataset.i !== i); });
+      const n = nodes[i].n; info.hidden = false; info.innerHTML = `<b>${esc(n.label)}</b> ${esc(n.info || '')}${n.children ? `<br><small>${t('includes')}: ${n.children.map(c => esc(c.label)).join(', ')}</small>` : ''}`; info.classList.remove('pop'); void info.offsetWidth; info.classList.add('pop');
+      seen.add(i); if (seen.size >= Math.min(3, nodes.length)) ctx.complete(s); };
+    return el;
+  },
+  venn(s, ctx) { // interactive Venn diagram: tap a circle or an overlap
+    const n = s.sets.length, C = n === 2 ? [[110, 100], [190, 100]] : [[115, 95], [185, 95], [150, 155]], cols = ['var(--sky)', 'var(--coral)', 'var(--accent)'];
+    const regions = s.sets.map((x, i) => ({ label: x[0], info: x[1], sets: [i] })).concat((s.overlaps || []).map(o => ({ label: o[1], info: o[2], sets: o[0] })));
+    const el = h('quiz fig venn', `<div class="ql">👆 ${t('tap_explore')}</div>${s.title ? Text(s.title, null, 'p', 'qq') : ''}<svg viewBox="0 0 300 ${n === 2 ? 200 : 250}" class="vsvg" role="img" aria-label="${esc(s.title || 'Venn diagram')}"></svg><div class="vchips">${regions.map((r, i) => `<button class="vchip ${r.sets.length > 1 ? 'ov' : ''}" data-i="${i}">${esc(r.label)}</button>`).join('')}</div><div class="ginfo" hidden data-text></div>`);
+    const svg = el.querySelector('svg'), info = el.querySelector('.ginfo'), seen = new Set(); let sel = -1;
+    const draw = () => { const on = sel >= 0 ? regions[sel].sets : []; svg.innerHTML = C.map((c, i) => `<circle data-set="${i}" cx="${c[0]}" cy="${c[1]}" r="72" style="fill:${cols[i]};stroke:${cols[i]};cursor:pointer" fill-opacity="${on.includes(i) ? (on.length > 1 ? .45 : .55) : .14}" stroke-width="${on.includes(i) ? 4 : 2}"/>`).join('') + C.map((c, i) => `<text x="${c[0] + (i === 0 ? -34 : i === 1 ? 34 : 0)}" y="${c[1] + (i === 2 ? 40 : -22)}" text-anchor="middle" font-size="14" font-weight="800" style="fill:var(--fg);pointer-events:none">${esc(s.sets[i][0])}</text>`).join(''); el.querySelectorAll('.vchip').forEach(b => b.classList.toggle('on', +b.dataset.i === sel)); };
+    const pick = i => { sel = i; draw(); const r = regions[i]; info.hidden = false; info.innerHTML = `<b>${esc(r.label)}</b> ${esc(r.info || '')}`; info.classList.remove('pop'); void info.offsetWidth; info.classList.add('pop'); seen.add(i); if (seen.size >= Math.min(3, regions.length)) ctx.complete(s); };
+    el.querySelector('.vchips').onclick = e => { const b = e.target.closest('.vchip'); if (b) pick(+b.dataset.i); };
+    svg.onclick = e => { const c = e.target.closest('circle'); if (c) pick(+c.dataset.set); };
+    draw(); return el;
+  },
+  tap(s, ctx) { // tap-to-explore buttons (optionally with pictures)
+    if (s.graded) return Blocks.answer(s, ctx);
+    const el = h('quiz fig taps', `<div class="ql">👆 ${t('tap_explore')}</div>${s.title ? Text(s.title, null, 'p', 'qq') : ''}${s.ask ? Text(s.ask, null, 'p', 'small qctx') : ''}<div class="tbtns ${s.items.some(x => x[2]) ? 'withpic' : ''}">${s.items.map((it, i) => `<button class="tb" data-i="${i}">${it[2] ? `<span class="pic">${pic(it[2], it[0])}</span>` : ''}<span>${esc(it[0])}</span></button>`).join('')}</div><div class="ginfo" hidden data-text></div>`);
+    const info = el.querySelector('.ginfo'), seen = new Set(), need = Math.min(s.need || 3, s.items.length);
+    el.querySelector('.tbtns').onclick = e => { const b = e.target.closest('.tb'); if (!b) return; const i = +b.dataset.i; el.querySelectorAll('.tb').forEach(x => x.classList.toggle('on', x === b)); b.classList.add('seen'); info.hidden = false; info.innerHTML = `<b>${esc(s.items[i][0])}</b> ${esc(s.items[i][1])}`; info.classList.remove('pop'); void info.offsetWidth; info.classList.add('pop'); seen.add(i); if (seen.size >= need) ctx.complete(s); };
+    if (ctx.isDone(s)) el.querySelectorAll('.tb').forEach(x => x.classList.add('seen'));
     return el;
   },
   explore(s, ctx) { // ungraded sort / tap / steps / tiles
@@ -706,7 +736,7 @@ async function viewBook(id) {
       wrong(el) { streak = 0; buzz(60); const sk = el && el.querySelector('.skip'); if (sk && !el.classList.contains('done')) sk.hidden = false; },
       done(el, s, pts) { el.classList.add('done'); const sk = el.querySelector('.skip'); if (sk) sk.remove(); if (!(s._key in B.got) || B.got[s._key] === 's') { B.got[s._key] = pts; save(); } progress(); doneCheck(); }
     };
-    rows.forEach(s => { const el = renderBlock(s, ctx); if (s.graded || ['guess', 'reveal', 'sort', 'tap', 'steps', 'tiles', 'order', 'match'].includes(s.kind)) { const u = { key: s._key, q: !!s.graded }; units.push(u); secUnits[si].push(u); } box.appendChild(el); });
+    rows.forEach(s => { const el = renderBlock(s, ctx); if (s.graded || ['guess', 'reveal', 'sort', 'tap', 'steps', 'tiles', 'order', 'match', 'tree', 'venn', 'gallery'].includes(s.kind)) { const u = { key: s._key, q: !!s.graded }; units.push(u); secUnits[si].push(u); } box.appendChild(el); });
     box.querySelectorAll('.tip').forEach(b => b.onclick = () => b.classList.toggle('open'));
     box.querySelectorAll('.kwt').forEach(b => b.onclick = () => { const k = kws[+b.dataset.k]; sheet(`<div class="kcard big"><div class="kt">📘 ${esc(k.en)}</div>${k.am ? `<div class="kam" lang="am">${esc(k.am)}</div>` : ''}${k.om ? `<div class="kam" lang="om">${esc(k.om)}</div>` : ''}<div class="kd" data-text>${esc(k.def || '')}</div></div><button class="btn" id="kok">${t('continue')}</button>`); $('#kok').onclick = () => sheet(''); });
     // end of section: celebration, practise set, book exercises

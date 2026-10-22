@@ -323,7 +323,9 @@
             "picture",
             "gallery",
             "people",
-            "reveal"
+            "reveal",
+            "tree",
+            "venn"
           ]
         },
         "step": {
@@ -494,6 +496,18 @@
         "answer": {
           "type": "string",
           "description": "reveal: the answer shown when the student taps Show answer"
+        },
+        "root": {
+          "type": "object",
+          "description": "tree: {label, info, pic?, children:[...]}"
+        },
+        "sets": {
+          "type": "array",
+          "description": "venn: [[label, info], ...] 2 or 3 sets"
+        },
+        "overlaps": {
+          "type": "array",
+          "description": "venn: [[[i, j], label, info], ...]"
         }
       },
       "allOf": [

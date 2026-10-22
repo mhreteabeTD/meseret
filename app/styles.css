@@ -328,3 +328,22 @@ body.panel-open main { padding-bottom: 60vh; }
 .pl.on, .pr.on { border-color: var(--h); background: var(--hs); color: var(--fg); }
 .quiz.act { background: var(--violet-soft); border-color: transparent; } .quiz.act .ql { color: var(--violet); }
 .quiz.act .rv { justify-self: start; width: auto; padding: 0 18px; }
+
+/* interactive figures: tree, venn, tap buttons */
+.quiz.fig { background: var(--surface); }
+.treebox { display: grid; gap: 14px; position: relative; padding: 4px 0; }
+.trow { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; position: relative; }
+.trow + .trow::before { content: ''; position: absolute; top: -12px; left: 15%; right: 15%; border-top: 2px dashed var(--line); }
+.tnode { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 6px 12px; border-radius: 14px; border: 2px solid var(--line); border-bottom-width: 4px; background: var(--hs); font-weight: 800; font-size: 14px; cursor: pointer; transition: transform .12s ease; }
+.tnode .pic { width: 28px; height: 28px; }
+.tnode.on { background: var(--h); color: #fff; border-color: var(--h); transform: scale(1.06); }
+.tnode.path { border-color: var(--h); }
+.vsvg { width: 100%; max-width: 320px; justify-self: center; display: block; }
+.vchips, .tbtns { display: flex; flex-wrap: wrap; gap: 8px; }
+.vchip, .tb { min-height: 44px; padding: 6px 14px; border-radius: 99px; border: 2px solid var(--line); background: var(--surface); font-weight: 800; font-size: 14px; cursor: pointer; }
+.vchip.ov { border-style: dashed; }
+.vchip.on, .tb.on { background: var(--h); color: #fff; border-color: var(--h); }
+.tb.seen:not(.on), .gi.seen:not([aria-expanded="true"]) { border-color: var(--accent-line); }
+.tbtns.withpic { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); }
+.tbtns.withpic .tb { border-radius: 18px; display: grid; justify-items: center; gap: 4px; padding: 10px 6px; }
+.tbtns.withpic .tb .pic { width: 56px; height: 56px; }
