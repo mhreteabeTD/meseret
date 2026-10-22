@@ -367,3 +367,9 @@ body.panel-open main { padding-bottom: 60vh; }
 .sld .sout { font-size: 22px; font-weight: 800; color: var(--accent-deep); background: var(--accent-soft); border-radius: 12px; padding: 10px 14px; text-align: center; }
 .fbar .fbp:empty, .grd .gp:empty { display: none; }
 .fbar svg, .grd svg, .nest svg { touch-action: manipulation; }
+/* order game: placed items can be taken back */
+.oseq .oit { all: unset; cursor: pointer; display: inline-flex; gap: 8px; align-items: center; min-height: 40px; padding: 2px 12px; border-radius: 10px; background: var(--sky-soft); font-weight: 800; }
+.oseq .oit span { color: var(--muted); font-size: 13px; }
+.oseq .oit:disabled { cursor: default; } .oseq .oit:disabled span { display: none; }
+.undo { justify-self: start; width: auto; }
+.fig #pool .chip:disabled { opacity: .3; box-shadow: none; }
