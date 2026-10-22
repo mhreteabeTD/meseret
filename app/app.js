@@ -117,7 +117,7 @@ async function viewHome() {
   const last = store.get('last', null);
   const due = dueReview();
   const days = store.get('days', []); const week = []; for (let i = 6; i >= 0; i--) { const d = new Date(Date.now() - i * DAY).toISOString().slice(0, 10); week.push([['S', 'M', 'T', 'W', 'T', 'F', 'S'][new Date(d).getDay()], days.includes(d)]); }
-  const chapterCard = c => { const p = chapterProgress(c.id), sub = idx.subjects[c.subject] || {}; return `<a class="item" href="#chapter/${c.id}"><div class="icon" style="background:var(--accent-soft);color:var(--accent-deep)">${sub.icon || '•'}</div><div class="grow"><div class="t">${esc(L(sub))} · ${t('grade')} ${c.grade}</div><div class="s">${t('unit')} ${c.unit} · ${esc(L(c.title))}${p ? ` · ${t('lessons_read', { d: p.done, t: p.total })}` : ''}</div></div>${c.free ? `<span class="pill green">${t('free_chapter')}</span>` : ''}</a>`; };
+  const chapterCard = c => { const p = chapterProgress(c.id), sub = idx.subjects[c.subject] || {}; return `<a class="item" href="#${c.view === 'book' ? 'book' : 'chapter'}/${c.id}"><div class="icon" style="background:var(--accent-soft);color:var(--accent-deep)">${sub.icon || '•'}</div><div class="grow"><div class="t">${esc(L(sub))} · ${t('grade')} ${c.grade}</div><div class="s">${t('unit')} ${c.unit} · ${esc(L(c.title))}${p ? ` · ${t('lessons_read', { d: p.done, t: p.total })}` : ''}</div></div>${c.free ? `<span class="pill green">${t('free_chapter')}</span>` : ''}</a>`; };
   app.innerHTML = `<div class="row"><div class="grow"><div class="small muted" style="font-weight:700">${t('grade')} ${S.grade || ''}</div><h1 class="display">${t('hello')}${S.name ? ', ' + esc(S.name) : ''}</h1></div><a class="iconbtn" href="#settings" aria-label="${t('settings')}">${svgIcon('M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM19 12l2-1-1-3-2 .3-1.5-1.5.3-2-3-1-1 2h-2l-1-2-3 1 .3 2L5.6 8.3 3.6 8l-1 3 2 1v2l-2 1 1 3 2-.3 1.5 1.5-.3 2 3 1 1-2h2l1 2 3-1-.3-2 1.5-1.5 2 .3 1-3-2-1z')}</a></div>
   <div class="week">${week.map(([d, on]) => `<div>${d}<i class="${on ? 'on' : ''}"></i></div>`).join('')}</div>
   ${last ? `<a class="card accent" href="#${last.route}"><span class="eyebrow">${t('continue')}</span><span class="display" style="font-size:22px">${esc(last.title)}</span><span class="small">${esc(last.sub || '')}</span></a>` : ''}
@@ -131,6 +131,7 @@ async function viewHome() {
 
 async function viewChapter(id) {
   const idx = await loadIndex(); const c = idx.chapters.find(x => x.id === id); if (!c) { location.hash = 'home'; return; }
+  if (c.view === 'book') { location.replace('#book/' + c.id); return; }
   setNav(true); hideTray();
   setTop(`<a class="iconbtn" href="#home" aria-label="back">${svgIcon(BACK)}</a><div class="grow"><div class="eyebrow">${t('grade')} ${c.grade} · ${esc(L(idx.subjects[c.subject]))}</div><div class="display" style="font-size:18px">${t('unit')} ${c.unit} · ${esc(L(c.title))}</div></div>`);
   const p = chapterProgress(c.id);
@@ -367,7 +368,7 @@ function runPlayer(cfg) {
   const { R, div, explainCard } = makeR({ phase: () => phase, update: () => update(), state, explain: cfg.explain, enter: () => { if (!go.disabled) go.click(); } });
   R.summary = () => { const graded = screens.map((x, i) => x.graded ? i : -1).filter(i => i >= 0); const right = graded.filter(i => firstTry[i]).length;
       const el = div(`<span class="eyebrow sky">${t('done')}</span><h1 class="display" tabindex="-1">${esc(cfg.title)}</h1><div class="score"><span class="big">${right} / ${graded.length}</span><span>${t('first_try')}</span></div><p>${missed.size ? t('replay_note', { n: missed.size }) : t('all_done')}</p>${cfg.learned ? `<div class="defn"><b>${t('learned')}</b><ul class="steps" style="padding-left:20px">${cfg.learned.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}${cfg.mode === 'learn' ? `<div class="card sky"><div class="small">${t('comes_back')}</div></div>` : ''}${cfg.backRoute ? `<a class="btn link" href="#${cfg.backRoute}">${t('back_chapter')}</a>` : ''}`);
-      return { el, label: cfg.mode === 'refresher' ? t('back_to_question') : missed.size ? t('replay_n', { n: missed.size }) : t('start_again'), ready: () => true, summary: true }; };
+      return { el, label: cfg.mode === 'refresher' ? t('back_to_question') : missed.size ? t('replay_n', { n: missed.size }) : cfg.resume ? t('back_to_book') : t('start_again'), ready: () => true, summary: true }; };
   function setTray(kind, title, body, label) { tray.className = 'tray' + (kind ? ' ' + kind : ''); msg.innerHTML = title ? `<strong>${esc(title)}</strong>${body ? `<span>${esc(body)}</span>` : ''}` : ''; go.textContent = label; }
   function update() { if (phase === 'answer' && cur) go.disabled = !cur.ready(); }
   function bindTop(k) { const rep = $('#rep'); if (rep) rep.onclick = () => reportSheet({ lesson: cfg.id || cfg.title, screen: k, label: `${cfg.title} · ${Math.min(pos + 1, order.length)}/${order.length}` }); const rb = $('#rback'); if (rb) rb.onclick = () => cfg.resume && cfg.resume(); }
@@ -381,20 +382,20 @@ function runPlayer(cfg) {
     phase = 'answer'; lastOk = null; setTray('', '', '', cur.label); update();
     const wb = $('#work'); wb.hidden = !(s.graded || s.kind === 'guess' || s.kind === 'tiles'); wb.onclick = () => workSheet({ key: `${cfg.id || cfg.title}:${k}`, lesson: cfg.id, item: k, tool: s.tool || cfg.tool, q: (s.ask || s.text || s.title || '').replace(/\n/g, ' ') });
     const pct = Math.round(pos / order.length * 100);
-    setTop(`${cfg.backRoute ? `<a class="iconbtn" href="#${cfg.backRoute}" aria-label="close">${svgIcon(CLOSE)}</a>` : `<button class="iconbtn" id="rback" aria-label="back">${svgIcon(BACK)}</button>`}<span class="mode ${cfg.mode === 'review' || review ? 'review' : cfg.mode === 'book' || cfg.mode === 'test' ? 'book' : ''}">${cfg.mode === 'refresher' ? t('refresher') : review ? t('review') : cfg.mode === 'review' ? t('review') : cfg.mode === 'book' ? t('book_exercise') : cfg.mode === 'test' ? t('unit_test') : t('learn')}</span><div class="bar"><i style="width:${pct}%"></i></div><span class="count">${Math.min(pos + 1, order.length)} / ${order.length}</span><button class="iconbtn" id="rep" aria-label="${t('report')}">${svgIcon(FLAG)}</button>`);
+    setTop(`${cfg.backRoute ? `<a class="iconbtn" href="#${cfg.backRoute}" aria-label="close">${svgIcon(CLOSE)}</a>` : `<button class="iconbtn" id="rback" aria-label="back">${svgIcon(BACK)}</button>`}<span class="mode ${cfg.mode === 'review' || review ? 'review' : cfg.mode === 'book' || cfg.mode === 'test' ? 'book' : ''}">${cfg.mode === 'refresher' ? t('refresher') : cfg.mode === 'practice' ? t('step_practise') : review ? t('review') : cfg.mode === 'review' ? t('review') : cfg.mode === 'book' ? t('book_exercise') : cfg.mode === 'test' ? t('unit_test') : t('learn')}</span><div class="bar"><i style="width:${pct}%"></i></div><span class="count">${Math.min(pos + 1, order.length)} / ${order.length}</span><button class="iconbtn" id="rep" aria-label="${t('report')}">${svgIcon(FLAG)}</button>`);
     bindTop(k);
     window.scrollTo(0, 0); const h = cur.el.querySelector('h1'); if (h) h.focus({ preventScroll: true });
   }
   function onGo() {
     const k = order[pos], s = screens[k];
-    if (cur.summary) { if (cfg.mode === 'refresher') { cfg.resume(); return; } if (missed.size) { order = [...missed].sort((a, b) => a - b).concat(SUM); review = true; } else { order = screens.map((_, i) => i).concat(SUM); firstTry = {}; review = false; state.guess = null; } pos = 0; round = {}; tries = {}; show(); return; }
+    if (cur.summary) { if (cfg.mode === 'refresher' || (cfg.resume && !missed.size)) { cfg.resume(); return; } if (missed.size) { order = [...missed].sort((a, b) => a - b).concat(SUM); review = true; } else { order = screens.map((_, i) => i).concat(SUM); firstTry = {}; review = false; state.guess = null; } pos = 0; round = {}; tries = {}; show(); return; }
     if (phase === 'feedback') { if (lastOk === false) { const old = tray.querySelector('#rfb'); if (old) old.remove(); phase = 'answer'; cur.retry && cur.retry(); setTray('', '', '', cur.label); update(); } else { pos++; show(); } return; }
     if (!cur.check) { pos++; show(); return; }
     const r = cur.check(); tries[k] = (tries[k] || 0) + 1;
     if (s.graded && !(k in round)) { round[k] = r.ok; if (!(k in firstTry)) firstTry[k] = r.ok; r.ok ? missed.delete(k) : missed.add(k); logEvent({ lesson: s._lesson || cfg.id, idea: s._idea || cfg.idea, item: k, correct: !!r.ok, attempt: tries[k], mode: cfg.mode }); }
     lastOk = r.ok; phase = 'feedback';
     const noClue = cfg.mode === 'test';
-    if (r.ok === true) setTray('ok', t('correct'), r.body, t('continue'));
+    if (r.ok === true) { setTray('ok', t('correct'), r.body, t('continue')); if (cfg.cheer) { const rc = go.getBoundingClientRect(); burst(rc.left + rc.width / 2, rc.top); buzz(25); } }
     else if (r.ok === false) { if (noClue) { lastOk = true; setTray('no', t('not_yet'), s.why || '', t('continue')); } else if (tries[k] >= 2 && s.worked) { lastOk = true; setTray('no', t('show_worked'), s.worked, t('continue')); } else { setTray('no', t('not_yet'), r.body, t('try_again')); const rf = s.needs && cfg.refreshers && cfg.refreshers[s.needs]; if (rf && !offered[k]) { offered[k] = true; msg.innerHTML += `<span class="small">${esc(t('offer_refresher', { n: rf.name }))}</span>`; const b = document.createElement('button'); b.className = 'btn ghost'; b.id = 'rfb'; b.textContent = t('yes_reminder'); b.onclick = () => openRefresher(s.needs); go.parentNode.insertBefore(b, go); go.textContent = t('no_continue'); } } }
     else setTray('info', r.title, r.body, t('continue'));
     go.disabled = false; go.focus();
@@ -497,6 +498,110 @@ async function viewLesson(path, mode, exIdx) {
   window.removeEventListener('scroll', viewLesson._scroll || (() => {})); viewLesson._scroll = onScroll; window.addEventListener('scroll', onScroll, { passive: true });
 }
 
+/* ---------- book view: a whole chapter on one colourful scrolling page ---------- */
+function burst(x, y, big) {
+  try { if (matchMedia('(prefers-reduced-motion: reduce)').matches) return; } catch (_) {}
+  const cols = ['var(--accent)', 'var(--sun)', 'var(--sky)', 'var(--coral)', 'var(--violet)'];
+  for (let i = 0; i < (big ? 28 : 14); i++) { const d = document.createElement('i'); d.className = 'conf'; const a = Math.random() * Math.PI * 2, r = (big ? 120 : 60) + Math.random() * (big ? 120 : 50);
+    d.style.cssText = `left:${x}px;top:${y}px;background:${cols[i % 5]};--dx:${Math.cos(a) * r}px;--dy:${Math.sin(a) * r - 40}px;--rot:${Math.random() * 540}deg`; document.body.appendChild(d); setTimeout(() => d.remove(), 900); }
+}
+function floatPts(el, n) { const r = el.getBoundingClientRect(); const f = document.createElement('div'); f.className = 'ptsfloat'; f.textContent = '+' + n; f.style.left = (r.left + r.width / 2) + 'px'; f.style.top = (r.top) + 'px'; document.body.appendChild(f); setTimeout(() => f.remove(), 1100); }
+function buzz(ms) { try { navigator.vibrate && navigator.vibrate(ms); } catch (_) {} }
+
+async function viewBook(id) {
+  const idx = await loadIndex(); const c = idx.chapters.find(x => x.id === id); if (!c) { location.hash = 'home'; return; }
+  const secs = c.sections.filter(x => x.lesson);
+  const lessons = await Promise.all(secs.map(x => loadLesson(x.lesson)));
+  setNav(false); hideTray(); markStudied();
+  const all = store.get('bk', {}), B = all[id] = Object.assign({ got: {}, pts: 0, prac: {} }, all[id]); const save = () => { const a = store.get('bk', {}); a[id] = B; store.set('bk', a); };
+  store.set('last', { route: 'book/' + id, title: `${t('unit')} ${c.unit} · ${L(c.title)}`, sub: `${L(idx.subjects[c.subject])} · ${t('grade')} ${c.grade}` });
+  let streak = 0, total = 0, away = false;
+  const hues = ['g', 's', 'y', 'c', 'v'];
+  setTop(`<a class="iconbtn" href="#home" aria-label="back">${svgIcon(BACK)}</a><div class="bar"><i id="pbar"></i></div><span class="pts" id="pts" aria-live="polite">⭐ <b>${B.pts}</b></span>`);
+  const page = document.createElement('div'); page.className = 'book';
+  const tops = []; secs.forEach((x, i) => { const tp = x.n.split('.').slice(0, 2).join('.'); if (!tops.includes(tp)) tops.push(tp); });
+  page.innerHTML = `<header class="hero"><svg class="heroart" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="10" fill="currentColor"/><ellipse cx="60" cy="60" rx="50" ry="18" fill="none" stroke="currentColor" stroke-width="5"/><ellipse cx="60" cy="60" rx="50" ry="18" fill="none" stroke="currentColor" stroke-width="5" transform="rotate(60 60 60)"/><ellipse cx="60" cy="60" rx="50" ry="18" fill="none" stroke="currentColor" stroke-width="5" transform="rotate(120 60 60)"/></svg>
+    <span class="eyebrow">${t('grade')} ${c.grade} · ${esc(L(idx.subjects[c.subject]))}</span><h1 class="display">${t('unit')} ${c.unit}<br>${esc(L(c.title))}</h1><p>${t('book_intro', { n: secs.length })}</p></header>
+    <nav class="chips secnav" id="secnav">${secs.map((x, i) => `<a class="chip h-${hues[tops.indexOf(x.n.split('.').slice(0, 2).join('.')) % 5]}" href="#book/${id}" data-go="${i}">${esc(x.n)}</a>`).join('')}</nav>`;
+  app.replaceChildren(page);
+  const bump = n => { B.pts += n; save(); const p = $('#pts'); p.innerHTML = `⭐ <b>${B.pts}</b>`; p.classList.remove('bump'); void p.offsetWidth; p.classList.add('bump'); };
+  const progress = () => { const d = Object.keys(B.got).length; $('#pbar').style.width = (total ? Math.round(d / total * 100) : 0) + '%'; };
+  const kwLink = (html, kws, used) => { kws.forEach((k, j) => { if (used.has(j) || !k.en) return; const e = esc(k.en).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); const re = new RegExp(`(^|[^\\p{L}])(${e})(?![\\p{L}])`, 'iu'); const parts = html.split(/(<button[^>]*>[^<]*<\/button>)/); for (let q = 0; q < parts.length; q += 2) if (re.test(parts[q])) { parts[q] = parts[q].replace(re, `$1<button class="kwt" data-k="${j}">$2</button>`); used.add(j); break; } html = parts.join(''); }); return html; };
+
+  secs.forEach((sec, si) => {
+    const ls = lessons[si], kws = ls.keywords || [], used = new Set(), hue = hues[tops.indexOf(sec.n.split('.').slice(0, 2).join('.')) % 5];
+    const box = document.createElement('section'); box.className = `sec h-${hue}`; box.id = 'sec' + si; box.dataset.i = si;
+    box.innerHTML = `<h2 class="sechead"><span class="num">${esc(sec.n)}</span><span>${esc(ls.title)}</span></h2>`;
+    const inline = [], practise = [];
+    ls.ideas.forEach((idea, ii) => idea.screens.forEach((s, k) => {
+      const key = `${sec.lesson}#${ii}.${k}`, sx = Object.assign({ _idea: idea.id, _key: key }, s);
+      if (s.graded && s.step !== 'check' && s.step !== 'notice') { practise.push(sx); return; }
+      inline.push(sx);
+    }));
+    // keep one inline check per idea; the rest join the practise set
+    const seenIdea = new Set(); const rows = inline.filter(s => { if (!s.graded) return true; if (seenIdea.has(s._idea)) { practise.unshift(s); return false; } seenIdea.add(s._idea); return true; });
+    const secKeys = rows.filter(s => s.graded).map(s => s._key); total += secKeys.length;
+    const doneCheck = () => { if (!box.querySelector('.secdone')) return; if (secKeys.every(k => k in B.got) && !box.classList.contains('complete')) { box.classList.add('complete'); const fresh = !B.got['done:' + sec.lesson]; if (fresh) { B.got['done:' + sec.lesson] = 1; save(); setLessonProgress(sec.lesson, { done: true }); const by = {}; secKeys.forEach(k => { const s = rows.find(r => r._key === k); by[s._idea] = (by[s._idea] !== false) && B.got[k] >= 10; }); Object.keys(by).forEach(i => bumpMastery(i, by[i])); const ban = box.querySelector('.secdone'); ban.hidden = false; const r = ban.getBoundingClientRect(); burst(r.left + r.width / 2, r.top + 20, true); bump(20); buzz([20, 40, 20]); } else box.querySelector('.secdone').hidden = false; } };
+    rows.forEach(s => {
+      const el = document.createElement('div');
+      if (s.kind === 'read') { el.className = 'rd'; el.innerHTML = (s.title ? `<h3>${esc(s.title)}</h3>` : '') + (s.paras || []).map(p => `<p>${kwLink(esc(p), kws, used)}</p>`).join('') + (s.table ? `<div class="tbl"><table>${s.table.map((r, i) => `<tr>${r.map(x => i ? `<td>${esc(x)}</td>` : `<th>${esc(x)}</th>`).join('')}</tr>`).join('')}</table></div>` : '') + (s.note ? `<button class="tip"><span>💡</span><span class="tx">${esc(s.note)}</span></button>` : ''); }
+      else if (s.kind === 'name') { el.className = 'keys'; el.innerHTML = s.defs.map(d => { const k = kws.find(x => x.en.toLowerCase() === d[0].toLowerCase()); return `<div class="kcard"><div class="kt">${esc(d[0])}${k && k.am ? ` <span class="kam" lang="am">${esc(k.am)}</span>` : ''}</div><div class="kd">${esc(d[1])}</div></div>`; }).join(''); }
+      else if (s.kind === 'guess') { el.className = 'quiz think'; el.innerHTML = `<div class="ql">🤔 ${t('step_hook')}</div><p class="qq">${esc(s.ask || s.text || '')}</p>${s.ask && s.text ? `<p class="small qctx">${esc(s.text)}</p>` : ''}<div class="qo">${s.opts.map(o => `<button class="qb">${esc(o)}</button>`).join('')}</div><p class="qf" hidden></p>`;
+        el.querySelector('.qo').onclick = e => { const b = e.target.closest('.qb'); if (!b || el.dataset.done) return; el.dataset.done = 1; b.classList.add('pick'); el.querySelectorAll('.qb').forEach(x => x.disabled = true); const f = el.querySelector('.qf'); f.hidden = false; f.textContent = s.after || ''; }; }
+      else if ((s.kind === 'mcq' || s.kind === 'tf') && s.graded) {
+        const opts = s.kind === 'tf' ? [t('true'), t('false')] : s.opts, ans = s.kind === 'tf' ? (s.a ? t('true') : t('false')) : s.ans; let tries = 0;
+        el.className = 'quiz'; el.innerHTML = `<div class="ql">✏️ ${t('quick_check')}</div><p class="qq">${esc(s.kind === 'tf' ? s.text : (s.ask || s.text || s.title || ''))}</p>${s.kind !== 'tf' && s.ask && s.text ? `<p class="small qctx">${esc(s.text)}</p>` : ''}<div class="qo ${s.kind === 'tf' ? 'two' : ''}">${opts.map(o => `<button class="qb">${esc(o)}</button>`).join('')}</div><p class="qf" hidden></p>`;
+        const f = el.querySelector('.qf'), say = (cls, txt) => { f.hidden = false; f.className = 'qf ' + cls; f.textContent = txt || ''; };
+        const settle = (pts) => { el.querySelectorAll('.qb').forEach(x => { x.disabled = true; if (x.textContent === ans) x.classList.add('ok'); }); el.classList.add('done'); if (!(s._key in B.got)) { B.got[s._key] = pts; save(); progress(); } doneCheck(); };
+        if (s._key in B.got) { settle(B.got[s._key]); say('ok', s.why); }
+        el.querySelector('.qo').onclick = e => { const b = e.target.closest('.qb'); if (!b || b.disabled || el.classList.contains('done')) return; tries++;
+          const ok = b.textContent === ans; logEvent({ lesson: ls.id, idea: s._idea, item: s._key, correct: ok, attempt: tries, mode: 'book' });
+          if (ok) { streak++; const pts = tries === 1 ? 10 : 5; b.classList.add('ok', 'pop'); const r = b.getBoundingClientRect(); burst(r.left + r.width / 2, r.top + r.height / 2); floatPts(b, pts); bump(pts); buzz(25); say('ok', (streak >= 3 ? `🔥 ${t('in_a_row', { n: streak })} ` : '') + (s.why || '')); settle(pts); }
+          else { streak = 0; b.classList.add('no', 'shake'); b.disabled = true; setTimeout(() => b.classList.remove('shake'), 500); buzz(60);
+            if (tries >= 2) { say('no', `${t('answer_is')} ${ans}. ${s.worked || s.why || ''}`); settle(0); } else say('no', `${s.clue || t('not_yet')} ${t('try_again')}.`); } };
+      }
+      else { // other kinds: reuse the shared renderers with a small check button
+        let phase = 'answer', tries = 0, cur = null; const btn = document.createElement('button'); btn.className = 'btn small'; const f = document.createElement('p'); f.className = 'qf'; f.hidden = true;
+        const env = { phase: () => phase, state: {}, explain: null, enter: () => { if (!btn.disabled) btn.click(); }, update() { if (!cur) return; if (cur.check && s.graded) btn.disabled = phase !== 'answer' || !cur.ready(); } };
+        const RR = makeR(env).R; cur = (RR[s.kind] || RR.name)(Object.assign({}, s, { title: '', step: '' }));
+        el.className = s.graded ? 'quiz' : 'quiz think'; el.insertAdjacentHTML('beforeend', `<div class="ql">${s.graded ? '✏️ ' + t('quick_check') : '🔍 ' + t('step_explore')}</div>${s.title ? `<p class="qq">${esc(s.title)}</p>` : ''}`);
+        el.appendChild(cur.el); el.appendChild(f);
+        if (cur.check && s.graded) { btn.textContent = t('check'); el.appendChild(btn); env.update();
+          btn.onclick = () => { const r = cur.check(); tries++; logEvent({ lesson: ls.id, idea: s._idea, item: s._key, correct: !!r.ok, attempt: tries, mode: 'book' });
+            const finish = pts => { phase = 'done'; btn.hidden = true; el.classList.add('done'); if (!(s._key in B.got)) { B.got[s._key] = pts; save(); progress(); } doneCheck(); };
+            if (r.ok) { streak++; const pts = tries === 1 ? 10 : 5; const rc = btn.getBoundingClientRect(); burst(rc.left + rc.width / 2, rc.top); floatPts(btn, pts); bump(pts); buzz(25); f.hidden = false; f.className = 'qf ok'; f.textContent = r.body || ''; finish(pts); }
+            else { streak = 0; buzz(60); f.hidden = false; f.className = 'qf no'; if (tries >= 2) { const shown = s.kind === 'blank' ? s.a[0] : s.kind === 'pick' ? s.a.join(', ') : ''; f.textContent = `${shown ? t('answer_is') + ' ' + shown + '. ' : ''}${s.worked || s.why || ''}`; finish(0); } else { f.textContent = `${r.body || t('not_yet')} ${t('try_again')}.`; cur.retry && cur.retry(); env.update(); } } };
+          if (s._key in B.got) { btn.hidden = true; el.classList.add('done'); f.hidden = false; f.className = 'qf ok'; f.textContent = '✓ ' + (s.why || ''); }
+        }
+      }
+      box.appendChild(el);
+    });
+    box.querySelectorAll('.tip').forEach(b => b.onclick = () => b.classList.toggle('open'));
+    box.querySelectorAll('.kwt').forEach(b => b.onclick = () => { const k = kws[+b.dataset.k]; sheet(`<div class="kcard big"><div class="kt">${esc(k.en)}</div>${k.am ? `<div class="kam" lang="am">${esc(k.am)}</div>` : ''}${k.om ? `<div class="kam" lang="om">${esc(k.om)}</div>` : ''}<div class="kd">${esc(k.def || '')}</div></div><button class="btn" id="kok">${t('continue')}</button>`); $('#kok').onclick = () => sheet(''); });
+    // end of section: celebration, practise set, book exercises
+    const end = document.createElement('div'); end.className = 'secend';
+    const pr = B.prac[sec.lesson];
+    end.innerHTML = `<div class="secdone" hidden>🎉 ${t('section_done', { s: esc(sec.n) })} <b>+20 ⭐</b></div>
+      ${practise.length ? `<button class="pcard" data-a="prac"><span class="pi">🎯</span><span class="grow"><b>${t('practise_n', { n: practise.length })}</b><small>${pr ? `${t('best')} ${pr}` : t('practise_sub')}</small></span><span>›</span></button>` : ''}
+      ${(ls.exercises || []).map((ex, k) => `<button class="pcard soft" data-a="ex" data-k="${k}"><span class="pi">📖</span><span class="grow"><b>${esc(ex.book_name)}</b><small>${t('book_exercise')} · ${ex.items.length}</small></span><span>›</span></button>`).join('')}`;
+    const runHere = (cfg) => { const keep = { app: [...app.childNodes], top: [...topin.childNodes], y: window.scrollY }; away = true;
+      runPlayer(Object.assign({ backRoute: null, refreshers: ls.refreshers || {}, tool: ls.tool, cheer: true, resume: () => { app.replaceChildren(...keep.app); topin.replaceChildren(...keep.top); top.hidden = false; hideTray(); setNav(false); away = false; $('#pts').innerHTML = `⭐ <b>${B.pts}</b>`; requestAnimationFrame(() => window.scrollTo(0, keep.y)); } }, cfg)); };
+    end.addEventListener('click', e => { const b = e.target.closest('.pcard'); if (!b) return;
+      if (b.dataset.a === 'prac') runHere({ id: ls.id, title: `${sec.n} · ${ls.title}`, mode: 'practice', screens: practise, onDone: res => { const right = Object.values(res.firstTry).filter(Boolean).length; B.prac[sec.lesson] = `${right}/${practise.length}`; bump(right * 5); Object.keys(res.byIdea).forEach(i => bumpMastery(i, res.byIdea[i])); } });
+      else { const ex = ls.exercises[+b.dataset.k]; runHere({ id: ls.id, title: ex.book_name, mode: 'book', screens: ex.items }); } });
+    box.appendChild(end);
+    page.appendChild(box);
+    doneCheck();
+  });
+  const fin = document.createElement('div'); fin.className = 'bookend'; fin.innerHTML = `<div class="display">⭐ ${t('book_points')}</div><a class="btn ghost" href="#exams">${t('exams')} ›</a><a class="btn link" href="${c.classic}">${t('open_chapter')}</a>`; page.appendChild(fin);
+  progress();
+  page.querySelector('#secnav').addEventListener('click', e => { const a = e.target.closest('[data-go]'); if (!a) return; e.preventDefault(); $('#sec' + a.dataset.go).scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+  try { const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { page.querySelectorAll('#secnav .chip').forEach(ch => ch.classList.toggle('on', ch.dataset.go === en.target.dataset.i)); const on = page.querySelector('#secnav .chip.on'); if (on) on.scrollIntoView({ block: 'nearest', inline: 'center' }); } }), { rootMargin: '-45% 0px -50% 0px' }); page.querySelectorAll('.sec').forEach(s => io.observe(s)); } catch (_) {}
+  if (B.y) requestAnimationFrame(() => window.scrollTo(0, B.y)); else window.scrollTo(0, 0);
+  let tm; const onScroll = () => { if (away || !page.isConnected) return; clearTimeout(tm); tm = setTimeout(() => { if (page.isConnected && !away) { B.y = Math.round(window.scrollY); save(); } }, 400); };
+  window.removeEventListener('scroll', viewBook._s || (() => {})); viewBook._s = onScroll; window.addEventListener('scroll', onScroll, { passive: true });
+}
+
 /* ---------- router ---------- */
 async function route() {
   sheet(''); closePanel();
@@ -509,6 +614,7 @@ async function route() {
     case 'setup': return viewSetup();
     case 'home': return viewHome();
     case 'chapter': return viewChapter(a);
+    case 'book': return viewBook(a);
     case 'lesson': return viewLesson(decodeURIComponent(a), 'learn');
     case 'exercise': return viewLesson(decodeURIComponent(a), 'book', +b || 0);
     case 'test': return viewLesson(decodeURIComponent(a), 'test');
