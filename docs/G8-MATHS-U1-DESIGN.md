@@ -369,6 +369,10 @@ Every idea: hook ✓ · read ✓ · name ✓ · check ✓ · ≥2 practise ✓ �
 - Book references (Example 1.31, Exercise 1.6 Q2, Q1 a) go in a separate "ref" field and show as a small 📖 label, never inside the question.
 - After every answer the student sees a pop-up: ✓ Correct / ↻ Not yet, try again / 💡 Here is the answer.
 
+## Difficulty levels (owner feedback, 2026-10-22)
+- 160 graded items carry a level (★ book items, ★★ multi-step / signed / worked). 24 hand-written ★★★ Challenge questions, one per idea, inline at the end of each idea (answers verified exactly).
+- Practise: lesson items + extra generated items that start at ★★ and adapt; section tests and the Chapter test rotate ★/★★/★★★.
+
 ## Generated questions (`gen`)
 A screen may carry `"gen": {"t": "<generator>", ...}` (generators in app.js between GEN-START/GEN-END: place, between, mixed, opposite, abs, abseq, classify, compare, order, op (add/sub/mul/div, options same/mixed/signs/word), share, interest).
 When they are used:

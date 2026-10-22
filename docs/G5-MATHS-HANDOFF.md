@@ -35,6 +35,9 @@ Live app: https://mhreteabetd.github.io/meseret/ (push to `main` deploys). Grade
 4. Ethiopian context (birr, injera, teff, Addis Ababa, local names). Anything added is `"added": true`.
 5. Facts and answers checked; unsure → keep the book's version and add a `review` note for a teacher.
 
+## Mixed difficulty (owner feedback: questions were too easy) — applies to Grade 5 too
+Every graded item gets `"level"` 1–3 (★ basic, ★★ standard, ★★★ challenge); each idea ends with one inline `"step": "challenge"` question; generators accept a level and have a ★★★ shape (`LV` and `HARD` in app.js, next to `GEN-START`). Practise adds adaptive ★★/★★★ generated items automatically for any item with `gen`; tests rotate ★/★★/★★★. Add `LV`/`HARD` entries for the Grade 5 generators (area, count, volume, convert, litres) in Amharic, and challenge items per idea. See rule 12 in `CLAUDE.md`.
+
 ## What is new for Grade 5: the book is in Amharic
 This is the first Grades 1–6 chapter. **All Grades 1–6 books (every subject) are in Amharic** (regional books in other languages come later), so build everything below as a **general Grades 1–6 capability**, not a Grade 5 special case: any later G1–G6 chapter (Environmental Science, Amharic, English as a subject, …) must work by setting `"lang": "am"` on its lessons. See the language rules in `CLAUDE.md`.
 

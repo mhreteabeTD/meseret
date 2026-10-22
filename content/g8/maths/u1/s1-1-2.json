@@ -190,7 +190,8 @@
      "why": "Every whole number is an integer.",
      "clue": "Look at Figure 1.11. Where is the W circle?",
      "id": "g8.maths.u1.s1-1-2.6",
-     "ref": "Example 1.6"
+     "ref": "Example 1.6",
+     "level": 1
     },
     {
      "kind": "sort",
@@ -227,7 +228,8 @@
      "why": "Find the smallest set, then add every set around it.",
      "clue": "Is the number a fraction? Is it negative?",
      "id": "g8.maths.u1.s1-1-2.7",
-     "ref": "Example 1.5"
+     "ref": "Example 1.5",
+     "level": 1
     },
     {
      "kind": "mcq",
@@ -243,7 +245,8 @@
      "why": "0 ∈ W, 0 ∈ ℤ and 0 ∈ ℚ.",
      "clue": "Is 0 in the whole numbers?",
      "id": "g8.maths.u1.s1-1-2.8",
-     "ref": "Exercise 1.2 Q1"
+     "ref": "Exercise 1.2 Q1",
+     "level": 1
     },
     {
      "kind": "tf",
@@ -253,7 +256,8 @@
      "a": true,
      "why": "ℕ is inside W.",
      "clue": "Look at the circles.",
-     "id": "g8.maths.u1.s1-1-2.9"
+     "id": "g8.maths.u1.s1-1-2.9",
+     "level": 1
     },
     {
      "kind": "tf",
@@ -263,7 +267,30 @@
      "a": false,
      "why": "−3 2/7 has a fraction part, so it is not an integer. It is a negative rational number.",
      "clue": "Integers have no fraction part.",
-     "id": "g8.maths.u1.s1-1-2.10"
+     "id": "g8.maths.u1.s1-1-2.10",
+     "level": 1
+    },
+    {
+     "kind": "pick",
+     "graded": true,
+     "text": "Which numbers are in ℤ but NOT in W?",
+     "pool": [
+      "−6",
+      "0",
+      "12/4",
+      "−15/3",
+      "−1/2"
+     ],
+     "a": [
+      "−6",
+      "−15/3"
+     ],
+     "why": "−6 and −15/3 = −5 are negative integers: in ℤ, not in W. 0 and 12/4 = 3 are whole numbers. −1/2 is not an integer at all.",
+     "clue": "Simplify each one. Negative integers are in ℤ but not in W.",
+     "step": "challenge",
+     "level": 3,
+     "added": true,
+     "id": "g8.maths.u1.s1-1-2.18"
     }
    ]
   }
@@ -286,7 +313,8 @@
      "why": "0 is whole, so it is also an integer and rational.",
      "clue": "Start with the whole numbers.",
      "id": "g8.maths.u1.s1-1-2.11",
-     "ref": "Q1"
+     "ref": "Q1",
+     "level": 1
     },
     {
      "kind": "tf",
@@ -297,7 +325,8 @@
      "why": "That is the meaning of integers.",
      "clue": "Think of …, −2, −1, 0, 1, 2, …",
      "id": "g8.maths.u1.s1-1-2.12",
-     "ref": "Q2 a"
+     "ref": "Q2 a",
+     "level": 1
     },
     {
      "kind": "tf",
@@ -308,7 +337,8 @@
      "why": "ℕ ⊂ W.",
      "clue": "Look at Figure 1.11.",
      "id": "g8.maths.u1.s1-1-2.13",
-     "ref": "Q2 b"
+     "ref": "Q2 b",
+     "level": 1
     },
     {
      "kind": "tf",
@@ -319,7 +349,8 @@
      "why": "It has a fraction part, so it is rational, not an integer.",
      "clue": "Integers have no fraction part.",
      "id": "g8.maths.u1.s1-1-2.14",
-     "ref": "Q2 c"
+     "ref": "Q2 c",
+     "level": 1
     }
    ]
   }
@@ -330,7 +361,8 @@
    "step": "test",
    "graded": true,
    "gen": {
-    "t": "classify"
+    "t": "classify",
+    "level": 1
    },
    "text": "What is the smallest set that contains −7?",
    "opts": [
@@ -342,14 +374,16 @@
    "ans": "ℤ",
    "why": "−7 is a negative integer.",
    "clue": "",
-   "id": "g8.maths.u1.s1-1-2.15"
+   "id": "g8.maths.u1.s1-1-2.15",
+   "level": 1
   },
   {
    "kind": "mcq",
    "step": "test",
    "graded": true,
    "gen": {
-    "t": "classify"
+    "t": "classify",
+    "level": 2
    },
    "text": "What is the smallest set that contains 2/3?",
    "opts": [
@@ -361,7 +395,8 @@
    "ans": "ℚ",
    "why": "2/3 is not an integer.",
    "clue": "",
-   "id": "g8.maths.u1.s1-1-2.16"
+   "id": "g8.maths.u1.s1-1-2.16",
+   "level": 2
   },
   {
    "kind": "tf",
@@ -371,7 +406,8 @@
    "a": true,
    "why": "Any integer n = n/1.",
    "clue": "",
-   "id": "g8.maths.u1.s1-1-2.17"
+   "id": "g8.maths.u1.s1-1-2.17",
+   "level": 3
   }
  ],
  "notes": [

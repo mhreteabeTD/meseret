@@ -412,3 +412,11 @@ body.panel-open main { padding-bottom: 60vh; }
 .opt .mf, .chip .mf, .pl .mf, .pr .mf { max-width: 96px; }
 #it .mf { max-width: 150px; }
 .lad svg g[data-i] { cursor: pointer; }
+/* difficulty badge and challenge card */
+.lvl { display: inline-block; margin-left: 8px; font-size: 12px; letter-spacing: 1px; padding: 1px 8px; border-radius: 99px; vertical-align: middle; font-weight: 800; }
+.lvl.l1 { color: var(--accent-deep); background: var(--accent-soft); }
+.lvl.l2 { color: var(--sky); background: var(--sky-soft); }
+.lvl.l3 { color: var(--sun-ink); background: var(--sun-soft); border: 1.5px solid var(--sun-line); }
+.quiz.chal { border: 2.5px solid var(--sun); background: linear-gradient(180deg, var(--sun-soft), var(--surface) 60%); }
+.quiz.chal .ql { color: var(--sun-ink); }
+.stack > .lvl, .stack > .ref { justify-self: start; width: fit-content; margin-left: 0; }

@@ -338,7 +338,7 @@ const Gen = (() => {
   const pair = k => `${M(k)} and ${M(k + 1)}`;
   const NAMES = ['Abebe', 'Almaz', 'Kebede', 'Hiwot', 'Tigist', 'Dawit', 'Selam', 'Yonas', 'Meron', 'Bekele'];
   const T = {
-    place(o) { const d = pick(o.dens || [2, 3, 4, 5, 6]); let n; do n = int(1, d * (o.improper ? 3 : 1) - 1); while (n % d === 0); const q = Q.mk(n * (o.signs ? sgn() : 1), d), lo = Math.floor(Q.val(q));
+    place(o) { const d = pick(o.dens || [2, 3, 4, 5, 6]); let n; do n = int(1, d * (o.improper ? 3 : 1) - 1); while (n % d === 0 || Q.gcd(n, d) !== 1); const q = Q.mk(n * (o.signs ? sgn() : 1), d), lo = Math.floor(Q.val(q));
       return { kind: 'numline', min: lo - 1, max: lo + 2, sub: q.d, targets: [{ v: fq(q), label: fq(q) }], ask: `Tap where ${fq(q)} goes.`, why: `${fmix(q) !== fq(q) ? `${fq(q)} = ${fmix(q)}. ` : ''}It lies between ${pair(lo)}.`, clue: q.n < 0 ? 'Negative numbers are left of 0.' : 'Split each unit into equal parts.' }; },
     between() { const d = pick([2, 3, 4, 5, 7]); let n; do n = int(1, d * 3); while (n % d === 0); const q = Q.mk(n * sgn(), d), lo = Math.floor(Q.val(q));
       const opts = shuffle([pair(lo), ...shuffle([pair(lo - 1), pair(lo + 1), pair(lo + 2)]).slice(0, 2), pair(-lo - 1) === pair(lo) ? pair(lo - 2) : pair(-lo - 1)]);
@@ -442,11 +442,57 @@ const Gen = (() => {
       if (st === 'm3') return { kind: 'blank', num: true, ask: am ? `${base} በሙሉ ___ ሜ³ ይይዛሉ።` : `${base} hold ___ m³ in all.`, a: [String(L / 1000)], why: `${n} × ${k} = ${L} ሊ፤ ${L} ÷ 1,000 = ${L / 1000} ሜ³` + dot, clue: am ? '1 ሊ = 1/1000 ሜ³። ሊትሩን በ1,000 አካፍል።' : '1 litre = 1/1000 m³. Divide the litres by 1,000.', machine: true };
       return { kind: 'blank', num: true, ask: am ? `${base} በሙሉ ___ ሊትር ነው።` : `${base} hold ___ litres in all.`, a: [String(L)], why: `${n} × ${k} = ${L}` + dot, clue: am ? 'ብዛቱን በአንዱ ሊትር አባዛ።' : 'Multiply the number by the litres of one.', machine: true }; },
   };
+  /* ---- difficulty levels: ★ basic (book level), ★★ standard, ★★★ challenge ----
+     LV[t](level) returns option overrides; HARD[t] makes a ★★★ question of a different shape (missing number, spot the mistake, multi-step). */
+  const LV = {
+    place: L => [{ dens: [2, 3, 4, 5], signs: false, improper: false }, { dens: [2, 3, 4, 5, 6], signs: true, improper: true }, { dens: [6, 7, 8, 9, 10], signs: true, improper: true }][L - 1],
+    compare: L => ({ kind: ['dec', 'frac', 'neg'][L - 1] }),
+    order: L => [{ n: 3, signs: false }, { n: 4 }, { n: 5 }][L - 1],
+    op: L => [{ same: true, signs: false, mixed: false }, { same: false, signs: true, mixed: false }, { same: false, signs: true, mixed: true }][L - 1],
+    abs: L => ({ form: L === 1 ? 'in' : 'sum' }),
+    abseq: L => (L === 3 ? { shift: true } : {}),
+    interest: L => (L === 1 ? { find: 'I' } : L === 2 ? { find: pick(['P', 'T', 'I']) } : {}),
+  };
+  const NM = () => pick(NAMES);
+  const HARD = {
+    op(o) { const t = o.op || 'add', kind = o.word ? 'mistake' : pick(['missing', 'mistake']);
+      let A = proper([2, 3, 4, 5, 6, 8]), B = proper([2, 3, 4, 5, 6, 8]); if (r() < .6) A = neg(A); if (r() < .4) B = neg(B); if (r() < .4) A = add(A, Q.mk(A.n < 0 ? -1 : 1, 1));
+      const sym = { add: '+', sub: '−', mul: '×', div: '÷' }[t], R = t === 'add' ? add(A, B) : t === 'sub' ? add(A, neg(B)) : t === 'mul' ? mul(A, B) : div(A, B);
+      if (kind === 'missing') {
+        const L = lcm(A.d, R.d);
+        const q = { add: [`___ + ${par(B)} = ${fq(R)}`, A, `Undo the addition: subtract ${par(B)} from ${fq(R)}. ${fq(R)} − ${par(B)} = ${fq(A)}.`],
+                    sub: [`${fmix(A)} − ___ = ${fq(R)}`, B, `The missing number is what you take away: ${fmix(A)} − ${fq(R)} = ${fq(B)}.`],
+                    mul: [`${fmix(A)} × ___ = ${fq(R)}`, B, `Undo the multiplication: divide. ${fq(R)} ÷ ${par(A)} = ${fq(R)} × ${fq(Q.mk(A.d, A.n))} = ${fq(B)}.`],
+                    div: [`___ ÷ ${par(B)} = ${fq(R)}`, A, `Undo the division: multiply. ${fq(R)} × ${par(B)} = ${fq(A)}.`] }[t];
+        return { kind: 'blank', num: true, ask: `Find the missing number: ${q[0]}`, a: forms(q[1]), why: `${q[2]} Check: put ${fq(q[1])} back in and the two sides are equal.`, worked: `${q[2]} Check: put ${fq(q[1])} back in and the two sides are equal.`, clue: t === 'add' || t === 'sub' ? 'Undo the operation with its opposite.' : 'Multiplication and division undo each other.' }; }
+      const W = { add: Q.mk(A.n + B.n, A.d + B.d), sub: add(A, B), mul: div(A, B), div: mul(A, B) }[t], why = { add: `He added the tops and the bottoms. That is never allowed: first make the denominators the same (LCM), then add only the numerators.`, sub: `He added ${fq(B)} instead of subtracting it. Subtracting means adding the opposite: ${fmix(A)} + ${par(neg(B))}.`, mul: `He divided instead of multiplying. To multiply, multiply the tops and multiply the bottoms.`, div: `He forgot to flip the divisor. Dividing by ${fq(B)} means multiplying by ${fq(Q.mk(B.d, B.n))}.` }[t];
+      if (W.n * R.d === R.n * W.d) return HARD.op(Object.assign({}, o, { word: false, _k: 'missing' }));
+      const nm = NM(), right = `No, it should be ${fq(R)}`, wrong2 = `No, it should be ${fq(R.n === 0 ? Q.mk(1, 1) : neg(R))}`;
+      return { kind: 'mcq', text: `${nm} worked out ${fmix(A)} ${sym} ${par(B)} and got ${fq(W)}. Is ${nm} right?`, opts: shuffle([`Yes, ${fq(W)} is right`, right, wrong2]), ans: right, why: `${why} The correct answer is ${fq(R)}.`, clue: 'Work it out yourself first, then compare.' }; },
+    place(o) { return T.place(Object.assign({}, o, LV.place(3))); },
+    between() { const d = pick([6, 7, 8, 9]); let n; do n = int(d + 1, d * 6); while (n % d === 0); const q = Q.mk(-n, d), lo = Math.floor(Q.val(q));
+      return { kind: 'mcq', text: `Between which two integers does ${fq(q)} lie?`, opts: shuffle([pair(lo), pair(lo + 1), pair(lo - 1), pair(-lo - 1)].filter((x, i, a) => a.indexOf(x) === i)), ans: pair(lo), why: `${fq(q)} = ${fmix(q)} (${n} ÷ ${d} = ${Math.trunc(n / d)} remainder ${n % d}). A negative number lies left of 0, so it lies between ${pair(lo)}.`, clue: 'Change it to a mixed number. Careful with the minus sign.' }; },
+    compare() { const w = int(1, 3), a = proper([4, 5, 8]), mixd = add(Q.mk(w, 1), a), dec = +(Q.val(mixd) + pick([-0.05, 0.05, -0.1, 0.1, 0])).toFixed(2), A = neg(mixd), B = Q.parse(String(-dec)), c = A.n * B.d - B.n * A.d, ans = c < 0 ? '<' : c > 0 ? '>' : '=';
+      return { kind: 'mcq', text: `Which sign is correct? ${fmix(A)} ? ${M(-dec)}`, opts: ['<', '>', '='], ans, why: `${fmix(neg(A))} = ${+Q.val(neg(A)).toFixed(3)} as a decimal. Compare the sizes: ${+Q.val(neg(A)).toFixed(3)} and ${dec}. Both are negative, so the one with the bigger size is smaller. So ${fmix(A)} ${ans} ${M(-dec)}.`, clue: 'Change the mixed number to a decimal. With negatives, bigger size means smaller number.' }; },
+    abs() { const x = int(-9, 9) || -4, a = int(2, 5), b = int(1, 9), v = Math.abs(a * x - b) - Math.abs(x);
+      return { kind: 'blank', num: true, ask: `If x = ${M(x)}, then |${a}x − ${b}| − |x| = ___`, a: [String(v)], why: `${a}x = ${a} × ${par(Q.mk(x, 1))} = ${M(a * x)}. ${M(a * x)} − ${b} = ${M(a * x - b)}, so |${a}x − ${b}| = ${Math.abs(a * x - b)}. |x| = |${M(x)}| = ${Math.abs(x)}. ${Math.abs(a * x - b)} − ${Math.abs(x)} = ${M(v)}.`, worked: `${a}x = ${M(a * x)}; ${M(a * x)} − ${b} = ${M(a * x - b)}; |${M(a * x - b)}| = ${Math.abs(a * x - b)}; |${M(x)}| = ${Math.abs(x)}; ${Math.abs(a * x - b)} − ${Math.abs(x)} = ${M(v)}.`, clue: 'Put the number in for x. Work inside the bars first.' }; },
+    abseq(o) { return T.abseq(Object.assign({}, o, { shift: true })); },
+    opposite() { const q = Q.mk(int(1, 12) * sgn(), pick([2, 3, 4, 5, 7])); return { kind: 'blank', num: true, ask: `−(−(${fmix(q)})) = ___`, a: forms(q), why: `The opposite of ${fmix(q)} is ${fmix(neg(q))}. The opposite of that is ${fmix(q)} again. Two opposites cancel.`, clue: 'Work from the inside: take the opposite twice.' }; },
+    mixed() { const d = pick([3, 4, 5, 6, 7, 8, 9]), w = int(2, 9); let n = int(1, d - 1); while (Q.gcd(n, d) !== 1) n = int(1, d - 1); const q = Q.mk(w * d + n, d);
+      return { kind: 'blank', num: false, ask: `As an improper fraction, ${w} ${n}/${d} = ___`, a: [fq(q)], why: `${w} wholes = ${w} × ${d} = ${w * d} parts of ${d}. Add the ${n}: ${w * d} + ${n} = ${w * d + n}. So ${w} ${n}/${d} = ${fq(q)}.`, clue: 'Whole × denominator + numerator, over the same denominator.' }; },
+    classify() { const pickOne = pick([['−8/4', 2, '−8/4 = −2, an integer. So it is in ℤ and ℚ.'], ['0/5', 1, '0/5 = 0, a whole number.'], ['12/3', 0, '12/3 = 4, a natural number.'], ['−0.5', 3, '−0.5 = −1/2, not an integer.'], ['6/4', 3, '6/4 = 3/2, not an integer.']]);
+      return { kind: 'mcq', text: `Simplify first! What is the smallest set that contains ${pickOne[0]}?`, opts: ['ℕ', 'W', 'ℤ', 'ℚ'], ans: ['ℕ', 'W', 'ℤ', 'ℚ'][pickOne[1]], why: pickOne[2], clue: 'Divide the top by the bottom first. Is the result an integer?' }; },
+    share() { const k = pick([3, 4, 5]), m = pick([2, 3]), n = pick([2, 3, 4]), nm = NM(), rest1 = Q.mk(k - 1, k), fatherPart = mul(rest1, Q.mk(1, m)), rest2 = add(rest1, neg(fatherPart)), each = div(rest2, Q.mk(n, 1));
+      return { kind: 'blank', num: true, ask: `${nm}'s mother takes 1/${k} of a cake. The father takes 1/${m} of what is left. ${n} children share the rest equally. Each child gets ___ of the cake.`, a: forms(each), why: `After the mother: 1 − 1/${k} = ${fq(rest1)}. The father takes 1/${m} of ${fq(rest1)} = ${fq(fatherPart)}. Left: ${fq(rest1)} − ${fq(fatherPart)} = ${fq(rest2)}. Each child: ${fq(rest2)} ÷ ${n} = ${fq(each)}.`, worked: `1 − 1/${k} = ${fq(rest1)}; 1/${m} × ${fq(rest1)} = ${fq(fatherPart)}; ${fq(rest1)} − ${fq(fatherPart)} = ${fq(rest2)}; ${fq(rest2)} ÷ ${n} = ${fq(each)}.`, clue: 'Go one step at a time: what is left after each person?' }; },
+    interest() { const nm = NM(), P = int(10, 60) * 100, R = int(5, 15), T2 = int(2, 4), I = P * R / 100 * T2, A = P + I;
+      return { kind: 'blank', num: true, ask: `${nm} saves Birr ${P} at ${R}% simple interest per year. How much money will ${nm} have after ${T2} years (savings + interest)? Birr ___`, a: [String(A)], why: `First the interest: I = P × R × T = ${P} × ${R / 100} × ${T2} = ${I}. Then add it to the savings: ${P} + ${I} = ${A}.`, worked: `I = ${P} × ${R / 100} × ${T2} = ${I}; total = ${P} + ${I} = ${A}.`, clue: 'Find the interest first, then add the savings.' }; },
+  };
   const api = {
     has: s => !!(s && s.gen && T[s.gen.t]),
     list: () => Object.keys(T),
-    make(s, seed, lang) { if (!api.has(s)) return s; r = seed == null ? Math.random : rng(seed);
-      try { const v = T[s.gen.t](Object.assign({ lang: lang || (typeof LL !== 'undefined' && LL) || 'en' }, s.gen), s); const out = Object.assign({}, s, { title: s.title ? s.title.replace(/^(Example|Exercise|Activity|Group work)[^:]*:\s*/i, '') : s.title }, v, { _gen: true });
+    make(s, seed, lang, level) { if (!api.has(s)) return s; r = seed == null ? Math.random : rng(seed);
+      try { const L = level || s.gen.level || 0, t = s.gen.t, o = Object.assign({ lang: lang || (typeof LL !== 'undefined' && LL) || 'en' }, s.gen, L && LV[t] ? LV[t](L) : {});
+        const v = L === 3 && HARD[t] && (!LV[t] || r() < .7) ? HARD[t](o, s) : T[t](o, s); if (L) v.level = L; const out = Object.assign({}, s, { title: s.title ? s.title.replace(/^(Example|Exercise|Activity|Group work)[^:]*:\s*/i, '') : s.title }, v, { _gen: true });
         ['ask', 'text', 'worked', 'opts', 'ans', 'pool', 'items', 'targets', 'min', 'max', 'sub', 'num'].forEach(k => { if (!(k in v)) delete out[k]; });
         if (['grid', 'cubes', 'ladder', 'blank'].includes(v.kind) && ['area', 'count', 'volume', 'convert', 'litres'].includes(s.gen.t)) ['say', 'intro', 'w', 'h', 'l', 'cube', 'layers', 'from', 'to', 'value', 'mode', 'unit', 'a', 'poly', 'cols', 'rows', 'graded'].forEach(k => { if (!(k in v)) delete out[k]; }); delete out.ref; return out; }
       catch (e) { return s; } finally { r = Math.random; } },
@@ -489,7 +535,7 @@ function vennSVG(a, b, k) {
 /* ---------- screen renderers (shared by the step player and the book reader) ---------- */
 function makeR(env) {
   const div = html => { const d = document.createElement('div'); d.className = 'stack'; d.innerHTML = html; return d; };
-  const head = s => `<span class="eyebrow sky">${esc(s._from || (['hook', 'explore', 'notice', 'check', 'practise'].includes(s.step) ? t('step_' + s.step) : ''))}</span>${s.ref ? `<span class="ref">📖 ${esc(s.ref)}</span>` : ''}${s.title ? `<h1 class="display" tabindex="-1">${esc(s.title)}</h1>` : ''}${s.text ? `<p class="lead">${esc(s.text)}</p>` : ''}`;
+  const head = s => `<span class="eyebrow sky">${esc(s._from || (['hook', 'explore', 'notice', 'check', 'practise'].includes(s.step) ? t('step_' + s.step) : ''))}</span>${s.graded && s.level ? levelTag(s) : ''}${s.ref ? `<span class="ref">📖 ${esc(s.ref)}</span>` : ''}${s.title ? `<h1 class="display" tabindex="-1">${esc(s.title)}</h1>` : ''}${s.text ? `<p class="lead">${esc(s.text)}</p>` : ''}`;
   const choice = (s, opts, ans, row2) => {
     const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="opts${row2 ? ' row2' : ''}" role="radiogroup">${opts.map(o => `<button class="opt" role="radio" aria-checked="false" data-v="${esc(o)}">${fig(o)}</button>`).join('')}</div>`);
     let pick = null;
@@ -788,7 +834,7 @@ function runPlayer(cfg) {
   setNav(false); tray.hidden = false;
   const screens = cfg.screens.slice(), SUM = screens.length;
   let order = screens.map((_, i) => i), pos = 0, cur = null, phase = 'answer', lastOk = null, review = false, firstTry = {}, missed = new Set(), round = {}, tries = {};
-  const state = { guess: null }; const offered = {};
+  const state = { guess: null }; const offered = {}; let lvl = cfg.startLevel || 2, recent = [];
   function openRefresher(id) { const rf = cfg.refreshers[id]; logEvent({ lesson: cfg.id, refresher: id, item: order[pos] }); const saved = { app: [...app.childNodes], tray: tray.className, msg: msg.innerHTML, goText: go.textContent, goDis: go.disabled, phase, lastOk, cur, top: topin.innerHTML, work: $('#work').hidden };
     const extra = tray.querySelector('#rfb'); if (extra) extra.remove();
     runPlayer({ id: cfg.id + ':' + id, idea: id, title: rf.name, mode: 'refresher', screens: rf.screens, backRoute: null, resume: () => { app.replaceChildren(...saved.app); tray.className = saved.tray; msg.innerHTML = saved.msg; go.textContent = saved.goText; go.disabled = saved.goDis; phase = saved.phase; lastOk = saved.lastOk; cur = saved.cur; topin.innerHTML = saved.top; $('#work').hidden = saved.work; bindTop(order[pos]); go.onclick = onGo; window.scrollTo(0, 0); } }); }
@@ -801,6 +847,7 @@ function runPlayer(cfg) {
   function bindTop(k) { const rep = $('#rep'); if (rep) rep.onclick = () => reportSheet({ lesson: cfg.id || cfg.title, screen: k, label: `${cfg.title} · ${Math.min(pos + 1, order.length)}/${order.length}` }); const rb = $('#rback'); if (rb) rb.onclick = () => cfg.resume && cfg.resume(); }
   function addSkip() { const k = order[pos], s = screens[k] || {}; const osk = $('#skipb'); if (osk) osk.remove(); if (s.graded && order.length - pos > 2 && (!['mcq', 'tf'].includes(s.kind) || tries[k])) { const sb = document.createElement('button'); sb.className = 'btn ghost'; sb.id = 'skipb'; sb.style.width = 'auto'; sb.textContent = t('skip'); sb.onclick = () => { order.splice(pos, 1); order.splice(order.length - 1, 0, k); show(); }; go.parentNode.insertBefore(sb, go); } }
   function show() {
+    const k0 = order[pos]; if (cfg.adapt && k0 !== SUM && screens[k0] && screens[k0]._adapt && !screens[k0]._shown) screens[k0] = Object.assign(Gen.make(screens[k0], null, null, lvl), { _adapt: true, _shown: true });
     const k = order[pos], s = k === SUM ? { kind: 'summary' } : screens[k];
     cur = (R[s.kind] || R.name)(s); app.replaceChildren(cur.el);
     const ex = cur.el.querySelector('#ex-play'); if (ex) ex.onclick = () => speak(cur.el.querySelector('#ex-text').textContent);
@@ -817,12 +864,12 @@ function runPlayer(cfg) {
   }
   function onGo() {
     const k = order[pos], s = screens[k];
-    if (cur.summary) { if (cfg.mode === 'refresher' || (cfg.resume && !missed.size)) { cfg.resume(); return; } if (missed.size) { if (cfg.vary) missed.forEach(k => { screens[k] = Gen.make(screens[k]); }); order = [...missed].sort((a, b) => a - b).concat(SUM); review = true; } else { if (cfg.vary) screens.forEach((x, k) => { screens[k] = Gen.make(x); }); order = screens.map((_, i) => i).concat(SUM); firstTry = {}; review = false; state.guess = null; } pos = 0; round = {}; tries = {}; show(); return; }
+    if (cur.summary) { if (cfg.mode === 'refresher' || (cfg.resume && !missed.size)) { cfg.resume(); return; } if (missed.size) { if (cfg.vary) missed.forEach(k => { screens[k] = Object.assign(Gen.make(screens[k], null, null, screens[k].level), { _adapt: false }); }); order = [...missed].sort((a, b) => a - b).concat(SUM); review = true; } else { if (cfg.vary) screens.forEach((x, k) => { screens[k] = x._adapt ? Object.assign({}, x, { _shown: false }) : Gen.make(x, null, null, x.level); }); order = screens.map((_, i) => i).concat(SUM); firstTry = {}; review = false; state.guess = null; } pos = 0; round = {}; tries = {}; show(); return; }
     if (phase === 'feedback') { if (lastOk === false) { const old = tray.querySelector('#rfb'); if (old) old.remove(); phase = 'answer'; cur.retry && cur.retry(); setTray('', '', '', cur.label); update(); addSkip(); } else { pos++; show(); } return; }
     if (!cur.check) { pos++; show(); return; }
     { const sb = $('#skipb'); if (sb) sb.remove(); }
     const r = cur.check(); tries[k] = (tries[k] || 0) + 1;
-    if (s.graded && !(k in round)) { round[k] = r.ok; if (!(k in firstTry)) firstTry[k] = r.ok; r.ok ? missed.delete(k) : missed.add(k); logEvent({ lesson: s._lesson || cfg.id, idea: s._idea || cfg.idea, item: k, correct: !!r.ok, attempt: tries[k], mode: cfg.mode }); }
+    if (s.graded && !(k in round)) { if (cfg.adapt && s._adapt) { recent.push(!!r.ok); const two = recent.slice(-2); if (two.length === 2 && two[0] === two[1]) { lvl = Math.max(1, Math.min(3, lvl + (two[0] ? 1 : -1))); recent = []; cfg.onLevel && cfg.onLevel(lvl); } } round[k] = r.ok; if (!(k in firstTry)) firstTry[k] = r.ok; r.ok ? missed.delete(k) : missed.add(k); logEvent({ lesson: s._lesson || cfg.id, idea: s._idea || cfg.idea, item: k, correct: !!r.ok, attempt: tries[k], mode: cfg.mode }); }
     lastOk = r.ok; phase = 'feedback';
     const noClue = cfg.mode === 'test';
     if (r.ok === true) { Fx.verdict('ok'); setTray('ok', t('correct'), r.body, t('continue')); if (cfg.cheer) { const rc = go.getBoundingClientRect(); burst(rc.left + rc.width / 2, rc.top); buzz(25); } }
@@ -1130,7 +1177,7 @@ const Blocks = {
   answer(s, ctx) { // blank, pick, sort, order, match: shared renderers plus one Check button
     let phase = 'answer', tries = 0, cur = null; const btn = document.createElement('button'); btn.className = 'btn small'; btn.textContent = t('check'); const f = document.createElement('p'); f.className = 'qf'; f.hidden = true;
     const env = { phase: () => phase, state: {}, explain: null, enter: () => { if (!btn.disabled) btn.click(); }, update() { if (cur) btn.disabled = phase !== 'answer' || !cur.ready(); } };
-    const RR = makeR(env).R; cur = (RR[s.kind] || RR.name)(Object.assign({}, s, { title: '', step: '', ref: '' }));
+    const RR = makeR(env).R; cur = (RR[s.kind] || RR.name)(Object.assign({}, s, { title: '', step: '', ref: '', level: 0 }));
     const el = h('quiz', `<div class="ql">✏️ ${t('quick_check')}</div>${s.title ? Text(s.title, null, 'p', 'qq') : ''}`); el.append(cur.el, f, btn); env.update();
     const say = (cls, txt) => { f.hidden = !txt; f.className = 'qf ' + cls; f.textContent = txt || ''; };
     ctx.question(el, s, { restore(v) { if (v === 's') return; btn.hidden = true; say('ok', '✓ ' + (s.why || '')); } });
@@ -1178,7 +1225,7 @@ const Blocks = {
   },
   explore(s, ctx) { // ungraded sort / tap / steps / tiles
     let cur = null; const env = { phase: () => 'answer', state: {}, explain: null, enter() {}, update() { if (cur && cur.ready()) ctx.complete(s); } };
-    const RR = makeR(env).R; cur = (RR[s.kind] || RR.name)(Object.assign({}, s, { title: '', step: '', ref: '' }));
+    const RR = makeR(env).R; cur = (RR[s.kind] || RR.name)(Object.assign({}, s, { title: '', step: '', ref: '', level: 0 }));
     const el = h(s.kind === 'steps' ? 'quiz worked' : 'quiz think', `<div class="ql">${s.kind === 'steps' ? '🧩 ' + t('worked_example') : '🔍 ' + t('step_explore')}</div>${s.title ? Text(s.title, null, 'p', 'qq') : ''}`); el.appendChild(cur.el); return el;
   }
 };
@@ -1189,11 +1236,24 @@ function answerLine(shown, s) {
   if (!shown || (parts.length && parts.every(x => ex.includes(x)))) return ex || `${t('answer_is')} ${shown}.`;
   return `${t('answer_is')} ${shown}. ${ex}`.trim();
 }
+/* Practise mix: the lesson's own questions (★ book level) plus extra questions from the same formulas.
+   Extras are marked _adapt: the player picks their level (★★ or ★★★) from how the student is doing. Target overall mix ≈ 30% ★, 40% ★★, 30% ★★★. */
+function mixPractise(base, again) {
+  const own = base.map(x => again && Gen.has(x) ? Object.assign(Gen.make(x, null, null, x.level || 1), { _adapt: true }) : x);
+  const tpl = []; base.forEach(x => { if (Gen.has(x) && !tpl.some(y => y.gen.t === x.gen.t && y.gen.op === x.gen.op && y._idea === x._idea)) tpl.push(x); });
+  const n = Math.min(Math.max(2, Math.round(base.length * 1.2)), tpl.length * 3, 10), extra = [];
+  for (let i = 0; i < n && tpl.length; i++) { const x = tpl[i % tpl.length]; extra.push(Object.assign({}, x, { _key: x._key + '~' + i, _adapt: true, level: 2 })); }
+  const out = []; own.forEach((x, i) => { out.push(x); if (extra[i]) out.push(extra[i]); }); return out.concat(extra.slice(own.length));
+}
+function levelTag(s) { return s.level ? `<span class="lvl l${s.level}" title="${esc(t('level_' + s.level))}">${'★'.repeat(s.level)}</span>` : ''; }
 function h(cls, html) { const d = document.createElement('div'); d.className = cls; d.innerHTML = html; return d; }
 function renderBlock(s, ctx) {
   const fn = Blocks[s.kind] || ((s.kind === 'mcq' || s.kind === 'tf') && s.graded ? Blocks.choice : s.graded ? Blocks.answer : Blocks.explore);
   const el = fn(s, ctx); el.dataset.kind = s.kind;
-  if (s.ref) { const ql = el.querySelector('.ql'); if (ql) ql.insertAdjacentHTML('beforeend', `<span class="ref">📖 ${esc(s.ref)}</span>`); }
+  const ql = el.querySelector('.ql');
+  if (ql && s.step === 'challenge') { ql.innerHTML = `🏆 ${esc(t('challenge'))}`; el.classList.add('chal'); }
+  if (ql && s.level && s.graded) ql.insertAdjacentHTML('beforeend', levelTag(s));
+  if (s.ref && ql) ql.insertAdjacentHTML('beforeend', `<span class="ref">📖 ${esc(s.ref)}</span>`);
   return el;
 }
 
@@ -1231,10 +1291,11 @@ async function viewBook(id) {
     const box = document.createElement('section'); box.className = `sec h-${hue}`; box.id = 'sec' + si; box.dataset.i = si;
     box.innerHTML = `<h2 class="sechead"><span class="num">${esc(sec.n)}</span><span>${esc(ls.title)}</span></h2>`;
     const inline = [], practise = [];
-    ls.ideas.forEach((idea, ii) => idea.screens.forEach((s, k) => { const sx = Object.assign({ _idea: idea.id, _key: `${sec.lesson}#${ii}.${k}` }, s); (s.graded && s.step !== 'check' && s.step !== 'notice' ? practise : inline).push(sx); }));
-    const seenIdea = new Set(); const rows = inline.filter(s => { if (!s.graded) return true; if (seenIdea.has(s._idea)) { practise.unshift(s); return false; } seenIdea.add(s._idea); return true; });
+    ls.ideas.forEach((idea, ii) => idea.screens.forEach((s, k) => { const sx = Object.assign({ _idea: idea.id, _key: `${sec.lesson}#${ii}.${k}` }, s); (s.graded && !['check', 'notice', 'challenge'].includes(s.step) ? practise : inline).push(sx); }));
+    const seenIdea = new Set(); const rows = inline.filter(s => { if (!s.graded || s.step === 'challenge') return true; if (seenIdea.has(s._idea)) { practise.unshift(s); return false; } seenIdea.add(s._idea); return true; });
     // games stay in the reading: they are the hands-on part students enjoy
     for (let q = practise.length - 1; q >= 0; q--) { const g = practise[q]; if (['sort', 'match', 'order', 'pick'].includes(g.kind)) { practise.splice(q, 1); const at = rows.map(r => r._idea).lastIndexOf(g._idea); rows.splice(at + 1, 0, g); } }
+    rows.filter(s => s.step === 'challenge').forEach(c => { rows.splice(rows.indexOf(c), 1); rows.splice(rows.map(r => r._idea).lastIndexOf(c._idea) + 1, 0, c); });
     const qKeys = rows.filter(s => s.graded).map(s => s._key);
     const doneCheck = () => { const ban = box.querySelector('.secdone'); if (!ban || !qKeys.every(k => k in B.got) || box.classList.contains('complete')) return; box.classList.add('complete'); ban.hidden = false;
       if (!B.got['done:' + sec.lesson]) { B.got['done:' + sec.lesson] = 1; setLessonProgress(sec.lesson, { done: true }); const by = {}; qKeys.forEach(k => { const s = rows.find(r => r._key === k); by[s._idea] = (by[s._idea] !== false) && B.got[k] >= 10; }); Object.keys(by).forEach(i => bumpMastery(i, by[i])); B.pts += 20; save(); bumpPts(); Fx.at(ban, true); buzz([20, 40, 20]); } };
@@ -1245,7 +1306,7 @@ async function viewBook(id) {
         sk.onclick = () => { if (s._key in B.got) return; B.got[s._key] = 's'; save(); sk.hidden = true; el.classList.add('skipped'); el.querySelector('.qf') && (el.querySelector('.qf').hidden = true); const n = document.createElement('p'); n.className = 'skipnote'; n.textContent = '↷ ' + t('skipped_note'); el.appendChild(n); if (!practise.includes(s)) practise.unshift(s); updPrac(); streak = 0; progress(); doneCheck(); };
         if (s._key in B.got) { const v = B.got[s._key]; sk.hidden = true; if (v === 's') { el.classList.add('skipped'); const n = document.createElement('p'); n.className = 'skipnote'; n.textContent = '↷ ' + t('skipped_note'); el.appendChild(n); if (!practise.includes(s)) practise.unshift(s); } else { el.classList.add('done'); api.restore(v); } }
       },
-      right(target, s, tries) { const pts = tries === 1 ? 10 : 5; streak++; Fx.at(target); Fx.float(target, '+' + pts); buzz(25); B.pts += pts; bumpPts(); if (streak >= 3) Fx.float($('#pts'), `🔥 ${t('in_a_row', { n: streak })}`); ctx.done(target.closest('.quiz'), s, pts); },
+      right(target, s, tries) { const pts = (s.level === 3 ? [15, 8] : [10, 5])[tries === 1 ? 0 : 1]; streak++; Fx.at(target); Fx.float(target, '+' + pts); buzz(25); B.pts += pts; bumpPts(); if (streak >= 3) Fx.float($('#pts'), `🔥 ${t('in_a_row', { n: streak })}`); ctx.done(target.closest('.quiz'), s, pts); },
       wrong(el) { streak = 0; buzz(60); const sk = el && el.querySelector('.skip'); if (sk && !el.classList.contains('done')) sk.hidden = false; },
       done(el, s, pts) { el.classList.add('done'); const sk = el.querySelector('.skip'); if (sk) sk.remove(); if (!(s._key in B.got) || B.got[s._key] === 's') { B.got[s._key] = pts; save(); } progress(); doneCheck(); }
     };
@@ -1259,7 +1320,7 @@ async function viewBook(id) {
     const runHere = cfg => { const keep = { app: [...app.childNodes], top: [...topin.childNodes], y: window.scrollY }; away = true;
       runPlayer(Object.assign({ backRoute: null, refreshers: ls.refreshers || {}, tool: ls.tool, cheer: true, resume: () => { app.replaceChildren(...keep.app); topin.replaceChildren(...keep.top); top.hidden = false; hideTray(); setNav(false); away = false; bumpPts(); Focus.tick(); requestAnimationFrame(() => window.scrollTo(0, keep.y)); } }, cfg)); };
     end.addEventListener('click', e => { const b = e.target.closest('.pcard'); if (!b) return;
-      if (b.dataset.a === 'prac') { B.runs = B.runs || {}; const again = (B.runs[sec.lesson] = (B.runs[sec.lesson] || 0) + 1) > 1; save(); runHere({ id: ls.id, title: `${sec.n} · ${ls.title}`, mode: 'practice', vary: true, screens: again ? practise.map(x => Gen.make(x)) : practise, onDone: res => { const right = Object.values(res.firstTry).filter(Boolean).length; B.prac[sec.lesson] = `${right}/${practise.length}`; B.pts += right * 5; practise.forEach((s, i) => { if (B.got[s._key] === 's' && res.firstTry[i]) B.got[s._key] = 5; }); save(); Object.keys(res.byIdea).forEach(i => bumpMastery(i, res.byIdea[i])); updPrac(); } }); }
+      if (b.dataset.a === 'prac') { B.runs = B.runs || {}; const again = (B.runs[sec.lesson] = (B.runs[sec.lesson] || 0) + 1) > 1; save(); runHere({ id: ls.id, title: `${sec.n} · ${ls.title}`, mode: 'practice', vary: true, adapt: true, startLevel: (B.lvl && B.lvl[sec.lesson]) || 2, onLevel: L => { B.lvl = B.lvl || {}; B.lvl[sec.lesson] = L; save(); }, screens: mixPractise(practise, again), onDone: res => { const right = Object.values(res.firstTry).filter(Boolean).length; B.prac[sec.lesson] = `${right}/${practise.length}`; B.pts += right * 5; practise.forEach((s, i) => { if (B.got[s._key] === 's' && res.firstTry[i]) B.got[s._key] = 5; }); save(); Object.keys(res.byIdea).forEach(i => bumpMastery(i, res.byIdea[i])); updPrac(); } }); }
       else { const ex = ls.exercises[+b.dataset.k]; runHere(ex.test ? { id: ls.id, title: ex.book_name, mode: 'test', vary: true, screens: ex.items.map(x => Gen.make(x)) } : { id: ls.id, title: ex.book_name, mode: 'book', screens: ex.items }); } });
     box.appendChild(end); page.appendChild(box); doneCheck();
   });

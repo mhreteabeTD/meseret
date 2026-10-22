@@ -367,7 +367,8 @@
             "practise",
             "exercise",
             "test",
-            "read"
+            "read",
+            "challenge"
           ]
         },
         "id": {
@@ -708,6 +709,14 @@
               "type": "integer"
             }
           }
+        },
+        "level": {
+          "enum": [
+            1,
+            2,
+            3
+          ],
+          "description": "difficulty: 1 ★ basic (book level), 2 ★★ standard, 3 ★★★ challenge"
         }
       },
       "allOf": [

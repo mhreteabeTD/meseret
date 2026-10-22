@@ -54,13 +54,14 @@ for (const file of files) {
     if (s.kind === 'grid' && s.mode === 'shape' && !(s.cols && s.rows && (s.poly || s.ellipse))) errs.push(`${where}: shape grid needs cols, rows and poly (or ellipse)`);
     if (s.kind === 'numline' && s.graded && !(s.targets || []).length) errs.push(`${where}: graded numline needs targets`);
     if (s.kind === 'blank' && s.num && Array.isArray(s.a) && !s.a.some(x => /^[≈~]?\s*[−-]?[\d.]/.test(String(x)))) errs.push(`${where}: num blank has no numeric accepted answer`);
-    if (s.gen) { if (!Gen.has(s)) errs.push(`${where}: unknown generator "${s.gen.t}"`); else for (let n = 0; n < 60; n++) { const g = Gen.make(s, n * 7919 + 1, L.lang), bad = m => { errs.push(`${where}: generator ${s.gen.t} seed ${n}: ${m}`); n = 99; };
+    if (s.gen) { if (!Gen.has(s)) errs.push(`${where}: unknown generator "${s.gen.t}"`); else for (let n = 0; n < 90; n++) { const g = Gen.make(s, n * 7919 + 1, L.lang, (n % 3) + 1), bad = m => { errs.push(`${where}: generator ${s.gen.t} level ${(n % 3) + 1} seed ${n}: ${m}`); n = 999; };
       if (g.kind === 'blank' && (!g.ask || !g.ask.includes('___') || !g.a || !g.a.length)) bad('blank without ___ or answers');
       else if (g.kind === 'blank' && g.num && g.a.some(x => numMatch(String(x).replace(/^[≈~]/, ''), g.a) !== true)) bad('answers do not parse as the same number: ' + g.a.join(' | '));
       else if (g.kind === 'mcq' && (!g.opts.includes(g.ans) || new Set(g.opts).size !== g.opts.length)) bad('mcq answer missing or duplicate options: ' + g.opts.join(' | '));
       else if (g.kind === 'pick' && (!g.a.every(x => g.pool.includes(x)) || new Set(g.pool).size !== g.pool.length)) bad('pick answers not in pool or duplicates: ' + g.pool.join(' | '));
       else if (g.kind === 'order' && new Set(g.items).size !== g.items.length) bad('order items repeat');
       else if (g.kind === 'numline' && g.targets.some(x => { const q = Q.parse(x.v); return !q || Q.val(q) < g.min || Q.val(q) > g.max; })) bad('target off the line'); } }
+    if (s.step === 'challenge' && !s.graded) errs.push(`${where}: a challenge must be graded`);
     if (s.step === 'test' && s.clue) errs.push(`${where}: test items must not carry a clue`);
   };
   (L.ideas || []).forEach((idea, i) => {
