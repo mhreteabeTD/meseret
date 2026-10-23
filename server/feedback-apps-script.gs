@@ -19,10 +19,16 @@ function doPost(e) {
     if (d.shot && String(d.shot).length < 1500000) shotUrl = saveShot(d.shot, d.at);
     sheet.appendRow([
       d.at ? new Date(d.at) : new Date(), clip(d.type, 60), msg, clip(d.where, 600), clip(d.question, 500),
-      clip(d.grades, 40), clip(d.lang, 10), clip(d.contact, 120), clip(d.device, 200), clip(d.version, 20), shotUrl, 'New', '',
-      /^https:\/\/[\w.-]+\.github\.io\//.test(String(d.link || '')) ? '=HYPERLINK("' + String(d.link).replace(/"/g, '') + '","Open")' : ''
+      clip(d.grades, 40), clip(d.lang, 10), clip(d.contact, 120), clip(d.device, 200), clip(d.version, 20), shotUrl, 'New', '', ''
     ]);
     if (sheet.getRange(1, 14).getValue() !== 'Open') sheet.getRange(1, 14).setValue('Open').setFontWeight('bold').setBackground('#DAF4E6');
+    // the link to the exact question: sent as "link", or taken from the "open: …" part of Where (older app versions)
+    let link = String(d.link || '');
+    if (!link) { const m = String(d.where || '').match(/open: (https:\/\/\S+)/); if (m) link = m[1]; }
+    if (/^https:\/\/[\w.-]+\.github\.io\//.test(link)) {
+      const row = sheet.getLastRow();
+      sheet.getRange(row, 14).setRichTextValue(SpreadsheetApp.newRichTextValue().setText('Open ↗').setLinkUrl(link).build());
+    }
     return out({ ok: true });
   } catch (err) {
     return out({ ok: false, error: String(err) });
