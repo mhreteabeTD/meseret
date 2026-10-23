@@ -1,0 +1,411 @@
+{
+ "id": "g7.maths.u1.s1-4",
+ "book": {
+  "title": "Mathematics Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "Basic Concepts of Sets",
+  "pages": "10",
+  "section": "Review"
+ },
+ "title": "Summary and review exercise",
+ "competency": "Bring together the ideas of Unit 1.",
+ "minutes": 15,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Set",
+   "am": "ስብስብ",
+   "def": "A collection of well-defined objects.",
+   "machine": true
+  },
+  {
+   "en": "Subset",
+   "am": "ንዑስ ስብስብ",
+   "def": "A ⊆ B when every element of A is also in B.",
+   "machine": true
+  },
+  {
+   "en": "Union",
+   "am": "ውህደት",
+   "def": "A ∪ B: all elements in A or B or both.",
+   "machine": true
+  },
+  {
+   "en": "Intersection",
+   "am": "መገናኛ",
+   "def": "A ∩ B: all elements in both A and B.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.sets-review",
+   "name": "Unit 1 in one page",
+   "explain": {
+    "en": {
+     "text": "A set is a collection of well-defined objects. A ⊆ B when every element of A is in B. A ∪ B joins the elements of both sets. A ∩ B keeps only the shared elements."
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "graded": false,
+     "title": "Warm up: which signs belong to sets?",
+     "bins": [
+      "Symbol for a set idea",
+      "Not a set symbol"
+     ],
+     "items": [
+      [
+       "∈",
+       "Symbol for a set idea",
+       "is an element of"
+      ],
+      [
+       "∪",
+       "Symbol for a set idea",
+       "union"
+      ],
+      [
+       "÷",
+       "Not a set symbol",
+       "division"
+      ],
+      [
+       "⊂",
+       "Symbol for a set idea",
+       "proper subset"
+      ]
+     ],
+     "id": "g7.maths.u1.s1-4.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Summary for unit one",
+     "paras": [
+      "A set is a collection of well-defined objects. Its objects are called members or elements.",
+      "A set with no element is the empty set.",
+      "Two sets are equal if they have exactly the same elements."
+     ],
+     "table": [
+      [
+       "Symbol",
+       "Meaning"
+      ],
+      [
+       "a ∈ A",
+       "a is an element of A"
+      ],
+      [
+       "A ⊆ B",
+       "every element of A is in B"
+      ],
+      [
+       "A ⊂ B",
+       "A ⊆ B and B has more elements"
+      ],
+      [
+       "A ∪ B",
+       "elements in A or B or both"
+      ],
+      [
+       "A ∩ B",
+       "elements in both A and B"
+      ]
+     ],
+     "id": "g7.maths.u1.s1-4.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words of the unit",
+     "defs": [
+      [
+       "Set",
+       "A collection of well-defined objects."
+      ],
+      [
+       "Subset",
+       "A ⊆ B when every element of A is also in B."
+      ],
+      [
+       "Union",
+       "A ∪ B: all elements in A or B or both."
+      ],
+      [
+       "Intersection",
+       "A ∩ B: all elements in both A and B."
+      ]
+     ],
+     "id": "g7.maths.u1.s1-4.3"
+    },
+    {
+     "kind": "match",
+     "step": "check",
+     "graded": true,
+     "pairs": [
+      [
+       "A ∪ B",
+       "elements in A or B or both"
+      ],
+      [
+       "A ∩ B",
+       "elements in both A and B"
+      ],
+      [
+       "A ⊆ B",
+       "every element of A is in B"
+      ],
+      [
+       "A ↔ B",
+       "same number of elements"
+      ],
+      [
+       "∅",
+       "the empty set"
+      ]
+     ],
+     "why": "Each symbol has one meaning.",
+     "clue": "Union joins, intersection keeps the shared part.",
+     "level": 1,
+     "id": "g7.maths.u1.s1-4.4"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "A set is a subset of itself.",
+     "a": true,
+     "why": "Any set is a subset of itself: A ⊆ A.",
+     "clue": "Read the Note on subsets.",
+     "level": 1,
+     "ref": "Review Exercise I b",
+     "id": "g7.maths.u1.s1-4.5"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "{m, n, o} ⊆ {m, n}",
+     "a": false,
+     "why": "o is not in {m, n}.",
+     "clue": "Is every element of the first set in the second?",
+     "level": 1,
+     "ref": "Review Exercise I c",
+     "id": "g7.maths.u1.s1-4.6"
+    },
+    {
+     "kind": "pick",
+     "step": "practise",
+     "graded": true,
+     "text": "A = {1, 2, 3, 4} and B = {2, 4, 6}. Tap every element of A ∩ B.",
+     "pool": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "6"
+     ],
+     "a": [
+      "2",
+      "4"
+     ],
+     "why": "2 and 4 are in both.",
+     "clue": "Keep only shared elements.",
+     "level": 2,
+     "added": true,
+     "id": "g7.maths.u1.s1-4.7"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "ask": "A = {1, 2, 3, 4, 5}, B = {4, 5, 6}, C = {5, 6, 7}. (A ∩ B) ∩ C = {___}",
+     "a": [
+      "5"
+     ],
+     "num": true,
+     "why": "A ∩ B = {4, 5}. Then {4, 5} ∩ {5, 6, 7} = {5}.",
+     "clue": "Do the bracket first, then intersect with C.",
+     "level": 3,
+     "added": true,
+     "id": "g7.maths.u1.s1-4.8"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Review Exercise",
+   "items": [
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "All equivalent sets are equal sets.",
+     "a": false,
+     "why": "{1, 2} ↔ {a, b}, but they are not equal.",
+     "clue": "Equivalent only needs the same count.",
+     "level": 1,
+     "ref": "I a",
+     "id": "g7.maths.u1.s1-4.9"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "A set is a subset of itself.",
+     "a": true,
+     "why": "A ⊆ A for any set A.",
+     "clue": "Read the Note on subsets.",
+     "level": 1,
+     "ref": "I b",
+     "id": "g7.maths.u1.s1-4.10"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "{m, n, o} ⊆ {m, n}",
+     "a": false,
+     "why": "o ∉ {m, n}.",
+     "clue": "Check each element.",
+     "level": 1,
+     "ref": "I c",
+     "id": "g7.maths.u1.s1-4.11"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "2 ∈ {0, 4, 12}",
+     "a": false,
+     "why": "2 is not listed.",
+     "clue": "Look between the braces.",
+     "level": 1,
+     "ref": "I d",
+     "id": "g7.maths.u1.s1-4.12"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which one is NOT a proper subset of {e, f}?",
+     "opts": [
+      "{ }",
+      "{e}",
+      "{f}",
+      "{e, f}"
+     ],
+     "ans": "{e, f}",
+     "why": "A set is not a proper subset of itself.",
+     "clue": "Which one leaves nothing out?",
+     "level": 1,
+     "ref": "II 1",
+     "id": "g7.maths.u1.s1-4.13"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which one is equivalent to the set {a, 3}?",
+     "opts": [
+      "{ }",
+      "{2, 3}",
+      "{a}",
+      "{3}"
+     ],
+     "ans": "{2, 3}",
+     "why": "{a, 3} and {2, 3} both have 2 elements.",
+     "clue": "Count the elements.",
+     "level": 1,
+     "ref": "II 2",
+     "id": "g7.maths.u1.s1-4.14"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "If A ⊆ B, which one is necessarily true?",
+     "opts": [
+      "A ∩ B = B",
+      "A ∩ B = A",
+      "A ∪ B = A",
+      "A ⊂ B"
+     ],
+     "ans": "A ∩ B = A",
+     "why": "All of A is shared with B. A ⊂ B fails when A = B.",
+     "clue": "Draw A inside B.",
+     "level": 2,
+     "ref": "II 3",
+     "id": "g7.maths.u1.s1-4.15"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "If A = {a, b} and B = {c, d}, then A ∩ B is:",
+     "opts": [
+      "{ }",
+      "{a, b, c, d}",
+      "{c, d}",
+      "{d}"
+     ],
+     "ans": "{ }",
+     "why": "No element is shared. {a, b, c, d} is A ∪ B.",
+     "clue": "Is anything in both sets?",
+     "level": 1,
+     "ref": "II 4",
+     "id": "g7.maths.u1.s1-4.16"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which Venn diagram shows E ⊂ F?",
+     "opts": [
+      "Circle E inside circle F",
+      "Circle F inside circle E"
+     ],
+     "ans": "Circle E inside circle F",
+     "why": "E ⊂ F: every element of E is in F, so E is the inner circle.",
+     "clue": "The smaller set goes inside.",
+     "level": 1,
+     "ref": "II 5",
+     "id": "g7.maths.u1.s1-4.17"
+    }
+   ]
+  },
+  {
+   "book_name": "Chapter test",
+   "test": true,
+   "chapter_test": true,
+   "count": 20,
+   "minutes": 25,
+   "items": []
+  }
+ ],
+ "test": [],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "The chapter test draws 20 questions round-robin from the four section tests (5 each), rotating ★/★★/★★★, 25 minutes, no clues."
+  },
+  {
+   "kind": "note",
+   "text": "Review Exercise II Q5 shows two pictures; it is asked as words (which circle is inside)."
+  },
+  {
+   "kind": "review",
+   "text": "No set generator exists in the engine yet: practice and tests reuse the hand-written questions rather than fresh ones."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

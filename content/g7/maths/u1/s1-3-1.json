@@ -1,0 +1,350 @@
+{
+ "id": "g7.maths.u1.s1-3-1",
+ "book": {
+  "title": "Mathematics Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "Basic Concepts of Sets",
+  "pages": "8",
+  "section": "1.3.1"
+ },
+ "title": "The union of sets",
+ "competency": "Determine the union of two sets and show it on a Venn diagram.",
+ "minutes": 9,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Union",
+   "am": "ውህደት",
+   "def": "A ∪ B: all elements that belong to A or B or both.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.set-union",
+   "name": "Union of two sets",
+   "requires": [
+    "math.set-element"
+   ],
+   "explain": {
+    "en": {
+     "text": "The union of A and B, written A ∪ B, is the set of all elements in A or B or both. List A, then add the elements of B that are not there yet. If A = {3, 4, 5, 6} and B = {4, 6, 8, 10}, A ∪ B = {3, 4, 5, 6, 8, 10}."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Two clubs",
+     "ask": "The football club has {Abel, Bethel, Chala}. The drama club has {Bethel, Dawit}. Who is in at least one club?",
+     "opts": [
+      "Bethel only",
+      "Abel, Bethel, Chala, Dawit",
+      "Abel, Chala, Dawit"
+     ],
+     "after": "Put everyone together, but write Bethel once. That is the union.",
+     "added": true,
+     "id": "g7.maths.u1.s1-3-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "1.3.1 The union of sets",
+     "paras": [
+      "Definition 1.6: The union of A and B, written A ∪ B and read \"A union B\", is the set of all elements in A or B or both.",
+      "On a Venn diagram, A ∪ B is both circles, shaded together."
+     ],
+     "id": "g7.maths.u1.s1-3-1.2"
+    },
+    {
+     "kind": "venn",
+     "step": "explore",
+     "title": "A = {3, 4, 5, 6}, B = {4, 6, 8, 10}",
+     "sets": [
+      [
+       "A",
+       "A = {3, 4, 5, 6}. Only in A: 3, 5."
+      ],
+      [
+       "B",
+       "B = {4, 6, 8, 10}. Only in B: 8, 10."
+      ]
+     ],
+     "overlaps": [
+      [
+       [
+        0,
+        1
+       ],
+       "A and B",
+       "In both: 4, 6."
+      ]
+     ],
+     "ref": "Example 1",
+     "id": "g7.maths.u1.s1-3-1.3"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Find A ∪ B",
+     "steps": [
+      "Write every element of A: 3, 4, 5, 6.",
+      "Look at B = {4, 6, 8, 10}. 4 and 6 are already listed.",
+      "Add the new ones: 8 and 10.",
+      "A ∪ B = {3, 4, 5, 6, 8, 10}."
+     ],
+     "ref": "Example 1",
+     "needs": "math.set-element",
+     "id": "g7.maths.u1.s1-3-1.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Union",
+       "A ∪ B: all elements that belong to A or B or both."
+      ]
+     ],
+     "id": "g7.maths.u1.s1-3-1.5"
+    },
+    {
+     "kind": "pick",
+     "step": "check",
+     "graded": true,
+     "text": "A = {3, 4, 5, 6} and B = {4, 6, 8, 10}. Tap every element of A ∪ B.",
+     "pool": [
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "10"
+     ],
+     "a": [
+      "3",
+      "4",
+      "5",
+      "6",
+      "8",
+      "10"
+     ],
+     "why": "A ∪ B = {3, 4, 5, 6, 8, 10}. 7 is in neither set.",
+     "clue": "Everything in A, plus everything in B.",
+     "level": 1,
+     "ref": "Example 1",
+     "id": "g7.maths.u1.s1-3-1.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "A = {a, e, i, o} and B = {a, e, i}. A ∪ B = ?",
+     "opts": [
+      "{a, e, i}",
+      "{a, e, i, o}",
+      "{o}",
+      "{a, a, e, e, i, i, o}"
+     ],
+     "ans": "{a, e, i, o}",
+     "why": "Every element of B is already in A. So A ∪ B = A.",
+     "clue": "Do not repeat elements.",
+     "level": 1,
+     "ref": "Example 2",
+     "id": "g7.maths.u1.s1-3-1.7"
+    },
+    {
+     "kind": "pick",
+     "step": "practise",
+     "graded": true,
+     "text": "P = {1, 3, 5} and Q = {2, 3, 4}. Tap every element of P ∪ Q.",
+     "pool": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+     ],
+     "a": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ],
+     "why": "P ∪ Q = {1, 2, 3, 4, 5}. 3 is written once.",
+     "clue": "List P, then add the new elements of Q.",
+     "level": 2,
+     "added": true,
+     "id": "g7.maths.u1.s1-3-1.8"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "A = {2, 4} and B = {4, 6, 8}. A ∪ B has ___ elements.",
+     "a": [
+      "4",
+      "four"
+     ],
+     "num": true,
+     "why": "A ∪ B = {2, 4, 6, 8}. 4 is counted once.",
+     "clue": "Do not count 4 twice.",
+     "level": 2,
+     "added": true,
+     "id": "g7.maths.u1.s1-3-1.9"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "A ∪ B = {1, 2, 3, 4} and A = {1, 2}. Which could B be?",
+     "opts": [
+      "{1, 2}",
+      "{3, 4}",
+      "{1, 5}",
+      "{ }"
+     ],
+     "ans": "{3, 4}",
+     "why": "B must give the missing 3 and 4, and add nothing new. {3, 4} works: {1, 2} ∪ {3, 4} = {1, 2, 3, 4}.",
+     "clue": "Which elements of A ∪ B are missing from A?",
+     "level": 3,
+     "added": true,
+     "id": "g7.maths.u1.s1-3-1.10"
+    }
+   ]
+  }
+ ],
+ "refreshers": {
+  "math.set-element": {
+   "name": "Elements of a set",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "∈ and ∉",
+     "steps": [
+      "A set lists its elements between braces: A = {3, 4, 5}.",
+      "3 ∈ A means 3 is an element of A.",
+      "8 ∉ A means 8 is not an element of A."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "A = {3, 4, 5}. Which is true?",
+     "opts": [
+      "4 ∉ A",
+      "8 ∈ A",
+      "5 ∈ A"
+     ],
+     "ans": "5 ∈ A",
+     "why": "5 is listed in A.",
+     "clue": "Look between the braces.",
+     "level": 1
+    }
+   ]
+  }
+ },
+ "exercises": [],
+ "test": [
+  {
+   "kind": "pick",
+   "step": "test",
+   "graded": true,
+   "text": "A = {1, 2} and B = {2, 5}. Tap every element of A ∪ B.",
+   "pool": [
+    "1",
+    "2",
+    "3",
+    "5"
+   ],
+   "a": [
+    "1",
+    "2",
+    "5"
+   ],
+   "why": "A ∪ B = {1, 2, 5}.",
+   "level": 1,
+   "id": "g7.maths.u1.s1-3-1.11"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "C = { } and B = {1, 3, 4}. C ∪ B = ?",
+   "opts": [
+    "{ }",
+    "{1, 3, 4}",
+    "{1}"
+   ],
+   "ans": "{1, 3, 4}",
+   "why": "The empty set adds nothing.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.maths.u1.s1-3-1.12"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "A = {a, b, c} and B = {c, d}. A ∪ B has ___ elements.",
+   "a": [
+    "4",
+    "four"
+   ],
+   "num": true,
+   "why": "A ∪ B = {a, b, c, d}.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.maths.u1.s1-3-1.13"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "If every element of A is in B, then A ∪ B = ?",
+   "opts": [
+    "A",
+    "B",
+    "{ }"
+   ],
+   "ans": "B",
+   "why": "A adds nothing new to B.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.maths.u1.s1-3-1.14"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "A = {1, 2, 3} and A ∪ B = {1, 2, 3, 4, 5}. B must contain 4 and ___",
+   "a": [
+    "5",
+    "five"
+   ],
+   "num": true,
+   "why": "The union has 4 and 5, which are not in A. So both must come from B.",
+   "level": 3,
+   "clue": "",
+   "id": "g7.maths.u1.s1-3-1.15"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "correction",
+   "text": "Example 2 writes \"A = {a, e, i}\" for the second set; it should be B = {a, e, i}. Shown as B."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
