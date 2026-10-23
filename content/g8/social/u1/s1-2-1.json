@@ -1,0 +1,308 @@
+{
+ "id": "g8.social.u1.s1-2-1",
+ "book": {
+  "title": "Social Studies Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "social",
+  "unit": 1,
+  "unit_title": "Physical Characteristics of the Earth",
+  "pages": "13–15",
+  "section": "1.2.1"
+ },
+ "title": "Composition of the earth's atmosphere",
+ "competency": "Describe the gases of the atmosphere.",
+ "minutes": 8,
+ "keywords": [
+  {
+   "en": "Atmosphere",
+   "am": "ከባቢ አየር",
+   "def": "The envelope of air (gases) that surrounds the earth.",
+   "machine": true
+  },
+  {
+   "en": "Aerosols",
+   "am": "ኤሮሶል",
+   "def": "The gases, dust particles and moisture droplets of the atmosphere taken together.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "soc.atmosphere.composition",
+   "name": "Gases of the atmosphere",
+   "explain": {
+    "en": {
+     "text": "The atmosphere is the envelope of air around the earth. It has gases, dust and water droplets, together called aerosols. Nitrogen (78%) and oxygen (21%) are the major gases; argon and carbon dioxide are minor; the rest are trace gases. Oxygen is the most important for life."
+    },
+    "am": {
+     "text": "ከባቢ አየር ምድርን የከበበ አየር ነው። ናይትሮጅን (78%) እና ኦክስጅን (21%) ዋና ጋዞች ናቸው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Most of the air",
+     "ask": "Which gas makes up most of the air you breathe?",
+     "opts": [
+      "Nitrogen",
+      "Oxygen",
+      "Carbon dioxide",
+      "Helium"
+     ],
+     "after": "Nitrogen: 78%. Oxygen is only 21%, but it is the one we need to live.",
+     "added": true,
+     "id": "g8.social.u1.s1-2-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The atmosphere",
+     "paras": [
+      "The air that surrounds the earth is called the atmosphere.",
+      "It is transparent, colourless, tasteless and odourless.",
+      "It has gases, dust particles and moisture droplets, together called aerosols."
+     ],
+     "ref": "p.14",
+     "id": "g8.social.u1.s1-2-1.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Figure 1.8: the gases",
+     "paras": [
+      "Nitrogen and oxygen are major gases. Argon and carbon dioxide are minor gases. The rest are trace gases."
+     ],
+     "table": [
+      [
+       "Gas",
+       "% by volume",
+       "Group"
+      ],
+      [
+       "Nitrogen (N₂)",
+       "78",
+       "Major"
+      ],
+      [
+       "Oxygen (O₂)",
+       "21",
+       "Major"
+      ],
+      [
+       "Argon (Ar)",
+       "0.934",
+       "Minor"
+      ],
+      [
+       "Carbon dioxide (CO₂)",
+       "0.037",
+       "Minor"
+      ],
+      [
+       "Neon, helium, methane, krypton",
+       "less than 0.002 each",
+       "Trace"
+      ]
+     ],
+     "note": "Nitrogen comes from volcanoes and decaying plants and animals. Oxygen is mainly produced by plants.",
+     "ref": "Figure 1.8",
+     "id": "g8.social.u1.s1-2-1.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Atmosphere",
+       "The envelope of air (gases) that surrounds the earth."
+      ],
+      [
+       "Aerosols",
+       "The gases, dust particles and moisture droplets of the atmosphere taken together."
+      ]
+     ],
+     "id": "g8.social.u1.s1-2-1.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "By volume, the major gas of the atmosphere is",
+     "opts": [
+      "nitrogen",
+      "oxygen",
+      "argon",
+      "helium"
+     ],
+     "ans": "nitrogen",
+     "why": "Nitrogen makes up 78%.",
+     "clue": "Look at the biggest number.",
+     "level": 1,
+     "ref": "Review MC Q9",
+     "id": "g8.social.u1.s1-2-1.5"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "Oxygen makes up about ___ % of the atmosphere",
+     "a": [
+      "21"
+     ],
+     "why": "Figure 1.8.",
+     "clue": "Second biggest.",
+     "level": 1,
+     "id": "g8.social.u1.s1-2-1.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Oxygen in the atmosphere is mainly produced by",
+     "opts": [
+      "plants",
+      "volcanoes",
+      "the sun",
+      "oceans only"
+     ],
+     "ans": "plants",
+     "why": "p.14.",
+     "clue": "Think of photosynthesis.",
+     "level": 1,
+     "id": "g8.social.u1.s1-2-1.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Gases, dust and moisture droplets together are called",
+     "opts": [
+      "aerosols",
+      "trace gases",
+      "ozone",
+      "clouds"
+     ],
+     "ans": "aerosols",
+     "why": "p.14.",
+     "clue": "Read the first paragraph.",
+     "level": 1,
+     "ref": "Activity 1.2 Q1",
+     "id": "g8.social.u1.s1-2-1.8"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "num": true,
+     "ask": "Nitrogen + oxygen = ___ % of the atmosphere",
+     "a": [
+      "99"
+     ],
+     "why": "78 + 21 = 99%. All the other gases share only about 1%.",
+     "clue": "Add the two major gases.",
+     "level": 3,
+     "added": true,
+     "id": "g8.social.u1.s1-2-1.9"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Argon and carbon dioxide are",
+   "opts": [
+    "minor gases",
+    "major gases",
+    "trace gases",
+    "not in the air"
+   ],
+   "ans": "minor gases",
+   "why": "Figure 1.8.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.social.u1.s1-2-1.10"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The most important gas for living things is",
+   "opts": [
+    "oxygen",
+    "nitrogen",
+    "argon",
+    "neon"
+   ],
+   "ans": "oxygen",
+   "why": "p.15.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.social.u1.s1-2-1.11"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "Nitrogen makes up ___ % of the atmosphere",
+   "a": [
+    "78"
+   ],
+   "why": "p.14.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.social.u1.s1-2-1.12"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Neon and helium are",
+   "opts": [
+    "trace gases",
+    "major gases",
+    "aerosols",
+    "minor gases"
+   ],
+   "ans": "trace gases",
+   "why": "Figure 1.8.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.social.u1.s1-2-1.13"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is NOT part of the atmosphere?",
+   "opts": [
+    "Magma",
+    "Dust",
+    "Water droplets",
+    "Nitrogen"
+   ],
+   "ans": "Magma",
+   "why": "Magma is molten rock inside the earth.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.social.u1.s1-2-1.14"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Figure 1.8 is low-resolution; the trace-gas decimals (0.00182, 0.00052, 0.00015, 0.00011) are uncertain, so the lesson says \"less than 0.002 each\"."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

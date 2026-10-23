@@ -1,0 +1,557 @@
+{
+ "id": "g8.social.u1.s1-3-2",
+ "book": {
+  "title": "Social Studies Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "social",
+  "unit": 1,
+  "unit_title": "Physical Characteristics of the Earth",
+  "pages": "18–21",
+  "section": "1.3.2"
+ },
+ "title": "Elements of weather and climate",
+ "competency": "Describe temperature, rainfall, air pressure and wind.",
+ "minutes": 14,
+ "keywords": [
+  {
+   "en": "Radiation",
+   "am": "ጨረራ",
+   "def": "Transfer of energy by electromagnetic waves, as the sun warms the earth.",
+   "machine": true
+  },
+  {
+   "en": "Conduction",
+   "am": "ማስተላለፍ በንክኪ",
+   "def": "Transfer of heat by contact between molecules; most important in solids.",
+   "machine": true
+  },
+  {
+   "en": "Convection",
+   "am": "ማስተላለፍ በፍሰት",
+   "def": "Transfer of heat through gases or liquids because of differences in density.",
+   "machine": true
+  },
+  {
+   "en": "Precipitation",
+   "am": "ዝናብና በረዶ",
+   "def": "Any moisture that falls from the clouds towards the earth's surface.",
+   "machine": true
+  },
+  {
+   "en": "Air pressure",
+   "am": "የአየር ግፊት",
+   "def": "The weight of air on a unit of area of the earth's surface, measured with a barometer.",
+   "machine": true
+  },
+  {
+   "en": "Wind",
+   "am": "ነፋስ",
+   "def": "The horizontal movement of air, from high pressure to low pressure.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "soc.climate.temperature-heat",
+   "name": "Temperature and heat transfer",
+   "explain": {
+    "en": {
+     "text": "Temperature is the hotness or coldness of something, measured with a thermometer. The sun's energy (insolation) heats the earth. Heat moves by radiation (electromagnetic waves), conduction (contact, best in solids) and convection (flow in gases and liquids)."
+    },
+    "am": {
+     "text": "ሙቀት በቴርሞሜትር ይለካል። ሙቀት በጨረራ፣ በንክኪ (በጠጣር) እና በፍሰት (በጋዝና በፈሳሽ) ይተላለፋል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Warm in the sun",
+     "ask": "You stand in the sun on a cold morning and feel warm, though the air is cold. How did the sun's heat reach you?",
+     "opts": [
+      "Radiation",
+      "Conduction",
+      "Convection",
+      "Evaporation"
+     ],
+     "after": "Radiation: energy travels as electromagnetic waves, even through empty space.",
+     "added": true,
+     "id": "g8.social.u1.s1-3-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Temperature",
+     "paras": [
+      "Temperature is the amount of hotness or coldness of an object.",
+      "It is measured with a thermometer.",
+      "The sun's energy is called insolation. It turns into heat at the earth's surface."
+     ],
+     "ref": "p.18",
+     "id": "g8.social.u1.s1-3-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Heat transfer",
+     "paras": [
+      "Heat moves in three ways."
+     ],
+     "table": [
+      [
+       "Way",
+       "How it works",
+       "Example"
+      ],
+      [
+       "Radiation",
+       "Electromagnetic waves",
+       "The sun warms the earth"
+      ],
+      [
+       "Conduction",
+       "Contact between molecules; best in solids",
+       "A metal spoon in hot shiro"
+      ],
+      [
+       "Convection",
+       "Flow due to density differences in gases and liquids",
+       "Warm air rising"
+      ]
+     ],
+     "ref": "p.19",
+     "id": "g8.social.u1.s1-3-2.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Radiation",
+       "Transfer of energy by electromagnetic waves, as the sun warms the earth."
+      ],
+      [
+       "Conduction",
+       "Transfer of heat by contact between molecules; most important in solids."
+      ],
+      [
+       "Convection",
+       "Transfer of heat through gases or liquids because of differences in density."
+      ]
+     ],
+     "id": "g8.social.u1.s1-3-2.4"
+    },
+    {
+     "kind": "match",
+     "step": "check",
+     "graded": true,
+     "text": "Match each way of heat transfer with its description.",
+     "pairs": [
+      [
+       "Radiation",
+       "By electromagnetic waves"
+      ],
+      [
+       "Conduction",
+       "By contact, best in solids"
+      ],
+      [
+       "Convection",
+       "By flow in gases and liquids"
+      ]
+     ],
+     "why": "p.19.",
+     "clue": "Which one needs touching?",
+     "level": 1,
+     "id": "g8.social.u1.s1-3-2.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Which is a poor conductor of heat?",
+     "opts": [
+      "Air",
+      "Iron",
+      "Copper",
+      "Aluminium"
+     ],
+     "ans": "Air",
+     "why": "The book says air and water are poor conductors.",
+     "clue": "Conduction is best in solids.",
+     "level": 1,
+     "id": "g8.social.u1.s1-3-2.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Heat moving up through boiling water in a pot is",
+     "opts": [
+      "convection",
+      "radiation",
+      "conduction",
+      "precipitation"
+     ],
+     "ans": "convection",
+     "why": "Heat moves through liquids by convection.",
+     "clue": "It is a liquid flowing.",
+     "level": 2,
+     "id": "g8.social.u1.s1-3-2.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Why is the handle of a clay jebena cooler than a metal pot handle on the same fire?",
+     "opts": [
+      "Clay conducts heat poorly; metal conducts well",
+      "Clay reflects radiation",
+      "Metal makes convection",
+      "They are the same"
+     ],
+     "ans": "Clay conducts heat poorly; metal conducts well",
+     "why": "Conduction is transfer by contact. Metals conduct well, so the metal handle gets hot.",
+     "clue": "Which way of heat transfer works through a solid handle?",
+     "level": 3,
+     "added": true,
+     "id": "g8.social.u1.s1-3-2.8"
+    }
+   ]
+  },
+  {
+   "id": "soc.climate.rain-pressure-wind",
+   "name": "Rainfall, air pressure and wind",
+   "explain": {
+    "en": {
+     "text": "Rainfall is liquid precipitation, measured with a rain gauge; it is part of the water cycle powered by the sun. Rain is relief, convectional or frontal. Air pressure, measured with a barometer, falls with height. Wind is air moving from high to low pressure, measured with an anemometer, named after where it comes from."
+    },
+    "am": {
+     "text": "ዝናብ በዝናብ መለኪያ ይለካል። የአየር ግፊት በባሮሜትር ይለካል፤ ከፍታ ሲጨምር ይቀንሳል። ነፋስ ከከፍተኛ ወደ ዝቅተኛ ግፊት ይነፍሳል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Rain on the highlands",
+     "ask": "Why do the windward slopes of the Ethiopian highlands get more rain than the lowlands nearby?",
+     "opts": [
+      "Moist air rises over the mountains, cools and rains",
+      "Mountains make water",
+      "The lowlands are too hot for clouds",
+      "Wind stops at mountains"
+     ],
+     "after": "Moist air is forced up the mountains, cools, condenses and falls as rain: relief (orographic) rainfall.",
+     "added": true,
+     "id": "g8.social.u1.s1-3-2.9"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Figure 1.10: the water cycle",
+     "ask": "Tap each step.",
+     "need": 6,
+     "items": [
+      [
+       "Evaporation",
+       "Liquid water becomes vapour."
+      ],
+      [
+       "Transpiration",
+       "Water passes from plants into the air as vapour."
+      ],
+      [
+       "Condensation",
+       "Vapour becomes liquid: clouds form."
+      ],
+      [
+       "Precipitation",
+       "Moisture falls from clouds."
+      ],
+      [
+       "Sublimation",
+       "Ice changes directly into vapour."
+      ],
+      [
+       "Deposition",
+       "Vapour changes directly into ice."
+      ]
+     ],
+     "ref": "Figure 1.10",
+     "id": "g8.social.u1.s1-3-2.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Rainfall",
+     "paras": [
+      "Rainfall is liquid precipitation, measured with a rain gauge.",
+      "Precipitation is any moisture that falls from clouds.",
+      "It is part of the hydrological cycle, powered by solar energy."
+     ],
+     "table": [
+      [
+       "Type of rainfall",
+       "How it forms"
+      ],
+      [
+       "Relief (orographic)",
+       "Moist air rises over mountains, cools and rains"
+      ],
+      [
+       "Convectional",
+       "The sun heats the ground; water evaporates and rises"
+      ],
+      [
+       "Frontal (cyclonic)",
+       "Warm and cold air masses meet"
+      ]
+     ],
+     "ref": "pp.19–21",
+     "id": "g8.social.u1.s1-3-2.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Air pressure and wind",
+     "paras": [
+      "Air pressure is the weight of air on a unit area. It is measured with a barometer.",
+      "At sea level it is 1,013 millibars. It falls with height and with rising temperature.",
+      "Wind is the horizontal movement of air, from high to low pressure. An anemometer measures its speed; a wind vane shows its direction."
+     ],
+     "note": "A southerly wind comes FROM the south.",
+     "ref": "p.21",
+     "id": "g8.social.u1.s1-3-2.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Precipitation",
+       "Any moisture that falls from the clouds towards the earth's surface."
+      ],
+      [
+       "Air pressure",
+       "The weight of air on a unit of area of the earth's surface, measured with a barometer."
+      ],
+      [
+       "Wind",
+       "The horizontal movement of air, from high pressure to low pressure."
+      ]
+     ],
+     "id": "g8.social.u1.s1-3-2.13"
+    },
+    {
+     "kind": "match",
+     "step": "check",
+     "graded": true,
+     "text": "Match each element with its instrument.",
+     "pairs": [
+      [
+       "Rainfall",
+       "Rain gauge"
+      ],
+      [
+       "Air pressure",
+       "Barometer"
+      ],
+      [
+       "Wind speed",
+       "Anemometer"
+      ],
+      [
+       "Wind direction",
+       "Wind vane"
+      ],
+      [
+       "Temperature",
+       "Thermometer"
+      ]
+     ],
+     "why": "pp.18–21.",
+     "clue": "Baro- means weight.",
+     "level": 1,
+     "id": "g8.social.u1.s1-3-2.14"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Winds blow from",
+     "opts": [
+      "high pressure to low pressure",
+      "low pressure to high pressure",
+      "cold places only",
+      "the sea only"
+     ],
+     "ans": "high pressure to low pressure",
+     "why": "p.21.",
+     "clue": "Air moves where there is less of it.",
+     "level": 1,
+     "id": "g8.social.u1.s1-3-2.15"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "A southerly wind",
+     "opts": [
+      "comes from the south",
+      "blows towards the south",
+      "is always cold",
+      "is a storm"
+     ],
+     "ans": "comes from the south",
+     "why": "Winds are named after where they come from.",
+     "clue": "Named after its source.",
+     "level": 2,
+     "id": "g8.social.u1.s1-3-2.16"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Rain from warm and cold air masses meeting is",
+     "opts": [
+      "frontal rainfall",
+      "relief rainfall",
+      "convectional rainfall",
+      "sublimation"
+     ],
+     "ans": "frontal rainfall",
+     "why": "p.21.",
+     "clue": "Two fronts meet.",
+     "level": 1,
+     "id": "g8.social.u1.s1-3-2.17"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Air pressure decreases as altitude increases.",
+     "a": true,
+     "why": "p.21.",
+     "clue": "Less air above you up high.",
+     "level": 1,
+     "id": "g8.social.u1.s1-3-2.18"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Air pressure on Ras Dejen (4,550 m) compared with Massawa on the coast is",
+     "opts": [
+      "lower, because pressure falls with height",
+      "higher, because mountains push air",
+      "the same everywhere",
+      "zero"
+     ],
+     "ans": "lower, because pressure falls with height",
+     "why": "Pressure is 1,013 mb at sea level and decreases with an increase of altitude.",
+     "clue": "Which place has more air above it?",
+     "level": 3,
+     "added": true,
+     "id": "g8.social.u1.s1-3-2.19"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Air pressure is measured with a",
+   "opts": [
+    "barometer",
+    "thermometer",
+    "rain gauge",
+    "anemometer"
+   ],
+   "ans": "barometer",
+   "why": "p.21.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.social.u1.s1-3-2.20"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Ice changing directly into vapour is",
+   "opts": [
+    "sublimation",
+    "deposition",
+    "condensation",
+    "evaporation"
+   ],
+   "ans": "sublimation",
+   "why": "p.20.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.social.u1.s1-3-2.21"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Common in humid areas hot all year:",
+   "opts": [
+    "convectional rainfall",
+    "frontal rainfall",
+    "relief rainfall",
+    "snow"
+   ],
+   "ans": "convectional rainfall",
+   "why": "p.21.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.social.u1.s1-3-2.22"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Air pressure at sea level is about",
+   "opts": [
+    "1,013 millibars",
+    "100 millibars",
+    "760 millibars",
+    "6.4 millibars"
+   ],
+   "ans": "1,013 millibars",
+   "why": "p.21.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.social.u1.s1-3-2.23"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The sun warms the earth mainly by",
+   "opts": [
+    "radiation",
+    "conduction",
+    "convection",
+    "erosion"
+   ],
+   "ans": "radiation",
+   "why": "p.19.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.social.u1.s1-3-2.24"
+  }
+ ],
+ "notes": [],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

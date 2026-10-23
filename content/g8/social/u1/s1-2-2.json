@@ -1,0 +1,393 @@
+{
+ "id": "g8.social.u1.s1-2-2",
+ "book": {
+  "title": "Social Studies Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "social",
+  "unit": 1,
+  "unit_title": "Physical Characteristics of the Earth",
+  "pages": "15–16",
+  "section": "1.2.2"
+ },
+ "title": "Structure of the earth's atmosphere",
+ "competency": "Describe the layers of the atmosphere and their characteristics.",
+ "minutes": 12,
+ "keywords": [
+  {
+   "en": "Troposphere",
+   "am": "ትሮፖስፌር",
+   "def": "The lowest layer of the atmosphere, up to 8–16 km, where all weather happens.",
+   "machine": true
+  },
+  {
+   "en": "Stratosphere",
+   "am": "ስትራቶስፌር",
+   "def": "The layer from the tropopause to about 50 km, with a lot of ozone.",
+   "machine": true
+  },
+  {
+   "en": "Mesosphere",
+   "am": "ሜሶስፌር",
+   "def": "The layer up to 80–85 km; the coldest layer, where meteorites burn up.",
+   "machine": true
+  },
+  {
+   "en": "Thermosphere",
+   "am": "ቴርሞስፌር",
+   "def": "The uppermost, very thin layer, where temperature rises with height. It holds the ionosphere and exosphere.",
+   "machine": true
+  },
+  {
+   "en": "Ozone",
+   "am": "ኦዞን",
+   "def": "A gas in the stratosphere that absorbs the sun's ultraviolet radiation.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "soc.atmosphere.layers",
+   "name": "Layers of the atmosphere",
+   "explain": {
+    "en": {
+     "text": "By temperature, the atmosphere has four layers. The troposphere (to 8–16 km) has all the weather and cools with height. The stratosphere (to 50 km) holds ozone that absorbs ultraviolet rays. The mesosphere (to 80–85 km) is the coldest and burns up meteorites. The thermosphere, with the ionosphere and exosphere, gets hotter with height."
+    },
+    "am": {
+     "text": "ከባቢ አየር አራት ንብርብሮች አሉት፤ ትሮፖስፌር (የአየር ሁኔታ)፣ ስትራቶስፌር (ኦዞን)፣ ሜሶስፌር (በጣም ቀዝቃዛ)፣ ቴርሞስፌር።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Outside the plane",
+     "ask": "An aeroplane flies at 11 km. Is the air outside hotter or colder than on the ground?",
+     "opts": [
+      "Much colder",
+      "Much hotter",
+      "The same",
+      "There is no air"
+     ],
+     "after": "Much colder. In the troposphere temperature falls as you go up. At 11 km it can be about −55°C.",
+     "added": true,
+     "id": "g8.social.u1.s1-2-2.1"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Figure 1.9: the layers, bottom to top",
+     "ask": "Tap each layer.",
+     "need": 6,
+     "items": [
+      [
+       "Troposphere",
+       "Sea level to 8–16 km. All weather. Temperature falls with height. Top: tropopause with jet streams."
+      ],
+      [
+       "Stratosphere",
+       "To about 50 km. Ozone absorbs ultraviolet rays, so it warms with height. Top: stratopause."
+      ],
+      [
+       "Mesosphere",
+       "To 80–85 km. Coldest layer, near −100°C. Strongest winds. Meteorites burn up. Top: mesopause."
+      ],
+      [
+       "Thermosphere",
+       "Uppermost, very thin. Temperature rises to 725–1,225°C. Has the ionosphere and exosphere."
+      ],
+      [
+       "Ionosphere",
+       "80 to 500–700 km. Charged particles reflect radio waves."
+      ],
+      [
+       "Exosphere",
+       "Beyond 500–700 km. More hydrogen and helium."
+      ]
+     ],
+     "ref": "Figure 1.9",
+     "id": "g8.social.u1.s1-2-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Four layers",
+     "paras": [
+      "The atmosphere is divided into four layers by temperature changes.",
+      "They are the troposphere, stratosphere, mesosphere and thermosphere.",
+      "The troposphere holds three-fourths of the atmosphere's mass."
+     ],
+     "ref": "p.15",
+     "id": "g8.social.u1.s1-2-2.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Troposphere",
+       "The lowest layer of the atmosphere, up to 8–16 km, where all weather happens."
+      ],
+      [
+       "Stratosphere",
+       "The layer from the tropopause to about 50 km, with a lot of ozone."
+      ],
+      [
+       "Mesosphere",
+       "The layer up to 80–85 km; the coldest layer, where meteorites burn up."
+      ],
+      [
+       "Thermosphere",
+       "The uppermost, very thin layer, where temperature rises with height. It holds the ionosphere and exosphere."
+      ],
+      [
+       "Ozone",
+       "A gas in the stratosphere that absorbs the sun's ultraviolet radiation."
+      ]
+     ],
+     "id": "g8.social.u1.s1-2-2.4"
+    },
+    {
+     "kind": "order",
+     "step": "check",
+     "graded": true,
+     "text": "Put the layers in order from the ground up.",
+     "items": [
+      "Troposphere",
+      "Stratosphere",
+      "Mesosphere",
+      "Thermosphere"
+     ],
+     "why": "Troposphere → stratosphere → mesosphere → thermosphere.",
+     "clue": "Weather is in the lowest one.",
+     "level": 1,
+     "ref": "Activity 1.2 Q5",
+     "id": "g8.social.u1.s1-2-2.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Which layer contains the ozone?",
+     "opts": [
+      "Stratosphere",
+      "Troposphere",
+      "Mesosphere",
+      "Exosphere"
+     ],
+     "ans": "Stratosphere",
+     "why": "It has high concentration of ozone, which absorbs ultraviolet radiation.",
+     "clue": "The layer just above the weather.",
+     "level": 1,
+     "ref": "Activity 1.2 Q3",
+     "id": "g8.social.u1.s1-2-2.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Which layer is the coldest?",
+     "opts": [
+      "Mesosphere",
+      "Thermosphere",
+      "Troposphere",
+      "Stratosphere"
+     ],
+     "ans": "Mesosphere",
+     "why": "Nearly −100°C at its top.",
+     "clue": "Where do meteorites burn up?",
+     "level": 1,
+     "ref": "Activity 1.2 Q4",
+     "id": "g8.social.u1.s1-2-2.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Radio waves are reflected by the",
+     "opts": [
+      "ionosphere",
+      "troposphere",
+      "stratosphere",
+      "mesosphere"
+     ],
+     "ans": "ionosphere",
+     "why": "Its electrically charged particles reflect radio waves.",
+     "clue": "Charged particles: ions.",
+     "level": 2,
+     "id": "g8.social.u1.s1-2-2.8"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "All kinds of weather changes take place in the troposphere.",
+     "a": true,
+     "why": "p.15.",
+     "clue": "The lowest layer.",
+     "level": 1,
+     "id": "g8.social.u1.s1-2-2.9"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Why does the stratosphere get warmer higher up, while the troposphere gets colder?",
+     "opts": [
+      "Ozone in the stratosphere absorbs the sun's ultraviolet rays",
+      "The stratosphere is closer to the sun",
+      "There is more water vapour up there",
+      "Jet streams carry heat"
+     ],
+     "ans": "Ozone in the stratosphere absorbs the sun's ultraviolet rays",
+     "why": "The book says temperature increases owing to absorption of ultraviolet radiation by ozone.",
+     "clue": "Which gas absorbs energy there?",
+     "level": 3,
+     "added": true,
+     "id": "g8.social.u1.s1-2-2.10"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activity 1.2",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Main characteristic of the troposphere",
+     "opts": [
+      "All weather happens here; temperature falls with height",
+      "Coldest layer",
+      "Reflects radio waves",
+      "Has the most ozone"
+     ],
+     "ans": "All weather happens here; temperature falls with height",
+     "why": "p.15.",
+     "clue": "Lowest layer.",
+     "level": 1,
+     "ref": "Q6",
+     "id": "g8.social.u1.s1-2-2.11"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Main characteristic of the thermosphere",
+     "opts": [
+      "Very thin air; temperature rises with height",
+      "All weather",
+      "Coldest",
+      "Ozone layer"
+     ],
+     "ans": "Very thin air; temperature rises with height",
+     "why": "p.15.",
+     "clue": "Uppermost layer.",
+     "level": 1,
+     "ref": "Q6",
+     "id": "g8.social.u1.s1-2-2.12"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The lowest layer of the atmosphere is the",
+   "opts": [
+    "troposphere",
+    "stratosphere",
+    "mesosphere",
+    "thermosphere"
+   ],
+   "ans": "troposphere",
+   "why": "p.15.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.social.u1.s1-2-2.13"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Most meteorites burn up in the",
+   "opts": [
+    "mesosphere",
+    "troposphere",
+    "stratosphere",
+    "exosphere"
+   ],
+   "ans": "mesosphere",
+   "why": "p.15.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.social.u1.s1-2-2.14"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The top of the troposphere is the",
+   "opts": [
+    "tropopause",
+    "stratopause",
+    "mesopause",
+    "ionosphere"
+   ],
+   "ans": "tropopause",
+   "why": "p.15.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.social.u1.s1-2-2.15"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The atmosphere is divided into layers based on",
+   "opts": [
+    "temperature variation",
+    "colour",
+    "wind direction",
+    "rainfall"
+   ],
+   "ans": "temperature variation",
+   "why": "p.15.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.social.u1.s1-2-2.16"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The outermost fringe of the atmosphere is the",
+   "opts": [
+    "exosphere",
+    "ionosphere",
+    "troposphere",
+    "stratosphere"
+   ],
+   "ans": "exosphere",
+   "why": "p.16.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.social.u1.s1-2-2.17"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.15 says the troposphere \"has uniform temperature that decreases\" (self-contradictory); it means temperature falls at a fairly steady rate with height."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

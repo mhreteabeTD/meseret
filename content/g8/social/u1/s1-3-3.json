@@ -1,0 +1,367 @@
+{
+ "id": "g8.social.u1.s1-3-3",
+ "book": {
+  "title": "Social Studies Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "social",
+  "unit": 1,
+  "unit_title": "Physical Characteristics of the Earth",
+  "pages": "22–24",
+  "section": "1.3.3"
+ },
+ "title": "Controls of weather and climate",
+ "competency": "Explain how latitude, altitude, the sea, clouds and ocean currents control climate.",
+ "minutes": 12,
+ "keywords": [
+  {
+   "en": "Controls of climate",
+   "am": "የአየር ንብረት ወሳኞች",
+   "def": "Factors that affect the elements of weather and climate: latitude, altitude, distance from the sea, cloud cover, ocean currents, wind, air pressure.",
+   "machine": true
+  },
+  {
+   "en": "Lapse rate",
+   "am": "የሙቀት መቀነሻ መጠን",
+   "def": "The rate at which air temperature falls with height: normally 6.4°C per 1000 m.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "soc.climate.controls",
+   "name": "Controls of climate",
+   "explain": {
+    "en": {
+     "text": "Controls are factors that make the elements of climate uneven. Near the equator the sun is overhead and it is hot; towards the poles rays are slanting and it is cold. Temperature falls about 6.4°C per 1000 m of height (lapse rate). Coasts are cooler and wetter; clouds reduce radiation; warm and cold ocean currents change coastal climate."
+    },
+    "am": {
+     "text": "የአየር ንብረት ወሳኞች ኬክሮስ፣ ከፍታ፣ ከባሕር ያለ ርቀት፣ ደመና፣ የውቅያኖስ ሞገድ፣ ነፋስና ግፊት ናቸው። ሙቀት በ1000 ሜ ከፍታ 6.4°C ይቀንሳል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Snow near the equator",
+     "ask": "Both are near the equator, but Mount Kilimanjaro has snow on top while the plains below are hot. Why?",
+     "opts": [
+      "Temperature falls with altitude",
+      "The sun never reaches the top",
+      "Snow falls from space",
+      "The mountain is near the pole"
+     ],
+     "after": "Temperature drops about 6.4°C for every 1000 m you climb. High enough, it is below freezing.",
+     "added": true,
+     "id": "g8.social.u1.s1-3-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Controls",
+     "paras": [
+      "Controls of weather and climate are factors that affect its elements.",
+      "They make the elements uneven over the earth's surface.",
+      "Major controls: latitude, altitude, distance from the sea, cloud cover, ocean currents, wind and air pressure."
+     ],
+     "ref": "p.22",
+     "id": "g8.social.u1.s1-3-3.2"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "The controls",
+     "ask": "Tap each control.",
+     "need": 5,
+     "items": [
+      [
+       "Latitude",
+       "Distance from the equator. Overhead sun at the equator = hot; slanting rays at the poles = cold."
+      ],
+      [
+       "Altitude",
+       "Temperature falls 6.4°C per 1000 m (normal lapse rate). Ethiopia's highlands show this."
+      ],
+      [
+       "Distance from the sea",
+       "Coasts are cooler and wetter; the centres of continents have a large temperature range."
+      ],
+      [
+       "Cloud cover",
+       "Clouds reduce sunshine reaching the ground and heat leaving it."
+      ],
+      [
+       "Ocean currents",
+       "Warm currents: hot and moist. Cold currents: cool and dry coastal lands."
+      ]
+     ],
+     "ref": "pp.22–24",
+     "id": "g8.social.u1.s1-3-3.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The overhead sun",
+     "paras": [
+      "The sun is overhead only between the Tropic of Cancer and the Tropic of Capricorn.",
+      "Overhead at the Tropic of Cancer on June 21 and at the Tropic of Capricorn on December 21.",
+      "At the March and September equinoxes it is overhead at the equator."
+     ],
+     "note": "Equinox: the sun is directly above the equator (March 21 and September 23).",
+     "ref": "pp.22–23",
+     "id": "g8.social.u1.s1-3-3.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Controls of climate",
+       "Factors that affect the elements of weather and climate: latitude, altitude, distance from the sea, cloud cover, ocean currents, wind, air pressure."
+      ],
+      [
+       "Lapse rate",
+       "The rate at which air temperature falls with height: normally 6.4°C per 1000 m."
+      ]
+     ],
+     "id": "g8.social.u1.s1-3-3.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "On a global scale, the most important factor deciding how much heat a place gets is",
+     "opts": [
+      "latitude",
+      "cloud cover",
+      "wind",
+      "ocean currents"
+     ],
+     "ans": "latitude",
+     "why": "p.22.",
+     "clue": "Distance from the equator.",
+     "level": 1,
+     "id": "g8.social.u1.s1-3-3.6"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "The normal lapse rate is ___ °C per 1000 m",
+     "a": [
+      "6.4"
+     ],
+     "why": "p.23.",
+     "clue": "Read the altitude paragraph.",
+     "level": 1,
+     "id": "g8.social.u1.s1-3-3.7"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Cold ocean currents make coastal lands drier and cooler.",
+     "a": true,
+     "why": "Cold currents have cool temperatures and low moisture.",
+     "clue": "Cold and low moisture.",
+     "level": 1,
+     "ref": "Review TF Q4",
+     "id": "g8.social.u1.s1-3-3.8"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "On June 21 the sun is directly overhead at the",
+     "opts": [
+      "Tropic of Cancer",
+      "Tropic of Capricorn",
+      "Equator",
+      "North Pole"
+     ],
+     "ans": "Tropic of Cancer",
+     "why": "p.22: the June solstice.",
+     "clue": "The northern tropic.",
+     "level": 2,
+     "id": "g8.social.u1.s1-3-3.9"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "A place at sea level is 30°C. With the normal lapse rate, a place 2000 m higher is about ___ °C",
+     "a": [
+      "17.2"
+     ],
+     "why": "2000 m = 2 × 1000 m. Drop: 2 × 6.4 = 12.8°C. 30 − 12.8 = 17.2°C.",
+     "clue": "How many 1000s of metres? Multiply by 6.4.",
+     "worked": "2000 m is 2 lots of 1000 m. Each lot cools 6.4°C, so 2 × 6.4 = 12.8°C. 30 − 12.8 = 17.2°C.",
+     "level": 2,
+     "added": true,
+     "id": "g8.social.u1.s1-3-3.10"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "num": true,
+     "ask": "Assab on the coast (about 0 m) is 34°C. Using the lapse rate, a highland town at 2500 m would be about ___ °C",
+     "a": [
+      "18"
+     ],
+     "why": "2500 m = 2.5 × 1000 m. Drop: 2.5 × 6.4 = 16°C. 34 − 16 = 18°C.",
+     "clue": "Multiply 2.5 by 6.4, then subtract.",
+     "level": 3,
+     "added": true,
+     "id": "g8.social.u1.s1-3-3.11"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activity 1.3 A",
+   "items": [
+    {
+     "kind": "pick",
+     "step": "exercise",
+     "graded": true,
+     "text": "The major elements of weather and climate",
+     "pool": [
+      "Temperature",
+      "Rainfall",
+      "Wind",
+      "Latitude",
+      "Air pressure"
+     ],
+     "a": [
+      "Temperature",
+      "Rainfall",
+      "Wind",
+      "Air pressure"
+     ],
+     "why": "Latitude is a control, not an element.",
+     "clue": "Elements are what we measure; controls change them.",
+     "level": 2,
+     "ref": "Q2",
+     "id": "g8.social.u1.s1-3-3.12"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which control explains why the Ethiopian highlands are cool?",
+     "opts": [
+      "Altitude",
+      "Ocean currents",
+      "Distance from the sea",
+      "Latitude"
+     ],
+     "ans": "Altitude",
+     "why": "p.23: the highlands show the effect of altitude.",
+     "clue": "They are high.",
+     "level": 1,
+     "ref": "Q3",
+     "id": "g8.social.u1.s1-3-3.13"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Coastal areas are usually",
+   "opts": [
+    "cooler and wetter than inland areas",
+    "hotter and drier",
+    "always frozen",
+    "without wind"
+   ],
+   "ans": "cooler and wetter than inland areas",
+   "why": "p.23.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.social.u1.s1-3-3.14"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Clouds",
+   "opts": [
+    "reduce the sun's radiation reaching the ground",
+    "add heat from the sun",
+    "have no effect",
+    "cause earthquakes"
+   ],
+   "ans": "reduce the sun's radiation reaching the ground",
+   "why": "p.24.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.social.u1.s1-3-3.15"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Warm ocean currents have",
+   "opts": [
+    "high temperature and high moisture",
+    "low moisture",
+    "cool temperature",
+    "no effect on coasts"
+   ],
+   "ans": "high temperature and high moisture",
+   "why": "p.24.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.social.u1.s1-3-3.16"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "At the equinoxes the sun is overhead at the",
+   "opts": [
+    "equator",
+    "Tropic of Cancer",
+    "Tropic of Capricorn",
+    "poles"
+   ],
+   "ans": "equator",
+   "why": "p.22.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.social.u1.s1-3-3.17"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "Climbing 1000 m, the temperature falls by about ___ °C",
+   "a": [
+    "6.4"
+   ],
+   "why": "p.23.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.social.u1.s1-3-3.18"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.23 \"Distance from the Sea\": the sentence \"as moisture from the sea evaporates from it reaches the center\" is garbled; probably \"evaporates before it reaches\". Paraphrased."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
