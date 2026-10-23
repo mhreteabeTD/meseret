@@ -1,0 +1,663 @@
+{
+ "id": "g8.maths.u2.s2-1-3",
+ "book": {
+  "title": "Mathematics Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "Squares, Square Roots, Cubes and Cube Roots",
+  "pages": "51–54",
+  "section": "2.1.3"
+ },
+ "title": "Square roots of a rational number",
+ "competency": "Calculate the square root of perfect squares.",
+ "minutes": 14,
+ "keywords": [
+  {
+   "en": "Square root",
+   "am": "ካሬ ሥር",
+   "def": "If a² = b, then a is a square root of b.",
+   "machine": true
+  },
+  {
+   "en": "Principal square root",
+   "am": "ዋና ካሬ ሥር",
+   "def": "The positive square root of a number, written √b.",
+   "machine": true
+  },
+  {
+   "en": "Radical sign",
+   "am": "የሥር ምልክት",
+   "def": "The symbol √ (or ∛ for a cube root).",
+   "machine": true
+  },
+  {
+   "en": "Radicand",
+   "am": "ከሥር ምልክቱ ሥር ያለ ቁጥር",
+   "def": "The number under the radical sign: in √b, b is the radicand.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.square-root",
+   "name": "Square roots",
+   "explain": {
+    "en": {
+     "text": "A square root undoes squaring. If a² = b, then a is a square root of b. 16 has two square roots, 4 and −4; the positive one, √16 = 4, is the principal square root. Negative numbers have no rational square root, and √0 = 0."
+    },
+    "am": {
+     "text": "ካሬ ሥር ማካሬን ይቀለብሳል። a² = b ከሆነ a የ b ካሬ ሥር ነው። √16 = 4 ዋናው ካሬ ሥር ነው። አሉታዊ ቁጥሮች ምክንያታዊ ካሬ ሥር የላቸውም።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "From area to side",
+     "ask": "A square garden has an area of 16 m². How long is each side?",
+     "opts": [
+      "4 m",
+      "8 m",
+      "16 m",
+      "2 m"
+     ],
+     "after": "4 m, because 4 × 4 = 16. Finding the side from the area is taking the square root.",
+     "added": true,
+     "id": "g8.maths.u2.s2-1-3.1"
+    },
+    {
+     "kind": "grid",
+     "step": "explore",
+     "mode": "tile",
+     "title": "16 squares",
+     "w": 4,
+     "h": 4,
+     "unit": "m",
+     "added": true,
+     "intro": "These 16 small squares make one big square. Fill it row by row.",
+     "say": [
+      "One row has 4 squares.",
+      "Two rows: 8.",
+      "Three rows: 12.",
+      "Four rows of 4 make 16. So the side is 4: √16 = 4."
+     ],
+     "id": "g8.maths.u2.s2-1-3.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Square roots",
+     "paras": [
+      "Definition 2.3: If a² = b, then a is called a square root of b.",
+      "The square root of 4 is 2, because 2² = 4.",
+      "The square root of 25/64 is 5/8, because (5/8)² = 25/64.",
+      "Extracting a square root is the inverse of squaring."
+     ],
+     "ref": "Example 2.9",
+     "id": "g8.maths.u2.s2-1-3.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The radical sign",
+     "paras": [
+      "16 = 4 × 4 = (−4) × (−4). So 4 and −4 are both square roots of 16.",
+      "The positive one is the principal square root.",
+      "The symbol √ is the radical sign. √16 = 4 and −√16 = −4.",
+      "In √b, the number b is called the radicand."
+     ],
+     "note": "Negative numbers have no square root in ℚ. The square root of 0 is 0. In power form, √a = a^(1/2).",
+     "ref": "Note, p.52",
+     "id": "g8.maths.u2.s2-1-3.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Square root",
+       "If a² = b, then a is a square root of b."
+      ],
+      [
+       "Principal square root",
+       "The positive square root of a number, written √b."
+      ],
+      [
+       "Radical sign",
+       "The symbol √ (or ∛ for a cube root)."
+      ],
+      [
+       "Radicand",
+       "The number under the radical sign: in √b, b is the radicand."
+      ]
+     ],
+     "id": "g8.maths.u2.s2-1-3.5"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Find √(25/100)",
+     "steps": [
+      "25/100 = 5/10 × 5/10 = (−5/10) × (−5/10).",
+      "So 25/100 = (5/10)² = (−5/10)².",
+      "The principal square root is the positive one: 5/10.",
+      "Simplify: GCF of 5 and 10 is 5. 5/10 = 1/2.",
+      "So √(25/100) = 5/10 = 1/2."
+     ],
+     "ref": "Example 2.10 d",
+     "id": "g8.maths.u2.s2-1-3.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "√121 = ?",
+     "opts": [
+      "11",
+      "−11",
+      "60.5",
+      "12"
+     ],
+     "ans": "11",
+     "why": "11 × 11 = 121, and √ means the positive root.",
+     "clue": "Which positive number times itself is 121?",
+     "level": 1,
+     "ref": "Example 2.10 b",
+     "id": "g8.maths.u2.s2-1-3.7"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "√0.04 = ___",
+     "a": [
+      "0.2"
+     ],
+     "why": "0.2 × 0.2 = 0.04, so √0.04 = 0.2.",
+     "clue": "Which decimal times itself gives 0.04?",
+     "level": 1,
+     "ref": "Example 2.10 c",
+     "id": "g8.maths.u2.s2-1-3.8"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "√(25/64) = ___",
+     "a": [
+      "5/8",
+      "0.625"
+     ],
+     "why": "(5/8)² = 25/64, so √(25/64) = 5/8.",
+     "clue": "Take the square root of the top and of the bottom.",
+     "level": 1,
+     "ref": "Example 2.9 d",
+     "id": "g8.maths.u2.s2-1-3.9"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "√(−9) is a rational number.",
+     "a": false,
+     "why": "No rational number times itself gives −9: positive × positive and negative × negative are both positive.",
+     "clue": "Can a square ever be negative?",
+     "level": 2,
+     "ref": "Note vii",
+     "id": "g8.maths.u2.s2-1-3.10"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "The number 16 has how many square roots?",
+     "opts": [
+      "Two: 4 and −4",
+      "One: 4",
+      "One: −4",
+      "None"
+     ],
+     "ans": "Two: 4 and −4",
+     "why": "4 × 4 = 16 and (−4) × (−4) = 16. √16 = 4 is the principal one.",
+     "clue": "Try (−4) × (−4).",
+     "level": 2,
+     "ref": "Example 2.10 a",
+     "id": "g8.maths.u2.s2-1-3.11"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "num": true,
+     "ask": "√x = 0.3. Then x = ___",
+     "a": [
+      "0.09"
+     ],
+     "why": "Squaring undoes the square root: x = (0.3)² = 0.3 × 0.3 = 0.09.",
+     "clue": "Square both sides.",
+     "level": 3,
+     "added": true,
+     "id": "g8.maths.u2.s2-1-3.12"
+    }
+   ]
+  },
+  {
+   "id": "math.sqrt-prime-factorization",
+   "name": "Square roots by prime factors",
+   "requires": [
+    "math.prime-factorization"
+   ],
+   "explain": {
+    "en": {
+     "text": "To find a square root, write the number as a product of primes, split the primes into two equal groups, and take one group. 400 = (2 × 2 × 5) × (2 × 2 × 5) = 20 × 20, so √400 = 20."
+    },
+    "am": {
+     "text": "ካሬ ሥርን ለማግኘት ቁጥሩን በፍጹም ቁጥሮች አባዛ ጻፍ፣ ሁለት እኩል ቡድን አድርግና አንዱን ውሰድ። 400 = 20 × 20፣ ስለዚህ √400 = 20።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Two equal groups",
+     "ask": "64 = 2 × 2 × 2 × 2 × 2 × 2. Can you split these six 2s into two equal groups?",
+     "opts": [
+      "Yes: (2 × 2 × 2) × (2 × 2 × 2) = 8 × 8",
+      "No, six is odd",
+      "Yes: 2 × 32",
+      "Only with 4 groups"
+     ],
+     "after": "Yes. Each group is 2 × 2 × 2 = 8, and 8 × 8 = 64. So √64 = 8.",
+     "ref": "Example 2.11 a",
+     "id": "g8.maths.u2.s2-1-3.13"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Using prime factorization",
+     "paras": [
+      "First decompose the number into a product of two equal factors.",
+      "Then take one of the equal factors as the square root.",
+      "A factor tree gives the prime factors."
+     ],
+     "ref": "Note ii, p.52",
+     "id": "g8.maths.u2.s2-1-3.14"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word again",
+     "defs": [
+      [
+       "Square root",
+       "If a² = b, then a is a square root of b."
+      ]
+     ],
+     "id": "g8.maths.u2.s2-1-3.15"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "√400 by prime factors",
+     "steps": [
+      "Factor tree: 400 = 2 × 200, 200 = 2 × 100, 100 = 2 × 50, 50 = 2 × 25, 25 = 5 × 5.",
+      "So 400 = 2 × 2 × 2 × 2 × 5 × 5.",
+      "Split into two equal groups: (2 × 2 × 5) × (2 × 2 × 5).",
+      "2 × 2 × 5 = 20, so 400 = 20 × 20 = 20².",
+      "So √400 = 20."
+     ],
+     "ref": "Example 2.11 c",
+     "needs": "math.prime-factorization",
+     "id": "g8.maths.u2.s2-1-3.16"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "100 = 2 × 2 × 5 × 5. So √100 = ?",
+     "opts": [
+      "10",
+      "20",
+      "50",
+      "25"
+     ],
+     "ans": "10",
+     "why": "100 = (2 × 5) × (2 × 5) = 10 × 10, so √100 = 10.",
+     "clue": "Make two equal groups from 2, 2, 5, 5.",
+     "level": 1,
+     "ref": "Example 2.11 b",
+     "needs": "math.prime-factorization",
+     "id": "g8.maths.u2.s2-1-3.17"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "√256 = ___",
+     "a": [
+      "16"
+     ],
+     "why": "256 = 2⁸ = (2 × 2 × 2 × 2) × (2 × 2 × 2 × 2) = 16 × 16, so √256 = 16.",
+     "clue": "Count the 2s in 256 and halve them.",
+     "level": 1,
+     "ref": "Exercise 2.4 Q3 a",
+     "needs": "math.prime-factorization",
+     "id": "g8.maths.u2.s2-1-3.18"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "√1225 = ___",
+     "a": [
+      "35"
+     ],
+     "why": "1225 = 5 × 5 × 7 × 7 = (5 × 7) × (5 × 7) = 35 × 35, so √1225 = 35.",
+     "clue": "1225 ends in 5: start dividing by 5.",
+     "worked": "1225 ÷ 5 = 245. 245 ÷ 5 = 49. 49 = 7 × 7. So 1225 = 5 × 5 × 7 × 7. Groups: (5 × 7) × (5 × 7) = 35 × 35. √1225 = 35.",
+     "level": 2,
+     "ref": "Exercise 2.4 Q3 c",
+     "needs": "math.prime-factorization",
+     "id": "g8.maths.u2.s2-1-3.19"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "√576 = ___",
+     "a": [
+      "24"
+     ],
+     "why": "576 = 2⁶ × 3² = (2 × 2 × 2 × 3) × (2 × 2 × 2 × 3) = 24 × 24, so √576 = 24.",
+     "clue": "Divide by 2 again and again, then by 3.",
+     "level": 2,
+     "ref": "Exercise 2.4 Q1 c",
+     "needs": "math.prime-factorization",
+     "id": "g8.maths.u2.s2-1-3.20"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "72 = 2 × 2 × 2 × 3 × 3. Is 72 a perfect square?",
+     "opts": [
+      "No: the three 2s cannot be split into two equal groups",
+      "Yes: √72 = 36",
+      "Yes: √72 = 8.5",
+      "No: 72 is even"
+     ],
+     "ans": "No: the three 2s cannot be split into two equal groups",
+     "why": "For two equal groups each prime must appear an even number of times. 2 appears three times, so 72 is not a perfect square.",
+     "clue": "Can each prime be shared equally between two groups?",
+     "level": 3,
+     "added": true,
+     "id": "g8.maths.u2.s2-1-3.21"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activity 2.3",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Prime factorization: 81 = 3 × 3 × 3 × ___",
+     "a": [
+      "3"
+     ],
+     "why": "81 = 3 × 27 = 3 × 3 × 9 = 3 × 3 × 3 × 3 = 3⁴.",
+     "clue": "Keep dividing by 3.",
+     "level": 1,
+     "ref": "f",
+     "id": "g8.maths.u2.s2-1-3.22"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Prime factorization of 625 is",
+     "opts": [
+      "5 × 5 × 5 × 5",
+      "25 × 25",
+      "5 × 125",
+      "5 × 5 × 25"
+     ],
+     "ans": "5 × 5 × 5 × 5",
+     "why": "625 = 5 × 125 = 5 × 5 × 25 = 5 × 5 × 5 × 5. Every factor is prime.",
+     "clue": "Every factor must be prime.",
+     "level": 1,
+     "ref": "g",
+     "id": "g8.maths.u2.s2-1-3.23"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 2.4",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "√0 = ___",
+     "a": [
+      "0"
+     ],
+     "why": "0 × 0 = 0, so √0 = 0.",
+     "clue": "What times itself gives 0?",
+     "level": 1,
+     "ref": "Q1 a",
+     "id": "g8.maths.u2.s2-1-3.24"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "√169 = ___",
+     "a": [
+      "13"
+     ],
+     "why": "13 × 13 = 169.",
+     "clue": "Try numbers near 13.",
+     "level": 1,
+     "ref": "Q1 b",
+     "id": "g8.maths.u2.s2-1-3.25"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "√0.25 = ___",
+     "a": [
+      "0.5",
+      "1/2"
+     ],
+     "why": "0.5 × 0.5 = 0.25.",
+     "clue": "0.25 = 25/100.",
+     "level": 1,
+     "ref": "Q1 d",
+     "id": "g8.maths.u2.s2-1-3.26"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "√0.0016 = ___",
+     "a": [
+      "0.04"
+     ],
+     "why": "0.0016 = 16/10000 = (4/100)², so √0.0016 = 4/100 = 0.04.",
+     "clue": "Write 0.0016 as a fraction first.",
+     "level": 2,
+     "ref": "Q1 e",
+     "id": "g8.maths.u2.s2-1-3.27"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "A square has an area of 144 cm². Each side = ___ cm",
+     "a": [
+      "12"
+     ],
+     "why": "Area = side × side, so side = √144. 144 = (2 × 2 × 3) × (2 × 2 × 3) = 12 × 12. Side = 12 cm.",
+     "clue": "Which number times itself is 144?",
+     "level": 1,
+     "ref": "Q2",
+     "id": "g8.maths.u2.s2-1-3.28"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "√324 = ___",
+     "a": [
+      "18"
+     ],
+     "why": "324 = 2 × 2 × 3 × 3 × 3 × 3 = (2 × 3 × 3) × (2 × 3 × 3) = 18 × 18.",
+     "clue": "Use prime factors.",
+     "level": 2,
+     "ref": "Q3 b",
+     "id": "g8.maths.u2.s2-1-3.29"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "√81 = ___",
+   "a": [
+    "9"
+   ],
+   "why": "9 × 9 = 81.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.maths.u2.s2-1-3.30"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "√(9/49) = ___",
+   "a": [
+    "3/7"
+   ],
+   "why": "(3/7)² = 9/49.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.maths.u2.s2-1-3.31"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which has no rational square root?",
+   "opts": [
+    "−4",
+    "0",
+    "0.01",
+    "1/9"
+   ],
+   "ans": "−4",
+   "why": "No square is negative.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.maths.u2.s2-1-3.32"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "√900 = ___",
+   "a": [
+    "30"
+   ],
+   "why": "900 = (2 × 3 × 5) × (2 × 3 × 5) = 30 × 30.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.maths.u2.s2-1-3.33"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "A square floor has an area of 2.25 m². Each side = ___ m",
+   "a": [
+    "1.5"
+   ],
+   "why": "1.5 × 1.5 = 2.25, so the side is 1.5 m.",
+   "clue": "",
+   "level": 3,
+   "id": "g8.maths.u2.s2-1-3.34"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "Activity 2.3 (factor trees for 16, 32, 64, 256, 400, 81, 625): two parts used as items; all answers are in source.md."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.prime-factorization": {
+   "name": "Prime factorization",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Factor tree of 36",
+     "text": "Keep splitting until every factor is prime.",
+     "steps": [
+      "36 = 2 × 18.",
+      "18 = 2 × 9.",
+      "9 = 3 × 3.",
+      "All the leaves are prime: 36 = 2 × 2 × 3 × 3."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "What is the prime factorization of 100?",
+     "opts": [
+      "2 × 2 × 5 × 5",
+      "10 × 10",
+      "2 × 50",
+      "4 × 25"
+     ],
+     "ans": "2 × 2 × 5 × 5",
+     "why": "100 = 2 × 50, 50 = 2 × 25, 25 = 5 × 5. All factors are prime: 2 × 2 × 5 × 5.",
+     "clue": "Every factor must be prime. Is 10 prime?"
+    }
+   ]
+  }
+ }
+}

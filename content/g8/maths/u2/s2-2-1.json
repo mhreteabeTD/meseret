@@ -1,0 +1,713 @@
+{
+ "id": "g8.maths.u2.s2-2-1",
+ "book": {
+  "title": "Mathematics Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "Squares, Square Roots, Cubes and Cube Roots",
+  "pages": "56–59",
+  "section": "2.2.1"
+ },
+ "title": "Cube of a rational number",
+ "competency": "Calculate the cube of a number.",
+ "minutes": 14,
+ "keywords": [
+  {
+   "en": "Cube number",
+   "am": "ኪዩብ ቁጥር",
+   "def": "A number multiplied by itself three times: a³ = a × a × a.",
+   "machine": true
+  },
+  {
+   "en": "Perfect cube",
+   "am": "ፍጹም ኪዩብ",
+   "def": "A rational number x with x = m³ for some rational m, like 27 = 3³ or −64 = (−4)³.",
+   "machine": true
+  },
+  {
+   "en": "Rounding",
+   "am": "ማጠጋጋት",
+   "def": "Changing a number to a simpler, nearby value: look at the next digit; less than 5 round down, 5 or more round up.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.cube",
+   "name": "Cubing a number",
+   "explain": {
+    "en": {
+     "text": "Cubing means multiplying a number by itself three times: a³ = a × a × a. A negative number cubed stays negative, because three negative factors give a negative product. For a fraction, cube the top and the bottom."
+    },
+    "am": {
+     "text": "ማኪዩብ ቁጥርን በራሱ ሦስት ጊዜ ማባዛት ነው፤ a³ = a × a × a። አሉታዊ ቁጥር ሲኪዩብ አሉታዊ ሆኖ ይቀራል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Building a cube",
+     "ask": "A box is filled with small cubes: 3 along, 3 across, 3 high. How many small cubes?",
+     "opts": [
+      "9",
+      "27",
+      "12",
+      "18"
+     ],
+     "after": "3 × 3 = 9 in one layer, and 3 layers: 9 × 3 = 27. This is 3 cubed, 3³.",
+     "added": true,
+     "id": "g8.maths.u2.s2-2-1.1"
+    },
+    {
+     "kind": "cubes",
+     "step": "explore",
+     "title": "3 × 3 × 3",
+     "cube": true,
+     "l": 3,
+     "unit": "cubes",
+     "added": true,
+     "intro": "A cube with sides of 3 small cubes. Build it one row, then one layer at a time.",
+     "say": [
+      "One row has 3 cubes.",
+      "One layer has 3 rows: 3 × 3 = 9 cubes.",
+      "Three layers: 9 × 3 = 27 cubes. 27 = 3³."
+     ],
+     "id": "g8.maths.u2.s2-2-1.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Cube numbers",
+     "paras": [
+      "Definition 2.4: A cube number is a number multiplied by itself three times.",
+      "We write a × a × a as a³ and read it \"a cubed\"."
+     ],
+     "table": [
+      [
+       "Example 2.14",
+       "Cube"
+      ],
+      [
+       "1 × 1 × 1",
+       "1"
+      ],
+      [
+       "2 × 2 × 2",
+       "8"
+      ],
+      [
+       "3 × 3 × 3",
+       "27"
+      ],
+      [
+       "4 × 4 × 4",
+       "64"
+      ]
+     ],
+     "ref": "Definition 2.4",
+     "id": "g8.maths.u2.s2-2-1.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Cube number",
+       "A number multiplied by itself three times: a³ = a × a × a."
+      ]
+     ],
+     "id": "g8.maths.u2.s2-2-1.4"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Cube −4 and 2/3",
+     "steps": [
+      "(−4)³ = (−4) × (−4) × (−4).",
+      "First pair: (−4) × (−4) = 16 (negative × negative = positive).",
+      "Then 16 × (−4) = −64.",
+      "(2/3)³ = 2/3 × 2/3 × 2/3.",
+      "Tops: 2 × 2 × 2 = 8. Bottoms: 3 × 3 × 3 = 27.",
+      "So (2/3)³ = 8/27."
+     ],
+     "ref": "Example 2.15 b, d",
+     "id": "g8.maths.u2.s2-2-1.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "What is 2³?",
+     "opts": [
+      "6",
+      "8",
+      "9",
+      "5"
+     ],
+     "ans": "8",
+     "why": "2³ = 2 × 2 × 2 = 4 × 2 = 8.",
+     "clue": "2³ means 2 × 2 × 2, not 2 × 3.",
+     "level": 1,
+     "ref": "Exercise 2.6 Q1 a",
+     "id": "g8.maths.u2.s2-2-1.6"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "(−1/4)³ = ___",
+     "a": [
+      "-1/64"
+     ],
+     "why": "(−1/4) × (−1/4) = 1/16. Then 1/16 × (−1/4) = −1/64.",
+     "clue": "Three negative factors: the answer is negative.",
+     "input": "signed",
+     "level": 2,
+     "ref": "Activity 2.5 Q1 c",
+     "id": "g8.maths.u2.s2-2-1.7"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "(0.5)³ = ___",
+     "a": [
+      "0.125",
+      "1/8"
+     ],
+     "why": "0.5 × 0.5 = 0.25. Then 0.25 × 0.5 = 0.125.",
+     "clue": "Multiply two at a time.",
+     "level": 1,
+     "ref": "Activity 2.5 Q1 d",
+     "id": "g8.maths.u2.s2-2-1.8"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "A cube has sides of 4 cm. Volume = ___ cm³",
+     "a": [
+      "64"
+     ],
+     "why": "4 × 4 = 16; 16 × 4 = 64 cm³.",
+     "clue": "Volume of a cube = side × side × side.",
+     "gen": {
+      "t": "volume",
+      "shape": "cube",
+      "unit": "ሳ.ሜ"
+     },
+     "level": 1,
+     "added": true,
+     "id": "g8.maths.u2.s2-2-1.9"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "(3/4)³ = 27/16",
+     "a": false,
+     "why": "(3/4)³ = (3 × 3 × 3)/(4 × 4 × 4) = 27/64.",
+     "clue": "Cube the bottom too.",
+     "level": 1,
+     "ref": "Exercise 2.6 Q1 d",
+     "id": "g8.maths.u2.s2-2-1.10"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "−20³ = −400",
+     "a": false,
+     "why": "−20³ = −(20 × 20 × 20) = −8000.",
+     "clue": "Multiply 20 three times, not two.",
+     "level": 2,
+     "ref": "Exercise 2.6 Q1 b",
+     "id": "g8.maths.u2.s2-2-1.11"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "num": true,
+     "ask": "(___)³ = −1/8",
+     "a": [
+      "-1/2",
+      "-0.5"
+     ],
+     "why": "(−1/2)³ = (−1 × −1 × −1)/(2 × 2 × 2) = −1/8.",
+     "clue": "Which fraction times itself three times gives −1/8? Think about the sign.",
+     "input": "signed",
+     "level": 3,
+     "added": true,
+     "id": "g8.maths.u2.s2-2-1.12"
+    }
+   ]
+  },
+  {
+   "id": "math.perfect-cube",
+   "name": "Perfect cubes and patterns",
+   "requires": [
+    "math.rounding"
+   ],
+   "explain": {
+    "en": {
+     "text": "A perfect cube is a number you get by cubing a rational number: 1, 8, 27, −64, 1/8. Adding odd numbers in groups of 1, 2, 3, … gives the cubes 1³, 2³, 3³, … To estimate a cube, round first, then cube."
+    },
+    "am": {
+     "text": "ፍጹም ኪዩብ ምክንያታዊ ቁጥርን በማኪዩብ የሚገኝ ቁጥር ነው፤ ለምሳሌ 1፣ 8፣ 27፣ −64። ኪዩብን ለመገመት መጀመሪያ አጠጋጋ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Group work 2.2",
+     "ask": "1 = 1, 3 + 5 = 8, 7 + 9 + 11 = 27. What is 13 + 15 + 17 + 19?",
+     "opts": [
+      "60",
+      "64",
+      "49",
+      "81"
+     ],
+     "after": "64 = 4³. Each group of odd numbers adds up to a cube!",
+     "ref": "Group work 2.2",
+     "id": "g8.maths.u2.s2-2-1.13"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "The odd-number cube pattern",
+     "ask": "Tap each group to see its cube.",
+     "need": "5",
+     "items": [
+      [
+       "1",
+       "1 = 1³"
+      ],
+      [
+       "3 + 5",
+       "8 = 2³"
+      ],
+      [
+       "7 + 9 + 11",
+       "27 = 3³"
+      ],
+      [
+       "13 + 15 + 17 + 19",
+       "64 = 4³"
+      ],
+      [
+       "21 + 23 + 25 + 27 + 29",
+       "125 = 5³"
+      ]
+     ],
+     "ref": "Group work 2.2",
+     "id": "g8.maths.u2.s2-2-1.14"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Perfect cubes",
+     "paras": [
+      "Definition 2.5: A rational number x is a perfect cube if x = m³ for some rational m.",
+      "A perfect cube is a product of three identical factors.",
+      "1 = 1³, 27 = 3³, 125 = 5³, 1/8 = (1/2)³, −64 = (−4)³, 216 = 6³."
+     ],
+     "ref": "Example 2.17",
+     "id": "g8.maths.u2.s2-2-1.15"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Estimating a cube",
+     "paras": [
+      "Round the number first, then cube it.",
+      "3.2 ≈ 3, so (3.2)³ ≈ 27.",
+      "10.57 ≈ 11, so (10.57)³ ≈ 1331."
+     ],
+     "ref": "Example 2.16",
+     "id": "g8.maths.u2.s2-2-1.16"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Perfect cube",
+       "A rational number x with x = m³ for some rational m, like 27 = 3³ or −64 = (−4)³."
+      ]
+     ],
+     "id": "g8.maths.u2.s2-2-1.17"
+    },
+    {
+     "kind": "pick",
+     "step": "check",
+     "graded": true,
+     "text": "Which are perfect cubes?",
+     "pool": [
+      "8",
+      "42",
+      "64",
+      "100",
+      "−125",
+      "27/64"
+     ],
+     "a": [
+      "8",
+      "64",
+      "−125",
+      "27/64"
+     ],
+     "why": "8 = 2³, 64 = 4³, −125 = (−5)³, 27/64 = (3/4)³. 42 and 100 are not cubes.",
+     "clue": "Can each be written as something × itself × itself?",
+     "level": 1,
+     "ref": "Exercise 2.6 Q4",
+     "id": "g8.maths.u2.s2-2-1.18"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Is 144 a perfect cube?",
+     "opts": [
+      "No: 5³ = 125 < 144 < 216 = 6³",
+      "Yes: 144 = 12³",
+      "Yes: 144 = 48³",
+      "No: it is odd"
+     ],
+     "ans": "No: 5³ = 125 < 144 < 216 = 6³",
+     "why": "144 lies between 125 and 216, so no whole number cubed gives 144. (144 = 12² is a square, not a cube.)",
+     "clue": "Find the cubes just below and above 144.",
+     "level": 1,
+     "ref": "Exercise 2.6 Q4 e",
+     "id": "g8.maths.u2.s2-2-1.19"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "(4.98)³ ≈ ___",
+     "a": [
+      "125"
+     ],
+     "why": "4.98 ≈ 5 because 9 ≥ 5. 5³ = 125.",
+     "clue": "Round to a whole number, then cube.",
+     "level": 1,
+     "ref": "Exercise 2.6 Q3 b",
+     "needs": "math.rounding",
+     "id": "g8.maths.u2.s2-2-1.20"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "1³ + 2³ + 3³ + 4³ = ___",
+     "a": [
+      "100"
+     ],
+     "why": "1 + 8 + 27 + 64 = 100.",
+     "clue": "Work out each cube, then add.",
+     "level": 2,
+     "ref": "Exercise 2.6 Q5",
+     "id": "g8.maths.u2.s2-2-1.21"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "num": true,
+     "ask": "The next eight odd numbers after 55 add up to ___",
+     "a": [
+      "512"
+     ],
+     "why": "They are 57, 59, 61, 63, 65, 67, 69, 71. 57 + 71 = 59 + 69 = 61 + 67 = 63 + 65 = 128. 4 × 128 = 512 = 8³.",
+     "clue": "Follow the pattern: the next group gives the next cube.",
+     "level": 3,
+     "ref": "Group work 2.2",
+     "added": true,
+     "id": "g8.maths.u2.s2-2-1.22"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activity 2.5",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "x = −4. x³ = ___",
+     "a": [
+      "-64"
+     ],
+     "why": "(−4) × (−4) = 16. 16 × (−4) = −64.",
+     "clue": "Three negative factors.",
+     "input": "signed",
+     "level": 1,
+     "ref": "Q1 b",
+     "id": "g8.maths.u2.s2-2-1.23"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which number can be written as x³?",
+     "opts": [
+      "729",
+      "121",
+      "2700",
+      "60"
+     ],
+     "ans": "729",
+     "why": "729 = 9 × 9 × 9 = 9³. 121 = 11² is a square.",
+     "clue": "Try 9 × 9 × 9.",
+     "level": 1,
+     "ref": "Q2",
+     "id": "g8.maths.u2.s2-2-1.24"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 2.6",
+   "items": [
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "8³ = 64 × 8",
+     "a": true,
+     "why": "8³ = 8 × 8 × 8 = (8 × 8) × 8 = 64 × 8.",
+     "clue": "Group the first two 8s.",
+     "level": 1,
+     "ref": "Q1 c",
+     "id": "g8.maths.u2.s2-2-1.25"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "(−3)³ = −27",
+     "a": true,
+     "why": "(−3) × (−3) = 9. 9 × (−3) = −27.",
+     "clue": "Three negatives give a negative.",
+     "level": 1,
+     "ref": "Q1 e",
+     "id": "g8.maths.u2.s2-2-1.26"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "x = 3/4. x³ = ___",
+     "a": [
+      "27/64"
+     ],
+     "why": "(3 × 3 × 3)/(4 × 4 × 4) = 27/64.",
+     "clue": "Cube the top and the bottom.",
+     "level": 1,
+     "ref": "Q2 d",
+     "id": "g8.maths.u2.s2-2-1.27"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "x = −1/2. x³ = ___",
+     "a": [
+      "-1/8"
+     ],
+     "why": "(−1/2) × (−1/2) = 1/4. 1/4 × (−1/2) = −1/8.",
+     "clue": "The answer is negative.",
+     "input": "signed",
+     "level": 1,
+     "ref": "Q2 c",
+     "id": "g8.maths.u2.s2-2-1.28"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "x = −3.45. x³ ≈ ___",
+     "a": [
+      "-27"
+     ],
+     "why": "−3.45 ≈ −3 because 4 < 5. (−3)³ = −27.",
+     "clue": "Round to −3 first.",
+     "input": "signed",
+     "level": 2,
+     "ref": "Q3 a",
+     "id": "g8.maths.u2.s2-2-1.29"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Is 216 a perfect cube?",
+     "opts": [
+      "Yes: 216 = 6³",
+      "No",
+      "Yes: 216 = 72³",
+      "Yes: 216 = 36³"
+     ],
+     "ans": "Yes: 216 = 6³",
+     "why": "6 × 6 × 6 = 36 × 6 = 216.",
+     "clue": "Try 6 × 6 × 6.",
+     "level": 1,
+     "ref": "Q4 f",
+     "id": "g8.maths.u2.s2-2-1.30"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "5³ = ___",
+   "a": [
+    "125"
+   ],
+   "why": "5 × 5 × 5 = 125.",
+   "clue": "",
+   "gen": {
+    "t": "volume",
+    "shape": "cube",
+    "unit": "ሳ.ሜ"
+   },
+   "level": 1,
+   "id": "g8.maths.u2.s2-2-1.31"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "(−2/3)³ = ___",
+   "a": [
+    "-8/27"
+   ],
+   "why": "(−2 × −2 × −2)/(3 × 3 × 3) = −8/27.",
+   "clue": "",
+   "input": "signed",
+   "level": 2,
+   "id": "g8.maths.u2.s2-2-1.32"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is a perfect cube?",
+   "opts": [
+    "1000",
+    "100",
+    "500",
+    "900"
+   ],
+   "ans": "1000",
+   "why": "1000 = 10³.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.maths.u2.s2-2-1.33"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "(0.2)³ = ___",
+   "a": [
+    "0.008"
+   ],
+   "why": "0.2 × 0.2 = 0.04; 0.04 × 0.2 = 0.008.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.maths.u2.s2-2-1.34"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "(2.9)³ is about",
+   "opts": [
+    "27",
+    "8",
+    "9",
+    "81"
+   ],
+   "ans": "27",
+   "why": "2.9 ≈ 3 and 3³ = 27.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.maths.u2.s2-2-1.35"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "The competency lines of 2.2.1 (cube) and 2.2.2 (cube root) appear swapped in the book. The lessons use the matching competency."
+  },
+  {
+   "kind": "review",
+   "text": "Exercise 2.6 Q3: rounding to a whole number gives rough estimates far from the exact cubes for a, c, d (e.g. (2.75)³ = 20.80 but ≈ 27). Kept as the book's method."
+  },
+  {
+   "kind": "note",
+   "text": "Engine: the \"volume\" generator's English \"why\" text uses the Amharic \"፤\" as a separator (e.g. \"4 × 4 = 16፤ 16 × 4 = 64\"). Fix in an engine session."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.rounding": {
+   "name": "Rounding decimals",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Round 4.3 and 2.45",
+     "text": "Look at the next digit to the right.",
+     "steps": [
+      "4.3 to a whole number: the next digit is 3. 3 < 5, so round down: 4.",
+      "2.45 to one decimal place: the next digit is 5. 5 or more, so round up: 2.5."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Round 10.8 to the nearest whole number.",
+     "opts": [
+      "10",
+      "11",
+      "10.9",
+      "12"
+     ],
+     "ans": "11",
+     "why": "The next digit is 8. 8 is 5 or more, so round up to 11.",
+     "clue": "Is the digit after the point less than 5?"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,415 @@
+{
+ "id": "g8.maths.u2.s2-1-4",
+ "book": {
+  "title": "Mathematics Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "Squares, Square Roots, Cubes and Cube Roots",
+  "pages": "55–56",
+  "section": "2.1.4"
+ },
+ "title": "Use of table values and scientific calculator to find square roots",
+ "competency": "Find square roots of decimals using the table of squares and a calculator.",
+ "minutes": 10,
+ "keywords": [
+  {
+   "en": "Table of squares",
+   "am": "የካሬዎች ሰንጠረዥ",
+   "def": "A table at the end of the book that gives x² for x from 1.00 to 9.99.",
+   "machine": true
+  },
+  {
+   "en": "Square root",
+   "am": "ካሬ ሥር",
+   "def": "If a² = b, then a is a square root of b.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.sqrt-table",
+   "name": "Square roots from the table",
+   "explain": {
+    "en": {
+     "text": "To find √b from the table of squares, look for b inside the table. Its row gives the first two digits and its column gives the third digit. If b is not in the table, use the nearest value. Moving the point two places in b moves it one place in √b."
+    },
+    "am": {
+     "text": "√b ን ከካሬዎች ሰንጠረዥ ለማግኘት b ን በሰንጠረዡ ውስጥ ፈልግ። ረድፉ የመጀመሪያዎቹን ሁለት አሃዞች፣ አምዱ ሦስተኛውን ይሰጣል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Read the table backwards",
+     "ask": "The table says (4.05)² ≈ 16.40. What is √16.40?",
+     "opts": [
+      "About 4.05",
+      "About 8.2",
+      "About 16.4",
+      "About 2.02"
+     ],
+     "after": "Square root undoes squaring. If (4.05)² ≈ 16.40, then √16.40 ≈ 4.05.",
+     "ref": "Example 2.12",
+     "id": "g8.maths.u2.s2-1-4.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Reading the table backwards",
+     "paras": [
+      "Find the number in the body of the table.",
+      "Move left along its row and read the first two digits under x.",
+      "Move up its column and read the third digit.",
+      "If the number is not in the table, use the nearest one."
+     ],
+     "ref": "p.55",
+     "id": "g8.maths.u2.s2-1-4.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Table of squares",
+       "A table at the end of the book that gives x² for x from 1.00 to 9.99."
+      ]
+     ],
+     "id": "g8.maths.u2.s2-1-4.3"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Find √71.80",
+     "steps": [
+      "71.80 is not in the table.",
+      "The neighbours in the table are 71.74 and 71.91: 71.74 < 71.80 < 71.91.",
+      "71.80 − 71.74 = 0.06 and 71.91 − 71.80 = 0.11. 71.74 is nearer.",
+      "71.74 is in row 8.4, column 7, so √71.74 = 8.47.",
+      "So √71.80 ≈ 8.47."
+     ],
+     "ref": "Example 2.13",
+     "id": "g8.maths.u2.s2-1-4.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "98.01 is in row 9.9, column 0 of the table. √98.01 = ?",
+     "opts": [
+      "9.9",
+      "9.0",
+      "0.99",
+      "99"
+     ],
+     "ans": "9.9",
+     "why": "Row 9.9 and column 0 give x = 9.90. Check: 9.9 × 9.9 = 98.01.",
+     "clue": "Row gives the first two digits; column gives the third.",
+     "level": 1,
+     "ref": "Activity 2.4 b",
+     "id": "g8.maths.u2.s2-1-4.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "11.16 is in row 3.3, column 4. So √11.16 ≈ ?",
+     "opts": [
+      "3.34",
+      "3.43",
+      "33.4",
+      "4.33"
+     ],
+     "ans": "3.34",
+     "why": "Row 3.3 gives 3.3 and column 4 gives the third digit: 3.34. Check: 3.34² = 11.1556 ≈ 11.16.",
+     "clue": "Join the row number and the column digit.",
+     "level": 1,
+     "ref": "Activity 2.4 c",
+     "id": "g8.maths.u2.s2-1-4.6"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "(4.63)² = 21.44. So √2144 ≈ ___",
+     "a": [
+      "46.3"
+     ],
+     "why": "2144 = 21.44 × 100, so √2144 = √21.44 × √100 ≈ 4.63 × 10 = 46.3.",
+     "clue": "Moving the point 2 places in the number moves it 1 place in the root.",
+     "level": 2,
+     "ref": "Exercise 2.5 Q2 b",
+     "id": "g8.maths.u2.s2-1-4.7"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "(4.63)² = 21.44. So √0.2144 ≈ ___",
+     "a": [
+      "0.463"
+     ],
+     "why": "0.2144 = 21.44 ÷ 100, so √0.2144 ≈ 4.63 ÷ 10 = 0.463.",
+     "clue": "Divide by 100 inside the root means divide by 10 outside.",
+     "level": 2,
+     "ref": "Exercise 2.5 Q2 c",
+     "id": "g8.maths.u2.s2-1-4.8"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "Calculator: √12.25 = ___",
+     "a": [
+      "3.5"
+     ],
+     "why": "3.5 × 3.5 = 12.25, so √12.25 = 3.5 exactly.",
+     "clue": "Try 3.5 × 3.5.",
+     "level": 1,
+     "added": true,
+     "id": "g8.maths.u2.s2-1-4.9"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "(1.52)² ≈ 2.310. Lulit says √231 ≈ 1.52 too. Is she right?",
+     "opts": [
+      "No: 231 = 2.310 × 100, so √231 ≈ 15.2",
+      "Yes, the digits are the same",
+      "No: √231 ≈ 152",
+      "No: √231 ≈ 0.152"
+     ],
+     "ans": "No: 231 = 2.310 × 100, so √231 ≈ 15.2",
+     "why": "231 = 2.310 × 100. √(2.310 × 100) = √2.310 × 10 ≈ 1.52 × 10 = 15.2. Check: 15.2² = 231.04.",
+     "clue": "How many places did the point move?",
+     "level": 3,
+     "added": true,
+     "id": "g8.maths.u2.s2-1-4.10"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activity 2.4",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "13.18 is in row 3.6, column 3. √13.18 ≈ ?",
+     "opts": [
+      "3.63",
+      "3.36",
+      "6.33",
+      "36.3"
+     ],
+     "ans": "3.63",
+     "why": "Row 3.6 and column 3 give 3.63. Check: 3.63² = 13.1769.",
+     "clue": "Row first, then column.",
+     "level": 1,
+     "ref": "a",
+     "id": "g8.maths.u2.s2-1-4.11"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "56.85 is in row 7.5, column 4. √56.85 ≈ ?",
+     "opts": [
+      "7.54",
+      "7.45",
+      "5.47",
+      "75.4"
+     ],
+     "ans": "7.54",
+     "why": "Row 7.5 and column 4 give 7.54. Check: 7.54² = 56.8516.",
+     "clue": "Row first, then column.",
+     "level": 1,
+     "ref": "d",
+     "id": "g8.maths.u2.s2-1-4.12"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 2.5",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "4.326 is in row 2.0, column 8. √4.326 ≈ ?",
+     "opts": [
+      "2.08",
+      "2.80",
+      "8.02",
+      "20.8"
+     ],
+     "ans": "2.08",
+     "why": "Row 2.0 and column 8 give 2.08. Check: 2.08² = 4.3264.",
+     "clue": "Row first, then column.",
+     "level": 1,
+     "ref": "Q1 b",
+     "id": "g8.maths.u2.s2-1-4.13"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "15.68 is in row 3.9, column 6. √15.68 ≈ ?",
+     "opts": [
+      "3.96",
+      "3.69",
+      "6.93",
+      "39.6"
+     ],
+     "ans": "3.96",
+     "why": "Row 3.9 and column 6 give 3.96. Check: 3.96² = 15.6816.",
+     "clue": "Row first, then column.",
+     "level": 1,
+     "ref": "Q1 c",
+     "id": "g8.maths.u2.s2-1-4.14"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "(4.63)² = 21.44. √21.44 ≈ ___",
+     "a": [
+      "4.63"
+     ],
+     "why": "Square root undoes squaring: √21.44 ≈ 4.63.",
+     "clue": "Read the given fact backwards.",
+     "level": 1,
+     "ref": "Q2 a",
+     "id": "g8.maths.u2.s2-1-4.15"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "(4.63)² = 21.44. √2144 ≈ ___",
+     "a": [
+      "46.3"
+     ],
+     "why": "√2144 = √21.44 × √100 ≈ 4.63 × 10 = 46.3.",
+     "clue": "Point moves 2 places in the number, 1 place in the root.",
+     "level": 2,
+     "ref": "Q2 b",
+     "id": "g8.maths.u2.s2-1-4.16"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The number 12.74 is in row 3.5, column 7. √12.74 ≈ ?",
+   "opts": [
+    "3.57",
+    "3.75",
+    "7.53",
+    "35.7"
+   ],
+   "ans": "3.57",
+   "why": "Row 3.5, column 7.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.maths.u2.s2-1-4.17"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "√6.25 = ___",
+   "a": [
+    "2.5"
+   ],
+   "why": "2.5 × 2.5 = 6.25.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.maths.u2.s2-1-4.18"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "(3.42)² = 11.70. √1170 ≈ ?",
+   "opts": [
+    "34.2",
+    "342",
+    "3.42",
+    "0.342"
+   ],
+   "ans": "34.2",
+   "why": "1170 = 11.70 × 100, so the root is 3.42 × 10.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.maths.u2.s2-1-4.19"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "(3.42)² = 11.70. √0.117 ≈ ?",
+   "opts": [
+    "0.342",
+    "0.0342",
+    "3.42",
+    "34.2"
+   ],
+   "ans": "0.342",
+   "why": "0.117 = 11.70 ÷ 100, so the root is 3.42 ÷ 10.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.maths.u2.s2-1-4.20"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "23.04 is the table value in row 4.8, column 0. √2304 = ?",
+   "opts": [
+    "48",
+    "4.8",
+    "480",
+    "0.48"
+   ],
+   "ans": "48",
+   "why": "2304 = 23.04 × 100, so √2304 = 4.8 × 10 = 48. Check: 48 × 48 = 2304.",
+   "clue": "",
+   "level": 3,
+   "id": "g8.maths.u2.s2-1-4.21"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Exercise 2.5 Q1 a (√2.310): the book's table is misprinted at row 1.5 / 1.6, column 2. Read literally it gives 1.62; the correct value is 1.52 (1.52² = 2.3104). The item is left out; teacher to note the misprint."
+  },
+  {
+   "kind": "review",
+   "text": "Exercise 2.5 Q1 is labelled a, b, c, d, f (no e) in the book."
+  },
+  {
+   "kind": "note",
+   "text": "Table questions tell the student the row and column, because the full table is only in the paper book (pp. 243–245)."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

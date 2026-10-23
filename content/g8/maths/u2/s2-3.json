@@ -1,0 +1,478 @@
+{
+ "id": "g8.maths.u2.s2-3",
+ "book": {
+  "title": "Mathematics Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "Squares, Square Roots, Cubes and Cube Roots",
+  "pages": "61–62",
+  "section": "2.3"
+ },
+ "title": "Applications of squares, square roots, cubes and cube roots",
+ "competency": "Solve real-life problems using squares, square roots, cubes and cube roots.",
+ "minutes": 12,
+ "keywords": [
+  {
+   "en": "Surface area",
+   "am": "የገጽ ስፋት",
+   "def": "The total area of all the faces of a solid. A cube has 6 equal square faces.",
+   "machine": true
+  },
+  {
+   "en": "Volume",
+   "am": "ይዘት",
+   "def": "The space a solid fills. Volume of a cube = side³.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.square-cube-applications",
+   "name": "Using squares and cubes in real life",
+   "requires": [
+    "math.square-root"
+   ],
+   "explain": {
+    "en": {
+     "text": "Area of a square = side², so side = √area. Volume of a cube = side³, so side = ∛volume. Surface area of a cube = 6 × side². Carpenters, builders and engineers use these every day."
+    },
+    "am": {
+     "text": "የካሬ ስፋት = ጎን²፣ ስለዚህ ጎን = √ስፋት። የኪዩብ ይዘት = ጎን³፣ ስለዚህ ጎን = ∛ይዘት። የኪዩብ የገጽ ስፋት = 6 × ጎን²።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "The patio",
+     "ask": "Alemu and Almaz have concrete for a square patio of 400 m². How long can each side be?",
+     "opts": [
+      "20 m",
+      "100 m",
+      "200 m",
+      "40 m"
+     ],
+     "after": "20 m, because 20 × 20 = 400. The side is √400.",
+     "ref": "Example 2.19",
+     "id": "g8.maths.u2.s2-3.1"
+    },
+    {
+     "kind": "cubes",
+     "step": "explore",
+     "title": "A cube with 6 faces",
+     "cube": true,
+     "l": 2,
+     "unit": "cubes",
+     "added": true,
+     "intro": "A cube has 6 equal square faces. Its volume is side × side × side.",
+     "say": [
+      "One row: 2 cubes.",
+      "One layer: 2 × 2 = 4 cubes.",
+      "Two layers: 4 × 2 = 8 = 2³. The volume is 8 unit cubes; each face is 2 × 2 = 4 square units, and 6 faces give 24."
+     ],
+     "id": "g8.maths.u2.s2-3.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Where we use them",
+     "paras": [
+      "Squares and square roots are used in carpentry, engineering, building design and technology.",
+      "A cube root finds the side of a solid when you know its volume."
+     ],
+     "table": [
+      [
+       "Shape",
+       "Formula",
+       "Back again"
+      ],
+      [
+       "Square",
+       "Area = s²",
+       "s = √Area"
+      ],
+      [
+       "Cube",
+       "Volume = s³",
+       "s = ∛Volume"
+      ],
+      [
+       "Cube",
+       "Surface area = 6 × s²",
+       ""
+      ]
+     ],
+     "ref": "p.61",
+     "id": "g8.maths.u2.s2-3.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Surface area",
+       "The total area of all the faces of a solid. A cube has 6 equal square faces."
+      ],
+      [
+       "Volume",
+       "The space a solid fills. Volume of a cube = side³."
+      ]
+     ],
+     "id": "g8.maths.u2.s2-3.4"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "The cube in Figure 2.1 (side 6 cm)",
+     "steps": [
+      "One face: 6 × 6 = 36 cm².",
+      "Six faces: 6 × 36 = 216 cm². This is the surface area.",
+      "Volume: 6 × 6 × 6 = 36 × 6 = 216 cm³.",
+      "The numbers are equal (216), but the units differ: cm² for area, cm³ for volume."
+     ],
+     "ref": "Activity 2.7 Q1",
+     "id": "g8.maths.u2.s2-3.5"
+    },
+    {
+     "kind": "blank",
+     "step": "check",
+     "graded": true,
+     "num": true,
+     "ask": "The side of a cube is 8 cm. Volume = ___ cm³",
+     "a": [
+      "512"
+     ],
+     "why": "V = 8³ = 8 × 8 × 8 = 64 × 8 = 512 cm³.",
+     "clue": "Volume = side³.",
+     "level": 1,
+     "ref": "Example 2.19 (second)",
+     "id": "g8.maths.u2.s2-3.6"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "1225 students stand in a square: rows = students in each row. Students in each row = ___",
+     "a": [
+      "35"
+     ],
+     "why": "x × x = 1225, so x = √1225. 1225 = 5 × 5 × 7 × 7 = 35 × 35. So 35.",
+     "clue": "The number of rows times itself is 1225.",
+     "worked": "Let x be the number in each row. Then x × x = 1225. 1225 ÷ 5 = 245, 245 ÷ 5 = 49, 49 = 7 × 7. So 1225 = (5 × 7) × (5 × 7) = 35 × 35. x = 35.",
+     "level": 2,
+     "ref": "Exercise 2.8 Q1",
+     "needs": "math.square-root",
+     "id": "g8.maths.u2.s2-3.7"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "A square room in Bahir Dar has a floor area of 64 m². Each wall is ___ m long",
+     "a": [
+      "8"
+     ],
+     "why": "√64 = 8, because 8 × 8 = 64.",
+     "clue": "Side = √area.",
+     "level": 1,
+     "ref": "Exercise 2.8 Q3",
+     "added": true,
+     "id": "g8.maths.u2.s2-3.8"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "A cube-shaped box has a volume of 125 cm³. Each edge = ___ cm",
+     "a": [
+      "5"
+     ],
+     "why": "∛125 = 5, because 5 × 5 × 5 = 125.",
+     "clue": "Edge = ∛volume.",
+     "level": 1,
+     "added": true,
+     "id": "g8.maths.u2.s2-3.9"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "A cube has sides of 4 cm. Surface area = ___ cm²",
+     "a": [
+      "96"
+     ],
+     "why": "One face: 4 × 4 = 16 cm². Six faces: 6 × 16 = 96 cm².",
+     "clue": "Surface area = 6 × side².",
+     "level": 2,
+     "ref": "Review Exercise Q16 a",
+     "id": "g8.maths.u2.s2-3.10"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "A square has sides of 6 cm. Area = ___ cm²",
+     "a": [
+      "36"
+     ],
+     "why": "6 × 6 = 36 cm².",
+     "clue": "Area = side × side.",
+     "gen": {
+      "t": "area",
+      "shape": "square",
+      "unit": "ሳ.ሜ"
+     },
+     "level": 1,
+     "added": true,
+     "id": "g8.maths.u2.s2-3.11"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "num": true,
+     "ask": "Getaneh's garden is a square. Widening it by 1 m and lengthening it by 3 m adds 19 m². The side now is ___ m",
+     "a": [
+      "4"
+     ],
+     "why": "New area: (x + 1)(x + 3) = x² + 4x + 3. So x² + 4x + 3 = x² + 19. Then 4x + 3 = 19, 4x = 16, x = 4. Check: 5 × 7 = 35 and 35 − 16 = 19.",
+     "clue": "Write the new area as (x + 1)(x + 3) and compare it with x² + 19.",
+     "worked": "Let x be the side now. Area now: x². New sides: x + 1 and x + 3. New area: (x + 1)(x + 3) = x² + 3x + x + 3 = x² + 4x + 3. It is 19 more: x² + 4x + 3 = x² + 19. Take x² from both sides: 4x + 3 = 19. 4x = 16. x = 4 m.",
+     "level": 3,
+     "ref": "Exercise 2.8 Q2",
+     "added": true,
+     "id": "g8.maths.u2.s2-3.12"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activity 2.7",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Figure 2.1: cube with side 6 cm. Surface area = ___ cm²",
+     "a": [
+      "216"
+     ],
+     "why": "One face 6 × 6 = 36 cm². Six faces: 6 × 36 = 216 cm².",
+     "clue": "A cube has 6 faces.",
+     "level": 1,
+     "ref": "Q1 a",
+     "id": "g8.maths.u2.s2-3.13"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Figure 2.1: cube with side 6 cm. Volume = ___ cm³",
+     "a": [
+      "216"
+     ],
+     "why": "6 × 6 × 6 = 216 cm³.",
+     "clue": "Volume = side³.",
+     "level": 1,
+     "ref": "Q1 b",
+     "id": "g8.maths.u2.s2-3.14"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Area of a square with side 5 cm = ___ cm²",
+     "a": [
+      "25"
+     ],
+     "why": "5 × 5 = 25 cm².",
+     "clue": "Side × side.",
+     "level": 1,
+     "ref": "Q2",
+     "id": "g8.maths.u2.s2-3.15"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 2.8",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "1225 students stand with rows = students per row. Students in each row = ___",
+     "a": [
+      "35"
+     ],
+     "why": "√1225 = 35, because 35 × 35 = 1225.",
+     "clue": "Find √1225.",
+     "level": 2,
+     "ref": "Q1",
+     "id": "g8.maths.u2.s2-3.16"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "Getaneh's garden side now = ___ m",
+     "a": [
+      "4"
+     ],
+     "why": "(x + 1)(x + 3) = x² + 19 gives 4x + 3 = 19, so x = 4.",
+     "clue": "Expand (x + 1)(x + 3).",
+     "level": 3,
+     "ref": "Q2",
+     "id": "g8.maths.u2.s2-3.17"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "A square region has an area of 64 m². Its side = ___ m",
+     "a": [
+      "8"
+     ],
+     "why": "√64 = 8.",
+     "clue": "Side = √area.",
+     "level": 1,
+     "ref": "Q3",
+     "id": "g8.maths.u2.s2-3.18"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "A square has an area of 81 m². Its side = ___ m",
+   "a": [
+    "9"
+   ],
+   "why": "√81 = 9.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.maths.u2.s2-3.19"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "A cube has sides of 3 cm. Volume = ___ cm³",
+   "a": [
+    "27"
+   ],
+   "why": "3 × 3 × 3 = 27.",
+   "clue": "",
+   "gen": {
+    "t": "volume",
+    "shape": "cube",
+    "unit": "ሳ.ሜ"
+   },
+   "level": 1,
+   "id": "g8.maths.u2.s2-3.20"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "A cube has sides of 5 cm. Surface area = ___ cm²",
+   "a": [
+    "150"
+   ],
+   "why": "6 × 5 × 5 = 150.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.maths.u2.s2-3.21"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "A cube holds 1000 cm³. Each edge = ___ cm",
+   "a": [
+    "10"
+   ],
+   "why": "∛1000 = 10.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.maths.u2.s2-3.22"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "A square patio of 2.56 m² has sides of ___ m",
+   "a": [
+    "1.6"
+   ],
+   "why": "1.6 × 1.6 = 2.56.",
+   "clue": "",
+   "level": 3,
+   "id": "g8.maths.u2.s2-3.23"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "The book numbers two examples \"Example 2.19\"; the second (cube volume from side 8 cm) should be Example 2.20."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.square-root": {
+   "name": "Square roots",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "√49",
+     "steps": [
+      "Which number times itself gives 49?",
+      "7 × 7 = 49.",
+      "So √49 = 7."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "√36 = ?",
+     "opts": [
+      "6",
+      "18",
+      "12",
+      "9"
+     ],
+     "ans": "6",
+     "why": "6 × 6 = 36.",
+     "clue": "Which number times itself is 36?"
+    }
+   ]
+  }
+ }
+}

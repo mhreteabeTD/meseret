@@ -13,7 +13,7 @@ G7: Maths U1–3, Citizenship U1–3, CTE U1–3, Science U2–3, Social U2–3 
 | Grade | Maths U1 | Maths U2 | Next subjects |
 |---|---|---|---|
 | 12 | **built** (`g12-maths-u1`) | todo | Physics, Chemistry, Biology U1–2 next; then Geography, History, Economics, IT, Agriculture. English: book missing |
-| 8 | **built** | todo | English, Gen. Science |
+| 8 | **built** | **built** | English, Gen. Science |
 | 7 (session A) | **built** | todo | built: maths U1, citizenship U2, citizenship U3 · todo: maths U2, maths U3, citizenship U1, cte U1, cte U2, cte U3, science U2, science U3, social U2, social U3 |
 | 6 | todo | todo | English, Science (Amharic) |
 | 5 | **built** | todo | |
