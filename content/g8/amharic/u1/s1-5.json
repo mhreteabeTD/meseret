@@ -1,0 +1,322 @@
+{
+ "id": "g8.amharic.u1.s1-5",
+ "book": {
+  "title": "አማርኛ የ8ኛ ክፍል የተማሪ መጽሐፍ",
+  "grade": 8,
+  "subject": "amharic",
+  "unit": 1,
+  "unit_title": "የሥራ ሥነምግባር",
+  "pages": "12",
+  "section": "ክፍል ስድስት"
+ },
+ "title": "ሰዋስው፡ የቋንቋ መዋቅር",
+ "competency": "የቋንቋውን ትክክለኛ የሰዋስው አወቃቀር መጠቀም።",
+ "minutes": 12,
+ "keywords": [
+  {
+   "en": "Language structure",
+   "am": "የቋንቋ መዋቅር",
+   "def": "ድምፅ ወደ ቃል፣ ቃል ወደ ሐረግ፣ ሐረግ ወደ ዓረፍተ ነገር፣ ዓረፍተ ነገር ወደ አንቀጽ፣ አንቀጽ ወደ ድርሰት የሚቀናጁበት ሥርዓት።",
+   "machine": true
+  },
+  {
+   "en": "Sound",
+   "am": "ድምፅ",
+   "def": "የቋንቋ መዋቅር መሠረት፤ ድምፆች በሥርዓት ሲቀናጁ ቃል ይሆናሉ።",
+   "machine": true
+  },
+  {
+   "en": "Phrase",
+   "am": "ሐረግ",
+   "def": "ቃላት ተገጣጥመው የሚፈጥሩት መዋቅር፤ ከቃል ይበልጣል ከዓረፍተ ነገር ያንሳል።",
+   "machine": true
+  },
+  {
+   "en": "Essay",
+   "am": "ድርሰት",
+   "def": "አንቀጾች በሥርዓት ተቀናጅተው የሚፈጥሩት ጽሑፍ።",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "amh.g8.language-structure",
+   "name": "የቋንቋ መዋቅር",
+   "explain": {
+    "en": {
+     "text": "Language is built in levels: sounds join into words, words into phrases, phrases into sentences, sentences into paragraphs, and paragraphs into an essay. The base of every language structure is sound. Units must join in order: the sounds /ብ-ኤ-ት/ make the meaningful word «ቤት», but /ት-ብ-ኤ/ makes the meaningless «ትቤ»."
+    },
+    "am": {
+     "text": "ድምፅ ተቀናጅቶ ቃል፣ ቃል ሐረግ፣ ሐረግ ዓረፍተ ነገር፣ ዓረፍተ ነገር አንቀጽ፣ አንቀጽ ድርሰት ይፈጥራል። መሠረቱ ድምፅ ነው፤ ቅንጅቱ በሥርዓት መሆን አለበት።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "ቤት ወይስ ትቤ?",
+     "ask": "/ብ-ኤ-ት/ የሚሉት ድምፆች ተቀናጅተው «ቤት» ይሆናሉ። /ት-ብ-ኤ/ ቢሆኑስ?",
+     "opts": [
+      "ትርጉም አልባ «ትቤ» ይሆናል",
+      "አሁንም «ቤት» ነው",
+      "አዲስ ትርጉም ያለው ቃል",
+      "ዓረፍተ ነገር ይሆናል"
+     ],
+     "after": "ድምፆቹ ተመሳሳይ ቢሆኑም ቅደም ተከተላቸው ስለተለወጠ ትርጉም አልባ ይሆናል።",
+     "ref": "ገጽ 12",
+     "machine": true,
+     "id": "g8.amharic.u1.s1-5.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "የቋንቋ መዋቅር",
+     "paras": [
+      "ድምፅ ከድምፅ ጋር ተቀናጅቶ ቃልን፣ ቃል ከቃል ጋር ተገጣጥሞ ሐረግን፣ ሐረግ ከሐረግ ጋር ተዋቅሮ ዓረፍተ ነገርን፣ ዓረፍተ ነገር ከዓረፍተ ነገር ጋር ተቀናጅቶ አንቀጽን፣ አንቀጾች ደግሞ ተቀናጅተው ድርሰትን ይፈጥራሉ።",
+      "የማንኛውም ቋንቋ መዋቅር መሠረቱ ድምፅ ነው።",
+      "መዋቅሮች ሲቀናጁ በሥርዓት መሆን አለባቸው። የተደረደሩ ድምፆች ሁሉ ቃል አይፈጥሩም።",
+      "ምሳሌ፦ /ብ-ኤ-ት/ → «ቤት» (ትርጉም ያለው)፤ /ት-ብ-ኤ/ → «ትቤ» (ትርጉም አልባ)።"
+     ],
+     "note": "ድምፅ → ቃል → ሐረግ → ዓረፍተ ነገር → አንቀጽ → ድርሰት",
+     "ref": "ገጽ 12",
+     "id": "g8.amharic.u1.s1-5.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "ቃላቱን እንወቅ",
+     "defs": [
+      [
+       "የቋንቋ መዋቅር",
+       "ድምፅ ወደ ቃል፣ ቃል ወደ ሐረግ፣ ሐረግ ወደ ዓረፍተ ነገር፣ ዓረፍተ ነገር ወደ አንቀጽ፣ አንቀጽ ወደ ድርሰት የሚቀናጁበት ሥርዓት።"
+      ],
+      [
+       "ድምፅ",
+       "የቋንቋ መዋቅር መሠረት፤ ድምፆች በሥርዓት ሲቀናጁ ቃል ይሆናሉ።"
+      ],
+      [
+       "ሐረግ",
+       "ቃላት ተገጣጥመው የሚፈጥሩት መዋቅር፤ ከቃል ይበልጣል ከዓረፍተ ነገር ያንሳል።"
+      ],
+      [
+       "ድርሰት",
+       "አንቀጾች በሥርዓት ተቀናጅተው የሚፈጥሩት ጽሑፍ።"
+      ]
+     ],
+     "id": "g8.amharic.u1.s1-5.3"
+    },
+    {
+     "kind": "order",
+     "step": "check",
+     "graded": true,
+     "text": "የቋንቋ መዋቅርን ከትንሹ ወደ ትልቁ ደርድሩ።",
+     "items": [
+      "ድምፅ",
+      "ቃል",
+      "ሐረግ",
+      "ዓረፍተ ነገር",
+      "አንቀጽ",
+      "ድርሰት"
+     ],
+     "why": "ገጽ 12።",
+     "clue": "መሠረቱ ድምፅ ነው።",
+     "level": 1,
+     "machine": true,
+     "id": "g8.amharic.u1.s1-5.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "የማንኛውም ቋንቋ መዋቅር መሠረቱ ምንድን ነው?",
+     "opts": [
+      "ድምፅ",
+      "ድርሰት",
+      "አንቀጽ",
+      "ሐረግ"
+     ],
+     "ans": "ድምፅ",
+     "why": "ገጽ 12።",
+     "clue": "ትንሹ መዋቅር።",
+     "level": 1,
+     "machine": true,
+     "id": "g8.amharic.u1.s1-5.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "ዓረፍተ ነገሮች ተቀናጅተው ምንን ይፈጥራሉ?",
+     "opts": [
+      "አንቀጽ",
+      "ድምፅ",
+      "ቃል",
+      "ሐረግ"
+     ],
+     "ans": "አንቀጽ",
+     "why": "ገጽ 12።",
+     "clue": "ከዓረፍተ ነገር የሚበልጠው።",
+     "level": 1,
+     "machine": true,
+     "id": "g8.amharic.u1.s1-5.6"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "text": "ቃል ወይስ ሐረግ?",
+     "bins": [
+      "ቃል",
+      "ሐረግ"
+     ],
+     "items": [
+      [
+       "ቤት",
+       "ቃል",
+       "አንድ ቃል ነው።"
+      ],
+      [
+       "ጠንካራ የሥራ ባህል",
+       "ሐረግ",
+       "ቃላት ተገጣጥመዋል።"
+      ],
+      [
+       "ሥራ",
+       "ቃል",
+       "አንድ ቃል።"
+      ],
+      [
+       "የአውራምባ ማኅበረሰብ",
+       "ሐረግ",
+       "ሁለት ቃላት።"
+      ]
+     ],
+     "why": "ሐረግ ከቃል ይበልጣል፤ ቃላት ተገጣጥመው ይፈጥሩታል።",
+     "clue": "ስንት ቃል አለ?",
+     "level": 2,
+     "added": true,
+     "machine": true,
+     "id": "g8.amharic.u1.s1-5.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "«ማኅበረሰቡ ሥራን ይወዳል» ከሚለው ዓረፍተ ነገር ቃላቱ ቢደበላለቁ «ይወዳል ሥራን ማኅበረሰቡ» ይሆናል። ይህ ምን ያሳያል?",
+     "opts": [
+      "መዋቅሮች በሥርዓት ካልተቀናጁ ትርጉም ይዛባል",
+      "የቃላት ቅደም ተከተል አያስፈልግም",
+      "ቃላት ድምፅ የላቸውም",
+      "ዓረፍተ ነገር አንቀጽ ነው"
+     ],
+     "ans": "መዋቅሮች በሥርዓት ካልተቀናጁ ትርጉም ይዛባል",
+     "why": "በአማርኛ ግስ ብዙ ጊዜ በመጨረሻ ይመጣል፤ ሥርዓቱ ካልተጠበቀ ዓረፍተ ነገሩ ተፈጥሯዊ አይሆንም።",
+     "clue": "እንደ «ትቤ» አስቡ።",
+     "level": 3,
+     "machine": true,
+     "added": true,
+     "id": "g8.amharic.u1.s1-5.8"
+    }
+   ]
+  }
+ ],
+ "lang": "am",
+ "main": "am",
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "ቃላት ተገጣጥመው ምንን ይፈጥራሉ?",
+   "opts": [
+    "ሐረግ",
+    "ድምፅ",
+    "ፊደል",
+    "ምንም"
+   ],
+   "ans": "ሐረግ",
+   "why": "ገጽ 12።",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g8.amharic.u1.s1-5.9"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "አንቀጾች ተቀናጅተው ምንን ይፈጥራሉ?",
+   "opts": [
+    "ድርሰት",
+    "ድምፅ",
+    "ቃል",
+    "ሐረግ"
+   ],
+   "ans": "ድርሰት",
+   "why": "ገጽ 12።",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g8.amharic.u1.s1-5.10"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "/ት-ብ-ኤ/ የሚለው ቅደም ተከተል ምን ይሰጣል?",
+   "opts": [
+    "ትርጉም አልባ ቃል",
+    "«ቤት»",
+    "ዓረፍተ ነገር",
+    "አንቀጽ"
+   ],
+   "ans": "ትርጉም አልባ ቃል",
+   "why": "ገጽ 12።",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g8.amharic.u1.s1-5.11"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "የተደረደሩ ድምፆች ሁሉ ቃላትን ይፈጥራሉ።",
+   "a": false,
+   "why": "በሥርዓት ሲቀናጁ ብቻ ነው።",
+   "clue": "",
+   "level": 2,
+   "machine": true,
+   "id": "g8.amharic.u1.s1-5.12"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "ከዓረፍተ ነገር ቀጥሎ የሚመጣው ትልቅ መዋቅር",
+   "opts": [
+    "አንቀጽ",
+    "ሐረግ",
+    "ቃል",
+    "ድምፅ"
+   ],
+   "ans": "አንቀጽ",
+   "why": "ገጽ 12።",
+   "clue": "",
+   "level": 2,
+   "machine": true,
+   "id": "g8.amharic.u1.s1-5.13"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "The essay task («የመምህርነት የሥራ ሥነምግባር») is a writing task for class; a model essay is in source.md."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
