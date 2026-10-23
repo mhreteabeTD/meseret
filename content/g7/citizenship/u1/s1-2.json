@@ -1,0 +1,541 @@
+{
+ "id": "g7.citizenship.u1.s1-2",
+ "book": {
+  "title": "Citizenship Education Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "citizenship",
+  "unit": 1,
+  "unit_title": "Citizenship",
+  "pages": "19–26",
+  "section": "1.2"
+ },
+ "title": "Ways of acquiring and losing citizenship",
+ "competency": "List ways of acquiring citizenship, compare birth and descent, and explain voluntary and involuntary loss.",
+ "minutes": 13,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Right of soil",
+   "am": "የመሬት መብት",
+   "def": "Citizenship by place of birth: born in a country, you become its citizen.",
+   "machine": true
+  },
+  {
+   "en": "Right of blood",
+   "am": "የደም መብት",
+   "def": "Citizenship by descent: your citizenship comes from your parents' nationality.",
+   "machine": true
+  },
+  {
+   "en": "Naturalization",
+   "am": "በሕግ ዜግነት ማግኘት",
+   "def": "The legal process by which a foreigner applies and becomes a citizen.",
+   "machine": true
+  },
+  {
+   "en": "Voluntary loss of citizenship",
+   "am": "በፈቃድ ዜግነትን ማጣት",
+   "def": "Giving up your citizenship by your own free choice.",
+   "machine": true
+  },
+  {
+   "en": "Involuntary loss of citizenship",
+   "am": "ያለፈቃድ ዜግነትን ማጣት",
+   "def": "When the state takes away citizenship without the person's consent.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "civ.acquire-citizenship",
+   "name": "Ways of acquiring citizenship",
+   "explain": {
+    "en": {
+     "text": "Each state makes its own rules about who its citizens are. The common ways to get citizenship are: by place of birth (right of soil), by descent from your parents (right of blood), and by naturalization. Naturalization is a legal process for foreigners, for example through marriage or adoption."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Just move there?",
+     "ask": "Can anyone travel to any country at any time and become its citizen?",
+     "opts": [
+      "Yes, anyone",
+      "No, they must meet that country's legal conditions",
+      "Yes, if they stay one week"
+     ],
+     "after": "Each country sets its own legal conditions. Only people who meet them can become citizens.",
+     "ref": "Start-up question 2, p.20",
+     "id": "g7.citizenship.u1.s1-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "1.2 Ways of acquiring and losing citizenship",
+     "paras": [
+      "Citizenship is a legal status earned by being a registered member of a country.",
+      "Anyone can become a member if they meet the country's legal conditions.",
+      "International law leaves it to each state to define its citizens.",
+      "So different states have different rules for granting and losing citizenship."
+     ],
+     "id": "g7.citizenship.u1.s1-2.2"
+    },
+    {
+     "kind": "tree",
+     "step": "explore",
+     "title": "A) Ways of acquiring citizenship",
+     "root": {
+      "label": "Ways of acquiring citizenship",
+      "info": "The most common methods.",
+      "children": [
+       {
+        "label": "1. By place of birth",
+        "info": "Right of soil: everyone born inside a state's borders becomes its citizen."
+       },
+       {
+        "label": "2. By descent",
+        "info": "Right of blood: citizenship comes from one or both parents, wherever the child is born."
+       },
+       {
+        "label": "3. By naturalization",
+        "info": "A foreigner applies and becomes a citizen through a legal process.",
+        "children": [
+         {
+          "label": "a) Marriage",
+          "info": "A foreigner who marries a citizen may get citizenship on application."
+         },
+         {
+          "label": "b) Adoption",
+          "info": "Legal parents adopt a child from another country and make the child a citizen."
+         }
+        ]
+       }
+      ]
+     },
+     "id": "g7.citizenship.u1.s1-2.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Adoption: common conditions",
+     "paras": [
+      "The parents must be permanent citizens of the state, by birth or naturalization.",
+      "The child must be under the age of 18.",
+      "The child must be a permanent citizen of the state he or she is adopted from."
+     ],
+     "id": "g7.citizenship.u1.s1-2.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Right of soil",
+       "Citizenship by place of birth."
+      ],
+      [
+       "Right of blood",
+       "Citizenship by descent from your parents."
+      ],
+      [
+       "Naturalization",
+       "The legal process by which a foreigner applies and becomes a citizen."
+      ]
+     ],
+     "id": "g7.citizenship.u1.s1-2.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Citizenship by descent is also called the principle of…",
+     "opts": [
+      "right of soil",
+      "right of blood",
+      "naturalization",
+      "adoption"
+     ],
+     "ans": "right of blood",
+     "why": "Descent means your parents' nationality decides yours: right of blood.",
+     "clue": "Descent is about family.",
+     "level": 1,
+     "id": "g7.citizenship.u1.s1-2.6"
+    },
+    {
+     "kind": "match",
+     "step": "practise",
+     "graded": true,
+     "pairs": [
+      [
+       "Citizenship by descent",
+       "the principle of right of blood"
+      ],
+      [
+       "Citizenship by adoption",
+       "citizenship from people recognised as legal parents"
+      ],
+      [
+       "Citizenship by birth",
+       "usually called right of soil"
+      ],
+      [
+       "Citizenship by marriage",
+       "a foreigner who marries a national gets citizenship"
+      ]
+     ],
+     "why": "Each way has its own rule.",
+     "clue": "Soil = place; blood = parents.",
+     "level": 1,
+     "ref": "Review Part III",
+     "id": "g7.citizenship.u1.s1-2.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "What is the main difference between citizenship by birth and by naturalization?",
+     "opts": [
+      "Birth is automatic; naturalization needs an application and a legal process",
+      "They are the same",
+      "Naturalization is automatic; birth needs an application"
+     ],
+     "ans": "Birth is automatic; naturalization needs an application and a legal process",
+     "why": "People born in the territory become citizens automatically. A foreigner must apply to be naturalized.",
+     "clue": "Which one needs a form?",
+     "level": 2,
+     "ref": "Check-point Q2, p.24",
+     "id": "g7.citizenship.u1.s1-2.8"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Meron's parents are both citizens of country X. She was born in country Y. Under the right of blood, she is a citizen of…",
+     "opts": [
+      "country X",
+      "country Y only",
+      "no country",
+      "whichever country she chooses at birth"
+     ],
+     "ans": "country X",
+     "why": "Right of blood: wherever a child is born, citizenship comes from the parents' nationality.",
+     "clue": "Does right of blood care where she was born?",
+     "level": 3,
+     "added": true,
+     "id": "g7.citizenship.u1.s1-2.9"
+    }
+   ]
+  },
+  {
+   "id": "civ.lose-citizenship",
+   "name": "Ways of losing citizenship",
+   "explain": {
+    "en": {
+     "text": "Citizenship can be lost, just as it can be gained. Loss of citizenship means a person is no longer a lawful citizen. It happens in two ways. Voluntary loss is when a person freely gives up citizenship. Involuntary loss is when the state takes it away, without consent, after a series of steps."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Losing citizenship",
+     "ask": "How can a person lose citizenship?",
+     "opts": [
+      "Only by dying",
+      "By giving it up freely, or by the state taking it away",
+      "By moving to another city"
+     ],
+     "after": "There are two ways: voluntary and involuntary. Read on.",
+     "ref": "Start-up question, p.25",
+     "id": "g7.citizenship.u1.s1-2.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "B) Ways of losing citizenship",
+     "paras": [
+      "\"Loss of citizenship\" means a citizen is no longer recognised as a lawful citizen.",
+      "The process is different in each country.",
+      "People lose citizenship either voluntarily or by force, without their consent."
+     ],
+     "id": "g7.citizenship.u1.s1-2.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Two kinds of loss",
+     "paras": [
+      "1. Voluntary loss: giving up one's citizenship by free decision. Most countries set requirements for this.",
+      "2. Involuntary loss: the state revokes citizenship if a person does not follow certain requirements.",
+      "Involuntary loss is not immediate. It goes through a series of steps."
+     ],
+     "id": "g7.citizenship.u1.s1-2.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Voluntary loss of citizenship",
+       "Giving up your citizenship by your own free choice."
+      ],
+      [
+       "Involuntary loss of citizenship",
+       "When the state takes away citizenship without the person's consent."
+      ]
+     ],
+     "id": "g7.citizenship.u1.s1-2.13"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Giving up your citizenship by your own free decision is called…",
+     "opts": [
+      "voluntary loss of citizenship",
+      "involuntary loss of citizenship",
+      "naturalization",
+      "right of soil"
+     ],
+     "ans": "voluntary loss of citizenship",
+     "why": "Voluntary means by free choice.",
+     "clue": "Voluntary = by choice.",
+     "level": 1,
+     "id": "g7.citizenship.u1.s1-2.14"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "title": "Voluntary or involuntary?",
+     "bins": [
+      "Voluntary loss",
+      "Involuntary loss"
+     ],
+     "items": [
+      [
+       "A person freely renounces citizenship",
+       "Voluntary loss",
+       "Free decision."
+      ],
+      [
+       "The state revokes citizenship without consent",
+       "Involuntary loss",
+       "Not the person's choice."
+      ],
+      [
+       "A person gives up citizenship to join another country",
+       "Voluntary loss",
+       "Own choice."
+      ],
+      [
+       "Citizenship taken away for not meeting requirements",
+       "Involuntary loss",
+       "Forced by the state."
+      ]
+     ],
+     "why": "Voluntary: the person chooses. Involuntary: the state decides.",
+     "clue": "Who made the decision?",
+     "level": 1,
+     "id": "g7.citizenship.u1.s1-2.15"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Involuntary loss of citizenship happens immediately, without any steps.",
+     "a": false,
+     "why": "It must go through a series of steps.",
+     "clue": "Read the involuntary loss paragraph.",
+     "level": 1,
+     "id": "g7.citizenship.u1.s1-2.16"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Why might a person voluntarily give up citizenship?",
+     "opts": [
+      "To become a citizen of another country that does not allow two citizenships",
+      "Because the state forced them",
+      "Because they were born there",
+      "Because their parents are citizens"
+     ],
+     "ans": "To become a citizen of another country that does not allow two citizenships",
+     "why": "Voluntary loss is a free choice, often to take another country's citizenship. Being forced is involuntary.",
+     "clue": "Voluntary means the person chose it.",
+     "level": 3,
+     "ref": "Check-point Q1, p.25",
+     "added": true,
+     "id": "g7.citizenship.u1.s1-2.17"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Check-points",
+   "items": [
+    {
+     "kind": "pick",
+     "step": "exercise",
+     "graded": true,
+     "text": "List the different ways of acquiring citizenship.",
+     "pool": [
+      "By place of birth",
+      "By descent",
+      "By naturalization (marriage, adoption)",
+      "By buying a passport at a shop"
+     ],
+     "a": [
+      "By place of birth",
+      "By descent",
+      "By naturalization (marriage, adoption)"
+     ],
+     "why": "The book lists these three main ways.",
+     "clue": "One option is not a legal way.",
+     "level": 1,
+     "ref": "Check-point Q1, p.24",
+     "id": "g7.citizenship.u1.s1-2.18"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "What is the main difference between acquiring citizenship by birth and by naturalization?",
+     "opts": [
+      "Birth is automatic; naturalization is a legal process for foreigners",
+      "There is no difference",
+      "Only naturalization is legal"
+     ],
+     "ans": "Birth is automatic; naturalization is a legal process for foreigners",
+     "why": "Born in the territory = automatic; naturalization = application.",
+     "clue": "Which one needs an application?",
+     "level": 1,
+     "ref": "Check-point Q2, p.24",
+     "id": "g7.citizenship.u1.s1-2.19"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "How does someone become a citizen of a country?",
+     "opts": [
+      "According to that country's rules: by birth, descent or naturalization",
+      "By visiting it once",
+      "By speaking its language"
+     ],
+     "ans": "According to that country's rules: by birth, descent or naturalization",
+     "why": "Each state sets its own rules.",
+     "clue": "Who decides who its citizens are?",
+     "level": 1,
+     "ref": "Start-up Q1, p.20",
+     "id": "g7.citizenship.u1.s1-2.20"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Citizenship by place of birth is called…",
+   "opts": [
+    "right of blood",
+    "right of soil",
+    "naturalization",
+    "adoption"
+   ],
+   "ans": "right of soil",
+   "why": "Born on the land = right of soil.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.citizenship.u1.s1-2.21"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "All countries follow the same procedures in granting and loss of citizenship.",
+   "a": false,
+   "why": "Each state defines its own rules.",
+   "level": 1,
+   "ref": "Review Part I Q4",
+   "clue": "",
+   "id": "g7.citizenship.u1.s1-2.22"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "A foreigner who marries a citizen and applies for citizenship gets it by…",
+   "opts": [
+    "naturalization",
+    "right of soil",
+    "right of blood",
+    "involuntary loss"
+   ],
+   "ans": "naturalization",
+   "why": "Marriage is a form of naturalization.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.citizenship.u1.s1-2.23"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "When the state takes away a person's citizenship without consent, it is…",
+   "opts": [
+    "voluntary loss",
+    "involuntary loss",
+    "adoption",
+    "descent"
+   ],
+   "ans": "involuntary loss",
+   "why": "Without consent = involuntary.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.citizenship.u1.s1-2.24"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which child can usually be adopted and made a citizen?",
+   "opts": [
+    "A child under 18 who is a permanent citizen of the state he or she is adopted from",
+    "An adult of 25",
+    "Any child, with no conditions",
+    "Only a child born in the same town"
+   ],
+   "ans": "A child under 18 who is a permanent citizen of the state he or she is adopted from",
+   "why": "These are the book's common eligibility criteria.",
+   "level": 3,
+   "clue": "",
+   "id": "g7.citizenship.u1.s1-2.25"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "The book says citizenship by place of birth (right of soil) is \"the most prevalent method\". Worldwide, descent is more widespread, and Ethiopia does not use right of soil. The lesson does not repeat \"most prevalent\"."
+  },
+  {
+   "kind": "review",
+   "text": "Naturalization sub-points are labelled \"a) Marriage\" then \"B) Adoption\" in the book; shown as a) and b)."
+  },
+  {
+   "kind": "note",
+   "text": "Check-point questions about reasons for losing citizenship and people the student knows are open; one is used as the challenge, the others are left out."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

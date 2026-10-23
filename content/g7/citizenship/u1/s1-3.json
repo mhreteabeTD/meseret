@@ -1,0 +1,470 @@
+{
+ "id": "g7.citizenship.u1.s1-3",
+ "book": {
+  "title": "Citizenship Education Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "citizenship",
+  "unit": 1,
+  "unit_title": "Citizenship",
+  "pages": "26–30",
+  "section": "1.3"
+ },
+ "title": "Citizenship law in Ethiopia",
+ "competency": "Examine how Ethiopian citizenship is acquired and lost, and the requirements for naturalization.",
+ "minutes": 11,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Citizenship law",
+   "am": "የዜግነት ሕግ",
+   "def": "The law of a state that decides citizenship rights and responsibilities.",
+   "machine": true
+  },
+  {
+   "en": "Constitution",
+   "am": "ሕገ መንግሥት",
+   "def": "The fundamental law of a nation that guarantees civil rights and liberties.",
+   "machine": true
+  },
+  {
+   "en": "Proclamation",
+   "am": "አዋጅ",
+   "def": "A law issued by the government, like Proclamation No. 378/2003 on Ethiopian nationality.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "civ.ethiopia-citizenship-descent",
+   "name": "Ethiopian citizenship by descent",
+   "explain": {
+    "en": {
+     "text": "Ethiopia made its first written citizenship law in 1930 G.C. Today the FDRE Constitution of 1995 G.C. sets the main ideas. Article 6 says a person with both or either Ethiopian parents is an Ethiopian citizen. So Ethiopia uses descent, or right of blood. Being born on Ethiopian land alone does not make you a citizen."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "How are you Ethiopian?",
+     "ask": "You are probably an Ethiopian citizen. How did you become one?",
+     "opts": [
+      "Because one or both of my parents are Ethiopian",
+      "Because I go to school",
+      "Because I bought an ID card"
+     ],
+     "after": "Most Ethiopians are citizens by descent: their parents are Ethiopian. Read the law.",
+     "ref": "Start-up question, p.27",
+     "id": "g7.citizenship.u1.s1-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "1.3 Citizenship law in Ethiopia",
+     "paras": [
+      "Ethiopia enacted its first written citizenship law in 1930 G.C.",
+      "Before that, citizenship was mostly defined by custom and tradition.",
+      "The FDRE Constitution of 1995 G.C. gives the main ideas about citizenship today."
+     ],
+     "id": "g7.citizenship.u1.s1-3.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Article 6 of the FDRE Constitution",
+     "paras": [
+      "Any person of either gender who has both or either Ethiopian parents is an Ethiopian citizen.",
+      "So the Constitution recognises citizenship by descent, or blood.",
+      "Proclamation No. 378/2003 gives the details of Ethiopian nationality.",
+      "In Ethiopia there is no broad right to citizenship by birthplace on the land."
+     ],
+     "id": "g7.citizenship.u1.s1-3.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Constitution",
+       "The fundamental law of a nation that guarantees civil rights and liberties."
+      ],
+      [
+       "Citizenship law",
+       "The law of a state that decides citizenship rights and responsibilities."
+      ],
+      [
+       "Proclamation",
+       "A law issued by the government."
+      ]
+     ],
+     "id": "g7.citizenship.u1.s1-3.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "According to Article 6 of the FDRE Constitution, who is an Ethiopian citizen?",
+     "opts": [
+      "Anyone born in Ethiopia",
+      "Any person with both or either Ethiopian parents",
+      "Only people with two Ethiopian parents",
+      "Anyone who lives in Addis Ababa"
+     ],
+     "ans": "Any person with both or either Ethiopian parents",
+     "why": "Article 6: both or either Ethiopian parents is enough.",
+     "clue": "Does it need one parent or two?",
+     "level": 1,
+     "id": "g7.citizenship.u1.s1-3.5"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Ethiopia enacted its first written citizenship law in 1930 G.C.",
+     "a": true,
+     "why": "The book states this date.",
+     "clue": "Read the first sentence of 1.3.",
+     "level": 1,
+     "id": "g7.citizenship.u1.s1-3.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Which principle does the FDRE Constitution use for Ethiopian citizenship?",
+     "opts": [
+      "Right of soil",
+      "Right of blood (descent)",
+      "Citizenship by money",
+      "Citizenship by school"
+     ],
+     "ans": "Right of blood (descent)",
+     "why": "Ethiopian nationality is inherited mainly by descent.",
+     "clue": "Is it about parents or about land?",
+     "level": 1,
+     "id": "g7.citizenship.u1.s1-3.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "An Ethiopian mother and an American father have a baby in France. Under Ethiopian law, is the baby Ethiopian?",
+     "opts": [
+      "No, the baby was born in France",
+      "Yes, by descent through the Ethiopian mother",
+      "Only if the baby moves to Ethiopia at 18",
+      "Yes, by naturalization"
+     ],
+     "ans": "Yes, by descent through the Ethiopian mother",
+     "why": "Article 6 needs only either parent to be Ethiopian. Place of birth does not matter for descent.",
+     "clue": "Does Article 6 need one Ethiopian parent or two? Does the birthplace matter?",
+     "level": 3,
+     "ref": "Check-point, p.30",
+     "added": true,
+     "id": "g7.citizenship.u1.s1-3.8"
+    }
+   ]
+  },
+  {
+   "id": "civ.ethiopia-naturalization",
+   "name": "Naturalization and loss in Ethiopian law",
+   "explain": {
+    "en": {
+     "text": "A foreigner can become Ethiopian by naturalization if he meets eight requirements. For example, he must be an adult, have lived in Ethiopia for at least four years and speak one of the country's languages. In exceptional cases, a foreigner who made a great contribution may be granted citizenship. Under Ethiopian law, no Ethiopian can lose citizenship against his or her will."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "One month in Ethiopia",
+     "ask": "A foreigner has lived in Ethiopia for one month. Can he apply for Ethiopian citizenship now?",
+     "opts": [
+      "Yes, at once",
+      "No, he must have lived here at least four years",
+      "Yes, if he likes injera"
+     ],
+     "after": "Proclamation No. 378/2003 asks for at least four years of living in Ethiopia, plus other requirements.",
+     "id": "g7.citizenship.u1.s1-3.9"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Requirements for naturalization",
+     "paras": [
+      "Proclamation No. 378/2003 also allows naturalization after birth.",
+      "A foreigner seeking Ethiopian nationality must meet these requirements:"
+     ],
+     "table": [
+      [
+       "",
+       "Requirement"
+      ],
+      [
+       "i",
+       "be an adult and legally capable under Ethiopian law"
+      ],
+      [
+       "ii",
+       "live in Ethiopia for a total of at least four years before applying"
+      ],
+      [
+       "iii",
+       "be able to speak any language of the nations/nationalities of the country"
+      ],
+      [
+       "iv",
+       "have enough lawful income to support himself and his family"
+      ],
+      [
+       "v",
+       "be a person of good character"
+      ],
+      [
+       "vi",
+       "have no criminal record"
+      ],
+      [
+       "vii",
+       "be released from the previous nationality, or be stateless"
+      ],
+      [
+       "viii",
+       "take the oath of allegiance (Article 12)"
+      ]
+     ],
+     "id": "g7.citizenship.u1.s1-3.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Exceptional cases and loss",
+     "paras": [
+      "In exceptional cases, a foreigner who made a significant contribution to Ethiopia may be granted citizenship.",
+      "No Ethiopian may be stripped of citizenship by a government decision.",
+      "Citizenship is lost only if the person renounces it, or freely takes another nationality.",
+      "Article 33(1): no Ethiopian may lose citizenship against his or her will."
+     ],
+     "note": "So under Ethiopian law, involuntary loss of citizenship is not permitted.",
+     "id": "g7.citizenship.u1.s1-3.11"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Proclamation",
+       "A law issued by the government, like Proclamation No. 378/2003 on Ethiopian nationality."
+      ]
+     ],
+     "id": "g7.citizenship.u1.s1-3.12"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "How long must a foreigner have lived in Ethiopia before applying for citizenship?",
+     "opts": [
+      "At least one year",
+      "At least four years",
+      "At least ten years",
+      "No time is needed"
+     ],
+     "ans": "At least four years",
+     "why": "Requirement ii says a total of at least four years.",
+     "clue": "Look at requirement ii.",
+     "level": 1,
+     "id": "g7.citizenship.u1.s1-3.13"
+    },
+    {
+     "kind": "pick",
+     "step": "practise",
+     "graded": true,
+     "text": "Tap the requirements a foreigner must meet to become Ethiopian.",
+     "pool": [
+      "Have no criminal record",
+      "Be a person of good character",
+      "Speak a language of the country's nations/nationalities",
+      "Own a car",
+      "Have a lawful source of income"
+     ],
+     "a": [
+      "Have no criminal record",
+      "Be a person of good character",
+      "Speak a language of the country's nations/nationalities",
+      "Have a lawful source of income"
+     ],
+     "why": "These are in the list. Owning a car is not a requirement.",
+     "clue": "One option is not in the Proclamation.",
+     "level": 2,
+     "id": "g7.citizenship.u1.s1-3.14"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Under Ethiopian law, the government can take away a citizen's citizenship against his or her will.",
+     "a": false,
+     "why": "Article 33(1) says no Ethiopian may lose citizenship against his or her will.",
+     "clue": "Read Article 33(1).",
+     "level": 1,
+     "id": "g7.citizenship.u1.s1-3.15"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "A foreign doctor has worked in Ethiopia for two years and saved many lives. The government wants to honour her with citizenship. Is this possible?",
+     "opts": [
+      "No, she has not lived here four years",
+      "Yes, in exceptional cases, for a significant contribution",
+      "Only if she marries an Ethiopian",
+      "No, foreigners can never become Ethiopian"
+     ],
+     "ans": "Yes, in exceptional cases, for a significant contribution",
+     "why": "The Proclamation allows citizenship in exceptional cases for people who made a significant contribution, regardless of the usual requirements.",
+     "clue": "Read the Remember box about special recognition.",
+     "level": 3,
+     "added": true,
+     "id": "g7.citizenship.u1.s1-3.16"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Check-point (p.30)",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "An Ethiopian mother and an American father have a child in France. Under Ethiopian law, what is the baby's citizenship?",
+     "opts": [
+      "Ethiopian, by descent",
+      "French only",
+      "No citizenship",
+      "Ethiopian by naturalization"
+     ],
+     "ans": "Ethiopian, by descent",
+     "why": "Article 6: either Ethiopian parent is enough.",
+     "clue": "Does the birthplace matter under Ethiopian law?",
+     "level": 1,
+     "ref": "Q1",
+     "id": "g7.citizenship.u1.s1-3.17"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "How can this newborn become an Ethiopian citizen?",
+     "opts": [
+      "By descent (right of blood) through the Ethiopian mother",
+      "By place of birth",
+      "By marriage",
+      "It cannot"
+     ],
+     "ans": "By descent (right of blood) through the Ethiopian mother",
+     "why": "Ethiopia uses right of blood, and one Ethiopian parent is enough.",
+     "clue": "Which principle does Ethiopia use?",
+     "level": 1,
+     "ref": "Q2",
+     "id": "g7.citizenship.u1.s1-3.18"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which law of 1995 G.C. sets the main ideas of Ethiopian citizenship today?",
+   "opts": [
+    "The FDRE Constitution",
+    "The 1930 law only",
+    "A school rule",
+    "An international treaty"
+   ],
+   "ans": "The FDRE Constitution",
+   "why": "The FDRE Constitution of 1995 G.C.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.citizenship.u1.s1-3.19"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "A child with only one Ethiopian parent can be an Ethiopian citizen.",
+   "a": true,
+   "why": "Article 6: both or either Ethiopian parents.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.citizenship.u1.s1-3.20"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which proclamation gives the details of Ethiopian nationality?",
+   "opts": [
+    "Proclamation No. 378/2003",
+    "Proclamation No. 1/1930",
+    "Article 6 only",
+    "Article 33 only"
+   ],
+   "ans": "Proclamation No. 378/2003",
+   "why": "The Ethiopian Nationality Proclamation No. 378/2003.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.citizenship.u1.s1-3.21"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "How can an Ethiopian lose citizenship under Ethiopian law?",
+   "opts": [
+    "Only by giving it up voluntarily or freely taking another nationality",
+    "By a government decision against his will",
+    "By moving to another region",
+    "By failing an exam"
+   ],
+   "ans": "Only by giving it up voluntarily or freely taking another nationality",
+   "why": "Involuntary loss is not permitted (Article 33(1)).",
+   "level": 2,
+   "clue": "",
+   "id": "g7.citizenship.u1.s1-3.22"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "A foreigner aged 30 has lived in Ethiopia for 5 years, speaks Afaan Oromoo, has a job and no criminal record. What else must he do?",
+   "opts": [
+    "Nothing else",
+    "Be released from his old nationality (or be stateless) and take the oath of allegiance",
+    "Buy land",
+    "Be born in Ethiopia"
+   ],
+   "ans": "Be released from his old nationality (or be stateless) and take the oath of allegiance",
+   "why": "Requirements vii and viii are still needed (and good character).",
+   "level": 3,
+   "clue": "",
+   "id": "g7.citizenship.u1.s1-3.23"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Check-point p.30: the model answer covers only Ethiopian law, as the question asks. The baby may also hold US citizenship through the father; dual nationality from birth is not explained in the book."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
