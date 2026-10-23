@@ -1,0 +1,541 @@
+{
+ "id": "g5.science.u2.s2-2",
+ "book": {
+  "title": "የአካባቢ ሳይንስ 5ኛ ክፍል",
+  "grade": 5,
+  "subject": "science",
+  "unit": 2,
+  "unit_title": "ሳይንስን መገንዘብ",
+  "pages": "25–28",
+  "section": "2.2"
+ },
+ "title": "ቁስ አካል",
+ "competency": "የቁስ አካልን፣ ድብልቅ ያልሆኑ ልዩ ቁሶችን፣ የውህድንና የኦክሳይድ፣ አሲድ፣ ቤዝና ጨው ምንነት መግለጽ።",
+ "minutes": 18,
+ "keywords": [
+  {
+   "en": "matter",
+   "am": "ቁስ አካል",
+   "def": "ማንኛውም ቦታ የሚይዝና መጠነ-ቁስ ያለው ነገር።"
+  },
+  {
+   "en": "pure substance",
+   "am": "ድብልቅ ያልሆነ ልዩ ቁስ",
+   "def": "ከአንድ ዓይነት ንጥረ ነገር ብቻ ወይም ከንጥረ ነገሮች በኬሚካዊ ለውጥ የሚፈጠር ልዩ ቁስ።"
+  },
+  {
+   "en": "element",
+   "am": "ንጥረ ነገር",
+   "def": "ከአንድ ዓይነት አቶም የተሠራ፣ ወደ አነስተኛ ልዩ ቁሶች ሊከፋፈል የማይችል ልዩ ቁስ።"
+  },
+  {
+   "en": "compound",
+   "am": "ውህድ",
+   "def": "ሁለትና ከሁለት በላይ ከሆኑ ንጥረ ነገሮች በኬሚካዊ መስተጋብር የሚፈጠር ልዩ ቁስ።"
+  },
+  {
+   "en": "oxide",
+   "am": "ኦክሳይድ",
+   "def": "ኦክስጅንና አንድ ሌላ ንጥረ ነገር ብቻ የያዘ ውህድ።"
+  },
+  {
+   "en": "acid",
+   "am": "አሲድ",
+   "def": "ኮምጣጣ ጣዕም ያለው ውህድ፤ ስሙ «አሲደስ» (ኮምጣጣ) ከሚለው የላቲን ቃል የመጣ ነው።"
+  },
+  {
+   "en": "base",
+   "am": "ቤዝ",
+   "def": "አብዛኞቹ ብረት አስተኔያማ ኦክሳይዶች ወይም አሞኒያ ከውሃ ጋር ሲፀገበሩ የሚፈጠሩ ውህዶች።"
+  },
+  {
+   "en": "salt",
+   "am": "ጨው",
+   "def": "አሲዶችና ቤዞች ሲፀገበሩ (አግልሎት) የሚፈጠሩ ውህዶች።"
+  }
+ ],
+ "ideas": [
+  {
+   "id": "sci.g5-matter-pure",
+   "name": "ቁስ አካል፣ ንጥረ ነገርና ውህድ",
+   "explain": {
+    "en": {
+     "text": "Matter is anything that takes up space and has mass: water, stone, iron, wood. Light is not matter. Pure substances are made of one kind of element only, or of elements joined by a chemical change. An element is made of one kind of atom and cannot be broken into simpler substances (gold, copper, oxygen). A compound forms when two or more elements join chemically (carbon dioxide, pure water, table salt)."
+    },
+    "am": {
+     "text": "ቁስ አካል ቦታ የሚይዝና መጠነ-ቁስ ያለው ነገር ነው። ንጥረ ነገር ከአንድ ዓይነት አቶም ይሠራል (ወርቅ)፤ ውህድ ከብዙ ንጥረ ነገሮች በኬሚካዊ መስተጋብር ይፈጠራል (የገበታ ጨው)።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "ቁስ አካል ነው?",
+     "ask": "ከሚከተሉት ቦታ የማይይዘውና መጠነ-ቁስ የሌለው የቱ ነው?",
+     "opts": [
+      "ብርሃን",
+      "ድንጋይ",
+      "ውሃ",
+      "ጨው"
+     ],
+     "after": "ብርሃን ቦታ አይይዝም፤ መጠነ-ቁስም የለውም፤ ስለዚህ ቁስ አካል አይደለም።",
+     "ref": "መልመጃ 2.2 I.1",
+     "machine": true,
+     "id": "g5.science.u2.s2-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "ቁስ አካል",
+     "paras": [
+      "ማንኛውም ቦታ የሚይዝና መጠነ-ቁስ ያለው ነገር ሁሉ ቁስ አካል በመባል ይታወቃል። ለምሳሌ ውሃ፣ ድንጋይ፣ ብረት፣ እንጨት።",
+      "ድብልቅ ያልሆኑ ልዩ ቁሶች ከአንድ ዓይነት ንጥረ ነገር ብቻ ወይም ከሁለትና ከዚያ በላይ ንጥረ ነገሮች በኬሚካዊ ለውጥ የሚፈጠሩ ልዩ ቁሶች ናቸው።",
+      "ንጥረ ነገር ከአንድ ዓይነት አቶም የተሠራ ልዩ ቁስ ሲሆን ወደ አነስተኛ ልዩ ቁሶች ሊከፋፈል አይችልም።",
+      "ውህድ ሁለትና ከሁለት በላይ ከሆኑ ንጥረ ነገሮች በኬሚካዊ መስተጋብር የሚፈጠር ልዩ ቁስ ነው።"
+     ],
+     "table": [
+      [
+       "ንጥረ ነገሮች",
+       "ውህዶች"
+      ],
+      [
+       "ወርቅ፣ መዳብ፣ ብር",
+       "ካርቦን ዳይኦክሳይድ"
+      ],
+      [
+       "ኦክስጅን፣ ናይትሮጅን",
+       "ያልተደባለቀ ውሃ፣ የገበታ ጨው"
+      ]
+     ],
+     "ref": "ገጽ 26–27",
+     "id": "g5.science.u2.s2-2.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "ቁልፍ ቃላት",
+     "defs": [
+      [
+       "ቁስ አካል",
+       "ማንኛውም ቦታ የሚይዝና መጠነ-ቁስ ያለው ነገር።"
+      ],
+      [
+       "ድብልቅ ያልሆነ ልዩ ቁስ",
+       "ከአንድ ዓይነት ንጥረ ነገር ብቻ ወይም ከንጥረ ነገሮች በኬሚካዊ ለውጥ የሚፈጠር ልዩ ቁስ።"
+      ],
+      [
+       "ንጥረ ነገር",
+       "ከአንድ ዓይነት አቶም የተሠራ፣ ወደ አነስተኛ ልዩ ቁሶች ሊከፋፈል የማይችል ልዩ ቁስ።"
+      ],
+      [
+       "ውህድ",
+       "ሁለትና ከሁለት በላይ ከሆኑ ንጥረ ነገሮች በኬሚካዊ መስተጋብር የሚፈጠር ልዩ ቁስ።"
+      ]
+     ],
+     "id": "g5.science.u2.s2-2.3"
+    },
+    {
+     "kind": "sort",
+     "step": "check",
+     "graded": true,
+     "text": "ንጥረ ነገር ወይስ ውህድ?",
+     "bins": [
+      "ንጥረ ነገር",
+      "ውህድ"
+     ],
+     "items": [
+      [
+       "ወርቅ",
+       "ንጥረ ነገር",
+       "አንድ ዓይነት አቶም።"
+      ],
+      [
+       "የገበታ ጨው",
+       "ውህድ",
+       "ከሶድየምና ክሎሪን።"
+      ],
+      [
+       "ኦክስጅን",
+       "ንጥረ ነገር",
+       "አንድ ዓይነት አቶም።"
+      ],
+      [
+       "ካርቦን ዳይኦክሳይድ",
+       "ውህድ",
+       "ከካርቦንና ኦክስጅን።"
+      ],
+      [
+       "መዳብ",
+       "ንጥረ ነገር",
+       "አንድ ዓይነት አቶም።"
+      ],
+      [
+       "ያልተደባለቀ ውሃ",
+       "ውህድ",
+       "ከሃይድሮጅንና ኦክስጅን።"
+      ]
+     ],
+     "why": "ገጽ 27።",
+     "clue": "ከአንድ ዓይነት አቶም ብቻ ነው?",
+     "level": 1,
+     "machine": true,
+     "id": "g5.science.u2.s2-2.4"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "ውህድ ሁለትና ከሁለት በላይ ከሆኑ ንጥረ ነገሮች በፊዚካዊ ለውጥ የሚፈጠር ልዩ ቁስ ነው።",
+     "a": false,
+     "why": "ውህድ የሚፈጠረው በኬሚካዊ መስተጋብር ነው።",
+     "clue": "ፊዚካዊ ወይስ ኬሚካዊ?",
+     "level": 1,
+     "ref": "የማጠቃለያ ጥያቄ I.2",
+     "id": "g5.science.u2.s2-2.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "ከሚከተሉት ውስጥ ድብልቅ ያልሆኑ ልዩ ቁሶች የትኞቹ ናቸው?",
+     "opts": [
+      "ሁሉም",
+      "መዳብ",
+      "ካርቦን ዳይኦክሳይድ",
+      "ሃይድሮክሎሪክ አሲድ"
+     ],
+     "ans": "ሁሉም",
+     "why": "መዳብ ንጥረ ነገር፣ የተቀሩት ውህዶች ናቸው፤ ሁሉም ድብልቅ ያልሆኑ ናቸው።",
+     "clue": "ንጥረ ነገሮችና ውህዶች ሁለቱም ድብልቅ ያልሆኑ ናቸው።",
+     "level": 2,
+     "ref": "መልመጃ 2.2 I.2",
+     "id": "g5.science.u2.s2-2.6"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "ማንኛውም ቦታ የሚይዝና መጠነ-ቁስ ያለው ነገር ሁሉ ___ ይባላል።",
+     "a": [
+      "ቁስ አካል"
+     ],
+     "why": "ገጽ 26።",
+     "clue": "ሁለት ቃላት።",
+     "level": 1,
+     "ref": "የማጠቃለያ ጥያቄ IV.2",
+     "id": "g5.science.u2.s2-2.7"
+    },
+    {
+     "kind": "tf",
+     "step": "challenge",
+     "graded": true,
+     "text": "የገበታ ጨውና ሶድየም ሃይድሮክሳይድ ንጥረ ነገሮች ናቸው።",
+     "a": false,
+     "why": "ሁለቱም ውህዶች ናቸው፤ ጨው የውህድ ምሳሌ፣ ሶድየም ሃይድሮክሳይድ ቤዝ ነው።",
+     "clue": "ከአንድ ዓይነት አቶም ብቻ ናቸው?",
+     "level": 3,
+     "ref": "የማጠቃለያ ጥያቄ I.5",
+     "added": true,
+     "id": "g5.science.u2.s2-2.8"
+    }
+   ]
+  },
+  {
+   "id": "sci.g5-compound-types",
+   "name": "ኦክሳይድ፣ አሲድ፣ ቤዝና ጨው",
+   "requires": [
+    "sci.g5-matter-pure"
+   ],
+   "explain": {
+    "en": {
+     "text": "There are four kinds of compounds. Oxides contain oxygen and one other element (water, carbon dioxide). Acids taste sour, from the Latin word acidus (hydrochloric, citric, lactic acid). Bases form when metal oxides or ammonia react with water (sodium hydroxide, calcium hydroxide). Salts form when acids and bases react; this is called neutralization (table salt, calcium carbonate)."
+    },
+    "am": {
+     "text": "አራቱ የውህድ ዓይነቶች፦ ኦክሳይድ (ኦክስጅን + አንድ ንጥረ ነገር)፣ አሲድ (ኮምጣጣ)፣ ቤዝ እና ጨው (አሲድ + ቤዝ)።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "ኮምጣጣ ጣዕም",
+     "ask": "ሎሚ ኮምጣጣ ጣዕም አለው። በውስጡ ምን ዓይነት ውህድ ይኖራል?",
+     "opts": [
+      "አሲድ (ሲትሪክ አሲድ)",
+      "ጨው",
+      "ቤዝ",
+      "ኦክሳይድ"
+     ],
+     "after": "«አሲድ» ማለት ኮምጣጣ ማለት ነው፤ ሎሚ ሲትሪክ አሲድ አለው።",
+     "added": true,
+     "machine": true,
+     "id": "g5.science.u2.s2-2.9"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "የውህድ ዓይነቶች",
+     "paras": [
+      "ኦክሳይዶች፣ አሲዶች፣ ቤዞች እና ጨዎች የውህድ ዓይነቶች ናቸው።"
+     ],
+     "table": [
+      [
+       "ዓይነት",
+       "ምንነት",
+       "ምሳሌ"
+      ],
+      [
+       "ኦክሳይድ",
+       "ኦክስጅንና አንድ ሌላ ንጥረ ነገር ብቻ",
+       "ውሃ፣ ካርቦን ዳይኦክሳይድ"
+      ],
+      [
+       "አሲድ",
+       "ኮምጣጣ («አሲደስ»)",
+       "ሃይድሮክሎሪክ፣ ሲትሪክ፣ ላክቲክ አሲድ"
+      ],
+      [
+       "ቤዝ",
+       "ብረት አስተኔያማ ኦክሳይድ ወይም አሞኒያ + ውሃ",
+       "ሶድየም ሃይድሮክሳይድ"
+      ],
+      [
+       "ጨው",
+       "አሲድ + ቤዝ (አግልሎት)",
+       "ሶድየም ክሎራይድ (የገበታ ጨው)"
+      ]
+     ],
+     "ref": "ገጽ 27–28",
+     "id": "g5.science.u2.s2-2.10"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "ቁልፍ ቃላት",
+     "defs": [
+      [
+       "ኦክሳይድ",
+       "ኦክስጅንና አንድ ሌላ ንጥረ ነገር ብቻ የያዘ ውህድ።"
+      ],
+      [
+       "አሲድ",
+       "ኮምጣጣ ጣዕም ያለው ውህድ፤ ስሙ «አሲደስ» (ኮምጣጣ) ከሚለው የላቲን ቃል የመጣ ነው።"
+      ],
+      [
+       "ቤዝ",
+       "አብዛኞቹ ብረት አስተኔያማ ኦክሳይዶች ወይም አሞኒያ ከውሃ ጋር ሲፀገበሩ የሚፈጠሩ ውህዶች።"
+      ],
+      [
+       "ጨው",
+       "አሲዶችና ቤዞች ሲፀገበሩ (አግልሎት) የሚፈጠሩ ውህዶች።"
+      ]
+     ],
+     "id": "g5.science.u2.s2-2.11"
+    },
+    {
+     "kind": "sort",
+     "step": "check",
+     "graded": true,
+     "text": "የትኛው ዓይነት ውህድ?",
+     "bins": [
+      "ኦክሳይድ",
+      "አሲድ",
+      "ቤዝ",
+      "ጨው"
+     ],
+     "items": [
+      [
+       "ሰልፈር ዳይኦክሳይድ",
+       "ኦክሳይድ",
+       "ኦክስጅን + ሰልፈር።"
+      ],
+      [
+       "ናይትሪክ አሲድ",
+       "አሲድ",
+       "አሲድ።"
+      ],
+      [
+       "ካልሲየም ሃይድሮክሳይድ",
+       "ቤዝ",
+       "ሃይድሮክሳይድ።"
+      ],
+      [
+       "ሶድየም ክሎራይድ",
+       "ጨው",
+       "የገበታ ጨው።"
+      ],
+      [
+       "ላክቲክ አሲድ",
+       "አሲድ",
+       "አሲድ።"
+      ],
+      [
+       "ካልሲየም ካርቦኔት",
+       "ጨው",
+       "ጨው።"
+      ]
+     ],
+     "why": "ገጽ 27–28።",
+     "clue": "ስሙ ውስጥ ፍንጭ አለ።",
+     "level": 1,
+     "machine": true,
+     "id": "g5.science.u2.s2-2.12"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "ከሚከተሉት ውስጥ «ጨው» የሆነው የቱ ነው?",
+     "opts": [
+      "ሶድየም ክሎራይድ",
+      "ካልሲየም ሃይድሮክሳይድ",
+      "ናይትሪክ አሲድ",
+      "ሰልፈር ዳይኦክሳይድ"
+     ],
+     "ans": "ሶድየም ክሎራይድ",
+     "why": "ሶድየም ክሎራይድ የገበታ ጨው ነው።",
+     "clue": "የገበታ ጨው።",
+     "level": 1,
+     "ref": "መልመጃ 2.2 I.3",
+     "id": "g5.science.u2.s2-2.13"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "ጨዎች አሲዶችና ቤዞች ሲፀገበሩ የሚፈጠሩ ውህዶች ናቸው።",
+     "a": true,
+     "why": "ይህ ሂደት አግልሎት ይባላል።",
+     "clue": "አግልሎት።",
+     "level": 1,
+     "ref": "የማጠቃለያ ጥያቄ I.3",
+     "id": "g5.science.u2.s2-2.14"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "ውሃ ኦክሳይድ የሆነው ለምንድን ነው?",
+     "opts": [
+      "ኦክስጅንና አንድ ሌላ ንጥረ ነገር (ሃይድሮጅን) ብቻ ስላለው",
+      "ኮምጣጣ ስለሆነ",
+      "ከአሲድና ከቤዝ ስለተፈጠረ",
+      "ንጥረ ነገር ስለሆነ"
+     ],
+     "ans": "ኦክስጅንና አንድ ሌላ ንጥረ ነገር (ሃይድሮጅን) ብቻ ስላለው",
+     "why": "ኦክሳይድ ኦክስጅንና አንድ ሌላ ንጥረ ነገር ብቻ ይይዛል፤ ውሃ ሃይድሮጅንና ኦክስጅን ብቻ አለው።",
+     "clue": "የኦክሳይድን ትርጉም አስታውሱ።",
+     "level": 3,
+     "machine": true,
+     "added": true,
+     "id": "g5.science.u2.s2-2.15"
+    }
+   ]
+  }
+ ],
+ "lang": "am",
+ "main": "am",
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "ቁስ አካል ያልሆነው",
+   "opts": [
+    "ብርሃን",
+    "ድንጋይ",
+    "ውሃ",
+    "ጨው"
+   ],
+   "ans": "ብርሃን",
+   "why": "መልመጃ 2.2።",
+   "clue": "",
+   "level": 1,
+   "id": "g5.science.u2.s2-2.16"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "ከአንድ ዓይነት አቶም የተሠራ ልዩ ቁስ",
+   "opts": [
+    "ንጥረ ነገር",
+    "ውህድ",
+    "ድብልቅ",
+    "ጨው"
+   ],
+   "ans": "ንጥረ ነገር",
+   "why": "ገጽ 27።",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g5.science.u2.s2-2.17"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "አሲድ ማለት",
+   "opts": [
+    "ኮምጣጣ",
+    "ጣፋጭ",
+    "መራራ",
+    "ጨዋማ"
+   ],
+   "ans": "ኮምጣጣ",
+   "why": "ገጽ 27።",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g5.science.u2.s2-2.18"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "አሲድና ቤዝ ሲፀገበሩ የሚፈጠረው",
+   "opts": [
+    "ጨው",
+    "ንጥረ ነገር",
+    "ኦክሳይድ ብቻ",
+    "ብርሃን"
+   ],
+   "ans": "ጨው",
+   "why": "ገጽ 28።",
+   "clue": "",
+   "level": 2,
+   "machine": true,
+   "id": "g5.science.u2.s2-2.19"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "ከሚከተሉት ቤዝ የሆነው",
+   "opts": [
+    "ሶድየም ሃይድሮክሳይድ",
+    "ሲትሪክ አሲድ",
+    "ካርቦን ዳይኦክሳይድ",
+    "ወርቅ"
+   ],
+   "ans": "ሶድየም ሃይድሮክሳይድ",
+   "why": "ገጽ 28።",
+   "clue": "",
+   "level": 2,
+   "machine": true,
+   "id": "g5.science.u2.s2-2.20"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "The book defines ልዩ ቁስ (substance) as including mixtures; in standard chemistry a substance is pure. The lesson keeps the book's pure-substance wording and does not test this definition. «ማግኒዚየም ኦክሳይ» and «ድንዳይ» are typos."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

@@ -1,0 +1,296 @@
+{
+ "id": "g5.science.u2.s2-3-2",
+ "book": {
+  "title": "የአካባቢ ሳይንስ 5ኛ ክፍል",
+  "grade": 5,
+  "subject": "science",
+  "unit": 2,
+  "unit_title": "ሳይንስን መገንዘብ",
+  "pages": "32–34",
+  "section": "2.3.2"
+ },
+ "title": "ርዝመትን መለካት",
+ "competency": "ርዝመትን መለካትና የርዝመት አሐዶችን መቀያየር።",
+ "minutes": 12,
+ "keywords": [
+  {
+   "en": "length",
+   "am": "ርዝመት",
+   "def": "በሁለት ቦታ መካከል ያለው ርቀት፤ ዓለም አቀፍ አሐዱ ሜትር ነው።"
+  }
+ ],
+ "ideas": [
+  {
+   "id": "sci.g5-measure-length",
+   "name": "ርዝመትና አሐዶቹ",
+   "explain": {
+    "en": {
+     "text": "Length is the distance between two places. Its international unit is the metre; other units are the kilometre, centimetre and millimetre. 1 km = 1000 m, 1 m = 100 cm, 1 m = 1000 mm, 1 cm = 10 mm. To change a big unit to a small one, multiply; to change a small unit to a big one, divide."
+    },
+    "am": {
+     "text": "ርዝመት በሁለት ቦታ መካከል ያለ ርቀት ነው፤ አሐዱ ሜትር ነው። 1 ኪ.ሜ = 1000 ሜ፣ 1 ሜ = 100 ሳ.ሜ። ከትልቅ ወደ ትንሽ እናባዛለን፣ ከትንሽ ወደ ትልቅ እናካፍላለን።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "ቁመታችሁ",
+     "ask": "ቁመታችሁ 140 ሴ.ሜ ነው። በሜትር ስንት ነው?",
+     "opts": [
+      "1.4 ሜ",
+      "14 ሜ",
+      "140 ሜ",
+      "0.14 ሜ"
+     ],
+     "after": "1 ሜ = 100 ሴ.ሜ → 140 ÷ 100 = 1.4 ሜ።",
+     "ref": "ተግባር 2.4",
+     "machine": true,
+     "id": "g5.science.u2.s2-3-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "ርዝመት",
+     "paras": [
+      "ርዝመት በሁለት ቦታ መካከል ያለው ርቀት ነው። ዓለም አቀፍ የርዝመት መለኪያ አሐድ ሜትር ነው።",
+      "ሴንቲሜትር፣ ኪሎሜትር፣ ሚሊሜትር ሌሎች የርዝመት አሐዶች ናቸው።"
+     ],
+     "table": [
+      [
+       "",
+       ""
+      ],
+      [
+       "1 ኪ.ሜ",
+       "1000 ሜ"
+      ],
+      [
+       "1 ሜ",
+       "100 ሳ.ሜ"
+      ],
+      [
+       "1 ሜ",
+       "1000 ሚ.ሜ"
+      ],
+      [
+       "1 ሜ",
+       "10 ዴ.ሜ"
+      ],
+      [
+       "1 ሳ.ሜ",
+       "10 ሚ.ሜ"
+      ]
+     ],
+     "note": "መጽሐፉ ሴንቲሜትርን «ሳ.ሜ» እና «ሴ.ሜ» ብሎ ይጽፋል።",
+     "ref": "ገጽ 32–33",
+     "id": "g5.science.u2.s2-3-2.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "ቁልፍ ቃል",
+     "defs": [
+      [
+       "ርዝመት",
+       "በሁለት ቦታ መካከል ያለው ርቀት፤ ዓለም አቀፍ አሐዱ ሜትር ነው።"
+      ]
+     ],
+     "id": "g5.science.u2.s2-3-2.3"
+    },
+    {
+     "kind": "blank",
+     "step": "check",
+     "graded": true,
+     "num": true,
+     "ask": "2 ሜ = ___ ሳ.ሜ",
+     "a": [
+      "200"
+     ],
+     "why": "1 ሜ = 100 ሳ.ሜ → 2 × 100 = 200።",
+     "clue": "ከትልቅ ወደ ትንሽ፦ አባዙ።",
+     "gen": {
+      "t": "convert",
+      "dim": 1,
+      "dir": "down"
+     },
+     "level": 1,
+     "ref": "ገጽ 33 ምሳሌ 2",
+     "id": "g5.science.u2.s2-3-2.4"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "1000 ሜ = ___ ኪ.ሜ",
+     "a": [
+      "1"
+     ],
+     "why": "1000 ÷ 1000 = 1 ኪ.ሜ።",
+     "clue": "ከትንሽ ወደ ትልቅ፦ አካፍሉ።",
+     "gen": {
+      "t": "convert",
+      "dim": 1,
+      "dir": "up"
+     },
+     "level": 1,
+     "ref": "ገጽ 33 ምሳሌ 1",
+     "id": "g5.science.u2.s2-3-2.5"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "በሁለት ቤቶች መካከል 200 ሜትር አለ። በሳ.ሜ ስንት ነው? መልስ፦ ___",
+     "a": [
+      "20000"
+     ],
+     "why": "200 × 100 = 20,000 ሳ.ሜ።",
+     "clue": "1 ሜ = 100 ሳ.ሜ።",
+     "level": 1,
+     "ref": "መልመጃ 2.4 Q1 ሀ",
+     "id": "g5.science.u2.s2-3-2.6"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "0.002 ኪ.ሜ = ___ ሚ.ሜ",
+     "a": [
+      "2000"
+     ],
+     "why": "0.002 × 1000 = 2 ሜ፤ 2 × 1000 = 2000 ሚ.ሜ።",
+     "clue": "መጀመሪያ ወደ ሜትር ቀይሩ።",
+     "level": 2,
+     "ref": "መልመጃ 2.4 Q2 ሀ",
+     "id": "g5.science.u2.s2-3-2.7"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "20 ሜ + 100 ሳ.ሜ = ___ ሜ",
+     "a": [
+      "21"
+     ],
+     "why": "100 ሳ.ሜ = 1 ሜ፤ 20 + 1 = 21 ሜ።",
+     "clue": "አሐዶቹን አንድ አድርጉ።",
+     "level": 2,
+     "ref": "መልመጃ 2.4 Q3 ሀ",
+     "id": "g5.science.u2.s2-3-2.8"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "num": true,
+     "ask": "2000 ሜ + 1,000,000 ሚ.ሜ = ___ ኪ.ሜ",
+     "a": [
+      "3"
+     ],
+     "why": "1,000,000 ሚ.ሜ = 1000 ሜ፤ 2000 + 1000 = 3000 ሜ = 3 ኪ.ሜ።",
+     "clue": "ሁሉንም ወደ ሜትር ቀይሩ።",
+     "level": 3,
+     "ref": "መልመጃ 2.4 Q3 ለ",
+     "added": true,
+     "id": "g5.science.u2.s2-3-2.9"
+    }
+   ]
+  }
+ ],
+ "lang": "am",
+ "main": "am",
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "ዓለም አቀፍ የርዝመት አሐድ",
+   "opts": [
+    "ሜትር",
+    "ኪሎ ግራም",
+    "ሊትር",
+    "ሴኮንድ"
+   ],
+   "ans": "ሜትር",
+   "why": "ገጽ 32።",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g5.science.u2.s2-3-2.10"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "0.01 ሜ = ___ ሚ.ሜ",
+   "a": [
+    "10"
+   ],
+   "why": "0.01 × 1000 = 10።",
+   "clue": "",
+   "level": 1,
+   "ref": "መልመጃ 2.4 Q2 ለ",
+   "id": "g5.science.u2.s2-3-2.11"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "ከ4 ሜ ጋር እኩል የሆነው",
+   "opts": [
+    "0.004 ኪ.ሜ",
+    "4,000 ሳ.ሜ",
+    "40 ኪ.ሜ",
+    "0.4 ኪ.ሜ"
+   ],
+   "ans": "0.004 ኪ.ሜ",
+   "why": "0.004 × 1000 = 4 ሜ።",
+   "clue": "",
+   "level": 2,
+   "ref": "የማጠቃለያ ጥያቄ III.1",
+   "id": "g5.science.u2.s2-3-2.12"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "200 ሜ = ___ ሚ.ሜ",
+   "a": [
+    "200000"
+   ],
+   "why": "200 × 1000 = 200,000።",
+   "clue": "",
+   "level": 2,
+   "ref": "መልመጃ 2.4 Q1 ለ",
+   "id": "g5.science.u2.s2-3-2.13"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "1 ሳ.ሜ = ___ ሚ.ሜ",
+   "a": [
+    "10"
+   ],
+   "why": "ሰንጠረዥ 2.2።",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g5.science.u2.s2-3-2.14"
+  }
+ ],
+ "notes": [],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

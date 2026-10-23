@@ -1,0 +1,279 @@
+{
+ "id": "g5.science.u2.s2-3-4",
+ "book": {
+  "title": "የአካባቢ ሳይንስ 5ኛ ክፍል",
+  "grade": 5,
+  "subject": "science",
+  "unit": 2,
+  "unit_title": "ሳይንስን መገንዘብ",
+  "pages": "37–39",
+  "section": "2.3.4"
+ },
+ "title": "ጊዜን መለካት",
+ "competency": "ጊዜን መለካትና የጊዜ አሐዶችን መቀያየር።",
+ "minutes": 12,
+ "keywords": [
+  {
+   "en": "time",
+   "am": "ጊዜ",
+   "def": "በአንድ ክስተት መጀመሪያና መጨረሻ መካከል ያለው ቆይታ፤ ዓለም አቀፍ አሐዱ ሴኮንድ ነው።"
+  }
+ ],
+ "ideas": [
+  {
+   "id": "sci.g5-measure-time",
+   "name": "ጊዜና አሐዶቹ",
+   "explain": {
+    "en": {
+     "text": "Time is how long something lasts, from its start to its end. Before clocks, people used the rising and setting sun. The international unit of time is the second; others are the minute, hour, day, week, month and year. 1 minute = 60 seconds, 1 hour = 60 minutes, 1 day = 24 hours, 1 week = 7 days, 1 year = 12 months (13 with Pagume) = 365¼ days."
+    },
+    "am": {
+     "text": "ጊዜ በአንድ ክስተት መጀመሪያና መጨረሻ መካከል ያለ ቆይታ ነው፤ አሐዱ ሴኮንድ ነው። 1 ደቂቃ = 60 ሴኮንድ፣ 1 ሰዓት = 60 ደቂቃ፣ 1 ቀን = 24 ሰዓት።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "ከሰዓት በፊት",
+     "ask": "ሰዓት ከመሠራቱ በፊት ሰዎች ጊዜን እንዴት ያውቁ ነበር?",
+     "opts": [
+      "የፀሐይን መውጣትና መግባት እያዩ",
+      "በስልክ",
+      "በኮምፒውተር",
+      "አያውቁም ነበር"
+     ],
+     "after": "የፀሐይን መውጣትና መግባት እያዩ «ንጋት»፣ «ምሽት» ይሉ ነበር።",
+     "ref": "ገጽ 37",
+     "machine": true,
+     "id": "g5.science.u2.s2-3-4.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "ጊዜ",
+     "paras": [
+      "ጊዜ በአንድ ክስተት መጀመሪያና መጨረሻ መካከል ያለው ቆይታ ነው።",
+      "ዓለም አቀፍ የጊዜ መለኪያ አሐድ ሴኮንድ ነው። ደቂቃ፣ ሰዓት፣ ቀን፣ ሳምንት፣ ወር፣ ዓመት ሌሎች መለኪያዎች ናቸው።"
+     ],
+     "table": [
+      [
+       "",
+       ""
+      ],
+      [
+       "1 ደቂቃ",
+       "60 ሴኮንድ"
+      ],
+      [
+       "1 ሰዓት",
+       "60 ደቂቃ"
+      ],
+      [
+       "1 ቀን",
+       "24 ሰዓት"
+      ],
+      [
+       "1 ሳምንት",
+       "7 ቀናት"
+      ],
+      [
+       "1 ዓመት",
+       "12 ወራት (ጳጉሜን ጨምሮ 13)"
+      ],
+      [
+       "1 ዓመት",
+       "365¼ ቀናት"
+      ]
+     ],
+     "ref": "ገጽ 37–38",
+     "id": "g5.science.u2.s2-3-4.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "ቁልፍ ቃል",
+     "defs": [
+      [
+       "ጊዜ",
+       "በአንድ ክስተት መጀመሪያና መጨረሻ መካከል ያለው ቆይታ፤ ዓለም አቀፍ አሐዱ ሴኮንድ ነው።"
+      ]
+     ],
+     "id": "g5.science.u2.s2-3-4.3"
+    },
+    {
+     "kind": "blank",
+     "step": "check",
+     "graded": true,
+     "num": true,
+     "ask": "2 ሰዓት = ___ ደቂቃ",
+     "a": [
+      "120"
+     ],
+     "why": "1 ሰዓት = 60 ደቂቃ → 2 × 60 = 120።",
+     "clue": "በ60 አባዙ።",
+     "level": 1,
+     "ref": "ገጽ 38 ምሳሌ",
+     "id": "g5.science.u2.s2-3-4.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "ዓለም አቀፍ የጊዜ መለኪያ የቱ ነው?",
+     "opts": [
+      "ሴኮንድ",
+      "ሰዓት",
+      "ደቂቃ",
+      "ቀን"
+     ],
+     "ans": "ሴኮንድ",
+     "why": "ገጽ 38።",
+     "clue": "ትንሹ መሠረታዊ አሐድ።",
+     "level": 1,
+     "ref": "የማጠቃለያ ጥያቄ III.3",
+     "id": "g5.science.u2.s2-3-4.5"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "3 ሰዓት = ___ ሴኮንድ",
+     "a": [
+      "10800"
+     ],
+     "why": "3 × 60 = 180 ደቂቃ፤ 180 × 60 = 10,800 ሴኮንድ።",
+     "clue": "መጀመሪያ ወደ ደቂቃ ቀይሩ።",
+     "level": 2,
+     "ref": "መልመጃ 2.7 Q1",
+     "id": "g5.science.u2.s2-3-4.6"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "2 ሰዓት ከ25 ደቂቃ = ___ ደቂቃ",
+     "a": [
+      "145"
+     ],
+     "why": "2 × 60 = 120፤ 120 + 25 = 145 ደቂቃ።",
+     "clue": "ሰዓቱን ቀይሩ፤ ከዚያ ደምሩ።",
+     "level": 2,
+     "ref": "መልመጃ 2.7 Q1",
+     "id": "g5.science.u2.s2-3-4.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "2 ሰዓት ከ30 ደቂቃ እኩል ይሆናል",
+     "opts": [
+      "9,000 ሴኮንድ",
+      "4,500 ሴኮንድ",
+      "90,000 ሴኮንድ",
+      "7,200 ሴኮንድ"
+     ],
+     "ans": "9,000 ሴኮንድ",
+     "why": "2 × 60 = 120፤ 120 + 30 = 150 ደቂቃ፤ 150 × 60 = 9,000 ሴኮንድ።",
+     "clue": "ወደ ደቂቃ፣ ከዚያ ወደ ሴኮንድ።",
+     "level": 3,
+     "ref": "የማጠቃለያ ጥያቄ III.6",
+     "added": true,
+     "id": "g5.science.u2.s2-3-4.8"
+    }
+   ]
+  }
+ ],
+ "lang": "am",
+ "main": "am",
+ "test": [
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "1 ሰዓት = ___ ደቂቃ",
+   "a": [
+    "60"
+   ],
+   "why": "ገጽ 38።",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g5.science.u2.s2-3-4.9"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "1 ቀን = ___ ሰዓት",
+   "a": [
+    "24"
+   ],
+   "why": "ገጽ 38።",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g5.science.u2.s2-3-4.10"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "1 ሳምንት = ___ ቀናት",
+   "a": [
+    "7"
+   ],
+   "why": "ገጽ 38።",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g5.science.u2.s2-3-4.11"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "6 ሰዓት ከ20 ደቂቃ = ___ ደቂቃ",
+   "a": [
+    "380"
+   ],
+   "why": "6 × 60 + 20 = 380።",
+   "clue": "",
+   "level": 2,
+   "ref": "መልመጃ 2.7 Q1",
+   "id": "g5.science.u2.s2-3-4.12"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "5 ደቂቃ = ___ ሴኮንድ",
+   "a": [
+    "300"
+   ],
+   "why": "5 × 60 = 300።",
+   "clue": "",
+   "level": 2,
+   "machine": true,
+   "id": "g5.science.u2.s2-3-4.13"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "The book prints the heading as \"3.3.4\". Its relation \"1 month = 4 weeks\" gives 48 weeks a year; a year has 52 weeks. The clock-reading table treats clock times as durations."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
