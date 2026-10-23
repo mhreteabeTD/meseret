@@ -1,0 +1,603 @@
+{
+ "id": "g12.it.u2.s2-3",
+ "book": {
+  "title": "Information Technology Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "it",
+  "unit": 2,
+  "unit_title": "Emerging technologies",
+  "pages": "46–47",
+  "section": "2.3"
+ },
+ "title": "Fog computing",
+ "competency": "Explain fog computing, its relation to cloud computing and its advantages.",
+ "minutes": 20,
+ "keywords": [
+  {
+   "en": "Fog computing",
+   "am": "ፎግ ኮምፒውቲንግ",
+   "def": "A decentralized computing layer where data, computing, storage and applications sit between the data source and the cloud.",
+   "machine": true
+  },
+  {
+   "en": "Fog node",
+   "am": "ፎግ ኖድ",
+   "def": "A device near the data source that processes and stores data locally and sends only what is needed to the cloud.",
+   "machine": true
+  },
+  {
+   "en": "Latency",
+   "am": "መዘግየት",
+   "def": "The delay between sending data or a request and getting the response.",
+   "machine": true
+  },
+  {
+   "en": "Edge computing",
+   "am": "ኤጅ ኮምፒውቲንግ",
+   "def": "Processing data on, or right beside, the device that produces it.",
+   "machine": true
+  },
+  {
+   "en": "Cloud computing",
+   "am": "ክላውድ ኮምፒውቲንግ",
+   "def": "Storing and accessing data and computing services (servers, storage, networking, databases, software) over the Internet, on demand.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "it.fog-computing",
+   "name": "Fog computing and fog nodes",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Fog computing is an extension of the cloud. The cloud depends on network bandwidth, and billions of users sending data in and out congest it. Fog computing places fog nodes close to the data source. They process and store data locally, at the edge, and decide what needs to go on to the cloud. So there are three layers: devices at the bottom, fog nodes in the middle and the cloud at the top."
+    },
+    "am": {
+     "text": "ፎግ ኮምፒውቲንግ የክላውድ ቅጥያ ነው። ፎግ ኖዶች ከመረጃ ምንጩ አጠገብ ሆነው መረጃን በአካባቢው ያቀናብራሉ፤ አስፈላጊውን ብቻ ወደ ክላውድ ይልካሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A busy road to the capital",
+     "ask": "Every CCTV camera in a city sends its full video to one far-away data center. What happens?",
+     "opts": [
+      "The network gets congested and responses are slow",
+      "Everything gets faster",
+      "The cameras stop recording",
+      "Nothing changes"
+     ],
+     "after": "Too much data travelling far causes congestion and delay. Fog computing handles data nearer the cameras.",
+     "ref": "p.46",
+     "id": "g12.it.u2.s2-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Why fog?",
+     "paras": [
+      "Fog computing is an extension of the cloud.",
+      "The cloud relies on the bandwidth of the network provider.",
+      "Billions of users send data in and out of the cloud.",
+      "So the system becomes increasingly congested."
+     ],
+     "ref": "p.46",
+     "id": "g12.it.u2.s2-3.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Fog nodes",
+     "paras": [
+      "Fog nodes sit close to the data source.",
+      "They can process and store more than the end devices (sensors, phones).",
+      "They still have far less capacity than a cloud data center.",
+      "They decide what to analyse locally, at the edge, and what to push to the cloud.",
+      "So they respond faster than sending every request to the cloud."
+     ],
+     "ref": "p.46–47",
+     "id": "g12.it.u2.s2-3.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Three layers (Figure 2.27)",
+     "paras": [],
+     "table": [
+      [
+       "Layer",
+       "What is there"
+      ],
+      [
+       "Cloud",
+       "big, distant data centers"
+      ],
+      [
+       "Fog",
+       "fog nodes near the devices"
+      ],
+      [
+       "Devices",
+       "phones, tablets, stoves, PCs, laptops, vehicles"
+      ]
+     ],
+     "ref": "Figure 2.27",
+     "id": "g12.it.u2.s2-3.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Fog computing",
+       "A decentralized computing layer where data, computing, storage and applications sit between the data source and the cloud."
+      ],
+      [
+       "Fog node",
+       "A device near the data source that processes and stores data locally and sends only what is needed to the cloud."
+      ]
+     ],
+     "id": "g12.it.u2.s2-3.5"
+    },
+    {
+     "kind": "mcq",
+     "text": "Fog computing is",
+     "opts": [
+      "an extension of the cloud, with processing close to the data source",
+      "a replacement that removes the cloud",
+      "weather data stored online",
+      "a type of SaaS"
+     ],
+     "ans": "an extension of the cloud, with processing close to the data source",
+     "why": "p.46: \"Fog computing is an extension of the cloud\"; fog nodes are \"located closer to the data source\".",
+     "clue": "Where are fog nodes placed?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.46",
+     "id": "g12.it.u2.s2-3.6"
+    },
+    {
+     "kind": "order",
+     "title": "Order the layers from bottom to top (Figure 2.27)",
+     "items": [
+      "Devices",
+      "Fog nodes",
+      "Cloud"
+     ],
+     "why": "Devices connect to a nearby fog node; fog nodes connect up to the cloud.",
+     "clue": "Start where data is produced.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Figure 2.27",
+     "id": "g12.it.u2.s2-3.7"
+    },
+    {
+     "kind": "tf",
+     "text": "Fog nodes have more processing power than the cloud.",
+     "a": false,
+     "why": "They have more than the end devices, but far less than cloud data centers. Their strength is being close.",
+     "clue": "Compare a local node with a giant data center.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.46",
+     "id": "g12.it.u2.s2-3.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "What does a fog node decide?",
+     "opts": [
+      "Which data to analyse locally and which to push to the cloud",
+      "Which users may buy phones",
+      "The price of cloud storage",
+      "Which websites are public"
+     ],
+     "ans": "Which data to analyse locally and which to push to the cloud",
+     "why": "p.47: fog \"provides the missing link for what data needs to be pushed to the cloud\" and what \"can be analyzed locally\".",
+     "clue": "It sits between devices and the cloud.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.47",
+     "id": "g12.it.u2.s2-3.9"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why does the cloud become congested?",
+     "opts": [
+      "Billions of users send data in and out through limited bandwidth",
+      "Clouds are too small to store data",
+      "Fog nodes block it",
+      "Users stop paying"
+     ],
+     "ans": "Billions of users send data in and out through limited bandwidth",
+     "why": "p.46: the cloud \"relies heavily on the bandwidth made available\".",
+     "clue": "Think of one road used by everybody.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.46",
+     "id": "g12.it.u2.s2-3.10"
+    },
+    {
+     "kind": "mcq",
+     "text": "A video-surveillance system in a Bole shopping centre has 200 cameras. Using fog, what is sent to the cloud?",
+     "opts": [
+      "Only important clips and alerts, after local analysis",
+      "Every second of every camera",
+      "Nothing is ever stored",
+      "Only the camera prices"
+     ],
+     "ans": "Only important clips and alerts, after local analysis",
+     "why": "Fog nodes analyse the big video streams locally and push only what is needed (p.47 example).",
+     "clue": "Video is \"large and cumbersome to transfer\".",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.47",
+     "added": true,
+     "id": "g12.it.u2.s2-3.11"
+    }
+   ]
+  },
+  {
+   "id": "it.fog-advantages",
+   "name": "Cloud, fog and edge compared",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Fog computing is closer to end-users, has wider consumer reach and better mobility than the cloud. It lets devices connect directly, improves the quality of service, reduces latency and improves user experience. It supports the Internet of Things and real-time Bigdata operations with billions of nodes, such as video surveillance. Edge computing goes one step further and processes data on the device itself, while the cloud remains best for huge storage and long-term analysis."
+    },
+    "am": {
+     "text": "ፎግ ከክላውድ ይልቅ ለተጠቃሚ ቅርብ ነው፤ መዘግየትን ይቀንሳል፣ የአገልግሎት ጥራትን ያሻሽላል፣ IoTን ይደግፋል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "title": "Warm up: where should this be processed?",
+     "bins": [
+      "On the device",
+      "At a nearby fog node",
+      "In the far cloud"
+     ],
+     "items": [
+      [
+       "A car braking for a sudden obstacle",
+       "On the device",
+       "no time to wait"
+      ],
+      [
+       "Combining 200 cameras in one building",
+       "At a nearby fog node",
+       "local and fast"
+      ],
+      [
+       "A yearly sales report for all branches",
+       "In the far cloud",
+       "big and not urgent"
+      ]
+     ],
+     "added": true,
+     "after": "The more urgent the task, the closer to the source it should be processed.",
+     "graded": false,
+     "id": "g12.it.u2.s2-3.12"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Advantages of fog computing",
+     "paras": [
+      "Closer to end-users, wider consumer reach, better mobility.",
+      "Devices connect directly instead of through the network backbone.",
+      "Improves quality of service and reduces latency.",
+      "Enhances user experience.",
+      "Supports IoT things: vehicles, home appliances, even clothes.",
+      "Supports real-time Bigdata with billions of nodes."
+     ],
+     "ref": "p.47",
+     "id": "g12.it.u2.s2-3.13"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Cloud, fog and edge",
+     "paras": [
+      "The book says fog analyses data \"locally, at the edge\". Here is a simple comparison."
+     ],
+     "table": [
+      [
+       "",
+       "Edge",
+       "Fog",
+       "Cloud"
+      ],
+      [
+       "Where",
+       "on the device itself",
+       "nodes near the devices",
+       "distant data centers"
+      ],
+      [
+       "Delay (latency)",
+       "lowest",
+       "low",
+       "highest"
+      ],
+      [
+       "Capacity",
+       "smallest",
+       "medium",
+       "huge"
+      ],
+      [
+       "Good for",
+       "instant reactions",
+       "local real-time analysis",
+       "storage and long-term analysis"
+      ]
+     ],
+     "added": true,
+     "id": "g12.it.u2.s2-3.14"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Latency",
+       "The delay between sending data or a request and getting the response."
+      ],
+      [
+       "Edge computing",
+       "Processing data on, or right beside, the device that produces it."
+      ]
+     ],
+     "id": "g12.it.u2.s2-3.15"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is an advantage of fog computing over sending everything to the cloud?",
+     "opts": [
+      "Reduced latency",
+      "Unlimited storage",
+      "No devices are needed",
+      "It removes the need for networks"
+     ],
+     "ans": "Reduced latency",
+     "why": "p.47: fog \"improves the quality of service, reduces latency, and enhance user experience\".",
+     "clue": "What gets shorter when data travels less?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Review Part III Q4",
+     "id": "g12.it.u2.s2-3.16"
+    },
+    {
+     "kind": "pick",
+     "text": "Review Part III Q4: which are advantages of fog computing?",
+     "pool": [
+      "Faster response (lower latency)",
+      "Less network congestion",
+      "Better mobility",
+      "Supports real-time IoT",
+      "More storage than the cloud"
+     ],
+     "a": [
+      "Faster response (lower latency)",
+      "Less network congestion",
+      "Better mobility",
+      "Supports real-time IoT"
+     ],
+     "why": "All come from p.46–47. Fog has less storage than the cloud.",
+     "clue": "One option compares fog's size with the cloud's.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Review Part III Q4",
+     "id": "g12.it.u2.s2-3.17"
+    },
+    {
+     "kind": "match",
+     "title": "Match each task with the best place to process it",
+     "pairs": [
+      [
+       "Car collision warning",
+       "edge (on the device)"
+      ],
+      [
+       "Traffic-light timing at one junction",
+       "fog node"
+      ],
+      [
+       "Five years of national traffic data",
+       "cloud"
+      ]
+     ],
+     "why": "Urgent tasks need the shortest distance; big long-term data needs cloud capacity.",
+     "clue": "How quickly must each answer come?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.it.u2.s2-3.18"
+    },
+    {
+     "kind": "mcq",
+     "text": "Activity 2.4 Q1: why use fog computing instead of sending all data to the cloud?",
+     "opts": [
+      "To process time-sensitive data near its source with less delay and congestion",
+      "Because the cloud cannot store anything",
+      "To stop using the Internet",
+      "Because fog is a kind of SaaS"
+     ],
+     "ans": "To process time-sensitive data near its source with less delay and congestion",
+     "why": "Fog works with the cloud, handling urgent local data and sending on what is needed.",
+     "clue": "Fog still uses the cloud.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 2.4 Q1",
+     "id": "g12.it.u2.s2-3.19"
+    },
+    {
+     "kind": "pick",
+     "text": "Activity 2.4 Q2: which services become more efficient with fog?",
+     "pool": [
+      "Video calls and streaming",
+      "CCTV surveillance",
+      "Ride-hailing location updates",
+      "Smart traffic lights",
+      "Reading a printed book"
+     ],
+     "a": [
+      "Video calls and streaming",
+      "CCTV surveillance",
+      "Ride-hailing location updates",
+      "Smart traffic lights"
+     ],
+     "why": "Real-time and data-heavy services gain most from processing close to the user.",
+     "clue": "Which one uses no network at all?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 2.4 Q2",
+     "id": "g12.it.u2.s2-3.20"
+    },
+    {
+     "kind": "mcq",
+     "text": "A telebirr outage happens when millions pay at once on holidays. Engineers add regional servers that check payments locally and sync to the central system later. What is this, and what does it improve?",
+     "opts": [
+      "Fog computing; lower latency and less congestion",
+      "IaaS; cheaper hardware",
+      "A community cloud; data ownership",
+      "Bigdata veracity; data quality"
+     ],
+     "ans": "Fog computing; lower latency and less congestion",
+     "why": "Processing near users and sending only what is needed to the centre is the fog idea.",
+     "clue": "Where does the checking now happen?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.it.u2.s2-3.21"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Fog computing is an extension of",
+   "opts": [
+    "the cloud",
+    "the printer",
+    "Bigdata veracity",
+    "the operating system"
+   ],
+   "ans": "the cloud",
+   "why": "p.46.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.it.u2.s2-3.22"
+  },
+  {
+   "kind": "mcq",
+   "text": "Fog nodes are located",
+   "opts": [
+    "close to the data source",
+    "only inside the cloud data center",
+    "on the moon",
+    "only in the user's pocket"
+   ],
+   "ans": "close to the data source",
+   "why": "p.46.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.it.u2.s2-3.23"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which example of fog computing does the book give?",
+   "opts": [
+    "Video surveillance",
+    "Printing a letter",
+    "Writing a poem",
+    "Burning a CD"
+   ],
+   "ans": "Video surveillance",
+   "why": "p.47.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.it.u2.s2-3.24"
+  },
+  {
+   "kind": "mcq",
+   "text": "In Figure 2.27, which layer is in the middle?",
+   "opts": [
+    "Fog",
+    "Cloud",
+    "Devices",
+    "Users"
+   ],
+   "ans": "Fog",
+   "why": "Figure 2.27.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.it.u2.s2-3.25"
+  },
+  {
+   "kind": "mcq",
+   "text": "A smart meter sends a reading every second. Which plan best uses fog computing?",
+   "opts": [
+    "A local node sums the readings and sends one hourly total to the cloud",
+    "Every reading goes straight to the cloud",
+    "Readings are never stored",
+    "The meter emails each reading to the owner"
+   ],
+   "ans": "A local node sums the readings and sends one hourly total to the cloud",
+   "why": "Fog processes locally and pushes only what is needed.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.it.u2.s2-3.26"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.46: fog nodes \"have a higher processing and storage capability\" means higher than end devices, not higher than the cloud. The lesson teaches that fog nodes have less capacity than cloud data centers; their advantage is closeness."
+  },
+  {
+   "kind": "review",
+   "text": "The book uses \"at the edge\" but does not define edge computing. The cloud–fog–edge comparison table, the edge key word and related items are added for clarity."
+  },
+  {
+   "kind": "note",
+   "text": "Bole shopping centre CCTV, telebirr regional servers and the task-placement sort and match are added examples."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

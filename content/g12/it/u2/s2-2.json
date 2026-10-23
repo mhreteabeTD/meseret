@@ -1,0 +1,1312 @@
+{
+ "id": "g12.it.u2.s2-2",
+ "book": {
+  "title": "Information Technology Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "it",
+  "unit": 2,
+  "unit_title": "Emerging technologies",
+  "pages": "37–46",
+  "section": "2.2"
+ },
+ "title": "Cloud computing",
+ "competency": "Explain cloud computing, its benefits, limitations, types and the SaaS, PaaS and IaaS services.",
+ "minutes": 45,
+ "keywords": [
+  {
+   "en": "Cloud computing",
+   "am": "ክላውድ ኮምፒውቲንግ",
+   "def": "Storing and accessing data and computing services (servers, storage, networking, databases, software) over the Internet, on demand.",
+   "machine": true
+  },
+  {
+   "en": "Pay as you go",
+   "am": "በተጠቀሙት ልክ መክፈል",
+   "def": "A model where users pay only for the cloud resources they actually use.",
+   "machine": true
+  },
+  {
+   "en": "Server downtime",
+   "am": "የሰርቨር መቋረጥ",
+   "def": "A time when a cloud service is interrupted, so users cannot reach their data or files.",
+   "machine": true
+  },
+  {
+   "en": "Public cloud",
+   "am": "ሕዝባዊ ክላውድ",
+   "def": "A cloud where one service provider's resources are shared across different clients, each kept logically separate.",
+   "machine": true
+  },
+  {
+   "en": "Private cloud",
+   "am": "የግል ክላውድ",
+   "def": "A cloud with all resources dedicated to one organization, giving full control over security and privacy.",
+   "machine": true
+  },
+  {
+   "en": "Hybrid cloud",
+   "am": "ድብልቅ ክላውድ",
+   "def": "A combination of public and private cloud: public services in the public part, confidential data in the private part.",
+   "machine": true
+  },
+  {
+   "en": "Community cloud",
+   "am": "የማኅበረሰብ ክላውድ",
+   "def": "A shared, privately managed cloud used by several organizations in the same field with common security and compliance needs.",
+   "machine": true
+  },
+  {
+   "en": "Software as a Service (SaaS)",
+   "am": "ሶፍትዌር እንደ አገልግሎት",
+   "def": "Finished applications hosted by a provider and used by end users over the Internet, usually by subscription.",
+   "machine": true
+  },
+  {
+   "en": "Platform as a Service (PaaS)",
+   "am": "ፕላትፎርም እንደ አገልግሎት",
+   "def": "A cloud platform (servers, storage, network, OS and middleware, tools) on which developers build, test and host applications.",
+   "machine": true
+  },
+  {
+   "en": "Infrastructure as a Service (IaaS)",
+   "am": "መሠረተ ልማት እንደ አገልግሎት",
+   "def": "Virtualized computing resources (servers, storage, network) rented over the Internet.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "it.cloud-computing",
+   "name": "What cloud computing is",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Cloud computing is storing and accessing data and computing services over the Internet instead of only on your own computer. Servers, storage, networking, databases and software are available on demand from a provider's data centers. Many users can be served from one data center, and they reach their data from anywhere, at any time, with an Internet connection. Gmail, Google Maps, Netflix, PayPal, Spotify and Adobe Creative Cloud are cloud-based services."
+    },
+    "am": {
+     "text": "ክላውድ ኮምፒውቲንግ መረጃንና የኮምፒውቲንግ አገልግሎትን በበይነመረብ ማስቀመጥና መጠቀም ነው። ምሳሌ፡ Gmail፣ Google Maps፣ Netflix።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Where is your Gmail?",
+     "ask": "Your phone is lost, but you log in on a friend's phone and all your emails are there. Where were they stored?",
+     "opts": [
+      "On the provider's servers, reached over the Internet",
+      "Only inside your old phone",
+      "On your SIM card",
+      "Nowhere; emails are not stored"
+     ],
+     "after": "The emails live in the provider's data centers. That is cloud computing.",
+     "ref": "Brainstorming (2.2)",
+     "id": "g12.it.u2.s2-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Cloud computing",
+     "paras": [
+      "Cloud computing: storing and accessing data and computing services over the Internet.",
+      "The main copy is kept on the provider's servers, not your PC.",
+      "Servers, storage, networking and databases are available on demand.",
+      "One data center serves many users.",
+      "Users reach their data anywhere, any time, with an Internet connection."
+     ],
+     "ref": "p.37, Figure 2.12",
+     "id": "g12.it.u2.s2-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Why \"cloud\"?",
+     "paras": [
+      "The servers are far away and out of view.",
+      "Users do not need to know where they are.",
+      "Network diagrams have long drawn the Internet as a cloud.",
+      "Cloud-based services: Gmail, Google Maps, Amazon, Netflix, PayPal, Spotify, Adobe Creative Cloud, Kindle."
+     ],
+     "ref": "p.37–38",
+     "id": "g12.it.u2.s2-2.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Cloud computing",
+       "Storing and accessing data and computing services (servers, storage, networking, databases, software) over the Internet, on demand."
+      ]
+     ],
+     "id": "g12.it.u2.s2-2.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "Cloud computing is best defined as",
+     "opts": [
+      "storing and accessing data and computing services over the Internet",
+      "a weather forecasting system",
+      "saving files only on a flash disk",
+      "a kind of printer"
+     ],
+     "ans": "storing and accessing data and computing services over the Internet",
+     "why": "p.37 definition.",
+     "clue": "Where are the services reached from?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.37",
+     "id": "g12.it.u2.s2-2.5"
+    },
+    {
+     "kind": "pick",
+     "text": "Which are cloud-based services?",
+     "pool": [
+      "Gmail",
+      "Google Maps",
+      "Spotify",
+      "Netflix",
+      "A calculator app that never goes online"
+     ],
+     "a": [
+      "Gmail",
+      "Google Maps",
+      "Spotify",
+      "Netflix"
+     ],
+     "why": "p.38 lists these. An offline calculator never uses the provider's servers.",
+     "clue": "Does it need the Internet to reach its data?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.38",
+     "id": "g12.it.u2.s2-2.6"
+    },
+    {
+     "kind": "tf",
+     "text": "With cloud computing, users can reach their data with no limitations at all.",
+     "a": false,
+     "why": "The book says \"without any limitations\", but 2.2.3 lists several (downtime, security, cost). Users need an Internet connection.",
+     "clue": "Look ahead at 2.2.3.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.37",
+     "id": "g12.it.u2.s2-2.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why is the word \"cloud\" used?",
+     "opts": [
+      "The servers are far away and out of view, and the Internet was drawn as a cloud",
+      "Data is stored in the sky",
+      "It works only when it rains",
+      "It was invented by meteorologists"
+     ],
+     "ans": "The servers are far away and out of view, and the Internet was drawn as a cloud",
+     "why": "Users do not see the hardware; diagrams drew the Internet as a cloud.",
+     "clue": "Think of network diagrams.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Brainstorming (2.2)",
+     "id": "g12.it.u2.s2-2.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "A student in Dire Dawa writes notes in Google Docs at school, then edits them at home on a phone. Which part of the definition explains this?",
+     "opts": [
+      "Data is stored on the provider's servers and reached over the Internet from any device",
+      "Data is copied by Bluetooth",
+      "The school prints it",
+      "The phone and school PC share one hard disk"
+     ],
+     "ans": "Data is stored on the provider's servers and reached over the Internet from any device",
+     "why": "The file lives in the cloud, so any connected device can open it.",
+     "clue": "Where is the document actually kept?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.it.u2.s2-2.9"
+    }
+   ]
+  },
+  {
+   "id": "it.cloud-benefits",
+   "name": "Benefits of cloud computing",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Cloud computing gives accessibility and mobility (any device, anywhere, with backup by the provider), flexibility (change resources any time and collaborate in real time), updating and scalability (the provider maintains and updates), optimized security, and controlled costs (pay as you go). Hosting a website shows the difference: buying, installing and running your own server costs much time and money, while cloud hosting needs only an upload and is ready in minutes."
+    },
+    "am": {
+     "text": "የክላውድ ጥቅሞች፡ ተደራሽነት፣ ተለዋዋጭነት፣ ማዘመን፣ ደህንነት እና በተጠቀሙት ልክ መክፈል። ድረ-ገጽን በክላውድ ማስተናገድ ጊዜና ገንዘብ ይቆጥባል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Publishing a school website",
+     "ask": "Your club wants to put its website online. Which is quicker and cheaper today?",
+     "opts": [
+      "Rent space from a cloud hosting provider and upload the site",
+      "Buy a server, get a public IP, install everything yourselves",
+      "Print the website and post it",
+      "Email the site to everyone"
+     ],
+     "after": "A decade ago people bought their own servers. Now cloud hosting is ready in minutes.",
+     "ref": "p.39–40",
+     "id": "g12.it.u2.s2-2.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Five benefits",
+     "paras": [],
+     "table": [
+      [
+       "Benefit",
+       "What it gives"
+      ],
+      [
+       "Accessibility and mobility",
+       "any device, anywhere, any time; provider backs up your data"
+      ],
+      [
+       "Flexibility",
+       "change resources any time; share and edit the same file in real time"
+      ],
+      [
+       "Updating and scalability",
+       "provider does maintenance and updates"
+      ],
+      [
+       "Optimized security",
+       "stronger than many small in-house systems"
+      ],
+      [
+       "Controlled costs",
+       "pay as you go; no buying or renewing servers"
+      ]
+     ],
+     "ref": "p.38–39, Figures 2.13–2.16",
+     "id": "g12.it.u2.s2-2.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Inclusive education",
+     "paras": [
+      "Cloud services support inclusive education.",
+      "Tools: voice recognition, mind mapping, word prediction, text to speech.",
+      "They help learners with special needs."
+     ],
+     "ref": "p.38",
+     "id": "g12.it.u2.s2-2.12"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Option 1: host on your own server",
+     "steps": [
+      "Buy physical server hardware.",
+      "Place it in your own data room.",
+      "Get a public IP address from your Internet service provider.",
+      "Install an operating system.",
+      "Install web services (web server software).",
+      "Copy the site files and publish. You must also power, maintain and secure it."
+     ],
+     "ref": "p.39–40, Figure 2.17",
+     "id": "g12.it.u2.s2-2.13"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Option 2: cloud hosting",
+     "steps": [
+      "Sign up with a cloud hosting provider; rent server space.",
+      "The provider already runs the server, OS and web services.",
+      "Press the upload button and upload your website content.",
+      "The site is public in a few minutes, at much lower cost."
+     ],
+     "ref": "p.40, Figure 2.18",
+     "id": "g12.it.u2.s2-2.14"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Pay as you go",
+       "A model where users pay only for the cloud resources they actually use."
+      ]
+     ],
+     "id": "g12.it.u2.s2-2.15"
+    },
+    {
+     "kind": "mcq",
+     "text": "Paying only for the cloud resources you actually use is called",
+     "opts": [
+      "pay as you go",
+      "server downtime",
+      "data ownership",
+      "private cloud"
+     ],
+     "ans": "pay as you go",
+     "why": "p.39: \"users or companies pay only for what they used (Pay as you go model)\".",
+     "clue": "You pay as you use.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.39",
+     "id": "g12.it.u2.s2-2.16"
+    },
+    {
+     "kind": "match",
+     "title": "Match each benefit with an example",
+     "pairs": [
+      [
+       "Accessibility and mobility",
+       "open your files on any phone with Internet"
+      ],
+      [
+       "Flexibility",
+       "three classmates edit one shared document at once"
+      ],
+      [
+       "Updating and scalability",
+       "the provider installs new features for you"
+      ],
+      [
+       "Controlled costs",
+       "pay monthly only for the storage you use"
+      ]
+     ],
+     "why": "Figures 2.13–2.16 show each benefit.",
+     "clue": "Look for the key word in each example.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.38–39",
+     "id": "g12.it.u2.s2-2.17"
+    },
+    {
+     "kind": "order",
+     "title": "Order the steps of Option 1 (own server)",
+     "items": [
+      "Buy server hardware",
+      "Get a public IP address",
+      "Install an operating system",
+      "Install web services",
+      "Publish the website"
+     ],
+     "why": "p.39–40: hardware first, then an address, then software, then publishing.",
+     "clue": "Software needs hardware first.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.39–40",
+     "id": "g12.it.u2.s2-2.18"
+    },
+    {
+     "kind": "pick",
+     "text": "Activity 2.2: which benefits do you get from Google Drive?",
+     "pool": [
+      "Files are safe if your phone breaks",
+      "Open files from any device",
+      "Share and edit with friends in real time",
+      "No Internet connection is ever needed"
+     ],
+     "a": [
+      "Files are safe if your phone breaks",
+      "Open files from any device",
+      "Share and edit with friends in real time"
+     ],
+     "why": "Backup, mobility and collaboration are cloud benefits. The cloud still needs the Internet.",
+     "clue": "One option ignores how you reach the cloud.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 2.2",
+     "id": "g12.it.u2.s2-2.19"
+    },
+    {
+     "kind": "mcq",
+     "text": "A Mekelle start-up expects 100 users this month and 10 000 next year. Which benefit matters most?",
+     "opts": [
+      "Flexibility and scalability: add resources as needed and pay for use",
+      "Data ownership",
+      "Lack of support",
+      "Server downtime"
+     ],
+     "ans": "Flexibility and scalability: add resources as needed and pay for use",
+     "why": "Resources can be increased later, paying only for what is used, instead of buying servers for 10 000 users now.",
+     "clue": "They need to grow without big early costs.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.it.u2.s2-2.20"
+    }
+   ]
+  },
+  {
+   "id": "it.cloud-limits",
+   "name": "Limitations of cloud computing",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Cloud computing has limitations: server downtime (and no service when the Internet is down), security and privacy risks (it is not completely safe), unclear data ownership and transparency, inflexibility when providers force their own applications and formats, little customer support, and unknown or growing costs. Weigh benefits and limitations before choosing a service."
+    },
+    "am": {
+     "text": "የክላውድ ውሱንነቶች፡ የሰርቨር መቋረጥ፣ የደህንነትና የግላዊነት ስጋት፣ የመረጃ ባለቤትነት፣ አለመተጣጠፍ፣ የድጋፍ እጥረት እና ወጪ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "The Internet goes down",
+     "ask": "Your Internet connection is cut for a day. What happens to the files you keep only in the cloud?",
+     "opts": [
+      "You cannot reach them until the connection returns",
+      "They are deleted",
+      "They move to your phone",
+      "Nothing; you can still open them"
+     ],
+     "after": "Cloud services depend on the Internet. The book calls this server downtime.",
+     "ref": "p.41",
+     "id": "g12.it.u2.s2-2.21"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Six limitations",
+     "paras": [
+      "Weigh benefits and limitations before choosing."
+     ],
+     "table": [
+      [
+       "Limitation",
+       "Meaning"
+      ],
+      [
+       "Server downtime",
+       "no provider can guarantee no interruptions; no Internet means no service"
+      ],
+      [
+       "Security and privacy",
+       "intruders keep trying; cloud is not completely safe"
+      ],
+      [
+       "Data ownership and transparency",
+       "who owns uploaded data? how is it managed?"
+      ],
+      [
+       "Inflexibility",
+       "provider may force its own applications and formats"
+      ],
+      [
+       "Lack of support",
+       "little help; users turn to Internet forums"
+      ],
+      [
+       "Cost",
+       "unknown fees; can become costly"
+      ]
+     ],
+     "ref": "p.41–42",
+     "id": "g12.it.u2.s2-2.22"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Server downtime",
+       "A time when a cloud service is interrupted, so users cannot reach their data or files."
+      ]
+     ],
+     "id": "g12.it.u2.s2-2.23"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is a limitation of cloud computing?",
+     "opts": [
+      "Server downtime",
+      "Pay as you go",
+      "Accessibility and mobility",
+      "Automatic updates"
+     ],
+     "ans": "Server downtime",
+     "why": "p.41: no provider can guarantee there will be no interruptions.",
+     "clue": "Which one stops you working?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.41",
+     "id": "g12.it.u2.s2-2.24"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Benefit or limitation of the cloud?",
+     "bins": [
+      "Benefit",
+      "Limitation"
+     ],
+     "items": [
+      [
+       "Pay as you go",
+       "Benefit",
+       "controlled costs"
+      ],
+      [
+       "Server downtime",
+       "Limitation",
+       "interruptions"
+      ],
+      [
+       "Real-time collaboration",
+       "Benefit",
+       "flexibility"
+      ],
+      [
+       "Provider forces its own formats",
+       "Limitation",
+       "inflexibility"
+      ],
+      [
+       "Provider does updates",
+       "Benefit",
+       "updating"
+      ],
+      [
+       "Unknown fees",
+       "Limitation",
+       "cost"
+      ]
+     ],
+     "why": "2.2.2 gives the benefits; 2.2.3 gives the limitations.",
+     "clue": "Does it help or hurt the user?",
+     "ref": "p.38–42",
+     "graded": true,
+     "level": 1,
+     "id": "g12.it.u2.s2-2.25"
+    },
+    {
+     "kind": "tf",
+     "text": "Because cloud providers have \"optimized security\", cloud data is completely safe.",
+     "a": false,
+     "why": "p.41: intruders keep trying new ways in, so \"cloud computing services are not completely safe\".",
+     "clue": "Read the security limitation.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.41",
+     "id": "g12.it.u2.s2-2.26"
+    },
+    {
+     "kind": "mcq",
+     "text": "A company asks: \"If we upload our files, do they become the provider's property?\" Which limitation is this?",
+     "opts": [
+      "Data ownership and transparency",
+      "Server downtime",
+      "Lack of support",
+      "Inflexibility"
+     ],
+     "ans": "Data ownership and transparency",
+     "why": "p.41 asks exactly this question under data ownership.",
+     "clue": "Who owns the data?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.41",
+     "id": "g12.it.u2.s2-2.27"
+    },
+    {
+     "kind": "mcq",
+     "text": "A clinic in Jimma moves all patient records to a cloud app. Power and Internet often fail there. Which TWO limitations should it plan for most?",
+     "opts": [
+      "Server downtime and security and privacy",
+      "Inflexibility and lack of customers",
+      "Pay as you go and backups",
+      "Scalability and updates"
+     ],
+     "ans": "Server downtime and security and privacy",
+     "why": "No Internet means no records (downtime); patient data is sensitive (security and privacy).",
+     "clue": "Think about unreliable connections and sensitive data.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.it.u2.s2-2.28"
+    }
+   ]
+  },
+  {
+   "id": "it.cloud-types",
+   "name": "Types of cloud: public, private, hybrid, community",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "There are four main types of cloud. A public cloud shares one provider's resources across many clients, each kept logically separate. A private cloud dedicates all resources to one organization and gives full control over security. A hybrid cloud combines both: public services in the public part, confidential data in the private part. A community cloud is shared by several organizations in the same field with common security and compliance needs, and is managed privately."
+    },
+    "am": {
+     "text": "አራት የክላውድ ዓይነቶች፡ ሕዝባዊ፣ የግል፣ ድብልቅ እና የማኅበረሰብ ክላውድ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "title": "Warm up: who shares it?",
+     "bins": [
+      "Many unrelated customers",
+      "One organization only",
+      "A group in one field"
+     ],
+     "items": [
+      [
+       "10 GB on Google Drive",
+       "Many unrelated customers",
+       "shared provider"
+      ],
+      [
+       "A bank's own data center",
+       "One organization only",
+       "dedicated"
+      ],
+      [
+       "Several hospitals sharing one records system",
+       "A group in one field",
+       "same industry"
+      ]
+     ],
+     "ref": "p.42–43",
+     "after": "These are the public, private and community clouds. A hybrid cloud mixes public and private.",
+     "graded": false,
+     "id": "g12.it.u2.s2-2.29"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Four types of cloud",
+     "paras": [],
+     "table": [
+      [
+       "Type",
+       "Who uses it",
+       "Key point"
+      ],
+      [
+       "Public",
+       "many clients",
+       "resources shared; each client logically isolated (e.g. 10 GB of a big disk)"
+      ],
+      [
+       "Private",
+       "one organization",
+       "dedicated resources; full control of security and privacy"
+      ],
+      [
+       "Hybrid",
+       "one organization",
+       "public + private: public services outside, confidential data inside"
+      ],
+      [
+       "Community",
+       "several organizations in one field",
+       "shared applications; common security and compliance; managed privately"
+      ]
+     ],
+     "ref": "p.42–43, Figures 2.19–2.22",
+     "id": "g12.it.u2.s2-2.30"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Public cloud: your 10 GB",
+     "paras": [
+      "You rent 10 GB of public cloud storage.",
+      "It is a slice of one big storage device.",
+      "The device is logically divided among many users.",
+      "Each slice is isolated, so others cannot see your data."
+     ],
+     "ref": "p.42",
+     "id": "g12.it.u2.s2-2.31"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Public cloud",
+       "A cloud where one service provider's resources are shared across different clients, each kept logically separate."
+      ],
+      [
+       "Private cloud",
+       "A cloud with all resources dedicated to one organization, giving full control over security and privacy."
+      ],
+      [
+       "Hybrid cloud",
+       "A combination of public and private cloud: public services in the public part, confidential data in the private part."
+      ],
+      [
+       "Community cloud",
+       "A shared, privately managed cloud used by several organizations in the same field with common security and compliance needs."
+      ]
+     ],
+     "id": "g12.it.u2.s2-2.32"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which cloud type is a combination of public cloud and private cloud?",
+     "opts": [
+      "Hybrid cloud",
+      "Community cloud",
+      "Public cloud",
+      "Private cloud"
+     ],
+     "ans": "Hybrid cloud",
+     "why": "p.43.",
+     "clue": "Hybrid means mixed.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Review Part II(a)",
+     "id": "g12.it.u2.s2-2.33"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Which type of cloud?",
+     "bins": [
+      "Public",
+      "Private",
+      "Hybrid",
+      "Community"
+     ],
+     "items": [
+      [
+       "You rent 10 GB from a big provider",
+       "Public",
+       "shared"
+      ],
+      [
+       "Ethio Telecom's own data center for internal systems",
+       "Private",
+       "dedicated"
+      ],
+      [
+       "A bank keeps records in-house but runs its public website on AWS",
+       "Hybrid",
+       "both"
+      ],
+      [
+       "Several regional health bureaus share one patient-record system",
+       "Community",
+       "same field"
+      ]
+     ],
+     "why": "Shared by anyone = public; one organization = private; both = hybrid; same field = community.",
+     "clue": "Ask who shares the resources.",
+     "ref": "p.42–43",
+     "added": true,
+     "graded": true,
+     "level": 1,
+     "id": "g12.it.u2.s2-2.34"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which type gives an extra layer of protection for sensitive and confidential information?",
+     "opts": [
+      "Private cloud",
+      "Public cloud",
+      "Community cloud",
+      "Every cloud equally"
+     ],
+     "ans": "Private cloud",
+     "why": "p.43: the private cloud \"provides an additional layer of protection\".",
+     "clue": "Whose resources are dedicated to you?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.43",
+     "id": "g12.it.u2.s2-2.35"
+    },
+    {
+     "kind": "tf",
+     "text": "In a public cloud, other customers can read your files because the storage is shared.",
+     "a": false,
+     "why": "p.42: the storage is logically divided and each part is isolated to keep it private.",
+     "clue": "Read the 10 GB example.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.42",
+     "id": "g12.it.u2.s2-2.36"
+    },
+    {
+     "kind": "mcq",
+     "text": "Who typically uses a community cloud?",
+     "opts": [
+      "Government institutions, healthcare facilities and financial services firms",
+      "One student at home",
+      "Only a single private company",
+      "Anyone on the Internet"
+     ],
+     "ans": "Government institutions, healthcare facilities and financial services firms",
+     "why": "p.43 names these professional communities.",
+     "clue": "Several organizations, one field.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.43",
+     "id": "g12.it.u2.s2-2.37"
+    },
+    {
+     "kind": "mcq",
+     "text": "Commercial Bank of Ethiopia wants customer accounts under its full control, but its public information site must handle big traffic cheaply. Which cloud type fits?",
+     "opts": [
+      "Hybrid cloud",
+      "Public cloud only",
+      "Community cloud",
+      "No cloud at all"
+     ],
+     "ans": "Hybrid cloud",
+     "why": "Confidential accounts go in the private part; the public site goes in the public part.",
+     "clue": "It needs two different things at once.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.it.u2.s2-2.38"
+    }
+   ]
+  },
+  {
+   "id": "it.cloud-services",
+   "name": "Cloud services: SaaS, PaaS and IaaS",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "The three major cloud services are SaaS, PaaS and IaaS. SaaS gives end users finished applications over the Internet by subscription, such as Google Workspace, Dropbox and Microsoft Office 365. PaaS gives developers a platform to build, test and host applications, such as Heroku, Google App Engine and Azure. IaaS rents virtual servers, storage and networks, such as AWS and Google Compute Engine. From IaaS to PaaS to SaaS, the provider manages more of the stack."
+    },
+    "am": {
+     "text": "ሦስቱ የክላውድ አገልግሎቶች፡ SaaS ለተጠቃሚዎች ዝግጁ ሶፍትዌር፣ PaaS ለገንቢዎች መድረክ፣ IaaS ቨርቹዋል ሰርቨር፣ ማከማቻና ኔትወርክ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Painting a picture",
+     "ask": "Your teacher gives you paint, brushes and paper; you only draw. Which cloud service is like this?",
+     "opts": [
+      "A platform where developers only write their app",
+      "A finished app you just use",
+      "Bare hardware you set up yourself",
+      "No cloud service"
+     ],
+     "after": "The book compares PaaS to this: tools are provided, you only create.",
+     "ref": "p.45",
+     "id": "g12.it.u2.s2-2.39"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Who manages what? (Figure 2.23)",
+     "paras": [
+      "Moving IaaS → PaaS → SaaS, the provider manages more."
+     ],
+     "table": [
+      [
+       "Service",
+       "Provider supplies",
+       "Main user"
+      ],
+      [
+       "IaaS",
+       "server, storage, network",
+       "infrastructure architects"
+      ],
+      [
+       "PaaS",
+       "server, storage, network, OS and middleware",
+       "software developers"
+      ],
+      [
+       "SaaS",
+       "all of that plus packaged software",
+       "end users"
+      ]
+     ],
+     "ref": "p.44, Figure 2.23",
+     "id": "g12.it.u2.s2-2.40"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "SaaS",
+     "paras": [
+      "Applications are hosted by a provider and used over the Internet.",
+      "Old way: buy software upfront and install it.",
+      "SaaS way: subscribe monthly or yearly.",
+      "Works on any Internet-enabled device; used for accounting, sales, invoicing, planning.",
+      "Examples: Google Workspace, Dropbox, Microsoft Office 365, Slack, Cisco WebEx, Concur, GoToMeeting.",
+      "Figure 2.24 shows Microsoft 365 used over the Internet: that is SaaS."
+     ],
+     "ref": "p.44–45, Figure 2.24",
+     "id": "g12.it.u2.s2-2.41"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "PaaS and IaaS",
+     "paras": [
+      "PaaS: a platform for developers to build, test, deploy and host apps.",
+      "PaaS examples: Windows Azure, Heroku, Force.com, Google App Engine, Apache Stratos, OpenShift.",
+      "IaaS: computing resources in a virtualized environment over the Internet.",
+      "IaaS helps small businesses cut IT infrastructure costs.",
+      "IaaS examples: AWS, Cisco Metapod, Microsoft Azure, Google Compute Engine.",
+      "Big providers such as Azure and AWS offer more than one service type."
+     ],
+     "ref": "p.45–46, Figures 2.25–2.26",
+     "id": "g12.it.u2.s2-2.42"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Software as a Service (SaaS)",
+       "Finished applications hosted by a provider and used by end users over the Internet, usually by subscription."
+      ],
+      [
+       "Platform as a Service (PaaS)",
+       "A cloud platform (servers, storage, network, OS and middleware, tools) on which developers build, test and host applications."
+      ],
+      [
+       "Infrastructure as a Service (IaaS)",
+       "Virtualized computing resources (servers, storage, network) rented over the Internet."
+      ]
+     ],
+     "id": "g12.it.u2.s2-2.43"
+    },
+    {
+     "kind": "mcq",
+     "text": "Microsoft Office 365 (Microsoft 365) is an example of",
+     "opts": [
+      "SaaS",
+      "PaaS",
+      "IaaS",
+      "Hybrid cloud"
+     ],
+     "ans": "SaaS",
+     "why": "End users use finished apps (Word, Excel, Outlook) over the Internet. Figure 2.24 is wrongly captioned \"Hybrid cloud\"; it shows SaaS.",
+     "clue": "Who uses it: end users or developers?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Review Part II(a)",
+     "id": "g12.it.u2.s2-2.44"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "SaaS, PaaS or IaaS?",
+     "bins": [
+      "SaaS",
+      "PaaS",
+      "IaaS"
+     ],
+     "items": [
+      [
+       "Google Workspace",
+       "SaaS",
+       "end-user apps"
+      ],
+      [
+       "Dropbox",
+       "SaaS",
+       "end-user app"
+      ],
+      [
+       "Slack",
+       "SaaS",
+       "end-user app"
+      ],
+      [
+       "Heroku",
+       "PaaS",
+       "developer platform"
+      ],
+      [
+       "Google App Engine",
+       "PaaS",
+       "developer platform"
+      ],
+      [
+       "OpenShift",
+       "PaaS",
+       "developer platform"
+      ],
+      [
+       "Amazon Web Services (AWS)",
+       "IaaS",
+       "virtual servers"
+      ],
+      [
+       "Google Compute Engine",
+       "IaaS",
+       "virtual machines"
+      ]
+     ],
+     "why": "p.45: end users use it → SaaS; developers build on it → PaaS; you rent virtual servers → IaaS.",
+     "clue": "Who is the main user of each?",
+     "ref": "p.45",
+     "graded": true,
+     "level": 1,
+     "id": "g12.it.u2.s2-2.45"
+    },
+    {
+     "kind": "match",
+     "title": "Match the service with its main user",
+     "pairs": [
+      [
+       "SaaS",
+       "end users"
+      ],
+      [
+       "PaaS",
+       "software developers"
+      ],
+      [
+       "IaaS",
+       "infrastructure architects"
+      ]
+     ],
+     "why": "Figure 2.23 names the user under each column.",
+     "clue": "Developers need a platform.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Figure 2.23",
+     "id": "g12.it.u2.s2-2.46"
+    },
+    {
+     "kind": "pick",
+     "text": "Which layers does the provider manage in PaaS?",
+     "pool": [
+      "Server",
+      "Storage",
+      "Network",
+      "OS and middleware",
+      "Packaged software"
+     ],
+     "a": [
+      "Server",
+      "Storage",
+      "Network",
+      "OS and middleware"
+     ],
+     "why": "Figure 2.23: PaaS adds OS and middleware to IaaS; packaged software is added only in SaaS.",
+     "clue": "The developer writes the software.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Figure 2.23",
+     "id": "g12.it.u2.s2-2.47"
+    },
+    {
+     "kind": "mcq",
+     "text": "Activity 2.3 Q2: why is SaaS becoming so popular?",
+     "opts": [
+      "No upfront purchase or install; subscribe and use on any connected device",
+      "It never needs the Internet",
+      "Users must maintain their own servers",
+      "It works only on one computer"
+     ],
+     "ans": "No upfront purchase or install; subscribe and use on any connected device",
+     "why": "p.44–45: subscribe monthly/yearly, available anywhere, on all Internet-enabled devices.",
+     "clue": "Compare buying software with subscribing.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 2.3 Q2",
+     "id": "g12.it.u2.s2-2.48"
+    },
+    {
+     "kind": "mcq",
+     "text": "Activity 2.3 Q3: an Addis Ababa start-up writes a delivery app and hosts it on Google App Engine. It uses Gmail for staff email. Which services are these?",
+     "opts": [
+      "App Engine = PaaS; Gmail = SaaS",
+      "App Engine = SaaS; Gmail = PaaS",
+      "Both are IaaS",
+      "Both are PaaS"
+     ],
+     "ans": "App Engine = PaaS; Gmail = SaaS",
+     "why": "Developers build and host on a platform (PaaS); staff simply use finished email (SaaS).",
+     "clue": "Who uses each one: developers or end users?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 2.3 Q3",
+     "added": true,
+     "id": "g12.it.u2.s2-2.49"
+    },
+    {
+     "kind": "mcq",
+     "text": "A team wants full control of its operating system and software, but does not want to buy physical servers. Which service should it choose, and why?",
+     "opts": [
+      "IaaS, because it rents only server, storage and network; the team manages the rest",
+      "SaaS, because the provider manages everything",
+      "PaaS, because the OS is the team's job",
+      "A private printer"
+     ],
+     "ans": "IaaS, because it rents only server, storage and network; the team manages the rest",
+     "why": "In IaaS the provider stops at the infrastructure, so the user controls OS and software.",
+     "clue": "Which service leaves the most to the user?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Figure 2.23",
+     "added": true,
+     "id": "g12.it.u2.s2-2.50"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Dropbox is an example of",
+   "opts": [
+    "SaaS",
+    "PaaS",
+    "IaaS",
+    "Community cloud"
+   ],
+   "ans": "SaaS",
+   "why": "p.45.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.it.u2.s2-2.51"
+  },
+  {
+   "kind": "mcq",
+   "text": "A cloud where one provider's resources are shared across different clients is a",
+   "opts": [
+    "public cloud",
+    "private cloud",
+    "hybrid cloud",
+    "community cloud"
+   ],
+   "ans": "public cloud",
+   "why": "p.42.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.it.u2.s2-2.52"
+  },
+  {
+   "kind": "mcq",
+   "text": "Heroku and Google App Engine are examples of",
+   "opts": [
+    "PaaS",
+    "SaaS",
+    "IaaS",
+    "Private cloud"
+   ],
+   "ans": "PaaS",
+   "why": "p.45.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.it.u2.s2-2.53"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which is a LIMITATION of cloud computing?",
+   "opts": [
+    "Unknown fees can make it costly",
+    "Pay as you go",
+    "Real-time collaboration",
+    "Provider does updates"
+   ],
+   "ans": "Unknown fees can make it costly",
+   "why": "p.42.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.it.u2.s2-2.54"
+  },
+  {
+   "kind": "mcq",
+   "text": "In which service does the provider manage the OS and middleware but NOT the packaged software?",
+   "opts": [
+    "PaaS",
+    "SaaS",
+    "IaaS",
+    "Public cloud"
+   ],
+   "ans": "PaaS",
+   "why": "Figure 2.23.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.it.u2.s2-2.55"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Figure 2.24 is captioned \"Hybrid cloud\" but shows Microsoft 365 used over the Internet, which is Software as a Service. The lesson teaches Microsoft (Office) 365 as SaaS; corrected caption: \"Figure 2.24. Software as a Service (SaaS)\"."
+  },
+  {
+   "kind": "review",
+   "text": "p.37: \"without any limitations\" is an overstatement (2.2.3 lists limitations); the lesson says \"anywhere, any time, with an Internet connection\". \"Does not store any data on your PC\" is taught as \"the main copy is on the provider's servers\"."
+  },
+  {
+   "kind": "review",
+   "text": "p.40: \"covered in the next section\" — the next section (2.2.3) is Limitations; cloud services are in 2.2.5."
+  },
+  {
+   "kind": "review",
+   "text": "\"Windows Azure\" (PaaS) is the old name of Microsoft Azure (listed under IaaS); Azure and AWS both offer several service types. Cisco Metapod has been discontinued. The lesson notes that big providers offer more than one type."
+  },
+  {
+   "kind": "review",
+   "text": "Activity 2.3 Q1 asks for \"the three types of cloud computing\", but the book has FOUR types (2.2.4) and THREE services (2.2.5). The lesson treats it as the three services."
+  },
+  {
+   "kind": "note",
+   "text": "The website-hosting step lists, the type-scenario sort (Ethio Telecom, AWS, health bureaus), and the Dire Dawa, Mekelle, Jimma, CBE and Addis start-up items are added and marked."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

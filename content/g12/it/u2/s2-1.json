@@ -1,0 +1,1258 @@
+{
+ "id": "g12.it.u2.s2-1",
+ "book": {
+  "title": "Information Technology Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "it",
+  "unit": 2,
+  "unit_title": "Emerging technologies",
+  "pages": "29–37",
+  "section": "2.1"
+ },
+ "title": "Introduction to Bigdata",
+ "competency": "Describe the meaning, characteristics, benefits, applications and challenges of Bigdata.",
+ "minutes": 35,
+ "keywords": [
+  {
+   "en": "Emerging technology",
+   "am": "አዳዲስ ቴክኖሎጂ",
+   "def": "A new technology, or an evolution of an existing one, expected within 5–10 years and with big social or economic effects.",
+   "machine": true
+  },
+  {
+   "en": "Bigdata",
+   "am": "ግዙፍ መረጃ (ቢግ ዳታ)",
+   "def": "Data sets so massive and complex that typical data processing software or database tools cannot easily process them.",
+   "machine": true
+  },
+  {
+   "en": "Data pipeline",
+   "am": "የመረጃ መስመር",
+   "def": "The path that moves data from where it is generated to where the organization stores it.",
+   "machine": true
+  },
+  {
+   "en": "Volume",
+   "am": "መጠን",
+   "def": "The huge amount of data generated daily from many sources.",
+   "machine": true
+  },
+  {
+   "en": "Variety",
+   "am": "ብዝሃነት",
+   "def": "The different forms of data: structured, unstructured and semi-structured.",
+   "machine": true
+  },
+  {
+   "en": "Velocity",
+   "am": "ፍጥነት",
+   "def": "The speed at which data is created in real time.",
+   "machine": true
+  },
+  {
+   "en": "Veracity",
+   "am": "እውነተኛነት",
+   "def": "How reliable the data is; its inconsistencies and uncertainty.",
+   "machine": true
+  },
+  {
+   "en": "Value",
+   "am": "ጠቀሜታ",
+   "def": "The useful, reliable and trustworthy part of the data that gives insights.",
+   "machine": true
+  },
+  {
+   "en": "Structured data",
+   "am": "የተደራጀ መረጃ",
+   "def": "Data in fixed rows and columns, such as a spreadsheet or a relational database.",
+   "machine": true
+  },
+  {
+   "en": "Unstructured data",
+   "am": "ያልተደራጀ መረጃ",
+   "def": "Data with no fixed format, such as audio, images, free text and video.",
+   "machine": true
+  },
+  {
+   "en": "Semi-structured data",
+   "am": "ከፊል የተደራጀ መረጃ",
+   "def": "Data with tags or keys but no fixed table, such as JSON, XML and HTML files.",
+   "machine": true
+  },
+  {
+   "en": "Bigdata analytics",
+   "am": "የግዙፍ መረጃ ትንተና",
+   "def": "Using special tools to find patterns and insights in Bigdata.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "it.big-data",
+   "name": "What Bigdata is and where it comes from",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Emerging technologies are new or evolving technologies expected within five to ten years with big social or economic effects. Bigdata is one of them: data sets so massive and complex that typical data processing software and database tools cannot easily process them. It comes from business transactions, IoT devices, social media, smartphone locations and surveys. An organization identifies its sources, then builds a pipeline that moves the data to storage for use."
+    },
+    "am": {
+     "text": "ቢግ ዳታ በተለመደ ሶፍትዌር ለማቀናበር የሚከብድ ግዙፍና ውስብስብ መረጃ ነው። ምንጮቹ ግብይት፣ ማኅበራዊ ሚዲያ፣ የስልክ አካባቢ፣ ሴንሰሮችና ጥናቶች ናቸው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "One shop or a whole country?",
+     "ask": "Which of these would ordinary spreadsheet software struggle to handle?",
+     "opts": [
+      "Every telebirr payment in Ethiopia, every second, for a year",
+      "One shop's sales for a day",
+      "A class's marks for one term",
+      "A list of 40 phone numbers"
+     ],
+     "after": "Millions of records arriving every second are too big and fast for ordinary tools. That is Bigdata.",
+     "ref": "Brainstorming 2.1",
+     "added": true,
+     "id": "g12.it.u2.s2-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Emerging technologies",
+     "paras": [
+      "An emerging technology is new, or an evolution of an old one.",
+      "It is in development or arrives within 5–10 years.",
+      "It creates, or will create, big social or economic effects.",
+      "Grade 11 covered data science, AI, virtual and augmented reality.",
+      "This unit covers Bigdata, cloud computing, fog computing and the Internet of Things (IoT)."
+     ],
+     "ref": "p.29, Unit overview",
+     "id": "g12.it.u2.s2-1.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Bigdata",
+     "paras": [
+      "Every digital service we use generates data.",
+      "The amount keeps growing in many dimensions.",
+      "Bigdata: data so massive and complex that typical software cannot easily process it.",
+      "It grew with computers, the Internet and devices that capture real-world information.",
+      "Example: Google studies search history, locations and trends to see what users want."
+     ],
+     "ref": "p.30–31, Figure 2.1",
+     "id": "g12.it.u2.s2-1.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Sources and the pipeline",
+     "paras": [
+      "Sources of Bigdata (Figure 2.2):"
+     ],
+     "table": [
+      [
+       "Source",
+       "Example"
+      ],
+      [
+       "Business transactional data",
+       "point-of-sale (PoS) software in a supermarket"
+      ],
+      [
+       "Endpoint devices and sensors",
+       "IoT devices, phones, laptops"
+      ],
+      [
+       "Social media posts",
+       "comments from existing and possible customers"
+      ],
+      [
+       "Location data",
+       "smartphone locations"
+      ],
+      [
+       "Surveys",
+       "questions asked directly to customers"
+      ]
+     ],
+     "ref": "p.30, Figure 2.2",
+     "id": "g12.it.u2.s2-1.4"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "How an organization collects Bigdata",
+     "steps": [
+      "Identify the useful data sources.",
+      "Build a pipeline from where data is generated.",
+      "Move the data to enterprise storage.",
+      "Store it for organizational use and analysis."
+     ],
+     "ref": "p.30–31",
+     "id": "g12.it.u2.s2-1.5"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Emerging technology",
+       "A new technology, or an evolution of an existing one, expected within 5–10 years and with big social or economic effects."
+      ],
+      [
+       "Bigdata",
+       "Data sets so massive and complex that typical data processing software or database tools cannot easily process them."
+      ],
+      [
+       "Data pipeline",
+       "The path that moves data from where it is generated to where the organization stores it."
+      ]
+     ],
+     "id": "g12.it.u2.s2-1.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which statement best describes Bigdata?",
+     "opts": [
+      "Data so massive and complex that typical software struggles to process it",
+      "Any data stored in a spreadsheet",
+      "Data that is deleted after one day",
+      "Data used only by Google"
+     ],
+     "ans": "Data so massive and complex that typical software struggles to process it",
+     "why": "p.30: Bigdata is \"challenging to process using typical data processing software\".",
+     "clue": "Think about which tools can handle it.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.30",
+     "id": "g12.it.u2.s2-1.7"
+    },
+    {
+     "kind": "pick",
+     "text": "Which are sources of Bigdata named in the book?",
+     "pool": [
+      "Point-of-sale transactions",
+      "Social media posts",
+      "Smartphone location data",
+      "Customer surveys",
+      "A paper diary kept in a drawer"
+     ],
+     "a": [
+      "Point-of-sale transactions",
+      "Social media posts",
+      "Smartphone location data",
+      "Customer surveys"
+     ],
+     "why": "Figure 2.2 and p.30 list transactions, devices and sensors, social media, location data and surveys.",
+     "clue": "Bigdata sources are digital.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Figure 2.2",
+     "id": "g12.it.u2.s2-1.8"
+    },
+    {
+     "kind": "order",
+     "title": "Put the Bigdata collection steps in order",
+     "items": [
+      "Identify useful data sources",
+      "Build a pipeline from the sources",
+      "Move data to enterprise storage",
+      "Analyse the stored data for insights"
+     ],
+     "why": "p.30–31: identifying sources is \"the start\"; then a pipeline moves data to storage for use.",
+     "clue": "You cannot build a pipeline before you know the sources.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.30–31",
+     "id": "g12.it.u2.s2-1.9"
+    },
+    {
+     "kind": "tf",
+     "text": "An emerging technology must be completely new; an improved old technology cannot be one.",
+     "a": false,
+     "why": "p.29: the term \"can also refer to the evolution of existing technology\".",
+     "clue": "Read the first sentence of the unit overview again.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.29",
+     "id": "g12.it.u2.s2-1.10"
+    },
+    {
+     "kind": "mcq",
+     "text": "Ethio Telecom records every call, SMS and data session of millions of customers. Why is this Bigdata?",
+     "opts": [
+      "It is huge, grows fast and needs special tools to analyse",
+      "It is stored on paper",
+      "It comes from only one source",
+      "It is never analysed"
+     ],
+     "ans": "It is huge, grows fast and needs special tools to analyse",
+     "why": "Millions of records per day, in many forms, arriving continuously: too much for ordinary tools.",
+     "clue": "Compare it with one shop's daily list.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.30",
+     "added": true,
+     "id": "g12.it.u2.s2-1.11"
+    },
+    {
+     "kind": "mcq",
+     "text": "A supermarket in Hawassa wants to use its data. Which plan follows the book's order?",
+     "opts": [
+      "List its sources (PoS, loyalty cards), build a pipeline, store the data, then analyse it",
+      "Analyse first, then decide which data to collect",
+      "Buy storage, then delete old sales records",
+      "Post sales data on social media"
+     ],
+     "ans": "List its sources (PoS, loyalty cards), build a pipeline, store the data, then analyse it",
+     "why": "Identifying sources starts the process; a pipeline moves data to storage; analysis gives value.",
+     "clue": "What does the book call \"the start\"?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.30–31",
+     "added": true,
+     "id": "g12.it.u2.s2-1.12"
+    }
+   ]
+  },
+  {
+   "id": "it.big-data-5v",
+   "name": "The 5 V's of Bigdata",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Bigdata is characterized by five V's. Volume is the huge amount of data. Variety is its many forms: structured (spreadsheets, relational databases), unstructured (audio, images, text, video) and semi-structured (JSON, XML, HTML). Velocity is the speed at which data is created in real time. Veracity is how reliable the data is. Value is the useful, trustworthy data that gives insights."
+    },
+    "am": {
+     "text": "የቢግ ዳታ አምስቱ V፡ መጠን፣ ብዝሃነት፣ ፍጥነት፣ እውነተኛነት እና ጠቀሜታ። መረጃ የተደራጀ፣ ያልተደራጀ ወይም ከፊል የተደራጀ ሊሆን ይችላል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "title": "Warm up: what kind of data is it?",
+     "bins": [
+      "Neat rows and columns",
+      "No fixed format",
+      "Tags but no table"
+     ],
+     "items": [
+      [
+       "Excel mark sheet",
+       "Neat rows and columns",
+       "a spreadsheet"
+      ],
+      [
+       "Voice message",
+       "No fixed format",
+       "audio"
+      ],
+      [
+       "Photo of a receipt",
+       "No fixed format",
+       "image"
+      ],
+      [
+       "JSON file from an app",
+       "Tags but no table",
+       "keys and values"
+      ],
+      [
+       "Bank customer table",
+       "Neat rows and columns",
+       "relational database"
+      ],
+      [
+       "HTML web page",
+       "Tags but no table",
+       "tags like <p>"
+      ]
+     ],
+     "ref": "Figure 2.4",
+     "after": "These three groups are structured, unstructured and semi-structured data.",
+     "graded": false,
+     "id": "g12.it.u2.s2-1.13"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The 5 V's",
+     "paras": [
+      "Bigdata is described by five V's (from techtarget.com).",
+      "More features may be added as research continues."
+     ],
+     "table": [
+      [
+       "V",
+       "Meaning (Figure 2.3)"
+      ],
+      [
+       "Volume",
+       "huge amount of data"
+      ],
+      [
+       "Variety",
+       "different formats from various sources"
+      ],
+      [
+       "Velocity",
+       "high speed of accumulation, in real time"
+      ],
+      [
+       "Veracity",
+       "reliability; inconsistencies and uncertainty"
+      ],
+      [
+       "Value",
+       "extracting useful, trustworthy data for insights"
+      ]
+     ],
+     "ref": "p.31–32, Figure 2.3",
+     "id": "g12.it.u2.s2-1.14"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Variety in detail",
+     "paras": [
+      "In the past, data came only from spreadsheets and databases.",
+      "Today it comes as emails, PDFs, photos, videos, audio and social media posts."
+     ],
+     "table": [
+      [
+       "Type",
+       "Examples"
+      ],
+      [
+       "Structured",
+       "spreadsheet, relational database"
+      ],
+      [
+       "Unstructured",
+       "audio, image, text, video"
+      ],
+      [
+       "Semi-structured",
+       "JSON, XML, HTML"
+      ]
+     ],
+     "ref": "p.31, Figure 2.4",
+     "id": "g12.it.u2.s2-1.15"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Volume",
+       "The huge amount of data generated daily from many sources."
+      ],
+      [
+       "Variety",
+       "The different forms of data: structured, unstructured and semi-structured."
+      ],
+      [
+       "Velocity",
+       "The speed at which data is created in real time."
+      ],
+      [
+       "Veracity",
+       "How reliable the data is; its inconsistencies and uncertainty."
+      ],
+      [
+       "Value",
+       "The useful, reliable and trustworthy part of the data that gives insights."
+      ],
+      [
+       "Structured data",
+       "Data in fixed rows and columns, such as a spreadsheet or a relational database."
+      ],
+      [
+       "Unstructured data",
+       "Data with no fixed format, such as audio, images, free text and video."
+      ],
+      [
+       "Semi-structured data",
+       "Data with tags or keys but no fixed table, such as JSON, XML and HTML files."
+      ]
+     ],
+     "id": "g12.it.u2.s2-1.16"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which characteristic refers to the speed at which data is created in real time?",
+     "opts": [
+      "Velocity",
+      "Volume",
+      "Variety",
+      "Value"
+     ],
+     "ans": "Velocity",
+     "why": "p.31: \"Velocity refers to the speed at which data is being created in real-time.\"",
+     "clue": "Speed of a car is its…",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Review Part I Q2",
+     "id": "g12.it.u2.s2-1.17"
+    },
+    {
+     "kind": "match",
+     "title": "Match each V with its meaning",
+     "pairs": [
+      [
+       "Volume",
+       "huge amount of data"
+      ],
+      [
+       "Variety",
+       "different formats from many sources"
+      ],
+      [
+       "Velocity",
+       "speed of data creation"
+      ],
+      [
+       "Veracity",
+       "how reliable the data is"
+      ],
+      [
+       "Value",
+       "useful data that gives insights"
+      ]
+     ],
+     "why": "Figure 2.3 gives one short meaning for each V.",
+     "clue": "Veracity sounds like \"very true\".",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Figure 2.3",
+     "id": "g12.it.u2.s2-1.18"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Structured, unstructured or semi-structured?",
+     "bins": [
+      "Structured",
+      "Unstructured",
+      "Semi-structured"
+     ],
+     "items": [
+      [
+       "Relational database",
+       "Structured",
+       "tables"
+      ],
+      [
+       "Spreadsheet",
+       "Structured",
+       "rows and columns"
+      ],
+      [
+       "Video",
+       "Unstructured",
+       "no fixed format"
+      ],
+      [
+       "Audio recording",
+       "Unstructured",
+       "no fixed format"
+      ],
+      [
+       "XML file",
+       "Semi-structured",
+       "tags"
+      ],
+      [
+       "JSON file",
+       "Semi-structured",
+       "keys"
+      ]
+     ],
+     "why": "Figure 2.4: spreadsheets and relational databases are structured; audio, image, text, video are unstructured; JSON, XML, HTML are semi-structured.",
+     "clue": "Does it have tables, tags, or neither?",
+     "ref": "Figure 2.4",
+     "graded": true,
+     "level": 1,
+     "id": "g12.it.u2.s2-1.19"
+    },
+    {
+     "kind": "mcq",
+     "text": "Some customer ages in a bank database are recorded as 300. Which V is the problem?",
+     "opts": [
+      "Veracity",
+      "Velocity",
+      "Volume",
+      "Variety"
+     ],
+     "ans": "Veracity",
+     "why": "Veracity is the reliability of data; impossible values make the data untrustworthy.",
+     "clue": "Can you trust this data?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.it.u2.s2-1.20"
+    },
+    {
+     "kind": "mcq",
+     "text": "Sensors on a factory machine send a reading every millisecond. Which V does this show most?",
+     "opts": [
+      "Velocity",
+      "Veracity",
+      "Value",
+      "Variety"
+     ],
+     "ans": "Velocity",
+     "why": "Data arriving very fast, in real time, is velocity.",
+     "clue": "Think of how often new data arrives.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.it.u2.s2-1.21"
+    },
+    {
+     "kind": "tf",
+     "text": "Value means storing as much data as possible.",
+     "a": false,
+     "why": "p.32: \"It is not just the amount of data… It is the amount of valuable, reliable, and trustworthy data\" that gives insights.",
+     "clue": "Which V is about amount?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.32",
+     "id": "g12.it.u2.s2-1.22"
+    },
+    {
+     "kind": "mcq",
+     "text": "Ethiopian Airlines stores booking tables, passenger emails, check-in photos and app JSON logs. Which TWO V's does this mix of data mainly show, together with its size?",
+     "opts": [
+      "Variety and Volume",
+      "Velocity and Value",
+      "Veracity and Velocity",
+      "Value and Veracity"
+     ],
+     "ans": "Variety and Volume",
+     "why": "Tables, emails, photos and JSON are different formats (variety); millions of records are a huge amount (volume).",
+     "clue": "Look at the kinds of data, then at how much.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.it.u2.s2-1.23"
+    }
+   ]
+  },
+  {
+   "id": "it.big-data-uses",
+   "name": "Benefits and applications of Bigdata",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Bigdata helps companies win and keep customers, target advertisements, develop products, set the best prices, manage risks and make better decisions. In Ethiopia, Ethiopian Airlines, Ethio Telecom, the Artificial Intelligence Center and some banks use it to serve and segment customers. It is applied in healthcare, education, banking (real-time fraud detection), agriculture, manufacturing, retail and transportation. Each application follows one pattern: data sources, then analytics, then a better service."
+    },
+    "am": {
+     "text": "ቢግ ዳታ ደንበኞችን ለመሳብ፣ ማስታወቂያ ለማነጣጠር፣ ምርት ለማሻሻል፣ ዋጋ ለመወሰንና ለተሻለ ውሳኔ ይጠቅማል። በጤና፣ ትምህርት፣ ባንክ፣ ግብርና፣ ማምረቻ፣ ችርቻሮና ትራንስፖርት ይተገበራል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Netflix knows you",
+     "ask": "After you watch two Ethiopian comedies, a streaming app suggests a third. How does it know?",
+     "opts": [
+      "It analyses your viewing history and that of similar users",
+      "It guesses at random",
+      "A worker phones you",
+      "It reads your mind"
+     ],
+     "after": "Personalization engines analyse huge viewing data. The book calls this customer acquisition and retention.",
+     "ref": "p.32, Brainstorming 2.2",
+     "id": "g12.it.u2.s2-1.24"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Benefits of Bigdata",
+     "paras": [
+      "Bigdata projects help cure disease, raise crop yields and predict disasters.",
+      "In Ethiopia: Ethiopian Airlines, Ethio Telecom, the AI Center and some banks use it."
+     ],
+     "table": [
+      [
+       "Benefit",
+       "What it means"
+      ],
+      [
+       "Customer acquisition and retention",
+       "act on trends to satisfy and keep customers (Amazon, Netflix, Spotify)"
+      ],
+      [
+       "Targeted ads",
+       "use past purchases and viewing history for ads"
+      ],
+      [
+       "Product development",
+       "update products and create new ones"
+      ],
+      [
+       "Price optimization",
+       "analyse demand and competitors to set the best price, with less manual work and fewer errors"
+      ],
+      [
+       "Risk management",
+       "find new risks from data patterns"
+      ],
+      [
+       "Improved decision-making",
+       "quicker and better decisions from insights"
+      ]
+     ],
+     "ref": "p.32–33",
+     "id": "g12.it.u2.s2-1.25"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Where Bigdata is applied",
+     "paras": [
+      "Each figure shows: data sources → Bigdata analytics → better service."
+     ],
+     "table": [
+      [
+       "Sector",
+       "Use"
+      ],
+      [
+       "Healthcare",
+       "patient history → monitoring → personalized health services"
+      ],
+      [
+       "Education",
+       "analyse students' participation, achievement and learning style"
+      ],
+      [
+       "Banking",
+       "detect fraud in real time; compliance and auditing"
+      ],
+      [
+       "Agriculture",
+       "rainfall, water and fertilizer data for precision farming"
+      ],
+      [
+       "Manufacturing",
+       "predict uncertainties; quality products"
+      ],
+      [
+       "Retail",
+       "PoS, scanners, customer cards → personalized shopping"
+      ],
+      [
+       "Transportation",
+       "route planning, traffic control, safety alerts"
+      ]
+     ],
+     "ref": "p.33–35, Figures 2.5–2.11",
+     "id": "g12.it.u2.s2-1.26"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Fraud detection in a bank (Figure 2.7)",
+     "steps": [
+      "Store historical fraud data as Bigdata.",
+      "Run fraud data analytics to learn the patterns.",
+      "Inspect each new card transaction against the patterns.",
+      "If it matches, flag \"Fraud detected\" in real time."
+     ],
+     "ref": "Figure 2.7",
+     "id": "g12.it.u2.s2-1.27"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Bigdata analytics",
+       "Using special tools to find patterns and insights in Bigdata."
+      ]
+     ],
+     "id": "g12.it.u2.s2-1.28"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which benefit uses past purchases and product-page viewing history to show the right adverts?",
+     "opts": [
+      "Targeted advertisements",
+      "Risk management",
+      "Price optimization",
+      "Managing growth"
+     ],
+     "ans": "Targeted advertisements",
+     "why": "p.32: personalization data from past purchases and viewing histories generates targeted ad campaigns.",
+     "clue": "Adverts aimed at a target.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.32",
+     "id": "g12.it.u2.s2-1.29"
+    },
+    {
+     "kind": "match",
+     "title": "Match the sector with its Bigdata use",
+     "pairs": [
+      [
+       "Banking",
+       "real-time fraud detection"
+      ],
+      [
+       "Agriculture",
+       "rainfall and fertilizer data for farmers"
+      ],
+      [
+       "Education",
+       "learning plans based on grades and attention spans"
+      ],
+      [
+       "Transportation",
+       "route planning and traffic control"
+      ],
+      [
+       "Retail",
+       "personalized shopping from PoS and customer cards"
+      ]
+     ],
+     "why": "p.33–35 describe each sector.",
+     "clue": "Who would care about fraud? About rainfall?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.33–35",
+     "id": "g12.it.u2.s2-1.30"
+    },
+    {
+     "kind": "mcq",
+     "text": "A university uses Bigdata to compare thousands of applications quickly. Which education use is this?",
+     "opts": [
+      "Evaluating applications and shortening selection",
+      "Blended learning",
+      "Fraud detection",
+      "Price optimization"
+     ],
+     "ans": "Evaluating applications and shortening selection",
+     "why": "p.34: institutions use Bigdata \"to evaluate applications and determine who will be a good fit\", shortening selection.",
+     "clue": "It happens before students join.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.34",
+     "id": "g12.it.u2.s2-1.31"
+    },
+    {
+     "kind": "pick",
+     "text": "Activity 2.1: which customer data could a company collect to improve service?",
+     "pool": [
+      "Social media comments about the brand",
+      "Past purchase records",
+      "Product pages viewed",
+      "Customer complaints and surveys",
+      "Customers' private passwords"
+     ],
+     "a": [
+      "Social media comments about the brand",
+      "Past purchase records",
+      "Product pages viewed",
+      "Customer complaints and surveys"
+     ],
+     "why": "These are the sources the unit names. Passwords must never be collected or analysed.",
+     "clue": "One option would break customer privacy.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 2.1 Q1",
+     "id": "g12.it.u2.s2-1.32"
+    },
+    {
+     "kind": "order",
+     "title": "Order the healthcare flow (Figure 2.5)",
+     "items": [
+      "Patient history data",
+      "Data analytics",
+      "Monitoring current health state",
+      "Personalized health services"
+     ],
+     "why": "Every application figure goes from data, to analytics, to a better service.",
+     "clue": "Data comes first; the patient benefits last.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Figure 2.5",
+     "id": "g12.it.u2.s2-1.33"
+    },
+    {
+     "kind": "mcq",
+     "text": "A farmer near Bahir Dar gets an SMS: \"Little rain expected; plant teff next week, not now.\" Which steps made this possible?",
+     "opts": [
+      "Satellite and weather-station data were stored and analysed, then advice was sent",
+      "The farmer guessed and the phone agreed",
+      "A bank detected fraud",
+      "A shop scanned his loyalty card"
+     ],
+     "ans": "Satellite and weather-station data were stored and analysed, then advice was sent",
+     "why": "Figure 2.8: satellite, weather station and sensors → Bigdata storage → analytics → farmer.",
+     "clue": "Follow Figure 2.8 from left to right.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Figure 2.8",
+     "added": true,
+     "id": "g12.it.u2.s2-1.34"
+    }
+   ]
+  },
+  {
+   "id": "it.big-data-challenges",
+   "name": "Challenges of Bigdata",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Bigdata also has challenges. Data grows quickly, so storing and managing it is hard. Companies lack skilled data scientists, data analysts and data engineers. Huge data stores must be secured, otherwise they can become a haven for intruders. Data comes from many sources, so it must be integrated and the most relevant data chosen. Data quality and validation are further challenges."
+    },
+    "am": {
+     "text": "የቢግ ዳታ ፈተናዎች፡ የመረጃ እድገትን ማስተዳደር፣ የባለሙያ እጥረት፣ መረጃን መጠበቅ እና ከተለያዩ ምንጮች ማዋሃድ ናቸው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A fast-filling store",
+     "ask": "A company's data doubles every year. What is the first problem it meets?",
+     "opts": [
+      "Where and how to store and manage it all",
+      "It has too little data",
+      "Data stops arriving",
+      "Computers get faster by themselves"
+     ],
+     "after": "The book names managing Bigdata growth as one of the main issues.",
+     "ref": "p.36",
+     "id": "g12.it.u2.s2-1.35"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Four major challenges",
+     "paras": [
+      "Challenges may change as the technology advances."
+     ],
+     "table": [
+      [
+       "Challenge",
+       "Why it is hard"
+      ],
+      [
+       "Managing Bigdata growth",
+       "data sets grow quickly; storage and management get harder"
+      ],
+      [
+       "Lack of data professionals",
+       "too few data scientists, analysts and engineers"
+      ],
+      [
+       "Securing data",
+       "security is often left to later; stores can become a haven for intruders"
+      ],
+      [
+       "Integrating data from many sources",
+       "social media, logs, transactions, emails, reports: choose the most relevant"
+      ]
+     ],
+     "ref": "p.36–37",
+     "id": "g12.it.u2.s2-1.36"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Also: data quality",
+     "paras": [
+      "Data can be wrong, fake or inconsistent (a veracity problem).",
+      "Validating data is listed among the challenges.",
+      "Careers: students who like data can study data science."
+     ],
+     "ref": "p.36",
+     "id": "g12.it.u2.s2-1.37"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Bigdata",
+       "Data sets so massive and complex that typical data processing software or database tools cannot easily process them."
+      ]
+     ],
+     "id": "g12.it.u2.s2-1.38"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is a challenge of Bigdata, not a benefit?",
+     "opts": [
+      "Lack of data professionals",
+      "Targeted advertisements",
+      "Improved decision-making",
+      "Product development"
+     ],
+     "ans": "Lack of data professionals",
+     "why": "p.36: companies demand skilled data specialists, but there are too few.",
+     "clue": "Which one is a problem?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.36",
+     "id": "g12.it.u2.s2-1.39"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Benefit or challenge?",
+     "bins": [
+      "Benefit",
+      "Challenge"
+     ],
+     "items": [
+      [
+       "Price optimization",
+       "Benefit",
+       "sets better prices"
+      ],
+      [
+       "Securing huge data sets",
+       "Challenge",
+       "intruders"
+      ],
+      [
+       "Risk management",
+       "Benefit",
+       "spots new risks"
+      ],
+      [
+       "Integrating data from many sources",
+       "Challenge",
+       "many formats"
+      ],
+      [
+       "Managing fast data growth",
+       "Challenge",
+       "storage"
+      ],
+      [
+       "Customer retention",
+       "Benefit",
+       "keeps customers"
+      ]
+     ],
+     "why": "2.1.2 lists the benefits; 2.1.4 lists the challenges.",
+     "clue": "Does it help the company, or make work harder?",
+     "ref": "p.32–37",
+     "graded": true,
+     "level": 1,
+     "id": "g12.it.u2.s2-1.40"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why do companies often have weak Bigdata security?",
+     "opts": [
+      "They are busy understanding, storing and analysing data, so they leave security for later",
+      "Bigdata cannot be stolen",
+      "The law forbids security",
+      "Data is always on paper"
+     ],
+     "ans": "They are busy understanding, storing and analysing data, so they leave security for later",
+     "why": "p.37: companies \"frequently put data security to later phases\".",
+     "clue": "What do they do first?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.37",
+     "id": "g12.it.u2.s2-1.41"
+    },
+    {
+     "kind": "pick",
+     "text": "Activity 2.1 Q3: which are drawbacks of analysing customer data?",
+     "pool": [
+      "Privacy can be invaded without consent",
+      "Stored data can be stolen",
+      "Wrong data can lead to bad decisions",
+      "Storage and tools are expensive",
+      "Customers always get lower prices"
+     ],
+     "a": [
+      "Privacy can be invaded without consent",
+      "Stored data can be stolen",
+      "Wrong data can lead to bad decisions",
+      "Storage and tools are expensive"
+     ],
+     "why": "Privacy, security, data quality and cost are all risks; lower prices are not a drawback.",
+     "clue": "One option is not a drawback at all.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 2.1 Q3",
+     "id": "g12.it.u2.s2-1.42"
+    },
+    {
+     "kind": "mcq",
+     "text": "A bank merges data from its mobile app, ATMs, branch forms and call-centre notes. Dates are written in three different ways. Which TWO challenges does it face?",
+     "opts": [
+      "Integrating data from many sources and data quality",
+      "Lack of customers and too little data",
+      "Targeted ads and price optimization",
+      "Server downtime and cloud cost"
+     ],
+     "ans": "Integrating data from many sources and data quality",
+     "why": "Many sources must be combined, and inconsistent formats must be cleaned and validated.",
+     "clue": "Count the sources, then look at the dates.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.it.u2.s2-1.43"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Which V of Bigdata means the huge amount of data generated daily?",
+   "opts": [
+    "Volume",
+    "Velocity",
+    "Veracity",
+    "Value"
+   ],
+   "ans": "Volume",
+   "why": "p.31.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.it.u2.s2-1.44"
+  },
+  {
+   "kind": "mcq",
+   "text": "JSON, XML and HTML files are examples of",
+   "opts": [
+    "semi-structured data",
+    "structured data",
+    "unstructured data",
+    "not data at all"
+   ],
+   "ans": "semi-structured data",
+   "why": "Figure 2.4.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.it.u2.s2-1.45"
+  },
+  {
+   "kind": "mcq",
+   "text": "Real-time detection of card fraud is a Bigdata application in",
+   "opts": [
+    "banking",
+    "agriculture",
+    "education",
+    "manufacturing"
+   ],
+   "ans": "banking",
+   "why": "p.34, Figure 2.7.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.it.u2.s2-1.46"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which is NOT one of the four Bigdata challenges in the book?",
+   "opts": [
+    "Targeted advertisements",
+    "Managing Bigdata growth",
+    "Securing data",
+    "Lack of data professionals"
+   ],
+   "ans": "Targeted advertisements",
+   "why": "Targeted ads is a benefit (2.1.2).",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.it.u2.s2-1.47"
+  },
+  {
+   "kind": "mcq",
+   "text": "A hospital's records include scanned X-ray images, typed notes and a patient table. Some ages are missing. Which pair of V's is shown?",
+   "opts": [
+    "Variety and Veracity",
+    "Velocity and Value",
+    "Volume and Velocity",
+    "Value and Variety"
+   ],
+   "ans": "Variety and Veracity",
+   "why": "Different formats = variety; missing or wrong values = veracity.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.it.u2.s2-1.48"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.31: \"tectarget.com\" is a typo for techtarget.com; the lesson uses the correct name."
+  },
+  {
+   "kind": "review",
+   "text": "p.33: the book's \"Price optimization\" text does not say what it is. The lesson teaches the fuller meaning: analysing sales, demand and competitor data to set the best price, with less manual work and fewer errors."
+  },
+  {
+   "kind": "review",
+   "text": "p.37: \"unless it serve as a haven for intruders\" should read \"otherwise they may serve as a haven for intruders\"; the lesson uses the corrected meaning."
+  },
+  {
+   "kind": "review",
+   "text": "Brainstorming 2.2 is used twice in this unit (Benefits of Bigdata and Cloud Computing). The lesson cites the Bigdata box as Brainstorming 2.2."
+  },
+  {
+   "kind": "note",
+   "text": "Ethiopian examples (telebirr, Ethio Telecom records, Hawassa supermarket, Bahir Dar farmer, Ethiopian Airlines data mix) and the V-scenario items are added and marked."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

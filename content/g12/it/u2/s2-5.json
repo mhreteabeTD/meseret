@@ -1,0 +1,602 @@
+{
+ "id": "g12.it.u2.s2-5",
+ "book": {
+  "title": "Information Technology Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "it",
+  "unit": 2,
+  "unit_title": "Emerging technologies",
+  "pages": "55–59",
+  "section": "2.5"
+ },
+ "title": "Summary, review and chapter test",
+ "competency": "Review the unit and take the timed chapter test.",
+ "minutes": 25,
+ "keywords": [
+  {
+   "en": "Bigdata",
+   "am": "ግዙፍ መረጃ (ቢግ ዳታ)",
+   "def": "Data sets so massive and complex that typical data processing software or database tools cannot easily process them.",
+   "machine": true
+  },
+  {
+   "en": "Cloud computing",
+   "am": "ክላውድ ኮምፒውቲንግ",
+   "def": "Storing and accessing data and computing services (servers, storage, networking, databases, software) over the Internet, on demand.",
+   "machine": true
+  },
+  {
+   "en": "Fog computing",
+   "am": "ፎግ ኮምፒውቲንግ",
+   "def": "A decentralized computing layer where data, computing, storage and applications sit between the data source and the cloud.",
+   "machine": true
+  },
+  {
+   "en": "Internet of Things (IoT)",
+   "am": "የነገሮች በይነመረብ",
+   "def": "A network of physical objects (\"things\") with sensors, software and electronics that collect and exchange data over the Internet.",
+   "machine": true
+  },
+  {
+   "en": "Infrastructure as a Service (IaaS)",
+   "am": "መሠረተ ልማት እንደ አገልግሎት",
+   "def": "Virtualized computing resources (servers, storage, network) rented over the Internet.",
+   "machine": true
+  },
+  {
+   "en": "Platform as a Service (PaaS)",
+   "am": "ፕላትፎርም እንደ አገልግሎት",
+   "def": "A cloud platform (servers, storage, network, OS and middleware, tools) on which developers build, test and host applications.",
+   "machine": true
+  },
+  {
+   "en": "Software as a Service (SaaS)",
+   "am": "ሶፍትዌር እንደ አገልግሎት",
+   "def": "Finished applications hosted by a provider and used by end users over the Internet, usually by subscription.",
+   "machine": true
+  },
+  {
+   "en": "Internet",
+   "am": "በይነመረብ",
+   "def": "A global computer network of interconnected networks using standardized communication protocols.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "it.emerging-tech-review",
+   "name": "Unit 2 summary",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Bigdata is massive, complex data described by five V's, with benefits, applications and challenges. Cloud computing delivers data and computing services over the Internet: four types (public, private, hybrid, community) and three services (SaaS, PaaS, IaaS). Fog computing extends the cloud with nodes near the data source to cut latency. The Internet of Things connects sensor-equipped things through four components: sensors, connectivity, data processing and user interface."
+    },
+    "am": {
+     "text": "ይህ ምዕራፍ ቢግ ዳታን፣ ክላውድ ኮምፒውቲንግን፣ ፎግ ኮምፒውቲንግን እና የነገሮች በይነመረብን (IoT) ይሸፍናል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "title": "Warm up: which technology?",
+     "bins": [
+      "Bigdata",
+      "Cloud computing",
+      "Fog computing",
+      "IoT"
+     ],
+     "items": [
+      [
+       "5 V's",
+       "Bigdata",
+       "volume, variety…"
+      ],
+      [
+       "SaaS, PaaS, IaaS",
+       "Cloud computing",
+       "services"
+      ],
+      [
+       "Nodes near the data source",
+       "Fog computing",
+       "local processing"
+      ],
+      [
+       "Sensors and connected things",
+       "IoT",
+       "things"
+      ],
+      [
+       "Real-time fraud detection",
+       "Bigdata",
+       "analytics"
+      ],
+      [
+       "Pay as you go",
+       "Cloud computing",
+       "costs"
+      ]
+     ],
+     "graded": false,
+     "id": "g12.it.u2.s2-5.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Unit summary",
+     "paras": [
+      "Bigdata: meaning, its relation to data science, the 5 V's, advantages and sectors.",
+      "Cloud computing: benefits, types, services, examples of cloud-based apps.",
+      "Fog computing: basics and its relation to cloud computing.",
+      "IoT: meaning, how it works, advantages and applications."
+     ],
+     "ref": "p.55",
+     "id": "g12.it.u2.s2-5.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key terms (p.56)",
+     "defs": [
+      [
+       "Bigdata",
+       "Data sets so massive and complex that typical data processing software or database tools cannot easily process them."
+      ],
+      [
+       "Cloud computing",
+       "Storing and accessing data and computing services (servers, storage, networking, databases, software) over the Internet, on demand."
+      ],
+      [
+       "Fog computing",
+       "A decentralized computing layer where data, computing, storage and applications sit between the data source and the cloud."
+      ],
+      [
+       "Internet of Things (IoT)",
+       "A network of physical objects (\"things\") with sensors, software and electronics that collect and exchange data over the Internet."
+      ],
+      [
+       "Infrastructure as a Service (IaaS)",
+       "Virtualized computing resources (servers, storage, network) rented over the Internet."
+      ],
+      [
+       "Platform as a Service (PaaS)",
+       "A cloud platform (servers, storage, network, OS and middleware, tools) on which developers build, test and host applications."
+      ],
+      [
+       "Software as a Service (SaaS)",
+       "Finished applications hosted by a provider and used by end users over the Internet, usually by subscription."
+      ],
+      [
+       "Internet",
+       "A global computer network of interconnected networks using standardized communication protocols."
+      ]
+     ],
+     "id": "g12.it.u2.s2-5.3"
+    },
+    {
+     "kind": "match",
+     "title": "Review Part II(a): match column A with column B",
+     "pairs": [
+      [
+       "Hybrid cloud",
+       "combination of public cloud and private cloud"
+      ],
+      [
+       "PaaS",
+       "Windows Azure"
+      ],
+      [
+       "Microsoft Office 365",
+       "SaaS"
+      ],
+      [
+       "Public cloud",
+       "service providers' resources are shared across clients"
+      ]
+     ],
+     "why": "p.43–45. (Dropbox and Robotics are distractors in the book.)",
+     "clue": "Office 365 is used by end users.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Review Part II(a)",
+     "id": "g12.it.u2.s2-5.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "Review Part I Q1: which statement about Bigdata is NOT correct?",
+     "opts": [
+      "Bigdata is processed using conventional data processing techniques",
+      "Bigdata keeps growing exponentially with time",
+      "Bigdata includes data mining, storage, analysis, sharing and visualization",
+      "Bigdata includes data and data frameworks"
+     ],
+     "ans": "Bigdata is processed using conventional data processing techniques",
+     "why": "Bigdata is \"challenging to process using typical data processing software\".",
+     "clue": "Can ordinary tools handle it?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Review Part I Q1",
+     "id": "g12.it.u2.s2-5.5"
+    },
+    {
+     "kind": "pick",
+     "text": "Review Part III Q3: which are Bigdata uses in education?",
+     "pool": [
+      "Personalised learning plans from grades and attention spans",
+      "Blended offline and online learning",
+      "Faster selection of applicants",
+      "Evidence-based decisions on programmes",
+      "Detecting card fraud"
+     ],
+     "a": [
+      "Personalised learning plans from grades and attention spans",
+      "Blended offline and online learning",
+      "Faster selection of applicants",
+      "Evidence-based decisions on programmes"
+     ],
+     "why": "p.33–34 and Figure 2.6. Card fraud belongs to banking.",
+     "clue": "One use belongs to another sector.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Review Part III Q3",
+     "id": "g12.it.u2.s2-5.6"
+    },
+    {
+     "kind": "tf",
+     "text": "Fog computing replaces cloud computing.",
+     "a": false,
+     "why": "p.46: fog computing is an extension of the cloud; fog nodes push the data that needs it on to the cloud.",
+     "clue": "Read the first sentence of 2.3.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.46",
+     "id": "g12.it.u2.s2-5.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "Review Part IV: a group plans IoT for a local health centre storing vaccines at 2–8 °C. Which plan includes all four IoT components?",
+     "opts": [
+      "Fridge temperature sensors → Wi-Fi or cellular → cloud checks 2–8 °C → SMS and dashboard",
+      "Fridge sensors → paper logbook",
+      "Cloud → SMS → sensors",
+      "Dashboard only, with no sensors"
+     ],
+     "ans": "Fridge temperature sensors → Wi-Fi or cellular → cloud checks 2–8 °C → SMS and dashboard",
+     "why": "Sense, send, process, then alert: the four components of 2.4.2.",
+     "clue": "Count the four parts.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Review Part IV",
+     "added": true,
+     "id": "g12.it.u2.s2-5.8"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Review questions",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "Q I.1: Which is not correct about basic views of Bigdata?",
+     "opts": [
+      "Bigdata is processed or analyzed using conventional data processing techniques",
+      "Bigdata refers to a massive amount of data that keeps on growing exponentially with time",
+      "Bigdata includes data mining, data storage, data analysis, data sharing, and data visualization",
+      "Bigdata is an all-comprehensive one including data and data frameworks"
+     ],
+     "ans": "Bigdata is processed or analyzed using conventional data processing techniques",
+     "why": "p.30: Bigdata is challenging for typical data processing software.",
+     "clue": "Think of \"typical software\".",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Part I Q1",
+     "id": "g12.it.u2.s2-5.9"
+    },
+    {
+     "kind": "mcq",
+     "text": "Q I.2: Which characteristic of Bigdata refers to the speed at which data is created in real time?",
+     "opts": [
+      "Velocity",
+      "Volume",
+      "Variety",
+      "Value"
+     ],
+     "ans": "Velocity",
+     "why": "p.31.",
+     "clue": "Speed.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Part I Q2",
+     "id": "g12.it.u2.s2-5.10"
+    },
+    {
+     "kind": "tf",
+     "text": "Q I.3: As IoT exposes a huge amount of detailed personal information, it could create many privacy issues.",
+     "a": true,
+     "why": "p.50: security and privacy is an IoT limitation.",
+     "clue": "What data do IoT devices collect?",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Part I Q3",
+     "id": "g12.it.u2.s2-5.11"
+    },
+    {
+     "kind": "mcq",
+     "text": "Q I.4: Which is NOT among the four components of a complete IoT system?",
+     "opts": [
+      "Word Processing Applications",
+      "User Interface",
+      "Sensors / Devices",
+      "Connectivity"
+     ],
+     "ans": "Word Processing Applications",
+     "why": "p.51–52: data processing, not word processing.",
+     "clue": "One option is office software.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Part I Q4",
+     "id": "g12.it.u2.s2-5.12"
+    },
+    {
+     "kind": "match",
+     "title": "Q II(a): match column A with column B",
+     "pairs": [
+      [
+       "Hybrid Cloud",
+       "combination of Public Cloud and Private Cloud"
+      ],
+      [
+       "PaaS",
+       "Windows Azure"
+      ],
+      [
+       "Microsoft Office 365",
+       "SaaS"
+      ],
+      [
+       "Public Cloud",
+       "service providers' resources are shared across clients"
+      ]
+     ],
+     "why": "p.43–45.",
+     "clue": "Office 365 is used by end users.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Part II(a)",
+     "id": "g12.it.u2.s2-5.13"
+    },
+    {
+     "kind": "match",
+     "title": "Q II(b): match the industry to its IoT application",
+     "pairs": [
+      [
+       "Home",
+       "Smoke detector"
+      ],
+      [
+       "Health medical",
+       "Remote patient monitoring"
+      ],
+      [
+       "Fitness and wellness",
+       "Tracking heart rate"
+      ],
+      [
+       "Factory and Industry",
+       "Asset tracking"
+      ],
+      [
+       "Agriculture",
+       "Soil monitoring"
+      ],
+      [
+       "Smart Cities",
+       "Traffic management"
+      ]
+     ],
+     "why": "Table 2.1.",
+     "clue": "Use Table 2.1.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Part II(b)",
+     "id": "g12.it.u2.s2-5.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "Q III.1: What is the aim of IoT?",
+     "opts": [
+      "To extend Internet connectivity beyond computers and smartphones to everyday things",
+      "To replace all computers with paper",
+      "To store music in the cloud",
+      "To build websites faster"
+     ],
+     "ans": "To extend Internet connectivity beyond computers and smartphones to everyday things",
+     "why": "p.48.",
+     "clue": "Think \"things\".",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Part III Q1",
+     "id": "g12.it.u2.s2-5.15"
+    },
+    {
+     "kind": "pick",
+     "text": "Q III.4: Mention common advantages of fog computing.",
+     "pool": [
+      "Reduced latency",
+      "Less network congestion",
+      "Better mobility and closeness to users",
+      "Supports real-time IoT",
+      "Replaces the cloud completely"
+     ],
+     "a": [
+      "Reduced latency",
+      "Less network congestion",
+      "Better mobility and closeness to users",
+      "Supports real-time IoT"
+     ],
+     "why": "p.46–47. Fog extends the cloud; it does not replace it.",
+     "clue": "Fog is an extension.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Part III Q4",
+     "id": "g12.it.u2.s2-5.16"
+    },
+    {
+     "kind": "pick",
+     "text": "Q IV (b): which technologies might a health-centre IoT project need?",
+     "pool": [
+      "Temperature sensors",
+      "Wi-Fi or cellular connection",
+      "A cloud or local fog server",
+      "A phone dashboard and SMS alerts",
+      "A typewriter"
+     ],
+     "a": [
+      "Temperature sensors",
+      "Wi-Fi or cellular connection",
+      "A cloud or local fog server",
+      "A phone dashboard and SMS alerts"
+     ],
+     "why": "These cover the four components of 2.4.2.",
+     "clue": "Think sense, send, process, act.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Part IV",
+     "added": true,
+     "id": "g12.it.u2.s2-5.17"
+    }
+   ]
+  },
+  {
+   "book_name": "Chapter test",
+   "test": true,
+   "chapter_test": true,
+   "count": 20,
+   "minutes": 25,
+   "items": []
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Which V of Bigdata is about reliability?",
+   "opts": [
+    "Veracity",
+    "Velocity",
+    "Volume",
+    "Variety"
+   ],
+   "ans": "Veracity",
+   "why": "p.32.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.it.u2.s2-5.18"
+  },
+  {
+   "kind": "mcq",
+   "text": "Google Workspace is an example of",
+   "opts": [
+    "SaaS",
+    "PaaS",
+    "IaaS",
+    "Fog computing"
+   ],
+   "ans": "SaaS",
+   "why": "p.45.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.it.u2.s2-5.19"
+  },
+  {
+   "kind": "mcq",
+   "text": "A cloud shared by several organizations in the same field is a",
+   "opts": [
+    "community cloud",
+    "public cloud",
+    "private cloud",
+    "hybrid cloud"
+   ],
+   "ans": "community cloud",
+   "why": "p.43.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.it.u2.s2-5.20"
+  },
+  {
+   "kind": "mcq",
+   "text": "Fog computing mainly improves",
+   "opts": [
+    "latency and network congestion",
+    "the price of phones",
+    "data variety",
+    "printing speed"
+   ],
+   "ans": "latency and network congestion",
+   "why": "p.47.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.it.u2.s2-5.21"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which order shows how IoT works?",
+   "opts": [
+    "Sensors → connectivity → data processing → user interface",
+    "User interface → sensors → connectivity → processing",
+    "Connectivity → user interface → sensors → processing",
+    "Processing → sensors → user interface → connectivity"
+   ],
+   "ans": "Sensors → connectivity → data processing → user interface",
+   "why": "p.51–52.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.it.u2.s2-5.22"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Review Part II(a): Dropbox (D) is a SaaS product but SaaS is itself a column B answer, so Dropbox and Robotics are unused distractors. The lesson keeps the book's pairs (1–B, 2–C, 3–A, 4–E)."
+  },
+  {
+   "kind": "review",
+   "text": "Review Part II(b): \"C. Tacking heart rate\" is a typo for \"Tracking heart rate\"; Driverless car and Drones are unused distractors."
+  },
+  {
+   "kind": "note",
+   "text": "Part III open questions are turned into choose/pick items; Part IV (case study) is kept as a group project and represented by one added pick item. The chapter test draws from the section tests."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

@@ -1,0 +1,1136 @@
+{
+ "id": "g12.it.u2.s2-4",
+ "book": {
+  "title": "Information Technology Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "it",
+  "unit": 2,
+  "unit_title": "Emerging technologies",
+  "pages": "48–55",
+  "section": "2.4"
+ },
+ "title": "Internet of Things (IoT)",
+ "competency": "Explain the Internet of Things, how it works, its advantages, limitations and applications.",
+ "minutes": 40,
+ "keywords": [
+  {
+   "en": "Internet",
+   "am": "በይነመረብ",
+   "def": "A global computer network of interconnected networks using standardized communication protocols.",
+   "machine": true
+  },
+  {
+   "en": "Internet of Things (IoT)",
+   "am": "የነገሮች በይነመረብ",
+   "def": "A network of physical objects (\"things\") with sensors, software and electronics that collect and exchange data over the Internet.",
+   "machine": true
+  },
+  {
+   "en": "Sensor",
+   "am": "ዳሳሽ (ሴንሰር)",
+   "def": "A device that detects something in its environment, such as temperature, motion or smoke, and turns it into data.",
+   "machine": true
+  },
+  {
+   "en": "Connectivity",
+   "am": "ትስስር",
+   "def": "How IoT data is sent to the cloud: cellular, satellite, Wi-Fi, Bluetooth or Ethernet.",
+   "machine": true
+  },
+  {
+   "en": "Data processing",
+   "am": "መረጃ ማቀናበር",
+   "def": "Software, usually in the cloud, that checks the collected data and decides what it means.",
+   "machine": true
+  },
+  {
+   "en": "User interface",
+   "am": "የተጠቃሚ በይነገጽ",
+   "def": "How information reaches the user (alerts, apps) and how the user can act on the system.",
+   "machine": true
+  },
+  {
+   "en": "Smart home",
+   "am": "ዘመናዊ ቤት",
+   "def": "A home whose devices (lights, locks, alarms, appliances) are connected and controlled through IoT.",
+   "machine": true
+  },
+  {
+   "en": "Smart city",
+   "am": "ዘመናዊ ከተማ",
+   "def": "A city that uses IoT for traffic management, waste management, water distribution and more.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "it.iot",
+   "name": "What the Internet of Things is",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "The Internet of Things (IoT) is a network of physical objects or people, called things, equipped with software, electronics, networks and sensors to collect and exchange data. It extends Internet connectivity beyond computers and smartphones to everyday devices, such as a toaster, an animal tracker or a diabetes monitor, so they can be controlled remotely and become smart through data, AI and networks. The Internet itself grew from ARPANET (1969) and is over 50 years old."
+    },
+    "am": {
+     "text": "IoT በሴንሰር፣ ሶፍትዌርና ኔትወርክ የታጠቁ ነገሮች መረጃ የሚሰበስቡበትና የሚለዋወጡበት መረብ ነው። ምሳሌ፡ የስኳር መለኪያ፣ ስማርት ሰዓት፣ የእንስሳት መከታተያ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "More than social media",
+     "ask": "Which of these uses the Internet for something other than people chatting or searching?",
+     "opts": [
+      "A soil sensor that turns on a water pump by itself",
+      "Posting a photo on Telegram",
+      "Searching Google for a recipe",
+      "Watching a YouTube video"
+     ],
+     "after": "Here a thing, not a person, sends data and acts. That is the Internet of Things.",
+     "ref": "Brainstorming 2.4",
+     "id": "g12.it.u2.s2-4.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "A short Internet history",
+     "paras": [
+      "The Internet grew from ARPANET, started in 1969.",
+      "It adopted the TCP/IP protocols in 1983.",
+      "The World Wide Web was invented in 1989–1991.",
+      "So the Internet is more than 50 years old (2023).",
+      "Over 5 billion people now use it on computers, phones and tablets."
+     ],
+     "ref": "p.48",
+     "added": true,
+     "id": "g12.it.u2.s2-4.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The Internet of Things",
+     "paras": [
+      "Oracle.com: IoT is a network of physical objects or people (\"things\").",
+      "They are equipped with software, electronics, networks and sensors.",
+      "They collect and exchange data.",
+      "Oxford dictionary: computing devices in everyday objects, connected via the Internet, sending and receiving data."
+     ],
+     "ref": "p.48, Figure 2.28",
+     "id": "g12.it.u2.s2-4.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "What IoT aims at",
+     "paras": [
+      "It extends Internet connectivity beyond computers and smartphones.",
+      "Even simple equipment, like a toaster, can connect.",
+      "Devices can be controlled remotely, without human interaction.",
+      "Data, AI algorithms and networks make things \"smart\".",
+      "Examples: animal trackers, diabetes monitors, AC sensors, smart watches and clothes."
+     ],
+     "ref": "p.48–49, Figure 2.29",
+     "id": "g12.it.u2.s2-4.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Internet",
+       "A global computer network of interconnected networks using standardized communication protocols."
+      ],
+      [
+       "Internet of Things (IoT)",
+       "A network of physical objects (\"things\") with sensors, software and electronics that collect and exchange data over the Internet."
+      ]
+     ],
+     "id": "g12.it.u2.s2-4.5"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is the best example of IoT?",
+     "opts": [
+      "A diabetes monitor that sends glucose readings to a doctor's app",
+      "Streaming songs stored on the Internet",
+      "Typing a letter in a word processor",
+      "Reading a printed newspaper"
+     ],
+     "ans": "A diabetes monitor that sends glucose readings to a doctor's app",
+     "why": "A physical thing with a sensor collects and sends data. Music streaming is cloud computing, not IoT.",
+     "clue": "Look for a thing with a sensor.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.49",
+     "id": "g12.it.u2.s2-4.6"
+    },
+    {
+     "kind": "pick",
+     "text": "Which can be \"things\" in IoT, according to the book?",
+     "pool": [
+      "A person with a diabetes monitor implant",
+      "An animal with a tracking device",
+      "A toaster",
+      "An AC sensor",
+      "A paper map"
+     ],
+     "a": [
+      "A person with a diabetes monitor implant",
+      "An animal with a tracking device",
+      "A toaster",
+      "An AC sensor"
+     ],
+     "why": "p.49 names all four. A paper map has no electronics or connection.",
+     "clue": "Which one cannot send data?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.49",
+     "id": "g12.it.u2.s2-4.7"
+    },
+    {
+     "kind": "tf",
+     "text": "Listening to music stored on the Internet, without downloading it, is a clear example of IoT.",
+     "a": false,
+     "why": "The songs are stored in the cloud and streamed: that is cloud computing. IoT needs physical things with sensors, e.g. a smart speaker or smart bulb.",
+     "clue": "Is there a sensor or a physical \"thing\"?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.49",
+     "id": "g12.it.u2.s2-4.8"
+    },
+    {
+     "kind": "tf",
+     "text": "The Internet was created in the late 1990s.",
+     "a": false,
+     "why": "It grew from ARPANET (1969) and TCP/IP (1983); the Web came in 1989–1991. The book's \"late 1990s\" is an error.",
+     "clue": "Remember ARPANET.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.it.u2.s2-4.9"
+    },
+    {
+     "kind": "mcq",
+     "text": "Review Part III Q1: what makes IoT different from ordinary networking?",
+     "opts": [
+      "IoT connects things with sensors that gather data and can act without people",
+      "IoT connects only computers to printers",
+      "IoT never uses the Internet",
+      "Networking and IoT are exactly the same"
+     ],
+     "ans": "IoT connects things with sensors that gather data and can act without people",
+     "why": "Ordinary networking connects computers so people can share; IoT adds sensors, processing and automatic action.",
+     "clue": "Who or what is connected in IoT?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Review Part III Q1",
+     "id": "g12.it.u2.s2-4.10"
+    },
+    {
+     "kind": "mcq",
+     "text": "A herder in Borana puts GPS collars on his cattle and sees them on his phone. Why is this IoT?",
+     "opts": [
+      "The collars are physical things with sensors that send data over a network",
+      "He is using social media",
+      "The cattle use smartphones",
+      "It is a cloud storage service only"
+     ],
+     "ans": "The collars are physical things with sensors that send data over a network",
+     "why": "p.49: \"an animal with tracking devices\" is an IoT thing.",
+     "clue": "What does the collar contain?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.49",
+     "added": true,
+     "id": "g12.it.u2.s2-4.11"
+    }
+   ]
+  },
+  {
+   "id": "it.iot-pros-cons",
+   "name": "Advantages and limitations of IoT",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "IoT brings efficiency (real-time data, fewer resources used), technical optimization (one smartphone controls many devices), convenience and improved customer experience, conservation (monitoring traffic, water, electricity and air in smart cities) and personalization (devices learn your preferences). Its limitations are security and privacy, dependence on Internet and power, complexity and integration of devices from different makers, and higher cost."
+    },
+    "am": {
+     "text": "የIoT ጥቅሞች፡ ቅልጥፍና፣ በአንድ ስልክ መቆጣጠር፣ ምቾት፣ ጥበቃ፣ ግላዊነት ማላበስ። ውሱንነቶች፡ ደህንነትና ግላዊነት፣ የኢንተርኔትና የኃይል ጥገኝነት፣ ውስብስብነት፣ ወጪ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Power cut at home",
+     "ask": "Your smart lights and smart lock are controlled by a phone app. The power and Internet go off. What happens?",
+     "opts": [
+      "The smart devices stop working until power and Internet return",
+      "They work better",
+      "They switch to solar by themselves",
+      "Nothing changes"
+     ],
+     "after": "The book lists connectivity and power dependence as an IoT limitation.",
+     "ref": "p.50",
+     "id": "g12.it.u2.s2-4.12"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Major advantages of IoT",
+     "paras": [],
+     "table": [
+      [
+       "Advantage",
+       "Example"
+      ],
+      [
+       "Efficiency",
+       "ask a voice assistant (Siri, Alexa, Google Home) instead of searching"
+      ],
+      [
+       "Technical optimization",
+       "one smartphone controls TV volume, thermostat and lights"
+      ],
+      [
+       "Convenience",
+       "quick, quality solutions"
+      ],
+      [
+       "Improved customer experience",
+       "understand pain points; offer what customers need"
+      ],
+      [
+       "Conservation",
+       "monitor traffic, water, electricity, air quality; smart cities"
+      ],
+      [
+       "Personalization",
+       "devices learn your likes and dislikes"
+      ]
+     ],
+     "ref": "p.49–50",
+     "id": "g12.it.u2.s2-4.13"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Some limitations of IoT",
+     "paras": [],
+     "table": [
+      [
+       "Limitation",
+       "Why"
+      ],
+      [
+       "Security and privacy",
+       "hard to secure data; health and banking data; privacy laws"
+      ],
+      [
+       "Connectivity and power dependence",
+       "no Internet or power, no service"
+      ],
+      [
+       "Complexity and integration",
+       "standards still debated; devices from different makers may not work together"
+      ],
+      [
+       "Higher cost",
+       "many devices, setup and professional installation"
+      ]
+     ],
+     "ref": "p.50–51",
+     "id": "g12.it.u2.s2-4.14"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Internet of Things (IoT)",
+       "A network of physical objects (\"things\") with sensors, software and electronics that collect and exchange data over the Internet."
+      ]
+     ],
+     "id": "g12.it.u2.s2-4.15"
+    },
+    {
+     "kind": "mcq",
+     "text": "Controlling the TV volume, thermostat and lights from one smartphone is which IoT advantage?",
+     "opts": [
+      "Technical optimization",
+      "Conservation",
+      "Higher cost",
+      "Security and privacy"
+     ],
+     "ans": "Technical optimization",
+     "why": "p.50: you no longer operate multiple devices manually; one device controls everything.",
+     "clue": "One device, many tasks.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.50",
+     "id": "g12.it.u2.s2-4.16"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Advantage or limitation of IoT?",
+     "bins": [
+      "Advantage",
+      "Limitation"
+     ],
+     "items": [
+      [
+       "Personalization",
+       "Advantage",
+       "learns preferences"
+      ],
+      [
+       "Devices from different makers do not work together",
+       "Limitation",
+       "integration"
+      ],
+      [
+       "Monitoring water use in a smart city",
+       "Advantage",
+       "conservation"
+      ],
+      [
+       "Needs constant Internet and power",
+       "Limitation",
+       "dependence"
+      ],
+      [
+       "Voice assistant answers quickly",
+       "Advantage",
+       "efficiency"
+      ],
+      [
+       "Many devices and professional installation",
+       "Limitation",
+       "cost"
+      ]
+     ],
+     "why": "2.4.1 lists six advantages and four limitations.",
+     "clue": "Does it help users, or cause a problem?",
+     "ref": "p.49–51",
+     "graded": true,
+     "level": 1,
+     "id": "g12.it.u2.s2-4.17"
+    },
+    {
+     "kind": "tf",
+     "text": "Review Part I Q3: as IoT exposes a huge amount of detailed personal information, it could create many privacy issues.",
+     "a": true,
+     "why": "p.50: security and privacy is the first IoT limitation, especially in health and banking.",
+     "clue": "Think of what personalization needs.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Review Part I Q3",
+     "id": "g12.it.u2.s2-4.18"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why may IoT devices from different manufacturers fail to work together?",
+     "opts": [
+      "IoT protocols and standards are still being discussed",
+      "They all use the same standard",
+      "IoT needs no hardware",
+      "The Internet blocks them"
+     ],
+     "ans": "IoT protocols and standards are still being discussed",
+     "why": "p.51: devices made by various manufacturers may not be compatible.",
+     "clue": "Is there one agreed standard yet?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.51",
+     "id": "g12.it.u2.s2-4.19"
+    },
+    {
+     "kind": "mcq",
+     "text": "Addis Ababa installs sensors that report water leaks and electricity use in each sub-city. Which advantage is this mainly?",
+     "opts": [
+      "Conservation",
+      "Personalization",
+      "Technical optimization",
+      "Higher cost"
+     ],
+     "ans": "Conservation",
+     "why": "p.50: IoT conserves the environment by monitoring water and electricity use; it helps smart cities.",
+     "clue": "It saves resources.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.it.u2.s2-4.20"
+    },
+    {
+     "kind": "mcq",
+     "text": "A hospital in Hawassa plans IoT heart monitors. List the risks: patient data, frequent power cuts, mixed device brands. Which limitations are these, in order?",
+     "opts": [
+      "Security and privacy; connectivity and power dependence; complexity and integration",
+      "Cost; efficiency; conservation",
+      "Personalization; convenience; cost",
+      "Integration; security; conservation"
+     ],
+     "ans": "Security and privacy; connectivity and power dependence; complexity and integration",
+     "why": "Each risk matches one limitation in the book's list.",
+     "clue": "Match each risk to one limitation.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.it.u2.s2-4.21"
+    }
+   ]
+  },
+  {
+   "id": "it.iot-how",
+   "name": "How IoT works: the four components",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "A complete IoT system has four components. Sensors or devices collect data from the environment, such as temperature, motion or smoke. Connectivity sends the data to the cloud through cellular, satellite, Wi-Fi, Bluetooth or Ethernet. Data processing software checks the data, simply or with methods like computer vision. The user interface alerts the user by email, text or notification, and the user, or a predefined rule, can act on the system."
+    },
+    "am": {
+     "text": "IoT አራት ክፍሎች አሉት፡ ሴንሰር/መሣሪያ፣ ትስስር፣ መረጃ ማቀናበር እና የተጠቃሚ በይነገጽ። ሥርዓቱ ተጠቃሚውን ያስጠነቅቃል ወይም በራሱ እርምጃ ይወስዳል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A smoke alarm that texts you",
+     "ask": "A smoke alarm at home sends an SMS when it detects smoke. What must happen FIRST?",
+     "opts": [
+      "A sensor detects the smoke",
+      "The SMS is sent",
+      "The cloud decides it is a fire",
+      "You call the fire brigade"
+     ],
+     "after": "Every IoT system starts with sensing. Then data is sent, processed, and the user is told.",
+     "ref": "p.51",
+     "id": "g12.it.u2.s2-4.22"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The four components",
+     "paras": [],
+     "table": [
+      [
+       "Component",
+       "What it does",
+       "Examples"
+      ],
+      [
+       "1. Sensors/devices",
+       "collect data from the environment",
+       "temperature, proximity, humidity, smoke, water quality, infrared, motion sensors"
+      ],
+      [
+       "2. Connectivity",
+       "send the data to the cloud",
+       "cellular, satellite, Wi-Fi, Bluetooth, Ethernet"
+      ],
+      [
+       "3. Data processing",
+       "software checks the data",
+       "is the temperature within limits? is there an intruder in the video?"
+      ],
+      [
+       "4. User interface",
+       "inform the user; allow action",
+       "email, text, notification, phone app"
+      ]
+     ],
+     "ref": "p.51–52, Figure 2.30",
+     "id": "g12.it.u2.s2-4.23"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Acting on the data",
+     "paras": [
+      "A phone has many sensors (camera, accelerometer), but it is more than a sensor.",
+      "The user might adjust the temperature of a cold storage room from a phone app.",
+      "Or the system acts by itself using predefined rules.",
+      "Example: it can notify security offices about an intruder automatically."
+     ],
+     "ref": "p.51–52",
+     "id": "g12.it.u2.s2-4.24"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "A cold-storage alert (sense → send → process → act)",
+     "steps": [
+      "Sense: a temperature sensor reads 9 °C in a vaccine store.",
+      "Send: the reading goes to the cloud over the cellular network.",
+      "Process: software checks the rule \"keep 2–8 °C\" and finds it too warm.",
+      "Act: the manager gets an SMS; a predefined rule also switches on extra cooling."
+     ],
+     "added": true,
+     "id": "g12.it.u2.s2-4.25"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Sensor",
+       "A device that detects something in its environment, such as temperature, motion or smoke, and turns it into data."
+      ],
+      [
+       "Connectivity",
+       "How IoT data is sent to the cloud: cellular, satellite, Wi-Fi, Bluetooth or Ethernet."
+      ],
+      [
+       "Data processing",
+       "Software, usually in the cloud, that checks the collected data and decides what it means."
+      ],
+      [
+       "User interface",
+       "How information reaches the user (alerts, apps) and how the user can act on the system."
+      ]
+     ],
+     "id": "g12.it.u2.s2-4.26"
+    },
+    {
+     "kind": "mcq",
+     "text": "Review Part I Q4: which is NOT one of the four components of a complete IoT system?",
+     "opts": [
+      "Word processing applications",
+      "User interface",
+      "Sensors/devices",
+      "Connectivity"
+     ],
+     "ans": "Word processing applications",
+     "why": "The four are sensors/devices, connectivity, data processing and user interface. Do not confuse data processing with word processing.",
+     "clue": "One option is office software.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Review Part I Q4",
+     "id": "g12.it.u2.s2-4.27"
+    },
+    {
+     "kind": "order",
+     "title": "Put the IoT components in order",
+     "items": [
+      "Sensors/devices collect data",
+      "Connectivity sends it to the cloud",
+      "Data processing checks it",
+      "User interface alerts the user or acts"
+     ],
+     "why": "p.51–52 gives them in this order: sense, send, process, act.",
+     "clue": "Data must exist before it is sent.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.51–52",
+     "id": "g12.it.u2.s2-4.28"
+    },
+    {
+     "kind": "match",
+     "title": "Match the component with an example",
+     "pairs": [
+      [
+       "Sensors/devices",
+       "a smoke sensor"
+      ],
+      [
+       "Connectivity",
+       "Bluetooth"
+      ],
+      [
+       "Data processing",
+       "checking a reading is within limits"
+      ],
+      [
+       "User interface",
+       "an SMS alert"
+      ]
+     ],
+     "why": "Figure 2.30 shows each component.",
+     "clue": "Which one is a way of sending?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Figure 2.30",
+     "id": "g12.it.u2.s2-4.29"
+    },
+    {
+     "kind": "pick",
+     "text": "Which are connectivity methods named in the book?",
+     "pool": [
+      "Cellular",
+      "Satellite",
+      "Wi-Fi",
+      "Bluetooth",
+      "Ethernet",
+      "Temperature sensor"
+     ],
+     "a": [
+      "Cellular",
+      "Satellite",
+      "Wi-Fi",
+      "Bluetooth",
+      "Ethernet"
+     ],
+     "why": "p.51: \"cellular, satellite, Wi-Fi, Bluetooth, or connecting directly to the Internet via Ethernet\". A sensor collects data; it does not send it.",
+     "clue": "One option belongs to component 1.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.51",
+     "id": "g12.it.u2.s2-4.30"
+    },
+    {
+     "kind": "mcq",
+     "text": "A rule says: IF soil moisture is below 30 % THEN switch the pump ON. A sensor reads 22 %. What happens?",
+     "opts": [
+      "The pump switches on automatically",
+      "Nothing; the user must decide",
+      "The sensor turns off",
+      "The pump switches off"
+     ],
+     "ans": "The pump switches on automatically",
+     "why": "22 % is below 30 %, so the predefined rule acts without waiting for the user.",
+     "clue": "Compare 22 with 30.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.52",
+     "added": true,
+     "id": "g12.it.u2.s2-4.31"
+    },
+    {
+     "kind": "mcq",
+     "text": "A farm in Debre Zeit has no Wi-Fi, but good mobile coverage. A water-tank sensor must alert the farmer. Which design fits each component?",
+     "opts": [
+      "Level sensor → cellular (GSM) → cloud checks level → SMS to farmer",
+      "Level sensor → Wi-Fi → farmer guesses → no alert",
+      "SMS → cloud → sensor → cellular",
+      "Word processor → Bluetooth → printer → letter"
+     ],
+     "ans": "Level sensor → cellular (GSM) → cloud checks level → SMS to farmer",
+     "why": "Sense, send by the available network, process, then alert, in the book's order.",
+     "clue": "Which network is available, and what comes first?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.it.u2.s2-4.32"
+    }
+   ]
+  },
+  {
+   "id": "it.iot-applications",
+   "name": "Applications of IoT",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "IoT is used in many areas. Smart homes connect smoke detectors, light bulbs, appliances, locks, pet cameras and thermostats. Smart cities manage traffic, waste and water distribution. Supply chains track goods and inventory in real time. Connected health monitors patient care, heart rate, temperature and activity. Connected cars automate billing, insurance and parking. Smart outlets switch devices on or off remotely and track energy use."
+    },
+    "am": {
+     "text": "IoT በዘመናዊ ቤት፣ ዘመናዊ ከተማ፣ አቅርቦት ሰንሰለት፣ ጤና፣ ተገናኝ መኪኖችና ስማርት ሶኬቶች ይተገበራል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "tap",
+     "step": "hook",
+     "graded": false,
+     "title": "Tap the smart home (Figure 2.31)",
+     "need": 5,
+     "items": [
+      [
+       "Smoke detector",
+       "Senses smoke; sounds an alarm and notifies your phone."
+      ],
+      [
+       "Smart bulb",
+       "Switch on, off or dim it from your phone."
+      ],
+      [
+       "Door lock",
+       "Lock or unlock remotely; see who is at the door."
+      ],
+      [
+       "Pet camera",
+       "Watch your pet while you are away."
+      ],
+      [
+       "Smart thermostat",
+       "Adjusts heating or cooling by itself."
+      ]
+     ],
+     "id": "g12.it.u2.s2-4.33"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Common application areas",
+     "paras": [
+      "IoT matters in healthcare, the economy, marketing, banking and government."
+     ],
+     "table": [
+      [
+       "Area",
+       "Examples"
+      ],
+      [
+       "Smart home",
+       "smoke detector, bulbs, appliances, locks, pet camera, thermostat"
+      ],
+      [
+       "Smart city",
+       "traffic, waste and water distribution"
+      ],
+      [
+       "Supply chain",
+       "real-time goods tracking, inventory"
+      ],
+      [
+       "Connected health",
+       "patient care, calories, heart rate, temperature, activity"
+      ],
+      [
+       "Connected cars",
+       "automatic billing, insurance, parking"
+      ],
+      [
+       "Smart outlets",
+       "switch devices remotely, track energy use"
+      ]
+     ],
+     "ref": "p.52–54, Figures 2.31–2.33",
+     "id": "g12.it.u2.s2-4.34"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Table 2.1: area and use",
+     "paras": [],
+     "table": [
+      [
+       "Industry/Area",
+       "Use"
+      ],
+      [
+       "Home",
+       "control of heating, lights, door locks"
+      ],
+      [
+       "Health",
+       "remote patient monitoring"
+      ],
+      [
+       "Fitness and wellness",
+       "tracking heart rate and training plans"
+      ],
+      [
+       "Factory and industry",
+       "production line control, asset tracking"
+      ],
+      [
+       "Agriculture",
+       "automatic watering, soil monitoring"
+      ],
+      [
+       "Cars and roads",
+       "connected cars"
+      ],
+      [
+       "Smart cities",
+       "traffic management, parking space tracking and availability"
+      ]
+     ],
+     "ref": "Table 2.1, p.54",
+     "id": "g12.it.u2.s2-4.35"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Smart home",
+       "A home whose devices (lights, locks, alarms, appliances) are connected and controlled through IoT."
+      ],
+      [
+       "Smart city",
+       "A city that uses IoT for traffic management, waste management, water distribution and more."
+      ]
+     ],
+     "id": "g12.it.u2.s2-4.36"
+    },
+    {
+     "kind": "mcq",
+     "text": "Traffic management, waste management and water distribution are IoT applications in a",
+     "opts": [
+      "smart city",
+      "smart outlet",
+      "supply chain",
+      "connected car"
+     ],
+     "ans": "smart city",
+     "why": "p.53, Figure 2.32.",
+     "clue": "They serve a whole city.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.53",
+     "id": "g12.it.u2.s2-4.37"
+    },
+    {
+     "kind": "match",
+     "title": "Review Part II(b): match the industry with its IoT application",
+     "pairs": [
+      [
+       "Home",
+       "smoke detector"
+      ],
+      [
+       "Health medical",
+       "remote patient monitoring"
+      ],
+      [
+       "Fitness and wellness",
+       "tracking heart rate"
+      ],
+      [
+       "Factory and industry",
+       "asset tracking"
+      ],
+      [
+       "Agriculture",
+       "soil monitoring"
+      ],
+      [
+       "Smart cities",
+       "traffic management"
+      ]
+     ],
+     "why": "Table 2.1 and 2.4.3. (Driverless cars and drones are distractors in the book.)",
+     "clue": "Which one would a farmer use?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Review Part II(b)",
+     "id": "g12.it.u2.s2-4.38"
+    },
+    {
+     "kind": "pick",
+     "text": "Activity 2.5: which home routines can smart home IoT support or replace?",
+     "pool": [
+      "Switching lights off when nobody is in the room",
+      "Locking doors from a phone",
+      "Smoke alarms that message the owner",
+      "Watering the garden on a schedule",
+      "Choosing a school subject for you"
+     ],
+     "a": [
+      "Switching lights off when nobody is in the room",
+      "Locking doors from a phone",
+      "Smoke alarms that message the owner",
+      "Watering the garden on a schedule"
+     ],
+     "why": "These match the smart home examples and Table 2.1. Choosing subjects is a human decision.",
+     "clue": "One task is not a home device routine.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Activity 2.5 Q1",
+     "id": "g12.it.u2.s2-4.39"
+    },
+    {
+     "kind": "mcq",
+     "text": "A smart outlet lets you",
+     "opts": [
+      "turn a device on or off remotely and track its energy use",
+      "store files in the cloud",
+      "build apps on a platform",
+      "detect bank fraud"
+     ],
+     "ans": "turn a device on or off remotely and track its energy use",
+     "why": "p.54.",
+     "clue": "Outlet = socket.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.54",
+     "id": "g12.it.u2.s2-4.40"
+    },
+    {
+     "kind": "mcq",
+     "text": "Review Part III Q2: which pair are both practical IoT applications?",
+     "opts": [
+      "Remote patient monitoring and smart traffic lights",
+      "Writing an essay and printing it",
+      "Watching a DVD and reading a book",
+      "Using a calculator and a ruler"
+     ],
+     "ans": "Remote patient monitoring and smart traffic lights",
+     "why": "Both use connected sensors that send data and act (Table 2.1, 2.4.3).",
+     "clue": "Look for connected things with sensors.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Review Part III Q2",
+     "id": "g12.it.u2.s2-4.41"
+    },
+    {
+     "kind": "mcq",
+     "text": "Activity 2.5 Q2: a group presents IoT for a coffee farm in Jimma. Which scenario fits best?",
+     "opts": [
+      "Soil-moisture sensors send data by cellular network; the pump waters automatically and the farmer gets an SMS",
+      "The farmer buys a bigger notebook",
+      "Workers post photos on social media",
+      "The farm uses a SaaS word processor"
+     ],
+     "ans": "Soil-moisture sensors send data by cellular network; the pump waters automatically and the farmer gets an SMS",
+     "why": "It names all four components and matches Table 2.1 (automatic watering, soil monitoring).",
+     "clue": "Check for all four components.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Activity 2.5 Q2",
+     "added": true,
+     "id": "g12.it.u2.s2-4.42"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "IoT extends Internet connectivity beyond",
+   "opts": [
+    "computers and smartphones to everyday devices",
+    "the cloud to paper files",
+    "people to printers only",
+    "Ethiopia to other countries"
+   ],
+   "ans": "computers and smartphones to everyday devices",
+   "why": "p.48.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.it.u2.s2-4.43"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which IoT component sends data using Wi-Fi, Bluetooth or cellular networks?",
+   "opts": [
+    "Connectivity",
+    "Sensors/devices",
+    "Data processing",
+    "User interface"
+   ],
+   "ans": "Connectivity",
+   "why": "p.51.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.it.u2.s2-4.44"
+  },
+  {
+   "kind": "mcq",
+   "text": "Remote patient monitoring belongs to which area in Table 2.1?",
+   "opts": [
+    "Health",
+    "Agriculture",
+    "Smart cities",
+    "Home"
+   ],
+   "ans": "Health",
+   "why": "Table 2.1.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.it.u2.s2-4.45"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which is a LIMITATION of IoT?",
+   "opts": [
+    "Connectivity and power dependence",
+    "Personalization",
+    "Conservation",
+    "Efficiency"
+   ],
+   "ans": "Connectivity and power dependence",
+   "why": "p.50.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.it.u2.s2-4.46"
+  },
+  {
+   "kind": "mcq",
+   "text": "A fridge sensor reads 10 °C; the rule is \"alert above 8 °C\". Which component sends the SMS to the owner?",
+   "opts": [
+    "User interface",
+    "Sensors/devices",
+    "Connectivity",
+    "Word processing"
+   ],
+   "ans": "User interface",
+   "why": "Processing finds 10 > 8; the user interface delivers the alert.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.it.u2.s2-4.47"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.48: \"The Internet was created in the late 1990s and is now more than 30 years old, with over 2 billion people\" contradicts itself and is out of date. The lesson teaches: ARPANET 1969, TCP/IP 1983, World Wide Web 1989–1991; over 5 billion users in 2023 (about 5.4 billion, ITU)."
+  },
+  {
+   "kind": "review",
+   "text": "p.49: the music-streaming example is cloud computing, not IoT. The lesson uses it as a non-example and gives smart speakers, smart bulbs and trackers as IoT examples."
+  },
+  {
+   "kind": "review",
+   "text": "p.52: \"adjust the temperature in the cloud storage\" is a typo for \"cold storage\" (twice). The paragraph after item 4 repeats item 4; \"It instead of calling you\" should be \"Instead of calling you\"; Figure 2.30 \"User Inteface\" should be \"User Interface\"."
+  },
+  {
+   "kind": "review",
+   "text": "Table 2.1 and Review II(b): \"Tacking heart rate\" should be \"Tracking heart rate\". Activity 2.5 Q1 is garbled; read it as \"Discuss routine activities at home that can be supported, managed or replaced by smart home IoT applications.\""
+  },
+  {
+   "kind": "note",
+   "text": "The Internet history screen, the cold-storage worked example, the IF–THEN rule item, and Borana, Hawassa, Addis Ababa, Debre Zeit and Jimma examples are added and marked."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
