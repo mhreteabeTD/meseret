@@ -1,0 +1,644 @@
+{
+ "id": "g12.physics.u2.s2-5",
+ "book": {
+  "title": "Physics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "physics",
+  "unit": 2,
+  "unit_title": "Two-dimensional motion",
+  "pages": "59–63",
+  "section": "2.5"
+ },
+ "title": "Newton's law of universal gravitation",
+ "competency": "Use F = Gm₁m₂/r², find g at a planet's surface and explain orbits with gravity as the centripetal force.",
+ "minutes": 25,
+ "keywords": [
+  {
+   "en": "Law of universal gravitation",
+   "am": "ሁለንተናዊ የስበት ሕግ",
+   "def": "Every two masses attract with F = Gm₁m₂/r².",
+   "machine": true
+  },
+  {
+   "en": "Gravitational constant",
+   "am": "የስበት ቋሚ",
+   "def": "G = 6.67 × 10⁻¹¹ N m²/kg², the same everywhere in the Universe.",
+   "machine": true
+  },
+  {
+   "en": "Acceleration due to gravity",
+   "am": "የስበት ፍጥነት መጨመር",
+   "def": "g = GM/R², about 9.8 m/s² at Earth's surface.",
+   "machine": true
+  },
+  {
+   "en": "Centripetal force",
+   "am": "ወደ መሀል የሚስብ ኃይል",
+   "def": "A force pulling a body toward the centre of its circle: F_c = mv²/r.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "phys.universal-gravitation",
+   "name": "Newton's law of universal gravitation",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Every two masses attract each other with F = Gm₁m₂/r², where r is the distance between their centres and G = 6.67 × 10⁻¹¹ N m²/kg². The force is always attractive, acts along the line joining them, and is equal and opposite on the two bodies (Newton's third law). Doubling the distance makes the force four times smaller."
+    },
+    "am": {
+     "text": "ማናቸውም ሁለት ብዛቶች በ F = Gm₁m₂/r² ይሳሳባሉ። ኃይሉ ሁልጊዜ የሚስብ ነው፤ በሁለቱም ላይ እኩልና ተቃራኒ ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Switch off the Sun",
+     "ask": "Imagine the Sun's gravity suddenly switched off. What would the planets do?",
+     "opts": [
+      "Fly off in straight lines along the tangent",
+      "Fall into the Sun",
+      "Stop moving",
+      "Keep the same orbits"
+     ],
+     "after": "With no force, Newton's first law says each planet keeps going straight at constant speed.",
+     "ref": "Brainstorming question 2.2",
+     "id": "g12.physics.u2.s2-5.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Universal gravitation",
+     "paras": [
+      "Newton saw that the force pulling an apple down also keeps the Moon in orbit.",
+      "F = Gm₁m₂/r².",
+      "G = 6.67 × 10⁻¹¹ N m²/kg², the same everywhere.",
+      "The force is always attractive, along the line joining the centres.",
+      "Each body pulls the other equally: F₁₂ = −F₂₁."
+     ],
+     "ref": "p.59–60, Figure 2.22",
+     "id": "g12.physics.u2.s2-5.2"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Pull between two masses",
+     "ask": "Change the masses and the distance. What happens when you double r?",
+     "vars": [
+      {
+       "k": "m",
+       "label": "m₁ (kg)",
+       "min": 1,
+       "max": 100,
+       "step": 1,
+       "v": 10
+      },
+      {
+       "k": "M",
+       "label": "m₂ (kg)",
+       "min": 1,
+       "max": 100,
+       "step": 1,
+       "v": 100
+      },
+      {
+       "k": "r",
+       "label": "r (m)",
+       "min": 0.5,
+       "max": 5,
+       "step": 0.5,
+       "v": 1
+      }
+     ],
+     "formula": "6.67*m*M/(r*r)",
+     "out": "F = {v} × 10⁻¹¹ N",
+     "id": "g12.physics.u2.s2-5.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Law of universal gravitation",
+       "Every two masses attract with F = Gm₁m₂/r²."
+      ],
+      [
+       "Gravitational constant",
+       "G = 6.67 × 10⁻¹¹ N m²/kg², the same everywhere in the Universe."
+      ]
+     ],
+     "id": "g12.physics.u2.s2-5.4"
+    },
+    {
+     "kind": "tf",
+     "text": "A 60 kg man pulls on Earth less than Earth pulls on him.",
+     "a": false,
+     "why": "Newton's third law: the two forces are equal and opposite. Only the accelerations differ.",
+     "clue": "F = Gm₁m₂/r² is the same for both bodies.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Exercise 2.5 Q1",
+     "id": "g12.physics.u2.s2-5.5"
+    },
+    {
+     "kind": "mcq",
+     "text": "Two objects attract with force F. The distance between them is doubled. The new force is",
+     "opts": [
+      "F/4",
+      "4F",
+      "16F",
+      "F/16"
+     ],
+     "ans": "F/4",
+     "why": "F ∝ 1/r²: (1/2)² = 1/4.",
+     "clue": "The distance is squared.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 2.5 Q2",
+     "id": "g12.physics.u2.s2-5.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "Newton's law of gravitation applies to",
+     "opts": [
+      "all bodies, whatever their size",
+      "small bodies only",
+      "planets only",
+      "the Moon and satellites only"
+     ],
+     "ans": "all bodies, whatever their size",
+     "why": "The law is universal.",
+     "clue": "Look at its name.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 2.5 Q3",
+     "id": "g12.physics.u2.s2-5.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "Two spheres attract with 30 N. Each mass is doubled. The new force is ___ N",
+     "a": [
+      "120"
+     ],
+     "why": "F ∝ m₁m₂: 2 × 2 = 4, so 4 × 30 = 120 N.",
+     "clue": "Both masses change.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.5 Q4",
+     "id": "g12.physics.u2.s2-5.8"
+    },
+    {
+     "kind": "blank",
+     "ask": "A 10 kg and a 100 kg mass are 1 m apart. F ≈ ___ × 10⁻⁸ N (2 decimal places)",
+     "a": [
+      "≈6.67"
+     ],
+     "why": "F = 6.67 × 10⁻¹¹ × 1000/1 = 6.67 × 10⁻⁸ N.",
+     "clue": "10 × 100 = 10³.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Example 2.20",
+     "id": "g12.physics.u2.s2-5.9"
+    },
+    {
+     "kind": "blank",
+     "ask": "Two 2.00 kg particles are 30.0 cm apart. F ≈ ___ × 10⁻⁹ N (2 decimal places)",
+     "a": [
+      "≈2.96"
+     ],
+     "why": "F = 6.67 × 10⁻¹¹ × 4/0.09 = 2.96 × 10⁻⁹ N.",
+     "clue": "Change 30.0 cm to 0.300 m and square it.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "End of unit Q13",
+     "added": true,
+     "id": "g12.physics.u2.s2-5.10"
+    }
+   ]
+  },
+  {
+   "id": "phys.surface-gravity",
+   "name": "Gravity at a planet's surface",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Your weight is the gravitational pull of the planet: mg = GMm/R². Cancelling m gives g = GM/R², about 9.8 m/s² on Earth. So g does not depend on your mass; it grows with the planet's mass and falls with the square of its radius."
+    },
+    "am": {
+     "text": "ክብደት የፕላኔቷ የስበት ኃይል ነው፡ mg = GMm/R²፤ ስለዚህ g = GM/R² ≈ 9.8 m/s²። g በሰውዬው ብዛት አይወሰንም።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A bigger Earth",
+     "ask": "Suppose Earth kept its mass but swelled to 8 times its volume. Your weight would become",
+     "opts": [
+      "1/4 of now",
+      "1/8 of now",
+      "8 times now",
+      "the same"
+     ],
+     "after": "8 times the volume means twice the radius. Weight ∝ 1/R², so it becomes 1/4.",
+     "ref": "Discussion question 2.12",
+     "id": "g12.physics.u2.s2-5.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Where g comes from",
+     "paras": [
+      "Weight: F = mg.",
+      "Gravitation: F = GM_E m/R_E².",
+      "So mg = GM_E m/R_E², and g = GM_E/R_E².",
+      "g = 6.67 × 10⁻¹¹ × 5.97 × 10²⁴/(6.38 × 10⁶)² ≈ 9.8 m/s²."
+     ],
+     "ref": "p.61, Equations 2.24–2.25",
+     "id": "g12.physics.u2.s2-5.12"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Design a planet",
+     "ask": "Change the planet's mass and radius (Earth = 1). Watch g.",
+     "vars": [
+      {
+       "k": "k",
+       "label": "Mass (× Earth)",
+       "min": 0.25,
+       "max": 8,
+       "step": 0.25,
+       "v": 1
+      },
+      {
+       "k": "R",
+       "label": "Radius (× Earth)",
+       "min": 0.5,
+       "max": 4,
+       "step": 0.5,
+       "v": 1
+      }
+     ],
+     "formula": "9.8*k/(R*R)",
+     "out": "g = {v} m/s²",
+     "id": "g12.physics.u2.s2-5.13"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Acceleration due to gravity",
+       "g = GM/R², about 9.8 m/s² at Earth's surface."
+      ]
+     ],
+     "id": "g12.physics.u2.s2-5.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "Earth keeps its size but has one-third of its mass. Your weight becomes",
+     "opts": [
+      "1/3 of now",
+      "1/9 of now",
+      "3 times now",
+      "the same"
+     ],
+     "ans": "1/3 of now",
+     "why": "W ∝ M at the same R.",
+     "clue": "Only M changes.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Discussion question 2.12",
+     "id": "g12.physics.u2.s2-5.15"
+    },
+    {
+     "kind": "blank",
+     "ask": "M_E = 5.97 × 10²⁴ kg, R_E = 6.38 × 10⁶ m. The pull on a 60.0 kg person is ≈ ___ N (nearest newton)",
+     "a": [
+      "≈587",
+      "≈588"
+     ],
+     "why": "F = 6.67 × 10⁻¹¹ × 5.97 × 10²⁴ × 60/(6.38 × 10⁶)² = 587 N. Check: mg = 60 × 9.8 = 588 N. (The book prints 584 N.)",
+     "clue": "Use F = GMm/R², or check with mg.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Example 2.21",
+     "id": "g12.physics.u2.s2-5.16"
+    },
+    {
+     "kind": "blank",
+     "ask": "A planet has 4 times Earth's mass and twice its radius. g there = ___ m/s²",
+     "a": [
+      "9.8"
+     ],
+     "why": "g = 9.8 × 4/2² = 9.8 m/s², the same as Earth.",
+     "clue": "g ∝ M/R².",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.5 Q6",
+     "id": "g12.physics.u2.s2-5.17"
+    },
+    {
+     "kind": "tf",
+     "text": "A heavy stone and a light stone fall with the same g (no air resistance).",
+     "a": true,
+     "why": "m cancels in mg = GMm/R², so g does not depend on the falling body.",
+     "clue": "Which mass cancels?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.59",
+     "id": "g12.physics.u2.s2-5.18"
+    },
+    {
+     "kind": "blank",
+     "ask": "A planet has twice Earth's mass and half its radius. g there = ___ m/s²",
+     "a": [
+      "78.4"
+     ],
+     "why": "g = 9.8 × 2/(0.5)² = 9.8 × 8 = 78.4 m/s².",
+     "clue": "Dividing by (1/2)² is multiplying by 4.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.physics.u2.s2-5.19"
+    }
+   ]
+  },
+  {
+   "id": "phys.orbits-gravity",
+   "name": "Gravity keeps planets in orbit",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "A body moving in a circle needs a centripetal force F_c = mv²/r toward the centre. For planets this force is the Sun's gravity: GMₛ m/r² = mv²/r, so v² = GMₛ/r. With v = 2πr/T this gives T²/r³ = 4π²/(GMₛ), which is Kepler's third law with K ≈ 2.97 × 10⁻¹⁹ s²/m³."
+    },
+    "am": {
+     "text": "በክብ የሚንቀሳቀስ አካል ወደ መሀል የሚስብ ኃይል mv²/r ያስፈልገዋል፤ ለፕላኔቶች ይህ የፀሐይ ስበት ነው። ከዚህ T²/r³ = 4π²/(GM) ይገኛል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Why don't planets fall in?",
+     "ask": "The Sun pulls every planet. Why don't the planets fall into the Sun?",
+     "opts": [
+      "They move sideways fast enough to keep curving round it",
+      "The Sun pushes them away",
+      "Gravity does not reach that far",
+      "Space has no gravity"
+     ],
+     "after": "The pull bends the path into a circle; the large sideways speed keeps the planet from falling in.",
+     "ref": "Discussion question 2.11",
+     "id": "g12.physics.u2.s2-5.20"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Centripetal force",
+     "paras": [
+      "A force toward the centre of a circle is a centripetal force.",
+      "F_c = mv²/r.",
+      "For planets, the Sun's gravity supplies it.",
+      "Earth's gravity does the same for the Moon and satellites.",
+      "Without it, a planet would go straight on."
+     ],
+     "ref": "p.61–62, Figure 2.23",
+     "id": "g12.physics.u2.s2-5.21"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Kepler's third law from Newton",
+     "steps": [
+      "Gravity = centripetal force: GMₛ m/r² = mv²/r.",
+      "Cancel m and one r: v² = GMₛ/r.",
+      "One orbit: v = 2πr/T, so 4π²r²/T² = GMₛ/r.",
+      "Rearrange: T²/r³ = 4π²/(GMₛ).",
+      "With Mₛ = 1.989 × 10³⁰ kg: K = 39.48/(1.327 × 10²⁰) = 2.97 × 10⁻¹⁹ s²/m³."
+     ],
+     "ref": "p.62, Equations 2.26–2.30",
+     "id": "g12.physics.u2.s2-5.22"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Centripetal force",
+       "A force pulling a body toward the centre of its circle: F_c = mv²/r."
+      ]
+     ],
+     "id": "g12.physics.u2.s2-5.23"
+    },
+    {
+     "kind": "mcq",
+     "text": "What supplies the centripetal force that keeps Earth in orbit?",
+     "opts": [
+      "The Sun's gravity",
+      "Earth's spin",
+      "The Moon's gravity",
+      "Air resistance"
+     ],
+     "ans": "The Sun's gravity",
+     "why": "Gravity pulls Earth toward the Sun, the centre of its path.",
+     "clue": "What pulls toward the centre?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.61",
+     "id": "g12.physics.u2.s2-5.24"
+    },
+    {
+     "kind": "mcq",
+     "text": "From v² = GMₛ/r, planets closer to the Sun move",
+     "opts": [
+      "faster",
+      "slower",
+      "at the same speed",
+      "backwards"
+     ],
+     "ans": "faster",
+     "why": "Smaller r gives larger v²: Mercury is faster than Earth.",
+     "clue": "r is in the denominator.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Discussion question 2.9",
+     "id": "g12.physics.u2.s2-5.25"
+    },
+    {
+     "kind": "blank",
+     "ask": "Earth: T = 3.156 × 10⁷ s, r = 1.496 × 10¹¹ m. The Sun's mass ≈ ___ × 10³⁰ kg (2 decimal places)",
+     "a": [
+      "≈1.99"
+     ],
+     "why": "M = 4π²r³/(GT²) = 39.48 × 3.348 × 10³³/(6.67 × 10⁻¹¹ × 9.960 × 10¹⁴) = 1.99 × 10³⁰ kg.",
+     "clue": "Rearrange T²/r³ = 4π²/(GM) for M.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Exercise 2.5 Q5",
+     "id": "g12.physics.u2.s2-5.26"
+    },
+    {
+     "kind": "mcq",
+     "text": "For satellites of Earth, the constant in T²/r³ = K is",
+     "opts": [
+      "4π²/(GM_E)",
+      "4π²/(GMₛ)",
+      "2.97 × 10⁻¹⁹ s²/m³",
+      "GM_E/4π²"
+     ],
+     "ans": "4π²/(GM_E)",
+     "why": "Replace the Sun's mass by Earth's mass.",
+     "clue": "Which body is at the centre?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.62",
+     "id": "g12.physics.u2.s2-5.27"
+    },
+    {
+     "kind": "blank",
+     "ask": "Mercury orbits at 5.8 × 10¹⁰ m; Mₛ = 1.99 × 10³⁰ kg. Its period ≈ ___ Earth days (nearest day)",
+     "a": [
+      "≈88"
+     ],
+     "why": "T² = 39.48 × 1.951 × 10³²/1.327 × 10²⁰ = 5.80 × 10¹³ s², T = 7.62 × 10⁶ s = 88 days.",
+     "clue": "Use T² = 4π²r³/(GMₛ), then divide seconds by 86 400.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "End of unit Q12",
+     "added": true,
+     "id": "g12.physics.u2.s2-5.28"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "blank",
+   "ask": "Two 1 kg masses are 1 m apart. F = ___ × 10⁻¹¹ N",
+   "a": [
+    "6.67"
+   ],
+   "why": "F = G × 1 × 1/1² = G.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.physics.u2.s2-5.29"
+  },
+  {
+   "kind": "mcq",
+   "text": "The distance between two masses is tripled. The force becomes",
+   "opts": [
+    "F/9",
+    "F/3",
+    "3F",
+    "9F"
+   ],
+   "ans": "F/9",
+   "why": "1/3² = 1/9.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.physics.u2.s2-5.30"
+  },
+  {
+   "kind": "mcq",
+   "text": "Both masses are doubled and the distance is doubled. The force becomes",
+   "opts": [
+    "F",
+    "2F",
+    "4F",
+    "F/2"
+   ],
+   "ans": "F",
+   "why": "(2 × 2)/2² = 1.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.physics.u2.s2-5.31"
+  },
+  {
+   "kind": "tf",
+   "text": "Gravitational force between two masses can be repulsive.",
+   "a": false,
+   "why": "It is always attractive.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.physics.u2.s2-5.32"
+  },
+  {
+   "kind": "blank",
+   "ask": "A planet has Earth's radius but twice its mass. g = ___ m/s²",
+   "a": [
+    "19.6"
+   ],
+   "why": "2 × 9.8.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.physics.u2.s2-5.33"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Example 2.21: 6.673 × 10⁻¹¹ × 5.97 × 10²⁴ × 60/(6.38 × 10⁶)² = 587 N, not 584 N (agrees with mg = 588 N). The blank accepts 587 and 588."
+  },
+  {
+   "kind": "review",
+   "text": "Figure 2.22 labels both forces F₂₁; one should be F₁₂. The text uses G = 6.67 × 10⁻¹¹ and the examples 6.673 × 10⁻¹¹; answers agree."
+  },
+  {
+   "kind": "review",
+   "text": "p.62: \"speed of the plane\" means planet; K ≈ 2.97 × 10⁻¹⁹ needs the unit s²/m³. Exercise 2.5 Q3 option B \"Plants\" means planets."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

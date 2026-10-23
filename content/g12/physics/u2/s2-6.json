@@ -1,0 +1,452 @@
+{
+ "id": "g12.physics.u2.s2-6",
+ "book": {
+  "title": "Physics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "physics",
+  "unit": 2,
+  "unit_title": "Two-dimensional motion",
+  "pages": "63–68",
+  "section": "2.6"
+ },
+ "title": "Summary, review and chapter test",
+ "competency": "Review the unit and take the timed chapter test.",
+ "minutes": 25,
+ "keywords": [
+  {
+   "en": "Two-dimensional motion",
+   "am": "ባለሁለት አቅጣጫ እንቅስቃሴ",
+   "def": "Motion along a curved path in a plane, described with two coordinates.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "phys.two-d-motion-review",
+   "name": "Unit 2 summary",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Projectiles keep a constant horizontal velocity while falling with acceleration g. Rotating bodies are described by θ, ω and α, linked to linear motion by s = rθ, v = ωr and a = rα; torque τ = rF sinθ causes angular acceleration τ = Iα. Planets obey Kepler's laws because the Sun's gravity F = Gm₁m₂/r² supplies their centripetal force."
+    },
+    "am": {
+     "text": "ተወንጫፊዎች ቋሚ አግድም ፍጥነት አላቸው። መዞር በ θ፣ ω፣ α ይገለጻል፤ τ = Iα። ፕላኔቶች የኬፕለርን ሕጎች ይከተላሉ፤ ምክንያቱም የፀሐይ ስበት ወደ መሀል የሚስብ ኃይል ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "title": "Warm up: which kind of motion?",
+     "bins": [
+      "Projectile",
+      "Rotation",
+      "Orbit"
+     ],
+     "items": [
+      [
+       "A football kicked at an angle",
+       "Projectile",
+       "moves under gravity only"
+      ],
+      [
+       "A spinning fan blade",
+       "Rotation",
+       "turns about a fixed axis"
+      ],
+      [
+       "The Moon round Earth",
+       "Orbit",
+       "gravity is the centripetal force"
+      ],
+      [
+       "A jet of water from a hose",
+       "Projectile",
+       "parabolic path"
+      ],
+      [
+       "A bicycle wheel",
+       "Rotation",
+       "θ, ω, α"
+      ],
+      [
+       "A satellite above Ethiopia",
+       "Orbit",
+       "Kepler's laws apply"
+      ]
+     ],
+     "graded": false,
+     "id": "g12.physics.u2.s2-6.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Unit summary",
+     "paras": [
+      "Projectile: horizontal velocity constant, vertical acceleration g. Both motions share the same time.",
+      "Rotation: s = rθ, v = ωr, a = rα. Every particle has the same Δθ, ω and α.",
+      "Torque τ = rF sinθ; moment of inertia I = Σmr²; τ_net = Iα.",
+      "Kepler: ellipses, equal areas, T²/R³ = K.",
+      "Newton: F = Gm₁m₂/r², always attractive. The Sun's gravity is the planets' centripetal force."
+     ],
+     "ref": "p.63–65",
+     "id": "g12.physics.u2.s2-6.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Two-dimensional motion",
+       "Motion along a curved path in a plane, described with two coordinates."
+      ]
+     ],
+     "id": "g12.physics.u2.s2-6.3"
+    },
+    {
+     "kind": "match",
+     "title": "Match each formula to its idea",
+     "pairs": [
+      [
+       "R = v₀² sin2θ/g",
+       "range of a projectile"
+      ],
+      [
+       "v = ωr",
+       "tangential speed"
+      ],
+      [
+       "τ = Iα",
+       "rotational second law"
+      ],
+      [
+       "T²/R³ = K",
+       "Kepler's third law"
+      ],
+      [
+       "F = Gm₁m₂/r²",
+       "universal gravitation"
+      ]
+     ],
+     "why": "Each formula belongs to one section of the unit.",
+     "clue": "Look at the letters: θ for angles, G for gravitation.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "id": "g12.physics.u2.s2-6.4"
+    },
+    {
+     "kind": "blank",
+     "ask": "A football is kicked at 20 m/s at 30°. Its horizontal velocity is ≈ ___ m/s (1 decimal place)",
+     "a": [
+      "≈17.3"
+     ],
+     "why": "vₓ = 20cos30° = 20 × 0.866 = 17.3 m/s; v_y = 10 m/s.",
+     "clue": "Use cos for the horizontal part.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "End of unit Q2 a",
+     "id": "g12.physics.u2.s2-6.5"
+    },
+    {
+     "kind": "blank",
+     "ask": "A braked wheel has α = −5.60 rad/s². In 4.20 s it turns 62.4 rad. Its final angular speed is ≈ ___ rad/s (1 decimal place)",
+     "a": [
+      "≈3.1"
+     ],
+     "why": "Δθ = ωt − ½αt² gives ω = 62.4/4.20 + ½(−5.60)(4.20) = 14.86 − 11.76 = 3.10 rad/s.",
+     "clue": "Find ω₀ first, or use Δθ = ω_f t − ½αt².",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "End of unit Q10",
+     "added": true,
+     "id": "g12.physics.u2.s2-6.6"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "End of unit problems",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "A ball is thrown horizontally from the top of a 45 m building. It reaches the ground after ≈ ___ s (2 decimal places)",
+     "a": [
+      "≈3.03"
+     ],
+     "why": "t = √(2 × 45/9.8) = √9.18 = 3.03 s.",
+     "clue": "t = √(2h/g).",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 a",
+     "id": "g12.physics.u2.s2-6.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "Same ball, launched at 20 m/s: it lands ≈ ___ m from the foot of the building (1 decimal place)",
+     "a": [
+      "≈60.6"
+     ],
+     "why": "Δx = 20 × 3.03 = 60.6 m.",
+     "clue": "Δx = v₀t.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1 b",
+     "added": true,
+     "id": "g12.physics.u2.s2-6.8"
+    },
+    {
+     "kind": "blank",
+     "ask": "A football is kicked at 20 m/s at 30°. Time of flight ≈ ___ s (2 decimal places)",
+     "a": [
+      "≈2.04"
+     ],
+     "why": "T = 2 × 10/9.8 = 2.04 s.",
+     "clue": "T = 2v₀sinθ/g.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q2 b",
+     "id": "g12.physics.u2.s2-6.9"
+    },
+    {
+     "kind": "blank",
+     "ask": "Same kick: range ≈ ___ m (1 decimal place)",
+     "a": [
+      "≈35.3"
+     ],
+     "why": "R = 400 × sin60°/9.8 = 35.3 m.",
+     "clue": "R = v₀² sin2θ/g.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q2 c",
+     "id": "g12.physics.u2.s2-6.10"
+    },
+    {
+     "kind": "blank",
+     "ask": "Same kick: horizontal displacement at t = 1.5 s ≈ ___ m (1 decimal place)",
+     "a": [
+      "≈26.0"
+     ],
+     "why": "x = 17.32 × 1.5 = 26.0 m (the ball is still in the air).",
+     "clue": "x = vₓt.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q2 d",
+     "id": "g12.physics.u2.s2-6.11"
+    },
+    {
+     "kind": "blank",
+     "ask": "A volcanic bomb leaves vent A at 35°; it lands 9.40 km away and 3.30 km lower. Launch speed ≈ ___ m/s (nearest whole number)",
+     "a": [
+      "≈256",
+      "≈255"
+     ],
+     "why": "v₀t = 9400/cos35° = 11 475 m. −3300 = 11 475 × sin35° − 4.9t² gives t = 44.9 s, v₀ = 11 475/44.9 = 256 m/s.",
+     "clue": "Write x and y equations; eliminate v₀t.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q4",
+     "id": "g12.physics.u2.s2-6.12"
+    },
+    {
+     "kind": "mcq",
+     "text": "A firefighter at distance d aims water at angle θᵢ with speed vᵢ. It hits the building at height h =",
+     "opts": [
+      "d tanθᵢ − gd²/(2vᵢ² cos²θᵢ)",
+      "d tanθᵢ + gd²/(2vᵢ² cos²θᵢ)",
+      "vᵢ² sin2θᵢ/g",
+      "vᵢ² sin²θᵢ/(2g)"
+     ],
+     "ans": "d tanθᵢ − gd²/(2vᵢ² cos²θᵢ)",
+     "why": "t = d/(vᵢcosθᵢ); h = vᵢsinθᵢ t − ½gt².",
+     "clue": "Find t from the horizontal motion.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q5",
+     "id": "g12.physics.u2.s2-6.13"
+    },
+    {
+     "kind": "blank",
+     "ask": "A fan makes 1200 rev/min. A blade tip 0.15 m from the axis moves at ≈ ___ m/s (1 decimal place)",
+     "a": [
+      "≈18.8"
+     ],
+     "why": "20 rev/s × 2π × 0.15 = 18.8 m/s.",
+     "clue": "Change to rev/s, then multiply by the circumference.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q6",
+     "id": "g12.physics.u2.s2-6.14"
+    },
+    {
+     "kind": "blank",
+     "ask": "A car at 80 km/h with 40 cm wheels stops within 30 revolutions. |α| ≈ ___ rad/s² (2 decimal places)",
+     "a": [
+      "≈8.19"
+     ],
+     "why": "ω₀ = 22.2/0.40 = 55.6 rad/s; Δθ = 188.5 rad; α = −55.6²/(2 × 188.5) = −8.19 rad/s².",
+     "clue": "ω_f² = ω₀² + 2αΔθ with ω_f = 0.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q7",
+     "id": "g12.physics.u2.s2-6.15"
+    },
+    {
+     "kind": "blank",
+     "ask": "A grindstone belt turns at 40 rad/s. In one minute it turns ___ rad",
+     "a": [
+      "2400"
+     ],
+     "why": "Δθ = 40 × 60 = 2400 rad ≈ 382 rev.",
+     "clue": "Δθ = ωt.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q8",
+     "id": "g12.physics.u2.s2-6.16"
+    },
+    {
+     "kind": "blank",
+     "ask": "A cyclist's wheel (radius 0.50 m) makes 320 rotations. She travels ≈ ___ m (nearest metre)",
+     "a": [
+      "≈1005"
+     ],
+     "why": "320 × 2π × 0.50 = 1005 m.",
+     "clue": "Distance per turn = 2πr.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q9",
+     "id": "g12.physics.u2.s2-6.17"
+    }
+   ]
+  },
+  {
+   "book_name": "Chapter test",
+   "test": true,
+   "chapter_test": true,
+   "count": 20,
+   "minutes": 25,
+   "items": []
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "ask": "A stone falls from rest for 3 s. g = 10 m/s². It falls ___ m",
+   "a": [
+    "45"
+   ],
+   "why": "½ × 10 × 9.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.physics.u2.s2-6.18"
+  },
+  {
+   "kind": "mcq",
+   "text": "The horizontal velocity of a projectile",
+   "opts": [
+    "stays constant",
+    "increases",
+    "decreases",
+    "is zero at the top"
+   ],
+   "ans": "stays constant",
+   "why": "No horizontal force.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.physics.u2.s2-6.19"
+  },
+  {
+   "kind": "blank",
+   "ask": "A wheel of radius 0.5 m turns through 10 rad. A rim point moves ___ m",
+   "a": [
+    "5"
+   ],
+   "why": "s = rθ.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.physics.u2.s2-6.20"
+  },
+  {
+   "kind": "blank",
+   "ask": "A torque of 20 N m acts on I = 5 kg m². α = ___ rad/s²",
+   "a": [
+    "4"
+   ],
+   "why": "20/5.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.physics.u2.s2-6.21"
+  },
+  {
+   "kind": "blank",
+   "ask": "A satellite's orbit radius is 9 times another's around the same planet. Its period is ___ times longer",
+   "a": [
+    "27"
+   ],
+   "why": "9^(3/2).",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.physics.u2.s2-6.22"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "End of unit Q1 gives no launch speed, so (b) and (c) have no number. The lesson adds v₀ = 20 m/s (x = 60.6 m; v = 35.8 m/s at 56.0° below horizontal)."
+  },
+  {
+   "kind": "review",
+   "text": "Unit summary: Δy = v₀sinθ t + ½gt² and v_y = v₀sinθ + gt only work with g = −9.8 m/s²."
+  },
+  {
+   "kind": "note",
+   "text": "No national-exam (ESSLCE) physics bank yet; the chapter test draws from the five section tests."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

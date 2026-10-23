@@ -1,0 +1,496 @@
+{
+ "id": "g12.physics.u2.s2-4",
+ "book": {
+  "title": "Physics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "physics",
+  "unit": 2,
+  "unit_title": "Two-dimensional motion",
+  "pages": "54–59",
+  "section": "2.4"
+ },
+ "title": "Planetary motion and Kepler's laws",
+ "competency": "State Kepler's three laws and use T²/R³ = K to solve orbit problems.",
+ "minutes": 22,
+ "keywords": [
+  {
+   "en": "Ellipse",
+   "am": "ኤሊፕስ",
+   "def": "A closed oval curve. For every point, the distances to the two foci add to the same total.",
+   "machine": true
+  },
+  {
+   "en": "Perihelion",
+   "am": "ፔሪሂሊየን",
+   "def": "The point of an orbit nearest the Sun. The planet is fastest there.",
+   "machine": true
+  },
+  {
+   "en": "Aphelion",
+   "am": "አፌሊየን",
+   "def": "The point of an orbit farthest from the Sun. The planet is slowest there.",
+   "machine": true
+  },
+  {
+   "en": "Orbital period",
+   "am": "የምህዋር ጊዜ",
+   "def": "The time for one complete revolution around the Sun (or another central body).",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "phys.kepler-first-second",
+   "name": "Kepler's first and second laws",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Kepler used Tycho Brahe's data on Mars. First law: every planet moves on an ellipse with the Sun at one focus. Second law: the line from the Sun to the planet sweeps equal areas in equal times, so a planet is fastest at perihelion (nearest the Sun) and slowest at aphelion (farthest)."
+    },
+    "am": {
+     "text": "የኬፕለር የመጀመሪያ ሕግ፡ ፕላኔቶች በኤሊፕስ ይዞራሉ፤ ፀሐይ በአንዱ ፎከስ ላይ ናት። ሁለተኛ ሕግ፡ በእኩል ጊዜ እኩል ስፋት ይጠርጋሉ፤ ፀሐይ አጠገብ ፈጣን ናቸው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Earth's speed",
+     "ask": "Does Earth move round the Sun at the same speed all year?",
+     "opts": [
+      "No, it is fastest when closest to the Sun",
+      "Yes, always the same",
+      "No, it is fastest when farthest",
+      "It stops twice a year"
+     ],
+     "after": "Earth speeds up as it nears the Sun and slows as it moves away (Kepler's second law).",
+     "ref": "Discussion question 2.9",
+     "id": "g12.physics.u2.s2-4.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "From Ptolemy to Kepler",
+     "paras": [
+      "Ptolemy (c.100–c.170): Earth at the centre (geocentric). Accepted for 1400 years.",
+      "Copernicus (1543): planets go round the Sun (heliocentric).",
+      "Tycho Brahe (1546–1601): careful positions of planets, without a telescope.",
+      "Kepler studied Brahe's data on Mars for 16 years and found three laws."
+     ],
+     "ref": "p.54–55",
+     "id": "g12.physics.u2.s2-4.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "First and second laws",
+     "paras": [
+      "First law: the orbit is an ellipse with the Sun at one focus.",
+      "For every point on an ellipse, r₁ + r₂ is the same.",
+      "The other focus and the centre are empty.",
+      "Second law: the Sun–planet line sweeps equal areas in equal times.",
+      "So the planet is fastest at perihelion and slowest at aphelion."
+     ],
+     "ref": "p.55–56, Figures 2.20–2.21",
+     "id": "g12.physics.u2.s2-4.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Ellipse",
+       "A closed oval curve. For every point, the distances to the two foci add to the same total."
+      ],
+      [
+       "Perihelion",
+       "The point of an orbit nearest the Sun. The planet is fastest there."
+      ],
+      [
+       "Aphelion",
+       "The point of an orbit farthest from the Sun. The planet is slowest there."
+      ]
+     ],
+     "id": "g12.physics.u2.s2-4.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "Where is the Sun in a planet's orbit?",
+     "opts": [
+      "At one focus of the ellipse",
+      "At the centre of the ellipse",
+      "On the orbit itself",
+      "At both foci"
+     ],
+     "ans": "At one focus of the ellipse",
+     "why": "Kepler's first law puts the Sun at one focus; the centre is empty.",
+     "clue": "The ellipse has two special points.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Discussion question 2.8",
+     "id": "g12.physics.u2.s2-4.5"
+    },
+    {
+     "kind": "tf",
+     "text": "A satellite speeds up as it approaches the Sun and slows down as it moves away.",
+     "a": true,
+     "why": "Equal areas in equal times: near the Sun it must cover a longer arc.",
+     "clue": "Think of the equal-area wedges.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 2.4 Q1",
+     "id": "g12.physics.u2.s2-4.6"
+    },
+    {
+     "kind": "order",
+     "title": "Put the astronomers in time order",
+     "items": [
+      "Ptolemy",
+      "Copernicus",
+      "Tycho Brahe",
+      "Johannes Kepler"
+     ],
+     "why": "Ptolemy (2nd century), Copernicus (1543), Brahe (1546–1601), Kepler (used Brahe's data).",
+     "clue": "Ptolemy is the oldest.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.54–55",
+     "id": "g12.physics.u2.s2-4.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "How does a circle differ from an ellipse?",
+     "opts": [
+      "A circle is an ellipse whose two foci are at the same point",
+      "An ellipse has no centre",
+      "A circle has two foci far apart",
+      "They are the same"
+     ],
+     "ans": "A circle is an ellipse whose two foci are at the same point",
+     "why": "In a circle every point is the same distance r from one centre.",
+     "clue": "Move the two foci together.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Discussion question 2.8",
+     "id": "g12.physics.u2.s2-4.8"
+    },
+    {
+     "kind": "blank",
+     "ask": "At aphelion a planet is twice as far from the Sun as at perihelion. Its speed at perihelion is ___ times its speed at aphelion",
+     "a": [
+      "2"
+     ],
+     "why": "At the ends of the orbit the swept area per second is ½rv. Equal areas: rₚ vₚ = rₐ vₐ, so vₚ/vₐ = rₐ/rₚ = 2.",
+     "clue": "Equal areas: a thin wedge far away must match a wide wedge near the Sun.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.physics.u2.s2-4.9"
+    }
+   ]
+  },
+  {
+   "id": "phys.kepler-third",
+   "name": "Kepler's third law",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Kepler's third law compares planets: T²/R³ is the same constant K for every planet around the Sun (K ≈ 2.97 × 10⁻¹⁹ s²/m³). So T grows as R^(3/2): doubling R multiplies T by 2√2. Bodies orbiting a different central body (moons of Earth or Saturn) have their own constant."
+    },
+    "am": {
+     "text": "የኬፕለር ሦስተኛ ሕግ፡ T²/R³ ለሁሉም የፀሐይ ፕላኔቶች አንድ ቋሚ ነው። R ሲጨምር T በፍጥነት ይጨምራል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Farther means slower",
+     "ask": "Move a planet farther from the Sun. How many times longer is its year?",
+     "vars": [
+      {
+       "k": "r",
+       "label": "R₂/R₁ (times farther)",
+       "min": 1,
+       "max": 40,
+       "step": 1,
+       "v": 4
+      }
+     ],
+     "formula": "Math.pow(r, 1.5)",
+     "out": "Its year is {v} times longer",
+     "note": "T₂/T₁ = (R₂/R₁)^(3/2). Mercury 88 days, Earth 365, Saturn 10 759.",
+     "id": "g12.physics.u2.s2-4.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The law of periods",
+     "paras": [
+      "The period T is the time for one complete orbit.",
+      "T²/R³ = K, the same for every planet of the Sun.",
+      "K does not depend on the planet's mass.",
+      "It holds for circles and ellipses (R = average distance)."
+     ],
+     "table": [
+      [
+       "",
+       "Period (s)",
+       "Average distance (m)",
+       "T²/R³ (s²/m³)"
+      ],
+      [
+       "Earth",
+       "3.156 × 10⁷",
+       "1.4957 × 10¹¹",
+       "2.977 × 10⁻¹⁹"
+      ],
+      [
+       "Mars",
+       "5.93 × 10⁷",
+       "2.278 × 10¹¹",
+       "2.975 × 10⁻¹⁹"
+      ]
+     ],
+     "ref": "p.56–57, Table 2.2",
+     "id": "g12.physics.u2.s2-4.11"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Comparing two planets",
+     "steps": [
+      "Same central body: T₁²/R₁³ = T₂²/R₂³.",
+      "So T₂ = T₁ × (R₂/R₁)^(3/2).",
+      "Saturn is 9 times farther than Earth: T = 1 × 9^(3/2) = 27 years."
+     ],
+     "ref": "Example 2.19",
+     "id": "g12.physics.u2.s2-4.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Orbital period",
+       "The time for one complete revolution around the Sun (or another central body)."
+      ]
+     ],
+     "id": "g12.physics.u2.s2-4.13"
+    },
+    {
+     "kind": "mcq",
+     "text": "If the radius of a circular orbit doubles, the period",
+     "opts": [
+      "increases by a factor of 2√2",
+      "increases by a factor of 2",
+      "decreases by a factor of 4",
+      "decreases by a factor of 2√2"
+     ],
+     "ans": "increases by a factor of 2√2",
+     "why": "T ∝ R^(3/2): 2^(3/2) = 2√2 ≈ 2.83.",
+     "clue": "Square T, cube R.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Exercise 2.4 Q3",
+     "id": "g12.physics.u2.s2-4.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which has the shorter orbital period?",
+     "opts": [
+      "Earth",
+      "Pluto",
+      "They are equal",
+      "It depends on their masses"
+     ],
+     "ans": "Earth",
+     "why": "Earth is much closer to the Sun: 1 year against about 248 years.",
+     "clue": "Closer means shorter.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Discussion question 2.10",
+     "id": "g12.physics.u2.s2-4.15"
+    },
+    {
+     "kind": "blank",
+     "ask": "Saturn is 9 times farther from the Sun than Earth. Its period is ___ Earth years",
+     "a": [
+      "27"
+     ],
+     "why": "T² = 9³ = 729 years², T = 27 years.",
+     "clue": "T² ∝ R³.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Example 2.19",
+     "id": "g12.physics.u2.s2-4.16"
+    },
+    {
+     "kind": "blank",
+     "ask": "Pluto is 39.44 times farther from the Sun than Earth. Its period ≈ ___ Earth years (nearest year)",
+     "a": [
+      "≈248"
+     ],
+     "why": "39.44^(3/2) = 39.44 × 6.28 = 247.7 years ≈ 9.0 × 10⁴ days. (The book prints 9.0 × 10¹⁴ days.)",
+     "clue": "T = 1 year × (39.44)^(3/2).",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Example 2.18",
+     "id": "g12.physics.u2.s2-4.17"
+    },
+    {
+     "kind": "blank",
+     "ask": "Titan orbits Saturn at 1.22 × 10⁹ m every 15.95 days. Hyperion orbits Saturn at 1.48 × 10⁹ m. Its period ≈ ___ days (1 decimal place)",
+     "a": [
+      "≈21.3"
+     ],
+     "why": "T = 15.95 × (1.48/1.22)^(3/2) = 15.95 × 1.336 = 21.3 days.",
+     "clue": "Both orbit Saturn, so they share the same K.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "End of unit Q11",
+     "id": "g12.physics.u2.s2-4.18"
+    },
+    {
+     "kind": "blank",
+     "ask": "The Moon orbits Earth every 27.3 days at 3.84 × 10⁸ m. A satellite orbits 1500 km above Earth (radius 6380 km). Its period ≈ ___ hours (1 decimal place)",
+     "a": [
+      "≈1.9"
+     ],
+     "why": "r = 7880 km = 7.88 × 10⁶ m. T = 27.3 × (7.88 × 10⁶/3.84 × 10⁸)^(3/2) = 27.3 × 0.00294 = 0.0803 days = 1.93 h.",
+     "clue": "Measure r from Earth's centre, not from the surface.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Exercise 2.4 Q2",
+     "added": true,
+     "id": "g12.physics.u2.s2-4.19"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Kepler's first law says a planet's orbit is",
+   "opts": [
+    "an ellipse with the Sun at one focus",
+    "a circle with the Sun at the centre",
+    "a straight line",
+    "an ellipse with the Sun at the centre"
+   ],
+   "ans": "an ellipse with the Sun at one focus",
+   "why": "Law of ellipses.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.physics.u2.s2-4.20"
+  },
+  {
+   "kind": "mcq",
+   "text": "A planet moves fastest at",
+   "opts": [
+    "perihelion",
+    "aphelion",
+    "the end of the minor axis",
+    "every point equally"
+   ],
+   "ans": "perihelion",
+   "why": "Nearest the Sun.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.physics.u2.s2-4.21"
+  },
+  {
+   "kind": "blank",
+   "ask": "A planet's average distance is made 4 times larger. Its period becomes ___ times longer",
+   "a": [
+    "8"
+   ],
+   "why": "4^(3/2) = 8.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.physics.u2.s2-4.22"
+  },
+  {
+   "kind": "mcq",
+   "text": "Is the constant K = T²/R³ for the Moon around Earth the same as for planets around the Sun?",
+   "opts": [
+    "No, it depends on the central body",
+    "Yes, it is universal",
+    "Yes, if the Moon is heavy",
+    "No, it depends on the Moon's mass"
+   ],
+   "ans": "No, it depends on the central body",
+   "why": "K = 4π²/(GM) uses the central mass.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.physics.u2.s2-4.23"
+  },
+  {
+   "kind": "blank",
+   "ask": "A planet of the Sun has a period of 8 Earth years. Its distance is ___ times Earth's",
+   "a": [
+    "4"
+   ],
+   "why": "R³ = 8² = 64, R = 4.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.physics.u2.s2-4.24"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Table 2.2: the unit of T²/R³ should be s²/m³ (the \"s\" is missing)."
+  },
+  {
+   "kind": "review",
+   "text": "Example 2.18: 365 days must be squared. Correct answer ≈ 9.0 × 10⁴ days (≈ 248 years), not 9.0 × 10¹⁴ days. \"daya\" is a typo."
+  },
+  {
+   "kind": "review",
+   "text": "Example 2.19 asks for a \"distance in Earth years\"; it means the period (27 years). Real Saturn: 9.5 AU, 29.5 years."
+  },
+  {
+   "kind": "note",
+   "text": "The perihelion/aphelion speed ratio (challenge) is added; it uses equal areas at the ends of the orbit."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

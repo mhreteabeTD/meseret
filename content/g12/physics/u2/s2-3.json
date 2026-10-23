@@ -1,0 +1,578 @@
+{
+ "id": "g12.physics.u2.s2-3",
+ "book": {
+  "title": "Physics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "physics",
+  "unit": 2,
+  "unit_title": "Two-dimensional motion",
+  "pages": "50–54",
+  "section": "2.3"
+ },
+ "title": "Rotational dynamics",
+ "competency": "Define torque and moment of inertia and use τ = Iα with the rotation equations.",
+ "minutes": 25,
+ "keywords": [
+  {
+   "en": "Torque",
+   "am": "ቶርክ (የማዞር ውጤት)",
+   "def": "The turning effect of a force: τ = rF sinθ, in N m.",
+   "machine": true
+  },
+  {
+   "en": "Moment of inertia",
+   "am": "የማዞር ኢነርሺያ",
+   "def": "A body's resistance to change in its rotation: I = Σmr², in kg m².",
+   "machine": true
+  },
+  {
+   "en": "Net torque",
+   "am": "ጠቅላላ ቶርክ",
+   "def": "The sum of all torques on a body, counterclockwise positive: τ_net = Iα.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "phys.torque",
+   "name": "Torque",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Torque is the turning effect of a force: τ = rF sinθ, where r is the distance from the axis to the force and θ is the angle between r and F. Its unit is N m. Counterclockwise torques are usually positive, clockwise negative; the direction follows the right-hand rule."
+    },
+    "am": {
+     "text": "ቶርክ የኃይል የማዞር ውጤት ነው፡ τ = rF sinθ (N m)። ከሰዓት ተቃራኒ አቅጣጫ አዎንታዊ፣ በሰዓት አቅጣጫ አሉታዊ ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Door handles",
+     "ask": "Why is a door handle put far from the hinges?",
+     "opts": [
+      "The same push turns the door more easily",
+      "It looks better",
+      "The door is lighter there",
+      "It keeps the door closed"
+     ],
+     "after": "A force far from the axis has a bigger turning effect: torque grows with r.",
+     "added": true,
+     "id": "g12.physics.u2.s2-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Torque",
+     "paras": [
+      "Torque makes a body gain angular acceleration.",
+      "τ = rF sinθ.",
+      "r: distance from the axis to where the force acts.",
+      "θ: angle between r and F, drawn from the same point.",
+      "Unit: N m. Torque is a vector along the axis (right-hand rule).",
+      "Counterclockwise: positive. Clockwise: negative."
+     ],
+     "ref": "p.50–51, Figure 2.14",
+     "id": "g12.physics.u2.s2-3.2"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Turn a spanner",
+     "ask": "Change the distance, the force and the angle. When is the torque largest? When is it zero?",
+     "vars": [
+      {
+       "k": "r",
+       "label": "r (m)",
+       "min": 0.1,
+       "max": 1,
+       "step": 0.1,
+       "v": 0.5
+      },
+      {
+       "k": "F",
+       "label": "F (N)",
+       "min": 10,
+       "max": 100,
+       "step": 10,
+       "v": 40
+      },
+      {
+       "k": "a",
+       "label": "Angle θ (°)",
+       "min": 0,
+       "max": 180,
+       "step": 15,
+       "v": 90
+      }
+     ],
+     "formula": "r*F*Math.sin(a*Math.PI/180)",
+     "out": "τ = {v} N m",
+     "id": "g12.physics.u2.s2-3.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Torque",
+       "The turning effect of a force: τ = rF sinθ, in N m."
+      ]
+     ],
+     "id": "g12.physics.u2.s2-3.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "A force is pushed straight along a rod toward its pivot (θ = 0°). The torque is",
+     "opts": [
+      "zero",
+      "the largest possible",
+      "negative",
+      "equal to F"
+     ],
+     "ans": "zero",
+     "why": "sin0° = 0, so τ = 0. The force cannot turn the rod.",
+     "clue": "What is sin0°?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "id": "g12.physics.u2.s2-3.5"
+    },
+    {
+     "kind": "blank",
+     "ask": "A 400 N force acts 5 m from a pivot at 30° to the beam. τ = ___ N m",
+     "a": [
+      "1000"
+     ],
+     "why": "τ = 5 × 400 × sin30° = 5 × 400 × 0.5 = 1000 N m.",
+     "clue": "Use sinθ with the angle between beam and force.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 2.3 Q1",
+     "id": "g12.physics.u2.s2-3.6"
+    },
+    {
+     "kind": "blank",
+     "ask": "A 16 N force acts 4.0 m from O at 150° to r. τ = ___ N m",
+     "a": [
+      "32"
+     ],
+     "why": "τ = 4 × 16 × sin150° = 4 × 16 × 0.5 = 32 N m (counterclockwise).",
+     "clue": "sin150° = sin30°.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Example 2.14",
+     "id": "g12.physics.u2.s2-3.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "Three forces act on a rod pivoted at O: −26.0 N m (clockwise), +32 N m and +107.5 N m. τ_net = ___ N m (1 decimal place)",
+     "a": [
+      "≈113.5"
+     ],
+     "why": "τ_net = −26.0 + 32 + 107.5 = 113.5 N m, counterclockwise.",
+     "clue": "Add with signs.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Example 2.14",
+     "id": "g12.physics.u2.s2-3.8"
+    },
+    {
+     "kind": "blank",
+     "ask": "F₁ = 10 N at 3.0 m and 120° (clockwise), F₂ = 16 N at 4.0 m and 150°, F₃ = 19 N at 8.0 m and 45° (both counterclockwise). τ_net ≈ ___ N m (1 decimal place)",
+     "a": [
+      "≈113.5"
+     ],
+     "why": "τ₁ = −3 × 10 × 0.866 = −26.0; τ₂ = +32; τ₃ = 8 × 19 × 0.707 = +107.5. Sum: 113.5 N m.",
+     "clue": "Work out each torque, give it a sign, then add.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Example 2.14",
+     "added": true,
+     "id": "g12.physics.u2.s2-3.9"
+    }
+   ]
+  },
+  {
+   "id": "phys.moment-of-inertia",
+   "name": "Moment of inertia",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Moment of inertia measures how hard it is to change a body's rotation. For a point mass, I = mr²; for several masses, I = m₁r₁² + m₂r₂² + … . Its unit is kg m² and it is a scalar. It depends on the mass and on where the mass sits relative to the axis."
+    },
+    "am": {
+     "text": "የማዞር ኢነርሺያ መዞርን ለመለወጥ ያለውን ተቃውሞ ይለካል፡ I = Σmr² (kg m²)። በብዛቱና ከዘንጉ ባለው ርቀት ይወሰናል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Which spins more easily?",
+     "ask": "Two equal rods carry the same two masses. On rod A the masses are at the ends; on rod B they are near the middle. Which is easier to start spinning about its centre?",
+     "opts": [
+      "Rod B",
+      "Rod A",
+      "Both the same",
+      "Neither can spin"
+     ],
+     "after": "Mass near the axis has small r, so small mr². Rod B resists rotation less.",
+     "added": true,
+     "id": "g12.physics.u2.s2-3.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Moment of inertia",
+     "paras": [
+      "Mass resists changes in linear motion.",
+      "Moment of inertia I resists changes in rotation.",
+      "Point mass: I = mr².",
+      "Several masses: I = m₁r₁² + m₂r₂² + m₃r₃² + …",
+      "Unit: kg m². It is a scalar.",
+      "It depends on the mass and on the axis."
+     ],
+     "ref": "p.51–52, Figure 2.16",
+     "id": "g12.physics.u2.s2-3.11"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Moment of inertia",
+       "A body's resistance to change in its rotation: I = Σmr², in kg m²."
+      ]
+     ],
+     "id": "g12.physics.u2.s2-3.12"
+    },
+    {
+     "kind": "mcq",
+     "text": "The SI unit of moment of inertia is",
+     "opts": [
+      "kg m²",
+      "kg m/s",
+      "N m",
+      "kg/m²"
+     ],
+     "ans": "kg m²",
+     "why": "I = mr²: kilograms times metres squared.",
+     "clue": "Look at the formula I = mr².",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "id": "g12.physics.u2.s2-3.13"
+    },
+    {
+     "kind": "blank",
+     "ask": "A 2 kg mass turns 0.5 m from the axis. I = ___ kg m²",
+     "a": [
+      "0.5"
+     ],
+     "why": "I = 2 × 0.5² = 2 × 0.25 = 0.5 kg m².",
+     "clue": "Square r first.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "added": true,
+     "id": "g12.physics.u2.s2-3.14"
+    },
+    {
+     "kind": "blank",
+     "ask": "Masses 4 kg, 2 kg and 3 kg sit 3 m, 2 m and 4 m from the axis. I = ___ kg m²",
+     "a": [
+      "92"
+     ],
+     "why": "I = 4 × 9 + 2 × 4 + 3 × 16 = 36 + 8 + 48 = 92 kg m². (The book prints 164.)",
+     "clue": "Square each distance.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Example 2.15",
+     "id": "g12.physics.u2.s2-3.15"
+    },
+    {
+     "kind": "tf",
+     "text": "Moving the same masses farther from the axis makes I larger.",
+     "a": true,
+     "why": "I grows with r², so doubling r makes it four times larger.",
+     "clue": "r is squared in I = mr².",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "id": "g12.physics.u2.s2-3.16"
+    },
+    {
+     "kind": "mcq",
+     "text": "Three masses m sit at the corners of an equilateral triangle of side L. I about an axis through one corner, perpendicular to the triangle, is",
+     "opts": [
+      "2mL²",
+      "3mL²",
+      "mL²",
+      "3mL²/2"
+     ],
+     "ans": "2mL²",
+     "why": "The mass on the axis has r = 0. The other two are L away: I = mL² + mL² = 2mL².",
+     "clue": "How far is the corner mass from the axis?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Exercise 2.3 Q2",
+     "added": true,
+     "id": "g12.physics.u2.s2-3.17"
+    }
+   ]
+  },
+  {
+   "id": "phys.torque-angular-acceleration",
+   "name": "Torque and angular acceleration",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Net torque causes angular acceleration, just as net force causes linear acceleration. Newton's second law for rotation is τ_net = Iα. A bigger torque gives a bigger α; a bigger moment of inertia gives a smaller α. Then the rotation equations give ω and θ."
+    },
+    "am": {
+     "text": "ጠቅላላ ቶርክ የማዕዘን ፍጥነት ለውጥ ያመጣል፡ τ = Iα። ይህ የኒውተን ሁለተኛ ሕግ ለመዞር ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Push a flywheel",
+     "ask": "Change the torque and the moment of inertia. Watch α.",
+     "vars": [
+      {
+       "k": "t",
+       "label": "Torque τ (N m)",
+       "min": 10,
+       "max": 100,
+       "step": 10,
+       "v": 50
+      },
+      {
+       "k": "I",
+       "label": "I (kg m²)",
+       "min": 0.5,
+       "max": 10,
+       "step": 0.5,
+       "v": 2
+      }
+     ],
+     "formula": "t/I",
+     "out": "α = {v} rad/s²",
+     "id": "g12.physics.u2.s2-3.18"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Newton's second law for rotation",
+     "paras": [
+      "Add all torques: τ_net = τ₁ + τ₂ + τ₃ + …",
+      "Linear: F = ma. Rotation: τ = Iα.",
+      "Replace m by I and a by α.",
+      "Angular acceleration is proportional to the net torque."
+     ],
+     "ref": "p.52, Equation 2.21",
+     "id": "g12.physics.u2.s2-3.19"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Net torque",
+       "The sum of all torques on a body, counterclockwise positive: τ_net = Iα."
+      ]
+     ],
+     "id": "g12.physics.u2.s2-3.20"
+    },
+    {
+     "kind": "mcq",
+     "text": "In τ = Iα, which quantity plays the part of mass?",
+     "opts": [
+      "Moment of inertia I",
+      "Torque τ",
+      "Angular acceleration α",
+      "Radius r"
+     ],
+     "ans": "Moment of inertia I",
+     "why": "F = ma becomes τ = Iα: I replaces m.",
+     "clue": "Match F = ma letter by letter.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "id": "g12.physics.u2.s2-3.21"
+    },
+    {
+     "kind": "blank",
+     "ask": "A torque of 36 N m gives a wheel α = 24 rad/s². I = ___ kg m²",
+     "a": [
+      "1.5"
+     ],
+     "why": "I = τ/α = 36/24 = 1.5 kg m².",
+     "clue": "Rearrange τ = Iα.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Example 2.16",
+     "id": "g12.physics.u2.s2-3.22"
+    },
+    {
+     "kind": "blank",
+     "ask": "A motor gives 100 N m to a flywheel with I = 0.1 kg m². α = ___ rad/s²",
+     "a": [
+      "1000"
+     ],
+     "why": "α = 100/0.1 = 1000 rad/s².",
+     "clue": "α = τ/I.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Example 2.17 a",
+     "id": "g12.physics.u2.s2-3.23"
+    },
+    {
+     "kind": "blank",
+     "ask": "Same flywheel: from rest it reaches 150 rad/s after ___ s",
+     "a": [
+      "0.15"
+     ],
+     "why": "t = 150/1000 = 0.15 s.",
+     "clue": "Use ω_f = ω₀ + αt.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Example 2.17 b",
+     "id": "g12.physics.u2.s2-3.24"
+    },
+    {
+     "kind": "blank",
+     "ask": "A disc (I = 2 kg m²) goes from 3 rad/s to 8 rad/s under a net torque of 50 N m. It takes ___ s",
+     "a": [
+      "0.2"
+     ],
+     "why": "α = 50/2 = 25 rad/s². t = (8 − 3)/25 = 0.2 s.",
+     "clue": "Find α, then the time.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Exercise 2.3 Q3",
+     "added": true,
+     "id": "g12.physics.u2.s2-3.25"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "blank",
+   "ask": "A 10 N force acts 2 m from the axis, at 90° to r. τ = ___ N m",
+   "a": [
+    "20"
+   ],
+   "why": "2 × 10 × 1 = 20.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.physics.u2.s2-3.26"
+  },
+  {
+   "kind": "blank",
+   "ask": "A 40 N force acts 0.5 m from the axis, at 30° to r. τ = ___ N m",
+   "a": [
+    "10"
+   ],
+   "why": "0.5 × 40 × 0.5 = 10.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.physics.u2.s2-3.27"
+  },
+  {
+   "kind": "blank",
+   "ask": "A 3 kg point mass turns 2 m from the axis. I = ___ kg m²",
+   "a": [
+    "12"
+   ],
+   "why": "3 × 2² = 12.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.physics.u2.s2-3.28"
+  },
+  {
+   "kind": "blank",
+   "ask": "A net torque of 12 N m acts on a wheel with I = 4 kg m². α = ___ rad/s²",
+   "a": [
+    "3"
+   ],
+   "why": "12/4 = 3.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.physics.u2.s2-3.29"
+  },
+  {
+   "kind": "blank",
+   "ask": "A wheel (I = 0.5 kg m²) goes from rest to 20 rad/s in 4 s. The net torque is ___ N m",
+   "a": [
+    "2.5"
+   ],
+   "why": "α = 5 rad/s²; τ = 0.5 × 5 = 2.5.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.physics.u2.s2-3.30"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Example 2.14: 3 × 10 × sin120° = 25.98 ≈ 26.0 N m (book −25.9); the τ₃ line is labelled τ₂. Net torque 113.5 N m is right."
+  },
+  {
+   "kind": "review",
+   "text": "Example 2.15: 4×9 + 2×4 + 3×16 = 92 kg m², not 164. Figure 2.17 labels the distances in cm while the solution uses m; the lesson uses metres (92 kg m²). The 2 rad/s is not needed."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
