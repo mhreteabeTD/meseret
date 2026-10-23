@@ -1,0 +1,541 @@
+{
+ "id": "g12.geography.u1.s1-1",
+ "book": {
+  "title": "Geography Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "geography",
+  "unit": 1,
+  "unit_title": "Major geological processes associated with plate tectonics",
+  "pages": "2–5",
+  "section": "1.1"
+ },
+ "title": "The continental drift theory",
+ "competency": "Explain the continental drift theory, its evidence and why it was not easily accepted.",
+ "minutes": 20,
+ "keywords": [
+  {
+   "en": "Continental drift",
+   "am": "የአህጉራት መንሸራተት",
+   "def": "The theory that the continents have moved over geologic time across the earth's surface.",
+   "machine": true
+  },
+  {
+   "en": "Pangaea",
+   "am": "ፓንጂያ",
+   "def": "The single supercontinent from which the present continents were formed.",
+   "machine": true
+  },
+  {
+   "en": "Laurasia",
+   "am": "ሎራሲያ",
+   "def": "The northern part of Pangaea: North America, Europe and Asia (except India).",
+   "machine": true
+  },
+  {
+   "en": "Gondwanaland",
+   "am": "ጎንድዋናላንድ",
+   "def": "The southern part of Pangaea: South America, Africa, India, Australia and Antarctica.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "geo.continental-drift",
+   "name": "Pangaea and continental drift",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "The continental drift theory says the present continents were once one supercontinent, Pangaea. In the Triassic period of the Mesozoic era Pangaea split into Laurasia in the north and Gondwanaland in the south, which broke into today's continents and drifted to their present places over millions of years."
+    },
+    "am": {
+     "text": "የአህጉራት መንሸራተት ንድፈ ሀሳብ፡ አህጉራት ቀድሞ አንድ ፓንጂያ ነበሩ፤ በሰሜን ሎራሲያ በደቡብ ጎንድዋናላንድ ተከፈሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A jigsaw world",
+     "ask": "Look at a world map. Which two coastlines look as if they could fit together like puzzle pieces?",
+     "opts": [
+      "South America and Africa",
+      "Europe and Australia",
+      "Asia and South America",
+      "Antarctica and North America"
+     ],
+     "after": "The bulge of Brazil fits into the Gulf of Guinea. Wegener used this fit as his first evidence.",
+     "ref": "p.3, Figure 1.2",
+     "id": "g12.geography.u1.s1-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Continental drift",
+     "paras": [
+      "The continents have moved over geologic time.",
+      "They were once one supercontinent: Pangaea.",
+      "In the Triassic (Mesozoic era) Pangaea broke apart.",
+      "North: Laurasia. South: Gondwanaland.",
+      "These split into the present continents and drifted to where they are now."
+     ],
+     "ref": "p.2–3, Figure 1.1",
+     "id": "g12.geography.u1.s1-1.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Who belonged where?",
+     "paras": [
+      "The book's outcome asks this; the text does not list them, so here they are."
+     ],
+     "table": [
+      [
+       "Laurasia (north)",
+       "Gondwanaland (south)"
+      ],
+      [
+       "North America",
+       "South America"
+      ],
+      [
+       "Europe",
+       "Africa"
+      ],
+      [
+       "Asia (except India)",
+       "India, Australia, Antarctica"
+      ]
+     ],
+     "added": true,
+     "id": "g12.geography.u1.s1-1.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Continental drift",
+       "The theory that the continents have moved over geologic time across the earth's surface."
+      ],
+      [
+       "Pangaea",
+       "The single supercontinent from which the present continents were formed."
+      ],
+      [
+       "Laurasia",
+       "The northern part of Pangaea: North America, Europe and Asia (except India)."
+      ],
+      [
+       "Gondwanaland",
+       "The southern part of Pangaea: South America, Africa, India, Australia and Antarctica."
+      ]
+     ],
+     "id": "g12.geography.u1.s1-1.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which was part of the old Gondwanaland?",
+     "opts": [
+      "Australia",
+      "North America",
+      "Asia",
+      "Europe"
+     ],
+     "ans": "Australia",
+     "why": "Gondwanaland was the southern part: South America, Africa, India, Australia, Antarctica.",
+     "clue": "Think south.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Review Q1",
+     "id": "g12.geography.u1.s1-1.5"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Laurasia or Gondwanaland?",
+     "bins": [
+      "Laurasia",
+      "Gondwanaland"
+     ],
+     "items": [
+      [
+       "North America",
+       "Laurasia",
+       "north"
+      ],
+      [
+       "Europe",
+       "Laurasia",
+       "north"
+      ],
+      [
+       "Africa",
+       "Gondwanaland",
+       "south"
+      ],
+      [
+       "South America",
+       "Gondwanaland",
+       "south"
+      ],
+      [
+       "India",
+       "Gondwanaland",
+       "it later moved north"
+      ],
+      [
+       "Antarctica",
+       "Gondwanaland",
+       "south"
+      ]
+     ],
+     "why": "Laurasia was the northern half of Pangaea, Gondwanaland the southern half.",
+     "clue": "India started in the south.",
+     "ref": "p.2",
+     "graded": true,
+     "level": 1,
+     "id": "g12.geography.u1.s1-1.6"
+    },
+    {
+     "kind": "order",
+     "title": "Put the stages in order (oldest first)",
+     "items": [
+      "Pangaea, one supercontinent (225 million years ago)",
+      "Laurasia and Gondwanaland (135 million years ago)",
+      "Continents mostly separate (65 million years ago)",
+      "Today's continents"
+     ],
+     "why": "Figure 1.1 shows the break-up from Pangaea to today.",
+     "clue": "Start with one landmass.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Figure 1.1",
+     "id": "g12.geography.u1.s1-1.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "In which period did Pangaea start to break apart, according to the book?",
+     "opts": [
+      "Triassic period of the Mesozoic era",
+      "Cenozoic era",
+      "Carboniferous period",
+      "Quaternary period"
+     ],
+     "ans": "Triassic period of the Mesozoic era",
+     "why": "p.2: \"In the Triassic period of Mesozoic era, Pangaea started to break into several parts.\"",
+     "clue": "It is in the Mesozoic.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.2",
+     "id": "g12.geography.u1.s1-1.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "India now lies in Asia, yet it was part of Gondwanaland. What explains this?",
+     "opts": [
+      "India drifted north and joined Asia",
+      "Asia drifted south to India",
+      "India was formed later by volcanoes",
+      "Gondwanaland was in the north"
+     ],
+     "ans": "India drifted north and joined Asia",
+     "why": "Figure 1.1 shows India moving north as an island until it met Asia (raising the Himalayas).",
+     "clue": "Look at the 65-million-year globe.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Figure 1.1",
+     "added": true,
+     "id": "g12.geography.u1.s1-1.9"
+    }
+   ]
+  },
+  {
+   "id": "geo.drift-evidence",
+   "name": "Evidence for drift and why Wegener was rejected",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Alfred Wegener, a German meteorologist, proposed continental drift in 1912. His evidence: coastlines that fit, the same rocks and mountain belts across oceans, the same fossils (Mesosaurus) in South America and Africa, and matching ancient climates. Scientists rejected it mainly because he had no direct evidence of movement and no mechanism; plate tectonics later supplied one."
+    },
+    "am": {
+     "text": "አልፍሬድ ቬገነር በ1912 ሀሳቡን አቀረበ። ማስረጃዎቹ፡ የጠረፍ መገጣጠም፣ ተመሳሳይ ዐለቶች፣ ቅሪተ አካል፣ የጥንት የአየር ንብረት። ግን እንቅስቃሴውን የሚያብራራ ዘዴ አልነበረውም።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A small reptile",
+     "ask": "Fossils of Mesosaurus, a small reptile, are found only in South America and in southern Africa. What does this suggest?",
+     "opts": [
+      "The two continents were once joined",
+      "Mesosaurus swam across the Atlantic",
+      "Two different reptiles evolved the same",
+      "Fossils were carried by rivers"
+     ],
+     "after": "A small freshwater reptile could not cross an ocean, so the lands must once have been connected.",
+     "ref": "p.4, Figure 1.3",
+     "id": "g12.geography.u1.s1-1.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Wegener's four evidences",
+     "paras": [
+      "1. Coastline fit: Africa and South America fit like a jigsaw, best at the continental shelves.",
+      "2. Rocks: the same rock types, of the same age, and the same mountain belts continue across.",
+      "3. Fossils: Mesosaurus found on both sides of the South Atlantic.",
+      "4. Palaeoclimate: rocks record the same ancient climates on now-distant continents."
+     ],
+     "ref": "p.3–5",
+     "id": "g12.geography.u1.s1-1.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Why the theory was rejected",
+     "paras": [
+      "Wegener was a meteorologist, not a geologist.",
+      "Leading scientists were in the north; his best data came from the south.",
+      "He thought the break-up began only in the Cenozoic: too little time.",
+      "Greatest problem: no direct evidence and no mechanism for moving continents.",
+      "His legacy: the shift from fixism to mobilism."
+     ],
+     "ref": "p.5",
+     "id": "g12.geography.u1.s1-1.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Continental drift",
+       "The theory that the continents have moved over geologic time across the earth's surface."
+      ]
+     ],
+     "id": "g12.geography.u1.s1-1.13"
+    },
+    {
+     "kind": "mcq",
+     "text": "Continental drift was proposed by",
+     "opts": [
+      "Alfred Wegener",
+      "Charles Richter",
+      "Isaac Newton",
+      "Harry Hess"
+     ],
+     "ans": "Alfred Wegener",
+     "why": "A German meteorologist, in 1912.",
+     "clue": "Review Q2.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Review Q2",
+     "id": "g12.geography.u1.s1-1.14"
+    },
+    {
+     "kind": "match",
+     "title": "Match each evidence with its description",
+     "pairs": [
+      [
+       "Coastline similarity",
+       "Africa and South America fit like a jigsaw"
+      ],
+      [
+       "Rock and structure",
+       "same rock types, ages and mountain belts"
+      ],
+      [
+       "Fossil evidence",
+       "Mesosaurus on both sides of the Atlantic"
+      ],
+      [
+       "Palaeoclimate",
+       "the same ancient climates recorded in rocks"
+      ]
+     ],
+     "why": "The four evidences on p.3–5.",
+     "clue": "Read each description for its key word.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.3–5",
+     "id": "g12.geography.u1.s1-1.15"
+    },
+    {
+     "kind": "mcq",
+     "text": "What was the GREATEST problem with Wegener's theory?",
+     "opts": [
+      "No direct evidence and no mechanism for the movement",
+      "He was not a geologist",
+      "He worked in the Northern Hemisphere",
+      "Africa and South America do not fit"
+     ],
+     "ans": "No direct evidence and no mechanism for the movement",
+     "why": "The book names this as \"the greatest problem\".",
+     "clue": "What force could move a continent?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.5",
+     "id": "g12.geography.u1.s1-1.16"
+    },
+    {
+     "kind": "pick",
+     "text": "Which were reasons the theory was rejected at first?",
+     "pool": [
+      "Wegener was not a geologist",
+      "He had no mechanism to explain the movement",
+      "His break-up time seemed too short",
+      "Fossils were found only in Europe"
+     ],
+     "a": [
+      "Wegener was not a geologist",
+      "He had no mechanism to explain the movement",
+      "His break-up time seemed too short"
+     ],
+     "why": "The fossil statement is false: Mesosaurus was in South America and Africa.",
+     "clue": "One option contradicts the fossil evidence.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.5",
+     "id": "g12.geography.u1.s1-1.17"
+    },
+    {
+     "kind": "mcq",
+     "text": "How are continental drift and plate tectonics related?",
+     "opts": [
+      "Plate tectonics explains the mechanism that drift lacked",
+      "They say opposite things",
+      "Plate tectonics came first",
+      "Drift explains earthquakes but plate tectonics does not"
+     ],
+     "ans": "Plate tectonics explains the mechanism that drift lacked",
+     "why": "Drift said continents move; plate tectonics (1960s) explained how: plates on the asthenosphere, driven by convection.",
+     "clue": "Which came later and filled the gap?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.5–6",
+     "added": true,
+     "id": "g12.geography.u1.s1-1.18"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "The single supercontinent of the past is called",
+   "opts": [
+    "Pangaea",
+    "Laurasia",
+    "Gondwanaland",
+    "Tethys"
+   ],
+   "ans": "Pangaea",
+   "why": "p.2.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.geography.u1.s1-1.19"
+  },
+  {
+   "kind": "mcq",
+   "text": "The northern part of Pangaea was",
+   "opts": [
+    "Laurasia",
+    "Gondwanaland",
+    "Antarctica",
+    "Arabia"
+   ],
+   "ans": "Laurasia",
+   "why": "p.2.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.geography.u1.s1-1.20"
+  },
+  {
+   "kind": "mcq",
+   "text": "Mesosaurus fossils support drift because they are found in",
+   "opts": [
+    "South America and Africa",
+    "Europe and Asia",
+    "only Antarctica",
+    "every continent"
+   ],
+   "ans": "South America and Africa",
+   "why": "p.4.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.geography.u1.s1-1.21"
+  },
+  {
+   "kind": "mcq",
+   "text": "Wegener proposed his theory in",
+   "opts": [
+    "1912",
+    "1960",
+    "1883",
+    "1906"
+   ],
+   "ans": "1912",
+   "why": "p.3.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.geography.u1.s1-1.22"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which is NOT one of Wegener's evidences?",
+   "opts": [
+    "Seafloor spreading at ocean ridges",
+    "Coastline fit",
+    "Fossil distribution",
+    "Palaeoclimate"
+   ],
+   "ans": "Seafloor spreading at ocean ridges",
+   "why": "That came in the 1960s.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.geography.u1.s1-1.23"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.2: Pangaea \"350 million years ago\" in the Carboniferous is questionable (assembled about 335–300 Ma). p.4: Mesosaurus is usually dated about 299–270 Ma, not 250 Ma; caption misspelt \"Mesosousarus\"."
+  },
+  {
+   "kind": "review",
+   "text": "p.5 reason 3 (Wegener's Cenozoic break-up) seems to contradict p.2 (Triassic); p.2 is the modern view, reason 3 is Wegener's own."
+  },
+  {
+   "kind": "note",
+   "text": "The section outcome asks which continents formed Laurasia and Gondwanaland, but the text does not list them; the lesson adds a short table (marked added)."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

@@ -1,0 +1,449 @@
+{
+ "id": "g12.geography.u1.s1-3",
+ "book": {
+  "title": "Geography Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "geography",
+  "unit": 1,
+  "unit_title": "Major geological processes associated with plate tectonics",
+  "pages": "8–11",
+  "section": "1.3"
+ },
+ "title": "Plate movements and plate boundaries",
+ "competency": "Describe convergent, divergent and transform boundaries, their landforms, and what drives the plates.",
+ "minutes": 20,
+ "keywords": [
+  {
+   "en": "Convergent boundary",
+   "am": "ተገጣጣሚ ድንበር",
+   "def": "Plates move toward each other; the denser plate is subducted and destroyed (destructive).",
+   "machine": true
+  },
+  {
+   "en": "Divergent boundary",
+   "am": "ተለያይ ድንበር",
+   "def": "Plates move apart; rising magma makes new crust (constructive).",
+   "machine": true
+  },
+  {
+   "en": "Transform boundary",
+   "am": "ተንሸራታች ድንበር",
+   "def": "Plates slide past each other; crust is neither made nor destroyed (conservative).",
+   "machine": true
+  },
+  {
+   "en": "Subduction",
+   "am": "ስርጎት",
+   "def": "The sinking of a denser plate under a less dense one into the mantle.",
+   "machine": true
+  },
+  {
+   "en": "Plate tectonics",
+   "am": "ፕሌት ቴክቶኒክስ",
+   "def": "The theory that the lithosphere is broken into plates that move over the asthenosphere.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "geo.plate-boundaries",
+   "name": "Three types of plate boundary",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "At convergent (destructive) boundaries plates meet and the denser plate is subducted: ocean–continent gives volcanic mountains such as the Andes, ocean–ocean gives island arcs such as the Marianas, continent–continent gives fold mountains such as the Himalayas. At divergent (constructive) boundaries plates part and magma makes new crust: ocean ridges and rift valleys. At transform (conservative) boundaries plates slide past each other, causing earthquakes, as on the San Andreas Fault."
+    },
+    "am": {
+     "text": "ተገጣጣሚ (አጥፊ)፣ ተለያይ (ገንቢ)፣ ተንሸራታች (ጠባቂ) ድንበሮች። ለምሳሌ አንዲስ፣ ሂማላያ፣ የምሥራቅ አፍሪካ ስምጥ ሸለቆ፣ ሳን አንድሪያስ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Which plate sinks?",
+     "ask": "An oceanic plate (basalt) meets a continental plate (granite). Which one is forced down?",
+     "opts": [
+      "The oceanic plate, because it is denser",
+      "The continental plate, because it is heavier",
+      "Neither; both rise",
+      "Both sink together"
+     ],
+     "after": "Basalt oceanic crust is denser than granite continental crust, so it is subducted.",
+     "ref": "p.8",
+     "id": "g12.geography.u1.s1-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Convergent (destructive) boundaries",
+     "paras": [
+      "Plates move toward each other; the denser one is subducted and destroyed.",
+      "Ocean–continent: Nazca under South American Plate → volcanoes of the Andes.",
+      "Ocean–ocean: an arc of volcanic islands, such as the Mariana Islands.",
+      "Continent–continent: crust is squeezed and lifted, e.g. India meeting Asia → Himalayas."
+     ],
+     "ref": "p.8–9, Figure 1.6",
+     "id": "g12.geography.u1.s1-3.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Divergent and transform boundaries",
+     "paras": [
+      "Divergent (constructive): plates move apart; magma rises and makes new seafloor at ocean ridges (Mid-Atlantic). This is seafloor spreading.",
+      "On land, divergence makes rift valleys: the East African Rift. It may one day become an ocean.",
+      "Transform (conservative): plates slide past; crust is neither made nor destroyed; stick-slip earthquakes (San Andreas Fault)."
+     ],
+     "ref": "p.9–10, Figures 1.7–1.8",
+     "id": "g12.geography.u1.s1-3.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Convergent boundary",
+       "Plates move toward each other; the denser plate is subducted and destroyed (destructive)."
+      ],
+      [
+       "Divergent boundary",
+       "Plates move apart; rising magma makes new crust (constructive)."
+      ],
+      [
+       "Transform boundary",
+       "Plates slide past each other; crust is neither made nor destroyed (conservative)."
+      ],
+      [
+       "Subduction",
+       "The sinking of a denser plate under a less dense one into the mantle."
+      ]
+     ],
+     "id": "g12.geography.u1.s1-3.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "At which boundary is new crust created?",
+     "opts": [
+      "Divergent",
+      "Convergent",
+      "Transform",
+      "None"
+     ],
+     "ans": "Divergent",
+     "why": "Rising magma fills the gap as plates part: \"constructive\".",
+     "clue": "Which name means \"building\"?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.9",
+     "id": "g12.geography.u1.s1-3.5"
+    },
+    {
+     "kind": "match",
+     "title": "Match each boundary with its other name",
+     "pairs": [
+      [
+       "Convergent",
+       "Destructive"
+      ],
+      [
+       "Divergent",
+       "Constructive"
+      ],
+      [
+       "Transform",
+       "Conservative"
+      ]
+     ],
+     "why": "Destroyed, created, conserved crust.",
+     "clue": "Think of what happens to the crust.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.8",
+     "id": "g12.geography.u1.s1-3.6"
+    },
+    {
+     "kind": "match",
+     "title": "Match each collision with its result",
+     "pairs": [
+      [
+       "Ocean–continent",
+       "volcanic mountains (Andes)"
+      ],
+      [
+       "Ocean–ocean",
+       "volcanic island arc (Mariana Islands)"
+      ],
+      [
+       "Continent–continent",
+       "high fold mountains (Himalayas)"
+      ]
+     ],
+     "why": "Which crusts meet decides the landform.",
+     "clue": "Islands need ocean on both sides.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.8–9",
+     "id": "g12.geography.u1.s1-3.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "The East African Rift Valley is an example of a",
+     "opts": [
+      "divergent boundary on land",
+      "convergent ocean–ocean boundary",
+      "transform fault",
+      "collision of two continents"
+     ],
+     "ans": "divergent boundary on land",
+     "why": "Plates pulling apart crack the continent into a rift.",
+     "clue": "Are the plates moving apart or together?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.9",
+     "id": "g12.geography.u1.s1-3.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why do earthquakes but not volcanoes typify the San Andreas Fault?",
+     "opts": [
+      "Plates slide past each other; no crust is made or destroyed",
+      "One plate is subducted there",
+      "Magma rises there",
+      "It is a mid-ocean ridge"
+     ],
+     "ans": "Plates slide past each other; no crust is made or destroyed",
+     "why": "At a transform boundary plates stick and slip, so there is no melting to feed volcanoes.",
+     "clue": "What happens to crust at a transform fault?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.9–10",
+     "added": true,
+     "id": "g12.geography.u1.s1-3.9"
+    }
+   ]
+  },
+  {
+   "id": "geo.mantle-convection",
+   "name": "What drives the plates",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Plate motion is driven by the earth's internal heat. Convection currents in the asthenosphere rise under ocean ridges, spread sideways under the plates and sink at subduction zones, dragging the brittle plates along. Figure 1.9 also shows ridge push, where hot raised lithosphere slides away from a ridge, and slab pull, where a sinking cold slab pulls the plate behind it."
+    },
+    "am": {
+     "text": "ፕሌቶችን የሚያንቀሳቅሰው በአስቴኖስፌር ውስጥ ያለ የኮንቬክሽን ፍሰት ነው፤ በሸንተረሮች ይነሳል፣ በስርጎት ቦታዎች ይሰምጣል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A pot of boiling water",
+     "ask": "In a pot of hot water, warm water rises in the middle and sinks at the sides. What earth process is like this?",
+     "opts": [
+      "Convection currents in the mantle",
+      "Rainfall",
+      "Wind erosion",
+      "Ocean tides"
+     ],
+     "after": "Hot mantle rock rises, spreads and sinks in slow convection cells that drag the plates.",
+     "ref": "p.10",
+     "id": "g12.geography.u1.s1-3.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Convection drives the plates",
+     "paras": [
+      "Plate tectonics is driven by the earth's internal energy.",
+      "Rocks conduct heat poorly, so heat moves by convection.",
+      "The asthenosphere is ductile and can flow.",
+      "Hot currents rise at ocean ridges; cool currents sink at subduction zones.",
+      "The plates on top are dragged along.",
+      "Figure 1.9 also names ridge push and slab pull."
+     ],
+     "ref": "p.10–11, Figure 1.9",
+     "id": "g12.geography.u1.s1-3.11"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Plate tectonics",
+       "The theory that the lithosphere is broken into plates that move over the asthenosphere."
+      ]
+     ],
+     "id": "g12.geography.u1.s1-3.12"
+    },
+    {
+     "kind": "mcq",
+     "text": "Most geoscientists agree that plates are ultimately driven by",
+     "opts": [
+      "convection currents in the mantle",
+      "the moon's gravity",
+      "winds",
+      "ocean currents"
+     ],
+     "ans": "convection currents in the mantle",
+     "why": "p.10.",
+     "clue": "It comes from the earth's internal heat.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.10",
+     "id": "g12.geography.u1.s1-3.13"
+    },
+    {
+     "kind": "mcq",
+     "text": "Where do hot convection currents rise?",
+     "opts": [
+      "Under oceanic ridges",
+      "Under ocean trenches",
+      "Under deserts",
+      "At the poles"
+     ],
+     "ans": "Under oceanic ridges",
+     "why": "Rising currents bring magma up at ridges; cool currents sink at trenches.",
+     "clue": "Where is new crust made?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Figure 1.9",
+     "id": "g12.geography.u1.s1-3.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "\"Slab pull\" means",
+     "opts": [
+      "a cold sinking plate pulls the rest of the plate after it",
+      "hot rock pushes away from a ridge",
+      "two continents pull apart",
+      "wind pulls the crust"
+     ],
+     "ans": "a cold sinking plate pulls the rest of the plate after it",
+     "why": "At a trench the dense slab sinks and drags the plate. (Ridge push is the push away from a ridge.)",
+     "clue": "Slab = the sinking part.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Figure 1.9",
+     "added": true,
+     "id": "g12.geography.u1.s1-3.15"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "A convergent boundary is also called",
+   "opts": [
+    "destructive",
+    "constructive",
+    "conservative",
+    "passive"
+   ],
+   "ans": "destructive",
+   "why": "p.8.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.geography.u1.s1-3.16"
+  },
+  {
+   "kind": "mcq",
+   "text": "The Andes formed where",
+   "opts": [
+    "the Nazca Plate is subducted under the South American Plate",
+    "two continents collide",
+    "plates move apart",
+    "plates slide past"
+   ],
+   "ans": "the Nazca Plate is subducted under the South American Plate",
+   "why": "p.8.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.geography.u1.s1-3.17"
+  },
+  {
+   "kind": "mcq",
+   "text": "The Himalayas formed by",
+   "opts": [
+    "continent–continent collision",
+    "ocean–ocean subduction",
+    "seafloor spreading",
+    "a transform fault"
+   ],
+   "ans": "continent–continent collision",
+   "why": "p.9.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.geography.u1.s1-3.18"
+  },
+  {
+   "kind": "mcq",
+   "text": "Seafloor spreading happens at",
+   "opts": [
+    "oceanic ridges",
+    "ocean trenches",
+    "transform faults only",
+    "continental shields"
+   ],
+   "ans": "oceanic ridges",
+   "why": "p.9.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.geography.u1.s1-3.19"
+  },
+  {
+   "kind": "mcq",
+   "text": "The Mariana Islands formed where",
+   "opts": [
+    "two oceanic plates converge",
+    "two plates diverge",
+    "two continents collide",
+    "plates slide past"
+   ],
+   "ans": "two oceanic plates converge",
+   "why": "p.9.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.geography.u1.s1-3.20"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "The key-term list omits \"Destructive\", used in the text for convergent boundaries. The introduction says plates \"transverse\"; the standard term is transform (sliding past)."
+  },
+  {
+   "kind": "note",
+   "text": "Unit outcomes mention triple junctions and retarding forces of plate motion; these pages do not cover them. Ridge push and slab pull appear only in Figure 1.9 (items marked added)."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

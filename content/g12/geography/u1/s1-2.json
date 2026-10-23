@@ -1,0 +1,367 @@
+{
+ "id": "g12.geography.u1.s1-2",
+ "book": {
+  "title": "Geography Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "geography",
+  "unit": 1,
+  "unit_title": "Major geological processes associated with plate tectonics",
+  "pages": "5–7",
+  "section": "1.2"
+ },
+ "title": "Plate tectonics theory",
+ "competency": "Explain the plate tectonics theory and identify the major continental and oceanic plates.",
+ "minutes": 15,
+ "keywords": [
+  {
+   "en": "Lithosphere",
+   "am": "ሊቶስፌር",
+   "def": "The rigid outer layer: the crust plus the uppermost mantle, about 0–100 km deep.",
+   "machine": true
+  },
+  {
+   "en": "Asthenosphere",
+   "am": "አስቴኖስፌር",
+   "def": "The weak, plastic layer of the mantle under the lithosphere, on which plates slide.",
+   "machine": true
+  },
+  {
+   "en": "Plate tectonics",
+   "am": "ፕሌት ቴክቶኒክስ",
+   "def": "The theory that the lithosphere is broken into plates that move over the asthenosphere.",
+   "machine": true
+  },
+  {
+   "en": "Plate boundary",
+   "am": "የፕሌት ድንበር",
+   "def": "The zone where two plates meet: convergent, divergent or transform.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "geo.plate-tectonics",
+   "name": "The plate tectonics theory",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Plate tectonics (late 1960s) says the lithosphere, the rigid crust and uppermost mantle, is broken into about a dozen large plates and some small ones. They slide a few centimetres a year over the weak, plastic asthenosphere and meet at plate boundaries. Plate edges are not the edges of continents: a plate can be continental, oceanic or both."
+    },
+    "am": {
+     "text": "ሊቶስፌር ወደ አስራ ሁለት ያህል ትላልቅ ፕሌቶች ተከፋፍሏል፤ በአስቴኖስፌር ላይ በዓመት ጥቂት ሴንቲሜትር ይንቀሳቀሳሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Does Africa's plate end at its coast?",
+     "ask": "Is the edge of the African Plate the same as the coast of Africa?",
+     "opts": [
+      "No, the plate also includes ocean floor around Africa",
+      "Yes, exactly at the coast",
+      "Only on the east coast",
+      "Africa has no plate"
+     ],
+     "after": "The African Plate reaches the mid-Atlantic ridge and other ocean ridges. Plate edges do not follow coastlines.",
+     "ref": "p.6",
+     "id": "g12.geography.u1.s1-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Lithosphere and asthenosphere",
+     "paras": [
+      "Lithosphere: crust + uppermost mantle, rigid, about 0–100 km.",
+      "Asthenosphere: weak, plastic, partly molten layer beneath it.",
+      "The lithosphere slides over the asthenosphere."
+     ],
+     "ref": "p.6, Figure 1.4",
+     "id": "g12.geography.u1.s1-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The theory",
+     "paras": [
+      "Developed in the late 1960s.",
+      "About a dozen large plates plus smaller ones.",
+      "They move a few cm per year and change size.",
+      "Plates can be continental, oceanic or both.",
+      "They meet at plate boundaries, where mountains, earthquakes and volcanoes form.",
+      "It also affects the oceans, the atmosphere and long-term climate."
+     ],
+     "ref": "p.6–7",
+     "id": "g12.geography.u1.s1-2.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Main plates",
+     "paras": [
+      "From Figure 1.5."
+     ],
+     "table": [
+      [
+       "Carry a continent",
+       "Mainly ocean floor"
+      ],
+      [
+       "African, Eurasian",
+       "Pacific (largest)"
+      ],
+      [
+       "North American, South American",
+       "Nazca, Cocos, Juan de Fuca"
+      ],
+      [
+       "Indo-Australian, Antarctic, Arabian",
+       "Philippine, Caribbean, Scotia"
+      ]
+     ],
+     "ref": "Figure 1.5, p.7",
+     "id": "g12.geography.u1.s1-2.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Lithosphere",
+       "The rigid outer layer: the crust plus the uppermost mantle, about 0–100 km deep."
+      ],
+      [
+       "Asthenosphere",
+       "The weak, plastic layer of the mantle under the lithosphere, on which plates slide."
+      ],
+      [
+       "Plate tectonics",
+       "The theory that the lithosphere is broken into plates that move over the asthenosphere."
+      ],
+      [
+       "Plate boundary",
+       "The zone where two plates meet: convergent, divergent or transform."
+      ]
+     ],
+     "id": "g12.geography.u1.s1-2.5"
+    },
+    {
+     "kind": "mcq",
+     "text": "According to plate tectonics, the plates move on top of the",
+     "opts": [
+      "asthenosphere",
+      "inner core",
+      "lower mantle",
+      "atmosphere"
+     ],
+     "ans": "asthenosphere",
+     "why": "The weak, plastic layer lets the rigid lithosphere slide.",
+     "clue": "Which layer is soft enough to flow?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.6",
+     "id": "g12.geography.u1.s1-2.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "The lithosphere is made of",
+     "opts": [
+      "the crust and the uppermost mantle",
+      "only the oceanic crust",
+      "the outer core",
+      "the asthenosphere and lower mantle"
+     ],
+     "ans": "the crust and the uppermost mantle",
+     "why": "p.6.",
+     "clue": "It is the rigid outer layer.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.6",
+     "id": "g12.geography.u1.s1-2.7"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Mainly oceanic or carries a continent?",
+     "bins": [
+      "Carries a continent",
+      "Mainly oceanic"
+     ],
+     "items": [
+      [
+       "Pacific",
+       "Mainly oceanic",
+       "largest, ocean only"
+      ],
+      [
+       "Nazca",
+       "Mainly oceanic",
+       "under the SE Pacific"
+      ],
+      [
+       "African",
+       "Carries a continent",
+       "Africa"
+      ],
+      [
+       "Eurasian",
+       "Carries a continent",
+       "Europe and Asia"
+      ],
+      [
+       "Cocos",
+       "Mainly oceanic",
+       "off Central America"
+      ],
+      [
+       "South American",
+       "Carries a continent",
+       "South America"
+      ]
+     ],
+     "why": "Plates named after continents carry them (plus some ocean floor).",
+     "clue": "Is there a continent on it?",
+     "ref": "Brainstorming 1.3",
+     "graded": true,
+     "level": 1,
+     "id": "g12.geography.u1.s1-2.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "About how fast do plates move?",
+     "opts": [
+      "A few centimetres per year",
+      "A few metres per day",
+      "A few kilometres per year",
+      "They do not move"
+     ],
+     "ans": "A few centimetres per year",
+     "why": "p.6.",
+     "clue": "About as fast as fingernails grow.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.6",
+     "id": "g12.geography.u1.s1-2.9"
+    },
+    {
+     "kind": "blank",
+     "ask": "A plate moves 3 cm per year. In 10 million years it moves ___ km",
+     "a": [
+      "300"
+     ],
+     "why": "3 cm × 10 000 000 = 30 000 000 cm = 300 000 m = 300 km.",
+     "clue": "100 000 cm = 1 km.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.geography.u1.s1-2.10"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Plate tectonics theory was developed in the",
+   "opts": [
+    "late 1960s",
+    "1912",
+    "1850s",
+    "2000s"
+   ],
+   "ans": "late 1960s",
+   "why": "p.6.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.geography.u1.s1-2.11"
+  },
+  {
+   "kind": "mcq",
+   "text": "The largest plate is the",
+   "opts": [
+    "Pacific Plate",
+    "African Plate",
+    "Nazca Plate",
+    "Arabian Plate"
+   ],
+   "ans": "Pacific Plate",
+   "why": "Figure 1.5.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.geography.u1.s1-2.12"
+  },
+  {
+   "kind": "mcq",
+   "text": "The North American Plate includes",
+   "opts": [
+    "the western half of the North Atlantic seafloor",
+    "only land",
+    "Africa",
+    "the Pacific Ocean"
+   ],
+   "ans": "the western half of the North Atlantic seafloor",
+   "why": "p.6.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.geography.u1.s1-2.13"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which plate is mainly oceanic?",
+   "opts": [
+    "Nazca",
+    "Eurasian",
+    "African",
+    "Antarctic"
+   ],
+   "ans": "Nazca",
+   "why": "Figure 1.5.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.geography.u1.s1-2.14"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which statement is TRUE?",
+   "opts": [
+    "A plate can contain both continental and oceanic crust",
+    "Every plate is exactly one continent",
+    "Plates never change size",
+    "The asthenosphere is rigid"
+   ],
+   "ans": "A plate can contain both continental and oceanic crust",
+   "why": "p.6.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.geography.u1.s1-2.15"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Figure 1.4 misspells \"litoosphere\" and \"weeker\"; the asthenosphere is usually given as about 100–350 km, shorter than the arrow drawn."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
