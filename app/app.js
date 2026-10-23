@@ -65,7 +65,7 @@ function sheet(html) { sheetEl.innerHTML = html ? `<div class="sheet" id="sheetb
 const FEEDBACK_URL = store.get('fburl', '') || 'https://script.google.com/macros/s/AKfycby7tvA6JjQxUCDW7wkeyDhdNgNsIhh4m9TP_wFtdtbsaWiQSvSPOUtmCdG04qKAxUkh/exec'; // paste the Apps Script Web app URL between the last quotes (…/exec); 'fburl' in storage is for testing only
 const APP_VERSION = '0.2';
 const Feedback = {
-  where: ctx => [ctx.chapter, ctx.section, ctx.label].filter(Boolean).join(' · '),
+  where: ctx => [ctx.chapter, ctx.section, ctx.label, ctx.lesson && `lesson ${ctx.lesson}`, ctx.item && `item ${ctx.item}${ctx.generated ? ' (new numbers)' : ''}`].filter(Boolean).join(' · '),
   device() { const ua = navigator.userAgent || ''; const m = ua.match(/\(([^)]+)\)/); return `${m ? m[1].split(';').slice(0, 3).join(';') : ''} · ${innerWidth}×${innerHeight}${Install.installed() ? ' · installed' : ''}`.slice(0, 200); },
   busy: false,
   async flush() { if (!FEEDBACK_URL || !navigator.onLine || Feedback.busy) return; Feedback.busy = true;
@@ -79,10 +79,12 @@ const Feedback = {
     sheet(`<div class="stack fbsheet"><div style="width:40px;height:5px;border-radius:99px;background:var(--line);justify-self:center"></div><h2 class="display">${ctx.lesson ? t('report_q') : '💬 ' + t('fb_title')}</h2>${Feedback.where(ctx) ? `<p class="small muted">${esc(Feedback.where(ctx))}</p>` : `<p class="small muted">${t('fb_sub')}</p>`}
       <div class="opts" role="group">${kinds.map(k => `<button class="opt" data-k="${k}" aria-pressed="false">${t(k)}</button>`).join('')}</div>
       <label class="stack"><span class="small" style="font-weight:800">${t('report_more')}</span><textarea id="fbmsg" rows="4" maxlength="3000" style="padding:10px 12px;border-radius:12px;border:2px solid var(--line);background:var(--surface);color:var(--fg);font:inherit"></textarea></label>
-      <div class="row"><label class="btn ghost small fbpic">📷 ${t('fb_shot')}<input type="file" accept="image/*" id="fbfile" hidden></label><span class="small muted" id="fbshotok"></span></div>
+      <div class="fbshot" id="fbshotbox" ${ctx.shot ? '' : 'hidden'}><img id="fbimg" alt="${t('fb_shot')}" ${ctx.shot ? `src="${ctx.shot}"` : ''}><div class="stack"><span class="small" style="font-weight:800">📸 ${t('fb_screen')}</span><button class="btn ghost small" id="fbnoshot">✕ ${t('fb_remove')}</button></div></div>
+      <div class="row" id="fbpicrow" ${ctx.shot ? 'hidden' : ''}><label class="btn ghost small fbpic">📷 ${t('fb_shot')}<input type="file" accept="image/*" id="fbfile" hidden></label><span class="small muted" id="fbshotok"></span></div>
       <label class="stack"><span class="small" style="font-weight:800">${t('fb_contact')}</span><input id="fbcontact" maxlength="120" value="${esc(store.get('fbcontact', ''))}" style="min-height:48px;padding:0 12px;border-radius:12px;border:2px solid var(--line);background:var(--surface);color:var(--fg)"></label>
       <div class="row"><button class="btn ghost" id="fbcancel">${t('cancel')}</button><button class="btn" id="fbsend">${t('send')}</button></div></div>`);
-    let kind = null, shot = '';
+    let kind = null, shot = ctx.shot || '';
+    $('#fbnoshot').onclick = () => { shot = ''; $('#fbshotbox').hidden = true; $('#fbpicrow').hidden = false; };
     sheetEl.querySelector('.opts').addEventListener('click', e => { const b = e.target.closest('.opt'); if (!b) return; kind = b.dataset.k; sheetEl.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-pressed', x === b)); });
     $('#fbfile').onchange = async e => { const f = e.target.files && e.target.files[0]; if (!f) return; $('#fbshotok').textContent = '…'; shot = await Feedback.shrink(f); $('#fbshotok').textContent = shot ? '✓ ' + t('fb_shot_ok') : ''; };
     $('#fbcancel').onclick = () => sheet('');
@@ -94,6 +96,43 @@ const Feedback = {
   }
 };
 function reportSheet(ctx) { Feedback.open(ctx); } // older call sites
+/* Snap: a picture of what the student sees right now (the page redrawn into an image, no library).
+   Works in Chrome/Android; where the browser refuses, it returns '' and the form opens without a picture. */
+const Snap = {
+  css: null,
+  async take() {
+    try {
+      if (Snap.css == null) { try { Snap.css = await (await fetch('styles.css')).text(); } catch (_) { Snap.css = ''; } }
+      const W = innerWidth, H = innerHeight, cs = getComputedStyle(document.documentElement), bs = getComputedStyle(document.body);
+      const q = x => String(x).replace(/"/g, "'"), vars = q([...new Set(Snap.css.match(/--[\w-]+(?=\s*:)/g) || [])].map(v => `${v}:${cs.getPropertyValue(v).trim()}`).join(';'));
+      // anchor on the first block at the top of the screen: drop everything above it, so font differences above can't shift the picture
+      const appEl = document.getElementById('app'), topH = (document.getElementById('top') || { getBoundingClientRect: () => ({ bottom: 0 }) }).getBoundingClientRect().bottom;
+      const blocks = [...appEl.querySelectorAll('*')].filter(e => { const pr = e.parentElement; return pr && (pr === appEl || pr.classList.contains('book') || pr.classList.contains('sec') || pr.classList.contains('reader')) && !e.classList.contains('sec') && !e.classList.contains('book'); });
+      const A = blocks.find(e => { const r = e.getBoundingClientRect(), pos = getComputedStyle(e).position; return pos !== 'sticky' && pos !== 'fixed' && r.bottom > topH + 8 && r.height > 0; });
+      const path = []; if (A) for (let n = A; n && n !== document.body; n = n.parentElement) path.unshift([...n.parentElement.children].indexOf(n));
+      const clone = document.body.cloneNode(true); clone.querySelectorAll('script,.fbfab,.verdict,#sheet,.toast').forEach(n => n.remove());
+      const a = document.body.querySelectorAll('input,textarea'), b = clone.querySelectorAll('input,textarea'); a.forEach((x, i) => { if (b[i]) b[i].setAttribute('value', x.value); });
+      let shift = -scrollY;
+      if (A) { let cn = clone; const chain = []; path.forEach(i => { cn = cn.children[i]; chain.push(cn); });
+        chain.forEach(n => { if (n.closest && n.closest('#app') && n.id !== 'app') { let p = n.previousElementSibling; while (p) { const q2 = p.previousElementSibling; p.remove(); p = q2; } } });
+        let pad = 0; for (let n = A.parentElement; n && n !== document.body; n = n.parentElement) { const st = getComputedStyle(n); pad += parseFloat(st.paddingTop) + parseFloat(st.borderTopWidth); if (n === appEl) { pad += parseFloat(st.marginTop); break; } }
+        shift = A.getBoundingClientRect().top - parseFloat(getComputedStyle(A).marginTop) - pad; }
+      const wrap = document.createElement('div'); wrap.className = document.body.className; [...clone.childNodes].forEach(n => wrap.appendChild(n));
+      wrap.querySelectorAll('img').forEach(i => { if (!/^data:/.test(i.getAttribute('src') || '')) i.removeAttribute('src'); }); // outside pictures would block the capture
+      const html = new XMLSerializer().serializeToString(wrap), font = q(`font-family:${bs.fontFamily};color:${bs.color};font-size:${bs.fontSize};line-height:${bs.lineHeight}`);
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}"><foreignObject x="0" y="0" width="${W}" height="${H}"><div xmlns="http://www.w3.org/1999/xhtml" lang="${document.documentElement.lang || ''}" style="${vars};${font};width:${W}px;height:${H}px;overflow:hidden;position:relative;background:${bs.backgroundColor}"><style>${Snap.css}</style><div style="position:absolute;left:0;top:${shift}px;width:${W}px">${html}</div></div></foreignObject></svg>`;
+      const img = new Image(); img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg); await img.decode();
+      const c = document.createElement('canvas'); c.width = W; c.height = H; c.getContext('2d').drawImage(img, 0, 0); return c.toDataURL('image/jpeg', .72);
+    } catch (_) { return ''; }
+  }
+};
+// one floating button on every lesson screen: tap → picture of the screen + where the student is → feedback form
+const FAB = {
+  el: null,
+  show(on) { if (!FAB.el) { FAB.el = document.createElement('button'); FAB.el.className = 'fbfab'; FAB.el.setAttribute('aria-label', t('report')); FAB.el.innerHTML = '<span aria-hidden="true">💬</span>';
+      FAB.el.onclick = async () => { FAB.el.disabled = true; const ctx = (Feedback.here || (() => ({})))(); const shot = await Snap.take(); FAB.el.disabled = false; Feedback.open(Object.assign(ctx, { shot, quick: true })); }; document.body.appendChild(FAB.el); }
+    FAB.el.setAttribute('aria-label', t('report')); FAB.el.hidden = !on; }
+};
 window.addEventListener('online', () => Feedback.flush());
 const svgIcon = d => `<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="${d}" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 const BACK = 'M15 6l-6 6 6 6', FLAG = 'M4 21V4h12l-1 4 1 4H4', CLOSE = 'M6 6l12 12M18 6L6 18';
@@ -873,9 +912,10 @@ function runPlayer(cfg) {
       return { el, label: cfg.mode === 'refresher' ? t('back_to_question') : missed.size ? t('replay_n', { n: missed.size }) : cfg.resume ? t('back_to_book') : t('start_again'), ready: () => true, summary: true }; };
   function setTray(kind, title, body, label) { tray.className = 'tray' + (kind ? ' ' + kind : ''); msg.innerHTML = title ? `<strong>${esc(title)}</strong>${body ? `<span>${esc(body)}</span>` : ''}` : ''; go.textContent = label; }
   function update() { if (phase === 'answer' && cur) go.disabled = !cur.ready(); }
-  function bindTop(k) { const rep = $('#rep'); if (rep) rep.onclick = () => { const sc = screens[k] || {}; Feedback.open({ lesson: cfg.id || cfg.title, label: `${cfg.title} · ${Math.min(pos + 1, order.length)}/${order.length}`, question: [sc.ask, sc.text, sc.title].filter(Boolean).join(' | ') }); }; const rb = $('#rback'); if (rb) rb.onclick = () => cfg.resume && cfg.resume(); }
+  function bindTop(k) { const rep = $('#rep'); if (rep) rep.onclick = () => Feedback.open(Feedback.here ? Feedback.here() : {}); const rb = $('#rback'); if (rb) rb.onclick = () => cfg.resume && cfg.resume(); }
   function addSkip() { const k = order[pos], s = screens[k] || {}; const osk = $('#skipb'); if (osk) osk.remove(); if (s.graded && order.length - pos > 2 && (!['mcq', 'tf'].includes(s.kind) || tries[k])) { const sb = document.createElement('button'); sb.className = 'btn ghost'; sb.id = 'skipb'; sb.style.width = 'auto'; sb.textContent = t('skip'); sb.onclick = () => { order.splice(pos, 1); order.splice(order.length - 1, 0, k); show(); }; go.parentNode.insertBefore(sb, go); } }
   function show() {
+    Feedback.here = () => { const sc = screens[order[pos]] || {}; return Object.assign({}, cfg.where || {}, { lesson: (cfg.id || '').split(':')[0], label: `${cfg.where ? '' : cfg.title + ' · '}${cfg.mode === 'practice' ? t('step_practise') : cfg.mode === 'test' ? t('unit_test') : cfg.mode === 'book' ? cfg.title : cfg.mode} ${Math.min(pos + 1, order.length)}/${order.length}`, item: sc.id || '', generated: !!sc._gen, question: [sc.ask, sc.text, sc.title].filter(Boolean).join(' | ') }); }; FAB.show(true);
     const k0 = order[pos]; if (cfg.adapt && k0 !== SUM && screens[k0] && screens[k0]._adapt && !screens[k0]._shown) screens[k0] = Object.assign(Gen.make(screens[k0], null, null, lvl), { _adapt: true, _shown: true });
     const k = order[pos], s = k === SUM ? { kind: 'summary' } : screens[k];
     cur = (R[s.kind] || R.name)(s); app.replaceChildren(cur.el);
@@ -931,7 +971,8 @@ async function viewLesson(path, mode, exIdx) {
   const page = document.createElement('div'); page.className = 'reader';
   page.innerHTML = `<header class="stack"><span class="eyebrow">${ch ? `${t('grade')} ${ch.grade} · ${esc(L(idx.subjects[ch.subject]))} · ` : ''}${t('unit')} ${ls.book.unit}</span><h1 class="display">${m === 'learn' ? esc(ls.book.section) + ' ' : ''}${esc(title)}</h1>${m === 'learn' && ls.competency ? `<p class="muted">${esc(ls.competency)}</p>` : ''}${m === 'test' ? `<p class="muted">${t('test_note')}</p>` : ''}</header>`;
   app.replaceChildren(page);
-  $('#rep').onclick = () => reportSheet({ lesson: ls.id, label: `${ls.book.section} · ${ls.title}` });
+  Feedback.here = () => ({ chapter: ch ? `${t('grade')} ${ch.grade} · ${L(idx.subjects[ch.subject])} · ${t('unit')} ${ch.unit}` : '', section: `${ls.book.section} ${ls.title}`, lesson: ls.id }); FAB.show(true);
+  $('#rep').onclick = () => Feedback.open(Feedback.here());
   function progress() { const d = Object.keys(got).length; $('#pbar').style.width = (tasks ? Math.round(d / tasks * 100) : 100) + '%'; $('#pcount').textContent = `${d} / ${tasks}`; }
   function persist(extra) { setLessonProgress(key, Object.assign({ got, n: tasks }, extra || {})); }
   function finish(i, ok) {
@@ -1278,7 +1319,7 @@ function levelTag(s) { return s.level ? `<span class="lvl l${s.level}" title="${
 function h(cls, html) { const d = document.createElement('div'); d.className = cls; d.innerHTML = html; return d; }
 function renderBlock(s, ctx) {
   const fn = Blocks[s.kind] || ((s.kind === 'mcq' || s.kind === 'tf') && s.graded ? Blocks.choice : s.graded ? Blocks.answer : Blocks.explore);
-  const el = fn(s, ctx); el.dataset.kind = s.kind;
+  const el = fn(s, ctx); el.dataset.kind = s.kind; if (s.id) el.dataset.id = s.id; if (s._gen) el.dataset.gen = '1';
   const ql = el.querySelector('.ql');
   if (ql && s.step === 'challenge') { ql.innerHTML = `🏆 ${esc(t('challenge'))}`; el.classList.add('chal'); }
   if (ql && s.level && s.graded) ql.insertAdjacentHTML('beforeend', levelTag(s));
@@ -1298,6 +1339,7 @@ async function viewBook(id) {
   const save = () => { const a = store.get('bk', {}); a[id] = B; store.set('bk', a); };
   store.set('last', { route: 'book/' + id, title: `${t('unit')} ${c.unit} · ${L(c.title)}`, sub: `${L(idx.subjects[c.subject])} · ${t('grade')} ${c.grade}` });
   let streak = 0, away = false; const units = [], secUnits = secs.map(() => []);
+  const chapterLabel = `${t('grade')} ${c.grade} · ${L(idx.subjects[c.subject])} · ${t('unit')} ${c.unit}`;
   const hues = ['g', 's', 'y', 'c', 'v'], topOf = n => n.split('.').slice(0, 2).join('.'), tops = [...new Set(secs.map(x => topOf(x.n)))], hueOf = n => hues[tops.indexOf(topOf(n)) % 5];
   setTop(`<a class="iconbtn" href="#home" aria-label="back">${svgIcon(BACK)}</a><div class="prog"><div class="bar"><i id="pbar"></i></div><span id="ppct">0%</span></div><button class="focus" id="focus" aria-label="${t('focus_title')}">⏱</button><span class="pts" id="pts" aria-live="polite">⭐ <b>${B.pts}</b></span>`);
   $('#focus').onclick = () => Focus.sheet(); Focus.tick();
@@ -1345,17 +1387,22 @@ async function viewBook(id) {
     const end = document.createElement('div'); end.className = 'secend';
     end.innerHTML = `<div class="secdone" hidden>🎉 ${t('section_done', { s: esc(sec.n) })} <b>+20 ⭐</b></div><div class="prac"></div>${(ls.exercises || []).map((ex, k) => `<button class="pcard soft" data-a="ex" data-k="${k}"><span class="pi">${ex.test ? '🏁' : '📝'}</span><span class="grow"><b>${esc(ex.book_name)}</b><small>${ex.test ? t('fresh_test') : t('book_exercise')} · ${ex.items.length}</small></span><span>›</span></button>`).join('')}`;
     end.insertAdjacentHTML('beforeend', `<button class="btn link small fbsec">🚩 ${t('report_section')}</button>`);
-    end.querySelector('.fbsec').onclick = () => Feedback.open({ lesson: ls.id, chapter: `${t('grade')} ${c.grade} · ${L(idx.subjects[c.subject])} · ${t('unit')} ${c.unit}`, section: `${sec.n} ${ls.title}` });
+    end.querySelector('.fbsec').onclick = () => Feedback.open({ lesson: ls.id, chapter: chapterLabel, section: `${sec.n} ${ls.title}` });
     function updPrac() { const pr = B.prac[sec.lesson]; end.querySelector('.prac').innerHTML = practise.length ? `<button class="pcard" data-a="prac"><span class="pi">🎯</span><span class="grow"><b>${t('practise_n', { n: practise.length })}</b><small>${pr ? `${t('best')} ${pr}` : t('practise_sub')}</small></span><span>›</span></button>` : ''; }
     updPrac();
-    const runHere = cfg => { const keep = { app: [...app.childNodes], top: [...topin.childNodes], y: window.scrollY }; away = true;
-      runPlayer(Object.assign({ backRoute: null, refreshers: ls.refreshers || {}, tool: ls.tool, cheer: true, resume: () => { app.replaceChildren(...keep.app); topin.replaceChildren(...keep.top); top.hidden = false; hideTray(); setNav(false); away = false; bumpPts(); Focus.tick(); requestAnimationFrame(() => window.scrollTo(0, keep.y)); } }, cfg)); };
+    const runHere = cfg => { const keep = { app: [...app.childNodes], top: [...topin.childNodes], y: window.scrollY }; away = true; cfg.where = { chapter: chapterLabel, section: `${sec.n} ${ls.title}` };
+      runPlayer(Object.assign({ backRoute: null, refreshers: ls.refreshers || {}, tool: ls.tool, cheer: true, resume: () => { app.replaceChildren(...keep.app); topin.replaceChildren(...keep.top); top.hidden = false; hideTray(); setNav(false); away = false; Feedback.here = bookHere; FAB.show(true); bumpPts(); Focus.tick(); requestAnimationFrame(() => window.scrollTo(0, keep.y)); } }, cfg)); };
     end.addEventListener('click', e => { const b = e.target.closest('.pcard'); if (!b) return;
       if (b.dataset.a === 'prac') { B.runs = B.runs || {}; const again = (B.runs[sec.lesson] = (B.runs[sec.lesson] || 0) + 1) > 1; save(); runHere({ id: ls.id, title: `${sec.n} · ${ls.title}`, mode: 'practice', vary: true, adapt: true, startLevel: (B.lvl && B.lvl[sec.lesson]) || 2, onLevel: L => { B.lvl = B.lvl || {}; B.lvl[sec.lesson] = L; save(); }, screens: mixPractise(practise, again), onDone: res => { const right = Object.values(res.firstTry).filter(Boolean).length; B.prac[sec.lesson] = `${right}/${practise.length}`; B.pts += right * 5; practise.forEach((s, i) => { if (B.got[s._key] === 's' && res.firstTry[i]) B.got[s._key] = 5; }); save(); Object.keys(res.byIdea).forEach(i => bumpMastery(i, res.byIdea[i])); updPrac(); } }); }
       else { const ex = ls.exercises[+b.dataset.k]; runHere(ex.test ? { id: ls.id, title: ex.book_name, mode: 'test', vary: true, screens: ex.items.map(x => Gen.make(x)) } : { id: ls.id, title: ex.book_name, mode: 'book', screens: ex.items }); } });
     box.appendChild(end); page.appendChild(box); doneCheck();
   });
   const fin = document.createElement('div'); fin.className = 'bookend'; fin.innerHTML = `<div class="display">⭐ ${t('book_points')}</div><a class="btn ghost" href="#exams">${t('exams')} ›</a>`; page.appendChild(fin);
+  // what the student is looking at: the section in view and the block nearest the middle of the screen
+  function bookHere() { const on = page.querySelector('#secnav .chip.on'), i = on ? +on.dataset.go : 0, sec = secs[i], ls = lessons[i]; let best = null, bd = 1e9;
+    page.querySelectorAll('[data-id]').forEach(el => { const r = el.getBoundingClientRect(); if (r.bottom < 70 || r.top > innerHeight) return; const d = Math.abs(r.top + r.height / 2 - innerHeight / 2) + (el.classList.contains('quiz') ? 0 : 250); if (d < bd) { bd = d; best = el; } });
+    return { chapter: chapterLabel, section: sec ? `${sec.n} ${ls.title}` : '', lesson: ls ? ls.id : '', item: best ? best.dataset.id : '', question: best ? best.innerText.replace(/\s+/g, ' ').trim().slice(0, 400) : '' }; }
+  Feedback.here = bookHere; FAB.show(true);
   progress(); Translate.bind(page);
   page.querySelector('#secnav').addEventListener('click', e => { const a = e.target.closest('[data-go]'); if (!a) return; e.preventDefault(); $('#sec' + a.dataset.go).scrollIntoView({ behavior: 'smooth', block: 'start' }); });
   try {
@@ -1369,7 +1416,7 @@ async function viewBook(id) {
 
 /* ---------- router ---------- */
 async function route() {
-  sheet(''); closePanel();
+  sheet(''); closePanel(); FAB.show(false); Feedback.here = null;
   const h = location.hash.replace(/^#/, ''), [r, a, b] = h.split('/');
   if (!S.lang && r !== 'welcome') { await viewWelcome(); return; }
   if (!T.app) await loadLang(S.lang);

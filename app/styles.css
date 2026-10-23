@@ -426,3 +426,11 @@ body.panel-open main { padding-bottom: 60vh; }
 .fbsheet textarea:focus, .fbsheet input:focus { outline: 2px solid var(--sky); }
 .fbpic { width: auto; cursor: pointer; }
 .secend .fbsec { justify-self: start; }
+/* floating report button on lesson screens */
+.fbfab { position: fixed; right: max(14px, env(safe-area-inset-right, 0px)); bottom: calc(18px + env(safe-area-inset-bottom, 0px)); z-index: 7; width: 52px; height: 52px; border-radius: 99px; border: 2px solid var(--line); background: var(--surface); box-shadow: 0 6px 18px rgba(0,0,0,.18); font-size: 24px; display: grid; place-items: center; cursor: pointer; }
+.fbfab:disabled { opacity: .6; }
+body:has(#tray:not([hidden])) .fbfab { bottom: calc(150px + env(safe-area-inset-bottom, 0px)); }
+.fbshot { display: flex; gap: 12px; align-items: center; }
+.fbshot img { width: 92px; border-radius: 10px; border: 2px solid var(--line); }
+/* bottom sheets never grow taller than the screen: they scroll */
+.sheet .in { max-height: 92vh; max-height: 92dvh; overflow-y: auto; overscroll-behavior: contain; }
