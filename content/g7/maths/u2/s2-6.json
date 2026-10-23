@@ -1,0 +1,721 @@
+{
+ "id": "g7.maths.u2.s2-6",
+ "book": {
+  "title": "Mathematics Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "Integers",
+  "pages": "47–52",
+  "section": "2.6"
+ },
+ "title": "Even and odd integers",
+ "competency": "Describe and identify even and odd integers, and their sums, differences and products.",
+ "minutes": 12,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Even integer",
+   "am": "ጥንድ ኢንቲጀር",
+   "def": "An integer that 2 divides with no remainder, like −4, 0, 6.",
+   "machine": true
+  },
+  {
+   "en": "Odd integer",
+   "am": "ጎዶሎ ኢንቲጀር",
+   "def": "An integer that leaves remainder 1 when divided by 2, like −3, 1, 5.",
+   "machine": true
+  },
+  {
+   "en": "Consecutive integers",
+   "am": "ተከታታይ ኢንቲጀሮች",
+   "def": "Integers that follow one another. Consecutive even integers differ by 2.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.even-odd",
+   "name": "Even and odd integers",
+   "explain": {
+    "en": {
+     "text": "An even integer can be divided by 2 with no remainder. An odd integer leaves remainder 1. Look at the last digit: 0, 2, 4, 6 or 8 means even; otherwise odd. Zero is even. Consecutive even or odd integers differ by 2."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Pairs",
+     "ask": "Group 5 books in twos. What happens?",
+     "opts": [
+      "They all fit in pairs",
+      "One book is left over"
+     ],
+     "after": "5 = 2 + 2 + 1. One is left over, so 5 is odd. 6 balls fit exactly, so 6 is even.",
+     "ref": "Activity 2.6.1",
+     "id": "g7.maths.u2.s2-6.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Even and odd",
+     "paras": [
+      "An even integer can be divided by 2 without a remainder.",
+      "An odd integer cannot be divided by 2. Its remainder is 1.",
+      "Single-digit even integers: −8, −6, −4, −2, 0, 2, 4, 6, 8.",
+      "Single-digit odd integers: −9, −7, −5, −3, −1, 1, 3, 5, 7, 9."
+     ],
+     "ref": "Examples 1–2",
+     "id": "g7.maths.u2.s2-6.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Many digits",
+     "paras": [
+      "If the unit digit is 0, 2, 4, 6 or 8, the number is even.",
+      "Otherwise it is odd. So −252 is even and 345 is odd.",
+      "The next three even integers after 31 are 32, 34 and 36."
+     ],
+     "ref": "Examples 3–4",
+     "id": "g7.maths.u2.s2-6.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Even integer",
+       "An integer that 2 divides with no remainder."
+      ],
+      [
+       "Odd integer",
+       "An integer that leaves remainder 1 when divided by 2."
+      ],
+      [
+       "Consecutive integers",
+       "Integers that follow one another."
+      ]
+     ],
+     "id": "g7.maths.u2.s2-6.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Is −252 even or odd?",
+     "opts": [
+      "Even",
+      "Odd"
+     ],
+     "ans": "Even",
+     "why": "Its unit digit is 2.",
+     "clue": "Look at the last digit only.",
+     "level": 1,
+     "ref": "Example 3",
+     "id": "g7.maths.u2.s2-6.5"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "bins": [
+      "Even",
+      "Odd"
+     ],
+     "items": [
+      [
+       "−36",
+       "Even",
+       "Ends in 6."
+      ],
+      [
+       "55",
+       "Odd",
+       "Ends in 5."
+      ],
+      [
+       "0",
+       "Even",
+       "Ends in 0."
+      ],
+      [
+       "−71",
+       "Odd",
+       "Ends in 1."
+      ],
+      [
+       "103",
+       "Odd",
+       "Ends in 3."
+      ],
+      [
+       "−180",
+       "Even",
+       "Ends in 0."
+      ]
+     ],
+     "why": "Use the unit digit.",
+     "clue": "Is the last digit 0, 2, 4, 6 or 8?",
+     "level": 1,
+     "ref": "Exercise 2.6.1 Q1",
+     "id": "g7.maths.u2.s2-6.6"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "The first even integer greater than 143 is ___",
+     "a": [
+      "144",
+      "+144"
+     ],
+     "num": true,
+     "why": "143 is odd. The next integer, 144, is even. Then 146 and 148.",
+     "clue": "Add 1 to the odd number.",
+     "level": 1,
+     "ref": "Exercise 2.6.1 Q3",
+     "id": "g7.maths.u2.s2-6.7"
+    },
+    {
+     "kind": "pick",
+     "step": "practise",
+     "graded": true,
+     "text": "Tap the next three consecutive odd integers greater than −54.",
+     "pool": [
+      "−55",
+      "−53",
+      "−52",
+      "−51",
+      "−49",
+      "−47"
+     ],
+     "a": [
+      "−53",
+      "−51",
+      "−49"
+     ],
+     "why": "−54 is even. The next odd is −53, then −51 and −49 (add 2 each time).",
+     "clue": "Greater means to the right of −54.",
+     "level": 2,
+     "ref": "Exercise 2.6.1 Q4",
+     "id": "g7.maths.u2.s2-6.8"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "ask": "What is the smallest two-digit negative integer? ___",
+     "a": [
+      "−99",
+      "-99"
+     ],
+     "num": true,
+     "why": "Two-digit negatives go from −10 to −99. −99 is furthest left, so it is the smallest.",
+     "clue": "Smallest means furthest left on the number line.",
+     "level": 3,
+     "ref": "Exercise 2.6.1 Q9",
+     "input": "signed",
+     "added": true,
+     "id": "g7.maths.u2.s2-6.9"
+    }
+   ]
+  },
+  {
+   "id": "math.even-odd-operations",
+   "name": "Adding, subtracting and multiplying even and odd",
+   "explain": {
+    "en": {
+     "text": "Even plus even is even, and odd plus odd is even. Even plus odd is odd. Subtraction follows the same pattern. A product is odd only when every factor is odd; one even factor makes it even."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Odd + odd",
+     "ask": "Add two odd numbers: 31 + 25. Is the sum even or odd?",
+     "opts": [
+      "Even",
+      "Odd"
+     ],
+     "after": "31 + 25 = 56, which is even. Two odd numbers always give an even sum.",
+     "ref": "Example 2",
+     "id": "g7.maths.u2.s2-6.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Results",
+     "paras": [],
+     "table": [
+      [
+       "Operation",
+       "Result",
+       "Example"
+      ],
+      [
+       "even + even",
+       "even",
+       "24 + (−18) = 6"
+      ],
+      [
+       "odd + odd",
+       "even",
+       "31 + 25 = 56"
+      ],
+      [
+       "even + odd",
+       "odd",
+       "8 + 19 = 27"
+      ],
+      [
+       "even − even",
+       "even",
+       "12 − 20 = −8"
+      ],
+      [
+       "odd − odd",
+       "even",
+       "7 − 5 = 2"
+      ],
+      [
+       "odd − even, even − odd",
+       "odd",
+       "12 − 5 = 7"
+      ],
+      [
+       "even × even",
+       "even",
+       "−8 × (−4) = 32"
+      ],
+      [
+       "odd × even",
+       "even",
+       "−7 × 4 = −28"
+      ],
+      [
+       "odd × odd",
+       "odd",
+       "−9 × (−5) = 45"
+      ]
+     ],
+     "ref": "Examples 1–6",
+     "id": "g7.maths.u2.s2-6.11"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Consecutive integers",
+       "Integers that follow one another. Consecutive even integers differ by 2."
+      ]
+     ],
+     "id": "g7.maths.u2.s2-6.12"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "odd × odd = ?",
+     "opts": [
+      "even",
+      "odd"
+     ],
+     "ans": "odd",
+     "why": "For example 5 × 3 = 15, which is odd.",
+     "clue": "Try 3 × 5.",
+     "level": 1,
+     "ref": "Example 3",
+     "id": "g7.maths.u2.s2-6.13"
+    },
+    {
+     "kind": "match",
+     "step": "practise",
+     "graded": true,
+     "pairs": [
+      [
+       "even + even",
+       "even"
+      ],
+      [
+       "even − odd",
+       "odd"
+      ],
+      [
+       "odd × even",
+       "even"
+      ],
+      [
+       "odd × odd",
+       "odd"
+      ]
+     ],
+     "why": "Try small numbers like 2, 3, 4, 5.",
+     "clue": "Test with 2 and 3.",
+     "level": 1,
+     "ref": "Exercise 2.6.2 Q1",
+     "id": "g7.maths.u2.s2-6.14"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "The difference between two consecutive even integers is ___",
+     "a": [
+      "2",
+      "+2"
+     ],
+     "num": true,
+     "why": "For example 34 − 32 = 2.",
+     "clue": "Try 4 and 6.",
+     "level": 1,
+     "ref": "Exercise 2.6.2 Q1 h",
+     "id": "g7.maths.u2.s2-6.15"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "even + odd + even = ?",
+     "opts": [
+      "even",
+      "odd"
+     ],
+     "ans": "odd",
+     "why": "even + odd = odd; odd + even = odd. For example 2 + 3 + 4 = 9.",
+     "clue": "Work two at a time.",
+     "level": 2,
+     "ref": "Exercise 2.6.2 Q1 d",
+     "id": "g7.maths.u2.s2-6.16"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "odd − even − odd + odd = ?",
+     "opts": [
+      "even",
+      "odd"
+     ],
+     "ans": "odd",
+     "why": "odd − even = odd. odd − odd = even. even + odd = odd. For example 5 − 2 − 3 + 1 = 1.",
+     "clue": "Go left to right, two at a time.",
+     "level": 3,
+     "ref": "Exercise 2.6.2 Q1 e",
+     "added": true,
+     "id": "g7.maths.u2.s2-6.17"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 2.6.1",
+   "items": [
+    {
+     "kind": "sort",
+     "step": "exercise",
+     "graded": true,
+     "bins": [
+      "Even",
+      "Odd"
+     ],
+     "items": [
+      [
+       "−3675",
+       "Odd",
+       "Ends in 5."
+      ],
+      [
+       "5568",
+       "Even",
+       "Ends in 8."
+      ],
+      [
+       "−7109",
+       "Odd",
+       "Ends in 9."
+      ],
+      [
+       "1034",
+       "Even",
+       "Ends in 4."
+      ],
+      [
+       "−1807",
+       "Odd",
+       "Ends in 7."
+      ]
+     ],
+     "why": "Use the unit digit.",
+     "clue": "Look at the last digit.",
+     "level": 1,
+     "ref": "Q2",
+     "id": "g7.maths.u2.s2-6.18"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "An even integer which is neither positive nor negative: ___",
+     "a": [
+      "0"
+     ],
+     "num": true,
+     "why": "0 is even and is neither positive nor negative.",
+     "clue": "Which integer has no sign?",
+     "level": 1,
+     "ref": "Q5",
+     "id": "g7.maths.u2.s2-6.19"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "The smallest positive even integer is ___",
+     "a": [
+      "2",
+      "+2"
+     ],
+     "num": true,
+     "why": "1 is odd; 2 is the first even positive integer.",
+     "clue": "Start at 1.",
+     "level": 1,
+     "ref": "Q6",
+     "id": "g7.maths.u2.s2-6.20"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "The greatest odd negative integer is ___",
+     "a": [
+      "−1",
+      "-1"
+     ],
+     "num": true,
+     "why": "−1 is the greatest negative integer, and it is odd.",
+     "clue": "Closest to 0.",
+     "level": 1,
+     "ref": "Q7",
+     "input": "signed",
+     "id": "g7.maths.u2.s2-6.21"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "The greatest three-digit positive integer is ___",
+     "a": [
+      "999",
+      "+999"
+     ],
+     "num": true,
+     "why": "Three-digit numbers go up to 999.",
+     "clue": "Which is the largest with three digits?",
+     "level": 1,
+     "ref": "Q8",
+     "id": "g7.maths.u2.s2-6.22"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 2.6.2",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "even + even = ?",
+     "opts": [
+      "even",
+      "odd"
+     ],
+     "ans": "even",
+     "why": "2 + 4 = 6.",
+     "clue": "Try 2 + 4.",
+     "level": 1,
+     "ref": "Q1 a",
+     "id": "g7.maths.u2.s2-6.23"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "even − odd = ?",
+     "opts": [
+      "even",
+      "odd"
+     ],
+     "ans": "odd",
+     "why": "12 − 5 = 7.",
+     "clue": "Try 4 − 1.",
+     "level": 1,
+     "ref": "Q1 b",
+     "id": "g7.maths.u2.s2-6.24"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "odd × odd × even = ?",
+     "opts": [
+      "even",
+      "odd"
+     ],
+     "ans": "even",
+     "why": "One even factor makes the product even: 3 × 5 × 2 = 30.",
+     "clue": "Is there an even factor?",
+     "level": 1,
+     "ref": "Q1 f",
+     "id": "g7.maths.u2.s2-6.25"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "even × odd + even = ?",
+     "opts": [
+      "even",
+      "odd"
+     ],
+     "ans": "even",
+     "why": "even × odd = even; even + even = even. 2 × 3 + 4 = 10.",
+     "clue": "Multiply first.",
+     "level": 2,
+     "ref": "Q1 g",
+     "id": "g7.maths.u2.s2-6.26"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "The difference between two consecutive odd integers is ___",
+     "a": [
+      "2",
+      "+2"
+     ],
+     "num": true,
+     "why": "7 − 5 = 2.",
+     "clue": "Try 5 and 7.",
+     "level": 1,
+     "ref": "Q1 i",
+     "id": "g7.maths.u2.s2-6.27"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Is −1807 even or odd?",
+   "opts": [
+    "Even",
+    "Odd"
+   ],
+   "ans": "Odd",
+   "why": "It ends in 7.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.maths.u2.s2-6.28"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "odd + odd = ?",
+   "opts": [
+    "even",
+    "odd"
+   ],
+   "ans": "even",
+   "why": "3 + 5 = 8.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.maths.u2.s2-6.29"
+  },
+  {
+   "kind": "pick",
+   "step": "test",
+   "graded": true,
+   "text": "Tap every even integer.",
+   "pool": [
+    "−36",
+    "55",
+    "0",
+    "103",
+    "−180"
+   ],
+   "a": [
+    "−36",
+    "0",
+    "−180"
+   ],
+   "why": "They end in 6, 0, 0.",
+   "level": 2,
+   "id": "g7.maths.u2.s2-6.30"
+  },
+  {
+   "kind": "pick",
+   "step": "test",
+   "graded": true,
+   "text": "Tap all odd integers between −106 and −96.",
+   "pool": [
+    "−105",
+    "−104",
+    "−103",
+    "−101",
+    "−99",
+    "−97",
+    "−95"
+   ],
+   "a": [
+    "−105",
+    "−103",
+    "−101",
+    "−99",
+    "−97"
+   ],
+   "why": "−106 is even; start at −105 and add 2. −95 is past −96.",
+   "level": 2,
+   "ref": "Review Exercise Q15",
+   "id": "g7.maths.u2.s2-6.31"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The product of any three odd integers is",
+   "opts": [
+    "even",
+    "odd"
+   ],
+   "ans": "odd",
+   "why": "odd × odd × odd = odd, e.g. 3 × 5 × 7 = 105.",
+   "level": 3,
+   "clue": "",
+   "id": "g7.maths.u2.s2-6.32"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Examples 3 (sums) and 3 (products) label their first item \"b.\" in the question; transcribed as a."
+  },
+  {
+   "kind": "note",
+   "text": "Integer arithmetic has no generator in the engine yet: practice and tests reuse these hand-written integer items (no fresh numbers). An integer generator (add/sub/mul/div with signs) is needed in an engine session."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

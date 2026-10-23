@@ -1,0 +1,504 @@
+{
+ "id": "g7.maths.u2.s2-7",
+ "book": {
+  "title": "Mathematics Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "Integers",
+  "pages": "53–56",
+  "section": "Review"
+ },
+ "title": "Summary and review exercise",
+ "competency": "Bring together the ideas of Unit 2.",
+ "minutes": 15,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Integer",
+   "am": "ኢንቲጀር",
+   "def": "A whole number or the negative of a whole number.",
+   "machine": true
+  },
+  {
+   "en": "Opposite numbers",
+   "am": "ተቃራኒ ቁጥሮች",
+   "def": "Two numbers at the same distance from 0 on different sides.",
+   "machine": true
+  },
+  {
+   "en": "Even integer",
+   "am": "ጥንድ ኢንቲጀር",
+   "def": "An integer that 2 divides with no remainder.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.integers-review",
+   "name": "Unit 2 in one page",
+   "requires": [
+    "math.add-integers-rules",
+    "math.multiply-integers"
+   ],
+   "explain": {
+    "en": {
+     "text": "Integers are the whole numbers and their negatives. Right on the number line is bigger. To add, use the sign of the bigger magnitude. To subtract, add the opposite. Same signs multiply or divide to a positive; different signs to a negative."
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "graded": false,
+     "title": "Warm up: what is the sign?",
+     "bins": [
+      "Positive",
+      "Negative"
+     ],
+     "items": [
+      [
+       "(−) × (−)",
+       "Positive",
+       "Same signs."
+      ],
+      [
+       "(+) × (−)",
+       "Negative",
+       "Different signs."
+      ],
+      [
+       "(−) ÷ (−)",
+       "Positive",
+       "Same signs."
+      ],
+      [
+       "(−) + (−)",
+       "Negative",
+       "Two negatives add to a negative."
+      ]
+     ],
+     "id": "g7.maths.u2.s2-7.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Summary for unit two",
+     "paras": [
+      "ℕ = {1, 2, 3, …}, 𝕎 = {0, 1, 2, …} and ℤ = {…, −2, −1, 0, 1, 2, …}.",
+      "Every negative integer is less than any positive integer.",
+      "The sum of two opposite integers is zero."
+     ],
+     "table": [
+      [
+       "Rule",
+       "Example"
+      ],
+      [
+       "Successor: add 1",
+       "successor of −4 is −3"
+      ],
+      [
+       "Predecessor: subtract 1",
+       "predecessor of 0 is −1"
+      ],
+      [
+       "a − b = a + (−b)",
+       "4 − 7 = −3"
+      ],
+      [
+       "Even number of negative factors: +",
+       "−2 × (−3) = 6"
+      ],
+      [
+       "Odd number of negative factors: −",
+       "−1 × (−2) × (−3) = −6"
+      ],
+      [
+       "Even: divisible by 2",
+       "−8, 0, 14"
+      ]
+     ],
+     "id": "g7.maths.u2.s2-7.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words of the unit",
+     "defs": [
+      [
+       "Integer",
+       "A whole number or the negative of a whole number."
+      ],
+      [
+       "Opposite numbers",
+       "Same distance from 0, different sides."
+      ],
+      [
+       "Even integer",
+       "Divisible by 2 with no remainder."
+      ]
+     ],
+     "id": "g7.maths.u2.s2-7.3"
+    },
+    {
+     "kind": "match",
+     "step": "check",
+     "graded": true,
+     "pairs": [
+      [
+       "26 + (−52)",
+       "−26"
+      ],
+      [
+       "−95 + 124",
+       "29"
+      ],
+      [
+       "513 − (−109)",
+       "622"
+      ],
+      [
+       "−45 × (−12)",
+       "540"
+      ],
+      [
+       "−7632 ÷ 36",
+       "−212"
+      ]
+     ],
+     "why": "Decide the sign first, then work with the sizes.",
+     "clue": "Use the sign rules.",
+     "level": 1,
+     "ref": "Review Exercise Q9–Q13",
+     "id": "g7.maths.u2.s2-7.4"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "−90 + (−489) + 315 = ___",
+     "a": [
+      "−264",
+      "-264"
+     ],
+     "num": true,
+     "why": "−90 + (−489) = −579. −579 + 315 = −(579 − 315) = −264.",
+     "clue": "Two at a time.",
+     "level": 2,
+     "ref": "Review Exercise Q9 h",
+     "needs": "math.add-integers-rules",
+     "input": "signed",
+     "id": "g7.maths.u2.s2-7.5"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "−4 × (−25) × 14 × (−1) = ___",
+     "a": [
+      "−1400",
+      "-1400"
+     ],
+     "num": true,
+     "why": "Three negatives: negative. 4 × 25 = 100; 100 × 14 = 1400. Answer −1400.",
+     "clue": "Count the negatives.",
+     "level": 2,
+     "ref": "Review Exercise Q11 d",
+     "needs": "math.multiply-integers",
+     "input": "signed",
+     "id": "g7.maths.u2.s2-7.6"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "ask": "Abel lost 30 points in round one and gained 13 in round two. His net score is ___",
+     "a": [
+      "−17",
+      "-17"
+     ],
+     "num": true,
+     "why": "Loss is −30, gain is +13. −30 + 13 = −(30 − 13) = −17.",
+     "clue": "Loss is negative, gain is positive.",
+     "level": 3,
+     "ref": "Review Exercise Q19",
+     "input": "signed",
+     "added": true,
+     "id": "g7.maths.u2.s2-7.7"
+    }
+   ]
+  }
+ ],
+ "refreshers": {
+  "math.add-integers-rules": {
+   "name": "Adding integers",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Two rules",
+     "steps": [
+      "Different signs: take the sign of the bigger size, then subtract the sizes.",
+      "22 + (−43): 43 > 22, so the sign is −. 43 − 22 = 21. Answer −21.",
+      "Two negatives: add the sizes and keep −. −15 + (−35) = −50."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "−9 + 4 = ?",
+     "opts": [
+      "−5",
+      "5",
+      "−13"
+     ],
+     "ans": "−5",
+     "why": "9 > 4, so the sign is −. 9 − 4 = 5. Answer −5.",
+     "clue": "Which number has the bigger size?",
+     "level": 1
+    }
+   ]
+  },
+  "math.multiply-integers": {
+   "name": "Multiplying integers",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Sign of a product",
+     "steps": [
+      "Same signs: the product is positive. −3 × (−5) = 15.",
+      "Different signs: the product is negative. −3 × 5 = −15.",
+      "Multiply the sizes, then put the sign in front."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "−4 × 6 = ?",
+     "opts": [
+      "24",
+      "−24",
+      "−10"
+     ],
+     "ans": "−24",
+     "why": "Different signs give −. 4 × 6 = 24. Answer −24.",
+     "clue": "Decide the sign first.",
+     "level": 1
+    }
+   ]
+  }
+ },
+ "exercises": [
+  {
+   "book_name": "Review Exercise",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Show the relation between ℕ, 𝕎 and ℤ.",
+     "opts": [
+      "ℕ ⊂ 𝕎 ⊂ ℤ",
+      "ℤ ⊂ 𝕎 ⊂ ℕ",
+      "𝕎 ⊂ ℕ ⊂ ℤ"
+     ],
+     "ans": "ℕ ⊂ 𝕎 ⊂ ℤ",
+     "why": "Natural inside whole inside integers.",
+     "clue": "Which set is biggest?",
+     "level": 1,
+     "ref": "Q2",
+     "id": "g7.maths.u2.s2-7.8"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "The opposite of −1020 is ___",
+     "a": [
+      "1020",
+      "+1020"
+     ],
+     "num": true,
+     "why": "Change the sign.",
+     "clue": "Other side of 0.",
+     "level": 1,
+     "ref": "Q4 g",
+     "input": "signed",
+     "id": "g7.maths.u2.s2-7.9"
+    },
+    {
+     "kind": "pick",
+     "step": "exercise",
+     "graded": true,
+     "text": "List all integers between −12 and −10.",
+     "pool": [
+      "−12",
+      "−11",
+      "−10"
+     ],
+     "a": [
+      "−11"
+     ],
+     "why": "Only −11.",
+     "clue": "Leave out the ends.",
+     "level": 1,
+     "ref": "Q5 d",
+     "id": "g7.maths.u2.s2-7.10"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which sign is correct? −34 ? −304",
+     "opts": [
+      "<",
+      ">",
+      "="
+     ],
+     "ans": ">",
+     "why": "−34 is closer to 0, so it is greater.",
+     "clue": "Closer to 0 is bigger.",
+     "level": 1,
+     "ref": "Q6 c",
+     "id": "g7.maths.u2.s2-7.11"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "−545 + 511 = ___",
+     "a": [
+      "−34",
+      "-34"
+     ],
+     "num": true,
+     "why": "545 > 511, sign −. 545 − 511 = 34. Answer −34.",
+     "clue": "Sign of the bigger magnitude.",
+     "level": 1,
+     "ref": "Q9 d",
+     "input": "signed",
+     "id": "g7.maths.u2.s2-7.12"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "−1099 − (−412) = ___",
+     "a": [
+      "−687",
+      "-687"
+     ],
+     "num": true,
+     "why": "−1099 + 412 = −(1099 − 412) = −687.",
+     "clue": "Add the opposite.",
+     "level": 2,
+     "ref": "Q10 e",
+     "input": "signed",
+     "id": "g7.maths.u2.s2-7.13"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "−1 × (−1) × 1 × (−1) × (−1) × (−1) × (−1) = ___",
+     "a": [
+      "1",
+      "+1"
+     ],
+     "num": true,
+     "why": "Six negative factors: even, so positive. 1.",
+     "clue": "Count the negatives.",
+     "level": 2,
+     "ref": "Q11 f",
+     "input": "signed",
+     "id": "g7.maths.u2.s2-7.14"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Name the property: m × (n + p) = (m × n) + (m × p)",
+     "opts": [
+      "Commutative",
+      "Associative",
+      "Distributive"
+     ],
+     "ans": "Distributive",
+     "why": "m is shared out over the bracket.",
+     "clue": "Is a bracket shared out?",
+     "level": 1,
+     "ref": "Q12 b",
+     "id": "g7.maths.u2.s2-7.15"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "−54 ÷ 4 = ___",
+     "a": [
+      "−13.5",
+      "-13.5"
+     ],
+     "num": true,
+     "why": "Different signs: negative. 54 ÷ 4 = 13.5.",
+     "clue": "Decimal quotient.",
+     "level": 1,
+     "ref": "Q13 h",
+     "input": "signed",
+     "id": "g7.maths.u2.s2-7.16"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "The difference of any two odd integers is",
+     "opts": [
+      "Even",
+      "Odd"
+     ],
+     "ans": "Even",
+     "why": "odd − odd = even, e.g. 7 − 5 = 2.",
+     "clue": "Try 7 − 5.",
+     "level": 1,
+     "ref": "Q16 b",
+     "id": "g7.maths.u2.s2-7.17"
+    }
+   ]
+  },
+  {
+   "book_name": "Chapter test",
+   "test": true,
+   "chapter_test": true,
+   "count": 20,
+   "minutes": 25,
+   "items": []
+  }
+ ],
+ "test": [],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "The chapter test draws 20 questions round-robin from the six section tests (5 each), rotating ★/★★/★★★, 25 minutes, no clues."
+  },
+  {
+   "kind": "review",
+   "text": "Review Exercise Q5 b prints \"−34 and −34\" (no integer lies between); possibly a misprint. Left out."
+  },
+  {
+   "kind": "note",
+   "text": "Review Q1 (draw number lines), Q3, Q17 and Q18 (give your own examples) are open; left out."
+  },
+  {
+   "kind": "note",
+   "text": "Integer arithmetic has no generator in the engine yet: practice and tests reuse these hand-written integer items (no fresh numbers). An integer generator (add/sub/mul/div with signs) is needed in an engine session."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

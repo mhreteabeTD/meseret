@@ -1,0 +1,1047 @@
+{
+ "id": "g7.maths.u2.s2-2",
+ "book": {
+  "title": "Mathematics Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "Integers",
+  "pages": "14–20",
+  "section": "2.2"
+ },
+ "title": "Introduction to integers",
+ "competency": "Use integers for temperature, altitude and money; define the set of integers and show integers on a number line.",
+ "minutes": 16,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Negative number",
+   "am": "አሉታዊ ቁጥር",
+   "def": "A number below zero, written with a minus sign, like −5.",
+   "machine": true
+  },
+  {
+   "en": "Positive number",
+   "am": "አዎንታዊ ቁጥር",
+   "def": "A number above zero, like +5 or 5.",
+   "machine": true
+  },
+  {
+   "en": "Integer",
+   "am": "ኢንቲጀር",
+   "def": "A whole number or the negative of a whole number. ℤ = {…, −2, −1, 0, 1, 2, …}.",
+   "machine": true
+  },
+  {
+   "en": "Number line",
+   "am": "የቁጥር መስመር",
+   "def": "A line with 0 in the middle, positives to the right and negatives to the left.",
+   "machine": true
+  },
+  {
+   "en": "Opposite numbers",
+   "am": "ተቃራኒ ቁጥሮች",
+   "def": "Two numbers at the same distance from 0 on different sides, like 4 and −4.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.negative-numbers",
+   "name": "Positive and negative numbers",
+   "explain": {
+    "en": {
+     "text": "Temperatures below zero get a minus sign, like minus 5 degrees. These are negative numbers. Numbers above zero are positive, like plus 15. We use the same signs for loss and profit, or below and above sea level."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Cold morning",
+     "ask": "On Tuesday, Debre Birhan was 5 °C below zero. How can we write it?",
+     "opts": [
+      "5 °C",
+      "−5 °C",
+      "+5 °C"
+     ],
+     "after": "Below zero gets a minus sign: −5 °C. Above zero gets a plus sign, or no sign.",
+     "ref": "Activity 2.2.1",
+     "id": "g7.maths.u2.s2-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "2.2 Introduction to integers",
+     "paras": [
+      "Anders Celsius (1701–1744) found a way to measure temperature.",
+      "Debre Birhan had 15 °C above zero, then 5 °C and 10 °C below zero."
+     ],
+     "table": [
+      [
+       "Day",
+       "Temperature",
+       "With a sign"
+      ],
+      [
+       "Monday",
+       "15 °C above zero",
+       "+15 °C"
+      ],
+      [
+       "Tuesday",
+       "5 °C below zero",
+       "−5 °C"
+      ],
+      [
+       "Wednesday",
+       "10 °C below zero",
+       "−10 °C"
+      ]
+     ],
+     "ref": "Activity 2.2.1",
+     "id": "g7.maths.u2.s2-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Note",
+     "paras": [
+      "Temperatures below zero use a minus sign. They are negative numbers.",
+      "Temperatures above zero use a plus sign. They are positive numbers.",
+      "A positive number can be written without the plus sign: +2 is 2."
+     ],
+     "ref": "Example 1",
+     "id": "g7.maths.u2.s2-2.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Negative number",
+       "A number below zero, written with a minus sign, like −5."
+      ],
+      [
+       "Positive number",
+       "A number above zero, like +5 or 5."
+      ]
+     ],
+     "id": "g7.maths.u2.s2-2.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "6 °C below zero is written",
+     "opts": [
+      "6 °C",
+      "−6 °C",
+      "+6 °C"
+     ],
+     "ans": "−6 °C",
+     "why": "Below zero gets a minus sign.",
+     "clue": "Below zero or above zero?",
+     "level": 1,
+     "ref": "Exercise 2.2.1 Q7 e",
+     "id": "g7.maths.u2.s2-2.5"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "A loss of Birr 100 is written ___",
+     "a": [
+      "−100",
+      "-100"
+     ],
+     "num": true,
+     "why": "A loss is a decrease, so it gets a minus sign: −100.",
+     "clue": "Is a loss a gain or a decrease?",
+     "level": 1,
+     "ref": "Exercise 2.2.1 Q7 a",
+     "input": "signed",
+     "id": "g7.maths.u2.s2-2.6"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "title": "Plus or minus?",
+     "bins": [
+      "Positive",
+      "Negative"
+     ],
+     "items": [
+      [
+       "A rise of 10 °C",
+       "Positive",
+       "+10"
+      ],
+      [
+       "A walk of 7 km forward",
+       "Positive",
+       "+7"
+      ],
+      [
+       "6 °C below zero",
+       "Negative",
+       "−6"
+      ],
+      [
+       "A loss of Birr 100",
+       "Negative",
+       "−100"
+      ],
+      [
+       "21 °C above zero",
+       "Positive",
+       "+21"
+      ]
+     ],
+     "why": "Rise, forward, above and gain are positive. Loss and below are negative.",
+     "clue": "Is it more than zero or less than zero?",
+     "level": 1,
+     "ref": "Exercise 2.2.1 Q7",
+     "id": "g7.maths.u2.s2-2.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Which day was the coldest: Monday +15 °C, Tuesday −5 °C or Wednesday −10 °C?",
+     "opts": [
+      "Monday",
+      "Tuesday",
+      "Wednesday"
+     ],
+     "ans": "Wednesday",
+     "why": "−10 °C is furthest below zero.",
+     "clue": "Which is furthest below zero?",
+     "level": 2,
+     "ref": "Activity 2.2.1 Q1 b",
+     "id": "g7.maths.u2.s2-2.8"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "ask": "Ras Dashen is 4550 m above sea level. The Danakil Depression is 125 m below sea level. Write the Danakil height as an integer: ___ m",
+     "a": [
+      "−125",
+      "-125"
+     ],
+     "num": true,
+     "why": "Below sea level is negative, so −125 m. Ras Dashen is +4550 m.",
+     "clue": "Sea level is like zero.",
+     "level": 3,
+     "input": "signed",
+     "added": true,
+     "id": "g7.maths.u2.s2-2.9"
+    }
+   ]
+  },
+  {
+   "id": "math.integers-set",
+   "name": "The set of integers",
+   "requires": [
+    "math.natural-whole"
+   ],
+   "explain": {
+    "en": {
+     "text": "Integers are the whole numbers together with the negative numbers. ℤ is the set of integers. Zero is an integer that is neither positive nor negative. Fractions and decimals like 2.5 are not integers. Natural numbers sit inside whole numbers, which sit inside the integers."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Integer or not?",
+     "ask": "Is 2.5 an integer?",
+     "opts": [
+      "Yes",
+      "No"
+     ],
+     "after": "2.5 has a decimal part. Integers have no fraction or decimal part.",
+     "id": "g7.maths.u2.s2-2.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Definition 2.3",
+     "paras": [
+      "An integer is a whole number or a negative number.",
+      "The set of integers is ℤ = {…, −4, −3, −2, −1, 0, 1, 2, 3, 4, …}."
+     ],
+     "id": "g7.maths.u2.s2-2.11"
+    },
+    {
+     "kind": "nest",
+     "step": "explore",
+     "title": "ℕ ⊂ 𝕎 ⊂ ℤ",
+     "ask": "Tap a circle, then each number.",
+     "rings": [
+      [
+       "ℤ",
+       "Integers",
+       "…, −2, −1, 0, 1, 2, …"
+      ],
+      [
+       "𝕎",
+       "Whole numbers",
+       "0, 1, 2, …"
+      ],
+      [
+       "ℕ",
+       "Natural numbers",
+       "1, 2, 3, …"
+      ]
+     ],
+     "numbers": [
+      [
+       "−3",
+       0,
+       "A negative integer: only in ℤ."
+      ],
+      [
+       "0",
+       1,
+       "Whole, so also an integer. Not natural."
+      ],
+      [
+       "4",
+       2,
+       "Natural, so also whole and an integer."
+      ]
+     ],
+     "need": 3,
+     "id": "g7.maths.u2.s2-2.12"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Note",
+     "paras": [],
+     "table": [
+      [
+       "Fact",
+       "Example"
+      ],
+      [
+       "Negative integers: ℤ⁻",
+       "−1, −2, −3, …"
+      ],
+      [
+       "Positive integers: ℤ⁺ = ℕ",
+       "1, 2, 3, …"
+      ],
+      [
+       "Zero is neither positive nor negative",
+       "0"
+      ],
+      [
+       "Decimals and fractions are not integers",
+       "2.5, 3/4"
+      ],
+      [
+       "ℕ ⊂ 𝕎 ⊂ ℤ",
+       "−4 is read \"negative four\""
+      ]
+     ],
+     "id": "g7.maths.u2.s2-2.13"
+    },
+    {
+     "kind": "numline",
+     "step": "explore",
+     "title": "Integers from −3 to 3",
+     "min": -3,
+     "max": 3,
+     "sub": 1,
+     "points": [
+      {
+       "v": "-3",
+       "label": "−3",
+       "info": "Three steps left of 0."
+      },
+      {
+       "v": "0",
+       "label": "0",
+       "info": "The middle. Neither positive nor negative."
+      },
+      {
+       "v": "3",
+       "label": "3",
+       "info": "Three steps right of 0."
+      }
+     ],
+     "ask": "Tap each point.",
+     "ref": "Example 3",
+     "id": "g7.maths.u2.s2-2.14"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Integer",
+       "A whole number or the negative of a whole number."
+      ],
+      [
+       "Number line",
+       "A line with 0 in the middle, positives right and negatives left."
+      ]
+     ],
+     "id": "g7.maths.u2.s2-2.15"
+    },
+    {
+     "kind": "tf",
+     "step": "check",
+     "graded": true,
+     "text": "0 ∈ ℤ⁺",
+     "a": false,
+     "why": "Zero is neither positive nor negative.",
+     "clue": "Is 0 positive?",
+     "level": 1,
+     "ref": "Exercise 2.2.1 Q8 c",
+     "id": "g7.maths.u2.s2-2.16"
+    },
+    {
+     "kind": "pick",
+     "step": "practise",
+     "graded": true,
+     "text": "Tap every integer.",
+     "pool": [
+      "2 1/3",
+      "0",
+      "2/5",
+      "1.02",
+      "12",
+      "−294",
+      "0.25",
+      "455"
+     ],
+     "a": [
+      "0",
+      "12",
+      "−294",
+      "455"
+     ],
+     "why": "Fractions and decimals are not integers. 0, 12, −294 and 455 are.",
+     "clue": "Does it have a fraction or decimal part?",
+     "level": 1,
+     "ref": "Exercise 2.2.1 Q11",
+     "id": "g7.maths.u2.s2-2.17"
+    },
+    {
+     "kind": "numline",
+     "step": "practise",
+     "graded": true,
+     "min": -5,
+     "max": 5,
+     "sub": 1,
+     "targets": [
+      {
+       "v": "-2",
+       "label": "−2"
+      }
+     ],
+     "ask": "Tap where −2 goes.",
+     "why": "−2 is two steps to the left of 0.",
+     "clue": "Negative numbers are left of 0.",
+     "level": 1,
+     "ref": "Exercise 2.2.1 Q3",
+     "id": "g7.maths.u2.s2-2.18"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "On a number line the marks go S, −15, −10, R, 0, 5. Each step is the same. R = ___",
+     "a": [
+      "−5",
+      "-5"
+     ],
+     "num": true,
+     "why": "Each step is 5 (−15 to −10). R is one step after −10: −10 + 5 = −5.",
+     "clue": "Find the size of one step first.",
+     "level": 2,
+     "ref": "Exercise 2.2.1 Q2",
+     "input": "signed",
+     "id": "g7.maths.u2.s2-2.19"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "ℤ⁺ ∪ ℤ⁻ = ℤ",
+     "a": false,
+     "why": "ℤ⁺ ∪ ℤ⁻ misses 0, and 0 ∈ ℤ.",
+     "clue": "Which integer is neither positive nor negative?",
+     "level": 2,
+     "ref": "Exercise 2.2.1 Q8 k",
+     "id": "g7.maths.u2.s2-2.20"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Which set is ℤ⁺ ∪ {0}?",
+     "opts": [
+      "ℕ",
+      "𝕎",
+      "ℤ",
+      "ℤ⁻"
+     ],
+     "ans": "𝕎",
+     "why": "ℤ⁺ = {1, 2, 3, …}. Adding 0 gives {0, 1, 2, 3, …} = 𝕎.",
+     "clue": "Write ℤ⁺ and add 0 to it.",
+     "level": 3,
+     "ref": "Exercise 2.2.1 Q8 l",
+     "added": true,
+     "id": "g7.maths.u2.s2-2.21"
+    }
+   ]
+  },
+  {
+   "id": "math.opposite-integers",
+   "name": "Opposite numbers",
+   "explain": {
+    "en": {
+     "text": "Opposite numbers are the same distance from zero on different sides, like 7 and minus 7. The opposite of a is minus a, and the opposite of minus a is a. The opposite of zero is zero. A gain of 120 birr is the opposite of a loss of 120 birr."
+    }
+   },
+   "screens": [
+    {
+     "kind": "numline",
+     "step": "hook",
+     "title": "Pairs around 0",
+     "min": -8,
+     "max": 8,
+     "sub": 1,
+     "points": [
+      {
+       "v": "-7",
+       "label": "−7"
+      },
+      {
+       "v": "7",
+       "label": "7"
+      },
+      {
+       "v": "-4",
+       "label": "−4"
+      },
+      {
+       "v": "4",
+       "label": "4"
+      },
+      {
+       "v": "-2",
+       "label": "−2"
+      },
+      {
+       "v": "2",
+       "label": "2"
+      }
+     ],
+     "opposites": true,
+     "ask": "Tap the points. What do the pairs share?",
+     "id": "g7.maths.u2.s2-2.22"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Definition 2.4",
+     "paras": [
+      "Opposite numbers are at the same distance from zero, in opposite directions.",
+      "The opposite of zero is zero."
+     ],
+     "table": [
+      [
+       "Number",
+       "−10",
+       "−7",
+       "0",
+       "2",
+       "5"
+      ],
+      [
+       "Opposite",
+       "10",
+       "7",
+       "0",
+       "−2",
+       "−5"
+      ]
+     ],
+     "id": "g7.maths.u2.s2-2.23"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Note",
+     "paras": [
+      "For any integer a: the opposite of a is −a.",
+      "−(−a) = a. The opposite of a negative number is positive.",
+      "The opposite of a positive number is negative."
+     ],
+     "id": "g7.maths.u2.s2-2.24"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Opposite numbers",
+       "Two numbers at the same distance from 0 on different sides."
+      ]
+     ],
+     "id": "g7.maths.u2.s2-2.25"
+    },
+    {
+     "kind": "blank",
+     "step": "check",
+     "graded": true,
+     "ask": "The opposite of 70 is ___",
+     "a": [
+      "−70",
+      "-70"
+     ],
+     "num": true,
+     "why": "Change the sign: 70 becomes −70.",
+     "clue": "Same distance from 0, other side.",
+     "level": 1,
+     "ref": "Exercise 2.2.2 Q1 a",
+     "input": "signed",
+     "id": "g7.maths.u2.s2-2.26"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "The opposite of −23 is ___",
+     "a": [
+      "23",
+      "+23"
+     ],
+     "num": true,
+     "why": "−(−23) = 23.",
+     "clue": "The opposite of a negative number is positive.",
+     "level": 1,
+     "ref": "Exercise 2.2.2 Q1 b",
+     "input": "signed",
+     "id": "g7.maths.u2.s2-2.27"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "What is the opposite of a gain of Birr 120?",
+     "opts": [
+      "A gain of Birr 120",
+      "A loss of Birr 120",
+      "Birr 0"
+     ],
+     "ans": "A loss of Birr 120",
+     "why": "Gain is +120, so its opposite is −120, a loss.",
+     "clue": "Opposite direction, same size.",
+     "level": 1,
+     "ref": "Exercise 2.2.2 Q2 a",
+     "id": "g7.maths.u2.s2-2.28"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "Hawassa is 9 °C above zero. Bale has the opposite temperature. Bale = ___ °C",
+     "a": [
+      "−9",
+      "-9"
+     ],
+     "num": true,
+     "why": "Hawassa is +9. Its opposite is −9.",
+     "clue": "Change the sign.",
+     "level": 2,
+     "ref": "Exercise 2.2.2 Q3",
+     "input": "signed",
+     "id": "g7.maths.u2.s2-2.29"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "ask": "−(−(−5)) = ___",
+     "a": [
+      "−5",
+      "-5"
+     ],
+     "num": true,
+     "why": "Work from inside: −(−5) = 5. Then −(5) = −5.",
+     "clue": "Take the opposite three times, one at a time.",
+     "level": 3,
+     "input": "signed",
+     "added": true,
+     "id": "g7.maths.u2.s2-2.30"
+    }
+   ]
+  }
+ ],
+ "refreshers": {
+  "math.natural-whole": {
+   "name": "Natural and whole numbers",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "ℕ and 𝕎",
+     "steps": [
+      "Natural numbers: ℕ = {1, 2, 3, …}.",
+      "Whole numbers: 𝕎 = {0, 1, 2, 3, …}.",
+      "So 0 is whole but not natural."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Which number is whole but not natural?",
+     "opts": [
+      "0",
+      "1",
+      "10"
+     ],
+     "ans": "0",
+     "why": "Whole numbers start at 0; natural numbers start at 1.",
+     "clue": "Which one is missing from {1, 2, 3, …}?",
+     "level": 1
+    }
+   ]
+  }
+ },
+ "exercises": [
+  {
+   "book_name": "Exercise 2.2.1",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "On a number line the marks go A, −7, B, −5, C, … in steps of 1. A = ___",
+     "a": [
+      "−8",
+      "-8"
+     ],
+     "num": true,
+     "why": "A is one step left of −7: −7 − 1 = −8.",
+     "clue": "Left means smaller.",
+     "level": 1,
+     "ref": "Q1",
+     "input": "signed",
+     "id": "g7.maths.u2.s2-2.31"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Write −3 in words.",
+     "opts": [
+      "negative three",
+      "positive three",
+      "minus thirty"
+     ],
+     "ans": "negative three",
+     "why": "The minus sign is read \"negative\".",
+     "clue": "How do we read the − sign?",
+     "level": 1,
+     "ref": "Q5 a",
+     "id": "g7.maths.u2.s2-2.32"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Write \"negative fifty-three\" as a numeral: ___",
+     "a": [
+      "−53",
+      "-53"
+     ],
+     "num": true,
+     "why": "Negative means the − sign: −53.",
+     "clue": "\"Negative\" means minus.",
+     "level": 1,
+     "ref": "Q6 c",
+     "input": "signed",
+     "id": "g7.maths.u2.s2-2.33"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "A rise of 10 °C is written ___",
+     "a": [
+      "10",
+      "+10"
+     ],
+     "num": true,
+     "why": "A rise is positive: +10.",
+     "clue": "Rise means up.",
+     "level": 1,
+     "ref": "Q7 b",
+     "input": "signed",
+     "id": "g7.maths.u2.s2-2.34"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "−2 ∈ ℤ",
+     "a": true,
+     "why": "−2 is a negative integer.",
+     "clue": "Is −2 a whole number or its negative?",
+     "level": 1,
+     "ref": "Q8 a",
+     "id": "g7.maths.u2.s2-2.35"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "2.5 ∈ ℤ",
+     "a": false,
+     "why": "Decimals are not integers.",
+     "clue": "Does 2.5 have a decimal part?",
+     "level": 1,
+     "ref": "Q8 b",
+     "id": "g7.maths.u2.s2-2.36"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "ℕ = ℤ⁺",
+     "a": true,
+     "why": "The positive integers are the natural numbers.",
+     "clue": "List both sets.",
+     "level": 1,
+     "ref": "Q8 d",
+     "id": "g7.maths.u2.s2-2.37"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "𝕎 ∪ ℕ = ℕ",
+     "a": false,
+     "why": "𝕎 ∪ ℕ = 𝕎; it contains 0, which is not in ℕ.",
+     "clue": "Where is 0?",
+     "level": 2,
+     "ref": "Q8 j",
+     "id": "g7.maths.u2.s2-2.38"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "What is the relationship between whole numbers, natural numbers and integers?",
+     "opts": [
+      "ℕ ⊂ 𝕎 ⊂ ℤ",
+      "ℤ ⊂ 𝕎 ⊂ ℕ",
+      "They share no numbers"
+     ],
+     "ans": "ℕ ⊂ 𝕎 ⊂ ℤ",
+     "why": "Every natural number is whole, and every whole number is an integer.",
+     "clue": "Which set is the biggest?",
+     "level": 1,
+     "ref": "Q10",
+     "id": "g7.maths.u2.s2-2.39"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 2.2.2",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "The opposite of −170 is ___",
+     "a": [
+      "170",
+      "+170"
+     ],
+     "num": true,
+     "why": "−(−170) = 170.",
+     "clue": "Change the sign.",
+     "level": 1,
+     "ref": "Q1 c",
+     "input": "signed",
+     "id": "g7.maths.u2.s2-2.40"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "The opposite of 0 is ___",
+     "a": [
+      "0"
+     ],
+     "num": true,
+     "why": "The opposite of zero is zero.",
+     "clue": "Zero is its own opposite.",
+     "level": 1,
+     "ref": "Q1 d",
+     "id": "g7.maths.u2.s2-2.41"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "What is the opposite of 15 °C above zero?",
+     "opts": [
+      "15 °C below zero",
+      "15 °C above zero",
+      "0 °C"
+     ],
+     "ans": "15 °C below zero",
+     "why": "+15 becomes −15.",
+     "clue": "Same size, other side of 0.",
+     "level": 1,
+     "ref": "Q2 b",
+     "id": "g7.maths.u2.s2-2.42"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "What is the opposite of a walk of 5 km backward?",
+     "opts": [
+      "A walk of 5 km forward",
+      "A walk of 5 km backward",
+      "Standing still"
+     ],
+     "ans": "A walk of 5 km forward",
+     "why": "−5 becomes +5.",
+     "clue": "Backward is negative.",
+     "level": 1,
+     "ref": "Q2 c",
+     "id": "g7.maths.u2.s2-2.43"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "5 °C below zero is written ___ °C",
+   "a": [
+    "−5",
+    "-5"
+   ],
+   "num": true,
+   "why": "Below zero gets a minus sign.",
+   "level": 1,
+   "input": "signed",
+   "clue": "",
+   "id": "g7.maths.u2.s2-2.44"
+  },
+  {
+   "kind": "pick",
+   "step": "test",
+   "graded": true,
+   "text": "Tap every integer.",
+   "pool": [
+    "−7",
+    "0.5",
+    "0",
+    "3/4",
+    "12"
+   ],
+   "a": [
+    "−7",
+    "0",
+    "12"
+   ],
+   "why": "Fractions and decimals are not integers.",
+   "level": 1,
+   "id": "g7.maths.u2.s2-2.45"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "The opposite of −48 is ___",
+   "a": [
+    "48",
+    "+48"
+   ],
+   "num": true,
+   "why": "−(−48) = 48.",
+   "level": 2,
+   "input": "signed",
+   "clue": "",
+   "id": "g7.maths.u2.s2-2.46"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Zero is a positive integer.",
+   "a": false,
+   "why": "Zero is neither positive nor negative.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.maths.u2.s2-2.47"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which statement is true?",
+   "opts": [
+    "ℤ ⊂ 𝕎",
+    "𝕎 ⊂ ℤ",
+    "ℕ = 𝕎"
+   ],
+   "ans": "𝕎 ⊂ ℤ",
+   "why": "Every whole number is an integer, but −1 is not whole.",
+   "level": 3,
+   "clue": "",
+   "id": "g7.maths.u2.s2-2.48"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "correction",
+   "text": "Example 4: the printed solution does not match the questions (it answers 413 for b and 0 for c). The lesson uses the correct opposites: −12, 9, −413, 564."
+  },
+  {
+   "kind": "correction",
+   "text": "Definition 2.3 prints \"{… 4, −3, …}\"; shown as {…, −4, −3, …}."
+  },
+  {
+   "kind": "review",
+   "text": "The thermometer scales in Activity 2.2.1 print the labels below 0 without minus signs. The lesson uses a table instead of the picture."
+  },
+  {
+   "kind": "review",
+   "text": "Exercise 2.2.1 Q7 d \"five minutes late\": the book gives no sign rule; left out of the lesson. Teacher to choose a convention."
+  },
+  {
+   "kind": "note",
+   "text": "Exercise 2.2.1 Q1 and Q2 (letters on a number line) are asked as blanks that describe the marks in words."
+  },
+  {
+   "kind": "note",
+   "text": "Integer arithmetic has no generator in the engine yet: practice and tests reuse these hand-written integer items (no fresh numbers). An integer generator (add/sub/mul/div with signs) is needed in an engine session."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

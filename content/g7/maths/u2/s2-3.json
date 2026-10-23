@@ -1,0 +1,1006 @@
+{
+ "id": "g7.maths.u2.s2-3",
+ "book": {
+  "title": "Mathematics Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "Integers",
+  "pages": "20–27",
+  "section": "2.3"
+ },
+ "title": "Comparing and ordering integers",
+ "competency": "Compare and order integers using a number line, and find the successor and predecessor of an integer.",
+ "minutes": 15,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Greater than",
+   "am": "ይበልጣል",
+   "def": "a > b: a is to the right of b on the number line.",
+   "machine": true
+  },
+  {
+   "en": "Less than",
+   "am": "ያንሳል",
+   "def": "a < b: a is to the left of b on the number line.",
+   "machine": true
+  },
+  {
+   "en": "Successor",
+   "am": "ተከታይ",
+   "def": "The integer that comes just after a given integer: add 1.",
+   "machine": true
+  },
+  {
+   "en": "Predecessor",
+   "am": "ቀዳሚ",
+   "def": "The integer that comes just before a given integer: subtract 1.",
+   "machine": true
+  },
+  {
+   "en": "Ascending order",
+   "am": "ከትንሽ ወደ ትልቅ",
+   "def": "From the smallest to the largest.",
+   "machine": true
+  },
+  {
+   "en": "Descending order",
+   "am": "ከትልቅ ወደ ትንሽ",
+   "def": "From the largest to the smallest.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.compare-integers",
+   "name": "Comparing integers",
+   "explain": {
+    "en": {
+     "text": "On a number line, the number further right is bigger. Every negative integer is less than 0 and less than every positive integer. For two negatives, the one closer to 0 is bigger, so minus 94 is greater than minus 100."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Coldest city",
+     "ask": "In October, Debre Birhan was −4 °C, Addis Ababa 4 °C and Adama 10 °C. Which city was coldest?",
+     "opts": [
+      "Debre Birhan",
+      "Addis Ababa",
+      "Adama"
+     ],
+     "after": "−4 is the furthest left on the number line, so it is the lowest temperature.",
+     "ref": "Activity 2.3.1 Q1",
+     "id": "g7.maths.u2.s2-3.1"
+    },
+    {
+     "kind": "numline",
+     "step": "explore",
+     "title": "Right is bigger",
+     "min": -6,
+     "max": 6,
+     "sub": 1,
+     "points": [
+      {
+       "v": "-6",
+       "label": "−6",
+       "info": "Furthest left here: the smallest."
+      },
+      {
+       "v": "-3",
+       "label": "−3",
+       "info": "Right of −6, so −3 > −6."
+      },
+      {
+       "v": "3",
+       "label": "3",
+       "info": "Right of 0, so 3 > 0."
+      },
+      {
+       "v": "6",
+       "label": "6",
+       "info": "Furthest right: the biggest."
+      }
+     ],
+     "ask": "Tap the points from left to right.",
+     "ref": "Example 1",
+     "id": "g7.maths.u2.s2-3.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "To compare integers",
+     "paras": [
+      "Draw a number line and mark the numbers.",
+      "The number to the right of the other is bigger.",
+      "The number to the left of the other is smaller.",
+      "a > b means a is greater than b. a < b means a is less than b."
+     ],
+     "id": "g7.maths.u2.s2-3.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Note",
+     "paras": [
+      "Every negative integer is less than 0.",
+      "Every negative integer is less than any positive integer.",
+      "−94 is to the right of −100, so −94 > −100."
+     ],
+     "ref": "Example 4",
+     "id": "g7.maths.u2.s2-3.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Greater than",
+       "a > b: a is to the right of b."
+      ],
+      [
+       "Less than",
+       "a < b: a is to the left of b."
+      ]
+     ],
+     "id": "g7.maths.u2.s2-3.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Which sign is correct? −4 ? 0",
+     "opts": [
+      "<",
+      ">",
+      "="
+     ],
+     "ans": "<",
+     "why": "−4 is to the left of 0, so −4 < 0.",
+     "clue": "Which one is further left?",
+     "level": 1,
+     "ref": "Example 2 a",
+     "id": "g7.maths.u2.s2-3.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Which sign is correct? −1200 ? −74",
+     "opts": [
+      "<",
+      ">",
+      "="
+     ],
+     "ans": "<",
+     "why": "Both are negative. −1200 is further from 0, so it is further left and smaller.",
+     "clue": "For negatives, further from 0 means smaller.",
+     "level": 2,
+     "ref": "Exercise 2.3.1 Q1 c",
+     "id": "g7.maths.u2.s2-3.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Which sign is correct? −340 ? −341",
+     "opts": [
+      "<",
+      ">",
+      "="
+     ],
+     "ans": ">",
+     "why": "−341 is one step left of −340, so −340 > −341.",
+     "clue": "Which is closer to 0?",
+     "level": 2,
+     "ref": "Exercise 2.3.1 Q1 f",
+     "id": "g7.maths.u2.s2-3.8"
+    },
+    {
+     "kind": "pick",
+     "step": "practise",
+     "graded": true,
+     "text": "Tap every integer between −2 and 3.",
+     "pool": [
+      "−2",
+      "−1",
+      "0",
+      "1",
+      "2",
+      "3"
+     ],
+     "a": [
+      "−1",
+      "0",
+      "1",
+      "2"
+     ],
+     "why": "Count from −2 to 3 and leave out the two ends: −1, 0, 1, 2.",
+     "clue": "\"Between\" does not include the end numbers.",
+     "level": 1,
+     "ref": "Exercise 2.3.1 Q3 a",
+     "id": "g7.maths.u2.s2-3.9"
+    },
+    {
+     "kind": "pick",
+     "step": "challenge",
+     "graded": true,
+     "text": "If −5 > x and x is an integer, tap every possible value of x.",
+     "pool": [
+      "−4",
+      "−5",
+      "−6",
+      "−9",
+      "0"
+     ],
+     "a": [
+      "−6",
+      "−9"
+     ],
+     "why": "x must be less than −5, so left of −5: −6 and −9 work. −5 is not less than itself.",
+     "clue": "x is to the left of −5.",
+     "level": 3,
+     "ref": "Review Exercise Q7",
+     "added": true,
+     "id": "g7.maths.u2.s2-3.10"
+    }
+   ]
+  },
+  {
+   "id": "math.successor-predecessor",
+   "name": "Successor and predecessor",
+   "explain": {
+    "en": {
+     "text": "The successor of an integer comes just after it: add 1. The predecessor comes just before it: subtract 1. The successor of minus 4 is minus 3, and the predecessor of 0 is minus 1."
+    }
+   },
+   "screens": [
+    {
+     "kind": "numline",
+     "step": "hook",
+     "title": "One step right",
+     "min": -6,
+     "max": 1,
+     "sub": 1,
+     "hops": [
+      {
+       "from": -4,
+       "by": 1
+      }
+     ],
+     "ask": "Tap Hop. Where does −4 go?",
+     "after": "One step right of −4 is −3. It comes just after −4.",
+     "ref": "Example 7",
+     "id": "g7.maths.u2.s2-3.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Successor and predecessor",
+     "paras": [
+      "The successor of an integer comes after it.",
+      "The predecessor of an integer comes before it."
+     ],
+     "table": [
+      [
+       "Number",
+       "Predecessor",
+       "Successor"
+      ],
+      [
+       "5",
+       "4",
+       "6"
+      ],
+      [
+       "0",
+       "−1",
+       "1"
+      ],
+      [
+       "−4",
+       "−5",
+       "−3"
+      ],
+      [
+       "−99",
+       "−100",
+       "−98"
+      ]
+     ],
+     "ref": "Examples 7–8",
+     "id": "g7.maths.u2.s2-3.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Successor",
+       "The integer just after: add 1."
+      ],
+      [
+       "Predecessor",
+       "The integer just before: subtract 1."
+      ]
+     ],
+     "id": "g7.maths.u2.s2-3.13"
+    },
+    {
+     "kind": "blank",
+     "step": "check",
+     "graded": true,
+     "ask": "The successor of −16 is ___",
+     "a": [
+      "−15",
+      "-15"
+     ],
+     "num": true,
+     "why": "−16 + 1 = −15. One step right.",
+     "clue": "Add 1.",
+     "level": 1,
+     "ref": "Exercise 2.3.2 Q1 b",
+     "input": "signed",
+     "id": "g7.maths.u2.s2-3.14"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "The predecessor of −77 is ___",
+     "a": [
+      "−78",
+      "-78"
+     ],
+     "num": true,
+     "why": "−77 − 1 = −78. One step left.",
+     "clue": "Subtract 1. Move left.",
+     "level": 1,
+     "ref": "Exercise 2.3.2 Q2 b",
+     "input": "signed",
+     "id": "g7.maths.u2.s2-3.15"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "The successor of −999 is ___",
+     "a": [
+      "−998",
+      "-998"
+     ],
+     "num": true,
+     "why": "−999 + 1 = −998, closer to 0.",
+     "clue": "Move one step right.",
+     "level": 2,
+     "ref": "Exercise 2.3.2 Q1 d",
+     "input": "signed",
+     "id": "g7.maths.u2.s2-3.16"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "ask": "What is the predecessor of the successor of −50? ___",
+     "a": [
+      "−50",
+      "-50"
+     ],
+     "num": true,
+     "why": "Successor of −50 is −49. Predecessor of −49 is −50. One step right, then one step left, brings you back.",
+     "clue": "Do the inner part first.",
+     "level": 3,
+     "input": "signed",
+     "added": true,
+     "id": "g7.maths.u2.s2-3.17"
+    }
+   ]
+  },
+  {
+   "id": "math.order-integers",
+   "name": "Ascending and descending order",
+   "explain": {
+    "en": {
+     "text": "Ascending order goes from the smallest to the largest. Descending order goes from the largest to the smallest. Negatives come first in ascending order, with the one furthest from zero first."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Who goes first?",
+     "ask": "Which comes first in ascending order: −40 or −8?",
+     "opts": [
+      "−40",
+      "−8"
+     ],
+     "after": "−40 is further left on the number line, so it is smaller and comes first.",
+     "ref": "Example 9 b",
+     "id": "g7.maths.u2.s2-3.18"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Ordering",
+     "paras": [
+      "Ascending order: from the smallest to the largest.",
+      "Descending order: from the largest to the smallest."
+     ],
+     "id": "g7.maths.u2.s2-3.19"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Put in ascending order",
+     "steps": [
+      "Numbers: −40, −8, 0, −12, −10.",
+      "Negatives first. Furthest from 0 is smallest: −40.",
+      "Then −12, then −10, then −8.",
+      "Then 0.",
+      "Ascending: −40, −12, −10, −8, 0."
+     ],
+     "ref": "Example 9 b",
+     "id": "g7.maths.u2.s2-3.20"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Ascending order",
+       "From the smallest to the largest."
+      ],
+      [
+       "Descending order",
+       "From the largest to the smallest."
+      ]
+     ],
+     "id": "g7.maths.u2.s2-3.21"
+    },
+    {
+     "kind": "order",
+     "step": "check",
+     "graded": true,
+     "text": "Tap them in ascending order (smallest first).",
+     "items": [
+      "−78",
+      "−24",
+      "0",
+      "17",
+      "71"
+     ],
+     "why": "−78 < −24 < 0 < 17 < 71",
+     "clue": "Negatives first, furthest from 0 first.",
+     "level": 1,
+     "ref": "Exercise 2.3.2 Q3 a",
+     "id": "g7.maths.u2.s2-3.22"
+    },
+    {
+     "kind": "order",
+     "step": "practise",
+     "graded": true,
+     "text": "Tap them in descending order (largest first).",
+     "items": [
+      "69",
+      "59",
+      "−9",
+      "−89",
+      "−99"
+     ],
+     "why": "69 > 59 > −9 > −89 > −99",
+     "clue": "Largest first. For negatives, closest to 0 first.",
+     "level": 1,
+     "ref": "Exercise 2.3.2 Q4 a",
+     "id": "g7.maths.u2.s2-3.23"
+    },
+    {
+     "kind": "order",
+     "step": "practise",
+     "graded": true,
+     "text": "Tap them in ascending order.",
+     "items": [
+      "−400",
+      "−350",
+      "−230",
+      "−157",
+      "50"
+     ],
+     "why": "−400 < −350 < −230 < −157 < 50",
+     "clue": "The negative furthest from 0 is the smallest.",
+     "level": 2,
+     "ref": "Exercise 2.3.2 Q3 b",
+     "id": "g7.maths.u2.s2-3.24"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Final scores: Abebe +2, Almaz 0, Hailu −5, Derartu +3. Who won?",
+     "opts": [
+      "Abebe",
+      "Almaz",
+      "Hailu",
+      "Derartu"
+     ],
+     "ans": "Derartu",
+     "why": "+3 is the greatest score.",
+     "clue": "Which number is furthest right?",
+     "level": 2,
+     "ref": "Exercise 2.3.2 Q5 b",
+     "id": "g7.maths.u2.s2-3.25"
+    },
+    {
+     "kind": "order",
+     "step": "challenge",
+     "graded": true,
+     "text": "Tap all nine in descending order.",
+     "items": [
+      "101",
+      "21",
+      "1",
+      "−1",
+      "−5",
+      "−51",
+      "−69",
+      "−81",
+      "−101"
+     ],
+     "why": "101 > 21 > 1 > −1 > −5 > −51 > −69 > −81 > −101",
+     "clue": "Positives from largest; then negatives from closest to 0.",
+     "level": 3,
+     "ref": "Review Exercise Q8",
+     "added": true,
+     "id": "g7.maths.u2.s2-3.26"
+    }
+   ]
+  }
+ ],
+ "refreshers": {
+  "math.negative-numbers": {
+   "name": "Negative numbers",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Signs",
+     "steps": [
+      "Numbers below zero get a minus sign: 5 °C below zero is −5.",
+      "Numbers above zero are positive: +5 or just 5.",
+      "On a number line, negatives are left of 0."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "3 °C below zero is written",
+     "opts": [
+      "3",
+      "−3",
+      "+3"
+     ],
+     "ans": "−3",
+     "why": "Below zero gets a minus sign.",
+     "clue": "Below zero means minus.",
+     "level": 1
+    }
+   ]
+  }
+ },
+ "exercises": [
+  {
+   "book_name": "Exercise 2.3.1",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which sign is correct? −150 ? 0",
+     "opts": [
+      "<",
+      ">",
+      "="
+     ],
+     "ans": "<",
+     "why": "Every negative integer is less than 0.",
+     "clue": "Negative or positive?",
+     "level": 1,
+     "ref": "Q1 a",
+     "id": "g7.maths.u2.s2-3.27"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which sign is correct? −34 ? 34",
+     "opts": [
+      "<",
+      ">",
+      "="
+     ],
+     "ans": "<",
+     "why": "A negative integer is less than any positive integer.",
+     "clue": "Which side of 0?",
+     "level": 1,
+     "ref": "Q1 d",
+     "id": "g7.maths.u2.s2-3.28"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which sign is correct? −23 ? −23",
+     "opts": [
+      "<",
+      ">",
+      "="
+     ],
+     "ans": "=",
+     "why": "They are the same number.",
+     "clue": "Look closely.",
+     "level": 1,
+     "ref": "Q1 g",
+     "id": "g7.maths.u2.s2-3.29"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which sign is correct? −120 ? −80",
+     "opts": [
+      "<",
+      ">",
+      "="
+     ],
+     "ans": "<",
+     "why": "−120 is further from 0, so it is smaller.",
+     "clue": "For negatives, further from 0 is smaller.",
+     "level": 2,
+     "ref": "Q1 i",
+     "id": "g7.maths.u2.s2-3.30"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which number is to the right: −1005 or −105?",
+     "opts": [
+      "−1005",
+      "−105"
+     ],
+     "ans": "−105",
+     "why": "−105 is closer to 0.",
+     "clue": "Closer to 0 means further right.",
+     "level": 2,
+     "ref": "Q2 d",
+     "id": "g7.maths.u2.s2-3.31"
+    },
+    {
+     "kind": "pick",
+     "step": "exercise",
+     "graded": true,
+     "text": "Tap every integer between −98 and −95.",
+     "pool": [
+      "−98",
+      "−97",
+      "−96",
+      "−95"
+     ],
+     "a": [
+      "−97",
+      "−96"
+     ],
+     "why": "Leave out the ends: −97 and −96.",
+     "clue": "Between does not include the ends.",
+     "level": 1,
+     "ref": "Q3 c",
+     "id": "g7.maths.u2.s2-3.32"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "How many integers lie between −10 and −9?",
+     "opts": [
+      "None",
+      "One",
+      "Two"
+     ],
+     "ans": "None",
+     "why": "−10 and −9 are next to each other.",
+     "clue": "Is there a whole step between them?",
+     "level": 1,
+     "ref": "Q3 d",
+     "id": "g7.maths.u2.s2-3.33"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "On a line the points are y, z, 0, m, x, n from left to right. Which is true?",
+     "opts": [
+      "z < x",
+      "z > x",
+      "m > x"
+     ],
+     "ans": "z < x",
+     "why": "z is left of x.",
+     "clue": "Left is smaller.",
+     "level": 1,
+     "ref": "Q4 a",
+     "id": "g7.maths.u2.s2-3.34"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "What is the greatest negative integer? ___",
+     "a": [
+      "−1",
+      "-1"
+     ],
+     "num": true,
+     "why": "−1 is the negative integer closest to 0.",
+     "clue": "Which negative is furthest right?",
+     "level": 1,
+     "ref": "Q5 a",
+     "input": "signed",
+     "id": "g7.maths.u2.s2-3.35"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "What is the greatest integer?",
+     "opts": [
+      "1,000,000",
+      "There is no greatest integer",
+      "0"
+     ],
+     "ans": "There is no greatest integer",
+     "why": "You can always add 1.",
+     "clue": "Does the line end?",
+     "level": 1,
+     "ref": "Q5 c",
+     "id": "g7.maths.u2.s2-3.36"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 2.3.2",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "The successor of 20 is ___",
+     "a": [
+      "21",
+      "+21"
+     ],
+     "num": true,
+     "why": "20 + 1 = 21.",
+     "clue": "Add 1.",
+     "level": 1,
+     "ref": "Q1 a",
+     "id": "g7.maths.u2.s2-3.37"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "The successor of 999 is ___",
+     "a": [
+      "1000",
+      "+1000"
+     ],
+     "num": true,
+     "why": "999 + 1 = 1000.",
+     "clue": "Add 1.",
+     "level": 1,
+     "ref": "Q1 c",
+     "id": "g7.maths.u2.s2-3.38"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "The predecessor of −999 is ___",
+     "a": [
+      "−1000",
+      "-1000"
+     ],
+     "num": true,
+     "why": "−999 − 1 = −1000.",
+     "clue": "Subtract 1.",
+     "level": 1,
+     "ref": "Q2 c",
+     "input": "signed",
+     "id": "g7.maths.u2.s2-3.39"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "The predecessor of −1000 is ___",
+     "a": [
+      "−1001",
+      "-1001"
+     ],
+     "num": true,
+     "why": "−1000 − 1 = −1001.",
+     "clue": "Subtract 1.",
+     "level": 1,
+     "ref": "Q2 d",
+     "input": "signed",
+     "id": "g7.maths.u2.s2-3.40"
+    },
+    {
+     "kind": "order",
+     "step": "exercise",
+     "graded": true,
+     "text": "Tap in descending order.",
+     "items": [
+      "400",
+      "200",
+      "−300",
+      "−445",
+      "−757"
+     ],
+     "why": "400 > 200 > −300 > −445 > −757",
+     "clue": "Largest first.",
+     "level": 1,
+     "ref": "Q4 b",
+     "id": "g7.maths.u2.s2-3.41"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Hailu lost 3 baskets, then lost 2 more. His final result is ___",
+     "a": [
+      "−5",
+      "-5"
+     ],
+     "num": true,
+     "why": "−3 + (−2) = −5.",
+     "clue": "Loss is negative.",
+     "level": 2,
+     "ref": "Q5 a",
+     "input": "signed",
+     "id": "g7.maths.u2.s2-3.42"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Final results: +2, 0, −5, +3. Who was the loser?",
+     "opts": [
+      "Abebe (+2)",
+      "Almaz (0)",
+      "Hailu (−5)",
+      "Derartu (+3)"
+     ],
+     "ans": "Hailu (−5)",
+     "why": "−5 is the smallest.",
+     "clue": "Which is furthest left?",
+     "level": 1,
+     "ref": "Q5 c",
+     "id": "g7.maths.u2.s2-3.43"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which sign is correct? −8 ? 2",
+   "opts": [
+    "<",
+    ">",
+    "="
+   ],
+   "ans": "<",
+   "why": "A negative integer is less than a positive integer.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.maths.u2.s2-3.44"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "The predecessor of 0 is ___",
+   "a": [
+    "−1",
+    "-1"
+   ],
+   "num": true,
+   "why": "0 − 1 = −1.",
+   "level": 1,
+   "input": "signed",
+   "clue": "",
+   "id": "g7.maths.u2.s2-3.45"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which sign is correct? −250 ? −180",
+   "opts": [
+    "<",
+    ">",
+    "="
+   ],
+   "ans": "<",
+   "why": "−250 is further from 0, so it is smaller.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.maths.u2.s2-3.46"
+  },
+  {
+   "kind": "order",
+   "step": "test",
+   "graded": true,
+   "text": "Tap in ascending order.",
+   "items": [
+    "−12",
+    "−7",
+    "0",
+    "3",
+    "15"
+   ],
+   "why": "−12 < −7 < 0 < 3 < 15",
+   "level": 2,
+   "id": "g7.maths.u2.s2-3.47"
+  },
+  {
+   "kind": "pick",
+   "step": "test",
+   "graded": true,
+   "text": "Tap every integer between −4 and 1.",
+   "pool": [
+    "−4",
+    "−3",
+    "−2",
+    "−1",
+    "0",
+    "1"
+   ],
+   "a": [
+    "−3",
+    "−2",
+    "−1",
+    "0"
+   ],
+   "why": "Leave out the ends −4 and 1.",
+   "level": 3,
+   "id": "g7.maths.u2.s2-3.48"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "correction",
+   "text": "Example 7 lists questions a, c, d, e but answers them as a, b, c, d; the −99 figure prints \"100\" for −100. Shown correctly in a table."
+  },
+  {
+   "kind": "note",
+   "text": "The Project work (record city temperatures from the media) is a class project; left out."
+  },
+  {
+   "kind": "note",
+   "text": "Integer arithmetic has no generator in the engine yet: practice and tests reuse these hand-written integer items (no fresh numbers). An integer generator (add/sub/mul/div with signs) is needed in an engine session."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
