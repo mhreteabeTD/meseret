@@ -14,7 +14,7 @@ G7: Maths U1–3, Citizenship U1–3, CTE U1–3, Science U2–3, Social U2–3 
 |---|---|---|---|
 | 12 | **built** (`g12-maths-u1`) | todo | Physics, Chemistry, Biology U1–2 next; then Geography, History, Economics, IT, Agriculture. English: book missing |
 | 8 | **built** | **built** | English, Gen. Science |
-| 7 (session A) | **built** | todo | built: maths U1, citizenship U1, citizenship U2, citizenship U3 · todo: maths U2, maths U3, cte U1, cte U2, cte U3, science U2, science U3, social U2, social U3 |
+| 7 (session A) | **built** | todo | built: maths U1, citizenship U1, citizenship U2, citizenship U3, social U3 · todo: maths U2, maths U3, cte U1, cte U2, cte U3, science U2, science U3, social U2 |
 | 6 | todo | todo | English, Science (Amharic) |
 | 5 | **built** | todo | |
 | 9 | U1 older version exists (rebuild queued) | todo | Physics, Biology, English, Geography, History, Economics, Citizenship, IT, HPE, PVA, Amharic queued. Chemistry: book missing |

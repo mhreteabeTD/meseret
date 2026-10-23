@@ -1,0 +1,717 @@
+{
+ "id": "g7.social.u3.s3-2",
+ "book": {
+  "title": "Social Studies Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "social",
+  "unit": 3,
+  "unit_title": "Human and Natural Resources",
+  "pages": "75–78",
+  "section": "3.2"
+ },
+ "title": "Population-resource relationship",
+ "competency": "Describe over, optimal and under population with respect to natural resources.",
+ "minutes": 12,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Population",
+   "am": "ሕዝብ",
+   "def": "The number of people living in a definite area.",
+   "machine": true
+  },
+  {
+   "en": "Natural resources",
+   "am": "የተፈጥሮ ሀብቶች",
+   "def": "Resources that occur in nature, such as soil, water, minerals, wildlife, vegetation and energy sources.",
+   "machine": true
+  },
+  {
+   "en": "Over population",
+   "am": "የሕዝብ ብዛት መብዛት",
+   "def": "More people in an area than its resources can comfortably support.",
+   "machine": true
+  },
+  {
+   "en": "Under population",
+   "am": "የሕዝብ ቁጥር ማነስ",
+   "def": "Too few people in an area to fully use its resources.",
+   "machine": true
+  },
+  {
+   "en": "Optimum population",
+   "am": "ተመጣጣኝ የሕዝብ ብዛት",
+   "def": "A balanced population-resource relationship in an area.",
+   "machine": true
+  },
+  {
+   "en": "Carrying capacity",
+   "am": "የመሸከም አቅም",
+   "def": "The number of people a region can support without environmental degradation.",
+   "machine": true
+  },
+  {
+   "en": "Anti natalist policy",
+   "am": "የወሊድ መጠንን የሚቀንስ ፖሊሲ",
+   "def": "A policy that aims to reduce the birth rate and slow population growth.",
+   "machine": true
+  },
+  {
+   "en": "Pro natalist policy",
+   "am": "የወሊድ መጠንን የሚጨምር ፖሊሲ",
+   "def": "A policy that aims to increase the birth rate and population growth.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "soc.population-resources",
+   "name": "Population and resources depend on each other",
+   "explain": {
+    "en": {
+     "text": "Population is the number of people living in an area. Natural resources occur in nature: soil, water, minerals, wildlife, vegetation and energy sources. People cannot make them. When population grows or falls, the resources available change. And the resources available affect how population changes."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "One spring, more people",
+     "ask": "A village has one spring. Its population doubles. What happens to the water each family gets?",
+     "opts": [
+      "It gets less",
+      "It gets more",
+      "It stays the same"
+     ],
+     "after": "More people share the same spring, so each family gets less. Population change affects the resources available.",
+     "added": true,
+     "id": "g7.social.u3.s3-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "3.2 Population-resource relationship",
+     "paras": [
+      "Human population is the number of people living in a definite area.",
+      "We cannot live without clean air, plants to eat and water to drink.",
+      "Natural resources are essential to human wellbeing."
+     ],
+     "id": "g7.social.u3.s3-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Natural resources",
+     "paras": [
+      "Natural resources occur in nature. Humans cannot produce them.",
+      "They include soil, water, minerals, wildlife, vegetation and energy sources.",
+      "Population and resources have a strong relationship.",
+      "Population growth or decline affects the resources available. Resources also affect population trends."
+     ],
+     "id": "g7.social.u3.s3-2.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Population",
+       "The number of people living in a definite area."
+      ],
+      [
+       "Natural resources",
+       "Resources that occur in nature, such as soil, water, minerals, wildlife, vegetation and energy sources."
+      ]
+     ],
+     "id": "g7.social.u3.s3-2.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Which of these is a natural resource?",
+     "opts": [
+      "Soil",
+      "A school building",
+      "A bicycle"
+     ],
+     "ans": "Soil",
+     "why": "Soil occurs in nature; people cannot produce it. Buildings and bicycles are made by people.",
+     "clue": "Which one did nature make?",
+     "level": 1,
+     "id": "g7.social.u3.s3-2.5"
+    },
+    {
+     "kind": "pick",
+     "step": "practise",
+     "graded": true,
+     "text": "Tap every natural resource the book lists.",
+     "pool": [
+      "Soil",
+      "Water",
+      "Minerals",
+      "Wildlife",
+      "Vegetation",
+      "Plastic bags"
+     ],
+     "a": [
+      "Soil",
+      "Water",
+      "Minerals",
+      "Wildlife",
+      "Vegetation"
+     ],
+     "why": "The book lists soil, water, minerals, wildlife, vegetation and energy sources. Plastic is made by people.",
+     "clue": "Which one is made in a factory?",
+     "level": 1,
+     "id": "g7.social.u3.s3-2.6"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "The availability of natural resources affects the trends of population.",
+     "a": true,
+     "why": "The relationship works both ways.",
+     "clue": "Does it work in both directions?",
+     "level": 1,
+     "id": "g7.social.u3.s3-2.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Why can people NOT simply produce more natural resources when population grows?",
+     "opts": [
+      "Natural resources occur in nature and cannot be produced by humans",
+      "People do not need resources",
+      "Resources grow faster than people",
+      "Resources only exist in cities"
+     ],
+     "ans": "Natural resources occur in nature and cannot be produced by humans",
+     "why": "The book says natural resources cannot be produced by humankind; they come from the environment. So a growing population must share what nature gives.",
+     "clue": "Read the definition of natural resources again.",
+     "level": 3,
+     "added": true,
+     "id": "g7.social.u3.s3-2.8"
+    }
+   ]
+  },
+  {
+   "id": "soc.over-under-optimum",
+   "name": "Over, under and optimum population",
+   "explain": {
+    "en": {
+     "text": "Over population: more people than the resources can comfortably support. It brings low income, unemployment, famine and outward migration. Under population: too few people to use the resources fully; it has low unemployment and inward migration. Optimum population is a balance between people and resources."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "The balance scale",
+     "ask": "A balance scale has People on one pan and Resources on the other. The People pan is much heavier. What does this show?",
+     "opts": [
+      "Over population",
+      "Under population",
+      "Optimum population"
+     ],
+     "after": "More people than resources: over population. If the pans are level, it is optimum population.",
+     "ref": "Figure 3.1",
+     "id": "g7.social.u3.s3-2.9"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Overpopulation",
+     "paras": [
+      "Overpopulation is an excess of population in relation to the available resources.",
+      "The area has more people than it can comfortably support. Its carrying capacity is exceeded.",
+      "It brings low income per person, high unemployment, malnutrition, famine, low living standards and outward migration."
+     ],
+     "id": "g7.social.u3.s3-2.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Under and optimum population",
+     "paras": [
+      "Under population is the opposite. The population is too small to fully use its resources.",
+      "More people would mean better use of resources and higher living standards.",
+      "Under population has low unemployment and inward migration.",
+      "Optimum population is the balanced population-resource relationship."
+     ],
+     "table": [
+      [
+       "Scale in Figure 3.1",
+       "Meaning"
+      ],
+      [
+       "Pans level",
+       "Optimum population"
+      ],
+      [
+       "Population pan heavier",
+       "Overpopulation"
+      ],
+      [
+       "Resources pan heavier",
+       "Under population"
+      ]
+     ],
+     "id": "g7.social.u3.s3-2.11"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Over population",
+       "More people in an area than its resources can comfortably support."
+      ],
+      [
+       "Under population",
+       "Too few people in an area to fully use its resources."
+      ],
+      [
+       "Optimum population",
+       "A balanced population-resource relationship in an area."
+      ],
+      [
+       "Carrying capacity",
+       "The number of people a region can support without environmental degradation."
+      ]
+     ],
+     "id": "g7.social.u3.s3-2.12"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "An area has more people than its resources can comfortably support. This is:",
+     "opts": [
+      "Over population",
+      "Under population",
+      "Optimum population"
+     ],
+     "ans": "Over population",
+     "why": "Over population is an excess of people in relation to resources.",
+     "clue": "Which side of the scale is heavier?",
+     "level": 1,
+     "ref": "Activity 3.2 A",
+     "id": "g7.social.u3.s3-2.13"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "title": "Which one has it?",
+     "bins": [
+      "Over population",
+      "Under population"
+     ],
+     "items": [
+      [
+       "High unemployment",
+       "Over population",
+       "Too many people for the jobs."
+      ],
+      [
+       "Famine and malnutrition",
+       "Over population",
+       "Not enough food for all."
+      ],
+      [
+       "Outward migration",
+       "Over population",
+       "People leave to find resources."
+      ],
+      [
+       "Low unemployment",
+       "Under population",
+       "Plenty of work."
+      ],
+      [
+       "Inward migration",
+       "Under population",
+       "People come to use the resources."
+      ]
+     ],
+     "why": "Over population brings shortages; under population brings unused resources.",
+     "clue": "Are there too many people or too few?",
+     "level": 2,
+     "id": "g7.social.u3.s3-2.14"
+    },
+    {
+     "kind": "match",
+     "step": "practise",
+     "graded": true,
+     "pairs": [
+      [
+       "Over population",
+       "Population exceeds the available resources"
+      ],
+      [
+       "Under population",
+       "Available resources exceed the population"
+      ],
+      [
+       "Optimum population",
+       "Balanced population-resource relationship"
+      ]
+     ],
+     "why": "These are the three book definitions.",
+     "clue": "Think of the three balance scales.",
+     "level": 1,
+     "ref": "Review Exercise II",
+     "id": "g7.social.u3.s3-2.15"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "A region has rich farmland but few people, so much land is unused. What would more people most likely bring?",
+     "opts": [
+      "Better use of resources and higher living standards",
+      "Famine and outward migration",
+      "High unemployment at once",
+      "No change at all"
+     ],
+     "ans": "Better use of resources and higher living standards",
+     "why": "This is under population. The book says an increase in population would mean more effective use of resources and higher living standards.",
+     "clue": "Is this region over or under populated?",
+     "level": 3,
+     "added": true,
+     "id": "g7.social.u3.s3-2.16"
+    }
+   ]
+  },
+  {
+   "id": "soc.population-policy",
+   "name": "Population policies",
+   "explain": {
+    "en": {
+     "text": "Countries use population policies to balance people and resources. An anti natalist policy reduces the birth rate, through family planning education, contraception or law: China and Ethiopia. A pro natalist policy raises the birth rate with incentives: France, Sweden and Romania."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "What would a government do?",
+     "ask": "A country has too many people for its resources. What policy would it most likely choose?",
+     "opts": [
+      "Encourage smaller families",
+      "Pay people to have more children",
+      "Do nothing"
+     ],
+     "after": "To slow growth, a country encourages fewer births. This is called an anti natalist policy.",
+     "id": "g7.social.u3.s3-2.17"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Population policies",
+     "paras": [
+      "Over and under population are imbalances between people and resources.",
+      "Many countries use population policies to balance this relationship."
+     ],
+     "table": [
+      [
+       "Policy",
+       "Aim",
+       "How",
+       "Examples"
+      ],
+      [
+       "A. Anti natalist",
+       "Reduce birth rate, slow growth",
+       "Family planning education, contraception, or law",
+       "China, Ethiopia"
+      ],
+      [
+       "B. Pro natalist",
+       "Increase birth rate and growth",
+       "Incentives",
+       "France, Sweden, Romania"
+      ]
+     ],
+     "id": "g7.social.u3.s3-2.18"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Do you know? The Chinese one child policy",
+     "paras": [
+      "From 1974 to 1979, China used the slogan \"Wan-xi-shao\": later marriage, longer gaps, fewer children.",
+      "It did not work well, and the population kept growing.",
+      "In 1979 China introduced the one child policy. It worked better in towns than in rural areas.",
+      "From 1990 it was relaxed a little. It was hard to enforce, and older people became too many."
+     ],
+     "id": "g7.social.u3.s3-2.19"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Anti natalist policy",
+       "A policy that aims to reduce the birth rate and slow population growth."
+      ],
+      [
+       "Pro natalist policy",
+       "A policy that aims to increase the birth rate and population growth."
+      ]
+     ],
+     "id": "g7.social.u3.s3-2.20"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Which country does the book give as an example of an anti natalist policy?",
+     "opts": [
+      "Ethiopia",
+      "France",
+      "Sweden",
+      "Romania"
+     ],
+     "ans": "Ethiopia",
+     "why": "The book lists China, Ethiopia and many developing countries as anti natalist.",
+     "clue": "Which countries want slower growth?",
+     "level": 1,
+     "ref": "Review Exercise III 3",
+     "id": "g7.social.u3.s3-2.21"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "A pro natalist policy aims to reduce the birth rate.",
+     "a": false,
+     "why": "Pro natalist aims to increase the birth rate. Anti natalist reduces it.",
+     "clue": "\"Pro\" means for.",
+     "level": 1,
+     "id": "g7.social.u3.s3-2.22"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "How does a pro natalist policy usually raise the birth rate?",
+     "opts": [
+      "By incentives",
+      "By a one child law",
+      "By closing schools"
+     ],
+     "ans": "By incentives",
+     "why": "The book says pro natalist policies use incentives.",
+     "clue": "What would encourage families to have more children?",
+     "level": 2,
+     "id": "g7.social.u3.s3-2.23"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "What did \"Wan-xi-shao\" ask Chinese people to do?",
+     "opts": [
+      "Marry later, wait longer between children, have fewer children",
+      "Have only one child by law",
+      "Move to cities",
+      "Have more children"
+     ],
+     "ans": "Marry later, wait longer between children, have fewer children",
+     "why": "Wan-xi-shao means later, longer, fewer (1974–1979). The one child law came later, in 1979.",
+     "clue": "The slogan has three words: later, longer, fewer.",
+     "level": 3,
+     "ref": "Do you know?",
+     "added": true,
+     "id": "g7.social.u3.s3-2.24"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activity 3.2",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Define over population.",
+     "opts": [
+      "An excess of population in relation to the available resources",
+      "Too few people to use the resources",
+      "A balanced population-resource relationship"
+     ],
+     "ans": "An excess of population in relation to the available resources",
+     "why": "This is the book's definition.",
+     "clue": "Over means too many.",
+     "level": 1,
+     "ref": "A 1 A",
+     "id": "g7.social.u3.s3-2.25"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Define under population.",
+     "opts": [
+      "When the population is too small to fully use its resources",
+      "When population exceeds resources",
+      "When resources are balanced with population"
+     ],
+     "ans": "When the population is too small to fully use its resources",
+     "why": "This is the book's definition.",
+     "clue": "Under means too few.",
+     "level": 1,
+     "ref": "A 1 B",
+     "id": "g7.social.u3.s3-2.26"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Define optimum population.",
+     "opts": [
+      "A balanced population-resource relationship",
+      "Too many people",
+      "Too few people"
+     ],
+     "ans": "A balanced population-resource relationship",
+     "why": "Optimum means the best balance.",
+     "clue": "Think of the level scale.",
+     "level": 1,
+     "ref": "A 1 C",
+     "id": "g7.social.u3.s3-2.27"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "What is the difference between pro natalist and anti natalist policies?",
+     "opts": [
+      "Pro natalist raises the birth rate; anti natalist reduces it",
+      "Pro natalist reduces the birth rate; anti natalist raises it",
+      "There is no difference"
+     ],
+     "ans": "Pro natalist raises the birth rate; anti natalist reduces it",
+     "why": "Anti natalist slows growth (family planning, law); pro natalist increases it (incentives).",
+     "clue": "\"Anti\" means against.",
+     "level": 1,
+     "ref": "B 1",
+     "id": "g7.social.u3.s3-2.28"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "How can an anti natalist policy help an overpopulated country?",
+     "opts": [
+      "It slows population growth so people do not exceed resources",
+      "It makes the population grow faster",
+      "It removes all resources"
+     ],
+     "ans": "It slows population growth so people do not exceed resources",
+     "why": "Slower growth moves the country towards an optimum, balanced population.",
+     "clue": "What is the problem in an overpopulated country?",
+     "level": 2,
+     "ref": "B 2",
+     "id": "g7.social.u3.s3-2.29"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The number of people living in a definite area is called:",
+   "opts": [
+    "Population",
+    "Resource",
+    "Environment"
+   ],
+   "ans": "Population",
+   "why": "This is the book's definition.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.social.u3.s3-2.30"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Under population is characterized by low unemployment and inward migration.",
+   "a": true,
+   "why": "The book says so.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.social.u3.s3-2.31"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is a sign of over population?",
+   "opts": [
+    "Famine and high unemployment",
+    "Inward migration",
+    "Unused farmland"
+   ],
+   "ans": "Famine and high unemployment",
+   "why": "Over population brings low income, unemployment, malnutrition and famine.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.social.u3.s3-2.32"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which country is given as an example of a pro natalist policy?",
+   "opts": [
+    "France",
+    "China",
+    "Ethiopia"
+   ],
+   "ans": "France",
+   "why": "France, Sweden and Romania are pro natalist.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.social.u3.s3-2.33"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "When the people of an area exceed its carrying capacity, the area is:",
+   "opts": [
+    "Overpopulated",
+    "Underpopulated",
+    "At optimum population"
+   ],
+   "ans": "Overpopulated",
+   "why": "Exceeding the carrying capacity means more people than the area can comfortably support.",
+   "level": 3,
+   "clue": "",
+   "id": "g7.social.u3.s3-2.34"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "Figure 3.1 (three balance scales) is described in words and a table; Activity 3.2 B 2 is asked as a multiple choice with the book-based answer."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
