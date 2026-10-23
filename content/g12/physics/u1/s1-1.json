@@ -1,0 +1,768 @@
+{
+ "id": "g12.physics.u1.s1-1",
+ "book": {
+  "title": "Physics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "physics",
+  "unit": 1,
+  "unit_title": "Application of physics in other fields",
+  "pages": "2–9",
+  "section": "1.1"
+ },
+ "title": "Physics and other sciences",
+ "competency": "Explain how physics relates to chemistry, biology, astronomy and geology.",
+ "minutes": 18,
+ "keywords": [
+  {
+   "en": "Spectroscopy",
+   "am": "ስፔክትሮስኮፒ",
+   "def": "The study of how matter and electromagnetic radiation interact, by wavelength or frequency.",
+   "machine": true
+  },
+  {
+   "en": "Centre of gravity",
+   "am": "የስበት ማዕከል",
+   "def": "The point where the whole weight of a body seems to act.",
+   "machine": true
+  },
+  {
+   "en": "Base of support",
+   "am": "የመቆሚያ መሠረት",
+   "def": "The area under a body that holds it up, such as the space between the feet.",
+   "machine": true
+  },
+  {
+   "en": "Light year",
+   "am": "የብርሃን ዓመት",
+   "def": "The distance light travels in one year, about 9.46 × 10¹² km.",
+   "machine": true
+  },
+  {
+   "en": "Inverse square law",
+   "am": "የተገላቢጦሽ ካሬ ሕግ",
+   "def": "Apparent brightness falls as 1/distance².",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "phys.physics-chemistry",
+   "name": "Physics and chemistry",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Physics and chemistry both study matter and its interaction with energy. Atomic and subatomic physics explains how atoms bond. The physics of heat tells whether a reaction can happen. Spectroscopy, the study of how matter and radiation interact, is a tool both sciences share."
+    },
+    "am": {
+     "text": "ፊዚክስና ኬሚስትሪ ሁለቱም ቁስን እና ከኃይል ጋር ያለውን ግንኙነት ያጠናሉ። የአቶም ፊዚክስ አቶሞች እንዴት እንደሚተሳሰሩ ያብራራል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Salt from sea water",
+     "ask": "You boil salty water until it is dry. Salt stays behind. Which physics idea explains this?",
+     "opts": [
+      "Change of state: water evaporates, salt does not",
+      "Magnetism",
+      "Friction",
+      "Reflection of light"
+     ],
+     "after": "Heat gives water molecules enough energy to escape as vapour. Salt has a far higher boiling point, so it stays.",
+     "ref": "Brainstorming question 1.2",
+     "id": "g12.physics.u1.s1-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Physics and chemistry",
+     "paras": [
+      "Physics and chemistry both deal with matter and its interaction with energy.",
+      "The rules about atoms used in chemistry are explained by atomic and subatomic physics.",
+      "The physics of heat tells whether a reaction can go, and what the mixture is at equilibrium."
+     ],
+     "id": "g12.physics.u1.s1-1.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Spectroscopy",
+     "paras": [
+      "Spectroscopy studies how matter and electromagnetic radiation interact, by wavelength or frequency.",
+      "Most of what we know about atoms and molecules comes from it.",
+      "Chemistry is rooted in atomic and molecular physics."
+     ],
+     "ref": "p.2–3",
+     "id": "g12.physics.u1.s1-1.3"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "graded": false,
+     "title": "Physics tools chemists use",
+     "text": "Tap each tool. Discussion question 1.1.",
+     "need": 4,
+     "items": [
+      [
+       "Spectroscopy",
+       "Each element absorbs or emits its own wavelengths: its fingerprint."
+      ],
+      [
+       "X-ray diffraction",
+       "The pattern of scattered X-rays shows how atoms are arranged in a crystal."
+      ],
+      [
+       "Mass spectrometry",
+       "Electric and magnetic fields sort ions by mass."
+      ],
+      [
+       "Heat measurement",
+       "Shows the energy given out or taken in by a reaction."
+      ]
+     ],
+     "id": "g12.physics.u1.s1-1.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Spectroscopy",
+       "The study of how matter and electromagnetic radiation interact, by wavelength or frequency."
+      ]
+     ],
+     "id": "g12.physics.u1.s1-1.5"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which part of physics explains how atoms join by covalent bonds?",
+     "opts": [
+      "Atomic and subatomic physics",
+      "Fluid mechanics",
+      "Acoustics",
+      "Astronomy"
+     ],
+     "ans": "Atomic and subatomic physics",
+     "why": "The physics of atoms and subatomic particles explains bonding.",
+     "clue": "Bonds are about electrons and nuclei.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.2",
+     "id": "g12.physics.u1.s1-1.6"
+    },
+    {
+     "kind": "pick",
+     "text": "Which chemistry topics rest on physics?",
+     "pool": [
+      "Atomic structure",
+      "Chemical bonds",
+      "Radioactivity",
+      "Periodic properties of elements"
+     ],
+     "a": [
+      "Atomic structure",
+      "Chemical bonds",
+      "Radioactivity",
+      "Periodic properties of elements"
+     ],
+     "why": "The book lists all four as rooted in atomic and molecular physics.",
+     "clue": "The book lists many on p.3.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "id": "g12.physics.u1.s1-1.7"
+    },
+    {
+     "kind": "tf",
+     "text": "Spectroscopy was developed by physicists and chemists working together.",
+     "a": true,
+     "why": "The book says the techniques came from collaborative work.",
+     "clue": "See p.3.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "id": "g12.physics.u1.s1-1.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "A chemist wants to know which elements are in an unknown powder without touching its atoms. The best physics tool is",
+     "opts": [
+      "spectroscopy",
+      "a lever",
+      "a thermometer only",
+      "a stethoscope"
+     ],
+     "ans": "spectroscopy",
+     "why": "Each element has its own spectral lines, so the light it absorbs or emits identifies it.",
+     "clue": "Think of fingerprints made of light.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.physics.u1.s1-1.9"
+    }
+   ]
+  },
+  {
+   "id": "phys.physics-biology",
+   "name": "Physics and biology",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Physics explains how living things work. A body is stable when its centre of gravity is over its base of support. Soft animals like the earthworm move using Pascal's principle. Our voice is sound from vibrating vocal cords when we breathe out, nerves carry electrical pulses, and light (400–700 nm) drives vision and photosynthesis."
+    },
+    "am": {
+     "text": "ፊዚክስ ሕያዋን ፍጡራን እንዴት እንደሚሠሩ ያብራራል፤ የስበት ማዕከል፣ የፓስካል መርህ፣ ድምፅ፣ የነርቭ ኤሌክትሪክ፣ ብርሃን።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "One foot or two?",
+     "ask": "Why is it harder to stand on one foot than on two?",
+     "opts": [
+      "The base of support is smaller",
+      "You weigh more on one foot",
+      "Gravity is stronger",
+      "The floor pushes harder"
+     ],
+     "after": "A small base lets the centre of gravity slip outside it easily, so the body tips.",
+     "ref": "Discussion question 1.2",
+     "id": "g12.physics.u1.s1-1.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Mechanics and the body",
+     "paras": [
+      "A body is stable if its centre of mass is directly over its base of support.",
+      "If the centre of mass moves outside the base, its weight makes a torque that tips the body.",
+      "A wider base and a lower centre of gravity make a body more stable."
+     ],
+     "ref": "p.3, Figure 1.1",
+     "id": "g12.physics.u1.s1-1.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Fluids, sound, electricity and light",
+     "paras": [
+      "Blood flow uses viscosity, the equation of continuity and turbulent flow.",
+      "The earthworm, with no firm skeleton, moves using Pascal's principle.",
+      "Vocal cords vibrate as air leaves the lungs: that is your voice.",
+      "Neurons send messages as electrical pulses.",
+      "Light is the radiation between about 400 nm and 700 nm."
+     ],
+     "ref": "p.4–5",
+     "id": "g12.physics.u1.s1-1.12"
+    },
+    {
+     "kind": "sort",
+     "step": "explore",
+     "title": "Which physics?",
+     "bins": [
+      "Mechanics",
+      "Fluids",
+      "Sound",
+      "Electricity",
+      "Optics"
+     ],
+     "items": [
+      [
+       "Standing balance",
+       "Mechanics",
+       "centre of gravity"
+      ],
+      [
+       "Blood pressure",
+       "Fluids",
+       "pressure and flow"
+      ],
+      [
+       "Speaking",
+       "Sound",
+       "vocal cords vibrate"
+      ],
+      [
+       "Nerve messages",
+       "Electricity",
+       "electrical pulses"
+      ],
+      [
+       "Seeing",
+       "Optics",
+       "the eye lens forms an image"
+      ]
+     ],
+     "added": true,
+     "graded": false,
+     "id": "g12.physics.u1.s1-1.13"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Centre of gravity",
+       "The point where the whole weight of a body seems to act."
+      ],
+      [
+       "Base of support",
+       "The area under a body that holds it up, such as the space between the feet."
+      ]
+     ],
+     "id": "g12.physics.u1.s1-1.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "A person carries a heavy bag in the right hand. To stay balanced they lean",
+     "opts": [
+      "to the left",
+      "to the right",
+      "forward only",
+      "not at all"
+     ],
+     "ans": "to the left",
+     "why": "Leaning away from the load brings the combined centre of gravity back over the feet.",
+     "clue": "The load pulls the centre of gravity towards it.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Discussion question 1.2 (ii)",
+     "id": "g12.physics.u1.s1-1.15"
+    },
+    {
+     "kind": "mcq",
+     "text": "We produce controlled speech sounds when we",
+     "opts": [
+      "breathe out",
+      "breathe in",
+      "hold our breath",
+      "swallow"
+     ],
+     "ans": "breathe out",
+     "why": "The vocal cords vibrate as air passes out of the lungs.",
+     "clue": "Try it.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Activity 1.1",
+     "id": "g12.physics.u1.s1-1.16"
+    },
+    {
+     "kind": "mcq",
+     "text": "An earthworm moves without legs by using",
+     "opts": [
+      "Pascal's principle in its fluid-filled body",
+      "magnetism",
+      "reflection of light",
+      "nerve electricity only"
+     ],
+     "ans": "Pascal's principle in its fluid-filled body",
+     "why": "Muscles squeeze the body fluid; the pressure spreads equally and changes the shape of each segment.",
+     "clue": "It has no firm skeleton.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Discussion question 1.3",
+     "id": "g12.physics.u1.s1-1.17"
+    },
+    {
+     "kind": "tf",
+     "text": "We are more stable lying down than standing.",
+     "a": true,
+     "why": "Lying down, the base is very wide and the centre of gravity is very low.",
+     "clue": "Compare base size and height.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Discussion question 1.2",
+     "id": "g12.physics.u1.s1-1.18"
+    },
+    {
+     "kind": "blank",
+     "ask": "Light is the radiation from about 400 nm to ___ nm",
+     "a": [
+      "700"
+     ],
+     "why": "The book gives 400–700 nm.",
+     "clue": "Red light is the long end.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.5",
+     "id": "g12.physics.u1.s1-1.19"
+    },
+    {
+     "kind": "mcq",
+     "text": "Blood must rise about 0.4 m from the heart to the brain. Pressure needed = ρgh ≈ 1060 × 9.8 × 0.4 Pa ≈",
+     "opts": [
+      "4.2 × 10³ Pa",
+      "4.2 × 10⁵ Pa",
+      "420 Pa",
+      "42 Pa"
+     ],
+     "ans": "4.2 × 10³ Pa",
+     "why": "1060 × 9.8 = 10 388; × 0.4 ≈ 4155 Pa ≈ 4.2 × 10³ Pa (about 31 mmHg).",
+     "clue": "Multiply ρ, g and h.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Discussion question 1.3 (ii)",
+     "added": true,
+     "id": "g12.physics.u1.s1-1.20"
+    }
+   ]
+  },
+  {
+   "id": "phys.physics-astronomy",
+   "name": "Physics, astronomy and geology",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Astronomers learn about far objects only from the radiation they send. Gravity gives the centripetal force for orbits. Each kind of telescope detects one band of the spectrum. Brightness falls with distance²; a light year is the distance light travels in a year (about 9.46 × 10¹² km). Electrons jumping down emit light, jumping up absorb it. Geologists use waves, magnetism, density and radioactivity to study rocks."
+    },
+    "am": {
+     "text": "አስትሮኖመሮች ከሩቅ አካላት የሚመጣውን ጨረር ብቻ ያጠናሉ። የብርሃን ዓመት ብርሃን በአንድ ዓመት የሚጓዘው ርቀት ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Too far to visit",
+     "ask": "Stars are far too far to visit. How do astronomers learn what a star is made of?",
+     "opts": [
+      "From the light it sends",
+      "By taking samples",
+      "By its sound",
+      "They cannot know"
+     ],
+     "after": "Spectral lines in starlight act like fingerprints of the elements in it.",
+     "ref": "Brainstorming question 1.4",
+     "id": "g12.physics.u1.s1-1.21"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Physics and astronomy",
+     "paras": [
+      "Newton's law of gravitation explains the orbits of moons and planets.",
+      "Telescopes detect different parts of the electromagnetic spectrum: radio, infrared, visible, and so on.",
+      "Computers turn invisible radiation into \"false colour\" images."
+     ],
+     "ref": "p.5–6, Figures 1.3–1.4",
+     "id": "g12.physics.u1.s1-1.22"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Measuring distance with light",
+     "paras": [
+      "Apparent brightness ∝ true brightness / distance².",
+      "This is the inverse square law of apparent brightness.",
+      "A light year is the distance light travels in one year."
+     ],
+     "ref": "p.7",
+     "id": "g12.physics.u1.s1-1.23"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "One light year in km",
+     "steps": [
+      "d = c × t, with c = 3 × 10⁵ km/s.",
+      "t = 365 × 24 × 3600 s = 3.1536 × 10⁷ s.",
+      "d = 3 × 10⁵ × 3.1536 × 10⁷ = 9.46 × 10¹² km."
+     ],
+     "ref": "Exercise 1.1",
+     "id": "g12.physics.u1.s1-1.24"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Atoms, light and the Earth",
+     "paras": [
+      "An electron falling to a lower orbit emits a photon; jumping up, it absorbs one.",
+      "These lines show a star's composition and temperature.",
+      "Geologists use force, waves, heat, magnetism and radioactivity to study rocks, often without digging."
+     ],
+     "ref": "p.7–8, Figure 1.5",
+     "id": "g12.physics.u1.s1-1.25"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Light year",
+       "The distance light travels in one year, about 9.46 × 10¹² km."
+      ],
+      [
+       "Inverse square law",
+       "Apparent brightness falls as 1/distance²."
+      ]
+     ],
+     "id": "g12.physics.u1.s1-1.26"
+    },
+    {
+     "kind": "mcq",
+     "text": "A star moves to twice its distance. Its apparent brightness becomes",
+     "opts": [
+      "1/4 as much",
+      "1/2 as much",
+      "twice as much",
+      "the same"
+     ],
+     "ans": "1/4 as much",
+     "why": "1/2² = 1/4.",
+     "clue": "Brightness ∝ 1/distance².",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.7",
+     "id": "g12.physics.u1.s1-1.27"
+    },
+    {
+     "kind": "mcq",
+     "text": "An electron jumps from orbit n = 3 to n = 1. The atom",
+     "opts": [
+      "emits a photon",
+      "absorbs a photon",
+      "loses its nucleus",
+      "does nothing"
+     ],
+     "ans": "emits a photon",
+     "why": "Falling to a lower orbit releases energy as light.",
+     "clue": "Down = emit.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Figure 1.5",
+     "id": "g12.physics.u1.s1-1.28"
+    },
+    {
+     "kind": "tf",
+     "text": "A light year is a unit of time.",
+     "a": false,
+     "why": "It is a distance: how far light goes in a year.",
+     "clue": "Read the definition again.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "id": "g12.physics.u1.s1-1.29"
+    },
+    {
+     "kind": "mcq",
+     "text": "What keeps the Moon in orbit around the Earth?",
+     "opts": [
+      "Gravity, acting as the centripetal force",
+      "A centrifugal force pushing it out",
+      "Magnetism",
+      "Air pressure"
+     ],
+     "ans": "Gravity, acting as the centripetal force",
+     "why": "Gravity pulls the Moon towards the Earth and bends its path into an orbit.",
+     "clue": "Which force pulls towards the centre?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.6",
+     "id": "g12.physics.u1.s1-1.30"
+    },
+    {
+     "kind": "blank",
+     "ask": "Light from the Sun takes about 500 s to reach us. The Sun is about ___ × 10⁸ km away (c = 3 × 10⁵ km/s)",
+     "a": [
+      "1.5"
+     ],
+     "why": "3 × 10⁵ × 500 = 1.5 × 10⁸ km.",
+     "clue": "d = c × t.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.physics.u1.s1-1.31"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 1.1",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "Distance light travels in one year = ___ × 10¹² km",
+     "a": [
+      "9.46",
+      "≈9.46"
+     ],
+     "why": "3 × 10⁵ × 3.1536 × 10⁷.",
+     "clue": "d = ct.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "id": "g12.physics.u1.s1-1.32"
+    }
+   ]
+  },
+  {
+   "book_name": "Discussion questions",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "How do chemists study invisible particles?",
+     "opts": [
+      "With instruments based on physics, like spectroscopy",
+      "Only with a magnifying glass",
+      "By guessing",
+      "By weighing single atoms by hand"
+     ],
+     "ans": "With instruments based on physics, like spectroscopy",
+     "why": "Radiation and fields interact with matter.",
+     "clue": "Think of spectroscopy.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Discussion question 1.1",
+     "id": "g12.physics.u1.s1-1.33"
+    },
+    {
+     "kind": "mcq",
+     "text": "How does the eye form an image?",
+     "opts": [
+      "The cornea and lens refract light onto the retina",
+      "The eye sends out light",
+      "The pupil reflects light",
+      "The ear helps the eye"
+     ],
+     "ans": "The cornea and lens refract light onto the retina",
+     "why": "Then nerves carry signals to the brain.",
+     "clue": "Lenses bend light.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Discussion question 1.4",
+     "id": "g12.physics.u1.s1-1.34"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "A body is stable when its centre of gravity is",
+   "opts": [
+    "over its base of support",
+    "outside its base",
+    "very high",
+    "moving"
+   ],
+   "ans": "over its base of support",
+   "why": "p.3.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.physics.u1.s1-1.35"
+  },
+  {
+   "kind": "mcq",
+   "text": "Spectroscopy studies",
+   "opts": [
+    "how matter and radiation interact",
+    "how blood flows",
+    "how bridges stand",
+    "how sound echoes"
+   ],
+   "ans": "how matter and radiation interact",
+   "why": "p.2.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.physics.u1.s1-1.36"
+  },
+  {
+   "kind": "mcq",
+   "text": "A star at 3 times the distance looks",
+   "opts": [
+    "1/9 as bright",
+    "1/3 as bright",
+    "3 times as bright",
+    "9 times as bright"
+   ],
+   "ans": "1/9 as bright",
+   "why": "1/3².",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.physics.u1.s1-1.37"
+  },
+  {
+   "kind": "mcq",
+   "text": "Electron jumps n = 1 → n = 2: the atom",
+   "opts": [
+    "absorbs a photon",
+    "emits a photon",
+    "becomes an ion",
+    "heats up only"
+   ],
+   "ans": "absorbs a photon",
+   "why": "up = absorb.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.physics.u1.s1-1.38"
+  },
+  {
+   "kind": "blank",
+   "ask": "Light travels for 2 years. Distance ≈ ___ × 10¹² km",
+   "a": [
+    "18.9",
+    "≈18.9",
+    "18.92"
+   ],
+   "why": "2 × 9.46.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.physics.u1.s1-1.39"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.6 says centripetal and centrifugal force keep objects in orbit; in an inertial frame only gravity (as the centripetal force) does. Lessons say gravity."
+  },
+  {
+   "kind": "review",
+   "text": "p.4: \"Soft-bodied animals … that lack a firm utilize Pascal's principle\" is missing the word \"skeleton\"."
+  },
+  {
+   "kind": "note",
+   "text": "The blood-pressure estimate (ρgh ≈ 4.2 kPa) is an added challenge built from Discussion question 1.3 (ii)."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

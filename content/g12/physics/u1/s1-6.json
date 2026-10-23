@@ -1,0 +1,385 @@
+{
+ "id": "g12.physics.u1.s1-6",
+ "book": {
+  "title": "Physics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "physics",
+  "unit": 1,
+  "unit_title": "Application of physics in other fields",
+  "pages": "20–23",
+  "section": "1.6"
+ },
+ "title": "Summary, review and chapter test",
+ "competency": "Review the unit and take the timed chapter test.",
+ "minutes": 15,
+ "keywords": [
+  {
+   "en": "Medical physics",
+   "am": "የሕክምና ፊዚክስ",
+   "def": "The use of physics to diagnose and treat disease.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "phys.applications-review",
+   "name": "Unit 1 summary",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Physics supports every other science: chemistry (atoms, heat, spectra), biology (balance, fluids, sound, nerves, light), astronomy (gravity, light, spectra), geology (waves, magnetism), engineering and technology, medicine (X-ray, CT, MRI, ultrasound, radiotherapy), defence (radar R = ct/2, infrared) and communication (electromagnetic waves)."
+    },
+    "am": {
+     "text": "ፊዚክስ ሌሎቹን ሳይንሶች ሁሉ ይደግፋል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "title": "Warm up: where is this physics used?",
+     "bins": [
+      "Medicine",
+      "Defence",
+      "Astronomy",
+      "Communication"
+     ],
+     "items": [
+      [
+       "MRI",
+       "Medicine",
+       "magnetic resonance"
+      ],
+      [
+       "Radar",
+       "Defence",
+       "radio echoes"
+      ],
+      [
+       "Spectral lines of stars",
+       "Astronomy",
+       "atomic physics"
+      ],
+      [
+       "Optical fibre",
+       "Communication",
+       "light in glass"
+      ]
+     ],
+     "graded": false,
+     "id": "g12.physics.u1.s1-6.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Unit summary",
+     "paras": [
+      "Sciences depend on and reinforce each other.",
+      "Chemistry is rooted in atomic and molecular physics.",
+      "Biology uses mechanics, fluids, sound, electricity and light.",
+      "Astronomers use light, atomic physics and Newton's laws.",
+      "Medical devices like X-ray, MRI, CT and ultrasound come from physics.",
+      "Radar and infrared night vision use electromagnetic waves."
+     ],
+     "ref": "p.20–22",
+     "id": "g12.physics.u1.s1-6.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Medical physics",
+       "The use of physics to diagnose and treat disease."
+      ]
+     ],
+     "id": "g12.physics.u1.s1-6.3"
+    },
+    {
+     "kind": "match",
+     "title": "Match the device to its physics",
+     "pairs": [
+      [
+       "X-ray",
+       "absorption of X-rays"
+      ],
+      [
+       "MRI",
+       "hydrogen nuclei in a magnet"
+      ],
+      [
+       "Ultrasound",
+       "sound echoes"
+      ],
+      [
+       "Radar",
+       "radio echoes, R = ct/2"
+      ],
+      [
+       "Night vision",
+       "infrared from warm bodies"
+      ]
+     ],
+     "why": "Each device rests on one physics idea.",
+     "clue": "Think of what each one sends or detects.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "id": "g12.physics.u1.s1-6.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "In photosynthesis, energy changes from",
+     "opts": [
+      "light to chemical",
+      "chemical to light",
+      "sound to heat",
+      "electrical to sound"
+     ],
+     "ans": "light to chemical",
+     "why": "Sunlight is stored in glucose.",
+     "clue": "End of unit Q1.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "End of unit Q1",
+     "id": "g12.physics.u1.s1-6.5"
+    },
+    {
+     "kind": "mcq",
+     "text": "A diagnostic device differs from a therapeutic one because it",
+     "opts": [
+      "finds out what is wrong",
+      "cures the disease",
+      "uses more radiation",
+      "needs surgery"
+     ],
+     "ans": "finds out what is wrong",
+     "why": "Diagnostic = observe; therapeutic = treat.",
+     "clue": "End of unit Q8.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "End of unit Q8",
+     "id": "g12.physics.u1.s1-6.6"
+    },
+    {
+     "kind": "blank",
+     "ask": "A radar echo returns after 2.0 ms. The target is ___ km away",
+     "a": [
+      "300"
+     ],
+     "why": "R = 3 × 10⁸ × 2 × 10⁻³ / 2 = 3 × 10⁵ m = 300 km.",
+     "clue": "R = ct/2.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.physics.u1.s1-6.7"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "End of unit questions",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "How does the brain get information from the body?",
+     "opts": [
+      "Neurons carry electrical pulses",
+      "Blood carries sound",
+      "Bones carry light",
+      "Muscles carry heat"
+     ],
+     "ans": "Neurons carry electrical pulses",
+     "why": "Sensory neurons to the brain, motor neurons to muscles.",
+     "clue": "p.5.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1",
+     "id": "g12.physics.u1.s1-6.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "A clinical thermometer works by",
+     "opts": [
+      "expansion of a liquid (or a thermistor)",
+      "reflection of light",
+      "magnetism",
+      "sound echoes"
+     ],
+     "ans": "expansion of a liquid (or a thermistor)",
+     "why": "Heat flows until thermal equilibrium; the liquid expands.",
+     "clue": "Q1.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1",
+     "id": "g12.physics.u1.s1-6.9"
+    },
+    {
+     "kind": "pick",
+     "text": "Physics used in designing a modern car",
+     "pool": [
+      "Newton's laws",
+      "Aerodynamics",
+      "Pascal's principle (brakes)",
+      "Radioactive dating"
+     ],
+     "a": [
+      "Newton's laws",
+      "Aerodynamics",
+      "Pascal's principle (brakes)"
+     ],
+     "why": "Radioactive dating is for old objects.",
+     "clue": "Q2.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q2",
+     "id": "g12.physics.u1.s1-6.10"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why is the physics of light important in astronomy?",
+     "opts": [
+      "Light is almost the only information we get from far objects",
+      "Stars make sound",
+      "We can visit stars",
+      "Light is slow"
+     ],
+     "ans": "Light is almost the only information we get from far objects",
+     "why": "Q3.",
+     "clue": "Q3.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q3",
+     "id": "g12.physics.u1.s1-6.11"
+    },
+    {
+     "kind": "pick",
+     "text": "Uses of radar",
+     "pool": [
+      "Air traffic control",
+      "Weather observation",
+      "Ship navigation",
+      "Measuring body temperature"
+     ],
+     "a": [
+      "Air traffic control",
+      "Weather observation",
+      "Ship navigation"
+     ],
+     "why": "Body temperature uses a thermometer.",
+     "clue": "Q9.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q9",
+     "id": "g12.physics.u1.s1-6.12"
+    }
+   ]
+  },
+  {
+   "book_name": "Chapter test",
+   "test": true,
+   "chapter_test": true,
+   "count": 20,
+   "minutes": 25,
+   "items": []
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Physics and chemistry both study",
+   "opts": [
+    "matter and energy",
+    "only living things",
+    "only stars",
+    "only machines"
+   ],
+   "ans": "matter and energy",
+   "why": "p.2.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.physics.u1.s1-6.13"
+  },
+  {
+   "kind": "mcq",
+   "text": "CT means",
+   "opts": [
+    "computerized tomography",
+    "central temperature",
+    "current transfer",
+    "coded transmission"
+   ],
+   "ans": "computerized tomography",
+   "why": "p.14.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.physics.u1.s1-6.14"
+  },
+  {
+   "kind": "blank",
+   "ask": "1 light year ≈ ___ × 10¹² km",
+   "a": [
+    "9.46"
+   ],
+   "why": "Exercise 1.1.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.physics.u1.s1-6.15"
+  },
+  {
+   "kind": "mcq",
+   "text": "Ultrasound used in hospitals is about",
+   "opts": [
+    "3.5–10 MHz",
+    "20–200 Hz",
+    "1–2 kHz",
+    "3.5–10 Hz"
+   ],
+   "ans": "3.5–10 MHz",
+   "why": "p.15.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.physics.u1.s1-6.16"
+  },
+  {
+   "kind": "blank",
+   "ask": "Echo after 0.1 ms: range = ___ km",
+   "a": [
+    "15"
+   ],
+   "why": "ct/2.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.physics.u1.s1-6.17"
+  }
+ ],
+ "notes": [],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

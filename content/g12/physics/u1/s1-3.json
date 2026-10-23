@@ -1,0 +1,455 @@
+{
+ "id": "g12.physics.u1.s1-3",
+ "book": {
+  "title": "Physics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "physics",
+  "unit": 1,
+  "unit_title": "Application of physics in other fields",
+  "pages": "12–16",
+  "section": "1.3"
+ },
+ "title": "Medical physics",
+ "competency": "Explain how X-ray, CT, MRI, ultrasound and radiotherapy use physics.",
+ "minutes": 14,
+ "keywords": [
+  {
+   "en": "Medical physics",
+   "am": "የሕክምና ፊዚክስ",
+   "def": "The use of physics to diagnose and treat disease.",
+   "machine": true
+  },
+  {
+   "en": "Ultrasound",
+   "am": "አልትራሳውንድ",
+   "def": "Sound with frequency above 20 kHz.",
+   "machine": true
+  },
+  {
+   "en": "CT scan",
+   "am": "ሲቲ ስካን",
+   "def": "X-ray imaging with a rotating source and detectors that makes slice images.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "phys.medical-physics",
+   "name": "Medical physics",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Medical physics uses physics to diagnose and treat disease. X-rays make a shadow picture: bone (calcium) blocks X-rays and looks white, air-filled lungs look dark. A CT scanner rotates the X-ray source and detectors and a computer builds slice images. MRI aligns hydrogen nuclei in a strong magnet and reads the energy they give back. Ultrasound uses sound above 20 kHz. Radiotherapy aims radiation at a tumour from many directions."
+    },
+    "am": {
+     "text": "ሕክምና ፊዚክስ በሽታን ለመመርመርና ለማከም ፊዚክስን ይጠቀማል፤ ኤክስሬይ፣ ሲቲ፣ ኤምአርአይ፣ አልትራሳውንድ፣ ጨረር ሕክምና።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A broken arm",
+     "ask": "A doctor needs to see if an arm bone is broken. Which is the quickest choice?",
+     "opts": [
+      "An X-ray picture",
+      "A stethoscope",
+      "A thermometer",
+      "An ultrasound of the heart"
+     ],
+     "after": "X-rays are blocked by bone, so a crack shows as a dark line in the white bone.",
+     "ref": "p.14",
+     "id": "g12.physics.u1.s1-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Medical physics",
+     "paras": [
+      "Medical physics applies physics to diagnose and treat abnormal tissue.",
+      "Roentgen discovered X-rays in 1895; this started medical physics."
+     ],
+     "ref": "p.12–13",
+     "id": "g12.physics.u1.s1-3.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "X-ray and CT",
+     "paras": [
+      "X-rays are absorbed differently by different tissues, making a shadow picture.",
+      "Bone (calcium) blocks X-rays and looks white; the air-filled lung looks dark.",
+      "A CT scan rotates the X-ray source and detectors round the patient and a computer builds many slice images."
+     ],
+     "ref": "p.14, Figures 1.15–1.16",
+     "id": "g12.physics.u1.s1-3.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "MRI",
+     "paras": [
+      "The body is mostly water, so it has many hydrogen nuclei (protons). Each acts as a tiny magnet.",
+      "A strong magnet lines them up; a short radio pulse disturbs them.",
+      "As they line up again they give back energy. Different tissues give back different amounts: the computer makes an image."
+     ],
+     "ref": "p.13–14, Discussion question 1.5",
+     "id": "g12.physics.u1.s1-3.4"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Sound and radiation",
+     "paras": [
+      "A stethoscope carries body sounds to the doctor's ears (Laennec, 1816).",
+      "Ultrasound is sound above 20 kHz; medical scanners use 3.5–10 MHz.",
+      "Radiotherapy aims X-rays or gamma rays at a tumour from changing directions to spare healthy tissue."
+     ],
+     "table": [
+      [
+       "Ultrasound term",
+       "Looks",
+       "Why"
+      ],
+      [
+       "Anechoic",
+       "black",
+       "fluid: no echoes"
+      ],
+      [
+       "Hypoechoic",
+       "dark grey",
+       "few echoes"
+      ],
+      [
+       "Hyperechoic",
+       "bright",
+       "many echoes"
+      ]
+     ],
+     "ref": "p.15–16",
+     "id": "g12.physics.u1.s1-3.5"
+    },
+    {
+     "kind": "sort",
+     "step": "explore",
+     "title": "Diagnose or treat?",
+     "bins": [
+      "Diagnostic",
+      "Therapeutic"
+     ],
+     "items": [
+      [
+       "X-ray picture",
+       "Diagnostic",
+       "looks inside"
+      ],
+      [
+       "MRI scan",
+       "Diagnostic",
+       "looks inside"
+      ],
+      [
+       "Radiotherapy beam",
+       "Therapeutic",
+       "destroys cancer cells"
+      ],
+      [
+       "Ultrasound scan",
+       "Diagnostic",
+       "images organs"
+      ],
+      [
+       "Implanted cobalt-60 source",
+       "Therapeutic",
+       "treats a tumour"
+      ]
+     ],
+     "added": true,
+     "graded": false,
+     "id": "g12.physics.u1.s1-3.6"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Medical physics",
+       "The use of physics to diagnose and treat disease."
+      ],
+      [
+       "Ultrasound",
+       "Sound with frequency above 20 kHz."
+      ],
+      [
+       "CT scan",
+       "X-ray imaging with a rotating source and detectors that makes slice images."
+      ]
+     ],
+     "id": "g12.physics.u1.s1-3.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "On an X-ray picture, bone looks white because",
+     "opts": [
+      "calcium in bone blocks X-rays",
+      "bone gives off light",
+      "bone is full of air",
+      "X-rays pass easily through bone"
+     ],
+     "ans": "calcium in bone blocks X-rays",
+     "why": "Bone absorbs X-rays strongly, so little reaches the film.",
+     "clue": "What happens to X-rays in bone?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.14",
+     "id": "g12.physics.u1.s1-3.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "MRI images come from",
+     "opts": [
+      "hydrogen nuclei in a strong magnetic field",
+      "X-rays",
+      "sound echoes",
+      "gamma rays"
+     ],
+     "ans": "hydrogen nuclei in a strong magnetic field",
+     "why": "Protons align, are disturbed by a pulse and give energy back.",
+     "clue": "The body is mostly water.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "id": "g12.physics.u1.s1-3.9"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which frequency is in the medical ultrasound range?",
+     "opts": [
+      "5 MHz",
+      "2 kHz",
+      "15 Hz",
+      "500 Hz"
+     ],
+     "ans": "5 MHz",
+     "why": "Medical ultrasound uses 3.5–10 MHz.",
+     "clue": "Ultrasound is above 20 kHz.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.15",
+     "id": "g12.physics.u1.s1-3.10"
+    },
+    {
+     "kind": "mcq",
+     "text": "In an ultrasound image, a fluid-filled region looks",
+     "opts": [
+      "black (anechoic)",
+      "bright white (hyperechoic)",
+      "dark grey (hypoechoic)",
+      "red"
+     ],
+     "ans": "black (anechoic)",
+     "why": "Fluid sends back no echoes.",
+     "clue": "No echoes → black.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.16",
+     "id": "g12.physics.u1.s1-3.11"
+    },
+    {
+     "kind": "mcq",
+     "text": "A conventional X-ray and a CT scan differ because CT",
+     "opts": [
+      "rotates the source and detectors and uses a computer",
+      "uses sound waves",
+      "uses no radiation",
+      "only images teeth"
+     ],
+     "ans": "rotates the source and detectors and uses a computer",
+     "why": "CT takes many images from different directions and builds slices.",
+     "clue": "Both use X-rays.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Discussion question 1.6",
+     "id": "g12.physics.u1.s1-3.12"
+    },
+    {
+     "kind": "order",
+     "title": "MRI: put the steps in order",
+     "items": [
+      "Strong magnet aligns the protons",
+      "A radio pulse disturbs them",
+      "Protons return and give off energy",
+      "A coil detects the energy",
+      "A computer makes the image"
+     ],
+     "why": "Align → disturb → relax and emit → detect → image.",
+     "clue": "What must happen first?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.physics.u1.s1-3.13"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Discussion questions",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "In MRI, what disturbs the lined-up protons?",
+     "opts": [
+      "A short radio-frequency pulse",
+      "An X-ray beam",
+      "A sound wave",
+      "Heat"
+     ],
+     "ans": "A short radio-frequency pulse",
+     "why": "Then they relax and emit energy.",
+     "clue": "Discussion question 1.5.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Discussion question 1.5",
+     "id": "g12.physics.u1.s1-3.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "Radiotherapy changes the beam direction often in order to",
+     "opts": [
+      "spare healthy tissue",
+      "make the image sharper",
+      "heat the patient",
+      "save electricity"
+     ],
+     "ans": "spare healthy tissue",
+     "why": "The tumour always gets the dose; each healthy part gets a little.",
+     "clue": "p.16.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "p.16",
+     "id": "g12.physics.u1.s1-3.15"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "X-rays were discovered by",
+   "opts": [
+    "Roentgen",
+    "Newton",
+    "Laennec",
+    "Bloch"
+   ],
+   "ans": "Roentgen",
+   "why": "1895.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.physics.u1.s1-3.16"
+  },
+  {
+   "kind": "mcq",
+   "text": "Ultrasound is sound above",
+   "opts": [
+    "20 kHz",
+    "20 Hz",
+    "20 MHz",
+    "2 kHz"
+   ],
+   "ans": "20 kHz",
+   "why": "p.15.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.physics.u1.s1-3.17"
+  },
+  {
+   "kind": "mcq",
+   "text": "A hyperechoic region looks",
+   "opts": [
+    "bright",
+    "black",
+    "red",
+    "invisible"
+   ],
+   "ans": "bright",
+   "why": "many echoes.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.physics.u1.s1-3.18"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which is a therapeutic device?",
+   "opts": [
+    "Radiotherapy machine",
+    "Stethoscope",
+    "MRI scanner",
+    "Thermometer"
+   ],
+   "ans": "Radiotherapy machine",
+   "why": "it treats.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.physics.u1.s1-3.19"
+  },
+  {
+   "kind": "mcq",
+   "text": "The air-filled lung on an X-ray looks",
+   "opts": [
+    "dark",
+    "white",
+    "bright yellow",
+    "the same as bone"
+   ],
+   "ans": "dark",
+   "why": "X-rays pass through air.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.physics.u1.s1-3.20"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Figure 1.13 caption: the first famous X-ray (1895) is of Roentgen's wife's hand, not his own."
+  },
+  {
+   "kind": "review",
+   "text": "p.13: MRI protons are hydrogen nuclei, not \"free hydrogen atoms\"; the pulse is a radio-frequency pulse from a coil, not a current through the tissue."
+  },
+  {
+   "kind": "review",
+   "text": "p.14: CT text cites Figure 1.18 (should be 1.15) and says source and detectors rotate \"in opposite direction\" (they rotate together, on opposite sides)."
+  },
+  {
+   "kind": "review",
+   "text": "p.15–16: \"KHz\" should be kHz; hyperechoic areas look bright (white), not light grey."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

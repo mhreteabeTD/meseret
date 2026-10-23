@@ -1,0 +1,321 @@
+{
+ "id": "g12.physics.u1.s1-5",
+ "book": {
+  "title": "Physics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "physics",
+  "unit": 1,
+  "unit_title": "Application of physics in other fields",
+  "pages": "20",
+  "section": "1.5"
+ },
+ "title": "Physics in communication",
+ "competency": "Explain wired and wireless communication in terms of physics.",
+ "minutes": 8,
+ "keywords": [
+  {
+   "en": "Wireless communication",
+   "am": "ገመድ አልባ ግንኙነት",
+   "def": "Sending messages with electromagnetic waves, without a wire.",
+   "machine": true
+  },
+  {
+   "en": "Optical fibre",
+   "am": "ኦፕቲካል ፋይበር",
+   "def": "A thin glass fibre that carries light signals.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "phys.communication",
+   "name": "Physics in communication",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Communication sends a message from one point to another through a medium. Wired systems use metal wire or optical fibre. Wireless systems use radio waves, microwaves and infrared, which travel through air and even empty space at the speed of light. A transmitter puts the message on a wave; a receiver picks it up."
+    },
+    "am": {
+     "text": "ኮሙኒኬሽን መልእክትን በመገናኛ ዘዴ ያስተላልፋል፤ በሽቦ ወይም ገመድ አልባ (የሬዲዮ ሞገድ፣ ማይክሮዌቭ፣ ኢንፍራሬድ)።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "No wires",
+     "ask": "Your phone talks to a tower kilometres away with no wire. What carries the message?",
+     "opts": [
+      "Electromagnetic waves",
+      "Sound waves in air",
+      "Water",
+      "Nothing"
+     ],
+     "after": "Radio waves and microwaves travel through air, and even through space, at the speed of light.",
+     "ref": "Discussion question 1.9",
+     "id": "g12.physics.u1.s1-5.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Physics in communication",
+     "paras": [
+      "Communication is transferring a message from one point to another.",
+      "Wired systems use wire and optical fibre.",
+      "Wireless systems use radio waves, microwaves and infrared.",
+      "Electromagnetic theory, circuits, electronics and wave behaviour are all needed."
+     ],
+     "ref": "p.20",
+     "id": "g12.physics.u1.s1-5.2"
+    },
+    {
+     "kind": "sort",
+     "step": "explore",
+     "title": "Wired or wireless?",
+     "bins": [
+      "Wired",
+      "Wireless"
+     ],
+     "items": [
+      [
+       "Landline telephone",
+       "Wired",
+       "metal wire"
+      ],
+      [
+       "Fibre-optic internet",
+       "Wired",
+       "optical fibre"
+      ],
+      [
+       "Mobile phone",
+       "Wireless",
+       "radio/microwaves"
+      ],
+      [
+       "Satellite TV",
+       "Wireless",
+       "microwaves from a satellite"
+      ],
+      [
+       "TV remote",
+       "Wireless",
+       "infrared"
+      ]
+     ],
+     "added": true,
+     "graded": false,
+     "id": "g12.physics.u1.s1-5.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Wireless communication",
+       "Sending messages with electromagnetic waves, without a wire."
+      ],
+      [
+       "Optical fibre",
+       "A thin glass fibre that carries light signals."
+      ]
+     ],
+     "id": "g12.physics.u1.s1-5.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is a wired communication system?",
+     "opts": [
+      "Optical fibre",
+      "Wi-Fi",
+      "Bluetooth",
+      "Satellite phone"
+     ],
+     "ans": "Optical fibre",
+     "why": "It uses a physical glass cable.",
+     "clue": "Which one has a cable?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.20",
+     "id": "g12.physics.u1.s1-5.5"
+    },
+    {
+     "kind": "mcq",
+     "text": "Wireless communication works because electromagnetic waves",
+     "opts": [
+      "need no medium to travel",
+      "need water",
+      "travel only in wires",
+      "are sound waves"
+     ],
+     "ans": "need no medium to travel",
+     "why": "They even cross empty space at the speed of light.",
+     "clue": "Think of satellites.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Discussion question 1.9",
+     "id": "g12.physics.u1.s1-5.6"
+    },
+    {
+     "kind": "tf",
+     "text": "A TV remote control uses infrared.",
+     "a": true,
+     "why": "Infrared is one of the wireless media listed.",
+     "clue": "Look at the list.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "id": "g12.physics.u1.s1-5.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "Mobile network radio waves travel at about",
+     "opts": [
+      "3 × 10⁸ m/s",
+      "340 m/s",
+      "3 × 10⁵ m/s",
+      "1500 m/s"
+     ],
+     "ans": "3 × 10⁸ m/s",
+     "why": "They are electromagnetic waves, like light.",
+     "clue": "340 m/s is sound.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.physics.u1.s1-5.8"
+    },
+    {
+     "kind": "blank",
+     "ask": "A signal goes up to a satellite 36 000 km high and back down. At 3 × 10⁵ km/s this takes ___ s",
+     "a": [
+      "0.24"
+     ],
+     "why": "Total 72 000 km ÷ 300 000 km/s = 0.24 s.",
+     "clue": "Up and down: double the height.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.physics.u1.s1-5.9"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Brainstorming question 1.16",
+   "items": [
+    {
+     "kind": "pick",
+     "text": "Which technologies are wireless?",
+     "pool": [
+      "Mobile phone",
+      "Wi-Fi",
+      "Landline telephone",
+      "Bluetooth"
+     ],
+     "a": [
+      "Mobile phone",
+      "Wi-Fi",
+      "Bluetooth"
+     ],
+     "why": "A landline uses wire.",
+     "clue": "Which need a cable?",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "id": "g12.physics.u1.s1-5.10"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Wireless systems use",
+   "opts": [
+    "radio waves, microwaves and infrared",
+    "only sound",
+    "water pipes",
+    "wire"
+   ],
+   "ans": "radio waves, microwaves and infrared",
+   "why": "p.20.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.physics.u1.s1-5.11"
+  },
+  {
+   "kind": "mcq",
+   "text": "An optical fibre carries",
+   "opts": [
+    "light",
+    "sound",
+    "water",
+    "electrons only"
+   ],
+   "ans": "light",
+   "why": "p.20.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.physics.u1.s1-5.12"
+  },
+  {
+   "kind": "tf",
+   "text": "Communication needs a medium of transmission.",
+   "a": true,
+   "why": "p.20.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.physics.u1.s1-5.13"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which knowledge is essential for wireless communication?",
+   "opts": [
+    "Electromagnetic theory",
+    "Fluid mechanics",
+    "Acoustics only",
+    "Geology"
+   ],
+   "ans": "Electromagnetic theory",
+   "why": "p.20.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.physics.u1.s1-5.14"
+  },
+  {
+   "kind": "blank",
+   "ask": "A radio signal crosses 600 km at 3 × 10⁵ km/s in ___ s",
+   "a": [
+    "0.002"
+   ],
+   "why": "600/300 000.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.physics.u1.s1-5.15"
+  }
+ ],
+ "notes": [],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

@@ -1,0 +1,357 @@
+{
+ "id": "g12.physics.u1.s1-2",
+ "book": {
+  "title": "Physics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "physics",
+  "unit": 1,
+  "unit_title": "Application of physics in other fields",
+  "pages": "9–12",
+  "section": "1.2"
+ },
+ "title": "Physics and engineering",
+ "competency": "Relate physics to civil, mechanical, electrical and chemical engineering and to technology.",
+ "minutes": 10,
+ "keywords": [
+  {
+   "en": "Engineering",
+   "am": "ምህንድስና",
+   "def": "Using scientific laws to design and build structures, machines and systems.",
+   "machine": true
+  },
+  {
+   "en": "Technology",
+   "am": "ቴክኖሎጂ",
+   "def": "The products and processes made by engineering to solve problems.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "phys.physics-engineering",
+   "name": "Physics, engineering and technology",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Engineering applies physics. Civil engineering uses forces, pressure and gravity; mechanical engineering uses mechanics, thermodynamics and aerodynamics; electrical engineering uses electromagnetism; chemical engineering uses molecular physics and thermodynamics. Technology, in turn, gives physics new tools, like X-rays and rockets, so new physics is found."
+    },
+    "am": {
+     "text": "ኢንጂነሪንግ ፊዚክስን ይተገብራል። ቴክኖሎጂም ለፊዚክስ አዲስ መሣሪያዎችን ይሰጣል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "The Abay bridge",
+     "ask": "Engineers built the suspension bridge over the Abay. Which physics did they need most?",
+     "opts": [
+      "Forces, tension and gravity",
+      "Light spectra",
+      "Sound echoes",
+      "Nuclear decay"
+     ],
+     "after": "A bridge must carry loads safely: forces, tension, stress and gravity.",
+     "ref": "Figure 1.8",
+     "id": "g12.physics.u1.s1-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Physics and engineering",
+     "paras": [
+      "Physics gives knowledge that engineers use: mechanics, thermodynamics, electromagnetism, optics and more.",
+      "Engineering branches are governed by physical laws.",
+      "Ethiopia built the Axum obelisks and Lalibela churches long ago; modern physics made skyscrapers and suspension bridges possible."
+     ],
+     "ref": "p.9–10, Figures 1.7–1.8",
+     "id": "g12.physics.u1.s1-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Branches",
+     "paras": [
+      "Engineering branches and the physics they use:"
+     ],
+     "table": [
+      [
+       "Branch",
+       "Physics used"
+      ],
+      [
+       "Civil",
+       "forces, fluid pressure, gravity"
+      ],
+      [
+       "Mechanical",
+       "mechanics, thermodynamics, aerodynamics"
+      ],
+      [
+       "Electrical",
+       "electromagnetism, thermodynamics"
+      ],
+      [
+       "Chemical",
+       "molecular physics, thermodynamics"
+      ]
+     ],
+     "ref": "p.10–11",
+     "id": "g12.physics.u1.s1-2.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Technology generating new physics",
+     "paras": [
+      "Science and technology are interwoven, like three gears: physics, engineering and technology.",
+      "Rockets let us measure in space. X-ray technology helped physics grow."
+     ],
+     "ref": "p.11–12, Figure 1.12",
+     "id": "g12.physics.u1.s1-2.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Engineering",
+       "Using scientific laws to design and build structures, machines and systems."
+      ],
+      [
+       "Technology",
+       "The products and processes made by engineering to solve problems."
+      ]
+     ],
+     "id": "g12.physics.u1.s1-2.5"
+    },
+    {
+     "kind": "match",
+     "title": "Match the engineering branch",
+     "pairs": [
+      [
+       "Civil",
+       "roads, bridges, dams"
+      ],
+      [
+       "Mechanical",
+       "engines, tractors, robots"
+      ],
+      [
+       "Electrical",
+       "motors, circuits, power lines"
+      ],
+      [
+       "Chemical",
+       "plastics, paints, fuels"
+      ]
+     ],
+     "why": "Each branch builds different things.",
+     "clue": "Think of what each engineer designs.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "id": "g12.physics.u1.s1-2.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "An electrical engineer designs a motor. The main physics needed is",
+     "opts": [
+      "electromagnetism",
+      "astronomy",
+      "acoustics",
+      "optics only"
+     ],
+     "ans": "electromagnetism",
+     "why": "Motors turn electrical energy into motion using magnetic forces.",
+     "clue": "Electricity + magnetism.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "id": "g12.physics.u1.s1-2.7"
+    },
+    {
+     "kind": "tf",
+     "text": "Technology can lead to new physics.",
+     "a": true,
+     "why": "New instruments like X-ray machines and rockets give new observations.",
+     "clue": "Brainstorming question 1.8.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "id": "g12.physics.u1.s1-2.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "A solar panel works by",
+     "opts": [
+      "changing light into electricity",
+      "storing heat in water",
+      "reflecting sound",
+      "burning fuel"
+     ],
+     "ans": "changing light into electricity",
+     "why": "The photovoltaic effect.",
+     "clue": "Activity 1.3.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 1.3",
+     "id": "g12.physics.u1.s1-2.9"
+    },
+    {
+     "kind": "mcq",
+     "text": "Galileo's telescope showed moons going round Jupiter. This is an example of",
+     "opts": [
+      "technology leading to new physics",
+      "physics leading to a bridge",
+      "chemistry leading to medicine",
+      "engineering without physics"
+     ],
+     "ans": "technology leading to new physics",
+     "why": "A new instrument revealed something no theory had seen.",
+     "clue": "Which came first: the tool or the discovery?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Activity 1.3 (iii)",
+     "added": true,
+     "id": "g12.physics.u1.s1-2.10"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activity 1.3",
+   "items": [
+    {
+     "kind": "match",
+     "title": "Physics in everyday technology",
+     "pairs": [
+      [
+       "Mobile phone",
+       "electromagnetic waves"
+      ],
+      [
+       "Water pump motor",
+       "electromagnetism"
+      ],
+      [
+       "Solar panel",
+       "photovoltaic effect"
+      ],
+      [
+       "Car engine",
+       "thermodynamics"
+      ]
+     ],
+     "why": "Each product uses a physics principle.",
+     "clue": "What does each one use?",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "(i)",
+     "id": "g12.physics.u1.s1-2.11"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Civil engineering mainly uses",
+   "opts": [
+    "forces and pressure",
+    "spectra",
+    "radioactivity",
+    "optics"
+   ],
+   "ans": "forces and pressure",
+   "why": "p.9.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.physics.u1.s1-2.12"
+  },
+  {
+   "kind": "mcq",
+   "text": "Aerodynamics is used most in",
+   "opts": [
+    "mechanical engineering",
+    "chemical engineering",
+    "medicine",
+    "geology"
+   ],
+   "ans": "mechanical engineering",
+   "why": "aircraft and cars.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.physics.u1.s1-2.13"
+  },
+  {
+   "kind": "tf",
+   "text": "Engineering branches are governed by physical laws.",
+   "a": true,
+   "why": "p.9.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.physics.u1.s1-2.14"
+  },
+  {
+   "kind": "mcq",
+   "text": "Rocket technology lets scientists",
+   "opts": [
+    "measure in space",
+    "cure disease",
+    "make paint",
+    "build dams"
+   ],
+   "ans": "measure in space",
+   "why": "p.12.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.physics.u1.s1-2.15"
+  },
+  {
+   "kind": "mcq",
+   "text": "Physics, engineering and technology are shown as",
+   "opts": [
+    "three interlocking gears",
+    "three separate boxes",
+    "a ladder",
+    "a circle of arrows only"
+   ],
+   "ans": "three interlocking gears",
+   "why": "Figure 1.12.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.physics.u1.s1-2.16"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.10 dates the laws of motion to the eighteenth century; Newton published them in 1687."
+  },
+  {
+   "kind": "review",
+   "text": "p.11 \"revere\" should be \"reverse\"."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
