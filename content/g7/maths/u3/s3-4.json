@@ -1,0 +1,686 @@
+{
+ "id": "g7.maths.u3.s3-4",
+ "book": {
+  "title": "Mathematics Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "maths",
+  "unit": 3,
+  "unit_title": "Linear Equations",
+  "pages": "93–98",
+  "section": "3.4"
+ },
+ "title": "Applications",
+ "competency": "Translate word problems into linear equations, solve them and check the answer.",
+ "minutes": 18,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Word problem",
+   "am": "የቃላት ፕሮብሌም",
+   "def": "A problem told in words that you turn into an equation.",
+   "machine": true
+  },
+  {
+   "en": "Consecutive integers",
+   "am": "ተከታታይ ኢንቲጀሮች",
+   "def": "Integers that follow each other: x, x + 1, x + 2.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.translate-equation",
+   "name": "From words to equations",
+   "explain": {
+    "en": {
+     "text": "Turn words into an equation. \"Increased by\" means +, \"decreased by\" means −, \"product\" means ×, \"half of\" means ÷ 2, and \"is\" means =. A number increased by 5 is 11: x + 5 = 11, so x = 6."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Guess the number",
+     "ask": "A number increased by 5 is 11. What is the number?",
+     "opts": [
+      "6",
+      "16",
+      "55",
+      "5"
+     ],
+     "after": "x + 5 = 11, so x = 11 − 5 = 6.",
+     "ref": "Activity 3.4.1 Q1 a",
+     "id": "g7.maths.u3.s3-4.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Activity 3.4.1",
+     "paras": [],
+     "table": [
+      [
+       "Words",
+       "Equation",
+       "Number"
+      ],
+      [
+       "A number increased by 5 is 11",
+       "x + 5 = 11",
+       "6"
+      ],
+      [
+       "A number decreased by 5 is 11",
+       "x − 5 = 11",
+       "16"
+      ],
+      [
+       "The product of a number and 5 is 30",
+       "5x = 30",
+       "6"
+      ],
+      [
+       "Half of a number is 20",
+       "x/2 = 20",
+       "40"
+      ],
+      [
+       "10 less than a number is 12",
+       "x − 10 = 12",
+       "22"
+      ]
+     ],
+     "id": "g7.maths.u3.s3-4.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Word problem",
+       "A problem told in words that you turn into an equation."
+      ]
+     ],
+     "id": "g7.maths.u3.s3-4.3"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "\"The product of a number and 5 is 30\" as an equation:",
+     "opts": [
+      "5x = 30",
+      "x + 5 = 30",
+      "x/5 = 30",
+      "5 − x = 30"
+     ],
+     "ans": "5x = 30",
+     "why": "Product means multiply. \"Is\" means =.",
+     "clue": "What does \"product\" mean?",
+     "level": 1,
+     "ref": "Activity 3.4.1 Q1 c",
+     "id": "g7.maths.u3.s3-4.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "\"10 less than a number is 12\" as an equation:",
+     "opts": [
+      "x − 10 = 12",
+      "10 − x = 12",
+      "x + 10 = 12",
+      "10x = 12"
+     ],
+     "ans": "x − 10 = 12",
+     "why": "10 less than x means x − 10.",
+     "clue": "Start with the number, then take 10 away.",
+     "level": 1,
+     "ref": "Activity 3.4.1 Q1 f",
+     "id": "g7.maths.u3.s3-4.5"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "Half of a number is 20. The number is ___",
+     "a": [
+      "40"
+     ],
+     "num": true,
+     "why": "x/2 = 20, so x = 20 × 2 = 40.",
+     "clue": "Undo \"half of\" by multiplying by 2.",
+     "level": 1,
+     "ref": "Activity 3.4.1 Q1 e",
+     "id": "g7.maths.u3.s3-4.6"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "5 more than four times a number is 30. The number is ___",
+     "a": [
+      "25/4",
+      "6.25",
+      "6 1/4"
+     ],
+     "num": true,
+     "why": "4x + 5 = 30, so 4x = 25 and x = 25/4.",
+     "clue": "Write 4x + 5 = 30.",
+     "level": 2,
+     "ref": "Activity 3.4.1 Q1 g",
+     "id": "g7.maths.u3.s3-4.7"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "ask": "Twice the sum of a number and 3 is 20. The number is ___",
+     "a": [
+      "7"
+     ],
+     "num": true,
+     "why": "2(x + 3) = 20. 2x + 6 = 20, so 2x = 14 and x = 7. Check: 2(10) = 20.",
+     "clue": "The sum comes first, so use a bracket: 2(x + 3).",
+     "level": 3,
+     "added": true,
+     "id": "g7.maths.u3.s3-4.8"
+    }
+   ]
+  },
+  {
+   "id": "math.word-problems",
+   "name": "Solving word problems",
+   "explain": {
+    "en": {
+     "text": "To solve a word problem: read it, choose a variable, write an equation, solve it, answer in words, and check. Three consecutive integers are x, x + 1 and x + 2. If they add to 156, then 3x + 3 = 156 and x = 51."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Sheep and hens",
+     "ask": "A farmer's sheep and hens have 100 heads and 356 legs. How do you start?",
+     "opts": [
+      "Let x be the number of sheep",
+      "Divide 356 by 100",
+      "Guess 50 sheep"
+     ],
+     "after": "Choose a variable: x sheep, so 100 − x hens. Then sheep legs + hen legs = 356.",
+     "ref": "Example 7",
+     "id": "g7.maths.u3.s3-4.9"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Solving word problems",
+     "paras": [],
+     "table": [
+      [
+       "Step",
+       "What to do"
+      ],
+      [
+       "1",
+       "Read the problem carefully"
+      ],
+      [
+       "2",
+       "Select variables for unknown quantities"
+      ],
+      [
+       "3",
+       "Write a mathematical equation"
+      ],
+      [
+       "4",
+       "Solve the equation"
+      ],
+      [
+       "5",
+       "Write the final answer in words"
+      ],
+      [
+       "6",
+       "Check the answer"
+      ]
+     ],
+     "id": "g7.maths.u3.s3-4.10"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Example 2",
+     "steps": [
+      "26 less than three times a number is 46.",
+      "Let x be the number: 3x − 26 = 46.",
+      "Shift −26: 3x = 46 + 26 = 72.",
+      "Divide by 3: x = 24.",
+      "Answer: the number is 24. Check: 72 − 26 = 46."
+     ],
+     "ref": "Example 2",
+     "id": "g7.maths.u3.s3-4.11"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Example 6 (ages)",
+     "steps": [
+      "A man and his wife are 96 years together. He is 6 years older.",
+      "Let the wife's age be y. The man is y + 6.",
+      "y + (y + 6) = 96, so 2y + 6 = 96.",
+      "2y = 90, so y = 45.",
+      "The wife is 45 years old. Check: 45 + 51 = 96."
+     ],
+     "ref": "Example 6",
+     "id": "g7.maths.u3.s3-4.12"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Example 7 (sheep and hens)",
+     "steps": [
+      "Let x be the number of sheep. Hens: 100 − x.",
+      "Legs: 4x + 2(100 − x) = 356.",
+      "Remove the bracket: 4x + 200 − 2x = 356.",
+      "2x = 356 − 200 = 156, so x = 78.",
+      "Sheep: 78. Hens: 100 − 78 = 22. Check: 312 + 44 = 356."
+     ],
+     "ref": "Example 7",
+     "id": "g7.maths.u3.s3-4.13"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Consecutive integers",
+       "Integers that follow each other: x, x + 1, x + 2."
+      ]
+     ],
+     "id": "g7.maths.u3.s3-4.14"
+    },
+    {
+     "kind": "blank",
+     "step": "check",
+     "graded": true,
+     "ask": "A number increased by 7 gives 20. The number is ___",
+     "a": [
+      "13"
+     ],
+     "num": true,
+     "why": "x + 7 = 20, so x = 13. Check: 13 + 7 = 20.",
+     "clue": "Write x + 7 = 20.",
+     "level": 1,
+     "ref": "Exercise 3.4.1 Q1",
+     "id": "g7.maths.u3.s3-4.15"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "The sum of three consecutive integers is 345. The smallest is ___",
+     "a": [
+      "114"
+     ],
+     "num": true,
+     "why": "x + (x + 1) + (x + 2) = 345. 3x + 3 = 345, 3x = 342, x = 114.",
+     "clue": "Call them x, x + 1, x + 2.",
+     "level": 2,
+     "ref": "Exercise 3.4.2 Q1",
+     "id": "g7.maths.u3.s3-4.16"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "A man and his wife are 83 years together. He is 3 years older. The wife is ___ years old.",
+     "a": [
+      "40"
+     ],
+     "num": true,
+     "why": "y + (y + 3) = 83. 2y = 80, so y = 40. The man is 43.",
+     "clue": "Let the wife be y. The man is y + 3.",
+     "level": 2,
+     "ref": "Exercise 3.4.2 Q4",
+     "id": "g7.maths.u3.s3-4.17"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "48 students give equal amounts for the Grand Ethiopian Renaissance Dam (Hidassie Gidib). Birr 2400 is collected. Each student gives Birr ___",
+     "a": [
+      "50"
+     ],
+     "num": true,
+     "why": "48x = 2400, so x = 2400 ÷ 48 = 50.",
+     "clue": "Let each student give x birr.",
+     "level": 1,
+     "ref": "Exercise 3.4.2 Q6 a",
+     "id": "g7.maths.u3.s3-4.18"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "ask": "Almaz has 25 coins. Some are 1-birr and some are 5-birr coins. Together they are worth 65 birr. How many 5-birr coins does she have? ___",
+     "a": [
+      "10"
+     ],
+     "num": true,
+     "why": "Let x be the 5-birr coins. Then 25 − x are 1-birr coins. 5x + (25 − x) = 65. 4x + 25 = 65, so 4x = 40 and x = 10. Check: 50 + 15 = 65.",
+     "clue": "Like the sheep and hens: let x be one kind.",
+     "level": 3,
+     "added": true,
+     "id": "g7.maths.u3.s3-4.19"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 3.4.1",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "A number decreased by 3 gives 13. The number is ___",
+     "a": [
+      "16"
+     ],
+     "num": true,
+     "why": "x − 3 = 13, so x = 16.",
+     "clue": "Write x − 3 = 13.",
+     "level": 1,
+     "ref": "Q2",
+     "id": "g7.maths.u3.s3-4.20"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "The difference between a positive number x and 3 is 21. x = ___",
+     "a": [
+      "24"
+     ],
+     "num": true,
+     "why": "x − 3 = 21, so x = 24.",
+     "clue": "Write x − 3 = 21.",
+     "level": 1,
+     "ref": "Q3",
+     "id": "g7.maths.u3.s3-4.21"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "15 more than twice a number is 37. The number is ___",
+     "a": [
+      "11"
+     ],
+     "num": true,
+     "why": "2x + 15 = 37, so 2x = 22 and x = 11.",
+     "clue": "Write 2x + 15 = 37.",
+     "level": 1,
+     "ref": "Q4",
+     "id": "g7.maths.u3.s3-4.22"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "A number is increased by 7; twice the result is 41. The number is ___",
+     "a": [
+      "27/2",
+      "13.5",
+      "13 1/2"
+     ],
+     "num": true,
+     "why": "2(x + 7) = 41, so 2x = 27 and x = 27/2.",
+     "clue": "Use a bracket: 2(x + 7).",
+     "level": 2,
+     "ref": "Q5",
+     "id": "g7.maths.u3.s3-4.23"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "The sum of 1/4 of a number and 15 is 13. The number is ___",
+     "a": [
+      "−8"
+     ],
+     "num": true,
+     "why": "x/4 + 15 = 13, so x/4 = −2 and x = −8.",
+     "clue": "Write x/4 + 15 = 13.",
+     "level": 2,
+     "ref": "Q6",
+     "id": "g7.maths.u3.s3-4.24"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "8 less than three times a number is 55. The number is ___",
+     "a": [
+      "21"
+     ],
+     "num": true,
+     "why": "3x − 8 = 55, so 3x = 63 and x = 21.",
+     "clue": "Write 3x − 8 = 55.",
+     "level": 1,
+     "ref": "Q7",
+     "id": "g7.maths.u3.s3-4.25"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "A number is doubled and then increased by 8. The result is 36. The number is ___",
+     "a": [
+      "14"
+     ],
+     "num": true,
+     "why": "2x + 8 = 36, so 2x = 28 and x = 14.",
+     "clue": "Write 2x + 8 = 36.",
+     "level": 1,
+     "ref": "Q8",
+     "id": "g7.maths.u3.s3-4.26"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 3.4.2",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "The sum of two consecutive even integers is 170. The smaller is ___",
+     "a": [
+      "84"
+     ],
+     "num": true,
+     "why": "x + (x + 2) = 170, so 2x = 168 and x = 84. They are 84 and 86.",
+     "clue": "Consecutive even integers differ by 2.",
+     "level": 2,
+     "ref": "Q2",
+     "id": "g7.maths.u3.s3-4.27"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "The sum of two consecutive odd integers is 144. The smaller is ___",
+     "a": [
+      "71"
+     ],
+     "num": true,
+     "why": "x + (x + 2) = 144, so 2x = 142 and x = 71. They are 71 and 73.",
+     "clue": "Consecutive odd integers differ by 2.",
+     "level": 2,
+     "ref": "Q3",
+     "id": "g7.maths.u3.s3-4.28"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "A class has 45 students. Girls are 1.5 times the boys. Number of boys = ___",
+     "a": [
+      "18"
+     ],
+     "num": true,
+     "why": "b + 1.5b = 45, so 2.5b = 45 and b = 18. Girls: 27.",
+     "clue": "Let the boys be b. Girls are 1.5b.",
+     "level": 2,
+     "ref": "Q5",
+     "id": "g7.maths.u3.s3-4.29"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "26 girls and 22 boys each give Birr 50. The boys give Birr ___ in all.",
+     "a": [
+      "1100"
+     ],
+     "num": true,
+     "why": "22 × 50 = 1100.",
+     "clue": "Multiply the boys by 50.",
+     "level": 1,
+     "ref": "Q6 b",
+     "id": "g7.maths.u3.s3-4.30"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "A government has 87 hospitals and builds 2 a year. After ___ years there are 109.",
+     "a": [
+      "11"
+     ],
+     "num": true,
+     "why": "87 + 2n = 109, so 2n = 22 and n = 11.",
+     "clue": "Write 87 + 2n = 109.",
+     "level": 2,
+     "ref": "Q7",
+     "id": "g7.maths.u3.s3-4.31"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "In triangle ABC, angle A is twice angle B, and angle B is 20° more than angle C. Angle A = ___°",
+     "a": [
+      "100"
+     ],
+     "num": true,
+     "why": "Let B = x. A = 2x, C = x − 20. 4x − 20 = 180, so x = 50. A = 100°.",
+     "clue": "The angles add up to 180°.",
+     "level": 3,
+     "ref": "Q8",
+     "id": "g7.maths.u3.s3-4.32"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "A number increased by 10 is 23. The number is ___",
+   "a": [
+    "13"
+   ],
+   "num": true,
+   "why": "y + 10 = 23, so y = 13.",
+   "level": 1,
+   "ref": "Example 1",
+   "clue": "",
+   "id": "g7.maths.u3.s3-4.33"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "A number decreased by 11 is 35. The number is ___",
+   "a": [
+    "46"
+   ],
+   "num": true,
+   "why": "x − 11 = 35, so x = 46.",
+   "level": 1,
+   "ref": "Example 3",
+   "clue": "",
+   "id": "g7.maths.u3.s3-4.34"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "The sum of one seventh of a number and 15 is 19. The number is ___",
+   "a": [
+    "28"
+   ],
+   "num": true,
+   "why": "x/7 + 15 = 19, so x/7 = 4 and x = 28.",
+   "level": 2,
+   "ref": "Example 4",
+   "clue": "",
+   "id": "g7.maths.u3.s3-4.35"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "Three consecutive integers add up to 156. The smallest is ___",
+   "a": [
+    "51"
+   ],
+   "num": true,
+   "why": "3x + 3 = 156, so x = 51.",
+   "level": 2,
+   "ref": "Example 5",
+   "clue": "",
+   "id": "g7.maths.u3.s3-4.36"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "A farmer's sheep and hens have 30 heads and 100 legs. Number of sheep = ___",
+   "a": [
+    "20"
+   ],
+   "num": true,
+   "why": "Let x be sheep: 4x + 2(30 − x) = 100. 2x + 60 = 100, so x = 20.",
+   "level": 3,
+   "clue": "",
+   "id": "g7.maths.u3.s3-4.37"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Exercise 3.4.1 Q5 gives 13 1/2, not a whole number; correct for the numbers printed. Teacher to confirm."
+  },
+  {
+   "kind": "note",
+   "text": "Exercise 3.4.2 Q6 is kept with the Renaissance Dam (Hidassie Gidib) context, as in the book."
+  },
+  {
+   "kind": "note",
+   "text": "No generator in the engine fits algebra or linear equations yet, so practice and tests reuse the hand-written items (no fresh numbers)."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

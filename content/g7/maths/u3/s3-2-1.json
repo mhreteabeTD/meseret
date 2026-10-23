@@ -1,0 +1,1198 @@
+{
+ "id": "g7.maths.u3.s3-2-1",
+ "book": {
+  "title": "Mathematics Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "maths",
+  "unit": 3,
+  "unit_title": "Linear Equations",
+  "pages": "65–74",
+  "section": "3.2.1"
+ },
+ "title": "Linear equations involving brackets",
+ "competency": "Define a linear equation and solve linear equations, including ones with brackets.",
+ "minutes": 22,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Equation",
+   "am": "እኩልታ",
+   "def": "Two algebraic expressions joined by an equal sign (=).",
+   "machine": true
+  },
+  {
+   "en": "Linear equation",
+   "am": "ቀጥተኛ እኩልታ",
+   "def": "An equation that can be written ax + b = 0 with a ≠ 0. The highest exponent of x is 1.",
+   "machine": true
+  },
+  {
+   "en": "Rules of transformation",
+   "am": "የመለወጫ ሕጎች",
+   "def": "Add, subtract, multiply or divide both sides by the same number (not 0 for × and ÷).",
+   "machine": true
+  },
+  {
+   "en": "Solution",
+   "am": "መፍትሔ",
+   "def": "The value of the variable that makes the equation true.",
+   "machine": true
+  },
+  {
+   "en": "Distributive property",
+   "am": "የማሰራጨት ባሕሪ",
+   "def": "a(b + c) = ab + ac. Multiply each term in the bracket.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.equation",
+   "name": "Equations and linear equations",
+   "explain": {
+    "en": {
+     "text": "An equation joins two expressions with an equal sign, like 3x − 1 = 6. A linear equation has the variable only to the power 1, like x + 3 = 2x − 1. 2x² + 3 = 2x − 1 is not linear. The left part is the L.H.S, the right part the R.H.S."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A level balance",
+     "ask": "A balance is level. One pan has a box x. The other has 10 kg. What is x?",
+     "opts": [
+      "10 kg",
+      "5 kg",
+      "20 kg",
+      "We cannot tell"
+     ],
+     "after": "The balance is level, so both sides weigh the same: x = 10 kg. An equation is like a level balance.",
+     "ref": "Activity 3.2.1 Q2 a",
+     "id": "g7.maths.u3.s3-2-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Definitions 3.9 and 3.10",
+     "paras": [
+      "Two different algebraic expressions joined by an equal sign (=) is called an equation.",
+      "A linear equation in x can be written as ax + b = 0, where a ≠ 0.",
+      "In a linear equation the highest exponent of the variable is one."
+     ],
+     "id": "g7.maths.u3.s3-2-1.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Example 1 and Example 2",
+     "paras": [
+      "2x = 2 and x + 3 = 2x − 1 are linear equations.",
+      "2x² + 3 = 2x − 1 and x = 2x³ − 6 are not linear.",
+      "In 3x + 5 = x − 1, the L.H.S is 3x + 5 and the R.H.S is x − 1."
+     ],
+     "note": "L.H.S = left-hand side. R.H.S = right-hand side.",
+     "id": "g7.maths.u3.s3-2-1.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Equation",
+       "Two algebraic expressions joined by an equal sign (=)."
+      ],
+      [
+       "Linear equation",
+       "An equation that can be written ax + b = 0 with a ≠ 0. The highest exponent of x is 1."
+      ]
+     ],
+     "id": "g7.maths.u3.s3-2-1.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Which one is an equation?",
+     "opts": [
+      "2 + x",
+      "x = 2",
+      "x > 2"
+     ],
+     "ans": "x = 2",
+     "why": "Only x = 2 has an equal sign. x > 2 uses >.",
+     "clue": "Look for the = sign.",
+     "level": 1,
+     "ref": "Activity 3.2.1 Q4",
+     "id": "g7.maths.u3.s3-2-1.5"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "bins": [
+      "Linear equation",
+      "Not a linear equation"
+     ],
+     "items": [
+      [
+       "x − 1 = 5",
+       "Linear equation",
+       "x has power 1."
+      ],
+      [
+       "2y − 2",
+       "Not a linear equation",
+       "No = sign."
+      ],
+      [
+       "2x² = 4",
+       "Not a linear equation",
+       "x has power 2."
+      ],
+      [
+       "3x = 0",
+       "Linear equation",
+       "x has power 1."
+      ],
+      [
+       "x > 0",
+       "Not a linear equation",
+       "No = sign."
+      ],
+      [
+       "x − 3 + 4x = 2x − 2",
+       "Linear equation",
+       "All x have power 1."
+      ]
+     ],
+     "why": "Linear: has = and the highest power of x is 1.",
+     "clue": "Is there an = sign? Is there an x² or x³?",
+     "level": 1,
+     "ref": "Exercise 3.2.1 Q1",
+     "id": "g7.maths.u3.s3-2-1.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "In 3x + 5 = x − 1, what is the R.H.S?",
+     "opts": [
+      "x − 1",
+      "3x + 5",
+      "3x",
+      "−1"
+     ],
+     "ans": "x − 1",
+     "why": "R.H.S is everything right of the = sign.",
+     "clue": "Right-hand side of =.",
+     "level": 1,
+     "ref": "Example 2",
+     "id": "g7.maths.u3.s3-2-1.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Which one is a linear equation?",
+     "opts": [
+      "x(x + 1) = 5",
+      "2x² = 8",
+      "x² + 3x = x² + 6",
+      "x > 4"
+     ],
+     "ans": "x² + 3x = x² + 6",
+     "why": "Take x² from both sides: 3x = 6. That is linear. x(x + 1) = x² + x is not linear.",
+     "clue": "Simplify each one first. Does an x² cancel?",
+     "level": 3,
+     "added": true,
+     "id": "g7.maths.u3.s3-2-1.8"
+    }
+   ]
+  },
+  {
+   "id": "math.transform-rules",
+   "name": "Rules of transformation",
+   "explain": {
+    "en": {
+     "text": "An equation stays true if you do the same thing to both sides. You may add or subtract the same number. You may multiply or divide by the same number that is not 0. For x − 10 = 6, add 10 to both sides: x = 16."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Add to both pans",
+     "ask": "A balance has 6 kg on each pan. You add 4 kg to both pans. What happens?",
+     "opts": [
+      "It stays level",
+      "The left goes down",
+      "The right goes down"
+     ],
+     "after": "Adding the same weight to both sides keeps it level. Equations work the same way.",
+     "ref": "Rule 1",
+     "id": "g7.maths.u3.s3-2-1.9"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Rules of transforming equations",
+     "paras": [],
+     "table": [
+      [
+       "Rule",
+       "If a = b, then"
+      ],
+      [
+       "1. Add c to both sides",
+       "a + c = b + c"
+      ],
+      [
+       "2. Subtract c from both sides",
+       "a − c = b − c"
+      ],
+      [
+       "3. Multiply both sides by c (c ≠ 0)",
+       "a × c = b × c"
+      ],
+      [
+       "4. Divide both sides by c (c ≠ 0)",
+       "a/c = b/c"
+      ]
+     ],
+     "id": "g7.maths.u3.s3-2-1.10"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Solve 10 − x = 6",
+     "steps": [
+      "10 − x = 6",
+      "Subtract 10 from both sides: 10 − 10 − x = 6 − 10.",
+      "So −x = −4.",
+      "Divide both sides by −1: x = 4.",
+      "Check: 10 − 4 = 6. True."
+     ],
+     "ref": "Example 3 b",
+     "id": "g7.maths.u3.s3-2-1.11"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Solve y/5 = −2",
+     "steps": [
+      "y/5 = −2",
+      "Multiply both sides by 5: 5 × y/5 = −2 × 5.",
+      "So y = −10.",
+      "Check: −10 ÷ 5 = −2. True."
+     ],
+     "ref": "Example 4 b",
+     "id": "g7.maths.u3.s3-2-1.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Rules of transformation",
+       "Add, subtract, multiply or divide both sides by the same number (not 0 for × and ÷)."
+      ]
+     ],
+     "id": "g7.maths.u3.s3-2-1.13"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "2x − 4 = 6 becomes 2x = 10. What was done?",
+     "opts": [
+      "4 was added to both sides",
+      "4 was subtracted from both sides",
+      "Both sides were divided by 2"
+     ],
+     "ans": "4 was added to both sides",
+     "why": "2x − 4 + 4 = 6 + 4, so 2x = 10. This is Rule 1.",
+     "clue": "What turns −4 into 0?",
+     "level": 1,
+     "ref": "Exercise 3.2.1 Q2 c",
+     "id": "g7.maths.u3.s3-2-1.14"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "8y = 72. So y = ___",
+     "a": [
+      "9"
+     ],
+     "num": true,
+     "why": "Divide both sides by 8: y = 72 ÷ 8 = 9.",
+     "clue": "Which rule undoes \"times 8\"?",
+     "level": 1,
+     "ref": "Example 4 a",
+     "id": "g7.maths.u3.s3-2-1.15"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "20 − x = 15. So x = ___",
+     "a": [
+      "5"
+     ],
+     "num": true,
+     "why": "Subtract 20: −x = −5. Divide by −1: x = 5.",
+     "clue": "Subtract 20 from both sides first.",
+     "level": 2,
+     "ref": "Exercise 3.2.1 Q3 c",
+     "id": "g7.maths.u3.s3-2-1.16"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "2x/5 = 10. So x = ___",
+     "a": [
+      "25"
+     ],
+     "num": true,
+     "why": "Multiply both sides by 5: 2x = 50. Divide by 2: x = 25.",
+     "clue": "Multiply by 5 first, then divide by 2.",
+     "level": 2,
+     "ref": "Exercise 3.2.1 Q3 b",
+     "id": "g7.maths.u3.s3-2-1.17"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "ask": "3x/4 = −6. So x = ___",
+     "a": [
+      "−8"
+     ],
+     "num": true,
+     "why": "Multiply both sides by 4: 3x = −24. Divide by 3: x = −8. Check: 3(−8)/4 = −24/4 = −6.",
+     "clue": "Clear the 4 first, then the 3. Watch the sign.",
+     "level": 3,
+     "added": true,
+     "id": "g7.maths.u3.s3-2-1.18"
+    }
+   ]
+  },
+  {
+   "id": "math.solve-both-sides",
+   "name": "Variables on both sides",
+   "requires": [
+    "math.integer-signs"
+   ],
+   "explain": {
+    "en": {
+     "text": "Shifting a term to the other side changes its sign. In x − 5 = 10, −5 moves across as +5, so x = 15. Put the variable terms on one side and the numbers on the other. Then check by putting the answer back."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Moving across",
+     "ask": "x − 5 = 10. If you move −5 to the other side, what does it become?",
+     "opts": [
+      "+5",
+      "−5",
+      "× 5"
+     ],
+     "after": "Moving a term across the = sign changes its sign: x = 10 + 5 = 15.",
+     "ref": "Note",
+     "id": "g7.maths.u3.s3-2-1.19"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Shifting terms",
+     "paras": [
+      "Solving x − 5 = 10, you add 5 to both sides and get x = 10 + 5.",
+      "This is the same as shifting −5 to the other side. It becomes +5.",
+      "When you shift a term to the other side, its sign changes."
+     ],
+     "note": "Collect the variable terms on one side and the numbers on the other.",
+     "id": "g7.maths.u3.s3-2-1.20"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Solve 5x − 10 = 6 − 3x",
+     "steps": [
+      "5x − 10 = 6 − 3x",
+      "Shift −3x to the left (it becomes +3x) and −10 to the right (it becomes +10).",
+      "5x + 3x = 6 + 10, so 8x = 16.",
+      "Divide both sides by 8: x = 2.",
+      "Check: 5(2) − 10 = 0 and 6 − 3(2) = 0. True."
+     ],
+     "ref": "Example 5 c",
+     "id": "g7.maths.u3.s3-2-1.21"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Solution",
+       "The value of the variable that makes the equation true."
+      ]
+     ],
+     "id": "g7.maths.u3.s3-2-1.22"
+    },
+    {
+     "kind": "blank",
+     "step": "check",
+     "graded": true,
+     "ask": "2x = x + 4. So x = ___",
+     "a": [
+      "4"
+     ],
+     "num": true,
+     "why": "Shift x to the left: 2x − x = 4, so x = 4. Check: 8 = 8.",
+     "clue": "Get all the x terms on the left.",
+     "level": 1,
+     "ref": "Example 5 a",
+     "id": "g7.maths.u3.s3-2-1.23"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "8x + 5 = 2x + 17. So x = ___",
+     "a": [
+      "2"
+     ],
+     "num": true,
+     "why": "8x − 2x = 17 − 5, so 6x = 12 and x = 2. Check: 21 = 21.",
+     "clue": "Move 2x left and 5 right.",
+     "level": 1,
+     "ref": "Exercise 3.2.2 Q1 f",
+     "id": "g7.maths.u3.s3-2-1.24"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "3x − 9 = 4x + 5. So x = ___",
+     "a": [
+      "−14"
+     ],
+     "num": true,
+     "why": "3x − 4x = 5 + 9, so −x = 14 and x = −14. Check: −51 = −51.",
+     "clue": "After shifting you get −x. Divide by −1.",
+     "level": 2,
+     "ref": "Exercise 3.2.2 Q1 a",
+     "needs": "math.integer-signs",
+     "id": "g7.maths.u3.s3-2-1.25"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "12x + 7 = 5 − 3x + 17. So x = ___",
+     "a": [
+      "1"
+     ],
+     "num": true,
+     "why": "R.H.S: 5 + 17 = 22, so 12x + 7 = 22 − 3x. 12x + 3x = 22 − 7, so 15x = 15 and x = 1.",
+     "clue": "Simplify the right side first.",
+     "level": 2,
+     "ref": "Exercise 3.2.2 Q1 c",
+     "id": "g7.maths.u3.s3-2-1.26"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Dawit solved 4x − 3 = x + 9 like this: 4x − x = 9 − 3, so 3x = 6 and x = 2. Is he right?",
+     "opts": [
+      "Yes, x = 2",
+      "No, x = 4",
+      "No, x = 3"
+     ],
+     "ans": "No, x = 4",
+     "why": "Shifting −3 to the right makes it +3, not −3. 4x − x = 9 + 3, so 3x = 12 and x = 4. Check: 13 = 13.",
+     "clue": "Check his answer: is 4(2) − 3 equal to 2 + 9?",
+     "level": 3,
+     "added": true,
+     "id": "g7.maths.u3.s3-2-1.27"
+    }
+   ]
+  },
+  {
+   "id": "math.solve-brackets",
+   "name": "Equations with brackets",
+   "explain": {
+    "en": {
+     "text": "To solve an equation with brackets, first remove the brackets with the distributive property. Then collect variable terms on one side and numbers on the other. For 4(2x + 3) = 36: 8x + 12 = 36, 8x = 24, x = 3."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "First step",
+     "ask": "3(x + 2) = 0. What do you do first?",
+     "opts": [
+      "Remove the bracket: 3x + 6 = 0",
+      "Divide by 0",
+      "Add 2 to both sides"
+     ],
+     "after": "Remove the bracket first: 3x + 6 = 0. Then 3x = −6 and x = −2.",
+     "ref": "Activity 3.2.2 Q2 a",
+     "id": "g7.maths.u3.s3-2-1.28"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "To solve linear equations involving brackets",
+     "paras": [
+      "1. Remove the brackets using the distributive property.",
+      "2. Collect variable terms on one side and constants on the other. Change the sign when you shift a term."
+     ],
+     "table": [
+      [
+       "For any numbers a, b, c",
+       ""
+      ],
+      [
+       "a + (b + c)",
+       "a + b + c"
+      ],
+      [
+       "a − (b + c)",
+       "a − b − c"
+      ],
+      [
+       "a − (b − c)",
+       "a − b + c"
+      ],
+      [
+       "a(b + c)",
+       "ab + ac"
+      ],
+      [
+       "a(b − c)",
+       "ab − ac"
+      ]
+     ],
+     "id": "g7.maths.u3.s3-2-1.29"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Solve 4(2x + 3) = 36",
+     "steps": [
+      "4(2x + 3) = 36",
+      "Remove the bracket: 8x + 12 = 36.",
+      "Shift +12 to the right: 8x = 36 − 12 = 24.",
+      "Divide both sides by 8: x = 3.",
+      "Check: 4(6 + 3) = 4 × 9 = 36. True."
+     ],
+     "ref": "Example 7 a",
+     "id": "g7.maths.u3.s3-2-1.30"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Solve −10y − (−2y + 3) = 21",
+     "steps": [
+      "−10y − (−2y + 3) = 21",
+      "Remove the bracket: −10y + 2y − 3 = 21.",
+      "Combine: −8y − 3 = 21.",
+      "Shift −3: −8y = 21 + 3 = 24.",
+      "Divide by −8: y = −3."
+     ],
+     "ref": "Example 7 c",
+     "needs": "math.integer-signs",
+     "id": "g7.maths.u3.s3-2-1.31"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Distributive property",
+       "a(b + c) = ab + ac. Multiply each term in the bracket."
+      ]
+     ],
+     "id": "g7.maths.u3.s3-2-1.32"
+    },
+    {
+     "kind": "blank",
+     "step": "check",
+     "graded": true,
+     "ask": "3(x + 2) = 0. So x = ___",
+     "a": [
+      "−2"
+     ],
+     "num": true,
+     "why": "3x + 6 = 0, so 3x = −6 and x = −2.",
+     "clue": "Remove the bracket first.",
+     "level": 1,
+     "ref": "Activity 3.2.2 Q2 a",
+     "id": "g7.maths.u3.s3-2-1.33"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "−(−2x + 9) = ?",
+     "opts": [
+      "2x − 9",
+      "−2x − 9",
+      "2x + 9",
+      "−2x + 9"
+     ],
+     "ans": "2x − 9",
+     "why": "Multiply each term by −1: (−1)(−2x) = 2x and (−1)(9) = −9.",
+     "clue": "A minus in front changes every sign inside.",
+     "level": 1,
+     "ref": "Activity 3.2.2 Q1 b",
+     "id": "g7.maths.u3.s3-2-1.34"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "8(2y − 6) = 5(3y − 7). So y = ___",
+     "a": [
+      "13"
+     ],
+     "num": true,
+     "why": "16y − 48 = 15y − 35. 16y − 15y = −35 + 48, so y = 13.",
+     "clue": "Remove both brackets first.",
+     "level": 2,
+     "ref": "Exercise 3.2.3 Q1 c",
+     "id": "g7.maths.u3.s3-2-1.35"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "3 − 2(2x + 1) = x − 14. So x = ___",
+     "a": [
+      "3"
+     ],
+     "num": true,
+     "why": "3 − 4x − 2 = x − 14, so 1 − 4x = x − 14. −5x = −15, x = 3.",
+     "clue": "−2 multiplies both 2x and 1.",
+     "level": 2,
+     "ref": "Exercise 3.2.3 Q1 d",
+     "needs": "math.integer-signs",
+     "id": "g7.maths.u3.s3-2-1.36"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "ask": "2(x + 3) − (x − 4) = 15. So x = ___",
+     "a": [
+      "5"
+     ],
+     "num": true,
+     "why": "2x + 6 − x + 4 = 15. So x + 10 = 15 and x = 5. Check: 2(8) − 1 = 15.",
+     "clue": "−(x − 4) = −x + 4.",
+     "level": 3,
+     "added": true,
+     "id": "g7.maths.u3.s3-2-1.37"
+    }
+   ]
+  }
+ ],
+ "refreshers": {
+  "math.integer-signs": {
+   "name": "Signs when multiplying and adding integers",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Integer signs",
+     "steps": [
+      "Same signs multiply to +: (−3) × (−2) = 6.",
+      "Different signs multiply to −: (−2) × 4 = −8.",
+      "Adding different signs: −5 + 3 = −2 (take 3 from 5, keep the sign of 5)."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "(−3) × (−4) = ?",
+     "opts": [
+      "12",
+      "−12",
+      "−7"
+     ],
+     "ans": "12",
+     "why": "Same signs give a positive answer: 3 × 4 = 12.",
+     "clue": "Are the signs the same or different?",
+     "level": 1
+    }
+   ]
+  }
+ },
+ "exercises": [
+  {
+   "book_name": "Exercise 3.2.1",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Is 2x² = 4 a linear equation?",
+     "opts": [
+      "Yes",
+      "No"
+     ],
+     "ans": "No",
+     "why": "The highest exponent of x is 2.",
+     "clue": "Look at the power of x.",
+     "level": 1,
+     "ref": "Q1 c",
+     "id": "g7.maths.u3.s3-2-1.38"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Is x − 3 + 4x = 2x − 2 a linear equation?",
+     "opts": [
+      "Yes",
+      "No"
+     ],
+     "ans": "Yes",
+     "why": "It has = and every x has power 1.",
+     "clue": "Look at the powers of x.",
+     "level": 1,
+     "ref": "Q1 d",
+     "id": "g7.maths.u3.s3-2-1.39"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "x + 1 = 2 becomes x = 1 by:",
+     "opts": [
+      "Subtracting 1 from both sides",
+      "Adding 1 to both sides",
+      "Dividing both sides by 2"
+     ],
+     "ans": "Subtracting 1 from both sides",
+     "why": "x + 1 − 1 = 2 − 1.",
+     "clue": "What removes the +1?",
+     "level": 1,
+     "ref": "Q2 a",
+     "id": "g7.maths.u3.s3-2-1.40"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "2x/3 = 5 becomes 2x = 15 by:",
+     "opts": [
+      "Multiplying both sides by 3",
+      "Dividing both sides by 3",
+      "Adding 3 to both sides"
+     ],
+     "ans": "Multiplying both sides by 3",
+     "why": "3 × 2x/3 = 5 × 3.",
+     "clue": "What clears the /3?",
+     "level": 1,
+     "ref": "Q2 d",
+     "id": "g7.maths.u3.s3-2-1.41"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "−8x = 12. So x = ___",
+     "a": [
+      "−3/2",
+      "−1.5",
+      "−1 1/2"
+     ],
+     "num": true,
+     "why": "Divide by −8: x = 12/(−8) = −3/2.",
+     "clue": "Divide both sides by −8.",
+     "level": 2,
+     "ref": "Q3 a",
+     "id": "g7.maths.u3.s3-2-1.42"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "2x/5 = 10. So x = ___",
+     "a": [
+      "25"
+     ],
+     "num": true,
+     "why": "2x = 50, so x = 25.",
+     "clue": "Multiply by 5 first.",
+     "level": 1,
+     "ref": "Q3 b",
+     "id": "g7.maths.u3.s3-2-1.43"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "20 − x = 15. So x = ___",
+     "a": [
+      "5"
+     ],
+     "num": true,
+     "why": "−x = −5, so x = 5.",
+     "clue": "Subtract 20 from both sides.",
+     "level": 1,
+     "ref": "Q3 c",
+     "id": "g7.maths.u3.s3-2-1.44"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "2x − 4 = 16. So x = ___",
+     "a": [
+      "10"
+     ],
+     "num": true,
+     "why": "2x = 20, so x = 10.",
+     "clue": "Add 4 to both sides.",
+     "level": 1,
+     "ref": "Q3 d",
+     "id": "g7.maths.u3.s3-2-1.45"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 3.2.2",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "3x − 9 = 4x + 5. x = ___",
+     "a": [
+      "−14"
+     ],
+     "num": true,
+     "why": "−x = 14, so x = −14.",
+     "clue": "Shift 4x left and −9 right.",
+     "level": 2,
+     "ref": "Q1 a",
+     "id": "g7.maths.u3.s3-2-1.46"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "5x − 3 − 4x = 13. x = ___",
+     "a": [
+      "16"
+     ],
+     "num": true,
+     "why": "x − 3 = 13, so x = 16.",
+     "clue": "Combine 5x − 4x first.",
+     "level": 1,
+     "ref": "Q1 b",
+     "id": "g7.maths.u3.s3-2-1.47"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "−x + 3 = x + 9. x = ___",
+     "a": [
+      "−3"
+     ],
+     "num": true,
+     "why": "−2x = 6, so x = −3.",
+     "clue": "Shift x left and 3 right.",
+     "level": 2,
+     "ref": "Q1 d",
+     "id": "g7.maths.u3.s3-2-1.48"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "3x − 9 = −x + 19. x = ___",
+     "a": [
+      "7"
+     ],
+     "num": true,
+     "why": "4x = 28, so x = 7.",
+     "clue": "Shift −x left and −9 right.",
+     "level": 1,
+     "ref": "Q1 e",
+     "id": "g7.maths.u3.s3-2-1.49"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "10 = 3x − 5 + 2x. x = ___",
+     "a": [
+      "3"
+     ],
+     "num": true,
+     "why": "10 = 5x − 5, so 15 = 5x and x = 3.",
+     "clue": "Combine 3x + 2x first.",
+     "level": 1,
+     "ref": "Q1 g",
+     "id": "g7.maths.u3.s3-2-1.50"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "x − 5 = 2x + 13 + x. x = ___",
+     "a": [
+      "−9"
+     ],
+     "num": true,
+     "why": "x − 5 = 3x + 13, so −2x = 18 and x = −9.",
+     "clue": "Combine 2x + x first.",
+     "level": 2,
+     "ref": "Q1 h",
+     "id": "g7.maths.u3.s3-2-1.51"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 3.2.3",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "(x − 1) = 11. x = ___",
+     "a": [
+      "12"
+     ],
+     "num": true,
+     "why": "x − 1 = 11, so x = 12.",
+     "clue": "Remove the bracket.",
+     "level": 1,
+     "ref": "Q1 a",
+     "id": "g7.maths.u3.s3-2-1.52"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "6(8y + 3) = 4(7y + 5). y = ___",
+     "a": [
+      "1/10",
+      "0.1"
+     ],
+     "num": true,
+     "why": "48y + 18 = 28y + 20, so 20y = 2 and y = 1/10.",
+     "clue": "Remove both brackets.",
+     "level": 2,
+     "ref": "Q1 b",
+     "id": "g7.maths.u3.s3-2-1.53"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "7 − (x + 1) = 9 − (2x − 1). x = ___",
+     "a": [
+      "4"
+     ],
+     "num": true,
+     "why": "6 − x = 10 − 2x, so x = 4.",
+     "clue": "−(2x − 1) = −2x + 1.",
+     "level": 2,
+     "ref": "Q1 e",
+     "id": "g7.maths.u3.s3-2-1.54"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "5(1 − 2a) − 3(4 − 4a) = 0. a = ___",
+     "a": [
+      "7/2",
+      "3.5",
+      "3 1/2"
+     ],
+     "num": true,
+     "why": "5 − 10a − 12 + 12a = 0, so 2a − 7 = 0 and a = 7/2.",
+     "clue": "−3 × (−4a) = +12a.",
+     "level": 2,
+     "ref": "Q1 f",
+     "id": "g7.maths.u3.s3-2-1.55"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "3x + 7 + 3(x − 1) = 2(2x + 6). x = ___",
+     "a": [
+      "4"
+     ],
+     "num": true,
+     "why": "6x + 4 = 4x + 12, so 2x = 8 and x = 4.",
+     "clue": "Remove brackets, then collect.",
+     "level": 2,
+     "ref": "Q1 g",
+     "id": "g7.maths.u3.s3-2-1.56"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "5(2x + 1) + 3(3x − 4) = 4(5x − 6). x = ___",
+     "a": [
+      "17"
+     ],
+     "num": true,
+     "why": "19x − 7 = 20x − 24, so −x = −17 and x = 17.",
+     "clue": "Remove all brackets first.",
+     "level": 3,
+     "ref": "Q1 h",
+     "id": "g7.maths.u3.s3-2-1.57"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "m(x − 1) = 0, m ≠ 0. x = ___",
+     "a": [
+      "1"
+     ],
+     "num": true,
+     "why": "mx − m = 0, so mx = m. Divide by m: x = 1.",
+     "clue": "Divide both sides by m.",
+     "level": 3,
+     "ref": "Q2 a",
+     "id": "g7.maths.u3.s3-2-1.58"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "m(x + n) = mn, m ≠ 0. x = ___",
+     "a": [
+      "0"
+     ],
+     "num": true,
+     "why": "mx + mn = mn, so mx = 0 and x = 0.",
+     "clue": "Remove the bracket first.",
+     "level": 3,
+     "ref": "Q2 b",
+     "id": "g7.maths.u3.s3-2-1.59"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is a linear equation?",
+   "opts": [
+    "x + 3 = 2x − 1",
+    "x = 2x³ − 6",
+    "2x² + 3 = 7"
+   ],
+   "ans": "x + 3 = 2x − 1",
+   "why": "x has power 1 only.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.maths.u3.s3-2-1.60"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "x + 4 = −6. x = ___",
+   "a": [
+    "−10"
+   ],
+   "num": true,
+   "why": "Subtract 4: x = −10.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.maths.u3.s3-2-1.61"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "2x − 8 = 4. x = ___",
+   "a": [
+    "6"
+   ],
+   "num": true,
+   "why": "2x = 12, so x = 6.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.maths.u3.s3-2-1.62"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "6(5x − 7) = 4(3x + 7). x = ___",
+   "a": [
+    "35/9",
+    "3 8/9"
+   ],
+   "num": true,
+   "why": "30x − 42 = 12x + 28, so 18x = 70 and x = 70/18 = 35/9.",
+   "level": 2,
+   "ref": "Example 7 b",
+   "clue": "",
+   "id": "g7.maths.u3.s3-2-1.63"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "4(x − 1) + 3(x + 2) = 5(x − 4). x = ___",
+   "a": [
+    "−11"
+   ],
+   "num": true,
+   "why": "7x + 2 = 5x − 20, so 2x = −22 and x = −11.",
+   "level": 3,
+   "ref": "Example 7 d",
+   "clue": "",
+   "id": "g7.maths.u3.s3-2-1.64"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "The balance pictures of Activity 3.2.1 and the four rules are shown as words and a table (no balance block)."
+  },
+  {
+   "kind": "review",
+   "text": "In the Note on brackets the book prints a capital \"C\" inside brackets (a + (b + C)); shown as c."
+  },
+  {
+   "kind": "note",
+   "text": "Exercise 3.2.3 Q2 c and d (answers in m and n) are left out because typed algebra answers are not checked yet."
+  },
+  {
+   "kind": "note",
+   "text": "No generator in the engine fits algebra or linear equations yet, so practice and tests reuse the hand-written items (no fresh numbers)."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

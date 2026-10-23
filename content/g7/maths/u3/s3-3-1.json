@@ -1,0 +1,890 @@
+{
+ "id": "g7.maths.u3.s3-3-1",
+ "book": {
+  "title": "Mathematics Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "maths",
+  "unit": 3,
+  "unit_title": "Linear Equations",
+  "pages": "78–85",
+  "section": "3.3.1"
+ },
+ "title": "The four quadrants of the Cartesian coordinate plane",
+ "competency": "Describe the Cartesian plane, locate points from their coordinates and name their quadrant.",
+ "minutes": 16,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Cartesian coordinate plane",
+   "am": "የካርቴዥያን መጋጠሚያ ገጽ",
+   "def": "The plane made by a horizontal and a vertical number line that cross at right angles.",
+   "machine": true
+  },
+  {
+   "en": "x-axis",
+   "am": "x-ዘንግ",
+   "def": "The horizontal number line.",
+   "machine": true
+  },
+  {
+   "en": "y-axis",
+   "am": "y-ዘንግ",
+   "def": "The vertical number line.",
+   "machine": true
+  },
+  {
+   "en": "Origin",
+   "am": "መነሻ ነጥብ",
+   "def": "The point where the x-axis and y-axis meet: (0, 0).",
+   "machine": true
+  },
+  {
+   "en": "Coordinates",
+   "am": "መጋጠሚያዎች",
+   "def": "The pair (a, b) that gives a point: a across, then b up or down.",
+   "machine": true
+  },
+  {
+   "en": "Quadrant",
+   "am": "ሩብ ክፍል",
+   "def": "One of the four parts the axes cut the plane into.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.coordinate-plane",
+   "name": "The coordinate plane",
+   "requires": [
+    "math.integers-numberline"
+   ],
+   "explain": {
+    "en": {
+     "text": "Draw a horizontal number line and a vertical one through its 0. Together they make the Cartesian coordinate plane. The horizontal line is the x-axis. The vertical line is the y-axis. They meet at the origin, (0, 0)."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Find a seat",
+     "ask": "In a hall, a seat is found by its row and its number. How many numbers find a point on a flat page?",
+     "opts": [
+      "1",
+      "2",
+      "3"
+     ],
+     "after": "Two numbers: how far across, and how far up or down. This is the idea of the coordinate plane.",
+     "added": true,
+     "id": "g7.maths.u3.s3-3-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Definition 3.12",
+     "paras": [
+      "Two number lines cross at right angles. Together they make the Cartesian coordinate plane.",
+      "The horizontal number line is called the x-axis.",
+      "The vertical number line is called the y-axis.",
+      "The point where the two axes meet is called the origin."
+     ],
+     "ref": "Activity 3.3.1",
+     "id": "g7.maths.u3.s3-3-1.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Cartesian coordinate plane",
+       "The plane made by a horizontal and a vertical number line that cross at right angles."
+      ],
+      [
+       "x-axis",
+       "The horizontal number line."
+      ],
+      [
+       "y-axis",
+       "The vertical number line."
+      ],
+      [
+       "Origin",
+       "The point where the x-axis and y-axis meet: (0, 0)."
+      ]
+     ],
+     "id": "g7.maths.u3.s3-3-1.3"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "The horizontal number line is called the:",
+     "opts": [
+      "x-axis",
+      "y-axis",
+      "origin"
+     ],
+     "ans": "x-axis",
+     "why": "Horizontal: x-axis. Vertical: y-axis.",
+     "clue": "Think \"x is across\".",
+     "level": 1,
+     "ref": "Activity 3.3.1 Q4",
+     "needs": "math.integers-numberline",
+     "id": "g7.maths.u3.s3-3-1.4"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "The point where the x-axis and the y-axis meet is called the ___.",
+     "a": [
+      "origin",
+      "the origin",
+      "(0, 0)"
+     ],
+     "why": "They meet at the origin, (0, 0).",
+     "clue": "It is where you start counting.",
+     "level": 1,
+     "ref": "Definition 3.12",
+     "id": "g7.maths.u3.s3-3-1.5"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "On the y-axis, positive numbers are above 0.",
+     "a": true,
+     "why": "On the vertical line, numbers increase upward.",
+     "clue": "Which way do numbers grow on the y-axis?",
+     "level": 1,
+     "ref": "Activity 3.3.1 Q3",
+     "id": "g7.maths.u3.s3-3-1.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Where is every point whose x-coordinate is 0?",
+     "opts": [
+      "On the y-axis",
+      "On the x-axis",
+      "At the origin only",
+      "In Quadrant I"
+     ],
+     "ans": "On the y-axis",
+     "why": "x = 0 means no move across. Every such point is straight up or down from the origin: on the y-axis.",
+     "clue": "Start at the origin. Do not move left or right.",
+     "level": 3,
+     "added": true,
+     "id": "g7.maths.u3.s3-3-1.7"
+    }
+   ]
+  },
+  {
+   "id": "math.locate-point",
+   "name": "Locating points",
+   "explain": {
+    "en": {
+     "text": "A point is written (a, b). The first number a is the x-coordinate: move right if positive, left if negative. The second number b is the y-coordinate: move up if positive, down if negative. (3, 2) is 3 right and 2 up."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Which move first?",
+     "ask": "To reach (3, 2) from the origin, which move comes first?",
+     "opts": [
+      "3 units right",
+      "2 units up",
+      "3 units up"
+     ],
+     "after": "The first number tells the move across. Go 3 right, then 2 up.",
+     "ref": "Example 1",
+     "id": "g7.maths.u3.s3-3-1.8"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Locating points on the coordinate plane",
+     "paras": [
+      "A point is described by two numbers (a, b), called coordinates.",
+      "The first number a is the x-coordinate (abscissa).",
+      "The second number b is the y-coordinate (ordinate)."
+     ],
+     "id": "g7.maths.u3.s3-3-1.9"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "To locate a point (a, b)",
+     "paras": [],
+     "table": [
+      [
+       "Step",
+       "Move"
+      ],
+      [
+       "1. Move a units across",
+       "Right if a is positive, left if negative"
+      ],
+      [
+       "2. Then move b units",
+       "Up if b is positive, down if negative"
+      ]
+     ],
+     "id": "g7.maths.u3.s3-3-1.10"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Locate (−3, 2)",
+     "steps": [
+      "Locate (−3, 2).",
+      "x-coordinate −3: move 3 units left from the origin.",
+      "y-coordinate 2: then move 2 units up.",
+      "Mark the point (−3, 2)."
+     ],
+     "ref": "Example 2",
+     "id": "g7.maths.u3.s3-3-1.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Note",
+     "paras": [
+      "Every point on the x-axis has the form (a, 0).",
+      "Every point on the y-axis has the form (0, b)."
+     ],
+     "table": [
+      [
+       "Point in Example 5",
+       "Coordinates"
+      ],
+      [
+       "A",
+       "(3, 4)"
+      ],
+      [
+       "B",
+       "(−3, 4)"
+      ],
+      [
+       "C",
+       "(3, −4)"
+      ],
+      [
+       "D",
+       "(−3, −4)"
+      ],
+      [
+       "E (on the x-axis)",
+       "(−1, 0)"
+      ],
+      [
+       "F (on the y-axis)",
+       "(0, −1)"
+      ]
+     ],
+     "ref": "Example 5",
+     "id": "g7.maths.u3.s3-3-1.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Coordinates",
+       "The pair (a, b) that gives a point: a across, then b up or down."
+      ]
+     ],
+     "id": "g7.maths.u3.s3-3-1.13"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "How do you locate (−3, 2)?",
+     "opts": [
+      "3 left, then 2 up",
+      "3 right, then 2 up",
+      "2 left, then 3 up",
+      "3 left, then 2 down"
+     ],
+     "ans": "3 left, then 2 up",
+     "why": "−3 means left. 2 means up.",
+     "clue": "The first number is across.",
+     "level": 1,
+     "ref": "Example 2",
+     "id": "g7.maths.u3.s3-3-1.14"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Point C is 3 units right and 4 units down from the origin. C = ?",
+     "opts": [
+      "(3, −4)",
+      "(−4, 3)",
+      "(−3, 4)",
+      "(3, 4)"
+     ],
+     "ans": "(3, −4)",
+     "why": "Right 3 gives x = 3. Down 4 gives y = −4.",
+     "clue": "Across first, then up or down.",
+     "level": 1,
+     "ref": "Example 5",
+     "id": "g7.maths.u3.s3-3-1.15"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "Start at the origin. Move 5 units left and do not move up or down. The point is (___, 0).",
+     "a": [
+      "−5"
+     ],
+     "num": true,
+     "why": "Left means negative: x = −5. No vertical move: y = 0.",
+     "clue": "Left is negative.",
+     "level": 2,
+     "ref": "Exercise 3.3.1 Q1 e",
+     "id": "g7.maths.u3.s3-3-1.16"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Point F sits on the y-axis, 1 unit below the origin. F = ?",
+     "opts": [
+      "(0, −1)",
+      "(−1, 0)",
+      "(1, 0)",
+      "(0, 1)"
+     ],
+     "ans": "(0, −1)",
+     "why": "On the y-axis x = 0. Below means y = −1.",
+     "clue": "On the y-axis, what is x?",
+     "level": 2,
+     "ref": "Example 5",
+     "id": "g7.maths.u3.s3-3-1.17"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Start at (2, −1). Move 3 units left and 4 units up. Where are you?",
+     "opts": [
+      "(−1, 3)",
+      "(5, 3)",
+      "(−1, −5)",
+      "(6, −4)"
+     ],
+     "ans": "(−1, 3)",
+     "why": "Left 3 changes x: 2 − 3 = −1. Up 4 changes y: −1 + 4 = 3. You are at (−1, 3).",
+     "clue": "Change x for left/right and y for up/down.",
+     "level": 3,
+     "added": true,
+     "id": "g7.maths.u3.s3-3-1.18"
+    }
+   ]
+  },
+  {
+   "id": "math.quadrants",
+   "name": "The four quadrants",
+   "explain": {
+    "en": {
+     "text": "The axes cut the plane into four quadrants. Quadrant I is (+, +). Quadrant II is (−, +). Quadrant III is (−, −). Quadrant IV is (+, −). A point with a 0 coordinate lies on an axis, not in a quadrant."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Both positive",
+     "ask": "In which part of the plane are both coordinates positive?",
+     "opts": [
+      "Upper right",
+      "Upper left",
+      "Lower left",
+      "Lower right"
+     ],
+     "after": "Right means x positive and up means y positive. That is the upper right: Quadrant I.",
+     "id": "g7.maths.u3.s3-3-1.19"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Quadrants",
+     "paras": [
+      "The x-axis and the y-axis divide the plane into 4 regions called quadrants."
+     ],
+     "table": [
+      [
+       "Quadrant",
+       "Signs (x, y)",
+       "Where"
+      ],
+      [
+       "I",
+       "(+, +)",
+       "Upper right"
+      ],
+      [
+       "II",
+       "(−, +)",
+       "Upper left"
+      ],
+      [
+       "III",
+       "(−, −)",
+       "Lower left"
+      ],
+      [
+       "IV",
+       "(+, −)",
+       "Lower right"
+      ]
+     ],
+     "id": "g7.maths.u3.s3-3-1.20"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Quadrant",
+       "One of the four parts the axes cut the plane into."
+      ]
+     ],
+     "id": "g7.maths.u3.s3-3-1.21"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "In which quadrant is (−4, 1)?",
+     "opts": [
+      "Quadrant I",
+      "Quadrant II",
+      "Quadrant III",
+      "Quadrant IV"
+     ],
+     "ans": "Quadrant II",
+     "why": "x is negative and y is positive: (−, +).",
+     "clue": "Look at the two signs.",
+     "level": 1,
+     "ref": "Example 6 b",
+     "id": "g7.maths.u3.s3-3-1.22"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "bins": [
+      "Quadrant I",
+      "Quadrant II",
+      "Quadrant III",
+      "Quadrant IV",
+      "On an axis"
+     ],
+     "items": [
+      [
+       "(4, 1)",
+       "Quadrant I",
+       "(+, +)"
+      ],
+      [
+       "(−3, −3)",
+       "Quadrant III",
+       "(−, −)"
+      ],
+      [
+       "(1, −3)",
+       "Quadrant IV",
+       "(+, −)"
+      ],
+      [
+       "(0, 9)",
+       "On an axis",
+       "x = 0: y-axis."
+      ],
+      [
+       "(−3, 0)",
+       "On an axis",
+       "y = 0: x-axis."
+      ]
+     ],
+     "why": "Check the sign of each coordinate. A 0 puts the point on an axis.",
+     "clue": "Write the signs (+ or −) of x and y.",
+     "level": 1,
+     "ref": "Example 6",
+     "id": "g7.maths.u3.s3-3-1.23"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "In which quadrant is (−7/4, −13/5)?",
+     "opts": [
+      "Quadrant I",
+      "Quadrant II",
+      "Quadrant III",
+      "Quadrant IV"
+     ],
+     "ans": "Quadrant III",
+     "why": "Both coordinates are negative: (−, −).",
+     "clue": "Fractions do not change the rule. Look at the signs.",
+     "level": 2,
+     "ref": "Exercise 3.3.1 Q3 i",
+     "id": "g7.maths.u3.s3-3-1.24"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "a is negative and b is positive. Where is the point (b, a)?",
+     "opts": [
+      "Quadrant I",
+      "Quadrant II",
+      "Quadrant III",
+      "Quadrant IV"
+     ],
+     "ans": "Quadrant IV",
+     "why": "In (b, a) the x-coordinate is b, which is positive. The y-coordinate is a, which is negative. (+, −) is Quadrant IV.",
+     "clue": "Careful: b comes first here.",
+     "level": 3,
+     "added": true,
+     "id": "g7.maths.u3.s3-3-1.25"
+    }
+   ]
+  }
+ ],
+ "refreshers": {
+  "math.integers-numberline": {
+   "name": "Integers on a number line",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "The number line",
+     "steps": [
+      "0 is in the middle of the number line.",
+      "Positive numbers go to the right: 1, 2, 3, …",
+      "Negative numbers go to the left: −1, −2, −3, …"
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "On a number line, where is −3?",
+     "opts": [
+      "3 units left of 0",
+      "3 units right of 0",
+      "At 0"
+     ],
+     "ans": "3 units left of 0",
+     "why": "Negative numbers are left of 0.",
+     "clue": "Which side are negative numbers on?",
+     "level": 1
+    }
+   ]
+  }
+ },
+ "exercises": [
+  {
+   "book_name": "Exercise 3.3.1",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Where is M (−1, 4)?",
+     "opts": [
+      "Quadrant I",
+      "Quadrant II",
+      "Quadrant III",
+      "Quadrant IV"
+     ],
+     "ans": "Quadrant II",
+     "why": "1 left, 4 up.",
+     "clue": "Look at the signs.",
+     "level": 1,
+     "ref": "Q1 a",
+     "id": "g7.maths.u3.s3-3-1.26"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Where is P (−3, −2)?",
+     "opts": [
+      "Quadrant I",
+      "Quadrant II",
+      "Quadrant III",
+      "Quadrant IV"
+     ],
+     "ans": "Quadrant III",
+     "why": "3 left, 2 down.",
+     "clue": "Look at the signs.",
+     "level": 1,
+     "ref": "Q1 d",
+     "id": "g7.maths.u3.s3-3-1.27"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Where is R (0, −3)?",
+     "opts": [
+      "On the x-axis",
+      "On the y-axis",
+      "Quadrant IV"
+     ],
+     "ans": "On the y-axis",
+     "why": "x = 0, so it is on the y-axis.",
+     "clue": "Which coordinate is 0?",
+     "level": 1,
+     "ref": "Q1 f",
+     "id": "g7.maths.u3.s3-3-1.28"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Where is T (3/2, −5)?",
+     "opts": [
+      "Quadrant I",
+      "Quadrant II",
+      "Quadrant III",
+      "Quadrant IV"
+     ],
+     "ans": "Quadrant IV",
+     "why": "1.5 right, 5 down.",
+     "clue": "Look at the signs.",
+     "level": 2,
+     "ref": "Q1 h",
+     "id": "g7.maths.u3.s3-3-1.29"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "In the figure, T is 3 units left and 3 units down. T = ?",
+     "opts": [
+      "(−3, −3)",
+      "(3, 3)",
+      "(−3, 3)",
+      "(3, −3)"
+     ],
+     "ans": "(−3, −3)",
+     "why": "Left gives −3, down gives −3.",
+     "clue": "Across first.",
+     "level": 1,
+     "ref": "Q2 a",
+     "id": "g7.maths.u3.s3-3-1.30"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "In the figure, M is 2 units right and 4 units down. M = ?",
+     "opts": [
+      "(2, −4)",
+      "(−4, 2)",
+      "(−2, 4)",
+      "(4, −2)"
+     ],
+     "ans": "(2, −4)",
+     "why": "Right 2 and down 4.",
+     "clue": "Across first.",
+     "level": 1,
+     "ref": "Q2 a",
+     "id": "g7.maths.u3.s3-3-1.31"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "In the figure, Q is 2 left and 3 up; N is on the y-axis at 4. Which point has coordinate (−2, 3)?",
+     "opts": [
+      "Q",
+      "N",
+      "K",
+      "P"
+     ],
+     "ans": "Q",
+     "why": "(−2, 3) is 2 left and 3 up.",
+     "clue": "Go 2 left and 3 up.",
+     "level": 1,
+     "ref": "Q2 b",
+     "id": "g7.maths.u3.s3-3-1.32"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Where is (−3, 27)?",
+     "opts": [
+      "Quadrant I",
+      "Quadrant II",
+      "Quadrant III",
+      "Quadrant IV"
+     ],
+     "ans": "Quadrant II",
+     "why": "(−, +).",
+     "clue": "Look at the signs.",
+     "level": 1,
+     "ref": "Q3 b",
+     "id": "g7.maths.u3.s3-3-1.33"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Where is (5/2, 0)?",
+     "opts": [
+      "On the x-axis",
+      "On the y-axis",
+      "Quadrant I"
+     ],
+     "ans": "On the x-axis",
+     "why": "y = 0.",
+     "clue": "Which coordinate is 0?",
+     "level": 1,
+     "ref": "Q3 g",
+     "id": "g7.maths.u3.s3-3-1.34"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Where is (35, −12.5)?",
+     "opts": [
+      "Quadrant I",
+      "Quadrant II",
+      "Quadrant III",
+      "Quadrant IV"
+     ],
+     "ans": "Quadrant IV",
+     "why": "(+, −).",
+     "clue": "Look at the signs.",
+     "level": 1,
+     "ref": "Q3 h",
+     "id": "g7.maths.u3.s3-3-1.35"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The vertical number line is called the:",
+   "opts": [
+    "y-axis",
+    "x-axis",
+    "origin"
+   ],
+   "ans": "y-axis",
+   "why": "Vertical is the y-axis.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.maths.u3.s3-3-1.36"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "In which quadrant is (4, 1)?",
+   "opts": [
+    "Quadrant I",
+    "Quadrant II",
+    "Quadrant III",
+    "Quadrant IV"
+   ],
+   "ans": "Quadrant I",
+   "why": "(+, +).",
+   "level": 1,
+   "clue": "",
+   "id": "g7.maths.u3.s3-3-1.37"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which point lies on the x-axis?",
+   "opts": [
+    "(−3, 0)",
+    "(0, 9)",
+    "(1, −3)"
+   ],
+   "ans": "(−3, 0)",
+   "why": "Points on the x-axis have y = 0.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.maths.u3.s3-3-1.38"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "A point is 4 units left and 2 units up from the origin. It is:",
+   "opts": [
+    "(−4, 2)",
+    "(4, −2)",
+    "(2, −4)",
+    "(−2, 4)"
+   ],
+   "ans": "(−4, 2)",
+   "why": "Left 4 gives −4, up 2 gives 2.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.maths.u3.s3-3-1.39"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Start at (−2, 3). Move 5 right. In which quadrant are you now?",
+   "opts": [
+    "Quadrant I",
+    "Quadrant II",
+    "Quadrant IV",
+    "On an axis"
+   ],
+   "ans": "Quadrant I",
+   "why": "−2 + 5 = 3, so the point is (3, 3): (+, +).",
+   "level": 3,
+   "clue": "",
+   "id": "g7.maths.u3.s3-3-1.40"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "No coordinate-plane block exists yet: students cannot plot or tap points. Locating and reading points is asked with words and multiple choice. A coordinate-plane block is needed (engine session)."
+  },
+  {
+   "kind": "review",
+   "text": "Example 6 f and Exercise 3.3.1 print \"(1. −3)\", \"R (0. -3)\", \"(12. −30)\" with full stops; read as commas."
+  },
+  {
+   "kind": "note",
+   "text": "Exercise 3.3.1 Q2 refers to a figure; its points are described in words in the questions."
+  },
+  {
+   "kind": "note",
+   "text": "No generator in the engine fits algebra or linear equations yet, so practice and tests reuse the hand-written items (no fresh numbers)."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

@@ -1,0 +1,686 @@
+{
+ "id": "g7.maths.u3.s3-1-1",
+ "book": {
+  "title": "Mathematics Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "maths",
+  "unit": 3,
+  "unit_title": "Linear Equations",
+  "pages": "57–59",
+  "section": "3.1.1"
+ },
+ "title": "Use of variables in formula",
+ "competency": "Use variables to describe numbers and find the value of a formula.",
+ "minutes": 12,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Variable",
+   "am": "ተለዋዋጭ",
+   "def": "A letter or symbol that stands for an unknown number, such as x, y or n.",
+   "machine": true
+  },
+  {
+   "en": "Substitute",
+   "am": "መተካት",
+   "def": "Put a number in place of a variable, then work out the answer.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.variable",
+   "name": "Variables",
+   "explain": {
+    "en": {
+     "text": "A variable is a letter that stands for an unknown number. \"Twice a number\" is 2x. \"Two more than a number\" is y + 2. \"Half a number\" is n/2. If you are 13 now, after x years you will be 13 + x."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Chala's age",
+     "ask": "Chala is 13 years old now. How old will he be after x years?",
+     "opts": [
+      "13 + x",
+      "13 − x",
+      "13x",
+      "x − 13"
+     ],
+     "after": "After x more years, add x: 13 + x. The letter x stands for a number we do not know yet.",
+     "added": true,
+     "ref": "Example 3",
+     "id": "g7.maths.u3.s3-1-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Unit 3 Linear equations",
+     "paras": [
+      "In this unit you learn why variables are important.",
+      "You use variables to solve linear equations."
+     ],
+     "id": "g7.maths.u3.s3-1-1.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Definition 3.1",
+     "paras": [
+      "A variable is any letter or symbol that represents an unknown number or value.",
+      "Examples: x, y, z, n, m.",
+      "In x + 2, x is a variable."
+     ],
+     "ref": "Example 1",
+     "id": "g7.maths.u3.s3-1-1.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Describing with variables",
+     "paras": [],
+     "table": [
+      [
+       "Words",
+       "With a variable"
+      ],
+      [
+       "Twice a number",
+       "2x"
+      ],
+      [
+       "Three times a number",
+       "3z"
+      ],
+      [
+       "Two more than a number",
+       "y + 2"
+      ],
+      [
+       "Half a number",
+       "n/2"
+      ],
+      [
+       "Two less than a number",
+       "m − 2"
+      ],
+      [
+       "The product of a number and 10",
+       "10k"
+      ],
+      [
+       "Product of ten and the sum of two numbers",
+       "10(x + y)"
+      ]
+     ],
+     "ref": "Example 2",
+     "id": "g7.maths.u3.s3-1-1.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Variable",
+       "A letter or symbol that stands for an unknown number, such as x, y or n."
+      ]
+     ],
+     "id": "g7.maths.u3.s3-1-1.5"
+    },
+    {
+     "kind": "pick",
+     "step": "check",
+     "graded": true,
+     "text": "Tap every variable.",
+     "pool": [
+      "23",
+      "x",
+      "4",
+      "y",
+      "0.5",
+      "a",
+      "3/4"
+     ],
+     "a": [
+      "x",
+      "y",
+      "a"
+     ],
+     "why": "x, y and a are letters. 23, 4, 0.5 and 3/4 are fixed numbers.",
+     "clue": "A variable is a letter, not a number.",
+     "level": 1,
+     "ref": "Activity 3.1.1 Q1",
+     "id": "g7.maths.u3.s3-1-1.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Write \"five less than a number\" with a variable.",
+     "opts": [
+      "x − 5",
+      "5 − x",
+      "5x",
+      "x + 5"
+     ],
+     "ans": "x − 5",
+     "why": "Start with the number x. Five less means take 5 away: x − 5.",
+     "clue": "Start with the number, then take 5 away.",
+     "level": 1,
+     "ref": "Exercise 3.1.1 Q2 f",
+     "id": "g7.maths.u3.s3-1-1.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "I start with x, add 8, then double the result. Which expression is it?",
+     "opts": [
+      "2x + 8",
+      "2(x + 8)",
+      "x + 16",
+      "8x + 2"
+     ],
+     "ans": "2(x + 8)",
+     "why": "Start: x. Add 8: x + 8. Double the whole result: 2(x + 8).",
+     "clue": "Double the WHOLE result, so use a bracket.",
+     "level": 2,
+     "ref": "Activity 3.1.1 Q3 d",
+     "id": "g7.maths.u3.s3-1-1.8"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "You are 13 years old now. y years ago you were ___ years old.",
+     "a": [
+      "13 − y",
+      "13-y",
+      "13 - y"
+     ],
+     "why": "\"Ago\" means you were younger. Subtract: 13 − y.",
+     "clue": "Were you older or younger then?",
+     "level": 1,
+     "ref": "Example 3 c",
+     "id": "g7.maths.u3.s3-1-1.9"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Hiwot has x birr. Chala has 5 birr more than twice Hiwot's money. How much do they have together?",
+     "opts": [
+      "3x + 5",
+      "2x + 5",
+      "x + 5",
+      "3x + 10"
+     ],
+     "ans": "3x + 5",
+     "why": "Chala has 2x + 5. Together: x + (2x + 5) = x + 2x + 5 = 3x + 5.",
+     "clue": "First write Chala's money. Then add Hiwot's x.",
+     "level": 3,
+     "added": true,
+     "id": "g7.maths.u3.s3-1-1.10"
+    }
+   ]
+  },
+  {
+   "id": "math.substitute",
+   "name": "Finding the value of a formula",
+   "requires": [
+    "math.integer-signs"
+   ],
+   "explain": {
+    "en": {
+     "text": "To find y in y = 2x + 3, put the value of x in place of x. Multiply first, then add. When x = 5, y = 2(5) + 3 = 10 + 3 = 13."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Guess y",
+     "ask": "y = 2x + 3. If x = 1, what is y?",
+     "opts": [
+      "5",
+      "6",
+      "3",
+      "23"
+     ],
+     "after": "Put 1 in place of x: y = 2(1) + 3 = 2 + 3 = 5.",
+     "id": "g7.maths.u3.s3-1-1.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Using a formula",
+     "paras": [
+      "A relation like y = 2x + 3 tells how y depends on x.",
+      "Put the number in place of x. Then multiply before you add."
+     ],
+     "ref": "Exercise 3.1.1 Q4",
+     "id": "g7.maths.u3.s3-1-1.12"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "y = 2x + 3 when x = −4",
+     "steps": [
+      "y = 2x + 3 and x = −4.",
+      "Put −4 in place of x: y = 2(−4) + 3.",
+      "Multiply: 2 × (−4) = −8 (different signs give −).",
+      "Add: −8 + 3 = −5.",
+      "So y = −5."
+     ],
+     "ref": "Exercise 3.1.1 Q4 c",
+     "id": "g7.maths.u3.s3-1-1.13"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Substitute",
+       "Put a number in place of a variable, then work out the answer."
+      ]
+     ],
+     "id": "g7.maths.u3.s3-1-1.14"
+    },
+    {
+     "kind": "blank",
+     "step": "check",
+     "graded": true,
+     "ask": "y = 2x + 3. When x = 5, y = ___",
+     "a": [
+      "13"
+     ],
+     "num": true,
+     "why": "y = 2(5) + 3 = 10 + 3 = 13.",
+     "clue": "Multiply 2 × 5 first, then add 3.",
+     "level": 1,
+     "ref": "Exercise 3.1.1 Q4 b",
+     "id": "g7.maths.u3.s3-1-1.15"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "A rectangle has sides x and y. Perimeter P = 2x + 2y. If x = 4 cm and y = 7 cm, P = ___ cm",
+     "a": [
+      "22"
+     ],
+     "num": true,
+     "why": "P = 2(4) + 2(7) = 8 + 14 = 22 cm.",
+     "clue": "Work out 2 × 4 and 2 × 7, then add.",
+     "level": 1,
+     "added": true,
+     "id": "g7.maths.u3.s3-1-1.16"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "y = 2x + 3. When x = 2/3, y = ___",
+     "a": [
+      "13/3",
+      "4 1/3"
+     ],
+     "num": true,
+     "why": "y = 2 × 2/3 + 3 = 4/3 + 3. Write 3 as 9/3. 4/3 + 9/3 = 13/3 = 4 1/3.",
+     "clue": "Write 3 as a fraction with denominator 3.",
+     "level": 2,
+     "ref": "Exercise 3.1.1 Q4 d",
+     "id": "g7.maths.u3.s3-1-1.17"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "y = 2x + 3. When x = −4, y = ___",
+     "a": [
+      "−5"
+     ],
+     "num": true,
+     "why": "2(−4) = −8, and −8 + 3 = −5.",
+     "clue": "A positive times a negative is negative.",
+     "level": 2,
+     "ref": "Exercise 3.1.1 Q4 c",
+     "needs": "math.integer-signs",
+     "id": "g7.maths.u3.s3-1-1.18"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "ask": "y = 3x − 5. For which value of x is y = 10? x = ___",
+     "a": [
+      "5"
+     ],
+     "num": true,
+     "why": "We need 3x − 5 = 10. Add 5: 3x = 15. Divide by 3: x = 5. Check: 3(5) − 5 = 10.",
+     "clue": "Try x = 4, 5, 6 and see which gives 10.",
+     "level": 3,
+     "added": true,
+     "id": "g7.maths.u3.s3-1-1.19"
+    }
+   ]
+  }
+ ],
+ "refreshers": {
+  "math.integer-signs": {
+   "name": "Signs when multiplying and adding integers",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Integer signs",
+     "steps": [
+      "Same signs multiply to +: (−3) × (−2) = 6.",
+      "Different signs multiply to −: (−2) × 4 = −8.",
+      "Adding different signs: −5 + 3 = −2 (take 3 from 5, keep the sign of 5)."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "(−3) × (−4) = ?",
+     "opts": [
+      "12",
+      "−12",
+      "−7"
+     ],
+     "ans": "12",
+     "why": "Same signs give a positive answer: 3 × 4 = 12.",
+     "clue": "Are the signs the same or different?",
+     "level": 1
+    }
+   ]
+  }
+ },
+ "exercises": [
+  {
+   "book_name": "Exercise 3.1.1",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Identify the variables in 2y + b.",
+     "opts": [
+      "y and b",
+      "2 and y",
+      "b only",
+      "2, y and b"
+     ],
+     "ans": "y and b",
+     "why": "2 is a number. The letters are y and b.",
+     "clue": "Variables are letters.",
+     "level": 1,
+     "ref": "Q1 c",
+     "id": "g7.maths.u3.s3-1-1.20"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Identify the variables in x/2 − p.",
+     "opts": [
+      "x and p",
+      "x only",
+      "2 and p",
+      "x, 2 and p"
+     ],
+     "ans": "x and p",
+     "why": "The letters are x and p.",
+     "clue": "Variables are letters.",
+     "level": 1,
+     "ref": "Q1 d",
+     "id": "g7.maths.u3.s3-1-1.21"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Four times a number:",
+     "opts": [
+      "4x",
+      "x + 4",
+      "x/4",
+      "x − 4"
+     ],
+     "ans": "4x",
+     "why": "Four times x is 4 × x = 4x.",
+     "clue": "\"Times\" means multiply.",
+     "level": 1,
+     "ref": "Q2 a",
+     "id": "g7.maths.u3.s3-1-1.22"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "One third of a number:",
+     "opts": [
+      "x/3",
+      "3x",
+      "x − 3",
+      "3/x"
+     ],
+     "ans": "x/3",
+     "why": "One third of x is x ÷ 3 = x/3.",
+     "clue": "\"One third of\" means divide by 3.",
+     "level": 1,
+     "ref": "Q2 b",
+     "id": "g7.maths.u3.s3-1-1.23"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Ten more than twice a number:",
+     "opts": [
+      "2x + 10",
+      "10x + 2",
+      "2(x + 10)",
+      "12x"
+     ],
+     "ans": "2x + 10",
+     "why": "Twice the number is 2x. Ten more: 2x + 10.",
+     "clue": "Write \"twice a number\" first.",
+     "level": 2,
+     "ref": "Q2 g",
+     "id": "g7.maths.u3.s3-1-1.24"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Six less than twice a number:",
+     "opts": [
+      "2x − 6",
+      "6 − 2x",
+      "2(x − 6)",
+      "6x − 2"
+     ],
+     "ans": "2x − 6",
+     "why": "Twice the number is 2x. Six less: 2x − 6.",
+     "clue": "Write \"twice a number\" first.",
+     "level": 2,
+     "ref": "Q2 h",
+     "id": "g7.maths.u3.s3-1-1.25"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Express 3 + 4x in words.",
+     "opts": [
+      "Three more than four times a number",
+      "Four more than three times a number",
+      "Seven times a number",
+      "Three times four"
+     ],
+     "ans": "Three more than four times a number",
+     "why": "4x is four times a number. Adding 3 gives three more.",
+     "clue": "What does 4x mean?",
+     "level": 1,
+     "ref": "Q3 c",
+     "id": "g7.maths.u3.s3-1-1.26"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "y = 2x + 3. When x = 1, y = ___",
+     "a": [
+      "5"
+     ],
+     "num": true,
+     "why": "y = 2(1) + 3 = 2 + 3 = 5.",
+     "clue": "Multiply first, then add.",
+     "level": 1,
+     "ref": "Q4 a",
+     "id": "g7.maths.u3.s3-1-1.27"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "y = 2x + 3. When x = −4, y = ___",
+     "a": [
+      "−5"
+     ],
+     "num": true,
+     "why": "y = 2(−4) + 3 = −8 + 3 = −5.",
+     "clue": "A positive times a negative is negative.",
+     "level": 2,
+     "ref": "Q4 c",
+     "id": "g7.maths.u3.s3-1-1.28"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "y = 2x + 3. When x = 2/3, y = ___",
+     "a": [
+      "13/3",
+      "4 1/3"
+     ],
+     "num": true,
+     "why": "y = 4/3 + 9/3 = 13/3.",
+     "clue": "Write 3 as 9/3.",
+     "level": 2,
+     "ref": "Q4 d",
+     "id": "g7.maths.u3.s3-1-1.29"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which expression means \"two more than a number\"?",
+   "opts": [
+    "y + 2",
+    "2y",
+    "y − 2",
+    "y/2"
+   ],
+   "ans": "y + 2",
+   "why": "More than means add.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.maths.u3.s3-1-1.30"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is a variable?",
+   "opts": [
+    "n",
+    "7",
+    "0.5",
+    "3/4"
+   ],
+   "ans": "n",
+   "why": "A variable is a letter.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.maths.u3.s3-1-1.31"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "y = 3x + 1. When x = 4, y = ___",
+   "a": [
+    "13"
+   ],
+   "num": true,
+   "why": "3 × 4 = 12, and 12 + 1 = 13.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.maths.u3.s3-1-1.32"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "y = 2x + 3. When x = −2, y = ___",
+   "a": [
+    "−1"
+   ],
+   "num": true,
+   "why": "2(−2) = −4, and −4 + 3 = −1.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.maths.u3.s3-1-1.33"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Abel has x birr. Bethel has 3 birr less than Abel. Together they have:",
+   "opts": [
+    "2x − 3",
+    "2x + 3",
+    "x − 3",
+    "3x"
+   ],
+   "ans": "2x − 3",
+   "why": "Bethel has x − 3. x + (x − 3) = 2x − 3.",
+   "level": 3,
+   "clue": "",
+   "id": "g7.maths.u3.s3-1-1.34"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Activity 3.1.1 Q3 b \"the difference of 5 and y, where y is greater than 5\" is read as y − 5. Teacher to confirm."
+  },
+  {
+   "kind": "review",
+   "text": "Activity 3.1.1 Q4: the bottom side of the rectangle is printed \"v\"; it should be y. Not used in the lesson."
+  },
+  {
+   "kind": "review",
+   "text": "Learning outcome 1 reads \"identify variables, terms and variables\"; probably \"variables, terms and expressions\"."
+  },
+  {
+   "kind": "note",
+   "text": "No generator in the engine fits algebra or linear equations yet, so practice and tests reuse the hand-written items (no fresh numbers)."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
