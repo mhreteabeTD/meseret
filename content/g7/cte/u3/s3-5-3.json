@@ -1,0 +1,319 @@
+{
+ "id": "g7.cte.u3.s3-5-3",
+ "book": {
+  "title": "Career and Technical Education Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "cte",
+  "unit": 3,
+  "unit_title": "Self-Employment Opportunities",
+  "pages": "75–77",
+  "section": "3.5.3"
+ },
+ "title": "Apiary management",
+ "competency": "Choose and manage a good apiary site.",
+ "minutes": 7,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Apiary management",
+   "am": "የንብ ማነቢያ አያያዝ",
+   "def": "Caring for an apiary, starting with a good site for the hives.",
+   "machine": true
+  },
+  {
+   "en": "Bee flora",
+   "am": "የንብ ቀሰም ዕፅዋት",
+   "def": "Plants that bees visit for nectar and pollen.",
+   "machine": true
+  },
+  {
+   "en": "Wind break",
+   "am": "የንፋስ መከላከያ",
+   "def": "A hedge or wall that protects hives from strong wind.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "cte.apiary-site",
+   "name": "A good apiary site",
+   "explain": {
+    "en": {
+     "text": "Good apiary management starts with a good site. A poor site means people and animals may be stung; an insecure site means honey and hives can be stolen. The site should be easy to reach, fenced, away from homes and roads, shaded at midday, sheltered from wind, near clean water, rich in bee flora, and free from pollution, smoke and disease."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Where to put hives",
+     "ask": "Where should you NOT place beehives?",
+     "opts": [
+      "Next to a busy road and a school",
+      "In a fenced, quiet place near flowers",
+      "Near clean water"
+     ],
+     "after": "Bees can sting. Keep hives away from people, animals and roads.",
+     "id": "g7.cte.u3.s3-5-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "3.5.3 Apiary management",
+     "paras": [
+      "A good apiary management starts with choosing a good site for hives.",
+      "At a poor site, people and animals may be stung.",
+      "At an insecure site, honey and hives can be stolen.",
+      "The site must be easy to reach, so you can check hives often."
+     ],
+     "id": "g7.cte.u3.s3-5-3.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "A good apiary site",
+     "paras": [],
+     "table": [
+      [
+       "Need",
+       "Why"
+      ],
+      [
+       "Hedge or fence",
+       "Separates bees from people and animals"
+      ],
+      [
+       "Away from homes and roads",
+       "Bees can be aggressive"
+      ],
+      [
+       "Shade at midday, sun in the morning",
+       "Safe from strong sunshine"
+      ],
+      [
+       "Shelter from strong wind",
+       "Good air, no strong wind"
+      ],
+      [
+       "Fresh water nearby",
+       "Bees need water"
+      ],
+      [
+       "Lockable bee house (optional)",
+       "Stops thieves; needs air holes"
+      ],
+      [
+       "Away from smoke and fire",
+       "Bees dislike them"
+      ]
+     ],
+     "id": "g7.cte.u3.s3-5-3.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "More conditions",
+     "paras": [
+      "Free from air and water pollution, and from bee diseases.",
+      "Open, dry place with shade, and wind breaks.",
+      "Rich in bee flora."
+     ],
+     "id": "g7.cte.u3.s3-5-3.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Apiary management",
+       "Caring for an apiary, starting with a good site for the hives."
+      ],
+      [
+       "Bee flora",
+       "Plants that bees visit for nectar and pollen."
+      ],
+      [
+       "Wind break",
+       "A hedge or wall that protects hives from strong wind."
+      ]
+     ],
+     "id": "g7.cte.u3.s3-5-3.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Good apiary management starts with:",
+     "opts": [
+      "Choosing a good site to hang or place hives",
+      "Selling honey",
+      "Buying a honey sieve"
+     ],
+     "ans": "Choosing a good site to hang or place hives",
+     "why": "The book begins 3.5.3 with this.",
+     "clue": "Read the first block.",
+     "level": 1,
+     "ref": "Review Part I Q7",
+     "id": "g7.cte.u3.s3-5-3.6"
+    },
+    {
+     "kind": "pick",
+     "step": "practise",
+     "graded": true,
+     "text": "Tap the features of a good apiary site.",
+     "pool": [
+      "Near fresh water",
+      "Rich in bee flora",
+      "Fenced",
+      "Next to a busy road",
+      "Full of smoke"
+     ],
+     "a": [
+      "Near fresh water",
+      "Rich in bee flora",
+      "Fenced"
+     ],
+     "why": "Water, flora and a fence help; roads and smoke do not.",
+     "clue": "What do bees and people need?",
+     "level": 1,
+     "id": "g7.cte.u3.s3-5-3.7"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Hives should be in strong direct sunshine all day.",
+     "a": false,
+     "why": "Shade during the hot part of the day, sun in the morning.",
+     "clue": "Read the shade row.",
+     "level": 2,
+     "id": "g7.cte.u3.s3-5-3.8"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Why is selecting a suitable location important in beekeeping?",
+     "opts": [
+      "It prevents stings and theft, meets the bees' needs and saves time and money",
+      "It makes bees bigger",
+      "It is not important"
+     ],
+     "ans": "It prevents stings and theft, meets the bees' needs and saves time and money",
+     "why": "A poor site causes stings; an insecure site invites theft; a good site gives water, flora, shade and saves time, energy and money.",
+     "clue": "Combine 3.5.1 and 3.5.3.",
+     "level": 3,
+     "ref": "Activity 20",
+     "added": true,
+     "id": "g7.cte.u3.s3-5-3.9"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activity 20",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Why is selecting a suitable location important in beekeeping?",
+     "opts": [
+      "To protect people from stings, prevent theft and give bees water, flora and shade",
+      "To make honey taste salty",
+      "There is no reason"
+     ],
+     "ans": "To protect people from stings, prevent theft and give bees water, flora and shade",
+     "why": "From 3.5.1 and 3.5.3.",
+     "clue": "Think about people, thieves and bees.",
+     "level": 2,
+     "id": "g7.cte.u3.s3-5-3.10"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Bees need which nearby?",
+   "opts": [
+    "Fresh water",
+    "A busy road",
+    "A smoky kitchen"
+   ],
+   "ans": "Fresh water",
+   "why": "River, pond or even a dripping tap.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.cte.u3.s3-5-3.11"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "A hedge or fence should surround the apiary.",
+   "a": true,
+   "why": "To separate bees from people and animals.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.cte.u3.s3-5-3.12"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "What can happen at an insecure apiary?",
+   "opts": [
+    "Honey and hives can be stolen",
+    "Bees make more honey",
+    "Nothing"
+   ],
+   "ans": "Honey and hives can be stolen",
+   "why": "That is why security matters.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.cte.u3.s3-5-3.13"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "An apiary should be next to homes and public areas.",
+   "a": false,
+   "why": "Away from them.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.cte.u3.s3-5-3.14"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "A lockable bee house must also have:",
+   "opts": [
+    "Holes for fresh air",
+    "No openings at all",
+    "A fire inside"
+   ],
+   "ans": "Holes for fresh air",
+   "why": "Bees need air in and out.",
+   "level": 3,
+   "clue": "",
+   "id": "g7.cte.u3.s3-5-3.15"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "\"Sunrise set\" in the location list is unclear; probably the direction of sunrise/sunset. Left out."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

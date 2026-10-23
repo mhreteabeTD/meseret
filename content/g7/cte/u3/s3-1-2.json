@@ -1,0 +1,295 @@
+{
+ "id": "g7.cte.u3.s3-1-2",
+ "book": {
+  "title": "Career and Technical Education Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "cte",
+  "unit": 3,
+  "unit_title": "Self-Employment Opportunities",
+  "pages": "32–35",
+  "section": "3.1.2"
+ },
+ "title": "Types of garden",
+ "competency": "Describe vegetable gardens and container gardens.",
+ "minutes": 8,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Vegetable garden",
+   "am": "የአትክልት ቦታ",
+   "def": "A garden where vegetables are grown, in the ground or in a planting bed.",
+   "machine": true
+  },
+  {
+   "en": "Container garden",
+   "am": "በዕቃ ውስጥ የሚለማ አትክልት",
+   "def": "Plants grown in containers deep enough for their roots.",
+   "machine": true
+  },
+  {
+   "en": "Irrigation",
+   "am": "መስኖ",
+   "def": "Giving water to plants.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "cte.garden-types",
+   "name": "Vegetable and container gardens",
+   "explain": {
+    "en": {
+     "text": "The two most popular types of gardening are vegetable gardens and container gardens. A vegetable garden is in the ground or in a bed. A container garden uses pots, bottles or barrels deep enough for the roots, and needs watering more often."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "No land?",
+     "ask": "You live in a flat in Addis Ababa with no land. Can you still grow vegetables?",
+     "opts": [
+      "No, you need a big farm",
+      "Yes, in pots and containers",
+      "Only in the rainy season"
+     ],
+     "after": "Yes. Many vegetables grow well in containers like pots, bottles and barrels.",
+     "added": true,
+     "id": "g7.cte.u3.s3-1-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "3.1.2 Types of garden",
+     "paras": [
+      "There are many types of gardening.",
+      "The two most popular are vegetable gardens and container gardens."
+     ],
+     "id": "g7.cte.u3.s3-1-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "a. Vegetable garden",
+     "paras": [
+      "A vegetable garden is a garden where vegetables are grown.",
+      "You select a site, plan, prepare the soil and choose seeds.",
+      "Then you plant and care for the plants until harvest.",
+      "The result is fresh food, like cabbage, carrots and potatoes, to eat, share or sell."
+     ],
+     "note": "A vegetable garden can be in the ground or in a planting bed. It does not need much money, time or talent.",
+     "id": "g7.cte.u3.s3-1-2.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "b. Container garden",
+     "paras": [
+      "Many vegetables grow in containers deep enough for their roots.",
+      "The bigger the container, the easier it is to succeed.",
+      "Containers need more frequent irrigation than gardens.",
+      "They can be made from used bottles, pots and barrels."
+     ],
+     "id": "g7.cte.u3.s3-1-2.4"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Gardens around us",
+     "paras": [
+      "Farmers grow cabbage, tomato, potato, lemon and avocado around their homes.",
+      "Urban families grow vegetables and flowers in their compounds.",
+      "Schools make vegetable and flower gardens with teachers and students."
+     ],
+     "id": "g7.cte.u3.s3-1-2.5"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Vegetable garden",
+       "A garden where vegetables are grown, in the ground or in a bed."
+      ],
+      [
+       "Container garden",
+       "Plants grown in containers deep enough for their roots."
+      ],
+      [
+       "Irrigation",
+       "Giving water to plants."
+      ]
+     ],
+     "id": "g7.cte.u3.s3-1-2.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "The two most popular types of gardening are:",
+     "opts": [
+      "Vegetable gardens",
+      "Container gardens",
+      "Farm gardens",
+      "Vegetable and container gardens"
+     ],
+     "ans": "Vegetable and container gardens",
+     "why": "The book names vegetable gardens and container gardens.",
+     "clue": "There are two.",
+     "level": 1,
+     "ref": "Review Part III Q2",
+     "id": "g7.cte.u3.s3-1-2.7"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Containers need less water than gardens in the ground.",
+     "a": false,
+     "why": "Containers need more frequent irrigation, especially as plants grow.",
+     "clue": "Does a small pot dry out fast or slowly?",
+     "level": 1,
+     "id": "g7.cte.u3.s3-1-2.8"
+    },
+    {
+     "kind": "pick",
+     "step": "practise",
+     "graded": true,
+     "text": "Which of these can be made into a container garden?",
+     "pool": [
+      "Used bottles",
+      "Old barrels",
+      "Clay pots",
+      "A spade",
+      "A rake"
+     ],
+     "a": [
+      "Used bottles",
+      "Old barrels",
+      "Clay pots"
+     ],
+     "why": "Bottles, barrels and pots can hold soil. A spade and a rake are tools.",
+     "clue": "What can hold soil?",
+     "level": 2,
+     "id": "g7.cte.u3.s3-1-2.9"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "Almaz grows lettuce in a pot. The bigger the ___, the easier it is to succeed.",
+     "a": [
+      "container",
+      "pot"
+     ],
+     "why": "The book says the bigger the container, the easier it is.",
+     "clue": "What holds the soil?",
+     "level": 2,
+     "id": "g7.cte.u3.s3-1-2.10"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Tigist has a small balcony and little time to fetch water. Which plan fits best?",
+     "opts": [
+      "A big in-ground cabbage field",
+      "Large containers with a drip irrigation system",
+      "Tiny cups with no water plan",
+      "No garden at all"
+     ],
+     "ans": "Large containers with a drip irrigation system",
+     "why": "A balcony has no ground, so containers fit. Big containers are easier, and drip irrigation helps because containers need frequent water.",
+     "clue": "Think about space, container size and water.",
+     "level": 3,
+     "added": true,
+     "id": "g7.cte.u3.s3-1-2.11"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Where is a vegetable garden made?",
+   "opts": [
+    "In the ground or a planting bed",
+    "Only in barrels",
+    "Only on roofs"
+   ],
+   "ans": "In the ground or a planting bed",
+   "why": "The book says ground or bed.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.cte.u3.s3-1-2.12"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Many vegetables can grow in containers.",
+   "a": true,
+   "why": "Beans, carrots, tomatoes and more.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.cte.u3.s3-1-2.13"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Why do containers need more irrigation?",
+   "opts": [
+    "They hold less soil and dry out",
+    "Plants in pots do not drink",
+    "Pots are always in shade"
+   ],
+   "ans": "They hold less soil and dry out",
+   "why": "Containers need more frequent watering.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.cte.u3.s3-1-2.14"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Vegetable gardening needs a lot of money and talent.",
+   "a": false,
+   "why": "The book says it does not take a lot of money, time or talent.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.cte.u3.s3-1-2.15"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "A school wants a garden but its ground is concrete. What is best?",
+   "opts": [
+    "Container garden",
+    "In-ground vegetable garden",
+    "Give up"
+   ],
+   "ans": "Container garden",
+   "why": "Containers do not need open ground.",
+   "level": 3,
+   "clue": "",
+   "id": "g7.cte.u3.s3-1-2.16"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Figure 3.2 caption prints its number twice (\"Figure 3.2: Figure 3.2 Container Garden\")."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

@@ -1,0 +1,423 @@
+{
+ "id": "g7.cte.u3.s3-4-3",
+ "book": {
+  "title": "Career and Technical Education Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "cte",
+  "unit": 3,
+  "unit_title": "Self-Employment Opportunities",
+  "pages": "64–65",
+  "section": "3.4.3"
+ },
+ "title": "Selecting chickens and feed sources",
+ "competency": "Apply chicken selection criteria and list feed sources.",
+ "minutes": 8,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Day-old chick",
+   "am": "የአንድ ቀን ጫጩት",
+   "def": "A newly hatched chick (DOC).",
+   "machine": true
+  },
+  {
+   "en": "Cull",
+   "am": "መለየት",
+   "def": "To remove weak or unwanted birds from the flock.",
+   "machine": true
+  },
+  {
+   "en": "Feed source",
+   "am": "የመኖ ምንጭ",
+   "def": "Where chicken feed comes from.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "cte.chicken-selection",
+   "name": "Choosing the best chickens",
+   "explain": {
+    "en": {
+     "text": "Select hens that hatch and mother well, chicks that grow fast, and birds that resist disease. Cull poor growers, dwarf birds and surplus cocks. Hatching eggs should be average size, with a good uncracked shell and a broad bottom and sharper tip. Day-old chicks should be healthy and keen to eat."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Pick an egg",
+     "ask": "Which egg is best for hatching?",
+     "opts": [
+      "Average size, clean shell, no cracks",
+      "Very small and cracked",
+      "Huge and misshapen"
+     ],
+     "after": "Average-sized eggs with good, uncracked shells hatch best.",
+     "id": "g7.cte.u3.s3-4-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "3.4.3 Chicken selection criteria",
+     "paras": [],
+     "table": [
+      [
+       "Criterion",
+       "What to look for"
+      ],
+      [
+       "Good hatching ability",
+       "Hens that incubate eggs well"
+      ],
+      [
+       "Mothering behaviour",
+       "Hens that protect chicks from predators"
+      ],
+      [
+       "High growth rate",
+       "Keep fast growers; cull poor growers and dwarfs"
+      ],
+      [
+       "Eggs for hatching",
+       "Average size, good shell, broad bottom, sharp tip"
+      ],
+      [
+       "Day-old chicks",
+       "Good body, no leg or eye deformity, keen to eat"
+      ],
+      [
+       "Disease resistance",
+       "Breed from birds that survive outbreaks"
+      ]
+     ],
+     "id": "g7.cte.u3.s3-4-3.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Day-old chick",
+       "A newly hatched chick (DOC)."
+      ],
+      [
+       "Cull",
+       "To remove weak or unwanted birds from the flock."
+      ]
+     ],
+     "id": "g7.cte.u3.s3-4-3.3"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Which hatching egg should you choose?",
+     "opts": [
+      "Average size with a good, uncracked shell",
+      "The smallest egg",
+      "A cracked egg"
+     ],
+     "ans": "Average size with a good, uncracked shell",
+     "why": "Average size, good shell, clear shape.",
+     "clue": "Read the \"Eggs for hatching\" row.",
+     "level": 1,
+     "id": "g7.cte.u3.s3-4-3.4"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "A farmer should keep dwarf birds and poor growers.",
+     "a": false,
+     "why": "They should be culled.",
+     "clue": "Read \"High growth rate\".",
+     "level": 1,
+     "id": "g7.cte.u3.s3-4-3.5"
+    },
+    {
+     "kind": "pick",
+     "step": "practise",
+     "graded": true,
+     "text": "Tap the signs of a good day-old chick.",
+     "pool": [
+      "Good body condition",
+      "No leg or eye deformity",
+      "Keen to eat and drink",
+      "Weak legs",
+      "Will not drink"
+     ],
+     "a": [
+      "Good body condition",
+      "No leg or eye deformity",
+      "Keen to eat and drink"
+     ],
+     "why": "Healthy chicks are strong and eager to eat.",
+     "clue": "Read the \"Day-old chicks\" row.",
+     "level": 2,
+     "id": "g7.cte.u3.s3-4-3.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Some of Almaz's birds survived a disease outbreak. Which should she breed from?",
+     "opts": [
+      "The birds that survived",
+      "New birds from an unknown market",
+      "The birds that got sickest"
+     ],
+     "ans": "The birds that survived",
+     "why": "Breeding from survivors selects for disease resistance.",
+     "clue": "Read \"Disease resistance\".",
+     "level": 3,
+     "added": true,
+     "id": "g7.cte.u3.s3-4-3.7"
+    }
+   ]
+  },
+  {
+   "id": "cte.chicken-feed",
+   "name": "Feed sources for chickens",
+   "explain": {
+    "en": {
+     "text": "Egg production depends on feed. Chicken feed is mostly by-products of home food and agro-industries: household cooking waste, cereals and by-products, roots and tubers, oilseeds, trees and shrubs, animal proteins and commercially prepared feed."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Fewer eggs",
+     "ask": "Your hens lay fewer eggs when you feed them less. Why?",
+     "opts": [
+      "Egg production depends on feed",
+      "Hens dislike food",
+      "It is just bad luck"
+     ],
+     "after": "There is a clear link between feed and egg production.",
+     "id": "g7.cte.u3.s3-4-3.8"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "3.4.4 Feed sources",
+     "paras": [
+      "Egg production is clearly linked to feed and nutrients.",
+      "Most feeds are by-products of home food processing and agro-industries."
+     ],
+     "table": [
+      [
+       "Feed resources for chickens"
+      ],
+      [
+       "Household cooking waste"
+      ],
+      [
+       "Cereals and cereal by-products"
+      ],
+      [
+       "Roots and tubers"
+      ],
+      [
+       "Oilseeds"
+      ],
+      [
+       "Trees and shrubs"
+      ],
+      [
+       "Animal proteins"
+      ],
+      [
+       "Commercially prepared feed"
+      ]
+     ],
+     "id": "g7.cte.u3.s3-4-3.9"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Feed source",
+       "Where chicken feed comes from."
+      ]
+     ],
+     "id": "g7.cte.u3.s3-4-3.10"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "What links to egg production?",
+     "opts": [
+      "Feed and nutrient intake",
+      "The colour of the house",
+      "The owner's age"
+     ],
+     "ans": "Feed and nutrient intake",
+     "why": "The book says there is a clear relationship.",
+     "clue": "Read the first block.",
+     "level": 1,
+     "id": "g7.cte.u3.s3-4-3.11"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "title": "Feed or not?",
+     "bins": [
+      "Chicken feed source",
+      "Not a feed"
+     ],
+     "items": [
+      [
+       "Leftover injera",
+       "Chicken feed source",
+       "Household cooking waste."
+      ],
+      [
+       "Wheat bran",
+       "Chicken feed source",
+       "A cereal by-product."
+      ],
+      [
+       "Sweet potato",
+       "Chicken feed source",
+       "A root or tuber."
+      ],
+      [
+       "Plastic bags",
+       "Not a feed",
+       "Harmful, not food."
+      ],
+      [
+       "Noug cake",
+       "Chicken feed source",
+       "An oilseed product."
+      ]
+     ],
+     "why": "All but plastic belong to the book's feed groups.",
+     "clue": "Can a chicken safely eat it?",
+     "level": 1,
+     "ref": "Activity 13",
+     "added": true,
+     "id": "g7.cte.u3.s3-4-3.12"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Commercially prepared feed is one feed source for chickens.",
+     "a": true,
+     "why": "It is on the book's list.",
+     "clue": "Read the table.",
+     "level": 1,
+     "id": "g7.cte.u3.s3-4-3.13"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "A family has maize, kitchen leftovers and some termites the hens find. Which book feed groups do they have?",
+     "opts": [
+      "Cereals, household waste and animal proteins",
+      "Only commercial feed",
+      "Only oilseeds"
+     ],
+     "ans": "Cereals, household waste and animal proteins",
+     "why": "Maize is a cereal, leftovers are household waste, and termites are animal protein.",
+     "clue": "Match each feed to a group.",
+     "level": 3,
+     "added": true,
+     "id": "g7.cte.u3.s3-4-3.14"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which hens should be selected?",
+   "opts": [
+    "Hens with good hatching and mothering behaviour",
+    "Hens that never sit on eggs",
+    "The smallest hens"
+   ],
+   "ans": "Hens with good hatching and mothering behaviour",
+   "why": "Good incubators and mothers.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.cte.u3.s3-4-3.15"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Household cooking waste can feed chickens.",
+   "a": true,
+   "why": "It is on the list.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.cte.u3.s3-4-3.16"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "A good hatching egg has:",
+   "opts": [
+    "A broader bottom and a sharper tip",
+    "Cracks",
+    "A round deformed shape"
+   ],
+   "ans": "A broader bottom and a sharper tip",
+   "why": "A clearly defined shape.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.cte.u3.s3-4-3.17"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Surplus cocks should always be kept.",
+   "a": false,
+   "why": "Surplus cocks at slaughter age should be culled.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.cte.u3.s3-4-3.18"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Wheat bran belongs to which feed group?",
+   "opts": [
+    "Cereals and cereal by-products",
+    "Animal proteins",
+    "Trees and shrubs"
+   ],
+   "ans": "Cereals and cereal by-products",
+   "why": "Bran comes from wheat.",
+   "level": 3,
+   "clue": "",
+   "id": "g7.cte.u3.s3-4-3.19"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "3.4.3 and 3.4.4 (a short list) are merged in one lesson. Activity 13 is open; the sort uses added local examples."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

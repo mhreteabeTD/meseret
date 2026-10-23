@@ -1,0 +1,460 @@
+{
+ "id": "g7.cte.u3.s3-2-5",
+ "book": {
+  "title": "Career and Technical Education Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "cte",
+  "unit": 3,
+  "unit_title": "Self-Employment Opportunities",
+  "pages": "49–53",
+  "section": "3.2.5"
+ },
+ "title": "Management of the herd",
+ "competency": "Describe housing, feeding, breeding, lactation and waste in dairy management.",
+ "minutes": 10,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Herd",
+   "am": "መንጋ",
+   "def": "A group of cattle kept together.",
+   "machine": true
+  },
+  {
+   "en": "Lactation",
+   "am": "ወተት መስጠት",
+   "def": "The secretion of milk from the mammary glands.",
+   "machine": true
+  },
+  {
+   "en": "Lactation cycle",
+   "am": "የወተት ዑደት",
+   "def": "The pattern of lactation and pregnancy in a cow.",
+   "machine": true
+  },
+  {
+   "en": "Heat stress",
+   "am": "የሙቀት ጫና",
+   "def": "Harm to cattle from too much heat; it lowers fertility and milk.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "cte.herd-management",
+   "name": "Housing and feeding the herd",
+   "explain": {
+    "en": {
+     "text": "Modern dairy farms group animals by age, needs and milk production. Housing must give feed, water and protection from heat and cold; heat stress lowers fertility and milk, and shade helps. Feed is the largest expense; diets depend on each animal's growth, milk and breeding status."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Hot day",
+     "ask": "Cows stand in hot sun all day with no shade. What happens to their milk?",
+     "opts": [
+      "It goes up",
+      "It goes down",
+      "No change"
+     ],
+     "after": "Heat stress lowers fertility and milk production. Shade helps.",
+     "id": "g7.cte.u3.s3-2-5.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "3.2.5 Management of the herd",
+     "paras": [
+      "Dairy management changes with new technology and rules.",
+      "It covers nutrition, housing, health, reproduction and waste.",
+      "Farms divide animals into groups by age, needs and milk production.",
+      "The milking herd is managed most carefully."
+     ],
+     "id": "g7.cte.u3.s3-2-5.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Housing systems",
+     "paras": [
+      "Housing must give feed, water and protection from heat and cold.",
+      "Heat stress can lower fertility and milk production.",
+      "Shade is a common way to reduce heat stress. Barns may use fans.",
+      "Very cold weather can even kill cattle, so housing must be warm."
+     ],
+     "id": "g7.cte.u3.s3-2-5.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Nutritional management",
+     "paras": [
+      "Feed is the largest expense, whether grazing land or bought crops.",
+      "Rotational grazing is a common pasture method.",
+      "Diets differ by growth rate, milk production and breeding status."
+     ],
+     "id": "g7.cte.u3.s3-2-5.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Herd",
+       "A group of cattle kept together."
+      ],
+      [
+       "Heat stress",
+       "Harm to cattle from too much heat; it lowers fertility and milk."
+      ]
+     ],
+     "id": "g7.cte.u3.s3-2-5.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "What must dairy housing provide?",
+     "opts": [
+      "Feed, water and protection from bad weather",
+      "Only a roof",
+      "Nothing; cows live outside"
+     ],
+     "ans": "Feed, water and protection from bad weather",
+     "why": "Housing must provide all three.",
+     "clue": "Read \"Housing systems\".",
+     "level": 1,
+     "ref": "Activity 6",
+     "id": "g7.cte.u3.s3-2-5.6"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Feed is the largest expense in raising cattle.",
+     "a": true,
+     "why": "The book says so.",
+     "clue": "Read \"Nutritional management\".",
+     "level": 1,
+     "id": "g7.cte.u3.s3-2-5.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "What is a common way to reduce heat stress?",
+     "opts": [
+      "Providing shade",
+      "Giving less water",
+      "Tying cows in the sun"
+     ],
+     "ans": "Providing shade",
+     "why": "Shade is very common; barns may add fans.",
+     "clue": "Think of hot sun.",
+     "level": 2,
+     "id": "g7.cte.u3.s3-2-5.8"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "A farmer gives every cow the same feed: calves, milking cows and dry cows. What is wrong?",
+     "opts": [
+      "Diets should differ by growth, milk production and breeding status",
+      "Nothing is wrong",
+      "Cows should get no feed"
+     ],
+     "ans": "Diets should differ by growth, milk production and breeding status",
+     "why": "The book says diets must be prepared differently for each animal's needs.",
+     "clue": "Do all animals need the same food?",
+     "level": 3,
+     "added": true,
+     "id": "g7.cte.u3.s3-2-5.9"
+    }
+   ]
+  },
+  {
+   "id": "cte.lactation",
+   "name": "Breeding, lactation and waste",
+   "explain": {
+    "en": {
+     "text": "A cow gives milk only after she has a calf. Lactation is the secretion of milk from the mammary glands; it continues while the cow is milked but slowly falls. Farmers time breeding to keep milk high. Managed waste is an excellent fertilizer. Starting a dairy needs shelter, breeds, fodder, daily care, disease control and breeding management."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Milk and calves",
+     "ask": "Can a cow give milk before she has ever had a calf?",
+     "opts": [
+      "Yes",
+      "No"
+     ],
+     "after": "No. A cow produces milk only after giving birth.",
+     "id": "g7.cte.u3.s3-2-5.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Reproductive and lactation management",
+     "paras": [
+      "Female calves are raised to replace older cows.",
+      "A dairy cow's life is a cycle of pregnancy and lactation.",
+      "A cow will not produce milk until she has given birth.",
+      "Lactation is the secretion of milk from the mammary glands."
+     ],
+     "id": "g7.cte.u3.s3-2-5.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The lactation cycle",
+     "paras": [
+      "After a calf is born, the cow begins to lactate.",
+      "Milk continues while she is milked, but it steadily declines.",
+      "Farmers time the next breeding to get the most milk.",
+      "This pattern of lactation and pregnancy is the lactation cycle."
+     ],
+     "id": "g7.cte.u3.s3-2-5.12"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Waste and starting a dairy farm",
+     "paras": [
+      "Well-managed cattle waste is an excellent fertilizer.",
+      "It adds organic matter and improves soil."
+     ],
+     "table": [
+      [
+       "To start a dairy farm you need"
+      ],
+      [
+       "Space and shelter"
+      ],
+      [
+       "Improved or local dairy breeds"
+      ],
+      [
+       "Fodder management"
+      ],
+      [
+       "Daily farm management"
+      ],
+      [
+       "Disease control"
+      ],
+      [
+       "Breeding management"
+      ]
+     ],
+     "id": "g7.cte.u3.s3-2-5.13"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Lactation",
+       "The secretion of milk from the mammary glands."
+      ],
+      [
+       "Lactation cycle",
+       "The pattern of lactation and pregnancy in a cow."
+      ]
+     ],
+     "id": "g7.cte.u3.s3-2-5.14"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "___ describes the secretion of milk from the mammary glands.",
+     "opts": [
+      "Lactation",
+      "Dairy",
+      "Milking",
+      "All are correct"
+     ],
+     "ans": "Lactation",
+     "why": "Milking is removing milk; lactation is producing it.",
+     "clue": "Which word means the body making milk?",
+     "level": 1,
+     "ref": "Review Part III Q4",
+     "id": "g7.cte.u3.s3-2-5.15"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Milk production stays the same for the whole lactation.",
+     "a": false,
+     "why": "It steadily declines.",
+     "clue": "Read \"The lactation cycle\".",
+     "level": 1,
+     "id": "g7.cte.u3.s3-2-5.16"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "How can dairy waste help the farm?",
+     "opts": [
+      "As fertilizer for crops",
+      "As cattle feed",
+      "It has no use"
+     ],
+     "ans": "As fertilizer for crops",
+     "why": "Its nutrients improve soil.",
+     "clue": "What does it add to soil?",
+     "level": 2,
+     "id": "g7.cte.u3.s3-2-5.17"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "A farmer wants milk all year. Which plan fits the lactation cycle?",
+     "opts": [
+      "Time each cow's breeding so new lactations start regularly",
+      "Never breed the cows",
+      "Milk only the calves"
+     ],
+     "ans": "Time each cow's breeding so new lactations start regularly",
+     "why": "Milk only starts after calving and declines over time. Planned breeding restarts lactation and keeps milk coming.",
+     "clue": "When does a cow start giving milk?",
+     "level": 3,
+     "added": true,
+     "id": "g7.cte.u3.s3-2-5.18"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activity 6 and 7",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Activity 6: Why is housing important for animals?",
+     "opts": [
+      "It gives feed, water and protection from heat and cold",
+      "It makes the animals thinner",
+      "It has no use"
+     ],
+     "ans": "It gives feed, water and protection from heat and cold",
+     "why": "Heat stress lowers production and cold can kill cattle.",
+     "clue": "Read \"Housing systems\".",
+     "level": 1,
+     "id": "g7.cte.u3.s3-2-5.19"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Activity 7: Lactation is the secretion of ___ from the mammary glands.",
+     "a": [
+      "milk"
+     ],
+     "why": "That is the book's definition.",
+     "clue": "What does a cow give?",
+     "level": 1,
+     "id": "g7.cte.u3.s3-2-5.20"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Lactation begins:",
+   "opts": [
+    "After the calf is born",
+    "Before the cow is born",
+    "Only in old age"
+   ],
+   "ans": "After the calf is born",
+   "why": "A cow gives milk after calving.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.cte.u3.s3-2-5.21"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Heat stress can decrease milk production.",
+   "a": true,
+   "why": "It lowers fertility and milk.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.cte.u3.s3-2-5.22"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Female calves on a dairy farm are usually raised to:",
+   "opts": [
+    "Replace older cows",
+    "Be sold as meat at once",
+    "Pull ploughs"
+   ],
+   "ans": "Replace older cows",
+   "why": "They are replacement stock.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.cte.u3.s3-2-5.23"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Cattle waste can never be used.",
+   "a": false,
+   "why": "It is an excellent fertilizer.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.cte.u3.s3-2-5.24"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is NOT on the list to start a dairy farm?",
+   "opts": [
+    "A honey extractor",
+    "Disease control",
+    "Fodder management"
+   ],
+   "ans": "A honey extractor",
+   "why": "That is for bees.",
+   "level": 3,
+   "clue": "",
+   "id": "g7.cte.u3.s3-2-5.25"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Activity 6 asks about \"animal fattening\" but sits under dairy housing; used as \"animals\"."
+  },
+  {
+   "kind": "note",
+   "text": "Activity 8 (ask extension agents) is open; left out."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

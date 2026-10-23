@@ -1,0 +1,437 @@
+{
+ "id": "g7.cte.u3.s3-2-2",
+ "book": {
+  "title": "Career and Technical Education Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "cte",
+  "unit": 3,
+  "unit_title": "Self-Employment Opportunities",
+  "pages": "44–48",
+  "section": "3.2.2"
+ },
+ "title": "Milking and milking techniques",
+ "competency": "Describe milk, milking, hand milking and machine milking.",
+ "minutes": 9,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Milk",
+   "am": "ወተት",
+   "def": "A nutrient-rich liquid food from the mammary glands of mammals.",
+   "machine": true
+  },
+  {
+   "en": "Milking",
+   "am": "ማለብ",
+   "def": "Removing milk from the udder of cows, goats, sheep or camels.",
+   "machine": true
+  },
+  {
+   "en": "Hand milking",
+   "am": "በእጅ ማለብ",
+   "def": "Massaging and pulling the teats to squirt milk into a bucket.",
+   "machine": true
+  },
+  {
+   "en": "Machine milking",
+   "am": "በማሽን ማለብ",
+   "def": "Milking with teat cups that use vacuum and air pressure.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "cte.milking",
+   "name": "Milk and milking",
+   "explain": {
+    "en": {
+     "text": "Milk is a nutrient-rich food from the mammary glands of mammals. Milking removes milk from the udder, by hand or by machine. Traditionally milking is done twice a day, morning and evening. Hygiene matters: wash hands, containers and teats."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "How often?",
+     "ask": "How many times a day is a cow traditionally milked?",
+     "opts": [
+      "Once",
+      "Twice: morning and evening",
+      "Five times"
+     ],
+     "after": "Traditionally milking happens twice a day, in the morning and evening.",
+     "id": "g7.cte.u3.s3-2-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "3.2.2 Milking",
+     "paras": [
+      "Milk is a nutrient-rich liquid food from the mammary glands of mammals.",
+      "It is the main food of young mammals, including babies.",
+      "Milking is removing milk from the udder of cows, goats, sheep or camels.",
+      "In local dairy farming, milking is done by hand."
+     ],
+     "id": "g7.cte.u3.s3-2-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Where and when",
+     "paras": [
+      "Traditionally, milking is indoors twice a day.",
+      "The cattle are tied with ropes or held in stanchions or a barn.",
+      "A barn is a farm building for livestock, equipment and fodder."
+     ],
+     "id": "g7.cte.u3.s3-2-2.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Milk",
+       "A nutrient-rich liquid food from the mammary glands of mammals."
+      ],
+      [
+       "Milking",
+       "Removing milk from the udder of cows, goats, sheep or camels."
+      ]
+     ],
+     "id": "g7.cte.u3.s3-2-2.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Milk is the primary food of:",
+     "opts": [
+      "Young mammals",
+      "Bees",
+      "Plants"
+     ],
+     "ans": "Young mammals",
+     "why": "Including breastfed babies.",
+     "clue": "Who drinks milk first?",
+     "level": 1,
+     "id": "g7.cte.u3.s3-2-2.5"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "In local dairy farming, milking is usually done by hand.",
+     "a": true,
+     "why": "The book says so.",
+     "clue": "Read 3.2.2.",
+     "level": 1,
+     "id": "g7.cte.u3.s3-2-2.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Why is milk good for people?",
+     "opts": [
+      "It is nutrient-rich, with protein and calcium for growth and bones",
+      "It has no nutrients",
+      "It replaces water completely"
+     ],
+     "ans": "It is nutrient-rich, with protein and calcium for growth and bones",
+     "why": "Milk is nutrient-rich. It gives protein, calcium and energy.",
+     "clue": "What does \"nutrient-rich\" mean?",
+     "level": 2,
+     "ref": "Activity 4",
+     "id": "g7.cte.u3.s3-2-2.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Chala milks at 6 a.m. Following tradition, when is the next milking?",
+     "opts": [
+      "In the evening",
+      "Next week",
+      "Right after breakfast and again at noon"
+     ],
+     "ans": "In the evening",
+     "why": "Traditional milking is twice a day: morning and evening.",
+     "clue": "Twice a day.",
+     "level": 3,
+     "added": true,
+     "id": "g7.cte.u3.s3-2-2.8"
+    }
+   ]
+  },
+  {
+   "id": "cte.milking-methods",
+   "name": "Hand milking and machine milking",
+   "explain": {
+    "en": {
+     "text": "There are two milking methods. Hand milking massages and pulls the teats to squirt milk into a bucket; the top of the teat is pinched shut so milk is pushed out. Machine milking uses teat cups that switch between vacuum and air pressure. In both, hygiene protects the milk."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Big farm",
+     "ask": "Which method can milk many cows quickly on a big farm?",
+     "opts": [
+      "Hand milking",
+      "Machine milking"
+     ],
+     "after": "Machines milk many cows quickly. Small local farms usually milk by hand.",
+     "id": "g7.cte.u3.s3-2-2.9"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "3.2.3 Milking techniques",
+     "paras": [
+      "The two common methods are hand milking and machine milking.",
+      "Hand milking: massage and pull down on the teats. The milk squirts into a bucket."
+     ],
+     "table": [
+      [
+       "Hand method",
+       "How"
+      ],
+      [
+       "1",
+       "Pinch the top of the teat, then squeeze with the other fingers"
+      ],
+      [
+       "2",
+       "Pinch the top of the teat, then slide the fingers down"
+      ]
+     ],
+     "id": "g7.cte.u3.s3-2-2.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Machine milking",
+     "paras": [
+      "Teat cups are attached to the cow's teats.",
+      "The cups switch between vacuum and normal air pressure to pull out milk.",
+      "The milk is filtered and cooled, then stored in a bulk tank."
+     ],
+     "id": "g7.cte.u3.s3-2-2.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Hygiene",
+     "paras": [
+      "In both methods, protect milk from contamination.",
+      "Wash your hands, the container and the teats.",
+      "Take care that hair does not fall into the container."
+     ],
+     "id": "g7.cte.u3.s3-2-2.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Hand milking",
+       "Massaging and pulling the teats to squirt milk into a bucket."
+      ],
+      [
+       "Machine milking",
+       "Milking with teat cups that use vacuum and air pressure."
+      ]
+     ],
+     "id": "g7.cte.u3.s3-2-2.13"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "In machine milking, what pulls the milk out?",
+     "opts": [
+      "Teat cups switching between vacuum and air pressure",
+      "A person squeezing",
+      "Gravity only"
+     ],
+     "ans": "Teat cups switching between vacuum and air pressure",
+     "why": "The cups alternate vacuum and normal air pressure.",
+     "clue": "Read \"Machine milking\".",
+     "level": 1,
+     "id": "g7.cte.u3.s3-2-2.14"
+    },
+    {
+     "kind": "pick",
+     "step": "practise",
+     "graded": true,
+     "text": "Tap the hygiene steps for hand milking.",
+     "pool": [
+      "Wash your hands",
+      "Wash the container",
+      "Wash the teats",
+      "Let hair fall in the bucket",
+      "Use a dirty cloth"
+     ],
+     "a": [
+      "Wash your hands",
+      "Wash the container",
+      "Wash the teats"
+     ],
+     "why": "Clean hands, container and teats protect the milk.",
+     "clue": "What keeps milk clean?",
+     "level": 1,
+     "id": "g7.cte.u3.s3-2-2.15"
+    },
+    {
+     "kind": "order",
+     "step": "practise",
+     "graded": true,
+     "title": "Machine milking in order",
+     "items": [
+      "Attach teat cups",
+      "Vacuum and air pressure pull out milk",
+      "Filter and cool the milk",
+      "Store in a bulk tank"
+     ],
+     "why": "This is the machine milking process.",
+     "clue": "Cups first, storage last.",
+     "level": 2,
+     "id": "g7.cte.u3.s3-2-2.16"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Almaz's milk spoils fast and has hairs in it. What is the most likely cause?",
+     "opts": [
+      "Poor hygiene during milking",
+      "Milking twice a day",
+      "Using a clean bucket"
+     ],
+     "ans": "Poor hygiene during milking",
+     "why": "Hairs and germs get in when hands, teats and containers are not clean. Hygiene protects milk from contamination.",
+     "clue": "Read \"Hygiene\".",
+     "level": 3,
+     "added": true,
+     "id": "g7.cte.u3.s3-2-2.17"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activity 4",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "In light of science, what are the benefits of milk for humans?",
+     "opts": [
+      "Protein for growth, calcium for bones and teeth, and energy",
+      "Milk has no benefit",
+      "Milk only quenches thirst"
+     ],
+     "ans": "Protein for growth, calcium for bones and teeth, and energy",
+     "why": "The book calls milk nutrient-rich. Its protein, calcium and energy are general science.",
+     "clue": "What does nutrient-rich mean?",
+     "level": 2,
+     "id": "g7.cte.u3.s3-2-2.18"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Milking is removing milk from the:",
+   "opts": [
+    "Udder",
+    "Horn",
+    "Hoof"
+   ],
+   "ans": "Udder",
+   "why": "The udder has the teats.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.cte.u3.s3-2-2.19"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "There are two common milking methods.",
+   "a": true,
+   "why": "Hand and machine.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.cte.u3.s3-2-2.20"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Where is milk stored after machine milking?",
+   "opts": [
+    "In a bulk tank after filtering and cooling",
+    "In the barn floor",
+    "In the teat cups"
+   ],
+   "ans": "In a bulk tank after filtering and cooling",
+   "why": "Filtered, cooled, stored.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.cte.u3.s3-2-2.21"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Hygiene matters only in machine milking.",
+   "a": false,
+   "why": "In both methods.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.cte.u3.s3-2-2.22"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "A barn is:",
+   "opts": [
+    "A farm building for livestock, equipment and fodder",
+    "A milking machine",
+    "A type of cheese"
+   ],
+   "ans": "A farm building for livestock, equipment and fodder",
+   "why": "That is the book's meaning.",
+   "level": 3,
+   "clue": "",
+   "id": "g7.cte.u3.s3-2-2.23"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "3.2.2 Milking (half a page) and 3.2.3 Milking techniques are merged in one lesson."
+  },
+  {
+   "kind": "review",
+   "text": "The text refers to \"Fig. 3.9\" for machine milking; the picture is Figure 3.10."
+  },
+  {
+   "kind": "review",
+   "text": "The book says machine milking is \"without human labor\"; that is true only of automatic (robotic) milking. Not used in a graded item."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

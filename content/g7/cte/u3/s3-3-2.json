@@ -1,0 +1,487 @@
+{
+ "id": "g7.cte.u3.s3-3-2",
+ "book": {
+  "title": "Career and Technical Education Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "cte",
+  "unit": 3,
+  "unit_title": "Self-Employment Opportunities",
+  "pages": "56–58",
+  "section": "3.3.2"
+ },
+ "title": "Site, housing and selecting fattening cattle",
+ "competency": "Describe site selection, housing, selection criteria and feeds for fattening cattle.",
+ "minutes": 10,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Steer",
+   "am": "የተኮላሸ ወይፈን",
+   "def": "A castrated male animal.",
+   "machine": true
+  },
+  {
+   "en": "Concentrates",
+   "am": "የተጠናከረ መኖ",
+   "def": "Feeds such as grains, high in protein or carbohydrates.",
+   "machine": true
+  },
+  {
+   "en": "Roughages",
+   "am": "ደረቅ መኖ",
+   "def": "Feeds such as pasture, hay and silage, high in fibre.",
+   "machine": true
+  },
+  {
+   "en": "Silage",
+   "am": "ሲሌጅ",
+   "def": "Feed made by controlled fermentation of moist green plants.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "cte.fattening-selection",
+   "name": "Site, housing and choosing cattle",
+   "explain": {
+    "en": {
+     "text": "Fattening is most profitable where feed is available locally. Housing must shield cattle from heat and cold, with shade. Choose cattle by age (two to three years is best), sex (steers grow faster than heifers), calm character, good constitution and improved breed."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Pick a bull",
+     "ask": "Which bull is the best choice for fattening?",
+     "opts": [
+      "A calm 2–3 year old steer",
+      "A nervous 10 year old bull",
+      "A newborn calf"
+     ],
+     "after": "A calm steer of 2–3 years fattens fastest. Read the selection criteria.",
+     "id": "g7.cte.u3.s3-3-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "3.3.2 Site selection and 3.3.3 Housing",
+     "paras": [
+      "Fattening is most profitable when feed is found locally.",
+      "Straw, maize stover, bran and molasses should be in good supply.",
+      "Grass must be enough for grazing all year.",
+      "Cattle must be shielded from extreme heat or cold. Shade is very necessary."
+     ],
+     "id": "g7.cte.u3.s3-3-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "3.3.4 Selecting fattening cattle",
+     "paras": [],
+     "table": [
+      [
+       "Factor",
+       "Best choice"
+      ],
+      [
+       "Age",
+       "Two to three years old"
+      ],
+      [
+       "Sex",
+       "Steers (castrated males), not heifers"
+      ],
+      [
+       "Character",
+       "Lively but mild, quiet, easy to handle"
+      ],
+      [
+       "Constitution",
+       "Big appetite, large heart girth, well-sprung ribs"
+      ],
+      [
+       "Breed",
+       "Improved breeds gain weight faster on less feed"
+      ]
+     ],
+     "id": "g7.cte.u3.s3-3-2.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Steer",
+       "A castrated male animal."
+      ]
+     ],
+     "id": "g7.cte.u3.s3-3-2.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "What is the preferred age of cattle for fattening?",
+     "opts": [
+      "Two to three years",
+      "Under one month",
+      "Over ten years"
+     ],
+     "ans": "Two to three years",
+     "why": "The book prefers two to three years old.",
+     "clue": "Read the table.",
+     "level": 1,
+     "id": "g7.cte.u3.s3-3-2.5"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Restless, nervous cattle fatten best.",
+     "a": false,
+     "why": "They waste a lot of energy. Calm animals fatten easily.",
+     "clue": "Read the \"Character\" row.",
+     "level": 1,
+     "id": "g7.cte.u3.s3-3-2.6"
+    },
+    {
+     "kind": "pick",
+     "step": "practise",
+     "graded": true,
+     "text": "Tap the factors used to select fattening cattle.",
+     "pool": [
+      "Age",
+      "Sex",
+      "Character",
+      "Breed",
+      "Colour of the rope",
+      "Owner's name"
+     ],
+     "a": [
+      "Age",
+      "Sex",
+      "Character",
+      "Breed"
+     ],
+     "why": "Age, sex, character, constitution and breed.",
+     "clue": "Which ones are about the animal itself?",
+     "level": 1,
+     "ref": "Review Part II Q6",
+     "id": "g7.cte.u3.s3-3-2.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Two steers are the same age. One is an improved breed; one is native. Both get the same feed. Which gains weight faster?",
+     "opts": [
+      "The improved breed",
+      "The native animal",
+      "They gain the same"
+     ],
+     "ans": "The improved breed",
+     "why": "The book says improved breeds gain weight quicker with less feed than native animals.",
+     "clue": "Read the \"Breed\" row.",
+     "level": 3,
+     "added": true,
+     "id": "g7.cte.u3.s3-3-2.8"
+    }
+   ]
+  },
+  {
+   "id": "cte.fattening-feeds",
+   "name": "Feeds for fattening",
+   "explain": {
+    "en": {
+     "text": "Barley is the best grain for feeding cattle, but wheat, sorghum, maize and oats are also used. Feeds are concentrates (grains, high in protein or carbohydrate) or roughages (pasture, hay, silage, high in fibre). Hay is dried forage; silage is fermented moist forage. Vitamin, mineral and by-product feeds also help."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Two kinds of feed",
+     "ask": "Is dry hay a concentrate or a roughage?",
+     "opts": [
+      "Concentrate",
+      "Roughage"
+     ],
+     "after": "Hay is a roughage: high in fibre. Grains are concentrates.",
+     "id": "g7.cte.u3.s3-3-2.9"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Feed and types of feeds",
+     "paras": [
+      "Barley is the best grain for lot feeding cattle.",
+      "Wheat, triticale, sorghum, maize and oats are also used.",
+      "Oats are used with other grains, not alone."
+     ],
+     "id": "g7.cte.u3.s3-3-2.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Concentrates and roughages",
+     "paras": [],
+     "table": [
+      [
+       "Feed",
+       "What it is"
+      ],
+      [
+       "Concentrates",
+       "Grains; high in protein or carbohydrates"
+      ],
+      [
+       "Roughages",
+       "Pasture, hay, silage; high in fibre"
+      ],
+      [
+       "Hay",
+       "Forage mowed and dried"
+      ],
+      [
+       "Silage",
+       "Moist herbage fermented under control"
+      ],
+      [
+       "Supplements",
+       "Vitamins and minerals mixed with grains"
+      ],
+      [
+       "By-product feeds",
+       "Left over from processing; often cheap"
+      ]
+     ],
+     "id": "g7.cte.u3.s3-3-2.11"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Concentrates",
+       "Feeds such as grains, high in protein or carbohydrates."
+      ],
+      [
+       "Roughages",
+       "Feeds such as pasture, hay and silage, high in fibre."
+      ],
+      [
+       "Silage",
+       "Feed made by controlled fermentation of moist green plants."
+      ]
+     ],
+     "id": "g7.cte.u3.s3-3-2.12"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Which grain does the book call the best for lot feeding cattle?",
+     "opts": [
+      "Barley",
+      "Oats alone",
+      "Rice"
+     ],
+     "ans": "Barley",
+     "why": "Barley is best; others are often used too.",
+     "clue": "Read the first block.",
+     "level": 1,
+     "id": "g7.cte.u3.s3-3-2.13"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "title": "Sort the feeds",
+     "bins": [
+      "Concentrate",
+      "Roughage"
+     ],
+     "items": [
+      [
+       "Barley",
+       "Concentrate",
+       "A grain."
+      ],
+      [
+       "Hay",
+       "Roughage",
+       "Dried forage."
+      ],
+      [
+       "Maize grain",
+       "Concentrate",
+       "A grain."
+      ],
+      [
+       "Silage",
+       "Roughage",
+       "Fermented forage."
+      ],
+      [
+       "Pasture grass",
+       "Roughage",
+       "High in fibre."
+      ]
+     ],
+     "why": "Grains are concentrates; pasture, hay and silage are roughages.",
+     "clue": "Is it a grain?",
+     "level": 1,
+     "id": "g7.cte.u3.s3-3-2.14"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Hay is forage that has been mowed and dried.",
+     "a": true,
+     "why": "That is the book's definition.",
+     "clue": "Look at the table.",
+     "level": 1,
+     "id": "g7.cte.u3.s3-3-2.15"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Dawit has teff straw and maize stover, but no grain. What should he add for a balanced fattening ration?",
+     "opts": [
+      "A concentrate such as barley, with vitamin and mineral supplements",
+      "More straw only",
+      "Nothing"
+     ],
+     "ans": "A concentrate such as barley, with vitamin and mineral supplements",
+     "why": "Straw and stover are roughages. A balanced ration also needs concentrates (grains) and supplements.",
+     "clue": "Which kind of feed is he missing?",
+     "level": 3,
+     "added": true,
+     "id": "g7.cte.u3.s3-3-2.16"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activity 10",
+   "items": [
+    {
+     "kind": "pick",
+     "step": "exercise",
+     "graded": true,
+     "text": "How are cattle selected for fattening? Tap the good choices.",
+     "pool": [
+      "Steers of two to three years",
+      "Calm and easy to handle",
+      "Big appetite and deep chest",
+      "Improved breed",
+      "Very old and thin",
+      "Restless and nervous"
+     ],
+     "a": [
+      "Steers of two to three years",
+      "Calm and easy to handle",
+      "Big appetite and deep chest",
+      "Improved breed"
+     ],
+     "why": "These follow the book's criteria in 3.3.4.",
+     "clue": "Use the selection table.",
+     "level": 2,
+     "id": "g7.cte.u3.s3-3-2.17"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Steers are:",
+   "opts": [
+    "Castrated males",
+    "Young females",
+    "Old cows"
+   ],
+   "ans": "Castrated males",
+   "why": "Steers grow faster than heifers.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.cte.u3.s3-3-2.18"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Shade is very necessary for fattening cattle.",
+   "a": true,
+   "why": "Cattle must be shielded from extreme heat.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.cte.u3.s3-3-2.19"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Roughages are high in:",
+   "opts": [
+    "Fibre",
+    "Sugar only",
+    "Fat only"
+   ],
+   "ans": "Fibre",
+   "why": "Pasture, hay, silage.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.cte.u3.s3-3-2.20"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Older animals need a longer time to fatten than younger ones.",
+   "a": false,
+   "why": "Younger animals need a longer feeding period.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.cte.u3.s3-3-2.21"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Where is fattening most profitable?",
+   "opts": [
+    "Where feed is available locally",
+    "Far from any feed",
+    "In the desert"
+   ],
+   "ans": "Where feed is available locally",
+   "why": "Local feed lowers costs.",
+   "level": 3,
+   "clue": "",
+   "id": "g7.cte.u3.s3-3-2.22"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "3.3.2 Site selection, 3.3.3 Housing (one short paragraph each) and 3.3.4 are merged in one lesson."
+  },
+  {
+   "kind": "review",
+   "text": "\"Cattle rising\" is a misprint for \"cattle raising\"; \"a good, depend upon full chest\" probably means \"a deep, full chest\"; \"opposite grains\" means \"other grains\"."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

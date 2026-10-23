@@ -1,0 +1,334 @@
+{
+ "id": "g7.cte.u3.s3-4-6",
+ "book": {
+  "title": "Career and Technical Education Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "cte",
+  "unit": 3,
+  "unit_title": "Self-Employment Opportunities",
+  "pages": "67–69",
+  "section": "3.4.6"
+ },
+ "title": "Poultry health and disease control",
+ "competency": "Explain causes of poultry disease and how to control them.",
+ "minutes": 8,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Quarantine",
+   "am": "ለይቶ ማቆየት",
+   "def": "Keeping new birds apart for two weeks to watch for sickness.",
+   "machine": true
+  },
+  {
+   "en": "Infectious disease",
+   "am": "ተላላፊ በሽታ",
+   "def": "A disease caused by viruses, bacteria or parasites that can spread.",
+   "machine": true
+  },
+  {
+   "en": "Vaccination",
+   "am": "ክትባት",
+   "def": "Giving a vaccine to protect birds from a disease.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "cte.poultry-health",
+   "name": "Keeping the flock healthy",
+   "explain": {
+    "en": {
+     "text": "Infectious diseases enter a flock through contaminated materials and sick birds. Do not buy birds from unknown sources during outbreaks; quarantine new birds for two weeks. Poor ventilation builds up ammonia and causes breathing problems. Diseases are infectious (viral, bacterial, parasitic) or non-infectious (feed deficiency, toxicity). Control them with hygiene, good housing, feeding, chick care, vaccination and deworming."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "New hens",
+     "ask": "A neighbour gives you 3 new hens. What should you do first?",
+     "opts": [
+      "Keep them apart for two weeks and watch them",
+      "Put them straight in with your flock",
+      "Sell your old hens"
+     ],
+     "after": "New birds may carry disease. Keep them apart (quarantine) for two weeks first.",
+     "id": "g7.cte.u3.s3-4-6.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "3.4.6 Poultry health",
+     "paras": [
+      "Infectious diseases enter through contaminated materials and sick birds.",
+      "Do not buy chickens from unknown sources, especially during outbreaks.",
+      "Quarantine new birds for two weeks, away from the flock.",
+      "Crowding increases the risk of cross-infection."
+     ],
+     "id": "g7.cte.u3.s3-4-6.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Ventilation",
+     "paras": [
+      "Poor ventilation builds up ammonia gas from droppings.",
+      "This causes sneezing, running eyes and mouth discharge.",
+      "Good ventilation easily prevents this."
+     ],
+     "id": "g7.cte.u3.s3-4-6.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "3.4.7 Common diseases and 3.4.8 Disease control",
+     "paras": [],
+     "table": [
+      [
+       "Kind of disease",
+       "Examples of cause"
+      ],
+      [
+       "Infectious",
+       "Viruses, bacteria, parasites"
+      ],
+      [
+       "Non-infectious",
+       "Feed deficiencies, toxicity"
+      ]
+     ],
+     "note": "Prevent disease with hygiene, housing, flock structure, chick care and feeding. Also vaccinate, deworm, and treat external parasites.",
+     "id": "g7.cte.u3.s3-4-6.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Quarantine",
+       "Keeping new birds apart for two weeks to watch for sickness."
+      ],
+      [
+       "Infectious disease",
+       "A disease caused by viruses, bacteria or parasites that can spread."
+      ],
+      [
+       "Vaccination",
+       "Giving a vaccine to protect birds from a disease."
+      ]
+     ],
+     "id": "g7.cte.u3.s3-4-6.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "How long should new birds be quarantined?",
+     "opts": [
+      "Two weeks",
+      "Two hours",
+      "Two years"
+     ],
+     "ans": "Two weeks",
+     "why": "The book says two weeks.",
+     "clue": "Read 3.4.6.",
+     "level": 1,
+     "id": "g7.cte.u3.s3-4-6.6"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Viral diseases are some of the most important bacterial diseases affecting poultry.",
+     "a": false,
+     "why": "Viral and bacterial are different kinds of infectious disease.",
+     "clue": "Is a virus a bacterium?",
+     "level": 1,
+     "ref": "Review Part I Q5",
+     "id": "g7.cte.u3.s3-4-6.7"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "bins": [
+      "Infectious",
+      "Non-infectious"
+     ],
+     "items": [
+      [
+       "A virus",
+       "Infectious",
+       "Viruses spread."
+      ],
+      [
+       "Bacteria",
+       "Infectious",
+       "Bacteria spread."
+      ],
+      [
+       "Parasites",
+       "Infectious",
+       "Parasites spread."
+      ],
+      [
+       "Poor feed (deficiency)",
+       "Non-infectious",
+       "Not passed between birds."
+      ],
+      [
+       "Toxic feed",
+       "Non-infectious",
+       "Toxicity."
+      ]
+     ],
+     "why": "Infectious: viral, bacterial, parasitic. Non-infectious: deficiency, toxicity.",
+     "clue": "Can it spread from bird to bird?",
+     "level": 2,
+     "id": "g7.cte.u3.s3-4-6.8"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Hens in a closed, smelly house sneeze and have running eyes. What is the best fix?",
+     "opts": [
+      "Improve ventilation",
+      "Close the windows more",
+      "Add more birds"
+     ],
+     "ans": "Improve ventilation",
+     "why": "Poor ventilation builds ammonia from droppings, causing breathing problems. Good ventilation prevents it.",
+     "clue": "What gas builds up?",
+     "level": 3,
+     "added": true,
+     "id": "g7.cte.u3.s3-4-6.9"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activity 16",
+   "items": [
+    {
+     "kind": "pick",
+     "step": "exercise",
+     "graded": true,
+     "text": "Common control methods for poultry disease: tap the book's methods.",
+     "pool": [
+      "Hygiene",
+      "Good housing",
+      "Vaccination",
+      "Deworming",
+      "Quarantine of new birds",
+      "Buying birds from unknown markets"
+     ],
+     "a": [
+      "Hygiene",
+      "Good housing",
+      "Vaccination",
+      "Deworming",
+      "Quarantine of new birds"
+     ],
+     "why": "These come from 3.4.6 and 3.4.8.",
+     "clue": "Which ones prevent disease?",
+     "level": 2,
+     "id": "g7.cte.u3.s3-4-6.10"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Infectious diseases can be:",
+   "opts": [
+    "Viral, bacterial or parasitic",
+    "Only from feed",
+    "Only from cold"
+   ],
+   "ans": "Viral, bacterial or parasitic",
+   "why": "Three kinds.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.cte.u3.s3-4-6.11"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Good ventilation prevents ammonia build-up.",
+   "a": true,
+   "why": "It prevents breathing problems.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.cte.u3.s3-4-6.12"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is a non-infectious disease cause?",
+   "opts": [
+    "Feed deficiency",
+    "Bacteria",
+    "Virus"
+   ],
+   "ans": "Feed deficiency",
+   "why": "Also toxicity.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.cte.u3.s3-4-6.13"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "It is safe to buy birds from unknown markets during an outbreak.",
+   "a": false,
+   "why": "The book warns against it.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.cte.u3.s3-4-6.14"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The most economical way to prevent non-viral diseases is:",
+   "opts": [
+    "Improved management and nutrition",
+    "Buying more birds",
+    "Never cleaning"
+   ],
+   "ans": "Improved management and nutrition",
+   "why": "Hygiene, housing, feeding, chick care.",
+   "level": 3,
+   "clue": "",
+   "id": "g7.cte.u3.s3-4-6.15"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "3.4.6, 3.4.7 and 3.4.8 (short sections) are merged in one lesson."
+  },
+  {
+   "kind": "review",
+   "text": "The book says droppings contain urea; chemically it is mainly uric acid. Kept out of graded items."
+  },
+  {
+   "kind": "note",
+   "text": "Activity 15 (visit a poultry site) is open; specific disease names in source.md are not from the book and are not used."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
