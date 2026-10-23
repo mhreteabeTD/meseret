@@ -1,0 +1,689 @@
+{
+ "id": "g12.chemistry.u1.s1-5",
+ "book": {
+  "title": "Chemistry Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "chemistry",
+  "unit": 1,
+  "unit_title": "Acid–base equilibria",
+  "pages": "42–48",
+  "section": "1.5"
+ },
+ "title": "Acid–base indicators and titrations",
+ "competency": "Choose an indicator, use equivalents and normality, and calculate concentrations from titration data.",
+ "minutes": 30,
+ "keywords": [
+  {
+   "en": "Acid–base indicator",
+   "am": "የአሲድ–ቤዝ አመልካች",
+   "def": "A weak organic acid or base whose two forms have different colours.",
+   "machine": true
+  },
+  {
+   "en": "Equivalent",
+   "am": "ኢኩቫለንት",
+   "def": "The amount of a substance that supplies or reacts with one mole of H⁺ (or OH⁻).",
+   "machine": true
+  },
+  {
+   "en": "Normality",
+   "am": "ኖርማሊቲ",
+   "def": "Equivalents of solute per litre of solution: N = n × M.",
+   "machine": true
+  },
+  {
+   "en": "Titrant",
+   "am": "ቲትራንት",
+   "def": "The solution of known concentration added from the burette.",
+   "machine": true
+  },
+  {
+   "en": "Equivalence point",
+   "am": "የተመጣጣኝነት ነጥብ",
+   "def": "The point where equivalents of acid and base are exactly equal.",
+   "machine": true
+  },
+  {
+   "en": "End point",
+   "am": "የመጨረሻ ነጥብ",
+   "def": "The point where the indicator changes colour.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "chem.indicators",
+   "name": "Acid–base indicators",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "An indicator is a weak organic acid HIn whose acid form and base form have different colours: HIn + H₂O ⇌ H₃O⁺ + In⁻. In acid the equilibrium lies left (acid colour); in base it lies right (base colour). Each indicator changes colour over its own pH range, so we choose one whose range includes the pH we want to detect."
+    },
+    "am": {
+     "text": "አመልካች ደካማ አሲድ HIn ነው፤ የአሲድና የቤዝ ቅርጾቹ የተለያየ ቀለም አላቸው። እያንዳንዱ በራሱ pH ክልል ቀለም ይቀይራል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Pink or colourless?",
+     "ask": "A few drops of phenolphthalein are added to ammonia solution. What colour appears?",
+     "opts": [
+      "Pink",
+      "Colourless",
+      "Red",
+      "Blue"
+     ],
+     "after": "Phenolphthalein is colourless in acid and pink above pH 8.2. Ammonia solution is basic (pH ≈ 11).",
+     "ref": "Start-up Activity",
+     "id": "g12.chemistry.u1.s1-5.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "How indicators work",
+     "paras": [
+      "HIn (acid colour) + H₂O ⇌ H₃O⁺ + In⁻ (base colour).",
+      "More H₃O⁺: equilibrium shifts left, acid colour.",
+      "Less H₃O⁺: shifts right, base colour.",
+      "A tiny amount of indicator does not change the pH.",
+      "pH paper is paper soaked in indicator."
+     ],
+     "ref": "p.42–43",
+     "id": "g12.chemistry.u1.s1-5.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Some common indicators",
+     "paras": [
+      "Choose one whose colour-change range includes the pH you need."
+     ],
+     "table": [
+      [
+       "Indicator",
+       "Acid colour",
+       "Base colour",
+       "pH range"
+      ],
+      [
+       "Methyl violet",
+       "yellow",
+       "violet",
+       "0.0–1.6"
+      ],
+      [
+       "Methyl orange",
+       "red",
+       "yellow",
+       "3.2–4.4"
+      ],
+      [
+       "Bromcresol green",
+       "yellow",
+       "blue",
+       "3.8–5.4"
+      ],
+      [
+       "Methyl red",
+       "red",
+       "yellow",
+       "4.8–6.0"
+      ],
+      [
+       "Litmus",
+       "red",
+       "blue",
+       "5.0–8.0"
+      ],
+      [
+       "Phenolphthalein",
+       "colourless",
+       "pink",
+       "8.2–10.0"
+      ]
+     ],
+     "ref": "Table 1.5, p.43",
+     "id": "g12.chemistry.u1.s1-5.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Acid–base indicator",
+       "A weak organic acid or base whose two forms have different colours."
+      ]
+     ],
+     "id": "g12.chemistry.u1.s1-5.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "Methyl orange is added to a solution of pH 2. Its colour is",
+     "opts": [
+      "red",
+      "yellow",
+      "pink",
+      "colourless"
+     ],
+     "ans": "red",
+     "why": "pH 2 is below its range (3.2–4.4), so it shows its acid colour, red.",
+     "clue": "Is pH 2 below or above the range?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Table 1.5",
+     "id": "g12.chemistry.u1.s1-5.5"
+    },
+    {
+     "kind": "match",
+     "title": "Match each indicator with its pH range",
+     "pairs": [
+      [
+       "Methyl orange",
+       "3.2–4.4"
+      ],
+      [
+       "Bromcresol green",
+       "3.8–5.4"
+      ],
+      [
+       "Methyl red",
+       "4.8–6.0"
+      ],
+      [
+       "Litmus",
+       "5.0–8.0"
+      ],
+      [
+       "Phenolphthalein",
+       "8.2–10.0"
+      ]
+     ],
+     "why": "Table 1.5.",
+     "clue": "Phenolphthalein changes in basic solution.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Table 1.5",
+     "id": "g12.chemistry.u1.s1-5.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "A buffer has pH 4.44. Which indicator shows a colour change near this pH?",
+     "opts": [
+      "Bromcresol green (3.8–5.4)",
+      "Phenolphthalein (8.2–10.0)",
+      "Methyl violet (0.0–1.6)",
+      "Litmus (5.0–8.0)"
+     ],
+     "ans": "Bromcresol green (3.8–5.4)",
+     "why": "Its range contains 4.44, so it shows an in-between green.",
+     "clue": "Which range contains 4.44?",
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Example 1.10",
+     "id": "g12.chemistry.u1.s1-5.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why does an indicator show its acid colour in strong acid?",
+     "opts": [
+      "High [H₃O⁺] shifts HIn ⇌ H⁺ + In⁻ to the left",
+      "Acid destroys the indicator",
+      "The indicator becomes a strong base",
+      "Water changes colour"
+     ],
+     "ans": "High [H₃O⁺] shifts HIn ⇌ H⁺ + In⁻ to the left",
+     "why": "Le Chatelier: added H₃O⁺ is a product, so HIn (acid colour) dominates.",
+     "clue": "Which side of the indicator equilibrium has H⁺?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.42",
+     "added": true,
+     "id": "g12.chemistry.u1.s1-5.8"
+    }
+   ]
+  },
+  {
+   "id": "chem.normality",
+   "name": "Equivalents and normality",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "One equivalent of an acid supplies one mole of H⁺; one equivalent of a base supplies one mole of OH⁻. Equivalent mass = molar mass ÷ n, where n is the number of H⁺ or OH⁻ per formula. Normality N = equivalents per litre = n × M. At neutralization, equivalents of acid = equivalents of base, so N₁V₁ = N₂V₂."
+    },
+    "am": {
+     "text": "ኢኩቫለንት አንድ ሞል H⁺ ይሰጣል። ኖርማሊቲ N = n × M። በገለልተኝነት N₁V₁ = N₂V₂።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "How much base?",
+     "ask": "How many moles of NaOH does 1 mole of H₂SO₄ neutralize?",
+     "opts": [
+      "2",
+      "1",
+      "½",
+      "4"
+     ],
+     "after": "H₂SO₄ gives 2 H⁺: H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O.",
+     "ref": "Activity 1.10",
+     "id": "g12.chemistry.u1.s1-5.9"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Equivalents",
+     "paras": [
+      "One equivalent supplies or reacts with one mole of H⁺ (or OH⁻).",
+      "n = H⁺ per acid formula or OH⁻ per base formula: HCl 1, H₂SO₄ 2, NaOH 1, Ba(OH)₂ 2.",
+      "Equivalent mass = molar mass ÷ n. H₂SO₄: 98 ÷ 2 = 49 g."
+     ],
+     "ref": "p.44",
+     "id": "g12.chemistry.u1.s1-5.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Normality",
+     "paras": [
+      "Normality N = equivalents of solute ÷ litres of solution.",
+      "N = n × M: 1 M H₂SO₄ = 2 N.",
+      "Equivalents = N × V (in L).",
+      "At neutralization: N₁V₁ = N₂V₂."
+     ],
+     "ref": "p.44–45",
+     "id": "g12.chemistry.u1.s1-5.11"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Equivalent",
+       "The amount of a substance that supplies or reacts with one mole of H⁺ (or OH⁻)."
+      ],
+      [
+       "Normality",
+       "Equivalents of solute per litre of solution: N = n × M."
+      ]
+     ],
+     "id": "g12.chemistry.u1.s1-5.12"
+    },
+    {
+     "kind": "mcq",
+     "text": "1 M H₂SO₄ is",
+     "opts": [
+      "2 N",
+      "1 N",
+      "0.5 N",
+      "4 N"
+     ],
+     "ans": "2 N",
+     "why": "N = n × M = 2 × 1.",
+     "clue": "How many H⁺ per H₂SO₄?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Activity 1.10 Q2",
+     "id": "g12.chemistry.u1.s1-5.13"
+    },
+    {
+     "kind": "blank",
+     "ask": "Equivalent mass of H₂SO₄ (molar mass 98 g/mol) = ___ g",
+     "a": [
+      "49"
+     ],
+     "why": "98 ÷ 2 = 49 g.",
+     "clue": "Divide by the number of H⁺.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Activity 1.10 Q1",
+     "id": "g12.chemistry.u1.s1-5.14"
+    },
+    {
+     "kind": "blank",
+     "ask": "Equivalent mass of Ca(OH)₂ (molar mass 74 g/mol) = ___ g",
+     "a": [
+      "37"
+     ],
+     "why": "74 ÷ 2 = 37 g.",
+     "clue": "Two OH⁻ per formula.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Activity 1.10 Q1",
+     "id": "g12.chemistry.u1.s1-5.15"
+    },
+    {
+     "kind": "blank",
+     "ask": "Volume of 2.0 N NaOH to neutralize 25.0 mL of 2.70 N H₂SO₄ ≈ ___ mL (1 decimal place)",
+     "a": [
+      "≈33.8",
+      "≈33.75"
+     ],
+     "why": "V₂ = 2.70 × 25.0/2.0 = 33.75 ≈ 33.8 mL.",
+     "clue": "N₁V₁ = N₂V₂.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Example 1.11 (printed as 1.10)",
+     "id": "g12.chemistry.u1.s1-5.16"
+    },
+    {
+     "kind": "blank",
+     "ask": "The normality of 0.50 M H₃PO₄ (all three H⁺ react) = ___ N",
+     "a": [
+      "1.5"
+     ],
+     "why": "N = 3 × 0.50 = 1.5 N.",
+     "clue": "n = 3 for H₃PO₄.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.chemistry.u1.s1-5.17"
+    }
+   ]
+  },
+  {
+   "id": "chem.titration",
+   "name": "Acid–base titrations",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "In a titration the titrant (known concentration) is added from a burette to the analyte with an indicator, until the indicator changes colour. The equivalence point is where equivalents of acid and base are equal; the end point is where the indicator changes colour, and a good indicator makes them match. Then C_acid = V_base × C_base ÷ V_acid."
+    },
+    "am": {
+     "text": "በቲትሬሽን ቲትራንት ከቡሬት ይጨመራል፤ አመልካቹ ቀለም ሲቀይር ይቆማል። የተመጣጣኝነት ነጥብና የመጨረሻ ነጥብ መመሳሰል አለባቸው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "tap",
+     "step": "explore",
+     "graded": false,
+     "title": "The titration set-up",
+     "text": "Tap each part. Figure 1.3.",
+     "need": 5,
+     "items": [
+      [
+       "Burette",
+       "A long graduated tube that delivers the titrant."
+      ],
+      [
+       "Stopcock",
+       "The tap at the bottom of the burette."
+      ],
+      [
+       "Erlenmeyer flask",
+       "Holds the analyte and a few drops of indicator."
+      ],
+      [
+       "Clamp and stand",
+       "Hold the burette upright."
+      ],
+      [
+       "Pipette",
+       "Measures exactly 10 mL of the acid into the flask."
+      ]
+     ],
+     "id": "g12.chemistry.u1.s1-5.18"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Titration",
+     "paras": [
+      "The analyte (say, acid) and indicator go in the flask.",
+      "The titrant (base) is added from the burette, fast at first, then drop by drop.",
+      "Equivalence point: equivalents of acid = equivalents of base.",
+      "End point: the indicator changes colour.",
+      "Choose an indicator whose range includes the equivalence-point pH.",
+      "Unknown concentration = (V_base × C_base) ÷ V_acid."
+     ],
+     "ref": "p.45–46",
+     "id": "g12.chemistry.u1.s1-5.19"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Experiment 1.1 in short",
+     "paras": [
+      "Rinse the burette with 0.1 N NaOH; remove air bubbles.",
+      "Pipette 10 mL HCl into the flask; add 2–3 drops of phenolphthalein.",
+      "Add NaOH, swirling, until a faint pink stays.",
+      "Read the burette at the bottom of the meniscus to 0.1 mL."
+     ],
+     "ref": "Experiment 1.1, p.47–48",
+     "id": "g12.chemistry.u1.s1-5.20"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Titrant",
+       "The solution of known concentration added from the burette."
+      ],
+      [
+       "Equivalence point",
+       "The point where equivalents of acid and base are exactly equal."
+      ],
+      [
+       "End point",
+       "The point where the indicator changes colour."
+      ]
+     ],
+     "id": "g12.chemistry.u1.s1-5.21"
+    },
+    {
+     "kind": "mcq",
+     "text": "The end point of a titration is where",
+     "opts": [
+      "the indicator changes colour",
+      "equivalents of acid and base are exactly equal",
+      "the burette is empty",
+      "the pH is exactly 7"
+     ],
+     "ans": "the indicator changes colour",
+     "why": "The equivalence point is the stoichiometric point; the end point is what we see.",
+     "clue": "Which one do you observe?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.45",
+     "id": "g12.chemistry.u1.s1-5.22"
+    },
+    {
+     "kind": "mcq",
+     "text": "NaOH is added to HCl with phenolphthalein. At the end point the colour changes from",
+     "opts": [
+      "colourless to pink",
+      "pink to colourless",
+      "red to yellow",
+      "yellow to blue"
+     ],
+     "ans": "colourless to pink",
+     "why": "Phenolphthalein is colourless in acid, pink just past neutralization.",
+     "clue": "Start acidic, end slightly basic.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Experiment 1.1",
+     "id": "g12.chemistry.u1.s1-5.23"
+    },
+    {
+     "kind": "blank",
+     "ask": "10.0 mL of HCl needs 12.5 mL of 0.1 N NaOH. N(HCl) = ___ N",
+     "a": [
+      "0.125"
+     ],
+     "why": "N₁ = 0.1 × 12.5/10.0 = 0.125 N.",
+     "clue": "N₁V₁ = N₂V₂.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Experiment 1.1",
+     "id": "g12.chemistry.u1.s1-5.24"
+    },
+    {
+     "kind": "mcq",
+     "text": "An air bubble leaves the burette tip during the titration. The calculated N(HCl) will be",
+     "opts": [
+      "too high",
+      "too low",
+      "unchanged",
+      "zero"
+     ],
+     "ans": "too high",
+     "why": "The reading drops by the bubble's volume, so the recorded NaOH volume is too large.",
+     "clue": "Did that volume of NaOH really enter the flask?",
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Experiment 1.1",
+     "id": "g12.chemistry.u1.s1-5.25"
+    },
+    {
+     "kind": "blank",
+     "ask": "25.0 mL of H₂SO₄ is neutralized by 30.0 mL of 0.10 M NaOH. Molarity of H₂SO₄ = ___ M",
+     "a": [
+      "0.06"
+     ],
+     "why": "mol NaOH = 0.0030; mol H₂SO₄ = 0.0015; 0.0015/0.0250 = 0.060 M.",
+     "clue": "Moles of acid are NOT equal to moles of base here: H₂SO₄ gives 2 H⁺.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.chemistry.u1.s1-5.26"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Phenolphthalein in an acidic solution is",
+   "opts": [
+    "colourless",
+    "pink",
+    "red",
+    "blue"
+   ],
+   "ans": "colourless",
+   "why": "Table 1.5.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-5.27"
+  },
+  {
+   "kind": "blank",
+   "ask": "The normality of 0.2 M H₂SO₄ = ___ N",
+   "a": [
+    "0.4"
+   ],
+   "why": "2 × 0.2.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-5.28"
+  },
+  {
+   "kind": "blank",
+   "ask": "20 mL of 0.1 N HCl needs ___ mL of 0.2 N NaOH",
+   "a": [
+    "10"
+   ],
+   "why": "0.1 × 20/0.2.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-5.29"
+  },
+  {
+   "kind": "mcq",
+   "text": "At the equivalence point of an acid–base titration",
+   "opts": [
+    "equivalents of acid = equivalents of base",
+    "the pH is always 7",
+    "the indicator is used up",
+    "moles of acid always equal moles of base"
+   ],
+   "ans": "equivalents of acid = equivalents of base",
+   "why": "p.45.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-5.30"
+  },
+  {
+   "kind": "blank",
+   "ask": "4.9 g of H₂SO₄ (98 g/mol) is dissolved to make 500 mL. Normality = ___ N",
+   "a": [
+    "0.2"
+   ],
+   "why": "4.9/49 = 0.1 eq in 0.5 L.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-5.31"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.42: in base the indicator shows its own base colour, not always \"blue\" (phenolphthalein turns pink)."
+  },
+  {
+   "kind": "review",
+   "text": "Example 1.10 does not answer which indicator to use; suggested: bromcresol green (3.8–5.4), or litmus/methyl red to show acidity."
+  },
+  {
+   "kind": "review",
+   "text": "p.44: 1 mol H₂SO₄ is 2 equivalents (one equivalent = ½ mol = 49 g); the promised normality equation is missing (N = equivalents/V(L) = n × M)."
+  },
+  {
+   "kind": "review",
+   "text": "Two examples are numbered 1.10; the normality example should be Example 1.11. \"Moles of base = moles of acid\" (p.45) holds only for 1 : 1 reactions."
+  },
+  {
+   "kind": "review",
+   "text": "Section 1.5 promises \"types of titration curves\" but none are shown."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

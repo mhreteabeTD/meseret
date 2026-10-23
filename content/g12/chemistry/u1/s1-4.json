@@ -1,0 +1,500 @@
+{
+ "id": "g12.chemistry.u1.s1-4",
+ "book": {
+  "title": "Chemistry Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "chemistry",
+  "unit": 1,
+  "unit_title": "Acid–base equilibria",
+  "pages": "39–42",
+  "section": "1.4"
+ },
+ "title": "Hydrolysis of salts",
+ "competency": "Predict whether a salt solution is acidic, basic or neutral and explain why.",
+ "minutes": 20,
+ "keywords": [
+  {
+   "en": "Salt hydrolysis",
+   "am": "የጨው ሃይድሮሊሲስ",
+   "def": "Reaction of the cation or anion of a salt with water, giving H₃O⁺ or OH⁻.",
+   "machine": true
+  },
+  {
+   "en": "Cationic hydrolysis",
+   "am": "የካታዮን ሃይድሮሊሲስ",
+   "def": "The cation of a salt gives H⁺ to water, making H₃O⁺ (acidic).",
+   "machine": true
+  },
+  {
+   "en": "Anionic hydrolysis",
+   "am": "የአናዮን ሃይድሮሊሲስ",
+   "def": "The anion of a salt takes H⁺ from water, making OH⁻ (basic).",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "chem.salt-hydrolysis",
+   "name": "Acidic, basic and neutral salts",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "In salt hydrolysis an ion of the salt reacts with water. Salts of a strong acid and a strong base (NaCl) do not hydrolyze: neutral. Salts of a weak acid and a strong base (CH₃COONa, Na₂CO₃) are basic, because the anion takes H⁺ from water. Salts of a strong acid and a weak base (NH₄Cl) are acidic, because the cation gives H⁺ to water."
+    },
+    "am": {
+     "text": "የጠንካራ አሲድና ጠንካራ ቤዝ ጨው ገለልተኛ ነው፤ የደካማ አሲድ ጨው ቤዛማ፤ የደካማ ቤዝ ጨው አሲዳማ ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Is every salt neutral?",
+     "ask": "Sodium acetate (CH₃COONa) is a salt. Its water solution is",
+     "opts": [
+      "basic",
+      "neutral",
+      "acidic",
+      "it does not dissolve"
+     ],
+     "after": "Acetate, the conjugate base of a weak acid, takes H⁺ from water and leaves OH⁻.",
+     "ref": "p.40",
+     "id": "g12.chemistry.u1.s1-4.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Three kinds of salt",
+     "paras": [
+      "Hydrolysis: an ion of the salt reacts with water.",
+      "Ions from strong acids and bases (Na⁺, K⁺, Cl⁻, NO₃⁻, Br⁻) do not hydrolyze."
+     ],
+     "table": [
+      [
+       "Parents",
+       "Example",
+       "Ion that hydrolyzes",
+       "Solution"
+      ],
+      [
+       "Strong acid + strong base",
+       "NaCl, KNO₃",
+       "none",
+       "neutral, pH 7"
+      ],
+      [
+       "Weak acid + strong base",
+       "CH₃COONa, Na₂CO₃",
+       "anion: CH₃COO⁻ + H₂O ⇌ CH₃COOH + OH⁻",
+       "basic"
+      ],
+      [
+       "Strong acid + weak base",
+       "NH₄Cl",
+       "cation: NH₄⁺ + H₂O ⇌ H₃O⁺ + NH₃",
+       "acidic"
+      ]
+     ],
+     "ref": "p.39–41",
+     "id": "g12.chemistry.u1.s1-4.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Salt hydrolysis",
+       "Reaction of the cation or anion of a salt with water, giving H₃O⁺ or OH⁻."
+      ]
+     ],
+     "id": "g12.chemistry.u1.s1-4.3"
+    },
+    {
+     "kind": "sort",
+     "step": "check",
+     "title": "Acidic, basic or neutral?",
+     "bins": [
+      "Acidic",
+      "Basic",
+      "Neutral"
+     ],
+     "items": [
+      [
+       "NaCl",
+       "Neutral",
+       "strong + strong"
+      ],
+      [
+       "KNO₃",
+       "Neutral",
+       "strong + strong"
+      ],
+      [
+       "CH₃COONa",
+       "Basic",
+       "acetate hydrolyzes"
+      ],
+      [
+       "Na₂CO₃",
+       "Basic",
+       "carbonate hydrolyzes"
+      ],
+      [
+       "NH₄Cl",
+       "Acidic",
+       "NH₄⁺ hydrolyzes"
+      ],
+      [
+       "NaBr",
+       "Neutral",
+       "strong + strong"
+      ]
+     ],
+     "why": "Find the parent acid and base. The weak parent's ion hydrolyzes.",
+     "clue": "Which parent is weak?",
+     "ref": "p.39–41",
+     "graded": true,
+     "level": 1,
+     "id": "g12.chemistry.u1.s1-4.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which salt gives a solution with pH = 7?",
+     "opts": [
+      "NaBr",
+      "Na₂S",
+      "NaNO₂",
+      "Na₂CO₃"
+     ],
+     "ans": "NaBr",
+     "why": "HBr and NaOH are both strong, so no ion hydrolyzes.",
+     "clue": "Both parents must be strong.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Review Part I Q15",
+     "id": "g12.chemistry.u1.s1-4.5"
+    },
+    {
+     "kind": "mcq",
+     "text": "The parents of Na₂CO₃ are",
+     "opts": [
+      "H₂CO₃ and NaOH",
+      "HCl and Na₂O",
+      "CO₂ and Na",
+      "NaHCO₃ and H₂O"
+     ],
+     "ans": "H₂CO₃ and NaOH",
+     "why": "H₂CO₃ + 2NaOH → Na₂CO₃ + 2H₂O.",
+     "clue": "Na⁺ comes from a base, CO₃²⁻ from an acid.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Activity 1.8 a",
+     "id": "g12.chemistry.u1.s1-4.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "In Na₂CO₃ solution, which ion hydrolyzes?",
+     "opts": [
+      "CO₃²⁻",
+      "Na⁺",
+      "Both",
+      "Neither"
+     ],
+     "ans": "CO₃²⁻",
+     "why": "CO₃²⁻ + H₂O ⇌ HCO₃⁻ + OH⁻, so the solution is basic. Na⁺ does not react.",
+     "clue": "Which ion comes from the weak parent?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 1.8 b",
+     "id": "g12.chemistry.u1.s1-4.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why is NH₄Cl solution acidic?",
+     "opts": [
+      "NH₄⁺, a weak acid, gives H⁺ to water",
+      "Cl⁻ takes H⁺ from water",
+      "NH₄⁺ is a strong acid",
+      "NH₄Cl releases HCl gas"
+     ],
+     "ans": "NH₄⁺, a weak acid, gives H⁺ to water",
+     "why": "NH₄⁺ + H₂O ⇌ H₃O⁺ + NH₃ (Ka = 5.6 × 10⁻¹⁰). NH₄⁺ is weak, not strong.",
+     "clue": "Cl⁻ comes from a strong acid.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.40–41",
+     "added": true,
+     "id": "g12.chemistry.u1.s1-4.8"
+    }
+   ]
+  },
+  {
+   "id": "chem.weak-weak-salts",
+   "name": "Salts of a weak acid and a weak base",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "When both parents are weak, both ions hydrolyze. Compare Ka of the cation with Kb of the anion: if Ka > Kb the solution is acidic, if Ka < Kb it is basic, and if they are equal it is neutral. Ammonium formate is slightly acidic because Ka(NH₄⁺) = 5.6 × 10⁻¹⁰ is larger than Kb(HCOO⁻) = 5.9 × 10⁻¹¹."
+    },
+    "am": {
+     "text": "ሁለቱም ወላጆች ደካማ ሲሆኑ የካታዮኑን Ka ከአናዮኑ Kb ጋር አወዳድር፡ Ka > Kb አሲዳማ፣ Ka < Kb ቤዛማ፣ እኩል ሲሆኑ ገለልተኛ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A tie",
+     "ask": "In ammonium acetate, Ka(NH₄⁺) = 5.6 × 10⁻¹⁰ and Kb(CH₃COO⁻) = 5.6 × 10⁻¹⁰. The solution is",
+     "opts": [
+      "neutral",
+      "acidic",
+      "basic",
+      "it cannot be predicted"
+     ],
+     "after": "The cation makes H₃O⁺ and the anion makes OH⁻ to the same extent, so they balance.",
+     "ref": "Activity 1.9",
+     "id": "g12.chemistry.u1.s1-4.9"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Compare Ka and Kb",
+     "paras": [
+      "Both ions hydrolyze.",
+      "Ka (cation) > Kb (anion): acidic.",
+      "Ka < Kb: basic.",
+      "Ka = Kb: neutral.",
+      "Ammonium formate: 5.6 × 10⁻¹⁰ > 5.9 × 10⁻¹¹, so slightly acidic."
+     ],
+     "table": [
+      [
+       "Ion",
+       "Constant"
+      ],
+      [
+       "NH₄⁺",
+       "Ka = 5.6 × 10⁻¹⁰"
+      ],
+      [
+       "F⁻",
+       "Kb = 1.4 × 10⁻¹¹"
+      ],
+      [
+       "CN⁻",
+       "Kb = 2.0 × 10⁻⁵"
+      ],
+      [
+       "CH₃COO⁻",
+       "Kb = 5.6 × 10⁻¹⁰"
+      ]
+     ],
+     "ref": "p.41, Activity 1.9",
+     "id": "g12.chemistry.u1.s1-4.10"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Cationic hydrolysis",
+       "The cation of a salt gives H⁺ to water, making H₃O⁺ (acidic)."
+      ],
+      [
+       "Anionic hydrolysis",
+       "The anion of a salt takes H⁺ from water, making OH⁻ (basic)."
+      ]
+     ],
+     "id": "g12.chemistry.u1.s1-4.11"
+    },
+    {
+     "kind": "mcq",
+     "text": "NH₄F solution is",
+     "opts": [
+      "acidic",
+      "basic",
+      "neutral",
+      "impossible to say"
+     ],
+     "ans": "acidic",
+     "why": "Ka(NH₄⁺) = 5.6 × 10⁻¹⁰ > Kb(F⁻) = 1.4 × 10⁻¹¹.",
+     "clue": "Which constant is larger?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Activity 1.9",
+     "id": "g12.chemistry.u1.s1-4.12"
+    },
+    {
+     "kind": "mcq",
+     "text": "NH₄CN solution (Kb of CN⁻ = 2.0 × 10⁻⁵) is",
+     "opts": [
+      "basic",
+      "acidic",
+      "neutral",
+      "strongly acidic"
+     ],
+     "ans": "basic",
+     "why": "Kb(CN⁻) = 2.0 × 10⁻⁵ is much larger than Ka(NH₄⁺) = 5.6 × 10⁻¹⁰.",
+     "clue": "Compare the powers of ten.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 1.9",
+     "id": "g12.chemistry.u1.s1-4.13"
+    },
+    {
+     "kind": "mcq",
+     "text": "For a salt of a weak acid and a weak base, you compare",
+     "opts": [
+      "Ka of the cation with Kb of the anion",
+      "Ka of the anion with Kb of the cation",
+      "the masses of the ions",
+      "the charges only"
+     ],
+     "ans": "Ka of the cation with Kb of the anion",
+     "why": "The cation acts as an acid (gives H⁺); the anion acts as a base (takes H⁺).",
+     "clue": "Which ion gives H⁺, which takes it?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.41",
+     "id": "g12.chemistry.u1.s1-4.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "Ammonium formate (Ka of NH₄⁺ 5.6 × 10⁻¹⁰, Kb of HCOO⁻ 5.9 × 10⁻¹¹) is",
+     "opts": [
+      "slightly acidic",
+      "slightly basic",
+      "exactly neutral",
+      "strongly basic"
+     ],
+     "ans": "slightly acidic",
+     "why": "Ka is about ten times Kb, so a little more H₃O⁺ than OH⁻ forms.",
+     "clue": "5.6 × 10⁻¹⁰ = 56 × 10⁻¹¹.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.41",
+     "added": true,
+     "id": "g12.chemistry.u1.s1-4.15"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "KNO₃ solution is",
+   "opts": [
+    "neutral",
+    "acidic",
+    "basic",
+    "strongly basic"
+   ],
+   "ans": "neutral",
+   "why": "Strong + strong.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-4.16"
+  },
+  {
+   "kind": "mcq",
+   "text": "CH₃COONa solution is",
+   "opts": [
+    "basic",
+    "acidic",
+    "neutral",
+    "strongly acidic"
+   ],
+   "ans": "basic",
+   "why": "Acetate hydrolyzes.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-4.17"
+  },
+  {
+   "kind": "mcq",
+   "text": "NH₄NO₃ solution is",
+   "opts": [
+    "acidic",
+    "basic",
+    "neutral",
+    "strongly basic"
+   ],
+   "ans": "acidic",
+   "why": "NH₄⁺ hydrolyzes.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-4.18"
+  },
+  {
+   "kind": "mcq",
+   "text": "Na₂S solution is",
+   "opts": [
+    "basic",
+    "acidic",
+    "neutral",
+    "impossible to say"
+   ],
+   "ans": "basic",
+   "why": "S²⁻ from a weak acid.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-4.19"
+  },
+  {
+   "kind": "mcq",
+   "text": "A salt of a weak acid and a weak base has Ka(cation) > Kb(anion). Its solution is",
+   "opts": [
+    "acidic",
+    "basic",
+    "neutral",
+    "always pH 7"
+   ],
+   "ans": "acidic",
+   "why": "Cation wins.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-4.20"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.40: \"This conjugate acid is a strong acid\" (NH₄⁺) is wrong; NH₄⁺ is a weak acid (Ka = 5.6 × 10⁻¹⁰). Acetate is a weak base, not \"moderately strong\"."
+  },
+  {
+   "kind": "review",
+   "text": "Hydrolysis equations on p.40–41 use one-way arrows and H₂O(aq); they are equilibria with H₂O(l)."
+  },
+  {
+   "kind": "review",
+   "text": "Activity 1.9: Kb = 2.0 × 10⁻⁵ is for cyanide CN⁻, not thiocyanate CNS⁻ (a negligible base). The lesson uses NH₄CN."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

@@ -1,0 +1,625 @@
+{
+ "id": "g12.chemistry.u1.s1-3",
+ "book": {
+  "title": "Chemistry Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "chemistry",
+  "unit": 1,
+  "unit_title": "Acid–base equilibria",
+  "pages": "31–39",
+  "section": "1.3"
+ },
+ "title": "Common ion effect and buffer solutions",
+ "competency": "Explain the common-ion effect and buffer action, and calculate the pH of buffers with the Henderson–Hasselbalch equation.",
+ "minutes": 30,
+ "keywords": [
+  {
+   "en": "Common-ion effect",
+   "am": "የጋራ አዮን ውጤት",
+   "def": "The shift of an ionic equilibrium when an ion already in it is added.",
+   "machine": true
+  },
+  {
+   "en": "Buffer solution",
+   "am": "ቋት መፍትሄ (ባፈር)",
+   "def": "A solution of a weak acid and its conjugate base (or a weak base and its conjugate acid) that resists pH change.",
+   "machine": true
+  },
+  {
+   "en": "Henderson–Hasselbalch equation",
+   "am": "የሄንደርሰን–ሃሰልባልክ እኩልታ",
+   "def": "pH = pKa + log([conjugate base]/[weak acid]).",
+   "machine": true
+  },
+  {
+   "en": "pKa",
+   "am": "ፒኬኤ",
+   "def": "pKa = −log Ka. A smaller pKa means a stronger acid.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "chem.common-ion",
+   "name": "The common-ion effect",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Adding an ion that is already part of an ionic equilibrium shifts it, by Le Chatelier's principle. Adding HCl (H₃O⁺) or sodium acetate (CH₃COO⁻) to acetic acid shifts CH₃COOH + H₂O ⇌ H₃O⁺ + CH₃COO⁻ to the left, so less acetic acid ionizes. This is the common-ion effect."
+    },
+    "am": {
+     "text": "በሚዛን ውስጥ ያለ አዮን ሲጨመር ሚዛኑ ወደ ግራ ይሄዳል (የለ ሻትሊዬ መርህ)፤ ይህ የጋራ አዮን ውጤት ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Add HCl to vinegar",
+     "ask": "You add some HCl to acetic acid solution. What happens to the ionization of acetic acid?",
+     "opts": [
+      "It decreases",
+      "It increases",
+      "It stays the same",
+      "Acetic acid becomes a strong acid"
+     ],
+     "after": "HCl adds H₃O⁺, a product of acetic acid ionization, so the equilibrium shifts left.",
+     "ref": "p.32",
+     "id": "g12.chemistry.u1.s1-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Le Chatelier and the common ion",
+     "paras": [
+      "Adding a product shifts an equilibrium to the left.",
+      "CH₃COOH + H₂O ⇌ H₃O⁺ + CH₃COO⁻.",
+      "HCl supplies H₃O⁺; CH₃COONa supplies CH₃COO⁻.",
+      "Either way, less CH₃COOH ionizes."
+     ],
+     "ref": "p.32–33",
+     "id": "g12.chemistry.u1.s1-3.2"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "0.10 M acetic acid with 0.10 M HCl",
+     "steps": [
+      "HCl gives 0.10 M H₃O⁺. ICE: [CH₃COOH] = 0.10 − x, [CH₃COO⁻] = x, [H₃O⁺] = 0.10 + x.",
+      "Ka = (0.10 + x)x/(0.10 − x) ≈ 0.10x/0.10 = x.",
+      "So [CH₃COO⁻] = x = 1.8 × 10⁻⁵ M, and [H₃O⁺] ≈ 0.10 M.",
+      "Without HCl, [CH₃COO⁻] would be 1.3 × 10⁻³ M: about 75 times more."
+     ],
+     "ref": "Example 1.7",
+     "id": "g12.chemistry.u1.s1-3.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Common-ion effect",
+       "The shift of an ionic equilibrium when an ion already in it is added."
+      ]
+     ],
+     "id": "g12.chemistry.u1.s1-3.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "Sodium acetate is added to acetic acid. The ionization of acetic acid",
+     "opts": [
+      "decreases",
+      "increases",
+      "is unchanged",
+      "becomes complete"
+     ],
+     "ans": "decreases",
+     "why": "Extra CH₃COO⁻ shifts the equilibrium left.",
+     "clue": "Which side gets the extra ion?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.33",
+     "id": "g12.chemistry.u1.s1-3.5"
+    },
+    {
+     "kind": "blank",
+     "ask": "A solution is 0.10 M in both CH₃COOH and HCl (Ka = 1.8 × 10⁻⁵). [CH₃COO⁻] = ___ × 10⁻⁵ M",
+     "a": [
+      "1.8"
+     ],
+     "why": "Ka ≈ (0.10)x/0.10, so x = Ka = 1.8 × 10⁻⁵ M.",
+     "clue": "The two 0.10 terms cancel.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Example 1.7",
+     "id": "g12.chemistry.u1.s1-3.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "N₂ + 3H₂ ⇌ 2NH₃ is at equilibrium. More NH₃ is added. The equilibrium",
+     "opts": [
+      "shifts to the left",
+      "shifts to the right",
+      "does not shift",
+      "stops"
+     ],
+     "ans": "shifts to the left",
+     "why": "The system uses up the added product.",
+     "clue": "Le Chatelier: oppose the change.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Activity 1.7",
+     "id": "g12.chemistry.u1.s1-3.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "Finely divided iron is added to the Haber equilibrium. The equilibrium position",
+     "opts": [
+      "does not change",
+      "shifts to the right",
+      "shifts to the left",
+      "shifts right, then left"
+     ],
+     "ans": "does not change",
+     "why": "A catalyst speeds both directions equally; equilibrium is just reached faster.",
+     "clue": "What does a catalyst change?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Activity 1.7 g",
+     "id": "g12.chemistry.u1.s1-3.8"
+    },
+    {
+     "kind": "blank",
+     "ask": "0.20 M acetic acid alone (Ka = 1.8 × 10⁻⁵) has pH ≈ ___ (2 decimal places)",
+     "a": [
+      "≈2.72"
+     ],
+     "why": "x = √(3.6 × 10⁻⁶) = 1.9 × 10⁻³ M; pH = 2.72. With 0.30 M acetate it rises to 4.92.",
+     "clue": "x = √(Ka·C₀).",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Exercise 1.9 Q2",
+     "added": true,
+     "id": "g12.chemistry.u1.s1-3.9"
+    }
+   ]
+  },
+  {
+   "id": "chem.buffer",
+   "name": "Buffer solutions",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "A buffer resists changes in pH when a little acid or base is added. It contains a weak acid and its conjugate base (or a weak base and its conjugate acid) in comparable, fairly large amounts. Added H⁺ is taken up by the base (CH₃COO⁻ + H⁺ → CH₃COOH); added OH⁻ by the acid (CH₃COOH + OH⁻ → CH₃COO⁻ + H₂O). Blood is buffered near pH 7.4."
+    },
+    "am": {
+     "text": "ባፈር ትንሽ አሲድ ወይም ቤዝ ሲጨመር pHን አይለውጥም። ደካማ አሲድና ተጓዳኝ ቤዙን ይይዛል። ደም በpH 7.4 አካባቢ ይጠበቃል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Which keeps its pH?",
+     "ask": "Two 1.0 L solutions both have pH 4.8: very dilute HCl, and an acetic acid/sodium acetate mixture. 0.010 mol NaOH is added to each. Which keeps its pH?",
+     "opts": [
+      "The acetic acid/acetate mixture",
+      "The dilute HCl",
+      "Both change the same",
+      "Neither changes"
+     ],
+     "after": "The HCl solution jumps to pH 12.0; the mixture stays near 4.8. The mixture is a buffer.",
+     "ref": "Table 1.4",
+     "id": "g12.chemistry.u1.s1-3.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "What a buffer is",
+     "paras": [
+      "A buffer resists pH change when a little acid or base is added.",
+      "It is a weak acid + its conjugate base, or a weak base + its conjugate acid.",
+      "Example: CH₃COOH + CH₃COONa; NH₃ + NH₄Cl."
+     ],
+     "table": [
+      [
+       "",
+       "Start",
+       "+ 0.010 mol NaOH",
+       "+ 0.010 mol HCl"
+      ],
+      [
+       "Unbuffered (HCl)",
+       "4.8",
+       "12.0",
+       "2.0"
+      ],
+      [
+       "Buffer (CH₃COOH/CH₃COONa)",
+       "4.8",
+       "4.8",
+       "4.7"
+      ]
+     ],
+     "ref": "Table 1.4, p.35",
+     "id": "g12.chemistry.u1.s1-3.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "How it works",
+     "paras": [
+      "Added acid: CH₃COO⁻ + H⁺ → CH₃COOH.",
+      "Added base: CH₃COOH + OH⁻ → CH₃COO⁻ + H₂O.",
+      "Only the ratio of the two parts changes a little.",
+      "Buffers keep blood at pH 7.4; gastric juice is about 1.5."
+     ],
+     "ref": "p.35–36",
+     "id": "g12.chemistry.u1.s1-3.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Buffer solution",
+       "A solution of a weak acid and its conjugate base (or a weak base and its conjugate acid) that resists pH change."
+      ]
+     ],
+     "id": "g12.chemistry.u1.s1-3.13"
+    },
+    {
+     "kind": "pick",
+     "text": "Which mixtures are buffers?",
+     "pool": [
+      "CH₃COOH + CH₃COONa",
+      "NH₃ + NH₄Cl",
+      "HCl + NaCl",
+      "NaOH + NaCl"
+     ],
+     "a": [
+      "CH₃COOH + CH₃COONa",
+      "NH₃ + NH₄Cl"
+     ],
+     "why": "A buffer needs a weak acid/base and its conjugate. HCl and NaOH are strong.",
+     "clue": "Look for a WEAK acid or base with its conjugate.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.34",
+     "id": "g12.chemistry.u1.s1-3.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "A little HCl is added to an acetic acid/acetate buffer. Which buffer part reacts?",
+     "opts": [
+      "CH₃COO⁻",
+      "CH₃COOH",
+      "Na⁺",
+      "H₂O"
+     ],
+     "ans": "CH₃COO⁻",
+     "why": "The conjugate base takes up added H⁺: CH₃COO⁻ + H⁺ → CH₃COOH.",
+     "clue": "Which part can accept H⁺?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.36",
+     "id": "g12.chemistry.u1.s1-3.15"
+    },
+    {
+     "kind": "mcq",
+     "text": "A buffer has its greatest capacity when",
+     "opts": [
+      "pH = pKa (equal acid and base)",
+      "the acid is much larger than the base",
+      "it is very dilute",
+      "pH = 7"
+     ],
+     "ans": "pH = pKa (equal acid and base)",
+     "why": "Equal amounts can absorb acid or base equally well. More concentrated buffers also resist more.",
+     "clue": "Look at the unit summary.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Unit summary, p.50",
+     "id": "g12.chemistry.u1.s1-3.16"
+    },
+    {
+     "kind": "blank",
+     "ask": "100 mL of 1.8 × 10⁻⁵ M HCl (pH 4.74, unbuffered) gets 1.0 mL of 0.10 M NaOH. New pH ≈ ___ (1 decimal place)",
+     "a": [
+      "≈11.0"
+     ],
+     "why": "Excess OH⁻ = 1.0 × 10⁻⁴ − 1.8 × 10⁻⁶ = 9.8 × 10⁻⁵ mol in 0.101 L: 9.7 × 10⁻⁴ M. pOH 3.01, pH 10.99. A buffer would barely move.",
+     "clue": "Find the excess OH⁻ in moles, then divide by the new volume.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Exercise 1.10 e i",
+     "added": true,
+     "id": "g12.chemistry.u1.s1-3.17"
+    }
+   ]
+  },
+  {
+   "id": "chem.henderson-hasselbalch",
+   "name": "The Henderson–Hasselbalch equation",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "From Ka = [H₃O⁺][A⁻]/[HA], taking −log gives pH = pKa + log([conjugate base]/[weak acid]). For a weak base buffer, pOH = pKb + log([conjugate acid]/[weak base]). When the two parts are equal, pH = pKa. Added strong acid or base first reacts with a buffer part, then the new ratio gives the pH."
+    },
+    "am": {
+     "text": "pH = pKa + log([ተጓዳኝ ቤዝ]/[ደካማ አሲድ])። ሁለቱ እኩል ሲሆኑ pH = pKa።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Mix a buffer",
+     "ask": "Acetic acid buffer (pKa = 4.74). Change the amounts of acid and acetate.",
+     "vars": [
+      {
+       "k": "a",
+       "label": "[CH₃COOH] (M)",
+       "min": 0.1,
+       "max": 1,
+       "step": 0.1,
+       "v": 0.5
+      },
+      {
+       "k": "b",
+       "label": "[CH₃COO⁻] (M)",
+       "min": 0.1,
+       "max": 1,
+       "step": 0.1,
+       "v": 0.5
+      }
+     ],
+     "formula": "4.74 + Math.log10(b/a)",
+     "out": "pH = {v}",
+     "note": "Equal amounts give pH = pKa = 4.74.",
+     "id": "g12.chemistry.u1.s1-3.18"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Deriving the equation",
+     "paras": [
+      "Ka = [H₃O⁺][A⁻]/[HA], so [H₃O⁺] = Ka × [HA]/[A⁻].",
+      "Take −log of both sides: pH = pKa − log([HA]/[A⁻]).",
+      "So pH = pKa + log([A⁻]/[HA]).",
+      "Weak base buffers: pOH = pKb + log([conjugate acid]/[weak base])."
+     ],
+     "ref": "p.36–37",
+     "id": "g12.chemistry.u1.s1-3.19"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Henderson–Hasselbalch equation",
+       "pH = pKa + log([conjugate base]/[weak acid])."
+      ],
+      [
+       "pKa",
+       "pKa = −log Ka. A smaller pKa means a stronger acid."
+      ]
+     ],
+     "id": "g12.chemistry.u1.s1-3.20"
+    },
+    {
+     "kind": "blank",
+     "ask": "A buffer has 0.1 M CH₃COOH and 0.1 M CH₃COONa (Ka = 1.8 × 10⁻⁵). pH ≈ ___ (2 decimal places)",
+     "a": [
+      "≈4.74"
+     ],
+     "why": "pH = 4.74 + log 1 = 4.74.",
+     "clue": "log 1 = 0.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Exercise 1.10 a",
+     "id": "g12.chemistry.u1.s1-3.21"
+    },
+    {
+     "kind": "blank",
+     "ask": "0.20 M CH₃COOH and 0.30 M CH₃COONa. pH ≈ ___ (2 decimal places)",
+     "a": [
+      "≈4.92"
+     ],
+     "why": "pH = 4.745 + log(0.30/0.20) = 4.745 + 0.176 = 4.92.",
+     "clue": "Base on top of the log.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.9 Q1",
+     "id": "g12.chemistry.u1.s1-3.22"
+    },
+    {
+     "kind": "blank",
+     "ask": "0.035 M NH₃ and 0.050 M NH₄⁺ (Ka of NH₄⁺ = 5.6 × 10⁻¹⁰). pH ≈ ___ (2 decimal places)",
+     "a": [
+      "≈9.10",
+      "≈9.1"
+     ],
+     "why": "pKa = 9.25; pH = 9.25 + log 0.70 = 9.25 − 0.15 = 9.10. (The book prints 9.095.)",
+     "clue": "NH₃ is the base, NH₄⁺ the acid.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Example 1.8 Q1",
+     "id": "g12.chemistry.u1.s1-3.23"
+    },
+    {
+     "kind": "blank",
+     "ask": "0.060 M NH₃ and 0.040 M NH₄Cl (Kb = 1.8 × 10⁻⁵). pH ≈ ___ (2 decimal places)",
+     "a": [
+      "≈9.43"
+     ],
+     "why": "pOH = 4.745 + log(0.040/0.060) = 4.745 − 0.176 = 4.57. pH = 14 − 4.57 = 9.43.",
+     "clue": "Use pOH = pKb + log([acid]/[base]) first.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Example 1.8 Q2",
+     "id": "g12.chemistry.u1.s1-3.24"
+    },
+    {
+     "kind": "blank",
+     "ask": "0.40 M CH₃COOH and 0.20 M CH₃COO⁻ (Ka = 1.8 × 10⁻⁵). pH ≈ ___ (2 decimal places)",
+     "a": [
+      "≈4.44"
+     ],
+     "why": "[H₃O⁺] = 1.8 × 10⁻⁵ × 0.40/0.20 = 3.6 × 10⁻⁵ M. pH = 4.44.",
+     "clue": "More acid than base: pH below pKa.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Example 1.10",
+     "id": "g12.chemistry.u1.s1-3.25"
+    },
+    {
+     "kind": "blank",
+     "ask": "1.0 mL of 0.10 M HCl is added to 100 mL of the 0.1 M/0.1 M acetate buffer. New pH ≈ ___ (2 decimal places)",
+     "a": [
+      "≈4.74"
+     ],
+     "why": "1.0 × 10⁻⁴ mol H⁺: acetate 0.0099 mol, acid 0.0101 mol. pH = 4.745 + log(0.0099/0.0101) = 4.736 ≈ 4.74. It barely moves.",
+     "clue": "React the H⁺ with acetate first, then use the mole ratio.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Exercise 1.10 b",
+     "added": true,
+     "id": "g12.chemistry.u1.s1-3.26"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "A buffer contains",
+   "opts": [
+    "a weak acid and its conjugate base",
+    "a strong acid and a strong base",
+    "only a strong acid",
+    "pure water"
+   ],
+   "ans": "a weak acid and its conjugate base",
+   "why": "p.34.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-3.27"
+  },
+  {
+   "kind": "blank",
+   "ask": "pKa = 4.74 and [A⁻] = [HA]. pH = ___",
+   "a": [
+    "4.74"
+   ],
+   "why": "log 1 = 0.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-3.28"
+  },
+  {
+   "kind": "blank",
+   "ask": "pKa = 5.0 and [A⁻]/[HA] = 10. pH = ___",
+   "a": [
+    "6"
+   ],
+   "why": "5 + log 10.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-3.29"
+  },
+  {
+   "kind": "mcq",
+   "text": "NH₄Cl is added to ammonia solution. [OH⁻]",
+   "opts": [
+    "decreases",
+    "increases",
+    "is unchanged",
+    "becomes zero"
+   ],
+   "ans": "decreases",
+   "why": "Common ion NH₄⁺ shifts NH₃ + H₂O ⇌ NH₄⁺ + OH⁻ left.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-3.30"
+  },
+  {
+   "kind": "blank",
+   "ask": "An NH₃/NH₄Cl buffer has pKb = 4.74 and [NH₄⁺] = [NH₃]. pH = ___",
+   "a": [
+    "9.26"
+   ],
+   "why": "pOH 4.74; pH 14 − 4.74.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-3.31"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Example 1.7: \"approximate (1.00 − x) and (1.00 + x) to 1.00\" should be 0.10."
+  },
+  {
+   "kind": "review",
+   "text": "Table 1.4: \"CH₃OOH\" should be CH₃COOH; −log(1.28 × 10⁻⁵) = 4.89, not 4.8."
+  },
+  {
+   "kind": "review",
+   "text": "Example 1.8 Q1: pKa of 5.6 × 10⁻¹⁰ is 9.25 (book 9.23), and the answer is pH 9.10 (book 9.095)."
+  },
+  {
+   "kind": "review",
+   "text": "Exercise 1.10 d omits the unit: 1.8 × 10⁻⁵ M HCl."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

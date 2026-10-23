@@ -1,0 +1,939 @@
+{
+ "id": "g12.chemistry.u1.s1-1",
+ "book": {
+  "title": "Chemistry Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "chemistry",
+  "unit": 1,
+  "unit_title": "Acid–base equilibria",
+  "pages": "3–14",
+  "section": "1.1"
+ },
+ "title": "Acid–base concepts",
+ "competency": "Define acids and bases by the Arrhenius, Brønsted–Lowry and Lewis concepts, identify conjugate pairs and amphiprotic species.",
+ "minutes": 30,
+ "keywords": [
+  {
+   "en": "Arrhenius acid",
+   "am": "አርሄኒየስ አሲድ",
+   "def": "A substance that increases [H⁺] (H₃O⁺) when dissolved in water.",
+   "machine": true
+  },
+  {
+   "en": "Arrhenius base",
+   "am": "አርሄኒየስ ቤዝ",
+   "def": "A substance that increases [OH⁻] when dissolved in water.",
+   "machine": true
+  },
+  {
+   "en": "Brønsted–Lowry acid",
+   "am": "ብሮንስቴድ–ሎውሪ አሲድ (ፕሮቶን ሰጪ)",
+   "def": "A proton (H⁺) donor.",
+   "machine": true
+  },
+  {
+   "en": "Brønsted–Lowry base",
+   "am": "ብሮንስቴድ–ሎውሪ ቤዝ (ፕሮቶን ተቀባይ)",
+   "def": "A proton (H⁺) acceptor.",
+   "machine": true
+  },
+  {
+   "en": "Conjugate acid–base pair",
+   "am": "ተጓዳኝ አሲድ–ቤዝ ጥንድ",
+   "def": "Two species that differ by exactly one H⁺, such as HF and F⁻.",
+   "machine": true
+  },
+  {
+   "en": "Autoionization",
+   "am": "ራስን ማዮናይዝ",
+   "def": "Two identical molecules react to give a cation and an anion: 2H₂O ⇌ H₃O⁺ + OH⁻.",
+   "machine": true
+  },
+  {
+   "en": "Amphiprotic species",
+   "am": "አምፊፕሮቲክ (ሁለት ገጽ) ዝርያ",
+   "def": "A molecule or ion that can donate or accept a proton, depending on its partner.",
+   "machine": true
+  },
+  {
+   "en": "Lewis acid",
+   "am": "ሉዊስ አሲድ (የኤሌክትሮን ጥንድ ተቀባይ)",
+   "def": "A species that accepts an electron pair to form a bond.",
+   "machine": true
+  },
+  {
+   "en": "Lewis base",
+   "am": "ሉዊስ ቤዝ (የኤሌክትሮን ጥንድ ሰጪ)",
+   "def": "A species that donates an electron pair to form a bond.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "chem.arrhenius",
+   "name": "Arrhenius acids and bases",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Arrhenius defined acids and bases by what they do in water. An acid increases [H⁺] (really H₃O⁺); a base increases [OH⁻]. Strong acids (HCl, HBr, HI, HNO₃, H₂SO₄, HClO₄) and strong bases (Group 1 hydroxides, Ca, Sr and Ba hydroxides) ionize completely. The idea fails outside water and for bases such as NH₃ that contain no OH."
+    },
+    "am": {
+     "text": "አርሄኒየስ አሲድ በውሃ ውስጥ [H⁺] ይጨምራል፤ ቤዝ [OH⁻] ይጨምራል። ሀሳቡ ከውሃ ውጭ እና እንደ NH₃ ላሉ ቤዞች አይሠራም።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Lemon or soap?",
+     "ask": "Almaz dips blue litmus paper into four liquids. Which one turns it red?",
+     "opts": [
+      "Lemon juice",
+      "Soap solution",
+      "Salt water",
+      "Ammonia solution"
+     ],
+     "after": "Lemon juice contains citric acid. Acids turn blue litmus red; bases turn red litmus blue.",
+     "ref": "Start-up Activity",
+     "id": "g12.chemistry.u1.s1-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Arrhenius acids and bases",
+     "paras": [
+      "An acid increases [H⁺] in water. A base increases [OH⁻].",
+      "H⁺ never exists alone in water. It joins H₂O to form H₃O⁺.",
+      "Strong acid: ionizes completely. HClO₄ + H₂O → H₃O⁺ + ClO₄⁻.",
+      "Strong acids: HCl, HBr, HI, HNO₃, H₂SO₄, HClO₄.",
+      "Strong bases: Group 1 hydroxides and Ca(OH)₂, Sr(OH)₂, Ba(OH)₂.",
+      "Neutralization: H⁺ + OH⁻ → H₂O."
+     ],
+     "ref": "p.3–4",
+     "id": "g12.chemistry.u1.s1-1.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Where Arrhenius fails",
+     "paras": [
+      "It works only in water.",
+      "NH₃ and Na₂CO₃ make water basic but contain no OH⁻ to release.",
+      "It cannot explain HCl(g) + NH₃(g) → NH₄Cl(s), which happens without water."
+     ],
+     "ref": "Activity 1.1",
+     "id": "g12.chemistry.u1.s1-1.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Arrhenius acid",
+       "A substance that increases [H⁺] (H₃O⁺) when dissolved in water."
+      ],
+      [
+       "Arrhenius base",
+       "A substance that increases [OH⁻] when dissolved in water."
+      ]
+     ],
+     "id": "g12.chemistry.u1.s1-1.4"
+    },
+    {
+     "kind": "sort",
+     "step": "check",
+     "title": "Classify by Arrhenius",
+     "bins": [
+      "Arrhenius acid",
+      "Arrhenius base",
+      "Neither"
+     ],
+     "items": [
+      [
+       "HBr",
+       "Arrhenius acid",
+       "gives H₃O⁺"
+      ],
+      [
+       "NaOH",
+       "Arrhenius base",
+       "gives OH⁻"
+      ],
+      [
+       "NaCl",
+       "Neither",
+       "only Na⁺ and Cl⁻"
+      ],
+      [
+       "HNO₃",
+       "Arrhenius acid",
+       "gives H₃O⁺"
+      ],
+      [
+       "KOH",
+       "Arrhenius base",
+       "gives OH⁻"
+      ]
+     ],
+     "why": "Acids add H⁺ to water; bases add OH⁻; NaCl adds neither.",
+     "clue": "What ion does each give in water?",
+     "ref": "Exercise 1.1",
+     "graded": true,
+     "level": 1,
+     "id": "g12.chemistry.u1.s1-1.5"
+    },
+    {
+     "kind": "tf",
+     "text": "A bare H⁺ ion moves freely in water.",
+     "a": false,
+     "why": "H⁺ is a tiny bare proton. It bonds at once to H₂O, forming H₃O⁺.",
+     "clue": "What happens when a proton meets a lone pair on water?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Activity 1.1 Q2",
+     "id": "g12.chemistry.u1.s1-1.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is a drawback of the Arrhenius concept?",
+     "opts": [
+      "It cannot explain why NH₃ is a base",
+      "It cannot explain why HCl is an acid",
+      "It cannot explain why NaOH is a base",
+      "It cannot explain neutralization in water"
+     ],
+     "ans": "It cannot explain why NH₃ is a base",
+     "why": "NH₃ has no OH⁻ to release, yet its solution is basic.",
+     "clue": "Look for the base without OH in its formula.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 1.1 Q3",
+     "id": "g12.chemistry.u1.s1-1.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which reaction can the Arrhenius concept NOT describe as acid–base?",
+     "opts": [
+      "HCl(g) + NH₃(g) → NH₄Cl(s)",
+      "HCl(aq) + NaOH(aq) → NaCl(aq) + H₂O(l)",
+      "HNO₃(aq) + KOH(aq) → KNO₃(aq) + H₂O(l)",
+      "H⁺(aq) + OH⁻(aq) → H₂O(l)"
+     ],
+     "ans": "HCl(g) + NH₃(g) → NH₄Cl(s)",
+     "why": "There is no water and no OH⁻: Arrhenius cannot call it acid–base.",
+     "clue": "Which one happens in the gas phase?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.chemistry.u1.s1-1.8"
+    }
+   ]
+  },
+  {
+   "id": "chem.bronsted-lowry",
+   "name": "Brønsted–Lowry acids, bases and conjugate pairs",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Brønsted and Lowry (1923) defined an acid as a proton donor and a base as a proton acceptor, in any medium. When an acid gives up H⁺ it becomes its conjugate base; when a base takes H⁺ it becomes its conjugate acid. The partners differ by one H⁺. The stronger an acid, the weaker its conjugate base, and reactions favour the weaker acid and weaker base."
+    },
+    "am": {
+     "text": "ብሮንስቴድ–ሎውሪ፡ አሲድ ፕሮቶን ሰጪ፣ ቤዝ ፕሮቶን ተቀባይ ነው። ተጓዳኝ ጥንዶች በአንድ H⁺ ይለያያሉ። ጠንካራ አሲድ ደካማ ተጓዳኝ ቤዝ አለው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Who gives the proton?",
+     "ask": "NH₃ + H₂O ⇌ NH₄⁺ + OH⁻. Which reactant gives away a proton (H⁺)?",
+     "opts": [
+      "H₂O",
+      "NH₃",
+      "Neither",
+      "Both"
+     ],
+     "after": "H₂O loses H⁺ and becomes OH⁻; NH₃ gains it and becomes NH₄⁺. Here water acts as an acid.",
+     "ref": "p.5",
+     "id": "g12.chemistry.u1.s1-1.9"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Proton donors and acceptors",
+     "paras": [
+      "Acid: proton donor. Base: proton acceptor.",
+      "Water is not needed.",
+      "NH₃ is a base because it accepts H⁺ from water.",
+      "Every Arrhenius acid is also a Brønsted–Lowry acid."
+     ],
+     "ref": "p.5",
+     "id": "g12.chemistry.u1.s1-1.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Conjugate pairs",
+     "paras": [
+      "Acid − H⁺ → its conjugate base. Base + H⁺ → its conjugate acid.",
+      "The conjugate base has one fewer H and one more minus charge."
+     ],
+     "table": [
+      [
+       "Acid",
+       "Base",
+       "Conjugate base",
+       "Conjugate acid"
+      ],
+      [
+       "HF",
+       "H₂O",
+       "F⁻",
+       "H₃O⁺"
+      ],
+      [
+       "HCOOH",
+       "CN⁻",
+       "HCOO⁻",
+       "HCN"
+      ],
+      [
+       "NH₄⁺",
+       "CO₃²⁻",
+       "NH₃",
+       "HCO₃⁻"
+      ],
+      [
+       "H₂PO₄⁻",
+       "OH⁻",
+       "HPO₄²⁻",
+       "H₂O"
+      ]
+     ],
+     "ref": "Table 1.1, p.7",
+     "id": "g12.chemistry.u1.s1-1.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Strength of conjugate pairs",
+     "paras": [
+      "The stronger the acid, the weaker its conjugate base.",
+      "HCl is strong, so Cl⁻ is a negligible base.",
+      "Reactions go mainly toward the weaker acid and weaker base."
+     ],
+     "table": [
+      [
+       "Acid",
+       "Conjugate base"
+      ],
+      [
+       "HCl (strong)",
+       "Cl⁻ (negligible)"
+      ],
+      [
+       "H₃O⁺",
+       "H₂O"
+      ],
+      [
+       "HF",
+       "F⁻"
+      ],
+      [
+       "CH₃COOH",
+       "CH₃COO⁻"
+      ],
+      [
+       "NH₄⁺",
+       "NH₃"
+      ],
+      [
+       "H₂O (very weak)",
+       "OH⁻ (strong)"
+      ]
+     ],
+     "ref": "Chart 1.1, p.9",
+     "id": "g12.chemistry.u1.s1-1.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Brønsted–Lowry acid",
+       "A proton (H⁺) donor."
+      ],
+      [
+       "Brønsted–Lowry base",
+       "A proton (H⁺) acceptor."
+      ],
+      [
+       "Conjugate acid–base pair",
+       "Two species that differ by exactly one H⁺, such as HF and F⁻."
+      ]
+     ],
+     "id": "g12.chemistry.u1.s1-1.13"
+    },
+    {
+     "kind": "mcq",
+     "text": "The conjugate acid of HPO₄²⁻ is",
+     "opts": [
+      "H₂PO₄⁻",
+      "H₃PO₄",
+      "PO₄³⁻",
+      "H₃O⁺"
+     ],
+     "ans": "H₂PO₄⁻",
+     "why": "Add one H⁺: HPO₄²⁻ + H⁺ → H₂PO₄⁻ (charge −2 + 1 = −1).",
+     "clue": "Add exactly one H⁺ and fix the charge.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Review Part I Q4",
+     "id": "g12.chemistry.u1.s1-1.14"
+    },
+    {
+     "kind": "match",
+     "title": "Match each acid with its conjugate base",
+     "pairs": [
+      [
+       "HF",
+       "F⁻"
+      ],
+      [
+       "NH₄⁺",
+       "NH₃"
+      ],
+      [
+       "H₂O",
+       "OH⁻"
+      ],
+      [
+       "HCO₃⁻",
+       "CO₃²⁻"
+      ],
+      [
+       "H₂PO₄⁻",
+       "HPO₄²⁻"
+      ]
+     ],
+     "why": "Remove one H⁺ and add one minus charge.",
+     "clue": "One fewer H, one more minus.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.6",
+     "id": "g12.chemistry.u1.s1-1.15"
+    },
+    {
+     "kind": "mcq",
+     "text": "In OCl⁻ + H₂O ⇌ HOCl + OH⁻, the Brønsted–Lowry acid is",
+     "opts": [
+      "H₂O",
+      "OCl⁻",
+      "HOCl",
+      "OH⁻"
+     ],
+     "ans": "H₂O",
+     "why": "H₂O gives H⁺ and becomes OH⁻.",
+     "clue": "Which reactant loses an H?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.2 b",
+     "id": "g12.chemistry.u1.s1-1.16"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is NOT a conjugate acid–base pair?",
+     "opts": [
+      "H₃O⁺ and OH⁻",
+      "NH₃ and NH₄⁺",
+      "HS⁻ and H₂S",
+      "NH₃ and NH₂⁻"
+     ],
+     "ans": "H₃O⁺ and OH⁻",
+     "why": "They differ by two H⁺. The pairs are H₃O⁺/H₂O and H₂O/OH⁻.",
+     "clue": "Count the H atoms in each pair.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Review Part I Q5",
+     "id": "g12.chemistry.u1.s1-1.17"
+    },
+    {
+     "kind": "mcq",
+     "text": "Ka: HF 7.2 × 10⁻⁴, HNO₂ 4.5 × 10⁻⁴, HCN 6.2 × 10⁻¹⁰. Base strength, strongest first:",
+     "opts": [
+      "CN⁻ > NO₂⁻ > F⁻",
+      "F⁻ > NO₂⁻ > CN⁻",
+      "NO₂⁻ > F⁻ > CN⁻",
+      "NO₂⁻ > CN⁻ > F⁻"
+     ],
+     "ans": "CN⁻ > NO₂⁻ > F⁻",
+     "why": "The weakest acid (HCN) has the strongest conjugate base.",
+     "clue": "Reverse the order of the acids.",
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Review Part I Q2",
+     "id": "g12.chemistry.u1.s1-1.18"
+    },
+    {
+     "kind": "order",
+     "title": "Put these bases in order, strongest first",
+     "items": [
+      "OH⁻",
+      "NH₃",
+      "CH₃COO⁻",
+      "NO₃⁻",
+      "Cl⁻"
+     ],
+     "why": "Their conjugate acids, weakest first: H₂O, NH₄⁺, CH₃COOH, HNO₃, HCl.",
+     "clue": "The weaker the conjugate acid, the stronger the base.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Exercise 1.3 Q3 a",
+     "added": true,
+     "id": "g12.chemistry.u1.s1-1.19"
+    }
+   ]
+  },
+  {
+   "id": "chem.amphiprotic",
+   "name": "Autoionization and amphiprotic species",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Some species can donate or accept a proton depending on their partner: they are amphiprotic. Water is the most important one; HCO₃⁻ and H₂PO₄⁻ are others. In autoionization two identical molecules transfer a proton: 2H₂O ⇌ H₃O⁺ + OH⁻ and 2NH₃ ⇌ NH₄⁺ + NH₂⁻."
+    },
+    "am": {
+     "text": "አምፊፕሮቲክ ዝርያዎች እንደ አጋራቸው ፕሮቶን ይሰጣሉ ወይም ይቀበላሉ፤ ውሃ ዋናው ምሳሌ ነው። 2H₂O ⇌ H₃O⁺ + OH⁻።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Acid or base?",
+     "ask": "Water reacts with NH₃ and with CH₃COOH. What role does water play?",
+     "opts": [
+      "A base with CH₃COOH, an acid with NH₃",
+      "Always an acid",
+      "Always a base",
+      "Neither"
+     ],
+     "after": "Water accepts H⁺ from acetic acid but gives H⁺ to ammonia. It depends on its partner.",
+     "ref": "p.10–11",
+     "id": "g12.chemistry.u1.s1-1.20"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Autoionization",
+     "paras": [
+      "Two identical molecules react to give a cation and an anion.",
+      "Water: 2H₂O ⇌ H₃O⁺ + OH⁻.",
+      "One molecule acts as an acid, the other as a base.",
+      "Liquid ammonia: 2NH₃ ⇌ NH₄⁺ + NH₂⁻."
+     ],
+     "ref": "p.10",
+     "id": "g12.chemistry.u1.s1-1.21"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Amphiprotic species",
+     "paras": [
+      "They can donate or accept a proton.",
+      "HCO₃⁻ + OH⁻ → CO₃²⁻ + H₂O: HCO₃⁻ is an acid.",
+      "HCO₃⁻ + HF → H₂CO₃ + F⁻: HCO₃⁻ is a base.",
+      "Other examples: H₂O, H₂PO₄⁻, HPO₄²⁻, HS⁻."
+     ],
+     "ref": "p.10–11",
+     "id": "g12.chemistry.u1.s1-1.22"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Autoionization",
+       "Two identical molecules react to give a cation and an anion: 2H₂O ⇌ H₃O⁺ + OH⁻."
+      ],
+      [
+       "Amphiprotic species",
+       "A molecule or ion that can donate or accept a proton, depending on its partner."
+      ]
+     ],
+     "id": "g12.chemistry.u1.s1-1.23"
+    },
+    {
+     "kind": "pick",
+     "text": "Which are amphiprotic?",
+     "pool": [
+      "H₂O",
+      "HCO₃⁻",
+      "H₂PO₄⁻",
+      "NO₃⁻",
+      "CH₃COO⁻",
+      "HNO₃"
+     ],
+     "a": [
+      "H₂O",
+      "HCO₃⁻",
+      "H₂PO₄⁻"
+     ],
+     "why": "Each has an H to give and a lone pair or negative charge to take H⁺. NO₃⁻ and CH₃COO⁻ only accept; HNO₃ only donates.",
+     "clue": "Look for species with a removable H AND room for one more.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Review Part II Q6",
+     "id": "g12.chemistry.u1.s1-1.24"
+    },
+    {
+     "kind": "mcq",
+     "text": "When H₂PO₄⁻ acts as a base, it becomes",
+     "opts": [
+      "H₃PO₄",
+      "HPO₄²⁻",
+      "PO₄³⁻",
+      "H₃O⁺"
+     ],
+     "ans": "H₃PO₄",
+     "why": "A base gains one H⁺: H₂PO₄⁻ + H⁺ → H₃PO₄.",
+     "clue": "A base gains H⁺.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 1.3 Q2",
+     "id": "g12.chemistry.u1.s1-1.25"
+    },
+    {
+     "kind": "mcq",
+     "text": "The self-ionization of liquid ammonia is",
+     "opts": [
+      "2NH₃ ⇌ NH₄⁺ + NH₂⁻",
+      "NH₃ + H₂O ⇌ NH₄⁺ + OH⁻",
+      "2NH₃ ⇌ N₂ + 3H₂",
+      "NH₃ ⇌ NH₂⁻ + H⁺ only"
+     ],
+     "ans": "2NH₃ ⇌ NH₄⁺ + NH₂⁻",
+     "why": "One NH₃ gives H⁺ (→ NH₂⁻), the other takes it (→ NH₄⁺), like 2H₂O ⇌ H₃O⁺ + OH⁻.",
+     "clue": "Same pattern as water, no water involved.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.3 Q5",
+     "id": "g12.chemistry.u1.s1-1.26"
+    },
+    {
+     "kind": "mcq",
+     "text": "In liquid ammonia, the strongest base that can exist is",
+     "opts": [
+      "NH₂⁻",
+      "OH⁻",
+      "NH₄⁺",
+      "NH₃"
+     ],
+     "ans": "NH₂⁻",
+     "why": "Any stronger base would take H⁺ from NH₃ and become NH₂⁻, just as OH⁻ is the strongest base in water.",
+     "clue": "Think of the solvent minus one H⁺.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Activity 1.4 b",
+     "added": true,
+     "id": "g12.chemistry.u1.s1-1.27"
+    }
+   ]
+  },
+  {
+   "id": "chem.lewis",
+   "name": "Lewis acids and bases",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Lewis defined acids and bases by electron pairs. A Lewis base donates an electron pair; a Lewis acid accepts one to form a bond. Look for a lone pair (NH₃, H₂O, OH⁻, Cl⁻) and an empty orbital (B in BF₃, metal ions, CO₂, H⁺). The Lewis idea is the broadest: every Brønsted–Lowry reaction is also a Lewis reaction."
+    },
+    "am": {
+     "text": "ሉዊስ ቤዝ የኤሌክትሮን ጥንድ ይሰጣል፤ ሉዊስ አሲድ ይቀበላል። ይህ ትርጉም ከሦስቱ ሰፊው ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "No proton moves",
+     "ask": "BF₃ + NH₃ → F₃B–NH₃. No H⁺ moves. Is this an acid–base reaction?",
+     "opts": [
+      "Yes: NH₃ shares its lone pair with B",
+      "No: there is no H⁺",
+      "No: there is no water",
+      "Only in water"
+     ],
+     "after": "NH₃ donates an electron pair to the boron atom, which has only six valence electrons. That is a Lewis acid–base reaction.",
+     "ref": "p.12",
+     "id": "g12.chemistry.u1.s1-1.28"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Electron pairs",
+     "paras": [
+      "Lewis base: donates an electron pair to form a bond.",
+      "Lewis acid: accepts an electron pair to form a bond.",
+      "B in BF₃ has only 6 valence electrons: it has room for a pair.",
+      "Look for a lone pair (base) and an empty orbital (acid).",
+      "Negative ions and molecules with lone pairs: bases. Cations and electron-poor molecules: acids."
+     ],
+     "ref": "p.12–13",
+     "id": "g12.chemistry.u1.s1-1.29"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Lewis acid",
+       "A species that accepts an electron pair to form a bond."
+      ],
+      [
+       "Lewis base",
+       "A species that donates an electron pair to form a bond."
+      ]
+     ],
+     "id": "g12.chemistry.u1.s1-1.30"
+    },
+    {
+     "kind": "mcq",
+     "text": "In BF₃ + NH₃ → F₃B–NH₃, the Lewis acid is",
+     "opts": [
+      "BF₃",
+      "NH₃",
+      "F₃B–NH₃",
+      "There is none"
+     ],
+     "ans": "BF₃",
+     "why": "B accepts the lone pair from N.",
+     "clue": "Which atom has an empty orbital?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.12",
+     "id": "g12.chemistry.u1.s1-1.31"
+    },
+    {
+     "kind": "match",
+     "title": "Match each reaction with its Lewis acid",
+     "pairs": [
+      [
+       "H⁺ + OH⁻ → H₂O",
+       "H⁺"
+      ],
+      [
+       "Cl⁻ + BCl₃ → BCl₄⁻",
+       "BCl₃"
+      ],
+      [
+       "CO₂ + H₂O → H₂CO₃",
+       "CO₂"
+      ],
+      [
+       "Ni + 4CO → Ni(CO)₄",
+       "Ni"
+      ],
+      [
+       "K⁺ + 6H₂O → K(H₂O)₆⁺",
+       "K⁺"
+      ]
+     ],
+     "why": "The acid accepts the electron pair; the partner with the lone pair is the base.",
+     "clue": "Find the species with room for an electron pair.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.4",
+     "id": "g12.chemistry.u1.s1-1.32"
+    },
+    {
+     "kind": "mcq",
+     "text": "In CaO + CO₂ → CaCO₃, the Lewis base is",
+     "opts": [
+      "CaO",
+      "CO₂",
+      "CaCO₃",
+      "Ca"
+     ],
+     "ans": "CaO",
+     "why": "O²⁻ in CaO gives an electron pair to the C of CO₂.",
+     "clue": "Which species has the lone pair?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Example 1.2 b",
+     "id": "g12.chemistry.u1.s1-1.33"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which statement about Lewis bases is NOT true?",
+     "opts": [
+      "Lewis bases are cationic",
+      "Lewis bases are electron-rich",
+      "Water is a Lewis base",
+      "Lewis bases donate an electron pair"
+     ],
+     "ans": "Lewis bases are cationic",
+     "why": "Bases are molecules with lone pairs or anions. Cations are usually Lewis acids.",
+     "clue": "Which species have spare electron pairs?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Review Part I Q14",
+     "id": "g12.chemistry.u1.s1-1.34"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is a Lewis acid but NOT a Brønsted–Lowry acid?",
+     "opts": [
+      "BF₃",
+      "HCl",
+      "NH₄⁺",
+      "H₂O"
+     ],
+     "ans": "BF₃",
+     "why": "BF₃ has no H⁺ to donate, but B accepts an electron pair.",
+     "clue": "A Brønsted–Lowry acid must have an H to give.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.chemistry.u1.s1-1.35"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "In the Brønsted–Lowry definition, an acid is",
+   "opts": [
+    "a proton donor",
+    "a proton acceptor",
+    "an electron-pair donor",
+    "anything that corrodes metals"
+   ],
+   "ans": "a proton donor",
+   "why": "Review Q3.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-1.36"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which is a Brønsted–Lowry base but not an Arrhenius base?",
+   "opts": [
+    "NH₃",
+    "NaOH",
+    "KOH",
+    "Ca(OH)₂"
+   ],
+   "ans": "NH₃",
+   "why": "No OH⁻ to release.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-1.37"
+  },
+  {
+   "kind": "mcq",
+   "text": "The conjugate base of H₂SO₄ is",
+   "opts": [
+    "HSO₄⁻",
+    "SO₄²⁻",
+    "H₃SO₄⁺",
+    "H₂O"
+   ],
+   "ans": "HSO₄⁻",
+   "why": "Remove one H⁺.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-1.38"
+  },
+  {
+   "kind": "mcq",
+   "text": "In H₂O + SO₃²⁻ ⇌ OH⁻ + HSO₃⁻, the conjugate acid is",
+   "opts": [
+    "HSO₃⁻",
+    "OH⁻",
+    "H₂O",
+    "SO₃²⁻"
+   ],
+   "ans": "HSO₃⁻",
+   "why": "SO₃²⁻ gained H⁺.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-1.39"
+  },
+  {
+   "kind": "mcq",
+   "text": "In OH⁻ + CO₂ → HCO₃⁻, the Lewis acid is",
+   "opts": [
+    "CO₂",
+    "OH⁻",
+    "HCO₃⁻",
+    "There is none"
+   ],
+   "ans": "CO₂",
+   "why": "C accepts the lone pair of OH⁻.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-1.40"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Exercise 1.1 a and c: the book's equations are unbalanced (2Br⁻, 2OH⁻). Correct: HBr + H₂O → H₃O⁺ + Br⁻; NaOH → Na⁺ + OH⁻."
+  },
+  {
+   "kind": "review",
+   "text": "p.8: \"CH₃COO⁻ is a strong base\" is wrong; acetate is a weak base (Chart 1.1 lists it as weak). It is only stronger than Cl⁻."
+  },
+  {
+   "kind": "review",
+   "text": "p.4: the strong Group IIA hydroxides are usually Ca(OH)₂, Sr(OH)₂, Ba(OH)₂ (Mg(OH)₂ is only slightly soluble)."
+  },
+  {
+   "kind": "review",
+   "text": "Review Part I Q1 is missing \"not\": \"a Brønsted–Lowry base but NOT an Arrhenius base\" (answer NH₃)."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

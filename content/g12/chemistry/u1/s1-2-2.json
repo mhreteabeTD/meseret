@@ -1,0 +1,750 @@
+{
+ "id": "g12.chemistry.u1.s1-2-2",
+ "book": {
+  "title": "Chemistry Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "chemistry",
+  "unit": 1,
+  "unit_title": "Acid–base equilibria",
+  "pages": "22–31",
+  "section": "1.2.2"
+ },
+ "title": "Strength of acids and bases: Ka and Kb",
+ "competency": "Compare acid and base strength, use Ka and Kb with ICE tables, and find pH and percent ionization of weak acids and bases.",
+ "minutes": 35,
+ "keywords": [
+  {
+   "en": "Strong acid",
+   "am": "ጠንካራ አሲድ",
+   "def": "An acid that ionizes completely in water, such as HCl.",
+   "machine": true
+  },
+  {
+   "en": "Weak acid",
+   "am": "ደካማ አሲድ",
+   "def": "An acid that ionizes only partly in water and sets up an equilibrium, such as CH₃COOH.",
+   "machine": true
+  },
+  {
+   "en": "Percent ionization",
+   "am": "የአዮናይዜሽን መቶኛ",
+   "def": "(Concentration ionized at equilibrium ÷ initial concentration) × 100 %.",
+   "machine": true
+  },
+  {
+   "en": "Acid ionization constant",
+   "am": "የአሲድ አዮናይዜሽን ቋሚ",
+   "def": "Ka = [H₃O⁺][A⁻]/[HA]. A larger Ka means a stronger acid.",
+   "machine": true
+  },
+  {
+   "en": "Base ionization constant",
+   "am": "የቤዝ አዮናይዜሽን ቋሚ",
+   "def": "Kb = [HB⁺][OH⁻]/[B]. A larger Kb means a stronger base.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "chem.acid-strength",
+   "name": "Strong and weak acids and bases",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "A strong acid or base ionizes completely in water; a weak one ionizes only partly and sets up an equilibrium. Strength can be compared by [H₃O⁺] or [OH⁻], by pH or pOH, by percent ionization and by Ka or Kb, but the first three only at equal concentrations. Strength is not the same as concentration."
+    },
+    "am": {
+     "text": "ጠንካራ አሲድ ሙሉ በሙሉ ይዮናይዛል፤ ደካማው በከፊል ብቻ። ጥንካሬ ከመጠን (ኮንሰንትሬሽን) የተለየ ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Same concentration, different acids",
+     "ask": "0.10 M HCl and 0.10 M acetic acid (CH₃COOH). Which has more H₃O⁺?",
+     "opts": [
+      "HCl, about 75 times more",
+      "Acetic acid",
+      "They are equal",
+      "Neither has H₃O⁺"
+     ],
+     "after": "HCl ionizes completely: [H₃O⁺] = 0.10 M. Acetic acid gives only about 1.3 × 10⁻³ M.",
+     "ref": "p.22",
+     "id": "g12.chemistry.u1.s1-2-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Strong and weak",
+     "paras": [
+      "Strong acids ionize about 100 %: HCl, HBr, HI, HNO₃, H₂SO₄, HClO₄.",
+      "Weak acids ionize partly: CH₃COOH, HF, HCN, HNO₂, H₂CO₃.",
+      "Strong bases: NaOH, KOH, Ca(OH)₂, Ba(OH)₂. Weak bases: NH₃ and amines such as CH₃NH₂.",
+      "Strong: HCl + H₂O → H₃O⁺ + Cl⁻ (one arrow).",
+      "Weak: CH₃COOH + H₂O ⇌ H₃O⁺ + CH₃COO⁻ (equilibrium)."
+     ],
+     "ref": "p.22–23, Activity 1.6",
+     "id": "g12.chemistry.u1.s1-2-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Percent ionization",
+     "paras": [
+      "Percent ionization = (concentration ionized ÷ initial concentration) × 100 %.",
+      "For a weak acid the ionized amount is [H₃O⁺] = 10^(−pH).",
+      "Strong acids: about 100 %. Weak acids: a few percent or less.",
+      "Compare strengths only at equal concentrations."
+     ],
+     "ref": "p.23",
+     "id": "g12.chemistry.u1.s1-2-2.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Strong acid",
+       "An acid that ionizes completely in water, such as HCl."
+      ],
+      [
+       "Weak acid",
+       "An acid that ionizes only partly in water and sets up an equilibrium, such as CH₃COOH."
+      ],
+      [
+       "Percent ionization",
+       "(Concentration ionized at equilibrium ÷ initial concentration) × 100 %."
+      ]
+     ],
+     "id": "g12.chemistry.u1.s1-2-2.4"
+    },
+    {
+     "kind": "sort",
+     "step": "check",
+     "title": "Strong or weak?",
+     "bins": [
+      "Strong acid",
+      "Weak acid",
+      "Strong base",
+      "Weak base"
+     ],
+     "items": [
+      [
+       "HCl",
+       "Strong acid",
+       "ionizes completely"
+      ],
+      [
+       "CH₃COOH",
+       "Weak acid",
+       "partly ionized"
+      ],
+      [
+       "NaOH",
+       "Strong base",
+       "Group 1 hydroxide"
+      ],
+      [
+       "NH₃",
+       "Weak base",
+       "accepts H⁺ partly"
+      ],
+      [
+       "HNO₃",
+       "Strong acid",
+       "ionizes completely"
+      ],
+      [
+       "HF",
+       "Weak acid",
+       "Ka = 6.8 × 10⁻⁴"
+      ],
+      [
+       "KOH",
+       "Strong base",
+       "Group 1 hydroxide"
+      ],
+      [
+       "CH₃NH₂",
+       "Weak base",
+       "an amine"
+      ]
+     ],
+     "why": "Strong ones ionize completely; weak ones set up an equilibrium.",
+     "clue": "Remember the six strong acids and the Group 1 and 2 hydroxides.",
+     "ref": "Activity 1.6",
+     "graded": true,
+     "level": 1,
+     "id": "g12.chemistry.u1.s1-2-2.5"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is NOT a strong acid?",
+     "opts": [
+      "H₂CO₃",
+      "HNO₃",
+      "H₂SO₄",
+      "HClO₄"
+     ],
+     "ans": "H₂CO₃",
+     "why": "Carbonic acid is weak (Ka₁ ≈ 4.3 × 10⁻⁷).",
+     "clue": "Which one is in soda water?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Review Part I Q7",
+     "id": "g12.chemistry.u1.s1-2-2.6"
+    },
+    {
+     "kind": "blank",
+     "ask": "0.10 M acetic acid has pH 2.89. Percent ionization ≈ ___ %",
+     "a": [
+      "≈1.3"
+     ],
+     "why": "[H₃O⁺] = 10⁻²·⁸⁹ = 1.29 × 10⁻³ M. (1.29 × 10⁻³/0.10) × 100 = 1.3 %.",
+     "clue": "Ionized amount = 10^(−pH).",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.7 Q1",
+     "id": "g12.chemistry.u1.s1-2-2.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "0.125 M nitrous acid has pH 2.09. Percent ionization ≈ ___ %",
+     "a": [
+      "≈6.5"
+     ],
+     "why": "[H₃O⁺] = 10⁻²·⁰⁹ = 8.13 × 10⁻³ M. 8.13 × 10⁻³/0.125 × 100 = 6.5 %.",
+     "clue": "Divide [H₃O⁺] by the starting concentration.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Review Part II Q8",
+     "id": "g12.chemistry.u1.s1-2-2.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "Each pair has one strong and one weak acid EXCEPT",
+     "opts": [
+      "HSO₄⁻ and HCN",
+      "H₂SO₄ and H₂CO₃",
+      "HNO₃ and HNO₂",
+      "HBr and H₃PO₂"
+     ],
+     "ans": "HSO₄⁻ and HCN",
+     "why": "Both HSO₄⁻ (Ka ≈ 1.2 × 10⁻²) and HCN are weak.",
+     "clue": "H₂SO₄ is strong, but what about HSO₄⁻?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Review Part I Q8",
+     "added": true,
+     "id": "g12.chemistry.u1.s1-2-2.9"
+    }
+   ]
+  },
+  {
+   "id": "chem.ka",
+   "name": "Acid ionization constant, Ka",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "For a weak acid HA + H₂O ⇌ H₃O⁺ + A⁻, Ka = [H₃O⁺][A⁻]/[HA]; a larger Ka means a stronger acid. With an ICE table, x = [H₃O⁺] and Ka = x²/(C₀ − x). If x is at most 5 % of C₀, use C₀ − x ≈ C₀ so x = √(Ka·C₀); otherwise solve the quadratic. Then pH = −log x."
+    },
+    "am": {
+     "text": "Ka = [H₃O⁺][A⁻]/[HA]፤ ትልቅ Ka ጠንካራ አሲድ ማለት ነው። በ ICE ሰንጠረዥ x = √(Ka·C₀) (5 % ደንብ ሲሟላ)።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Dilute acetic acid",
+     "ask": "Change the concentration of acetic acid (Ka = 1.8 × 10⁻⁵). What happens to the percent ionized?",
+     "vars": [
+      {
+       "k": "c",
+       "label": "C₀ (M)",
+       "min": 0.01,
+       "max": 1,
+       "step": 0.01,
+       "v": 0.1
+      }
+     ],
+     "formula": "Math.sqrt(1.8e-5*c)/c*100",
+     "out": "Ionized: {v} %",
+     "note": "x = √(Ka·C₀). Dilution raises the percent ionized.",
+     "id": "g12.chemistry.u1.s1-2-2.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The acid ionization constant",
+     "paras": [
+      "HA + H₂O ⇌ H₃O⁺ + A⁻.",
+      "Ka = [H₃O⁺][A⁻]/[HA].",
+      "Larger Ka: stronger acid. Most weak acids: Ka from 10⁻² to 10⁻¹⁰."
+     ],
+     "table": [
+      [
+       "Acid",
+       "Formula",
+       "Ka"
+      ],
+      [
+       "Hydrofluoric",
+       "HF",
+       "6.8 × 10⁻⁴"
+      ],
+      [
+       "Nitrous",
+       "HNO₂",
+       "4.5 × 10⁻⁴"
+      ],
+      [
+       "Formic",
+       "HCOOH",
+       "1.7 × 10⁻⁴"
+      ],
+      [
+       "Acetic",
+       "CH₃COOH",
+       "1.8 × 10⁻⁵"
+      ],
+      [
+       "Hypochlorous",
+       "HOCl",
+       "3.0 × 10⁻⁸"
+      ],
+      [
+       "Hydrocyanic",
+       "HCN",
+       "4.9 × 10⁻¹⁰"
+      ]
+     ],
+     "ref": "Table 1.2, p.25",
+     "id": "g12.chemistry.u1.s1-2-2.11"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "pH of 0.50 M HF (Ka = 6.8 × 10⁻⁴)",
+     "steps": [
+      "ICE: [HF] = 0.50 − x, [H₃O⁺] = [F⁻] = x.",
+      "Ka = x²/(0.50 − x) ≈ x²/0.50.",
+      "x² = 0.50 × 6.8 × 10⁻⁴ = 3.4 × 10⁻⁴, x = 1.8 × 10⁻² M.",
+      "Check: 0.018/0.50 × 100 = 3.6 % ≤ 5 %. The shortcut is valid.",
+      "pH = −log 0.018 = 1.74."
+     ],
+     "ref": "Example 1.5 Q2",
+     "id": "g12.chemistry.u1.s1-2-2.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Acid ionization constant",
+       "Ka = [H₃O⁺][A⁻]/[HA]. A larger Ka means a stronger acid."
+      ]
+     ],
+     "id": "g12.chemistry.u1.s1-2-2.13"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is the strongest acid?",
+     "opts": [
+      "HF (Ka 6.8 × 10⁻⁴)",
+      "CH₃COOH (Ka 1.8 × 10⁻⁵)",
+      "HOCl (Ka 3.0 × 10⁻⁸)",
+      "HCN (Ka 4.9 × 10⁻¹⁰)"
+     ],
+     "ans": "HF (Ka 6.8 × 10⁻⁴)",
+     "why": "The largest Ka belongs to the strongest acid.",
+     "clue": "Compare the powers of ten.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Table 1.2",
+     "id": "g12.chemistry.u1.s1-2-2.14"
+    },
+    {
+     "kind": "blank",
+     "ask": "0.10 M acetic acid (Ka = 1.8 × 10⁻⁵). pH ≈ ___ (2 decimal places)",
+     "a": [
+      "≈2.87"
+     ],
+     "why": "x = √(1.8 × 10⁻⁶) = 1.34 × 10⁻³ M (1.3 % ≤ 5 %). pH = 2.87.",
+     "clue": "x = √(Ka·C₀), then pH = −log x.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.7 Q2",
+     "id": "g12.chemistry.u1.s1-2-2.15"
+    },
+    {
+     "kind": "blank",
+     "ask": "0.250 M butyric acid has pH 2.72. Ka ≈ ___ × 10⁻⁵",
+     "a": [
+      "≈1.5"
+     ],
+     "why": "x = 10⁻²·⁷² = 1.9 × 10⁻³. Ka = (1.9 × 10⁻³)²/(0.250 − 0.0019) = 1.5 × 10⁻⁵.",
+     "clue": "x = 10^(−pH); Ka = x²/(C₀ − x).",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Example 1.5 Q1",
+     "id": "g12.chemistry.u1.s1-2-2.16"
+    },
+    {
+     "kind": "mcq",
+     "text": "0.036 M HNO₂ (Ka 4.5 × 10⁻⁴): the shortcut gives x = 4.0 × 10⁻³ M. Is the shortcut valid?",
+     "opts": [
+      "No: 11 % ionized, more than 5 %",
+      "Yes: 1.1 % ionized",
+      "Yes: Ka is small",
+      "No: HNO₂ is a strong acid"
+     ],
+     "ans": "No: 11 % ionized, more than 5 %",
+     "why": "4.0 × 10⁻³/0.036 × 100 = 11 % > 5 %, so use the quadratic.",
+     "clue": "Work out x/C₀ × 100.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.7 Q3 b",
+     "id": "g12.chemistry.u1.s1-2-2.17"
+    },
+    {
+     "kind": "blank",
+     "ask": "Vinegar: 0.85 M acetic acid has pH 2.4. Ka ≈ ___ × 10⁻⁵",
+     "a": [
+      "≈1.9"
+     ],
+     "why": "x = 10⁻²·⁴ = 3.98 × 10⁻³. Ka = (3.98 × 10⁻³)²/0.846 = 1.9 × 10⁻⁵.",
+     "clue": "Same method as butyric acid.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Review Part I Q11",
+     "id": "g12.chemistry.u1.s1-2-2.18"
+    },
+    {
+     "kind": "blank",
+     "ask": "Solve 0.036 M HNO₂ exactly: x² + 4.5 × 10⁻⁴x − 1.62 × 10⁻⁵ = 0. pH ≈ ___ (2 decimal places)",
+     "a": [
+      "≈2.42"
+     ],
+     "why": "x = (−4.5 × 10⁻⁴ + √(6.50 × 10⁻⁵))/2 = 3.8 × 10⁻³ M. pH = 2.42.",
+     "clue": "Use the quadratic formula and keep the positive root.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Exercise 1.7 Q3 c–d",
+     "added": true,
+     "id": "g12.chemistry.u1.s1-2-2.19"
+    }
+   ]
+  },
+  {
+   "id": "chem.kb",
+   "name": "Base ionization constant, Kb",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "A weak base B takes H⁺ from water: B + H₂O ⇌ HB⁺ + OH⁻, with Kb = [HB⁺][OH⁻]/[B]. Solve like a weak acid but find [OH⁻] first: x = √(Kb·C₀), then pOH = −log x and pH = 14 − pOH. For a conjugate pair Ka × Kb = Kw."
+    },
+    "am": {
+     "text": "ደካማ ቤዝ ከውሃ H⁺ ይወስዳል፡ Kb = [HB⁺][OH⁻]/[B]። መጀመሪያ [OH⁻] ፈልግ፣ ከዚያ pOH እና pH።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "How does NH₃ make OH⁻?",
+     "ask": "Ammonia has no OH in its formula. How does its solution get OH⁻ ions?",
+     "opts": [
+      "NH₃ takes H⁺ from water, leaving OH⁻",
+      "NH₃ splits into N and OH",
+      "NH₃ releases OH⁻ it contains",
+      "It does not; it is neutral"
+     ],
+     "after": "NH₃ + H₂O ⇌ NH₄⁺ + OH⁻: each NH₃ that accepts a proton leaves one OH⁻ behind.",
+     "ref": "p.29",
+     "id": "g12.chemistry.u1.s1-2-2.20"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The base ionization constant",
+     "paras": [
+      "B + H₂O ⇌ HB⁺ + OH⁻.",
+      "Kb = [HB⁺][OH⁻]/[B].",
+      "Find [OH⁻] first, then pOH, then pH = 14 − pOH.",
+      "For a conjugate pair: Ka × Kb = Kw."
+     ],
+     "table": [
+      [
+       "Base",
+       "Formula",
+       "Kb"
+      ],
+      [
+       "Ethylamine",
+       "C₂H₅NH₂",
+       "4.7 × 10⁻⁴"
+      ],
+      [
+       "Methylamine",
+       "CH₃NH₂",
+       "4.4 × 10⁻⁴"
+      ],
+      [
+       "Ammonia",
+       "NH₃",
+       "1.8 × 10⁻⁵"
+      ],
+      [
+       "Hydrazine",
+       "N₂H₄",
+       "1.7 × 10⁻⁶"
+      ],
+      [
+       "Pyridine",
+       "C₅H₅N",
+       "1.7 × 10⁻⁹"
+      ],
+      [
+       "Aniline",
+       "C₆H₅NH₂",
+       "4.0 × 10⁻¹⁰"
+      ]
+     ],
+     "ref": "Table 1.3, p.30",
+     "id": "g12.chemistry.u1.s1-2-2.21"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Base ionization constant",
+       "Kb = [HB⁺][OH⁻]/[B]. A larger Kb means a stronger base."
+      ]
+     ],
+     "id": "g12.chemistry.u1.s1-2-2.22"
+    },
+    {
+     "kind": "mcq",
+     "text": "The Kb expression for ammonia is",
+     "opts": [
+      "[NH₄⁺][OH⁻]/[NH₃]",
+      "[NH₃]/[NH₄⁺][OH⁻]",
+      "[NH₄⁺][OH⁻]/[NH₃][H₂O]²",
+      "[NH₃][H₂O]"
+     ],
+     "ans": "[NH₄⁺][OH⁻]/[NH₃]",
+     "why": "Products over the base; [H₂O] is folded into Kb.",
+     "clue": "Products on top.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.29",
+     "id": "g12.chemistry.u1.s1-2-2.23"
+    },
+    {
+     "kind": "blank",
+     "ask": "0.20 M NH₃ (Kb = 1.8 × 10⁻⁵). [OH⁻] ≈ ___ × 10⁻³ M",
+     "a": [
+      "≈1.9"
+     ],
+     "why": "x = √(1.8 × 10⁻⁵ × 0.20) = √(3.6 × 10⁻⁶) = 1.9 × 10⁻³ M.",
+     "clue": "x = √(Kb·C₀).",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Example 1.6, Review Q13",
+     "id": "g12.chemistry.u1.s1-2-2.24"
+    },
+    {
+     "kind": "blank",
+     "ask": "Same solution: [H₃O⁺] ≈ ___ × 10⁻¹² M",
+     "a": [
+      "≈5.3"
+     ],
+     "why": "[H₃O⁺] = 1.0 × 10⁻¹⁴/1.9 × 10⁻³ = 5.3 × 10⁻¹² M (pH 11.28). The book stops at [OH⁻].",
+     "clue": "Use Kw.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Example 1.6",
+     "id": "g12.chemistry.u1.s1-2-2.25"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is the weakest base?",
+     "opts": [
+      "Aniline (Kb 4.0 × 10⁻¹⁰)",
+      "Ammonia (Kb 1.8 × 10⁻⁵)",
+      "Methylamine (Kb 4.4 × 10⁻⁴)",
+      "Pyridine (Kb 1.7 × 10⁻⁹)"
+     ],
+     "ans": "Aniline (Kb 4.0 × 10⁻¹⁰)",
+     "why": "Smallest Kb, weakest base.",
+     "clue": "Look for the smallest Kb.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Table 1.3",
+     "id": "g12.chemistry.u1.s1-2-2.26"
+    },
+    {
+     "kind": "blank",
+     "ask": "0.040 M NH₃ (Kb = 1.8 × 10⁻⁵). pH ≈ ___ (2 decimal places)",
+     "a": [
+      "≈10.93"
+     ],
+     "why": "x = √(7.2 × 10⁻⁷) = 8.5 × 10⁻⁴ M (2.1 % ≤ 5 %). pOH = 3.07, pH = 10.93.",
+     "clue": "Find [OH⁻], then pOH, then pH.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Exercise 1.8",
+     "id": "g12.chemistry.u1.s1-2-2.27"
+    },
+    {
+     "kind": "blank",
+     "ask": "Kb of NH₃ is 1.8 × 10⁻⁵. Ka of NH₄⁺ ≈ ___ × 10⁻¹⁰",
+     "a": [
+      "≈5.6"
+     ],
+     "why": "Ka = Kw/Kb = 1.0 × 10⁻¹⁴/1.8 × 10⁻⁵ = 5.6 × 10⁻¹⁰.",
+     "clue": "Ka × Kb = Kw for a conjugate pair.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Unit summary, p.50",
+     "added": true,
+     "id": "g12.chemistry.u1.s1-2-2.28"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "A larger Ka means",
+   "opts": [
+    "a stronger acid",
+    "a weaker acid",
+    "a stronger conjugate base",
+    "a higher pH at the same concentration"
+   ],
+   "ans": "a stronger acid",
+   "why": "More ions at equilibrium.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-2-2.29"
+  },
+  {
+   "kind": "blank",
+   "ask": "0.010 M HCl is ___ % ionized",
+   "a": [
+    "100"
+   ],
+   "why": "Strong acid.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-2-2.30"
+  },
+  {
+   "kind": "blank",
+   "ask": "0.10 M weak acid with Ka = 1.0 × 10⁻⁵. pH = ___",
+   "a": [
+    "3"
+   ],
+   "why": "x = √(1.0 × 10⁻⁶) = 1.0 × 10⁻³.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-2-2.31"
+  },
+  {
+   "kind": "blank",
+   "ask": "0.20 M weak acid has pH 3.00. Percent ionization = ___ %",
+   "a": [
+    "0.5"
+   ],
+   "why": "10⁻³/0.20 × 100.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-2-2.32"
+  },
+  {
+   "kind": "blank",
+   "ask": "0.10 M NH₃ (Kb = 1.8 × 10⁻⁵). pH ≈ ___ (2 decimal places)",
+   "a": [
+    "≈11.13"
+   ],
+   "why": "x = 1.34 × 10⁻³, pOH 2.87.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-2-2.33"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Table 1.3: hydrazine is N₂H₄ (the book prints C₂H₄, which is ethene)."
+  },
+  {
+   "kind": "review",
+   "text": "Example 1.6 asks for [H₃O⁺] but stops at x = [OH⁻] = 1.9 × 10⁻³ M. Answer: [H₃O⁺] = 5.3 × 10⁻¹² M (pH 11.28)."
+  },
+  {
+   "kind": "review",
+   "text": "p.23: comparing strength by pH or percent ionization is valid only at equal concentrations; percent ionization rises on dilution."
+  },
+  {
+   "kind": "review",
+   "text": "Example 1.5 Q3 reports 1.342 %; 2 significant figures (1.3 %) match the data."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

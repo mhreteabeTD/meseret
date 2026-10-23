@@ -1,0 +1,522 @@
+{
+ "id": "g12.chemistry.u1.s1-2-1",
+ "book": {
+  "title": "Chemistry Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "chemistry",
+  "unit": 1,
+  "unit_title": "Acid–base equilibria",
+  "pages": "14–22",
+  "section": "1.2.1"
+ },
+ "title": "Ionization of water and the pH scale",
+ "competency": "Use Kw to find [H₃O⁺] or [OH⁻], and convert between concentration, pH and pOH.",
+ "minutes": 25,
+ "keywords": [
+  {
+   "en": "Ion-product constant of water",
+   "am": "የውሃ አዮን ብዜት ቋሚ",
+   "def": "Kw = [H₃O⁺][OH⁻] = 1.0 × 10⁻¹⁴ at 25 °C.",
+   "machine": true
+  },
+  {
+   "en": "pH",
+   "am": "ፒኤች",
+   "def": "pH = −log[H₃O⁺]. Below 7 acidic, 7 neutral, above 7 basic (25 °C).",
+   "machine": true
+  },
+  {
+   "en": "pOH",
+   "am": "ፒኦኤች",
+   "def": "pOH = −log[OH⁻]. At 25 °C, pH + pOH = 14.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "chem.water-ionization",
+   "name": "The ion product of water, Kw",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Water ionizes very slightly: 2H₂O ⇌ H₃O⁺ + OH⁻. At 25 °C, Kw = [H₃O⁺][OH⁻] = 1.0 × 10⁻¹⁴ in every aqueous solution, so in pure water both ions are 1.0 × 10⁻⁷ M. A solution is neutral when [H₃O⁺] = [OH⁻], acidic when [H₃O⁺] is larger and basic when [OH⁻] is larger. Kw changes with temperature."
+    },
+    "am": {
+     "text": "ውሃ በጣም ትንሽ ይዮናይዛል። በ25 °C Kw = [H₃O⁺][OH⁻] = 1.0 × 10⁻¹⁴። ንፁህ ውሃ ውስጥ ሁለቱም 1.0 × 10⁻⁷ M ናቸው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Does pure water conduct?",
+     "ask": "Very careful measurements test pure water for electrical conduction. What do they find?",
+     "opts": [
+      "A very small conduction",
+      "No conduction at all",
+      "Good conduction, like salt water",
+      "Conduction only when hot"
+     ],
+     "after": "Pure water forms a tiny number of H₃O⁺ and OH⁻ ions, so it conducts very slightly.",
+     "ref": "p.15",
+     "id": "g12.chemistry.u1.s1-2-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Ion product of water",
+     "paras": [
+      "2H₂O(l) ⇌ H₃O⁺(aq) + OH⁻(aq).",
+      "[H₂O] stays almost constant (about 55.5 M).",
+      "So Kw = [H₃O⁺][OH⁻] = 1.0 × 10⁻¹⁴ at 25 °C.",
+      "At 37 °C (body temperature) Kw is about 2.5 × 10⁻¹⁴.",
+      "Pure water: [H₃O⁺] = [OH⁻] = √(1.0 × 10⁻¹⁴) = 1.0 × 10⁻⁷ M."
+     ],
+     "ref": "p.15–16",
+     "id": "g12.chemistry.u1.s1-2-1.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Acidic, neutral, basic",
+     "paras": [
+      "Kw holds in every aqueous solution at 25 °C.",
+      "Neutral: [H₃O⁺] = [OH⁻].",
+      "Acidic: [H₃O⁺] > [OH⁻].",
+      "Basic: [OH⁻] > [H₃O⁺].",
+      "To find one ion: [OH⁻] = Kw/[H₃O⁺]."
+     ],
+     "ref": "p.16",
+     "id": "g12.chemistry.u1.s1-2-1.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Ion-product constant of water",
+       "Kw = [H₃O⁺][OH⁻] = 1.0 × 10⁻¹⁴ at 25 °C."
+      ]
+     ],
+     "id": "g12.chemistry.u1.s1-2-1.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "A solution is basic when",
+     "opts": [
+      "[OH⁻] > [H₃O⁺]",
+      "[H₃O⁺] > [OH⁻]",
+      "[H₃O⁺] = [OH⁻]",
+      "[OH⁻] = 1.0 × 10⁻⁷ M"
+     ],
+     "ans": "[OH⁻] > [H₃O⁺]",
+     "why": "More hydroxide than hydronium means basic.",
+     "clue": "Compare the two ions.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.16",
+     "id": "g12.chemistry.u1.s1-2-1.5"
+    },
+    {
+     "kind": "blank",
+     "ask": "HCl is added to water: [H₃O⁺] = 3.0 × 10⁻⁴ M. [OH⁻] ≈ ___ × 10⁻¹¹ M",
+     "a": [
+      "≈3.3"
+     ],
+     "why": "[OH⁻] = 1.0 × 10⁻¹⁴/3.0 × 10⁻⁴ = 3.3 × 10⁻¹¹ M. Acidic.",
+     "clue": "[OH⁻] = Kw/[H₃O⁺].",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Example 1.3",
+     "id": "g12.chemistry.u1.s1-2-1.6"
+    },
+    {
+     "kind": "blank",
+     "ask": "[H₃O⁺] = 2.0 × 10⁻⁵ M. [OH⁻] = ___ × 10⁻¹⁰ M",
+     "a": [
+      "5",
+      "5.0"
+     ],
+     "why": "1.0 × 10⁻¹⁴/2.0 × 10⁻⁵ = 0.50 × 10⁻⁹ = 5.0 × 10⁻¹⁰ M.",
+     "clue": "Divide the numbers, subtract the powers.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 1.5 Q2 a",
+     "id": "g12.chemistry.u1.s1-2-1.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "[OH⁻] = 6.7 × 10⁻² M. [H₃O⁺] ≈ ___ × 10⁻¹³ M",
+     "a": [
+      "≈1.5"
+     ],
+     "why": "1.0 × 10⁻¹⁴/6.7 × 10⁻² = 0.149 × 10⁻¹² = 1.5 × 10⁻¹³ M. Basic.",
+     "clue": "1.0/6.7 is less than 1, so move one power.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.5 Q3",
+     "id": "g12.chemistry.u1.s1-2-1.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why is water a weak electrolyte?",
+     "opts": [
+      "It ionizes only to a tiny extent",
+      "It has no ions at all",
+      "Its ions are too heavy to move",
+      "It is a strong acid"
+     ],
+     "ans": "It ionizes only to a tiny extent",
+     "why": "Only 1.0 × 10⁻⁷ M of each ion forms from about 55.5 M water, so few ions carry current.",
+     "clue": "Compare 10⁻⁷ M with 55.5 M.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.5 Q4",
+     "id": "g12.chemistry.u1.s1-2-1.9"
+    },
+    {
+     "kind": "blank",
+     "ask": "In a solution [H₃O⁺] = 100 × [OH⁻]. Then [OH⁻] = 1.0 × 10ⁿ M. n = ___",
+     "a": [
+      "-8"
+     ],
+     "why": "100x² = 1.0 × 10⁻¹⁴, so x² = 10⁻¹⁶ and x = 10⁻⁸ M.",
+     "clue": "Let [OH⁻] = x. Then Kw = (100x)(x).",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Exercise 1.5 Q2 c",
+     "added": true,
+     "id": "g12.chemistry.u1.s1-2-1.10"
+    }
+   ]
+  },
+  {
+   "id": "chem.ph-poh",
+   "name": "pH and pOH",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Because [H₃O⁺] is often tiny, we use pH = −log[H₃O⁺] and pOH = −log[OH⁻]. The reverse is [H₃O⁺] = 10^(−pH). At 25 °C pH + pOH = 14. Neutral is pH 7, acidic below 7, basic above 7. A lower pH means more H₃O⁺, and pH can even be below 0 or above 14."
+    },
+    "am": {
+     "text": "pH = −log[H₃O⁺]፣ pOH = −log[OH⁻]። በ25 °C pH + pOH = 14። ከ7 በታች አሲዳማ፣ ከ7 በላይ ቤዛማ ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "title": "Acidic, neutral or basic?",
+     "bins": [
+      "Acidic",
+      "Neutral",
+      "Basic"
+     ],
+     "items": [
+      [
+       "Gastric juice, pH 1.5",
+       "Acidic",
+       "below 7"
+      ],
+      [
+       "Black coffee, pH 5",
+       "Acidic",
+       "below 7"
+      ],
+      [
+       "Pure water, pH 7",
+       "Neutral",
+       "exactly 7"
+      ],
+      [
+       "Blood, pH 7.4",
+       "Basic",
+       "slightly above 7"
+      ],
+      [
+       "Milk of magnesia, pH 10.5",
+       "Basic",
+       "above 7"
+      ],
+      [
+       "Household bleach, pH 12.5",
+       "Basic",
+       "above 7"
+      ]
+     ],
+     "ref": "Unit opener, p.1",
+     "graded": false,
+     "id": "g12.chemistry.u1.s1-2-1.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The pH scale",
+     "paras": [
+      "pH = −log[H₃O⁺].",
+      "Example: [H₃O⁺] = 2.5 × 10⁻³ M gives pH = 3 − log 2.5 = 3 − 0.40 = 2.60.",
+      "Reverse: [H₃O⁺] = 10^(−pH). pH 4.50 gives 3.2 × 10⁻⁵ M.",
+      "pOH = −log[OH⁻] and [OH⁻] = 10^(−pOH).",
+      "At 25 °C: pH + pOH = 14.",
+      "A pH meter measures pH in the laboratory."
+     ],
+     "ref": "p.18–21",
+     "id": "g12.chemistry.u1.s1-2-1.12"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Juice and blood",
+     "steps": [
+      "Juice: [H₃O⁺] = 5.0 × 10⁻³ M. pH = 3 − log 5.0 = 3 − 0.70 = 2.30.",
+      "pOH = 14 − 2.30 = 11.70.",
+      "Blood: pH = 7.40, so pOH = 6.60.",
+      "[H₃O⁺] = 10⁻⁷·⁴⁰ = 4.0 × 10⁻⁸ M; [OH⁻] = 10⁻⁶·⁶ = 2.5 × 10⁻⁷ M. Blood is slightly basic."
+     ],
+     "ref": "Example 1.4",
+     "id": "g12.chemistry.u1.s1-2-1.13"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "pH",
+       "pH = −log[H₃O⁺]. Below 7 acidic, 7 neutral, above 7 basic (25 °C)."
+      ],
+      [
+       "pOH",
+       "pOH = −log[OH⁻]. At 25 °C, pH + pOH = 14."
+      ]
+     ],
+     "id": "g12.chemistry.u1.s1-2-1.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "At 25 °C a solution has pH 2. It is",
+     "opts": [
+      "acidic",
+      "neutral",
+      "basic",
+      "impossible to tell"
+     ],
+     "ans": "acidic",
+     "why": "pH 2 < 7. [H₃O⁺] = 0.010 M > [OH⁻] = 10⁻¹² M.",
+     "clue": "Compare with 7.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.23",
+     "id": "g12.chemistry.u1.s1-2-1.15"
+    },
+    {
+     "kind": "blank",
+     "ask": "A juice has [H₃O⁺] = 5.0 × 10⁻³ M. pH ≈ ___ (2 decimal places)",
+     "a": [
+      "≈2.30"
+     ],
+     "why": "pH = −log(5.0 × 10⁻³) = 3 − 0.70 = 2.30.",
+     "clue": "pH = −log[H₃O⁺].",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Example 1.4 a",
+     "id": "g12.chemistry.u1.s1-2-1.16"
+    },
+    {
+     "kind": "blank",
+     "ask": "Blood has pH 7.40. Its pOH = ___",
+     "a": [
+      "6.6",
+      "6.60"
+     ],
+     "why": "pOH = 14 − 7.40 = 6.60.",
+     "clue": "pH + pOH = 14.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Example 1.4 b",
+     "id": "g12.chemistry.u1.s1-2-1.17"
+    },
+    {
+     "kind": "mcq",
+     "text": "[H⁺] = 4.0 × 10⁻⁹ M at 25 °C. The pH is",
+     "opts": [
+      "8.40",
+      "9.40",
+      "7.00",
+      "6.40"
+     ],
+     "ans": "8.40",
+     "why": "pH = 9 − log 4.0 = 9 − 0.60 = 8.40.",
+     "clue": "Subtract log 4 from 9.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Review Part I Q9",
+     "id": "g12.chemistry.u1.s1-2-1.18"
+    },
+    {
+     "kind": "blank",
+     "ask": "A cup of coffee has [OH⁻] = 1.0 × 10⁻¹⁰ M. Its pH = ___",
+     "a": [
+      "4"
+     ],
+     "why": "pOH = 10, so pH = 14 − 10 = 4.",
+     "clue": "Find pOH first.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Review Part I Q12",
+     "id": "g12.chemistry.u1.s1-2-1.19"
+    },
+    {
+     "kind": "blank",
+     "ask": "A dissolved antacid tablet has pH 9.18. [OH⁻] ≈ ___ × 10⁻⁵ M",
+     "a": [
+      "≈1.5"
+     ],
+     "why": "pOH = 14 − 9.18 = 4.82. [OH⁻] = 10⁻⁴·⁸² = 1.5 × 10⁻⁵ M.",
+     "clue": "Find pOH, then [OH⁻] = 10^(−pOH).",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Exercise 1.6 Q1",
+     "id": "g12.chemistry.u1.s1-2-1.20"
+    },
+    {
+     "kind": "blank",
+     "ask": "HNO₃ is diluted to 2.0 M. pH ≈ ___ (2 decimal places)",
+     "a": [
+      "≈-0.30"
+     ],
+     "why": "Strong acid: [H⁺] = 2.0 M. pH = −log 2.0 = −0.30. pH can be below 0.",
+     "clue": "HNO₃ ionizes completely.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Exercise 1.6 Q2",
+     "added": true,
+     "id": "g12.chemistry.u1.s1-2-1.21"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "blank",
+   "ask": "[OH⁻] = 1.0 × 10⁻⁴ M. [H⁺] = 1.0 × 10ⁿ M. n = ___",
+   "a": [
+    "-10"
+   ],
+   "why": "Kw/[OH⁻].",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-2-1.22"
+  },
+  {
+   "kind": "blank",
+   "ask": "The pH of 0.010 M HCl = ___",
+   "a": [
+    "2"
+   ],
+   "why": "−log 0.010.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-2-1.23"
+  },
+  {
+   "kind": "blank",
+   "ask": "[OH⁻] = 1.0 × 10⁻³ M. pH = ___",
+   "a": [
+    "11"
+   ],
+   "why": "pOH 3, pH 11.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-2-1.24"
+  },
+  {
+   "kind": "blank",
+   "ask": "[H₃O⁺] = 2.5 × 10⁻³ M. pH ≈ ___ (2 decimal places)",
+   "a": [
+    "≈2.60"
+   ],
+   "why": "3 − 0.40.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-2-1.25"
+  },
+  {
+   "kind": "mcq",
+   "text": "[OH⁻] = 1.20 × 10⁻⁷ M. pOH and pH are",
+   "opts": [
+    "6.92 and 7.08",
+    "7.08 and 6.92",
+    "1.00 and 13.00",
+    "5.94 and 8.06"
+   ],
+   "ans": "6.92 and 7.08",
+   "why": "Review Q10.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-2-1.26"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.19: \"pH values can be greater than 1 and less than 14\" should read \"less than 0 or greater than 14\" (2.0 M HNO₃ has pH −0.30)."
+  },
+  {
+   "kind": "review",
+   "text": "p.20: sign error \"−log[H₃O⁺] + log[OH⁻] = 14\"; it should be −log[H₃O⁺] − log[OH⁻] = 14. Also p.16: with H⁺ notation Kw = [H⁺][OH⁻]."
+  },
+  {
+   "kind": "review",
+   "text": "p.15: [H₂O] ≈ 55.5 M (\"about 56 M\"); Kw at 37 °C is usually 2.4 × 10⁻¹⁴ (book 2.5 × 10⁻¹⁴)."
+  },
+  {
+   "kind": "note",
+   "text": "Activity 1.5 asks for pH with litmus paper; litmus only shows acidic or basic. Universal indicator or a pH meter is needed for values."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

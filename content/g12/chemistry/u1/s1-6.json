@@ -1,0 +1,462 @@
+{
+ "id": "g12.chemistry.u1.s1-6",
+ "book": {
+  "title": "Chemistry Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "chemistry",
+  "unit": 1,
+  "unit_title": "Acid–base equilibria",
+  "pages": "49–55",
+  "section": "1.6"
+ },
+ "title": "Summary, review and chapter test",
+ "competency": "Review the unit and take the timed chapter test.",
+ "minutes": 25,
+ "keywords": [
+  {
+   "en": "pKa",
+   "am": "ፒኬኤ",
+   "def": "pKa = −log Ka. A smaller pKa means a stronger acid.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "chem.acid-base-review",
+   "name": "Unit 1 summary",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Acids and bases are defined three ways: Arrhenius (H⁺ and OH⁻ in water), Brønsted–Lowry (proton donor and acceptor) and Lewis (electron-pair acceptor and donor). Kw = [H₃O⁺][OH⁻] = 1.0 × 10⁻¹⁴ links acidity to pH and pOH. Ka and Kb measure weak acid and base strength; buffers, salt hydrolysis, indicators and titrations all follow from these equilibria."
+    },
+    "am": {
+     "text": "አሲድና ቤዝ በሦስት መንገድ ይገለጻሉ። Kw፣ pH፣ Ka እና Kb የአሲድ–ቤዝ ሚዛንን ይገልጻሉ። ባፈር፣ ሃይድሮሊሲስ፣ አመልካችና ቲትሬሽን ከዚህ ይከተላሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "title": "Warm up: which definition?",
+     "bins": [
+      "Arrhenius",
+      "Brønsted–Lowry",
+      "Lewis"
+     ],
+     "items": [
+      [
+       "HCl gives H⁺ in water",
+       "Arrhenius",
+       "ions in water"
+      ],
+      [
+       "NH₃ takes H⁺ from water",
+       "Brønsted–Lowry",
+       "proton transfer"
+      ],
+      [
+       "BF₃ accepts NH₃'s lone pair",
+       "Lewis",
+       "electron pair"
+      ],
+      [
+       "NaOH gives OH⁻ in water",
+       "Arrhenius",
+       "ions in water"
+      ],
+      [
+       "Ni + 4CO → Ni(CO)₄",
+       "Lewis",
+       "electron pairs, no H⁺"
+      ]
+     ],
+     "graded": false,
+     "id": "g12.chemistry.u1.s1-6.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Unit summary",
+     "paras": [
+      "Arrhenius: H⁺ and OH⁻ in water. Brønsted–Lowry: proton transfer. Lewis: electron pairs.",
+      "A stronger acid has a weaker conjugate base.",
+      "Kw = 1.0 × 10⁻¹⁴ at 25 °C; pH = −log[H₃O⁺]; pH + pOH = 14.",
+      "Ka and Kb measure weak acid and base strength; Ka × Kb = Kw.",
+      "Buffers: pH = pKa + log([base]/[acid]); highest capacity at pH = pKa.",
+      "Salts can be acidic, basic or neutral. Indicators and titrations find unknown concentrations."
+     ],
+     "ref": "p.49–50",
+     "id": "g12.chemistry.u1.s1-6.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "pKa",
+       "pKa = −log Ka. A smaller pKa means a stronger acid."
+      ]
+     ],
+     "id": "g12.chemistry.u1.s1-6.3"
+    },
+    {
+     "kind": "match",
+     "title": "Match each formula to its use",
+     "pairs": [
+      [
+       "Kw = [H₃O⁺][OH⁻]",
+       "ion product of water"
+      ],
+      [
+       "pH = −log[H₃O⁺]",
+       "acidity scale"
+      ],
+      [
+       "pH = pKa + log([A⁻]/[HA])",
+       "buffer pH"
+      ],
+      [
+       "N₁V₁ = N₂V₂",
+       "titration"
+      ],
+      [
+       "Ka = [H₃O⁺][A⁻]/[HA]",
+       "weak acid strength"
+      ]
+     ],
+     "why": "One formula for each part of the unit.",
+     "clue": "Look for the brackets and the logs.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "id": "g12.chemistry.u1.s1-6.4"
+    },
+    {
+     "kind": "blank",
+     "ask": "Vinegar has [OH⁻] = 5.0 × 10⁻¹² M. [H₃O⁺] = ___ × 10⁻³ M",
+     "a": [
+      "2",
+      "2.0"
+     ],
+     "why": "1.0 × 10⁻¹⁴/5.0 × 10⁻¹² = 2.0 × 10⁻³ M; acidic (pH 2.70).",
+     "clue": "Use Kw.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Review Part II Q9",
+     "id": "g12.chemistry.u1.s1-6.5"
+    },
+    {
+     "kind": "blank",
+     "ask": "A buffer of 1.0 M HC₂H₃O₂ and 1.0 M C₂H₃O₂⁻ (Ka = 1.8 × 10⁻⁵). pH ≈ ___ (2 decimal places)",
+     "a": [
+      "≈4.74"
+     ],
+     "why": "pH = pKa + log 1 = 4.74.",
+     "clue": "Equal amounts.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Review Part II Q10",
+     "id": "g12.chemistry.u1.s1-6.6"
+    },
+    {
+     "kind": "pick",
+     "text": "Which are amphiprotic in water?",
+     "pool": [
+      "NH₃",
+      "H₂O",
+      "HCO₃⁻",
+      "NO₃⁻",
+      "CH₃COO⁻",
+      "HNO₃"
+     ],
+     "a": [
+      "NH₃",
+      "H₂O",
+      "HCO₃⁻"
+     ],
+     "why": "NH₃ (→ NH₄⁺ or NH₂⁻), H₂O (→ H₃O⁺ or OH⁻), HCO₃⁻ (→ H₂CO₃ or CO₃²⁻). The others only accept or only donate.",
+     "clue": "Each must be able to gain AND lose one H⁺.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Review Part II Q6",
+     "added": true,
+     "id": "g12.chemistry.u1.s1-6.7"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Review exercise for Unit 1",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "Which is NOT a conjugate acid–base pair?",
+     "opts": [
+      "HNO₃ and HNO₂",
+      "NH₃ and NH₂⁻",
+      "H₂PO₄⁻ and HPO₄²⁻",
+      "H₂O and OH⁻"
+     ],
+     "ans": "HNO₃ and HNO₂",
+     "why": "They differ by an O atom, not by H⁺.",
+     "clue": "Pairs differ by exactly one H⁺.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Part I Q6",
+     "id": "g12.chemistry.u1.s1-6.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "In CN⁻ + H₂O ⇌ HCN + OH⁻, the Brønsted–Lowry acid is",
+     "opts": [
+      "H₂O",
+      "CN⁻",
+      "HCN",
+      "OH⁻"
+     ],
+     "ans": "H₂O",
+     "why": "H₂O gives H⁺ and becomes OH⁻.",
+     "clue": "Which reactant loses H?",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Part II Q2 b",
+     "id": "g12.chemistry.u1.s1-6.9"
+    },
+    {
+     "kind": "mcq",
+     "text": "In H₃PO₄ + NH₃ ⇌ H₂PO₄⁻ + NH₄⁺, the conjugate acid of NH₃ is",
+     "opts": [
+      "NH₄⁺",
+      "H₂PO₄⁻",
+      "H₃PO₄",
+      "NH₂⁻"
+     ],
+     "ans": "NH₄⁺",
+     "why": "NH₃ gains H⁺ to become NH₄⁺.",
+     "clue": "Add H⁺ to the base.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Part II Q3 c",
+     "id": "g12.chemistry.u1.s1-6.10"
+    },
+    {
+     "kind": "mcq",
+     "text": "In BF₃ + F⁻ → BF₄⁻, the Lewis base is",
+     "opts": [
+      "F⁻",
+      "BF₃",
+      "BF₄⁻",
+      "B"
+     ],
+     "ans": "F⁻",
+     "why": "F⁻ donates a lone pair to the electron-deficient B.",
+     "clue": "Which species has lone pairs to give?",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Part II Q4 a",
+     "id": "g12.chemistry.u1.s1-6.11"
+    },
+    {
+     "kind": "sort",
+     "step": "exercise",
+     "title": "Classify",
+     "bins": [
+      "Strong acid",
+      "Weak acid",
+      "Strong base",
+      "Weak base"
+     ],
+     "items": [
+      [
+       "KOH",
+       "Strong base",
+       "Group 1 hydroxide"
+      ],
+      [
+       "(CH₃)₂CHCOOH",
+       "Weak acid",
+       "a carboxylic acid"
+      ],
+      [
+       "H₂SeO₄",
+       "Strong acid",
+       "like H₂SO₄"
+      ],
+      [
+       "(CH₃)₂CHNH₂",
+       "Weak base",
+       "an amine"
+      ]
+     ],
+     "why": "–COOH acids are weak; amines are weak bases; H₂SeO₄ is like H₂SO₄.",
+     "clue": "Compare each with a compound you know.",
+     "ref": "Part II Q5",
+     "graded": true,
+     "level": 2,
+     "id": "g12.chemistry.u1.s1-6.12"
+    },
+    {
+     "kind": "blank",
+     "ask": "HCl in water gives [H₃O⁺] = 3.0 × 10⁻⁴ M. pH ≈ ___ (2 decimal places)",
+     "a": [
+      "≈3.52"
+     ],
+     "why": "pH = 4 − log 3.0 = 4 − 0.48 = 3.52.",
+     "clue": "pH = −log[H₃O⁺].",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Part II Q7",
+     "id": "g12.chemistry.u1.s1-6.13"
+    },
+    {
+     "kind": "blank",
+     "ask": "0.30 M HNO₃: pOH ≈ ___ (2 decimal places)",
+     "a": [
+      "≈13.48"
+     ],
+     "why": "pH = −log 0.30 = 0.52; pOH = 14 − 0.52 = 13.48.",
+     "clue": "Find pH first.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Exercise 1.6 Q2",
+     "id": "g12.chemistry.u1.s1-6.14"
+    },
+    {
+     "kind": "blank",
+     "ask": "0.0063 M HNO₃: pH ≈ ___ (2 decimal places)",
+     "a": [
+      "≈2.20"
+     ],
+     "why": "pH = −log(6.3 × 10⁻³) = 3 − 0.80 = 2.20.",
+     "clue": "HNO₃ ionizes completely.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Exercise 1.6 Q2",
+     "id": "g12.chemistry.u1.s1-6.15"
+    }
+   ]
+  },
+  {
+   "book_name": "Chapter test",
+   "test": true,
+   "chapter_test": true,
+   "count": 20,
+   "minutes": 25,
+   "items": []
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Which concept defines a base as an electron-pair donor?",
+   "opts": [
+    "Lewis",
+    "Arrhenius",
+    "Brønsted–Lowry",
+    "Henderson"
+   ],
+   "ans": "Lewis",
+   "why": "p.12.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-6.16"
+  },
+  {
+   "kind": "blank",
+   "ask": "Pure water at 25 °C: [OH⁻] = 1.0 × 10ⁿ M. n = ___",
+   "a": [
+    "-7"
+   ],
+   "why": "√Kw.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-6.17"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which salt solution is acidic?",
+   "opts": [
+    "NH₄Cl",
+    "NaCl",
+    "CH₃COONa",
+    "KNO₃"
+   ],
+   "ans": "NH₄Cl",
+   "why": "NH₄⁺ hydrolyzes.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-6.18"
+  },
+  {
+   "kind": "blank",
+   "ask": "pH 3.0 means [H₃O⁺] = 1.0 × 10ⁿ M. n = ___",
+   "a": [
+    "-3"
+   ],
+   "why": "10^(−pH).",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-6.19"
+  },
+  {
+   "kind": "blank",
+   "ask": "An acid–base pair has Ka = 1.0 × 10⁻⁶. Kb of its conjugate base = 1.0 × 10ⁿ. n = ___",
+   "a": [
+    "-8"
+   ],
+   "why": "Kw/Ka.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.chemistry.u1.s1-6.20"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Review Part I Q1 is missing \"not\"; Part II Q7 has a stray \"5\" ([H₃O⁺] = 3.0 × 10⁻⁴ M); Part II Q10 writes H₂O(aq) and \"H₃O +\"."
+  },
+  {
+   "kind": "review",
+   "text": "Review Part II Q6: the expected amphiprotic answers are NH₃, H₂O and HCO₃⁻ (H₂S and OH⁻ only in theory)."
+  },
+  {
+   "kind": "note",
+   "text": "No national-exam (ESSLCE) chemistry bank yet; the chapter test draws from the six section tests."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
