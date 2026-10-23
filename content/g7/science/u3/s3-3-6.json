@@ -1,0 +1,516 @@
+{
+ "id": "g7.science.u3.s3-3-6",
+ "book": {
+  "title": "General Science Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "science",
+  "unit": 3,
+  "unit_title": "Elements, Compound and Chemical Reaction",
+  "pages": "85–88",
+  "section": "3.3.6"
+ },
+ "title": "Balancing chemical equation",
+ "competency": "Balance simple chemical equations by inspection and by the LCM method.",
+ "minutes": 14,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Balanced chemical equation",
+   "am": "የተመጣጠነ የኬሚካል እኩልታ",
+   "def": "An equation with the same number of each kind of atom on both sides.",
+   "machine": true
+  },
+  {
+   "en": "Inspection method",
+   "am": "የምልከታ ዘዴ",
+   "def": "Balancing by trial: change coefficients until atoms are equal on both sides.",
+   "machine": true
+  },
+  {
+   "en": "LCM method",
+   "am": "የትንሹ የጋራ ብዜት ዘዴ",
+   "def": "Balancing using the least common multiple of total valence numbers.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "sci.balance-inspection",
+   "name": "Balancing by inspection",
+   "explain": {
+    "en": {
+     "text": "A balanced equation has the same number of each kind of atom on both sides. This obeys the law of conservation of mass. Change only the coefficients, never the subscripts. Inspection is trial and error: N₂ + H₂ → NH₃ becomes N₂ + 3H₂ → 2NH₃."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A tempting shortcut",
+     "ask": "To balance H₂ + O₂ → H₂O, Abebe changes it to H₂ + O₂ → H₂O₂. Is that allowed?",
+     "opts": [
+      "Yes",
+      "No, he changed water into a new substance"
+     ],
+     "after": "Changing a subscript changes the substance. H₂O₂ is not water. Only coefficients may change.",
+     "added": true,
+     "id": "g7.science.u3.s3-3-6.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "3.3.6 Balancing chemical equation",
+     "paras": [
+      "A chemical equation is balanced to obey the law of conservation of mass.",
+      "In a balanced equation, the atoms on the left equal the atoms on the right.",
+      "We change the coefficients, not the subscripts.",
+      "Changing subscripts changes the identity of substances."
+     ],
+     "id": "g7.science.u3.s3-3-6.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Two methods",
+     "paras": [
+      "This grade uses two methods: the inspection method and the LCM method.",
+      "Inspection is a trial and error method.",
+      "Adjust the coefficients until each kind of atom is equal on both sides."
+     ],
+     "id": "g7.science.u3.s3-3-6.3"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Inspection: making ammonia",
+     "steps": [
+      "N₂ + H₂ → NH₃",
+      "N: 2 on the left. Put 2 before NH₃: N₂ + H₂ → 2NH₃.",
+      "Now H: 2 × 3 = 6 on the right. Put 3 before H₂: N₂ + 3H₂ → 2NH₃.",
+      "Check: N 2 = 2, H 6 = 6. Balanced."
+     ],
+     "id": "g7.science.u3.s3-3-6.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Balanced chemical equation",
+       "An equation with the same number of each kind of atom on both sides."
+      ],
+      [
+       "Inspection method",
+       "Balancing by trial: change coefficients until atoms are equal on both sides."
+      ]
+     ],
+     "id": "g7.science.u3.s3-3-6.5"
+    },
+    {
+     "kind": "tf",
+     "step": "check",
+     "graded": true,
+     "text": "When we balance an equation, we change the subscripts but not the coefficients.",
+     "a": false,
+     "why": "We change coefficients, not subscripts.",
+     "clue": "What would changing H₂O to H₂O₂ do?",
+     "level": 1,
+     "ref": "Review Exercise I 5",
+     "id": "g7.science.u3.s3-3-6.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Balance: H₂ + I₂ → HI",
+     "opts": [
+      "H₂ + I₂ → 2HI",
+      "H₂ + I₂ → H₂I₂",
+      "2H₂ + I₂ → HI"
+     ],
+     "ans": "H₂ + I₂ → 2HI",
+     "why": "H: 2 on the left, so put 2 before HI. Then H 2 = 2 and I 2 = 2.",
+     "clue": "Count H on each side.",
+     "level": 1,
+     "ref": "Exercise 3.6 Q1 b",
+     "id": "g7.science.u3.s3-3-6.7"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Exercise 3.6 Q1 d",
+     "steps": [
+      "Ca + H₂O → Ca(OH)₂ + H₂",
+      "Ca: 1 = 1.",
+      "O: left 1, right 2. Put 2 before H₂O.",
+      "H: left 2 × 2 = 4. Right 2 + 2 = 4.",
+      "Balanced: Ca + 2H₂O → Ca(OH)₂ + H₂."
+     ],
+     "id": "g7.science.u3.s3-3-6.8"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Balance: Ca + H₂O → Ca(OH)₂ + H₂",
+     "opts": [
+      "Ca + H₂O → Ca(OH)₂ + H₂",
+      "Ca + 2H₂O → Ca(OH)₂ + H₂",
+      "2Ca + H₂O → Ca(OH)₂ + 2H₂"
+     ],
+     "ans": "Ca + 2H₂O → Ca(OH)₂ + H₂",
+     "why": "O: 2 on the right needs 2H₂O. Then H: 4 = 4.",
+     "clue": "Start with oxygen.",
+     "level": 2,
+     "ref": "Exercise 3.6 Q1 d",
+     "id": "g7.science.u3.s3-3-6.9"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Balance: Fe₂O₃ + CO → Fe + CO₂",
+     "opts": [
+      "Fe₂O₃ + CO → 2Fe + CO₂",
+      "Fe₂O₃ + 3CO → 2Fe + 3CO₂",
+      "Fe₂O₃ + 2CO → 2Fe + 2CO₂"
+     ],
+     "ans": "Fe₂O₃ + 3CO → 2Fe + 3CO₂",
+     "why": "Fe: 2Fe. CO and CO₂ need the same coefficient x. O: 3 + x = 2x, so x = 3. Check O: 3 + 3 = 6 = 3 × 2.",
+     "clue": "Count O on both sides with the same number before CO and CO₂.",
+     "level": 3,
+     "ref": "Exercise 3.6 Q1 e",
+     "added": true,
+     "id": "g7.science.u3.s3-3-6.10"
+    }
+   ]
+  },
+  {
+   "id": "sci.balance-lcm",
+   "name": "Balancing by the LCM method",
+   "explain": {
+    "en": {
+     "text": "In the LCM method, find each total valence (subscript × valence), find the LCM of these numbers, then divide the LCM by each total to get the coefficients. For aluminum and oxygen: totals 3, 4 and 6 give LCM 12, so 4Al + 3O₂ → 2Al₂O₃."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A common number",
+     "ask": "Al has total valence 3, O₂ has 4, Al₂O₃ has 6. What is the smallest number all three divide into?",
+     "opts": [
+      "6",
+      "12",
+      "24"
+     ],
+     "after": "12 is the least common multiple (LCM) of 3, 4 and 6. The LCM method uses it.",
+     "id": "g7.science.u3.s3-3-6.11"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "The LCM method",
+     "steps": [
+      "Step 1, word equation: aluminum + oxygen → aluminum oxide.",
+      "Step 2, formulas: Al + O₂ → Al₂O₃.",
+      "Step 3, total valences: Al = 1 × 3 = 3; O₂ = 2 × 2 = 4; Al₂O₃ = 2 × 3 = 6.",
+      "Step 4, LCM of 3, 4 and 6 is 12.",
+      "Step 5, divide: 12 ÷ 3 = 4 (Al); 12 ÷ 4 = 3 (O₂); 12 ÷ 6 = 2 (Al₂O₃).",
+      "4Al + 3O₂ → 2Al₂O₃. Check: Al 4 = 4, O 6 = 6."
+     ],
+     "id": "g7.science.u3.s3-3-6.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "LCM method",
+       "Balancing using the least common multiple of total valence numbers."
+      ]
+     ],
+     "id": "g7.science.u3.s3-3-6.13"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "In the LCM method for Al + O₂ → Al₂O₃, the LCM of 3, 4 and 6 is",
+     "opts": [
+      "6",
+      "12",
+      "13",
+      "72"
+     ],
+     "ans": "12",
+     "why": "Multiples of 6: 6, 12. 12 is divisible by 3 and 4 too.",
+     "clue": "List multiples of 6.",
+     "level": 1,
+     "id": "g7.science.u3.s3-3-6.14"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Balance: Fe + O₂ → Fe₂O₃ (Fe valence 3)",
+     "opts": [
+      "2Fe + O₂ → Fe₂O₃",
+      "4Fe + 3O₂ → 2Fe₂O₃",
+      "3Fe + 4O₂ → 2Fe₂O₃"
+     ],
+     "ans": "4Fe + 3O₂ → 2Fe₂O₃",
+     "why": "Totals 3, 4, 6 → LCM 12 → 4, 3, 2. Check Fe 4 = 4, O 6 = 6.",
+     "clue": "Same as the aluminum example.",
+     "level": 2,
+     "ref": "Exercise 3.6 Q2 a",
+     "id": "g7.science.u3.s3-3-6.15"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "In 4Al + 3O₂ → 2Al₂O₃ there are ___ oxygen atoms on each side.",
+     "a": [
+      "6",
+      "six"
+     ],
+     "num": true,
+     "why": "Left: 3 × 2 = 6. Right: 2 × 3 = 6.",
+     "clue": "Coefficient × subscript.",
+     "level": 1,
+     "id": "g7.science.u3.s3-3-6.16"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Balance: Cu + H₂SO₄ → CuSO₄ + SO₂ + H₂O",
+     "opts": [
+      "Cu + H₂SO₄ → CuSO₄ + SO₂ + H₂O",
+      "Cu + 2H₂SO₄ → CuSO₄ + SO₂ + 2H₂O",
+      "2Cu + 2H₂SO₄ → 2CuSO₄ + SO₂ + H₂O"
+     ],
+     "ans": "Cu + 2H₂SO₄ → CuSO₄ + SO₂ + 2H₂O",
+     "why": "S: 2 on the right → 2H₂SO₄. H: 4 → 2H₂O. O: left 8; right 4 + 2 + 2 = 8.",
+     "clue": "Balance S first, then H, then check O.",
+     "level": 3,
+     "ref": "Exercise 3.6 Q2 b",
+     "added": true,
+     "id": "g7.science.u3.s3-3-6.17"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 3.6",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Balance by inspection: CaCO₃ → CaO + CO₂",
+     "opts": [
+      "It is already balanced",
+      "2CaCO₃ → CaO + CO₂",
+      "CaCO₃ → 2CaO + CO₂"
+     ],
+     "ans": "It is already balanced",
+     "why": "Ca 1 = 1, C 1 = 1, O 3 = 1 + 2.",
+     "clue": "Count each atom.",
+     "level": 1,
+     "ref": "Q1 a",
+     "id": "g7.science.u3.s3-3-6.18"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "H₂ + I₂ → HI",
+     "opts": [
+      "H₂ + I₂ → 2HI",
+      "H₂ + 2I₂ → HI",
+      "2H₂ + I₂ → 2HI"
+     ],
+     "ans": "H₂ + I₂ → 2HI",
+     "why": "H 2 = 2, I 2 = 2.",
+     "clue": "Count H.",
+     "level": 1,
+     "ref": "Q1 b",
+     "id": "g7.science.u3.s3-3-6.19"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "C₂H₂ + O₂ → CO₂ + H₂O",
+     "opts": [
+      "C₂H₂ + O₂ → 2CO₂ + H₂O",
+      "2C₂H₂ + 5O₂ → 4CO₂ + 2H₂O",
+      "C₂H₂ + 3O₂ → 2CO₂ + H₂O"
+     ],
+     "ans": "2C₂H₂ + 5O₂ → 4CO₂ + 2H₂O",
+     "why": "C 4 = 4, H 4 = 4, O 10 = 8 + 2.",
+     "clue": "Double everything to avoid 5/2.",
+     "level": 3,
+     "ref": "Q1 c",
+     "id": "g7.science.u3.s3-3-6.20"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Ca + H₂O → Ca(OH)₂ + H₂",
+     "opts": [
+      "Ca + 2H₂O → Ca(OH)₂ + H₂",
+      "Ca + H₂O → Ca(OH)₂ + 2H₂"
+     ],
+     "ans": "Ca + 2H₂O → Ca(OH)₂ + H₂",
+     "why": "O 2 = 2, H 4 = 4.",
+     "clue": "Start with O.",
+     "level": 2,
+     "ref": "Q1 d",
+     "id": "g7.science.u3.s3-3-6.21"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Fe₂O₃ + CO → Fe + CO₂",
+     "opts": [
+      "Fe₂O₃ + 3CO → 2Fe + 3CO₂",
+      "Fe₂O₃ + CO → 2Fe + CO₂"
+     ],
+     "ans": "Fe₂O₃ + 3CO → 2Fe + 3CO₂",
+     "why": "Fe 2 = 2, C 3 = 3, O 6 = 6.",
+     "clue": "Same number before CO and CO₂.",
+     "level": 3,
+     "ref": "Q1 e",
+     "id": "g7.science.u3.s3-3-6.22"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Balance: Fe + O₂ → Fe₂O₃",
+     "opts": [
+      "4Fe + 3O₂ → 2Fe₂O₃",
+      "2Fe + 3O₂ → Fe₂O₃"
+     ],
+     "ans": "4Fe + 3O₂ → 2Fe₂O₃",
+     "why": "LCM 12 → 4, 3, 2.",
+     "clue": "Use the LCM method.",
+     "level": 2,
+     "ref": "Q2 a",
+     "id": "g7.science.u3.s3-3-6.23"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Balance: Cu + H₂SO₄ → CuSO₄ + SO₂ + H₂O",
+     "opts": [
+      "Cu + 2H₂SO₄ → CuSO₄ + SO₂ + 2H₂O",
+      "Cu + H₂SO₄ → CuSO₄ + SO₂ + H₂O"
+     ],
+     "ans": "Cu + 2H₂SO₄ → CuSO₄ + SO₂ + 2H₂O",
+     "why": "S 2 = 2, H 4 = 4, O 8 = 8.",
+     "clue": "Balance S, then H.",
+     "level": 3,
+     "ref": "Q2 b",
+     "id": "g7.science.u3.s3-3-6.24"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "A balanced equation has equal numbers of each atom on both sides.",
+   "a": true,
+   "why": "Definition.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.science.u3.s3-3-6.25"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "To balance an equation we change the",
+   "opts": [
+    "subscripts",
+    "coefficients",
+    "symbols"
+   ],
+   "ans": "coefficients",
+   "why": "Never the subscripts.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.science.u3.s3-3-6.26"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Balance: N₂ + H₂ → NH₃",
+   "opts": [
+    "N₂ + H₂ → 2NH₃",
+    "N₂ + 3H₂ → 2NH₃",
+    "N₂ + 3H₂ → NH₃"
+   ],
+   "ans": "N₂ + 3H₂ → 2NH₃",
+   "why": "N 2 = 2, H 6 = 6.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.science.u3.s3-3-6.27"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Balance: Mg + O₂ → MgO",
+   "opts": [
+    "Mg + O₂ → 2MgO",
+    "2Mg + O₂ → 2MgO",
+    "Mg + O₂ → MgO₂"
+   ],
+   "ans": "2Mg + O₂ → 2MgO",
+   "why": "O: 2MgO; then Mg: 2Mg.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.science.u3.s3-3-6.28"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Balance: Al(OH)₃ → Al₂O₃ + H₂O",
+   "opts": [
+    "2Al(OH)₃ → Al₂O₃ + 3H₂O",
+    "Al(OH)₃ → Al₂O₃ + H₂O",
+    "2Al(OH)₃ → Al₂O₃ + 6H₂O"
+   ],
+   "ans": "2Al(OH)₃ → Al₂O₃ + 3H₂O",
+   "why": "Al 2 = 2; H 6 = 6; O 6 = 3 + 3.",
+   "level": 3,
+   "clue": "",
+   "id": "g7.science.u3.s3-3-6.29"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "Balancing is asked as multiple choice (typing coefficients and subscripts is hard on a phone); every option is checked by counting atoms."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

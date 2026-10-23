@@ -1,0 +1,522 @@
+{
+ "id": "g7.science.u3.s3-2-2",
+ "book": {
+  "title": "General Science Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "science",
+  "unit": 3,
+  "unit_title": "Elements, Compound and Chemical Reaction",
+  "pages": "72–74",
+  "section": "3.2.2"
+ },
+ "title": "Chemical formulas",
+ "competency": "Write formulas of elements and compounds and explain what a molecule is.",
+ "minutes": 10,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Chemical formula",
+   "am": "የኬሚካል ቀመር",
+   "def": "The symbolic representation of an element or a compound, like H₂O.",
+   "machine": true
+  },
+  {
+   "en": "Molecule",
+   "am": "ሞለኪውል",
+   "def": "The smallest particle of an element or compound that has a stable, independent existence.",
+   "machine": true
+  },
+  {
+   "en": "Diatomic molecule",
+   "am": "ባለሁለት አቶም ሞለኪውል",
+   "def": "A molecule made of two atoms, like H₂ or O₂.",
+   "machine": true
+  },
+  {
+   "en": "Subscript",
+   "am": "ንዑስ ቁጥር",
+   "def": "The small number after a symbol. In H₂O the 2 is a subscript.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "sci.formula-element",
+   "name": "Formulas of elements",
+   "explain": {
+    "en": {
+     "text": "A chemical formula is the symbolic representation of an element or a compound. Noble gases like helium exist as single atoms, so their formula is their symbol: He. Hydrogen, nitrogen, oxygen, fluorine, chlorine, bromine and iodine exist as diatomic molecules: H₂, N₂, O₂, F₂, Cl₂, Br₂, I₂. Ozone is O₃, phosphorus P₄ and sulfur S₈."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "The oxygen we breathe",
+     "ask": "The oxygen we breathe: single O atoms, or two O atoms joined?",
+     "opts": [
+      "Single O atoms",
+      "Two O atoms joined (O₂)",
+      "Three O atoms"
+     ],
+     "after": "Oxygen gas is made of molecules of two atoms: O₂.",
+     "added": true,
+     "id": "g7.science.u3.s3-2-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "3.2.2 Chemical formulas",
+     "paras": [
+      "A chemical formula is the symbolic representation of an element or a compound.",
+      "There are formulas of elements and formulas of compounds.",
+      "The formula of an element has one kind of symbol."
+     ],
+     "id": "g7.science.u3.s3-2-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Molecules",
+     "paras": [
+      "A molecule is the smallest particle of an element or compound that has a stable, independent existence.",
+      "Helium, neon, argon, krypton, xenon and radon are noble gases.",
+      "They exist as single atoms (monoatomic). Their formula is the same as their symbol: He, Ne, Ar."
+     ],
+     "id": "g7.science.u3.s3-2-2.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Table 3.3: Diatomic elements",
+     "paras": [
+      "Some non-metals exist as molecules of two atoms. They are diatomic molecules."
+     ],
+     "table": [
+      [
+       "Name",
+       "Symbol",
+       "Formula"
+      ],
+      [
+       "Hydrogen",
+       "H",
+       "H₂"
+      ],
+      [
+       "Nitrogen",
+       "N",
+       "N₂"
+      ],
+      [
+       "Oxygen",
+       "O",
+       "O₂"
+      ],
+      [
+       "Fluorine",
+       "F",
+       "F₂"
+      ],
+      [
+       "Chlorine",
+       "Cl",
+       "Cl₂"
+      ],
+      [
+       "Bromine",
+       "Br",
+       "Br₂"
+      ],
+      [
+       "Iodine",
+       "I",
+       "I₂"
+      ]
+     ],
+     "note": "Some molecules have more than two atoms: ozone O₃, phosphorus P₄, sulfur S₈.",
+     "id": "g7.science.u3.s3-2-2.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Chemical formula",
+       "The symbolic representation of an element or a compound, like H₂O."
+      ],
+      [
+       "Molecule",
+       "The smallest particle of an element or compound that has a stable, independent existence."
+      ],
+      [
+       "Diatomic molecule",
+       "A molecule made of two atoms, like H₂ or O₂."
+      ]
+     ],
+     "id": "g7.science.u3.s3-2-2.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "What is the formula of a nitrogen molecule?",
+     "opts": [
+      "N",
+      "N₂",
+      "N₃",
+      "Ni"
+     ],
+     "ans": "N₂",
+     "why": "Nitrogen is diatomic: N₂.",
+     "clue": "Look at Table 3.3.",
+     "level": 1,
+     "ref": "Table 3.3",
+     "id": "g7.science.u3.s3-2-2.6"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "title": "How many atoms in the molecule?",
+     "bins": [
+      "Single atom",
+      "Diatomic",
+      "More than two atoms"
+     ],
+     "items": [
+      [
+       "He",
+       "Single atom",
+       "Noble gas."
+      ],
+      [
+       "Ne",
+       "Single atom",
+       "Noble gas."
+      ],
+      [
+       "Cl₂",
+       "Diatomic",
+       "Two atoms."
+      ],
+      [
+       "O₂",
+       "Diatomic",
+       "Two atoms."
+      ],
+      [
+       "O₃",
+       "More than two atoms",
+       "Ozone."
+      ],
+      [
+       "S₈",
+       "More than two atoms",
+       "Sulfur."
+      ]
+     ],
+     "why": "Noble gases are single atoms. Seven non-metals are diatomic.",
+     "clue": "Count the atoms from the subscript.",
+     "level": 2,
+     "id": "g7.science.u3.s3-2-2.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "For which element are the atom and molecule formulas different?",
+     "opts": [
+      "Helium",
+      "Argon",
+      "Nitrogen",
+      "Neon"
+     ],
+     "ans": "Nitrogen",
+     "why": "Nitrogen atom is N, the molecule is N₂. Noble gases are single atoms.",
+     "clue": "Which one is diatomic?",
+     "level": 2,
+     "ref": "Exercise 3.2 Q2",
+     "id": "g7.science.u3.s3-2-2.8"
+    },
+    {
+     "kind": "pick",
+     "step": "challenge",
+     "graded": true,
+     "text": "Tap every element whose formula is the SAME as its symbol.",
+     "pool": [
+      "He",
+      "H",
+      "Ar",
+      "Br",
+      "Ne",
+      "O"
+     ],
+     "a": [
+      "He",
+      "Ar",
+      "Ne"
+     ],
+     "why": "Noble gases (He, Ar, Ne) exist as single atoms. H, Br and O are diatomic: H₂, Br₂, O₂.",
+     "clue": "Which are noble gases?",
+     "level": 3,
+     "added": true,
+     "id": "g7.science.u3.s3-2-2.9"
+    }
+   ]
+  },
+  {
+   "id": "sci.formula-compound",
+   "name": "Formulas of compounds",
+   "explain": {
+    "en": {
+     "text": "A chemical formula with two or more different symbols stands for a compound. The small number after each symbol, the subscript, tells how many atoms of that element there are. In H₂O there are two hydrogen atoms and one oxygen atom."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "The small 2",
+     "ask": "In H₂O, what does the small 2 tell you?",
+     "opts": [
+      "There are 2 water molecules",
+      "There are 2 hydrogen atoms",
+      "There are 2 oxygen atoms"
+     ],
+     "after": "The 2 belongs to H. There are two hydrogen atoms and one oxygen atom.",
+     "id": "g7.science.u3.s3-2-2.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Formulas of compounds",
+     "paras": [
+      "Elements combine to form compounds.",
+      "A formula of a compound has two or more different symbols.",
+      "Each symbol is followed by a subscript. It shows the number of atoms of that element.",
+      "No subscript means one atom."
+     ],
+     "id": "g7.science.u3.s3-2-2.11"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Reading H₂O",
+     "steps": [
+      "Water is H₂O.",
+      "H₂: the subscript 2 means 2 hydrogen atoms.",
+      "O: no subscript, so 1 oxygen atom.",
+      "So one water molecule has 2 H atoms and 1 O atom."
+     ],
+     "id": "g7.science.u3.s3-2-2.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Subscript",
+       "The small number after a symbol. In H₂O the 2 is a subscript."
+      ]
+     ],
+     "id": "g7.science.u3.s3-2-2.13"
+    },
+    {
+     "kind": "blank",
+     "step": "check",
+     "graded": true,
+     "ask": "In CO₂ there is one carbon atom and ___ oxygen atoms.",
+     "a": [
+      "2",
+      "two"
+     ],
+     "num": true,
+     "why": "The subscript 2 after O means 2 oxygen atoms.",
+     "clue": "Look at the number after O.",
+     "level": 1,
+     "id": "g7.science.u3.s3-2-2.14"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "How many atoms of each element are in CaCO₃?",
+     "opts": [
+      "Ca 1, C 1, O 3",
+      "Ca 1, C 3, O 1",
+      "Ca 3, C 1, O 1"
+     ],
+     "ans": "Ca 1, C 1, O 3",
+     "why": "Only O has a subscript, 3. Ca and C have none, so 1 each.",
+     "clue": "A symbol with no subscript has 1 atom.",
+     "level": 1,
+     "id": "g7.science.u3.s3-2-2.15"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "In C₁₂H₂₂O₁₁ (sugar) there are ___ hydrogen atoms.",
+     "a": [
+      "22"
+     ],
+     "num": true,
+     "why": "The subscript after H is 22.",
+     "clue": "Find the number just after H.",
+     "level": 2,
+     "added": true,
+     "id": "g7.science.u3.s3-2-2.16"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "ask": "One molecule of H₂SO₄ has ___ atoms in total.",
+     "a": [
+      "7",
+      "seven"
+     ],
+     "num": true,
+     "why": "H: 2, S: 1, O: 4. Total 2 + 1 + 4 = 7 atoms.",
+     "clue": "Count each element, then add.",
+     "level": 3,
+     "added": true,
+     "id": "g7.science.u3.s3-2-2.17"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 3.2",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Elements exist as diatomic and polyatomic molecules except",
+     "opts": [
+      "phosphorus",
+      "nitrogen",
+      "oxygen",
+      "neon"
+     ],
+     "ans": "neon",
+     "why": "Neon is a noble gas. It exists as single atoms.",
+     "clue": "Which one is a noble gas?",
+     "level": 1,
+     "ref": "Q1",
+     "id": "g7.science.u3.s3-2-2.18"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "For which do the atom and molecule have different formulas?",
+     "opts": [
+      "Helium",
+      "Argon",
+      "Nitrogen",
+      "Neon"
+     ],
+     "ans": "Nitrogen",
+     "why": "N atom, N₂ molecule.",
+     "clue": "Which is diatomic?",
+     "level": 1,
+     "ref": "Q2",
+     "id": "g7.science.u3.s3-2-2.19"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The formula of hydrogen gas is",
+   "opts": [
+    "H",
+    "H₂",
+    "He",
+    "H₃"
+   ],
+   "ans": "H₂",
+   "why": "Hydrogen is diatomic.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.science.u3.s3-2-2.20"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "The formula of helium is the same as its symbol, He.",
+   "a": true,
+   "why": "Noble gases are single atoms.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.science.u3.s3-2-2.21"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "In H₂O there are ___ hydrogen atoms.",
+   "a": [
+    "2",
+    "two"
+   ],
+   "num": true,
+   "why": "The subscript after H is 2.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.science.u3.s3-2-2.22"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which element is NOT diatomic?",
+   "opts": [
+    "Chlorine",
+    "Iodine",
+    "Argon",
+    "Fluorine"
+   ],
+   "ans": "Argon",
+   "why": "Argon is a noble gas: Ar.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.science.u3.s3-2-2.23"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "NaHCO₃ has ___ atoms in one formula unit.",
+   "a": [
+    "6",
+    "six"
+   ],
+   "num": true,
+   "why": "Na 1 + H 1 + C 1 + O 3 = 6.",
+   "level": 3,
+   "clue": "",
+   "id": "g7.science.u3.s3-2-2.24"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "Krypton, xenon and radon are named in the book but have no symbol in Tables 3.1–3.2; not tested."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

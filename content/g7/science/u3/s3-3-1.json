@@ -1,0 +1,305 @@
+{
+ "id": "g7.science.u3.s3-3-1",
+ "book": {
+  "title": "General Science Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "science",
+  "unit": 3,
+  "unit_title": "Elements, Compound and Chemical Reaction",
+  "pages": "80–81",
+  "section": "3.3.1"
+ },
+ "title": "Simple chemical reaction",
+ "competency": "Define chemical reaction and give examples.",
+ "minutes": 9,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Chemical reaction",
+   "am": "ኬሚካላዊ ለውጥ",
+   "def": "A process that changes substances into one or more new substances.",
+   "machine": true
+  },
+  {
+   "en": "Reactants",
+   "am": "ተለዋዋጮች (መነሻ ንጥረ ነገሮች)",
+   "def": "The starting materials in a chemical reaction.",
+   "machine": true
+  },
+  {
+   "en": "Products",
+   "am": "ውጤቶች",
+   "def": "The new substances formed in a chemical reaction.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "sci.chemical-reaction",
+   "name": "Reactants and products",
+   "explain": {
+    "en": {
+     "text": "In a chemical reaction the starting materials, the reactants, change into new substances, the products. We write Reactants → Products. The arrow means \"produce\". When magnesium burns, magnesium and oxygen are the reactants and magnesium oxide is the product: 2Mg + O₂ → 2MgO."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A broken beaker",
+     "ask": "A glass beaker falls and breaks. Is a new substance formed?",
+     "opts": [
+      "Yes",
+      "No, it is still glass"
+     ],
+     "after": "Only the shape changed. No new substance formed, so it is a physical change, not a chemical reaction.",
+     "ref": "Activity 3.7 Q3",
+     "id": "g7.science.u3.s3-3-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "3.3.1 Simple chemical reaction",
+     "paras": [
+      "The starting materials of a reaction are called reactants.",
+      "They react to produce one or more new substances, called products.",
+      "A chemical reaction changes reactants into products: Reactants → Products."
+     ],
+     "id": "g7.science.u3.s3-3-1.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Writing a reaction",
+     "paras": [
+      "The arrow (→) is read as \"produce\", \"give\", \"form\" or \"yield\".",
+      "Reactants go on the left of the arrow. Products go on the right.",
+      "A \"+\" sign means \"combines with\" or \"reacts with\"."
+     ],
+     "id": "g7.science.u3.s3-3-1.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Examples",
+     "paras": [
+      "Magnesium burns easily in air.",
+      "The reactants are magnesium and oxygen. The product is a white ash, magnesium oxide.",
+      "2Mg + O₂ → 2MgO",
+      "Iron + sulfur → iron sulfide. Iron sulfide is the product."
+     ],
+     "note": "Rusting of iron, fermentation and digestion of food are chemical reactions.",
+     "id": "g7.science.u3.s3-3-1.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Chemical reaction",
+       "A process that changes substances into one or more new substances."
+      ],
+      [
+       "Reactants",
+       "The starting materials in a chemical reaction."
+      ],
+      [
+       "Products",
+       "The new substances formed in a chemical reaction."
+      ]
+     ],
+     "id": "g7.science.u3.s3-3-1.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "In 2Mg + O₂ → 2MgO, what are the reactants?",
+     "opts": [
+      "Magnesium and oxygen",
+      "Magnesium oxide",
+      "Only oxygen"
+     ],
+     "ans": "Magnesium and oxygen",
+     "why": "Reactants are on the left of the arrow.",
+     "clue": "Which side holds the starting materials?",
+     "level": 1,
+     "id": "g7.science.u3.s3-3-1.6"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "title": "Chemical or physical?",
+     "bins": [
+      "Chemical change",
+      "Physical change"
+     ],
+     "items": [
+      [
+       "Rusting of iron",
+       "Chemical change",
+       "Rust is a new substance."
+      ],
+      [
+       "Breaking a glass",
+       "Physical change",
+       "Still glass."
+      ],
+      [
+       "Digestion of food",
+       "Chemical change",
+       "Food breaks into new substances."
+      ],
+      [
+       "Melting ice",
+       "Physical change",
+       "Still water."
+      ],
+      [
+       "Burning charcoal",
+       "Chemical change",
+       "Ash and gases form."
+      ]
+     ],
+     "why": "A chemical change forms a new substance.",
+     "clue": "Is anything new formed?",
+     "level": 1,
+     "added": true,
+     "id": "g7.science.u3.s3-3-1.7"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "In iron + sulfur → iron sulfide, the product is iron ___",
+     "a": [
+      "sulfide"
+     ],
+     "why": "Iron sulfide is the new substance on the right.",
+     "clue": "What is on the right of the arrow?",
+     "level": 1,
+     "id": "g7.science.u3.s3-3-1.8"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Cooking injera is a chemical change.",
+     "a": true,
+     "why": "Cooking forms new substances; it cannot be undone.",
+     "clue": "Can you turn baked injera back into batter?",
+     "level": 2,
+     "added": true,
+     "id": "g7.science.u3.s3-3-1.9"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "In a reaction, what does the arrow (→) tell you?",
+     "opts": [
+      "The reactants are heavier",
+      "Reactants produce products",
+      "The products turn back into reactants"
+     ],
+     "ans": "Reactants produce products",
+     "why": "The arrow is read as \"produce\", \"give\", \"form\" or \"yield\".",
+     "clue": "How is the arrow read?",
+     "level": 3,
+     "added": true,
+     "id": "g7.science.u3.s3-3-1.10"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The starting materials in a reaction are the",
+   "opts": [
+    "products",
+    "reactants",
+    "formulas"
+   ],
+   "ans": "reactants",
+   "why": "Definition.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.science.u3.s3-3-1.11"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is a chemical change?",
+   "opts": [
+    "Melting butter",
+    "Rusting of iron",
+    "Breaking a stick"
+   ],
+   "ans": "Rusting of iron",
+   "why": "A new substance, rust, forms.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.science.u3.s3-3-1.12"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Products are written on the left of the arrow.",
+   "a": false,
+   "why": "Products go on the right.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.science.u3.s3-3-1.13"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "In 2Mg + O₂ → 2MgO, the product is",
+   "opts": [
+    "magnesium",
+    "oxygen",
+    "magnesium oxide"
+   ],
+   "ans": "magnesium oxide",
+   "why": "Right side of the arrow.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.science.u3.s3-3-1.14"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "In a reaction, the \"+\" sign means",
+   "opts": [
+    "reacts with",
+    "is heavier than",
+    "produces"
+   ],
+   "ans": "reacts with",
+   "why": "The + means \"combines with\" or \"reacts with\".",
+   "level": 3,
+   "clue": "",
+   "id": "g7.science.u3.s3-3-1.15"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "Activity 3.7 Q1–Q2 (examples at home, cooking) are open questions; used as a sort and a true/false."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

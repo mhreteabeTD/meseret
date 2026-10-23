@@ -1,0 +1,412 @@
+{
+ "id": "g7.science.u3.s3-2-7",
+ "book": {
+  "title": "General Science Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "science",
+  "unit": 3,
+  "unit_title": "Elements, Compound and Chemical Reaction",
+  "pages": "79–80",
+  "section": "3.2.7"
+ },
+ "title": "Interpreting formula",
+ "competency": "Interpret formulas qualitatively and quantitatively, using coefficients and subscripts.",
+ "minutes": 10,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Coefficient",
+   "am": "ኮፊሸንት",
+   "def": "The number in front of a symbol or formula. In 3H₂O it is 3.",
+   "machine": true
+  },
+  {
+   "en": "Subscript",
+   "am": "ንዑስ ቁጥር",
+   "def": "The small number after a symbol. In H₂O the 2 is a subscript.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "sci.interpret-formula",
+   "name": "Coefficients and subscripts",
+   "explain": {
+    "en": {
+     "text": "A formula has a qualitative meaning, which elements, and a quantitative meaning, how many. The coefficient in front counts atoms or molecules: 3H₂O is three water molecules. The subscript after a symbol counts atoms in one molecule: Cl₂ has two chlorine atoms."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "The big number in front",
+     "ask": "3H₂O: how many water molecules?",
+     "opts": [
+      "1",
+      "2",
+      "3",
+      "6"
+     ],
+     "after": "The 3 in front is the coefficient. It counts the molecules: 3 water molecules.",
+     "id": "g7.science.u3.s3-2-7.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "3.2.7 Interpreting formula",
+     "paras": [
+      "A formula gives qualitative and quantitative meanings.",
+      "Qualitative: which kind of element or elements.",
+      "Quantitative: how many atoms or molecules."
+     ],
+     "id": "g7.science.u3.s3-2-7.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Qualitative meaning",
+     "paras": [
+      "The symbol O stands for an atom of oxygen. Fe stands for iron metal.",
+      "CaO stands for calcium oxide, from calcium and oxygen.",
+      "Ca(NO₃)₂ stands for calcium nitrate: one calcium and two nitrate groups."
+     ],
+     "id": "g7.science.u3.s3-2-7.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Quantitative meaning",
+     "paras": [
+      "The number before a symbol is the coefficient. 2Fe is two atoms of iron.",
+      "A subscript after a symbol shows a molecule. Cl₂ is a chlorine molecule of two atoms.",
+      "A coefficient before a formula counts molecules. 2CO₂ is two molecules of carbon dioxide.",
+      "4NaCl is four formula units of sodium chloride."
+     ],
+     "id": "g7.science.u3.s3-2-7.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Coefficient",
+       "The number in front of a symbol or formula. In 3H₂O it is 3."
+      ],
+      [
+       "Subscript",
+       "The small number after a symbol. In H₂O the 2 is a subscript."
+      ]
+     ],
+     "id": "g7.science.u3.s3-2-7.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "In 4O₃, what are the coefficient and the subscript?",
+     "opts": [
+      "3 and 4",
+      "4 and 3",
+      "7 and 3",
+      "3 and 7"
+     ],
+     "ans": "4 and 3",
+     "why": "The coefficient is in front (4). The subscript is after the symbol (3).",
+     "clue": "Which number is in front?",
+     "level": 1,
+     "ref": "Review Exercise 12",
+     "id": "g7.science.u3.s3-2-7.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "What does 3H₂O represent?",
+     "opts": [
+      "3 H₂O atoms",
+      "6 H molecules",
+      "3 H₂O molecules",
+      "3 O molecules"
+     ],
+     "ans": "3 H₂O molecules",
+     "why": "The coefficient 3 counts molecules of water.",
+     "clue": "H₂O is a molecule, not an atom.",
+     "level": 1,
+     "ref": "Exercise 3.5 Q1",
+     "id": "g7.science.u3.s3-2-7.7"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "O₂ and 2O have the same meaning.",
+     "a": false,
+     "why": "O₂ is one molecule of two joined atoms. 2O is two separate atoms.",
+     "clue": "Is the 2 a coefficient or a subscript?",
+     "level": 2,
+     "ref": "Review Exercise 3",
+     "id": "g7.science.u3.s3-2-7.8"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Counting atoms in 4H₂O",
+     "steps": [
+      "4H₂O: coefficient 4 → 4 water molecules.",
+      "H atoms: 4 × 2 = 8.",
+      "O atoms: 4 × 1 = 4.",
+      "So 4H₂O has 8 hydrogen atoms and 4 oxygen atoms."
+     ],
+     "ref": "Exercise 3.5 Q3 B",
+     "id": "g7.science.u3.s3-2-7.9"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "3H₂ has ___ hydrogen atoms in total.",
+     "a": [
+      "6",
+      "six"
+     ],
+     "num": true,
+     "why": "3 molecules × 2 atoms = 6 atoms.",
+     "clue": "Multiply the coefficient by the subscript.",
+     "level": 2,
+     "ref": "Exercise 3.5 Q3 A",
+     "id": "g7.science.u3.s3-2-7.10"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "ask": "2Ca(NO₃)₂ has ___ oxygen atoms in total.",
+     "a": [
+      "12",
+      "twelve"
+     ],
+     "num": true,
+     "why": "One formula unit: (NO₃)₂ gives 3 × 2 = 6 O. Two units: 2 × 6 = 12 O.",
+     "clue": "The 2 after the bracket multiplies NO₃; the 2 in front multiplies everything.",
+     "level": 3,
+     "added": true,
+     "id": "g7.science.u3.s3-2-7.11"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 3.5",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "What does 3H₂O represent?",
+     "opts": [
+      "3H₂O atoms",
+      "6 H molecule",
+      "3 H₂O molecule",
+      "3O molecule"
+     ],
+     "ans": "3 H₂O molecule",
+     "why": "The coefficient 3 counts water molecules.",
+     "clue": "H₂O is a molecule.",
+     "level": 1,
+     "ref": "Q1",
+     "id": "g7.science.u3.s3-2-7.12"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Qualitative meaning of 2Fe",
+     "opts": [
+      "Iron (the element)",
+      "Two atoms",
+      "Iron oxide"
+     ],
+     "ans": "Iron (the element)",
+     "why": "Fe tells the kind of element: iron. The 2 is quantitative.",
+     "clue": "Qualitative = which kind.",
+     "level": 1,
+     "ref": "Q2 A",
+     "id": "g7.science.u3.s3-2-7.13"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Qualitative meaning of CO₂",
+     "opts": [
+      "Carbon dioxide, from carbon and oxygen",
+      "Two carbon atoms",
+      "Only oxygen"
+     ],
+     "ans": "Carbon dioxide, from carbon and oxygen",
+     "why": "The symbols C and O show the kinds of element.",
+     "clue": "Which elements are in it?",
+     "level": 1,
+     "ref": "Q2 B",
+     "id": "g7.science.u3.s3-2-7.14"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Qualitative meaning of O₂",
+     "opts": [
+      "An oxygen molecule",
+      "Two separate oxygen atoms",
+      "Ozone"
+     ],
+     "ans": "An oxygen molecule",
+     "why": "The subscript shows the molecular form.",
+     "clue": "Subscript means molecule.",
+     "level": 1,
+     "ref": "Q2 C",
+     "id": "g7.science.u3.s3-2-7.15"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Quantitative meaning of 3H₂",
+     "opts": [
+      "3 molecules, 6 H atoms",
+      "2 molecules, 3 H atoms",
+      "5 H atoms"
+     ],
+     "ans": "3 molecules, 6 H atoms",
+     "why": "3 × 2 = 6.",
+     "clue": "Multiply.",
+     "level": 2,
+     "ref": "Q3 A",
+     "id": "g7.science.u3.s3-2-7.16"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Quantitative meaning of 4H₂O",
+     "opts": [
+      "4 molecules: 8 H and 4 O",
+      "4 molecules: 4 H and 8 O",
+      "6 atoms"
+     ],
+     "ans": "4 molecules: 8 H and 4 O",
+     "why": "H 4 × 2 = 8; O 4 × 1 = 4.",
+     "clue": "Multiply each subscript by 4.",
+     "level": 2,
+     "ref": "Q3 B",
+     "id": "g7.science.u3.s3-2-7.17"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Quantitative meaning of 2NaCl",
+     "opts": [
+      "2 formula units: 2 Na and 2 Cl",
+      "1 unit: 2 Na and 1 Cl",
+      "4 molecules"
+     ],
+     "ans": "2 formula units: 2 Na and 2 Cl",
+     "why": "Coefficient 2 counts formula units.",
+     "clue": "Coefficient × each atom.",
+     "level": 2,
+     "ref": "Q3 C",
+     "id": "g7.science.u3.s3-2-7.18"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "In 2CO₂, the 2 in front is the",
+   "opts": [
+    "coefficient",
+    "subscript",
+    "valence"
+   ],
+   "ans": "coefficient",
+   "why": "The number in front is the coefficient.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.science.u3.s3-2-7.19"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Cl₂ means",
+   "opts": [
+    "two chlorine molecules",
+    "one chlorine molecule of two atoms",
+    "two separate chlorine atoms"
+   ],
+   "ans": "one chlorine molecule of two atoms",
+   "why": "The subscript shows a molecule.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.science.u3.s3-2-7.20"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "2H₂O has ___ hydrogen atoms.",
+   "a": [
+    "4",
+    "four"
+   ],
+   "num": true,
+   "why": "2 × 2 = 4.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.science.u3.s3-2-7.21"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "2Fe stands for two atoms of iron.",
+   "a": true,
+   "why": "The coefficient 2 counts atoms.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.science.u3.s3-2-7.22"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "3CaCO₃ has ___ oxygen atoms.",
+   "a": [
+    "9",
+    "nine"
+   ],
+   "num": true,
+   "why": "3 × 3 = 9.",
+   "level": 3,
+   "clue": "",
+   "id": "g7.science.u3.s3-2-7.23"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "Project Work (formulas of baking soda, vinegar, lime, sugar, chalk, milk of magnesia) is an out-of-class project; not built as items."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

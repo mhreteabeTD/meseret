@@ -1,0 +1,334 @@
+{
+ "id": "g7.science.u3.s3-2-3",
+ "book": {
+  "title": "General Science Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "science",
+  "unit": 3,
+  "unit_title": "Elements, Compound and Chemical Reaction",
+  "pages": "74–75",
+  "section": "3.2.3"
+ },
+ "title": "Valence number",
+ "competency": "Define valence as the combining power of an atom.",
+ "minutes": 8,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Valence",
+   "am": "ቫሌንስ",
+   "def": "The combining power of an element. Most common elements have valence 1, 2 or 3.",
+   "machine": true
+  },
+  {
+   "en": "Ion",
+   "am": "አዮን",
+   "def": "An atom or group of atoms with a positive or negative charge.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "sci.valence",
+   "name": "Valence: the combining power",
+   "explain": {
+    "en": {
+     "text": "The combining power of an element is its valence. Most common elements have valence 1, 2 or 3. Iron, copper, lead and tin have more than one valence. The charge on an ion equals its valence: Cl⁻ has 1, O²⁻ has 2, Al³⁺ has 3."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Joining power",
+     "ask": "Hydrogen joins one other atom. Oxygen can join two hydrogens in H₂O. Which has more \"joining power\"?",
+     "opts": [
+      "Hydrogen",
+      "Oxygen",
+      "The same"
+     ],
+     "after": "Oxygen holds two hydrogens, so it has more combining power. This power is called valence.",
+     "added": true,
+     "id": "g7.science.u3.s3-2-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "3.2.3 Valence number",
+     "paras": [
+      "Each element in a compound has a combining power.",
+      "The combining power of an element is called valence.",
+      "If we know the valences, it is easy to write a formula.",
+      "Most common elements have valence 1, 2 or 3."
+     ],
+     "id": "g7.science.u3.s3-2-3.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "More than one valence",
+     "paras": [
+      "Some elements have more than one valence.",
+      "Iron, copper, lead and tin are common examples.",
+      "Ions are atoms with a positive or negative charge.",
+      "The charge an ion carries equals its valence. Cl⁻, O²⁻ and Al³⁺ have valences 1, 2 and 3."
+     ],
+     "id": "g7.science.u3.s3-2-3.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Table 3.4: Valences of some common elements",
+     "paras": [],
+     "table": [
+      [
+       "",
+       "Valence 1",
+       "Valence 2",
+       "Valence 3"
+      ],
+      [
+       "Metals",
+       "Li, Na, K, Cu(I), Ag",
+       "Mg, Ca, Fe(II), Zn, Pb(II)",
+       "Al, Fe(III)"
+      ],
+      [
+       "Non-metals",
+       "Cl, Br, I, F",
+       "O, S",
+       "N"
+      ]
+     ],
+     "id": "g7.science.u3.s3-2-3.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Valence",
+       "The combining power of an element. Most common elements have valence 1, 2 or 3."
+      ],
+      [
+       "Ion",
+       "An atom or group of atoms with a positive or negative charge."
+      ]
+     ],
+     "id": "g7.science.u3.s3-2-3.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "What is the valence of oxygen?",
+     "opts": [
+      "1",
+      "2",
+      "3"
+     ],
+     "ans": "2",
+     "why": "Table 3.4 puts oxygen in the valence 2 column.",
+     "clue": "Look at the non-metal row of Table 3.4.",
+     "level": 1,
+     "ref": "Table 3.4",
+     "id": "g7.science.u3.s3-2-3.6"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "title": "Sort by valence",
+     "bins": [
+      "Valence 1",
+      "Valence 2",
+      "Valence 3"
+     ],
+     "items": [
+      [
+       "Na",
+       "Valence 1",
+       ""
+      ],
+      [
+       "Cl",
+       "Valence 1",
+       ""
+      ],
+      [
+       "Mg",
+       "Valence 2",
+       ""
+      ],
+      [
+       "O",
+       "Valence 2",
+       ""
+      ],
+      [
+       "Al",
+       "Valence 3",
+       ""
+      ],
+      [
+       "N",
+       "Valence 3",
+       ""
+      ]
+     ],
+     "why": "From Table 3.4.",
+     "clue": "Use Table 3.4.",
+     "level": 1,
+     "id": "g7.science.u3.s3-2-3.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "What is the valence of aluminium?",
+     "opts": [
+      "1",
+      "2",
+      "3",
+      "5"
+     ],
+     "ans": "3",
+     "why": "Al is in the valence 3 column; Al³⁺ carries 3 charges.",
+     "clue": "Look at the charge on Al³⁺.",
+     "level": 2,
+     "ref": "Exercise 3.3 Q4",
+     "id": "g7.science.u3.s3-2-3.8"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Iron has only one valence number.",
+     "a": false,
+     "why": "Iron has valence 2, iron(II), and valence 3, iron(III).",
+     "clue": "Look for iron in Table 3.4.",
+     "level": 1,
+     "id": "g7.science.u3.s3-2-3.9"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "An ion has the charge 2−. What is its valence?",
+     "opts": [
+      "−2",
+      "2",
+      "1",
+      "0"
+     ],
+     "ans": "2",
+     "why": "The valence equals the number of charges, not the sign. 2− means valence 2, like O²⁻.",
+     "clue": "Count the charges; ignore + or −.",
+     "level": 3,
+     "added": true,
+     "id": "g7.science.u3.s3-2-3.10"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The combining power of an element is its",
+   "opts": [
+    "symbol",
+    "valence",
+    "formula"
+   ],
+   "ans": "valence",
+   "why": "That is the definition.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.science.u3.s3-2-3.11"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Valence of sodium (Na)?",
+   "opts": [
+    "1",
+    "2",
+    "3"
+   ],
+   "ans": "1",
+   "why": "Table 3.4.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.science.u3.s3-2-3.12"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which element has more than one valence?",
+   "opts": [
+    "Sodium",
+    "Iron",
+    "Oxygen"
+   ],
+   "ans": "Iron",
+   "why": "Iron (II) and iron (III).",
+   "level": 2,
+   "clue": "",
+   "id": "g7.science.u3.s3-2-3.13"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Valence of nitrogen in Table 3.4?",
+   "opts": [
+    "1",
+    "2",
+    "3"
+   ],
+   "ans": "3",
+   "why": "Nitrogen is in the valence 3 column.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.science.u3.s3-2-3.14"
+  },
+  {
+   "kind": "pick",
+   "step": "test",
+   "graded": true,
+   "text": "Tap every element with valence 2.",
+   "pool": [
+    "Ca",
+    "K",
+    "Zn",
+    "S",
+    "Al",
+    "Br"
+   ],
+   "a": [
+    "Ca",
+    "Zn",
+    "S"
+   ],
+   "why": "Ca, Zn and S have valence 2. K and Br have 1; Al has 3.",
+   "level": 3,
+   "id": "g7.science.u3.s3-2-3.15"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Exercise 3.3 Q4 asks \"How many valence numbers does Aluminium have?\"; the intended question is \"what is its valence\" (answer 3). Used that way."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

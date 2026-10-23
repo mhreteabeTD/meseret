@@ -1,0 +1,406 @@
+{
+ "id": "g7.science.u3.s3-5",
+ "book": {
+  "title": "General Science Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "science",
+  "unit": 3,
+  "unit_title": "Elements, Compound and Chemical Reaction",
+  "pages": "90–92",
+  "section": "Review"
+ },
+ "title": "Summary and review exercise",
+ "competency": "Bring together the ideas of Unit 3.",
+ "minutes": 15,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Element",
+   "am": "ንጥረ ነገር",
+   "def": "A pure substance that cannot be broken down into simpler substances by ordinary chemical means.",
+   "machine": true
+  },
+  {
+   "en": "Compound",
+   "am": "ውሁድ",
+   "def": "A pure substance of two or more elements chemically combined.",
+   "machine": true
+  },
+  {
+   "en": "Valence",
+   "am": "ቫሌንስ",
+   "def": "The combining power of an element. Most common elements have valence 1, 2 or 3.",
+   "machine": true
+  },
+  {
+   "en": "Chemical equation",
+   "am": "የኬሚካል እኩልታ",
+   "def": "A shorthand expression of a chemical reaction through symbols and formulas.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "sci.unit3-review",
+   "name": "Unit 3 in one page",
+   "explain": {
+    "en": {
+     "text": "Elements have symbols; compounds have formulas. Valence is the combining power and gives formulas by criss-cross. In a reaction, reactants become products. Mass is conserved, so equations must be balanced by changing coefficients only."
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "graded": false,
+     "title": "Warm up: element or compound?",
+     "bins": [
+      "Element",
+      "Compound"
+     ],
+     "items": [
+      [
+       "O₂",
+       "Element",
+       "Only oxygen atoms."
+      ],
+      [
+       "H₂O",
+       "Compound",
+       "Hydrogen and oxygen."
+      ],
+      [
+       "Fe",
+       "Element",
+       "Iron."
+      ],
+      [
+       "NaCl",
+       "Compound",
+       "Sodium and chlorine."
+      ]
+     ],
+     "id": "g7.science.u3.s3-5.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Unit summary",
+     "paras": [
+      "An atomic symbol is a shorthand way of representing elements.",
+      "A compound is a pure substance of two or more elements chemically combined.",
+      "A chemical formula is the symbolic representation of an element or a compound.",
+      "A molecule is the smallest particle with a stable, independent existence."
+     ],
+     "id": "g7.science.u3.s3-5.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Unit summary (continued)",
+     "paras": [
+      "The combining power of an element is called valence. Most have valence 1, 2 or 3.",
+      "A polyatomic ion is a charged group of atoms.",
+      "In a reaction, reactants change into new substances called products.",
+      "Signs of a reaction: colour change, gas, heat change, precipitate.",
+      "Matter is neither created nor destroyed. Equations are balanced by inspection or the LCM method."
+     ],
+     "id": "g7.science.u3.s3-5.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Element",
+       "A pure substance that cannot be broken down into simpler substances by ordinary chemical means."
+      ],
+      [
+       "Compound",
+       "A pure substance of two or more elements chemically combined."
+      ],
+      [
+       "Valence",
+       "The combining power of an element. Most common elements have valence 1, 2 or 3."
+      ],
+      [
+       "Chemical equation",
+       "A shorthand expression of a chemical reaction through symbols and formulas."
+      ]
+     ],
+     "id": "g7.science.u3.s3-5.4"
+    },
+    {
+     "kind": "match",
+     "step": "check",
+     "graded": true,
+     "pairs": [
+      [
+       "Na",
+       "Sodium"
+      ],
+      [
+       "NO₃⁻",
+       "Nitrate ion"
+      ],
+      [
+       "CaCl₂",
+       "Calcium chloride"
+      ],
+      [
+       "2Mg + O₂ → 2MgO",
+       "Burning magnesium"
+      ]
+     ],
+     "why": "Each symbol or formula has one meaning.",
+     "clue": "Recall the symbols and names.",
+     "level": 1,
+     "id": "g7.science.u3.s3-5.5"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "The formula and symbol of nitrogen are the same.",
+     "a": false,
+     "why": "Symbol N, formula N₂.",
+     "clue": "Is nitrogen diatomic?",
+     "level": 1,
+     "ref": "Review Exercise I 8",
+     "id": "g7.science.u3.s3-5.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "What is the chemical formula of iron (III) chloride?",
+     "opts": [
+      "FeCl₂",
+      "FeCl",
+      "FeCl₃",
+      "Fe₂Cl₃"
+     ],
+     "ans": "FeCl₃",
+     "why": "Fe = 3, Cl = 1: Fe₁Cl₃ → FeCl₃.",
+     "clue": "(III) means valence 3.",
+     "level": 2,
+     "ref": "Review Exercise 15",
+     "id": "g7.science.u3.s3-5.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Balance: Aluminum + bromine → aluminum bromide",
+     "opts": [
+      "Al + Br₂ → AlBr₃",
+      "2Al + 3Br₂ → 2AlBr₃",
+      "Al + 3Br → AlBr₃",
+      "2Al + Br₂ → 2AlBr"
+     ],
+     "ans": "2Al + 3Br₂ → 2AlBr₃",
+     "why": "AlBr₃ (Al 3, Br 1). Bromine is Br₂. Br: LCM of 2 and 3 is 6 → 3Br₂, 2AlBr₃; then 2Al. Check Al 2 = 2, Br 6 = 6.",
+     "clue": "Write formulas first; bromine is diatomic.",
+     "level": 3,
+     "ref": "Review Exercise 20 a",
+     "added": true,
+     "id": "g7.science.u3.s3-5.8"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Review Exercise",
+   "items": [
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "A compound is pure substance.",
+     "a": true,
+     "why": "Compounds are pure substances.",
+     "clue": "Recall 3.2.1.",
+     "level": 1,
+     "ref": "1",
+     "id": "g7.science.u3.s3-5.9"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "In a chemical reaction atoms are neither created nor destroyed.",
+     "a": true,
+     "why": "Law of conservation of mass.",
+     "clue": "Recall 3.3.3.",
+     "level": 1,
+     "ref": "2",
+     "id": "g7.science.u3.s3-5.10"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "O₂ and 2O have the same meaning.",
+     "a": false,
+     "why": "O₂ is a molecule; 2O is two atoms.",
+     "clue": "Coefficient or subscript?",
+     "level": 1,
+     "ref": "3",
+     "id": "g7.science.u3.s3-5.11"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "The symbol of copper is Co.",
+     "a": false,
+     "why": "Copper is Cu (Cuprum).",
+     "clue": "Latin name.",
+     "level": 1,
+     "ref": "4",
+     "id": "g7.science.u3.s3-5.12"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Respiration is a chemical change.",
+     "a": true,
+     "why": "New substances form.",
+     "clue": "Are new substances made?",
+     "level": 1,
+     "ref": "6",
+     "id": "g7.science.u3.s3-5.13"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "The Latin name of silver is",
+     "opts": [
+      "Argentum",
+      "Kalium",
+      "Natrium",
+      "Cuprum"
+     ],
+     "ans": "Argentum",
+     "why": "Silver – Argentum – Ag.",
+     "clue": "Table 3.2.",
+     "level": 1,
+     "ref": "11",
+     "id": "g7.science.u3.s3-5.14"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "All can exist as diatomic molecules EXCEPT",
+     "opts": [
+      "Hydrogen",
+      "Oxygen",
+      "Sodium",
+      "Chlorine"
+     ],
+     "ans": "Sodium",
+     "why": "Sodium is a metal, not diatomic.",
+     "clue": "Table 3.3.",
+     "level": 1,
+     "ref": "14",
+     "id": "g7.science.u3.s3-5.15"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "The chemical symbol for helium is",
+     "opts": [
+      "H",
+      "Hl",
+      "He",
+      "HE"
+     ],
+     "ans": "He",
+     "why": "Helium is He.",
+     "clue": "Capital then small.",
+     "level": 1,
+     "ref": "16",
+     "id": "g7.science.u3.s3-5.16"
+    },
+    {
+     "kind": "match",
+     "step": "exercise",
+     "graded": true,
+     "pairs": [
+      [
+       "Zinc",
+       "Zn"
+      ],
+      [
+       "Phosphorus",
+       "P"
+      ],
+      [
+       "Mercury",
+       "Hg"
+      ],
+      [
+       "Calcium",
+       "Ca"
+      ],
+      [
+       "Tin",
+       "Sn"
+      ]
+     ],
+     "why": "From Tables 3.1 and 3.2.",
+     "clue": "Hydrargyrum, Stannum.",
+     "level": 2,
+     "ref": "18",
+     "id": "g7.science.u3.s3-5.17"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Balance: NH₃ + O₂ → NO + H₂O",
+     "opts": [
+      "4NH₃ + 5O₂ → 4NO + 6H₂O",
+      "2NH₃ + O₂ → 2NO + 3H₂O",
+      "NH₃ + O₂ → NO + H₂O"
+     ],
+     "ans": "4NH₃ + 5O₂ → 4NO + 6H₂O",
+     "why": "N 4 = 4, H 12 = 12, O 10 = 4 + 6.",
+     "clue": "Balance H, then N, then O; clear 5/2.",
+     "level": 3,
+     "ref": "19 b",
+     "id": "g7.science.u3.s3-5.18"
+    }
+   ]
+  },
+  {
+   "book_name": "Chapter test",
+   "test": true,
+   "chapter_test": true,
+   "count": 20,
+   "minutes": 25,
+   "items": []
+  }
+ ],
+ "test": [],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "The chapter test draws 20 questions round-robin from the 16 section tests, 25 minutes, no clues."
+  },
+  {
+   "kind": "note",
+   "text": "Review Exercise 19 a, 19 c, 20 b, 20 c are balanced in source.md: 2Al(OH)₃ → Al₂O₃ + 3H₂O; 3Ca(OH)₂ + 2H₃PO₄ → Ca₃(PO₄)₂ + 6H₂O; 6Na + N₂ → 2Na₃N; 2K + 2H₂O → 2KOH + H₂. Some appear in section tests."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

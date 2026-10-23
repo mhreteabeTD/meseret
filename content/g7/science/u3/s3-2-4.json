@@ -1,0 +1,493 @@
+{
+ "id": "g7.science.u3.s3-2-4",
+ "book": {
+  "title": "General Science Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "science",
+  "unit": 3,
+  "unit_title": "Elements, Compound and Chemical Reaction",
+  "pages": "75–76",
+  "section": "3.2.4"
+ },
+ "title": "Formulas of binary compounds",
+ "competency": "Write formulas of simple binary compounds using symbols and valences.",
+ "minutes": 12,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Binary compound",
+   "am": "ባለሁለት ንጥረ ነገር ውሁድ",
+   "def": "A compound made of only two different elements.",
+   "machine": true
+  },
+  {
+   "en": "Valence",
+   "am": "ቫሌንስ",
+   "def": "The combining power of an element. Most common elements have valence 1, 2 or 3.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "sci.criss-cross",
+   "name": "Writing formulas by criss-cross",
+   "explain": {
+    "en": {
+     "text": "A binary compound has two different elements. To write its formula: write the symbols, write each valence above, then criss-cross the valences to below the other symbol. Omit a subscript of 1. Calcium (2) and chlorine (1) give CaCl₂."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "How many partners?",
+     "ask": "Calcium has valence 2 and chlorine has valence 1. How many chlorines does one calcium need?",
+     "opts": [
+      "1",
+      "2",
+      "3"
+     ],
+     "after": "Calcium can hold two chlorines. The formula is CaCl₂. The criss-cross method shows this.",
+     "ref": "Example b",
+     "id": "g7.science.u3.s3-2-4.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "3.2.4 Formulas of binary compounds",
+     "paras": [
+      "Binary compounds are made of two different elements.",
+      "To write their formulas, follow three steps."
+     ],
+     "table": [
+      [
+       "Step",
+       "What to do"
+      ],
+      [
+       "i",
+       "Write the symbols of the elements."
+      ],
+      [
+       "ii",
+       "Write the valence number above each symbol."
+      ],
+      [
+       "iii",
+       "Criss-cross the valences and write them below the symbols. Omit a 1."
+      ]
+     ],
+     "id": "g7.science.u3.s3-2-4.2"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Example a: potassium iodide",
+     "steps": [
+      "Step 1: write the symbols K and I.",
+      "Step 2: valences above: K is 1, I is 1.",
+      "Step 3: criss-cross: K₁I₁.",
+      "A subscript of 1 is omitted. Potassium iodide is KI."
+     ],
+     "id": "g7.science.u3.s3-2-4.3"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Example b: calcium chloride",
+     "steps": [
+      "Step 1: write the symbols Ca and Cl.",
+      "Step 2: valences above: Ca is 2, Cl is 1.",
+      "Step 3: criss-cross: Ca gets 1, Cl gets 2 → Ca₁Cl₂.",
+      "Omit the 1. Calcium chloride is CaCl₂."
+     ],
+     "id": "g7.science.u3.s3-2-4.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Binary compound",
+       "A compound made of only two different elements."
+      ]
+     ],
+     "id": "g7.science.u3.s3-2-4.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "What is the formula of sodium chloride? (Na = 1, Cl = 1)",
+     "opts": [
+      "NaCl",
+      "Na₂Cl",
+      "NaCl₂",
+      "Na₂Cl₂"
+     ],
+     "ans": "NaCl",
+     "why": "Criss-cross gives Na₁Cl₁. Omit the 1s: NaCl.",
+     "clue": "Both valences are 1.",
+     "level": 1,
+     "ref": "Exercise 3.3 Q1 C",
+     "id": "g7.science.u3.s3-2-4.6"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Aluminum oxide",
+     "steps": [
+      "Symbols: Al and O.",
+      "Valences: Al = 3, O = 2.",
+      "Criss-cross: Al gets 2, O gets 3 → Al₂O₃.",
+      "Check: 2 × 3 = 6 and 3 × 2 = 6. The charges balance."
+     ],
+     "id": "g7.science.u3.s3-2-4.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "What is the formula of aluminum oxide? (Al = 3, O = 2)",
+     "opts": [
+      "AlO",
+      "Al₃O₂",
+      "Al₂O₃",
+      "Al₂O"
+     ],
+     "ans": "Al₂O₃",
+     "why": "Criss-cross: Al gets O's 2, O gets Al's 3.",
+     "clue": "Each valence moves below the OTHER symbol.",
+     "level": 2,
+     "ref": "Exercise 3.3 Q1 D",
+     "id": "g7.science.u3.s3-2-4.8"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "What is the formula of magnesium nitride? (Mg = 2, N = 3)",
+     "opts": [
+      "MgN",
+      "Mg₂N₃",
+      "Mg₃N₂",
+      "Mg₃N"
+     ],
+     "ans": "Mg₃N₂",
+     "why": "Mg gets N's 3, N gets Mg's 2: Mg₃N₂. Check: 3 × 2 = 6 = 2 × 3.",
+     "clue": "Swap the valences.",
+     "level": 2,
+     "ref": "Exercise 3.3 Q1 B",
+     "id": "g7.science.u3.s3-2-4.9"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "When the subscripts are equal",
+     "steps": [
+      "Symbols: Cu and O. Copper(II) means Cu = 2. O = 2.",
+      "Criss-cross: Cu₂O₂.",
+      "Both subscripts are 2. Divide both by 2.",
+      "Copper (II) oxide is CuO."
+     ],
+     "id": "g7.science.u3.s3-2-4.10"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Aluminum (3) and nitrogen (3) form aluminum nitride. What is its formula?",
+     "opts": [
+      "Al₃N₃",
+      "AlN",
+      "Al₃N",
+      "AlN₃"
+     ],
+     "ans": "AlN",
+     "why": "Criss-cross gives Al₃N₃. Divide both by 3: AlN.",
+     "clue": "Simplify when the subscripts can be divided.",
+     "level": 3,
+     "added": true,
+     "id": "g7.science.u3.s3-2-4.11"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 3.3",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Write the chemical formula for copper (II) oxide.",
+     "opts": [
+      "CuO",
+      "Cu₂O",
+      "CuO₂",
+      "Cu₂O₂"
+     ],
+     "ans": "CuO",
+     "why": "Cu = 2, O = 2. Cu₂O₂ simplifies to CuO.",
+     "clue": "Simplify equal subscripts.",
+     "level": 2,
+     "ref": "Q1 A",
+     "id": "g7.science.u3.s3-2-4.12"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Magnesium nitride",
+     "opts": [
+      "Mg₃N₂",
+      "Mg₂N₃",
+      "MgN"
+     ],
+     "ans": "Mg₃N₂",
+     "why": "Mg = 2, N = 3. Criss-cross: Mg₃N₂.",
+     "clue": "Swap the valences.",
+     "level": 1,
+     "ref": "Q1 B",
+     "id": "g7.science.u3.s3-2-4.13"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Sodium chloride",
+     "opts": [
+      "NaCl",
+      "Na₂Cl",
+      "NaCl₂"
+     ],
+     "ans": "NaCl",
+     "why": "Both valences are 1.",
+     "clue": "Omit the 1s.",
+     "level": 1,
+     "ref": "Q1 C",
+     "id": "g7.science.u3.s3-2-4.14"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Aluminum oxide",
+     "opts": [
+      "Al₂O₃",
+      "Al₃O₂",
+      "AlO"
+     ],
+     "ans": "Al₂O₃",
+     "why": "Al = 3, O = 2.",
+     "clue": "Swap the valences.",
+     "level": 1,
+     "ref": "Q1 D",
+     "id": "g7.science.u3.s3-2-4.15"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Iron (III) oxide",
+     "opts": [
+      "FeO",
+      "Fe₃O₂",
+      "Fe₂O₃"
+     ],
+     "ans": "Fe₂O₃",
+     "why": "Fe = 3, O = 2. Criss-cross: Fe₂O₃.",
+     "clue": "(III) means valence 3.",
+     "level": 2,
+     "ref": "Q1 E",
+     "id": "g7.science.u3.s3-2-4.16"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Iron (II) bromide",
+     "opts": [
+      "FeBr₂",
+      "Fe₂Br",
+      "FeBr"
+     ],
+     "ans": "FeBr₂",
+     "why": "Fe = 2, Br = 1. Fe₁Br₂ → FeBr₂.",
+     "clue": "(II) means valence 2.",
+     "level": 2,
+     "ref": "Q1 F",
+     "id": "g7.science.u3.s3-2-4.17"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Silver oxide",
+     "opts": [
+      "AgO",
+      "Ag₂O",
+      "AgO₂"
+     ],
+     "ans": "Ag₂O",
+     "why": "Ag = 1, O = 2. Ag₂O₁ → Ag₂O.",
+     "clue": "Swap the valences.",
+     "level": 1,
+     "ref": "Q1 G",
+     "id": "g7.science.u3.s3-2-4.18"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Calcium fluoride",
+     "opts": [
+      "CaF",
+      "Ca₂F",
+      "CaF₂"
+     ],
+     "ans": "CaF₂",
+     "why": "Ca = 2, F = 1. Ca₁F₂ → CaF₂.",
+     "clue": "Swap the valences.",
+     "level": 1,
+     "ref": "Q1 H",
+     "id": "g7.science.u3.s3-2-4.19"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which is the chemical formula of aluminum nitride?",
+     "opts": [
+      "Al₅N₃",
+      "Al₃N₂",
+      "AlN₃",
+      "AlN"
+     ],
+     "ans": "AlN",
+     "why": "Al₃N₃ simplifies to AlN.",
+     "clue": "Both valences are 3.",
+     "level": 2,
+     "ref": "Q3",
+     "id": "g7.science.u3.s3-2-4.20"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "How many valence numbers does aluminium have? (What is its valence?)",
+     "opts": [
+      "1",
+      "2",
+      "3",
+      "5"
+     ],
+     "ans": "3",
+     "why": "Aluminium has valence 3.",
+     "clue": "Look at Al³⁺.",
+     "level": 1,
+     "ref": "Q4",
+     "id": "g7.science.u3.s3-2-4.21"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Formula of potassium iodide (K = 1, I = 1)?",
+   "opts": [
+    "KI",
+    "K₂I",
+    "KI₂"
+   ],
+   "ans": "KI",
+   "why": "Criss-cross gives K₁I₁ → KI.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.science.u3.s3-2-4.22"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Formula of calcium chloride (Ca = 2, Cl = 1)?",
+   "opts": [
+    "CaCl",
+    "CaCl₂",
+    "Ca₂Cl"
+   ],
+   "ans": "CaCl₂",
+   "why": "Ca₁Cl₂ → CaCl₂.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.science.u3.s3-2-4.23"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Formula of sodium oxide (Na = 1, O = 2)?",
+   "opts": [
+    "NaO",
+    "Na₂O",
+    "NaO₂"
+   ],
+   "ans": "Na₂O",
+   "why": "Na gets 2, O gets 1 → Na₂O.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.science.u3.s3-2-4.24"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Formula of magnesium oxide (Mg = 2, O = 2)?",
+   "opts": [
+    "Mg₂O₂",
+    "MgO",
+    "MgO₂"
+   ],
+   "ans": "MgO",
+   "why": "Mg₂O₂ simplifies to MgO.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.science.u3.s3-2-4.25"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Formula of calcium nitride (Ca = 2, N = 3)?",
+   "opts": [
+    "Ca₂N₃",
+    "Ca₃N₂",
+    "CaN"
+   ],
+   "ans": "Ca₃N₂",
+   "why": "Ca gets 3, N gets 2. Check: 3 × 2 = 6 = 2 × 3.",
+   "level": 3,
+   "clue": "",
+   "id": "g7.science.u3.s3-2-4.26"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "Formulas are chosen from options (typing subscripts on a phone is hard). Exercise 3.3 Q2 (naming) is in lesson 3.2.5."
+  },
+  {
+   "kind": "review",
+   "text": "Exercise 3.3 Q4 wording (\"how many valence numbers\") is unclear; asked as \"what is its valence\" (3)."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

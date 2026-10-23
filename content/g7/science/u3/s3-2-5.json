@@ -1,0 +1,372 @@
+{
+ "id": "g7.science.u3.s3-2-5",
+ "book": {
+  "title": "General Science Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "science",
+  "unit": 3,
+  "unit_title": "Elements, Compound and Chemical Reaction",
+  "pages": "76–77",
+  "section": "3.2.5"
+ },
+ "title": "Naming binary compounds",
+ "competency": "Name binary compounds from their formulas.",
+ "minutes": 9,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Binary compound",
+   "am": "ባለሁለት ንጥረ ነገር ውሁድ",
+   "def": "A compound made of only two different elements.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "sci.naming-binary",
+   "name": "Naming binary compounds",
+   "explain": {
+    "en": {
+     "text": "Name the metal first with its element name. Then name the non-metal with the ending -ide: oxygen becomes oxide, chlorine becomes chloride. For metals with more than one valence, write the valence in Roman numerals: FeCl₃ is iron (III) chloride."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Fix the name",
+     "ask": "A student named a compound of calcium and sulfur \"sulfur calcium\". What is the correct name?",
+     "opts": [
+      "Sulfur calcium",
+      "Calcium sulfide",
+      "Calcium sulfur"
+     ],
+     "after": "The metal comes first, and sulfur takes the ending -ide. The name is calcium sulfide.",
+     "ref": "Activity 3.5",
+     "id": "g7.science.u3.s3-2-5.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "3.2.5 Naming binary compounds",
+     "paras": [
+      "In naming a compound, the metal is named first.",
+      "Then comes the non-metal.",
+      "A binary compound is made of only two different elements, in a whole number ratio."
+     ],
+     "id": "g7.science.u3.s3-2-5.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Rule 1",
+     "paras": [
+      "The metal keeps its element name.",
+      "The end of the non-metal name changes to -ide."
+     ],
+     "table": [
+      [
+       "Non-metal",
+       "Name in compounds",
+       "Non-metal",
+       "Name in compounds"
+      ],
+      [
+       "Nitrogen",
+       "Nitride",
+       "Bromine",
+       "Bromide"
+      ],
+      [
+       "Oxygen",
+       "Oxide",
+       "Iodine",
+       "Iodide"
+      ],
+      [
+       "Fluorine",
+       "Fluoride",
+       "Phosphorus",
+       "Phosphide"
+      ],
+      [
+       "Chlorine",
+       "Chloride",
+       "Sulfur",
+       "Sulfide"
+      ]
+     ],
+     "id": "g7.science.u3.s3-2-5.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Rule 2",
+     "paras": [
+      "Some metals form more than one positive ion.",
+      "Write the valence in Roman numerals in brackets.",
+      "Fe²⁺ is iron (II), read \"iron two\". Fe³⁺ is iron (III), read \"iron three\"."
+     ],
+     "id": "g7.science.u3.s3-2-5.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Binary compound",
+       "A compound made of only two different elements."
+      ]
+     ],
+     "id": "g7.science.u3.s3-2-5.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "What is the correct name of MgO?",
+     "opts": [
+      "Magnesium oxygen",
+      "Oxygen magnesium",
+      "Magnesium oxide",
+      "Molybdenum oxide"
+     ],
+     "ans": "Magnesium oxide",
+     "why": "Metal first; oxygen becomes oxide.",
+     "clue": "Use the -ide ending.",
+     "level": 1,
+     "ref": "Review Exercise 17",
+     "id": "g7.science.u3.s3-2-5.6"
+    },
+    {
+     "kind": "match",
+     "step": "practise",
+     "graded": true,
+     "title": "Non-metal name in a compound",
+     "pairs": [
+      [
+       "Nitrogen",
+       "Nitride"
+      ],
+      [
+       "Oxygen",
+       "Oxide"
+      ],
+      [
+       "Chlorine",
+       "Chloride"
+      ],
+      [
+       "Sulfur",
+       "Sulfide"
+      ],
+      [
+       "Iodine",
+       "Iodide"
+      ]
+     ],
+     "why": "Table 3.5: the ending changes to -ide.",
+     "clue": "Keep the start of the name, add -ide.",
+     "level": 1,
+     "ref": "Table 3.5",
+     "id": "g7.science.u3.s3-2-5.7"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "AgCl is silver ___",
+     "a": [
+      "chloride"
+     ],
+     "why": "Chlorine becomes chloride.",
+     "clue": "Change chlorine to the -ide name.",
+     "level": 1,
+     "ref": "Exercise 3.3 Q2 C",
+     "id": "g7.science.u3.s3-2-5.8"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "What is the name of FeS? (S has valence 2)",
+     "opts": [
+      "Iron sulfide (III)",
+      "Iron (II) sulfide",
+      "Iron (III) sulfide",
+      "Sulfur iron"
+     ],
+     "ans": "Iron (II) sulfide",
+     "why": "One Fe for one S of valence 2, so iron has valence 2: iron (II).",
+     "clue": "Work out iron's valence from sulfur.",
+     "level": 2,
+     "ref": "Exercise 3.3 Q2 B",
+     "id": "g7.science.u3.s3-2-5.9"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "What is the name of FeCl₃?",
+     "opts": [
+      "Iron chloride",
+      "Iron (II) chloride",
+      "Iron (III) chloride",
+      "Iron trichlorine"
+     ],
+     "ans": "Iron (III) chloride",
+     "why": "Three Cl, each valence 1, give 3 charges. So iron has valence 3: iron (III) chloride.",
+     "clue": "Add up the chlorines' valences.",
+     "level": 3,
+     "added": true,
+     "id": "g7.science.u3.s3-2-5.10"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 3.3 Q2 (names)",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Write the chemical name for MgO: magnesium ___",
+     "a": [
+      "oxide"
+     ],
+     "why": "Oxygen becomes oxide.",
+     "clue": "Use -ide.",
+     "level": 1,
+     "ref": "Q2 A",
+     "id": "g7.science.u3.s3-2-5.11"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Write the chemical name for FeS.",
+     "opts": [
+      "Iron (II) sulfide",
+      "Iron (III) sulfide",
+      "Iron sulfur"
+     ],
+     "ans": "Iron (II) sulfide",
+     "why": "Iron has valence 2 here.",
+     "clue": "S has valence 2.",
+     "level": 2,
+     "ref": "Q2 B",
+     "id": "g7.science.u3.s3-2-5.12"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Write the chemical name for AgCl: silver ___",
+     "a": [
+      "chloride"
+     ],
+     "why": "Chlorine becomes chloride.",
+     "clue": "Use -ide.",
+     "level": 1,
+     "ref": "Q2 C",
+     "id": "g7.science.u3.s3-2-5.13"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Name of NaCl?",
+   "opts": [
+    "Sodium chlorine",
+    "Sodium chloride",
+    "Chloride sodium"
+   ],
+   "ans": "Sodium chloride",
+   "why": "Metal first, then -ide.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.science.u3.s3-2-5.14"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "In compounds, oxygen is called",
+   "opts": [
+    "oxide",
+    "oxygenide",
+    "oxy"
+   ],
+   "ans": "oxide",
+   "why": "Table 3.5.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.science.u3.s3-2-5.15"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Name of CaS?",
+   "opts": [
+    "Calcium sulfide",
+    "Sulfur calcium",
+    "Calcium sulfur"
+   ],
+   "ans": "Calcium sulfide",
+   "why": "Metal first, sulfur → sulfide.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.science.u3.s3-2-5.16"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Fe³⁺ is read as",
+   "opts": [
+    "iron two",
+    "iron three",
+    "iron"
+   ],
+   "ans": "iron three",
+   "why": "Roman numeral III.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.science.u3.s3-2-5.17"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Name of CuO (O has valence 2)?",
+   "opts": [
+    "Copper (I) oxide",
+    "Copper (II) oxide",
+    "Copper oxygen"
+   ],
+   "ans": "Copper (II) oxide",
+   "why": "One Cu for one O of valence 2, so copper is (II).",
+   "level": 3,
+   "clue": "",
+   "id": "g7.science.u3.s3-2-5.18"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "Exercise 3.3 Q2 (naming) is placed here, after the naming rules, although the book prints it before 3.2.5."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
