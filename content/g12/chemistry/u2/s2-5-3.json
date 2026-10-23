@@ -1,0 +1,511 @@
+{
+ "id": "g12.chemistry.u2.s2-5-3",
+ "book": {
+  "title": "Chemistry Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "chemistry",
+  "unit": 2,
+  "unit_title": "Electrochemistry",
+  "pages": "109–119",
+  "section": "2.5.3"
+ },
+ "title": "Cell potential, free energy and the Nernst equation",
+ "competency": "Relate E°cell to ΔG° and K, and use the Nernst equation for non-standard cells, concentration cells and pH.",
+ "minutes": 35,
+ "keywords": [
+  {
+   "en": "Electromotive force",
+   "am": "ኤሌክትሮሞቲቭ ኃይል (EMF)",
+   "def": "The potential difference that drives electrons from anode to cathode, in volts.",
+   "machine": true
+  },
+  {
+   "en": "Nernst equation",
+   "am": "የኔርንስት እኩልታ",
+   "def": "Ecell = E°cell − (0.0592/n) log Q at 25 °C.",
+   "machine": true
+  },
+  {
+   "en": "Concentration cell",
+   "am": "የኮንሰንትሬሽን ሴል",
+   "def": "Two identical half-cells with different concentrations; E°cell = 0.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "chem.free-energy-emf",
+   "name": "Cell potential, free energy and K",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "A cell's EMF is linked to free energy by ΔG = −nFE: a positive cell potential means a negative ΔG and a spontaneous reaction. At standard conditions ΔG° = −nFE° and ΔG° = −RT ln K, so at 25 °C log K = nE°/0.0592 and ln K = nE°/0.0257. A large positive E° means a very large K."
+    },
+    "am": {
+     "text": "ΔG = −nFE፤ አዎንታዊ E አሉታዊ ΔG ማለት ድንገተኛ ነው። ΔG° = −RT ln K፤ log K = nE°/0.0592።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Downhill electrons",
+     "ask": "Water flows downhill by itself. Electrons in a cell flow by themselves from",
+     "opts": [
+      "the anode to the cathode",
+      "the cathode to the anode",
+      "the salt bridge to the anode",
+      "nowhere"
+     ],
+     "after": "Like water falling, electrons move from higher to lower potential energy: anode (−) to cathode (+).",
+     "ref": "Activity 2.11",
+     "id": "g12.chemistry.u2.s2-5-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "EMF, ΔG and K",
+     "paras": [
+      "EMF: the potential difference that drives electrons, in volts (1 V = 1 J/C).",
+      "ΔG = −nFE; ΔG° = −nFE°.",
+      "E° > 0 means ΔG° < 0: spontaneous.",
+      "ΔG° = −RT ln K, so ln K = nE°/0.0257 and log K = nE°/0.0592 at 25 °C."
+     ],
+     "ref": "p.109–113",
+     "id": "g12.chemistry.u2.s2-5-3.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Electromotive force",
+       "The potential difference that drives electrons from anode to cathode, in volts."
+      ]
+     ],
+     "id": "g12.chemistry.u2.s2-5-3.3"
+    },
+    {
+     "kind": "mcq",
+     "text": "If E°cell is positive, ΔG° is",
+     "opts": [
+      "negative",
+      "positive",
+      "zero",
+      "impossible to tell"
+     ],
+     "ans": "negative",
+     "why": "ΔG° = −nFE°.",
+     "clue": "Look at the minus sign.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.113",
+     "id": "g12.chemistry.u2.s2-5-3.4"
+    },
+    {
+     "kind": "blank",
+     "ask": "Zn + 2Ag⁺ → Zn²⁺ + 2Ag, E° = 1.56 V, n = 2. ΔG° ≈ ___ kJ (nearest kJ)",
+     "a": [
+      "≈-301"
+     ],
+     "why": "ΔG° = −2 × 96 500 × 1.56 = −301 080 J ≈ −301 kJ.",
+     "clue": "ΔG° = −nFE°; divide J by 1000.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Review Part II Q8",
+     "id": "g12.chemistry.u2.s2-5-3.5"
+    },
+    {
+     "kind": "blank",
+     "ask": "For 2H₂ + O₂ → 2H₂O, ΔG° = −474 kJ and n = 4. E° ≈ ___ V (2 decimal places)",
+     "a": [
+      "≈1.23"
+     ],
+     "why": "E° = 474 000/(4 × 96 500) = 1.23 V.",
+     "clue": "E° = −ΔG°/(nF).",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Review Part I Q9",
+     "id": "g12.chemistry.u2.s2-5-3.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which equation links ΔG° and K?",
+     "opts": [
+      "ΔG° = −RT ln K",
+      "ΔG° = RT ln K",
+      "K = ΔG°",
+      "K = RT ln ΔG°"
+     ],
+     "ans": "ΔG° = −RT ln K",
+     "why": "At equilibrium ΔG = 0 and Q = K.",
+     "clue": "A large K should give a negative ΔG°.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Review Part I Q10",
+     "id": "g12.chemistry.u2.s2-5-3.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "2Au + 3Ca²⁺ → 2Au³⁺ + 3Ca: E° = −4.37 V, n = 6. ΔG° ≈ ___ × 10³ kJ (2 decimal places)",
+     "a": [
+      "≈2.53"
+     ],
+     "why": "ΔG° = −6 × 96 500 × (−4.37) = +2.53 × 10⁶ J = 2.53 × 10³ kJ: gold cannot reduce calcium.",
+     "clue": "Two negatives make a positive.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Example 2.9",
+     "id": "g12.chemistry.u2.s2-5-3.8"
+    },
+    {
+     "kind": "blank",
+     "ask": "The Daniell cell has E° = 1.10 V, n = 2. log K ≈ ___ (1 decimal place)",
+     "a": [
+      "≈37.2"
+     ],
+     "why": "log K = 2 × 1.10 ÷ 0.0592 = 37.2, so K ≈ 1.5 × 10³⁷.",
+     "clue": "log K = nE°/0.0592.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Review Part II Q9",
+     "added": true,
+     "id": "g12.chemistry.u2.s2-5-3.9"
+    }
+   ]
+  },
+  {
+   "id": "chem.nernst",
+   "name": "The Nernst equation",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Real cells are not at 1 M. The Nernst equation corrects for concentration: Ecell = E°cell − (0.0592/n) log Q at 25 °C. As a cell runs, products build up, Q rises and Ecell falls until it reaches 0 at equilibrium (a dead battery). A concentration cell has identical half-cells; its E° is 0, but different concentrations still give a voltage. The same idea lets a cell measure pH."
+    },
+    "am": {
+     "text": "የኔርንስት እኩልታ፡ Ecell = E°cell − (0.0592/n) log Q። ሴሉ ሲሠራ Q ይጨምራል፣ E ይቀንሳል፤ በሚዛን ዜሮ ይሆናል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Daniell cell away from 1 M",
+     "ask": "Change log Q = log([Zn²⁺]/[Cu²⁺]). Watch the cell voltage.",
+     "vars": [
+      {
+       "k": "k",
+       "label": "log Q",
+       "min": -6,
+       "max": 6,
+       "step": 1,
+       "v": 0
+      }
+     ],
+     "formula": "1.10 - 0.0296*k",
+     "out": "Ecell = {v} V",
+     "note": "Q < 1 (little product): above 1.10 V. Q > 1: below.",
+     "id": "g12.chemistry.u2.s2-5-3.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The Nernst equation",
+     "paras": [
+      "ΔG = ΔG° + RT ln Q gives Ecell = E°cell − (RT/nF) ln Q.",
+      "At 25 °C: Ecell = E°cell − (0.0592/n) log Q.",
+      "As the cell runs, Q rises and Ecell falls.",
+      "At equilibrium Ecell = 0, ΔG = 0 and Q = K: the battery is dead."
+     ],
+     "ref": "p.110–111",
+     "id": "g12.chemistry.u2.s2-5-3.11"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Zn | Zn²⁺(1.0 × 10⁻⁵ M) || Cu²⁺(0.100 M) | Cu",
+     "steps": [
+      "n = 2; Q = [Zn²⁺]/[Cu²⁺] = 1.0 × 10⁻⁵/0.100 = 1.0 × 10⁻⁴.",
+      "log Q = −4.",
+      "Ecell = 1.10 − (0.0592 ÷ 2)(−4) = 1.10 + 0.12 = 1.22 V."
+     ],
+     "ref": "Example 2.11",
+     "id": "g12.chemistry.u2.s2-5-3.12"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Concentration cells and pH",
+     "paras": [
+      "Same half-cell on both sides, different concentrations: E°cell = 0.",
+      "Dilute side is the anode; concentrated side is the cathode.",
+      "Cu 0.10 M | 1.0 M: Ecell = −(0.0592 ÷ 2) log(0.10 ÷ 1.0) = 0.0296 V.",
+      "With a Zn electrode and a hydrogen electrode in the test solution: pH = (0.76 − Ecell)/0.0592."
+     ],
+     "ref": "p.115–118",
+     "id": "g12.chemistry.u2.s2-5-3.13"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Nernst equation",
+       "Ecell = E°cell − (0.0592/n) log Q at 25 °C."
+      ],
+      [
+       "Concentration cell",
+       "Two identical half-cells with different concentrations; E°cell = 0."
+      ]
+     ],
+     "id": "g12.chemistry.u2.s2-5-3.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "As a voltaic cell runs, Ecell",
+     "opts": [
+      "decreases",
+      "increases",
+      "stays the same",
+      "changes sign at once"
+     ],
+     "ans": "decreases",
+     "why": "Products build up, Q rises, so the log term grows.",
+     "clue": "What happens to Q?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.111",
+     "id": "g12.chemistry.u2.s2-5-3.15"
+    },
+    {
+     "kind": "blank",
+     "ask": "Zn + Cu²⁺ → Zn²⁺ + Cu, E° = 1.10 V, [Cu²⁺] = 1.0 M, [Zn²⁺] = 0.025 M. Ecell ≈ ___ V (2 decimal places)",
+     "a": [
+      "≈1.15"
+     ],
+     "why": "Q = 0.025; log Q = −1.60; Ecell = 1.10 + 0.0296 × 1.60 = 1.15 V.",
+     "clue": "Q < 1, so E > E°.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Review Part I Q12",
+     "id": "g12.chemistry.u2.s2-5-3.16"
+    },
+    {
+     "kind": "blank",
+     "ask": "A Cu concentration cell has 0.10 M and 1.0 M Cu²⁺. Ecell ≈ ___ V (4 decimal places)",
+     "a": [
+      "≈0.0296"
+     ],
+     "why": "Ecell = 0 − (0.0592 ÷ 2) log(0.10 ÷ 1.0) = 0.0296 V.",
+     "clue": "E° = 0; Q = dilute/concentrated.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.116",
+     "id": "g12.chemistry.u2.s2-5-3.17"
+    },
+    {
+     "kind": "mcq",
+     "text": "In a concentration cell, the more dilute solution is in the",
+     "opts": [
+      "anode compartment",
+      "cathode compartment",
+      "salt bridge",
+      "either compartment"
+     ],
+     "ans": "anode compartment",
+     "why": "The anode adds ions to the dilute side until both are equal.",
+     "clue": "Which side gains ions?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.115",
+     "id": "g12.chemistry.u2.s2-5-3.18"
+    },
+    {
+     "kind": "mcq",
+     "text": "A battery is \"dead\" when",
+     "opts": [
+      "all of these are true",
+      "reactants and products reach equilibrium",
+      "Ecell = 0",
+      "ΔG = 0"
+     ],
+     "ans": "all of these are true",
+     "why": "At equilibrium Q = K, Ecell = 0 and ΔG = 0: three ways of saying the same thing.",
+     "clue": "Think about equilibrium.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Review Part I Q14",
+     "id": "g12.chemistry.u2.s2-5-3.19"
+    },
+    {
+     "kind": "blank",
+     "ask": "Zn | Zn²⁺(0.010 M) || H⁺(2.5 M) | H₂(0.30 atm) | Pt, E° = 0.76 V. Ecell ≈ ___ V (2 decimal places)",
+     "a": [
+      "≈0.86"
+     ],
+     "why": "Q = 0.010 × 0.30 ÷ 2.5² = 4.8 × 10⁻⁴; log Q = −3.32; Ecell = 0.76 + 0.0296 × 3.32 = 0.86 V.",
+     "clue": "Q = [Zn²⁺]·p(H₂)/[H⁺]².",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Exercise 2.10 Q1",
+     "id": "g12.chemistry.u2.s2-5-3.20"
+    },
+    {
+     "kind": "blank",
+     "ask": "A Zn/hydrogen-electrode cell reads Ecell = 0.523 V. The test solution's pH ≈ ___ (1 decimal place)",
+     "a": [
+      "≈4.0"
+     ],
+     "why": "pH = (0.76 − 0.523)/0.0592 = 4.0.",
+     "clue": "pH = (0.76 − Ecell)/0.0592.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "p.118",
+     "added": true,
+     "id": "g12.chemistry.u2.s2-5-3.21"
+    },
+    {
+     "kind": "blank",
+     "ask": "Zn | Zn²⁺(0.200 M) || Ag⁺(0.002 M) | Ag: E° = 1.56 V, n = 2. Ecell ≈ ___ V (2 decimal places)",
+     "a": [
+      "≈1.42"
+     ],
+     "why": "Q = 0.200 ÷ (0.002)² = 5.0 × 10⁴; log Q = 4.70; Ecell = 1.56 − 0.0296 × 4.70 = 1.42 V.",
+     "clue": "Square [Ag⁺], because 2Ag⁺ react.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Exercise 2.10 Q3",
+     "added": true,
+     "id": "g12.chemistry.u2.s2-5-3.22"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "When a battery is completely run down, Ecell is",
+   "opts": [
+    "0",
+    "1.10 V",
+    "E°cell",
+    "negative infinity"
+   ],
+   "ans": "0",
+   "why": "Equilibrium.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-5-3.23"
+  },
+  {
+   "kind": "blank",
+   "ask": "E°cell = 1.10 V and Q = 1. Ecell = ___ V",
+   "a": [
+    "1.1",
+    "1.10"
+   ],
+   "why": "log 1 = 0.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-5-3.24"
+  },
+  {
+   "kind": "blank",
+   "ask": "E° = 1.10 V, n = 2, Q = 0.01. Ecell ≈ ___ V (2 decimal places)",
+   "a": [
+    "≈1.16"
+   ],
+   "why": "1.10 + 0.0296 × 2.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-5-3.25"
+  },
+  {
+   "kind": "blank",
+   "ask": "In Zn + Cu²⁺ → Zn²⁺ + Cu, n = ___",
+   "a": [
+    "2"
+   ],
+   "why": "Two electrons move.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-5-3.26"
+  },
+  {
+   "kind": "blank",
+   "ask": "n = 1 and E° = 1.00 V. ΔG° ≈ ___ kJ (1 decimal place)",
+   "a": [
+    "≈-96.5"
+   ],
+   "why": "−96 500 J.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-5-3.27"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.111, Example 2.11 and p.116–117 call the concentration ratio \"K\"; with non-equilibrium concentrations it is the reaction quotient Q. Gases enter Q as pressures in atm (p.111 converts to mol/L, which is not the usual convention)."
+  },
+  {
+   "kind": "review",
+   "text": "Example 2.8: the anode is Sn → Sn²⁺ + 2e⁻ (book \"Sn⁺\"). Example 2.9: Au³⁺/Au, not Au²⁺/Au. Exercise 2.10: silver ion is Ag⁺, not \"Ag²⁺\". Exercise 2.11 Q2: E°(Zn²⁺/Zn) = −0.76 V."
+  },
+  {
+   "kind": "review",
+   "text": "p.109: electrons flow from the anode (−) to the cathode (+); the book's \"higher potential\" wording mixes conventions. Figure 2.15b labels \"Anode (−)\" for an electrolytic cell; it should be (+)."
+  },
+  {
+   "kind": "note",
+   "text": "The pH-from-Ecell item (0.523 V → pH 4.0) is an added example."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

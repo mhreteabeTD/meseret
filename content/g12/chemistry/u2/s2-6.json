@@ -1,0 +1,443 @@
+{
+ "id": "g12.chemistry.u2.s2-6",
+ "book": {
+  "title": "Chemistry Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "chemistry",
+  "unit": 2,
+  "unit_title": "Electrochemistry",
+  "pages": "127–134",
+  "section": "2.6"
+ },
+ "title": "Summary, review and chapter test",
+ "competency": "Review the unit and take the timed chapter test.",
+ "minutes": 25,
+ "keywords": [
+  {
+   "en": "Electrochemistry",
+   "am": "ኤሌክትሮኬሚስትሪ",
+   "def": "The study of how chemical reactions and electricity are converted into each other.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "chem.electrochemistry-review",
+   "name": "Unit 2 summary",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Redox reactions transfer electrons from a reducing agent to an oxidizing agent. Electrolytic cells use electricity to drive non-spontaneous reactions, and Faraday's laws give the amounts formed. Galvanic cells use spontaneous reactions to make electricity: E°cell = E°cathode − E°anode, ΔG° = −nFE°, and the Nernst equation handles non-standard concentrations. Batteries, fuel cells and corrosion are everyday electrochemistry."
+    },
+    "am": {
+     "text": "ሪዶክስ ኤሌክትሮን ያስተላልፋል። ኤሌክትሮሊቲክ ሴል ኤሌክትሪክ ይጠቀማል፤ ጋልቫኒክ ሴል ኤሌክትሪክ ያመነጫል። ባትሪ፣ የነዳጅ ሴልና ዝገት የዕለት ኤሌክትሮኬሚስትሪ ናቸው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "title": "Warm up: galvanic or electrolytic?",
+     "bins": [
+      "Galvanic",
+      "Electrolytic"
+     ],
+     "items": [
+      [
+       "Daniell cell lighting a bulb",
+       "Galvanic",
+       "spontaneous"
+      ],
+      [
+       "Electroplating a key",
+       "Electrolytic",
+       "needs a power supply"
+      ],
+      [
+       "Car battery starting a car",
+       "Galvanic",
+       "discharging"
+      ],
+      [
+       "Refining copper",
+       "Electrolytic",
+       "external current"
+      ],
+      [
+       "Hydrogen fuel cell",
+       "Galvanic",
+       "spontaneous"
+      ],
+      [
+       "Charging a phone battery",
+       "Electrolytic",
+       "reverses the reaction"
+      ]
+     ],
+     "graded": false,
+     "id": "g12.chemistry.u2.s2-6.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Unit summary",
+     "paras": [
+      "Oxidation: loss of e⁻; reduction: gain of e⁻; they happen together.",
+      "Electrolytic cell: anode (+), cathode (−); electricity drives a non-spontaneous reaction.",
+      "Faraday: m = MIt/(nF); m₁/E₁ = m₂/E₂.",
+      "Galvanic cell: anode (−), cathode (+); E°cell = E°cathode − E°anode > 0 for a spontaneous reaction.",
+      "ΔG° = −nFE°; Ecell = E°cell − (0.0592/n) log Q.",
+      "Corrosion is a short-circuited galvanic cell; galvanizing and cathodic protection stop it."
+     ],
+     "ref": "p.127–129",
+     "id": "g12.chemistry.u2.s2-6.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Electrochemistry",
+       "The study of how chemical reactions and electricity are converted into each other."
+      ]
+     ],
+     "id": "g12.chemistry.u2.s2-6.3"
+    },
+    {
+     "kind": "match",
+     "title": "Match each equation to its idea",
+     "pairs": [
+      [
+       "m = MIt/(nF)",
+       "Faraday's first law"
+      ],
+      [
+       "m₁/E₁ = m₂/E₂",
+       "Faraday's second law"
+      ],
+      [
+       "E°cell = E°cathode − E°anode",
+       "standard cell potential"
+      ],
+      [
+       "ΔG° = −nFE°",
+       "free energy from EMF"
+      ],
+      [
+       "Ecell = E° − (0.0592/n) log Q",
+       "Nernst equation"
+      ]
+     ],
+     "why": "One equation for each part of the unit.",
+     "clue": "Look for Q, F and E°.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "id": "g12.chemistry.u2.s2-6.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which statement about electrochemical cells is true?",
+     "opts": [
+      "Oxidation occurs at the anode",
+      "Reduction occurs at the anode",
+      "An element with high electron affinity is easily oxidized",
+      "Only oxidation half-reactions are useful"
+     ],
+     "ans": "Oxidation occurs at the anode",
+     "why": "In every cell, galvanic or electrolytic, the anode is where oxidation happens.",
+     "clue": "Anode and oxidation both start with a vowel.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Review Part I Q5",
+     "id": "g12.chemistry.u2.s2-6.5"
+    },
+    {
+     "kind": "blank",
+     "ask": "KI solution is electrolyzed at 8.52 mA for 10.0 min (2I⁻ → I₂ + 2e⁻, I₂ = 253.8 g/mol). Iodine formed ≈ ___ mg (2 decimal places)",
+     "a": [
+      "≈6.72"
+     ],
+     "why": "Q = 8.52 × 10⁻³ × 600 = 5.11 C; 5.30 × 10⁻⁵ mol e⁻; ÷ 2 × 253.8 = 6.72 × 10⁻³ g = 6.72 mg.",
+     "clue": "Change mA to A and minutes to seconds.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Review Part II Q5",
+     "id": "g12.chemistry.u2.s2-6.6"
+    },
+    {
+     "kind": "blank",
+     "ask": "The Daniell cell (E° = 1.10 V, n = 2): ΔG° ≈ ___ kJ (nearest kJ)",
+     "a": [
+      "≈-212"
+     ],
+     "why": "ΔG° = −2 × 96 500 × 1.10 = −212 300 J ≈ −212 kJ.",
+     "clue": "ΔG° = −nFE°.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.chemistry.u2.s2-6.7"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Review exercise on Unit 2",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "The oxidation number of Cr in (NH₄)₂Cr₂O₇ is",
+     "opts": [
+      "+6",
+      "+3",
+      "+4",
+      "+5"
+     ],
+     "ans": "+6",
+     "why": "In Cr₂O₇²⁻: 2x − 14 = −2, x = +6.",
+     "clue": "Use the dichromate ion.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Part I Q1",
+     "id": "g12.chemistry.u2.s2-6.8"
+    },
+    {
+     "kind": "blank",
+     "ask": "ClO₃⁻ + 3SO₂ + 3H₂O → Cl⁻ + 3SO₄²⁻ + ___H⁺ (acidic)",
+     "a": [
+      "6"
+     ],
+     "why": "Charge: −1 = −1 − 6 + 6. H: 6 = 6.",
+     "clue": "Balance H last.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Part II Q3 a",
+     "id": "g12.chemistry.u2.s2-6.9"
+    },
+    {
+     "kind": "blank",
+     "ask": "Cu + SO₄²⁻ + 2H₂O → Cu²⁺ + SO₂ + ___OH⁻ (basic)",
+     "a": [
+      "4"
+     ],
+     "why": "Charge: −2 = +2 − 4.",
+     "clue": "Balance the charge.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Part II Q3 d",
+     "id": "g12.chemistry.u2.s2-6.10"
+    },
+    {
+     "kind": "mcq",
+     "text": "Concentrated HCl is electrolyzed. The gases are",
+     "opts": [
+      "H₂ at the cathode, Cl₂ at the anode",
+      "Cl₂ at the cathode, H₂ at the anode",
+      "H₂ and O₂",
+      "O₂ and Cl₂"
+     ],
+     "ans": "H₂ at the cathode, Cl₂ at the anode",
+     "why": "H⁺ is reduced; concentrated Cl⁻ is oxidized.",
+     "clue": "Cations go to the cathode.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Exercise 2.4 Q2",
+     "id": "g12.chemistry.u2.s2-6.11"
+    },
+    {
+     "kind": "mcq",
+     "text": "The overall reaction for electrolysis of dilute NaOH is",
+     "opts": [
+      "2H₂O → 2H₂ + O₂",
+      "2NaOH → 2Na + O₂ + H₂",
+      "4OH⁻ → O₂ + 2H₂O",
+      "Na⁺ + e⁻ → Na"
+     ],
+     "ans": "2H₂O → 2H₂ + O₂",
+     "why": "Only water is decomposed; NaOH gets more concentrated.",
+     "clue": "Na⁺ is not discharged.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Exercise 2.5 Q1",
+     "id": "g12.chemistry.u2.s2-6.12"
+    },
+    {
+     "kind": "mcq",
+     "text": "The electrolyte in a dry cell is",
+     "opts": [
+      "a moist paste of NH₄Cl and ZnCl₂",
+      "sulfuric acid",
+      "molten NaCl",
+      "pure water"
+     ],
+     "ans": "a moist paste of NH₄Cl and ZnCl₂",
+     "why": "A paste, so it does not spill.",
+     "clue": "It must not leak.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Exercise 2.12 Q3",
+     "id": "g12.chemistry.u2.s2-6.13"
+    },
+    {
+     "kind": "blank",
+     "ask": "Co + Fe²⁺ → Co²⁺ + Fe with [Co²⁺] = 0.25 M, [Fe²⁺] = 0.94 M (Co −0.28 V, Fe −0.44 V). Ecell ≈ ___ V (2 decimal places)",
+     "a": [
+      "≈-0.14"
+     ],
+     "why": "E° = −0.44 − (−0.28) = −0.16 V; Q = 0.266; Ecell = −0.16 + 0.0296 × 0.575 = −0.14 V: not spontaneous.",
+     "clue": "Find E° first; the sign tells spontaneity.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Exercise 2.11 Q1, Part II Q6",
+     "id": "g12.chemistry.u2.s2-6.14"
+    },
+    {
+     "kind": "pick",
+     "text": "Ways to protect iron from corrosion",
+     "pool": [
+      "Painting",
+      "Galvanizing",
+      "Joining it to magnesium",
+      "Joining it to copper"
+     ],
+     "a": [
+      "Painting",
+      "Galvanizing",
+      "Joining it to magnesium"
+     ],
+     "why": "Copper is less active and makes iron rust faster.",
+     "clue": "Which metal would make iron the anode?",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Activity 2.13",
+     "id": "g12.chemistry.u2.s2-6.15"
+    }
+   ]
+  },
+  {
+   "book_name": "Chapter test",
+   "test": true,
+   "chapter_test": true,
+   "count": 20,
+   "minutes": 25,
+   "items": []
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Reduction occurs at the",
+   "opts": [
+    "cathode",
+    "anode",
+    "salt bridge",
+    "wire"
+   ],
+   "ans": "cathode",
+   "why": "In every cell.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-6.16"
+  },
+  {
+   "kind": "blank",
+   "ask": "The Faraday constant ≈ ___ C/mol",
+   "a": [
+    "96500",
+    "≈96500",
+    "96485"
+   ],
+   "why": "Charge on 1 mol e⁻.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-6.17"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which is NOT a redox reaction?",
+   "opts": [
+    "H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O",
+    "Zn + Cu²⁺ → Zn²⁺ + Cu",
+    "2Na + Cl₂ → 2NaCl",
+    "Mg + 2HCl → MgCl₂ + H₂"
+   ],
+   "ans": "H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O",
+   "why": "No numbers change.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-6.18"
+  },
+  {
+   "kind": "blank",
+   "ask": "A Ni | Ni²⁺ || Cu²⁺ | Cu cell: E°cell = ___ V (Ni −0.25, Cu +0.34)",
+   "a": [
+    "0.59"
+   ],
+   "why": "0.34 + 0.25.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-6.19"
+  },
+  {
+   "kind": "blank",
+   "ask": "0.5 mol of electrons pass through AgNO₃ (Ag = 108). Silver deposited = ___ g",
+   "a": [
+    "54"
+   ],
+   "why": "0.5 × 108.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-6.20"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Review Part I Q9 has two identical options (2.46 V). Q11 is not balanced (2Al + 3Fe²⁺, n = 6) and its E° (2.431 V) does not match Table 2.3; it is left out of the items."
+  },
+  {
+   "kind": "review",
+   "text": "Review Part II Q7 (CaCO₃ at 1000 °C) needs ΔH and S data the unit does not give; Q10 c is truncated (\"S\"). Key term \"Galv\" is truncated (probably galvanizing)."
+  },
+  {
+   "kind": "note",
+   "text": "No national-exam (ESSLCE) chemistry bank yet; the chapter test draws from the section tests."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

@@ -1,0 +1,489 @@
+{
+ "id": "g12.chemistry.u2.s2-5-1",
+ "book": {
+  "title": "Chemistry Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "chemistry",
+  "unit": 2,
+  "unit_title": "Electrochemistry",
+  "pages": "92–96",
+  "section": "2.5.1"
+ },
+ "title": "Voltaic cells and cell notation",
+ "competency": "Describe how a galvanic cell works, explain the salt bridge, compare galvanic and electrolytic cells, and write cell notation.",
+ "minutes": 25,
+ "keywords": [
+  {
+   "en": "Galvanic cell",
+   "am": "ጋልቫኒክ ሴል",
+   "def": "A cell in which a spontaneous redox reaction produces electricity (also voltaic cell).",
+   "machine": true
+  },
+  {
+   "en": "Salt bridge",
+   "am": "የጨው ድልድይ",
+   "def": "A tube of inert electrolyte (KNO₃, KCl) that joins two half-cells and keeps them neutral.",
+   "machine": true
+  },
+  {
+   "en": "Cell notation",
+   "am": "የሴል አጻጻፍ",
+   "def": "anode | anode solution || cathode solution | cathode.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "chem.voltaic-cell",
+   "name": "Galvanic (voltaic) cells",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "A galvanic cell uses a spontaneous redox reaction to make electricity. The two half-reactions happen in separate compartments, so electrons must flow through the external wire from the anode (oxidation, negative) to the cathode (reduction, positive). A salt bridge of inert ions keeps both solutions neutral and completes the circuit. The Daniell cell, Zn | Zn²⁺ || Cu²⁺ | Cu, gives 1.10 V."
+    },
+    "am": {
+     "text": "ጋልቫኒክ ሴል ድንገተኛ ሪዶክስ ግብረመልስን ወደ ኤሌክትሪክ ይቀይራል። ኤሌክትሮኖች ከአኖድ (−) ወደ ካቶድ (+) በሽቦ ይጓዛሉ፤ የጨው ድልድይ ሴሉን ያገናኛል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Zinc in copper sulfate",
+     "ask": "A zinc strip is dipped straight into blue CuSO₄ solution. What do you see?",
+     "opts": [
+      "Copper coats the zinc and the blue fades, with no useful current",
+      "Nothing happens",
+      "Zinc is deposited on copper",
+      "A bulb lights up"
+     ],
+     "after": "Zn gives electrons directly to Cu²⁺. To get a current, the two must be separated.",
+     "ref": "p.93",
+     "id": "g12.chemistry.u2.s2-5-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Building a galvanic cell",
+     "paras": [
+      "A spontaneous redox reaction is split into two half-cells.",
+      "Daniell cell: Zn in ZnSO₄ and Cu in CuSO₄.",
+      "Anode (−): Zn → Zn²⁺ + 2e⁻. Cathode (+): Cu²⁺ + 2e⁻ → Cu.",
+      "Electrons flow through the wire from Zn to Cu.",
+      "The cell gives 1.10 V."
+     ],
+     "ref": "p.92–94, Figure 2.9",
+     "id": "g12.chemistry.u2.s2-5-1.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The salt bridge",
+     "paras": [
+      "An inverted U-tube of KNO₃ or KCl solution.",
+      "Anions move toward the anode compartment; cations toward the cathode compartment.",
+      "It keeps each solution neutral and completes the circuit.",
+      "Without it, charge builds up and the current stops."
+     ],
+     "ref": "p.94",
+     "id": "g12.chemistry.u2.s2-5-1.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Galvanic or electrolytic?",
+     "paras": [
+      "Both: oxidation at the anode, reduction at the cathode."
+     ],
+     "table": [
+      [
+       "",
+       "Galvanic cell",
+       "Electrolytic cell"
+      ],
+      [
+       "Reaction",
+       "spontaneous (ΔG < 0)",
+       "non-spontaneous (ΔG > 0)"
+      ],
+      [
+       "Energy",
+       "chemical → electrical",
+       "electrical → chemical"
+      ],
+      [
+       "Anode sign",
+       "negative",
+       "positive"
+      ],
+      [
+       "Electrons from",
+       "the oxidized species",
+       "an outside power source"
+      ]
+     ],
+     "ref": "Table 2.4, p.118",
+     "id": "g12.chemistry.u2.s2-5-1.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Galvanic cell",
+       "A cell in which a spontaneous redox reaction produces electricity (also voltaic cell)."
+      ],
+      [
+       "Salt bridge",
+       "A tube of inert electrolyte (KNO₃, KCl) that joins two half-cells and keeps them neutral."
+      ]
+     ],
+     "id": "g12.chemistry.u2.s2-5-1.5"
+    },
+    {
+     "kind": "mcq",
+     "text": "In a Daniell cell, electrons flow through the wire",
+     "opts": [
+      "from Zn to Cu",
+      "from Cu to Zn",
+      "through the salt bridge",
+      "in both directions"
+     ],
+     "ans": "from Zn to Cu",
+     "why": "Zn is oxidized (anode) and its electrons go to the Cu cathode.",
+     "clue": "Which metal is oxidized?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.93",
+     "id": "g12.chemistry.u2.s2-5-1.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "The salt bridge",
+     "opts": [
+      "keeps the solutions neutral and completes the circuit",
+      "carries electrons between beakers",
+      "supplies the electrons",
+      "stops all ion movement"
+     ],
+     "ans": "keeps the solutions neutral and completes the circuit",
+     "why": "Ions, not electrons, move through the bridge.",
+     "clue": "What moves in a solution?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 2.8 Q2",
+     "id": "g12.chemistry.u2.s2-5-1.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which statement about voltaic cells is NOT correct?",
+     "opts": [
+      "Electrons flow from the cathode to the anode",
+      "Reduction occurs at the cathode",
+      "Anions move toward the anode",
+      "The cathode is positive"
+     ],
+     "ans": "Electrons flow from the cathode to the anode",
+     "why": "Electrons are made at the anode and used at the cathode: anode → cathode.",
+     "clue": "Where are electrons produced?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Review Part I Q6",
+     "id": "g12.chemistry.u2.s2-5-1.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "In a galvanic cell, the anode is",
+     "opts": [
+      "negative",
+      "positive",
+      "neutral",
+      "positive or negative at random"
+     ],
+     "ans": "negative",
+     "why": "Electrons pile up where oxidation releases them. (In electrolysis the anode is positive.)",
+     "clue": "Electrons are released there.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Table 2.4",
+     "id": "g12.chemistry.u2.s2-5-1.9"
+    },
+    {
+     "kind": "mcq",
+     "text": "What happens if the salt bridge is removed?",
+     "opts": [
+      "Charge builds up and the current stops",
+      "The voltage doubles",
+      "Electrons flow faster",
+      "Nothing changes"
+     ],
+     "ans": "Charge builds up and the current stops",
+     "why": "Zn²⁺ piles up in one beaker and SO₄²⁻ is left in the other; the circuit is broken.",
+     "clue": "What keeps the beakers neutral?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.94",
+     "added": true,
+     "id": "g12.chemistry.u2.s2-5-1.10"
+    }
+   ]
+  },
+  {
+   "id": "chem.cell-notation",
+   "name": "Cell notation",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Cell notation writes the anode on the left and the cathode on the right: anode | anode solution || cathode solution | cathode. A single line is a phase boundary, the double line is the salt bridge, commas separate species in one solution, and concentrations go in brackets. Inert electrodes such as Pt or graphite are written at the ends; salt-bridge and spectator ions are left out."
+    },
+    "am": {
+     "text": "የሴል አጻጻፍ፡ አኖድ | የአኖድ መፍትሄ || የካቶድ መፍትሄ | ካቶድ። ነጠላ መስመር የደረጃ ወሰን፣ ድርብ መስመር የጨው ድልድይ ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Read the code",
+     "ask": "In Zn(s) | Zn²⁺(aq) || Cu²⁺(aq) | Cu(s), what does the double line || stand for?",
+     "opts": [
+      "The salt bridge",
+      "A wire",
+      "A phase boundary",
+      "An equals sign"
+     ],
+     "after": "The double line is the salt bridge between the two half-cells; single lines are phase boundaries.",
+     "ref": "p.95",
+     "id": "g12.chemistry.u2.s2-5-1.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Rules for cell notation",
+     "paras": [
+      "Anode half-cell on the left, cathode on the right.",
+      "Single line |: boundary between phases (solid | solution).",
+      "Double line ||: the salt bridge.",
+      "Commas: species in the same solution.",
+      "Concentrations in brackets: Zn²⁺(1 M).",
+      "Do not write salt-bridge or spectator ions."
+     ],
+     "ref": "p.95–96",
+     "id": "g12.chemistry.u2.s2-5-1.12"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Chromium and silver, 0.20 M",
+     "steps": [
+      "Oxidation (anode): Cr → Cr³⁺ + 3e⁻.",
+      "Reduction (cathode): Ag⁺ + e⁻ → Ag (× 3).",
+      "Overall: Cr + 3Ag⁺ → Cr³⁺ + 3Ag.",
+      "Notation: Cr(s) | Cr³⁺(0.20 M) || Ag⁺(0.20 M) | Ag(s)."
+     ],
+     "ref": "Example 2.6",
+     "id": "g12.chemistry.u2.s2-5-1.13"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Cell notation",
+       "anode | anode solution || cathode solution | cathode."
+      ]
+     ],
+     "id": "g12.chemistry.u2.s2-5-1.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "Al in 1 M Al(NO₃)₃ is joined to Ag in 1 M AgNO₃. The cell notation is",
+     "opts": [
+      "Al(s) | Al³⁺(1 M) || Ag⁺(1 M) | Ag(s)",
+      "Ag(s) | Ag⁺(1 M) || Al³⁺(1 M) | Al(s)",
+      "Al(s) | NO₃⁻ || NO₃⁻ | Ag(s)",
+      "Al³⁺ | Al(s) || Ag(s) | Ag⁺"
+     ],
+     "ans": "Al(s) | Al³⁺(1 M) || Ag⁺(1 M) | Ag(s)",
+     "why": "Al (E° −1.66 V) is oxidized: it is the anode, written on the left. NO₃⁻ is a spectator.",
+     "clue": "Which metal is oxidized?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Exercise 2.8 Q1",
+     "id": "g12.chemistry.u2.s2-5-1.15"
+    },
+    {
+     "kind": "mcq",
+     "text": "In Pt(s) | H₂(1 atm) | H⁺(1 M) || Cu²⁺(1 M) | Cu(s), the anode reaction is",
+     "opts": [
+      "H₂ → 2H⁺ + 2e⁻",
+      "Cu²⁺ + 2e⁻ → Cu",
+      "2H⁺ + 2e⁻ → H₂",
+      "Cu → Cu²⁺ + 2e⁻"
+     ],
+     "ans": "H₂ → 2H⁺ + 2e⁻",
+     "why": "The left side is the anode: H₂ is oxidized on platinum.",
+     "clue": "Left side = oxidation.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.101",
+     "id": "g12.chemistry.u2.s2-5-1.16"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which of these is NOT written in cell notation?",
+     "opts": [
+      "Ions of the salt bridge",
+      "The electrodes",
+      "The ions that react",
+      "Concentrations"
+     ],
+     "ans": "Ions of the salt bridge",
+     "why": "Salt-bridge ions take no part in the reaction.",
+     "clue": "Which ions are only spectators?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.96",
+     "id": "g12.chemistry.u2.s2-5-1.17"
+    },
+    {
+     "kind": "mcq",
+     "text": "Mg + Cu²⁺ → Mg²⁺ + Cu. The correct cell notation is",
+     "opts": [
+      "Mg(s) | Mg²⁺ || Cu²⁺ | Cu(s)",
+      "Cu(s) | Cu²⁺ || Mg²⁺ | Mg(s)",
+      "Mg²⁺ | Mg(s) || Cu(s) | Cu²⁺",
+      "Mg(s) || Cu(s)"
+     ],
+     "ans": "Mg(s) | Mg²⁺ || Cu²⁺ | Cu(s)",
+     "why": "Mg is oxidized (anode, left); Cu²⁺ is reduced (cathode, right). E°cell = 0.34 − (−2.37) = 2.71 V.",
+     "clue": "Write the oxidation half on the left.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Exercise 2.9 Q3",
+     "added": true,
+     "id": "g12.chemistry.u2.s2-5-1.18"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "At the anode of a galvanic cell",
+   "opts": [
+    "oxidation happens and it is negative",
+    "reduction happens and it is positive",
+    "oxidation happens and it is positive",
+    "nothing happens"
+   ],
+   "ans": "oxidation happens and it is negative",
+   "why": "Table 2.4.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-5-1.19"
+  },
+  {
+   "kind": "mcq",
+   "text": "In the Daniell cell the anode is",
+   "opts": [
+    "zinc",
+    "copper",
+    "the salt bridge",
+    "the voltmeter"
+   ],
+   "ans": "zinc",
+   "why": "Zn is oxidized.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-5-1.20"
+  },
+  {
+   "kind": "mcq",
+   "text": "A salt bridge usually contains",
+   "opts": [
+    "an inert electrolyte such as KNO₃",
+    "copper wire",
+    "pure water",
+    "zinc metal"
+   ],
+   "ans": "an inert electrolyte such as KNO₃",
+   "why": "p.94.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-5-1.21"
+  },
+  {
+   "kind": "mcq",
+   "text": "In cell notation a single vertical line means",
+   "opts": [
+    "a phase boundary",
+    "the salt bridge",
+    "a wire",
+    "equal concentrations"
+   ],
+   "ans": "a phase boundary",
+   "why": "p.95.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-5-1.22"
+  },
+  {
+   "kind": "mcq",
+   "text": "A galvanic cell differs from an electrolytic cell because it",
+   "opts": [
+    "uses a spontaneous reaction to make electricity",
+    "needs a battery to work",
+    "has a positive anode",
+    "has no electrodes"
+   ],
+   "ans": "uses a spontaneous reaction to make electricity",
+   "why": "Table 2.4.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-5-1.23"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Section heading \"Volatic Cells\" should be \"Voltaic Cells\". The text mentions a light bulb, KCl and SO₄²⁻, but Figure 2.9 shows a voltmeter, KNO₃ and nitrates."
+  },
+  {
+   "kind": "review",
+   "text": "p.95: the overall MnO₄⁻/I⁻ equation is garbled; correct: 2MnO₄⁻ + 16H⁺ + 10I⁻ → 2Mn²⁺ + 5I₂ + 8H₂O. Example 2.6 prints \"(0.020M) Ag⁺\"; it should be Ag⁺(0.20 M)."
+  },
+  {
+   "kind": "note",
+   "text": "Section 2.5 has no numbered subsections in the book; lessons 2.5.1–2.5.4 split it by its own sub-headings."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

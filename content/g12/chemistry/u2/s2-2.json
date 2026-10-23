@@ -1,0 +1,884 @@
+{
+ "id": "g12.chemistry.u2.s2-2",
+ "book": {
+  "title": "Chemistry Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "chemistry",
+  "unit": 2,
+  "unit_title": "Electrochemistry",
+  "pages": "66–80",
+  "section": "2.2"
+ },
+ "title": "Electrolysis of aqueous solutions",
+ "competency": "Explain conduction and electrolytic cells, predict preferential discharge and write electrode reactions for common electrolyses.",
+ "minutes": 35,
+ "keywords": [
+  {
+   "en": "Electrolytic conduction",
+   "am": "ኤሌክትሮላይቲክ ማስተላለፍ",
+   "def": "Conduction by moving ions in a molten or dissolved electrolyte, with a chemical change.",
+   "machine": true
+  },
+  {
+   "en": "Electrolysis",
+   "am": "ኤሌክትሮሊሲስ",
+   "def": "Decomposing a molten or dissolved ionic compound by passing a direct current through it.",
+   "machine": true
+  },
+  {
+   "en": "Anode",
+   "am": "አኖድ",
+   "def": "The electrode where oxidation happens.",
+   "machine": true
+  },
+  {
+   "en": "Cathode",
+   "am": "ካቶድ",
+   "def": "The electrode where reduction happens.",
+   "machine": true
+  },
+  {
+   "en": "Preferential discharge",
+   "am": "ተመራጭ ፍሰት",
+   "def": "When several ions reach an electrode, only one kind is discharged.",
+   "machine": true
+  },
+  {
+   "en": "Inert electrode",
+   "am": "የማይሳተፍ ኤሌክትሮድ",
+   "def": "An electrode (graphite, platinum) that only carries electrons and does not react.",
+   "machine": true
+  },
+  {
+   "en": "Active electrode",
+   "am": "ተሳታፊ ኤሌክትሮድ",
+   "def": "An electrode (Cu, Ag, Ni) that takes part; as an anode it dissolves.",
+   "machine": true
+  },
+  {
+   "en": "Brine",
+   "am": "ጨዋማ ውሃ (ብራይን)",
+   "def": "A concentrated solution of sodium chloride in water.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "chem.conduction",
+   "name": "Metallic and electrolytic conduction",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Metals conduct by moving electrons: no matter moves and no chemical change happens, and conductivity falls as temperature rises. Electrolytes conduct by moving ions, only when molten or dissolved: matter moves, chemical changes happen at the electrodes, and conductivity rises with temperature."
+    },
+    "am": {
+     "text": "ብረቶች በኤሌክትሮን ያስተላልፋሉ፤ ኤሌክትሮላይቶች ግን በአዮኖች፣ ሲቀልጡ ወይም ሲሟሙ ብቻ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Salt that conducts?",
+     "ask": "Which form of sodium chloride lights a bulb in a conductivity tester?",
+     "opts": [
+      "Molten NaCl and NaCl solution",
+      "Solid NaCl",
+      "All forms",
+      "No form"
+     ],
+     "after": "Ions must be free to move. In the solid they are locked in the crystal.",
+     "ref": "Activity 2.2 Q3",
+     "id": "g12.chemistry.u2.s2-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Two kinds of conduction",
+     "paras": [
+      "Conduction needs mobile charges: free electrons or free ions."
+     ],
+     "table": [
+      [
+       "",
+       "Metallic",
+       "Electrolytic"
+      ],
+      [
+       "Carriers",
+       "electrons",
+       "ions"
+      ],
+      [
+       "Matter moves?",
+       "no",
+       "yes"
+      ],
+      [
+       "Chemical change?",
+       "no",
+       "yes, at the electrodes"
+      ],
+      [
+       "Hotter",
+       "conducts less",
+       "conducts more"
+      ]
+     ],
+     "ref": "p.67",
+     "id": "g12.chemistry.u2.s2-2.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Electrolytic conduction",
+       "Conduction by moving ions in a molten or dissolved electrolyte, with a chemical change."
+      ]
+     ],
+     "id": "g12.chemistry.u2.s2-2.3"
+    },
+    {
+     "kind": "sort",
+     "step": "check",
+     "title": "Does it conduct?",
+     "bins": [
+      "Conducts",
+      "Does not conduct"
+     ],
+     "items": [
+      [
+       "Iron",
+       "Conducts",
+       "free electrons"
+      ],
+      [
+       "Sulphur",
+       "Does not conduct",
+       "covalent S₈"
+      ],
+      [
+       "Solid NaCl",
+       "Does not conduct",
+       "ions locked"
+      ],
+      [
+       "Molten CaCl₂",
+       "Conducts",
+       "free ions"
+      ],
+      [
+       "1 M NaCl solution",
+       "Conducts",
+       "free ions"
+      ],
+      [
+       "Sugar solution",
+       "Does not conduct",
+       "no ions"
+      ]
+     ],
+     "why": "Free electrons or free ions are needed.",
+     "clue": "Look for metals or free ions.",
+     "ref": "Exercise 2.3, Experiment 2.1",
+     "graded": true,
+     "level": 1,
+     "id": "g12.chemistry.u2.s2-2.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "As a metal wire gets hotter, its conductivity",
+     "opts": [
+      "decreases",
+      "increases",
+      "stays the same",
+      "becomes zero"
+     ],
+     "ans": "decreases",
+     "why": "Vibrating atoms get in the way of the moving electrons.",
+     "clue": "Think of crowded corridors.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.67",
+     "id": "g12.chemistry.u2.s2-2.5"
+    },
+    {
+     "kind": "mcq",
+     "text": "In Experiment 2.1, which solution makes the bulb glow only dimly?",
+     "opts": [
+      "1 M acetic acid",
+      "1 M NaCl",
+      "1 M H₂SO₄",
+      "1 M sugar"
+     ],
+     "ans": "1 M acetic acid",
+     "why": "Acetic acid is a weak electrolyte: few ions.",
+     "clue": "Which one ionizes only partly?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Experiment 2.1",
+     "id": "g12.chemistry.u2.s2-2.6"
+    },
+    {
+     "kind": "tf",
+     "text": "In metallic conduction, matter moves and a chemical change happens at the ends of the wire.",
+     "a": false,
+     "why": "Only electrons move in a metal; nothing is deposited or released.",
+     "clue": "What carries the charge in copper wire?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.chemistry.u2.s2-2.7"
+    }
+   ]
+  },
+  {
+   "id": "chem.electrolytic-cell",
+   "name": "The electrolytic cell",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "In electrolysis a direct current decomposes a molten or dissolved ionic compound. Cations move to the cathode (negative electrode) and are reduced; anions move to the anode (positive electrode) and are oxidized. Molten NaCl gives sodium at the cathode and chlorine at the anode."
+    },
+    "am": {
+     "text": "በኤሌክትሮሊሲስ ካታዮኖች ወደ ካቶድ (−) ሄደው ይቀነሳሉ፤ አናዮኖች ወደ አኖድ (+) ሄደው ኦክሳይድ ይሆናሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Where does Na⁺ go?",
+     "ask": "Two graphite electrodes dip in molten NaCl and are joined to a battery. Where do the Na⁺ ions move?",
+     "opts": [
+      "To the electrode joined to the negative terminal",
+      "To the positive electrode",
+      "They do not move",
+      "Half each way"
+     ],
+     "after": "Opposite charges attract: Na⁺ goes to the negative cathode, Cl⁻ to the positive anode.",
+     "ref": "Figure 2.3",
+     "id": "g12.chemistry.u2.s2-2.8"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Electrolysis",
+     "paras": [
+      "A direct current passes through a molten or dissolved ionic compound.",
+      "Cathode: joined to −; cations go there and are reduced.",
+      "Anode: joined to +; anions go there and are oxidized.",
+      "Electrons flow in the wire from the anode, through the power supply, to the cathode."
+     ],
+     "ref": "p.69–75",
+     "id": "g12.chemistry.u2.s2-2.9"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Molten sodium chloride",
+     "steps": [
+      "Cathode (reduction): 2Na⁺ + 2e⁻ → 2Na(l).",
+      "Anode (oxidation): 2Cl⁻ → Cl₂(g) + 2e⁻.",
+      "Overall: 2NaCl(l) → 2Na(l) + Cl₂(g)."
+     ],
+     "ref": "Activity 2.3",
+     "id": "g12.chemistry.u2.s2-2.10"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Electrolysis",
+       "Decomposing a molten or dissolved ionic compound by passing a direct current through it."
+      ],
+      [
+       "Anode",
+       "The electrode where oxidation happens."
+      ],
+      [
+       "Cathode",
+       "The electrode where reduction happens."
+      ]
+     ],
+     "id": "g12.chemistry.u2.s2-2.11"
+    },
+    {
+     "kind": "mcq",
+     "text": "In an electrolytic cell, oxidation takes place at the",
+     "opts": [
+      "anode, the positive electrode",
+      "cathode, the negative electrode",
+      "anode, the negative electrode",
+      "salt bridge"
+     ],
+     "ans": "anode, the positive electrode",
+     "why": "Anions give up electrons at the positive anode.",
+     "clue": "Which electrode attracts anions?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.75",
+     "id": "g12.chemistry.u2.s2-2.12"
+    },
+    {
+     "kind": "mcq",
+     "text": "Molten KCl is electrolyzed. The cathode product is",
+     "opts": [
+      "potassium",
+      "chlorine",
+      "hydrogen",
+      "oxygen"
+     ],
+     "ans": "potassium",
+     "why": "2K⁺ + 2e⁻ → 2K. Only K⁺ and Cl⁻ are present.",
+     "clue": "No water in a melt.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Activity 2.4 Q2",
+     "id": "g12.chemistry.u2.s2-2.13"
+    },
+    {
+     "kind": "mcq",
+     "text": "The overall equation for electrolysis of molten NaCl is",
+     "opts": [
+      "2NaCl(l) → 2Na(l) + Cl₂(g)",
+      "NaCl(l) → Na(l) + Cl(g)",
+      "2NaCl(aq) → 2Na(s) + Cl₂(g)",
+      "NaCl(l) → Na⁺ + Cl⁻"
+     ],
+     "ans": "2NaCl(l) → 2Na(l) + Cl₂(g)",
+     "why": "Double the sodium half so 2e⁻ cancel.",
+     "clue": "Chlorine gas is Cl₂.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 2.3 c",
+     "id": "g12.chemistry.u2.s2-2.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why must NaCl be molten, not dissolved in water, to make sodium?",
+     "opts": [
+      "In water, H₂O is reduced instead of Na⁺",
+      "Na⁺ does not move in water",
+      "Water stops the current",
+      "Molten NaCl is cheaper"
+     ],
+     "ans": "In water, H₂O is reduced instead of Na⁺",
+     "why": "Water (E° = −0.83 V) is far easier to reduce than Na⁺ (−2.71 V), so H₂ forms.",
+     "clue": "Compare −0.83 V with −2.71 V.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Activity 2.4 Q1",
+     "added": true,
+     "id": "g12.chemistry.u2.s2-2.15"
+    }
+   ]
+  },
+  {
+   "id": "chem.preferential-discharge",
+   "name": "Preferential discharge",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "When more than one kind of ion reaches an electrode, only one is discharged. It depends on (1) the position of the ion in the electrochemical series (lower is discharged first), (2) its concentration (a very concentrated ion can win), and (3) the electrode: an active anode such as copper dissolves instead of any anion being discharged."
+    },
+    "am": {
+     "text": "ብዙ አዮኖች ወደ አንድ ኤሌክትሮድ ሲደርሱ አንዱ ብቻ ይፈሳል፤ በተከታታይ ቦታው፣ በኮንሰንትሬሽኑና በኤሌክትሮዱ ዓይነት ይወሰናል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Brine at the cathode",
+     "ask": "In brine, Na⁺ and H⁺ both reach the cathode. Which is discharged?",
+     "opts": [
+      "H⁺, giving hydrogen gas",
+      "Na⁺, giving sodium",
+      "Both equally",
+      "Neither"
+     ],
+     "after": "H⁺ (from water) is much easier to reduce than Na⁺, so H₂ forms.",
+     "ref": "p.75",
+     "id": "g12.chemistry.u2.s2-2.16"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Three factors",
+     "paras": [
+      "1. Position: the ion lower in the electrochemical series is discharged first.",
+      "2. Concentration: a much more concentrated ion can be discharged first.",
+      "3. Electrode: inert (graphite, Pt) or active (Cu, Ag, Ni)."
+     ],
+     "table": [
+      [
+       "Cations, hard → easy",
+       "Anions, hard → easy"
+      ],
+      [
+       "K⁺, Na⁺, Mg²⁺, Al³⁺",
+       "F⁻, SO₄²⁻, NO₃⁻"
+      ],
+      [
+       "Zn²⁺, Fe²⁺, Pb²⁺",
+       "Cl⁻, Br⁻, I⁻"
+      ],
+      [
+       "H⁺, Cu²⁺, Ag⁺",
+       "OH⁻"
+      ]
+     ],
+     "ref": "Table 2.2, p.72",
+     "id": "g12.chemistry.u2.s2-2.17"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Displacing metals",
+     "paras": [
+      "A metal displaces ions of metals below it in the reactivity series.",
+      "Zn + Cu²⁺ → Zn²⁺ + Cu, but Ag cannot displace Cu²⁺.",
+      "Metals above H displace H₂ from acids."
+     ],
+     "ref": "Table 2.1, p.71–72",
+     "id": "g12.chemistry.u2.s2-2.18"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Preferential discharge",
+       "When several ions reach an electrode, only one kind is discharged."
+      ],
+      [
+       "Inert electrode",
+       "An electrode (graphite, platinum) that only carries electrons and does not react."
+      ],
+      [
+       "Active electrode",
+       "An electrode (Cu, Ag, Ni) that takes part; as an anode it dissolves."
+      ]
+     ],
+     "id": "g12.chemistry.u2.s2-2.19"
+    },
+    {
+     "kind": "mcq",
+     "text": "A solution has K⁺ and Cu²⁺. At the cathode the first to be discharged is",
+     "opts": [
+      "Cu²⁺",
+      "K⁺",
+      "both together",
+      "neither"
+     ],
+     "ans": "Cu²⁺",
+     "why": "Cu²⁺ is much lower in the series (easier to reduce).",
+     "clue": "Which is easier to discharge?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.73",
+     "id": "g12.chemistry.u2.s2-2.20"
+    },
+    {
+     "kind": "mcq",
+     "text": "Can silver metal displace copper ions from CuSO₄ solution?",
+     "opts": [
+      "No, silver is below copper",
+      "Yes, silver is more reactive",
+      "Yes, but only when hot",
+      "Only in molten CuSO₄"
+     ],
+     "ans": "No, silver is below copper",
+     "why": "A metal only displaces metals below it in the series.",
+     "clue": "Where is Ag compared with Cu?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.72",
+     "id": "g12.chemistry.u2.s2-2.21"
+    },
+    {
+     "kind": "mcq",
+     "text": "Concentrated HCl is electrolyzed. The anode gas is",
+     "opts": [
+      "chlorine",
+      "oxygen",
+      "hydrogen",
+      "no gas"
+     ],
+     "ans": "chlorine",
+     "why": "[Cl⁻] is huge and [OH⁻] tiny, so Cl⁻ is discharged.",
+     "clue": "Think about concentration.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.4 Q2",
+     "id": "g12.chemistry.u2.s2-2.22"
+    },
+    {
+     "kind": "mcq",
+     "text": "CuSO₄ solution is electrolyzed with copper electrodes. At the anode",
+     "opts": [
+      "the copper anode dissolves",
+      "oxygen is released",
+      "sulfur is deposited",
+      "hydrogen is released"
+     ],
+     "ans": "the copper anode dissolves",
+     "why": "An active anode is oxidized itself: Cu → Cu²⁺ + 2e⁻.",
+     "clue": "Is copper an active or inert electrode?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.74",
+     "id": "g12.chemistry.u2.s2-2.23"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why does brine give Cl₂ at the anode while dilute NaCl gives O₂?",
+     "opts": [
+      "In brine, [Cl⁻] is much higher",
+      "Cl⁻ is lower than OH⁻ in the series",
+      "Brine uses copper electrodes",
+      "Dilute NaCl has no Cl⁻"
+     ],
+     "ans": "In brine, [Cl⁻] is much higher",
+     "why": "OH⁻ is slightly easier to discharge, but a very high [Cl⁻] wins.",
+     "clue": "Which of the three factors changes?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.76",
+     "added": true,
+     "id": "g12.chemistry.u2.s2-2.24"
+    }
+   ]
+  },
+  {
+   "id": "chem.electrolysis-products",
+   "name": "Products of electrolysing solutions",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "In water, H⁺/H₂O and OH⁻/H₂O compete with the salt's ions. Brine gives H₂, Cl₂ and leaves NaOH. Dilute NaCl, dilute H₂SO₄ and NaOH all just decompose water into H₂ and O₂ (2 : 1 by volume). CuSO₄ with inert electrodes gives Cu and O₂ and turns acidic; with copper electrodes copper simply moves from anode to cathode."
+    },
+    "am": {
+     "text": "ጨዋማ ውሃ H₂፣ Cl₂ ይሰጣል NaOH ይቀራል። የተቀጠነ NaCl፣ H₂SO₄ እና NaOH ውሃን ወደ H₂ እና O₂ ይከፍላሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "What gets used up?",
+     "ask": "Dilute sulfuric acid is electrolyzed for a long time. What is actually used up?",
+     "opts": [
+      "Water",
+      "Sulfuric acid",
+      "The electrodes",
+      "Nothing"
+     ],
+     "after": "H₂ and O₂ come from water; the acid stays and becomes more concentrated.",
+     "ref": "Exercise 2.5 Q2",
+     "id": "g12.chemistry.u2.s2-2.25"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "What forms where",
+     "paras": [
+      "Inert electrodes unless stated."
+     ],
+     "table": [
+      [
+       "Solution",
+       "Cathode",
+       "Anode",
+       "Afterwards"
+      ],
+      [
+       "Concentrated NaCl (brine)",
+       "H₂",
+       "Cl₂",
+       "NaOH forms"
+      ],
+      [
+       "Dilute NaCl",
+       "H₂",
+       "O₂",
+       "water used up"
+      ],
+      [
+       "Dilute H₂SO₄",
+       "H₂",
+       "O₂",
+       "acid more concentrated"
+      ],
+      [
+       "NaOH",
+       "H₂",
+       "O₂",
+       "NaOH more concentrated"
+      ],
+      [
+       "CuSO₄",
+       "Cu",
+       "O₂",
+       "blue fades, turns acidic"
+      ],
+      [
+       "CuSO₄, Cu electrodes",
+       "Cu",
+       "Cu dissolves",
+       "unchanged"
+      ]
+     ],
+     "ref": "p.75–80",
+     "id": "g12.chemistry.u2.s2-2.26"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Brine",
+       "A concentrated solution of sodium chloride in water."
+      ]
+     ],
+     "id": "g12.chemistry.u2.s2-2.27"
+    },
+    {
+     "kind": "match",
+     "title": "Match each electrolysis with its products",
+     "pairs": [
+      [
+       "Brine",
+       "H₂ and Cl₂"
+      ],
+      [
+       "Dilute H₂SO₄",
+       "H₂ and O₂"
+      ],
+      [
+       "CuSO₄, inert electrodes",
+       "Cu and O₂"
+      ],
+      [
+       "Molten NaCl",
+       "Na and Cl₂"
+      ],
+      [
+       "CuSO₄, copper electrodes",
+       "Cu moves from anode to cathode"
+      ]
+     ],
+     "why": "Use the table of products.",
+     "clue": "Is there water? Is the anode active?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "id": "g12.chemistry.u2.s2-2.28"
+    },
+    {
+     "kind": "mcq",
+     "text": "After electrolysis of dilute H₂SO₄, the acid concentration",
+     "opts": [
+      "increases",
+      "decreases",
+      "stays the same",
+      "becomes zero"
+     ],
+     "ans": "increases",
+     "why": "Only water is used up, so the same acid is in less water.",
+     "clue": "Which substance is decomposed?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 2.5 Q2",
+     "id": "g12.chemistry.u2.s2-2.29"
+    },
+    {
+     "kind": "mcq",
+     "text": "CuSO₄ is electrolyzed with inert electrodes. The solution",
+     "opts": [
+      "loses colour and becomes acidic",
+      "stays the same",
+      "becomes basic",
+      "turns green"
+     ],
+     "ans": "loses colour and becomes acidic",
+     "why": "Cu²⁺ is removed; H⁺ and SO₄²⁻ are left (H₂SO₄).",
+     "clue": "What replaces the Cu²⁺?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.5 Q3",
+     "id": "g12.chemistry.u2.s2-2.30"
+    },
+    {
+     "kind": "blank",
+     "ask": "When water is electrolyzed, the volume of H₂ to O₂ is ___ : 1",
+     "a": [
+      "2"
+     ],
+     "why": "2H₂O → 2H₂ + O₂.",
+     "clue": "Look at the coefficients.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Experiment 2.2",
+     "id": "g12.chemistry.u2.s2-2.31"
+    },
+    {
+     "kind": "mcq",
+     "text": "The overall equation that shows where NaOH comes from in brine electrolysis is",
+     "opts": [
+      "2NaCl + 2H₂O → 2NaOH + H₂ + Cl₂",
+      "2NaCl → 2Na + Cl₂",
+      "2H₂O → 2H₂ + O₂",
+      "NaCl + H₂O → NaOCl + H₂"
+     ],
+     "ans": "2NaCl + 2H₂O → 2NaOH + H₂ + Cl₂",
+     "why": "Cathode: 2H₂O + 2e⁻ → H₂ + 2OH⁻; OH⁻ stays with Na⁺ as NaOH.",
+     "clue": "Water is reduced at the cathode.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.91",
+     "added": true,
+     "id": "g12.chemistry.u2.s2-2.32"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "In an electrolytic cell the cathode is",
+   "opts": [
+    "negative, where reduction occurs",
+    "positive, where reduction occurs",
+    "negative, where oxidation occurs",
+    "positive, where oxidation occurs"
+   ],
+   "ans": "negative, where reduction occurs",
+   "why": "p.75.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-2.33"
+  },
+  {
+   "kind": "mcq",
+   "text": "Solid NaCl does not conduct because",
+   "opts": [
+    "its ions cannot move",
+    "it has no ions",
+    "it is a metal",
+    "it is covalent"
+   ],
+   "ans": "its ions cannot move",
+   "why": "Locked lattice.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-2.34"
+  },
+  {
+   "kind": "mcq",
+   "text": "Dilute NaOH is electrolyzed. The anode gas is",
+   "opts": [
+    "oxygen",
+    "hydrogen",
+    "chlorine",
+    "sodium vapour"
+   ],
+   "ans": "oxygen",
+   "why": "OH⁻ discharged.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-2.35"
+  },
+  {
+   "kind": "mcq",
+   "text": "CuSO₄ with inert electrodes: the cathode product is",
+   "opts": [
+    "copper",
+    "hydrogen",
+    "oxygen",
+    "sulfur"
+   ],
+   "ans": "copper",
+   "why": "Cu²⁺ below H⁺.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-2.36"
+  },
+  {
+   "kind": "mcq",
+   "text": "CuSO₄ with copper electrodes: the CuSO₄ concentration",
+   "opts": [
+    "stays the same",
+    "increases",
+    "decreases",
+    "drops to zero"
+   ],
+   "ans": "stays the same",
+   "why": "Anode replaces what the cathode removes.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-2.37"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.74: electrolysis is defined only \"in aqueous solution\"; molten compounds are electrolyzed too (Figure 2.3)."
+  },
+  {
+   "kind": "review",
+   "text": "p.75–76: the −0.83 V value is for 2H₂O + 2e⁻ → H₂ + 2OH⁻; the book's overall brine equation (2H⁺ + 2Cl⁻ → H₂ + Cl₂) does not show the OH⁻ build-up. \"compute\" should be \"compete\"."
+  },
+  {
+   "kind": "review",
+   "text": "p.78: overall reaction should be 2H₂O(l), not H₂O(g); CuSO₄ dissociates into Cu²⁺, not \"Cu⁺\". Table 2.1 \"forms hydroxides\" is true only for the first group."
+  },
+  {
+   "kind": "review",
+   "text": "The outcomes mention Ni electrodes for CuSO₄, but the text treats only inert and copper electrodes."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

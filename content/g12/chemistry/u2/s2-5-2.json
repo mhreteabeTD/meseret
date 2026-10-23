@@ -1,0 +1,527 @@
+{
+ "id": "g12.chemistry.u2.s2-5-2",
+ "book": {
+  "title": "Chemistry Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "chemistry",
+  "unit": 2,
+  "unit_title": "Electrochemistry",
+  "pages": "97–109",
+  "section": "2.5.2"
+ },
+ "title": "Standard electrode potentials",
+ "competency": "Use the standard hydrogen electrode and Table 2.3 to find E°cell and predict whether redox reactions are spontaneous.",
+ "minutes": 30,
+ "keywords": [
+  {
+   "en": "Standard hydrogen electrode",
+   "am": "መደበኛ የሃይድሮጅን ኤሌክትሮድ",
+   "def": "Pt in 1 M H⁺ with H₂ at 1 atm; its E° is defined as 0.00 V.",
+   "machine": true
+  },
+  {
+   "en": "Standard reduction potential",
+   "am": "መደበኛ የሪዳክሽን አቅም",
+   "def": "E° of a half-reaction written as a reduction, at 1 M, 1 atm and 25 °C.",
+   "machine": true
+  },
+  {
+   "en": "Diagonal rule",
+   "am": "የሰያፍ ደንብ",
+   "def": "A species on the left of a half-reaction reacts with a species on the right of any half-reaction below it in Table 2.3.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "chem.standard-potentials",
+   "name": "Standard electrode potentials",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "A single electrode potential cannot be measured, so the standard hydrogen electrode (Pt, H₂ at 1 atm, 1 M H⁺) is defined as 0.00 V. Any half-cell joined to it gives its standard reduction potential E°. Always written as reductions, these combine as E°cell = E°cathode − E°anode: Zn −0.76 V and Cu +0.34 V give the Daniell cell 1.10 V."
+    },
+    "am": {
+     "text": "መደበኛ የሃይድሮጅን ኤሌክትሮድ 0.00 V ተብሎ ይወሰዳል። E°cell = E°ካቶድ − E°አኖድ። ዳኒዬል ሴል 1.10 V ይሰጣል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "One electrode alone?",
+     "ask": "Can you measure the voltage of a single zinc electrode on its own?",
+     "opts": [
+      "No, only the difference between two electrodes",
+      "Yes, with any voltmeter",
+      "Yes, if it is pure",
+      "Only at 0 °C"
+     ],
+     "after": "A voltmeter needs two electrodes. So we pick a reference, the hydrogen electrode, and call it 0.00 V.",
+     "ref": "p.97",
+     "id": "g12.chemistry.u2.s2-5-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The standard hydrogen electrode",
+     "paras": [
+      "Pt electrode, H₂ at 1 atm, in 1 M H⁺, at 25 °C.",
+      "2H⁺ + 2e⁻ → H₂, E° = 0.00 V by definition.",
+      "E°cell = E°cathode − E°anode (both as reductions).",
+      "Zn with SHE: 0.76 V, Zn is the anode, so E°(Zn²⁺/Zn) = −0.76 V.",
+      "Cu with SHE: 0.34 V, Cu is the cathode, so E°(Cu²⁺/Cu) = +0.34 V.",
+      "Daniell: 0.34 − (−0.76) = 1.10 V."
+     ],
+     "ref": "p.97–102",
+     "id": "g12.chemistry.u2.s2-5-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Some standard reduction potentials (25 °C)",
+     "paras": [
+      "Strongest oxidizing agent at the top; strongest reducing agent at the bottom."
+     ],
+     "table": [
+      [
+       "Half-reaction",
+       "E° (V)"
+      ],
+      [
+       "F₂ + 2e⁻ → 2F⁻",
+       "+2.87"
+      ],
+      [
+       "Cl₂ + 2e⁻ → 2Cl⁻",
+       "+1.36"
+      ],
+      [
+       "O₂ + 4H⁺ + 4e⁻ → 2H₂O",
+       "+1.23"
+      ],
+      [
+       "Br₂ + 2e⁻ → 2Br⁻",
+       "+1.07"
+      ],
+      [
+       "Ag⁺ + e⁻ → Ag",
+       "+0.80"
+      ],
+      [
+       "Cu²⁺ + 2e⁻ → Cu",
+       "+0.34"
+      ],
+      [
+       "2H⁺ + 2e⁻ → H₂",
+       "0.00"
+      ],
+      [
+       "Pb²⁺ + 2e⁻ → Pb",
+       "−0.13"
+      ],
+      [
+       "Ni²⁺ + 2e⁻ → Ni",
+       "−0.25"
+      ],
+      [
+       "Fe²⁺ + 2e⁻ → Fe",
+       "−0.44"
+      ],
+      [
+       "Zn²⁺ + 2e⁻ → Zn",
+       "−0.76"
+      ],
+      [
+       "Al³⁺ + 3e⁻ → Al",
+       "−1.66"
+      ],
+      [
+       "Mg²⁺ + 2e⁻ → Mg",
+       "−2.37"
+      ],
+      [
+       "Na⁺ + e⁻ → Na",
+       "−2.71"
+      ],
+      [
+       "Li⁺ + e⁻ → Li",
+       "−3.05"
+      ]
+     ],
+     "ref": "Table 2.3, p.103",
+     "id": "g12.chemistry.u2.s2-5-2.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Standard hydrogen electrode",
+       "Pt in 1 M H⁺ with H₂ at 1 atm; its E° is defined as 0.00 V."
+      ],
+      [
+       "Standard reduction potential",
+       "E° of a half-reaction written as a reduction, at 1 M, 1 atm and 25 °C."
+      ]
+     ],
+     "id": "g12.chemistry.u2.s2-5-2.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "Zn joined to the SHE reads 0.76 V and Zn is the anode. So E°(Zn²⁺/Zn) is",
+     "opts": [
+      "−0.76 V",
+      "+0.76 V",
+      "0.00 V",
+      "+1.10 V"
+     ],
+     "ans": "−0.76 V",
+     "why": "0.76 = 0 − E°(Zn), so E°(Zn) = −0.76 V.",
+     "clue": "Use E°cell = E°cathode − E°anode.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.100",
+     "id": "g12.chemistry.u2.s2-5-2.5"
+    },
+    {
+     "kind": "blank",
+     "ask": "E°cell of the Daniell cell (Cu +0.34 V, Zn −0.76 V) = ___ V",
+     "a": [
+      "1.1",
+      "1.10"
+     ],
+     "why": "0.34 − (−0.76) = 1.10 V.",
+     "clue": "Cathode minus anode.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Example 2.10",
+     "id": "g12.chemistry.u2.s2-5-2.6"
+    },
+    {
+     "kind": "blank",
+     "ask": "A Mg | Mg²⁺ || Ag⁺ | Ag cell (Mg −2.37 V, Ag +0.80 V): E°cell = ___ V",
+     "a": [
+      "3.17"
+     ],
+     "why": "0.80 − (−2.37) = 3.17 V. Do not multiply 0.80 by 2.",
+     "clue": "Silver is the cathode.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Example 2.7",
+     "id": "g12.chemistry.u2.s2-5-2.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "A cell of Cd (E° −0.40 V) and Cr (E° −0.74 V): E°cell = ___ V",
+     "a": [
+      "0.34"
+     ],
+     "why": "Cd²⁺ is reduced (higher E°): −0.40 − (−0.74) = +0.34 V.",
+     "clue": "The higher E° is the cathode.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.9 Q2",
+     "id": "g12.chemistry.u2.s2-5-2.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "Mg | Mg²⁺ || Zn²⁺ | Zn has E° = +1.61 V and E°(Zn²⁺/Zn) = −0.76 V. E°(Mg²⁺/Mg) is",
+     "opts": [
+      "−2.37 V",
+      "−0.85 V",
+      "+0.85 V",
+      "+2.37 V"
+     ],
+     "ans": "−2.37 V",
+     "why": "1.61 = −0.76 − E°(Mg), so E°(Mg) = −2.37 V.",
+     "clue": "Zn is the cathode here.",
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Review Part I Q7",
+     "id": "g12.chemistry.u2.s2-5-2.9"
+    },
+    {
+     "kind": "blank",
+     "ask": "Br₂ + Zn → Zn²⁺ + 2Br⁻ has E°cell = 1.83 V; E°(Zn²⁺/Zn) = −0.76 V. E°(Br₂/Br⁻) = ___ V",
+     "a": [
+      "1.07"
+     ],
+     "why": "1.83 = E°(Br₂) − (−0.76), so E°(Br₂) = 1.07 V.",
+     "clue": "Bromine is reduced: it is the cathode.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Exercise 2.11 Q2",
+     "added": true,
+     "id": "g12.chemistry.u2.s2-5-2.10"
+    }
+   ]
+  },
+  {
+   "id": "chem.spontaneity",
+   "name": "Predicting spontaneous reactions",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "The higher E°, the stronger the oxidizing agent (F₂ is strongest); the lower E°, the stronger the reducing agent (Li is strongest). A reaction is spontaneous under standard conditions if E°cell > 0: a species on the left of a half-reaction reacts with a species on the right of any half-reaction below it (the diagonal rule). E° does not change when a half-reaction is multiplied, but changes sign when reversed."
+    },
+    "am": {
+     "text": "E° ከፍ ሲል ጠንካራ ኦክሳይድ አድራጊ ነው። E°cell > 0 ሲሆን ግብረመልሱ ድንገተኛ ነው (የሰያፍ ደንብ)። E° በማባዛት አይለወጥም።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Try a pair",
+     "ask": "Pick E° of the cathode and of the anode. When is the cell reaction spontaneous?",
+     "vars": [
+      {
+       "k": "c",
+       "label": "E° cathode (V)",
+       "min": -3,
+       "max": 3,
+       "step": 0.01,
+       "v": 0.34
+      },
+      {
+       "k": "a",
+       "label": "E° anode (V)",
+       "min": -3,
+       "max": 3,
+       "step": 0.01,
+       "v": -0.76
+      }
+     ],
+     "formula": "c - a",
+     "out": "E°cell = {v} V",
+     "note": "Positive: spontaneous. Negative: the reverse reaction is spontaneous.",
+     "id": "g12.chemistry.u2.s2-5-2.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Using the table",
+     "paras": [
+      "Higher E°: greater tendency to be reduced; stronger oxidizing agent.",
+      "Lower E°: stronger reducing agent (Li strongest).",
+      "Diagonal rule: left of an upper half-reaction + right of a lower one react.",
+      "E° is intensive: 2Ag⁺ + 2e⁻ → 2Ag still has +0.80 V.",
+      "Reversing a half-reaction changes the sign of E°."
+     ],
+     "ref": "p.104–105",
+     "id": "g12.chemistry.u2.s2-5-2.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Diagonal rule",
+       "A species on the left of a half-reaction reacts with a species on the right of any half-reaction below it in Table 2.3."
+      ]
+     ],
+     "id": "g12.chemistry.u2.s2-5-2.13"
+    },
+    {
+     "kind": "mcq",
+     "text": "The strongest oxidizing agent in Table 2.3 is",
+     "opts": [
+      "F₂",
+      "Li",
+      "Li⁺",
+      "F⁻"
+     ],
+     "ans": "F₂",
+     "why": "It has the most positive E° (+2.87 V).",
+     "clue": "Look at the top of the table.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.104",
+     "id": "g12.chemistry.u2.s2-5-2.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "Can Sn (E° −0.14 V) reduce Zn²⁺ (E° −0.76 V)?",
+     "opts": [
+      "No: E°cell = −0.62 V",
+      "Yes: E°cell = +0.62 V",
+      "Yes: E°cell = +0.90 V",
+      "No: E°cell = 0"
+     ],
+     "ans": "No: E°cell = −0.62 V",
+     "why": "Zn²⁺ would be the cathode: −0.76 − (−0.14) = −0.62 V, so not spontaneous.",
+     "clue": "Which is the stronger reducing agent, Sn or Zn?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.9 Q1",
+     "id": "g12.chemistry.u2.s2-5-2.15"
+    },
+    {
+     "kind": "mcq",
+     "text": "For 2Ag⁺ + 2e⁻ → 2Ag, E° is",
+     "opts": [
+      "+0.80 V",
+      "+1.60 V",
+      "+0.40 V",
+      "−0.80 V"
+     ],
+     "ans": "+0.80 V",
+     "why": "E° is intensive: multiplying the equation does not change it.",
+     "clue": "Does a bigger electrode change the voltage?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.105",
+     "id": "g12.chemistry.u2.s2-5-2.16"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which species react with Al³⁺ (E° −1.66 V)?",
+     "opts": [
+      "Mg and K",
+      "Pb only",
+      "Fe and Pb",
+      "Au³⁺ only"
+     ],
+     "ans": "Mg and K",
+     "why": "Only metals with E° below −1.66 V can reduce Al³⁺: Mg (−2.37), K (−2.93).",
+     "clue": "They must be stronger reducing agents than Al.",
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Review Part I Q8",
+     "id": "g12.chemistry.u2.s2-5-2.17"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which metal reduces Fe²⁺ (−0.44 V) but NOT Zn²⁺ (−0.76 V)?",
+     "opts": [
+      "Cr (−0.74 V)",
+      "Mg (−2.37 V)",
+      "Cu (+0.34 V)",
+      "Ni (−0.25 V)"
+     ],
+     "ans": "Cr (−0.74 V)",
+     "why": "With Fe²⁺: −0.44 − (−0.74) = +0.30 V. With Zn²⁺: −0.76 − (−0.74) = −0.02 V.",
+     "clue": "Its E° must lie between −0.76 V and −0.44 V.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.chemistry.u2.s2-5-2.18"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "blank",
+   "ask": "The standard potential of the SHE = ___ V",
+   "a": [
+    "0"
+   ],
+   "why": "By definition.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-5-2.19"
+  },
+  {
+   "kind": "mcq",
+   "text": "The strongest reducing agent in Table 2.3 is",
+   "opts": [
+    "Li",
+    "F₂",
+    "Ag",
+    "H₂"
+   ],
+   "ans": "Li",
+   "why": "Most negative E°.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-5-2.20"
+  },
+  {
+   "kind": "blank",
+   "ask": "A Zn | Zn²⁺ || Ag⁺ | Ag cell: E°cell = ___ V (Zn −0.76, Ag +0.80)",
+   "a": [
+    "1.56"
+   ],
+   "why": "0.80 + 0.76.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-5-2.21"
+  },
+  {
+   "kind": "mcq",
+   "text": "A negative E°cell means the reaction as written is",
+   "opts": [
+    "non-spontaneous",
+    "spontaneous",
+    "at equilibrium",
+    "very fast"
+   ],
+   "ans": "non-spontaneous",
+   "why": "p.102.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-5-2.22"
+  },
+  {
+   "kind": "blank",
+   "ask": "An Al | Al³⁺ || Ag⁺ | Ag cell: E°cell = ___ V (Al −1.66, Ag +0.80)",
+   "a": [
+    "2.46"
+   ],
+   "why": "0.80 + 1.66.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-5-2.23"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Table 2.3 misprints (E° values are fine): PbO₂ + 4H⁺ (not 4H⁻) → PbSO₄; Ce⁴⁺ + e⁻ → Ce³⁺; Cl₂ (not 2Cl); Cr₂O₇²⁻; NO₃⁻(aq) → NO(g); MnO₄⁻ + 2H₂O + 3e⁻ → MnO₂ + 4OH⁻; SO₄²⁻ → SO₂ (not NO₂)."
+  },
+  {
+   "kind": "review",
+   "text": "p.104: Li⁺ takes one electron (book prints 2e⁻); strictly F⁻, not F₂, is the weakest reducing agent. p.100: H₂ is at 1 atm, not \"1M\". p.102: the Daniell cell is Figure 2.9, and the line should begin \"E°cell =\"."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

@@ -1,0 +1,598 @@
+{
+ "id": "g12.chemistry.u2.s2-4",
+ "book": {
+  "title": "Chemistry Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "chemistry",
+  "unit": 2,
+  "unit_title": "Electrochemistry",
+  "pages": "86–91",
+  "section": "2.4"
+ },
+ "title": "Industrial applications of electrolysis",
+ "competency": "Explain how electrolysis is used to extract and refine metals, electroplate, and make nonmetals and compounds.",
+ "minutes": 25,
+ "keywords": [
+  {
+   "en": "Ore",
+   "am": "ማዕድን (ኦር)",
+   "def": "A mineral from which a metal can be extracted economically.",
+   "machine": true
+  },
+  {
+   "en": "Mineral",
+   "am": "ሚኒራል",
+   "def": "A naturally occurring material that contains a metal or its compound.",
+   "machine": true
+  },
+  {
+   "en": "Electrorefining",
+   "am": "በኤሌክትሪክ ማጣራት",
+   "def": "Purifying a metal by electrolysis: impure anode, pure cathode, salt solution.",
+   "machine": true
+  },
+  {
+   "en": "Electroplating",
+   "am": "በኤሌክትሪክ መለበጥ",
+   "def": "Coating an object (the cathode) with a thin layer of metal by electrolysis.",
+   "machine": true
+  },
+  {
+   "en": "Anode mud",
+   "am": "የአኖድ ዝቃጭ",
+   "def": "Insoluble impurities (Ag, Au, Pt) that settle under the anode during refining.",
+   "machine": true
+  },
+  {
+   "en": "Chlor-alkali process",
+   "am": "ክሎር-አልካሊ ሂደት",
+   "def": "Electrolysis of brine to make chlorine, hydrogen and sodium hydroxide.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "chem.metal-extraction",
+   "name": "Extracting active metals",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Metals less reactive than carbon are extracted by heating their ores with carbon. Very reactive metals (K, Na, Ca, Mg, Al) are extracted by electrolysis of their molten compounds, because no cheap chemical reducing agent is strong enough. Aluminium comes from molten Al₂O₃: Al³⁺ is reduced at the cathode and O²⁻ is oxidized to O₂ at the anode."
+    },
+    "am": {
+     "text": "ከካርቦን ያነሱ ብረቶች በካርቦን ይወጣሉ፤ እንደ Na፣ Mg፣ Al ያሉ ንቁ ብረቶች ግን ቀልጦ በኤሌክትሮሊሲስ ይወጣሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Carbon and aluminium",
+     "ask": "Iron is made by heating its ore with carbon. Why can't carbon do the same for aluminium oxide?",
+     "opts": [
+      "Aluminium is more reactive than carbon",
+      "Aluminium oxide does not melt",
+      "Carbon is too expensive",
+      "Aluminium is a non-metal"
+     ],
+     "after": "Carbon can only take oxygen from metals less reactive than itself.",
+     "ref": "p.87",
+     "id": "g12.chemistry.u2.s2-4.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Ores and extraction",
+     "paras": [
+      "A mineral contains a metal or its compound; an ore is a mineral worth mining.",
+      "Metals less reactive than carbon: reduce the ore with carbon.",
+      "K, Na, Ca, Mg, Al: electrolysis of molten compounds.",
+      "Molten chlorides melt lower, conduct, give useful Cl₂, and have no water to compete."
+     ],
+     "ref": "p.87, Activity 2.7",
+     "id": "g12.chemistry.u2.s2-4.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Aluminium from molten Al₂O₃",
+     "paras": [
+      "Graphite electrodes; molten aluminium oxide (in cryolite).",
+      "Cathode: 4Al³⁺ + 12e⁻ → 4Al.",
+      "Anode: 6O²⁻ → 3O₂ + 12e⁻.",
+      "Overall: 4Al³⁺ + 6O²⁻ → 4Al + 3O₂."
+     ],
+     "ref": "p.88",
+     "id": "g12.chemistry.u2.s2-4.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Ore",
+       "A mineral from which a metal can be extracted economically."
+      ],
+      [
+       "Mineral",
+       "A naturally occurring material that contains a metal or its compound."
+      ]
+     ],
+     "id": "g12.chemistry.u2.s2-4.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which metal is extracted by electrolysis of a molten compound?",
+     "opts": [
+      "Sodium",
+      "Iron",
+      "Copper",
+      "Lead"
+     ],
+     "ans": "Sodium",
+     "why": "Na is above carbon in reactivity.",
+     "clue": "Which is the most reactive?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Activity 2.7 Q1",
+     "id": "g12.chemistry.u2.s2-4.5"
+    },
+    {
+     "kind": "mcq",
+     "text": "The cathode reaction in aluminium extraction is",
+     "opts": [
+      "Al³⁺ + 3e⁻ → Al",
+      "2O²⁻ → O₂ + 4e⁻",
+      "Al → Al³⁺ + 3e⁻",
+      "O₂ + 4e⁻ → 2O²⁻"
+     ],
+     "ans": "Al³⁺ + 3e⁻ → Al",
+     "why": "Reduction happens at the cathode.",
+     "clue": "Cations go to the cathode.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.88",
+     "id": "g12.chemistry.u2.s2-4.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why are molten chlorides used to make active metals?",
+     "opts": [
+      "They melt at lower temperatures and give useful Cl₂",
+      "They are insoluble",
+      "They contain water",
+      "They do not conduct"
+     ],
+     "ans": "They melt at lower temperatures and give useful Cl₂",
+     "why": "Low melting point, mobile ions, no water and a valuable by-product.",
+     "clue": "Think about cost and products.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 2.7 Q3",
+     "id": "g12.chemistry.u2.s2-4.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "In 4Al³⁺ + 6O²⁻ → 4Al + 3O₂, 12 mol of electrons produce ___ mol of O₂",
+     "a": [
+      "3"
+     ],
+     "why": "6O²⁻ → 3O₂ + 12e⁻.",
+     "clue": "Each O₂ needs 4e⁻.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.88",
+     "added": true,
+     "id": "g12.chemistry.u2.s2-4.8"
+    }
+   ]
+  },
+  {
+   "id": "chem.refining-plating",
+   "name": "Electrorefining and electroplating",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "In electrorefining, impure metal is the anode, a thin sheet of pure metal is the cathode and a salt of the metal is the electrolyte. The metal dissolves from the anode and deposits pure on the cathode; less active impurities fall as anode mud. In electroplating, the object to be coated is the cathode, the plating metal is the anode, and its salt is the electrolyte."
+    },
+    "am": {
+     "text": "በማጣራት ያልተጣራው ብረት አኖድ፣ ንፁሁ ካቶድ ነው። በመለበጥ የሚለበጠው ዕቃ ካቶድ ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Plating a key",
+     "ask": "Abebe wants to coat an iron key with copper. The key should be joined to",
+     "opts": [
+      "the negative terminal (cathode)",
+      "the positive terminal (anode)",
+      "either terminal",
+      "no terminal"
+     ],
+     "after": "Cu²⁺ ions are reduced onto the cathode, so the key must be the cathode.",
+     "ref": "Experiment 2.3",
+     "id": "g12.chemistry.u2.s2-4.9"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Electrorefining of copper",
+     "paras": [
+      "Anode: impure copper. Cathode: thin pure copper. Electrolyte: acidified CuSO₄.",
+      "Anode: Cu → Cu²⁺ + 2e⁻. Cathode: Cu²⁺ + 2e⁻ → Cu (pure).",
+      "Zn, Fe, Ni impurities dissolve and stay in solution.",
+      "Ag, Au, Pt fall as anode mud."
+     ],
+     "ref": "p.88–89, Figure 2.7",
+     "id": "g12.chemistry.u2.s2-4.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Electroplating",
+     "paras": [
+      "Object to be plated: cathode (−).",
+      "Plating metal: anode (+).",
+      "Electrolyte: a salt of the plating metal.",
+      "Purposes: prevent corrosion and improve appearance."
+     ],
+     "ref": "p.89–91",
+     "id": "g12.chemistry.u2.s2-4.11"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Electrorefining",
+       "Purifying a metal by electrolysis: impure anode, pure cathode, salt solution."
+      ],
+      [
+       "Electroplating",
+       "Coating an object (the cathode) with a thin layer of metal by electrolysis."
+      ],
+      [
+       "Anode mud",
+       "Insoluble impurities (Ag, Au, Pt) that settle under the anode during refining."
+      ]
+     ],
+     "id": "g12.chemistry.u2.s2-4.12"
+    },
+    {
+     "kind": "mcq",
+     "text": "In copper refining, the impure copper is",
+     "opts": [
+      "the anode",
+      "the cathode",
+      "the electrolyte",
+      "the anode mud"
+     ],
+     "ans": "the anode",
+     "why": "It dissolves: Cu → Cu²⁺ + 2e⁻.",
+     "clue": "Which electrode dissolves?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Activity 2.8",
+     "id": "g12.chemistry.u2.s2-4.13"
+    },
+    {
+     "kind": "mcq",
+     "text": "Anode mud from copper refining contains",
+     "opts": [
+      "silver and gold",
+      "zinc and iron",
+      "pure copper",
+      "sulfuric acid"
+     ],
+     "ans": "silver and gold",
+     "why": "Less active metals do not dissolve and fall to the bottom.",
+     "clue": "Which metals are less reactive than copper?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Activity 2.8 Q3",
+     "id": "g12.chemistry.u2.s2-4.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "After plating, the iron key is covered with",
+     "opts": [
+      "a reddish-brown copper layer",
+      "a white layer of iron oxide",
+      "a blue layer of CuSO₄",
+      "nothing"
+     ],
+     "ans": "a reddish-brown copper layer",
+     "why": "Cu²⁺ + 2e⁻ → Cu on the key.",
+     "clue": "What is reduced at the cathode?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Experiment 2.3",
+     "id": "g12.chemistry.u2.s2-4.15"
+    },
+    {
+     "kind": "mcq",
+     "text": "The main purposes of electroplating are",
+     "opts": [
+      "to prevent corrosion and improve appearance",
+      "to make the object heavier",
+      "to make the object magnetic",
+      "to produce gases"
+     ],
+     "ans": "to prevent corrosion and improve appearance",
+     "why": "A thin layer of Cr, Ni, Ag or Zn protects and decorates.",
+     "clue": "Why are taps chrome-plated?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Experiment 2.3",
+     "id": "g12.chemistry.u2.s2-4.16"
+    },
+    {
+     "kind": "mcq",
+     "text": "In copper refining, zinc and iron impurities",
+     "opts": [
+      "dissolve and stay in solution as ions",
+      "deposit on the cathode",
+      "fall as anode mud",
+      "escape as gas"
+     ],
+     "ans": "dissolve and stay in solution as ions",
+     "why": "They are more active than Cu, so they are oxidized, but they are harder to reduce than Cu²⁺.",
+     "clue": "Compare their reactivity with copper.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Activity 2.8 Q3",
+     "added": true,
+     "id": "g12.chemistry.u2.s2-4.17"
+    }
+   ]
+  },
+  {
+   "id": "chem.chlor-alkali",
+   "name": "Making nonmetals and compounds",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Electrolysis also makes nonmetals and compounds. In the chlor-alkali process, brine gives chlorine at the anode and hydrogen with hydroxide at the cathode, so sodium hydroxide forms. Fluorine is made from molten KF and HF, and water with a little added electrolyte gives hydrogen and oxygen."
+    },
+    "am": {
+     "text": "በክሎር-አልካሊ ሂደት ጨዋማ ውሃ Cl₂፣ H₂ እና NaOH ይሰጣል። F₂ ከቀለጠ KF እና HF ይሠራል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Three products",
+     "ask": "Brine is electrolyzed in a chemical factory. Which three products can be sold?",
+     "opts": [
+      "Chlorine, hydrogen and sodium hydroxide",
+      "Sodium, chlorine and water",
+      "Oxygen, hydrogen and salt",
+      "Sodium, oxygen and acid"
+     ],
+     "after": "The chlor-alkali process gives Cl₂, H₂ and NaOH.",
+     "ref": "p.91",
+     "id": "g12.chemistry.u2.s2-4.18"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The chlor-alkali process",
+     "paras": [
+      "Anode: 2Cl⁻ → Cl₂ + 2e⁻.",
+      "Cathode: 2H₂O + 2e⁻ → H₂ + 2OH⁻.",
+      "Overall: 2NaCl + 2H₂O → 2NaOH + Cl₂ + H₂.",
+      "Molten KF + HF: anode 2F⁻ → F₂ + 2e⁻; cathode 2H⁺ + 2e⁻ → H₂.",
+      "Pure water barely conducts, so a little Na₂SO₄ or H₂SO₄ is added."
+     ],
+     "ref": "p.91, Activity 2.9",
+     "id": "g12.chemistry.u2.s2-4.19"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Chlor-alkali process",
+       "Electrolysis of brine to make chlorine, hydrogen and sodium hydroxide."
+      ]
+     ],
+     "id": "g12.chemistry.u2.s2-4.20"
+    },
+    {
+     "kind": "mcq",
+     "text": "The cathode reaction in the chlor-alkali process is",
+     "opts": [
+      "2H₂O + 2e⁻ → H₂ + 2OH⁻",
+      "2Cl⁻ → Cl₂ + 2e⁻",
+      "Na⁺ + e⁻ → Na",
+      "4OH⁻ → O₂ + 2H₂O + 4e⁻"
+     ],
+     "ans": "2H₂O + 2e⁻ → H₂ + 2OH⁻",
+     "why": "Water is reduced; Na⁺ stays as a spectator.",
+     "clue": "Reduction at the cathode.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.91",
+     "id": "g12.chemistry.u2.s2-4.21"
+    },
+    {
+     "kind": "mcq",
+     "text": "Fluorine gas is made by electrolysis of",
+     "opts": [
+      "molten KF and HF",
+      "aqueous NaF",
+      "water",
+      "brine"
+     ],
+     "ans": "molten KF and HF",
+     "why": "In water, F⁻ would not be oxidized; the melt has no water.",
+     "clue": "F₂ reacts with water.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Activity 2.9 Q2",
+     "id": "g12.chemistry.u2.s2-4.22"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why is a little Na₂SO₄ added to water before electrolysis?",
+     "opts": [
+      "To supply ions so current can flow",
+      "To make sodium",
+      "To stop the reaction",
+      "To make the water cold"
+     ],
+     "ans": "To supply ions so current can flow",
+     "why": "Pure water has only 10⁻⁷ M of ions. Na⁺ and SO₄²⁻ carry current but are not discharged.",
+     "clue": "What does conduction need?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 2.9 Q3",
+     "id": "g12.chemistry.u2.s2-4.23"
+    },
+    {
+     "kind": "mcq",
+     "text": "The overall reaction for making fluorine from KF/HF is",
+     "opts": [
+      "2HF → H₂ + F₂",
+      "2KF → 2K + F₂",
+      "HF → H + F",
+      "KF + HF → KHF₂"
+     ],
+     "ans": "2HF → H₂ + F₂",
+     "why": "Add 2F⁻ → F₂ + 2e⁻ and 2H⁺ + 2e⁻ → H₂.",
+     "clue": "K⁺ is not discharged.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Activity 2.9 Q2",
+     "added": true,
+     "id": "g12.chemistry.u2.s2-4.24"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "In electroplating, the object to be plated is the",
+   "opts": [
+    "cathode",
+    "anode",
+    "electrolyte",
+    "salt bridge"
+   ],
+   "ans": "cathode",
+   "why": "Metal ions are reduced onto it.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-4.25"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which metal is made by electrolysis of its molten oxide?",
+   "opts": [
+    "Aluminium",
+    "Iron",
+    "Copper",
+    "Gold"
+   ],
+   "ans": "Aluminium",
+   "why": "p.88.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-4.26"
+  },
+  {
+   "kind": "mcq",
+   "text": "Brine electrolysis gives",
+   "opts": [
+    "H₂, Cl₂ and NaOH",
+    "Na and Cl₂",
+    "O₂ and H₂ only",
+    "NaCl and water"
+   ],
+   "ans": "H₂, Cl₂ and NaOH",
+   "why": "Chlor-alkali.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-4.27"
+  },
+  {
+   "kind": "mcq",
+   "text": "In copper refining the electrolyte is",
+   "opts": [
+    "acidified CuSO₄",
+    "molten copper",
+    "pure water",
+    "NaCl solution"
+   ],
+   "ans": "acidified CuSO₄",
+   "why": "Figure 2.7.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-4.28"
+  },
+  {
+   "kind": "mcq",
+   "text": "In refining, the anode loses a little more mass than the cathode gains because",
+   "opts": [
+    "impurities dissolve or fall as anode mud",
+    "copper turns into gas",
+    "the cathode dissolves",
+    "the electrolyte evaporates"
+   ],
+   "ans": "impurities dissolve or fall as anode mud",
+   "why": "Only pure Cu deposits.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-4.29"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.88: the electrolyte for copper refining is left out (\"a solution of acidified .\"); it is acidified CuSO₄, as Figure 2.7 shows."
+  },
+  {
+   "kind": "note",
+   "text": "Experiment 2.3 (copper plating an iron key) is hands-on; the questions are used as items."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

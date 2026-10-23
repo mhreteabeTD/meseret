@@ -1,0 +1,443 @@
+{
+ "id": "g12.chemistry.u2.s2-3",
+ "book": {
+  "title": "Chemistry Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "chemistry",
+  "unit": 2,
+  "unit_title": "Electrochemistry",
+  "pages": "80–85",
+  "section": "2.3"
+ },
+ "title": "Quantitative aspects of electrolysis",
+ "competency": "Use Faraday's first and second laws to calculate masses, volumes, charges and currents in electrolysis.",
+ "minutes": 30,
+ "keywords": [
+  {
+   "en": "Faraday constant",
+   "am": "የፋራዴይ ቋሚ",
+   "def": "The charge on one mole of electrons: F = 96 500 C/mol.",
+   "machine": true
+  },
+  {
+   "en": "Faraday's first law",
+   "am": "የፋራዴይ የመጀመሪያ ሕግ",
+   "def": "The mass deposited is proportional to the charge passed: m = MIt/(nF).",
+   "machine": true
+  },
+  {
+   "en": "Faraday's second law",
+   "am": "የፋራዴይ ሁለተኛ ሕግ",
+   "def": "The same charge deposits masses in the ratio of their equivalent masses: m₁/E₁ = m₂/E₂.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "chem.faraday-first",
+   "name": "Faraday's first law",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "The mass of substance formed at an electrode is proportional to the charge passed, Q = It. One mole of electrons carries 96 500 C (the Faraday constant). So moles of electrons = It/F, moles of product = moles of electrons ÷ n from the half-reaction, and m = MIt/(nF), with t in seconds."
+    },
+    "am": {
+     "text": "በኤሌክትሮድ የሚፈጠረው ብዛት ከተላለፈው ቻርጅ Q = It ጋር ተመጣጣኝ ነው፤ m = MIt/(nF)።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Copper plating",
+     "ask": "Change the current and the time. How much copper is deposited (Cu²⁺ + 2e⁻ → Cu)?",
+     "vars": [
+      {
+       "k": "I",
+       "label": "Current I (A)",
+       "min": 0.5,
+       "max": 10,
+       "step": 0.5,
+       "v": 2
+      },
+      {
+       "k": "t",
+       "label": "Time t (min)",
+       "min": 5,
+       "max": 120,
+       "step": 5,
+       "v": 30
+      }
+     ],
+     "formula": "63.5*I*t*60/(2*96500)",
+     "out": "Copper deposited = {v} g",
+     "note": "m = MIt/(nF), with t in seconds.",
+     "id": "g12.chemistry.u2.s2-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Faraday's first law",
+     "paras": [
+      "m ∝ Q, and Q = It (coulombs = amperes × seconds).",
+      "1 mol of electrons = 96 500 C (F).",
+      "Moles of e⁻ = It/F.",
+      "Moles of product = moles of e⁻ ÷ electrons per formula (from the half-reaction).",
+      "So m = MIt/(nF)."
+     ],
+     "ref": "p.80–81",
+     "id": "g12.chemistry.u2.s2-3.2"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Molten CaCl₂, 0.452 A for 1.5 h",
+     "steps": [
+      "t = 1.5 × 3600 = 5400 s; Q = 0.452 × 5400 = 2.44 × 10³ C.",
+      "mol e⁻ = 2440/96 500 = 0.0253 mol.",
+      "Ca²⁺ + 2e⁻ → Ca: 0.0253 ÷ 2 × 40.08 = 0.507 g Ca.",
+      "2Cl⁻ → Cl₂ + 2e⁻: 0.0253 ÷ 2 × 71 = 0.898 g Cl₂."
+     ],
+     "ref": "Example 2.4",
+     "id": "g12.chemistry.u2.s2-3.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Faraday constant",
+       "The charge on one mole of electrons: F = 96 500 C/mol."
+      ],
+      [
+       "Faraday's first law",
+       "The mass deposited is proportional to the charge passed: m = MIt/(nF)."
+      ]
+     ],
+     "id": "g12.chemistry.u2.s2-3.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "How many moles of electrons are needed to deposit 1 mole of aluminium?",
+     "opts": [
+      "3",
+      "1",
+      "2",
+      "6"
+     ],
+     "ans": "3",
+     "why": "Al³⁺ + 3e⁻ → Al.",
+     "clue": "Look at the charge on the ion.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example 2.3",
+     "id": "g12.chemistry.u2.s2-3.5"
+    },
+    {
+     "kind": "blank",
+     "ask": "0.452 A flows for 1.5 h. Q ≈ ___ C (nearest coulomb)",
+     "a": [
+      "≈2441",
+      "≈2440"
+     ],
+     "why": "Q = 0.452 × 5400 = 2440.8 C.",
+     "clue": "Change hours to seconds.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Example 2.4",
+     "id": "g12.chemistry.u2.s2-3.6"
+    },
+    {
+     "kind": "blank",
+     "ask": "A current of 40 A flows for 30 minutes through molten aluminium compound. Al deposited ≈ ___ g (1 decimal place)",
+     "a": [
+      "≈6.7"
+     ],
+     "why": "Q = 72 000 C; 0.746 mol e⁻; ÷ 3 = 0.249 mol Al × 27 = 6.7 g.",
+     "clue": "n = 3 for Al.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.6 Q3",
+     "id": "g12.chemistry.u2.s2-3.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "0.5 A passes through CuSO₄ for 3 hours. Copper deposited ≈ ___ g (2 decimal places)",
+     "a": [
+      "≈1.78"
+     ],
+     "why": "Q = 5400 C; 0.0560 mol e⁻; ÷ 2 × 63.5 = 1.78 g.",
+     "clue": "Cu²⁺ needs 2e⁻.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.6 Q2",
+     "id": "g12.chemistry.u2.s2-3.8"
+    },
+    {
+     "kind": "blank",
+     "ask": "404 mg of copper is deposited in 5.00 h. The current ≈ ___ A (3 decimal places)",
+     "a": [
+      "≈0.068"
+     ],
+     "why": "0.404 ÷ 63.55 = 6.36 × 10⁻³ mol Cu; × 2 = 1.27 × 10⁻² mol e⁻; × 96 500 = 1227 C; ÷ 18 000 s = 0.068 A.",
+     "clue": "Work backwards: mass → moles → charge → current.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Review Part II Q4",
+     "id": "g12.chemistry.u2.s2-3.9"
+    },
+    {
+     "kind": "blank",
+     "ask": "Na₂SO₄ solution is electrolyzed for 2 h at 10 A. Volume of H₂ at 25 °C and 1 atm (24.5 L/mol) ≈ ___ L (1 decimal place)",
+     "a": [
+      "≈9.1"
+     ],
+     "why": "Q = 72 000 C; 0.746 mol e⁻; H₂ needs 2e⁻: 0.373 mol × 24.5 = 9.1 L. (O₂: 4.6 L.)",
+     "clue": "Water is electrolyzed; 2e⁻ per H₂.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Exercise 2.6 Q1",
+     "added": true,
+     "id": "g12.chemistry.u2.s2-3.10"
+    }
+   ]
+  },
+  {
+   "id": "chem.faraday-second",
+   "name": "Faraday's second law",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "When the same charge passes through cells in series, the masses deposited are proportional to the equivalent masses (molar mass ÷ electrons per ion): m₁/E₁ = m₂/E₂. Equivalently, the same number of moles of electrons reaches every cathode."
+    },
+    "am": {
+     "text": "አንድ አይነት ቻርጅ በተከታታይ ሴሎች ሲያልፍ የሚፈጠሩት ብዛቶች ከኢኩቫለንት ብዛታቸው ጋር ይመጣጠናሉ፡ m₁/E₁ = m₂/E₂።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Silver or copper?",
+     "ask": "AgNO₃ and CuSO₄ cells are joined in series, so the same charge passes through both. Which metal is deposited in greater mass?",
+     "opts": [
+      "Silver",
+      "Copper",
+      "Equal masses",
+      "Neither"
+     ],
+     "after": "Each electron deposits one Ag (108 g/mol) but only half a Cu (63.5 ÷ 2 = 31.75 g).",
+     "ref": "Figure 2.6",
+     "id": "g12.chemistry.u2.s2-3.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Faraday's second law",
+     "paras": [
+      "Same charge through cells in series.",
+      "Masses are in the ratio of equivalent masses: m₁/E₁ = m₂/E₂.",
+      "Equivalent mass E = molar mass ÷ electrons per ion.",
+      "Ag: 108/1 = 108. Cu: 63.5 ÷ 2 = 31.75. Al: 27/3 = 9."
+     ],
+     "ref": "p.84–85",
+     "id": "g12.chemistry.u2.s2-3.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Faraday's second law",
+       "The same charge deposits masses in the ratio of their equivalent masses: m₁/E₁ = m₂/E₂."
+      ]
+     ],
+     "id": "g12.chemistry.u2.s2-3.13"
+    },
+    {
+     "kind": "blank",
+     "ask": "The equivalent mass of copper in Cu²⁺ + 2e⁻ → Cu (63.5 g/mol) is ___ g",
+     "a": [
+      "31.75"
+     ],
+     "why": "63.5 ÷ 2 = 31.75 g.",
+     "clue": "Divide by the electrons per ion.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example 2.5",
+     "id": "g12.chemistry.u2.s2-3.14"
+    },
+    {
+     "kind": "blank",
+     "ask": "0.108 g of Ag is deposited. The copper deposited in series ≈ ___ g (3 decimal places)",
+     "a": [
+      "≈0.032"
+     ],
+     "why": "m_Cu = 31.75 × 0.108 ÷ 108 = 0.032 g.",
+     "clue": "m₁/E₁ = m₂/E₂.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Example 2.5",
+     "id": "g12.chemistry.u2.s2-3.15"
+    },
+    {
+     "kind": "blank",
+     "ask": "AlCl₃ and AgNO₃ cells are in series. 18 g of Al is deposited. Mass of Ag = ___ g",
+     "a": [
+      "216"
+     ],
+     "why": "m_Ag = 18 × 108/9 = 216 g.",
+     "clue": "E_Al = 9, E_Ag = 108.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.7 Q1",
+     "id": "g12.chemistry.u2.s2-3.16"
+    },
+    {
+     "kind": "blank",
+     "ask": "0.2 mol of electrons pass through a Zn²⁺ cell. Zinc deposited ≈ ___ g (2 decimal places)",
+     "a": [
+      "≈6.54"
+     ],
+     "why": "0.2 ÷ 2 = 0.1 mol × 65.4 = 6.54 g.",
+     "clue": "Zn²⁺ needs 2e⁻.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.7 Q2",
+     "id": "g12.chemistry.u2.s2-3.17"
+    },
+    {
+     "kind": "blank",
+     "ask": "The same 0.2 mol of electrons pass through an Fe³⁺ cell. Iron deposited ≈ ___ g (2 decimal places)",
+     "a": [
+      "≈3.72"
+     ],
+     "why": "0.2 ÷ 3 = 0.0667 mol × 55.85 = 3.72 g.",
+     "clue": "Fe³⁺ needs 3e⁻.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Exercise 2.7 Q2",
+     "added": true,
+     "id": "g12.chemistry.u2.s2-3.18"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "blank",
+   "ask": "96 500 C is ___ mol of electrons",
+   "a": [
+    "1"
+   ],
+   "why": "Definition of F.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-3.19"
+  },
+  {
+   "kind": "blank",
+   "ask": "2 A flows for 100 s. Q = ___ C",
+   "a": [
+    "200"
+   ],
+   "why": "Q = It.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-3.20"
+  },
+  {
+   "kind": "blank",
+   "ask": "0.5 mol of electrons pass through CuSO₄. Moles of Cu deposited = ___",
+   "a": [
+    "0.25"
+   ],
+   "why": "2e⁻ per Cu.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-3.21"
+  },
+  {
+   "kind": "blank",
+   "ask": "1930 C = ___ mol of electrons",
+   "a": [
+    "0.02"
+   ],
+   "why": "1930/96 500.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-3.22"
+  },
+  {
+   "kind": "blank",
+   "ask": "9650 C pass through AgNO₃ (Ag = 108). Silver deposited = ___ g",
+   "a": [
+    "10.8"
+   ],
+   "why": "0.1 mol × 108.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-3.23"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.81: F = 96 500 C per mole of electrons (C/mol; more precisely 96 485). \"Valence n\" means electrons per ion; t must be in seconds."
+  },
+  {
+   "kind": "review",
+   "text": "Example 2.3: Mg and Al cannot be deposited from aqueous solutions; read the states as molten. Example 2.4: the overall equation has \"→\" where \"+\" belongs and should use (l)."
+  },
+  {
+   "kind": "review",
+   "text": "Figure 2.6 label \"Cu₂SO₄\" should be CuSO₄; p.83 prints \"2.44 × 103\" for 2.44 × 10³."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

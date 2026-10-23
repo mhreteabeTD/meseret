@@ -1,0 +1,543 @@
+{
+ "id": "g12.chemistry.u2.s2-5-4",
+ "book": {
+  "title": "Chemistry Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "chemistry",
+  "unit": 2,
+  "unit_title": "Electrochemistry",
+  "pages": "120–127",
+  "section": "2.5.4"
+ },
+ "title": "Batteries, fuel cells and corrosion",
+ "competency": "Describe primary and secondary batteries and fuel cells, explain corrosion as an electrochemical process and how to prevent it.",
+ "minutes": 25,
+ "keywords": [
+  {
+   "en": "Primary battery",
+   "am": "አንደኛ ደረጃ ባትሪ",
+   "def": "A battery used once and thrown away, such as a dry cell.",
+   "machine": true
+  },
+  {
+   "en": "Secondary battery",
+   "am": "ሁለተኛ ደረጃ ባትሪ",
+   "def": "A rechargeable battery, such as a lead–acid car battery.",
+   "machine": true
+  },
+  {
+   "en": "Fuel cell",
+   "am": "የነዳጅ ሴል",
+   "def": "A cell that runs on a continuous supply of fuel (H₂) and oxygen.",
+   "machine": true
+  },
+  {
+   "en": "Corrosion",
+   "am": "ዝገት",
+   "def": "The slow destruction of a metal by an electrochemical reaction with its surroundings.",
+   "machine": true
+  },
+  {
+   "en": "Galvanizing",
+   "am": "በዚንክ መለበጥ",
+   "def": "Coating iron with zinc, which corrodes instead of the iron.",
+   "machine": true
+  },
+  {
+   "en": "Cathodic protection",
+   "am": "የካቶድ ጥበቃ",
+   "def": "Joining iron to a more active metal (Zn, Mg) so the iron is only a cathode.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "chem.batteries-fuel-cells",
+   "name": "Batteries and fuel cells",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "A battery is one or more galvanic cells in a sealed package. Primary batteries such as the zinc–carbon dry cell (about 1.5 V) are used once; secondary batteries such as the lead–acid car battery (2 V per cell, six cells for 12 V) can be recharged by reversing the reaction. A fuel cell does not store its reactants: hydrogen and oxygen are fed in continuously and combine to water, giving about 1.23 V."
+    },
+    "am": {
+     "text": "ባትሪ የታሸገ ጋልቫኒክ ሴል ነው። ደረቅ ሴል አንድ ጊዜ ብቻ፣ የመኪና ባትሪ ግን ደጋግሞ ይሞላል። የነዳጅ ሴል H₂ እና O₂ በቀጣይ ይመገባል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Which one recharges?",
+     "ask": "Which of these batteries can be recharged and used again and again?",
+     "opts": [
+      "A car (lead–acid) battery",
+      "A torch dry cell",
+      "A watch button cell",
+      "None of them"
+     ],
+     "after": "The lead–acid battery is a secondary battery: charging reverses its reaction.",
+     "ref": "Activity 2.12",
+     "id": "g12.chemistry.u2.s2-5-4.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Common batteries",
+     "paras": [
+      "Primary: used once. Secondary: rechargeable."
+     ],
+     "table": [
+      [
+       "",
+       "Dry cell (primary)",
+       "Lead–acid (secondary)"
+      ],
+      [
+       "Anode (−)",
+       "zinc can",
+       "lead plates"
+      ],
+      [
+       "Cathode (+)",
+       "MnO₂ + carbon around a graphite rod",
+       "PbO₂ plates"
+      ],
+      [
+       "Electrolyte",
+       "moist paste of NH₄Cl and ZnCl₂",
+       "sulfuric acid"
+      ],
+      [
+       "Voltage",
+       "about 1.5 V",
+       "2 V per cell; 6 cells = 12 V"
+      ]
+     ],
+     "ref": "Exercise 2.12 (added detail)",
+     "added": true,
+     "id": "g12.chemistry.u2.s2-5-4.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The hydrogen–oxygen fuel cell",
+     "paras": [
+      "Fuel and oxygen are supplied continuously; nothing is stored.",
+      "Acid cell: anode H₂ → 2H⁺ + 2e⁻; cathode O₂ + 4H⁺ + 4e⁻ → 2H₂O.",
+      "Alkaline cell: anode 2H₂ + 4OH⁻ → 4H₂O + 4e⁻; cathode O₂ + 2H₂O + 4e⁻ → 4OH⁻.",
+      "Overall: 2H₂ + O₂ → 2H₂O, about 1.23 V.",
+      "Uses: buses, cars, emergency power."
+     ],
+     "ref": "p.120–122, Figure 2.16",
+     "id": "g12.chemistry.u2.s2-5-4.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Primary battery",
+       "A battery used once and thrown away, such as a dry cell."
+      ],
+      [
+       "Secondary battery",
+       "A rechargeable battery, such as a lead–acid car battery."
+      ],
+      [
+       "Fuel cell",
+       "A cell that runs on a continuous supply of fuel (H₂) and oxygen."
+      ]
+     ],
+     "id": "g12.chemistry.u2.s2-5-4.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "A basic difference between a fuel cell and a battery is that",
+     "opts": [
+      "a fuel cell does not store its chemical energy",
+      "a fuel cell is rechargeable and a battery is not",
+      "both are rechargeable",
+      "a battery needs fuel"
+     ],
+     "ans": "a fuel cell does not store its chemical energy",
+     "why": "Fuel cells are refuelled, not recharged.",
+     "clue": "Where do the reactants come from?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Review Part I Q13",
+     "id": "g12.chemistry.u2.s2-5-4.5"
+    },
+    {
+     "kind": "mcq",
+     "text": "In a dry cell, the anode is",
+     "opts": [
+      "the zinc container",
+      "the graphite rod",
+      "the MnO₂ paste",
+      "the NH₄Cl paste"
+     ],
+     "ans": "the zinc container",
+     "why": "Zn → Zn²⁺ + 2e⁻.",
+     "clue": "Which metal is oxidized?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 2.12 Q3",
+     "id": "g12.chemistry.u2.s2-5-4.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "The overall reaction in a hydrogen–oxygen fuel cell is",
+     "opts": [
+      "2H₂ + O₂ → 2H₂O",
+      "H₂ + O₂ → H₂O₂",
+      "2H₂O → 2H₂ + O₂",
+      "H₂ + Cl₂ → 2HCl"
+     ],
+     "ans": "2H₂ + O₂ → 2H₂O",
+     "why": "Its only product is water.",
+     "clue": "Add the two half-reactions.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.122",
+     "id": "g12.chemistry.u2.s2-5-4.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "The acid in a flat (discharged) car battery freezes more easily because",
+     "opts": [
+      "the acid is used up and water is formed",
+      "lead dissolves in it",
+      "it becomes more concentrated",
+      "it turns into PbO₂"
+     ],
+     "ans": "the acid is used up and water is formed",
+     "why": "Pb + PbO₂ + 2H₂SO₄ → 2PbSO₄ + 2H₂O: the solution becomes dilute, so its freezing point is higher.",
+     "clue": "What does discharge do to H₂SO₄?",
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Activity 2.12 Q2",
+     "id": "g12.chemistry.u2.s2-5-4.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "While a lead–acid battery is being charged, the electrode that becomes lead has the reaction",
+     "opts": [
+      "PbSO₄ + 2e⁻ → Pb + SO₄²⁻",
+      "Pb → Pb²⁺ + 2e⁻",
+      "PbO₂ + 4H⁺ + 2e⁻ → Pb²⁺ + 2H₂O",
+      "PbSO₄ → PbO₂ + 2e⁻"
+     ],
+     "ans": "PbSO₄ + 2e⁻ → Pb + SO₄²⁻",
+     "why": "Charging reverses discharge. Pb goes +2 → 0: reduction at the cathode.",
+     "clue": "Charging is electrolysis.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Exercise 2.12 Q2",
+     "added": true,
+     "id": "g12.chemistry.u2.s2-5-4.9"
+    }
+   ]
+  },
+  {
+   "id": "chem.corrosion",
+   "name": "Corrosion and its prevention",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Corrosion is a natural electrochemical process. Iron rusts only with both oxygen and water; it rusts faster at low pH, in salty water and in contact with a less active metal such as copper. At an anodic region Fe → Fe²⁺ + 2e⁻; the electrons reduce O₂ elsewhere; Fe²⁺ is then oxidized to rust, Fe₂O₃·nH₂O. Paint, alloys, metal coatings and cathodic protection with a more active metal (galvanizing with zinc) prevent it."
+    },
+    "am": {
+     "text": "ዝገት ኤሌክትሮኬሚካል ሂደት ነው፤ ብረት ኦክስጅንና ውሃ ሲኖር ብቻ ይዝጋል። ቀለም፣ በዚንክ መለበጥና የካቶድ ጥበቃ ይከላከላሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Which nail rusts?",
+     "ask": "Three iron nails: one in dry air, one in boiled (air-free) water, one in tap water open to air. Which rusts?",
+     "opts": [
+      "Only the one in water open to air",
+      "Only the one in dry air",
+      "All three",
+      "Only the one in boiled water"
+     ],
+     "after": "Rusting needs both water and oxygen.",
+     "ref": "p.122–123",
+     "id": "g12.chemistry.u2.s2-5-4.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Facts about rusting",
+     "paras": [
+      "No rust in dry air: water is needed.",
+      "No rust in air-free water: oxygen is needed.",
+      "Iron is lost in one place; rust forms in another.",
+      "Faster at low pH and in salty (ionic) water.",
+      "Faster in contact with a less active metal (Cu); slower with a more active one (Zn)."
+     ],
+     "ref": "p.123",
+     "id": "g12.chemistry.u2.s2-5-4.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "How iron corrodes",
+     "paras": [
+      "Anodic region: Fe → Fe²⁺ + 2e⁻ (a pit forms).",
+      "Cathodic region: O₂ + 4H⁺ + 4e⁻ → 2H₂O.",
+      "Then Fe²⁺ + O₂ + water → rust, Fe₂O₃·nH₂O.",
+      "Overall: 2Fe + 3/2 O₂ + nH₂O → Fe₂O₃·nH₂O.",
+      "Aluminium is more reactive but forms a tight Al₂O₃ layer that protects it; rust is porous."
+     ],
+     "ref": "p.123–125, Figure 2.17",
+     "id": "g12.chemistry.u2.s2-5-4.12"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Preventing corrosion",
+     "paras": [
+      "Paint, oil or plastic: keep O₂ and water away.",
+      "Alloys: stainless steel forms a protective chromium oxide.",
+      "Tin or zinc coatings.",
+      "Cathodic protection: join iron to a more active metal (Zn, Mg) that is oxidized instead.",
+      "Galvanizing: coating iron with zinc."
+     ],
+     "ref": "p.125–127, Figure 2.19",
+     "id": "g12.chemistry.u2.s2-5-4.13"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Corrosion",
+       "The slow destruction of a metal by an electrochemical reaction with its surroundings."
+      ],
+      [
+       "Galvanizing",
+       "Coating iron with zinc, which corrodes instead of the iron."
+      ],
+      [
+       "Cathodic protection",
+       "Joining iron to a more active metal (Zn, Mg) so the iron is only a cathode."
+      ]
+     ],
+     "id": "g12.chemistry.u2.s2-5-4.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "A metal corrodes when it acts as",
+     "opts": [
+      "the anode",
+      "the cathode",
+      "a salt bridge",
+      "a catalyst"
+     ],
+     "ans": "the anode",
+     "why": "Corrosion is oxidation, which happens at the anode.",
+     "clue": "Where does oxidation happen?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Review Part I Q15",
+     "id": "g12.chemistry.u2.s2-5-4.15"
+    },
+    {
+     "kind": "mcq",
+     "text": "Aluminium does not rust like iron because",
+     "opts": [
+      "a tight Al₂O₃ layer protects it",
+      "it is less reactive than iron",
+      "it does not react with oxygen",
+      "it contains no electrons"
+     ],
+     "ans": "a tight Al₂O₃ layer protects it",
+     "why": "Al (−1.66 V) is more reactive than Fe (−0.44 V), but its oxide seals the surface.",
+     "clue": "Compare their E° values.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.13 Q3",
+     "id": "g12.chemistry.u2.s2-5-4.16"
+    },
+    {
+     "kind": "pick",
+     "text": "Which make iron rust faster?",
+     "pool": [
+      "Salt water",
+      "Acidic rain",
+      "Contact with copper",
+      "Contact with zinc"
+     ],
+     "a": [
+      "Salt water",
+      "Acidic rain",
+      "Contact with copper"
+     ],
+     "why": "Ions and H⁺ speed it up; copper makes iron the anode. Zinc protects iron.",
+     "clue": "Which metal is more active than iron?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.123–126",
+     "id": "g12.chemistry.u2.s2-5-4.17"
+    },
+    {
+     "kind": "mcq",
+     "text": "In cathodic protection with zinc, the iron acts as",
+     "opts": [
+      "the cathode",
+      "the anode",
+      "the electrolyte",
+      "the salt bridge"
+     ],
+     "ans": "the cathode",
+     "why": "Zinc is oxidized instead, so iron only receives electrons.",
+     "clue": "Which metal is sacrificed?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.126",
+     "id": "g12.chemistry.u2.s2-5-4.18"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which metal could serve as a sacrificial anode for an iron pipe?",
+     "opts": [
+      "Magnesium",
+      "Copper",
+      "Silver",
+      "Tin"
+     ],
+     "ans": "Magnesium",
+     "why": "Mg (−2.37 V) is oxidized more easily than Fe (−0.44 V).",
+     "clue": "It must be more active than iron.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Review Part II Q10",
+     "added": true,
+     "id": "g12.chemistry.u2.s2-5-4.19"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Iron rusts only when there is",
+   "opts": [
+    "both oxygen and water",
+    "only oxygen",
+    "only water",
+    "neither"
+   ],
+   "ans": "both oxygen and water",
+   "why": "p.123.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-5-4.20"
+  },
+  {
+   "kind": "mcq",
+   "text": "Galvanizing coats iron with",
+   "opts": [
+    "zinc",
+    "tin",
+    "copper",
+    "paint"
+   ],
+   "ans": "zinc",
+   "why": "p.126.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-5-4.21"
+  },
+  {
+   "kind": "mcq",
+   "text": "A lead–acid car battery is a",
+   "opts": [
+    "secondary battery",
+    "primary battery",
+    "fuel cell",
+    "concentration cell"
+   ],
+   "ans": "secondary battery",
+   "why": "Rechargeable.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-5-4.22"
+  },
+  {
+   "kind": "mcq",
+   "text": "The product of a hydrogen–oxygen fuel cell is",
+   "opts": [
+    "water",
+    "carbon dioxide",
+    "hydrogen peroxide",
+    "ozone"
+   ],
+   "ans": "water",
+   "why": "p.122.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-5-4.23"
+  },
+  {
+   "kind": "mcq",
+   "text": "Iron in contact with copper rusts",
+   "opts": [
+    "faster",
+    "slower",
+    "not at all",
+    "at the same rate"
+   ],
+   "ans": "faster",
+   "why": "Iron becomes the anode.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.chemistry.u2.s2-5-4.24"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.120 announces \"types of batteries in widespread use\" but prints no section on the dry cell, alkaline cell or lead–acid battery, although Exercise 2.12 asks about them. The lesson adds a short table (marked added) for teacher review."
+  },
+  {
+   "kind": "review",
+   "text": "p.124: the overall rusting equation needs 2Fe: 2Fe + 3/2 O₂ + nH₂O → Fe₂O₃·nH₂O. p.125: Ag → Ag⁺ + e⁻ (not 2e⁻); silver sulfide is Ag₂S; Table 2.3 (not 2.2) has the reduction potentials."
+  },
+  {
+   "kind": "review",
+   "text": "Figure 2.16 has a stray \"2Zn²⁺\" label; Figure 2.19 should show 2Zn²⁺ leaving the zinc, not 2Fe²⁺."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
