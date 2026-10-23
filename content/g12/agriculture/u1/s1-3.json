@@ -1,0 +1,1028 @@
+{
+ "id": "g12.agriculture.u1.s1-3",
+ "book": {
+  "title": "Agriculture Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "agriculture",
+  "unit": 1,
+  "unit_title": "Vegetable crops production and management",
+  "pages": "10–12",
+  "section": "1.3"
+ },
+ "title": "Classification of vegetable crops",
+ "competency": "Classify vegetable crops by edible part, temperature requirement and life cycle.",
+ "minutes": 25,
+ "keywords": [
+  {
+   "en": "Root vegetable",
+   "am": "ሥራሥር አትክልት",
+   "def": "A vegetable whose root is eaten: carrot, radish, cassava, sweet potato, beet.",
+   "machine": true
+  },
+  {
+   "en": "Bulb vegetable",
+   "am": "የቡልብ አትክልት",
+   "def": "A vegetable whose bulb (a short stem with swollen fleshy leaf bases) is eaten: onion, garlic.",
+   "machine": true
+  },
+  {
+   "en": "Leafy vegetable",
+   "am": "ቅጠላ ቅጠል አትክልት",
+   "def": "A vegetable grown for its leaves or stems: cabbage, Swiss chard, celery, lettuce, asparagus.",
+   "machine": true
+  },
+  {
+   "en": "Flower vegetable",
+   "am": "የአበባ አትክልት",
+   "def": "A vegetable whose flowers are eaten: cauliflower, broccoli.",
+   "machine": true
+  },
+  {
+   "en": "Fruit vegetable",
+   "am": "የፍሬ አትክልት",
+   "def": "A vegetable whose fruit is eaten, either immature (cucumber, eggplant) or mature (tomato, pumpkin).",
+   "machine": true
+  },
+  {
+   "en": "Warm-season vegetable",
+   "am": "የሞቃት ወቅት አትክልት",
+   "def": "A tropical or sub-tropical vegetable adapted to 18–29 °C that cannot tolerate frost.",
+   "machine": true
+  },
+  {
+   "en": "Cool-season vegetable",
+   "am": "የቀዝቃዛ ወቅት አትክልት",
+   "def": "A temperate vegetable that grows well in cooler regions and needs cool weather to flower and seed.",
+   "machine": true
+  },
+  {
+   "en": "Hardy",
+   "am": "ውርጭ ቋቋሚ",
+   "def": "Able to tolerate frost without injury (some cool-season crops).",
+   "machine": true
+  },
+  {
+   "en": "Tender",
+   "am": "ውርጭ የማይችል",
+   "def": "Unable to tolerate frost (warm-season crops; very tender ones are the most sensitive).",
+   "machine": true
+  },
+  {
+   "en": "Annual",
+   "am": "የአንድ ዓመት ተክል",
+   "def": "A crop that completes its life cycle in a single year.",
+   "machine": true
+  },
+  {
+   "en": "Biennial",
+   "am": "የሁለት ዓመት ተክል",
+   "def": "A crop that needs two growing seasons: vegetative parts in the first, reproductive parts in the second.",
+   "machine": true
+  },
+  {
+   "en": "Perennial",
+   "am": "ቋሚ ተክል",
+   "def": "A crop that grows for more than two growing seasons; may produce for up to ten years.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "agri.edible-part",
+   "name": "Classification by edible part",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Vegetables can be grouped by the part we eat. The book names root vegetables (carrot, radish, cassava, sweet potato, beet), leafy vegetables grown for leaves or stems (cabbage, Swiss chard, celery, lettuce, asparagus) and flower vegetables (cauliflower, broccoli). Garlic, listed by the book as a root, is really a bulb like onion. Other groups are tubers (potato, a swollen stem), immature fruits (cucumber, eggplant), mature fruits (tomato, pumpkin) and seeds or pods (peas, green beans)."
+    },
+    "am": {
+     "text": "አትክልቶች በሚበላው ክፍላቸው ይመደባሉ፡ ሥር (ካሮት)፣ ቡልብ (ነጭ ሽንኩርት፣ ቀይ ሽንኩርት)፣ ቅጠል (ጎመን)፣ አበባ (አበባ ጎመን)፣ ፍሬ (ቲማቲም)።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "title": "Which part do we eat?",
+     "bins": [
+      "Root",
+      "Leaf or stem",
+      "Flower",
+      "Fruit"
+     ],
+     "items": [
+      [
+       "Carrot",
+       "Root",
+       "the orange root"
+      ],
+      [
+       "Cabbage",
+       "Leaf or stem",
+       "tightly packed leaves"
+      ],
+      [
+       "Cauliflower",
+       "Flower",
+       "a head of flower buds"
+      ],
+      [
+       "Tomato",
+       "Fruit",
+       "it holds seeds"
+      ],
+      [
+       "Beetroot",
+       "Root",
+       "swollen root"
+      ],
+      [
+       "Swiss chard",
+       "Leaf or stem",
+       "leaves and stalks"
+      ]
+     ],
+     "ref": "Brainstorming 1.4",
+     "graded": false,
+     "id": "g12.agriculture.u1.s1-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Groups named in the book",
+     "paras": [
+      "Root vegetables: carrot, radish, cassava, sweet potato and beet.",
+      "Leafy vegetables (leaves or stems): cabbage, Swiss chard, celery, lettuce, asparagus.",
+      "Flower vegetables: cauliflower and broccoli."
+     ],
+     "note": "The book also lists garlic as a root vegetable. Garlic is a bulb: a short stem with swollen fleshy leaf bases (cloves).",
+     "ref": "p.10–11",
+     "id": "g12.agriculture.u1.s1-3.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "More groups",
+     "paras": [
+      "Bulb vegetables: onion and garlic.",
+      "Tuber vegetables: potato, a swollen underground stem.",
+      "Immature fruit vegetables are picked before the seeds ripen: cucumber, eggplant.",
+      "Mature fruit vegetables are picked fully ripe: tomato, pumpkin.",
+      "Seed and pod vegetables: peas and green beans."
+     ],
+     "ref": "Review Exercise Part I",
+     "added": true,
+     "id": "g12.agriculture.u1.s1-3.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Root vegetable",
+       "A vegetable whose root is eaten: carrot, radish, cassava, sweet potato, beet."
+      ],
+      [
+       "Bulb vegetable",
+       "A vegetable whose bulb (a short stem with swollen fleshy leaf bases) is eaten: onion, garlic."
+      ],
+      [
+       "Leafy vegetable",
+       "A vegetable grown for its leaves or stems: cabbage, Swiss chard, celery, lettuce, asparagus."
+      ],
+      [
+       "Flower vegetable",
+       "A vegetable whose flowers are eaten: cauliflower, broccoli."
+      ],
+      [
+       "Fruit vegetable",
+       "A vegetable whose fruit is eaten, either immature (cucumber, eggplant) or mature (tomato, pumpkin)."
+      ]
+     ],
+     "id": "g12.agriculture.u1.s1-3.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "By its edible part, garlic is a",
+     "opts": [
+      "bulb vegetable",
+      "root vegetable",
+      "flower vegetable",
+      "fruit vegetable"
+     ],
+     "ans": "bulb vegetable",
+     "why": "We eat the cloves: swollen leaf bases on a short stem, like onion. (The book wrongly lists garlic as a root.)",
+     "clue": "Is a garlic clove a root, or a swollen leaf base like an onion layer?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.10",
+     "id": "g12.agriculture.u1.s1-3.5"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Classify by edible part",
+     "bins": [
+      "Root",
+      "Bulb",
+      "Leaf",
+      "Fruit",
+      "Seed or pod"
+     ],
+     "items": [
+      [
+       "Cassava",
+       "Root",
+       "tuberous root"
+      ],
+      [
+       "Radish",
+       "Root",
+       "swollen root"
+      ],
+      [
+       "Onion",
+       "Bulb",
+       "fleshy leaf bases"
+      ],
+      [
+       "Garlic",
+       "Bulb",
+       "cloves"
+      ],
+      [
+       "Ethiopian kale (gomen)",
+       "Leaf",
+       "leaves"
+      ],
+      [
+       "Pepper",
+       "Fruit",
+       "holds seeds"
+      ],
+      [
+       "Cucumber",
+       "Fruit",
+       "immature fruit"
+      ],
+      [
+       "Peas",
+       "Seed or pod",
+       "seeds"
+      ]
+     ],
+     "why": "Ask which plant organ you eat: root, bulb, leaf, fruit or seed.",
+     "clue": "Garlic and onion belong together.",
+     "ref": "p.10–11",
+     "graded": true,
+     "level": 1,
+     "id": "g12.agriculture.u1.s1-3.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "The edible part of cauliflower is its",
+     "opts": [
+      "flower head",
+      "root",
+      "bulb",
+      "seed"
+     ],
+     "ans": "flower head",
+     "why": "p.11: cauliflower is a flower vegetable.",
+     "clue": "Its name gives a hint.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.11",
+     "id": "g12.agriculture.u1.s1-3.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "Potato is often called a root, but its tuber is really a",
+     "opts": [
+      "swollen underground stem",
+      "flower",
+      "fruit",
+      "leaf"
+     ],
+     "ans": "swollen underground stem",
+     "why": "Potato tubers have \"eyes\" (buds), which only stems carry.",
+     "clue": "What grows from the eyes of a potato?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.agriculture.u1.s1-3.8"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Immature or mature fruit?",
+     "bins": [
+      "Immature fruit",
+      "Mature fruit"
+     ],
+     "items": [
+      [
+       "Cucumber",
+       "Immature fruit",
+       "picked green"
+      ],
+      [
+       "Eggplant",
+       "Immature fruit",
+       "picked before seeds harden"
+      ],
+      [
+       "Okra",
+       "Immature fruit",
+       "young pods"
+      ],
+      [
+       "Tomato",
+       "Mature fruit",
+       "picked red and ripe"
+      ],
+      [
+       "Pumpkin",
+       "Mature fruit",
+       "hard rind"
+      ],
+      [
+       "Watermelon",
+       "Mature fruit",
+       "picked ripe"
+      ]
+     ],
+     "why": "Immature fruits are picked before the seeds ripen; mature fruits are picked fully ripe.",
+     "clue": "Would you eat it yellow and seedy, or fully ripe?",
+     "ref": "Review Exercise Part I",
+     "added": true,
+     "graded": true,
+     "level": 2,
+     "id": "g12.agriculture.u1.s1-3.9"
+    },
+    {
+     "kind": "tf",
+     "text": "Celery and asparagus are leafy vegetables because their leaves or stems are eaten.",
+     "a": true,
+     "why": "p.11: leafy vegetables are grown for their leaves or stems.",
+     "clue": "Read the definition of leafy vegetables carefully.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.11",
+     "id": "g12.agriculture.u1.s1-3.10"
+    },
+    {
+     "kind": "mcq",
+     "text": "A student writes: \"Garlic and carrot are both root vegetables.\" What is wrong?",
+     "opts": [
+      "Garlic is a bulb (swollen leaf bases); carrot is a root",
+      "Carrot is a bulb",
+      "Both are flower vegetables",
+      "Nothing is wrong"
+     ],
+     "ans": "Garlic is a bulb (swollen leaf bases); carrot is a root",
+     "why": "Carrot is a true root. Garlic cloves are swollen leaf bases on a short stem, so garlic is a bulb.",
+     "clue": "Check each one separately.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.10",
+     "added": true,
+     "id": "g12.agriculture.u1.s1-3.11"
+    }
+   ]
+  },
+  {
+   "id": "agri.temperature-groups",
+   "name": "Warm-season and cool-season vegetables",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Warm-season (tropical and sub-tropical) vegetables are adapted to 18–29 °C, grow well only in warm areas and cannot tolerate frost, so they are called tender: cucumber, eggplant, pepper, snap bean, sweet potato, tomato, watermelon. Cool-season (temperate) vegetables grow well in cooler regions and need cool weather to flower and seed: broccoli, celery, cabbage, garlic, kale, onion, pea, radish, spinach. They are often small, shallow rooted and respond more to nitrogen. Hardy ones tolerate frost; semi-hardy ones only light frost."
+    },
+    "am": {
+     "text": "የሞቃት ወቅት አትክልቶች (ቲማቲም፣ በርበሬ) ከ18–29 °C ይስማማቸዋል፤ ውርጭ አይችሉም። የቀዝቃዛ ወቅት አትክልቶች (ጎመን፣ ሽንኩርት) በቀዝቃዛ አካባቢ ያድጋሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Hot or cold place?",
+     "ask": "Which vegetable would grow better in hot Metehara than in cold Debre Birhan?",
+     "opts": [
+      "Watermelon",
+      "Cabbage",
+      "Garlic",
+      "Spinach"
+     ],
+     "after": "Watermelon is a warm-season crop. Cabbage, garlic and spinach are cool-season crops.",
+     "ref": "p.11",
+     "added": true,
+     "id": "g12.agriculture.u1.s1-3.12"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Warm season (tropical and sub-tropical)",
+     "paras": [
+      "Adapted to 18–29 °C; grow well only in warm areas.",
+      "Cannot tolerate frost: called tender plants.",
+      "Examples: cucumber, eggplant, pepper, snap bean, sweet potato, tomato, watermelon."
+     ],
+     "ref": "p.11",
+     "id": "g12.agriculture.u1.s1-3.13"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Cool season (temperate)",
+     "paras": [
+      "Grow well in cooler regions; need cool weather to flower and seed.",
+      "Examples: broccoli, celery, cabbage, garlic, kale, onion, pea, radish, spinach.",
+      "Often small and shallow rooted.",
+      "They respond more readily to nitrogen fertilizer than warm-season crops.",
+      "Hardy ones tolerate frost without injury; semi-hardy ones only light frost."
+     ],
+     "table": [
+      [
+       "Group",
+       "Sub-group",
+       "Examples"
+      ],
+      [
+       "Cool season",
+       "Hardy",
+       "broccoli, cabbage, garlic, kale, onion, pea, radish, spinach"
+      ],
+      [
+       "Cool season",
+       "Semi-hardy",
+       "beetroot, carrot, cauliflower, celery, lettuce, potato"
+      ],
+      [
+       "Warm season",
+       "Tender",
+       "snap bean, sweet corn, tomato"
+      ],
+      [
+       "Warm season",
+       "Very tender",
+       "cucumber, eggplant, okra, pepper, pumpkin, sweet potato, watermelon"
+      ]
+     ],
+     "note": "Shortened from the temperature table on p.12 (printed as a second \"Table 1.2\").",
+     "ref": "p.11–12",
+     "id": "g12.agriculture.u1.s1-3.14"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Warm-season vegetable",
+       "A tropical or sub-tropical vegetable adapted to 18–29 °C that cannot tolerate frost."
+      ],
+      [
+       "Cool-season vegetable",
+       "A temperate vegetable that grows well in cooler regions and needs cool weather to flower and seed."
+      ],
+      [
+       "Hardy",
+       "Able to tolerate frost without injury (some cool-season crops)."
+      ],
+      [
+       "Tender",
+       "Unable to tolerate frost (warm-season crops; very tender ones are the most sensitive)."
+      ]
+     ],
+     "id": "g12.agriculture.u1.s1-3.15"
+    },
+    {
+     "kind": "mcq",
+     "text": "Warm-season vegetables are adapted to temperatures of about",
+     "opts": [
+      "18–29 °C",
+      "0–10 °C",
+      "30–45 °C",
+      "5–15 °C"
+     ],
+     "ans": "18–29 °C",
+     "why": "p.11.",
+     "clue": "Warm, not hot.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.11",
+     "id": "g12.agriculture.u1.s1-3.16"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Warm or cool season?",
+     "bins": [
+      "Warm season",
+      "Cool season"
+     ],
+     "items": [
+      [
+       "Tomato",
+       "Warm season",
+       "tender"
+      ],
+      [
+       "Pepper",
+       "Warm season",
+       "very tender"
+      ],
+      [
+       "Watermelon",
+       "Warm season",
+       "very tender"
+      ],
+      [
+       "Sweet potato",
+       "Warm season",
+       "very tender"
+      ],
+      [
+       "Cabbage",
+       "Cool season",
+       "hardy"
+      ],
+      [
+       "Onion",
+       "Cool season",
+       "hardy"
+      ],
+      [
+       "Garlic",
+       "Cool season",
+       "hardy"
+      ],
+      [
+       "Spinach",
+       "Cool season",
+       "hardy"
+      ]
+     ],
+     "why": "p.11–12 lists these crops by season.",
+     "clue": "Fruit crops that love heat are warm-season.",
+     "ref": "p.11–12",
+     "graded": true,
+     "level": 1,
+     "id": "g12.agriculture.u1.s1-3.17"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why are tomato and pepper called tender plants?",
+     "opts": [
+      "They cannot tolerate frost",
+      "They are soft to eat",
+      "They need no water",
+      "They are perennials"
+     ],
+     "ans": "They cannot tolerate frost",
+     "why": "p.11.",
+     "clue": "Think of a frosty night.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.11",
+     "id": "g12.agriculture.u1.s1-3.18"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Hardy or semi-hardy?",
+     "bins": [
+      "Hardy",
+      "Semi-hardy"
+     ],
+     "items": [
+      [
+       "Cabbage",
+       "Hardy",
+       "table"
+      ],
+      [
+       "Garlic",
+       "Hardy",
+       "table"
+      ],
+      [
+       "Spinach",
+       "Hardy",
+       "table"
+      ],
+      [
+       "Carrot",
+       "Semi-hardy",
+       "table"
+      ],
+      [
+       "Cauliflower",
+       "Semi-hardy",
+       "table"
+      ],
+      [
+       "Lettuce",
+       "Semi-hardy",
+       "table"
+      ]
+     ],
+     "why": "The p.12 temperature table splits cool-season crops into hardy and semi-hardy.",
+     "clue": "Carrot, cauliflower and lettuce share a group.",
+     "ref": "Table p.12",
+     "graded": true,
+     "level": 2,
+     "id": "g12.agriculture.u1.s1-3.19"
+    },
+    {
+     "kind": "pick",
+     "text": "Which are features of cool-season vegetables?",
+     "pool": [
+      "Often small in size",
+      "Shallow rooted",
+      "Respond readily to nitrogen fertilizer",
+      "Killed by any frost",
+      "Need 18–29 °C"
+     ],
+     "a": [
+      "Often small in size",
+      "Shallow rooted",
+      "Respond readily to nitrogen fertilizer"
+     ],
+     "why": "Being killed by frost and needing 18–29 °C describe warm-season crops.",
+     "clue": "Two options belong to warm-season crops.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.12",
+     "id": "g12.agriculture.u1.s1-3.20"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is a very tender warm-season crop?",
+     "opts": [
+      "Cucumber",
+      "Cabbage",
+      "Carrot",
+      "Garlic"
+     ],
+     "ans": "Cucumber",
+     "why": "Table p.12: cucumber is very tender.",
+     "clue": "Very tender crops are warm-season.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Table p.12",
+     "id": "g12.agriculture.u1.s1-3.21"
+    },
+    {
+     "kind": "mcq",
+     "text": "Frost is expected tonight in a garden with cabbage, carrot and tomato. Which crop is at greatest risk?",
+     "opts": [
+      "Tomato (tender)",
+      "Cabbage (hardy)",
+      "Carrot (semi-hardy)",
+      "All are equally safe"
+     ],
+     "ans": "Tomato (tender)",
+     "why": "Hardy cabbage tolerates frost; semi-hardy carrot tolerates light frost; tender tomato cannot tolerate frost.",
+     "clue": "Use the sub-group of each crop.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.11–12",
+     "added": true,
+     "id": "g12.agriculture.u1.s1-3.22"
+    }
+   ]
+  },
+  {
+   "id": "agri.life-cycle",
+   "name": "Annuals, biennials and perennials",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "By life cycle, annuals such as spinach, lettuce and beans complete their life in a single year; most vegetables are annuals. Biennials such as carrot, cabbage and beet need two growing seasons: vegetative parts in the first and reproductive parts in the second, and many need cold to flower. Perennials such as asparagus and artichoke grow for more than two seasons and can stay in production for up to ten years."
+    },
+    "am": {
+     "text": "አንድ ዓመት ቆይ (ቆስጣ፣ ሰላጣ)፣ ሁለት ዓመት ቆይ (ካሮት፣ ጎመን) እና ብዙ ዓመት ቆይ (አስፓራጉስ) አትክልቶች አሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "When does cabbage seed?",
+     "ask": "Cabbage grown for its head is harvested after a few months. If left in the field, when would it make seed?",
+     "opts": [
+      "In its second growing season",
+      "Never",
+      "In the same week",
+      "Only after ten years"
+     ],
+     "after": "Cabbage is a biennial: leaves in season 1, flowers and seed in season 2.",
+     "ref": "p.12",
+     "id": "g12.agriculture.u1.s1-3.23"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Life cycle (phenology)",
+     "paras": [
+      "Annuals complete their life cycle in a single year: spinach, lettuce, beans.",
+      "Most vegetable crops are annuals.",
+      "Biennials need two growing seasons: carrot, cabbage, beet.",
+      "Season 1: vegetative parts. Season 2: reproductive parts.",
+      "Many biennials need cold to flower.",
+      "Perennials grow for more than two seasons: asparagus, artichoke.",
+      "They can stay in production for up to ten years."
+     ],
+     "ref": "p.12",
+     "id": "g12.agriculture.u1.s1-3.24"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Annual",
+       "A crop that completes its life cycle in a single year."
+      ],
+      [
+       "Biennial",
+       "A crop that needs two growing seasons: vegetative parts in the first, reproductive parts in the second."
+      ],
+      [
+       "Perennial",
+       "A crop that grows for more than two growing seasons; may produce for up to ten years."
+      ]
+     ],
+     "id": "g12.agriculture.u1.s1-3.25"
+    },
+    {
+     "kind": "mcq",
+     "text": "A vegetable that needs two growing seasons to complete its life cycle is",
+     "opts": [
+      "a biennial",
+      "an annual",
+      "a perennial",
+      "day-neutral"
+     ],
+     "ans": "a biennial",
+     "why": "p.12.",
+     "clue": "Bi = two.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.12",
+     "id": "g12.agriculture.u1.s1-3.26"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Annual, biennial or perennial?",
+     "bins": [
+      "Annual",
+      "Biennial",
+      "Perennial"
+     ],
+     "items": [
+      [
+       "Spinach",
+       "Annual",
+       "one year"
+      ],
+      [
+       "Lettuce",
+       "Annual",
+       "one year"
+      ],
+      [
+       "Beans",
+       "Annual",
+       "one year"
+      ],
+      [
+       "Carrot",
+       "Biennial",
+       "two seasons"
+      ],
+      [
+       "Cabbage",
+       "Biennial",
+       "two seasons"
+      ],
+      [
+       "Beet",
+       "Biennial",
+       "two seasons"
+      ],
+      [
+       "Asparagus",
+       "Perennial",
+       "many years"
+      ],
+      [
+       "Artichoke",
+       "Perennial",
+       "many years"
+      ]
+     ],
+     "why": "p.12 examples for each life cycle.",
+     "clue": "Only two of these keep producing for years.",
+     "ref": "Activity 1.1",
+     "graded": true,
+     "level": 1,
+     "id": "g12.agriculture.u1.s1-3.27"
+    },
+    {
+     "kind": "mcq",
+     "text": "In its first season, a biennial produces",
+     "opts": [
+      "vegetative parts (leaves, roots)",
+      "flowers and seeds",
+      "nothing at all",
+      "only fruit"
+     ],
+     "ans": "vegetative parts (leaves, roots)",
+     "why": "p.12.",
+     "clue": "Reproduction comes in season 2.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.12",
+     "id": "g12.agriculture.u1.s1-3.28"
+    },
+    {
+     "kind": "tf",
+     "text": "Most vegetable crops are perennials.",
+     "a": false,
+     "why": "p.12: most vegetable crops are annuals.",
+     "clue": "Think of how often you replant tomatoes.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.12",
+     "id": "g12.agriculture.u1.s1-3.29"
+    },
+    {
+     "kind": "mcq",
+     "text": "Perennial vegetables can stay in production for as long as",
+     "opts": [
+      "ten years",
+      "one month",
+      "one season",
+      "a hundred years"
+     ],
+     "ans": "ten years",
+     "why": "p.12.",
+     "clue": "More than two seasons, but not a century.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.12",
+     "id": "g12.agriculture.u1.s1-3.30"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why is carrot harvested in its first season, though it is a biennial?",
+     "opts": [
+      "Its edible root forms in season 1; season 2 is for flowers and seed",
+      "It dies after one season",
+      "It is really an annual",
+      "Its root grows only in season 2"
+     ],
+     "ans": "Its edible root forms in season 1; season 2 is for flowers and seed",
+     "why": "The root stores food in season 1 to feed flowering in season 2, so we harvest it at the end of season 1.",
+     "clue": "What does a biennial make in each season?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.12",
+     "added": true,
+     "id": "g12.agriculture.u1.s1-3.31"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Cauliflower and broccoli are",
+   "opts": [
+    "flower vegetables",
+    "root vegetables",
+    "bulb vegetables",
+    "leafy vegetables"
+   ],
+   "ans": "flower vegetables",
+   "why": "p.11.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.agriculture.u1.s1-3.32"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which is a cool-season vegetable?",
+   "opts": [
+    "Onion",
+    "Tomato",
+    "Watermelon",
+    "Eggplant"
+   ],
+   "ans": "Onion",
+   "why": "p.11.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.agriculture.u1.s1-3.33"
+  },
+  {
+   "kind": "mcq",
+   "text": "Asparagus is a",
+   "opts": [
+    "perennial",
+    "annual",
+    "biennial",
+    "tender annual"
+   ],
+   "ans": "perennial",
+   "why": "p.12.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.agriculture.u1.s1-3.34"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which list contains only root vegetables?",
+   "opts": [
+    "Carrot, radish, cassava",
+    "Carrot, garlic, onion",
+    "Cabbage, lettuce, celery",
+    "Tomato, pepper, cucumber"
+   ],
+   "ans": "Carrot, radish, cassava",
+   "why": "Garlic and onion are bulbs.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.agriculture.u1.s1-3.35"
+  },
+  {
+   "kind": "mcq",
+   "text": "A crop cannot tolerate frost, likes about 25 °C, and its ripe fruit is eaten. It is most likely",
+   "opts": [
+    "tomato",
+    "cabbage",
+    "carrot",
+    "garlic"
+   ],
+   "ans": "tomato",
+   "why": "Tender, warm-season, mature fruit.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.agriculture.u1.s1-3.36"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.10: garlic is listed as a root vegetable. Its edible part is a bulb (short stem with swollen leaf bases/cloves), so the lesson teaches garlic with onion as a bulb vegetable."
+  },
+  {
+   "kind": "review",
+   "text": "p.11 says all cool-season crops are \"hardy\" and tolerate frost without injury, but the p.12 table splits them into hardy and semi-hardy (light frost only). The p.12 table is a second \"Table 1.2\" (should be 1.3) and lacks a comma in \"pea radish\"."
+  },
+  {
+   "kind": "note",
+   "text": "Added: bulb, tuber, immature/mature fruit and seed/pod groups. The text defines only root, leafy and flower vegetables, but the Review Exercise uses immature- and mature-fruit vegetables."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

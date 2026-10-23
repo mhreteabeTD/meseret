@@ -1,0 +1,905 @@
+{
+ "id": "g12.agriculture.u1.s1-1",
+ "book": {
+  "title": "Agriculture Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "agriculture",
+  "unit": 1,
+  "unit_title": "Vegetable crops production and management",
+  "pages": "2–6",
+  "section": "1.1"
+ },
+ "title": "Importance, problems and prospects of vegetable crops production in Ethiopia",
+ "competency": "Explain what vegetables are, their importance, and the potentials and constraints of vegetable production in Ethiopia.",
+ "minutes": 25,
+ "keywords": [
+  {
+   "en": "Vegetable",
+   "am": "አትክልት",
+   "def": "A plant whose fruit, seeds, roots, tubers, bulbs, stems, leaves or flowers are eaten as food, usually fresh.",
+   "machine": true
+  },
+  {
+   "en": "Herbaceous",
+   "am": "ልምላሜ ተክል",
+   "def": "Plants that have no persistent woody stems above the ground.",
+   "machine": true
+  },
+  {
+   "en": "Perishable",
+   "am": "ቶሎ የሚበላሽ",
+   "def": "Spoils quickly; cannot be stored for a long time without care.",
+   "machine": true
+  },
+  {
+   "en": "Smallholder farmer",
+   "am": "አነስተኛ ይዞታ ያለው አርሶ አደር",
+   "def": "A farmer with an average landholding of about 0.9 hectare.",
+   "machine": true
+  },
+  {
+   "en": "Hidden hunger",
+   "am": "ስውር ረሃብ",
+   "def": "Micronutrient deficiency: a lack of essential vitamins and minerals.",
+   "machine": true
+  },
+  {
+   "en": "Beta carotene",
+   "am": "ቤታ ካሮቲን",
+   "def": "An orange plant pigment that the body turns into vitamin A, needed for normal vision.",
+   "machine": true
+  },
+  {
+   "en": "Agro ecology",
+   "am": "አግሮ ኢኮሎጂ",
+   "def": "The relationships organisms have among themselves and with the physical environment in agriculture.",
+   "machine": true
+  },
+  {
+   "en": "Alpine climate",
+   "am": "የአልፓይን የአየር ንብረት",
+   "def": "The climate of high mountain regions and highlands.",
+   "machine": true
+  },
+  {
+   "en": "Humid tropics",
+   "am": "እርጥበታማ ሐሩር",
+   "def": "Regions with high temperature all year, where rainfall exceeds evapotranspiration for 75 % of the year.",
+   "machine": true
+  },
+  {
+   "en": "Constraint",
+   "am": "ማነቆ",
+   "def": "A problem that limits production, such as drought, pests or high input costs.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "agri.vegetables",
+   "name": "What vegetables are",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Vegetables are plants whose fruit, seeds, roots, tubers, bulbs, stems, leaves or flowers are eaten as food. Most are herbaceous, and they may be annual, biennial or perennial. Unlike field grain crops, they are harvested fresh with high moisture, so they are seasonal, perishable, bulky for their value and need intensive management."
+    },
+    "am": {
+     "text": "አትክልቶች ፍሬያቸው፣ ዘራቸው፣ ሥራቸው ወይም ቅጠላቸው የሚበላ ተክሎች ናቸው። ትኩስ ሆነው ይሰበሰባሉ፤ ቶሎ ይበላሻሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Fresh or dry?",
+     "ask": "A farmer harvests teff when the grain is dry. When is a tomato usually harvested?",
+     "opts": [
+      "Fresh, while its moisture is high",
+      "Only when it is completely dry",
+      "After storing it for a year",
+      "Before the plant flowers"
+     ],
+     "after": "Vegetables are harvested fresh, with high moisture. Grain crops are harvested at the mature, dry stage.",
+     "ref": "p.2",
+     "id": "g12.agriculture.u1.s1-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Vegetables",
+     "paras": [
+      "Vegetables are plants whose parts are eaten as food.",
+      "The part may be fruit, seeds, roots, tubers, bulbs, stems, leaves or flowers.",
+      "Many are herbaceous: no persistent woody stem above ground.",
+      "Some are annuals, others biennials, still others perennials.",
+      "Growth habits: viny, shrubby or tree."
+     ],
+     "ref": "p.2, Brainstorming 1.1",
+     "id": "g12.agriculture.u1.s1-1.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Characteristics",
+     "paras": [
+      "Vegetables are harvested fresh, when moisture is high.",
+      "Field grain crops are harvested at the mature stage.",
+      "Vegetables are seasonal and perishable.",
+      "They are bulky in relation to their value.",
+      "They need intensive management.",
+      "They are easily damaged and cannot be stored long."
+     ],
+     "note": "The book says \"bulky in relation to their volume\"; the usual wording is \"value\".",
+     "ref": "p.2",
+     "id": "g12.agriculture.u1.s1-1.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Vegetable",
+       "A plant whose fruit, seeds, roots, tubers, bulbs, stems, leaves or flowers are eaten as food, usually fresh."
+      ],
+      [
+       "Herbaceous",
+       "Plants that have no persistent woody stems above the ground."
+      ],
+      [
+       "Perishable",
+       "Spoils quickly; cannot be stored for a long time without care."
+      ]
+     ],
+     "id": "g12.agriculture.u1.s1-1.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which feature separates vegetables from field grain crops?",
+     "opts": [
+      "Vegetables are harvested fresh with high moisture",
+      "Vegetables are harvested dry at maturity",
+      "Vegetables store for many years",
+      "Vegetables need no management"
+     ],
+     "ans": "Vegetables are harvested fresh with high moisture",
+     "why": "Vegetables are harvested fresh; grain crops are harvested at the mature, dry stage.",
+     "clue": "Think of a fresh tomato and dry teff.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.2",
+     "id": "g12.agriculture.u1.s1-1.5"
+    },
+    {
+     "kind": "tf",
+     "text": "Vegetables can be stored for a long time without special care.",
+     "a": false,
+     "why": "They are perishable and easily damaged; they cannot be stored long.",
+     "clue": "Think of a tomato left for two weeks.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.2",
+     "id": "g12.agriculture.u1.s1-1.6"
+    },
+    {
+     "kind": "pick",
+     "text": "Which are characteristics of vegetables?",
+     "pool": [
+      "Seasonal",
+      "Perishable",
+      "Need intensive management",
+      "Harvested as dry grain",
+      "Easily damaged"
+     ],
+     "a": [
+      "Seasonal",
+      "Perishable",
+      "Need intensive management",
+      "Easily damaged"
+     ],
+     "why": "Dry grain belongs to cereals, not vegetables.",
+     "clue": "One option describes teff, not tomato.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Brainstorming 1.1",
+     "id": "g12.agriculture.u1.s1-1.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "A herbaceous plant has",
+     "opts": [
+      "no persistent woody stem above the ground",
+      "a thick woody trunk",
+      "no roots at all",
+      "only underground parts"
+     ],
+     "ans": "no persistent woody stem above the ground",
+     "why": "Book key term, p.2.",
+     "clue": "Herb versus tree.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Key term p.2",
+     "id": "g12.agriculture.u1.s1-1.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which list contains only plant parts eaten as vegetables?",
+     "opts": [
+      "Leaves, roots, bulbs and flowers",
+      "Bark, wood and resin",
+      "Pollen and nectar only",
+      "Dry cereal grain only"
+     ],
+     "ans": "Leaves, roots, bulbs and flowers",
+     "why": "The definition lists fruit, seeds, roots, tubers, bulbs, stems, leaves and flowers.",
+     "clue": "Think of kale, carrot and onion.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.2",
+     "id": "g12.agriculture.u1.s1-1.9"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why must tomatoes be transported carefully and sold quickly?",
+     "opts": [
+      "They are perishable and easily damaged",
+      "They are dry and light",
+      "They are woody",
+      "They grow only in winter"
+     ],
+     "ans": "They are perishable and easily damaged",
+     "why": "p.3: vegetables are highly perishable and need careful storage and transport to stay fresh.",
+     "clue": "What happens to a bruised tomato?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.3",
+     "id": "g12.agriculture.u1.s1-1.10"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why does a truck of cabbage earn far less money than a truck of coffee beans of the same size?",
+     "opts": [
+      "Cabbage is bulky in relation to its value",
+      "Cabbage is a cereal",
+      "Cabbage cannot be eaten fresh",
+      "Cabbage weighs nothing"
+     ],
+     "ans": "Cabbage is bulky in relation to its value",
+     "why": "A large volume of cabbage is worth little money, so transport costs per birr earned are high.",
+     "clue": "Compare space taken with money earned.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.2",
+     "added": true,
+     "id": "g12.agriculture.u1.s1-1.11"
+    }
+   ]
+  },
+  {
+   "id": "agri.veg-importance",
+   "name": "Importance of vegetables",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Ethiopia's most important vegetables include pepper, Ethiopian mustard/kale, onion, tomato, potato, chili, carrot, garlic and cabbage. Over 6.7 million households lived from vegetables in 2018, and exports to the Middle East, Europe, Djibouti and Somalia earn hundreds of millions of dollars. Vegetables give higher value and income than cereals, create jobs, supply processors, and fight hidden hunger with vitamins and minerals; legumes add protein."
+    },
+    "am": {
+     "text": "አትክልቶች ገቢ፣ የሥራ ዕድል እና የውጭ ምንዛሪ ያስገኛሉ። በቫይታሚንና በማዕድን የበለፀጉ ስለሆኑ ስውር ረሃብን ይቀንሳሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "How many households?",
+     "ask": "About how many Ethiopian households made their living from vegetables in 2018?",
+     "opts": [
+      "Over 6.7 million",
+      "About 6,700",
+      "About 67,000",
+      "None; vegetables are only imported"
+     ],
+     "after": "The book estimates over 6.7 million households (2018). Vegetables are a big part of the economy.",
+     "ref": "p.3",
+     "id": "g12.agriculture.u1.s1-1.12"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Main vegetables in Ethiopia",
+     "paras": [
+      "Most important: pepper, Ethiopian mustard/kale, onion, tomato, potato, chili, carrot, garlic, cabbage.",
+      "Also important: green beans, asparagus, broccoli, celery, cucumbers.",
+      "Mainly for home use: cabbages, tomatoes and garlic.",
+      "Mainly for export: green beans and peas.",
+      "Smallholders (about 0.9 ha) grow mainly for their own use.",
+      "Commercial private farms grow only for the market."
+     ],
+     "ref": "p.2–3",
+     "id": "g12.agriculture.u1.s1-1.13"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Economic importance",
+     "paras": [
+      "Over 6.7 million households lived from vegetables (2018 estimate).",
+      "Exports earn hundreds of millions of dollars a year.",
+      "Buyers: the Middle East, Europe, Djibouti and Somalia.",
+      "Tomato and chilli are among the major exports.",
+      "Vegetables have a shorter growth cycle and higher value than cereals.",
+      "They create jobs and raise household income.",
+      "They supply local industries making tomato paste and juices."
+     ],
+     "ref": "p.3–4",
+     "id": "g12.agriculture.u1.s1-1.14"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Nutrition and health",
+     "paras": [
+      "More vegetables reduce hidden hunger: lack of vitamins and minerals.",
+      "They are rich in vitamin A, vitamin C, thiamine, niacin, folic acid and beta carotene.",
+      "The body turns beta carotene into vitamin A.",
+      "Vitamin A is needed for normal vision; long deficiency leads to blindness.",
+      "Leafy vegetables such as spinach supply iron and other minerals.",
+      "Leguminous vegetables (beans, peas) are rich in protein."
+     ],
+     "note": "Corrected wording: the book says beta carotene itself works in vision and that leafy vegetables are rich in protein. See teacher notes.",
+     "ref": "p.3–4",
+     "id": "g12.agriculture.u1.s1-1.15"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Smallholder farmer",
+       "A farmer with an average landholding of about 0.9 hectare."
+      ],
+      [
+       "Hidden hunger",
+       "Micronutrient deficiency: a lack of essential vitamins and minerals."
+      ],
+      [
+       "Beta carotene",
+       "An orange plant pigment that the body turns into vitamin A, needed for normal vision."
+      ]
+     ],
+     "id": "g12.agriculture.u1.s1-1.16"
+    },
+    {
+     "kind": "mcq",
+     "text": "Hidden hunger means",
+     "opts": [
+      "a lack of essential vitamins and minerals",
+      "not eating for a day",
+      "eating too much meat",
+      "a lack of water"
+     ],
+     "ans": "a lack of essential vitamins and minerals",
+     "why": "p.3: hidden hunger is micronutrient deficiency.",
+     "clue": "The hunger cannot be seen: it is about small nutrients.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.3",
+     "id": "g12.agriculture.u1.s1-1.17"
+    },
+    {
+     "kind": "match",
+     "title": "Match each item with its role",
+     "pairs": [
+      [
+       "Green beans and peas",
+       "mainly produced for export"
+      ],
+      [
+       "Cabbages, tomatoes and garlic",
+       "main vegetables for home consumption"
+      ],
+      [
+       "Middle East, Europe, Djibouti, Somalia",
+       "export destinations"
+      ],
+      [
+       "Local processing industries",
+       "make tomato paste and juices"
+      ]
+     ],
+     "why": "p.2–4.",
+     "clue": "Two pairs are about where vegetables go.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.2–4",
+     "id": "g12.agriculture.u1.s1-1.18"
+    },
+    {
+     "kind": "pick",
+     "text": "Why do smallholders choose to grow vegetables?",
+     "pool": [
+      "Shorter growth cycle",
+      "Higher value than cereals",
+      "More employment and income",
+      "They need no care after harvest"
+     ],
+     "a": [
+      "Shorter growth cycle",
+      "Higher value than cereals",
+      "More employment and income"
+     ],
+     "why": "Vegetables need special care after harvest, so the last option is false.",
+     "clue": "One option contradicts \"perishable\".",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.3",
+     "id": "g12.agriculture.u1.s1-1.19"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which vegetables are rich sources of protein?",
+     "opts": [
+      "Leguminous vegetables such as green beans and peas",
+      "Carrot and sweet potato",
+      "Cucumber and lettuce",
+      "Onion and garlic"
+     ],
+     "ans": "Leguminous vegetables such as green beans and peas",
+     "why": "p.4: leguminous vegetables are rich in protein.",
+     "clue": "Think of shiro, made from peas.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.4",
+     "id": "g12.agriculture.u1.s1-1.20"
+    },
+    {
+     "kind": "mcq",
+     "text": "Beta carotene matters for the eyes because the body",
+     "opts": [
+      "turns it into vitamin A",
+      "turns it into protein",
+      "stores it only as fat",
+      "turns it into iodine"
+     ],
+     "ans": "turns it into vitamin A",
+     "why": "Vitamin A is needed for normal vision; its long deficiency causes blindness.",
+     "clue": "Which vitamin is linked to vision?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.3–4",
+     "id": "g12.agriculture.u1.s1-1.21"
+    },
+    {
+     "kind": "tf",
+     "text": "Rising prices of meat, milk and eggs increase the demand for vegetables.",
+     "a": true,
+     "why": "p.4 gives this as a reason for increasing demand.",
+     "clue": "What do families buy when meat is expensive?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.4",
+     "id": "g12.agriculture.u1.s1-1.22"
+    },
+    {
+     "kind": "mcq",
+     "text": "A child in Hawassa eats enough injera but almost no vegetables. Which problem is most likely?",
+     "opts": [
+      "Hidden hunger from lack of vitamins and minerals",
+      "Too much protein",
+      "Too much vitamin A",
+      "Chilling injury"
+     ],
+     "ans": "Hidden hunger from lack of vitamins and minerals",
+     "why": "Enough energy from cereals does not supply the vitamins and minerals vegetables give.",
+     "clue": "The child is full but missing small nutrients.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.3",
+     "added": true,
+     "id": "g12.agriculture.u1.s1-1.23"
+    }
+   ]
+  },
+  {
+   "id": "agri.potentials-constraints",
+   "name": "Potentials and constraints",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Ethiopia has a favourable and diverse climate (altitude from 126 m below to 4620 m above sea level, humid tropics to alpine), abundant labour, and vast land and water. Production is growing thanks to health awareness, small-scale irrigation, investor support, tax incentives, local demand and exports. Yet production is held back by poor knowledge, low consumption, costly inputs, poor management, few processors, poor soils, pests, drought, postharvest losses and costly pump fuel."
+    },
+    "am": {
+     "text": "ኢትዮጵያ ለአትክልት ተስማሚ የአየር ንብረት፣ መሬት፣ ውሃ እና የሰው ኃይል አላት። ግን የእውቀት እጥረት፣ ውድ ግብዓት፣ ተባይ፣ ድርቅ እና ከምርት በኋላ ብክነት ማነቆዎች ናቸው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "From below sea level to the peaks",
+     "ask": "Ethiopia's land runs from below sea level to over 4,600 m. Why does this help vegetable growers?",
+     "opts": [
+      "Different altitudes give climates for many crops",
+      "Low land is always best for every crop",
+      "High land cannot be farmed",
+      "Altitude does not affect crops"
+     ],
+     "after": "Each altitude has its own temperature and rainfall, so many different vegetables can be grown somewhere.",
+     "ref": "p.4",
+     "id": "g12.agriculture.u1.s1-1.24"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Potentials and opportunities",
+     "paras": [
+      "Favourable climate for many vegetables.",
+      "Abundant labour; vast land and water resources.",
+      "Altitude: 126 m below to 4620 m above sea level.",
+      "Climates range from humid tropics to alpine.",
+      "Land now used for vegetables is still extremely small."
+     ],
+     "ref": "p.4–5",
+     "id": "g12.agriculture.u1.s1-1.25"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Why production is growing",
+     "paras": [
+      "Public awareness of health benefits.",
+      "Small-scale irrigation.",
+      "Government support and tax exemptions for investors.",
+      "Local demand and exports.",
+      "Intensive work creates many jobs.",
+      "Income per hectare is higher than from teff or maize."
+     ],
+     "ref": "p.5",
+     "id": "g12.agriculture.u1.s1-1.26"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Constraints",
+     "paras": [
+      "Production and consumption are still low compared with cereals.",
+      "The book lists ten constraints:"
+     ],
+     "table": [
+      [
+       "Knowledge and market",
+       "Inputs and resources",
+       "In the field and after"
+      ],
+      [
+       "Inadequate knowledge of improved production and marketing",
+       "High cost of fertilizer, improved seed, pesticides",
+       "Pests"
+      ],
+      [
+       "Low consumption of vegetables",
+       "Poor soil fertility",
+       "Drought"
+      ],
+      [
+       "Poor management of vegetables",
+       "High fuel price for pumping irrigation water",
+       "Postharvest losses"
+      ],
+      [
+       "Small processing facilities",
+       "",
+       ""
+      ]
+     ],
+     "note": "The grouping is added for reading; the book gives one list.",
+     "ref": "p.5–6",
+     "id": "g12.agriculture.u1.s1-1.27"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Agro ecology",
+       "The relationships organisms have among themselves and with the physical environment in agriculture."
+      ],
+      [
+       "Alpine climate",
+       "The climate of high mountain regions and highlands."
+      ],
+      [
+       "Humid tropics",
+       "Regions with high temperature all year, where rainfall exceeds evapotranspiration for 75 % of the year."
+      ],
+      [
+       "Constraint",
+       "A problem that limits production, such as drought, pests or high input costs."
+      ]
+     ],
+     "id": "g12.agriculture.u1.s1-1.28"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is a constraint to vegetable production in Ethiopia?",
+     "opts": [
+      "Postharvest losses",
+      "Abundant labour",
+      "Vast land and water resources",
+      "Diverse climate zones"
+     ],
+     "ans": "Postharvest losses",
+     "why": "The other three are potentials (p.4).",
+     "clue": "Which one is a problem?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.6",
+     "id": "g12.agriculture.u1.s1-1.29"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Potential or constraint?",
+     "bins": [
+      "Potential",
+      "Constraint"
+     ],
+     "items": [
+      [
+       "Abundant labour",
+       "Potential",
+       "p.4"
+      ],
+      [
+       "Diverse climate zones",
+       "Potential",
+       "p.4"
+      ],
+      [
+       "Vast water resources",
+       "Potential",
+       "p.4"
+      ],
+      [
+       "High cost of improved seed",
+       "Constraint",
+       "p.5"
+      ],
+      [
+       "Drought",
+       "Constraint",
+       "p.6"
+      ],
+      [
+       "Small processing facilities",
+       "Constraint",
+       "p.5"
+      ]
+     ],
+     "why": "Potentials help production; constraints hold it back.",
+     "clue": "Does it help or hurt the farmer?",
+     "ref": "Brainstorming 1.2",
+     "graded": true,
+     "level": 1,
+     "id": "g12.agriculture.u1.s1-1.30"
+    },
+    {
+     "kind": "mcq",
+     "text": "Humid tropics are regions where",
+     "opts": [
+      "temperature is high all year and rainfall exceeds evapotranspiration for 75 % of the year",
+      "it snows all year",
+      "there is almost no rain",
+      "the altitude is above 4,000 m"
+     ],
+     "ans": "temperature is high all year and rainfall exceeds evapotranspiration for 75 % of the year",
+     "why": "Book key term, p.4.",
+     "clue": "Humid = wet; tropics = warm.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Key terms p.4",
+     "id": "g12.agriculture.u1.s1-1.31"
+    },
+    {
+     "kind": "mcq",
+     "text": "High fuel prices hurt many vegetable farmers mainly because",
+     "opts": [
+      "fuel runs the pumps for irrigation water",
+      "vegetables are cooked before sale",
+      "fuel is used as fertilizer",
+      "tomatoes are harvested by tractor"
+     ],
+     "ans": "fuel runs the pumps for irrigation water",
+     "why": "p.6: \"high price of fuel for pumping water for irrigation\".",
+     "clue": "Think of a motor pump by a river.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.6",
+     "id": "g12.agriculture.u1.s1-1.32"
+    },
+    {
+     "kind": "match",
+     "title": "Match the constraint with a possible solution",
+     "pairs": [
+      [
+       "Drought",
+       "small-scale irrigation and water harvesting"
+      ],
+      [
+       "Postharvest losses",
+       "careful handling, cool storage, faster transport"
+      ],
+      [
+       "Poor soil fertility",
+       "compost and crop rotation"
+      ],
+      [
+       "Inadequate knowledge",
+       "extension training and demonstration plots"
+      ]
+     ],
+     "why": "Each solution attacks the cause of the problem.",
+     "clue": "What is missing in each case: water, care, nutrients or knowledge?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Review III Q5",
+     "added": true,
+     "id": "g12.agriculture.u1.s1-1.33"
+    },
+    {
+     "kind": "blank",
+     "ask": "Lowest point: 126 m below sea level. Highest: 4620 m above. At 0.6 °C per 100 m, their temperature difference is about ___ °C (1 decimal place)",
+     "a": [
+      "≈28.5"
+     ],
+     "why": "Height difference = 4620 + 126 = 4746 m. 4746 ÷ 100 = 47.46 steps. 47.46 × 0.6 ≈ 28.5 °C.",
+     "clue": "Below sea level counts as negative: add the two heights first.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.4",
+     "added": true,
+     "id": "g12.agriculture.u1.s1-1.34"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Smallholder farmers in Ethiopia own on average about",
+   "opts": [
+    "0.9 hectare",
+    "9 hectares",
+    "90 hectares",
+    "0.09 hectare"
+   ],
+   "ans": "0.9 hectare",
+   "why": "Key term p.3.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.agriculture.u1.s1-1.35"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which vegetables are mainly produced for export?",
+   "opts": [
+    "Green beans and peas",
+    "Cabbages and garlic",
+    "Onion and potato",
+    "Kale and carrot"
+   ],
+   "ans": "Green beans and peas",
+   "why": "p.2.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.agriculture.u1.s1-1.36"
+  },
+  {
+   "kind": "mcq",
+   "text": "Micronutrient deficiency in children is called",
+   "opts": [
+    "hidden hunger",
+    "chilling injury",
+    "vernalization",
+    "compaction"
+   ],
+   "ans": "hidden hunger",
+   "why": "p.3.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.agriculture.u1.s1-1.37"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which is NOT a potential for vegetable production in Ethiopia?",
+   "opts": [
+    "Postharvest losses",
+    "Abundant labour",
+    "Diverse climate",
+    "Vast water resources"
+   ],
+   "ans": "Postharvest losses",
+   "why": "It is a constraint (p.6).",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.agriculture.u1.s1-1.38"
+  },
+  {
+   "kind": "mcq",
+   "text": "Why can Ethiopia grow both cabbage and watermelon?",
+   "opts": [
+    "Its altitude range gives both cool and warm climates",
+    "Both need exactly the same temperature",
+    "Both are grown only for export",
+    "Both are wild vegetables"
+   ],
+   "ans": "Its altitude range gives both cool and warm climates",
+   "why": "Diverse altitude gives cool highlands for cabbage and warm lowlands for watermelon (p.4).",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.agriculture.u1.s1-1.39"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.4: the book says beta carotene itself works in the visual process and its deficiency leads to blindness. Strictly, the body converts beta carotene to vitamin A; vitamin A deficiency causes night blindness and then blindness. The lesson teaches this chain."
+  },
+  {
+   "kind": "review",
+   "text": "p.3: vegetables are not a meaningful iodine source (iodised salt is), and tomato is a weak iron/zinc source; leafy vegetables like spinach supply iron. p.4: legumes, not leafy vegetables, are the protein-rich vegetables. The book lines are not used in graded items."
+  },
+  {
+   "kind": "review",
+   "text": "Typos and garbles: p.2 \"plants that that\"; \"bulky in relation to their volume\" should be \"value\"; p.3 \"They smallholders\"; p.5 income sentence garbled (meaning: income per hectare from vegetables is higher than from teff or maize)."
+  },
+  {
+   "kind": "review",
+   "text": "p.4: altitudes are usually quoted as about 125 m below sea level (Dallol) and 4,550–4,620 m (Ras Dashen). The book's 126 m and 4620 m are kept."
+  },
+  {
+   "kind": "note",
+   "text": "Added: the constraint table grouping, the constraint–solution match and the altitude-range challenge."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

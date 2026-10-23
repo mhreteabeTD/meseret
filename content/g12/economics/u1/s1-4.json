@@ -1,0 +1,613 @@
+{
+ "id": "g12.economics.u1.s1-4",
+ "book": {
+  "title": "Economics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "economics",
+  "unit": 1,
+  "unit_title": "The fundamental concepts of macroeconomics",
+  "pages": "22–24",
+  "section": "1.4"
+ },
+ "title": "Summary, review and chapter test",
+ "competency": "Review the unit and take the timed chapter test.",
+ "minutes": 25,
+ "keywords": [
+  {
+   "en": "Macroeconomics",
+   "am": "ማክሮ ኢኮኖሚክስ (አጠቃላይ ኢኮኖሚክስ)",
+   "def": "The study of the economy as a whole: overall output, prices and employment, and the policies that affect them.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "eco.macro-review",
+   "name": "Unit 1 summary",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Microeconomics studies individual agents; macroeconomics studies the economy as a whole — growth, unemployment, inflation, government deficits, exports, imports and the trade balance — and the two are complementary. Variables such as GDP, the unemployment rate and inflation measure a country's macroeconomic performance. Since the 1930s, classical and neoclassical, Keynesian, monetarist, new classical and new Keynesian schools of thought have shaped macroeconomics."
+    },
+    "am": {
+     "text": "ማክሮ ኢኮኖሚክስ መላውን ኢኮኖሚ ያጠናል፡ እድገት፣ ሥራ አጥነት፣ የዋጋ ግሽበትና የንግድ ሚዛን። ከ1930ዎቹ ጀምሮ የተለያዩ የአስተሳሰብ ትምህርት ቤቶች ተፈጥረዋል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "title": "Warm up: which challenge?",
+     "bins": [
+      "Inflation",
+      "Unemployment",
+      "Trade balance"
+     ],
+     "items": [
+      [
+       "CPI rises from 100 to 130",
+       "Inflation",
+       "price level"
+      ],
+      [
+       "Graduates cannot find jobs",
+       "Unemployment",
+       "labour market"
+      ],
+      [
+       "Imports exceed exports",
+       "Trade balance",
+       "deficit"
+      ],
+      [
+       "Zimbabwe, 2008",
+       "Inflation",
+       "hyperinflation"
+      ],
+      [
+       "Coffee workers laid off in a slump",
+       "Unemployment",
+       "cyclical"
+      ],
+      [
+       "China, 2020",
+       "Trade balance",
+       "surplus"
+      ]
+     ],
+     "graded": false,
+     "id": "g12.economics.u1.s1-4.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Unit summary",
+     "paras": [
+      "Microeconomics: individual households, workers and businesses.",
+      "Macroeconomics: the economy as a whole.",
+      "They are complementary perspectives.",
+      "Focus areas: growth, employment, inflation, income distribution, policies, international trade.",
+      "GDP, the unemployment rate and inflation measure macroeconomic performance.",
+      "Schools since the 1930s: classical and neoclassical, Keynesian, monetarist, new classical, new Keynesian."
+     ],
+     "ref": "p.22",
+     "id": "g12.economics.u1.s1-4.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Key formulas",
+     "paras": [
+      "GDP = Σ Pᵢ Qᵢ; GNP = GDP + NFI.",
+      "GDP = C + I + G + NE, with NE = X − M.",
+      "Growth rate = (real GDPₜ − real GDPₜ₋₁) ÷ real GDPₜ₋₁ × 100.",
+      "CPI = (cost of basket now ÷ base-year cost) × 100.",
+      "Inflation rate = (CPIₜ − CPIₜ₋₁) ÷ CPIₜ₋₁ × 100.",
+      "Unemployment rate = unemployed ÷ labour force × 100.",
+      "Balance of trade = X − M."
+     ],
+     "id": "g12.economics.u1.s1-4.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Macroeconomics",
+       "The study of the economy as a whole: overall output, prices and employment, and the policies that affect them."
+      ]
+     ],
+     "id": "g12.economics.u1.s1-4.4"
+    },
+    {
+     "kind": "match",
+     "title": "Match each measure to its formula",
+     "pairs": [
+      [
+       "Unemployment rate",
+       "unemployed ÷ labour force × 100"
+      ],
+      [
+       "Inflation rate",
+       "(CPIₜ − CPIₜ₋₁) ÷ CPIₜ₋₁ × 100"
+      ],
+      [
+       "GNP",
+       "GDP + NFI"
+      ],
+      [
+       "Balance of trade",
+       "exports − imports"
+      ]
+     ],
+     "why": "The four key formulas of the unit.",
+     "clue": "Look for the variable each formula uses.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "id": "g12.economics.u1.s1-4.5"
+    },
+    {
+     "kind": "blank",
+     "ask": "CPI 2015 = 180; CPI 2016 = 207. Inflation rate = ___ %",
+     "a": [
+      "15",
+      "15%"
+     ],
+     "why": "(207 − 180) ÷ 180 × 100 = 27 ÷ 180 × 100 = 15 %.",
+     "clue": "Divide by the earlier CPI.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.economics.u1.s1-4.6"
+    },
+    {
+     "kind": "blank",
+     "ask": "Labour force 25 million; unemployed 2 million. Unemployment rate = ___ %",
+     "a": [
+      "8",
+      "8%"
+     ],
+     "why": "2 ÷ 25 × 100 = 8 %.",
+     "clue": "Divide by the labour force.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "added": true,
+     "id": "g12.economics.u1.s1-4.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "Economists who say \"prices adjust quickly, so the government should do nothing\" belong to the",
+     "opts": [
+      "classical school",
+      "Keynesian school",
+      "new Keynesian school",
+      "monetarist school"
+     ],
+     "ans": "classical school",
+     "why": "p.18: hands-off policy.",
+     "clue": "Who trusts flexible prices and says hands off?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "id": "g12.economics.u1.s1-4.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "Real GDP grew 3 %, population grew 3 %, and the CPI rose from 100 to 112. Which describes the year?",
+     "opts": [
+      "Income per person about flat, with 12 % inflation",
+      "Strong growth per person, with deflation",
+      "Recession with deflation",
+      "Income per person up 15 %"
+     ],
+     "ans": "Income per person about flat, with 12 % inflation",
+     "why": "Per capita growth ≈ 3 − 3 = 0. Inflation = (112 − 100) ÷ 100 × 100 = 12 %.",
+     "clue": "Work out per capita growth and inflation separately.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.economics.u1.s1-4.9"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Review questions",
+   "items": [
+    {
+     "kind": "tf",
+     "text": "There is no difference between microeconomics and macroeconomics.",
+     "a": false,
+     "why": "Micro studies individual units; macro studies the economy as a whole. They differ but are complementary.",
+     "clue": "Compare what each studies.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Part I Q1",
+     "id": "g12.economics.u1.s1-4.10"
+    },
+    {
+     "kind": "tf",
+     "text": "Macroeconomics focuses on the economy as a whole.",
+     "a": true,
+     "why": "This is the book's definition (1.1.1).",
+     "clue": "Recall the definition.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Part I Q2",
+     "id": "g12.economics.u1.s1-4.11"
+    },
+    {
+     "kind": "tf",
+     "text": "Microeconomic goals include achieving high economic growth, promoting maximum employment and attaining stable prices. They also include reducing budget or balance of payment deficits and ensuring fair distribution of income.",
+     "a": false,
+     "why": "These are MACROeconomic goals (1.1.2).",
+     "clue": "Check the first word.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Part I Q3",
+     "id": "g12.economics.u1.s1-4.12"
+    },
+    {
+     "kind": "tf",
+     "text": "Balance of trade is the difference between export and import of goods and services of a country for a given period.",
+     "a": true,
+     "why": "Definition in 1.2.5: X − M.",
+     "clue": "Recall the definition.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Part I Q4",
+     "id": "g12.economics.u1.s1-4.13"
+    },
+    {
+     "kind": "tf",
+     "text": "Monetarists prescribe active fiscal policy to alleviate weak aggregate demand.",
+     "a": false,
+     "why": "That is the Keynesian prescription. Monetarists favour monetary policy and a constant money-growth rule.",
+     "clue": "Which school favours fiscal policy?",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Part I Q5",
+     "id": "g12.economics.u1.s1-4.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which one of the following is not a macroeconomic question?",
+     "opts": [
+      "What determines the level of economic activity in a society?",
+      "What determines how many goods and services a nation produces?",
+      "What determines how many jobs are available in an economy?",
+      "What causes a firm to grow?"
+     ],
+     "ans": "What causes a firm to grow?",
+     "why": "The growth of a single firm is about one economic unit: microeconomics. The others are about national totals.",
+     "clue": "Which is about one unit?",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Part II Q1",
+     "id": "g12.economics.u1.s1-4.15"
+    },
+    {
+     "kind": "mcq",
+     "text": "Technological change has the largest impact on which form of unemployment?",
+     "opts": [
+      "frictional unemployment",
+      "cyclical unemployment",
+      "structural unemployment",
+      "All of the above"
+     ],
+     "ans": "structural unemployment",
+     "why": "New technology changes the skills employers demand; workers with old skills become structurally unemployed until retrained.",
+     "clue": "Skills no longer match the jobs.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Part II Q2",
+     "id": "g12.economics.u1.s1-4.16"
+    },
+    {
+     "kind": "mcq",
+     "text": "If the national economy is closed, i.e. a country has no interaction with the rest of the world, then",
+     "opts": [
+      "GNP > GDP",
+      "GNP < GDP",
+      "GNP = GDP",
+      "All"
+     ],
+     "ans": "GNP = GDP",
+     "why": "GNP = GDP + NFI. In a closed economy no factor income flows in or out, so NFI = 0 and GNP = GDP.",
+     "clue": "What is NFI with no foreign links?",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Part II Q3",
+     "id": "g12.economics.u1.s1-4.17"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which one of the following refers to the recurrent ups and downs in the level of economic activity?",
+     "opts": [
+      "economic boom",
+      "economic trough",
+      "unemployment",
+      "business cycle"
+     ],
+     "ans": "business cycle",
+     "why": "A boom and a trough are single points of one cycle; the whole up-and-down pattern is the business cycle.",
+     "clue": "The whole pattern, not one point.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Part II Q4",
+     "id": "g12.economics.u1.s1-4.18"
+    },
+    {
+     "kind": "mcq",
+     "text": "One of the following is not true about the evolution and recent development of macroeconomics.",
+     "opts": [
+      "The classical view was the predominant economic philosophy until the Great Depression.",
+      "Keynesian economics is more useful for analysing the macroeconomy in the short run.",
+      "The most recent wave of new Keynesian economics is more micro-based.",
+      "Monetarists argued that it is fiscal policy and not monetary policy that addresses the macroeconomic problems."
+     ],
+     "ans": "Monetarists argued that it is fiscal policy and not monetary policy that addresses the macroeconomic problems.",
+     "why": "The book says the opposite: monetarists argued for MONETARY policy, not fiscal policy. The other three are true.",
+     "clue": "Check what monetarists said.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Part II Q5",
+     "id": "g12.economics.u1.s1-4.19"
+    },
+    {
+     "kind": "mcq",
+     "text": "Economic growth is best measured by the rise in",
+     "opts": [
+      "real GDP or real per capita income",
+      "nominal GDP",
+      "the CPI",
+      "the trade balance"
+     ],
+     "ans": "real GDP or real per capita income",
+     "why": "Real values remove price changes; per capita values allow for population growth.",
+     "clue": "Remove prices and population.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Part III Q1",
+     "id": "g12.economics.u1.s1-4.20"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which describes GNP rather than GDP?",
+     "opts": [
+      "Output of a country's own factors of production, wherever located",
+      "Output produced within the country's borders",
+      "Spending by households only",
+      "Exports minus imports"
+     ],
+     "ans": "Output of a country's own factors of production, wherever located",
+     "why": "GDP is location-based; GNP is ownership-based: GNP = GDP + NFI.",
+     "clue": "Ownership or location?",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Part III Q2",
+     "id": "g12.economics.u1.s1-4.21"
+    },
+    {
+     "kind": "match",
+     "title": "Match each type of unemployment to its cause",
+     "pairs": [
+      [
+       "Frictional",
+       "time to match job seekers with jobs"
+      ],
+      [
+       "Cyclical",
+       "too little aggregate demand in a recession"
+      ],
+      [
+       "Structural",
+       "lasting mismatch of skills and jobs"
+      ],
+      [
+       "Underemployment",
+       "a job below one's training, or pay below poverty"
+      ]
+     ],
+     "why": "1.2.3.",
+     "clue": "Search, demand, skills.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Part III Q4",
+     "id": "g12.economics.u1.s1-4.22"
+    },
+    {
+     "kind": "order",
+     "title": "Order the phases of a business cycle, starting from expansion",
+     "items": [
+      "Expansion",
+      "Peak",
+      "Contraction",
+      "Trough"
+     ],
+     "why": "Expansion → peak → contraction → trough.",
+     "clue": "Up, top, down, bottom.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Part III Q5",
+     "id": "g12.economics.u1.s1-4.23"
+    },
+    {
+     "kind": "tf",
+     "text": "The balance of trade and the balance of payments are the same thing.",
+     "a": false,
+     "why": "The balance of trade (X − M) is only one part of the balance of payments, which records all transactions in current and capital accounts.",
+     "clue": "Which one is broader?",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Part III Q6",
+     "id": "g12.economics.u1.s1-4.24"
+    },
+    {
+     "kind": "match",
+     "title": "Match each school to its policy view",
+     "pairs": [
+      [
+       "Classical",
+       "hands off; prices clear markets"
+      ],
+      [
+       "Keynesian",
+       "active fiscal policy"
+      ],
+      [
+       "Monetarist",
+       "constant money-growth rule"
+      ],
+      [
+       "New classical",
+       "policy is ineffective"
+      ],
+      [
+       "New Keynesian",
+       "stabilisation policy works"
+      ]
+     ],
+     "why": "1.3.2–1.3.6.",
+     "clue": "Flexible or sticky prices decides a lot.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Part III Q7",
+     "id": "g12.economics.u1.s1-4.25"
+    }
+   ]
+  },
+  {
+   "book_name": "Chapter test",
+   "test": true,
+   "chapter_test": true,
+   "count": 20,
+   "minutes": 25,
+   "items": []
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Which is a macroeconomic variable?",
+   "opts": [
+    "the unemployment rate",
+    "one firm's profit",
+    "a household's rent",
+    "the price of one shirt"
+   ],
+   "ans": "the unemployment rate",
+   "why": "p.3.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.economics.u1.s1-4.26"
+  },
+  {
+   "kind": "mcq",
+   "text": "A fall in the general price level is",
+   "opts": [
+    "deflation",
+    "inflation",
+    "hyperinflation",
+    "seigniorage"
+   ],
+   "ans": "deflation",
+   "why": "p.8.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.economics.u1.s1-4.27"
+  },
+  {
+   "kind": "blank",
+   "ask": "GDP = 700 bn Birr and NFI = +20 bn Birr. GNP = ___ bn Birr",
+   "a": [
+    "720"
+   ],
+   "why": "700 + 20 = 720.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.economics.u1.s1-4.28"
+  },
+  {
+   "kind": "mcq",
+   "text": "Structural unemployment is caused mainly by",
+   "opts": [
+    "a mismatch between workers' skills and jobs",
+    "a short search between jobs",
+    "a recession",
+    "school holidays"
+   ],
+   "ans": "a mismatch between workers' skills and jobs",
+   "why": "p.14.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.economics.u1.s1-4.29"
+  },
+  {
+   "kind": "blank",
+   "ask": "A basket costs 500 Birr in the base year and 600 Birr now. Last year's CPI was 110. Inflation this year = ___ % (1 decimal place)",
+   "a": [
+    "≈9.1"
+   ],
+   "why": "CPI now = 600 ÷ 500 × 100 = 120. (120 − 110) ÷ 110 × 100 ≈ 9.1 %.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.economics.u1.s1-4.30"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Review Part II Q5 option B reads \"analysing the macroeconomic in the short run\"; reworded to \"the macroeconomy\". Part II Q5 option D \"Monetarist argued\" → \"Monetarists argued\"."
+  },
+  {
+   "kind": "review",
+   "text": "Part III Q3 (What is inflation?) is covered by the Inflation lesson; Part III short answers are turned into choice, match and order items here."
+  },
+  {
+   "kind": "note",
+   "text": "No past national-exam economics papers are available, so the chapter test draws from the section tests."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

@@ -1,0 +1,849 @@
+{
+ "id": "g12.agriculture.u1.s1-5",
+ "book": {
+  "title": "Agriculture Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "agriculture",
+  "unit": 1,
+  "unit_title": "Vegetable crops production and management",
+  "pages": "14–17",
+  "section": "1.5"
+ },
+ "title": "Principles of vegetable crops management",
+ "competency": "State the principles of vegetable crop management and calculate the profit of a vegetable crop.",
+ "minutes": 30,
+ "keywords": [
+  {
+   "en": "Site selection",
+   "am": "የቦታ መረጣ",
+   "def": "Choosing a plot after checking its history, soil, pollution, water, neighbouring crops and slope.",
+   "machine": true
+  },
+  {
+   "en": "Sustainability",
+   "am": "ዘላቂነት",
+   "def": "Keeping a farm productive over time; helped by keeping reliable records.",
+   "machine": true
+  },
+  {
+   "en": "Planting material",
+   "am": "የመትከያ ቁሳቁስ",
+   "def": "Seeds, bulbs, tubers or seedlings used to establish a crop.",
+   "machine": true
+  },
+  {
+   "en": "Crop rotation",
+   "am": "ሰብል ማፈራረቅ",
+   "def": "Growing different crops one after another on the same land to reduce pests and diseases.",
+   "machine": true
+  },
+  {
+   "en": "Integrated crop management",
+   "am": "የተቀናጀ የሰብል አያያዝ",
+   "def": "Combining rotation, less dependence on chemicals, organic matter and balanced nutrients to manage a crop.",
+   "machine": true
+  },
+  {
+   "en": "Gross income",
+   "am": "ጠቅላላ ገቢ",
+   "def": "Total money from sales: yield (kg) × price per kg.",
+   "machine": true
+  },
+  {
+   "en": "Production cost",
+   "am": "የምርት ወጪ",
+   "def": "Money spent on seed, fertilizer, chemicals, labour, transport and other expenses.",
+   "machine": true
+  },
+  {
+   "en": "Net profit",
+   "am": "የተጣራ ትርፍ",
+   "def": "Gross income minus all production costs.",
+   "machine": true
+  },
+  {
+   "en": "Quintal",
+   "am": "ኩንታል",
+   "def": "A unit of weight equal to 100 kg.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "agri.site-records",
+   "name": "Site selection and sustainability records",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Choosing a site means checking land-use history, soil properties and pollution, the availability and quality of water, and effects of nearby crops. Gentle slopes are suitable; steep slopes speed up erosion, so terraces or other conservation works may be needed first. Sustainability is helped by accurate records of yield, varieties, fertilizer, pesticides, irrigation and other inputs, soil analysis, techniques, and market information such as sales, demand and prices."
+    },
+    "am": {
+     "text": "ቦታ ሲመረጥ የመሬቱ ታሪክ፣ አፈር፣ ብክለት፣ ውሃ እና ተዳፋትነት ይታያል። ዘላቂነት የምርት፣ የግብዓትና የገበያ መረጃ በመመዝገብ ይረጋገጣል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Which plot?",
+     "ask": "Two plots: one on a gentle slope, one on a steep hillside. Which is better for vegetables?",
+     "opts": [
+      "The gentle slope",
+      "The steep hillside",
+      "Both are the same",
+      "Neither"
+     ],
+     "after": "Steep slopes speed up erosion. Gentle slopes suit vegetables; terraces help on slopes.",
+     "ref": "p.14",
+     "id": "g12.agriculture.u1.s1-5.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Site selection (1.5.1)",
+     "paras": [
+      "Consider the land-use history and soil properties.",
+      "Check soil pollution and the availability and quality of water.",
+      "Consider effects of nearby crops.",
+      "Gentle slopes are suitable; steep slopes speed up soil erosion.",
+      "Build terraces or other conservation works first if needed."
+     ],
+     "ref": "p.14",
+     "id": "g12.agriculture.u1.s1-5.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Sustainability records (1.5.2)",
+     "paras": [
+      "Reliable records help keep a farm sustainable.",
+      "Record accurately: yield level and crop varieties grown.",
+      "Quantity and type of fertilizer and pesticides.",
+      "Irrigation and other inputs used.",
+      "Soil analysis results and techniques used.",
+      "Market information: sales, demand and prices."
+     ],
+     "ref": "p.14–15",
+     "id": "g12.agriculture.u1.s1-5.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Site selection",
+       "Choosing a plot after checking its history, soil, pollution, water, neighbouring crops and slope."
+      ],
+      [
+       "Sustainability",
+       "Keeping a farm productive over time; helped by keeping reliable records."
+      ]
+     ],
+     "id": "g12.agriculture.u1.s1-5.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why are gentle slopes preferred for vegetable plots?",
+     "opts": [
+      "Steep slopes speed up soil erosion",
+      "Gentle slopes have no water",
+      "Steep slopes are too cold",
+      "Gentle slopes need no management"
+     ],
+     "ans": "Steep slopes speed up soil erosion",
+     "why": "p.14: steepness accelerates erosion.",
+     "clue": "Where does rain wash soil away fastest?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.14",
+     "id": "g12.agriculture.u1.s1-5.5"
+    },
+    {
+     "kind": "pick",
+     "text": "What should be checked when selecting a site?",
+     "pool": [
+      "Land-use history",
+      "Soil pollution",
+      "Water availability and quality",
+      "Effects of nearby crops",
+      "Colour of the farmer's house"
+     ],
+     "a": [
+      "Land-use history",
+      "Soil pollution",
+      "Water availability and quality",
+      "Effects of nearby crops"
+     ],
+     "why": "p.14 lists history, soil, pollution, water and neighbouring crops.",
+     "clue": "One option has nothing to do with growing crops.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.14",
+     "id": "g12.agriculture.u1.s1-5.6"
+    },
+    {
+     "kind": "pick",
+     "text": "Which should be recorded for sustainability?",
+     "pool": [
+      "Yield level",
+      "Fertilizer type and quantity",
+      "Pesticide type and quantity",
+      "Soil analysis results",
+      "Market prices",
+      "Football scores"
+     ],
+     "a": [
+      "Yield level",
+      "Fertilizer type and quantity",
+      "Pesticide type and quantity",
+      "Soil analysis results",
+      "Market prices"
+     ],
+     "why": "p.14–15 list.",
+     "clue": "Only one option is unrelated to the farm.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.14–15",
+     "id": "g12.agriculture.u1.s1-5.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "A farmer must use a sloping plot. What should be done first?",
+     "opts": [
+      "Build terraces or other conservation works",
+      "Plough straight down the slope",
+      "Remove all vegetation",
+      "Skip site selection"
+     ],
+     "ans": "Build terraces or other conservation works",
+     "why": "p.14: conservation practices like terraces can be built before use.",
+     "clue": "What slows water running downhill?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.14",
+     "id": "g12.agriculture.u1.s1-5.8"
+    },
+    {
+     "kind": "tf",
+     "text": "Records of sales and prices are part of sustainability management.",
+     "a": true,
+     "why": "p.15: market, sales, demand and prices are on the list.",
+     "clue": "Is the farm sustainable if it loses money?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.15",
+     "id": "g12.agriculture.u1.s1-5.9"
+    },
+    {
+     "kind": "mcq",
+     "text": "A plot was used for years to dump empty pesticide containers. It has good soil and water. Should it be chosen?",
+     "opts": [
+      "No: its pollution history makes it unsafe for vegetables",
+      "Yes: good soil is all that matters",
+      "Yes, but only if it is steep",
+      "Only for leafy vegetables"
+     ],
+     "ans": "No: its pollution history makes it unsafe for vegetables",
+     "why": "Land-use history and soil pollution must be considered; vegetables are eaten fresh, often raw.",
+     "clue": "Look at the site's history, not just its soil.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.14",
+     "added": true,
+     "id": "g12.agriculture.u1.s1-5.10"
+    }
+   ]
+  },
+  {
+   "id": "agri.icm-water",
+   "name": "Planting material, integrated crop management and water",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Good planting material is adapted to local conditions, resistant to pests and diseases, meets consumer quality demand and is planted at the right time; check seed, bulb and tuber quality. Integrated crop management uses diverse crop rotations, avoids over-dependence on chemicals, adds crop residues or compost, and gives balanced nutrients based on soil analysis and nutrients from organic matter. Water should be used economically, matched to crop need, checked for quality, and protected from fertilizer contamination."
+    },
+    "am": {
+     "text": "ጥሩ ዘር የአካባቢውን ሁኔታ የሚቋቋም፣ ተባይ የሚቋቋም መሆን አለበት። ሰብል ማፈራረቅ፣ ኮምፖስት እና ሚዛናዊ ማዳበሪያ ይመከራሉ። ውሃ በቁጠባ ይጠቀሙ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Same crop, same plot",
+     "ask": "Tomato has grown on the same plot for five seasons, and pests keep rising. What helps most?",
+     "opts": [
+      "Rotate with different crops",
+      "Spray more chemicals every week",
+      "Plant tomato more densely",
+      "Stop recording yields"
+     ],
+     "after": "Rotation breaks pest and disease cycles. Over-dependence on chemicals should be avoided.",
+     "ref": "p.15",
+     "id": "g12.agriculture.u1.s1-5.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Planting material (1.5.3)",
+     "paras": [
+      "Choose material adapted to local conditions.",
+      "Choose material resistant to pests and diseases.",
+      "It must meet consumer demand for quality.",
+      "Plant it at a suitable time of the season.",
+      "Check the quality of seeds, bulbs and tubers before use."
+     ],
+     "note": "The book prints \"tubers, bulbs and tubers\".",
+     "ref": "p.15",
+     "id": "g12.agriculture.u1.s1-5.12"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Integrated crop management (1.5.4)",
+     "paras": [
+      "Rotate crops to control pests and diseases; diverse rotations work best.",
+      "Avoid over-dependence on chemicals.",
+      "Rotation is working if yield is stable or rising and pesticide use is stable or falling.",
+      "Organic matter should be stable or rising; soil nutrients stable.",
+      "Chop in crop residues or add compost: better fertility and water and nutrient storage.",
+      "Give balanced nutrients; count nutrients from decaying organic matter.",
+      "Use soil analysis to set fertilizer; apply it only to the crop area."
+     ],
+     "ref": "p.15–16",
+     "id": "g12.agriculture.u1.s1-5.13"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Water (1.5.5)",
+     "paras": [
+      "Use water economically; conserve soil moisture in dry areas.",
+      "Assess groundwater before irrigating with it.",
+      "Match the amount and timing of irrigation to crop need.",
+      "Monitor irrigation water quality closely.",
+      "Store fertilizer in a dry, clean place to avoid water contamination."
+     ],
+     "ref": "p.16",
+     "id": "g12.agriculture.u1.s1-5.14"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Planting material",
+       "Seeds, bulbs, tubers or seedlings used to establish a crop."
+      ],
+      [
+       "Crop rotation",
+       "Growing different crops one after another on the same land to reduce pests and diseases."
+      ],
+      [
+       "Integrated crop management",
+       "Combining rotation, less dependence on chemicals, organic matter and balanced nutrients to manage a crop."
+      ]
+     ],
+     "id": "g12.agriculture.u1.s1-5.15"
+    },
+    {
+     "kind": "mcq",
+     "text": "Crop rotation in vegetable production mainly helps to",
+     "opts": [
+      "control pests and diseases",
+      "increase pesticide use",
+      "compact the soil",
+      "remove organic matter"
+     ],
+     "ans": "control pests and diseases",
+     "why": "p.15.",
+     "clue": "Pests that need one crop starve when it changes.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.15",
+     "id": "g12.agriculture.u1.s1-5.16"
+    },
+    {
+     "kind": "pick",
+     "text": "Which show that a rotation is working?",
+     "pool": [
+      "Yield stable or increasing",
+      "Pesticide use decreasing or stable",
+      "Organic matter stable or increasing",
+      "Soil nutrients stable",
+      "Pesticide use doubling"
+     ],
+     "a": [
+      "Yield stable or increasing",
+      "Pesticide use decreasing or stable",
+      "Organic matter stable or increasing",
+      "Soil nutrients stable"
+     ],
+     "why": "p.15 gives these four indicators.",
+     "clue": "One option is a warning sign.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.15",
+     "id": "g12.agriculture.u1.s1-5.17"
+    },
+    {
+     "kind": "pick",
+     "text": "What should a farmer look for in planting material?",
+     "pool": [
+      "Adapted to local conditions",
+      "Resistant to pests and diseases",
+      "Meets consumer quality demand",
+      "Cheapest, whatever the quality"
+     ],
+     "a": [
+      "Adapted to local conditions",
+      "Resistant to pests and diseases",
+      "Meets consumer quality demand"
+     ],
+     "why": "p.15: quality matters; cheapest is not a criterion.",
+     "clue": "One option ignores quality.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.15",
+     "id": "g12.agriculture.u1.s1-5.18"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why should fertilizer be stored in a dry, clean place?",
+     "opts": [
+      "To avoid contaminating water",
+      "To make it heavier",
+      "To speed up rotation",
+      "To attract pests"
+     ],
+     "ans": "To avoid contaminating water",
+     "why": "p.16.",
+     "clue": "Think of rain washing fertilizer into a well.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.16",
+     "id": "g12.agriculture.u1.s1-5.19"
+    },
+    {
+     "kind": "mcq",
+     "text": "Before irrigating with groundwater, a farmer should",
+     "opts": [
+      "assess the groundwater resource",
+      "pump as much as possible",
+      "add fertilizer to the well",
+      "skip water-quality checks"
+     ],
+     "ans": "assess the groundwater resource",
+     "why": "p.16.",
+     "clue": "Will the well run dry?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.16",
+     "id": "g12.agriculture.u1.s1-5.20"
+    },
+    {
+     "kind": "tf",
+     "text": "Chopping crop residues into the soil improves its water and nutrient storage.",
+     "a": true,
+     "why": "p.15.",
+     "clue": "Organic matter acts like a sponge.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.15",
+     "id": "g12.agriculture.u1.s1-5.21"
+    },
+    {
+     "kind": "mcq",
+     "text": "Soil analysis shows plenty of nitrogen from decaying compost. What should the farmer do with the planned nitrogen fertilizer?",
+     "opts": [
+      "Reduce it, counting the nitrogen from organic matter",
+      "Double it to be safe",
+      "Spread it on paths and roads too",
+      "Ignore the analysis"
+     ],
+     "ans": "Reduce it, counting the nitrogen from organic matter",
+     "why": "p.15–16: fertilizer plans must count nutrients from organic matter and soil analysis, and fertilizer is limited to the crop area.",
+     "clue": "Balanced, not excessive.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.15–16",
+     "added": true,
+     "id": "g12.agriculture.u1.s1-5.22"
+    }
+   ]
+  },
+  {
+   "id": "agri.profit",
+   "name": "Profitability of vegetable production",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Marketing is one of the most important factors for success, and it starts before production: choosing crops and varieties and planning how produce reaches consumers at an acceptable profit. All costs (seed, fertilizer, pesticides, labour, harvest, postharvest handling, marketing) must be counted. Gross income = yield × price, and net profit = gross income − costs. In the book's example, 4,500 kg of tomato at 25 birr/kg gives 112,500 birr; minus 51,300 birr costs, the profit is 61,200 birr per hectare per cropping season."
+    },
+    "am": {
+     "text": "ጠቅላላ ገቢ = ምርት × ዋጋ። የተጣራ ትርፍ = ጠቅላላ ገቢ − ወጪ። በመጽሐፉ ምሳሌ የቲማቲም ትርፍ በአንድ የምርት ወቅት 61,200 ብር ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Is it all profit?",
+     "ask": "A farmer sells 4,500 kg of tomato at 25 birr per kg. Is all that money profit?",
+     "opts": [
+      "No: seed, fertilizer, labour and transport costs come off",
+      "Yes: all sales are profit",
+      "Exactly half is always profit",
+      "Profit is the price per kg"
+     ],
+     "after": "Gross income minus all costs gives net profit.",
+     "ref": "p.17",
+     "id": "g12.agriculture.u1.s1-5.23"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Tomato profit explorer",
+     "ask": "Change the yield, the price and the season cost. When does the farm make a loss?",
+     "vars": [
+      {
+       "k": "y",
+       "label": "Yield (quintal per ha)",
+       "min": 20,
+       "max": 300,
+       "step": 5,
+       "v": 45
+      },
+      {
+       "k": "p",
+       "label": "Price (birr per kg)",
+       "min": 5,
+       "max": 50,
+       "step": 1,
+       "v": 25
+      },
+      {
+       "k": "c",
+       "label": "Season cost (birr)",
+       "min": 20000,
+       "max": 150000,
+       "step": 100,
+       "v": 51300
+      }
+     ],
+     "formula": "y*100*p - c",
+     "out": "Net profit = {v} birr per season",
+     "note": "Yield in kg = quintals × 100. Gross income = kg × price. Net profit = gross income − cost.",
+     "id": "g12.agriculture.u1.s1-5.24"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Marketing comes first",
+     "paras": [
+      "Marketing is one of the most important factors for success.",
+      "It starts before production: choose crops and varieties for the market.",
+      "Plan how produce reaches consumers at an acceptable profit.",
+      "Count all costs: seed, fertilizer, pesticides, labour, harvest, postharvest handling, marketing.",
+      "Set prices that balance market share and an acceptable return."
+     ],
+     "ref": "p.16",
+     "id": "g12.agriculture.u1.s1-5.25"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "The book's tomato example (1 ha, one season)",
+     "steps": [
+      "Yield = 45 quintal × 100 kg = 4,500 kg.",
+      "Gross income = 4,500 kg × 25 birr/kg = 112,500 birr.",
+      "Costs (seed, fertilizer, chemicals, transport, labour, other) = 51,300 birr.",
+      "Net profit = 112,500 − 51,300 = 61,200 birr.",
+      "Check: 51,300 + 61,200 = 112,500.",
+      "This is per cropping season, not per month."
+     ],
+     "ref": "p.17",
+     "id": "g12.agriculture.u1.s1-5.26"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Gross income",
+       "Total money from sales: yield (kg) × price per kg."
+      ],
+      [
+       "Production cost",
+       "Money spent on seed, fertilizer, chemicals, labour, transport and other expenses."
+      ],
+      [
+       "Net profit",
+       "Gross income minus all production costs."
+      ],
+      [
+       "Quintal",
+       "A unit of weight equal to 100 kg."
+      ]
+     ],
+     "id": "g12.agriculture.u1.s1-5.27"
+    },
+    {
+     "kind": "blank",
+     "ask": "Gross income = 4,500 kg × 25 birr per kg = ___ birr",
+     "a": [
+      "112500",
+      "112,500"
+     ],
+     "why": "4,500 × 20 = 90,000 and 4,500 × 5 = 22,500; together 112,500 birr.",
+     "clue": "Split 25 into 20 + 5.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.17",
+     "id": "g12.agriculture.u1.s1-5.28"
+    },
+    {
+     "kind": "blank",
+     "ask": "45 quintal = ___ kg",
+     "a": [
+      "4500",
+      "4,500"
+     ],
+     "why": "1 quintal = 100 kg, so 45 × 100 = 4,500 kg.",
+     "clue": "How many kg are in one quintal?",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.17",
+     "id": "g12.agriculture.u1.s1-5.29"
+    },
+    {
+     "kind": "blank",
+     "ask": "Net profit = 112,500 − 51,300 = ___ birr",
+     "a": [
+      "61200",
+      "61,200"
+     ],
+     "why": "112,500 − 51,300 = 61,200 birr.",
+     "clue": "Subtract the costs from the gross income.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.17",
+     "id": "g12.agriculture.u1.s1-5.30"
+    },
+    {
+     "kind": "tf",
+     "text": "In the book's example, 61,200 birr is the profit per month.",
+     "a": false,
+     "why": "It is per cropping season (the book mislabels the line). If a season lasts about 4 months, that is about 15,300 birr a month.",
+     "clue": "Read the last words of the book's result line.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.17",
+     "id": "g12.agriculture.u1.s1-5.31"
+    },
+    {
+     "kind": "blank",
+     "ask": "Cost per kg = 51,300 birr ÷ 4,500 kg = ___ birr (2 decimal places)",
+     "a": [
+      "≈11.40"
+     ],
+     "why": "51,300 ÷ 4,500 = 11.40 birr per kg. Selling below this price gives a loss.",
+     "clue": "Divide the total cost by the kilograms produced.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.agriculture.u1.s1-5.32"
+    },
+    {
+     "kind": "order",
+     "title": "Put the steps of a vegetable enterprise in order",
+     "items": [
+      "Study the market and choose the crop and variety",
+      "Select and prepare the site",
+      "Choose adapted, healthy planting material",
+      "Plant at the suitable time",
+      "Manage water, nutrients, pests and weeds",
+      "Harvest and handle carefully",
+      "Sell, then record yield, costs and prices"
+     ],
+     "why": "Marketing starts before production (p.16); records close the cycle (1.5.2).",
+     "clue": "Marketing does not start after harvest.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.14–16",
+     "added": true,
+     "id": "g12.agriculture.u1.s1-5.33"
+    },
+    {
+     "kind": "blank",
+     "ask": "A season profit of 61,200 birr over a 4-month season ≈ ___ birr per month",
+     "a": [
+      "15300",
+      "15,300"
+     ],
+     "why": "61,200 ÷ 4 = 15,300 birr per month.",
+     "clue": "Share the season profit equally among the months.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.agriculture.u1.s1-5.34"
+    },
+    {
+     "kind": "blank",
+     "ask": "The tomato price falls to 15 birr per kg; yield and costs stay the same. Net profit = ___ birr",
+     "a": [
+      "16200",
+      "16,200"
+     ],
+     "why": "Gross = 4,500 × 15 = 67,500 birr. Net = 67,500 − 51,300 = 16,200 birr.",
+     "clue": "Find the new gross income first.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.17",
+     "added": true,
+     "id": "g12.agriculture.u1.s1-5.35"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Which slope is suitable for vegetable production?",
+   "opts": [
+    "A gentle slope",
+    "A very steep slope",
+    "A cliff",
+    "Any slope without terraces"
+   ],
+   "ans": "A gentle slope",
+   "why": "p.14.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.agriculture.u1.s1-5.36"
+  },
+  {
+   "kind": "mcq",
+   "text": "Net profit equals",
+   "opts": [
+    "gross income − total costs",
+    "yield × price",
+    "costs − income",
+    "price ÷ yield"
+   ],
+   "ans": "gross income − total costs",
+   "why": "p.17.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.agriculture.u1.s1-5.37"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which is NOT a sign that crop rotation is working?",
+   "opts": [
+    "Pesticide use keeps rising",
+    "Stable or rising yields",
+    "Stable soil nutrients",
+    "Stable or rising organic matter"
+   ],
+   "ans": "Pesticide use keeps rising",
+   "why": "p.15.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.agriculture.u1.s1-5.38"
+  },
+  {
+   "kind": "mcq",
+   "text": "Marketing of vegetables should begin",
+   "opts": [
+    "before production",
+    "only after harvest",
+    "only after storage",
+    "never"
+   ],
+   "ans": "before production",
+   "why": "p.16.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.agriculture.u1.s1-5.39"
+  },
+  {
+   "kind": "mcq",
+   "text": "3,000 kg of onion sells at 20 birr per kg and costs are 35,000 birr. The net profit is",
+   "opts": [
+    "25,000 birr",
+    "60,000 birr",
+    "95,000 birr",
+    "35,000 birr"
+   ],
+   "ans": "25,000 birr",
+   "why": "3,000 × 20 = 60,000; 60,000 − 35,000 = 25,000 birr.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.agriculture.u1.s1-5.40"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.17: the tomato example labels the result \"Net profit per month\", but 61,200 birr is per cropping season (the book's own last line says so). Taught as per season; about 15,300 birr per month if a season lasts 4 months. Also, 45 q/ha is a low tomato yield; the example is indicative, as the book says."
+  },
+  {
+   "kind": "review",
+   "text": "p.15: \"tubers, bulbs and tubers\" should be \"seeds, bulbs and tubers\". \"Organic fertilizers and soil analysis show soil nutrient content\" is garbled: soil (and manure) analysis shows nutrient content so fertilizer rates can be adjusted."
+  },
+  {
+   "kind": "note",
+   "text": "Added: the profit slider, the enterprise-steps order item, cost per kg, profit per month and the price-fall challenge."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

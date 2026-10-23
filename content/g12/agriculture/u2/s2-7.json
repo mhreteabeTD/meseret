@@ -1,0 +1,508 @@
+{
+ "id": "g12.agriculture.u2.s2-7",
+ "book": {
+  "title": "Agriculture Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "agriculture",
+  "unit": 2,
+  "unit_title": "Fruit crops production and management",
+  "pages": "39–40",
+  "section": "2.7"
+ },
+ "title": "Factors influencing the quality of fruit crops during harvest and post-harvest",
+ "competency": "Explain how harvest stage, time and method and postharvest handling affect fruit quality.",
+ "minutes": 20,
+ "keywords": [
+  {
+   "en": "Harvest maturity",
+   "am": "የመሰብሰቢያ ብስለት",
+   "def": "The stage of development at which fruit is picked; it decides quality and storage life.",
+   "machine": true
+  },
+  {
+   "en": "Pre-cooling",
+   "am": "ቅድመ ማቀዝቀዝ",
+   "def": "Cooling fruit to storage temperature immediately after harvest.",
+   "machine": true
+  },
+  {
+   "en": "Sorting and grading",
+   "am": "መለየትና ደረጃ መስጠት",
+   "def": "Separating fruit by size and quality level.",
+   "machine": true
+  },
+  {
+   "en": "Chilling injury",
+   "am": "የቅዝቃዜ ጉዳት",
+   "def": "Damage from long exposure to low, non-freezing temperatures; it affects tropical fruits.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "agri.fruit-harvest",
+   "name": "Stage and time of harvest",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "The stage of harvest, the time of harvest and the harvesting method all affect fruit quality. Maturity at harvest is one of the main factors that decide a fruit's composition and storage life. Many fruits reach peak eating quality when fully ripe on the tree, but they are usually picked when nearly ripe; some, like avocado, only ripen after picking."
+    },
+    "am": {
+     "text": "የመሰብሰቢያ ደረጃ፣ ጊዜና ዘዴ የፍሬውን ጥራት ይወስናሉ። ብዙ ፍራፍሬዎች ሊበስሉ ሲቃረቡ ይለቀማሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Ripe on the tree?",
+     "ask": "Avocados can hang on the tree for weeks and stay hard. When do they soften?",
+     "opts": [
+      "Only after they are picked",
+      "Only on the tree",
+      "Never",
+      "Only when boiled"
+     ],
+     "after": "Avocado does not ripen on the tree; it softens after harvest. Not every fruit is best ripened on the tree.",
+     "ref": "p.39",
+     "added": true,
+     "id": "g12.agriculture.u2.s2-7.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Stage and time of harvest",
+     "paras": [
+      "Consider the stage, the time and the method of harvest.",
+      "Maturity at harvest decides a fruit's composition and storage life.",
+      "Check the fruit is at the right stage before picking.",
+      "Many fruits reach peak eating quality fully ripe on the tree.",
+      "But they are usually picked when nearly ripe."
+     ],
+     "note": "The book says \"nearly all fruits\" ripen best on the tree. Avocado does not ripen on the tree, and pears and bananas are better picked mature-green.",
+     "ref": "p.39",
+     "id": "g12.agriculture.u2.s2-7.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Harvest maturity",
+       "The stage of development at which fruit is picked; it decides quality and storage life."
+      ]
+     ],
+     "id": "g12.agriculture.u2.s2-7.3"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which three things should be considered when harvesting fruit?",
+     "opts": [
+      "The stage, the time and the method of harvest",
+      "The colour of the basket, the day of the week, the price",
+      "Only the weather",
+      "Only the size of the tree"
+     ],
+     "ans": "The stage, the time and the method of harvest",
+     "why": "p.39, first paragraph of 2.7.",
+     "clue": "Stage, time, method.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.39",
+     "id": "g12.agriculture.u2.s2-7.4"
+    },
+    {
+     "kind": "tf",
+     "text": "Maturity at harvest affects how long fruit can be stored.",
+     "a": true,
+     "why": "p.39: maturity at harvest determines compositional quality and storage life.",
+     "clue": "Read the \"Stage and time of harvest\" paragraph.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.39",
+     "id": "g12.agriculture.u2.s2-7.5"
+    },
+    {
+     "kind": "mcq",
+     "text": "Fruits are usually harvested when they are",
+     "opts": [
+      "nearly ripe",
+      "still flowers",
+      "rotten",
+      "tiny and green"
+     ],
+     "ans": "nearly ripe",
+     "why": "p.39.",
+     "clue": "Not fully ripe, but close.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.39",
+     "id": "g12.agriculture.u2.s2-7.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why can bananas be picked green, but oranges should be picked ripe?",
+     "opts": [
+      "Bananas are climacteric and ripen after harvest; oranges are non-climacteric",
+      "Oranges grow faster",
+      "Bananas have no ethylene",
+      "Oranges are tropical"
+     ],
+     "ans": "Bananas are climacteric and ripen after harvest; oranges are non-climacteric",
+     "why": "Link 2.7 to 2.3.3: ethylene lets climacteric fruits ripen off the plant.",
+     "clue": "Remember the ripening classes.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.26, 39",
+     "id": "g12.agriculture.u2.s2-7.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "A farmer sends mangoes on a 3-day trip to market. When should he pick them?",
+     "opts": [
+      "Mature but not fully ripe, so they ripen on the way without spoiling",
+      "Fully ripe and soft",
+      "Tiny and immature",
+      "Over-ripe, to save time"
+     ],
+     "ans": "Mature but not fully ripe, so they ripen on the way without spoiling",
+     "why": "Mango is climacteric; picking nearly ripe gives storage life and good eating quality at arrival.",
+     "clue": "Think about storage life and ripening off the tree.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.39",
+     "added": true,
+     "id": "g12.agriculture.u2.s2-7.8"
+    }
+   ]
+  },
+  {
+   "id": "agri.fruit-postharvest",
+   "name": "Postharvest handling",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "After harvest, fruit for longer storage is pre-cooled to storage temperature at once, then sorted and graded by size and quality and packed in materials that reduce moisture loss. It is cleaned of soil, dirt and insect waste before storage, kept at the right low temperature with relative humidity above 90%, and handled carefully in transport because mechanical injuries promote disease. Temperate fruits store near 0 °C, but tropical fruits need about 10–13 °C to avoid chilling injury."
+    },
+    "am": {
+     "text": "ከተሰበሰበ በኋላ፡ ማቀዝቀዝ፣ መለየትና ደረጃ መስጠት፣ ማሸግ፣ ማጽዳት፣ ተገቢ ሙቀትና ከ90% በላይ እርጥበት፣ በጥንቃቄ ማጓጓዝ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Which store is colder?",
+     "ask": "Should apples or bananas be stored at the colder temperature?",
+     "opts": [
+      "Apples",
+      "Bananas",
+      "Both at 0 °C",
+      "Neither needs cooling"
+     ],
+     "after": "Apples keep well near 0 °C. Bananas get chilling injury below about 13 °C.",
+     "ref": "p.39–40",
+     "added": true,
+     "id": "g12.agriculture.u2.s2-7.9"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Postharvest considerations",
+     "paras": [
+      "Pre-cooling: cool fruit to storage temperature right after harvest.",
+      "Sorting and grading: by size and quality level.",
+      "Packaging: materials should reduce moisture loss.",
+      "Storage: clean off soil, dirt and insect waste first.",
+      "Relative humidity above 90% limits water loss.",
+      "Transport: handle carefully. Mechanical injuries promote disease."
+     ],
+     "ref": "p.39–40",
+     "id": "g12.agriculture.u2.s2-7.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The right temperature",
+     "paras": [
+      "The book says \"around freezing point\" for most fruits.",
+      "That is right for temperate fruits: apple, pear, grape near 0 °C.",
+      "Tropical fruits suffer chilling injury there.",
+      "Banana: about 13 °C. Mango: about 10–13 °C.",
+      "Use the lowest SAFE temperature for each fruit."
+     ],
+     "ref": "p.39–40",
+     "added": true,
+     "id": "g12.agriculture.u2.s2-7.11"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Pre-cooling",
+       "Cooling fruit to storage temperature immediately after harvest."
+      ],
+      [
+       "Sorting and grading",
+       "Separating fruit by size and quality level."
+      ],
+      [
+       "Chilling injury",
+       "Damage from long exposure to low, non-freezing temperatures; it affects tropical fruits."
+      ]
+     ],
+     "id": "g12.agriculture.u2.s2-7.12"
+    },
+    {
+     "kind": "mcq",
+     "text": "Pre-cooling means",
+     "opts": [
+      "cooling fruit to storage temperature immediately after harvest",
+      "cooling the orchard before flowering",
+      "freezing fruit solid",
+      "cooling the truck after delivery"
+     ],
+     "ans": "cooling fruit to storage temperature immediately after harvest",
+     "why": "p.39.",
+     "clue": "Pre = before storage.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.39",
+     "id": "g12.agriculture.u2.s2-7.13"
+    },
+    {
+     "kind": "order",
+     "title": "Put the postharvest steps in order",
+     "items": [
+      "Harvest at the right maturity",
+      "Pre-cool to storage temperature",
+      "Sort and grade by size and quality",
+      "Pack in materials that reduce moisture loss",
+      "Transport carefully to market"
+     ],
+     "why": "Pre-cooling comes immediately after harvest; fruit is graded before it is packed.",
+     "clue": "What must happen \"immediately after harvest\"?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.39–40",
+     "id": "g12.agriculture.u2.s2-7.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "The relative humidity during storage should be",
+     "opts": [
+      "above 90%",
+      "below 20%",
+      "exactly 50%",
+      "zero"
+     ],
+     "ans": "above 90%",
+     "why": "p.40: >90% to minimize water loss.",
+     "clue": "High humidity keeps fruit from drying.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.40",
+     "id": "g12.agriculture.u2.s2-7.15"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why should fruit be handled carefully during transport?",
+     "opts": [
+      "Mechanical injuries promote disease",
+      "Fruit grows during transport",
+      "Careful handling adds weight",
+      "It is required by law only"
+     ],
+     "ans": "Mechanical injuries promote disease",
+     "why": "p.40.",
+     "clue": "What enters through a bruise?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.40",
+     "id": "g12.agriculture.u2.s2-7.16"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Store near 0 °C or at about 10–13 °C?",
+     "bins": [
+      "Near 0 °C",
+      "About 10–13 °C"
+     ],
+     "items": [
+      [
+       "Apple",
+       "Near 0 °C",
+       "temperate"
+      ],
+      [
+       "Pear",
+       "Near 0 °C",
+       "temperate"
+      ],
+      [
+       "Grape",
+       "Near 0 °C",
+       ""
+      ],
+      [
+       "Banana",
+       "About 10–13 °C",
+       "tropical"
+      ],
+      [
+       "Mango",
+       "About 10–13 °C",
+       "tropical"
+      ]
+     ],
+     "why": "Temperate fruits keep near 0 °C; tropical fruits get chilling injury below about 10–13 °C.",
+     "clue": "Tropical fruits are hurt by cold.",
+     "added": true,
+     "graded": true,
+     "level": 2,
+     "id": "g12.agriculture.u2.s2-7.17"
+    },
+    {
+     "kind": "mcq",
+     "text": "A cold store keeps everything at 1 °C and 60% relative humidity. What will happen to mangoes stored there?",
+     "opts": [
+      "Chilling injury, and they lose water because the humidity is too low",
+      "They keep perfectly",
+      "They ripen faster and taste better",
+      "Only their seeds are affected"
+     ],
+     "ans": "Chilling injury, and they lose water because the humidity is too low",
+     "why": "Mango is tropical (chilling injury below about 10 °C), and RH should be above 90%.",
+     "clue": "Check both the temperature and the humidity.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.22, 40",
+     "added": true,
+     "id": "g12.agriculture.u2.s2-7.18"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Fruit to be stored for a long time should first be",
+   "opts": [
+    "pre-cooled to storage temperature",
+    "washed in hot water",
+    "left in the sun",
+    "frozen solid"
+   ],
+   "ans": "pre-cooled to storage temperature",
+   "why": "p.39.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.agriculture.u2.s2-7.19"
+  },
+  {
+   "kind": "mcq",
+   "text": "Packaging materials for fruit should",
+   "opts": [
+    "reduce moisture loss",
+    "let fruit dry out",
+    "be as heavy as possible",
+    "keep air humidity low"
+   ],
+   "ans": "reduce moisture loss",
+   "why": "p.39.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.agriculture.u2.s2-7.20"
+  },
+  {
+   "kind": "mcq",
+   "text": "Sorting and grading separate fruit by",
+   "opts": [
+    "size and quality",
+    "colour of the tree",
+    "the farmer's name",
+    "planting date"
+   ],
+   "ans": "size and quality",
+   "why": "p.39.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.agriculture.u2.s2-7.21"
+  },
+  {
+   "kind": "mcq",
+   "text": "Maturity at harvest mainly decides",
+   "opts": [
+    "compositional quality and storage life",
+    "the tree's height",
+    "the rootstock",
+    "the irrigation method"
+   ],
+   "ans": "compositional quality and storage life",
+   "why": "p.39.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.agriculture.u2.s2-7.22"
+  },
+  {
+   "kind": "mcq",
+   "text": "Why is \"store all fruit near 0 °C\" bad advice for bananas?",
+   "opts": [
+    "Bananas get chilling injury at low non-freezing temperatures",
+    "Bananas need to freeze",
+    "Bananas do not spoil",
+    "Bananas are temperate fruits"
+   ],
+   "ans": "Bananas get chilling injury at low non-freezing temperatures",
+   "why": "p.22, 40.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.agriculture.u2.s2-7.23"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.39: \"Nearly all fruits reach peak eating quality fully ripened on the tree\" — avocado does not ripen on the tree, and pears and bananas are better picked mature-green. The lesson says \"many fruits\"."
+  },
+  {
+   "kind": "review",
+   "text": "p.39–40: \"temperatures around freezing point\" suits temperate fruits only; tropical fruits get chilling injury below about 10–13 °C (banana ≈ 13 °C, mango ≈ 10–13 °C). Recommended RH is usually 85–95%; the book says >90%."
+  },
+  {
+   "kind": "note",
+   "text": "Added (marked): the storage-temperature screen and sort item, the avocado hook, and the mango transport challenge. Project 2.1 is in the review exercise of the last lesson."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

@@ -1,0 +1,1119 @@
+{
+ "id": "g12.economics.u1.s1-3",
+ "book": {
+  "title": "Economics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "economics",
+  "unit": 1,
+  "unit_title": "The fundamental concepts of macroeconomics",
+  "pages": "17–22",
+  "section": "1.3"
+ },
+ "title": "The schools of thought in macroeconomic analysis",
+ "competency": "Describe and compare the classical, neoclassical, Keynesian, monetarist, new classical and new Keynesian schools of thought.",
+ "minutes": 40,
+ "keywords": [
+  {
+   "en": "Classical economics",
+   "am": "ክላሲካል ኢኮኖሚክስ",
+   "def": "The view that flexible prices and wages quickly restore full employment, so policy should be \"hands off\".",
+   "machine": true
+  },
+  {
+   "en": "Crowding out",
+   "am": "የግል ኢንቨስትመንትን ማፈናቀል",
+   "def": "Higher government spending raises interest rates and reduces private investment.",
+   "machine": true
+  },
+  {
+   "en": "Laffer curve",
+   "am": "የላፈር ኩርባ",
+   "def": "A curve relating tax rates to total tax revenue; above some rate, a tax cut can raise revenue.",
+   "machine": true
+  },
+  {
+   "en": "Neoclassical economics",
+   "am": "ኒዮክላሲካል ኢኮኖሚክስ",
+   "def": "A \"new\" classical view: marginal utility and mathematics; in the long run the economy returns to potential GDP.",
+   "machine": true
+  },
+  {
+   "en": "Keynesian economics",
+   "am": "የኬንስ ኢኮኖሚክስ",
+   "def": "The view that aggregate demand can be too low and wages and prices are sticky, so active fiscal policy is needed.",
+   "machine": true
+  },
+  {
+   "en": "Say's law",
+   "am": "የሴይ ሕግ",
+   "def": "\"Supply creates its own demand.\"",
+   "machine": true
+  },
+  {
+   "en": "Sticky wages and prices",
+   "am": "ግትር ደመወዝና ዋጋ",
+   "def": "Wages and prices that do not respond quickly to changes in demand.",
+   "machine": true
+  },
+  {
+   "en": "Monetarism",
+   "am": "ሞኒተሪዝም",
+   "def": "Friedman's view that monetary, not fiscal, policy matters, best used as a steady rule.",
+   "machine": true
+  },
+  {
+   "en": "Constant growth rule",
+   "am": "ቋሚ የገንዘብ እድገት ደንብ",
+   "def": "Friedman's rule: let the money supply grow at a fixed rate every year.",
+   "machine": true
+  },
+  {
+   "en": "New classical economics",
+   "am": "አዲሱ ክላሲካል ኢኮኖሚክስ",
+   "def": "Modern classical view: flexible prices, rational expectations, efficient markets.",
+   "machine": true
+  },
+  {
+   "en": "Rational expectations",
+   "am": "ምክንያታዊ ግምት",
+   "def": "People use all available information to forecast the future, so they are not systematically fooled.",
+   "machine": true
+  },
+  {
+   "en": "Policy ineffectiveness proposition",
+   "am": "የፖሊሲ ውጤት አልባነት ሀሳብ",
+   "def": "The new classical claim that policy makers cannot or should not use countercyclical policy.",
+   "machine": true
+  },
+  {
+   "en": "New Keynesian economics",
+   "am": "አዲሱ ኬንሲያን ኢኮኖሚክስ",
+   "def": "Modern Keynesian view: rational expectations plus nominal rigidities, so stabilisation policy works.",
+   "machine": true
+  },
+  {
+   "en": "Nominal rigidities",
+   "am": "የስመ ዋጋ ግትርነት",
+   "def": "Slow adjustment of money wages and prices, e.g. from multi-period wage contracts.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "eco.classical",
+   "name": "Classical, supply-side and neoclassical views",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "The classical view, from Adam Smith to Irving Fisher, dominated until the Great Depression: with flexible prices the economy returns quickly to full employment, so policy should be \"hands off\"; fiscal expansion only crowds out private investment and monetary expansion only raises prices. Supply-siders such as Arthur Laffer stress the harm of taxes; the Laffer curve shows that cutting tax rates can sometimes raise revenue. Neoclassical economics (Walras, Marshall, Pareto) adds marginal utility and mathematics and holds that, in the long run, flexible wages and prices return the economy to potential GDP."
+    },
+    "am": {
+     "text": "ክላሲካል ኢኮኖሚስቶች ዋጋ ተለዋዋጭ ስለሆነ ኢኮኖሚው ራሱን ያስተካክላል ይላሉ፤ መንግሥት ጣልቃ መግባት የለበትም። ኒዮክላሲካሎች በረጅም ጊዜ ኢኮኖሚው ወደ እምቅ ምርቱ ይመለሳል ይላሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Leave it alone?",
+     "ask": "An economy falls into recession and unsold goods pile up. If the government does nothing, what happens, according to classical economists?",
+     "opts": [
+      "Prices fall, the surplus clears, and full employment returns",
+      "The recession lasts forever",
+      "Prices rise sharply",
+      "Unemployment rises every year"
+     ],
+     "after": "Classical economists trusted flexible prices to restore full employment quickly. So: \"hands off\".",
+     "ref": "p.18",
+     "id": "g12.economics.u1.s1-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The classical school",
+     "paras": [
+      "The predominant philosophy until the Great Depression.",
+      "Adam Smith, David Hume, David Ricardo, J. B. Say, J. S. Mill, Knut Wicksell, Irving Fisher.",
+      "With flexible prices, fluctuations are short; the economy returns to full employment.",
+      "Policy: \"hands off\"; no active fiscal or monetary policy.",
+      "Fiscal expansion raises the interest rate and fully crowds out private investment.",
+      "Monetary expansion only raises the price level.",
+      "Real and monetary sectors can be studied separately."
+     ],
+     "ref": "p.18",
+     "id": "g12.economics.u1.s1-3.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Supply-siders and the Laffer curve",
+     "paras": [
+      "Arthur Laffer and Robert Mundell.",
+      "They oppose government intervention and stress the distorting effects of taxes.",
+      "Advice: cut tax rates to stimulate the economy.",
+      "They claim the tax cut pays for itself.",
+      "The Laffer curve links tax rates to total tax revenue.",
+      "Cutting tax rates can sometimes raise total revenue."
+     ],
+     "ref": "p.18–19",
+     "id": "g12.economics.u1.s1-3.3"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "The Laffer curve",
+     "ask": "The tax base shrinks as the rate rises: base = 1,000 × (1 − rate). Move the tax rate. Where is revenue largest?",
+     "vars": [
+      {
+       "k": "t",
+       "label": "Tax rate (%)",
+       "min": 0,
+       "max": 100,
+       "step": 5,
+       "v": 80
+      }
+     ],
+     "formula": "t / 100 * 1000 * (1 - t / 100)",
+     "out": "Tax revenue: {v} million Birr",
+     "note": "Revenue is 0 at a 0 % rate and at 100 %. A tax cut raises revenue only above the peak (here 50 %).",
+     "id": "g12.economics.u1.s1-3.4"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Neoclassical economics",
+     "paras": [
+      "Late 19th and early 20th century, Europe.",
+      "Léon Walras, Alfred Marshall, Vilfredo Pareto.",
+      "Uses marginal utility and mathematics; questions strict laissez faire.",
+      "Block 1: potential GDP determines the size of the economy.",
+      "Block 2: wages and prices adjust flexibly, so the economy returns to potential GDP.",
+      "Policy: focus on long-term growth and controlling inflation.",
+      "Neoclassical suits the long run; Keynesian suits the short run."
+     ],
+     "ref": "p.19",
+     "id": "g12.economics.u1.s1-3.5"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Classical economics",
+       "The view that flexible prices and wages quickly restore full employment, so policy should be \"hands off\"."
+      ],
+      [
+       "Crowding out",
+       "Higher government spending raises interest rates and reduces private investment."
+      ],
+      [
+       "Laffer curve",
+       "A curve relating tax rates to total tax revenue; above some rate, a tax cut can raise revenue."
+      ],
+      [
+       "Neoclassical economics",
+       "A \"new\" classical view: marginal utility and mathematics; in the long run the economy returns to potential GDP."
+      ]
+     ],
+     "id": "g12.economics.u1.s1-3.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "Classical economists believed that, in a recession, the economy",
+     "opts": [
+      "returns to full employment by itself as prices fall",
+      "needs active fiscal policy",
+      "needs a constant money-growth rule",
+      "can never recover"
+     ],
+     "ans": "returns to full employment by itself as prices fall",
+     "why": "p.18: falling prices remove the surplus of goods.",
+     "clue": "They trusted flexible prices.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.18",
+     "id": "g12.economics.u1.s1-3.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "In classical thinking, expansionary monetary policy",
+     "opts": [
+      "only raises the price level",
+      "raises real output a lot",
+      "lowers prices",
+      "creates full employment"
+     ],
+     "ans": "only raises the price level",
+     "why": "p.18: money has no effect on the real economy; it only raises prices.",
+     "clue": "Money affects only the \"monetary sphere\".",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.18",
+     "id": "g12.economics.u1.s1-3.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "Supply-siders advise governments to",
+     "opts": [
+      "cut tax rates",
+      "raise tax rates",
+      "print money",
+      "raise government spending"
+     ],
+     "ans": "cut tax rates",
+     "why": "p.18.",
+     "clue": "They dislike taxes.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.18",
+     "id": "g12.economics.u1.s1-3.9"
+    },
+    {
+     "kind": "blank",
+     "ask": "Laffer example: revenue = rate × 1,000 × (1 − rate). At a rate of 0.8 (80 %), revenue = ___",
+     "a": [
+      "160"
+     ],
+     "why": "0.8 × 1,000 × (1 − 0.8) = 0.8 × 200 = 160.",
+     "clue": "First find the base: 1,000 × 0.2.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.economics.u1.s1-3.10"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is a building block of neoclassical economics?",
+     "opts": [
+      "Wages and prices adjust flexibly back to potential GDP",
+      "Aggregate demand is never enough",
+      "Money growth must be constant",
+      "Wages are sticky forever"
+     ],
+     "ans": "Wages and prices adjust flexibly back to potential GDP",
+     "why": "p.19: potential GDP sets the size of the economy; flexible wages and prices bring it back.",
+     "clue": "Neoclassical keeps classical flexibility.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.19",
+     "id": "g12.economics.u1.s1-3.11"
+    },
+    {
+     "kind": "mcq",
+     "text": "On the Laffer curve above, revenue peaks at a 50 % rate. A country's tax rate is 30 %. What happens to revenue if it cuts the rate to 20 %?",
+     "opts": [
+      "Revenue falls",
+      "Revenue rises",
+      "Revenue stays the same",
+      "Revenue becomes zero"
+     ],
+     "ans": "Revenue falls",
+     "why": "Below the peak a cut lowers revenue: 0.3 × 700 = 210 but 0.2 × 800 = 160. A cut raises revenue only above the peak.",
+     "clue": "Which side of the peak is 30 %?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.economics.u1.s1-3.12"
+    }
+   ]
+  },
+  {
+   "id": "eco.keynesian",
+   "name": "Keynesian economics",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "The Great Depression of the early 1930s showed that markets did not correct themselves and contradicted Say's law, \"supply creates its own demand\". John Maynard Keynes argued that real GDP depends on aggregate demand, which is unstable; recessions happen because demand can be too low for full employment and because wages and prices are sticky. Keynesians see monetary policy as weak in a depression and prescribe active fiscal policy — more government spending — to raise demand, employment and output."
+    },
+    "am": {
+     "text": "የኬንስ ኢኮኖሚክስ፡ አጠቃላይ ፍላጎት ዝቅተኛ ሲሆንና ደመወዝና ዋጋ ግትር ሲሆኑ ድቀት ይከሰታል፤ መፍትሔው የመንግሥት ወጪ መጨመር ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "The Great Depression",
+     "ask": "In the 1930s factories could produce, but could not sell their goods, and unemployment stayed high for years. Which idea does this challenge?",
+     "opts": [
+      "That markets always correct themselves quickly",
+      "That wars cause inflation",
+      "That GDP counts final goods",
+      "That trade brings gains"
+     ],
+     "after": "The Great Depression contradicted the classical view and Say's law.",
+     "ref": "p.19",
+     "id": "g12.economics.u1.s1-3.13"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Keynesian economics",
+     "paras": [
+      "The Great Depression of the early 1930s changed classical thinking.",
+      "The market did not correct itself.",
+      "Say's law, \"supply creates its own demand\", failed: capacity existed, but goods did not sell.",
+      "John Maynard Keynes (1883–1946): firms produce only what they expect to sell.",
+      "Real GDP depends on aggregate demand, which is unstable."
+     ],
+     "ref": "p.19–20",
+     "id": "g12.economics.u1.s1-3.14"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Two building blocks and the policy",
+     "paras": [
+      "1. Aggregate demand may be too low to give full employment.",
+      "2. Wages and prices are sticky, so the economy adjusts slowly.",
+      "Example: a stock-market crash (1929) or housing collapse (2008) cuts wealth, consumption and investment.",
+      "Monetary policy helps little: extra money is absorbed; interest rates barely change.",
+      "Fiscal policy works: more government spending raises demand, employment and output."
+     ],
+     "ref": "p.20",
+     "id": "g12.economics.u1.s1-3.15"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Keynesian economics",
+       "The view that aggregate demand can be too low and wages and prices are sticky, so active fiscal policy is needed."
+      ],
+      [
+       "Say's law",
+       "\"Supply creates its own demand.\""
+      ],
+      [
+       "Sticky wages and prices",
+       "Wages and prices that do not respond quickly to changes in demand."
+      ]
+     ],
+     "id": "g12.economics.u1.s1-3.16"
+    },
+    {
+     "kind": "mcq",
+     "text": "Keynesian economics prescribes",
+     "opts": [
+      "active fiscal policy to raise weak aggregate demand",
+      "a hands-off approach",
+      "a constant money-growth rule",
+      "tax cuts that pay for themselves"
+     ],
+     "ans": "active fiscal policy to raise weak aggregate demand",
+     "why": "p.20.",
+     "clue": "Keynes focused on demand and government spending.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.20",
+     "id": "g12.economics.u1.s1-3.17"
+    },
+    {
+     "kind": "tf",
+     "text": "Say's law states that \"supply creates its own demand\".",
+     "a": true,
+     "why": "p.19. The Great Depression contradicted it.",
+     "clue": "It is quoted on p.19.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.19",
+     "id": "g12.economics.u1.s1-3.18"
+    },
+    {
+     "kind": "mcq",
+     "text": "In the Keynesian view, recessions can last because",
+     "opts": [
+      "wages and prices are sticky",
+      "prices fall too fast",
+      "money has no effect",
+      "markets are always efficient"
+     ],
+     "ans": "wages and prices are sticky",
+     "why": "p.20: sticky wages and prices slow the adjustment to lower demand.",
+     "clue": "Building block 2.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.20",
+     "id": "g12.economics.u1.s1-3.19"
+    },
+    {
+     "kind": "order",
+     "title": "Order the Keynesian chain after a stock-market crash",
+     "items": [
+      "Household wealth falls",
+      "Consumption falls",
+      "Firms expect less profit and cut investment",
+      "Aggregate demand and employment fall"
+     ],
+     "why": "p.20: wealth → consumption → expected profit and investment → demand and jobs.",
+     "clue": "Start with households.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.20",
+     "id": "g12.economics.u1.s1-3.20"
+    },
+    {
+     "kind": "mcq",
+     "text": "According to Keynes, why does monetary policy help little in a depression?",
+     "opts": [
+      "Extra money is absorbed with little effect on the interest rate",
+      "It always causes hyperinflation",
+      "Central banks cannot print money",
+      "It raises taxes"
+     ],
+     "ans": "Extra money is absorbed with little effect on the interest rate",
+     "why": "p.20.",
+     "clue": "What must change for money to raise investment?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.20",
+     "id": "g12.economics.u1.s1-3.21"
+    },
+    {
+     "kind": "mcq",
+     "text": "Ethiopia's exports fall and firms lay off workers. Which policy would a Keynesian recommend first?",
+     "opts": [
+      "Raise government spending, e.g. on roads",
+      "Do nothing and wait for prices to fall",
+      "Fix money growth at 4 % a year",
+      "Cut government spending"
+     ],
+     "ans": "Raise government spending, e.g. on roads",
+     "why": "Falling demand is the problem; Keynesians use fiscal policy to replace the lost demand.",
+     "clue": "Which school favours fiscal policy?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.economics.u1.s1-3.22"
+    }
+   ]
+  },
+  {
+   "id": "eco.monetarist",
+   "name": "Monetarism",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Milton Friedman and the monetarists argued that monetary policy, not fiscal policy, addresses macroeconomic problems. Because investment is very sensitive to interest rates, fiscal policy strongly crowds out private investment and cannot change output or employment. Monetary policy has real effects, but long and variable lags make its timing risky and can worsen the business cycle, so Friedman proposed a constant growth rule for the money supply."
+    },
+    "am": {
+     "text": "ሚልተን ፍሪድማን፡ የገንዘብ ፖሊሲ እንጂ የፊስካል ፖሊሲ አይደለም ጠቃሚው። በመዘግየት ምክንያት የገንዘብ አቅርቦት በቋሚ መጠን ማደግ አለበት።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Steering with a delay",
+     "ask": "You steer a car whose wheels respond 10 seconds late. What is the safest way to drive?",
+     "opts": [
+      "Steer gently and steadily, without sudden turns",
+      "Turn sharply whenever you drift",
+      "Steer harder the later it responds",
+      "Stop steering"
+     ],
+     "after": "Friedman argued that policy works with long and variable lags, so a steady rule beats sudden moves.",
+     "added": true,
+     "id": "g12.economics.u1.s1-3.23"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Monetarism",
+     "paras": [
+      "Milton Friedman (1912–2006) and colleagues.",
+      "Monetary policy, not fiscal policy, addresses macroeconomic problems.",
+      "Investment is very sensitive to interest rates.",
+      "So fiscal policy strongly crowds out private investment; output and employment do not change.",
+      "Monetary policy has real effects, but timing it is hard.",
+      "Long and variable lags: problems are recognised late, and policy acts late.",
+      "Late policy can make business-cycle fluctuations worse."
+     ],
+     "ref": "p.20–21",
+     "id": "g12.economics.u1.s1-3.24"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Friedman's constant growth rule",
+     "text": "The 4 % example is added.",
+     "steps": [
+      "The central bank fixes money growth, e.g. 4 % a year.",
+      "Year 0: 100.",
+      "Year 1: 100 × 1.04 = 104.",
+      "Year 2: 104 × 1.04 = 108.16.",
+      "It keeps the same rate in booms and recessions."
+     ],
+     "added": true,
+     "id": "g12.economics.u1.s1-3.25"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Monetarism",
+       "Friedman's view that monetary, not fiscal, policy matters, best used as a steady rule."
+      ],
+      [
+       "Constant growth rule",
+       "Friedman's rule: let the money supply grow at a fixed rate every year."
+      ]
+     ],
+     "id": "g12.economics.u1.s1-3.26"
+    },
+    {
+     "kind": "mcq",
+     "text": "Monetarists argued that macroeconomic problems are addressed by",
+     "opts": [
+      "monetary policy",
+      "fiscal policy",
+      "tax cuts only",
+      "doing nothing at all"
+     ],
+     "ans": "monetary policy",
+     "why": "p.20.",
+     "clue": "The name gives a hint.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.20",
+     "id": "g12.economics.u1.s1-3.27"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why did monetarists think fiscal policy fails?",
+     "opts": [
+      "It crowds out private investment, which is very interest-sensitive",
+      "It always lowers prices",
+      "It is too small",
+      "It raises exports"
+     ],
+     "ans": "It crowds out private investment, which is very interest-sensitive",
+     "why": "p.20.",
+     "clue": "What happens to interest rates when the government borrows more?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.20",
+     "id": "g12.economics.u1.s1-3.28"
+    },
+    {
+     "kind": "mcq",
+     "text": "Friedman suggested the central bank should",
+     "opts": [
+      "follow a constant growth rule for money",
+      "change money growth every month",
+      "stop creating money",
+      "set tax rates"
+     ],
+     "ans": "follow a constant growth rule for money",
+     "why": "p.21.",
+     "clue": "Steady, not tinkering.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.21",
+     "id": "g12.economics.u1.s1-3.29"
+    },
+    {
+     "kind": "blank",
+     "ask": "A money supply of 200 bn Birr grows by a constant 5 % a year. After 2 years it is ___ bn Birr",
+     "a": [
+      "220.5"
+     ],
+     "why": "200 × 1.05 = 210; 210 × 1.05 = 220.5 bn Birr.",
+     "clue": "Multiply by 1.05 twice.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.economics.u1.s1-3.30"
+    },
+    {
+     "kind": "match",
+     "title": "Match the school to its preferred approach",
+     "pairs": [
+      [
+       "Keynesian",
+       "active fiscal policy"
+      ],
+      [
+       "Monetarist",
+       "steady monetary rule"
+      ],
+      [
+       "Classical",
+       "hands off: no active policy"
+      ],
+      [
+       "Supply-siders",
+       "cut tax rates"
+      ]
+     ],
+     "why": "p.18–21.",
+     "clue": "Recall each school's policy advice.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.18–21",
+     "id": "g12.economics.u1.s1-3.31"
+    },
+    {
+     "kind": "mcq",
+     "text": "A central bank cuts interest rates in a recession, but the effect arrives 18 months later, during a boom. What do monetarists say happens?",
+     "opts": [
+      "The policy adds to the boom and worsens fluctuations",
+      "It ends the recession on time",
+      "It has no effect at all",
+      "It causes deflation"
+     ],
+     "ans": "The policy adds to the boom and worsens fluctuations",
+     "why": "p.21: \"When the policy is set too late, monetary policy can heighten business cycle fluctuations.\"",
+     "clue": "When does the push arrive?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.21",
+     "added": true,
+     "id": "g12.economics.u1.s1-3.32"
+    }
+   ]
+  },
+  {
+   "id": "eco.new-schools",
+   "name": "New classical and new Keynesian economics",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "New classical economists (Lucas, Sargent, Barro, Prescott) are modern classicals: they use mathematics and assume flexible prices and wages, rational expectations and efficient markets, so fluctuations are rational responses to incentives; their policy ineffectiveness proposition says policy makers cannot or should not use countercyclical policy. New Keynesians (Akerlof, Phelps, Taylor, Fischer, Blanchard, Mankiw), writing in the 1970s and 1980s, accept rational expectations but stress nominal rigidities from multi-period wage contracts, so stabilisation policy can work; recent work stresses imperfect competition, coordination failures and credit limits."
+    },
+    "am": {
+     "text": "አዲሱ ክላሲካል፡ ምክንያታዊ ግምትና ተለዋዋጭ ዋጋ፤ ፖሊሲ ውጤት የለውም። አዲሱ ኬንሲያን፡ ምክንያታዊ ግምትን ይቀበላሉ ግን የዋጋ ግትርነት ስላለ ፖሊሲ ይሠራል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Can people be fooled?",
+     "ask": "The government announces it will print much more money next month. People expect higher prices and raise their wages and prices now. What happens to output?",
+     "opts": [
+      "Little or nothing: mainly prices rise",
+      "Output doubles",
+      "Unemployment disappears",
+      "Prices fall"
+     ],
+     "after": "If people expect the policy and adjust at once, it may change only prices. This is the new classical idea behind the \"policy ineffectiveness proposition\".",
+     "added": true,
+     "id": "g12.economics.u1.s1-3.33"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "New classical economics",
+     "paras": [
+      "The natural successors of the classical economists.",
+      "Robert Lucas, Thomas Sargent, Robert Barro, Edward Prescott.",
+      "They stress mathematical techniques.",
+      "Flexible prices and wages, rational expectations, efficient markets, full employment.",
+      "Fluctuations are rational responses to incentives, not nominal rigidities.",
+      "Policy ineffectiveness proposition: policy makers cannot or should not use countercyclical policy."
+     ],
+     "ref": "p.21",
+     "id": "g12.economics.u1.s1-3.34"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "New Keynesian economics",
+     "paras": [
+      "The natural successors of the Keynesians, writing in the 1970s and 1980s.",
+      "George Akerlof, Edmund Phelps, John B. Taylor, Stanley Fischer, Olivier Blanchard, Gregory Mankiw.",
+      "Markets may not be as perfect as classical economists suggest.",
+      "They accept rational expectations, but stress nominal rigidities from multi-period wage contracts.",
+      "So the policy ineffectiveness proposition fails; policy can stabilise the economy.",
+      "Recent work is more micro-based: imperfect competition, coordination failures, credit restrictions."
+     ],
+     "ref": "p.21–22",
+     "id": "g12.economics.u1.s1-3.35"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The schools side by side",
+     "paras": [
+      "Two questions divide them: are wages and prices flexible? Can policy change real output?"
+     ],
+     "table": [
+      [
+       "School",
+       "Wages and prices",
+       "Policy view"
+      ],
+      [
+       "Classical",
+       "flexible",
+       "hands off"
+      ],
+      [
+       "Neoclassical",
+       "flexible (long run)",
+       "focus on growth and inflation"
+      ],
+      [
+       "Keynesian",
+       "sticky",
+       "active fiscal policy"
+      ],
+      [
+       "Monetarist",
+       "—",
+       "money matters; constant growth rule"
+      ],
+      [
+       "New classical",
+       "flexible; rational expectations",
+       "policy ineffective"
+      ],
+      [
+       "New Keynesian",
+       "sticky (nominal rigidities); rational expectations",
+       "stabilisation works"
+      ]
+     ],
+     "ref": "Activity 1.3",
+     "id": "g12.economics.u1.s1-3.36"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "New classical economics",
+       "Modern classical view: flexible prices, rational expectations, efficient markets."
+      ],
+      [
+       "Rational expectations",
+       "People use all available information to forecast the future, so they are not systematically fooled."
+      ],
+      [
+       "Policy ineffectiveness proposition",
+       "The new classical claim that policy makers cannot or should not use countercyclical policy."
+      ],
+      [
+       "New Keynesian economics",
+       "Modern Keynesian view: rational expectations plus nominal rigidities, so stabilisation policy works."
+      ],
+      [
+       "Nominal rigidities",
+       "Slow adjustment of money wages and prices, e.g. from multi-period wage contracts."
+      ]
+     ],
+     "id": "g12.economics.u1.s1-3.37"
+    },
+    {
+     "kind": "mcq",
+     "text": "The \"policy ineffectiveness proposition\" comes from the",
+     "opts": [
+      "new classical economists",
+      "new Keynesians",
+      "Keynesians",
+      "monetarists"
+     ],
+     "ans": "new classical economists",
+     "why": "p.21.",
+     "clue": "Which school trusts flexible markets most?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.21",
+     "id": "g12.economics.u1.s1-3.38"
+    },
+    {
+     "kind": "match",
+     "title": "Match the economist to the school",
+     "pairs": [
+      [
+       "Adam Smith",
+       "Classical"
+      ],
+      [
+       "Alfred Marshall",
+       "Neoclassical"
+      ],
+      [
+       "John Maynard Keynes",
+       "Keynesian"
+      ],
+      [
+       "Milton Friedman",
+       "Monetarist"
+      ],
+      [
+       "Robert Lucas",
+       "New classical"
+      ],
+      [
+       "Gregory Mankiw",
+       "New Keynesian"
+      ]
+     ],
+     "why": "p.18–21.",
+     "clue": "Two are \"new\" schools from the 1970s on.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.18–21",
+     "id": "g12.economics.u1.s1-3.39"
+    },
+    {
+     "kind": "match",
+     "title": "Match the school to its key idea",
+     "pairs": [
+      [
+       "Classical",
+       "flexible prices restore full employment; hands off"
+      ],
+      [
+       "Keynesian",
+       "demand can be too low; sticky prices; fiscal policy"
+      ],
+      [
+       "Monetarist",
+       "money matters; constant growth rule"
+      ],
+      [
+       "New classical",
+       "rational expectations; policy is ineffective"
+      ],
+      [
+       "New Keynesian",
+       "rational expectations plus nominal rigidities; policy works"
+      ]
+     ],
+     "why": "Activity 1.3.",
+     "clue": "Look for flexible versus sticky, and which policy.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 1.3",
+     "id": "g12.economics.u1.s1-3.40"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Flexible or sticky prices?",
+     "bins": [
+      "Flexible prices",
+      "Sticky prices"
+     ],
+     "items": [
+      [
+       "Classical",
+       "Flexible prices",
+       "self-correcting"
+      ],
+      [
+       "Neoclassical",
+       "Flexible prices",
+       "back to potential GDP"
+      ],
+      [
+       "New classical",
+       "Flexible prices",
+       "rational agents"
+      ],
+      [
+       "Keynesian",
+       "Sticky prices",
+       "slow adjustment"
+      ],
+      [
+       "New Keynesian",
+       "Sticky prices",
+       "nominal rigidities"
+      ]
+     ],
+     "why": "Classical-family schools assume flexible prices; Keynesian-family schools assume sticky ones.",
+     "clue": "Is the school \"classical\" or \"Keynesian\" in its name?",
+     "ref": "p.18–22",
+     "graded": true,
+     "level": 2,
+     "id": "g12.economics.u1.s1-3.41"
+    },
+    {
+     "kind": "mcq",
+     "text": "New Keynesians reject the policy ineffectiveness proposition because of",
+     "opts": [
+      "nominal rigidities from multi-period wage contracts",
+      "flexible prices",
+      "perfect foresight",
+      "Say's law"
+     ],
+     "ans": "nominal rigidities from multi-period wage contracts",
+     "why": "p.21.",
+     "clue": "What stops wages adjusting at once?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.21",
+     "id": "g12.economics.u1.s1-3.42"
+    },
+    {
+     "kind": "mcq",
+     "text": "Both new classicals and new Keynesians accept rational expectations. What divides them?",
+     "opts": [
+      "Whether wages and prices are sticky in the short run",
+      "Whether people are rational",
+      "Whether GDP should be measured",
+      "Whether money exists"
+     ],
+     "ans": "Whether wages and prices are sticky in the short run",
+     "why": "New Keynesians add nominal rigidities, so policy can still affect output; new classicals assume flexible prices.",
+     "clue": "They agree on expectations; find the other assumption.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.21",
+     "added": true,
+     "id": "g12.economics.u1.s1-3.43"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "The classical view dominated economic thinking until",
+   "opts": [
+    "the Great Depression",
+    "the end of World War II",
+    "the 1970s",
+    "2008"
+   ],
+   "ans": "the Great Depression",
+   "why": "p.18.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.economics.u1.s1-3.44"
+  },
+  {
+   "kind": "mcq",
+   "text": "Monetarism is associated with",
+   "opts": [
+    "Milton Friedman",
+    "John Maynard Keynes",
+    "Arthur Laffer",
+    "Léon Walras"
+   ],
+   "ans": "Milton Friedman",
+   "why": "p.20.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.economics.u1.s1-3.45"
+  },
+  {
+   "kind": "mcq",
+   "text": "The Laffer curve relates",
+   "opts": [
+    "tax rates and tax revenue",
+    "inflation and unemployment",
+    "exports and imports",
+    "money and output"
+   ],
+   "ans": "tax rates and tax revenue",
+   "why": "p.18–19.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.economics.u1.s1-3.46"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which school is more useful for short-run analysis, according to the book?",
+   "opts": [
+    "Keynesian",
+    "Neoclassical",
+    "Classical",
+    "New classical"
+   ],
+   "ans": "Keynesian",
+   "why": "p.19.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.economics.u1.s1-3.47"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which statement fits the new Keynesians?",
+   "opts": [
+    "They accept rational expectations but stress nominal rigidities",
+    "They reject all government policy",
+    "They say Say's law always holds",
+    "They reject rational expectations completely"
+   ],
+   "ans": "They accept rational expectations but stress nominal rigidities",
+   "why": "p.21.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.economics.u1.s1-3.48"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.18: the classical paragraph says fiscal expansion \"would only cause inflation\", then that it fully crowds out investment \"without effecting changes in the price level\" (\"effecting\" → \"affecting\"). The lesson teaches: fiscal expansion → full crowding out; monetary expansion → only higher prices."
+  },
+  {
+   "kind": "review",
+   "text": "p.19: misplaced comma in the neoclassical building blocks. They are (1) potential GDP determines the size of the economy, and (2) wages and prices adjust flexibly."
+  },
+  {
+   "kind": "review",
+   "text": "p.21: life dates are out of date — Edward Prescott died in 2022 and Robert Lucas in 2023. Other \"(year –)\" dates should be checked; the lesson omits dates of living economists. \"So are the new Keynesians\" should read \"… the natural successors of the Keynesians\"."
+  },
+  {
+   "kind": "note",
+   "text": "The Laffer slider and calculation, the delayed-steering hook, the 4 % money-growth example and the schools comparison table (from Activity 1.3) are added."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

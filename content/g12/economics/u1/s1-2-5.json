@@ -1,0 +1,562 @@
+{
+ "id": "g12.economics.u1.s1-2-5",
+ "book": {
+  "title": "Economics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "economics",
+  "unit": 1,
+  "unit_title": "The fundamental concepts of macroeconomics",
+  "pages": "16–17",
+  "section": "1.2.5"
+ },
+ "title": "Balance of trade",
+ "competency": "Calculate the balance of trade, distinguish surplus and deficit, and describe the balance of payments.",
+ "minutes": 25,
+ "keywords": [
+  {
+   "en": "Balance of trade",
+   "am": "የንግድ ሚዛን",
+   "def": "The value of exports minus the value of imports of goods and services in a period.",
+   "machine": true
+  },
+  {
+   "en": "Trade deficit",
+   "am": "የንግድ ጉድለት",
+   "def": "Imports exceed exports (X − M < 0).",
+   "machine": true
+  },
+  {
+   "en": "Trade surplus",
+   "am": "የንግድ ትርፍ",
+   "def": "Exports exceed imports (X − M > 0).",
+   "machine": true
+  },
+  {
+   "en": "Balance of payments",
+   "am": "የክፍያ ሚዛን",
+   "def": "The systematic record of a nation's financial transactions with the outside world: current and capital accounts.",
+   "machine": true
+  },
+  {
+   "en": "Current account",
+   "am": "የወቅታዊ ሂሳብ",
+   "def": "Exports and imports of goods and services, investment income, debt-service payments, net remittances and transfers.",
+   "machine": true
+  },
+  {
+   "en": "Capital account",
+   "am": "የካፒታል ሂሳብ",
+   "def": "Private foreign investment and public grants and loans flowing into and out of a country.",
+   "machine": true
+  },
+  {
+   "en": "Debt service",
+   "am": "የዕዳ ክፍያ",
+   "def": "Interest payments plus repayments of principal on external debt.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "eco.trade-balance",
+   "name": "Balance of trade",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "The balance of trade is exports minus imports of goods and services over a period: a surplus if exports are larger, a deficit if imports are larger, balanced if equal. In 2020 Ethiopia had a trade deficit of about US$10.7 billion while China had a surplus of about US$535 billion. Some deficit is tolerable when it pays for capital equipment, but large deficits can trigger financial crises, as in Mexico (1995) and East Asia (1997–1998); trade still brings real gains."
+    },
+    "am": {
+     "text": "የንግድ ሚዛን = ወጪ ንግድ − ገቢ ንግድ። ኢትዮጵያ በ2020 ወደ 10.7 ቢሊዮን ዶላር የንግድ ጉድለት ነበራት፤ ቻይና ደግሞ ትርፍ ነበራት።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Ethiopia's trade",
+     "ask": "In 2020, did Ethiopia export more than it imported, or import more?",
+     "opts": [
+      "It imported more: a deficit of about US$10.7 billion",
+      "It exported more: a surplus",
+      "Exactly balanced",
+      "Ethiopia did not trade"
+     ],
+     "after": "Ethiopia ran a trade deficit of about US$10.7 billion in 2020. China had a surplus of about US$535 billion.",
+     "ref": "p.16",
+     "id": "g12.economics.u1.s1-2-5.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Balance of trade",
+     "paras": [
+      "Balance of trade = value of exports − value of imports, for a period.",
+      "Exports > imports: trade surplus.",
+      "Imports > exports: trade deficit.",
+      "Equal: balanced trade.",
+      "It is an important part of the balance of payments."
+     ],
+     "ref": "p.16",
+     "id": "g12.economics.u1.s1-2-5.2"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Ethiopia's 2020 deficit as X − M",
+     "steps": [
+      "Balance = X − M.",
+      "Say exports US$3.5 bn and imports US$14.2 bn (an illustrative split).",
+      "3.5 − 14.2 = −10.7 bn.",
+      "Negative: a deficit of US$10.7 bn."
+     ],
+     "added": true,
+     "id": "g12.economics.u1.s1-2-5.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Are deficits bad?",
+     "paras": [
+      "Many nations seek trade surpluses.",
+      "Some deficit is tolerable if it imports capital equipment that raises productivity and output.",
+      "Large deficits can trigger crises: foreign investors take their money out.",
+      "Real GDP can then fall 10 % or more in a single year.",
+      "Examples: Mexico 1995; Thailand, South Korea, Malaysia, Indonesia 1997–1998; Russia and Argentina around 2000.",
+      "Trade still brings gains: different endowments, economies of scale, variety of goods (Samuelson and Nordhaus, 1995)."
+     ],
+     "ref": "p.16–17",
+     "id": "g12.economics.u1.s1-2-5.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Balance of trade",
+       "The value of exports minus the value of imports of goods and services in a period."
+      ],
+      [
+       "Trade deficit",
+       "Imports exceed exports (X − M < 0)."
+      ],
+      [
+       "Trade surplus",
+       "Exports exceed imports (X − M > 0)."
+      ]
+     ],
+     "id": "g12.economics.u1.s1-2-5.5"
+    },
+    {
+     "kind": "blank",
+     "ask": "Exports = 40 bn Birr; imports = 55 bn Birr. Balance of trade = ___ bn Birr",
+     "a": [
+      "-15",
+      "−15"
+     ],
+     "why": "40 − 55 = −15: a deficit of 15 bn Birr.",
+     "clue": "Exports minus imports.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-5.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "When imports exceed exports, a country has",
+     "opts": [
+      "a trade deficit",
+      "a trade surplus",
+      "balanced trade",
+      "a budget surplus"
+     ],
+     "ans": "a trade deficit",
+     "why": "p.16.",
+     "clue": "More goes out in payment than comes in.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Activity 1.2 Q3",
+     "id": "g12.economics.u1.s1-2-5.7"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Surplus, deficit or balanced?",
+     "bins": [
+      "Surplus",
+      "Deficit",
+      "Balanced"
+     ],
+     "items": [
+      [
+       "X = 50, M = 30",
+       "Surplus",
+       "+20"
+      ],
+      [
+       "X = 20, M = 45",
+       "Deficit",
+       "−25"
+      ],
+      [
+       "X = 60, M = 60",
+       "Balanced",
+       "0"
+      ],
+      [
+       "China, 2020",
+       "Surplus",
+       "about US$535 bn"
+      ],
+      [
+       "Ethiopia, 2020",
+       "Deficit",
+       "about US$10.7 bn"
+      ]
+     ],
+     "why": "Compute X − M: positive is a surplus, negative a deficit, zero balanced.",
+     "clue": "Which is bigger, X or M?",
+     "ref": "p.16",
+     "graded": true,
+     "level": 1,
+     "id": "g12.economics.u1.s1-2-5.8"
+    },
+    {
+     "kind": "tf",
+     "text": "A trade deficit is always harmful, whatever is imported.",
+     "a": false,
+     "why": "p.16: a deficit is tolerable when it imports capital equipment that boosts productivity and output.",
+     "clue": "What if the imports are machines?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.16",
+     "id": "g12.economics.u1.s1-2-5.9"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which countries suffered the 1997–1998 \"Asian financial crisis\", according to the book?",
+     "opts": [
+      "Thailand, South Korea, Malaysia and Indonesia",
+      "China and Japan",
+      "Mexico and Argentina",
+      "India and Pakistan"
+     ],
+     "ans": "Thailand, South Korea, Malaysia and Indonesia",
+     "why": "p.17.",
+     "clue": "All four are in South-East or East Asia.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.17",
+     "id": "g12.economics.u1.s1-2-5.10"
+    },
+    {
+     "kind": "mcq",
+     "text": "Ethiopia imports machines for new factories, which widens its trade deficit. According to the book, this deficit is",
+     "opts": [
+      "tolerable if the machines raise productivity and output",
+      "always a crisis",
+      "a trade surplus",
+      "not part of the balance of payments"
+     ],
+     "ans": "tolerable if the machines raise productivity and output",
+     "why": "p.16: deficits that import capital equipment can boost future output and exports.",
+     "clue": "Think about what the machines will do later.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.16",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-5.11"
+    }
+   ]
+  },
+  {
+   "id": "eco.balance-of-payments",
+   "name": "Balance of payments",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "The balance of payments is the systematic record of a nation's financial transactions with the outside world. Its current account records exports and imports of goods and services, investment income, debt-service payments and net remittances and transfers; its capital account records private foreign investment and public grants and loans. Debt service is the interest plus repayments of principal on external debt. The balance of trade is only one part of the balance of payments."
+    },
+    "am": {
+     "text": "የክፍያ ሚዛን ሀገሪቱ ከውጭ ዓለም ጋር ያደረገችውን የገንዘብ ልውውጥ መዝገብ ነው፤ የወቅታዊ ሂሳብና የካፒታል ሂሳብ አለው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "More than goods",
+     "ask": "An Ethiopian working in Dubai sends money home to her family. Is this part of the balance of TRADE?",
+     "opts": [
+      "No: it is a remittance, recorded in the wider balance of payments",
+      "Yes: it is an export of goods",
+      "Yes: it is an import",
+      "It is not recorded anywhere"
+     ],
+     "after": "The balance of trade counts only exports and imports. Remittances belong to the current account of the balance of payments.",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-5.12"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Balance of payments",
+     "paras": [
+      "The systematic record of a nation's financial transactions with the outside world.",
+      "It has a current account and a capital account.",
+      "Current account: exports and imports of goods and services, investment income, debt-service payments, net remittances and transfers.",
+      "Capital account: private foreign investment and public grants and loans flowing in and out.",
+      "Debt service: interest plus repayments of principal on external debt (Todaro and Smith, 2015)."
+     ],
+     "ref": "p.16",
+     "id": "g12.economics.u1.s1-2-5.13"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Balance of payments",
+       "The systematic record of a nation's financial transactions with the outside world: current and capital accounts."
+      ],
+      [
+       "Current account",
+       "Exports and imports of goods and services, investment income, debt-service payments, net remittances and transfers."
+      ],
+      [
+       "Capital account",
+       "Private foreign investment and public grants and loans flowing into and out of a country."
+      ],
+      [
+       "Debt service",
+       "Interest payments plus repayments of principal on external debt."
+      ]
+     ],
+     "id": "g12.economics.u1.s1-2-5.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which statement is true?",
+     "opts": [
+      "The balance of trade is one part of the balance of payments",
+      "The balance of payments is one part of the balance of trade",
+      "They are the same thing",
+      "Neither includes exports"
+     ],
+     "ans": "The balance of trade is one part of the balance of payments",
+     "why": "p.16: the balance of trade is \"an important component of the balance of payment\".",
+     "clue": "Which is the bigger record?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.16",
+     "id": "g12.economics.u1.s1-2-5.15"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Current or capital account?",
+     "bins": [
+      "Current account",
+      "Capital account"
+     ],
+     "items": [
+      [
+       "Coffee exports",
+       "Current account",
+       "goods"
+      ],
+      [
+       "Imported fuel",
+       "Current account",
+       "goods"
+      ],
+      [
+       "Remittances from relatives abroad",
+       "Current account",
+       "transfers"
+      ],
+      [
+       "A foreign firm builds a factory",
+       "Capital account",
+       "private foreign investment"
+      ],
+      [
+       "A foreign loan to the government",
+       "Capital account",
+       "public loans"
+      ],
+      [
+       "A grant from a foreign government",
+       "Capital account",
+       "public grants (as the book lists them)"
+      ]
+     ],
+     "why": "Current: trade, income, remittances. Capital: investment, grants and loans.",
+     "clue": "Is it trade and income, or investment and loans?",
+     "ref": "p.16",
+     "graded": true,
+     "level": 2,
+     "id": "g12.economics.u1.s1-2-5.16"
+    },
+    {
+     "kind": "mcq",
+     "text": "Debt service is",
+     "opts": [
+      "interest plus repayment of principal on external debt",
+      "a tax on imports",
+      "a grant from abroad",
+      "the value of exports"
+     ],
+     "ans": "interest plus repayment of principal on external debt",
+     "why": "p.16.",
+     "clue": "Servicing a debt means paying it.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.16",
+     "id": "g12.economics.u1.s1-2-5.17"
+    },
+    {
+     "kind": "tf",
+     "text": "A country can run a trade deficit while capital inflows such as loans and investment pay for it.",
+     "a": true,
+     "why": "The capital account can finance a current-account (trade) deficit.",
+     "clue": "Look at both accounts.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-5.18"
+    },
+    {
+     "kind": "mcq",
+     "text": "Exports 30, imports 50, net remittances +12 (bn US$). Which is true?",
+     "opts": [
+      "Trade deficit of 20; remittances cover part of it in the current account",
+      "Trade surplus of 20",
+      "The trade balance is −8",
+      "Remittances are part of the trade balance"
+     ],
+     "ans": "Trade deficit of 20; remittances cover part of it in the current account",
+     "why": "Trade balance = 30 − 50 = −20. Remittances are not trade, but they are in the current account, offsetting 12 of the 20.",
+     "clue": "Compute X − M first; then place the remittances.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-5.19"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "If exports exceed imports, the economy has",
+   "opts": [
+    "a trade surplus",
+    "a trade deficit",
+    "balanced trade",
+    "a budget deficit"
+   ],
+   "ans": "a trade surplus",
+   "why": "p.16.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.economics.u1.s1-2-5.20"
+  },
+  {
+   "kind": "mcq",
+   "text": "The capital account records",
+   "opts": [
+    "foreign investment, grants and loans",
+    "only exports",
+    "only imports",
+    "the prices of goods"
+   ],
+   "ans": "foreign investment, grants and loans",
+   "why": "p.16.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.economics.u1.s1-2-5.21"
+  },
+  {
+   "kind": "blank",
+   "ask": "Exports 12, imports 20 (bn US$). Balance of trade = ___ bn US$",
+   "a": [
+    "-8",
+    "−8"
+   ],
+   "why": "12 − 20 = −8: a deficit.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.economics.u1.s1-2-5.22"
+  },
+  {
+   "kind": "mcq",
+   "text": "In 2020 China had",
+   "opts": [
+    "a trade surplus of about US$535 billion",
+    "a trade deficit of about US$10.7 billion",
+    "balanced trade",
+    "a trade deficit of about US$535 billion"
+   ],
+   "ans": "a trade surplus of about US$535 billion",
+   "why": "p.16.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.economics.u1.s1-2-5.23"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which is NOT recorded in the current account?",
+   "opts": [
+    "A foreign loan to the government",
+    "Exports of coffee",
+    "Investment income",
+    "Net remittances"
+   ],
+   "ans": "A foreign loan to the government",
+   "why": "Loans are in the capital account (p.16).",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.economics.u1.s1-2-5.24"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.17: official data put Mexico's 1995 real GDP fall at about 6 %, not 8.1 %. The lesson does not quote the 8.1 % figure; no item is built on it."
+  },
+  {
+   "kind": "note",
+   "text": "The export/import split behind Ethiopia's US$10.7 bn deficit is illustrative only. The remittance and BoP-financing items are added."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

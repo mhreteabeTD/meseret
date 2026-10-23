@@ -1,0 +1,628 @@
+{
+ "id": "g12.economics.u1.s1-2-3",
+ "book": {
+  "title": "Economics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "economics",
+  "unit": 1,
+  "unit_title": "The fundamental concepts of macroeconomics",
+  "pages": "12–14",
+  "section": "1.2.3"
+ },
+ "title": "Unemployment",
+ "competency": "Distinguish employed, unemployed and not in the labour force, calculate unemployment and participation rates, and explain the types of unemployment.",
+ "minutes": 30,
+ "keywords": [
+  {
+   "en": "Labour force",
+   "am": "የሰው ኃይል",
+   "def": "The number of people employed plus the number unemployed.",
+   "machine": true
+  },
+  {
+   "en": "Unemployment",
+   "am": "ሥራ አጥነት",
+   "def": "Being without a job while looking for one (or on temporary layoff).",
+   "machine": true
+  },
+  {
+   "en": "Unemployment rate",
+   "am": "የሥራ አጥነት መጠን",
+   "def": "(Number unemployed ÷ labour force) × 100.",
+   "machine": true
+  },
+  {
+   "en": "Labour-force participation rate",
+   "am": "የሰው ኃይል ተሳትፎ መጠን",
+   "def": "(Labour force ÷ adult population) × 100.",
+   "machine": true
+  },
+  {
+   "en": "Frictional unemployment",
+   "am": "የሽግግር ሥራ አጥነት",
+   "def": "Unemployment while workers search and are matched with jobs, e.g. new graduates.",
+   "machine": true
+  },
+  {
+   "en": "Cyclical unemployment",
+   "am": "ዑደታዊ ሥራ አጥነት",
+   "def": "Unemployment caused by too little aggregate demand in a recession or depression.",
+   "machine": true
+  },
+  {
+   "en": "Structural unemployment",
+   "am": "መዋቅራዊ ሥራ አጥነት",
+   "def": "Lasting unemployment from a mismatch between labour demand and supply: skills, location, technology, economic structure.",
+   "machine": true
+  },
+  {
+   "en": "Underemployment",
+   "am": "ከአቅም በታች መቀጠር",
+   "def": "Working in a job below one's training or purpose, or working full time but earning too little to escape poverty.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "eco.labour-force",
+   "name": "Labour force and the unemployment rate",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "A person is employed if they work at a paid job, unemployed if they have no job and are looking for one (or are on temporary layoff), and otherwise not in the labour force, like a full-time student or a retiree. The labour force is employed plus unemployed; the unemployment rate is unemployed ÷ labour force × 100; the participation rate is labour force ÷ adult population × 100. Unemployment wastes output, so keeping it low is a policy priority."
+    },
+    "am": {
+     "text": "የሰው ኃይል = ተቀጣሪዎች + ሥራ አጦች። የሥራ አጥነት መጠን = ሥራ አጦች ÷ የሰው ኃይል × 100። ተማሪዎችና ጡረተኞች በሰው ኃይሉ ውስጥ አይቆጠሩም።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Is she unemployed?",
+     "ask": "Hiwot is a full-time student at Addis Ababa University. She is not looking for a job. Is she unemployed?",
+     "opts": [
+      "No: she is not in the labour force",
+      "Yes: she has no job",
+      "Yes: all students are unemployed",
+      "Only during holidays"
+     ],
+     "after": "Unemployed means no job AND looking for one. Students and retirees who are not looking are outside the labour force.",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Employed, unemployed, or not in the labour force?",
+     "paras": [
+      "Employed: spends some time working at a paid job.",
+      "Unemployed: no job, and looking for one or on temporary layoff.",
+      "Not in the labour force: neither, e.g. a full-time student or a retiree.",
+      "The book gives Ethiopia's working age as 14 to 60; formal employment needs age 18.",
+      "It excludes children under 14, people over 60, and people in mental and correctional institutions."
+     ],
+     "ref": "p.12",
+     "id": "g12.economics.u1.s1-2-3.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Why unemployment matters",
+     "paras": [
+      "It affects people most directly and severely.",
+      "Unemployed workers are unused resources.",
+      "Its opportunity cost is the output they could have produced.",
+      "So low unemployment is a public policy priority."
+     ],
+     "ref": "p.12–13",
+     "id": "g12.economics.u1.s1-2-3.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Measuring it",
+     "paras": [
+      "Labour force = number employed + number unemployed.",
+      "Unemployment rate = (number unemployed ÷ labour force) × 100.",
+      "Labour-force participation rate = (labour force ÷ adult population) × 100.",
+      "The labour force is a number of people, not a percentage."
+     ],
+     "ref": "p.13",
+     "id": "g12.economics.u1.s1-2-3.4"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Worked example",
+     "steps": [
+      "Adult population 60 million; employed 40 million; unemployed 5 million.",
+      "Labour force = 40 + 5 = 45 million.",
+      "Unemployment rate = 5 ÷ 45 × 100 ≈ 11.1 %.",
+      "Participation rate = 45 ÷ 60 × 100 = 75 %.",
+      "Trap: 5 ÷ 60 is wrong; divide by the labour force."
+     ],
+     "added": true,
+     "id": "g12.economics.u1.s1-2-3.5"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Labour force",
+       "The number of people employed plus the number unemployed."
+      ],
+      [
+       "Unemployment",
+       "Being without a job while looking for one (or on temporary layoff)."
+      ],
+      [
+       "Unemployment rate",
+       "(Number unemployed ÷ labour force) × 100."
+      ],
+      [
+       "Labour-force participation rate",
+       "(Labour force ÷ adult population) × 100."
+      ]
+     ],
+     "id": "g12.economics.u1.s1-2-3.6"
+    },
+    {
+     "kind": "blank",
+     "ask": "Employed = 90 thousand; unemployed = 10 thousand. Unemployment rate = ___ %",
+     "a": [
+      "10",
+      "10%"
+     ],
+     "why": "Labour force = 90 + 10 = 100. Rate = 10 ÷ 100 × 100 = 10 %.",
+     "clue": "First find the labour force.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-3.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "Employed 38 million; unemployed 2 million. Labour force = ___ million",
+     "a": [
+      "40"
+     ],
+     "why": "38 + 2 = 40 million.",
+     "clue": "Add the two groups.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-3.8"
+    },
+    {
+     "kind": "blank",
+     "ask": "Labour force 40 million; adult population 50 million. Participation rate = ___ %",
+     "a": [
+      "80",
+      "80%"
+     ],
+     "why": "40 ÷ 50 × 100 = 80 %.",
+     "clue": "Labour force ÷ adult population × 100.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-3.9"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Where does each person belong?",
+     "bins": [
+      "Employed",
+      "Unemployed",
+      "Not in labour force"
+     ],
+     "items": [
+      [
+       "A teacher in Bahir Dar",
+       "Employed",
+       "paid job"
+      ],
+      [
+       "A graduate applying for jobs",
+       "Unemployed",
+       "no job, looking"
+      ],
+      [
+       "A retired farmer, aged 70",
+       "Not in labour force",
+       "retired"
+      ],
+      [
+       "A full-time student not seeking work",
+       "Not in labour force",
+       "studying"
+      ],
+      [
+       "A factory worker on temporary layoff",
+       "Unemployed",
+       "layoff counts as unemployed"
+      ],
+      [
+       "A part-time taxi driver",
+       "Employed",
+       "some paid work"
+      ]
+     ],
+     "why": "Employed: some paid work. Unemployed: no job but looking (or laid off). Others are outside the labour force.",
+     "clue": "Is the person looking for work?",
+     "ref": "p.12",
+     "added": true,
+     "graded": true,
+     "level": 2,
+     "id": "g12.economics.u1.s1-2-3.10"
+    },
+    {
+     "kind": "mcq",
+     "text": "Adult population 60 m; employed 40 m; unemployed 5 m. A student divides 5 by 60. Why is this wrong?",
+     "opts": [
+      "The rate divides by the labour force (45 m), not the population",
+      "It should divide by the employed only",
+      "It should be 60 ÷ 5",
+      "Nothing is wrong"
+     ],
+     "ans": "The rate divides by the labour force (45 m), not the population",
+     "why": "Correct: 5 ÷ 45 × 100 ≈ 11.1 %.",
+     "clue": "Who is in the labour force?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "id": "g12.economics.u1.s1-2-3.11"
+    },
+    {
+     "kind": "blank",
+     "ask": "Adult population 50 million; 30 million employed; 15 million not in the labour force. Unemployment rate = ___ % (1 decimal place)",
+     "a": [
+      "≈14.3"
+     ],
+     "why": "Labour force = 50 − 15 = 35. Unemployed = 35 − 30 = 5. Rate = 5 ÷ 35 × 100 ≈ 14.3 %.",
+     "clue": "Find the labour force, then the unemployed.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-3.12"
+    }
+   ]
+  },
+  {
+   "id": "eco.unemployment-types",
+   "name": "Types of unemployment",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Frictional unemployment comes from the time it takes to match job seekers with jobs, as for new graduates. Cyclical unemployment comes from too little aggregate demand in a depression, for example when overseas demand for coffee falls. Structural unemployment is a lasting mismatch between labour demand and supply — missing skills, immobility, a labour force growing faster than capital — and education and retraining reduce it. Underemployment means working below one's training or earning too little to escape poverty."
+    },
+    "am": {
+     "text": "የሥራ አጥነት ዓይነቶች፡ የሽግግር (ሥራ ፍለጋ)፣ ዑደታዊ (የፍላጎት እጥረት)፣ መዋቅራዊ (የክህሎት አለመመጣጠን)። ከአቅም በታች መቀጠርም አለ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Typists and computers",
+     "ask": "Offices replace typists with computers. Typists without computer skills cannot find work for years. Why are they jobless?",
+     "opts": [
+      "Their skills no longer match the jobs available",
+      "They are between two jobs for a week",
+      "The economy is in a short recession",
+      "They chose not to work"
+     ],
+     "after": "A lasting mismatch between skills and jobs is structural unemployment.",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-3.13"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Three major types",
+     "paras": [
+      "Frictional: workers moving between jobs; matching takes time.",
+      "Example: new graduates searching for a first job.",
+      "Cyclical: too little aggregate demand in a business depression (Dewett, 1997).",
+      "Example: overseas demand for coffee falls; in a recession workers are laid off.",
+      "Structural: a lasting mismatch between labour demand and supply.",
+      "Causes: missing skills, labour immobility, labour force growing faster than capital, machine breakdowns, raw-material shortages.",
+      "Education and retraining reduce structural unemployment."
+     ],
+     "note": "Not knowing where the jobs are is a search problem, so this lesson counts it as frictional.",
+     "ref": "p.13–14",
+     "id": "g12.economics.u1.s1-2-3.14"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Underemployment",
+     "paras": [
+      "A person takes a job below their training or purpose.",
+      "Or works full time but earns too little to rise above poverty.",
+      "Open and disguised unemployment: about 30–35 % of the labour force in underdeveloped countries."
+     ],
+     "ref": "p.14",
+     "id": "g12.economics.u1.s1-2-3.15"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Frictional unemployment",
+       "Unemployment while workers search and are matched with jobs, e.g. new graduates."
+      ],
+      [
+       "Cyclical unemployment",
+       "Unemployment caused by too little aggregate demand in a recession or depression."
+      ],
+      [
+       "Structural unemployment",
+       "Lasting unemployment from a mismatch between labour demand and supply: skills, location, technology, economic structure."
+      ],
+      [
+       "Underemployment",
+       "Working in a job below one's training or purpose, or working full time but earning too little to escape poverty."
+      ]
+     ],
+     "id": "g12.economics.u1.s1-2-3.16"
+    },
+    {
+     "kind": "mcq",
+     "text": "A new university graduate is searching for her first job. This is",
+     "opts": [
+      "frictional unemployment",
+      "cyclical unemployment",
+      "structural unemployment",
+      "underemployment"
+     ],
+     "ans": "frictional unemployment",
+     "why": "p.14: entering the workforce and searching for a first job.",
+     "clue": "Is it a short search?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.14",
+     "id": "g12.economics.u1.s1-2-3.17"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Which type?",
+     "bins": [
+      "Frictional",
+      "Cyclical",
+      "Structural",
+      "Underemployment"
+     ],
+     "items": [
+      [
+       "A worker quits to find a better job nearby",
+       "Frictional",
+       "short search"
+      ],
+      [
+       "Coffee exporters lay off workers as world demand falls",
+       "Cyclical",
+       "demand falls"
+      ],
+      [
+       "Typists replaced by computers",
+       "Structural",
+       "skills mismatch"
+      ],
+      [
+       "An engineer working as a taxi driver",
+       "Underemployment",
+       "below training"
+      ],
+      [
+       "Factories lay off workers in a recession",
+       "Cyclical",
+       "recession"
+      ],
+      [
+       "Workers lack the skills new factories need",
+       "Structural",
+       "skills"
+      ]
+     ],
+     "why": "Frictional: search. Cyclical: low demand. Structural: lasting mismatch. Underemployment: a job below one's training.",
+     "clue": "What is the CAUSE of the joblessness?",
+     "ref": "p.13–14",
+     "graded": true,
+     "level": 2,
+     "id": "g12.economics.u1.s1-2-3.18"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which policy best reduces structural unemployment?",
+     "opts": [
+      "Education and retraining",
+      "Waiting for the recession to end",
+      "Printing money",
+      "Cutting exports"
+     ],
+     "ans": "Education and retraining",
+     "why": "p.14: \"Education is the key in minimizing the amount of structural unemployment.\"",
+     "clue": "The problem is skills.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.14",
+     "id": "g12.economics.u1.s1-2-3.19"
+    },
+    {
+     "kind": "tf",
+     "text": "Cyclical unemployment rises when the economy is in recession.",
+     "a": true,
+     "why": "p.14: workers are laid off when demand falls in a recession.",
+     "clue": "Cyclical = linked to the business cycle.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.14",
+     "id": "g12.economics.u1.s1-2-3.20"
+    },
+    {
+     "kind": "mcq",
+     "text": "The opportunity cost of unemployment is",
+     "opts": [
+      "the output the unemployed workers could have produced",
+      "the wages paid to employed workers",
+      "the cost of printing money",
+      "zero"
+     ],
+     "ans": "the output the unemployed workers could have produced",
+     "why": "p.13.",
+     "clue": "What is lost when workers sit idle?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.13",
+     "id": "g12.economics.u1.s1-2-3.21"
+    },
+    {
+     "kind": "mcq",
+     "text": "A country's labour force grows faster than its stock of capital, so many new workers cannot find productive jobs for years. Which type is this?",
+     "opts": [
+      "Structural",
+      "Frictional",
+      "Cyclical",
+      "None: they are not in the labour force"
+     ],
+     "ans": "Structural",
+     "why": "p.14 lists a labour force growing faster than capital as a structural cause: the economy's structure cannot absorb them.",
+     "clue": "Is it short, demand-driven, or lasting?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.14",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-3.22"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "The labour force equals",
+   "opts": [
+    "employed + unemployed",
+    "employed only",
+    "the whole adult population",
+    "unemployed ÷ employed"
+   ],
+   "ans": "employed + unemployed",
+   "why": "p.13.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.economics.u1.s1-2-3.23"
+  },
+  {
+   "kind": "mcq",
+   "text": "Workers laid off because of a recession are",
+   "opts": [
+    "cyclically unemployed",
+    "frictionally unemployed",
+    "structurally unemployed",
+    "not in the labour force"
+   ],
+   "ans": "cyclically unemployed",
+   "why": "p.14.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.economics.u1.s1-2-3.24"
+  },
+  {
+   "kind": "blank",
+   "ask": "Unemployed 6 million; labour force 48 million. Unemployment rate = ___ %",
+   "a": [
+    "12.5",
+    "12.5%"
+   ],
+   "why": "6 ÷ 48 × 100 = 12.5 %.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.economics.u1.s1-2-3.25"
+  },
+  {
+   "kind": "mcq",
+   "text": "A retired person who is not looking for work is",
+   "opts": [
+    "not in the labour force",
+    "unemployed",
+    "employed",
+    "frictionally unemployed"
+   ],
+   "ans": "not in the labour force",
+   "why": "p.12.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.economics.u1.s1-2-3.26"
+  },
+  {
+   "kind": "blank",
+   "ask": "Adult population 80 m; labour force 60 m; employed 54 m. Unemployment rate = ___ %",
+   "a": [
+    "10",
+    "10%"
+   ],
+   "why": "Unemployed = 60 − 54 = 6. 6 ÷ 60 × 100 = 10 %.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.economics.u1.s1-2-3.27"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.12: the book gives working age as 14–60 and formal employment from 18. Ethiopia's Labour Proclamation No. 1156/2019 sets 15 as the minimum employment age, and statistics often use 15–64. The lesson keeps \"the book gives …\"; please check before teaching as fact."
+  },
+  {
+   "kind": "review",
+   "text": "p.13: \"the total labour force refers to the percentage of the population …\" — the labour force is a number of people; the percentage is the participation rate."
+  },
+  {
+   "kind": "review",
+   "text": "p.14: lack of knowledge about available jobs or workers is a search/matching problem (frictional), but the book lists it under structural. The lesson keeps frictional = short search, structural = lasting mismatch."
+  },
+  {
+   "kind": "note",
+   "text": "All numeric examples and the employed/unemployed sorting are added; the book has formulas but no worked numbers."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

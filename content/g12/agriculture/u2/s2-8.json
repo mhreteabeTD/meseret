@@ -1,0 +1,531 @@
+{
+ "id": "g12.agriculture.u2.s2-8",
+ "book": {
+  "title": "Agriculture Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "agriculture",
+  "unit": 2,
+  "unit_title": "Fruit crops production and management",
+  "pages": "40–41",
+  "section": "2.8"
+ },
+ "title": "Floriculture and landscaping",
+ "competency": "Explain the concept of floriculture and its opportunities and importance in Ethiopia.",
+ "minutes": 15,
+ "keywords": [
+  {
+   "en": "Floriculture",
+   "am": "የአበባ ልማት",
+   "def": "The branch of horticulture that grows flowering and decorative plants and includes landscape gardening; ornamental horticulture.",
+   "machine": true
+  },
+  {
+   "en": "Ornamental plant",
+   "am": "የጌጥ ተክል",
+   "def": "A plant, or plant part, that is decorative, showy and attractive, used for beauty and function.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "agri.floriculture",
+   "name": "Floriculture and ornamental plants",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Floriculture, also called ornamental horticulture, is the branch of horticulture that grows flowering plants, decorative foliage plants, cacti, orchids, succulents, bonsai, ferns and container plants, and includes landscape gardening. Ornamental plants, or their parts, are decorative, showy and attractive and are used for both beauty and function; they may be flowering or non-flowering."
+    },
+    "am": {
+     "text": "የአበባ ልማት (የጌጥ ሆርቲካልቸር) አበቦችን፣ ጌጠኛ ቅጠሎችን፣ ቁልቋልን፣ ኦርኪድንና የመሬት ገጽታ ማስዋብን ያካትታል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Ethiopia's flowers",
+     "ask": "Which cut flower do you think Ethiopia exports most?",
+     "opts": [
+      "Roses",
+      "Sunflowers",
+      "Cotton flowers",
+      "Coffee flowers"
+     ],
+     "after": "Roses head the book's list of flowers grown and exported from Ethiopia.",
+     "ref": "p.41",
+     "id": "g12.agriculture.u2.s2-8.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Floriculture",
+     "paras": [
+      "Floriculture is a branch of horticulture.",
+      "It grows flowering plants and decorative foliage plants.",
+      "Also cacti, orchids, succulents, bonsai, ferns and container plants.",
+      "It includes landscape gardening.",
+      "Today it is often called ornamental horticulture."
+     ],
+     "ref": "p.40",
+     "id": "g12.agriculture.u2.s2-8.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Ornamental plants",
+     "paras": [
+      "A whole plant or a plant part can be ornamental.",
+      "It is decorative, showy and attractive.",
+      "It is used for beauty and for function.",
+      "It may be flowering or non-flowering."
+     ],
+     "ref": "p.40",
+     "id": "g12.agriculture.u2.s2-8.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Floriculture",
+       "The branch of horticulture that grows flowering and decorative plants and includes landscape gardening; ornamental horticulture."
+      ],
+      [
+       "Ornamental plant",
+       "A plant, or plant part, that is decorative, showy and attractive, used for beauty and function."
+      ]
+     ],
+     "id": "g12.agriculture.u2.s2-8.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "Floriculture is also called",
+     "opts": [
+      "ornamental horticulture",
+      "pomology",
+      "agronomy",
+      "forestry"
+     ],
+     "ans": "ornamental horticulture",
+     "why": "p.40.",
+     "clue": "Ornament = decoration.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.40",
+     "id": "g12.agriculture.u2.s2-8.5"
+    },
+    {
+     "kind": "pick",
+     "text": "Which are part of floriculture?",
+     "pool": [
+      "Cut roses",
+      "Cacti",
+      "Bonsai",
+      "Ferns",
+      "Landscape gardening",
+      "Teff fields",
+      "Mango orchards"
+     ],
+     "a": [
+      "Cut roses",
+      "Cacti",
+      "Bonsai",
+      "Ferns",
+      "Landscape gardening"
+     ],
+     "why": "p.40 lists these.",
+     "clue": "Two options are food crops.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.40",
+     "id": "g12.agriculture.u2.s2-8.6"
+    },
+    {
+     "kind": "tf",
+     "text": "An ornamental plant must have flowers.",
+     "a": false,
+     "why": "p.40: ornamentals can be flowering OR non-flowering, e.g. ferns.",
+     "clue": "Think of a fern.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.40",
+     "id": "g12.agriculture.u2.s2-8.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "A potted fern used to decorate an office is",
+     "opts": [
+      "an ornamental plant",
+      "a fruit crop",
+      "a small fruit",
+      "a rootstock"
+     ],
+     "ans": "an ornamental plant",
+     "why": "Decorative and non-flowering: still ornamental.",
+     "clue": "Why is it in the office?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.40",
+     "id": "g12.agriculture.u2.s2-8.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "A hotel in Bishoftu plants lawns, trees and flower beds around its buildings. Which part of floriculture is this?",
+     "opts": [
+      "Landscape gardening",
+      "Cut-flower export",
+      "Bonsai",
+      "Fruit set"
+     ],
+     "ans": "Landscape gardening",
+     "why": "Arranging plants to beautify grounds is landscape gardening, included in the book's definition.",
+     "clue": "It is about whole grounds, not single pots.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.40",
+     "added": true,
+     "id": "g12.agriculture.u2.s2-8.9"
+    }
+   ]
+  },
+  {
+   "id": "agri.floriculture-ethiopia",
+   "name": "Floriculture in Ethiopia",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Ornamental horticulture started recently in Ethiopia but is growing and is now one of the country's top exports. Opportunities include a suitable climate, ample land, cheap labour and water, nearness to Middle East and European markets, a growing domestic market and government incentives. It earns foreign currency, diversifies products, creates jobs, encourages supportive industries and promotes investment. Main crops include roses, poinsettia, geranium, chrysanthemum, lilies, carnation, gypsophila, statice, hypericum and freesia."
+    },
+    "am": {
+     "text": "የአበባ ልማት በኢትዮጵያ በቅርብ የተጀመረ ቢሆንም ዋና የወጪ ንግድ ሆኗል፤ የውጭ ምንዛሬ፣ የሥራ ዕድልና ኢንቨስትመንት ያመጣል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Selling flowers to Europe",
+     "ask": "What do you think helps Ethiopia sell fresh flowers to Europe?",
+     "opts": [
+      "It is close to Middle East and European markets",
+      "It has no farmers",
+      "It has snow all year",
+      "Flowers last for months"
+     ],
+     "after": "Nearness to markets is one of the book's opportunities for floriculture (and for fruit).",
+     "ref": "p.41",
+     "id": "g12.agriculture.u2.s2-8.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Floriculture in Ethiopia",
+     "paras": [
+      "Ornamental horticulture started in Ethiopia recently.",
+      "It is growing fast.",
+      "It is now one of the country's top export commodities."
+     ],
+     "ref": "p.40",
+     "id": "g12.agriculture.u2.s2-8.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Opportunities and importance",
+     "paras": [
+      "Opportunities and importance are different lists."
+     ],
+     "table": [
+      [
+       "Opportunities for expansion",
+       "Importance"
+      ],
+      [
+       "suitable climate for many flower crops",
+       "earns foreign currency"
+      ],
+      [
+       "land, cheap labour, abundant water",
+       "product diversification"
+      ],
+      [
+       "near Middle East and European markets",
+       "jobs for people"
+      ],
+      [
+       "growing domestic market",
+       "encourages supportive industries"
+      ],
+      [
+       "government policy and investment incentives",
+       "promotes investment"
+      ]
+     ],
+     "ref": "p.41",
+     "id": "g12.agriculture.u2.s2-8.12"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Main flower crops grown and exported",
+     "paras": [
+      "Roses, poinsettia, geranium (pelargonium).",
+      "Chrysanthemum, lilies, carnation.",
+      "Gypsophila, statice, hypericum, freesia."
+     ],
+     "ref": "p.41",
+     "id": "g12.agriculture.u2.s2-8.13"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Floriculture",
+       "The branch of horticulture that grows flowering and decorative plants and includes landscape gardening; ornamental horticulture."
+      ]
+     ],
+     "id": "g12.agriculture.u2.s2-8.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is an importance of floriculture in Ethiopia?",
+     "opts": [
+      "It earns foreign currency",
+      "It increases soil erosion",
+      "It reduces jobs",
+      "It replaces all food crops"
+     ],
+     "ans": "It earns foreign currency",
+     "why": "p.41.",
+     "clue": "Flowers are exported.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.41",
+     "id": "g12.agriculture.u2.s2-8.15"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Opportunity or importance?",
+     "bins": [
+      "Opportunity",
+      "Importance"
+     ],
+     "items": [
+      [
+       "Suitable climate",
+       "Opportunity",
+       ""
+      ],
+      [
+       "Proximity to European markets",
+       "Opportunity",
+       ""
+      ],
+      [
+       "Government investment incentives",
+       "Opportunity",
+       ""
+      ],
+      [
+       "Earns foreign currency",
+       "Importance",
+       ""
+      ],
+      [
+       "Creates jobs",
+       "Importance",
+       ""
+      ],
+      [
+       "Encourages supportive industries",
+       "Importance",
+       ""
+      ]
+     ],
+     "why": "Opportunities are conditions that help growth; importance is what the sector gives the country.",
+     "clue": "Is it a reason it CAN grow, or a benefit it GIVES?",
+     "ref": "p.41",
+     "graded": true,
+     "level": 2,
+     "id": "g12.agriculture.u2.s2-8.16"
+    },
+    {
+     "kind": "pick",
+     "text": "Which are flower crops grown and exported from Ethiopia?",
+     "pool": [
+      "Roses",
+      "Carnation",
+      "Gypsophila",
+      "Hypericum",
+      "Teff",
+      "Avocado"
+     ],
+     "a": [
+      "Roses",
+      "Carnation",
+      "Gypsophila",
+      "Hypericum"
+     ],
+     "why": "p.41 list.",
+     "clue": "Two are food crops.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.41",
+     "id": "g12.agriculture.u2.s2-8.17"
+    },
+    {
+     "kind": "mcq",
+     "text": "How does a flower farm \"encourage supportive industries\"?",
+     "opts": [
+      "It needs packaging, cold transport and other inputs that other businesses supply",
+      "It closes other businesses",
+      "It needs nothing from others",
+      "It only grows food"
+     ],
+     "ans": "It needs packaging, cold transport and other inputs that other businesses supply",
+     "why": "Cut flowers need boxes, cold chain and air freight, so related businesses grow.",
+     "clue": "What does a rose need between farm and buyer?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.41",
+     "id": "g12.agriculture.u2.s2-8.18"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which opportunities do the fruit sector (2.2.3) and the flower sector (2.8) share?",
+     "opts": [
+      "Suitable climate, cheap labour, water and nearness to Middle East and European markets",
+      "Wild indigenous fruits",
+      "Chilling injury",
+      "Fruit sold at hospital gates"
+     ],
+     "ans": "Suitable climate, cheap labour, water and nearness to Middle East and European markets",
+     "why": "Both lists name diverse climate, resources, cheap labour, nearby markets and government policy.",
+     "clue": "Compare p.24 with p.41.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.24, 41",
+     "added": true,
+     "id": "g12.agriculture.u2.s2-8.19"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Floriculture is a branch of",
+   "opts": [
+    "horticulture",
+    "animal science",
+    "forestry",
+    "soil science"
+   ],
+   "ans": "horticulture",
+   "why": "p.40.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.agriculture.u2.s2-8.20"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which is a major flower export of Ethiopia?",
+   "opts": [
+    "Roses",
+    "Teff",
+    "Coffee",
+    "Mango"
+   ],
+   "ans": "Roses",
+   "why": "p.41.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.agriculture.u2.s2-8.21"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which is an opportunity for expanding floriculture in Ethiopia?",
+   "opts": [
+    "Proximity to Middle East and European markets",
+    "Lack of water",
+    "No domestic market",
+    "High labour cost"
+   ],
+   "ans": "Proximity to Middle East and European markets",
+   "why": "p.41.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.agriculture.u2.s2-8.22"
+  },
+  {
+   "kind": "mcq",
+   "text": "Ornamental plants are used for",
+   "opts": [
+    "both aesthetic and functional purposes",
+    "food only",
+    "fuel only",
+    "nothing useful"
+   ],
+   "ans": "both aesthetic and functional purposes",
+   "why": "p.40.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.agriculture.u2.s2-8.23"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which is NOT listed as an importance of floriculture in Ethiopia?",
+   "opts": [
+    "Supplying staple food",
+    "Earning foreign currency",
+    "Creating jobs",
+    "Promoting investment"
+   ],
+   "ans": "Supplying staple food",
+   "why": "p.41.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.agriculture.u2.s2-8.24"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "The section title includes \"Landscaping\", but the unit gives no landscaping content beyond one phrase in the floriculture definition. \"Brainstorming 2.3\" is used twice (p.27 and p.40)."
+  },
+  {
+   "kind": "note",
+   "text": "The book prints the flower list in loose rows; gypsophila and statice are two separate crops. The Bishoftu landscaping challenge is added."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

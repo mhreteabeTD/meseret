@@ -1,0 +1,1141 @@
+{
+ "id": "g12.agriculture.u2.s2-3",
+ "book": {
+  "title": "Agriculture Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "agriculture",
+  "unit": 2,
+  "unit_title": "Fruit crops production and management",
+  "pages": "24–27",
+  "section": "2.3"
+ },
+ "title": "Classification of fruit crops",
+ "competency": "Classify fruit crops by structure, temperature requirement, ripening response and plant characteristics.",
+ "minutes": 30,
+ "keywords": [
+  {
+   "en": "Pericarp",
+   "am": "የፍሬ ልባስ",
+   "def": "The fruit wall that develops from the ovary wall; fleshy or dry at maturity.",
+   "machine": true
+  },
+  {
+   "en": "Simple fruit",
+   "am": "ነጠላ ፍሬ",
+   "def": "A fruit from a single mature ovary in a single flower, e.g. apple, grape, citrus.",
+   "machine": true
+  },
+  {
+   "en": "Aggregate fruit",
+   "am": "ስብስብ ፍሬ",
+   "def": "A fruit from many ovaries of ONE flower on one receptacle, e.g. strawberry.",
+   "machine": true
+  },
+  {
+   "en": "Multiple fruit",
+   "am": "ጥምር ፍሬ",
+   "def": "A fruit from the ovaries of SEVERAL flowers united into one mass, e.g. pineapple.",
+   "machine": true
+  },
+  {
+   "en": "Tropical fruit",
+   "am": "የሞቃት አካባቢ ፍራፍሬ",
+   "def": "Grows in a year-round summer-like season without freezing, e.g. banana, mango, papaya.",
+   "machine": true
+  },
+  {
+   "en": "Sub-tropical fruit",
+   "am": "ከፊል ሞቃት አካባቢ ፍራፍሬ",
+   "def": "Cannot tolerate severe winter but needs some winter chilling, e.g. citrus, figs, olives.",
+   "machine": true
+  },
+  {
+   "en": "Temperate fruit",
+   "am": "የቀዝቃዛ አካባቢ ፍራፍሬ",
+   "def": "Needs a cold winter and a summer growing season; survives well below freezing, e.g. apple, peach.",
+   "machine": true
+  },
+  {
+   "en": "Ethylene",
+   "am": "ኤቲሊን",
+   "def": "A plant hormone (a gas) that triggers and coordinates ripening in climacteric fruits.",
+   "machine": true
+  },
+  {
+   "en": "Climacteric fruit",
+   "am": "ክላይማክቴሪክ ፍሬ",
+   "def": "Ripening comes with a rise in respiration and ethylene, e.g. tomato, apple, pear, melon.",
+   "machine": true
+  },
+  {
+   "en": "Non-climacteric fruit",
+   "am": "ኖን-ክላይማክቴሪክ ፍሬ",
+   "def": "No ethylene-linked respiration peak during ripening, e.g. grape, orange, pineapple.",
+   "machine": true
+  },
+  {
+   "en": "Tree fruit",
+   "am": "የዛፍ ፍራፍሬ",
+   "def": "Fruit produced on trees, e.g. mango, avocado, citrus, guava, apple.",
+   "machine": true
+  },
+  {
+   "en": "Small fruit",
+   "am": "የቁጥቋጦ ፍራፍሬ",
+   "def": "Fruit produced on shrubs, e.g. blackberry, raspberry, blueberry.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "agri.fruit-classification",
+   "name": "Classification by structure",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "By the number of ovaries and flowers that form them, fruits are simple, aggregate or multiple. A simple fruit comes from one ovary of one flower (apple, grape, citrus); an aggregate fruit from many ovaries of one flower on one receptacle (strawberry); a multiple fruit from the ovaries of several flowers united into a mass (pineapple). Simple fruits are fleshy or dry, and dry fruits are dehiscent (split open) or indehiscent (do not split)."
+    },
+    "am": {
+     "text": "በአወቃቀር፡ ነጠላ (ፖም)፣ ስብስብ (እንጆሪ) እና ጥምር (አናናስ) ፍሬዎች አሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "One flower or many?",
+     "ask": "A strawberry grows from one flower. A pineapple grows from many flowers fused together. Which one would you call a \"multiple\" fruit?",
+     "opts": [
+      "Pineapple",
+      "Strawberry",
+      "Both",
+      "Neither"
+     ],
+     "after": "Pineapple is a multiple fruit: ovaries of several flowers united. Strawberry is an aggregate fruit: many ovaries of ONE flower.",
+     "ref": "p.25, Figure 2.1",
+     "id": "g12.agriculture.u2.s2-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Three groups by structure",
+     "paras": [
+      "Fruits can be classified by structure, temperature, ripening or plant type.",
+      "By structure, count the ovaries and flowers that form the fruit."
+     ],
+     "table": [
+      [
+       "Group",
+       "Formed from",
+       "Example"
+      ],
+      [
+       "Simple",
+       "one mature ovary of one flower",
+       "apple, grape, citrus"
+      ],
+      [
+       "Aggregate",
+       "many ovaries of one flower on one receptacle (fruitlets)",
+       "strawberry"
+      ],
+      [
+       "Multiple",
+       "ovaries of several flowers united into a mass",
+       "pineapple"
+      ]
+     ],
+     "ref": "p.24–25",
+     "id": "g12.agriculture.u2.s2-3.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Kinds of simple fruit",
+     "paras": [
+      "The pericarp is the fruit wall.",
+      "Fleshy fruit: pericarp fleshy at maturity, e.g. grape, banana.",
+      "Dry fruit: pericarp dry at maturity, e.g. coconut, peanut.",
+      "Dry fruits split further into two kinds.",
+      "Dehiscent: splits open when mature, e.g. a mustard pod (silique).",
+      "Indehiscent: does not split open, e.g. sunflower."
+     ],
+     "note": "The book lists these four as equal groups and gives \"pome\" (apple) as an indehiscent example. Dehiscent and indehiscent are kinds of DRY fruit; apple is fleshy.",
+     "ref": "p.24–25",
+     "id": "g12.agriculture.u2.s2-3.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Pericarp",
+       "The fruit wall that develops from the ovary wall; fleshy or dry at maturity."
+      ],
+      [
+       "Simple fruit",
+       "A fruit from a single mature ovary in a single flower, e.g. apple, grape, citrus."
+      ],
+      [
+       "Aggregate fruit",
+       "A fruit from many ovaries of ONE flower on one receptacle, e.g. strawberry."
+      ],
+      [
+       "Multiple fruit",
+       "A fruit from the ovaries of SEVERAL flowers united into one mass, e.g. pineapple."
+      ]
+     ],
+     "id": "g12.agriculture.u2.s2-3.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "A fruit formed from many ovaries of a single flower, like a strawberry, is",
+     "opts": [
+      "an aggregate fruit",
+      "a multiple fruit",
+      "a simple fruit",
+      "a dry fruit"
+     ],
+     "ans": "an aggregate fruit",
+     "why": "p.25: many ovaries, one flower, one receptacle.",
+     "clue": "Count the flowers: one or many?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.25",
+     "id": "g12.agriculture.u2.s2-3.5"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Simple, aggregate or multiple?",
+     "bins": [
+      "Simple",
+      "Aggregate",
+      "Multiple"
+     ],
+     "items": [
+      [
+       "Apple",
+       "Simple",
+       "one ovary"
+      ],
+      [
+       "Grape",
+       "Simple",
+       "one ovary"
+      ],
+      [
+       "Orange",
+       "Simple",
+       "citrus"
+      ],
+      [
+       "Banana",
+       "Simple",
+       "fleshy"
+      ],
+      [
+       "Strawberry",
+       "Aggregate",
+       "one flower, many ovaries"
+      ],
+      [
+       "Pineapple",
+       "Multiple",
+       "many flowers"
+      ]
+     ],
+     "why": "Simple: one ovary of one flower. Aggregate: many ovaries of one flower. Multiple: many flowers.",
+     "clue": "Ask: how many flowers made it?",
+     "ref": "p.24–25",
+     "graded": true,
+     "level": 1,
+     "id": "g12.agriculture.u2.s2-3.6"
+    },
+    {
+     "kind": "match",
+     "title": "Match each kind of simple fruit to an example",
+     "pairs": [
+      [
+       "Fleshy fruit",
+       "grape"
+      ],
+      [
+       "Dehiscent dry fruit",
+       "mustard pod (silique)"
+      ],
+      [
+       "Indehiscent dry fruit",
+       "sunflower"
+      ]
+     ],
+     "why": "Grape has a fleshy wall; a mustard pod splits open; a sunflower fruit stays closed.",
+     "clue": "Which one splits open to release seeds?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.24–25",
+     "id": "g12.agriculture.u2.s2-3.7"
+    },
+    {
+     "kind": "tf",
+     "text": "An apple (pome) is a good example of an indehiscent DRY fruit.",
+     "a": false,
+     "why": "Apple is a FLESHY fruit. Sunflower is a better example of an indehiscent dry fruit.",
+     "clue": "Is the apple wall dry or juicy?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.25",
+     "id": "g12.agriculture.u2.s2-3.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why is pineapple called a multiple fruit?",
+     "opts": [
+      "It forms from the ovaries of several flowers united into one mass",
+      "It has many seeds",
+      "It grows on many plants",
+      "It ripens many times"
+     ],
+     "ans": "It forms from the ovaries of several flowers united into one mass",
+     "why": "p.25 definition of multiple fruit.",
+     "clue": "Think about flowers, not seeds.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.25",
+     "id": "g12.agriculture.u2.s2-3.9"
+    },
+    {
+     "kind": "mcq",
+     "text": "A student says: \"Strawberry and pineapple are both made of many small parts, so both are multiple fruits.\" What is the mistake?",
+     "opts": [
+      "Strawberry comes from ONE flower (aggregate); pineapple comes from MANY flowers (multiple)",
+      "Both are simple fruits",
+      "Pineapple is aggregate and strawberry is multiple",
+      "There is no mistake"
+     ],
+     "ans": "Strawberry comes from ONE flower (aggregate); pineapple comes from MANY flowers (multiple)",
+     "why": "Count flowers, not parts: one flower → aggregate; several flowers → multiple.",
+     "clue": "How many flowers formed each fruit?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.25",
+     "added": true,
+     "id": "g12.agriculture.u2.s2-3.10"
+    }
+   ]
+  },
+  {
+   "id": "agri.fruit-climate",
+   "name": "Classification by temperature requirement",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "By temperature need, tropical fruits grow in a year-round summer-like season without freezing (banana, pineapple, papaya, mango, guava). Sub-tropical fruits cannot tolerate severe winters but need some winter chilling (citrus, figs, olives). Temperate fruits need a cold winter plus a summer growing season and survive temperatures well below freezing (apples, cherries, peaches)."
+    },
+    "am": {
+     "text": "ሞቃት አካባቢ (ሙዝ፣ ማንጎ)፣ ከፊል ሞቃት (ብርቱካን) እና ቀዝቃዛ አካባቢ (ፖም) ፍራፍሬዎች።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "title": "Where would it grow best?",
+     "bins": [
+      "Hot lowland, no frost",
+      "Cold highland with a cold winter"
+     ],
+     "items": [
+      [
+       "Mango",
+       "Hot lowland, no frost",
+       "tropical"
+      ],
+      [
+       "Banana",
+       "Hot lowland, no frost",
+       "tropical"
+      ],
+      [
+       "Apple",
+       "Cold highland with a cold winter",
+       "temperate"
+      ],
+      [
+       "Peach",
+       "Cold highland with a cold winter",
+       "temperate"
+      ],
+      [
+       "Papaya",
+       "Hot lowland, no frost",
+       "tropical"
+      ]
+     ],
+     "ref": "p.25",
+     "graded": false,
+     "id": "g12.agriculture.u2.s2-3.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Three groups by temperature",
+     "paras": [
+      "The groups follow how much cold a fruit needs or can stand."
+     ],
+     "table": [
+      [
+       "Group",
+       "Temperature need",
+       "Examples"
+      ],
+      [
+       "Tropical",
+       "year-round summer-like season, no freezing",
+       "banana, pineapple, papaya, mango, guava"
+      ],
+      [
+       "Sub-tropical",
+       "cannot stand severe winter; needs some winter chilling",
+       "citrus, figs, olives"
+      ],
+      [
+       "Temperate",
+       "cold winter plus summer season; survives well below freezing",
+       "apples, cherries, peaches"
+      ]
+     ],
+     "ref": "p.25–26",
+     "id": "g12.agriculture.u2.s2-3.12"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Link to the key terms",
+     "paras": [
+      "Temperate fruits have a chilling requirement.",
+      "Tropical fruits suffer chilling injury in the cold.",
+      "In Ethiopia, mango, banana and papaya grow in warm lowlands.",
+      "Apples grow in cool highlands."
+     ],
+     "added": true,
+     "id": "g12.agriculture.u2.s2-3.13"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Tropical fruit",
+       "Grows in a year-round summer-like season without freezing, e.g. banana, mango, papaya."
+      ],
+      [
+       "Sub-tropical fruit",
+       "Cannot tolerate severe winter but needs some winter chilling, e.g. citrus, figs, olives."
+      ],
+      [
+       "Temperate fruit",
+       "Needs a cold winter and a summer growing season; survives well below freezing, e.g. apple, peach."
+      ]
+     ],
+     "id": "g12.agriculture.u2.s2-3.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which fruits need a cold winter season and survive temperatures well below freezing?",
+     "opts": [
+      "Temperate fruits",
+      "Tropical fruits",
+      "Sub-tropical fruits",
+      "Multiple fruits"
+     ],
+     "ans": "Temperate fruits",
+     "why": "p.25–26.",
+     "clue": "Apples and cherries.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.25",
+     "id": "g12.agriculture.u2.s2-3.15"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Tropical, sub-tropical or temperate?",
+     "bins": [
+      "Tropical",
+      "Sub-tropical",
+      "Temperate"
+     ],
+     "items": [
+      [
+       "Banana",
+       "Tropical",
+       ""
+      ],
+      [
+       "Papaya",
+       "Tropical",
+       ""
+      ],
+      [
+       "Guava",
+       "Tropical",
+       ""
+      ],
+      [
+       "Mango",
+       "Tropical",
+       ""
+      ],
+      [
+       "Citrus",
+       "Sub-tropical",
+       ""
+      ],
+      [
+       "Fig",
+       "Sub-tropical",
+       ""
+      ],
+      [
+       "Olive",
+       "Sub-tropical",
+       ""
+      ],
+      [
+       "Apple",
+       "Temperate",
+       ""
+      ],
+      [
+       "Cherry",
+       "Temperate",
+       ""
+      ],
+      [
+       "Peach",
+       "Temperate",
+       ""
+      ]
+     ],
+     "why": "These are the book's examples for each group.",
+     "clue": "Which fruits need frost-free warmth all year?",
+     "ref": "p.25–26",
+     "graded": true,
+     "level": 1,
+     "id": "g12.agriculture.u2.s2-3.16"
+    },
+    {
+     "kind": "mcq",
+     "text": "Oranges and lemons belong to which group?",
+     "opts": [
+      "Sub-tropical",
+      "Tropical",
+      "Temperate",
+      "Small fruits"
+     ],
+     "ans": "Sub-tropical",
+     "why": "They are citrus, the book's sub-tropical example.",
+     "clue": "They are citrus fruits.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.25",
+     "id": "g12.agriculture.u2.s2-3.17"
+    },
+    {
+     "kind": "tf",
+     "text": "Sub-tropical fruits need no winter chilling at all.",
+     "a": false,
+     "why": "They cannot stand SEVERE winter, but they need SOME winter chilling.",
+     "clue": "Read: \"they need some winter chilling\".",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.25",
+     "id": "g12.agriculture.u2.s2-3.18"
+    },
+    {
+     "kind": "mcq",
+     "text": "A farmer at 2,700 m has frosty winter nights. Which fruit fits his farm best?",
+     "opts": [
+      "Apple",
+      "Mango",
+      "Papaya",
+      "Banana"
+     ],
+     "ans": "Apple",
+     "why": "Apple is temperate: it needs a cold winter and survives frost. Mango, papaya and banana are tropical and cannot stand freezing.",
+     "clue": "Which one needs cold rather than being hurt by it?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.25–26",
+     "added": true,
+     "id": "g12.agriculture.u2.s2-3.19"
+    }
+   ]
+  },
+  {
+   "id": "agri.fruit-ripening",
+   "name": "Classification by ripening (ethylene)",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "By ripening, climacteric fruits show a rise in respiration and in ethylene production; ethylene triggers and coordinates their ripening (tomato, apple, pear, melon). Non-climacteric fruits lack this ethylene-linked respiration peak (grape, orange, pineapple). Climacteric fruits can be picked mature and ripen later, but non-climacteric fruits should be picked ripe."
+    },
+    "am": {
+     "text": "ክላይማክቴሪክ ፍሬዎች (ቲማቲም፣ ፖም) በኤቲሊን ይበስላሉ፤ ኖን-ክላይማክቴሪክ (ወይን፣ ብርቱካን፣ አናናስ) ከተለቀሙ በኋላ አይበስሉም።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Green bananas at home",
+     "ask": "You buy hard green bananas and keep them at home for a few days. What happens?",
+     "opts": [
+      "They turn yellow and ripen",
+      "They stay green for ever",
+      "They turn into seeds",
+      "They become oranges"
+     ],
+     "after": "Bananas keep ripening after harvest because they make ethylene. Oranges do not get sweeter after picking.",
+     "ref": "p.26",
+     "added": true,
+     "id": "g12.agriculture.u2.s2-3.20"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Climacteric and non-climacteric",
+     "paras": [
+      "This grouping is based on how ripening is controlled."
+     ],
+     "table": [
+      [
+       "Group",
+       "During ripening",
+       "Book examples"
+      ],
+      [
+       "Climacteric",
+       "respiration and ethylene rise; ethylene triggers and coordinates ripening",
+       "tomato, apple, pear, melon"
+      ],
+      [
+       "Non-climacteric",
+       "no ethylene-linked respiration peak",
+       "grape, orange, pineapple"
+      ]
+     ],
+     "ref": "p.26, 2.3.3",
+     "id": "g12.agriculture.u2.s2-3.21"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "What it means at harvest",
+     "paras": [
+      "Climacteric fruits can be picked mature and ripen later.",
+      "Banana, mango, avocado and papaya are also climacteric.",
+      "Non-climacteric fruits do not ripen further after picking.",
+      "So they should be picked ripe."
+     ],
+     "added": true,
+     "id": "g12.agriculture.u2.s2-3.22"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Ethylene",
+       "A plant hormone (a gas) that triggers and coordinates ripening in climacteric fruits."
+      ],
+      [
+       "Climacteric fruit",
+       "Ripening comes with a rise in respiration and ethylene, e.g. tomato, apple, pear, melon."
+      ],
+      [
+       "Non-climacteric fruit",
+       "No ethylene-linked respiration peak during ripening, e.g. grape, orange, pineapple."
+      ]
+     ],
+     "id": "g12.agriculture.u2.s2-3.23"
+    },
+    {
+     "kind": "mcq",
+     "text": "In climacteric fruits, ripening is triggered and coordinated mainly by",
+     "opts": [
+      "ethylene",
+      "oxygen",
+      "sunlight",
+      "salt"
+     ],
+     "ans": "ethylene",
+     "why": "p.26: \"The ethylene is the major trigger and coordinator of the ripening process.\"",
+     "clue": "A plant hormone gas.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.26",
+     "id": "g12.agriculture.u2.s2-3.24"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Climacteric or non-climacteric?",
+     "bins": [
+      "Climacteric",
+      "Non-climacteric"
+     ],
+     "items": [
+      [
+       "Tomato",
+       "Climacteric",
+       ""
+      ],
+      [
+       "Apple",
+       "Climacteric",
+       ""
+      ],
+      [
+       "Pear",
+       "Climacteric",
+       ""
+      ],
+      [
+       "Melon",
+       "Climacteric",
+       ""
+      ],
+      [
+       "Grape",
+       "Non-climacteric",
+       ""
+      ],
+      [
+       "Orange",
+       "Non-climacteric",
+       ""
+      ],
+      [
+       "Pineapple",
+       "Non-climacteric",
+       ""
+      ]
+     ],
+     "why": "These are the book's examples (2.3.3).",
+     "clue": "Citrus, grape and pineapple belong together.",
+     "ref": "p.26",
+     "graded": true,
+     "level": 1,
+     "id": "g12.agriculture.u2.s2-3.25"
+    },
+    {
+     "kind": "mcq",
+     "text": "A pineapple is picked green and sour. Will it get much sweeter in storage?",
+     "opts": [
+      "No; non-climacteric fruits do not ripen further after harvest",
+      "Yes; all fruits ripen after harvest",
+      "Yes, if kept in the dark",
+      "Only if it is grafted"
+     ],
+     "ans": "No; non-climacteric fruits do not ripen further after harvest",
+     "why": "Pineapple is non-climacteric: no ethylene burst, so it should be picked ripe.",
+     "clue": "Which group is pineapple in?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.26",
+     "id": "g12.agriculture.u2.s2-3.26"
+    },
+    {
+     "kind": "tf",
+     "text": "Pineapple is both a multiple fruit and a non-climacteric fruit.",
+     "a": true,
+     "why": "One fruit gets a label in each system: multiple by structure, non-climacteric by ripening.",
+     "clue": "The systems are separate.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.25–26",
+     "id": "g12.agriculture.u2.s2-3.27"
+    },
+    {
+     "kind": "mcq",
+     "text": "A trader sends fruit on a 3-day truck journey. Which plan is best?",
+     "opts": [
+      "Pick apples and tomatoes mature but unripe; pick oranges ripe",
+      "Pick all fruit unripe",
+      "Pick all fruit over-ripe",
+      "Pick oranges unripe; pick apples over-ripe"
+     ],
+     "ans": "Pick apples and tomatoes mature but unripe; pick oranges ripe",
+     "why": "Climacteric fruits ripen on the way; non-climacteric oranges will not ripen after picking.",
+     "clue": "Which fruits can still ripen on the truck?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.26",
+     "added": true,
+     "id": "g12.agriculture.u2.s2-3.28"
+    }
+   ]
+  },
+  {
+   "id": "agri.fruit-plant-type",
+   "name": "Tree fruits, small fruits and using the four systems",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "By plant characteristics, tree fruits grow on trees (peach, plum, mango, citrus, avocado, guava, coffee, apple) and small fruits grow on shrubs (blackberry, raspberry, blueberry). Every fruit can be described in all four systems at once: an apple is a simple, temperate, climacteric tree fruit; an orange is a simple, sub-tropical, non-climacteric tree fruit."
+    },
+    "am": {
+     "text": "የዛፍ ፍራፍሬ (ማንጎ፣ አቮካዶ) እና የቁጥቋጦ ፍራፍሬ (ብሉቤሪ)። አንድ ፍሬ በአራቱም መንገዶች ይመደባል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Tree or bush?",
+     "ask": "Which of these grows on a bush (shrub) rather than on a tree?",
+     "opts": [
+      "Blueberry",
+      "Mango",
+      "Avocado",
+      "Guava"
+     ],
+     "after": "Blueberries grow on shrubs, so they are \"small fruits\". Mango, avocado and guava are tree fruits.",
+     "ref": "p.26",
+     "id": "g12.agriculture.u2.s2-3.29"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Tree fruits and small fruits",
+     "paras": [
+      "Tree fruits grow on trees.",
+      "Examples: peach, plum, mango, citrus, avocado, guava, coffee, apple.",
+      "Small fruits grow on shrubs.",
+      "Examples: blackberry, raspberry, blueberry."
+     ],
+     "note": "The book lists mango twice among the tree fruits.",
+     "ref": "p.26, 2.3.4",
+     "id": "g12.agriculture.u2.s2-3.30"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "One fruit, four labels",
+     "paras": [
+      "Use one system at a time when you classify."
+     ],
+     "table": [
+      [
+       "Basis",
+       "Apple",
+       "Orange"
+      ],
+      [
+       "Structure",
+       "simple",
+       "simple"
+      ],
+      [
+       "Temperature",
+       "temperate",
+       "sub-tropical"
+      ],
+      [
+       "Ripening",
+       "climacteric",
+       "non-climacteric"
+      ],
+      [
+       "Plant type",
+       "tree fruit",
+       "tree fruit"
+      ]
+     ],
+     "added": true,
+     "id": "g12.agriculture.u2.s2-3.31"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Tree fruit",
+       "Fruit produced on trees, e.g. mango, avocado, citrus, guava, apple."
+      ],
+      [
+       "Small fruit",
+       "Fruit produced on shrubs, e.g. blackberry, raspberry, blueberry."
+      ]
+     ],
+     "id": "g12.agriculture.u2.s2-3.32"
+    },
+    {
+     "kind": "mcq",
+     "text": "Fruits produced on shrubs are called",
+     "opts": [
+      "small fruits",
+      "tree fruits",
+      "multiple fruits",
+      "temperate fruits"
+     ],
+     "ans": "small fruits",
+     "why": "p.26: \"Small fruit: are fruits produced on shrubs.\"",
+     "clue": "Shrubs are smaller than trees.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.26",
+     "id": "g12.agriculture.u2.s2-3.33"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Tree fruit or small fruit?",
+     "bins": [
+      "Tree fruit",
+      "Small fruit"
+     ],
+     "items": [
+      [
+       "Mango",
+       "Tree fruit",
+       ""
+      ],
+      [
+       "Avocado",
+       "Tree fruit",
+       ""
+      ],
+      [
+       "Guava",
+       "Tree fruit",
+       ""
+      ],
+      [
+       "Coffee",
+       "Tree fruit",
+       ""
+      ],
+      [
+       "Blackberry",
+       "Small fruit",
+       ""
+      ],
+      [
+       "Raspberry",
+       "Small fruit",
+       ""
+      ],
+      [
+       "Blueberry",
+       "Small fruit",
+       ""
+      ]
+     ],
+     "why": "p.26 examples.",
+     "clue": "Berries on bushes are small fruits.",
+     "ref": "p.26",
+     "graded": true,
+     "level": 1,
+     "id": "g12.agriculture.u2.s2-3.34"
+    },
+    {
+     "kind": "match",
+     "title": "Match each basis to its groups",
+     "pairs": [
+      [
+       "Structure",
+       "simple, aggregate, multiple"
+      ],
+      [
+       "Temperature requirement",
+       "tropical, sub-tropical, temperate"
+      ],
+      [
+       "Ripening response",
+       "climacteric, non-climacteric"
+      ],
+      [
+       "Plant characteristics",
+       "tree fruit, small fruit"
+      ]
+     ],
+     "why": "Section 2.3 gives these four systems.",
+     "clue": "Ethylene decides ripening groups.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Activity 2.2",
+     "id": "g12.agriculture.u2.s2-3.35"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which classification puts banana and mango in one group but apple in another?",
+     "opts": [
+      "Temperature requirement",
+      "Structure",
+      "Ripening response",
+      "None of them"
+     ],
+     "ans": "Temperature requirement",
+     "why": "Banana and mango are tropical; apple is temperate. By structure all are simple; by ripening all are climacteric.",
+     "clue": "Try each system in turn.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 2.2",
+     "id": "g12.agriculture.u2.s2-3.36"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which full description of an orange is correct?",
+     "opts": [
+      "Simple, sub-tropical, non-climacteric tree fruit",
+      "Multiple, tropical, climacteric tree fruit",
+      "Simple, temperate, climacteric small fruit",
+      "Aggregate, sub-tropical, non-climacteric small fruit"
+     ],
+     "ans": "Simple, sub-tropical, non-climacteric tree fruit",
+     "why": "Orange is citrus: one ovary (simple), sub-tropical, non-climacteric (2.3.3), a tree fruit (2.3.4).",
+     "clue": "Check each of the four labels one by one.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.24–26",
+     "added": true,
+     "id": "g12.agriculture.u2.s2-3.37"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Strawberry is an example of",
+   "opts": [
+    "an aggregate fruit",
+    "a multiple fruit",
+    "a dry fruit",
+    "a small fruit only"
+   ],
+   "ans": "an aggregate fruit",
+   "why": "p.25.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.agriculture.u2.s2-3.38"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which is a tropical fruit?",
+   "opts": [
+    "Papaya",
+    "Apple",
+    "Cherry",
+    "Peach"
+   ],
+   "ans": "Papaya",
+   "why": "p.25.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.agriculture.u2.s2-3.39"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which is a climacteric fruit?",
+   "opts": [
+    "Tomato",
+    "Grape",
+    "Orange",
+    "Pineapple"
+   ],
+   "ans": "Tomato",
+   "why": "p.26.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.agriculture.u2.s2-3.40"
+  },
+  {
+   "kind": "mcq",
+   "text": "Figs and olives are",
+   "opts": [
+    "sub-tropical fruits",
+    "tropical fruits",
+    "temperate fruits",
+    "small fruits"
+   ],
+   "ans": "sub-tropical fruits",
+   "why": "p.25.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.agriculture.u2.s2-3.41"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which pair is classified correctly?",
+   "opts": [
+    "Pineapple: multiple and non-climacteric",
+    "Apple: aggregate and tropical",
+    "Orange: climacteric and temperate",
+    "Blueberry: tree fruit and multiple"
+   ],
+   "ans": "Pineapple: multiple and non-climacteric",
+   "why": "p.25–26.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.agriculture.u2.s2-3.42"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.24–25: the book lists fleshy, dry, dehiscent and indehiscent as four equal groups. Dehiscent and indehiscent are kinds of DRY fruit; \"silique\" is a fruit type (mustard pod), and \"pome\" (apple) is fleshy, a poor indehiscent example. The lesson teaches the corrected structure."
+  },
+  {
+   "kind": "review",
+   "text": "p.26: mango is listed twice in the tree-fruit examples. p.27: there is no Activity 2.1 or Brainstorming 2.2; numbering jumps to Activity 2.2."
+  },
+  {
+   "kind": "note",
+   "text": "Added (marked): banana, mango, avocado and papaya as climacteric; \"pick climacteric mature, non-climacteric ripe\"; the apple/orange four-label table; Ethiopian lowland/highland examples."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

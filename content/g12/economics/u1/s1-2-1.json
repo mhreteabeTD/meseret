@@ -1,0 +1,562 @@
+{
+ "id": "g12.economics.u1.s1-2-1",
+ "book": {
+  "title": "Economics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "economics",
+  "unit": 1,
+  "unit_title": "The fundamental concepts of macroeconomics",
+  "pages": "6–8",
+  "section": "1.2.1"
+ },
+ "title": "Economic growth",
+ "competency": "Explain economic growth, calculate the growth rate and per capita income, and explain the limits of these measures and the HDI.",
+ "minutes": 25,
+ "keywords": [
+  {
+   "en": "Economic growth",
+   "am": "ኢኮኖሚያዊ እድገት",
+   "def": "An increase in the capacity of an economy to produce goods and services.",
+   "machine": true
+  },
+  {
+   "en": "Economic growth rate",
+   "am": "የኢኮኖሚ እድገት መጠን",
+   "def": "The rate at which real GDP increases over a period: (real GDPₜ − real GDPₜ₋₁) ÷ real GDPₜ₋₁ × 100.",
+   "machine": true
+  },
+  {
+   "en": "Per capita income",
+   "am": "የነፍስ ወከፍ ገቢ",
+   "def": "Total (real) GNP divided by total population: the average income per person.",
+   "machine": true
+  },
+  {
+   "en": "Human Development Index",
+   "am": "የሰው ልማት መለኪያ",
+   "def": "HDI: the UNDP \"quality of life index\" that combines several development indicators into one number.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "eco.growth-rate",
+   "name": "Economic growth and its rate",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Economic growth is an increase in the capacity of an economy to produce goods and services; it is needed for higher incomes and living standards. The economic growth rate is the rate at which real GDP rises: (real GDPₜ − real GDPₜ₋₁) ÷ real GDPₜ₋₁ × 100. Growth comes from more labour, land and capital and higher productivity, supported by the rule of law and protection of property and contract rights."
+    },
+    "am": {
+     "text": "ኢኮኖሚያዊ እድገት የማምረት አቅም መጨመር ነው። የእድገት መጠን የእውነተኛ ምርት ለውጥ ለቀድሞው ምርት ተካፍሎ በ100 ሲባዛ ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "How fast?",
+     "ask": "Real GDP rises from 2,000 to 2,120 billion Birr in one year. About how fast did the economy grow?",
+     "opts": [
+      "6 %",
+      "12 %",
+      "120 %",
+      "2 %"
+     ],
+     "after": "The rise is 120 out of 2,000: 120 ÷ 2,000 = 0.06 = 6 %.",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Economic growth",
+     "paras": [
+      "Economic growth is an increase in the capacity to produce goods and services.",
+      "It is needed for high incomes and higher living standards.",
+      "Higher GDP per capita means better diet, health, life expectancy and education.",
+      "GDP expands or shrinks with the economic environment.",
+      "The economic growth rate is the rate at which real GDP rises over a period."
+     ],
+     "ref": "p.6",
+     "id": "g12.economics.u1.s1-2-1.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Sources of growth",
+     "paras": [
+      "More factors of production: labour, land, capital.",
+      "Higher productivity of those factors.",
+      "Institutions: rule of law, protection of property and contract rights.",
+      "These let markets work effectively and efficiently."
+     ],
+     "ref": "p.6–7",
+     "id": "g12.economics.u1.s1-2-1.3"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Growth-rate formula",
+     "text": "The book gives no formula; this is the standard one.",
+     "steps": [
+      "Growth rate = (real GDPₜ − real GDPₜ₋₁) ÷ real GDPₜ₋₁ × 100.",
+      "Real GDP: 2,000 → 2,120 billion Birr.",
+      "Change = 2,120 − 2,000 = 120.",
+      "120 ÷ 2,000 × 100 = 6 %.",
+      "Check: 2,000 × 1.06 = 2,120."
+     ],
+     "added": true,
+     "id": "g12.economics.u1.s1-2-1.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Economic growth",
+       "An increase in the capacity of an economy to produce goods and services."
+      ],
+      [
+       "Economic growth rate",
+       "The rate at which real GDP increases over a period: (real GDPₜ − real GDPₜ₋₁) ÷ real GDPₜ₋₁ × 100."
+      ]
+     ],
+     "id": "g12.economics.u1.s1-2-1.5"
+    },
+    {
+     "kind": "blank",
+     "ask": "Real GDP rises from 500 to 540 bn Birr. Growth rate = ___ %",
+     "a": [
+      "8",
+      "8%"
+     ],
+     "why": "(540 − 500) ÷ 500 × 100 = 40 ÷ 500 × 100 = 8 %.",
+     "clue": "Divide the change by the OLD value.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-1.6"
+    },
+    {
+     "kind": "blank",
+     "ask": "Real GDP falls from 800 to 780 bn Birr. Growth rate = ___ %",
+     "a": [
+      "-2.5",
+      "−2.5",
+      "-2.5%"
+     ],
+     "why": "(780 − 800) ÷ 800 × 100 = −20 ÷ 800 × 100 = −2.5 %. Negative growth means output shrank.",
+     "clue": "The change is negative.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-1.7"
+    },
+    {
+     "kind": "pick",
+     "text": "Which can raise a country's growth rate, according to the book?",
+     "pool": [
+      "More capital",
+      "Higher productivity of labour",
+      "Rule of law and property rights",
+      "Weak protection of contracts",
+      "Fewer factors of production"
+     ],
+     "a": [
+      "More capital",
+      "Higher productivity of labour",
+      "Rule of law and property rights"
+     ],
+     "why": "p.6–7: more factors, higher productivity and good institutions.",
+     "clue": "Two options would slow growth.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.6–7",
+     "id": "g12.economics.u1.s1-2-1.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why do economists use REAL GDP to measure growth?",
+     "opts": [
+      "Nominal GDP can rise just because prices rise",
+      "Real GDP includes inputs",
+      "Real GDP is easier to add",
+      "Nominal GDP ignores services"
+     ],
+     "ans": "Nominal GDP can rise just because prices rise",
+     "why": "p.7: inflation must be taken out; otherwise growth looks positive even with the same output.",
+     "clue": "What makes nominal GDP change without more goods?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.7",
+     "id": "g12.economics.u1.s1-2-1.9"
+    },
+    {
+     "kind": "blank",
+     "ask": "Real GDP is 1,200 bn Birr and grows 5 %. Next year real GDP = ___ bn Birr",
+     "a": [
+      "1260"
+     ],
+     "why": "1,200 × 1.05 = 1,260 bn Birr.",
+     "clue": "Multiply by 1 + 5/100.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-1.10"
+    },
+    {
+     "kind": "blank",
+     "ask": "Real GDP grows from 2,000 to 2,120 and then to 2,247.2 bn Birr. Growth in the SECOND year = ___ %",
+     "a": [
+      "6",
+      "≈6.0"
+     ],
+     "why": "(2,247.2 − 2,120) ÷ 2,120 × 100 = 127.2 ÷ 2,120 × 100 = 6 %.",
+     "clue": "Use the second year's starting value, 2,120.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-1.11"
+    }
+   ]
+  },
+  {
+   "id": "eco.per-capita",
+   "name": "Per capita income and the HDI",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Real income is often understated in developing countries because of subsistence output, under-reporting, a non-monetary sector, price distortions and no deduction for pollution. Simple GDP growth also ignores price changes and population growth, so economists use real per capita income: GNP ÷ population. Because an average hides how income is shared and ignores health and education, the UNDP built the Human Development Index (HDI), a \"quality of life index\"."
+    },
+    "am": {
+     "text": "የነፍስ ወከፍ ገቢ = ጠቅላላ ብሔራዊ ምርት ÷ የሕዝብ ብዛት። ይህ አማካይ ስለሆነ ትምህርትና ጤናን አያሳይም፤ ስለዚህ የተባበሩት መንግሥታት የሰው ልማት መለኪያ (HDI) ተዘጋጀ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "More output, more people",
+     "ask": "Move GDP growth and population growth. When does income per person rise? When does it fall?",
+     "vars": [
+      {
+       "k": "g",
+       "label": "Real GNP growth (%)",
+       "min": 0,
+       "max": 15,
+       "step": 1,
+       "v": 5
+      },
+      {
+       "k": "n",
+       "label": "Population growth (%)",
+       "min": 0,
+       "max": 8,
+       "step": 1,
+       "v": 3
+      }
+     ],
+     "formula": "((1 + g/100) / (1 + n/100) - 1) * 100",
+     "out": "Income per person grows: {v} %",
+     "note": "Roughly: growth per person ≈ GNP growth − population growth.",
+     "id": "g12.economics.u1.s1-2-1.12"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Why income is understated in developing countries",
+     "paras": [
+      "a) Most people are subsistence farmers; output for their own use is not correctly reported.",
+      "b) People under-report income for fear of tax; tax systems are weak.",
+      "c) No allowance is made for the non-monetary sector.",
+      "d) Prices are much more distorted.",
+      "e) Pollution costs are not deducted (Sweden and the Netherlands do deduct them)."
+     ],
+     "ref": "p.7",
+     "id": "g12.economics.u1.s1-2-1.13"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Two limits of the simple growth measure",
+     "paras": [
+      "1. National income is in value terms; it rises when prices rise, even if output is the same.",
+      "2. It ignores population growth, which can be faster than income growth.",
+      "Fix: measure growth as a rise in real per capita income.",
+      "Per capita income = total GNP ÷ total population."
+     ],
+     "ref": "p.7",
+     "id": "g12.economics.u1.s1-2-1.14"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Per capita income",
+     "steps": [
+      "Real GNP: 1,000 → 1,050 bn Birr (+5 %).",
+      "Population: 100 → 103 million (+3 %).",
+      "Before: 1,000 bn ÷ 100 m = 10,000 Birr.",
+      "After: 1,050 bn ÷ 103 m ≈ 10,194 Birr.",
+      "Growth ≈ 1.94 %, about 5 % − 3 %."
+     ],
+     "added": true,
+     "id": "g12.economics.u1.s1-2-1.15"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Beyond per capita income: the HDI",
+     "paras": [
+      "Per capita income is an average: it \"conceals more than it reveals\".",
+      "It treats growth and development as the same thing.",
+      "Development also needs income distribution, education and health.",
+      "The UNDP Human Development Index (HDI) is called the \"quality of life index\".",
+      "It compresses several indicators into one composite index.",
+      "Today the HDI uses life expectancy, years of schooling and GNI per capita; it runs from 0 to 1."
+     ],
+     "note": "The last line corrects the book, which calls the HDI purely non-monetary.",
+     "ref": "p.7–8",
+     "id": "g12.economics.u1.s1-2-1.16"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Per capita income",
+       "Total (real) GNP divided by total population: the average income per person."
+      ],
+      [
+       "Human Development Index",
+       "HDI: the UNDP \"quality of life index\" that combines several development indicators into one number."
+      ]
+     ],
+     "id": "g12.economics.u1.s1-2-1.17"
+    },
+    {
+     "kind": "mcq",
+     "text": "Per capita income is",
+     "opts": [
+      "total GNP ÷ total population",
+      "GDP + NFI",
+      "total exports ÷ total imports",
+      "GDP × population"
+     ],
+     "ans": "total GNP ÷ total population",
+     "why": "p.7: the ratio of total GNP to total population.",
+     "clue": "Per capita = per head.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.7",
+     "id": "g12.economics.u1.s1-2-1.18"
+    },
+    {
+     "kind": "blank",
+     "ask": "Real GNP = 360 bn Birr; population = 120 million. Per capita income = ___ Birr",
+     "a": [
+      "3000"
+     ],
+     "why": "360,000,000,000 ÷ 120,000,000 = 3,000 Birr.",
+     "clue": "Billion ÷ million = thousand.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-1.19"
+    },
+    {
+     "kind": "mcq",
+     "text": "Real GNP grows 4 % while population grows 6 %. Real per capita income",
+     "opts": [
+      "falls",
+      "rises",
+      "stays the same",
+      "doubles"
+     ],
+     "ans": "falls",
+     "why": "Growth per person ≈ 4 − 6 = −2 %. Population grew faster than income.",
+     "clue": "Compare the two growth rates.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.7",
+     "id": "g12.economics.u1.s1-2-1.20"
+    },
+    {
+     "kind": "pick",
+     "text": "Why is real income often understated in developing countries?",
+     "pool": [
+      "Subsistence output is not reported",
+      "People under-report income for fear of tax",
+      "The non-monetary sector is left out",
+      "Pollution costs are always deducted",
+      "Prices are never distorted"
+     ],
+     "a": [
+      "Subsistence output is not reported",
+      "People under-report income for fear of tax",
+      "The non-monetary sector is left out"
+     ],
+     "why": "p.7 reasons a–c. The last two options are the opposite of the book.",
+     "clue": "Two options contradict the book.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.7",
+     "id": "g12.economics.u1.s1-2-1.21"
+    },
+    {
+     "kind": "tf",
+     "text": "Per capita income shows how income is shared among people.",
+     "a": false,
+     "why": "It is an average; it says nothing about distribution. That is one of its limits.",
+     "clue": "An average can hide big differences.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.7",
+     "id": "g12.economics.u1.s1-2-1.22"
+    },
+    {
+     "kind": "mcq",
+     "text": "Country A: income per person 2,000 USD, life expectancy 75, most adults schooled. Country B: 2,500 USD, life expectancy 55, few schooled. Which likely has the higher HDI?",
+     "opts": [
+      "Country A",
+      "Country B",
+      "They must be equal",
+      "HDI uses income only"
+     ],
+     "ans": "Country A",
+     "why": "The HDI combines health, education and income. A is far ahead on health and education, which outweighs a small income gap.",
+     "clue": "HDI is not only income.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-1.23"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Economic growth is",
+   "opts": [
+    "an increase in the capacity of an economy to produce goods and services",
+    "a rise in the general price level",
+    "a fall in unemployment only",
+    "a trade surplus"
+   ],
+   "ans": "an increase in the capacity of an economy to produce goods and services",
+   "why": "p.6.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.economics.u1.s1-2-1.24"
+  },
+  {
+   "kind": "mcq",
+   "text": "The HDI was developed by",
+   "opts": [
+    "UNDP",
+    "the IMF",
+    "the World Trade Organization",
+    "the African Union"
+   ],
+   "ans": "UNDP",
+   "why": "p.8.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.economics.u1.s1-2-1.25"
+  },
+  {
+   "kind": "blank",
+   "ask": "Real GDP rises from 400 to 430 bn Birr. Growth rate = ___ %",
+   "a": [
+    "7.5",
+    "7.5%"
+   ],
+   "why": "30 ÷ 400 × 100 = 7.5 %.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.economics.u1.s1-2-1.26"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which is a limitation of total GDP growth as a measure of living standards?",
+   "opts": [
+    "It ignores population growth",
+    "It is measured per person",
+    "It counts only final goods",
+    "It uses base-year prices"
+   ],
+   "ans": "It ignores population growth",
+   "why": "p.7.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.economics.u1.s1-2-1.27"
+  },
+  {
+   "kind": "blank",
+   "ask": "Real GNP grows 5 % and population grows 3 %. Per capita income grows by about ___ %",
+   "a": [
+    "2",
+    "≈1.9",
+    "≈1.94"
+   ],
+   "why": "1.05 ÷ 1.03 ≈ 1.0194: about 1.94 %, roughly 5 − 3 = 2 %.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.economics.u1.s1-2-1.28"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.6: \"GDP per capital\" should be \"GDP per capita\"."
+  },
+  {
+   "kind": "review",
+   "text": "p.8: the HDI is described as a non-monetary index of fertility, mortality and infrastructure. The UNDP HDI combines health (life expectancy), education (years of schooling) and standard of living (GNI per capita, PPP), scaled 0–1. The lesson adds this correction."
+  },
+  {
+   "kind": "note",
+   "text": "The book gives no growth-rate formula; the formula, all worked numbers, the slider and the HDI comparison item are added."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

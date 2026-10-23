@@ -1,0 +1,883 @@
+{
+ "id": "g12.economics.u1.s1-2-2",
+ "book": {
+  "title": "Economics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "economics",
+  "unit": 1,
+  "unit_title": "The fundamental concepts of macroeconomics",
+  "pages": "8–12",
+  "section": "1.2.2"
+ },
+ "title": "Inflation",
+ "competency": "Define inflation and deflation, calculate the CPI and the inflation rate, and classify inflation by speed and cause.",
+ "minutes": 35,
+ "keywords": [
+  {
+   "en": "Inflation",
+   "am": "የዋጋ ግሽበት",
+   "def": "A regular and continuous rise in the general price level.",
+   "machine": true
+  },
+  {
+   "en": "Deflation",
+   "am": "የዋጋ ቅናሽ (ዲፍሌሽን)",
+   "def": "A fall in the general price level; the opposite of inflation.",
+   "machine": true
+  },
+  {
+   "en": "Consumer price index",
+   "am": "የሸማቾች የዋጋ መለኪያ",
+   "def": "CPI: (current cost of a typical consumer basket ÷ its base-year cost) × 100.",
+   "machine": true
+  },
+  {
+   "en": "Inflation rate",
+   "am": "የዋጋ ግሽበት መጠን",
+   "def": "The percentage change in the price level: (CPIₜ − CPIₜ₋₁) ÷ CPIₜ₋₁ × 100.",
+   "machine": true
+  },
+  {
+   "en": "Hyperinflation",
+   "am": "ልክ የለሽ የዋጋ ግሽበት",
+   "def": "Uncontrolled price rises, traditionally more than 50 % per month.",
+   "machine": true
+  },
+  {
+   "en": "Seigniorage",
+   "am": "ገንዘብ በማተም የሚገኝ ገቢ",
+   "def": "Revenue a government raises by printing money; it acts like an inflation tax on money holders.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "eco.inflation",
+   "name": "Inflation and the cost of living",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Inflation is a regular and continuous rise in the general price level, the average price of goods and services; a fall in the price level is deflation. Inflation lowers the purchasing power of money and raises the cost of living. Some governments index wages, contracts and interest rates to inflation; when wages do not keep up, the real wage and living standards fall."
+    },
+    "am": {
+     "text": "የዋጋ ግሽበት የአጠቃላይ ዋጋ ቀጣይ ጭማሪ ነው፤ የገንዘብን የመግዛት አቅም ይቀንሳል። ደመወዝ ከዋጋ ጋር ካልጨመረ እውነተኛ ደመወዝ ይቀንሳል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Your 100 Birr",
+     "ask": "Last year 100 Birr bought 2 kg of sugar. Now the prices of almost everything have risen 25 %. How much sugar does 100 Birr buy now?",
+     "opts": [
+      "1.6 kg",
+      "2 kg",
+      "2.5 kg",
+      "1 kg"
+     ],
+     "after": "Sugar was 50 Birr/kg and is now 62.5 Birr/kg. 100 ÷ 62.5 = 1.6 kg. Rising prices cut what money buys.",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Inflation",
+     "paras": [
+      "Prices do not always stay the same.",
+      "Inflation is a regular and continuous rise in the general price level.",
+      "The general price level is the average price of goods and services.",
+      "Inflation is cumulative: a small rise can grow very large.",
+      "The rate of inflation is the percentage change in the price level from one year to the next.",
+      "A fall in the price level is deflation."
+     ],
+     "ref": "p.8",
+     "id": "g12.economics.u1.s1-2-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Who loses?",
+     "paras": [
+      "Inflation lowers the purchasing power of money.",
+      "People must pay more for a litre of milk or a kilogram of sugar.",
+      "The cost of living rises; living standards can fall.",
+      "Some governments index wages, contracts and interest rates to inflation.",
+      "If wages do not rise with prices, the real wage falls.",
+      "So inflation is a major concern of policy makers everywhere."
+     ],
+     "ref": "p.8–9",
+     "id": "g12.economics.u1.s1-2-2.3"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Real wage",
+     "steps": [
+      "A nominal wage stays at 5,000 Birr; the CPI rises from 100 to 125.",
+      "Real wage = 5,000 ÷ 125 × 100 = 4,000 Birr (base-year Birr).",
+      "Purchasing power fell by 20 %.",
+      "An indexed wage must rise 25 %, to 6,250 Birr, to keep up."
+     ],
+     "added": true,
+     "id": "g12.economics.u1.s1-2-2.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Inflation",
+       "A regular and continuous rise in the general price level."
+      ],
+      [
+       "Deflation",
+       "A fall in the general price level; the opposite of inflation."
+      ]
+     ],
+     "id": "g12.economics.u1.s1-2-2.5"
+    },
+    {
+     "kind": "tf",
+     "text": "A one-time rise in the price of coffee only is inflation.",
+     "a": false,
+     "why": "Inflation is a continuous rise in the GENERAL price level, not a single jump in one price.",
+     "clue": "Check two words in the definition: general, continuous.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.8",
+     "id": "g12.economics.u1.s1-2-2.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "When prices rise and wages stay the same,",
+     "opts": [
+      "the real wage falls",
+      "the real wage rises",
+      "purchasing power rises",
+      "the cost of living falls"
+     ],
+     "ans": "the real wage falls",
+     "why": "p.8: the same money buys less, so the real wage and living standards fall.",
+     "clue": "What can the wage buy now?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.8",
+     "id": "g12.economics.u1.s1-2-2.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "Indexing wages to inflation means",
+     "opts": [
+      "wages rise when inflation rises",
+      "wages are frozen",
+      "wages fall when prices rise",
+      "wages are paid in dollars"
+     ],
+     "ans": "wages rise when inflation rises",
+     "why": "p.8: indexed wages and interest rates rise with inflation to keep purchasing power.",
+     "clue": "It protects purchasing power.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.8",
+     "id": "g12.economics.u1.s1-2-2.8"
+    },
+    {
+     "kind": "blank",
+     "ask": "A nominal wage is 6,000 Birr. The CPI rose from 100 to 150. Real wage = ___ Birr (base-year Birr)",
+     "a": [
+      "4000"
+     ],
+     "why": "6,000 ÷ 150 × 100 = 4,000 Birr.",
+     "clue": "Divide by the CPI, multiply by 100.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-2.9"
+    },
+    {
+     "kind": "tf",
+     "text": "A fall in the general price level is called deflation.",
+     "a": true,
+     "why": "p.8: deflation is the opposite of inflation.",
+     "clue": "Opposite of inflation.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.8",
+     "id": "g12.economics.u1.s1-2-2.10"
+    },
+    {
+     "kind": "blank",
+     "ask": "A worker earns 4,000 Birr. Prices rise 20 %. To keep the same real wage, the new wage must be ___ Birr",
+     "a": [
+      "4800"
+     ],
+     "why": "4,000 × 1.20 = 4,800 Birr.",
+     "clue": "The wage must rise by the same percentage as prices.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-2.11"
+    }
+   ]
+  },
+  {
+   "id": "eco.cpi",
+   "name": "The consumer price index and the inflation rate",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "The consumer price index (CPI) compares the cost of a typical consumer basket with its cost in a base year: CPI = (current cost ÷ base-year cost) × 100, so the base year is 100. The inflation rate is the percentage change in the CPI: (CPIₜ − CPIₜ₋₁) ÷ CPIₜ₋₁ × 100, always dividing by the past CPI. A negative rate means deflation, as in the book's wheat-and-oil example for 2002 E.C."
+    },
+    "am": {
+     "text": "የሸማቾች የዋጋ መለኪያ = የአሁኑ ቅርጫት ዋጋ ÷ የመሠረት ዓመት ዋጋ × 100። የዋጋ ግሽበት መጠን = (የአሁኑ − ያለፈው) ÷ ያለፈው × 100።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A basket of goods",
+     "ask": "A family buys the same basket every year. It cost 200 Birr in 2000 E.C. and 280 Birr in 2001 E.C. By what percent did its cost rise?",
+     "opts": [
+      "40 %",
+      "80 %",
+      "28 %",
+      "140 %"
+     ],
+     "after": "(280 − 200) ÷ 200 × 100 = 40 %. Tracking a fixed basket is the idea behind the CPI.",
+     "ref": "p.10",
+     "id": "g12.economics.u1.s1-2-2.12"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Inflation from the CPI",
+     "ask": "Move last year's and this year's CPI. Watch the inflation rate. When is it negative?",
+     "vars": [
+      {
+       "k": "p",
+       "label": "CPI last year",
+       "min": 80,
+       "max": 200,
+       "step": 1,
+       "v": 100
+      },
+      {
+       "k": "c",
+       "label": "CPI this year",
+       "min": 80,
+       "max": 250,
+       "step": 1,
+       "v": 120
+      }
+     ],
+     "formula": "(c - p) / p * 100",
+     "out": "Inflation rate: {v} %",
+     "note": "Inflation = (CPI this year − CPI last year) ÷ CPI last year × 100. A negative rate is deflation.",
+     "id": "g12.economics.u1.s1-2-2.13"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Consumer price index (CPI)",
+     "paras": [
+      "The CPI is a price index of goods and services typically bought by consumers.",
+      "CPI = (current cost of basket ÷ base-year cost of basket) × 100.",
+      "The base year's CPI is always 100.",
+      "Inflation rate = (CPIₜ − CPIₜ₋₁) ÷ CPIₜ₋₁ × 100.",
+      "Divide by the PAST year's CPI."
+     ],
+     "note": "The book's CPI box omits × 100; its worked example uses it.",
+     "ref": "p.9",
+     "id": "g12.economics.u1.s1-2-2.14"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Two short book examples",
+     "steps": [
+      "Price totals: 560 Birr now, 430 Birr before.",
+      "560 ÷ 430 ≈ 1.30; × 100 ≈ 130.",
+      "130 − 100 = 30: prices rose about 30 %.",
+      "CPI 20 → 25: (25 − 20) ÷ 20 × 100 = 5 ÷ 20 × 100 = 25 %."
+     ],
+     "ref": "p.9",
+     "id": "g12.economics.u1.s1-2-2.15"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Example: wheat and edible oil",
+     "paras": [
+      "A consumer buys 50 kg of wheat and 10 litres of oil each year.",
+      "Base year: 2000 E.C."
+     ],
+     "table": [
+      [
+       "Year",
+       "Wheat (Birr/kg)",
+       "Oil (Birr/litre)",
+       "Basket cost (Birr)",
+       "CPI"
+      ],
+      [
+       "2000 E.C.",
+       "2",
+       "10",
+       "2 × 50 + 10 × 10 = 200",
+       "100"
+      ],
+      [
+       "2001 E.C.",
+       "3",
+       "13",
+       "150 + 130 = 280",
+       "140"
+      ],
+      [
+       "2002 E.C.",
+       "2",
+       "14",
+       "100 + 140 = 240",
+       "120"
+      ],
+      [
+       "2003 E.C.",
+       "4",
+       "20",
+       "200 + 200 = 400",
+       "200"
+      ]
+     ],
+     "note": "The book's price table prints 24 Birr for oil in 2003 E.C., but its working uses 20 Birr. This lesson uses 20 Birr throughout.",
+     "ref": "p.9–10",
+     "id": "g12.economics.u1.s1-2-2.16"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Inflation each year",
+     "steps": [
+      "2000 → 2001: (140 − 100) ÷ 100 × 100 = 40 %.",
+      "2001 → 2002: (120 − 140) ÷ 140 × 100 ≈ −14.3 %.",
+      "2002 → 2003: (200 − 120) ÷ 120 × 100 ≈ 66.7 %.",
+      "2002 E.C. is negative: deflation.",
+      "2001 and 2003 E.C.: inflation."
+     ],
+     "ref": "p.10–11",
+     "id": "g12.economics.u1.s1-2-2.17"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Consumer price index",
+       "CPI: (current cost of a typical consumer basket ÷ its base-year cost) × 100."
+      ],
+      [
+       "Inflation rate",
+       "The percentage change in the price level: (CPIₜ − CPIₜ₋₁) ÷ CPIₜ₋₁ × 100."
+      ]
+     ],
+     "id": "g12.economics.u1.s1-2-2.18"
+    },
+    {
+     "kind": "blank",
+     "ask": "The CPI rises from 120 to 150. Inflation rate = ___ %",
+     "a": [
+      "25",
+      "25%"
+     ],
+     "why": "(150 − 120) ÷ 120 × 100 = 30 ÷ 120 × 100 = 25 %.",
+     "clue": "Divide by the past CPI.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "id": "g12.economics.u1.s1-2-2.19"
+    },
+    {
+     "kind": "blank",
+     "ask": "A basket costs 300 Birr in the base year and 390 Birr now. CPI now = ___",
+     "a": [
+      "130"
+     ],
+     "why": "390 ÷ 300 × 100 = 130.",
+     "clue": "Current cost ÷ base-year cost × 100.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-2.20"
+    },
+    {
+     "kind": "blank",
+     "ask": "The CPI falls from 140 to 126. Inflation rate = ___ %",
+     "a": [
+      "-10",
+      "−10",
+      "-10%"
+     ],
+     "why": "(126 − 140) ÷ 140 × 100 = −14 ÷ 140 × 100 = −10 %: deflation.",
+     "clue": "The change is negative.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-2.21"
+    },
+    {
+     "kind": "mcq",
+     "text": "A student computes inflation as (150 − 120) ÷ 150 × 100 = 20 %. What is wrong?",
+     "opts": [
+      "They divided by the current CPI instead of the past CPI",
+      "They forgot to subtract",
+      "Nothing; 20 % is right",
+      "They should add the two CPIs"
+     ],
+     "ans": "They divided by the current CPI instead of the past CPI",
+     "why": "Correct: (150 − 120) ÷ 120 × 100 = 25 %.",
+     "clue": "Which CPI goes in the denominator?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "id": "g12.economics.u1.s1-2-2.22"
+    },
+    {
+     "kind": "blank",
+     "ask": "Wheat-and-oil table: take 2001 E.C. as the base year. CPI in 2002 E.C. = ___ (1 decimal place)",
+     "a": [
+      "≈85.7"
+     ],
+     "why": "240 ÷ 280 × 100 ≈ 85.7. A new base year changes the CPI numbers.",
+     "clue": "The base-year basket now costs 280 Birr.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.10",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-2.23"
+    },
+    {
+     "kind": "tf",
+     "text": "The base year's CPI is always 100.",
+     "a": true,
+     "why": "Base-year cost ÷ base-year cost × 100 = 100.",
+     "clue": "Divide a number by itself.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.10",
+     "id": "g12.economics.u1.s1-2-2.24"
+    },
+    {
+     "kind": "blank",
+     "ask": "A consumer buys 20 kg of teff and 5 litres of oil. Year 1: teff 60, oil 120 Birr. Year 2: teff 75, oil 150 Birr. Inflation = ___ %",
+     "a": [
+      "25",
+      "25%"
+     ],
+     "why": "Year 1: 20 × 60 + 5 × 120 = 1,200 + 600 = 1,800. Year 2: 20 × 75 + 5 × 150 = 1,500 + 750 = 2,250. CPI 100 → 125. Inflation = 25 %.",
+     "clue": "Cost the basket in both years first.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-2.25"
+    }
+   ]
+  },
+  {
+   "id": "eco.inflation-types",
+   "name": "Types and causes of inflation",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "By speed, inflation is creeping (3 % or less a year), walking (3 % to under 10 %), running (10–20 %), galloping (double or triple digits) or hyperinflation (more than 50 % a month). By cause, it may be demand-pull, cost-push, or wage, profit, scarcity, deficit, currency, credit or foreign-trade induced. Printing money to finance spending (seigniorage) acts like an inflation tax; Hungary in 1946 and Zimbabwe in 2007–2009 show how far hyperinflation can go."
+    },
+    "am": {
+     "text": "የዋጋ ግሽበት በፍጥነቱ ቀርፋፋ፣ መካከለኛ፣ ፈጣን፣ በጣም ፈጣን እና ልክ የለሽ ይባላል። መንግሥት ገንዘብ ሲያትም የዋጋ ግሽበት ይጨምራል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Fifty percent a month",
+     "ask": "If prices rise 50 % every month, about how many times higher are they after one year?",
+     "opts": [
+      "About 130 times",
+      "6 times (12 × 50 %)",
+      "1.5 times",
+      "About 13 times"
+     ],
+     "after": "1.5¹² ≈ 129.7: prices rise about 130-fold in a year. That is hyperinflation.",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-2.26"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Types by speed",
+     "paras": [
+      "Inflation can be classified by how fast prices rise."
+     ],
+     "table": [
+      [
+       "Type",
+       "Rate of price rise"
+      ],
+      [
+       "Creeping",
+       "3 % or less a year"
+      ],
+      [
+       "Walking",
+       "3 % to under 10 % a year"
+      ],
+      [
+       "Running",
+       "10–20 % a year"
+      ],
+      [
+       "Galloping (jumping)",
+       "double or triple digits a year, for a short time"
+      ],
+      [
+       "Hyperinflation",
+       "more than 50 % a MONTH"
+      ]
+     ],
+     "note": "The book's galloping band overlaps running; in these exercises galloping means above 20 % a year.",
+     "ref": "p.11",
+     "id": "g12.economics.u1.s1-2-2.27"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Types by cause",
+     "paras": [
+      "Inflation: too much money chasing too few goods; demand exceeds supply.",
+      "Causes: demand-pull, cost-push, wage, profit, scarcity, deficit, currency, credit, foreign trade.",
+      "Printing money to finance spending raises the money supply.",
+      "This revenue is seigniorage.",
+      "It works like an inflation tax on people holding money (Mankiw, 2016)."
+     ],
+     "ref": "p.11–12",
+     "id": "g12.economics.u1.s1-2-2.28"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Extreme cases",
+     "paras": [
+      "Hungary, July 1946: monthly inflation of 41.9 quadrillion percent; prices doubled every 15.3 hours.",
+      "Zimbabwe 2007–2009: prices at times doubled daily; a $100 trillion note was printed.",
+      "By late 2008 its money was nearly worthless; Zimbabwe adopted the US dollar.",
+      "Wars, falling export prices, tax evasion and political stalemate cause large deficits.",
+      "If investors will not buy government bonds, the government prints money."
+     ],
+     "ref": "p.12",
+     "id": "g12.economics.u1.s1-2-2.29"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Hyperinflation",
+       "Uncontrolled price rises, traditionally more than 50 % per month."
+      ],
+      [
+       "Seigniorage",
+       "Revenue a government raises by printing money; it acts like an inflation tax on money holders."
+      ]
+     ],
+     "id": "g12.economics.u1.s1-2-2.30"
+    },
+    {
+     "kind": "mcq",
+     "text": "Prices rise 2 % a year. This is",
+     "opts": [
+      "creeping inflation",
+      "walking inflation",
+      "running inflation",
+      "hyperinflation"
+     ],
+     "ans": "creeping inflation",
+     "why": "Creeping: 3 % or less a year.",
+     "clue": "Is 2 % at most 3 %?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.11",
+     "id": "g12.economics.u1.s1-2-2.31"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Classify each inflation rate",
+     "bins": [
+      "Creeping",
+      "Walking",
+      "Running",
+      "Galloping",
+      "Hyperinflation"
+     ],
+     "items": [
+      [
+       "1 % a year",
+       "Creeping",
+       "3 % or less"
+      ],
+      [
+       "7 % a year",
+       "Walking",
+       "3 % to under 10 %"
+      ],
+      [
+       "15 % a year",
+       "Running",
+       "10–20 %"
+      ],
+      [
+       "80 % a year",
+       "Galloping",
+       "double digits, above running"
+      ],
+      [
+       "60 % a month",
+       "Hyperinflation",
+       "more than 50 % a month"
+      ],
+      [
+       "9 % a year",
+       "Walking",
+       "single digit"
+      ]
+     ],
+     "why": "Check the speed bands, and whether the rate is per year or per MONTH.",
+     "clue": "Look at the unit: year or month?",
+     "ref": "p.11",
+     "graded": true,
+     "level": 2,
+     "id": "g12.economics.u1.s1-2-2.32"
+    },
+    {
+     "kind": "mcq",
+     "text": "Seigniorage is",
+     "opts": [
+      "revenue a government raises by printing money",
+      "a tax on imports",
+      "a type of unemployment",
+      "interest on foreign loans"
+     ],
+     "ans": "revenue a government raises by printing money",
+     "why": "p.12.",
+     "clue": "It is linked to printing money.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.12",
+     "id": "g12.economics.u1.s1-2-2.33"
+    },
+    {
+     "kind": "tf",
+     "text": "Hyperinflation is traditionally defined as inflation above 50 % per year.",
+     "a": false,
+     "why": "It is more than 50 % per MONTH (p.12).",
+     "clue": "Check the time unit.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.12",
+     "id": "g12.economics.u1.s1-2-2.34"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why is inflation called a \"tax\" on holding money?",
+     "opts": [
+      "As prices rise, the real value of money in your wallet falls",
+      "The government collects it at banks",
+      "Only rich people pay it",
+      "It is written into the tax law"
+     ],
+     "ans": "As prices rise, the real value of money in your wallet falls",
+     "why": "p.12: holders of money lose purchasing power, as if taxed.",
+     "clue": "What happens to the cash you hold?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.12",
+     "id": "g12.economics.u1.s1-2-2.35"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which country adopted the US dollar to stop its hyperinflation?",
+     "opts": [
+      "Zimbabwe",
+      "Hungary",
+      "Mexico",
+      "Argentina"
+     ],
+     "ans": "Zimbabwe",
+     "why": "p.12: Zimbabwe, after 2008.",
+     "clue": "A $100 trillion note.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.12",
+     "id": "g12.economics.u1.s1-2-2.36"
+    },
+    {
+     "kind": "mcq",
+     "text": "During a long war, a government cannot raise taxes and no one will buy its bonds. What is the most likely result, according to the book?",
+     "opts": [
+      "It prints money, and inflation rises",
+      "Prices fall",
+      "Unemployment disappears",
+      "Its trade surplus grows"
+     ],
+     "ans": "It prints money, and inflation rises",
+     "why": "p.12: wars bring large deficits; with no bond buyers the only choice left is printing money, which fuels inflation.",
+     "clue": "How else can it pay?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.12",
+     "added": true,
+     "id": "g12.economics.u1.s1-2-2.37"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Inflation is",
+   "opts": [
+    "a continuous rise in the general price level",
+    "a fall in the general price level",
+    "a rise in the price of one good",
+    "a rise in output"
+   ],
+   "ans": "a continuous rise in the general price level",
+   "why": "p.8.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.economics.u1.s1-2-2.38"
+  },
+  {
+   "kind": "mcq",
+   "text": "Prices rising 15 % a year is",
+   "opts": [
+    "running inflation",
+    "creeping inflation",
+    "walking inflation",
+    "hyperinflation"
+   ],
+   "ans": "running inflation",
+   "why": "Running: 10–20 % a year.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.economics.u1.s1-2-2.39"
+  },
+  {
+   "kind": "blank",
+   "ask": "The CPI rises from 200 to 230. Inflation rate = ___ %",
+   "a": [
+    "15",
+    "15%"
+   ],
+   "why": "30 ÷ 200 × 100 = 15 %.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.economics.u1.s1-2-2.40"
+  },
+  {
+   "kind": "blank",
+   "ask": "A basket costs 250 Birr in the base year and 300 Birr now. CPI now = ___",
+   "a": [
+    "120"
+   ],
+   "why": "300 ÷ 250 × 100 = 120.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.economics.u1.s1-2-2.41"
+  },
+  {
+   "kind": "blank",
+   "ask": "CPI in 2001 = 150 and in 2002 = 135. Inflation rate = ___ %",
+   "a": [
+    "-10",
+    "−10",
+    "-10%"
+   ],
+   "why": "(135 − 150) ÷ 150 × 100 = −10 %: deflation.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.economics.u1.s1-2-2.42"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.9: the CPI box omits \"× 100\", which the worked example uses; the lesson writes CPI = (current cost ÷ base-year cost) × 100."
+  },
+  {
+   "kind": "review",
+   "text": "p.9: the past price total is printed \"$340\" but the working uses 430 (560 ÷ 430 ≈ 1.30). The lesson uses 430 Birr. The second example says \"CPI 25%\"; a CPI is an index number (25), not a percentage."
+  },
+  {
+   "kind": "review",
+   "text": "p.9–11 wheat-and-oil example: the price table gives oil at 24 Birr in 2003 E.C. but the working uses 20 Birr (basket 400, CPI 200, inflation 66.6 %). The lesson fixes the price at 20 Birr everywhere, and rounds 80 ÷ 120 × 100 to 66.7 % (the book truncates to 66.6 %). With 24 Birr: basket 440, CPI 220, inflation 83.3 %. The book also says \"three years\" for four, and asks for \"2003 to 2000 E.C.\", which is dropped."
+  },
+  {
+   "kind": "review",
+   "text": "p.11–12: \"seinorage\" → seigniorage; \"Mankiwi\" → Mankiw. The galloping band (\"dual-digit\") overlaps running (10–20 %); exercises treat galloping as above 20 % a year."
+  },
+  {
+   "kind": "note",
+   "text": "Real-wage, sugar, teff-and-oil basket and 1.5¹² compounding examples are added; the CPI slider is added."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

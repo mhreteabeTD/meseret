@@ -1,0 +1,394 @@
+{
+ "id": "g12.agriculture.u1.s1-4",
+ "book": {
+  "title": "Agriculture Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "agriculture",
+  "unit": 1,
+  "unit_title": "Vegetable crops production and management",
+  "pages": "13–14",
+  "section": "1.4"
+ },
+ "title": "Types of vegetable production systems",
+ "competency": "Describe the types of vegetable production systems in Ethiopia.",
+ "minutes": 15,
+ "keywords": [
+  {
+   "en": "Wild vegetable gathering",
+   "am": "የዱር አትክልት መልቀም",
+   "def": "Collecting edible parts of wild plants, such as moringa leaves and sama.",
+   "machine": true
+  },
+  {
+   "en": "Mixed cropping",
+   "am": "ቅይጥ ሰብል",
+   "def": "Growing vegetables together with other field crops, such as Ethiopian mustard with maize.",
+   "machine": true
+  },
+  {
+   "en": "Home gardening",
+   "am": "የጓሮ አትክልት ልማት",
+   "def": "Using land close to the homestead to grow vegetables for the household.",
+   "machine": true
+  },
+  {
+   "en": "Commercial vegetable production",
+   "am": "ለገበያ የሚመረት አትክልት",
+   "def": "Market-oriented, intensively managed vegetable production, usually near towns.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "agri.production-systems",
+   "name": "Vegetable production systems",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Vegetable production evolved from gathering wild plants to specialized systems. In gathering, people collect moringa (shiferaw) leaves, sama (Urtica pilulifera), Amaranthus and wild fruits. Some vegetables grow mixed with field crops, such as Ethiopian mustard with maize, or taro and kale with coffee. Home gardens near the homestead, fed with household organic waste, are very common among Ethiopian smallholders. Commercial production is market-oriented, intensive in inputs and located near towns."
+    },
+    "am": {
+     "text": "የአትክልት አመራረት ከዱር መልቀም እስከ ለገበያ ማምረት ያድጋል። የጓሮ አትክልት በኢትዮጵያ አርሶ አደሮች ዘንድ በጣም የተለመደ ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Which system?",
+     "ask": "A family grows onion, kale and tomato beside their house and feeds the plot with kitchen waste. What system is this?",
+     "opts": [
+      "Home gardening",
+      "Commercial production",
+      "Gathering wild vegetables",
+      "Mixed with cereal crops"
+     ],
+     "after": "Land close to the homestead, fed with household organic waste, is a home garden.",
+     "ref": "p.13",
+     "id": "g12.agriculture.u1.s1-4.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Gathering and mixed cropping",
+     "paras": [
+      "Production evolved from gathering wild plants to specialized systems.",
+      "1. Gathering wild vegetables: moringa (shiferaw) leaves, sama (Urtica pilulifera), Amaranthus.",
+      "Wild fruits are also gathered: shola, wild mango, dokma, agam, kega.",
+      "2. Mixed with field crops: Ethiopian mustard with maize; taro and kale with coffee.",
+      "Few vegetables grow in cereal fields; they are often on land unfit for cereals."
+     ],
+     "note": "The book lists shola, wild mango, dokma, agam and kega as wild vegetables; they are wild fruits.",
+     "ref": "p.13",
+     "id": "g12.agriculture.u1.s1-4.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Home gardens and commercial farms",
+     "paras": [
+      "3. Home gardening is very common in Ethiopian smallholder farming.",
+      "4. Commercial production supplies the urban population."
+     ],
+     "table": [
+      [
+       "",
+       "Home gardening",
+       "Commercial production"
+      ],
+      [
+       "Where",
+       "close to the homestead",
+       "close to urban centres"
+      ],
+      [
+       "Purpose",
+       "household food, some income",
+       "market demand"
+      ],
+      [
+       "Inputs",
+       "household organic waste",
+       "fertilizers, pesticides, irrigation, machinery"
+      ],
+      [
+       "Crops",
+       "fruit, seed, leafy and root vegetables together",
+       "what the market demands"
+      ]
+     ],
+     "ref": "p.13",
+     "id": "g12.agriculture.u1.s1-4.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Wild vegetable gathering",
+       "Collecting edible parts of wild plants, such as moringa leaves and sama."
+      ],
+      [
+       "Mixed cropping",
+       "Growing vegetables together with other field crops, such as Ethiopian mustard with maize."
+      ],
+      [
+       "Home gardening",
+       "Using land close to the homestead to grow vegetables for the household."
+      ],
+      [
+       "Commercial vegetable production",
+       "Market-oriented, intensively managed vegetable production, usually near towns."
+      ]
+     ],
+     "id": "g12.agriculture.u1.s1-4.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which system is very common among Ethiopian smallholders?",
+     "opts": [
+      "Home gardening",
+      "Commercial vegetable production",
+      "Gathering wild vegetables",
+      "Large export greenhouses"
+     ],
+     "ans": "Home gardening",
+     "why": "p.13.",
+     "clue": "Think of the plot beside most rural homes.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.13",
+     "id": "g12.agriculture.u1.s1-4.5"
+    },
+    {
+     "kind": "order",
+     "title": "Order the systems from simplest to most advanced",
+     "items": [
+      "Gathering of wild vegetables",
+      "Vegetables mixed with field crops",
+      "Home gardening",
+      "Commercial vegetable production"
+     ],
+     "why": "The order of 1.4.1–1.4.4.",
+     "clue": "Start with no planting at all.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.13",
+     "id": "g12.agriculture.u1.s1-4.6"
+    },
+    {
+     "kind": "match",
+     "title": "Match the example with the system",
+     "pairs": [
+      [
+       "Collecting sama and moringa leaves",
+       "gathering wild vegetables"
+      ],
+      [
+       "Ethiopian mustard among maize",
+       "mixed with field crops"
+      ],
+      [
+       "Kale and onion beside the tukul",
+       "home gardening"
+      ],
+      [
+       "Irrigated tomato farm supplying Addis Ababa",
+       "commercial production"
+      ]
+     ],
+     "why": "Each example matches one of 1.4.1–1.4.4.",
+     "clue": "Who eats or buys the produce?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 1.2",
+     "id": "g12.agriculture.u1.s1-4.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why are commercial vegetable farms usually close to towns?",
+     "opts": [
+      "Transport to market is easy and vegetables are perishable",
+      "Town soil is the most fertile",
+      "Towns are always in lowlands",
+      "Wild vegetables grow there"
+     ],
+     "ans": "Transport to market is easy and vegetables are perishable",
+     "why": "p.13: location near urban areas makes transport easy; perishable produce must reach buyers fast.",
+     "clue": "What happens to tomatoes on a long journey?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.13",
+     "id": "g12.agriculture.u1.s1-4.8"
+    },
+    {
+     "kind": "pick",
+     "text": "Which inputs are typical of commercial production?",
+     "pool": [
+      "Fertilizers",
+      "Pesticides",
+      "Irrigation",
+      "Machinery",
+      "Only kitchen waste"
+     ],
+     "a": [
+      "Fertilizers",
+      "Pesticides",
+      "Irrigation",
+      "Machinery"
+     ],
+     "why": "Kitchen waste is the home-garden input.",
+     "clue": "One option belongs to home gardens.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.13",
+     "id": "g12.agriculture.u1.s1-4.9"
+    },
+    {
+     "kind": "tf",
+     "text": "Taro and kale can be grown mixed with coffee plants.",
+     "a": true,
+     "why": "p.13.",
+     "clue": "Think of southern Ethiopian coffee gardens.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.13",
+     "id": "g12.agriculture.u1.s1-4.10"
+    },
+    {
+     "kind": "mcq",
+     "text": "A Batu farmer moves from a home garden to 2 ha of irrigated tomato for Addis markets. What must change most?",
+     "opts": [
+      "She must plan for market demand and manage intensively with more inputs",
+      "She can stop managing the crop",
+      "She should gather wild tomatoes",
+      "She no longer needs transport"
+     ],
+     "ans": "She must plan for market demand and manage intensively with more inputs",
+     "why": "Commercial production is market-oriented and intensively managed with fertilizer, pesticides, irrigation and machinery.",
+     "clue": "Compare the two columns of the table.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.13",
+     "added": true,
+     "id": "g12.agriculture.u1.s1-4.11"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Sama (Urtica pilulifera) is collected in which system?",
+   "opts": [
+    "Gathering wild vegetables",
+    "Commercial production",
+    "Home gardening",
+    "Mixed with maize"
+   ],
+   "ans": "Gathering wild vegetables",
+   "why": "p.13.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.agriculture.u1.s1-4.12"
+  },
+  {
+   "kind": "mcq",
+   "text": "Ethiopian mustard is often grown mixed with",
+   "opts": [
+    "maize",
+    "teff",
+    "sugar cane",
+    "barley"
+   ],
+   "ans": "maize",
+   "why": "p.13.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.agriculture.u1.s1-4.13"
+  },
+  {
+   "kind": "mcq",
+   "text": "Commercial vegetable production is mainly",
+   "opts": [
+    "market-oriented",
+    "for home use only",
+    "gathering from forests",
+    "done without inputs"
+   ],
+   "ans": "market-oriented",
+   "why": "p.13.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.agriculture.u1.s1-4.14"
+  },
+  {
+   "kind": "mcq",
+   "text": "In home gardens, plots near the house are often fertilized with",
+   "opts": [
+    "household organic wastes",
+    "imported pesticides",
+    "machinery",
+    "groundwater only"
+   ],
+   "ans": "household organic wastes",
+   "why": "p.13.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.agriculture.u1.s1-4.15"
+  },
+  {
+   "kind": "mcq",
+   "text": "A farmer sells all her cabbage in Adama market and uses fertilizer, irrigation and pesticides. Her system is",
+   "opts": [
+    "commercial production",
+    "home gardening",
+    "gathering wild vegetables",
+    "mixed with coffee"
+   ],
+   "ans": "commercial production",
+   "why": "Market-oriented and input-intensive.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.agriculture.u1.s1-4.16"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.13: shola, wild mango, dokma, agam and kega are wild fruits, not vegetables in the book's own sense; moringa leaves, sama (nettle) and Amaranthus are the true wild vegetables. The book prints \"Urticapilulifera\" (should be Urtica pilulifera)."
+  },
+  {
+   "kind": "review",
+   "text": "p.13: the heading says \"mixed with cereal crops\", but coffee is not a cereal (meaning: mixed with field crops). \"are most of the times is grown\" is ungrammatical."
+  },
+  {
+   "kind": "note",
+   "text": "Added: the Batu and Addis Ababa scenarios and the systems comparison table layout."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

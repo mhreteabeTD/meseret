@@ -1,0 +1,1057 @@
+{
+ "id": "g12.agriculture.u2.s2-6",
+ "book": {
+  "title": "Agriculture Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "agriculture",
+  "unit": 2,
+  "unit_title": "Fruit crops production and management",
+  "pages": "35–39",
+  "section": "2.6"
+ },
+ "title": "Management of orchards",
+ "competency": "Plan orchard planting, calculate plants per hectare from spacing, and choose suitable irrigation practices and methods.",
+ "minutes": 40,
+ "keywords": [
+  {
+   "en": "Orchard",
+   "am": "የፍራፍሬ እርሻ",
+   "def": "Farm land allocated for growing fruit crops.",
+   "machine": true
+  },
+  {
+   "en": "Planting distance",
+   "am": "የመትከያ ርቀት",
+   "def": "The spacing between rows and between plants in a row.",
+   "machine": true
+  },
+  {
+   "en": "Plant population",
+   "am": "የተክል ብዛት በሄክታር",
+   "def": "The number of plants per hectare = 10 000 m² ÷ (row spacing × plant spacing).",
+   "machine": true
+  },
+  {
+   "en": "Irrigation",
+   "am": "መስኖ",
+   "def": "Applying controlled amounts of water to land to help grow crops, landscape plants and lawns.",
+   "machine": true
+  },
+  {
+   "en": "Surface irrigation",
+   "am": "የገጽ መስኖ",
+   "def": "Water is applied directly to the soil surface and flows by gravity: basin, flood or furrow.",
+   "machine": true
+  },
+  {
+   "en": "Sprinkler irrigation",
+   "am": "የርጭት መስኖ",
+   "def": "Water under pressure is sprayed into the air and falls like rain or mist.",
+   "machine": true
+  },
+  {
+   "en": "Drip irrigation",
+   "am": "የጠብታ መስኖ",
+   "def": "Water flows through pipes and falls drop by drop at the root zone.",
+   "machine": true
+  },
+  {
+   "en": "Infiltration rate",
+   "am": "የውሃ ስርገት ፍጥነት",
+   "def": "How fast water soaks into the soil.",
+   "machine": true
+  },
+  {
+   "en": "Fertigation",
+   "am": "ማዳበሪያን በመስኖ መስጠት",
+   "def": "Applying fertilizer dissolved in the irrigation water.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "agri.orchard-planting",
+   "name": "Establishing an orchard and planting",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "An orchard is land used only for fruit; it needs planning, resources and a long time to establish. Site selection is the most important decision, because the site affects yield, quality and marketability. Land is prepared and holes dug: in good soil with irrigation a 30 × 30 cm or 50 × 50 cm hole 80–100 cm deep. Topsoil and subsoil are kept apart; topsoil is mixed with mature manure or decomposed coffee husk. Seedlings are planted without breaking or bending the tap root."
+    },
+    "am": {
+     "text": "የፍራፍሬ እርሻ ዕቅድ ያስፈልገዋል፤ ቦታ መምረጥ ዋናው ውሳኔ ነው። የላይኛው አፈር ከታችኛው ተለይቶ ከፍግ ወይም ከቡና ገለባ ጋር ይቀላቀላል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Two soil heaps",
+     "ask": "When digging a planting hole, why might a farmer put the topsoil on one side and the subsoil on the other?",
+     "opts": [
+      "Topsoil is better quality and goes back where the roots need it",
+      "To make the hole look tidy",
+      "Subsoil is always richer",
+      "To stop people falling in"
+     ],
+     "after": "Topsoil is richer. It is mixed with manure and put back around the roots.",
+     "ref": "p.36",
+     "id": "g12.agriculture.u2.s2-6.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Planning an orchard",
+     "paras": [
+      "An orchard is land used only for fruit.",
+      "It needs planning and takes a long time to establish.",
+      "Check what resources are available.",
+      "Site selection is the most important decision.",
+      "The site affects yield, quality and marketability.",
+      "Good sites allow the most fruit trees per hectare."
+     ],
+     "ref": "p.35",
+     "id": "g12.agriculture.u2.s2-6.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Preparing the hole and planting",
+     "paras": [
+      "Prepare the land, dig holes, then plant.",
+      "Good soil with irrigation: a 30 × 30 cm or 50 × 50 cm hole.",
+      "Dig with shovels or augers, 80–100 cm deep.",
+      "Keep topsoil and subsoil on separate sides.",
+      "Mix topsoil with mature moist manure or decomposed coffee husk.",
+      "Plant without breaking or bending the tap root.",
+      "Consider soil fertility before using fertilizer."
+     ],
+     "note": "The book's filling instructions (fill to the 40–50 cm mark, then topsoil to 30 cm from the surface, then compact) do not say which material goes where. Many guides use pits about 60 × 60 × 60 cm. Check with your teacher.",
+     "ref": "p.35–36",
+     "id": "g12.agriculture.u2.s2-6.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Orchard",
+       "Farm land allocated for growing fruit crops."
+      ]
+     ],
+     "id": "g12.agriculture.u2.s2-6.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "According to the book, the most important decision for the success of an orchard is",
+     "opts": [
+      "site selection",
+      "the colour of the fruit",
+      "the price of seedlings",
+      "the type of shovel"
+     ],
+     "ans": "site selection",
+     "why": "p.35.",
+     "clue": "Where will the trees grow for many years?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.35",
+     "id": "g12.agriculture.u2.s2-6.5"
+    },
+    {
+     "kind": "tf",
+     "text": "When planting a seedling, it does not matter if the tap root bends.",
+     "a": false,
+     "why": "p.35: take care not to break or bend the tap roots.",
+     "clue": "Read the planting sentence on p.35.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.35",
+     "id": "g12.agriculture.u2.s2-6.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which organic matter does the book suggest mixing with topsoil?",
+     "opts": [
+      "Mature moist manure or decomposed coffee husk",
+      "Fresh plastic waste",
+      "Subsoil only",
+      "Salt"
+     ],
+     "ans": "Mature moist manure or decomposed coffee husk",
+     "why": "p.36.",
+     "clue": "One comes from coffee processing.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.36",
+     "id": "g12.agriculture.u2.s2-6.7"
+    },
+    {
+     "kind": "pick",
+     "text": "Which are good practices for a planting hole?",
+     "pool": [
+      "Keep topsoil and subsoil apart",
+      "Mix topsoil with manure",
+      "Compact the fill by stepping on it",
+      "Throw the topsoil away",
+      "Bend the tap root to fit"
+     ],
+     "a": [
+      "Keep topsoil and subsoil apart",
+      "Mix topsoil with manure",
+      "Compact the fill by stepping on it"
+     ],
+     "why": "p.36.",
+     "clue": "Two options harm the tree.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.36",
+     "id": "g12.agriculture.u2.s2-6.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "A farmer near Jimma has coffee husk and cattle manure but little money for fertilizer. How should he improve his avocado planting holes?",
+     "opts": [
+      "Mix decomposed coffee husk or mature manure into the topsoil before refilling",
+      "Fill the hole with fresh coffee husk only",
+      "Leave the hole empty for a year",
+      "Put the subsoil on top of the roots"
+     ],
+     "ans": "Mix decomposed coffee husk or mature manure into the topsoil before refilling",
+     "why": "The book recommends topsoil mixed with organic matter such as mature manure or decomposed coffee husk.",
+     "clue": "Decomposed, mixed with topsoil.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.36",
+     "added": true,
+     "id": "g12.agriculture.u2.s2-6.9"
+    }
+   ]
+  },
+  {
+   "id": "agri.orchard-spacing",
+   "name": "Planting distance and plants per hectare",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Spacing depends mainly on the fruit crop (big mango trees or small banana and papaya plants), the variety's canopy width, the propagation method (seedlings grow larger), and soil quality and rainfall. Plants per hectare = 10 000 m² ÷ (row spacing × plant spacing). Apples at 3 m × 2 m give 10 000 ÷ 6 ≈ 1667 trees per hectare; mango at 10 m × 10 m gives 100."
+    },
+    "am": {
+     "text": "የመትከያ ርቀት በሰብሉ፣ በዝርያው፣ በአባዛዙና በአፈሩ ይወሰናል። በሄክታር የተክል ብዛት = 10 000 ÷ (የመስመር ርቀት × የተክል ርቀት)።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Mango or papaya?",
+     "ask": "Which crop do you think fits more plants on one hectare?",
+     "opts": [
+      "Papaya",
+      "Mango",
+      "Both the same",
+      "It is impossible to say"
+     ],
+     "after": "Papaya is small and planted 2.4 m × 3.1 m (about 1344 plants per hectare). Mango is a big tree at 10 m × 10 m (100 trees).",
+     "ref": "Table 2.1",
+     "id": "g12.agriculture.u2.s2-6.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "What decides spacing",
+     "paras": [
+      "Mainly the type of fruit crop.",
+      "Mango grows into a big tree; banana and papaya are small.",
+      "Variety: some canopies are narrow, some wide.",
+      "Wide canopies need wide spacing.",
+      "Seedlings grow larger than vegetatively propagated plants.",
+      "Without irrigation, soil quality and rainfall also decide size."
+     ],
+     "ref": "p.35–36",
+     "id": "g12.agriculture.u2.s2-6.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Counting plants per hectare",
+     "paras": [
+      "1 hectare = 100 m × 100 m = 10 000 m².",
+      "Each plant uses row spacing × plant spacing.",
+      "Plants per hectare = 10 000 ÷ (row spacing × plant spacing).",
+      "Round to whole plants."
+     ],
+     "ref": "Figure 2.7, Table 2.1",
+     "added": true,
+     "id": "g12.agriculture.u2.s2-6.12"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Worked example: apples in Figure 2.7",
+     "steps": [
+      "Rows 3 m apart; trees 2 m apart in a row.",
+      "Area per tree = 3 × 2 = 6 m².",
+      "Trees per hectare = 10 000 ÷ 6 = 1666.7.",
+      "Round: about 1667 trees per hectare.",
+      "Check: 1667 × 6 = 10 002 m², about 1 ha."
+     ],
+     "ref": "Figure 2.7",
+     "added": true,
+     "id": "g12.agriculture.u2.s2-6.13"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Plan an orchard",
+     "ask": "Move the row spacing and the plant spacing. Watch the number of plants per hectare.",
+     "vars": [
+      {
+       "k": "r",
+       "label": "Row spacing (m)",
+       "min": 1,
+       "max": 12,
+       "step": 0.1,
+       "v": 3
+      },
+      {
+       "k": "p",
+       "label": "Plant spacing in a row (m)",
+       "min": 1,
+       "max": 12,
+       "step": 0.1,
+       "v": 2
+      }
+     ],
+     "formula": "Math.round(10000 / (r * p))",
+     "out": "Plants per hectare ≈ {v}",
+     "note": "Try Table 2.1: mango 10 × 10, avocado 9 × 12, papaya 2.4 × 3.1, passion fruit 3.3 × 4.0.",
+     "id": "g12.agriculture.u2.s2-6.14"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Table 2.1 Spacing and plant population",
+     "paras": [
+      "Source: SNV manual, 2019. Passion fruit corrected (see note)."
+     ],
+     "table": [
+      [
+       "Fruit crop",
+       "Spacing (m)",
+       "Plants per hectare"
+      ],
+      [
+       "Avocado",
+       "9 × 12",
+       "93"
+      ],
+      [
+       "Guava",
+       "6.2 × 7.6",
+       "212"
+      ],
+      [
+       "Mango",
+       "10 × 10",
+       "100"
+      ],
+      [
+       "Papaya",
+       "2.4 × 3.1",
+       "1344"
+      ],
+      [
+       "Passion fruit",
+       "3.3 × 4.0",
+       "758"
+      ]
+     ],
+     "note": "The book prints 1324 for passion fruit. But 3.3 × 4.0 = 13.2 m², and 10 000 ÷ 13.2 ≈ 758.",
+     "ref": "Table 2.1, p.36",
+     "id": "g12.agriculture.u2.s2-6.15"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Planting distance",
+       "The spacing between rows and between plants in a row."
+      ],
+      [
+       "Plant population",
+       "The number of plants per hectare = 10 000 m² ÷ (row spacing × plant spacing)."
+      ]
+     ],
+     "id": "g12.agriculture.u2.s2-6.16"
+    },
+    {
+     "kind": "blank",
+     "ask": "Mango is planted 10 m × 10 m. Trees per hectare = ___",
+     "a": [
+      "100"
+     ],
+     "why": "Area per tree = 10 × 10 = 100 m². 10 000 ÷ 100 = 100 trees.",
+     "clue": "Find the area per tree first.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Table 2.1",
+     "id": "g12.agriculture.u2.s2-6.17"
+    },
+    {
+     "kind": "blank",
+     "ask": "Avocado is planted 9 m × 12 m. Trees per hectare = ___ (nearest whole tree)",
+     "a": [
+      "≈93"
+     ],
+     "why": "9 × 12 = 108 m². 10 000 ÷ 108 = 92.6 ≈ 93 trees.",
+     "clue": "Multiply the spacings, then divide 10 000 by the answer.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Table 2.1",
+     "id": "g12.agriculture.u2.s2-6.18"
+    },
+    {
+     "kind": "blank",
+     "ask": "Papaya is planted 2.4 m × 3.1 m. Plants per hectare = ___ (nearest whole plant)",
+     "a": [
+      "≈1344"
+     ],
+     "why": "2.4 × 3.1 = 7.44 m². 10 000 ÷ 7.44 = 1344.1 ≈ 1344 plants.",
+     "clue": "Decimal spacings: multiply carefully.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Table 2.1",
+     "id": "g12.agriculture.u2.s2-6.19"
+    },
+    {
+     "kind": "blank",
+     "ask": "Passion fruit is planted 3.3 m × 4.0 m. Plants per hectare = ___ (nearest whole plant)",
+     "a": [
+      "≈758"
+     ],
+     "why": "3.3 × 4.0 = 13.2 m². 10 000 ÷ 13.2 = 757.6 ≈ 758 plants. (The book's 1324 is a mistake.)",
+     "clue": "Area per plant first.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Table 2.1",
+     "id": "g12.agriculture.u2.s2-6.20"
+    },
+    {
+     "kind": "mcq",
+     "text": "A student plants apples 3 m × 2 m and writes: 3 + 2 = 5, so 10 000 ÷ 5 = 2000 trees per hectare. What is wrong?",
+     "opts": [
+      "The spacings must be multiplied: 6 m² per tree, so about 1667 trees",
+      "Nothing is wrong",
+      "He should divide 5 by 10 000",
+      "1 ha is 1000 m²"
+     ],
+     "ans": "The spacings must be multiplied: 6 m² per tree, so about 1667 trees",
+     "why": "Each tree uses a rectangle 3 m by 2 m: area = 3 × 2 = 6 m².",
+     "clue": "Area of a rectangle = length × width.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Figure 2.7",
+     "id": "g12.agriculture.u2.s2-6.21"
+    },
+    {
+     "kind": "blank",
+     "ask": "Project 2.1: a school plot is 12.4 m long and 10 m wide. Papaya rows run 3.1 m apart along the length, plants 2.4 m apart across. Whole plants that fit = ___",
+     "a": [
+      "16"
+     ],
+     "why": "12.4 ÷ 3.1 = 4 rows. 10 ÷ 2.4 = 4.17, so 4 plants per row (whole plants only). 4 × 4 = 16 plants.",
+     "clue": "Round each count DOWN to whole plants.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Project 2.1",
+     "added": true,
+     "id": "g12.agriculture.u2.s2-6.22"
+    },
+    {
+     "kind": "blank",
+     "ask": "The book prints 1324 passion-fruit plants per hectare. With plants 3.3 m apart, what row spacing would give about 1324? Row spacing ≈ ___ m (1 decimal place)",
+     "a": [
+      "≈2.3"
+     ],
+     "why": "Area per plant = 10 000 ÷ 1324 = 7.55 m². Row spacing = 7.55 ÷ 3.3 = 2.29 ≈ 2.3 m. So 1324 does not fit 3.3 m × 4.0 m.",
+     "clue": "Work backwards: area per plant = 10 000 ÷ plants.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Table 2.1",
+     "added": true,
+     "id": "g12.agriculture.u2.s2-6.23"
+    }
+   ]
+  },
+  {
+   "id": "agri.irrigation",
+   "name": "Irrigation: why and when",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Irrigation applies controlled amounts of water to help grow crops, landscape plants and lawns, and has been practised for over 5,000 years. The grower must check water quality (salt content), the amount and the timing; both too much and too little water reduce yields. Irrigating in the morning or late afternoon reduces evaporation loss. When rainfall is not enough, supplementary irrigation is used."
+    },
+    "am": {
+     "text": "መስኖ ቁጥጥር ያለው ውሃ መስጠት ነው። የውሃው ጨው፣ መጠንና ሰዓት መታየት አለበት፤ ጠዋት ወይም ከሰዓት በኋላ ማጠጣት ትነትን ይቀንሳል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "When to water",
+     "ask": "A farmer can irrigate at 1 pm or at 7 am. Which wastes less water?",
+     "opts": [
+      "7 am",
+      "1 pm",
+      "Both the same",
+      "It depends only on the soil colour"
+     ],
+     "after": "In the cool morning less water evaporates. The book says morning or late afternoon.",
+     "ref": "p.37",
+     "id": "g12.agriculture.u2.s2-6.24"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Irrigation",
+     "paras": [
+      "Irrigation applies controlled amounts of water to land.",
+      "It helps grow crops, landscape plants and lawns.",
+      "People have irrigated for over 5,000 years.",
+      "It is used in dry areas and when rainfall is below average.",
+      "If rainfall is not enough, supplementary irrigation is used."
+     ],
+     "ref": "p.37, 2.6.2",
+     "id": "g12.agriculture.u2.s2-6.25"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Doing it well",
+     "paras": [
+      "Check water quality: its salt content.",
+      "Check the amount of water and the timing.",
+      "Too much water reduces yield.",
+      "Too little water also reduces yield.",
+      "Irrigate in the morning or late afternoon to reduce evaporation."
+     ],
+     "ref": "p.37",
+     "id": "g12.agriculture.u2.s2-6.26"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Irrigation",
+       "Applying controlled amounts of water to land to help grow crops, landscape plants and lawns."
+      ]
+     ],
+     "id": "g12.agriculture.u2.s2-6.27"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why is irrigation usually done in the morning or late afternoon?",
+     "opts": [
+      "To reduce water loss by evaporation",
+      "Because plants sleep at noon",
+      "Because water is cheaper then",
+      "To wash off pests"
+     ],
+     "ans": "To reduce water loss by evaporation",
+     "why": "p.37.",
+     "clue": "When is the sun weakest?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.37",
+     "id": "g12.agriculture.u2.s2-6.28"
+    },
+    {
+     "kind": "tf",
+     "text": "Giving fruit trees much more water than they need always increases yield.",
+     "a": false,
+     "why": "p.37: excessive irrigation, like too little, can reduce yields.",
+     "clue": "Is more always better?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.37",
+     "id": "g12.agriculture.u2.s2-6.29"
+    },
+    {
+     "kind": "pick",
+     "text": "What should a fruit producer consider about irrigation water?",
+     "pool": [
+      "Its salt content",
+      "The amount given",
+      "The time of irrigation",
+      "The colour of the pipes"
+     ],
+     "a": [
+      "Its salt content",
+      "The amount given",
+      "The time of irrigation"
+     ],
+     "why": "p.37 names quality (salt), amount and time.",
+     "clue": "One option has no effect on the crop.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.37",
+     "id": "g12.agriculture.u2.s2-6.30"
+    },
+    {
+     "kind": "mcq",
+     "text": "Supplementary irrigation is used when",
+     "opts": [
+      "rainfall is not sufficient",
+      "the soil is flooded",
+      "it rains every day",
+      "fruit is being stored"
+     ],
+     "ans": "rainfall is not sufficient",
+     "why": "p.37.",
+     "clue": "Supplementary = adding to something.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.37",
+     "id": "g12.agriculture.u2.s2-6.31"
+    },
+    {
+     "kind": "mcq",
+     "text": "A farmer uses salty borehole water, irrigates at 1 pm, and floods his trees every day. Which changes would help most?",
+     "opts": [
+      "Check the water's salt content, and give the right amount in the morning or late afternoon",
+      "Irrigate even more at noon",
+      "Stop checking the water",
+      "Water only once a year"
+     ],
+     "ans": "Check the water's salt content, and give the right amount in the morning or late afternoon",
+     "why": "Each habit breaks one rule on p.37: quality, timing, amount.",
+     "clue": "Find the three mistakes first.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.37",
+     "added": true,
+     "id": "g12.agriculture.u2.s2-6.32"
+    }
+   ]
+  },
+  {
+   "id": "agri.irrigation-methods",
+   "name": "Irrigation methods",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Surface (gravity) irrigation such as basin, flood and furrow applies water directly to the soil surface; it is cheap, easy and needs no technology or skill and suits low infiltration soils, but needs accurately levelled land, does not suit high infiltration soils and wets plants unevenly. Pressurized systems apply water through pipes: sprinklers spray water like rain, suit high infiltration soils and unlevelled land and allow fertigation, but are costly, suffer wind drift and need power and enough water; drip delivers water drop by drop at the root zone, saving water and allowing fertigation, but has high maintenance cost and is uneconomical for closely spaced crops."
+    },
+    "am": {
+     "text": "የገጽ መስኖ (ጎርፍ፣ ቦይ) ርካሽ ነው፤ የርጭት መስኖ እንደ ዝናብ ይረጫል፤ የጠብታ መስኖ ውሃ ይቆጥባል ግን ጥገናው ውድ ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Least water",
+     "ask": "Which method do you think uses the least water?",
+     "opts": [
+      "Drip",
+      "Flood",
+      "Furrow",
+      "Basin"
+     ],
+     "after": "Drip puts water drop by drop only at the root zone, so little is wasted.",
+     "ref": "p.38",
+     "id": "g12.agriculture.u2.s2-6.33"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Surface (gravity) irrigation",
+     "paras": [
+      "Water is applied directly to the soil surface: basin, flood or furrow.",
+      "Advantages: easy to maintain, low cost, no modern technology, no technical skill.",
+      "Works well on soils with a low infiltration rate.",
+      "Disadvantages: land must be levelled accurately.",
+      "Not suitable for soils with a high infiltration rate.",
+      "Plants are covered with water even when not needed; some spots get too much.",
+      "No drainage outlet."
+     ],
+     "note": "The book writes \"filtration rate\"; the correct term is infiltration rate.",
+     "ref": "p.37–38, Figure 2.8",
+     "id": "g12.agriculture.u2.s2-6.34"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Pressurized irrigation",
+     "paras": [
+      "Water under pressure flows through pipes.",
+      "It applies water more effectively than surface irrigation.",
+      "Sprinkler: water is sprayed into the air and falls like rain. Suits high infiltration soils and unlevelled fields; fertigation is possible. But costly, wind drift, needs continuous power and enough water.",
+      "Drip: water falls drop by drop at the root zone. Saves water, keeps the root zone moist, fertigation is possible. But high maintenance cost; not economical for closely spaced crops."
+     ],
+     "ref": "p.38–39",
+     "id": "g12.agriculture.u2.s2-6.35"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Comparing the three",
+     "paras": [
+      "A summary of p.37–39."
+     ],
+     "table": [
+      [
+       "Method",
+       "How water is applied",
+       "Main advantage",
+       "Main disadvantage"
+      ],
+      [
+       "Surface",
+       "flows over the soil by gravity",
+       "cheap, simple",
+       "needs levelled land, wastes water"
+      ],
+      [
+       "Sprinkler",
+       "sprayed like rain",
+       "unlevelled land, sandy soil",
+       "costly, wind drift, power"
+      ],
+      [
+       "Drip",
+       "drops at the root zone",
+       "saves water",
+       "high maintenance cost"
+      ]
+     ],
+     "added": true,
+     "id": "g12.agriculture.u2.s2-6.36"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Surface irrigation",
+       "Water is applied directly to the soil surface and flows by gravity: basin, flood or furrow."
+      ],
+      [
+       "Sprinkler irrigation",
+       "Water under pressure is sprayed into the air and falls like rain or mist."
+      ],
+      [
+       "Drip irrigation",
+       "Water flows through pipes and falls drop by drop at the root zone."
+      ],
+      [
+       "Infiltration rate",
+       "How fast water soaks into the soil."
+      ],
+      [
+       "Fertigation",
+       "Applying fertilizer dissolved in the irrigation water."
+      ]
+     ],
+     "id": "g12.agriculture.u2.s2-6.37"
+    },
+    {
+     "kind": "mcq",
+     "text": "Water applied drop by drop at the root zone through a network of pipes is",
+     "opts": [
+      "drip irrigation",
+      "sprinkler irrigation",
+      "flood irrigation",
+      "furrow irrigation"
+     ],
+     "ans": "drip irrigation",
+     "why": "p.38.",
+     "clue": "Drop by drop.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.38",
+     "id": "g12.agriculture.u2.s2-6.38"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Surface or pressurized?",
+     "bins": [
+      "Surface",
+      "Pressurized"
+     ],
+     "items": [
+      [
+       "Basin",
+       "Surface",
+       ""
+      ],
+      [
+       "Flood",
+       "Surface",
+       ""
+      ],
+      [
+       "Furrow",
+       "Surface",
+       ""
+      ],
+      [
+       "Sprinkler",
+       "Pressurized",
+       ""
+      ],
+      [
+       "Drip",
+       "Pressurized",
+       ""
+      ]
+     ],
+     "why": "Basin, flood and furrow use gravity; sprinkler and drip need pressure in pipes.",
+     "clue": "Does it need pipes and pressure?",
+     "ref": "p.37–38",
+     "graded": true,
+     "level": 1,
+     "id": "g12.agriculture.u2.s2-6.39"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Which method is this?",
+     "bins": [
+      "Surface",
+      "Sprinkler",
+      "Drip"
+     ],
+     "items": [
+      [
+       "Low cost, no technology needed",
+       "Surface",
+       ""
+      ],
+      [
+       "No technical skill needed",
+       "Surface",
+       ""
+      ],
+      [
+       "Works on unlevelled fields",
+       "Sprinkler",
+       ""
+      ],
+      [
+       "Wind drift of droplets",
+       "Sprinkler",
+       ""
+      ],
+      [
+       "Saves the most water",
+       "Drip",
+       ""
+      ],
+      [
+       "Not economical for closely spaced crops",
+       "Drip",
+       ""
+      ]
+     ],
+     "why": "p.37–39 advantages and disadvantages.",
+     "clue": "Wind can only blow droplets that are in the air.",
+     "ref": "p.37–39",
+     "graded": true,
+     "level": 2,
+     "id": "g12.agriculture.u2.s2-6.40"
+    },
+    {
+     "kind": "mcq",
+     "text": "A sandy soil soaks up water very fast (high infiltration rate). Which method is NOT suitable?",
+     "opts": [
+      "Surface irrigation",
+      "Sprinkler irrigation",
+      "Drip irrigation",
+      "All are equally fine"
+     ],
+     "ans": "Surface irrigation",
+     "why": "p.37: surface irrigation is not applicable on soil with a high infiltration rate; water sinks before it spreads.",
+     "clue": "Which method relies on water flowing across the soil?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.37",
+     "id": "g12.agriculture.u2.s2-6.41"
+    },
+    {
+     "kind": "tf",
+     "text": "Drip irrigation is economical for closely spaced crops.",
+     "a": false,
+     "why": "p.39: it is NOT economical for closely spaced crops.",
+     "clue": "Think of how many drippers dense rows need.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.39",
+     "id": "g12.agriculture.u2.s2-6.42"
+    },
+    {
+     "kind": "mcq",
+     "text": "A farmer has a sloping, unlevelled sandy plot, little water and widely spaced mango trees, and can pay for maintenance. Which method fits best?",
+     "opts": [
+      "Drip",
+      "Flood",
+      "Basin",
+      "Furrow"
+     ],
+     "ans": "Drip",
+     "why": "Surface methods need levelled, low-infiltration land. Drip saves water, works on any slope, and suits widely spaced trees.",
+     "clue": "Water is scarce and the trees are far apart.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.37–39",
+     "added": true,
+     "id": "g12.agriculture.u2.s2-6.43"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Spacing of fruit crops is mainly determined by",
+   "opts": [
+    "the type of fruit crop",
+    "the colour of the soil",
+    "the farmer's age",
+    "the market price"
+   ],
+   "ans": "the type of fruit crop",
+   "why": "p.35.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.agriculture.u2.s2-6.44"
+  },
+  {
+   "kind": "mcq",
+   "text": "Water sprayed into the air and falling like rain is",
+   "opts": [
+    "sprinkler irrigation",
+    "drip irrigation",
+    "furrow irrigation",
+    "basin irrigation"
+   ],
+   "ans": "sprinkler irrigation",
+   "why": "p.38.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.agriculture.u2.s2-6.45"
+  },
+  {
+   "kind": "blank",
+   "ask": "Guava is planted 6.2 m × 7.6 m. Trees per hectare = ___ (nearest whole tree)",
+   "a": [
+    "≈212"
+   ],
+   "why": "6.2 × 7.6 = 47.12 m²; 10 000 ÷ 47.12 ≈ 212.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.agriculture.u2.s2-6.46"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which is an advantage of surface irrigation?",
+   "opts": [
+    "Low cost and no technical skill needed",
+    "Saves the most water",
+    "Works on unlevelled land",
+    "Allows fertigation"
+   ],
+   "ans": "Low cost and no technical skill needed",
+   "why": "p.37.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.agriculture.u2.s2-6.47"
+  },
+  {
+   "kind": "blank",
+   "ask": "Trees planted 5 m × 4 m. Trees per hectare = ___",
+   "a": [
+    "500"
+   ],
+   "why": "5 × 4 = 20 m²; 10 000 ÷ 20 = 500.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.agriculture.u2.s2-6.48"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Table 2.1: passion fruit 3.3 m × 4.0 m gives 10 000 ÷ 13.2 ≈ 758 plants/ha, not 1324 as printed. The lesson teaches 758. Also \"Pasion\" → Passion, \"Mannual\" → Manual, and the cited SNV source is a vegetable, root and tuber manual."
+  },
+  {
+   "kind": "review",
+   "text": "p.36: \"The whole\" should be \"The hole\". The hole-filling instructions do not say which material fills each level, and a 30 × 30 cm hole 80–100 cm deep is an unusual shape (many guides use about 60 × 60 × 60 cm). Check with a subject teacher."
+  },
+  {
+   "kind": "review",
+   "text": "p.37: \"filtration rate\" should be \"infiltration rate\" (corrected in the lesson). There is no heading 2.6.1; irrigation lettering is inconsistent (two \"a.\" items). Figure 2.8 shows a vegetable crop, not fruit."
+  },
+  {
+   "kind": "note",
+   "text": "Added (marked): 1 ha = 10 000 m², the plants-per-hectare formula, the Figure 2.7 worked example, the slider, the Project 2.1 plot item and the comparison table of irrigation methods. Fertigation and infiltration rate are defined here; the book uses them without definition."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

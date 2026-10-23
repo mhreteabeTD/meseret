@@ -1,0 +1,641 @@
+{
+ "id": "g12.geography.u2.s2-1",
+ "book": {
+  "title": "Geography Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "geography",
+  "unit": 2,
+  "unit_title": "Climate change",
+  "pages": "35–38",
+  "section": "2.1"
+ },
+ "title": "Basic concepts of climate change",
+ "competency": "Define climate change and distinguish weather, climate and global warming.",
+ "minutes": 20,
+ "keywords": [
+  {
+   "en": "Weather",
+   "am": "የአየር ሁኔታ",
+   "def": "The condition of the atmosphere at a place on a particular day.",
+   "machine": true
+  },
+  {
+   "en": "Climate",
+   "am": "የአየር ንብረት",
+   "def": "The conditions of the atmosphere in a certain place over many years.",
+   "machine": true
+  },
+  {
+   "en": "Regional climate",
+   "am": "ክልላዊ የአየር ንብረት",
+   "def": "The climate of one area, such as the Horn of Africa.",
+   "machine": true
+  },
+  {
+   "en": "Global climate",
+   "am": "ዓለም አቀፍ የአየር ንብረት",
+   "def": "The average climate around the world.",
+   "machine": true
+  },
+  {
+   "en": "Global warming",
+   "am": "የዓለም ሙቀት መጨመር",
+   "def": "The increase, over many years, of the average temperature of the Earth.",
+   "machine": true
+  },
+  {
+   "en": "Climate change",
+   "am": "የአየር ንብረት ለውጥ",
+   "def": "A change in the mean and/or variability of the climate that persists for decades or longer, from natural or human causes (IPCC).",
+   "machine": true
+  },
+  {
+   "en": "IPCC",
+   "am": "የመንግሥታት የአየር ንብረት ለውጥ ፓነል",
+   "def": "Intergovernmental Panel on Climate Change: set up by WMO and UNEP to assess climate change, its impacts and responses.",
+   "machine": true
+  },
+  {
+   "en": "Greenhouse gases",
+   "am": "የሙቀት አማቂ ጋዞች",
+   "def": "Gases such as CO₂, CH₄ and N₂O that trap heat and raise air temperature near the ground (GHGs).",
+   "machine": true
+  },
+  {
+   "en": "Carbon dioxide",
+   "am": "ካርቦን ዳይኦክሳይድ",
+   "def": "CO₂: a greenhouse gas that strongly absorbs infrared radiation; it rises mainly from burning fossil fuels and deforestation.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "geo.cc-weather-climate",
+   "name": "Weather, climate and global warming",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Weather is the state of the atmosphere on a particular day; climate is the conditions of the atmosphere in a place over many years. The climate of one area, like the Horn of Africa, is a regional climate, and the average climate around the world is the global climate. The rise of the Earth's average temperature over many years is called global warming."
+    },
+    "am": {
+     "text": "የአየር ሁኔታ የአንድ ቀን ሁኔታ ነው፤ የአየር ንብረት ግን የብዙ ዓመታት ሁኔታ ነው። የምድር አማካይ ሙቀት ለብዙ ዓመታት መጨመር የዓለም ሙቀት መጨመር ይባላል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "One hot summer",
+     "ask": "Last summer was much hotter than usual where you live. Is this, by itself, a sign of climate change?",
+     "opts": [
+      "No, one season is weather, not climate",
+      "Yes, certainly",
+      "Only if it also rained less",
+      "Only in big cities"
+     ],
+     "after": "Climate is about many years. One hot season is too short to show a change in climate.",
+     "ref": "Brainstorming Activity 2.1 Q1",
+     "id": "g12.geography.u2.s2-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Weather and climate",
+     "paras": [
+      "Think about clothes.",
+      "What you wear today depends on the weather.",
+      "What clothes you buy for years depends on the climate.",
+      "Climate: the conditions of the atmosphere in a place over many years.",
+      "Gondar is cold in the winter.",
+      "Gambella is warm and humid all year long."
+     ],
+     "ref": "p.35",
+     "id": "g12.geography.u2.s2-1.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Regional and global climate",
+     "paras": [
+      "The climate of one area, like the Horn of Africa, is a regional climate.",
+      "The average climate around the world is the global climate.",
+      "Global climate change: a pattern of change in the global climate over many years.",
+      "The Earth's average temperature has been rising for many years.",
+      "This is called global warming."
+     ],
+     "ref": "p.35–36",
+     "id": "g12.geography.u2.s2-1.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Weather",
+       "The condition of the atmosphere at a place on a particular day."
+      ],
+      [
+       "Climate",
+       "The conditions of the atmosphere in a certain place over many years."
+      ],
+      [
+       "Regional climate",
+       "The climate of one area, such as the Horn of Africa."
+      ],
+      [
+       "Global climate",
+       "The average climate around the world."
+      ],
+      [
+       "Global warming",
+       "The increase, over many years, of the average temperature of the Earth."
+      ]
+     ],
+     "id": "g12.geography.u2.s2-1.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "Climate refers to the conditions of the atmosphere in a place",
+     "opts": [
+      "over many years",
+      "on one day",
+      "during one storm",
+      "at one hour"
+     ],
+     "ans": "over many years",
+     "why": "p.35: climate is about many years; weather is about one day.",
+     "clue": "Think about buying clothes for years.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.35",
+     "id": "g12.geography.u2.s2-1.5"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Weather or climate?",
+     "bins": [
+      "Weather",
+      "Climate"
+     ],
+     "items": [
+      [
+       "Heavy rain in Addis Ababa this afternoon",
+       "Weather",
+       "one afternoon"
+      ],
+      [
+       "Gambella is warm and humid all year long",
+       "Climate",
+       "every year"
+      ],
+      [
+       "Gondar is cold in the winter",
+       "Climate",
+       "a regular pattern"
+      ],
+      [
+       "A hailstorm in Dessie yesterday",
+       "Weather",
+       "one day"
+      ],
+      [
+       "The usual dry seasons of the Horn of Africa",
+       "Climate",
+       "many years"
+      ],
+      [
+       "A very hot day in Semera last week",
+       "Weather",
+       "one day"
+      ]
+     ],
+     "why": "Weather is one day or one event; climate is the pattern over many years.",
+     "clue": "Is it one moment, or a pattern over years?",
+     "ref": "p.35",
+     "added": true,
+     "graded": true,
+     "level": 1,
+     "id": "g12.geography.u2.s2-1.6"
+    },
+    {
+     "kind": "tf",
+     "text": "The climate in one area, like the Horn of Africa, is called a regional climate.",
+     "a": true,
+     "why": "p.35 uses exactly this example.",
+     "clue": "One area, not the whole world.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.35",
+     "id": "g12.geography.u2.s2-1.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "What is global warming?",
+     "opts": [
+      "The increase of the Earth's average temperature over many years",
+      "One very hot summer",
+      "Warm nights in cities only",
+      "The heat of the sun at noon"
+     ],
+     "ans": "The increase of the Earth's average temperature over many years",
+     "why": "p.36: the average temperature of the Earth has been increasing for many years.",
+     "clue": "Average, Earth, many years.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.36",
+     "id": "g12.geography.u2.s2-1.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why must global warming be judged over decades, not from one weather event?",
+     "opts": [
+      "Warming in any one year is small; it only becomes clear when averaged over many years",
+      "Thermometers work only once a decade",
+      "Weather never changes",
+      "One event always proves it"
+     ],
+     "ans": "Warming in any one year is small; it only becomes clear when averaged over many years",
+     "why": "p.45: global warming in a given year is small and becomes significant only over decades.",
+     "clue": "Small yearly changes hide in the noise.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.45",
+     "id": "g12.geography.u2.s2-1.9"
+    },
+    {
+     "kind": "mcq",
+     "text": "Almost every summer for the past ten years has been hotter than usual. What is the best conclusion?",
+     "opts": [
+      "It is likely a warming trend; longer records over decades would confirm it",
+      "It means nothing; only one year matters",
+      "It is weather and can never show climate change",
+      "It proves the whole world warmed equally"
+     ],
+     "ans": "It is likely a warming trend; longer records over decades would confirm it",
+     "why": "A repeated pattern over years is a change in the mean: a climate signal. Decades of records make it certain.",
+     "clue": "Compare with one hot summer.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Brainstorming Activity 2.1 Q2",
+     "added": true,
+     "id": "g12.geography.u2.s2-1.10"
+    }
+   ]
+  },
+  {
+   "id": "geo.cc-definition",
+   "name": "The IPCC definition and climate connections",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "The IPCC defines climate change as a change in the state of the climate, seen in changes in the mean and/or variability of its properties, that persists for decades or longer, from natural variability or human activities. Because air, water and land are linked, warming spreads: greenhouse gases trap energy, the atmosphere and oceans warm, ice melts, sea level rises, storms strengthen and habitats change. Ice cores and direct observations show that CO₂, CH₄ and N₂O have increased over the last few centuries."
+    },
+    "am": {
+     "text": "IPCC የአየር ንብረት ለውጥን ለአሥርተ ዓመታት የሚቆይ የአማካይ ወይም የመዋዠቅ ለውጥ ብሎ ይገልጻል፤ መንስኤው ተፈጥሮ ወይም ሰው ሊሆን ይችላል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Warmer air, then what?",
+     "ask": "The air above the oceans gets warmer. What happens next?",
+     "opts": [
+      "The oceans absorb heat and warm, which can cause stronger storms",
+      "Nothing happens to the oceans",
+      "The oceans get colder",
+      "Only the land changes"
+     ],
+     "after": "Air, water and land are linked. A change in one place leads to changes somewhere else.",
+     "ref": "p.36, Figure 2.1",
+     "id": "g12.geography.u2.s2-1.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Climate connections",
+     "paras": [
+      "Greenhouse gases trap energy → warmer atmosphere.",
+      "Then: warmer oceans, more evaporation, melting snow and ice.",
+      "Warmer oceans → stronger storms and rising sea level.",
+      "More evaporation → more rain in some places; more droughts and wildfires in others.",
+      "Melting snow and ice → rising sea level; Earth absorbs more energy.",
+      "Plants and animals: shifting ranges, habitat loss, extinction."
+     ],
+     "ref": "p.36, Figure 2.1",
+     "id": "g12.geography.u2.s2-1.12"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The IPCC definition",
+     "paras": [
+      "Climate change is a change in the state of the climate.",
+      "It shows as changes in the mean and/or variability of its properties.",
+      "It lasts for an extended period: decades or longer.",
+      "The cause may be natural variability or human activities.",
+      "It is more than \"it will get hotter\".",
+      "Evidence: ice cores and direct observations show more CO₂, CH₄ and N₂O over the last few centuries."
+     ],
+     "ref": "p.36–37",
+     "id": "g12.geography.u2.s2-1.13"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "A cycle of cause and effect",
+     "paras": [
+      "Figure 2.2 links four boxes in a cycle."
+     ],
+     "table": [
+      [
+       "Box",
+       "Contains"
+      ],
+      [
+       "Emissions and concentrations",
+       "greenhouse gases, aerosols"
+      ],
+      [
+       "Climate change",
+       "temperature rise, sea-level rise, precipitation change, droughts and floods"
+      ],
+      [
+       "Impacts on human and natural systems",
+       "food and water, ecosystems, settlements, health"
+      ],
+      [
+       "Socio-economic development paths",
+       "economic growth, technology, population, governance"
+      ]
+     ],
+     "note": "The blue arrow is society's response: adaptation and mitigation.",
+     "ref": "p.37, Figure 2.2",
+     "id": "g12.geography.u2.s2-1.14"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Climate change",
+       "A change in the mean and/or variability of the climate that persists for decades or longer, from natural or human causes (IPCC)."
+      ],
+      [
+       "IPCC",
+       "Intergovernmental Panel on Climate Change: set up by WMO and UNEP to assess climate change, its impacts and responses."
+      ],
+      [
+       "Greenhouse gases",
+       "Gases such as CO₂, CH₄ and N₂O that trap heat and raise air temperature near the ground (GHGs)."
+      ],
+      [
+       "Carbon dioxide",
+       "CO₂: a greenhouse gas that strongly absorbs infrared radiation; it rises mainly from burning fossil fuels and deforestation."
+      ]
+     ],
+     "id": "g12.geography.u2.s2-1.15"
+    },
+    {
+     "kind": "mcq",
+     "text": "According to the IPCC, a change counts as climate change when it persists for",
+     "opts": [
+      "decades or longer",
+      "one season",
+      "one year",
+      "one week"
+     ],
+     "ans": "decades or longer",
+     "why": "p.36: \"persists for an extended period, typically decades or longer\".",
+     "clue": "Climate means many years.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.36",
+     "id": "g12.geography.u2.s2-1.16"
+    },
+    {
+     "kind": "pick",
+     "text": "Which greenhouse gases have increased in the atmosphere over the last few centuries?",
+     "pool": [
+      "Carbon dioxide (CO₂)",
+      "Methane (CH₄)",
+      "Nitrous oxide (N₂O)",
+      "Oxygen (O₂)"
+     ],
+     "a": [
+      "Carbon dioxide (CO₂)",
+      "Methane (CH₄)",
+      "Nitrous oxide (N₂O)"
+     ],
+     "why": "p.37 names these three. Oxygen is not a greenhouse gas.",
+     "clue": "One of these is the gas we breathe in.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.37",
+     "id": "g12.geography.u2.s2-1.17"
+    },
+    {
+     "kind": "order",
+     "title": "Follow one chain in Figure 2.1",
+     "items": [
+      "Greenhouse gases trap energy",
+      "Warmer atmosphere",
+      "Warmer oceans",
+      "Stronger storms"
+     ],
+     "why": "Trapped energy warms the air; the oceans take up heat; warmer oceans feed stronger storms.",
+     "clue": "Start at the centre of the web.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Figure 2.1",
+     "id": "g12.geography.u2.s2-1.18"
+    },
+    {
+     "kind": "mcq",
+     "text": "How is the IPCC definition different from narrower definitions of climate change?",
+     "opts": [
+      "It includes change from both natural variability and human activities",
+      "It counts only human causes",
+      "It counts only temperature",
+      "It counts changes that last one year"
+     ],
+     "ans": "It includes change from both natural variability and human activities",
+     "why": "p.36: \"due to either natural variability or human activities\". Some other definitions count only human-caused change.",
+     "clue": "What causes does it allow?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Reflective Activity 2.1",
+     "id": "g12.geography.u2.s2-1.19"
+    },
+    {
+     "kind": "match",
+     "title": "Match each box of Figure 2.2 with what it contains",
+     "pairs": [
+      [
+       "Emissions and concentrations",
+       "greenhouse gases and aerosols"
+      ],
+      [
+       "Climate change",
+       "temperature rise and sea-level rise"
+      ],
+      [
+       "Impacts on human and natural systems",
+       "food, water, health and settlements"
+      ],
+      [
+       "Socio-economic development paths",
+       "economic growth, technology, population, governance"
+      ]
+     ],
+     "why": "Figure 2.2.",
+     "clue": "Impacts are what happens to people and nature.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Figure 2.2",
+     "id": "g12.geography.u2.s2-1.20"
+    },
+    {
+     "kind": "mcq",
+     "text": "In Figure 2.1, melting snow and ice lets Earth absorb more energy, which warms the atmosphere again. What does this loop do?",
+     "opts": [
+      "It makes the warming speed itself up",
+      "It stops the warming",
+      "It cools the oceans",
+      "It has no effect"
+     ],
+     "ans": "It makes the warming speed itself up",
+     "why": "Less white ice reflects less sunlight; more energy is absorbed; the air warms and more ice melts.",
+     "clue": "Follow the arrow back to the centre.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Figure 2.1",
+     "added": true,
+     "id": "g12.geography.u2.s2-1.21"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Weather describes the atmosphere",
+   "opts": [
+    "on a particular day",
+    "over many years",
+    "over the whole world",
+    "over centuries"
+   ],
+   "ans": "on a particular day",
+   "why": "p.35.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.geography.u2.s2-1.22"
+  },
+  {
+   "kind": "mcq",
+   "text": "The average climate around the world is called",
+   "opts": [
+    "global climate",
+    "regional climate",
+    "weather",
+    "local climate"
+   ],
+   "ans": "global climate",
+   "why": "p.36.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.geography.u2.s2-1.23"
+  },
+  {
+   "kind": "mcq",
+   "text": "IPCC stands for",
+   "opts": [
+    "Intergovernmental Panel on Climate Change",
+    "International Programme for Climate Control",
+    "Intergovernmental Plan for Carbon Cuts",
+    "International Panel on Clean Cities"
+   ],
+   "ans": "Intergovernmental Panel on Climate Change",
+   "why": "p.36.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.geography.u2.s2-1.24"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which is an effect of global warming named in the book?",
+   "opts": [
+    "Melting glaciers",
+    "Cooler oceans",
+    "Thicker Arctic sea ice",
+    "Weaker storms"
+   ],
+   "ans": "Melting glaciers",
+   "why": "p.36.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.geography.u2.s2-1.25"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which observation best fits the IPCC definition of climate change?",
+   "opts": [
+    "Average rainfall in a region falls steadily for 40 years",
+    "A flood in one rainy season",
+    "One cold night in Gondar",
+    "A week of strong wind"
+   ],
+   "ans": "Average rainfall in a region falls steadily for 40 years",
+   "why": "Decades, change in the mean.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.geography.u2.s2-1.26"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Figure 2.2: the Note calls the cause-and-effect arrows \"yellow\" but they print orange; meaning unchanged (orange = cause–effect cycle, blue = societal response)."
+  },
+  {
+   "kind": "review",
+   "text": "Reflective Activity 2.1 asks to compare the IPCC with \"other\" definitions, but the book prints no other definition; the lesson uses the standard contrast (UNFCCC counts only human-caused change)."
+  },
+  {
+   "kind": "note",
+   "text": "Weather is not formally defined in the book; the definition and the Addis Ababa, Dessie and Semera sorting examples are added."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

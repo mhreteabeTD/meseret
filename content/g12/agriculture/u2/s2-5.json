@@ -1,0 +1,469 @@
+{
+ "id": "g12.agriculture.u2.s2-5",
+ "book": {
+  "title": "Agriculture Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "agriculture",
+  "unit": 2,
+  "unit_title": "Fruit crops production and management",
+  "pages": "33–35",
+  "section": "2.5"
+ },
+ "title": "Establishing a nursery",
+ "competency": "Select a suitable nursery site and describe how fruit seedlings are raised and managed.",
+ "minutes": 20,
+ "keywords": [
+  {
+   "en": "Nursery",
+   "am": "የችግኝ ጣቢያ",
+   "def": "A managed site where plants are cared for during their early growth stages.",
+   "machine": true
+  },
+  {
+   "en": "Tap root",
+   "am": "ዋና ሥር",
+   "def": "The main root that grows straight down from the seed.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "agri.nursery",
+   "name": "Nursery site selection",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "A nursery is a managed site where young plants get suitable conditions for germination and early growth until they are strong enough for the main field; young tropical seedlings need protection from strong sun, heavy rain, drought, pests and diseases. A good nursery site is gently sloping, has a continuous water supply, is protected from strong wind, is well drained and fertile, is separate from but near the main field, has dependable labour, is free from flooding and is not shaded by trees or buildings."
+    },
+    "am": {
+     "text": "የችግኝ ጣቢያ ቦታ፡ ትንሽ ተዳፋት፣ ቋሚ ውሃ፣ ከንፋስ የተጠበቀ፣ ውሃ የማያቁር ለም አፈር፣ ከጎርፍና ከጥላ የራቀ መሆን አለበት።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Pick a plot",
+     "ask": "Which plot would you choose for a fruit nursery?",
+     "opts": [
+      "A gentle slope near a stream, behind a windbreak",
+      "A flat valley floor that floods each rainy season",
+      "A steep, windy hilltop far from water",
+      "Under big shade trees behind the school"
+     ],
+     "after": "The gentle slope drains well, has water close by and is sheltered from wind.",
+     "ref": "p.33–34",
+     "id": "g12.agriculture.u2.s2-5.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "What a nursery is",
+     "paras": [
+      "A nursery is a managed site for young plants.",
+      "It gives suitable conditions for germination and early growth.",
+      "Plants stay until they are strong enough for the main field.",
+      "Young tropical seedlings need shade from severe sun.",
+      "Heavy rain, drought, pests and diseases damage seedlings."
+     ],
+     "ref": "p.33",
+     "id": "g12.agriculture.u2.s2-5.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Eight criteria for a nursery site",
+     "paras": [
+      "1. Gently sloping topography.",
+      "2. Continuous and sufficient water.",
+      "3. Protected from strong wind (or a good windbreak).",
+      "4. Well drained, fertile soil.",
+      "5. Separate from, but near, the main field.",
+      "6. Adequate, dependable labour.",
+      "7. Free from flooding.",
+      "8. Not shaded by trees or buildings."
+     ],
+     "ref": "p.33–34",
+     "id": "g12.agriculture.u2.s2-5.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Nursery",
+       "A managed site where plants are cared for during their early growth stages."
+      ]
+     ],
+     "id": "g12.agriculture.u2.s2-5.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "The purpose of a nursery is to",
+     "opts": [
+      "give young plants suitable conditions for germination and early growth",
+      "store harvested fruit",
+      "process fruit into juice",
+      "sell flowers abroad"
+     ],
+     "ans": "give young plants suitable conditions for germination and early growth",
+     "why": "p.33.",
+     "clue": "Think of the early life of a plant.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.33",
+     "id": "g12.agriculture.u2.s2-5.5"
+    },
+    {
+     "kind": "pick",
+     "text": "Which are criteria for a good nursery site?",
+     "pool": [
+      "Gently sloping",
+      "Continuous water supply",
+      "Protected from strong wind",
+      "Free from flooding",
+      "Under the shade of tall trees",
+      "Far from any labour"
+     ],
+     "a": [
+      "Gently sloping",
+      "Continuous water supply",
+      "Protected from strong wind",
+      "Free from flooding"
+     ],
+     "why": "p.33–34 criteria 1, 2, 3 and 7.",
+     "clue": "Two options break criteria 6 and 8.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.33–34",
+     "id": "g12.agriculture.u2.s2-5.6"
+    },
+    {
+     "kind": "tf",
+     "text": "The best nursery site is perfectly flat.",
+     "a": false,
+     "why": "The book says \"gently slope\": a gentle slope drains water away. (Review Q8 option A wrongly says \"flat\".)",
+     "clue": "Read criterion 1.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.33",
+     "id": "g12.agriculture.u2.s2-5.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why should a nursery be shaded from severe sun but NOT placed under big trees?",
+     "opts": [
+      "Seedlings need protection from harsh sun, yet heavy shade and tree roots weaken them",
+      "Seedlings need no light",
+      "Trees bring more water",
+      "The book wants full shade"
+     ],
+     "ans": "Seedlings need protection from harsh sun, yet heavy shade and tree roots weaken them",
+     "why": "p.33 asks for protection from severe heat; criterion 8 says not close to shade of trees or buildings. Light shade nets are used instead.",
+     "clue": "Compare p.33 with criterion 8.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.33–34",
+     "id": "g12.agriculture.u2.s2-5.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "Plot A: gentle slope, river nearby, floods every August. Plot B: gentle slope, reliable spring 200 m away, eucalyptus windbreak, open to sun. Plot C: flat, under big trees, near a well. Which is best?",
+     "opts": [
+      "Plot B",
+      "Plot A",
+      "Plot C",
+      "None of them"
+     ],
+     "ans": "Plot B",
+     "why": "A breaks \"free from flooding\"; C breaks \"gently sloping\" and \"not shaded\". B meets the criteria.",
+     "clue": "Check each plot against the eight criteria.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.33–34",
+     "added": true,
+     "id": "g12.agriculture.u2.s2-5.9"
+    }
+   ]
+  },
+  {
+   "id": "agri.nursery-seedlings",
+   "name": "Raising and managing seedlings",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Seedlings are raised in nursery beds or in polythene bags; bags often give better seedlings because the tap root is not disturbed, and they save weeding and watering labour. Nursery management starts with the right planting material from the parent plant, then sowing. Seedlings with twisted or poorly developed roots or stems should be discarded; only straight ones are moved to pots or bags. Good nursery care prevents many later problems."
+    },
+    "am": {
+     "text": "ችግኞች በፕላስቲክ ከረጢት ሲበቅሉ ዋና ሥራቸው አይረበሽም። የተጣመመ ሥር ወይም ግንድ ያላቸው ችግኞች ይወገዳሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Bag or bed?",
+     "ask": "Seedlings raised in polythene bags often do better after planting than seedlings dug from a bed. Why do you think?",
+     "opts": [
+      "Their main root is not disturbed when moved",
+      "Plastic makes them grow faster",
+      "Bags keep pests inside",
+      "They need no water"
+     ],
+     "after": "In a bag the whole root-ball moves with the plant, so the tap root is not torn.",
+     "ref": "p.34",
+     "id": "g12.agriculture.u2.s2-5.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Raising seedlings",
+     "paras": [
+      "Seedlings are raised in nursery beds or polythene bags.",
+      "Bags often give better seedlings.",
+      "The tap root is not disturbed.",
+      "Bags save labour for weeding and watering.",
+      "Many fruit problems are avoided by good care in the nursery."
+     ],
+     "ref": "p.34, Figure 2.6",
+     "id": "g12.agriculture.u2.s2-5.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Managing the nursery",
+     "paras": [
+      "First get the right planting material from the parent plant.",
+      "Then sow the seed.",
+      "Seedlings emerge soon after.",
+      "Some show twisted or poorly developed roots or stems.",
+      "Discard them: they rarely become good plants or rootstocks.",
+      "Move only straight seedlings to pots or bags."
+     ],
+     "ref": "p.34",
+     "id": "g12.agriculture.u2.s2-5.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Tap root",
+       "The main root that grows straight down from the seed."
+      ]
+     ],
+     "id": "g12.agriculture.u2.s2-5.13"
+    },
+    {
+     "kind": "mcq",
+     "text": "What should be done with seedlings that have twisted roots or stems?",
+     "opts": [
+      "Discard them",
+      "Use them as rootstocks",
+      "Plant them first",
+      "Give them more fertilizer"
+     ],
+     "ans": "Discard them",
+     "why": "p.34: they have very little chance of becoming good plants or rootstocks.",
+     "clue": "Would they make strong trees?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.34",
+     "id": "g12.agriculture.u2.s2-5.14"
+    },
+    {
+     "kind": "order",
+     "title": "Put the nursery work in order",
+     "items": [
+      "Select a good nursery site",
+      "Get the right planting material from the parent plant",
+      "Fill bags with 2:1:1 soil mix and sow",
+      "Water, shade and weed the seedlings",
+      "Discard twisted or weak seedlings",
+      "Transplant strong seedlings to the main field"
+     ],
+     "why": "Site first, then material, sowing, care, culling, and finally field planting.",
+     "clue": "What must you have before you can sow?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.29, 33–34",
+     "id": "g12.agriculture.u2.s2-5.15"
+    },
+    {
+     "kind": "pick",
+     "text": "Which are advantages of raising seedlings in polythene bags?",
+     "pool": [
+      "The tap root is not disturbed",
+      "Less labour for weeding",
+      "Less labour for watering",
+      "Seedlings never need water",
+      "Twisted seedlings become straight"
+     ],
+     "a": [
+      "The tap root is not disturbed",
+      "Less labour for weeding",
+      "Less labour for watering"
+     ],
+     "why": "p.34.",
+     "clue": "Two options are impossible.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.34",
+     "id": "g12.agriculture.u2.s2-5.16"
+    },
+    {
+     "kind": "mcq",
+     "text": "Activity: on a nursery visit, which practice would you NOT expect to see?",
+     "opts": [
+      "Keeping twisted seedlings to use as rootstocks",
+      "Seedlings in polythene bags",
+      "Shade nets over young seedlings",
+      "Regular watering and weeding"
+     ],
+     "ans": "Keeping twisted seedlings to use as rootstocks",
+     "why": "Twisted seedlings make poor rootstocks and are discarded (p.34).",
+     "clue": "Which one goes against p.34?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 2.2 (p.35)",
+     "id": "g12.agriculture.u2.s2-5.17"
+    },
+    {
+     "kind": "blank",
+     "ask": "A nursery fills 400 polythene bags, each with 2 litres of 2:1:1 mix (forest soil : sand : manure). Forest soil needed = ___ litres",
+     "a": [
+      "400"
+     ],
+     "why": "Total mix = 400 × 2 = 800 L. 4 parts, one part = 200 L. Forest soil = 2 parts = 400 L.",
+     "clue": "Find the total mix first.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.29, 34",
+     "added": true,
+     "id": "g12.agriculture.u2.s2-5.18"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "A nursery site should be",
+   "opts": [
+    "free from flooding",
+    "in a flood plain",
+    "under tall trees",
+    "far from water"
+   ],
+   "ans": "free from flooding",
+   "why": "p.34.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.agriculture.u2.s2-5.19"
+  },
+  {
+   "kind": "mcq",
+   "text": "Raising seedlings in polythene bags",
+   "opts": [
+    "does not disturb the tap root",
+    "needs more weeding",
+    "damages the roots",
+    "is not allowed"
+   ],
+   "ans": "does not disturb the tap root",
+   "why": "p.34.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.agriculture.u2.s2-5.20"
+  },
+  {
+   "kind": "mcq",
+   "text": "A windbreak at a nursery protects seedlings from",
+   "opts": [
+    "strong winds",
+    "pests only",
+    "too much water",
+    "sunlight"
+   ],
+   "ans": "strong winds",
+   "why": "p.34.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.agriculture.u2.s2-5.21"
+  },
+  {
+   "kind": "mcq",
+   "text": "Seedlings stay in the nursery until they are",
+   "opts": [
+    "ready and strong enough for the main field",
+    "bearing fruit",
+    "one year old in every case",
+    "grafted twice"
+   ],
+   "ans": "ready and strong enough for the main field",
+   "why": "p.33.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.agriculture.u2.s2-5.22"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which nursery site breaks TWO of the book's criteria?",
+   "opts": [
+    "A steep plot far from water",
+    "A gentle slope with a spring",
+    "A sunny plot with a windbreak",
+    "A well-drained plot near the main field"
+   ],
+   "ans": "A steep plot far from water",
+   "why": "Steep breaks criterion 1; no water breaks criterion 2.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.agriculture.u2.s2-5.23"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.35: the nursery-visit box is labelled \"Activity 2.2\", the same number as the market activity on p.27."
+  },
+  {
+   "kind": "review",
+   "text": "Review Q8 option A says the topography should be \"flat\"; the text (criterion 1) says \"gently slope\". The lesson teaches gently sloping."
+  },
+  {
+   "kind": "note",
+   "text": "The nursery-steps order item combines p.29 (soil mix) and p.33–34; shading with nets is inferred from Figure 2.6."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

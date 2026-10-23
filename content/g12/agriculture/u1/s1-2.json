@@ -1,0 +1,1429 @@
+{
+ "id": "g12.agriculture.u1.s1-2",
+ "book": {
+  "title": "Agriculture Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "agriculture",
+  "unit": 1,
+  "unit_title": "Vegetable crops production and management",
+  "pages": "6–10",
+  "section": "1.2"
+ },
+ "title": "Environmental factors influencing vegetable production",
+ "competency": "Explain how temperature, water, light, humidity, altitude, soil and biotic factors influence vegetable production.",
+ "minutes": 35,
+ "keywords": [
+  {
+   "en": "Optimum temperature",
+   "am": "ተስማሚ ሙቀት",
+   "def": "The temperature range at which a crop grows and yields best, between its minimum and maximum.",
+   "machine": true
+  },
+  {
+   "en": "Chilling injury",
+   "am": "የቅዝቃዜ ጉዳት",
+   "def": "Damage to tropical and sub-tropical vegetables at temperatures below 10 °C.",
+   "machine": true
+  },
+  {
+   "en": "Vernalization",
+   "am": "ቨርናላይዜሽን",
+   "def": "The need of some crops for a period of low temperature before they move from vegetative growth to flowering.",
+   "machine": true
+  },
+  {
+   "en": "Dry matter",
+   "am": "ደረቅ ክብደት",
+   "def": "What is left of a plant when all its water is removed.",
+   "machine": true
+  },
+  {
+   "en": "Critical growth stage",
+   "am": "ወሳኝ የእድገት ደረጃ",
+   "def": "A stage such as germination, flowering or seed setting when water shortage damages yield most.",
+   "machine": true
+  },
+  {
+   "en": "Photosynthesis",
+   "am": "ፎቶሲንተሲስ",
+   "def": "Green plants make carbohydrates from water and carbon dioxide in sunlight and give off oxygen.",
+   "machine": true
+  },
+  {
+   "en": "Succulent",
+   "am": "ውሃ አዘል",
+   "def": "Book key term: a plant like a cactus with thick, water-storing leaves and stem. Also used for soft, watery tissue.",
+   "machine": true
+  },
+  {
+   "en": "Long-day plant",
+   "am": "የረጅም ቀን ተክል",
+   "def": "A plant that flowers when the night is short (usually less than 12 hours).",
+   "machine": true
+  },
+  {
+   "en": "Short-day plant",
+   "am": "የአጭር ቀን ተክል",
+   "def": "A plant that flowers when the night is long (usually more than 12 hours).",
+   "machine": true
+  },
+  {
+   "en": "Day-neutral plant",
+   "am": "ቀን የማይመርጥ ተክል",
+   "def": "A plant not affected by day length; it can flower under any light period.",
+   "machine": true
+  },
+  {
+   "en": "Humidity",
+   "am": "የአየር እርጥበት",
+   "def": "The amount of water vapour in the atmosphere.",
+   "machine": true
+  },
+  {
+   "en": "Altitude",
+   "am": "ከፍታ",
+   "def": "The height of a place above (or below) sea level; temperature falls about 0.6 °C per 100 m rise.",
+   "machine": true
+  },
+  {
+   "en": "Soil texture",
+   "am": "የአፈር ቅንጣት ይዘት",
+   "def": "The particle sizes a soil contains: sand (biggest), silt (medium) and clay (smallest).",
+   "machine": true
+  },
+  {
+   "en": "Compaction",
+   "am": "የአፈር መጠቅጠቅ",
+   "def": "Soil pressed down (e.g. by heavy loads) until it is very firm with little space between particles.",
+   "machine": true
+  },
+  {
+   "en": "Pore space",
+   "am": "የአፈር ክፍተት",
+   "def": "The space between soil particles, used for air, water storage and root growth.",
+   "machine": true
+  },
+  {
+   "en": "Waterlogging",
+   "am": "ውሃ መቋጠር",
+   "def": "Excess water filling the soil so that roots and soil organisms lack air.",
+   "machine": true
+  },
+  {
+   "en": "Biotic factors",
+   "am": "ሕያው ምክንያቶች",
+   "def": "Living organisms such as bacteria, fungi, nematodes, viruses, weeds and animals that limit crop productivity.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "agri.temperature",
+   "name": "Temperature",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Temperature affects photosynthesis, respiration, transpiration, germination and flowering; the first three rise with temperature up to a point. Each vegetable has a minimum, optimum and maximum temperature: temperate crops need less heat, tropical crops more. Warm soil speeds germination, root growth and uptake. Below 10 °C tropical vegetables may suffer chilling injury, while biennials and some cool-season crops such as onion and carrot need a cold period (vernalization) before they flower."
+    },
+    "am": {
+     "text": "ሙቀት በፎቶሲንተሲስ፣ በመብቀልና በአበባ ላይ ተጽዕኖ ያደርጋል። ከ10 °C በታች ሞቃታማ አትክልቶች ይጎዳሉ፤ ሽንኩርትና ካሮት ለማበብ ቅዝቃዜ ያስፈልጋቸዋል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A cold night",
+     "ask": "Tomato seedlings in a highland garden face a night at 5 °C. What is likely?",
+     "opts": [
+      "They suffer chilling injury",
+      "They grow faster",
+      "They flower at once",
+      "Nothing; cold never harms tomato"
+     ],
+     "after": "Tropical and sub-tropical vegetables may be damaged below 10 °C. This is chilling injury.",
+     "ref": "p.6",
+     "id": "g12.agriculture.u1.s1-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Temperature and plant processes",
+     "paras": [
+      "Temperature affects photosynthesis, respiration, transpiration, germination and flowering.",
+      "The first three rise with temperature, up to a certain point.",
+      "It also controls the shift from vegetative to reproductive growth.",
+      "Each vegetable has a minimum, optimum and maximum temperature.",
+      "Temperate crops need lower temperatures; tropical crops need warmer ones."
+     ],
+     "ref": "p.6",
+     "id": "g12.agriculture.u1.s1-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Soil temperature, chilling and vernalization",
+     "paras": [
+      "Soil temperature affects germination, root growth and uptake of water and nutrients.",
+      "Warmer soil generally speeds these up.",
+      "It also affects the size, shape and quality of the harvest.",
+      "Below 10 °C, tropical and sub-tropical vegetables may get chilling injury.",
+      "Vernalization: some crops need a cold period before they flower.",
+      "Biennials and some cool-season crops (onion, carrot) flower after long cold exposure."
+     ],
+     "ref": "p.6–7",
+     "id": "g12.agriculture.u1.s1-2.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Optimum temperature",
+       "The temperature range at which a crop grows and yields best, between its minimum and maximum."
+      ],
+      [
+       "Chilling injury",
+       "Damage to tropical and sub-tropical vegetables at temperatures below 10 °C."
+      ],
+      [
+       "Vernalization",
+       "The need of some crops for a period of low temperature before they move from vegetative growth to flowering."
+      ]
+     ],
+     "id": "g12.agriculture.u1.s1-2.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "Onion and carrot start flowering only after a long cold period. This is called",
+     "opts": [
+      "vernalization",
+      "chilling injury",
+      "transpiration",
+      "compaction"
+     ],
+     "ans": "vernalization",
+     "why": "p.7.",
+     "clue": "Cold that helps, not cold that harms.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.7",
+     "id": "g12.agriculture.u1.s1-2.5"
+    },
+    {
+     "kind": "tf",
+     "text": "Photosynthesis keeps increasing with temperature without any limit.",
+     "a": false,
+     "why": "It rises with temperature only up to a certain point.",
+     "clue": "Is there a maximum temperature?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.6",
+     "id": "g12.agriculture.u1.s1-2.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "Below about which temperature may tropical vegetables suffer chilling injury?",
+     "opts": [
+      "10 °C",
+      "25 °C",
+      "18 °C",
+      "35 °C"
+     ],
+     "ans": "10 °C",
+     "why": "p.6.",
+     "clue": "It is a cool but not freezing temperature.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.6",
+     "id": "g12.agriculture.u1.s1-2.7"
+    },
+    {
+     "kind": "match",
+     "title": "Match each term with its meaning",
+     "pairs": [
+      [
+       "Chilling injury",
+       "cold damage to tropical crops below 10 °C"
+      ],
+      [
+       "Vernalization",
+       "cold period needed before flowering"
+      ],
+      [
+       "Optimum temperature",
+       "range where a crop grows best"
+      ]
+     ],
+     "why": "Chilling harms; vernalization is needed; optimum is best.",
+     "clue": "One term is good cold, one is bad cold.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.6–7",
+     "id": "g12.agriculture.u1.s1-2.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "Crops that originate in temperate regions",
+     "opts": [
+      "have lower temperature requirements",
+      "need the hottest temperatures",
+      "cannot grow in Ethiopia",
+      "never flower"
+     ],
+     "ans": "have lower temperature requirements",
+     "why": "p.6.",
+     "clue": "Temperate regions are cooler than the tropics.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.6",
+     "id": "g12.agriculture.u1.s1-2.9"
+    },
+    {
+     "kind": "mcq",
+     "text": "Warmer soil generally",
+     "opts": [
+      "speeds germination, root growth and uptake",
+      "stops germination",
+      "has no effect on roots",
+      "reduces nutrient uptake"
+     ],
+     "ans": "speeds germination, root growth and uptake",
+     "why": "p.6.",
+     "clue": "Seeds in cold soil are slow.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.6",
+     "id": "g12.agriculture.u1.s1-2.10"
+    },
+    {
+     "kind": "mcq",
+     "text": "A farmer at 2,800 m and a farmer at 800 m both grow carrots for seed. Who is more likely to get seed?",
+     "opts": [
+      "The highland farmer: carrot needs cold to flower",
+      "The lowland farmer: heat speeds flowering",
+      "Both equally",
+      "Neither: carrots never make seed"
+     ],
+     "ans": "The highland farmer: carrot needs cold to flower",
+     "why": "Carrot is a biennial that needs vernalization; the cool highland provides the cold period.",
+     "clue": "Which place gives a long cold period?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.7",
+     "added": true,
+     "id": "g12.agriculture.u1.s1-2.11"
+    }
+   ]
+  },
+  {
+   "id": "agri.water",
+   "name": "Water",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Fresh vegetables are often 80–90 % water, and about 322 litres of water are needed for each kilogram of vegetable dry matter. Water is needed for germination, dissolving nutrients, photosynthesis, and cell division, enlargement and turgidity. Shortage at critical stages (germination, flowering, seed setting) or early in growth cuts yield; excess water damages seedlings, washes out nutrients, erodes soil, floods fields and favours disease."
+    },
+    "am": {
+     "text": "ትኩስ አትክልቶች ከ80–90 % ውሃ ናቸው። በወሳኝ የእድገት ደረጃዎች የውሃ እጥረት ምርትን ይቀንሳል፤ ከመጠን ያለፈ ውሃም ይጎዳል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Mostly water?",
+     "ask": "About how much of a fresh tomato's weight is water?",
+     "opts": [
+      "80–90 %",
+      "10–20 %",
+      "40–50 %",
+      "Almost none"
+     ],
+     "after": "Fresh vegetables are often 80–90 % water. That is why they spoil and wilt quickly.",
+     "ref": "p.7",
+     "id": "g12.agriculture.u1.s1-2.12"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Water in vegetables",
+     "paras": [
+      "Fresh vegetables are often 80–90 % water by weight.",
+      "About 322 litres of water make 1 kg of vegetable dry matter.",
+      "Germination and growth start only when water is available.",
+      "Nutrients absorbed by plants are dissolved in water.",
+      "Water is used in photosynthesis, cell division, enlargement and turgidity."
+     ],
+     "ref": "p.7",
+     "id": "g12.agriculture.u1.s1-2.13"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Too little or too much",
+     "paras": [
+      "Shortage at critical stages (germination, flowering, seed setting) cuts yield.",
+      "Shortage early in growth stunts plants and greatly reduces yield.",
+      "Excess water is also harmful.",
+      "It damages seedlings and washes nutrients out of the soil.",
+      "It erodes soil, causes floods and favours crop diseases."
+     ],
+     "note": "The book starts the excess-water point with \"For example\" after a sentence on shortage; here it is a separate point.",
+     "ref": "p.7",
+     "id": "g12.agriculture.u1.s1-2.14"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Water behind a tomato harvest",
+     "steps": [
+      "Fresh yield: 4,500 kg of tomato, 90 % water.",
+      "Dry matter = 10 % of 4,500 kg = 450 kg.",
+      "Water needed = 450 × 322 L = 144,900 L.",
+      "That is about 145 cubic metres (1 m³ = 1,000 L)."
+     ],
+     "added": true,
+     "id": "g12.agriculture.u1.s1-2.15"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Dry matter",
+       "What is left of a plant when all its water is removed."
+      ],
+      [
+       "Critical growth stage",
+       "A stage such as germination, flowering or seed setting when water shortage damages yield most."
+      ]
+     ],
+     "id": "g12.agriculture.u1.s1-2.16"
+    },
+    {
+     "kind": "mcq",
+     "text": "Water shortage hurts yield most at",
+     "opts": [
+      "critical stages such as flowering and seed setting",
+      "after harvest only",
+      "when the plant is already dead",
+      "no stage; water never matters"
+     ],
+     "ans": "critical stages such as flowering and seed setting",
+     "why": "p.7: shortage at critical growth stages directly affects yields.",
+     "clue": "When is the crop forming what we harvest?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.7",
+     "id": "g12.agriculture.u1.s1-2.17"
+    },
+    {
+     "kind": "pick",
+     "text": "Which are roles of water in plants?",
+     "pool": [
+      "Dissolves absorbed nutrients",
+      "Used in photosynthesis",
+      "Keeps cells turgid",
+      "Makes plants woody"
+     ],
+     "a": [
+      "Dissolves absorbed nutrients",
+      "Used in photosynthesis",
+      "Keeps cells turgid"
+     ],
+     "why": "Water does not make plants woody.",
+     "clue": "One option is about wood, not water.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.7",
+     "id": "g12.agriculture.u1.s1-2.18"
+    },
+    {
+     "kind": "blank",
+     "ask": "To make 1 kg of vegetable dry matter, about ___ litres of water are needed",
+     "a": [
+      "322"
+     ],
+     "why": "p.7: about 322 litres.",
+     "clue": "It is a three-digit number between 300 and 350.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.7",
+     "id": "g12.agriculture.u1.s1-2.19"
+    },
+    {
+     "kind": "pick",
+     "text": "Which are effects of excess water?",
+     "pool": [
+      "Seedling damage",
+      "Nutrients washed out",
+      "Soil erosion and flooding",
+      "More crop diseases",
+      "More air for roots"
+     ],
+     "a": [
+      "Seedling damage",
+      "Nutrients washed out",
+      "Soil erosion and flooding",
+      "More crop diseases"
+     ],
+     "why": "Excess water pushes air out of the soil, so roots get less air.",
+     "clue": "One option is the opposite of what happens.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.7",
+     "id": "g12.agriculture.u1.s1-2.20"
+    },
+    {
+     "kind": "blank",
+     "ask": "5 kg of fresh carrot is 90 % water. Its dry matter is ___ kg",
+     "a": [
+      "0.5"
+     ],
+     "why": "100 % − 90 % = 10 %. 10 % of 5 kg = 0.5 kg.",
+     "clue": "Dry matter is the part that is not water.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.agriculture.u1.s1-2.21"
+    },
+    {
+     "kind": "blank",
+     "ask": "A cabbage field yields 2,000 kg fresh weight with 90 % water. Water needed for its dry matter ≈ ___ litres",
+     "a": [
+      "64400",
+      "64,400"
+     ],
+     "why": "Dry matter = 10 % of 2,000 kg = 200 kg. Water = 200 × 322 = 64,400 L.",
+     "clue": "Find the dry matter first, then multiply by 322.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.7",
+     "added": true,
+     "id": "g12.agriculture.u1.s1-2.22"
+    }
+   ]
+  },
+  {
+   "id": "agri.light",
+   "name": "Light and day length",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Light drives photosynthesis: in full light plants grow vigorously with more chlorophyll; in reduced light they are paler, soft and watery. Day length and light quality change with season, altitude and latitude, and the length of the night controls flowering in many plants. Long-day plants flower when nights are short (under about 12 hours), short-day plants when nights are long (over about 12 hours), and day-neutral plants under any light period."
+    },
+    "am": {
+     "text": "ብርሃን ለፎቶሲንተሲስ ዋና ነው። የሌሊት ርዝመት አበባን ይቆጣጠራል፡ የረጅም ቀን፣ የአጭር ቀን እና ቀን የማይመርጡ ተክሎች አሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Sun or shade?",
+     "ask": "Two cabbage seedlings: one in full sun, one under a dense tree. Which grows stronger and greener?",
+     "opts": [
+      "The one in full sun",
+      "The one in shade",
+      "Both the same",
+      "Neither: cabbage needs darkness"
+     ],
+     "after": "Full light gives more chlorophyll and more photosynthesis. Shaded plants are paler, soft and watery.",
+     "ref": "p.7–8",
+     "id": "g12.agriculture.u1.s1-2.23"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Light",
+     "paras": [
+      "Light is the key element in photosynthesis.",
+      "Carbon dioxide + water → (sunlight, chlorophyll) → carbohydrate + oxygen.",
+      "In full light, plants grow vigorously with more chlorophyll.",
+      "In reduced light, plants have less chlorophyll and are soft and watery (succulent).",
+      "Day length and light quality change with season, altitude and latitude.",
+      "The length of the night also triggers flowering in many plants."
+     ],
+     "note": "Balanced equation (added): 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂.",
+     "ref": "p.7–8, Figure 1.1",
+     "id": "g12.agriculture.u1.s1-2.24"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Day length (Table 1.1)",
+     "paras": [
+      "Long-day plants flower when the night is short (usually under 12 hours).",
+      "Short-day plants flower when the night is long (usually over 12 hours).",
+      "Day-neutral plants can flower under any light period."
+     ],
+     "table": [
+      [
+       "Short day",
+       "Day neutral",
+       "Long day"
+      ],
+      [
+       "Sweet potato",
+       "Cucumber",
+       "Spinach"
+      ],
+      [
+       "",
+       "Tomato",
+       "Onion"
+      ],
+      [
+       "",
+       "Pepper",
+       "Cabbage"
+      ],
+      [
+       "",
+       "Eggplant",
+       "Carrot"
+      ],
+      [
+       "",
+       "Artichoke",
+       "Potato"
+      ]
+     ],
+     "ref": "p.8, Table 1.1",
+     "id": "g12.agriculture.u1.s1-2.25"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Photosynthesis",
+       "Green plants make carbohydrates from water and carbon dioxide in sunlight and give off oxygen."
+      ],
+      [
+       "Succulent",
+       "Book key term: a plant like a cactus with thick, water-storing leaves and stem. Also used for soft, watery tissue."
+      ],
+      [
+       "Long-day plant",
+       "A plant that flowers when the night is short (usually less than 12 hours)."
+      ],
+      [
+       "Short-day plant",
+       "A plant that flowers when the night is long (usually more than 12 hours)."
+      ],
+      [
+       "Day-neutral plant",
+       "A plant not affected by day length; it can flower under any light period."
+      ]
+     ],
+     "id": "g12.agriculture.u1.s1-2.26"
+    },
+    {
+     "kind": "mcq",
+     "text": "A plant that can flower under any light period is",
+     "opts": [
+      "day-neutral",
+      "long-day",
+      "short-day",
+      "succulent"
+     ],
+     "ans": "day-neutral",
+     "why": "p.8.",
+     "clue": "It does not care about day length.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.8",
+     "id": "g12.agriculture.u1.s1-2.27"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Classify by day length (Table 1.1)",
+     "bins": [
+      "Short day",
+      "Day neutral",
+      "Long day"
+     ],
+     "items": [
+      [
+       "Sweet potato",
+       "Short day",
+       "Table 1.1"
+      ],
+      [
+       "Tomato",
+       "Day neutral",
+       "Table 1.1"
+      ],
+      [
+       "Pepper",
+       "Day neutral",
+       "Table 1.1"
+      ],
+      [
+       "Cucumber",
+       "Day neutral",
+       "Table 1.1"
+      ],
+      [
+       "Spinach",
+       "Long day",
+       "Table 1.1"
+      ],
+      [
+       "Cabbage",
+       "Long day",
+       "Table 1.1"
+      ]
+     ],
+     "why": "Table 1.1: sweet potato is short-day; tomato, pepper, cucumber are day-neutral; spinach and cabbage are long-day.",
+     "clue": "Only one of these is short-day.",
+     "ref": "Table 1.1",
+     "graded": true,
+     "level": 1,
+     "id": "g12.agriculture.u1.s1-2.28"
+    },
+    {
+     "kind": "mcq",
+     "text": "Long-day plants flower when the night is",
+     "opts": [
+      "short, usually under 12 hours",
+      "long, usually over 12 hours",
+      "exactly 24 hours",
+      "any length at all"
+     ],
+     "ans": "short, usually under 12 hours",
+     "why": "Long day means short night. Plants actually respond to the night length.",
+     "clue": "A long day leaves a short night.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.8",
+     "id": "g12.agriculture.u1.s1-2.29"
+    },
+    {
+     "kind": "tf",
+     "text": "Plants grown in reduced light have more chlorophyll than plants grown in full light.",
+     "a": false,
+     "why": "Reduced light gives less chlorophyll; full light gives more.",
+     "clue": "Which plant looked greener in the hook?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.7–8",
+     "id": "g12.agriculture.u1.s1-2.30"
+    },
+    {
+     "kind": "mcq",
+     "text": "Day length at a place varies with",
+     "opts": [
+      "season, altitude and latitude",
+      "soil colour only",
+      "the farmer's tools",
+      "the price of seed"
+     ],
+     "ans": "season, altitude and latitude",
+     "why": "p.8.",
+     "clue": "Think about where and when.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.8",
+     "id": "g12.agriculture.u1.s1-2.31"
+    },
+    {
+     "kind": "mcq",
+     "text": "A short-day plant is grown where nights are only 10 hours long. What happens?",
+     "opts": [
+      "It stays vegetative and does not flower",
+      "It flowers early",
+      "It dies at once",
+      "It turns into a long-day plant"
+     ],
+     "ans": "It stays vegetative and does not flower",
+     "why": "Short-day plants need nights longer than about 12 hours to flower; 10-hour nights are too short.",
+     "clue": "Compare 10 hours with the 12-hour limit.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.8",
+     "added": true,
+     "id": "g12.agriculture.u1.s1-2.32"
+    }
+   ]
+  },
+  {
+   "id": "agri.humidity-altitude",
+   "name": "Humidity and altitude",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Humidity is the amount of water vapour in the air. Moderate humidity keeps stomata open for photosynthesis; very high humidity favours fungal diseases and slows transpiration, so leaves cool less; low humidity raises transpiration and can favour some pests. Altitude decides temperature and rainfall: temperature falls about 0.6 °C for every 100 m rise. Ethiopia's cool, rainy highlands are often suitable for vegetables; the hotter, drier lowlands are less suitable."
+    },
+    "am": {
+     "text": "የአየር እርጥበት በሽታና ትነትን ይወስናል። ከፍታ በ100 ሜትር ሲጨምር ሙቀት በ0.6 °C ይቀንሳል። ደጋማ አካባቢዎች ለአትክልት ተስማሚ ናቸው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Up the escarpment",
+     "ask": "Travelling from lowland Awash up to highland Debre Birhan, the air gets",
+     "opts": [
+      "cooler",
+      "hotter",
+      "exactly the same",
+      "hotter and drier"
+     ],
+     "after": "Temperature falls about 0.6 °C for every 100 m you climb.",
+     "ref": "p.9",
+     "id": "g12.agriculture.u1.s1-2.33"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Humidity (Table 1.2)",
+     "paras": [
+      "Humidity is the amount of water vapour in the air.",
+      "Moderate humidity keeps stomata open for CO₂ uptake and photosynthesis.",
+      "Very high humidity helps fungal spores germinate: more disease.",
+      "Humid air also slows transpiration, so leaves cool less and may overheat.",
+      "Low humidity raises transpiration and can favour some pests."
+     ],
+     "table": [
+      [
+       "Need high humidity",
+       "Need low humidity"
+      ],
+      [
+       "Cabbage",
+       "Peppers"
+      ],
+      [
+       "Carrots",
+       "Sweet potatoes"
+      ],
+      [
+       "Lettuce",
+       "Watermelon"
+      ],
+      [
+       "Onion",
+       "Cucumber"
+      ],
+      [
+       "Spinach",
+       "Squash"
+      ],
+      [
+       "Broccoli",
+       "Tomato"
+      ],
+      [
+       "",
+       "Pumpkin"
+      ],
+      [
+       "",
+       "Potatoes"
+      ]
+     ],
+     "note": "Corrected: the book says excess humidity closes stomata. Overheating comes from slower transpiration. The onion and potato rows are questioned in the teacher notes.",
+     "ref": "p.8–9",
+     "id": "g12.agriculture.u1.s1-2.34"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Altitude",
+     "paras": [
+      "Altitude decides an area's temperature and rainfall.",
+      "Temperature falls about 0.6 °C for every 100 m rise.",
+      "Ethiopian highlands: high rainfall and low temperature; often suitable for vegetables.",
+      "Lowlands: lower rainfall and higher temperature; less suitable."
+     ],
+     "ref": "p.9",
+     "id": "g12.agriculture.u1.s1-2.35"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Using the 0.6 °C rule",
+     "steps": [
+      "Site A is at 1,400 m. Site B is at 2,400 m.",
+      "Height difference = 2,400 − 1,400 = 1,000 m.",
+      "Number of 100 m steps = 1,000 ÷ 100 = 10.",
+      "Temperature drop = 10 × 0.6 °C = 6 °C.",
+      "Site B is about 6 °C cooler than site A."
+     ],
+     "added": true,
+     "id": "g12.agriculture.u1.s1-2.36"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Humidity",
+       "The amount of water vapour in the atmosphere."
+      ],
+      [
+       "Altitude",
+       "The height of a place above (or below) sea level; temperature falls about 0.6 °C per 100 m rise."
+      ]
+     ],
+     "id": "g12.agriculture.u1.s1-2.37"
+    },
+    {
+     "kind": "mcq",
+     "text": "Very high humidity in a tomato field most often leads to",
+     "opts": [
+      "more fungal diseases",
+      "chilling injury",
+      "faster drying of the soil",
+      "vernalization"
+     ],
+     "ans": "more fungal diseases",
+     "why": "p.8: high humidity is associated with diseases and pests.",
+     "clue": "Fungi love damp air.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.8",
+     "id": "g12.agriculture.u1.s1-2.38"
+    },
+    {
+     "kind": "blank",
+     "ask": "Going up 500 m, the temperature falls by about ___ °C",
+     "a": [
+      "3"
+     ],
+     "why": "500 ÷ 100 = 5 steps. 5 × 0.6 = 3 °C.",
+     "clue": "Count the 100 m steps first.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.9",
+     "id": "g12.agriculture.u1.s1-2.39"
+    },
+    {
+     "kind": "blank",
+     "ask": "Site A is at 1,400 m and 24 °C. Site B is at 2,400 m. Temperature at B ≈ ___ °C",
+     "a": [
+      "18"
+     ],
+     "why": "Rise = 1,000 m = 10 steps. Drop = 10 × 0.6 = 6 °C. 24 − 6 = 18 °C.",
+     "clue": "Going up makes it cooler: subtract.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.9",
+     "id": "g12.agriculture.u1.s1-2.40"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which areas does the book call generally more suitable for vegetables in Ethiopia?",
+     "opts": [
+      "Highlands: high rainfall, low temperature",
+      "Lowlands: low rainfall, high temperature",
+      "Deserts",
+      "Places below sea level"
+     ],
+     "ans": "Highlands: high rainfall, low temperature",
+     "why": "p.9: highlands are often suitable; lowlands are less suitable.",
+     "clue": "Which has more rain?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.9",
+     "id": "g12.agriculture.u1.s1-2.41"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "High or low humidity need? (Table 1.2)",
+     "bins": [
+      "High humidity",
+      "Low humidity"
+     ],
+     "items": [
+      [
+       "Cabbage",
+       "High humidity",
+       "leafy"
+      ],
+      [
+       "Lettuce",
+       "High humidity",
+       "leafy"
+      ],
+      [
+       "Spinach",
+       "High humidity",
+       "leafy"
+      ],
+      [
+       "Watermelon",
+       "Low humidity",
+       "warm-season"
+      ],
+      [
+       "Peppers",
+       "Low humidity",
+       "warm-season"
+      ],
+      [
+       "Squash",
+       "Low humidity",
+       "warm-season"
+      ]
+     ],
+     "why": "In the table the leafy crops need high humidity; the warm-season fruit crops need low humidity.",
+     "clue": "Leafy crops wilt in dry air.",
+     "ref": "Table 1.2",
+     "graded": true,
+     "level": 1,
+     "id": "g12.agriculture.u1.s1-2.42"
+    },
+    {
+     "kind": "tf",
+     "text": "Low humidity increases transpiration from leaves.",
+     "a": true,
+     "why": "p.8: low humidity may increase transpiration.",
+     "clue": "Dry air pulls water from leaves.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.8",
+     "id": "g12.agriculture.u1.s1-2.43"
+    },
+    {
+     "kind": "blank",
+     "ask": "A farm at 1,600 m has a mean temperature of 22 °C. At about what altitude would the mean be 16 °C? ___ m",
+     "a": [
+      "2600",
+      "2,600"
+     ],
+     "why": "Drop = 22 − 16 = 6 °C. 6 ÷ 0.6 = 10 steps of 100 m = 1,000 m. 1,600 + 1,000 = 2,600 m.",
+     "clue": "Cooler means higher. How many 0.6 °C steps make 6 °C?",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.9",
+     "added": true,
+     "id": "g12.agriculture.u1.s1-2.44"
+    }
+   ]
+  },
+  {
+   "id": "agri.soil-biotic",
+   "name": "Soil and biotic factors",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Soil type, fertility and structure affect growth and yield; soil gives roots nutrients, water and support. Texture is the particle size: sand is biggest, silt medium, clay smallest. Sandy soils have large pores, good air and free drainage but store little water; clay soils drain slowly and can waterlog. Compacted soil slows emergence, so seedlings stay longer exposed to pests. Biotic factors — bacteria, fungi, nematodes, viruses, weeds and animals — limit yield, so choose adapted, resistant crops."
+    },
+    "am": {
+     "text": "የአፈር ዓይነት፣ ለምነት እና አወቃቀር ምርትን ይወስናሉ። አሸዋ ውሃ በቶሎ ያሳልፋል፤ ሸክላ ውሃ ይቋጥራል። ተባዮች፣ በሽታዎች እና አረሞች ምርትን ይቀንሳሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Sand or clay?",
+     "ask": "You pour a cup of water on sand and on clay. Which drains faster?",
+     "opts": [
+      "Sand",
+      "Clay",
+      "Both the same",
+      "Neither drains"
+     ],
+     "after": "Sand has large pores: good air and free drainage, but it stores little water. Clay drains very slowly.",
+     "ref": "p.10",
+     "id": "g12.agriculture.u1.s1-2.45"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Soil",
+     "paras": [
+      "Soil type, fertility and structure affect growth and yield.",
+      "Soil gives roots nutrients, water and physical support.",
+      "Soil type decides water storage and whether compaction or waterlogging is a problem.",
+      "In compacted soil, seedlings emerge slowly.",
+      "They then stay longer exposed to diseases, insects and weeds."
+     ],
+     "ref": "p.9–10",
+     "id": "g12.agriculture.u1.s1-2.46"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Soil texture",
+     "paras": [
+      "Texture: the particle sizes in a soil.",
+      "Sand is the biggest; silt is medium; clay is the smallest."
+     ],
+     "table": [
+      [
+       "",
+       "Sandy soil",
+       "Clay soil"
+      ],
+      [
+       "Pores",
+       "large",
+       "very small"
+      ],
+      [
+       "Air",
+       "plenty",
+       "often short"
+      ],
+      [
+       "Drainage",
+       "free and fast",
+       "very slow"
+      ],
+      [
+       "Water held for plants",
+       "little",
+       "much; may waterlog"
+      ]
+     ],
+     "note": "The book says sandy soils have a high level of pore space. Strictly, sand has larger pores but less total pore space than clay.",
+     "ref": "p.10",
+     "id": "g12.agriculture.u1.s1-2.47"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Biotic factors",
+     "paras": [
+      "Biotic factors: bacteria, fungi, nematodes, viruses, weeds and animals.",
+      "These harmful organisms limit crop productivity.",
+      "Choose crops adapted to the place.",
+      "Choose crops resistant to common diseases and pests."
+     ],
+     "ref": "p.10",
+     "id": "g12.agriculture.u1.s1-2.48"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Soil texture",
+       "The particle sizes a soil contains: sand (biggest), silt (medium) and clay (smallest)."
+      ],
+      [
+       "Compaction",
+       "Soil pressed down (e.g. by heavy loads) until it is very firm with little space between particles."
+      ],
+      [
+       "Pore space",
+       "The space between soil particles, used for air, water storage and root growth."
+      ],
+      [
+       "Waterlogging",
+       "Excess water filling the soil so that roots and soil organisms lack air."
+      ],
+      [
+       "Biotic factors",
+       "Living organisms such as bacteria, fungi, nematodes, viruses, weeds and animals that limit crop productivity."
+      ]
+     ],
+     "id": "g12.agriculture.u1.s1-2.49"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which soil particle is the smallest?",
+     "opts": [
+      "Clay",
+      "Silt",
+      "Sand",
+      "Gravel"
+     ],
+     "ans": "Clay",
+     "why": "p.10: sand is biggest, silt medium, clay smallest.",
+     "clue": "Think of the stickiest soil.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.10",
+     "id": "g12.agriculture.u1.s1-2.50"
+    },
+    {
+     "kind": "order",
+     "title": "Order the soil particles from biggest to smallest",
+     "items": [
+      "Sand",
+      "Silt",
+      "Clay"
+     ],
+     "why": "Sand > silt > clay.",
+     "clue": "You can see sand grains with your eyes.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.10",
+     "id": "g12.agriculture.u1.s1-2.51"
+    },
+    {
+     "kind": "match",
+     "title": "Match the soil with its effect",
+     "pairs": [
+      [
+       "Sandy soil",
+       "drains freely but stores little water"
+      ],
+      [
+       "Clay soil",
+       "drains slowly; roots may lack air"
+      ],
+      [
+       "Compacted soil",
+       "slow emergence; seedlings exposed longer to pests"
+      ]
+     ],
+     "why": "p.10.",
+     "clue": "Big pores drain; tiny pores hold water.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.10",
+     "id": "g12.agriculture.u1.s1-2.52"
+    },
+    {
+     "kind": "pick",
+     "text": "Which are biotic factors?",
+     "pool": [
+      "Fungi",
+      "Nematodes",
+      "Weeds",
+      "Viruses",
+      "Temperature",
+      "Altitude"
+     ],
+     "a": [
+      "Fungi",
+      "Nematodes",
+      "Weeds",
+      "Viruses"
+     ],
+     "why": "Biotic means living. Temperature and altitude are not living.",
+     "clue": "Bio = life.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.10",
+     "id": "g12.agriculture.u1.s1-2.53"
+    },
+    {
+     "kind": "match",
+     "title": "Match the environmental factor with its effect",
+     "pairs": [
+      [
+       "Temperature below 10 °C",
+       "chilling injury on tomato"
+      ],
+      [
+       "Very high humidity",
+       "more fungal leaf diseases"
+      ],
+      [
+       "Long cold period",
+       "onion and carrot start to flower"
+      ],
+      [
+       "Waterlogged clay",
+       "roots short of air"
+      ],
+      [
+       "Water shortage at flowering",
+       "poor seed set and low yield"
+      ]
+     ],
+     "why": "Each effect comes from one subsection of 1.2.",
+     "clue": "Two are about cold: one harms, one is needed.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Brainstorming 1.3",
+     "id": "g12.agriculture.u1.s1-2.54"
+    },
+    {
+     "kind": "mcq",
+     "text": "A farmer has only heavy clay land in a rainy highland. Which plan fits the book best?",
+     "opts": [
+      "Improve drainage and choose adapted, disease-resistant crops",
+      "Irrigate more often",
+      "Compact the soil with heavy loads",
+      "Plant only in the wettest low spot"
+     ],
+     "ans": "Improve drainage and choose adapted, disease-resistant crops",
+     "why": "Clay plus rain means waterlogging and disease; drainage and adapted, resistant crops answer both.",
+     "clue": "What two problems do clay and rain cause?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.10",
+     "added": true,
+     "id": "g12.agriculture.u1.s1-2.55"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "For every 100 m rise in altitude, temperature falls by about",
+   "opts": [
+    "0.6 °C",
+    "6 °C",
+    "0.06 °C",
+    "10 °C"
+   ],
+   "ans": "0.6 °C",
+   "why": "p.9.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.agriculture.u1.s1-2.56"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which crop is short-day in Table 1.1?",
+   "opts": [
+    "Sweet potato",
+    "Tomato",
+    "Spinach",
+    "Cucumber"
+   ],
+   "ans": "Sweet potato",
+   "why": "Table 1.1.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.agriculture.u1.s1-2.57"
+  },
+  {
+   "kind": "mcq",
+   "text": "Fresh vegetables are usually about what percentage water?",
+   "opts": [
+    "80–90 %",
+    "20–30 %",
+    "50 %",
+    "99–100 %"
+   ],
+   "ans": "80–90 %",
+   "why": "p.7.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.agriculture.u1.s1-2.58"
+  },
+  {
+   "kind": "mcq",
+   "text": "Sandy soils",
+   "opts": [
+    "drain freely but store little water",
+    "drain very slowly",
+    "have the smallest particles",
+    "always waterlog"
+   ],
+   "ans": "drain freely but store little water",
+   "why": "p.10.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.agriculture.u1.s1-2.59"
+  },
+  {
+   "kind": "mcq",
+   "text": "A site 800 m higher than another is about how much cooler?",
+   "opts": [
+    "4.8 °C",
+    "0.8 °C",
+    "8 °C",
+    "48 °C"
+   ],
+   "ans": "4.8 °C",
+   "why": "800 ÷ 100 = 8; 8 × 0.6 = 4.8 °C.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.agriculture.u1.s1-2.60"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.8: the book says excessive humidity closes stomata and so overheats plants. Overheating under high humidity comes mainly from slower transpiration (less evaporative cooling); stomata tend to close under low humidity/water stress. The lesson teaches the corrected reason."
+  },
+  {
+   "kind": "review",
+   "text": "Table 1.2 (humidity, p.9) comes from storage-humidity sources: in storage onion needs LOW and potato HIGH humidity, so both look misplaced. Two different tables are numbered \"Table 1.2\" (p.9 and p.12). Onion and potato are not used in graded humidity items."
+  },
+  {
+   "kind": "review",
+   "text": "Table 1.1: potato is usually short-day for tuber formation, and onion bulbing is long-day only in temperate varieties (many tropical onions are short-day). Kept as printed; potato and onion are not used in graded day-length items."
+  },
+  {
+   "kind": "review",
+   "text": "p.8: \"Flowering and seed production by the length of the night is an example\" is a fragment (meaning: night length triggers flowering). \"Succulent\" in the text means soft, watery tissue, unlike the cactus key term. p.7: \"For example, excess moisture…\" does not illustrate the shortage sentence."
+  },
+  {
+   "kind": "review",
+   "text": "p.10: \"water lodging\" should be \"waterlogging\"; \"increases a time\" should be \"increases the time\"; sandy soils have larger pores but less total pore space than clay."
+  },
+  {
+   "kind": "note",
+   "text": "Added: the 0.6 °C worked example, the tomato water-budget steps, the balanced photosynthesis equation, the factor–effect match and the challenges."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
