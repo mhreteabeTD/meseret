@@ -1,0 +1,699 @@
+{
+ "id": "g7.cte.u2.s2-1",
+ "book": {
+  "title": "Career and Technical Education Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "cte",
+  "unit": 2,
+  "unit_title": "Personal Career Selection",
+  "pages": "11–18",
+  "section": "2.1"
+ },
+ "title": "Introduction to Career and Technical Education areas in Ethiopia",
+ "competency": "Identify the eight Career and Technical Education areas.",
+ "minutes": 16,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Natural science",
+   "am": "የተፈጥሮ ሳይንስ",
+   "def": "Science of the physical world, such as physics, chemistry, biology and mathematics.",
+   "machine": true
+  },
+  {
+   "en": "Social science",
+   "am": "ማህበራዊ ሳይንስ",
+   "def": "The study of human society and relationships, such as economics, history and civics.",
+   "machine": true
+  },
+  {
+   "en": "Manufacturing",
+   "am": "ማምረት",
+   "def": "Making finished goods from raw materials with labour, machines and tools.",
+   "machine": true
+  },
+  {
+   "en": "Construction",
+   "am": "ግንባታ",
+   "def": "Planning, building, repairing and demolishing buildings, bridges and roads.",
+   "machine": true
+  },
+  {
+   "en": "Agriculture",
+   "am": "ግብርና",
+   "def": "The practice of cultivating plants and raising livestock.",
+   "machine": true
+  },
+  {
+   "en": "Health science",
+   "am": "የጤና ሳይንስ",
+   "def": "Applying science to health: medicine, nutrition and personal and community health.",
+   "machine": true
+  },
+  {
+   "en": "Business science",
+   "am": "የንግድ ሳይንስ",
+   "def": "Activities of doing business: what to sell, how to make it available and how to sell it.",
+   "machine": true
+  },
+  {
+   "en": "Raw material",
+   "am": "ጥሬ ዕቃ",
+   "def": "The material a product is made from, like cotton for cloth.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "cte.cte-areas",
+   "name": "The eight CTE areas and two streams",
+   "explain": {
+    "en": {
+     "text": "Ethiopia has eight CTE occupational areas. Natural science areas are manufacturing, agriculture, construction, information technology and health sciences. Business science is in the social science stream. Language and social sciences, and performing and visual arts, complete the eight. You study them in detail in Grades 11 and 12."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Jobs in your locality",
+     "ask": "Where could people in your area get jobs for a living?",
+     "opts": [
+      "Farming, shops, building, health centres, hotels and more",
+      "Nowhere at all",
+      "Only in offices"
+     ],
+     "after": "People work in many areas. Ethiopia groups this work into eight CTE areas.",
+     "ref": "Brainstorming Question",
+     "id": "g7.cte.u2.s2-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "2.1 CTE areas in Ethiopia",
+     "paras": [
+      "The CTE program in Ethiopia has eight occupational areas.",
+      "Each area has sub-specializations.",
+      "You will learn them in detail in Grades 11 and 12."
+     ],
+     "id": "g7.cte.u2.s2-1.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Two streams",
+     "paras": [
+      "Secondary school CTE programs are in two streams: natural sciences and social sciences.",
+      "Natural science deals with the physical world: physics, chemistry, biology, mathematics.",
+      "Social science studies human society: economics, politics, history, geography, civics."
+     ],
+     "table": [
+      [
+       "Stream",
+       "CTE areas"
+      ],
+      [
+       "Natural sciences",
+       "Manufacturing, agriculture, construction, information technology, health sciences"
+      ],
+      [
+       "Social sciences",
+       "Business sciences (accounting, banking and insurance, marketing, office management, hotel and tourism)"
+      ]
+     ],
+     "id": "g7.cte.u2.s2-1.3"
+    },
+    {
+     "kind": "tree",
+     "step": "explore",
+     "title": "Tap each area",
+     "root": {
+      "label": "Eight CTE areas",
+      "info": "The occupational areas of CTE in Ethiopia.",
+      "children": [
+       {
+        "label": "Manufacturing",
+        "info": "Metal manufacturing, automotive technology, textile and leather garment, wood work."
+       },
+       {
+        "label": "Construction",
+        "info": "Electricity, plumbing, carpentry, building finishing works."
+       },
+       {
+        "label": "IT and Computer Science",
+        "info": "Computer maintenance and network, website design, computer graphics design."
+       },
+       {
+        "label": "Agriculture",
+        "info": "Crops, animals, fattening, flowers, forestry, soil protection."
+       },
+       {
+        "label": "Health Sciences",
+        "info": "Medicine, nutrition, community health. Doctors, nurses, lab technicians, pharmacists."
+       },
+       {
+        "label": "Business Science",
+        "info": "Accounting, marketing, banking, insurance, office management, hotel and tourism."
+       },
+       {
+        "label": "Language and Social Sciences",
+        "info": "Language use, social work, anthropology, citizenship."
+       },
+       {
+        "label": "Performing and Visual Arts",
+        "info": "Music, dance, theatre, film, painting, sculpture."
+       }
+      ]
+     },
+     "id": "g7.cte.u2.s2-1.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Natural science",
+       "Science of the physical world, such as physics, chemistry, biology and mathematics."
+      ],
+      [
+       "Social science",
+       "The study of human society and relationships, such as economics, history and civics."
+      ]
+     ],
+     "id": "g7.cte.u2.s2-1.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "How many CTE occupational areas does Ethiopia have?",
+     "opts": [
+      "Four",
+      "Six",
+      "Eight",
+      "Ten"
+     ],
+     "ans": "Eight",
+     "why": "The book names eight areas.",
+     "clue": "Count the areas in the tree.",
+     "level": 1,
+     "id": "g7.cte.u2.s2-1.6"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "bins": [
+      "Natural sciences stream",
+      "Social sciences stream"
+     ],
+     "items": [
+      [
+       "Manufacturing",
+       "Natural sciences stream",
+       ""
+      ],
+      [
+       "Agriculture",
+       "Natural sciences stream",
+       ""
+      ],
+      [
+       "Health sciences",
+       "Natural sciences stream",
+       ""
+      ],
+      [
+       "Business sciences",
+       "Social sciences stream",
+       ""
+      ],
+      [
+       "Construction",
+       "Natural sciences stream",
+       ""
+      ]
+     ],
+     "why": "Manufacturing, agriculture, construction, IT and health are natural science areas. Business is social science.",
+     "clue": "Is it about the physical world or about society?",
+     "level": 1,
+     "id": "g7.cte.u2.s2-1.7"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Natural science includes physics, chemistry, biology and mathematics.",
+     "a": true,
+     "why": "That is how the book describes natural science.",
+     "clue": "Read \"Two streams\".",
+     "level": 1,
+     "id": "g7.cte.u2.s2-1.8"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Liya loves accounting and hotel work. Mekdes loves fixing computers. Which streams fit them best?",
+     "opts": [
+      "Liya: social sciences; Mekdes: natural sciences",
+      "Both: social sciences",
+      "Liya: natural sciences; Mekdes: social sciences"
+     ],
+     "ans": "Liya: social sciences; Mekdes: natural sciences",
+     "why": "Accounting and hotel and tourism are business sciences (social stream). IT is in the natural science stream.",
+     "clue": "Match each interest to its CTE area, then to its stream.",
+     "level": 3,
+     "added": true,
+     "id": "g7.cte.u2.s2-1.9"
+    }
+   ]
+  },
+  {
+   "id": "cte.areas-detail",
+   "name": "What each area does",
+   "explain": {
+    "en": {
+     "text": "Manufacturing turns raw materials into finished goods, like sugarcane into sugar. Construction builds and repairs buildings, roads and bridges. IT uses computers to handle data. Agriculture grows plants and livestock. Health science applies science to health. Business science is about selling goods and services. Language and social sciences use language and help communities. Performing and visual arts include music, theatre and painting."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "From cane to sugar",
+     "ask": "Sugarcane goes into a factory and comes out as sugar. Which CTE area is this?",
+     "opts": [
+      "Manufacturing",
+      "Health science",
+      "Performing arts"
+     ],
+     "after": "Changing raw material into a finished product is manufacturing.",
+     "id": "g7.cte.u2.s2-1.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "1. Manufacturing",
+     "paras": [
+      "Manufacturing is producing goods with labour, machines, tools and chemical or biological processes.",
+      "It transforms raw materials into finished goods.",
+      "Sugarcane becomes sugar. Cotton becomes your sweater in a textile factory."
+     ],
+     "table": [
+      [
+       "Sub-specialization",
+       "Example"
+      ],
+      [
+       "Metal manufacturing",
+       "Metal sheets, bolts, wires, jewellery, grinding mill parts"
+      ],
+      [
+       "Automotive technology",
+       "Cars, tractors, buses; repairing engines, wheels, brakes"
+      ],
+      [
+       "Textile and leather garment",
+       "Clothes and threads from fibres; shoes from leather"
+      ],
+      [
+       "Wood work technology",
+       "Tables, chairs, beds, doors from timber"
+      ]
+     ],
+     "id": "g7.cte.u2.s2-1.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "2. Construction and 3. Information technology",
+     "paras": [
+      "Construction plans, builds, repairs and demolishes buildings, bridges, roads and railways.",
+      "Its areas: electricity, plumbing, carpentry and building finishing works.",
+      "Information technology uses computers and networks to create, store and exchange electronic data.",
+      "Its areas: computer maintenance and network, website design, computer graphics design."
+     ],
+     "id": "g7.cte.u2.s2-1.12"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "4. Agriculture and 5. Health sciences",
+     "paras": [
+      "Agriculture is cultivating plants and livestock.",
+      "It includes crops, poultry, fattening, flowers, forestry and soil protection.",
+      "Health science applies science to health: medicine, nutrition, personal and community health.",
+      "Doctors, nurses, laboratory technicians and pharmacists are health professionals."
+     ],
+     "id": "g7.cte.u2.s2-1.13"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "6. Business, 7. Language and social sciences, 8. Arts",
+     "paras": [
+      "Business science covers accounting, marketing, banking, insurance, office management, and hotel and tourism.",
+      "Language and social sciences cover writing, translation, social work, anthropology and citizenship.",
+      "Performing and visual arts include music, dance, theatre, film, painting and sculpture.",
+      "Ethiopian instruments include the kirar, masinqo and dinke."
+     ],
+     "id": "g7.cte.u2.s2-1.14"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Manufacturing",
+       "Making finished goods from raw materials with labour, machines and tools."
+      ],
+      [
+       "Raw material",
+       "The material a product is made from, like cotton for cloth."
+      ],
+      [
+       "Construction",
+       "Planning, building, repairing and demolishing buildings, bridges and roads."
+      ],
+      [
+       "Agriculture",
+       "The practice of cultivating plants and raising livestock."
+      ],
+      [
+       "Health science",
+       "Applying science to health: medicine, nutrition and personal and community health."
+      ],
+      [
+       "Business science",
+       "Activities of doing business: what to sell, how to make it available and how to sell it."
+      ]
+     ],
+     "id": "g7.cte.u2.s2-1.15"
+    },
+    {
+     "kind": "match",
+     "step": "check",
+     "graded": true,
+     "pairs": [
+      [
+       "Plumbing",
+       "Construction"
+      ],
+      [
+       "Website design",
+       "Information technology"
+      ],
+      [
+       "Poultry production",
+       "Agriculture"
+      ],
+      [
+       "Pharmacist",
+       "Health sciences"
+      ],
+      [
+       "Banking",
+       "Business science"
+      ],
+      [
+       "Playing the masinqo",
+       "Performing and visual arts"
+      ]
+     ],
+     "why": "Each job belongs to one CTE area.",
+     "clue": "Think: what is the work about?",
+     "level": 1,
+     "id": "g7.cte.u2.s2-1.16"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "In making a cotton sweater, what is the raw material?",
+     "opts": [
+      "Cotton",
+      "The sweater",
+      "The factory"
+     ],
+     "ans": "Cotton",
+     "why": "The raw material is what the product is made from.",
+     "clue": "What goes into the factory?",
+     "level": 1,
+     "id": "g7.cte.u2.s2-1.17"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Which is a main activity of banks?",
+     "opts": [
+      "Keeping, withdrawing and lending money",
+      "Building roads",
+      "Growing teff"
+     ],
+     "ans": "Keeping, withdrawing and lending money",
+     "why": "Banking is the use of banks for keeping, withdrawing and borrowing money.",
+     "clue": "Read the business science part.",
+     "level": 1,
+     "ref": "Activity 4",
+     "id": "g7.cte.u2.s2-1.18"
+    },
+    {
+     "kind": "pick",
+     "step": "practise",
+     "graded": true,
+     "text": "Tap every traditional farming technology.",
+     "pool": [
+      "Ox-drawn plough (maresha)",
+      "Tractor",
+      "Sickle",
+      "Water pump",
+      "Traditional beehive"
+     ],
+     "a": [
+      "Ox-drawn plough (maresha)",
+      "Sickle",
+      "Traditional beehive"
+     ],
+     "why": "The maresha, sickle and traditional beehive are traditional. Tractors and pumps are modern.",
+     "clue": "Which ones were used long ago?",
+     "level": 2,
+     "ref": "Activity 2",
+     "added": true,
+     "id": "g7.cte.u2.s2-1.19"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "A carpenter makes a table. Then she polishes and varnishes it. Which two areas of construction does this show?",
+     "opts": [
+      "Carpentry and building finishing works",
+      "Plumbing and electricity",
+      "Website design and graphics"
+     ],
+     "ans": "Carpentry and building finishing works",
+     "why": "Cutting and shaping wood is carpentry. Polishing and varnishing are finishing works, the last stage.",
+     "clue": "What is the last stage of making something called?",
+     "level": 3,
+     "added": true,
+     "id": "g7.cte.u2.s2-1.20"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activities 1–4",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "How has manufacturing helped you as a student?",
+     "opts": [
+      "It made my exercise books, pens, bag, uniform and desk",
+      "It has not helped me at all",
+      "It only makes cars"
+     ],
+     "ans": "It made my exercise books, pens, bag, uniform and desk",
+     "why": "Manufacturing turns raw materials into the goods you use to learn.",
+     "clue": "Look at the things on your desk.",
+     "level": 1,
+     "ref": "Activity 1",
+     "id": "g7.cte.u2.s2-1.21"
+    },
+    {
+     "kind": "pick",
+     "step": "exercise",
+     "graded": true,
+     "text": "Tap every modern agricultural technology.",
+     "pool": [
+      "Tractor",
+      "Drip irrigation",
+      "Hoe",
+      "Improved seeds",
+      "Ox-drawn plough"
+     ],
+     "a": [
+      "Tractor",
+      "Drip irrigation",
+      "Improved seeds"
+     ],
+     "why": "Tractors, drip irrigation and improved seeds are modern; the hoe and plough are traditional.",
+     "clue": "Which are new tools or methods?",
+     "level": 1,
+     "ref": "Activity 2",
+     "id": "g7.cte.u2.s2-1.22"
+    },
+    {
+     "kind": "pick",
+     "step": "exercise",
+     "graded": true,
+     "text": "Tap every good advice to prevent the spread of COVID-19.",
+     "pool": [
+      "Wash hands often with soap",
+      "Wear a face mask",
+      "Keep physical distance",
+      "Share cups with many people",
+      "Cover your cough with your elbow"
+     ],
+     "a": [
+      "Wash hands often with soap",
+      "Wear a face mask",
+      "Keep physical distance",
+      "Cover your cough with your elbow"
+     ],
+     "why": "Sharing cups spreads germs. The others are health professionals' advice.",
+     "clue": "Which ones stop germs moving between people?",
+     "level": 1,
+     "ref": "Activity 3",
+     "id": "g7.cte.u2.s2-1.23"
+    },
+    {
+     "kind": "pick",
+     "step": "exercise",
+     "graded": true,
+     "text": "Tap every major activity of banks.",
+     "pool": [
+      "Keeping money",
+      "Withdrawing money",
+      "Lending money",
+      "Selling vegetables"
+     ],
+     "a": [
+      "Keeping money",
+      "Withdrawing money",
+      "Lending money"
+     ],
+     "why": "The book says banks are used for keeping, withdrawing and borrowing money.",
+     "clue": "Read the business science part.",
+     "level": 1,
+     "ref": "Activity 4",
+     "id": "g7.cte.u2.s2-1.24"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is a CTE area in Ethiopia?",
+   "opts": [
+    "Agriculture",
+    "Football",
+    "Sleeping"
+   ],
+   "ans": "Agriculture",
+   "why": "Agriculture is one of the eight areas.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.cte.u2.s2-1.25"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Wood work technology is part of manufacturing.",
+   "a": true,
+   "why": "It is one of the four manufacturing sub-specializations.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.cte.u2.s2-1.26"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Electricians, plumbers and carpenters work in which area?",
+   "opts": [
+    "Construction",
+    "Health sciences",
+    "Business science"
+   ],
+   "ans": "Construction",
+   "why": "These are construction areas.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.cte.u2.s2-1.27"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Business science belongs to which stream?",
+   "opts": [
+    "Social sciences",
+    "Natural sciences"
+   ],
+   "ans": "Social sciences",
+   "why": "The book places business sciences in the social science stream.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.cte.u2.s2-1.28"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "A designer blends words, pictures and colour on a computer for an advert. Which sub-specialization is this?",
+   "opts": [
+    "Computer graphics design",
+    "Plumbing",
+    "Metal manufacturing"
+   ],
+   "ans": "Computer graphics design",
+   "why": "Computer graphics blends words, images and colour to deliver messages.",
+   "level": 3,
+   "clue": "",
+   "id": "g7.cte.u2.s2-1.29"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "The stream paragraph names only six of the eight areas; Language and Social Sciences and Performing and Visual Arts are not placed in a stream by the book."
+  },
+  {
+   "kind": "correction",
+   "text": "\"breaks\" (Automotive Technology) shown as \"brakes\"; \"varnish paining\" as \"varnishing\"."
+  },
+  {
+   "kind": "review",
+   "text": "Activity 3 (COVID-19 advice) is not answered in the book; the items use standard health advice. Teacher to confirm."
+  },
+  {
+   "kind": "note",
+   "text": "Activities 1–4 are open questions; they are asked as choices or \"tap every\" items with model answers."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
