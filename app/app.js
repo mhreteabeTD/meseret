@@ -62,7 +62,7 @@ function hideTray() { tray.hidden = true; }
 function sheet(html) { sheetEl.innerHTML = html ? `<div class="sheet" id="sheetbg"><div class="in">${html}</div></div>` : ''; if (html) $('#sheetbg').addEventListener('click', e => { if (e.target.id === 'sheetbg') sheet(''); }); }
 /* ---------- Feedback: reports and ideas reach the team (Google Sheet via Apps Script, server/feedback-apps-script.gs) ----------
    Every message is queued on the phone first and sent when online, so nothing is lost offline. */
-const FEEDBACK_URL = store.get('fburl', '') || ''; // paste the Apps Script Web app URL between the last quotes (…/exec); 'fburl' in storage is for testing only
+const FEEDBACK_URL = store.get('fburl', '') || 'https://script.google.com/macros/s/AKfycby7tvA6JjQxUCDW7wkeyDhdNgNsIhh4m9TP_wFtdtbsaWiQSvSPOUtmCdG04qKAxUkh/exec'; // paste the Apps Script Web app URL between the last quotes (…/exec); 'fburl' in storage is for testing only
 const APP_VERSION = '0.2';
 const Feedback = {
   where: ctx => [ctx.chapter, ctx.section, ctx.label].filter(Boolean).join(' · '),
