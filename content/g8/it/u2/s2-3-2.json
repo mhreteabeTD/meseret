@@ -1,0 +1,458 @@
+{
+ "id": "g8.it.u2.s2-3-2",
+ "book": {
+  "title": "Information Technology Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "it",
+  "unit": 2,
+  "unit_title": "Computer Hardware",
+  "pages": "30–32",
+  "section": "2.3.2"
+ },
+ "title": "Secondary storage devices",
+ "competency": "Explain magnetic and optical secondary storage devices.",
+ "minutes": 16,
+ "keywords": [
+  {
+   "en": "Secondary storage",
+   "am": "ሁለተኛ ደረጃ ማከማቻ",
+   "def": "Auxiliary storage for permanent, long-term keeping of programs and data, e.g. hard disk, CD.",
+   "machine": true
+  },
+  {
+   "en": "Backup",
+   "am": "ተጠባባቂ ቅጂ",
+   "def": "A copy of data stored in another place, used if the original is lost.",
+   "machine": true
+  },
+  {
+   "en": "Hard disk",
+   "am": "ሃርድ ዲስክ",
+   "def": "A metal magnetic disk fixed in the system unit; fast secondary storage divided into tracks and sectors.",
+   "machine": true
+  },
+  {
+   "en": "Optical disk",
+   "am": "ኦፕቲካል ዲስክ",
+   "def": "A disk read and written with laser light, e.g. CD and DVD.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "it.storage.magnetic",
+   "name": "Magnetic tape and magnetic disk",
+   "explain": {
+    "en": {
+     "text": "Secondary (auxiliary) storage keeps programs and data permanently, for the long term. Magnetic tape, a plastic ribbon coated with iron oxide, was the main storage in the 1950s–60s and is used today for backup: a copy kept elsewhere in case the original is lost. Magnetic disks, such as the hard disk, are the most widely used storage. They allow fast random access, and the disk is divided into tracks and sectors."
+    },
+    "am": {
+     "text": "ሁለተኛ ደረጃ ማከማቻ መረጃን በቋሚነት ይይዛል። ማግኔቲክ ቴፕ ዛሬ ለተጠባባቂ ቅጂ፣ ሃርድ ዲስክ ደግሞ ለፈጣን ማከማቻ ያገለግላሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A copy elsewhere",
+     "ask": "Why does a bank keep a copy of its records in another building?",
+     "opts": [
+      "So data is not lost if the first copy is destroyed",
+      "To make the computer faster",
+      "To print more",
+      "Because RAM is permanent"
+     ],
+     "after": "That copy is a backup, protecting against data loss from disasters.",
+     "ref": "p.30",
+     "id": "g8.it.u2.s2-3-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Magnetic storage",
+     "paras": [
+      "Secondary storage is external to the main memory and keeps data permanently.",
+      "Magnetic tape: thin plastic ribbon coated with iron oxide; data stored by magnetising and demagnetising; used today mainly for backup.",
+      "Magnetic disk: round plastic or metal covered with magnetic material; random access, faster than tape.",
+      "Hard disk: metal magnetic disk fixed in the system unit; very fast access; divided into tracks and sectors."
+     ],
+     "ref": "pp.30–31",
+     "id": "g8.it.u2.s2-3-2.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Secondary storage",
+       "Auxiliary storage for permanent, long-term keeping of programs and data, e.g. hard disk, CD."
+      ],
+      [
+       "Backup",
+       "A copy of data stored in another place, used if the original is lost."
+      ],
+      [
+       "Hard disk",
+       "A metal magnetic disk fixed in the system unit; fast secondary storage divided into tracks and sectors."
+      ]
+     ],
+     "id": "g8.it.u2.s2-3-2.3"
+    },
+    {
+     "kind": "tf",
+     "step": "check",
+     "graded": true,
+     "text": "Magnetic disk is the primary storage device.",
+     "a": false,
+     "why": "Magnetic disk is secondary storage.",
+     "clue": "Main memory is RAM/ROM.",
+     "level": 1,
+     "ref": "Review I Q8",
+     "id": "g8.it.u2.s2-3-2.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Today magnetic tape is used mainly for",
+     "opts": [
+      "data backup",
+      "printing",
+      "typing",
+      "gaming"
+     ],
+     "ans": "data backup",
+     "why": "p.30.",
+     "clue": "Copies.",
+     "level": 1,
+     "id": "g8.it.u2.s2-3-2.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Why did magnetic disks replace tape for everyday storage?",
+     "opts": [
+      "They allow fast random access instead of slow sequential access",
+      "They are made of paper",
+      "They are volatile",
+      "They are output devices"
+     ],
+     "ans": "They allow fast random access instead of slow sequential access",
+     "why": "p.31.",
+     "clue": "Access time.",
+     "level": 2,
+     "id": "g8.it.u2.s2-3-2.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "A song is in the middle of a long tape. Why is it slower to reach than the same song on a hard disk?",
+     "opts": [
+      "Tape must be wound through in order; a disk can jump straight there",
+      "Tape is volatile",
+      "Hard disks use laser light",
+      "Tape stores only text"
+     ],
+     "ans": "Tape must be wound through in order; a disk can jump straight there",
+     "why": "Disks allow random access and \"solve the problem of slow access time\" found in tape files.",
+     "clue": "Think of winding a cassette.",
+     "level": 3,
+     "added": true,
+     "id": "g8.it.u2.s2-3-2.7"
+    }
+   ]
+  },
+  {
+   "id": "it.storage.optical",
+   "name": "Optical disks: CD and DVD",
+   "requires": [
+    "it.storage.magnetic"
+   ],
+   "explain": {
+    "en": {
+     "text": "Optical disks use laser light. Burnt spots (pits) and unburnt spots (lands) stand for 1 and 0. A CD holds about 700 MB: CD-ROM is read only, CD-R can be written once and read many times (WORM), and CD-RW can be erased and rewritten. A DVD (Digital Versatile Disc) has narrower tracks and holds 4.7–17 GB."
+    },
+    "am": {
+     "text": "ኦፕቲካል ዲስኮች ሌዘር ብርሃን ይጠቀማሉ። ሲዲ 700 ሜጋባይት፣ ዲቪዲ 4.7–17 ጊጋባይት ይይዛሉ፤ ሲዲ-አርደብልዩ ደጋግሞ መጻፍና መደምሰስ ያስችላል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "CD or DVD?",
+     "ask": "A DVD can hold a whole film, but a CD usually cannot. Why?",
+     "opts": [
+      "A DVD stores much more data (4.7–17 GB vs 700 MB)",
+      "CDs are magnetic",
+      "DVDs are volatile",
+      "CDs have no laser"
+     ],
+     "after": "DVDs have narrower tracks and hold far more data.",
+     "ref": "p.32",
+     "id": "g8.it.u2.s2-3-2.8"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Optical disks",
+     "paras": [
+      "Laser light burns pits on the surface; unburnt parts are lands. Land = 0, pit = 1."
+     ],
+     "table": [
+      [
+       "Disc",
+       "Facts"
+      ],
+      [
+       "CD-ROM",
+       "Read only: cannot write or erase"
+      ],
+      [
+       "CD-R",
+       "Write once, read many (WORM)"
+      ],
+      [
+       "CD-RW",
+       "Erasable: write and erase many times"
+      ],
+      [
+       "DVD",
+       "Digital Versatile Disc; 4.7–17 GB; narrower tracks"
+      ]
+     ],
+     "note": "A CD holds 700 MB, on one side only.",
+     "ref": "pp.31–32",
+     "id": "g8.it.u2.s2-3-2.9"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Optical disk",
+       "A disk read and written with laser light, e.g. CD and DVD."
+      ]
+     ],
+     "id": "g8.it.u2.s2-3-2.10"
+    },
+    {
+     "kind": "match",
+     "step": "check",
+     "graded": true,
+     "text": "Match each disc with its feature.",
+     "pairs": [
+      [
+       "CD-ROM",
+       "Read only"
+      ],
+      [
+       "CD-R",
+       "Write once, read many"
+      ],
+      [
+       "CD-RW",
+       "Write and erase many times"
+      ],
+      [
+       "DVD",
+       "Stores 4.7–17 GB"
+      ]
+     ],
+     "why": "pp.31–32.",
+     "clue": "R = recordable once; RW = rewritable.",
+     "level": 1,
+     "id": "g8.it.u2.s2-3-2.11"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "DVD stands for Digital Video Disc.",
+     "a": false,
+     "why": "DVD stands for Digital Versatile Disc; \"Video\" is a common mistake.",
+     "clue": "Versatile.",
+     "level": 1,
+     "ref": "Review I Q7",
+     "id": "g8.it.u2.s2-3-2.12"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "DVD stores larger amounts of data than CD.",
+     "a": true,
+     "why": "4.7–17 GB vs 700 MB.",
+     "clue": "Compare sizes.",
+     "level": 1,
+     "ref": "Review I Q10",
+     "id": "g8.it.u2.s2-3-2.13"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "You need a disc to save weekly homework, delete it, and save again next week. Which one?",
+     "opts": [
+      "CD-RW",
+      "CD-ROM",
+      "CD-R",
+      "Magnetic tape"
+     ],
+     "ans": "CD-RW",
+     "why": "Only CD-RW can be written and erased many times; CD-R is write-once and CD-ROM is read-only.",
+     "clue": "Which can be erased?",
+     "level": 3,
+     "added": true,
+     "id": "g8.it.u2.s2-3-2.14"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activity 2.2",
+   "items": [
+    {
+     "kind": "sort",
+     "step": "exercise",
+     "graded": true,
+     "text": "Primary or secondary storage?",
+     "bins": [
+      "Primary",
+      "Secondary"
+     ],
+     "items": [
+      [
+       "RAM",
+       "Primary",
+       "Main memory."
+      ],
+      [
+       "Hard disk",
+       "Secondary",
+       "Long-term."
+      ],
+      [
+       "ROM",
+       "Primary",
+       "Main memory."
+      ],
+      [
+       "DVD",
+       "Secondary",
+       "Optical."
+      ],
+      [
+       "Magnetic tape",
+       "Secondary",
+       "Backup."
+      ]
+     ],
+     "why": "Section 2.3.",
+     "clue": "Main memory or long-term?",
+     "level": 1,
+     "id": "g8.it.u2.s2-3-2.15"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "A CD can store about",
+   "opts": [
+    "700 MB",
+    "17 GB",
+    "1 KB",
+    "1 TB"
+   ],
+   "ans": "700 MB",
+   "why": "p.31.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.it.u2.s2-3-2.16"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "CD-R is also called",
+   "opts": [
+    "WORM",
+    "RAM",
+    "ROM",
+    "CMOS"
+   ],
+   "ans": "WORM",
+   "why": "p.32.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.it.u2.s2-3-2.17"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Optical disks use",
+   "opts": [
+    "laser light",
+    "magnets only",
+    "paper",
+    "vacuum tubes"
+   ],
+   "ans": "laser light",
+   "why": "p.31.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.it.u2.s2-3-2.18"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The hard disk is divided into",
+   "opts": [
+    "tracks and sectors",
+    "pits only",
+    "keys",
+    "pixels"
+   ],
+   "ans": "tracks and sectors",
+   "why": "p.31.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.it.u2.s2-3-2.19"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "On an optical disk, a pit represents",
+   "opts": [
+    "1",
+    "0",
+    "2",
+    "nothing"
+   ],
+   "ans": "1",
+   "why": "p.31.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.it.u2.s2-3-2.20"
+  }
+ ],
+ "notes": [],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

@@ -1,0 +1,376 @@
+{
+ "id": "g8.it.u2.s2-4",
+ "book": {
+  "title": "Information Technology Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "it",
+  "unit": 2,
+  "unit_title": "Computer Hardware",
+  "pages": "33–36",
+  "section": "2.4"
+ },
+ "title": "Output devices",
+ "competency": "Identify output devices and explain their functions.",
+ "minutes": 14,
+ "keywords": [
+  {
+   "en": "Output device",
+   "am": "የውጤት መሣሪያ",
+   "def": "Hardware that gets data out of a computer in human form, e.g. monitor, printer, speaker.",
+   "machine": true
+  },
+  {
+   "en": "Soft copy",
+   "am": "ሶፍት ኮፒ",
+   "def": "Output shown on a screen, by a monitor or projector.",
+   "machine": true
+  },
+  {
+   "en": "Hard copy",
+   "am": "ሃርድ ኮፒ",
+   "def": "Output printed on paper.",
+   "machine": true
+  },
+  {
+   "en": "Plotter",
+   "am": "ፕሎተር",
+   "def": "An output device for high-quality large drawings such as maps and banners.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "it.output.devices",
+   "name": "Monitors, printers and plotters",
+   "explain": {
+    "en": {
+     "text": "Output devices turn computer data into a form people understand: soft copy on a screen (monitor, projector) or hard copy on paper (printer). The monitor is the most used output device; types are CRT, LCD, LED and gas plasma. Printers are impact (dot-matrix, daisy-wheel) or non-impact (ink jet, laser, thermal). A plotter prints large, high-quality drawings like maps. Speakers, headphones and braille readers are output devices too."
+    },
+    "am": {
+     "text": "የውጤት መሣሪያዎች መረጃን በሰው ሊረዳ በሚችል መልክ ያቀርባሉ፤ በማያ ገጽ (ሶፍት ኮፒ) ወይም በወረቀት (ሃርድ ኮፒ)።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Screen or paper?",
+     "ask": "You read a report on the screen, then print it for your teacher. What are the two forms called?",
+     "opts": [
+      "Soft copy and hard copy",
+      "Input and output",
+      "RAM and ROM",
+      "CD and DVD"
+     ],
+     "after": "Screen = soft copy; paper = hard copy.",
+     "ref": "p.33",
+     "id": "g8.it.u2.s2-4.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Output devices",
+     "paras": [
+      "Output devices convert information from computer form to human form, as soft copy or hard copy.",
+      "Examples: monitor, printer, plotter, projector, speakers, headphones, braille reader."
+     ],
+     "table": [
+      [
+       "Device",
+       "Facts"
+      ],
+      [
+       "CRT monitor",
+       "Traditional deep monitors and TVs"
+      ],
+      [
+       "LCD",
+       "Most common: watches, calculators, phones, laptops, TVs"
+      ],
+      [
+       "LED",
+       "Flat, light, great colour; used in phones, TVs, laptops"
+      ],
+      [
+       "Gas plasma",
+       "Neon gas glows to make pixels"
+      ],
+      [
+       "Printer",
+       "Hard copy; impact (dot-matrix, daisy-wheel) or non-impact (ink jet, laser, thermal)"
+      ],
+      [
+       "Plotter",
+       "High-quality large drawings: charts, maps, banners"
+      ]
+     ],
+     "ref": "pp.33–35",
+     "id": "g8.it.u2.s2-4.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Output device",
+       "Hardware that gets data out of a computer in human form, e.g. monitor, printer, speaker."
+      ],
+      [
+       "Soft copy",
+       "Output shown on a screen, by a monitor or projector."
+      ],
+      [
+       "Hard copy",
+       "Output printed on paper."
+      ],
+      [
+       "Plotter",
+       "An output device for high-quality large drawings such as maps and banners."
+      ]
+     ],
+     "id": "g8.it.u2.s2-4.3"
+    },
+    {
+     "kind": "sort",
+     "step": "check",
+     "graded": true,
+     "text": "Input or output device?",
+     "bins": [
+      "Input",
+      "Output"
+     ],
+     "items": [
+      [
+       "Monitor",
+       "Output",
+       "Shows results."
+      ],
+      [
+       "Scanner",
+       "Input",
+       "Enters data."
+      ],
+      [
+       "Plotter",
+       "Output",
+       "Prints drawings."
+      ],
+      [
+       "Microphone",
+       "Input",
+       "Enters speech."
+      ],
+      [
+       "Speaker",
+       "Output",
+       "Gives sound."
+      ],
+      [
+       "Braille reader",
+       "Output",
+       "Output by touch."
+      ]
+     ],
+     "why": "Sections 2.1 and 2.4.",
+     "clue": "Does data go in or come out?",
+     "level": 1,
+     "id": "g8.it.u2.s2-4.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Which of the following is not an output device?",
+     "opts": [
+      "Scanner",
+      "Plotter",
+      "Printer",
+      "Monitor"
+     ],
+     "ans": "Scanner",
+     "why": "A scanner is an input device.",
+     "clue": "Which one enters data?",
+     "level": 1,
+     "ref": "Review II Q8",
+     "id": "g8.it.u2.s2-4.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "___ is most commonly used in digital watches, clocks and calculators.",
+     "opts": [
+      "Liquid Crystal Display",
+      "Cathode Ray Tube",
+      "Plasma Display",
+      "None"
+     ],
+     "ans": "Liquid Crystal Display",
+     "why": "p.34.",
+     "clue": "LCD.",
+     "level": 1,
+     "ref": "Review II Q14",
+     "id": "g8.it.u2.s2-4.6"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "text": "Impact or non-impact printer?",
+     "bins": [
+      "Impact",
+      "Non-impact"
+     ],
+     "items": [
+      [
+       "Dot-matrix",
+       "Impact",
+       "Pins strike a ribbon."
+      ],
+      [
+       "Laser",
+       "Non-impact",
+       "Uses a laser."
+      ],
+      [
+       "Ink jet",
+       "Non-impact",
+       "Sprays ink."
+      ],
+      [
+       "Daisy-wheel",
+       "Impact",
+       "A wheel strikes."
+      ],
+      [
+       "Thermal",
+       "Non-impact",
+       "Uses heat."
+      ]
+     ],
+     "why": "p.35.",
+     "clue": "Does it strike the paper?",
+     "level": 2,
+     "id": "g8.it.u2.s2-4.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "A city office needs a 1-metre-wide coloured map of new roads. Which output device is best?",
+     "opts": [
+      "Plotter",
+      "Dot-matrix printer",
+      "Speaker",
+      "Monitor"
+     ],
+     "ans": "Plotter",
+     "why": "Plotters produce high-quality multi-colour drawings on large paper that most printers cannot handle.",
+     "clue": "Large paper.",
+     "level": 3,
+     "added": true,
+     "id": "g8.it.u2.s2-4.8"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The most frequently used output device is the",
+   "opts": [
+    "monitor",
+    "plotter",
+    "scanner",
+    "joystick"
+   ],
+   "ans": "monitor",
+   "why": "p.33.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.it.u2.s2-4.9"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The device mainly used to provide hard copy is the",
+   "opts": [
+    "printer",
+    "CRT",
+    "computer console",
+    "card reader"
+   ],
+   "ans": "printer",
+   "why": "Review II Q11.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.it.u2.s2-4.10"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "___ converts information from machine form to human form.",
+   "opts": [
+    "Output",
+    "Input",
+    "CPU",
+    "Storage"
+   ],
+   "ans": "Output",
+   "why": "Review II Q12.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.it.u2.s2-4.11"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is not a type of monitor?",
+   "opts": [
+    "None of these: all are monitor types",
+    "Cathode Ray Tube",
+    "Liquid Crystal Display",
+    "Plasma Display"
+   ],
+   "ans": "None of these: all are monitor types",
+   "why": "Review II Q13.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.it.u2.s2-4.12"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Gas plasma monitors use",
+   "opts": [
+    "neon gas",
+    "liquid crystal",
+    "vacuum tubes only",
+    "paper"
+   ],
+   "ans": "neon gas",
+   "why": "p.35.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.it.u2.s2-4.13"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.34 says LED monitors \"do not have a good response time\"; LED-backlit monitors usually respond as fast as other LCDs. Review II Q15 has B and C also technically correct (both are printers)."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

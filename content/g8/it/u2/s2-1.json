@@ -1,0 +1,523 @@
+{
+ "id": "g8.it.u2.s2-1",
+ "book": {
+  "title": "Information Technology Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "it",
+  "unit": 2,
+  "unit_title": "Computer Hardware",
+  "pages": "19–26",
+  "section": "2.1"
+ },
+ "title": "Input devices",
+ "competency": "Identify input devices and explain their functions.",
+ "minutes": 18,
+ "keywords": [
+  {
+   "en": "Hardware",
+   "am": "ሃርድዌር",
+   "def": "The physical parts of a computer that we can see and touch.",
+   "machine": true
+  },
+  {
+   "en": "Input device",
+   "am": "የግብዓት መሣሪያ",
+   "def": "Hardware used to enter data into a computer, e.g. keyboard, mouse, scanner.",
+   "machine": true
+  },
+  {
+   "en": "Keyboard",
+   "am": "ኪቦርድ",
+   "def": "An input device with keys for entering text and numbers.",
+   "machine": true
+  },
+  {
+   "en": "Mouse",
+   "am": "ማውስ",
+   "def": "A hand-operated input device that controls the pointer on the screen.",
+   "machine": true
+  },
+  {
+   "en": "Scanner",
+   "am": "ስካነር",
+   "def": "An input device that turns printed text, handwriting or pictures into a digital document.",
+   "machine": true
+  },
+  {
+   "en": "OCR",
+   "am": "ኦሲአር",
+   "def": "Optical character recognition: reads printed or handwritten characters and turns them into computer text.",
+   "machine": true
+  },
+  {
+   "en": "OMR",
+   "am": "ኦኤምአር",
+   "def": "Optical mark recognition: senses pencil marks, e.g. on exam answer sheets.",
+   "machine": true
+  },
+  {
+   "en": "Barcode reader",
+   "am": "ባርኮድ አንባቢ",
+   "def": "A device that reads the black-and-white bar codes printed on products.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "it.input.keyboard-mouse",
+   "name": "Keyboard and mouse",
+   "explain": {
+    "en": {
+     "text": "Hardware is the physical part of a computer that we can see and touch. Input devices enter data and turn it into 0s and 1s. The keyboard has groups of keys: Esc cancels, Backspace deletes the character before the cursor, function keys (F1–F12) do special tasks, navigation keys move around, Ctrl and Alt combine with other keys, and the numeric keypad enters numbers fast. The mouse controls the pointer: left click selects, right click shows properties, the wheel scrolls."
+    },
+    "am": {
+     "text": "ሃርድዌር የምናየውና የምንነካው የኮምፒውተር ክፍል ነው። ኪቦርድ ጽሑፍና ቁጥር ለማስገባት፣ ማውስ ጠቋሚውን ለማንቀሳቀስ ያገለግላሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Fix a typo",
+     "ask": "You typed a wrong letter just before the cursor. Which key removes it?",
+     "opts": [
+      "Backspace",
+      "Esc",
+      "F1",
+      "Windows"
+     ],
+     "after": "Backspace deletes the character before the cursor.",
+     "ref": "p.21",
+     "id": "g8.it.u2.s2-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Keyboard key groups",
+     "paras": [
+      "Esc: cancel or close an operation.",
+      "Backspace: delete the character before the cursor.",
+      "Function keys F1–F12 on the top row: special tasks; F1 is usually Help.",
+      "Navigation and editing keys: arrows, Home, End, Page Up, Page Down, Delete, Insert.",
+      "Typing (alphanumeric) keys: letters, numbers, punctuation.",
+      "Ctrl: with other keys for bold, save, copy, cut, paste.",
+      "Windows key: opens the Start Menu; Windows + D shows the desktop, Windows + L locks the computer.",
+      "Alt: alternate operations with other keys.",
+      "Numeric keypad: enter numbers quickly, like a calculator."
+     ],
+     "ref": "pp.20–22",
+     "id": "g8.it.u2.s2-1.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The mouse",
+     "paras": [
+      "A mouse controls the movement of the pointer. It is named for its shape.",
+      "Left button: select (left click).",
+      "Right button: see properties (right click).",
+      "Middle button / wheel: scroll.",
+      "Mice connect by cable or wirelessly (cordless)."
+     ],
+     "ref": "pp.22–23",
+     "id": "g8.it.u2.s2-1.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Hardware",
+       "The physical parts of a computer that we can see and touch."
+      ],
+      [
+       "Input device",
+       "Hardware used to enter data into a computer, e.g. keyboard, mouse, scanner."
+      ],
+      [
+       "Keyboard",
+       "An input device with keys for entering text and numbers."
+      ],
+      [
+       "Mouse",
+       "A hand-operated input device that controls the pointer on the screen."
+      ]
+     ],
+     "id": "g8.it.u2.s2-1.4"
+    },
+    {
+     "kind": "match",
+     "step": "check",
+     "graded": true,
+     "text": "Match each key with its job.",
+     "pairs": [
+      [
+       "Esc",
+       "Cancel or close an operation"
+      ],
+      [
+       "F1",
+       "Help"
+      ],
+      [
+       "Windows + L",
+       "Lock the computer"
+      ],
+      [
+       "Numeric keypad",
+       "Enter numbers quickly"
+      ]
+     ],
+     "why": "pp.21–22.",
+     "clue": "Which key do you press for help?",
+     "level": 1,
+     "id": "g8.it.u2.s2-1.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "___ keys are on the top row of the keyboard.",
+     "opts": [
+      "Function",
+      "Typewriter",
+      "Numeric",
+      "Navigation"
+     ],
+     "ans": "Function",
+     "why": "Figure 2.2: F1–F12.",
+     "clue": "F-keys.",
+     "level": 1,
+     "ref": "Review II Q3",
+     "id": "g8.it.u2.s2-1.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "___ allows you to enter data into a computer in the form of text.",
+     "opts": [
+      "Keyboard",
+      "Mouse",
+      "Peripheral devices",
+      "Monitor"
+     ],
+     "ans": "Keyboard",
+     "why": "p.20.",
+     "clue": "Keys.",
+     "level": 1,
+     "ref": "Review II Q1",
+     "id": "g8.it.u2.s2-1.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Which mouse button do you use to see the properties of a file?",
+     "opts": [
+      "Right button",
+      "Left button",
+      "Wheel",
+      "None"
+     ],
+     "ans": "Right button",
+     "why": "p.22.",
+     "clue": "Right click.",
+     "level": 1,
+     "id": "g8.it.u2.s2-1.8"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "You want to copy a sentence. Which key do you hold together with C?",
+     "opts": [
+      "Ctrl",
+      "Esc",
+      "Backspace",
+      "F1"
+     ],
+     "ans": "Ctrl",
+     "why": "Ctrl combines with other keys for tasks such as copy, cut, paste and save (Ctrl + C copies).",
+     "clue": "The book lists copy under one key.",
+     "level": 3,
+     "added": true,
+     "id": "g8.it.u2.s2-1.9"
+    }
+   ]
+  },
+  {
+   "id": "it.input.other-devices",
+   "name": "Scanners, optical readers and more",
+   "requires": [
+    "it.input.keyboard-mouse"
+   ],
+   "explain": {
+    "en": {
+     "text": "Other input devices: a scanner turns paper text or pictures into a digital document. Optical recognition systems use light: OCR reads characters, OMR senses pencil marks (used to mark national exams), and a barcode reader reads product codes. A microphone lets speech recognition enter data by voice. A light pen draws on the screen, a touch screen uses your finger (as in ATMs and phones), and a joystick controls games."
+    },
+    "am": {
+     "text": "ስካነር ወረቀትን ዲጂታል ያደርጋል፤ ኦሲአር ፊደላትን፣ ኦኤምአር የእርሳስ ምልክቶችን፣ ባርኮድ አንባቢ የምርት ኮድን ያነባሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Marking exams",
+     "ask": "National exam answer sheets with pencil-filled bubbles are marked by a machine. Which device?",
+     "opts": [
+      "OMR",
+      "Keyboard",
+      "Plotter",
+      "Joystick"
+     ],
+     "after": "Optical Mark Recognition senses pencil marks and compares them with the answer key.",
+     "ref": "p.24",
+     "id": "g8.it.u2.s2-1.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "More input devices",
+     "paras": [
+      "Scanner: accepts printed text, handwriting or an object and converts it to a digital document.",
+      "OCR: reads typed, printed or handwritten characters and compares their shapes with fonts in memory.",
+      "OMR: senses the presence or absence of a mark such as pencil marks; used for exams like the ESLCE.",
+      "Barcode reader: reads codes (e.g. UPC) on products; used in shops, libraries and stock control.",
+      "Speech recognition: a microphone enters speech; the computer acts on it.",
+      "Light pen: touches the screen to create or change graphics.",
+      "Touch screen: enter data with a finger; used in ATMs, phones, tablets.",
+      "Joystick: controls speed and direction in games."
+     ],
+     "ref": "pp.23–26",
+     "id": "g8.it.u2.s2-1.11"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Scanner",
+       "An input device that turns printed text, handwriting or pictures into a digital document."
+      ],
+      [
+       "OCR",
+       "Optical character recognition: reads printed or handwritten characters and turns them into computer text."
+      ],
+      [
+       "OMR",
+       "Optical mark recognition: senses pencil marks, e.g. on exam answer sheets."
+      ],
+      [
+       "Barcode reader",
+       "A device that reads the black-and-white bar codes printed on products."
+      ]
+     ],
+     "id": "g8.it.u2.s2-1.12"
+    },
+    {
+     "kind": "match",
+     "step": "check",
+     "graded": true,
+     "text": "Match each device with its use.",
+     "pairs": [
+      [
+       "OMR",
+       "Marking exam answer sheets"
+      ],
+      [
+       "Barcode reader",
+       "Reading product codes in a shop"
+      ],
+      [
+       "Joystick",
+       "Playing racing games"
+      ],
+      [
+       "Touch screen",
+       "Using an ATM with a finger"
+      ]
+     ],
+     "why": "pp.24–26.",
+     "clue": "Where have you seen each one?",
+     "level": 1,
+     "id": "g8.it.u2.s2-1.13"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Which optical recognition system senses the presence or absence of a mark, such as pencil marks?",
+     "opts": [
+      "Optical Mark Recognition",
+      "Optical Character Recognition",
+      "Barcode Reader",
+      "None"
+     ],
+     "ans": "Optical Mark Recognition",
+     "why": "p.24.",
+     "clue": "Marks.",
+     "level": 1,
+     "ref": "Review II Q10",
+     "id": "g8.it.u2.s2-1.14"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "A light-sensitive device that converts drawings, printed text or other images into digital form is a",
+     "opts": [
+      "scanner",
+      "keyboard",
+      "plotter",
+      "OMR"
+     ],
+     "ans": "scanner",
+     "why": "p.23. OMR senses only marks.",
+     "clue": "It copies a whole page.",
+     "level": 1,
+     "ref": "Review II Q4",
+     "id": "g8.it.u2.s2-1.15"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Which group consists of only input devices?",
+     "opts": [
+      "Mouse, Keyboard, Scanner",
+      "Mouse, Keyboard, Monitor",
+      "Mouse, Keyboard, Printer",
+      "Mouse, Keyboard, Plotter"
+     ],
+     "ans": "Mouse, Keyboard, Scanner",
+     "why": "Monitor, printer and plotter are output devices.",
+     "clue": "Find the output device in each.",
+     "level": 2,
+     "ref": "Review II Q5",
+     "id": "g8.it.u2.s2-1.16"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "A library wants to put 500 old printed pages into a computer as editable text, without retyping. Which device is best?",
+     "opts": [
+      "OCR",
+      "OMR",
+      "Joystick",
+      "Barcode reader"
+     ],
+     "ans": "OCR",
+     "why": "OCR reads characters and converts them into computer text, so documents need not be typed.",
+     "clue": "Characters, not marks.",
+     "level": 3,
+     "added": true,
+     "id": "g8.it.u2.s2-1.17"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Input devices convert data into",
+   "opts": [
+    "0s and 1s",
+    "paper",
+    "sound",
+    "light only"
+   ],
+   "ans": "0s and 1s",
+   "why": "p.20.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.it.u2.s2-1.18"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Esc is found at the",
+   "opts": [
+    "top-left corner",
+    "bottom-right",
+    "centre",
+    "numeric keypad"
+   ],
+   "ans": "top-left corner",
+   "why": "p.21.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.it.u2.s2-1.19"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is not an example of hardware?",
+   "opts": [
+    "Word processing",
+    "Scanner",
+    "Printer",
+    "Monitor"
+   ],
+   "ans": "Word processing",
+   "why": "Review II Q6: it is software.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.it.u2.s2-1.20"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The most common way to enter text and numbers is a",
+   "opts": [
+    "keyboard",
+    "plotter",
+    "scanner",
+    "printer"
+   ],
+   "ans": "keyboard",
+   "why": "Review II Q9.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.it.u2.s2-1.21"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Touch screens are commonly used in",
+   "opts": [
+    "ATMs",
+    "vacuum tubes",
+    "magnetic tape",
+    "plotters"
+   ],
+   "ans": "ATMs",
+   "why": "p.26.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.it.u2.s2-1.22"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "The input list says \"Optical Speech Recognition\"; speech recognition uses a microphone, not optics. The summary lists devices not taught (electronic whiteboard, punch card reader)."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

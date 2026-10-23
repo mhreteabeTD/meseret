@@ -1,0 +1,307 @@
+{
+ "id": "g8.it.u2.s2-3-1",
+ "book": {
+  "title": "Information Technology Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "it",
+  "unit": 2,
+  "unit_title": "Computer Hardware",
+  "pages": "28–30",
+  "section": "2.3.1"
+ },
+ "title": "Primary storage devices",
+ "competency": "Explain RAM, ROM and CMOS.",
+ "minutes": 12,
+ "keywords": [
+  {
+   "en": "RAM",
+   "am": "ራም",
+   "def": "Random Access Memory: temporary, volatile main memory; data is lost when power is off.",
+   "machine": true
+  },
+  {
+   "en": "ROM",
+   "am": "ሮም",
+   "def": "Read Only Memory: permanent, non-volatile memory with start-up instructions built in at the factory.",
+   "machine": true
+  },
+  {
+   "en": "Volatile",
+   "am": "ተለዋዋጭ (ኃይል ሲጠፋ የሚጠፋ)",
+   "def": "Memory that loses its data when the power is turned off.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "it.storage.primary",
+   "name": "RAM, ROM and CMOS",
+   "explain": {
+    "en": {
+     "text": "Storage devices keep files. They are primary or secondary. Primary storage is the main memory. RAM holds the programs and data the CPU is using; it is read-write and volatile, so its data is lost when the power goes off. ROM is permanent and non-volatile, built in at the factory, and holds the start-up instructions. CMOS keeps some information when the computer is shut off."
+    },
+    "am": {
+     "text": "ራም ጊዜያዊ ዋና ማስታወሻ ነው፤ ኃይል ሲጠፋ መረጃው ይጠፋል። ሮም ቋሚ ነው፤ የማስጀመሪያ መመሪያዎችን ይይዛል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Power cut!",
+     "ask": "The power goes off while you are typing and you had not saved. Why is your work lost?",
+     "opts": [
+      "It was only in RAM, which is volatile",
+      "ROM deleted it",
+      "The keyboard forgot it",
+      "The monitor erased it"
+     ],
+     "after": "Unsaved work lives in RAM, which loses its data when the power is turned off.",
+     "added": true,
+     "id": "g8.it.u2.s2-3-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Primary storage",
+     "paras": [
+      "Primary storage is the main memory. It stores program instructions and data."
+     ],
+     "table": [
+      [
+       "Memory",
+       "Facts"
+      ],
+      [
+       "RAM",
+       "Temporary; read-write; main memory; volatile (lost when power is off)"
+      ],
+      [
+       "ROM",
+       "Permanent; built in at the factory; cannot be changed by the user; non-volatile; start-up instructions"
+      ],
+      [
+       "CMOS",
+       "Stores information when the computer shuts off"
+      ]
+     ],
+     "ref": "pp.29–30",
+     "id": "g8.it.u2.s2-3-1.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "RAM",
+       "Random Access Memory: temporary, volatile main memory; data is lost when power is off."
+      ],
+      [
+       "ROM",
+       "Read Only Memory: permanent, non-volatile memory with start-up instructions built in at the factory."
+      ],
+      [
+       "Volatile",
+       "Memory that loses its data when the power is turned off."
+      ]
+     ],
+     "id": "g8.it.u2.s2-3-1.3"
+    },
+    {
+     "kind": "sort",
+     "step": "check",
+     "graded": true,
+     "text": "RAM or ROM?",
+     "bins": [
+      "RAM",
+      "ROM"
+     ],
+     "items": [
+      [
+       "Volatile",
+       "RAM",
+       "Lost when power is off."
+      ],
+      [
+       "Built in at the factory",
+       "ROM",
+       "Permanent."
+      ],
+      [
+       "Read-write memory",
+       "RAM",
+       "You can write to it."
+      ],
+      [
+       "Holds start-up instructions",
+       "ROM",
+       "Used when the computer is turned on."
+      ],
+      [
+       "Holds the program you are using now",
+       "RAM",
+       "Working memory."
+      ]
+     ],
+     "why": "pp.29–30.",
+     "clue": "Temporary or permanent?",
+     "level": 1,
+     "id": "g8.it.u2.s2-3-1.4"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "RAM contains essential information that is required when the computer is turned on.",
+     "a": false,
+     "why": "That is ROM; RAM is temporary.",
+     "clue": "Which one is permanent?",
+     "level": 1,
+     "ref": "Review I Q6",
+     "id": "g8.it.u2.s2-3-1.5"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Random Access Memory is the secondary storage device.",
+     "a": false,
+     "why": "RAM is primary (main) memory.",
+     "clue": "Main memory.",
+     "level": 1,
+     "ref": "Review I Q9",
+     "id": "g8.it.u2.s2-3-1.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Which memory is non-volatile and cannot be changed by the user?",
+     "opts": [
+      "ROM",
+      "RAM",
+      "Registers",
+      "Cache"
+     ],
+     "ans": "ROM",
+     "why": "p.29.",
+     "clue": "Read only.",
+     "level": 1,
+     "id": "g8.it.u2.s2-3-1.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "A computer with more RAM can usually run more programs at once. Why?",
+     "opts": [
+      "RAM holds the programs and data the CPU is using right now",
+      "RAM is permanent storage",
+      "RAM makes the screen bigger",
+      "RAM stores start-up instructions only"
+     ],
+     "ans": "RAM holds the programs and data the CPU is using right now",
+     "why": "Programs and data the CPU needs during work are stored in RAM, so more RAM holds more open programs.",
+     "clue": "What does RAM hold?",
+     "level": 3,
+     "added": true,
+     "id": "g8.it.u2.s2-3-1.8"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "RAM is also called",
+   "opts": [
+    "read-write memory",
+    "read only memory",
+    "magnetic tape",
+    "optical disk"
+   ],
+   "ans": "read-write memory",
+   "why": "p.29.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.it.u2.s2-3-1.9"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "ROM stores information",
+   "opts": [
+    "permanently",
+    "only until power off",
+    "on paper",
+    "nowhere"
+   ],
+   "ans": "permanently",
+   "why": "p.29.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.it.u2.s2-3-1.10"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Primary storage is also called",
+   "opts": [
+    "main memory",
+    "backup",
+    "auxiliary storage",
+    "output"
+   ],
+   "ans": "main memory",
+   "why": "p.29.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.it.u2.s2-3-1.11"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "\"Volatile\" memory",
+   "opts": [
+    "loses data when power is off",
+    "never loses data",
+    "is a printer",
+    "is a CD"
+   ],
+   "ans": "loses data when power is off",
+   "why": "p.29.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.it.u2.s2-3-1.12"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is a type of primary memory?",
+   "opts": [
+    "CMOS",
+    "DVD",
+    "Hard disk",
+    "Magnetic tape"
+   ],
+   "ans": "CMOS",
+   "why": "p.29.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.it.u2.s2-3-1.13"
+  }
+ ],
+ "notes": [],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

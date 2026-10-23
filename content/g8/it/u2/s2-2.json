@@ -1,0 +1,351 @@
+{
+ "id": "g8.it.u2.s2-2",
+ "book": {
+  "title": "Information Technology Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "it",
+  "unit": 2,
+  "unit_title": "Computer Hardware",
+  "pages": "27–28",
+  "section": "2.2"
+ },
+ "title": "Processing devices",
+ "competency": "Explain the CPU and its sub-components.",
+ "minutes": 14,
+ "keywords": [
+  {
+   "en": "CPU",
+   "am": "ሲፒዩ",
+   "def": "Central Processing Unit: the processor, the \"brain\" of the computer.",
+   "machine": true
+  },
+  {
+   "en": "Control unit",
+   "am": "የቁጥጥር ክፍል",
+   "def": "The part of the CPU that directs the other parts to carry out instructions.",
+   "machine": true
+  },
+  {
+   "en": "ALU",
+   "am": "የሂሳብና የሎጂክ ክፍል",
+   "def": "Arithmetic Logic Unit: does arithmetic (+, −, ×, ÷) and logic comparisons (<, >, =).",
+   "machine": true
+  },
+  {
+   "en": "Register",
+   "am": "ሬጅስተር",
+   "def": "A temporary storage place in the CPU for data waiting to be processed by the ALU.",
+   "machine": true
+  },
+  {
+   "en": "Hertz (Hz)",
+   "am": "ኸርትዝ",
+   "def": "The unit of processor speed: one cycle per second.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "it.processing.cpu",
+   "name": "The CPU and its parts",
+   "explain": {
+    "en": {
+     "text": "The Central Processing Unit (CPU), or processor, turns input data into useful information. It is the brain of the computer, and its speed is measured in hertz (one cycle per second). It has three parts joined by a bus. The control unit directs the other parts but does not carry out instructions itself. The arithmetic logic unit (ALU) does arithmetic and logic comparisons. Registers hold data temporarily before the ALU uses it."
+    },
+    "am": {
+     "text": "ሲፒዩ የኮምፒውተሩ \"አንጎል\" ነው። የቁጥጥር ክፍሉ ይመራል፤ የሂሳብና የሎጂክ ክፍሉ ያሰላል ያነጻጽራል፤ ሬጅስተሮች መረጃን ለጊዜው ይይዛሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Who does the sum?",
+     "ask": "You type 2 + 3. Which part of the computer actually works out 5?",
+     "opts": [
+      "The arithmetic logic unit (ALU)",
+      "The keyboard",
+      "The monitor",
+      "The mouse"
+     ],
+     "after": "The ALU in the CPU performs arithmetic operations.",
+     "ref": "p.28",
+     "id": "g8.it.u2.s2-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The CPU",
+     "paras": [
+      "A processing device converts input data into useful information. The CPU is also called the processor: the brain of the computer.",
+      "Processor speed is measured in hertz (Hz): one cycle per second (and in MHz, GHz).",
+      "Three sub-components, connected by a bus:"
+     ],
+     "table": [
+      [
+       "Part",
+       "Job"
+      ],
+      [
+       "Control unit (CU)",
+       "Directs other parts; does not carry out instructions itself"
+      ],
+      [
+       "Arithmetic logic unit (ALU)",
+       "Arithmetic (+ − × ÷) and logic (<, >, =, <=, >=)"
+      ],
+      [
+       "Registers (memory unit)",
+       "Temporary storage of data before the ALU"
+      ]
+     ],
+     "ref": "pp.27–28",
+     "id": "g8.it.u2.s2-2.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "CPU",
+       "Central Processing Unit: the processor, the \"brain\" of the computer."
+      ],
+      [
+       "Control unit",
+       "The part of the CPU that directs the other parts to carry out instructions."
+      ],
+      [
+       "ALU",
+       "Arithmetic Logic Unit: does arithmetic (+, −, ×, ÷) and logic comparisons (<, >, =)."
+      ],
+      [
+       "Register",
+       "A temporary storage place in the CPU for data waiting to be processed by the ALU."
+      ],
+      [
+       "Hertz (Hz)",
+       "The unit of processor speed: one cycle per second."
+      ]
+     ],
+     "id": "g8.it.u2.s2-2.3"
+    },
+    {
+     "kind": "match",
+     "step": "check",
+     "graded": true,
+     "text": "Match each part of the CPU with its job.",
+     "pairs": [
+      [
+       "Control unit",
+       "Directs the other parts"
+      ],
+      [
+       "ALU",
+       "Does arithmetic and logic"
+      ],
+      [
+       "Registers",
+       "Hold data temporarily"
+      ],
+      [
+       "Bus",
+       "Connects the parts"
+      ]
+     ],
+     "why": "p.27–28.",
+     "clue": "Who directs, who calculates, who holds?",
+     "level": 1,
+     "id": "g8.it.u2.s2-2.4"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "CPU stands for Control Processing Unit.",
+     "a": false,
+     "why": "Central Processing Unit.",
+     "clue": "Central.",
+     "level": 1,
+     "ref": "Review I Q2",
+     "id": "g8.it.u2.s2-2.5"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Control unit performs Logic Operation.",
+     "a": false,
+     "why": "The ALU performs logic operations; the CU only directs.",
+     "clue": "Which unit does the work?",
+     "level": 1,
+     "ref": "Review I Q4",
+     "id": "g8.it.u2.s2-2.6"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "text": "Arithmetic or logic operation?",
+     "bins": [
+      "Arithmetic",
+      "Logic"
+     ],
+     "items": [
+      [
+       "7 + 5",
+       "Arithmetic",
+       "Addition."
+      ],
+      [
+       "Is 7 > 5?",
+       "Logic",
+       "Comparison."
+      ],
+      [
+       "12 ÷ 4",
+       "Arithmetic",
+       "Division."
+      ],
+      [
+       "Is mark = 100?",
+       "Logic",
+       "Comparison."
+      ],
+      [
+       "3 × 9",
+       "Arithmetic",
+       "Multiplication."
+      ]
+     ],
+     "why": "Arithmetic = calculating; logic = comparing.",
+     "clue": "Calculate or compare?",
+     "level": 1,
+     "id": "g8.it.u2.s2-2.7"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "The speed of CPU is measured in only Megahertz.",
+     "a": false,
+     "why": "It is measured in hertz (and its multiples, such as MHz and GHz).",
+     "clue": "Only?",
+     "level": 2,
+     "ref": "Review I Q1",
+     "id": "g8.it.u2.s2-2.8"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "A school program checks \"Is the student's average ≥ 50?\" to decide pass or fail. Which unit does this and what kind of operation is it?",
+     "opts": [
+      "ALU, logic operation",
+      "Control unit, arithmetic operation",
+      "Register, arithmetic operation",
+      "Monitor, logic operation"
+     ],
+     "ans": "ALU, logic operation",
+     "why": "Comparisons such as ≥ are logic operations, and the ALU performs them.",
+     "clue": "Compare = logic.",
+     "level": 3,
+     "added": true,
+     "id": "g8.it.u2.s2-2.9"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The CPU is called the",
+   "opts": [
+    "brain of the computer",
+    "eye of the computer",
+    "printer",
+    "keyboard"
+   ],
+   "ans": "brain of the computer",
+   "why": "p.27.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.it.u2.s2-2.10"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "One hertz means",
+   "opts": [
+    "one cycle per second",
+    "one byte",
+    "one key",
+    "one minute"
+   ],
+   "ans": "one cycle per second",
+   "why": "p.27.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.it.u2.s2-2.11"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The CPU parts are connected by a",
+   "opts": [
+    "bus",
+    "mouse",
+    "CD",
+    "printer"
+   ],
+   "ans": "bus",
+   "why": "p.27.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.it.u2.s2-2.12"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Register is temporary storage for data prior to execution in the ALU.",
+   "a": true,
+   "why": "Review I Q5.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.it.u2.s2-2.13"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is a logic operator?",
+   "opts": [
+    ">=",
+    "+",
+    "×",
+    "÷"
+   ],
+   "ans": ">=",
+   "why": "p.28.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.it.u2.s2-2.14"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "The book numbers the CPU photo \"Figure 2.10\", the same as the joystick."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

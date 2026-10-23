@@ -1,0 +1,427 @@
+{
+ "id": "g8.it.u2.s2-5",
+ "book": {
+  "title": "Information Technology Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "it",
+  "unit": 2,
+  "unit_title": "Computer Hardware",
+  "pages": "36–39",
+  "section": "Review"
+ },
+ "title": "Summary and review questions",
+ "competency": "Bring together the ideas of Unit 2.",
+ "minutes": 15,
+ "keywords": [
+  {
+   "en": "Hardware",
+   "am": "ሃርድዌር",
+   "def": "The physical parts of a computer that we can see and touch.",
+   "machine": true
+  },
+  {
+   "en": "Input device",
+   "am": "የግብዓት መሣሪያ",
+   "def": "Hardware used to enter data into a computer, e.g. keyboard, mouse, scanner.",
+   "machine": true
+  },
+  {
+   "en": "CPU",
+   "am": "ሲፒዩ",
+   "def": "Central Processing Unit: the processor, the \"brain\" of the computer.",
+   "machine": true
+  },
+  {
+   "en": "Output device",
+   "am": "የውጤት መሣሪያ",
+   "def": "Hardware that gets data out of a computer in human form, e.g. monitor, printer, speaker.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "it.hardware-unit2-review",
+   "name": "Unit 2 review",
+   "explain": {
+    "en": {
+     "text": "Computer hardware is grouped by information processing: input devices enter data, the CPU processes it, storage devices keep it, and output devices show it. The CPU has a control unit, an ALU and registers. Storage is primary (RAM, ROM, CMOS) or secondary (tape, disk, CD, DVD)."
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "graded": false,
+     "title": "Warm up: which category?",
+     "text": "Sort each device.",
+     "bins": [
+      "Input",
+      "Processing",
+      "Storage",
+      "Output"
+     ],
+     "items": [
+      [
+       "Keyboard",
+       "Input",
+       "Enters data."
+      ],
+      [
+       "ALU",
+       "Processing",
+       "Calculates."
+      ],
+      [
+       "Hard disk",
+       "Storage",
+       "Keeps data."
+      ],
+      [
+       "Printer",
+       "Output",
+       "Hard copy."
+      ],
+      [
+       "DVD",
+       "Storage",
+       "Optical."
+      ]
+     ],
+     "added": true,
+     "id": "g8.it.u2.s2-5.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Unit summary",
+     "paras": [
+      "Input devices enter data: keyboard, mouse, scanner, OCR, OMR, barcode reader, microphone, joystick, light pen, touch screen.",
+      "The CPU is the brain: control unit, ALU, registers; speed in hertz.",
+      "Storage: primary (RAM, ROM, CMOS) and secondary (magnetic tape, hard disk, CD, DVD).",
+      "Output devices get data out: monitor, printer, plotter, projector, speakers, headphones, braille reader."
+     ],
+     "ref": "p.36",
+     "id": "g8.it.u2.s2-5.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Hardware",
+       "The physical parts of a computer that we can see and touch."
+      ],
+      [
+       "Input device",
+       "Hardware used to enter data into a computer, e.g. keyboard, mouse, scanner."
+      ],
+      [
+       "CPU",
+       "Central Processing Unit: the processor, the \"brain\" of the computer."
+      ],
+      [
+       "Output device",
+       "Hardware that gets data out of a computer in human form, e.g. monitor, printer, speaker."
+      ]
+     ],
+     "id": "g8.it.u2.s2-5.3"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "The device that allows you to enter information into the computer is an",
+     "opts": [
+      "input device",
+      "output device",
+      "type",
+      "print"
+     ],
+     "ans": "input device",
+     "why": "Review II Q7.",
+     "clue": "In.",
+     "level": 1,
+     "ref": "Review II Q7",
+     "id": "g8.it.u2.s2-5.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "___ is an output device.",
+     "opts": [
+      "Monitor",
+      "Mouse",
+      "Joystick",
+      "None"
+     ],
+     "ans": "Monitor",
+     "why": "Review II Q2.",
+     "clue": "It shows.",
+     "level": 1,
+     "ref": "Review II Q2",
+     "id": "g8.it.u2.s2-5.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "At a supermarket, the cashier scans a product, the computer finds the price, saves the sale, and prints a receipt. Which list matches the steps?",
+     "opts": [
+      "Barcode reader → CPU → hard disk → printer",
+      "Printer → CPU → RAM → scanner",
+      "Monitor → ALU → keyboard → CD",
+      "Mouse → ROM → plotter → joystick"
+     ],
+     "ans": "Barcode reader → CPU → hard disk → printer",
+     "why": "Input (barcode reader), processing (CPU), storage (hard disk), output (printer receipt).",
+     "clue": "Input, process, store, output.",
+     "level": 3,
+     "added": true,
+     "id": "g8.it.u2.s2-5.6"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Review Questions",
+   "items": [
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Central Processing Unit acts as the brain of the computer.",
+     "a": true,
+     "why": "p.27.",
+     "clue": "Brain.",
+     "level": 1,
+     "ref": "I Q3",
+     "id": "g8.it.u2.s2-5.7"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "DVD stands for Digital Video Disc.",
+     "a": false,
+     "why": "Digital Versatile Disc.",
+     "clue": "Versatile.",
+     "level": 1,
+     "ref": "I Q7",
+     "id": "g8.it.u2.s2-5.8"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which group consists of only input devices?",
+     "opts": [
+      "Mouse, Keyboard, Scanner",
+      "Mouse, Keyboard, Monitor",
+      "Mouse, Keyboard, Printer",
+      "Mouse, Keyboard, Plotter"
+     ],
+     "ans": "Mouse, Keyboard, Scanner",
+     "why": "p.20.",
+     "clue": "No output devices.",
+     "level": 1,
+     "ref": "II Q5",
+     "id": "g8.it.u2.s2-5.9"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "A device that produces a hard copy of data is a",
+     "opts": [
+      "printer",
+      "monitor",
+      "scanner",
+      "mouse"
+     ],
+     "ans": "printer",
+     "why": "p.35.",
+     "clue": "Paper.",
+     "level": 1,
+     "ref": "II Q15",
+     "id": "g8.it.u2.s2-5.10"
+    }
+   ]
+  },
+  {
+   "book_name": "Chapter test",
+   "test": true,
+   "chapter_test": true,
+   "count": 20,
+   "minutes": 25,
+   "items": [
+    {
+     "kind": "tf",
+     "step": "test",
+     "graded": true,
+     "text": "The speed of CPU is measured in only Megahertz.",
+     "a": false,
+     "why": "Hertz and its multiples.",
+     "clue": "",
+     "level": 1,
+     "ref": "Review I Q1",
+     "id": "g8.it.u2.s2-5.11"
+    },
+    {
+     "kind": "tf",
+     "step": "test",
+     "graded": true,
+     "text": "Register is temporary storage location for data prior to execution in the ALU.",
+     "a": true,
+     "why": "p.28.",
+     "clue": "",
+     "level": 1,
+     "ref": "Review I Q5",
+     "id": "g8.it.u2.s2-5.12"
+    },
+    {
+     "kind": "tf",
+     "step": "test",
+     "graded": true,
+     "text": "Random Access Memory is the secondary storage device.",
+     "a": false,
+     "why": "Primary.",
+     "clue": "",
+     "level": 1,
+     "ref": "Review I Q9",
+     "id": "g8.it.u2.s2-5.13"
+    },
+    {
+     "kind": "mcq",
+     "step": "test",
+     "graded": true,
+     "text": "Which of the following is not an example of hardware?",
+     "opts": [
+      "Word Processing",
+      "Scanner",
+      "Printer",
+      "Monitor"
+     ],
+     "ans": "Word Processing",
+     "why": "Software.",
+     "clue": "",
+     "level": 1,
+     "ref": "Review II Q6",
+     "id": "g8.it.u2.s2-5.14"
+    },
+    {
+     "kind": "mcq",
+     "step": "test",
+     "graded": true,
+     "text": "Which optical recognition system senses pencil marks?",
+     "opts": [
+      "Optical Mark Recognition",
+      "Optical Character Recognition",
+      "Barcode Reader",
+      "None"
+     ],
+     "ans": "Optical Mark Recognition",
+     "why": "p.24.",
+     "clue": "",
+     "level": 1,
+     "ref": "Review II Q10",
+     "id": "g8.it.u2.s2-5.15"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Hardware is divided into ___ categories by information processing.",
+   "opts": [
+    "four",
+    "two",
+    "three",
+    "five"
+   ],
+   "ans": "four",
+   "why": "p.19.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.it.u2.s2-5.16"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which stores data temporarily and is volatile?",
+   "opts": [
+    "RAM",
+    "ROM",
+    "DVD",
+    "Hard disk"
+   ],
+   "ans": "RAM",
+   "why": "p.29.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.it.u2.s2-5.17"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is an input device?",
+   "opts": [
+    "Light pen",
+    "Plotter",
+    "Speaker",
+    "Projector"
+   ],
+   "ans": "Light pen",
+   "why": "p.25.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.it.u2.s2-5.18"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "A CD-RW can be",
+   "opts": [
+    "written and erased many times",
+    "written once only",
+    "read only",
+    "used as RAM"
+   ],
+   "ans": "written and erased many times",
+   "why": "p.32.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.it.u2.s2-5.19"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which correctly pairs device and category?",
+   "opts": [
+    "OMR – input; CMOS – primary storage; plotter – output",
+    "OMR – output; CMOS – secondary storage; plotter – input",
+    "OMR – storage; CMOS – output; plotter – processing",
+    "OMR – processing; CMOS – input; plotter – storage"
+   ],
+   "ans": "OMR – input; CMOS – primary storage; plotter – output",
+   "why": "Sections 2.1–2.4.",
+   "clue": "",
+   "level": 3,
+   "id": "g8.it.u2.s2-5.20"
+  }
+ ],
+ "notes": [],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
