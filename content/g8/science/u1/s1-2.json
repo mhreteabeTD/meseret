@@ -1,0 +1,557 @@
+{
+ "id": "g8.science.u1.s1-2",
+ "book": {
+  "title": "General Science Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "science",
+  "unit": 1,
+  "unit_title": "Basics of Scientific Investigation",
+  "pages": "16–21",
+  "section": "1.2"
+ },
+ "title": "Doing scientific investigation",
+ "competency": "Describe the steps of a scientific investigation and carry out a fair test.",
+ "minutes": 14,
+ "keywords": [
+  {
+   "en": "Scientific method",
+   "am": "ሳይንሳዊ ዘዴ",
+   "def": "The process by which scientists approach their work: question, research, hypothesis, test, conclude, communicate.",
+   "machine": true
+  },
+  {
+   "en": "Hypothesis",
+   "am": "መላምት",
+   "def": "A tentative explanation for a set of observations, with predictions that can be tested.",
+   "machine": true
+  },
+  {
+   "en": "Fair test",
+   "am": "ፍትሐዊ ሙከራ",
+   "def": "An experiment where you change only one factor and keep all the others the same.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "sci.scientific-method",
+   "name": "The scientific method",
+   "explain": {
+    "en": {
+     "text": "Scientists work in steps: ask a question, do background research, make a hypothesis, test it with an experiment, analyse the results and draw a conclusion, then communicate. If the hypothesis is wrong, make a new one and test again."
+    },
+    "am": {
+     "text": "ሳይንቲስቶች በደረጃ ይሰራሉ፤ ጥያቄ ይጠይቃሉ፣ ቅድመ ጥናት ያደርጋሉ፣ መላምት ያቀርባሉ፣ በሙከራ ይፈትናሉ፣ ውጤቱን ይተነትናሉ፣ ያሳውቃሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Taller teff",
+     "ask": "You notice that teff in one field grows taller than in another. What should a scientist do first?",
+     "opts": [
+      "Ask a question she can test",
+      "Write the conclusion",
+      "Tell everyone the answer",
+      "Forget it"
+     ],
+     "after": "Start with a question, like \"Does fertiliser make teff grow taller?\" Observations lead to questions.",
+     "added": true,
+     "id": "g8.science.u1.s1-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Scientific investigation",
+     "paras": [
+      "Science is learning about the world through observation and inquiry.",
+      "Scientists form and test hypotheses, gather and analyse data, then report.",
+      "This process is called the scientific investigation or scientific method."
+     ],
+     "ref": "p.16",
+     "id": "g8.science.u1.s1-2.2"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Figure 1.9: steps in the scientific method",
+     "ask": "Tap each step, in order.",
+     "need": 6,
+     "items": [
+      [
+       "1 Ask questions",
+       "Observations lead to a question that can be measured and answered by experiment."
+      ],
+      [
+       "2 Background research",
+       "Find information online, in a library or from earlier studies."
+      ],
+      [
+       "3 Hypothesis",
+       "A tentative, logical explanation with predictions you can test."
+      ],
+      [
+       "4 Test",
+       "Do an experiment that someone else can repeat. Keep conditions the same."
+      ],
+      [
+       "5 Analyse and conclude",
+       "Do the results support the hypothesis? If not, make a new one."
+      ],
+      [
+       "6 Communicate",
+       "Share your methods and results so others can check them."
+      ]
+     ],
+     "ref": "Figure 1.9",
+     "id": "g8.science.u1.s1-2.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Scientific method",
+       "The process by which scientists approach their work: question, research, hypothesis, test, conclude, communicate."
+      ],
+      [
+       "Hypothesis",
+       "A tentative explanation for a set of observations, with predictions that can be tested."
+      ]
+     ],
+     "id": "g8.science.u1.s1-2.4"
+    },
+    {
+     "kind": "order",
+     "step": "check",
+     "graded": true,
+     "text": "Put the steps of the scientific method in order.",
+     "items": [
+      "Ask questions",
+      "Do background research",
+      "Establish your hypothesis",
+      "Test your hypothesis",
+      "Analyse the results and draw a conclusion",
+      "Communicate results"
+     ],
+     "why": "These are the six steps in Figure 1.9.",
+     "clue": "It starts with a question and ends with sharing.",
+     "level": 1,
+     "ref": "Review IV Q6",
+     "id": "g8.science.u1.s1-2.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "What is a hypothesis?",
+     "opts": [
+      "A tentative explanation that can be tested",
+      "A proven law",
+      "The final report",
+      "A measuring instrument"
+     ],
+     "ans": "A tentative explanation that can be tested",
+     "why": "A hypothesis is a tentative explanation for a set of observations.",
+     "clue": "Is it already proven?",
+     "level": 1,
+     "ref": "p.17",
+     "id": "g8.science.u1.s1-2.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Your results do not support your hypothesis. What do you do?",
+     "opts": [
+      "Make a new hypothesis and test again",
+      "Change the results",
+      "Stop science",
+      "Report that the hypothesis was right"
+     ],
+     "ans": "Make a new hypothesis and test again",
+     "why": "If it did not happen, create a new hypothesis, return to step three and conduct a new experiment.",
+     "clue": "Look at the \"Try again\" arrow in Figure 1.9.",
+     "level": 2,
+     "ref": "p.18",
+     "id": "g8.science.u1.s1-2.7"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Communicating results lets other scientists check your methods and results.",
+     "a": true,
+     "why": "The book says this step allows others to verify your methods and results.",
+     "clue": "Read step 6.",
+     "level": 1,
+     "ref": "p.18",
+     "id": "g8.science.u1.s1-2.8"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Two schools test the same hypothesis and get different results. What does this mean?",
+     "opts": [
+      "The hypothesis may not be supported; check the methods",
+      "Both schools are wrong",
+      "The first result always wins",
+      "Science has failed"
+     ],
+     "ans": "The hypothesis may not be supported; check the methods",
+     "why": "If others get different results, they may not support the hypothesis. Scientists compare methods and look for problems.",
+     "clue": "What does step 6 say about other researchers?",
+     "level": 3,
+     "added": true,
+     "id": "g8.science.u1.s1-2.9"
+    }
+   ]
+  },
+  {
+   "id": "sci.fair-test",
+   "name": "Testing fairly: the candle experiment",
+   "explain": {
+    "en": {
+     "text": "In a fair test you change only one factor and keep all others the same, and you repeat the experiment. In Example 1.9 a burning candle covered with a gas jar goes out, which shows that air (oxygen) is needed for burning."
+    },
+    "am": {
+     "text": "በፍትሐዊ ሙከራ አንድ ነገር ብቻ ትቀይራለህ፣ ሌሎቹን ሁሉ ታቆያለህ። ሻማ በብርጭቆ ሲሸፈን ይጠፋል፤ ይህ ለማቃጠል አየር እንደሚያስፈልግ ያሳያል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Candle under a jar",
+     "ask": "A lit candle is covered with an upside-down glass jar. What happens?",
+     "opts": [
+      "It goes out after a short time",
+      "It burns brighter forever",
+      "Nothing changes",
+      "The jar melts"
+     ],
+     "after": "It goes out. The flame uses up the oxygen in the jar.",
+     "ref": "Example 1.9",
+     "id": "g8.science.u1.s1-2.10"
+    },
+    {
+     "kind": "steps",
+     "step": "explore",
+     "title": "Example 1.9: is air needed for burning?",
+     "steps": [
+      "Question: is air necessary for burning?",
+      "Research: books say air is necessary for burning.",
+      "Hypothesis: air is needed for burning.",
+      "Test: light a candle. It keeps burning in fresh air. Cover it with an inverted gas jar: soon it goes out.",
+      "Conclusion: the candle used the oxygen in the jar. Air is necessary for burning.",
+      "Communicate: report the result in writing or orally."
+     ],
+     "ref": "Example 1.9",
+     "id": "g8.science.u1.s1-2.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Keep it fair",
+     "paras": [
+      "If you change any factor, keep all the others the same.",
+      "This keeps the experiment fair.",
+      "Repeat it a few more times to make sure the results are accurate."
+     ],
+     "ref": "p.18",
+     "id": "g8.science.u1.s1-2.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Fair test",
+       "An experiment where you change only one factor and keep all the others the same."
+      ]
+     ],
+     "id": "g8.science.u1.s1-2.13"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Activity 1.7 a: you test if sunlight affects bean growth. What must you keep the same in both pots?",
+     "opts": [
+      "Soil, water and pot size",
+      "The amount of sunlight",
+      "Nothing",
+      "Only the pot colour"
+     ],
+     "ans": "Soil, water and pot size",
+     "why": "Only sunlight changes. Everything else stays the same, so the test is fair.",
+     "clue": "Which one factor are you testing?",
+     "level": 1,
+     "ref": "Activity 1.7 a",
+     "id": "g8.science.u1.s1-2.14"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "In the candle experiment, why does the candle go out under the jar?",
+     "opts": [
+      "The oxygen in the jar gets used up",
+      "The jar is cold",
+      "The wax runs out",
+      "Light cannot enter"
+     ],
+     "ans": "The oxygen in the jar gets used up",
+     "why": "The candle takes oxygen from the air in the jar. When too little is left, the flame goes out.",
+     "clue": "What does a flame need from the air?",
+     "level": 1,
+     "ref": "Example 1.9",
+     "id": "g8.science.u1.s1-2.15"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Lemlem tests beans: pot A in sun with water, pot B in the dark with no water. Pot A grows better. What is wrong?",
+     "opts": [
+      "She changed two factors, so it is not a fair test",
+      "Nothing is wrong",
+      "She should use three pots of sand",
+      "Beans never grow in pots"
+     ],
+     "ans": "She changed two factors, so it is not a fair test",
+     "why": "Light AND water were different, so she cannot tell which one caused the difference.",
+     "clue": "How many things were different between the pots?",
+     "level": 2,
+     "added": true,
+     "id": "g8.science.u1.s1-2.16"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "After an experiment, you should repeat it a few times.",
+     "a": true,
+     "why": "The book says repeat it a few more times to make sure the results are accurate.",
+     "clue": "Read \"Keep it fair\".",
+     "level": 1,
+     "ref": "p.18",
+     "id": "g8.science.u1.s1-2.17"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Abel wants to know if salt makes water boil faster. Which plan is a fair test?",
+     "opts": [
+      "Two same pots, same amount of water, same stove; add salt to one only",
+      "One pot with salt on a big stove, one without on a small stove",
+      "Taste the water",
+      "Boil salty water once and stop"
+     ],
+     "ans": "Two same pots, same amount of water, same stove; add salt to one only",
+     "why": "Only the salt changes. Pot, water amount and heat stay the same, so any difference comes from the salt.",
+     "clue": "Change one thing only.",
+     "level": 3,
+     "added": true,
+     "id": "g8.science.u1.s1-2.18"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activity 1.7",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "a) A bean plant kept in the dark for two weeks will most likely be",
+     "opts": [
+      "thin, pale and weak",
+      "greener than one in the sun",
+      "exactly the same",
+      "bigger"
+     ],
+     "ans": "thin, pale and weak",
+     "why": "Plants need sunlight to make food; in the dark they grow pale and weak.",
+     "clue": "What do plants need light for?",
+     "level": 1,
+     "ref": "a",
+     "id": "g8.science.u1.s1-2.19"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "b) Wire is coiled around a nail and joined to a battery. The nail",
+     "opts": [
+      "picks up pins: it acts like a magnet",
+      "gets wet",
+      "melts",
+      "does nothing"
+     ],
+     "ans": "picks up pins: it acts like a magnet",
+     "why": "A current in the coil makes the nail an electromagnet.",
+     "clue": "What does current in a coil do?",
+     "level": 2,
+     "ref": "b",
+     "id": "g8.science.u1.s1-2.20"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "c) A leaf from the sun turns blue-black with iodine. This shows the leaf stores",
+     "opts": [
+      "starch",
+      "water",
+      "salt",
+      "oxygen"
+     ],
+     "ans": "starch",
+     "why": "Iodine turns blue-black with starch. Leaves store extra sugar as starch.",
+     "clue": "What does iodine test for?",
+     "level": 2,
+     "ref": "c",
+     "id": "g8.science.u1.s1-2.21"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.13",
+   "items": [
+    {
+     "kind": "order",
+     "step": "exercise",
+     "graded": true,
+     "text": "Describe the components: put them in order.",
+     "items": [
+      "Ask questions",
+      "Background research",
+      "Hypothesis",
+      "Test",
+      "Analyse and conclude",
+      "Communicate"
+     ],
+     "why": "The six steps on pp. 17–18.",
+     "clue": "Start with a question.",
+     "level": 1,
+     "id": "g8.science.u1.s1-2.22"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The first step of the scientific method is",
+   "opts": [
+    "ask questions",
+    "communicate results",
+    "draw a conclusion",
+    "test the hypothesis"
+   ],
+   "ans": "ask questions",
+   "why": "Figure 1.9.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.science.u1.s1-2.23"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The last step is",
+   "opts": [
+    "communicate results",
+    "ask questions",
+    "do research",
+    "make a hypothesis"
+   ],
+   "ans": "communicate results",
+   "why": "Figure 1.9.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.science.u1.s1-2.24"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "A hypothesis must be",
+   "opts": [
+    "based on scientific knowledge and logical",
+    "always correct",
+    "a measurement",
+    "a final report"
+   ],
+   "ans": "based on scientific knowledge and logical",
+   "why": "p.17.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.science.u1.s1-2.25"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "In a fair test you change",
+   "opts": [
+    "only one factor",
+    "every factor",
+    "two factors",
+    "nothing at all"
+   ],
+   "ans": "only one factor",
+   "why": "p.18.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.science.u1.s1-2.26"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "A candle under a jar goes out. This shows that burning needs",
+   "opts": [
+    "air (oxygen)",
+    "light",
+    "water",
+    "a jar"
+   ],
+   "ans": "air (oxygen)",
+   "why": "Example 1.9.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.science.u1.s1-2.27"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "The sub-heading \"1.2 Scientific Method\" repeats the section number 1.2 (probably 1.2.1). Exercise numbering jumps from 1.10 to 1.13 (no 1.11 or 1.12)."
+  },
+  {
+   "kind": "review",
+   "text": "Example 1.9 says \"all the oxygen is used up\"; strictly the flame goes out when oxygen falls too low. Kept close to the book."
+  },
+  {
+   "kind": "note",
+   "text": "Activity 1.6 and Project 1.3 (making injera as an investigation) are open tasks; model answers are in source.md."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

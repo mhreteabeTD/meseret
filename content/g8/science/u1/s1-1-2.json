@@ -1,0 +1,595 @@
+{
+ "id": "g8.science.u1.s1-1-2",
+ "book": {
+  "title": "General Science Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "science",
+  "unit": 1,
+  "unit_title": "Basics of Scientific Investigation",
+  "pages": "7–9",
+  "section": "1.1"
+ },
+ "title": "Physical quantities and their units",
+ "competency": "Distinguish between fundamental and derived quantities and their SI units.",
+ "minutes": 12,
+ "keywords": [
+  {
+   "en": "Physical quantity",
+   "am": "ፊዚካዊ መጠን",
+   "def": "A property of an object that can be measured, or calculated from other physical quantities.",
+   "machine": true
+  },
+  {
+   "en": "Unit",
+   "am": "መለኪያ አሐድ",
+   "def": "The known fixed quantity a measurement is compared with, like the metre or the kilogram.",
+   "machine": true
+  },
+  {
+   "en": "SI",
+   "am": "ዓለም አቀፍ የመለኪያ ሥርዓት",
+   "def": "The International System of Units, used all over the world.",
+   "machine": true
+  },
+  {
+   "en": "Fundamental quantity",
+   "am": "መሠረታዊ መጠን",
+   "def": "A quantity that cannot be expressed in terms of any other quantity, like length, mass, time and temperature.",
+   "machine": true
+  },
+  {
+   "en": "Derived quantity",
+   "am": "ተዛማጅ መጠን",
+   "def": "A quantity that depends on one or more fundamental quantities, like area, volume, speed and density.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "sci.physical-quantity",
+   "name": "Physical quantities and units",
+   "explain": {
+    "en": {
+     "text": "A physical quantity is anything we can measure, like length, mass, time or temperature. Every measurement has two parts: a number and a unit. \"32 kg\" means the number 32 and the unit kilogram. The SI is the system of units used all over the world."
+    },
+    "am": {
+     "text": "ፊዚካዊ መጠን ሊለካ የሚችል ነገር ነው፤ ርዝመት፣ መጠነ ቁስ፣ ጊዜ፣ ሙቀት። እያንዳንዱ ልኬት ቁጥርና መለኪያ አሐድ አለው፤ 32 ኪ.ግ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "32 what?",
+     "ask": "Selam says, \"My mass is 32.\" What is missing?",
+     "opts": [
+      "The unit, like kg",
+      "Nothing",
+      "Her height",
+      "The date"
+     ],
+     "after": "The unit. 32 what? 32 kg is very different from 32 g. A measurement needs a number AND a unit.",
+     "added": true,
+     "id": "g8.science.u1.s1-1-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Physical quantities",
+     "paras": [
+      "We measure vegetables' mass, liquids' volume, a car's speed and the day's temperature.",
+      "Quantities that can be measured are called physical quantities.",
+      "Examples: length, mass, time, temperature, area, volume, density, force."
+     ],
+     "ref": "p.7",
+     "id": "g8.science.u1.s1-1-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Number and unit",
+     "paras": [
+      "Measurement compares an unknown quantity with a known one.",
+      "The known fixed quantity is called a unit.",
+      "A student's mass of 32 kg: the quantity is mass, the value is 32, the unit is kilogram (kg)."
+     ],
+     "note": "The SI (International System of Units) is used all over the world.",
+     "ref": "p.7–8",
+     "id": "g8.science.u1.s1-1-2.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Physical quantity",
+       "A property of an object that can be measured, or calculated from other physical quantities."
+      ],
+      [
+       "Unit",
+       "The known fixed quantity a measurement is compared with, like the metre or the kilogram."
+      ],
+      [
+       "SI",
+       "The International System of Units, used all over the world."
+      ]
+     ],
+     "id": "g8.science.u1.s1-1-2.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "In \"the road is 5 km long\", what is the unit?",
+     "opts": [
+      "km",
+      "5",
+      "road",
+      "long"
+     ],
+     "ans": "km",
+     "why": "The number is 5 and the unit is km (kilometre).",
+     "clue": "The unit tells you what you counted.",
+     "level": 1,
+     "added": true,
+     "id": "g8.science.u1.s1-1-2.5"
+    },
+    {
+     "kind": "pick",
+     "step": "practise",
+     "graded": true,
+     "text": "Which of these are physical quantities?",
+     "pool": [
+      "Length",
+      "Mass",
+      "Kindness",
+      "Temperature",
+      "Beauty",
+      "Time"
+     ],
+     "a": [
+      "Length",
+      "Mass",
+      "Temperature",
+      "Time"
+     ],
+     "why": "Length, mass, temperature and time can be measured with instruments. Kindness and beauty cannot.",
+     "clue": "Can you measure it with an instrument?",
+     "level": 1,
+     "id": "g8.science.u1.s1-1-2.6"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Every measurement has two parts: a number and a unit.",
+     "a": true,
+     "why": "The book says a measurement consists of the magnitude (number) and the unit.",
+     "clue": "Think of \"32 kg\".",
+     "level": 1,
+     "ref": "p.8",
+     "id": "g8.science.u1.s1-1-2.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Dawit writes his height as \"150\". Mekdes writes hers as \"1.6\". Who is taller?",
+     "opts": [
+      "You cannot tell without the units",
+      "Dawit",
+      "Mekdes",
+      "They are the same"
+     ],
+     "ans": "You cannot tell without the units",
+     "why": "If Dawit means 150 cm (1.5 m) and Mekdes means 1.6 m, Mekdes is taller. Without units, the numbers cannot be compared.",
+     "clue": "What could \"150\" and \"1.6\" mean?",
+     "level": 3,
+     "added": true,
+     "id": "g8.science.u1.s1-1-2.8"
+    }
+   ]
+  },
+  {
+   "id": "sci.fundamental-derived",
+   "name": "Fundamental and derived quantities",
+   "explain": {
+    "en": {
+     "text": "Fundamental quantities cannot be expressed through other quantities: length (m), mass (kg), time (s) and temperature (K). Derived quantities are built from them: area = m × m = m², volume = m³, speed = m/s, density = kg/m³."
+    },
+    "am": {
+     "text": "መሠረታዊ መጠኖች በሌላ መጠን አይገለጹም፤ ርዝመት (ሜ)፣ መጠነ ቁስ (ኪ.ግ)፣ ጊዜ (ሰ)፣ ሙቀት (K)። ተዛማጅ መጠኖች ከእነሱ ይገነባሉ፤ ስፋት ሜ²፣ ይዘት ሜ³፣ ፍጥነት ሜ/ሰ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "graded": false,
+     "title": "Basic or built?",
+     "text": "Before you read, guess: which quantities stand alone?",
+     "bins": [
+      "Basic",
+      "Built from others"
+     ],
+     "items": [
+      [
+       "Length",
+       "Basic",
+       "Length is not made from other quantities."
+      ],
+      [
+       "Area",
+       "Built from others",
+       "Area = length × width."
+      ],
+      [
+       "Time",
+       "Basic",
+       "Time stands on its own."
+      ],
+      [
+       "Speed",
+       "Built from others",
+       "Speed = distance ÷ time."
+      ]
+     ],
+     "added": true,
+     "id": "g8.science.u1.s1-1-2.9"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Fundamental quantities",
+     "paras": [
+      "Fundamental (base) quantities cannot be expressed in terms of any other quantity.",
+      "There are seven: length, mass, time, temperature, electric current, luminous intensity and amount of substance.",
+      "Their units are fundamental units."
+     ],
+     "table": [
+      [
+       "Quantity",
+       "SI unit",
+       "Symbol"
+      ],
+      [
+       "Length",
+       "metre",
+       "m"
+      ],
+      [
+       "Mass",
+       "kilogram",
+       "kg"
+      ],
+      [
+       "Time",
+       "second",
+       "s"
+      ],
+      [
+       "Temperature",
+       "kelvin",
+       "K"
+      ]
+     ],
+     "ref": "Table 1.1",
+     "id": "g8.science.u1.s1-1-2.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Derived quantities",
+     "paras": [
+      "Derived quantities depend on one or more fundamental quantities.",
+      "Their units combine base units by multiplying, dividing or powering."
+     ],
+     "table": [
+      [
+       "Derived quantity",
+       "Unit"
+      ],
+      [
+       "Area",
+       "m × m = m²"
+      ],
+      [
+       "Volume",
+       "m × m × m = m³"
+      ],
+      [
+       "Speed",
+       "m/s"
+      ],
+      [
+       "Density",
+       "kg/m³"
+      ]
+     ],
+     "ref": "Table 1.2",
+     "id": "g8.science.u1.s1-1-2.11"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Fundamental quantity",
+       "A quantity that cannot be expressed in terms of any other quantity, like length, mass, time and temperature."
+      ],
+      [
+       "Derived quantity",
+       "A quantity that depends on one or more fundamental quantities, like area, volume, speed and density."
+      ]
+     ],
+     "id": "g8.science.u1.s1-1-2.12"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Example 1.1: units of area and speed",
+     "steps": [
+      "Area of a rectangle = length × width.",
+      "Both are lengths, measured in metres.",
+      "So the unit of area = m × m = m².",
+      "Speed = distance ÷ time.",
+      "Distance is in m and time in s, so the unit of speed = m/s."
+     ],
+     "ref": "Example 1.1",
+     "id": "g8.science.u1.s1-1-2.13"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Which is a fundamental quantity?",
+     "opts": [
+      "Temperature",
+      "Area",
+      "Volume",
+      "Force"
+     ],
+     "ans": "Temperature",
+     "why": "Temperature is one of the seven fundamental quantities. Area, volume and force are derived.",
+     "clue": "Which one is not built from others?",
+     "level": 1,
+     "ref": "Review I Q1",
+     "id": "g8.science.u1.s1-1-2.14"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "The SI unit of density is",
+     "opts": [
+      "kg/m³",
+      "kg/m²",
+      "kg/m",
+      "g/m³"
+     ],
+     "ans": "kg/m³",
+     "why": "Density = mass ÷ volume = kg ÷ m³ = kg/m³.",
+     "clue": "Density is mass divided by volume.",
+     "level": 1,
+     "ref": "Review I Q4",
+     "id": "g8.science.u1.s1-1-2.15"
+    },
+    {
+     "kind": "match",
+     "step": "practise",
+     "graded": true,
+     "text": "Match each quantity with its SI unit.",
+     "pairs": [
+      [
+       "Area",
+       "m²"
+      ],
+      [
+       "Temperature",
+       "K"
+      ],
+      [
+       "Density",
+       "kg/m³"
+      ],
+      [
+       "Volume",
+       "m³"
+      ],
+      [
+       "Mass",
+       "kg"
+      ]
+     ],
+     "why": "From Tables 1.1 and 1.2.",
+     "clue": "Area is square metres; volume is cubic metres.",
+     "level": 1,
+     "ref": "Review III",
+     "id": "g8.science.u1.s1-1-2.16"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "Volume = length × width × height, so its unit is m × m × m = ___",
+     "a": [
+      "m³",
+      "m3",
+      "cubic metre",
+      "cubic meter"
+     ],
+     "why": "Each is a length in metres: m × m × m = m³.",
+     "clue": "Three metres multiplied.",
+     "level": 2,
+     "ref": "Exercise 1.4 a",
+     "id": "g8.science.u1.s1-1-2.17"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Pressure is force ÷ area. Is pressure fundamental or derived?",
+     "opts": [
+      "Derived, because it is made from other quantities",
+      "Fundamental, because it is common",
+      "Fundamental, because it has a unit",
+      "Neither"
+     ],
+     "ans": "Derived, because it is made from other quantities",
+     "why": "Force and area are both derived from base quantities, so pressure is derived too.",
+     "clue": "Is it built from other quantities?",
+     "level": 3,
+     "added": true,
+     "id": "g8.science.u1.s1-1-2.18"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 1.4",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Density = mass ÷ volume. Its unit = kg ÷ m³ = ___",
+     "a": [
+      "kg/m³",
+      "kg/m3"
+     ],
+     "why": "Mass in kg, volume in m³, so kg/m³.",
+     "clue": "Divide the mass unit by the volume unit.",
+     "level": 1,
+     "ref": "b",
+     "id": "g8.science.u1.s1-1-2.19"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Force = mass × acceleration. Its unit is",
+     "opts": [
+      "kg·m/s² (newton)",
+      "kg/m³",
+      "m/s",
+      "m²"
+     ],
+     "ans": "kg·m/s² (newton)",
+     "why": "Acceleration is m/s², so force = kg × m/s² = kg·m/s², called the newton (N).",
+     "clue": "Acceleration has unit m/s².",
+     "level": 2,
+     "ref": "c",
+     "id": "g8.science.u1.s1-1-2.20"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is a derived quantity?",
+   "opts": [
+    "Area",
+    "Mass",
+    "Time",
+    "Length"
+   ],
+   "ans": "Area",
+   "why": "Area = length × width.",
+   "clue": "",
+   "level": 1,
+   "ref": "Review I Q3",
+   "id": "g8.science.u1.s1-1-2.21"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The SI unit of time is",
+   "opts": [
+    "second",
+    "minute",
+    "hour",
+    "day"
+   ],
+   "ans": "second",
+   "why": "Table 1.1.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.science.u1.s1-1-2.22"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Derived units are",
+   "opts": [
+    "made by combining fundamental units",
+    "bigger than fundamental units",
+    "used only in Ethiopia",
+    "the same as fundamental units"
+   ],
+   "ans": "made by combining fundamental units",
+   "why": "p.8.",
+   "clue": "",
+   "level": 1,
+   "ref": "Review I Q2",
+   "id": "g8.science.u1.s1-1-2.23"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "The SI unit of volume is ___",
+   "a": [
+    "m³",
+    "m3",
+    "cubic metre",
+    "cubic meter"
+   ],
+   "why": "Table 1.2.",
+   "clue": "",
+   "level": 2,
+   "ref": "Review II Q5",
+   "id": "g8.science.u1.s1-1-2.24"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Speed = distance ÷ time. Its unit is",
+   "opts": [
+    "m/s",
+    "m²",
+    "kg/m³",
+    "s/m"
+   ],
+   "ans": "m/s",
+   "why": "Metres divided by seconds.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.science.u1.s1-1-2.25"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Table 1.1 prints the symbol of second as capital \"S\"; the SI symbol is lowercase \"s\" (used here). Table 1.2 gives speed the symbol \"V\" (same as volume) and writes \"Kg/m³\"; written here as kg/m³."
+  },
+  {
+   "kind": "review",
+   "text": "Exercise 1.4 c (force) needs F = m × a, which this unit never teaches. Kept as a ★★ exercise item."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

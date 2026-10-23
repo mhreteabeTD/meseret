@@ -1,0 +1,672 @@
+{
+ "id": "g8.science.u1.s1-1-3",
+ "book": {
+  "title": "General Science Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "science",
+  "unit": 1,
+  "unit_title": "Basics of Scientific Investigation",
+  "pages": "9–14",
+  "section": "1.1"
+ },
+ "title": "Prefixes and conversion of units",
+ "competency": "Identify prefixes and convert among units of length, mass and time.",
+ "minutes": 14,
+ "keywords": [
+  {
+   "en": "Prefix",
+   "am": "ቅድመ ቅጥያ",
+   "def": "A short-hand way of writing very large or very small numbers in a unit, like kilo (1000) or milli (0.001).",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "sci.prefixes",
+   "name": "Prefixes",
+   "explain": {
+    "en": {
+     "text": "A prefix is a short way to write very large or very small amounts: mega (M) = 1 000 000, kilo (k) = 1000, centi (c) = 0.01, milli (m) = 0.001, micro (µ) = 0.000001. So 1 km = 1000 m and 1 mm = 0.001 m."
+    },
+    "am": {
+     "text": "ቅድመ ቅጥያ ትልቅና ትንሽ መጠኖችን በአጭሩ ለመጻፍ ይረዳል፤ ኪሎ = 1000፣ ሴንቲ = 0.01፣ ሚሊ = 0.001።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A shorter way",
+     "ask": "The distance from Addis Ababa to Adama is about 99 000 m. What is a shorter way to say it?",
+     "opts": [
+      "99 km",
+      "99 mm",
+      "99 cm",
+      "9.9 m"
+     ],
+     "after": "99 km. \"Kilo\" means 1000, so 99 000 m = 99 km.",
+     "added": true,
+     "id": "g8.science.u1.s1-1-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Prefixes",
+     "paras": [
+      "Science deals with very large and very small quantities.",
+      "A short-hand way of writing them is a prefix."
+     ],
+     "table": [
+      [
+       "Prefix",
+       "Symbol",
+       "Name",
+       "Value"
+      ],
+      [
+       "Mega",
+       "M",
+       "million",
+       "1 000 000"
+      ],
+      [
+       "Kilo",
+       "k",
+       "thousand",
+       "1 000"
+      ],
+      [
+       "Centi",
+       "c",
+       "hundredth",
+       "0.01"
+      ],
+      [
+       "Milli",
+       "m",
+       "thousandth",
+       "0.001"
+      ],
+      [
+       "Micro",
+       "µ",
+       "millionth",
+       "0.000001"
+      ]
+     ],
+     "ref": "Table 1.3",
+     "id": "g8.science.u1.s1-1-3.2"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "What each prefix does",
+     "ask": "Tap a prefix to see it at work.",
+     "need": 4,
+     "items": [
+      [
+       "kilo (k)",
+       "× 1000: 1 km = 1000 m, 1 kg = 1000 g."
+      ],
+      [
+       "centi (c)",
+       "× 0.01: 1 cm = 0.01 m, so 100 cm = 1 m."
+      ],
+      [
+       "milli (m)",
+       "× 0.001: 1 mm = 0.001 m, so 1000 mm = 1 m."
+      ],
+      [
+       "micro (µ)",
+       "× 0.000001: a millionth."
+      ]
+     ],
+     "id": "g8.science.u1.s1-1-3.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Prefix",
+       "A short-hand way of writing very large or very small numbers in a unit, like kilo (1000) or milli (0.001)."
+      ]
+     ],
+     "id": "g8.science.u1.s1-1-3.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "The prefix that means 1/1000 is",
+     "opts": [
+      "milli",
+      "kilo",
+      "mega",
+      "centi"
+     ],
+     "ans": "milli",
+     "why": "Milli = thousandth = 0.001 = 1/1000.",
+     "clue": "Thousandth, not thousand.",
+     "level": 1,
+     "ref": "Review I Q5",
+     "id": "g8.science.u1.s1-1-3.5"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "The prefix for 0.01 is ___",
+     "a": [
+      "centi",
+      "c",
+      "centi (c)"
+     ],
+     "why": "Table 1.3: centi = hundredth = 0.01.",
+     "clue": "A hundredth: 100 of them make a metre.",
+     "level": 1,
+     "ref": "Review II Q4",
+     "id": "g8.science.u1.s1-1-3.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "3500 m written with a prefix is",
+     "opts": [
+      "3.5 km",
+      "35 km",
+      "3.5 mm",
+      "350 cm"
+     ],
+     "ans": "3.5 km",
+     "why": "Kilo = 1000, so 3500 m ÷ 1000 = 3.5 km.",
+     "clue": "Divide by 1000 for kilo.",
+     "level": 1,
+     "ref": "Exercise 1.5 Q2 a",
+     "id": "g8.science.u1.s1-1-3.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "0.005 m written with a prefix is",
+     "opts": [
+      "5 mm",
+      "5 km",
+      "0.5 mm",
+      "50 mm"
+     ],
+     "ans": "5 mm",
+     "why": "Milli = 0.001, so 0.005 m ÷ 0.001 = 5 mm.",
+     "clue": "How many thousandths are in 0.005?",
+     "level": 2,
+     "ref": "Review IV Q3",
+     "id": "g8.science.u1.s1-1-3.8"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "A tiny bacterium is 0.000002 m long. Which is the best way to write it?",
+     "opts": [
+      "2 µm",
+      "2 mm",
+      "2 km",
+      "2 Mm"
+     ],
+     "ans": "2 µm",
+     "why": "Micro (µ) = 0.000001. 0.000002 ÷ 0.000001 = 2, so 2 µm.",
+     "clue": "Which prefix means a millionth?",
+     "level": 3,
+     "added": true,
+     "id": "g8.science.u1.s1-1-3.9"
+    }
+   ]
+  },
+  {
+   "id": "sci.unit-conversion",
+   "name": "Converting units",
+   "explain": {
+    "en": {
+     "text": "To convert inside the SI, multiply or divide by the value of the prefix. Big unit to small unit: multiply (6.5 kg = 6.5 × 1000 g = 6500 g). Small unit to big unit: divide (200 m = 200 ÷ 1000 km = 0.2 km). For time: 1 hour = 60 min = 3600 s."
+    },
+    "am": {
+     "text": "ከትልቅ ወደ ትንሽ መለኪያ ስንቀይር እናባዛለን፤ ከትንሽ ወደ ትልቅ ስንቀይር እናካፍላለን። 6.5 ኪ.ግ = 6500 ግ፤ 200 ሜ = 0.2 ኪ.ሜ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Big to small",
+     "ask": "Is 2.5 kg more grams or fewer grams than 2.5?",
+     "opts": [
+      "More: 2500 g",
+      "Fewer: 0.0025 g",
+      "The same: 2.5 g",
+      "You cannot convert"
+     ],
+     "after": "More. A gram is small, so you need many of them: 2.5 × 1000 = 2500 g.",
+     "added": true,
+     "id": "g8.science.u1.s1-1-3.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Conversion of base units",
+     "paras": [
+      "Converting within the SI usually means moving the decimal point.",
+      "Multiply or divide by the value of the prefix."
+     ],
+     "table": [
+      [
+       "Length",
+       "Mass",
+       "Time"
+      ],
+      [
+       "1 km = 1000 m",
+       "1 kg = 1000 g",
+       "1 hour = 60 min"
+      ],
+      [
+       "1 m = 100 cm",
+       "1 g = 1000 mg",
+       "1 min = 60 s"
+      ],
+      [
+       "1 cm = 10 mm",
+       "1 quintal = 100 kg",
+       "1 day = 24 hours"
+      ],
+      [
+       "",
+       "1 tonne = 1000 kg",
+       "1 week = 7 days"
+      ]
+     ],
+     "ref": "pp.10–14",
+     "id": "g8.science.u1.s1-1-3.11"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word again",
+     "defs": [
+      [
+       "Prefix",
+       "A short-hand way of writing very large or very small numbers in a unit, like kilo (1000) or milli (0.001)."
+      ]
+     ],
+     "id": "g8.science.u1.s1-1-3.12"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Example 1.3: 200 m to km",
+     "steps": [
+      "1 km = 1000 m.",
+      "Metres are smaller than kilometres, so divide.",
+      "200 m = 200 ÷ 1000 km.",
+      "200 ÷ 1000 = 0.2, so 200 m = 0.2 km."
+     ],
+     "ref": "Example 1.3",
+     "id": "g8.science.u1.s1-1-3.13"
+    },
+    {
+     "kind": "blank",
+     "step": "check",
+     "graded": true,
+     "num": true,
+     "ask": "Example 1.2: 6.5 kg = ___ g",
+     "a": [
+      "6500",
+      "6 500"
+     ],
+     "why": "kilo = 1000, so 6.5 × 1000 = 6500 g.",
+     "clue": "Big unit to small unit: multiply.",
+     "level": 1,
+     "ref": "Example 1.2",
+     "id": "g8.science.u1.s1-1-3.14"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "500 g = ___ kg",
+     "a": [
+      "0.5",
+      "1/2"
+     ],
+     "why": "1 kg = 1000 g, so 500 ÷ 1000 = 0.5 kg.",
+     "clue": "Small to big: divide by 1000.",
+     "level": 1,
+     "ref": "Exercise 1.5 Q1 b",
+     "id": "g8.science.u1.s1-1-3.15"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "0.6 km = ___ cm",
+     "a": [
+      "60000",
+      "60 000"
+     ],
+     "why": "0.6 km = 0.6 × 1000 m = 600 m. 600 m = 600 × 100 cm = 60 000 cm.",
+     "clue": "Two steps: km to m, then m to cm.",
+     "worked": "First km to m: 0.6 × 1000 = 600 m. Then m to cm: 600 × 100 = 60 000 cm.",
+     "level": 2,
+     "ref": "Exercise 1.5 Q1 a",
+     "id": "g8.science.u1.s1-1-3.16"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "0.5 hour = ___ s",
+     "a": [
+      "1800",
+      "1 800"
+     ],
+     "why": "1 hour = 60 × 60 = 3600 s, so 0.5 × 3600 = 1800 s.",
+     "clue": "1 hour = 3600 seconds.",
+     "level": 2,
+     "ref": "Exercise 1.5 Q1 f",
+     "id": "g8.science.u1.s1-1-3.17"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "One day = ___ minutes",
+     "a": [
+      "1440",
+      "1 440"
+     ],
+     "why": "1 day = 24 hours and 1 hour = 60 min, so 24 × 60 = 1440 min.",
+     "clue": "Hours in a day × minutes in an hour.",
+     "level": 1,
+     "ref": "Exercise 1.8 a",
+     "id": "g8.science.u1.s1-1-3.18"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "1000 cm = ___ km",
+     "a": [
+      "0.01"
+     ],
+     "why": "1000 cm ÷ 100 = 10 m. 10 m ÷ 1000 = 0.01 km.",
+     "clue": "Go cm → m → km.",
+     "level": 2,
+     "ref": "Review IV Q4",
+     "id": "g8.science.u1.s1-1-3.19"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "num": true,
+     "ask": "A runner in the Great Ethiopian Run covers 10 km in 30 minutes. That is ___ metres per second (to 1 decimal place)",
+     "a": [
+      "5.6",
+      "5.56"
+     ],
+     "why": "10 km = 10 000 m. 30 min = 30 × 60 = 1800 s. 10 000 ÷ 1800 ≈ 5.6 m/s.",
+     "clue": "Change km to m and minutes to seconds first.",
+     "worked": "10 km = 10 × 1000 = 10 000 m. 30 min = 30 × 60 = 1800 s. Speed = 10 000 ÷ 1800 = 5.555…, about 5.6 m/s.",
+     "level": 3,
+     "added": true,
+     "id": "g8.science.u1.s1-1-3.20"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 1.5",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "30 min = ___ hour",
+     "a": [
+      "0.5",
+      "1/2"
+     ],
+     "why": "1 hour = 60 min, so 30 ÷ 60 = 1/2 = 0.5 hour.",
+     "clue": "Divide by 60.",
+     "level": 1,
+     "ref": "Q1 c",
+     "id": "g8.science.u1.s1-1-3.21"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "50 m = ___ mm",
+     "a": [
+      "50000",
+      "50 000"
+     ],
+     "why": "1 m = 1000 mm, so 50 × 1000 = 50 000 mm.",
+     "clue": "Multiply by 1000.",
+     "level": 1,
+     "ref": "Q1 d",
+     "id": "g8.science.u1.s1-1-3.22"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "0.25 kg = ___ g",
+     "a": [
+      "250"
+     ],
+     "why": "0.25 × 1000 = 250 g.",
+     "clue": "Multiply by 1000.",
+     "level": 1,
+     "ref": "Q1 e",
+     "id": "g8.science.u1.s1-1-3.23"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "0.0012 s with a prefix is",
+     "opts": [
+      "1.2 ms",
+      "12 ms",
+      "1.2 ks",
+      "0.12 ms"
+     ],
+     "ans": "1.2 ms",
+     "why": "milli = 0.001: 0.0012 ÷ 0.001 = 1.2 ms.",
+     "clue": "Divide by 0.001.",
+     "level": 2,
+     "ref": "Q2 b",
+     "id": "g8.science.u1.s1-1-3.24"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.6 and 1.7",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "2.5 kg = ___ g",
+     "a": [
+      "2500",
+      "2 500"
+     ],
+     "why": "2.5 × 1000 = 2500 g.",
+     "clue": "kg to g: × 1000.",
+     "level": 1,
+     "ref": "Ex 1.6 a",
+     "id": "g8.science.u1.s1-1-3.25"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "200 g = ___ mg",
+     "a": [
+      "200000",
+      "200 000"
+     ],
+     "why": "1 g = 1000 mg, so 200 × 1000 = 200 000 mg.",
+     "clue": "g to mg: × 1000.",
+     "level": 1,
+     "ref": "Ex 1.6 b",
+     "id": "g8.science.u1.s1-1-3.26"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "5500 m = ___ km",
+     "a": [
+      "5.5"
+     ],
+     "why": "5500 ÷ 1000 = 5.5 km.",
+     "clue": "m to km: ÷ 1000.",
+     "level": 1,
+     "ref": "Ex 1.7 b",
+     "id": "g8.science.u1.s1-1-3.27"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.8",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "One day = ___ seconds",
+     "a": [
+      "86400",
+      "86 400"
+     ],
+     "why": "24 hours × 3600 s = 86 400 s.",
+     "clue": "1 hour = 3600 s.",
+     "level": 2,
+     "ref": "b",
+     "id": "g8.science.u1.s1-1-3.28"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "8 m = ___ mm",
+   "a": [
+    "8000",
+    "8 000"
+   ],
+   "why": "8 × 1000.",
+   "clue": "",
+   "level": 1,
+   "ref": "Ex 1.7 a",
+   "id": "g8.science.u1.s1-1-3.29"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "kilo means",
+   "opts": [
+    "1000",
+    "0.001",
+    "100",
+    "1 000 000"
+   ],
+   "ans": "1000",
+   "why": "Table 1.3.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.science.u1.s1-1-3.30"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "1200 g = ___ kg",
+   "a": [
+    "1.2"
+   ],
+   "why": "1200 ÷ 1000.",
+   "clue": "",
+   "level": 1,
+   "ref": "Example 1.4",
+   "id": "g8.science.u1.s1-1-3.31"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "One million centimetres = ___ m",
+   "a": [
+    "10000",
+    "10 000"
+   ],
+   "why": "1 000 000 ÷ 100.",
+   "clue": "",
+   "level": 2,
+   "ref": "Review II Q3",
+   "id": "g8.science.u1.s1-1-3.32"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "2 hours = ___ s",
+   "a": [
+    "7200",
+    "7 200"
+   ],
+   "why": "2 × 3600.",
+   "clue": "",
+   "level": 3,
+   "id": "g8.science.u1.s1-1-3.33"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.12: the list of mass units is headed \"units of Length\" in the book; \"tone\" is the book's spelling of tonne."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
