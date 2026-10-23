@@ -443,3 +443,7 @@ body:has(#tray:not([hidden])) .fbfab { bottom: calc(150px + env(safe-area-inset-
 .sr { display: flex; gap: 10px; align-items: center; padding: 8px 12px; border-radius: 12px; background: var(--surface-2); }
 .sr.ok { background: var(--accent-soft); } .sr.weak { background: var(--sun-soft); }
 .sr .srn { font-weight: 800; min-width: 44px; }
+
+.cmpbox { display: inline-block; min-width: 1.6em; height: 1.4em; line-height: 1.3em; vertical-align: -0.25em; margin: 0 .15em; border: 2px dashed var(--accent-line); border-radius: 8px; background: var(--surface, #fff); text-align: center; font-weight: 800; color: var(--accent-deep); }
+.cmpbox.on { border-style: solid; border-color: var(--accent); }
+.nw { white-space: nowrap; }

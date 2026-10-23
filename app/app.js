@@ -4,6 +4,7 @@
 const BASE = location.pathname.includes('/app/') ? '../' : '';
 const $ = s => document.querySelector(s);
 const app = $('#app'), top = $('#top'), topin = $('#topin'), tray = $('#tray'), msg = $('#msg'), go = $('#go'), nav = $('#nav'), navin = $('#navin'), sheetEl = $('#sheet');
+document.addEventListener('click', e => { const o = e.target.closest('.opt, .qb'); if (!o) return; const v = o.textContent.trim(); if (!['<', '>', '='].includes(v)) return; let n = o; for (let k = 0; k < 6 && n; k++, n = n.parentElement) { const bx = n.querySelector && n.querySelector('.cmpbox'); if (bx) { bx.textContent = v; bx.classList.add('on'); break; } } });
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 /* ---------- storage ---------- */
@@ -1022,7 +1023,7 @@ async function viewLesson(path, mode, exIdx) {
     const wrap = document.createElement('section'); wrap.className = 'blk' + (s.step === 'hook' ? ' hook' : s.kind === 'name' || s.kind === 'read' ? ' plain' : '');
     let phase = 'answer', tries = 0, cur = null; const btn = document.createElement('button'), fb = document.createElement('div');
     const env = { phase: () => phase, state, explain: null, enter: () => { if (!btn.disabled && !btn.hidden) btn.click(); },
-      update() { if (!cur) return; if (cur.check) btn.disabled = phase !== 'answer' || !cur.ready(); else if (phase === 'answer' && cur.ready() && interactive) { phase = 'done'; wrap.classList.add('done'); finish(i, true); } } };
+      update() { if (!cur) return; if (cur.check && phase === 'retry') { phase = 'answer'; fb.hidden = true; const o = fb.nextElementSibling; if (o && o.dataset.offer) o.remove(); btn.textContent = cur.label; } if (cur.check) btn.disabled = phase !== 'answer' || !cur.ready(); else if (phase === 'answer' && cur.ready() && interactive) { phase = 'done'; wrap.classList.add('done'); finish(i, true); } } };
     const RR = makeR(env).R; cur = (RR[s.kind] || RR.name)(s);
     const interactive = !!cur.check || !cur.ready();
     if (interactive) tasks++;
@@ -1189,7 +1190,7 @@ const Translate = {
 
 /* ---------- Text: every piece of lesson prose goes through here ---------- */
 function Text(str, ctx, tag = 'p', cls = '') {
-  let html = esc(str);
+  let html = esc(str).replace(/(\S+) \? (\S+)/g, '<span class="nw">$1 <span class="cmpbox" aria-label="?"></span> $2</span>');
   if (ctx && ctx.kws) ctx.kws.forEach((k, j) => { const term = (ctx.main && k[ctx.main]) || k.en; if (ctx.used.has(j) || !term) return; const e = esc(term).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); const re = new RegExp(`(^|[^\\p{L}])(${e}${ctx.main === 'am' ? '\\p{L}{0,2}' : ''})(?![\\p{L}])`, 'iu'); const parts = html.split(/(<button[^>]*>[^<]*<\/button>)/); for (let q = 0; q < parts.length; q += 2) if (re.test(parts[q])) { parts[q] = parts[q].replace(re, `$1<button class="kwt" data-k="${j}">$2</button>`); ctx.used.add(j); break; } html = parts.join(''); });
   return `<${tag} class="${cls}" data-text>${html}</${tag}>`;
 }
