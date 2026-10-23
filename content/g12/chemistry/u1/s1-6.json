@@ -360,7 +360,260 @@
    "chapter_test": true,
    "count": 20,
    "minutes": 25,
-   "items": []
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "Given the reaction: NH₃ + H⁺ → NH₄⁺. The bond formed between NH₃ and H⁺ is",
+     "opts": [
+      "A. Nonpolar covalent",
+      "B. Coordinate covalent",
+      "C. Simple covalent",
+      "D. Ionic bond"
+     ],
+     "ans": "B. Coordinate covalent",
+     "why": "H⁺ has no electrons; NH₃ has a lone pair on N. N donates both electrons of its lone pair to H⁺ (NH₃ = Lewis base, H⁺ = Lewis acid). A shared pair supplied by one atom only is a coordinate (dative) covalent bond. A and C imply each atom gives one electron; D is wrong because no electron transfer to form separate ions occurs.",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "EUEE 2013 Chemistry Q30",
+     "id": "g12.chemistry.u1.s1-6.16"
+    },
+    {
+     "kind": "mcq",
+     "text": "The Brønsted–Lowry concept defines an acid as a substance that",
+     "opts": [
+      "A. furnishes proton to a molecule",
+      "B. gives hydrogen ion in water.",
+      "C. accepts proton from a molecule.",
+      "D. produces hydroxide ion in water."
+     ],
+     "ans": "A. furnishes proton to a molecule",
+     "why": "Brønsted–Lowry: acid = proton (H⁺) donor; base = proton acceptor. 'Furnishes a proton to a molecule' = donates H⁺ → acid. B is the Arrhenius acid definition (limited to water); C is a Brønsted base; D is an Arrhenius base.",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "EUEE 2013 Chemistry Q33",
+     "id": "g12.chemistry.u1.s1-6.17"
+    },
+    {
+     "kind": "mcq",
+     "text": "In the following reaction, which is the Brønsted–Lowry base?\nHC₂O₄⁻(aq) + H₂O(l) → H₃O⁺(aq) + C₂O₄²⁻(aq)",
+     "opts": [
+      "A. C₂O₄²⁻",
+      "B. H₂O",
+      "C. H₃O⁺",
+      "D. HC₂O₄⁻"
+     ],
+     "ans": "B. H₂O",
+     "why": "HC₂O₄⁻ loses H⁺ to become C₂O₄²⁻ → HC₂O₄⁻ is the acid (proton donor). H₂O gains that H⁺ to become H₃O⁺ → H₂O is the base (proton acceptor). Conjugate pairs: HC₂O₄⁻/C₂O₄²⁻ and H₃O⁺/H₂O. A is the conjugate base and C the conjugate acid (products, on the reverse side); D is the acid.",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "EUEE 2013 Chemistry Q43",
+     "id": "g12.chemistry.u1.s1-6.18"
+    },
+    {
+     "kind": "mcq",
+     "text": "In the autoionization of water",
+     "opts": [
+      "A. There is no transfer of hydrogen ion from the acid or the base.",
+      "B. one water molecule acts as a Lewis base and the other water molecule acts as Lewis acid.",
+      "C. a proton is transferred from one water molecule to another.",
+      "D. an electron is transferred from one water molecule to another."
+     ],
+     "ans": "C. a proton is transferred from one water molecule to another.",
+     "why": "H₂O(l) + H₂O(l) ⇌ H₃O⁺(aq) + OH⁻(aq). One H₂O donates H⁺ (Brønsted acid) and becomes OH⁻; the other accepts H⁺ (Brønsted base) and becomes H₃O⁺. So the process is proton transfer between two water molecules (Kw = [H₃O⁺][OH⁻] = 1.0×10⁻¹⁴ at 25 °C). A denies the proton transfer; D (electron transfer) describes redox, not autoionization; B is not the standard description (the process is described as Brønsted proton transfer, not a Lewis adduct between two whole water molecules).",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "EUEE 2013 Chemistry Q44",
+     "id": "g12.chemistry.u1.s1-6.19"
+    },
+    {
+     "kind": "mcq",
+     "text": "Given the following acid–base reaction: Ag⁺ + 2NH₃ ⇌ [Ag(NH₃)₂]⁺, the Lewis base is",
+     "opts": [
+      "A. [Ag(NH₃)₂]⁺",
+      "B. Ag⁺ and NH₃",
+      "C. Ag⁺",
+      "D. NH₃"
+     ],
+     "ans": "D. NH₃",
+     "why": "Lewis base = electron-pair donor; Lewis acid = electron-pair acceptor. Each NH₃ donates its N lone pair to Ag⁺, forming coordinate bonds. So NH₃ is the Lewis base and Ag⁺ (electron-deficient metal ion) is the Lewis acid. A is the product (adduct/complex ion); C is the Lewis acid; B wrongly calls both reactants bases.",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "EUEE 2013 Chemistry Q45",
+     "id": "g12.chemistry.u1.s1-6.20"
+    },
+    {
+     "kind": "mcq",
+     "text": "What is the pH and [H⁺] of a 0.2 M solution of HCN? (Ka = 4.9×10⁻¹⁰)",
+     "opts": [
+      "A. pH = 5; [H⁺] = 4.9×10⁻¹⁰",
+      "B. pH = 5; [H⁺] = 9.9×10⁻⁶",
+      "C. pH = 3; [H⁺] = 4.9×10⁻¹⁰",
+      "D. pH = 3; [H⁺] = 4.9×10⁻⁶"
+     ],
+     "ans": "B. pH = 5; [H⁺] = 9.9×10⁻⁶",
+     "why": "HCN ⇌ H⁺ + CN⁻; at equilibrium [H⁺] = [CN⁻] = x, [HCN] = 0.2 − x ≈ 0.2 (Ka is tiny). Ka = x²/0.2 → x² = 4.9×10⁻¹⁰ × 0.2 = 9.8×10⁻¹¹. x = √(9.8×10⁻¹¹) ≈ 9.9×10⁻⁶ M = [H⁺]. pH = −log(9.9×10⁻⁶) = 6 − 0.996 ≈ 5.0. A and C give Ka as [H⁺]; C and D also give pH 3, which would need [H⁺] = 10⁻³ M.",
+     "clue": "",
+     "graded": true,
+     "level": 3,
+     "step": "test",
+     "ref": "EUEE 2013 Chemistry Q71",
+     "id": "g12.chemistry.u1.s1-6.21"
+    },
+    {
+     "kind": "mcq",
+     "text": "A salt is formed from a weak acid (HCN) whose Ka = 4.9×10⁻¹⁰ and a weak base whose Kb = 1.8×10⁻⁵. What would you expect about the solution of the salt formed from HCN and NH₃?",
+     "opts": [
+      "A. The solution can be either acidic or basic at the same time.",
+      "B. The solution will be neutral, because the concentration of OH⁻ equals that of H⁺.",
+      "C. The solution will be basic, because the concentration of OH⁻ is less than that of H⁺.",
+      "D. The solution will be basic, because the concentration of OH⁻ is greater than that of H⁺."
+     ],
+     "ans": "D. The solution will be basic, because the concentration of OH⁻ is greater than that of H⁺.",
+     "why": "The salt is NH₄CN: NH₄⁺ hydrolyses to give H⁺, CN⁻ hydrolyses to give OH⁻. Compare Ka(HCN) = 4.9×10⁻¹⁰ with Kb(NH₃) = 1.8×10⁻⁵: Kb > Ka. So CN⁻ (Kb = Kw/Ka ≈ 2.0×10⁻⁵) is a stronger base than NH₄⁺ (Ka = Kw/Kb ≈ 5.6×10⁻¹⁰) is an acid → [OH⁻] > [H⁺], basic. A is impossible; B needs Ka = Kb; C contradicts itself (basic means [OH⁻] > [H⁺]).",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "EUEE 2013 Chemistry Q73",
+     "id": "g12.chemistry.u1.s1-6.22"
+    },
+    {
+     "kind": "mcq",
+     "text": "What is the difference between equivalence point and end point in an acid–base titration?",
+     "opts": [
+      "A. At the equivalence point, the pH is always 7 and at the end point there is a color change.",
+      "B. At the end point, the pH is always 7 and at the equivalence point there is a color change.",
+      "C. Equivalence point is where stoichiometrically equivalent amounts of the analyte and titrant react and end point is where an observable physical change occurs in a titration.",
+      "D. Equivalence point is where an observable physical change occurs in a titration."
+     ],
+     "ans": "C. Equivalence point is where stoichiometrically equivalent amounts of the analyte and titrant react and end point is where an observable physical change occurs in a titration.",
+     "why": "Equivalence point: moles of H⁺ added/present exactly equal moles of OH⁻ (stoichiometric amounts). End point: where the indicator changes colour (observed); a good indicator makes it very close to the equivalence point. A and B are wrong because the pH at equivalence is 7 only for strong acid–strong base (above 7 for weak acid–strong base, below 7 for weak base–strong acid). D swaps the definitions.",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "EUEE 2013 Chemistry Q75",
+     "id": "g12.chemistry.u1.s1-6.23"
+    },
+    {
+     "kind": "mcq",
+     "text": "The number of equivalents per liter of solution is known as",
+     "opts": [
+      "A. mole fraction",
+      "B. molality",
+      "C. normality",
+      "D. molarity"
+     ],
+     "ans": "C. normality",
+     "why": "Normality N = number of equivalents of solute / volume of solution in litres. For acids/bases, equivalents = moles × number of H⁺ or OH⁻ supplied (e.g. 1 M H₂SO₄ = 2 N). Molarity is moles per litre; molality is moles per kg of solvent; mole fraction is a ratio of moles.",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "EUEE 2013 Chemistry Q78",
+     "id": "g12.chemistry.u1.s1-6.24"
+    },
+    {
+     "kind": "mcq",
+     "text": "What is a Lewis acid? It is",
+     "opts": [
+      "A. a proton donor",
+      "B. an electron pair acceptor",
+      "C. an electron pair donor",
+      "D. a proton acceptor"
+     ],
+     "ans": "B. an electron pair acceptor",
+     "why": "Lewis acid = electron-pair acceptor (e.g. BF₃, Ag⁺, H⁺); Lewis base = electron-pair donor (e.g. NH₃, H₂O). A is the Brønsted–Lowry acid; C is the Lewis base; D is the Brønsted–Lowry base.",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "ESSLCE 2014 Chemistry Q25",
+     "id": "g12.chemistry.u1.s1-6.25"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which of the following is a polyprotic acid?",
+     "opts": [
+      "A. HCl",
+      "B. H₃PO₄",
+      "C. HF",
+      "D. HNO₃"
+     ],
+     "ans": "B. H₃PO₄",
+     "why": "A polyprotic acid has more than one ionizable H per molecule. H₃PO₄ ionizes in three steps: H₃PO₄ ⇌ H⁺ + H₂PO₄⁻ ⇌ H⁺ + HPO₄²⁻ ⇌ H⁺ + PO₄³⁻ (triprotic). HCl, HF and HNO₃ each have only one ionizable H (monoprotic).",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "ESSLCE 2014 Chemistry Q26",
+     "id": "g12.chemistry.u1.s1-6.26"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which of the following does respect a general property of a base?",
+     "opts": [
+      "A. Solutions of strong bases are good conductors of electricity.",
+      "B. Aqueous solutions of bases turn blue litmus paper to red.",
+      "C. Soluble bases release hydronium ion in aqueous solution.",
+      "D. Aqueous solution of bases turns methyl orange in to red."
+     ],
+     "ans": "A. Solutions of strong bases are good conductors of electricity.",
+     "why": "Strong bases (e.g. NaOH) ionize completely, giving many mobile ions (Na⁺, OH⁻), so their solutions conduct electricity well. B is wrong: bases turn red litmus blue (acids turn blue litmus red). C is wrong: soluble bases release OH⁻, not H₃O⁺. D is wrong: methyl orange is yellow in basic solution and red in acid.",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "ESSLCE 2014 Chemistry Q27",
+     "id": "g12.chemistry.u1.s1-6.27"
+    },
+    {
+     "kind": "mcq",
+     "text": "What are salts? Salts are",
+     "opts": [
+      "A. ionic compounds formed by complete replacement of ionizable hydrogen by anions of the acid.",
+      "B. ionic compounds that result from the reaction between metal hydroxide and water.",
+      "C. ionic compounds that derive their cations from a base and their anions from an acid.",
+      "D. ionic compounds formed by partial replacement of ionizable hydroxide by metal cations."
+     ],
+     "ans": "C. ionic compounds that derive their cations from a base and their anions from an acid.",
+     "why": "Acid + base → salt + water, e.g. NaOH + HCl → NaCl + H₂O. The salt's cation (Na⁺) comes from the base and its anion (Cl⁻) from the acid. A is wrong: ionizable H is replaced by metal (or NH₄⁺) cations, not anions. B describes no salt-forming reaction. D is wrong: hydroxide is not replaced by metal cations.",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "ESSLCE 2014 Chemistry Q28",
+     "id": "g12.chemistry.u1.s1-6.28"
+    },
+    {
+     "kind": "mcq",
+     "text": "For the reaction shown below, which of the following is a conjugate acid–base pair?\nHC₂O₄⁻(aq) + H₂O(l) ⇌ H₃O⁺ + C₂O₄²⁻",
+     "opts": [
+      "A. HC₂O₄⁻ and H₂O",
+      "B. H₂O and C₂O₄²⁻",
+      "C. H₃O⁺ and HC₂O₄⁻",
+      "D. HC₂O₄⁻ and C₂O₄²⁻"
+     ],
+     "ans": "D. HC₂O₄⁻ and C₂O₄²⁻",
+     "why": "A conjugate pair differs by exactly one H⁺. HC₂O₄⁻ loses H⁺ → C₂O₄²⁻: pair HC₂O₄⁻/C₂O₄²⁻ (acid/conjugate base). The other pair is H₃O⁺/H₂O. A and C pair the two acids or two reactants; B pairs species that differ by more than one proton (and are not related).",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "ESSLCE 2014 Chemistry Q65",
+     "id": "g12.chemistry.u1.s1-6.29"
+    }
+   ]
   }
  ],
  "test": [
@@ -379,7 +632,7 @@
    "graded": true,
    "level": 1,
    "step": "test",
-   "id": "g12.chemistry.u1.s1-6.16"
+   "id": "g12.chemistry.u1.s1-6.30"
   },
   {
    "kind": "blank",
@@ -393,7 +646,7 @@
    "graded": true,
    "level": 1,
    "step": "test",
-   "id": "g12.chemistry.u1.s1-6.17"
+   "id": "g12.chemistry.u1.s1-6.31"
   },
   {
    "kind": "mcq",
@@ -410,7 +663,7 @@
    "graded": true,
    "level": 2,
    "step": "test",
-   "id": "g12.chemistry.u1.s1-6.18"
+   "id": "g12.chemistry.u1.s1-6.32"
   },
   {
    "kind": "blank",
@@ -424,7 +677,7 @@
    "graded": true,
    "level": 2,
    "step": "test",
-   "id": "g12.chemistry.u1.s1-6.19"
+   "id": "g12.chemistry.u1.s1-6.33"
   },
   {
    "kind": "blank",
@@ -438,7 +691,7 @@
    "graded": true,
    "level": 3,
    "step": "test",
-   "id": "g12.chemistry.u1.s1-6.20"
+   "id": "g12.chemistry.u1.s1-6.34"
   }
  ],
  "notes": [
@@ -452,7 +705,7 @@
   },
   {
    "kind": "note",
-   "text": "No national-exam (ESSLCE) chemistry bank yet; the chapter test draws from the six section tests."
+   "text": "The chapter test mixes section-test items with past national-exam (EUEE 2013, ESSLCE 2014–2015) questions; items whose key we dispute are left out."
   }
  ],
  "review": {

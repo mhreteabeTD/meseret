@@ -1,0 +1,1082 @@
+{
+ "id": "g12.economics.u2.s2-2",
+ "book": {
+  "title": "Economics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "economics",
+  "unit": 2,
+  "unit_title": "Aggregate demand and aggregate supply",
+  "pages": "35–41",
+  "section": "2.2"
+ },
+ "title": "Aggregate supply",
+ "competency": "Define aggregate supply, explain why SRAS slopes up and LRAS is vertical, and describe what shifts SRAS.",
+ "minutes": 35,
+ "keywords": [
+  {
+   "en": "Aggregate supply",
+   "am": "ጠቅላላ አቅርቦት",
+   "def": "The quantity supplied of all goods and services (real GDP) at various price levels, other things equal.",
+   "machine": true
+  },
+  {
+   "en": "Short-run aggregate supply (SRAS)",
+   "am": "የአጭር ጊዜ ጠቅላላ አቅርቦት",
+   "def": "An upward-sloping curve: firms supply more real GDP at higher price levels.",
+   "machine": true
+  },
+  {
+   "en": "Short run",
+   "am": "አጭር ጊዜ",
+   "def": "A period in which at least one of a firm's inputs cannot be varied.",
+   "machine": true
+  },
+  {
+   "en": "Long run",
+   "am": "ረጅም ጊዜ",
+   "def": "A period long enough for a firm to vary all of its inputs.",
+   "machine": true
+  },
+  {
+   "en": "Keynesian aggregate supply curve",
+   "am": "የኬንስ አቅርቦት ኩርባ",
+   "def": "A horizontal AS curve: with unemployment, firms supply whatever is demanded at the existing price level.",
+   "machine": true
+  },
+  {
+   "en": "Classical aggregate supply curve",
+   "am": "የክላሲካል አቅርቦት ኩርባ",
+   "def": "A vertical AS curve: the labour market is always at full employment, so output is the same at every price level.",
+   "machine": true
+  },
+  {
+   "en": "Nominal wage",
+   "am": "ስመ ደመወዝ",
+   "def": "The wage paid in money, e.g. $30 an hour.",
+   "machine": true
+  },
+  {
+   "en": "Real wage",
+   "am": "እውነተኛ ደመወዝ",
+   "def": "The nominal wage divided by the price level: what the wage can buy.",
+   "machine": true
+  },
+  {
+   "en": "Sticky wages",
+   "am": "የማይለዋወጥ ደመወዝ",
+   "def": "Nominal wages that stay fixed for a time, because of contracts or ideas of fairness.",
+   "machine": true
+  },
+  {
+   "en": "Worker misperceptions",
+   "am": "የሠራተኞች የተሳሳተ ግንዛቤ",
+   "def": "Workers misjudge how much the price level changed, so they misjudge their real wage.",
+   "machine": true
+  },
+  {
+   "en": "Change in aggregate supply",
+   "am": "የጠቅላላ አቅርቦት ለውጥ",
+   "def": "A shift of the SRAS curve caused by a non-price factor such as input prices, technology, taxes or weather.",
+   "machine": true
+  },
+  {
+   "en": "Profit per unit",
+   "am": "የአንድ ምርት ትርፍ",
+   "def": "Price per unit minus cost per unit.",
+   "machine": true
+  },
+  {
+   "en": "Long-run aggregate supply (LRAS)",
+   "am": "የረጅም ጊዜ ጠቅላላ አቅርቦት",
+   "def": "A vertical curve at natural real GDP: in the long run output does not depend on the price level.",
+   "machine": true
+  },
+  {
+   "en": "Natural real GDP",
+   "am": "ተፈጥሯዊ እውነተኛ ምርት",
+   "def": "The full-employment real GDP (Qₙ) the economy produces in the long run.",
+   "machine": true
+  },
+  {
+   "en": "Long-run equilibrium",
+   "am": "የረጅም ጊዜ ሚዛን",
+   "def": "Real GDP when wages and prices have fully adjusted and there are no misperceptions: natural real GDP.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "eco.aggregate-supply",
+   "name": "Aggregate supply and its shapes",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Aggregate supply is the quantity of all goods and services (real GDP) supplied at various price levels, other things equal. In the short run the relationship is positive, so SRAS slopes up. The Keynesian AS curve is horizontal because unemployed labour lets firms supply any amount at the current price level; the classical AS curve is vertical because the labour market is always at full employment."
+    },
+    "am": {
+     "text": "ጠቅላላ አቅርቦት በተለያዩ የዋጋ ደረጃዎች የሚቀርብ ጠቅላላ እውነተኛ ምርት ነው። የኬንስ ኩርባ አግድም፣ የክላሲካል ኩርባ ቀጥ ያለ፣ የአጭር ጊዜ ኩርባ ወደ ላይ ያዘነበለ ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Prices rise, firms respond",
+     "ask": "The general price level rises, but firms' costs have not changed yet. What do firms want to do?",
+     "opts": [
+      "Produce more",
+      "Produce less",
+      "Close down",
+      "Nothing"
+     ],
+     "after": "Higher prices with unchanged costs mean more profit per unit, so firms supply more in the short run.",
+     "id": "g12.economics.u2.s2-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Aggregate supply",
+     "paras": [
+      "AS is the other side of the AS–AD model.",
+      "Aggregate supply: the quantity supplied of all goods and services (real GDP) at various price levels, ceteris paribus.",
+      "In the short run, price level and output supplied are directly related.",
+      "AS includes short-run AS (SRAS) and long-run AS (LRAS)."
+     ],
+     "ref": "p.35–36",
+     "id": "g12.economics.u2.s2-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Short run, long run and three shapes",
+     "paras": [
+      "Short run: at least one input cannot be varied.",
+      "Long run: long enough to vary all inputs."
+     ],
+     "table": [
+      [
+       "View",
+       "Shape",
+       "Why"
+      ],
+      [
+       "Keynesian",
+       "horizontal",
+       "unemployment: firms get all the labour they want at the current wage; average cost constant"
+      ],
+      [
+       "Short run (SRAS)",
+       "upward sloping",
+       "firms supply more as the price level rises"
+      ],
+      [
+       "Classical",
+       "vertical",
+       "labour market always at full employment"
+      ]
+     ],
+     "ref": "p.36",
+     "id": "g12.economics.u2.s2-2.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Aggregate supply",
+       "The quantity supplied of all goods and services (real GDP) at various price levels, other things equal."
+      ],
+      [
+       "Short-run aggregate supply (SRAS)",
+       "An upward-sloping curve: firms supply more real GDP at higher price levels."
+      ],
+      [
+       "Short run",
+       "A period in which at least one of a firm's inputs cannot be varied."
+      ],
+      [
+       "Long run",
+       "A period long enough for a firm to vary all of its inputs."
+      ],
+      [
+       "Keynesian aggregate supply curve",
+       "A horizontal AS curve: with unemployment, firms supply whatever is demanded at the existing price level."
+      ],
+      [
+       "Classical aggregate supply curve",
+       "A vertical AS curve: the labour market is always at full employment, so output is the same at every price level."
+      ]
+     ],
+     "id": "g12.economics.u2.s2-2.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "The classical aggregate supply curve is",
+     "opts": [
+      "vertical",
+      "horizontal",
+      "downward sloping",
+      "upward sloping"
+     ],
+     "ans": "vertical",
+     "why": "It assumes full employment, so output is the same at every price level.",
+     "clue": "Full employment: can output grow?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.36",
+     "id": "g12.economics.u2.s2-2.5"
+    },
+    {
+     "kind": "match",
+     "title": "Match each AS curve with its shape",
+     "pairs": [
+      [
+       "Keynesian AS",
+       "horizontal"
+      ],
+      [
+       "Short-run AS (SRAS)",
+       "upward sloping"
+      ],
+      [
+       "Classical AS",
+       "vertical"
+      ]
+     ],
+     "why": "p.36.",
+     "clue": "Unemployment versus full employment.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.36",
+     "id": "g12.economics.u2.s2-2.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why is the Keynesian AS curve horizontal?",
+     "opts": [
+      "With unemployment, firms can hire more at the current wage",
+      "The labour market is always at full employment",
+      "Wages fall when output rises",
+      "Technology never changes"
+     ],
+     "ans": "With unemployment, firms can hire more at the current wage",
+     "why": "Average costs do not change as output changes, so firms supply whatever is demanded at the existing price level.",
+     "clue": "Think about idle workers.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.36",
+     "id": "g12.economics.u2.s2-2.7"
+    },
+    {
+     "kind": "tf",
+     "text": "In the long run a firm can vary all of its inputs.",
+     "a": true,
+     "why": "p.36: the long run is long enough to vary all inputs.",
+     "clue": "Compare with the short run.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.36",
+     "id": "g12.economics.u2.s2-2.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "Many workers are unemployed and factories are idle. Demand rises. Which AS view predicts more output with no rise in the price level?",
+     "opts": [
+      "Keynesian",
+      "Classical",
+      "Long-run (LRAS)",
+      "None of them"
+     ],
+     "ans": "Keynesian",
+     "why": "Idle labour and machines can be used at the same wage and cost, so the Keynesian AS is flat: output rises, prices do not.",
+     "clue": "Which curve is flat?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.36",
+     "added": true,
+     "id": "g12.economics.u2.s2-2.9"
+    }
+   ]
+  },
+  {
+   "id": "eco.sras-slope",
+   "name": "Why SRAS slopes up: sticky wages and misperceptions",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Firms pay nominal wages but hire according to real wages, where real wage = nominal wage ÷ price level. If nominal wages are sticky and the price level falls, the real wage rises, so firms hire fewer workers and output falls. If workers misperceive the price level, they may think their real wage fell and supply less labour. Either way a lower price level brings lower output, so SRAS slopes up."
+    },
+    "am": {
+     "text": "እውነተኛ ደመወዝ = ስመ ደመወዝ ÷ የዋጋ ደረጃ። ደመወዝ ሳይለወጥ ዋጋ ሲቀንስ እውነተኛ ደመወዝ ይጨምራል፤ ድርጅቶች ሠራተኛ ይቀንሳሉ፤ ምርት ይቀንሳል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Same pay, lower prices",
+     "ask": "Your wage is fixed at $30 an hour by contract. Prices of everything fall. What happens to what your wage can buy?",
+     "opts": [
+      "It buys more",
+      "It buys less",
+      "It buys the same",
+      "It becomes zero"
+     ],
+     "after": "Your real wage rises. For the employer, each worker now costs more in real terms.",
+     "id": "g12.economics.u2.s2-2.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Real wages",
+     "paras": [
+      "Firms pay nominal wages, e.g. $30 an hour.",
+      "They decide how many to hire using real wages.",
+      "Real wage = Nominal wage ÷ Price level.",
+      "Labour supplied rises as the real wage rises.",
+      "Labour demanded falls as the real wage rises."
+     ],
+     "ref": "p.37",
+     "id": "g12.economics.u2.s2-2.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Sticky wages",
+     "paras": [
+      "Wages are often \"locked in\" by labour contracts for one to three years.",
+      "Or they stay fixed by social conventions and ideas of fairness.",
+      "Management knows its labour costs; workers know pay will not be cut."
+     ],
+     "ref": "p.37",
+     "id": "g12.economics.u2.s2-2.12"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Sticky wages: a firm with 1,000 workers",
+     "steps": [
+      "Contract: $30 an hour; price index expected to stay 1.50.",
+      "Expected real wage = 30 ÷ 1.50 = $20.",
+      "The price index falls to 1.25.",
+      "Real wage = 30 ÷ 1.25 = $24, which is 20% higher.",
+      "The firm cuts workers from 1,000 to 800.",
+      "Fewer workers → less output. Lower price level, lower output: SRAS slopes up."
+     ],
+     "ref": "p.37–38",
+     "id": "g12.economics.u2.s2-2.13"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Worker misperceptions",
+     "steps": [
+      "Before: 30 ÷ 1.50 = $20 real wage.",
+      "After: nominal wage $25, price index 1.25. Real wage = 25 ÷ 1.25 = $20, unchanged.",
+      "Workers wrongly think prices fell only to 1.39.",
+      "Perceived real wage = 25 ÷ 1.39 ≈ $17.99.",
+      "They think their real wage fell, so they supply less labour.",
+      "Less labour → less output. Again: lower price level, lower output."
+     ],
+     "ref": "p.38",
+     "id": "g12.economics.u2.s2-2.14"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Nominal wage",
+       "The wage paid in money, e.g. $30 an hour."
+      ],
+      [
+       "Real wage",
+       "The nominal wage divided by the price level: what the wage can buy."
+      ],
+      [
+       "Sticky wages",
+       "Nominal wages that stay fixed for a time, because of contracts or ideas of fairness."
+      ],
+      [
+       "Worker misperceptions",
+       "Workers misjudge how much the price level changed, so they misjudge their real wage."
+      ]
+     ],
+     "id": "g12.economics.u2.s2-2.15"
+    },
+    {
+     "kind": "blank",
+     "ask": "Nominal wage $30 an hour, price index 1.50. Real wage = $___",
+     "a": [
+      "20"
+     ],
+     "why": "30 ÷ 1.50 = 20. Check: 20 × 1.50 = 30.",
+     "clue": "Divide by the price index.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.37",
+     "id": "g12.economics.u2.s2-2.16"
+    },
+    {
+     "kind": "blank",
+     "ask": "The price index falls to 1.25; the nominal wage stays $30. Real wage = $___",
+     "a": [
+      "24"
+     ],
+     "why": "30 ÷ 1.25 = 24: $4 (20%) higher than expected.",
+     "clue": "Same nominal wage, smaller divisor.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.37",
+     "id": "g12.economics.u2.s2-2.17"
+    },
+    {
+     "kind": "blank",
+     "ask": "A worker earns $25 and believes the price index is 1.39. Perceived real wage = $___ (2 decimal places)",
+     "a": [
+      "≈17.99",
+      "≈17.98"
+     ],
+     "why": "25 ÷ 1.39 = 17.9856… ≈ $17.99 (the book truncates to $17.98). The true real wage is 25 ÷ 1.25 = $20.",
+     "clue": "Divide by what the worker believes.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.38",
+     "id": "g12.economics.u2.s2-2.18"
+    },
+    {
+     "kind": "order",
+     "title": "Order the sticky-wage story",
+     "items": [
+      "Price level falls",
+      "Real wage rises (nominal wage fixed)",
+      "Firms hire fewer workers",
+      "Output falls"
+     ],
+     "why": "P ↓ with W fixed → W ÷ P ↑ → labour demanded ↓ → output ↓.",
+     "clue": "Start with the price level.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.37–38",
+     "id": "g12.economics.u2.s2-2.19"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why might wages be sticky?",
+     "opts": [
+      "Labour contracts lock them in for years",
+      "Workers change jobs every day",
+      "Prices never change",
+      "Firms do not know their costs"
+     ],
+     "ans": "Labour contracts lock them in for years",
+     "why": "p.37: contracts, social conventions and fairness keep nominal wages fixed for a time.",
+     "clue": "Think of an agreement signed for 1–3 years.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.37",
+     "id": "g12.economics.u2.s2-2.20"
+    },
+    {
+     "kind": "tf",
+     "text": "With sticky nominal wages, a rise in the price level lowers the real wage.",
+     "a": true,
+     "why": "Real wage = W ÷ P: a bigger P with the same W gives a smaller real wage, so firms hire more.",
+     "clue": "Use the formula.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "id": "g12.economics.u2.s2-2.21"
+    },
+    {
+     "kind": "blank",
+     "ask": "A firm pays a fixed 45 Birr an hour. The price index rises from 1.50 to 1.80. The real wage falls by ___ Birr",
+     "a": [
+      "5"
+     ],
+     "why": "45 ÷ 1.50 = 30; 45 ÷ 1.80 = 25; fall = 5 Birr. Cheaper real labour → firms hire more → output rises with the price level.",
+     "clue": "Find both real wages, then subtract.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.economics.u2.s2-2.22"
+    }
+   ]
+  },
+  {
+   "id": "eco.sras-shifts",
+   "name": "Shifts in short-run aggregate supply",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "A change in the price level moves the economy along SRAS. Other factors shift the whole curve: input prices (especially wages), resource availability, imported resource prices, market power, productivity, technology, business taxes and subsidies, and weather. Profit per unit = price per unit − cost per unit: higher costs at the same price lower profit and output, shifting SRAS left; lower costs shift it right."
+    },
+    "am": {
+     "text": "የዋጋ ደረጃ ለውጥ በኩርባው ላይ እንቅስቃሴ ነው። ደመወዝ፣ የግብዓት ዋጋ፣ ቴክኖሎጂ፣ ግብርና የአየር ሁኔታ SRASን ያንቀሳቅሳሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "title": "Guess: more or less output at the same price level?",
+     "bins": [
+      "More output",
+      "Less output"
+     ],
+     "items": [
+      [
+       "Wage rates fall",
+       "More output",
+       "cheaper labour"
+      ],
+      [
+       "A drought hits farms",
+       "Less output",
+       "weather"
+      ],
+      [
+       "A new production technology",
+       "More output",
+       "productivity"
+      ],
+      [
+       "Imported oil costs more",
+       "Less output",
+       "input prices"
+      ]
+     ],
+     "after": "At a given price level, anything that lowers cost per unit raises output: SRAS shifts right.",
+     "graded": false,
+     "id": "g12.economics.u2.s2-2.23"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Movement or shift of SRAS?",
+     "paras": [
+      "A change in the price level changes quantity supplied: a movement along SRAS.",
+      "Other factors shift the whole SRAS curve."
+     ],
+     "ref": "p.38",
+     "id": "g12.economics.u2.s2-2.24"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Factors that shift SRAS",
+     "paras": [
+      "a) Cost of inputs (change in input prices)",
+      "b) Domestic resource availability: managerial ability, land, labour, capital; price of imported resources; market power",
+      "c) Change in productivity",
+      "d) State of technology",
+      "e) Tax policy: business taxes and subsidies",
+      "f) Weather (mainly farm output)"
+     ],
+     "ref": "p.39",
+     "id": "g12.economics.u2.s2-2.25"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Wage rates and SRAS",
+     "paras": [
+      "Labour is usually a firm's biggest cost.",
+      "Profit per unit = Price per unit − Cost per unit.",
+      "Higher wages at the same price → lower profit → firms produce less.",
+      "Figure 2.4: at P₁ output falls Q₁ → Q₂ (A → B): SRAS₁ shifts left to SRAS₂.",
+      "Lower wages: Q₁ → Q₃ (A → C): SRAS shifts right to SRAS₃."
+     ],
+     "ref": "p.39–40, Figure 2.4",
+     "id": "g12.economics.u2.s2-2.26"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Worked example: profit per unit",
+     "steps": [
+      "Price per unit 50 Birr; cost per unit 40 Birr.",
+      "Profit per unit = 50 − 40 = 10 Birr.",
+      "Wages rise: cost per unit becomes 46 Birr; price stays 50.",
+      "Profit per unit = 50 − 46 = 4 Birr, 60% less.",
+      "Firms produce less at the same price level: SRAS shifts left."
+     ],
+     "added": true,
+     "id": "g12.economics.u2.s2-2.27"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Change in aggregate supply",
+       "A shift of the SRAS curve caused by a non-price factor such as input prices, technology, taxes or weather."
+      ],
+      [
+       "Profit per unit",
+       "Price per unit minus cost per unit."
+      ]
+     ],
+     "id": "g12.economics.u2.s2-2.28"
+    },
+    {
+     "kind": "mcq",
+     "text": "Wage rates rise across the economy. The SRAS curve",
+     "opts": [
+      "shifts left",
+      "shifts right",
+      "stays; we move along it",
+      "becomes vertical"
+     ],
+     "ans": "shifts left",
+     "why": "Higher wages raise cost per unit, so less is supplied at every price level (Figure 2.4, A → B).",
+     "clue": "What happens to profit per unit?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Figure 2.4",
+     "id": "g12.economics.u2.s2-2.29"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "SRAS shifts right or left?",
+     "bins": [
+      "SRAS shifts right",
+      "SRAS shifts left"
+     ],
+     "items": [
+      [
+       "Wage rates fall",
+       "SRAS shifts right",
+       "cost ↓"
+      ],
+      [
+       "A storm destroys crops",
+       "SRAS shifts left",
+       "weather"
+      ],
+      [
+       "Better production technology",
+       "SRAS shifts right",
+       "productivity ↑"
+      ],
+      [
+       "Business taxes rise",
+       "SRAS shifts left",
+       "cost ↑"
+      ],
+      [
+       "Government gives producers subsidies",
+       "SRAS shifts right",
+       "cost ↓"
+      ],
+      [
+       "The price of imported oil rises",
+       "SRAS shifts left",
+       "input price ↑"
+      ],
+      [
+       "Labour productivity rises",
+       "SRAS shifts right",
+       "more output per worker"
+      ]
+     ],
+     "why": "Lower cost per unit or more resources → right; higher cost or lost resources → left.",
+     "clue": "Does the change raise or lower cost per unit?",
+     "ref": "p.39",
+     "graded": true,
+     "level": 2,
+     "id": "g12.economics.u2.s2-2.30"
+    },
+    {
+     "kind": "blank",
+     "ask": "Price per unit 80 Birr, cost per unit 60 Birr. Costs rise to 70 Birr. Profit per unit falls from 20 to ___ Birr",
+     "a": [
+      "10"
+     ],
+     "why": "80 − 70 = 10 Birr: half the profit, so firms supply less.",
+     "clue": "Profit = price − cost.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "added": true,
+     "id": "g12.economics.u2.s2-2.31"
+    },
+    {
+     "kind": "mcq",
+     "text": "In Figure 2.4 the price level stays at P₁, yet output changes from Q₁ to Q₃. This is",
+     "opts": [
+      "a shift of SRAS to the right",
+      "a movement up along SRAS",
+      "a shift of AD",
+      "a movement down along SRAS"
+     ],
+     "ans": "a shift of SRAS to the right",
+     "why": "Output changed with no change in the price level, so the curve itself moved (lower wages).",
+     "clue": "Did the price level change?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 2.2 Q3",
+     "id": "g12.economics.u2.s2-2.32"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is a movement along SRAS, not a shift?",
+     "opts": [
+      "The price level rises and firms supply more",
+      "Wage rates fall",
+      "A drought",
+      "New technology"
+     ],
+     "ans": "The price level rises and firms supply more",
+     "why": "Only a price-level change moves along the curve.",
+     "clue": "Look for the price level.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Part III Q2",
+     "id": "g12.economics.u2.s2-2.33"
+    },
+    {
+     "kind": "mcq",
+     "text": "Ethiopian farms adopt better seeds while the price of imported fertiliser doubles. What can we say about SRAS?",
+     "opts": [
+      "It may shift either way: the two changes pull in opposite directions",
+      "It must shift right",
+      "It must shift left",
+      "It cannot move, only AD moves"
+     ],
+     "ans": "It may shift either way: the two changes pull in opposite directions",
+     "why": "Better seeds (technology) push SRAS right; dearer imported inputs push it left. The net shift depends on which is bigger.",
+     "clue": "Classify each change separately.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.economics.u2.s2-2.34"
+    }
+   ]
+  },
+  {
+   "id": "eco.lras",
+   "name": "Long-run aggregate supply",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "SRAS slopes up only while wages are sticky or workers misperceive prices. In the long run wages become flexible and perceptions accurate, and the economy produces full-employment, or natural, real GDP (Qₙ). The LRAS curve is therefore vertical at Qₙ: the same output at every price level. Long-run equilibrium is real GDP at Qₙ with wages and prices fully adjusted."
+    },
+    "am": {
+     "text": "በረጅም ጊዜ ደመወዝ ይስተካከላል፣ የተሳሳተ ግንዛቤ ይጠፋል። LRAS በተፈጥሯዊ እውነተኛ ምርት (Qₙ) ላይ ቀጥ ያለ መስመር ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "After a few years",
+     "ask": "Contracts are renewed and workers see prices correctly. Will a higher price level still raise output?",
+     "opts": [
+      "No, output returns to its full-employment level",
+      "Yes, output keeps rising",
+      "Output falls to zero",
+      "Output doubles"
+     ],
+     "after": "In the long run wages adjust and misperceptions end, so the price level no longer changes output.",
+     "id": "g12.economics.u2.s2-2.35"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The long run",
+     "paras": [
+      "SRAS slopes up because of sticky wages and misperceptions.",
+      "In time, wages become flexible and perceptions become accurate.",
+      "Then the economy is in the long run.",
+      "It produces full-employment, or natural, real GDP (Qₙ).",
+      "LRAS is a vertical line at Qₙ: the same output at every price level (Figure 2.5)."
+     ],
+     "ref": "p.40–41, Figure 2.5",
+     "id": "g12.economics.u2.s2-2.36"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Long-run equilibrium",
+     "paras": [
+      "Wages and prices have adjusted to their final levels.",
+      "Workers have no misperceptions.",
+      "Real GDP equals natural real GDP, Qₙ."
+     ],
+     "ref": "p.41",
+     "id": "g12.economics.u2.s2-2.37"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Long-run aggregate supply (LRAS)",
+       "A vertical curve at natural real GDP: in the long run output does not depend on the price level."
+      ],
+      [
+       "Natural real GDP",
+       "The full-employment real GDP (Qₙ) the economy produces in the long run."
+      ],
+      [
+       "Long-run equilibrium",
+       "Real GDP when wages and prices have fully adjusted and there are no misperceptions: natural real GDP."
+      ]
+     ],
+     "id": "g12.economics.u2.s2-2.38"
+    },
+    {
+     "kind": "mcq",
+     "text": "The LRAS curve is",
+     "opts": [
+      "vertical at natural real GDP",
+      "horizontal at the current price level",
+      "upward sloping",
+      "downward sloping"
+     ],
+     "ans": "vertical at natural real GDP",
+     "why": "Figure 2.5.",
+     "clue": "Does output depend on the price level in the long run?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Figure 2.5",
+     "id": "g12.economics.u2.s2-2.39"
+    },
+    {
+     "kind": "tf",
+     "text": "On the LRAS curve, a higher price level brings more real GDP.",
+     "a": false,
+     "why": "LRAS is vertical: output stays at Qₙ whatever the price level.",
+     "clue": "Picture a vertical line.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.40",
+     "id": "g12.economics.u2.s2-2.40"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why is LRAS vertical?",
+     "opts": [
+      "Wages and prices have fully adjusted, so output is at natural real GDP",
+      "Firms cannot raise prices",
+      "There is always unemployment",
+      "Technology never changes"
+     ],
+     "ans": "Wages and prices have fully adjusted, so output is at natural real GDP",
+     "why": "The two reasons for an upward SRAS no longer hold.",
+     "clue": "What makes SRAS slope up, and does it last?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.40",
+     "id": "g12.economics.u2.s2-2.41"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Short run or long run?",
+     "bins": [
+      "Short run",
+      "Long run"
+     ],
+     "items": [
+      [
+       "Wages are sticky",
+       "Short run",
+       "contracts"
+      ],
+      [
+       "Workers may misperceive real wages",
+       "Short run",
+       "not yet adjusted"
+      ],
+      [
+       "Wages are fully flexible",
+       "Long run",
+       "adjusted"
+      ],
+      [
+       "Output is at natural real GDP whatever the price level",
+       "Long run",
+       "LRAS"
+      ],
+      [
+       "At least one input is fixed",
+       "Short run",
+       "definition"
+      ],
+      [
+       "All inputs can be varied",
+       "Long run",
+       "definition"
+      ]
+     ],
+     "why": "The short run has sticky wages and misperceptions; the long run has none.",
+     "clue": "Has everything adjusted yet?",
+     "ref": "p.36, 40",
+     "graded": true,
+     "level": 2,
+     "id": "g12.economics.u2.s2-2.42"
+    },
+    {
+     "kind": "mcq",
+     "text": "Natural real GDP is 600 billion Birr. The price index doubles from 1.0 to 2.0 and wages fully adjust. Long-run real GDP is",
+     "opts": [
+      "600 billion Birr",
+      "1200 billion Birr",
+      "300 billion Birr",
+      "0"
+     ],
+     "ans": "600 billion Birr",
+     "why": "In the long run output stays at Qₙ; only the price level changes.",
+     "clue": "Which curve applies once wages adjust?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.economics.u2.s2-2.43"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Real wage equals",
+   "opts": [
+    "nominal wage ÷ price level",
+    "nominal wage × price level",
+    "price level ÷ nominal wage",
+    "nominal wage − price level"
+   ],
+   "ans": "nominal wage ÷ price level",
+   "why": "p.37.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.economics.u2.s2-2.44"
+  },
+  {
+   "kind": "mcq",
+   "text": "The LRAS curve is",
+   "opts": [
+    "vertical",
+    "horizontal",
+    "upward sloping",
+    "downward sloping"
+   ],
+   "ans": "vertical",
+   "why": "Figure 2.5.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.economics.u2.s2-2.45"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which shifts SRAS to the right?",
+   "opts": [
+    "A fall in wage rates",
+    "A rise in imported oil prices",
+    "A drought",
+    "Higher business taxes"
+   ],
+   "ans": "A fall in wage rates",
+   "why": "Lower cost per unit → more output at each price level.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.economics.u2.s2-2.46"
+  },
+  {
+   "kind": "blank",
+   "ask": "Nominal wage 40 Birr, price index 1.60. Real wage = ___ Birr",
+   "a": [
+    "25"
+   ],
+   "why": "40 ÷ 1.60 = 25.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "added": true,
+   "id": "g12.economics.u2.s2-2.47"
+  },
+  {
+   "kind": "mcq",
+   "text": "Nominal wages are sticky and the price level falls. Then",
+   "opts": [
+    "the real wage rises, firms hire fewer workers and output falls",
+    "the real wage falls, firms hire more and output rises",
+    "nothing changes",
+    "the nominal wage falls at once"
+   ],
+   "ans": "the real wage rises, firms hire fewer workers and output falls",
+   "why": "p.37–38.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.economics.u2.s2-2.48"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.38: 25 ÷ 1.39 = 17.9856, which rounds to $17.99, not $17.98 (the book truncates). The practice blank accepts both."
+  },
+  {
+   "kind": "review",
+   "text": "p.39: the list of SRAS determinants is muddled. Price of imported resources and market power belong under input prices (with domestic resource availability), not under domestic resources."
+  },
+  {
+   "kind": "review",
+   "text": "p.36: citation \"(Dorrnbushpp, 2011)\" should be \"(Dornbusch et al., 2011)\". p.41: Figure 2.5 caption \"(LASC)\" should be \"(LRAS)\"."
+  },
+  {
+   "kind": "note",
+   "text": "Birr examples (45-Birr wage, profit per unit, better seeds and fertiliser) are added. The book's own wage examples use dollars and are kept."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

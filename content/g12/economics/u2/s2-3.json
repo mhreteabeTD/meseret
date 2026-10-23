@@ -1,0 +1,869 @@
+{
+ "id": "g12.economics.u2.s2-3",
+ "book": {
+  "title": "Economics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "economics",
+  "unit": 2,
+  "unit_title": "Aggregate demand and aggregate supply",
+  "pages": "41–45",
+  "section": "2.3"
+ },
+ "title": "Equilibrium of aggregate demand and aggregate supply",
+ "competency": "Find short-run and long-run equilibrium and explain the effects of demand and supply shocks on the price level and real GDP.",
+ "minutes": 35,
+ "keywords": [
+  {
+   "en": "Macroeconomic equilibrium",
+   "am": "የማክሮ ኢኮኖሚ ሚዛን",
+   "def": "The price level and real GDP at which real GDP demanded equals real GDP supplied: where AD meets AS.",
+   "machine": true
+  },
+  {
+   "en": "Short-run equilibrium",
+   "am": "የአጭር ጊዜ ሚዛን",
+   "def": "The point where AD crosses SRAS, giving Pₑ and Qₑ.",
+   "machine": true
+  },
+  {
+   "en": "Surplus",
+   "am": "ትርፍ ምርት",
+   "def": "Quantity of real GDP supplied is greater than quantity demanded (price level above Pₑ).",
+   "machine": true
+  },
+  {
+   "en": "Shortage",
+   "am": "እጥረት",
+   "def": "Quantity of real GDP demanded is greater than quantity supplied (price level below Pₑ).",
+   "machine": true
+  },
+  {
+   "en": "Static equilibrium",
+   "am": "የማይለወጥ ሚዛን",
+   "def": "AD, SRAS and LRAS meet at one point; the economy stays there while the curves do not shift.",
+   "machine": true
+  },
+  {
+   "en": "Demand shock",
+   "am": "የፍላጎት ድንገተኛ ለውጥ",
+   "def": "An unexpected shift of the AD curve; it moves the price level and real GDP in the same direction.",
+   "machine": true
+  },
+  {
+   "en": "Expansionary shock",
+   "am": "አስፋፊ ለውጥ",
+   "def": "A shock that raises equilibrium output (e.g. AD shifts right).",
+   "machine": true
+  },
+  {
+   "en": "Contractionary shock",
+   "am": "አኮማታች ለውጥ",
+   "def": "A shock that lowers equilibrium output (e.g. AD shifts left).",
+   "machine": true
+  },
+  {
+   "en": "Supply shock",
+   "am": "የአቅርቦት ድንገተኛ ለውጥ",
+   "def": "An unexpected shift of the AS curve; it moves the price level and real GDP in opposite directions.",
+   "machine": true
+  },
+  {
+   "en": "Stagflation",
+   "am": "የዋጋ ንረትና የምርት መቀነስ",
+   "def": "A rising price level together with falling output, as after a negative supply shock.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "eco.ad-as-equilibrium",
+   "name": "Short-run and long-run equilibrium",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Short-run equilibrium is where AD crosses SRAS: real GDP demanded equals real GDP supplied, at price level Pₑ and output Qₑ. Above Pₑ there is a surplus, so the price level falls; below Pₑ there is a shortage, so it rises. In long-run (static) equilibrium AD, SRAS and LRAS meet at one point, at natural real GDP, and the economy stays there while the curves do not shift."
+    },
+    "am": {
+     "text": "የአጭር ጊዜ ሚዛን AD እና SRAS በሚገናኙበት ነው። ከPₑ በላይ ትርፍ ምርት፣ ከPₑ በታች እጥረት አለ። በረጅም ጊዜ ሚዛን AD፣ SRAS እና LRAS በአንድ ነጥብ ይገናኛሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Move the curves",
+     "ask": "A linear AS–AD model: AD is Qd = a − 200P, SRAS is Qs = c + 200P. Raise a (more spending), then lower c (less supply). Which way does the price level move each time?",
+     "vars": [
+      {
+       "k": "a",
+       "label": "AD intercept a",
+       "min": 800,
+       "max": 1400,
+       "step": 50,
+       "v": 1000
+      },
+      {
+       "k": "c",
+       "label": "SRAS intercept c",
+       "min": 0,
+       "max": 400,
+       "step": 50,
+       "v": 200
+      }
+     ],
+     "formula": "(a - c) / 400",
+     "out": "Equilibrium price level = {v}",
+     "note": "Real GDP = (a + c) ÷ 2. Start: price level 2, real GDP 600 billion Birr. Numbers are added for practice.",
+     "id": "g12.economics.u2.s2-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Short-run equilibrium",
+     "paras": [
+      "AD and SRAS together set the price level and real GDP.",
+      "Figure 2.6 compares three price levels: P₁, Pₑ and P₂.",
+      "At P₁ (high): supplied Q₂ > demanded Q₁. Surplus. The price level falls.",
+      "At P₂ (low): demanded Q₂ > supplied Q₁. Shortage. The price level rises.",
+      "Both push the economy to E, where demanded = supplied.",
+      "Pₑ is the equilibrium price level; Qₑ is equilibrium real GDP."
+     ],
+     "ref": "p.42–43, Figure 2.6",
+     "id": "g12.economics.u2.s2-3.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Static (long-run) equilibrium",
+     "paras": [
+      "Short run: AD meets SRAS.",
+      "Long run: AD meets LRAS.",
+      "Figure 2.7: AD, SRAS and LRAS meet at one point.",
+      "Output is at the natural rate, at the equilibrium price.",
+      "If the curves do not shift, the economy stays there indefinitely."
+     ],
+     "ref": "p.43, Figure 2.7",
+     "id": "g12.economics.u2.s2-3.3"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Worked example: a linear AS–AD model",
+     "steps": [
+      "AD: Qd = 1000 − 200P. SRAS: Qs = 200 + 200P (billion Birr).",
+      "Set Qd = Qs: 1000 − 200P = 200 + 200P.",
+      "800 = 400P, so Pₑ = 2.",
+      "Qₑ = 1000 − 200 × 2 = 600. Check: 200 + 200 × 2 = 600.",
+      "At P = 2.5: Qd = 500, Qs = 700 → surplus of 200 → P falls.",
+      "At P = 1.5: Qd = 700, Qs = 500 → shortage of 200 → P rises."
+     ],
+     "added": true,
+     "id": "g12.economics.u2.s2-3.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Macroeconomic equilibrium",
+       "The price level and real GDP at which real GDP demanded equals real GDP supplied: where AD meets AS."
+      ],
+      [
+       "Short-run equilibrium",
+       "The point where AD crosses SRAS, giving Pₑ and Qₑ."
+      ],
+      [
+       "Surplus",
+       "Quantity of real GDP supplied is greater than quantity demanded (price level above Pₑ)."
+      ],
+      [
+       "Shortage",
+       "Quantity of real GDP demanded is greater than quantity supplied (price level below Pₑ)."
+      ],
+      [
+       "Static equilibrium",
+       "AD, SRAS and LRAS meet at one point; the economy stays there while the curves do not shift."
+      ]
+     ],
+     "id": "g12.economics.u2.s2-3.5"
+    },
+    {
+     "kind": "mcq",
+     "text": "At a price level above Pₑ there is",
+     "opts": [
+      "a surplus, so the price level falls",
+      "a shortage, so the price level rises",
+      "equilibrium",
+      "a surplus, so the price level rises"
+     ],
+     "ans": "a surplus, so the price level falls",
+     "why": "Above Pₑ, supply exceeds demand (Figure 2.6 at P₁): prices fall, firms cut output, buyers buy more.",
+     "clue": "Compare supplied and demanded at a high price.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Figure 2.6",
+     "id": "g12.economics.u2.s2-3.6"
+    },
+    {
+     "kind": "blank",
+     "ask": "AD: Qd = 900 − 100P. SRAS: Qs = 300 + 200P. Pₑ = ___",
+     "a": [
+      "2"
+     ],
+     "why": "900 − 100P = 300 + 200P → 600 = 300P → P = 2.",
+     "clue": "Set Qd = Qs and collect the P terms.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.economics.u2.s2-3.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "In the same model (Qd = 900 − 100P, Qs = 300 + 200P), Qₑ = ___ billion Birr",
+     "a": [
+      "700"
+     ],
+     "why": "Qd = 900 − 100 × 2 = 700. Check: 300 + 200 × 2 = 700.",
+     "clue": "Put Pₑ = 2 into either equation.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.economics.u2.s2-3.8"
+    },
+    {
+     "kind": "blank",
+     "ask": "With Qd = 1000 − 200P and Qs = 200 + 200P, at P = 3 the surplus is ___ billion Birr",
+     "a": [
+      "400"
+     ],
+     "why": "Qd = 1000 − 600 = 400; Qs = 200 + 600 = 800. Surplus = 800 − 400 = 400.",
+     "clue": "Work out Qd and Qs at P = 3.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.economics.u2.s2-3.9"
+    },
+    {
+     "kind": "tf",
+     "text": "At long-run equilibrium, AD, SRAS and LRAS all meet at one point.",
+     "a": true,
+     "why": "Figure 2.7 shows all three curves crossing at natural real GDP.",
+     "clue": "Look at Figure 2.7.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Figure 2.7",
+     "id": "g12.economics.u2.s2-3.10"
+    },
+    {
+     "kind": "order",
+     "title": "What happens when the price level is below Pₑ?",
+     "items": [
+      "Quantity demanded exceeds quantity supplied",
+      "There is a shortage",
+      "The price level rises",
+      "Firms raise output and buyers buy less",
+      "The economy reaches E"
+     ],
+     "why": "p.42: a shortage pushes the price level up until demanded = supplied.",
+     "clue": "Start with comparing demand and supply.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.42–43",
+     "id": "g12.economics.u2.s2-3.11"
+    },
+    {
+     "kind": "blank",
+     "ask": "AD: Qd = 1200 − 100P. SRAS: Qs = 300 + 200P. Equilibrium real GDP Qₑ = ___ billion Birr",
+     "a": [
+      "900"
+     ],
+     "why": "1200 − 100P = 300 + 200P → 900 = 300P → P = 3. Qₑ = 1200 − 300 = 900. Check: 300 + 600 = 900.",
+     "clue": "Find Pₑ first, then substitute.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.economics.u2.s2-3.12"
+    }
+   ]
+  },
+  {
+   "id": "eco.demand-shocks",
+   "name": "Shocks to aggregate demand",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "A demand shock is an unexpected shift of the AD curve, for example from expansionary monetary or fiscal policy or a rise in desired spending. An expansionary shock shifts AD right and raises both the price level and real GDP; a contractionary shock shifts AD left and lowers both. Demand shocks move P and Y in the same direction."
+    },
+    "am": {
+     "text": "የፍላጎት ድንገተኛ ለውጥ AD ኩርባን ያንቀሳቅሳል። AD ወደ ቀኝ ሲሄድ ዋጋና ምርት ሁለቱም ይጨምራሉ፤ ወደ ግራ ሲሄድ ሁለቱም ይቀንሳሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Add or cut spending",
+     "ask": "Same model: Qd = 1000 + g − 200P, Qs = 200 + 200P. Add or remove spending g at every price level (like a change in G). Does real GDP move the same way as the price level?",
+     "vars": [
+      {
+       "k": "g",
+       "label": "Extra spending g (billion Birr)",
+       "min": -200,
+       "max": 200,
+       "step": 50,
+       "v": 0
+      }
+     ],
+     "formula": "600 + g / 2",
+     "out": "Equilibrium real GDP = {v} billion Birr",
+     "note": "The price level = 2 + g ÷ 400. Both rise when g rises and both fall when g falls.",
+     "id": "g12.economics.u2.s2-3.13"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Demand shocks",
+     "paras": [
+      "A demand shock is an unexpected shift of the AD curve.",
+      "Causes: expansionary monetary policy, expansionary fiscal policy, or more desired spending.",
+      "Expansionary shock: AD shifts right; P and Y both rise.",
+      "Contractionary shock: AD shifts left; P and Y both fall.",
+      "\"Expansionary\" and \"contractionary\" describe the effect on equilibrium output."
+     ],
+     "ref": "p.43–44",
+     "id": "g12.economics.u2.s2-3.14"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Figure 2.8",
+     "paras": [
+      "AD₀ meets AS at E₀ (Y₀, P₀).",
+      "AD shifts right to AD₁.",
+      "New equilibrium E₁ (Y₁, P₁): Y₁ > Y₀ and P₁ > P₀.",
+      "Demand shocks move P and Y in the same direction."
+     ],
+     "ref": "Figure 2.8, p.44",
+     "id": "g12.economics.u2.s2-3.15"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Worked example: government spending rises",
+     "steps": [
+      "Start: Qd = 1000 − 200P, Qs = 200 + 200P; Pₑ = 2, Qₑ = 600.",
+      "G adds 200 at every price level: Qd = 1200 − 200P.",
+      "1200 − 200P = 200 + 200P → 1000 = 400P → P = 2.5.",
+      "Q = 200 + 200 × 2.5 = 700.",
+      "P rises 2 → 2.5 and Y rises 600 → 700: same direction.",
+      "Y rises by 100, not 200: higher prices absorb part of the shift."
+     ],
+     "added": true,
+     "id": "g12.economics.u2.s2-3.16"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Demand shock",
+       "An unexpected shift of the AD curve; it moves the price level and real GDP in the same direction."
+      ],
+      [
+       "Expansionary shock",
+       "A shock that raises equilibrium output (e.g. AD shifts right)."
+      ],
+      [
+       "Contractionary shock",
+       "A shock that lowers equilibrium output (e.g. AD shifts left)."
+      ]
+     ],
+     "id": "g12.economics.u2.s2-3.17"
+    },
+    {
+     "kind": "mcq",
+     "text": "An expansionary demand shock makes the price level and real GDP",
+     "opts": [
+      "both rise",
+      "both fall",
+      "P rise and Y fall",
+      "P fall and Y rise"
+     ],
+     "ans": "both rise",
+     "why": "AD shifts right along an upward SRAS (Figure 2.8).",
+     "clue": "Same direction or opposite?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Figure 2.8",
+     "id": "g12.economics.u2.s2-3.18"
+    },
+    {
+     "kind": "pick",
+     "text": "Which are demand shocks?",
+     "pool": [
+      "Government raises spending on roads",
+      "Income taxes rise sharply",
+      "Foreign incomes fall, so exports fall",
+      "A drought destroys crops",
+      "Oil prices jump"
+     ],
+     "a": [
+      "Government raises spending on roads",
+      "Income taxes rise sharply",
+      "Foreign incomes fall, so exports fall"
+     ],
+     "why": "These change spending (G, C, X), so AD shifts. Drought and oil prices change costs and supply.",
+     "clue": "Does it change spending or production costs?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.43–44",
+     "id": "g12.economics.u2.s2-3.19"
+    },
+    {
+     "kind": "blank",
+     "ask": "Start: Qd = 1000 − 200P, Qs = 200 + 200P. Spending falls by 200 at every price level (Qd = 800 − 200P). New price level = ___",
+     "a": [
+      "1.5"
+     ],
+     "why": "800 − 200P = 200 + 200P → 600 = 400P → P = 1.5.",
+     "clue": "Set the new Qd equal to Qs.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.economics.u2.s2-3.20"
+    },
+    {
+     "kind": "blank",
+     "ask": "In that case (Qd = 800 − 200P, Qs = 200 + 200P) new real GDP = ___ billion Birr",
+     "a": [
+      "500"
+     ],
+     "why": "Q = 200 + 200 × 1.5 = 500. P and Y both fell: a contractionary demand shock.",
+     "clue": "Put P = 1.5 into Qs.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.economics.u2.s2-3.21"
+    },
+    {
+     "kind": "tf",
+     "text": "A contractionary demand shock lowers both the price level and real GDP.",
+     "a": true,
+     "why": "AD shifts left: P ↓ and Y ↓.",
+     "clue": "Demand shocks move P and Y together.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.44",
+     "id": "g12.economics.u2.s2-3.22"
+    },
+    {
+     "kind": "mcq",
+     "text": "In the worked example, AD shifted right by 200 but real GDP rose by only 100. Why?",
+     "opts": [
+      "Part of the shift raised the price level instead of output",
+      "Government spending does not count in AD",
+      "SRAS shifted left at the same time",
+      "Imports fell"
+     ],
+     "ans": "Part of the shift raised the price level instead of output",
+     "why": "Along an upward SRAS, the higher price level cuts quantity demanded, so output rises less than the shift.",
+     "clue": "What else changed besides output?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.economics.u2.s2-3.23"
+    }
+   ]
+  },
+  {
+   "id": "eco.supply-shocks",
+   "name": "Shocks to aggregate supply",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "A supply shock shifts the SRAS curve and moves the price level and real GDP in opposite directions. Better technology or more labour or capital shifts SRAS right: P falls and Y rises. A storm that destroys crops or a rise in the price of oil shifts SRAS left: P rises and Y falls, which is called stagflation (Figure 2.9)."
+    },
+    "am": {
+     "text": "የአቅርቦት ድንገተኛ ለውጥ ዋጋና ምርትን በተቃራኒ አቅጣጫ ያንቀሳቅሳል። የነዳጅ ዋጋ ሲጨምር ዋጋ ይጨምራል፣ ምርት ይቀንሳል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Oil price jump",
+     "ask": "The world price of oil suddenly doubles. Ethiopia imports all its fuel. What happens to the price level and real GDP?",
+     "opts": [
+      "Prices rise and output falls",
+      "Both rise",
+      "Both fall",
+      "Prices fall and output rises"
+     ],
+     "after": "Costs rise, so SRAS shifts left: prices up, output down. Supply shocks move P and Y in opposite directions.",
+     "id": "g12.economics.u2.s2-3.24"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Supply shocks",
+     "paras": [
+      "Supply shocks move P and Y in opposite directions.",
+      "Positive: better technology, more labour or capital → SRAS right.",
+      "Negative: a storm destroys crops, or imported inputs like oil are cut off → SRAS left.",
+      "Example: the price of oil rises; SRAS₁ shifts left to SRAS₂.",
+      "Equilibrium moves from A (Y₁, P₁) to B (Y₂, P₂): output falls, price level rises (Figure 2.9)."
+     ],
+     "ref": "p.44–45, Figure 2.9",
+     "id": "g12.economics.u2.s2-3.25"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Comparing shocks",
+     "paras": [
+      "Demand shocks: same direction. Supply shocks: opposite directions."
+     ],
+     "table": [
+      [
+       "Shock",
+       "Curve",
+       "Price level",
+       "Real GDP"
+      ],
+      [
+       "Expansionary demand",
+       "AD right",
+       "↑",
+       "↑"
+      ],
+      [
+       "Contractionary demand",
+       "AD left",
+       "↓",
+       "↓"
+      ],
+      [
+       "Positive supply",
+       "SRAS right",
+       "↓",
+       "↑"
+      ],
+      [
+       "Negative supply",
+       "SRAS left",
+       "↑",
+       "↓"
+      ]
+     ],
+     "ref": "Activity 2.3 Q2",
+     "id": "g12.economics.u2.s2-3.26"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Worked example: an oil price shock",
+     "steps": [
+      "Start: Qd = 1000 − 200P, Qs = 200 + 200P; P = 2, Q = 600.",
+      "Oil cuts supply by 200 at every price level: Qs = 200P.",
+      "1000 − 200P = 200P → 1000 = 400P → P = 2.5.",
+      "Q = 200 × 2.5 = 500.",
+      "P rises 2 → 2.5 while Y falls 600 → 500: opposite directions."
+     ],
+     "added": true,
+     "id": "g12.economics.u2.s2-3.27"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Supply shock",
+       "An unexpected shift of the AS curve; it moves the price level and real GDP in opposite directions."
+      ],
+      [
+       "Stagflation",
+       "A rising price level together with falling output, as after a negative supply shock."
+      ]
+     ],
+     "id": "g12.economics.u2.s2-3.28"
+    },
+    {
+     "kind": "mcq",
+     "text": "A negative supply shock causes",
+     "opts": [
+      "a higher price level and lower output",
+      "a lower price level and higher output",
+      "a higher price level and higher output",
+      "a lower price level and lower output"
+     ],
+     "ans": "a higher price level and lower output",
+     "why": "SRAS shifts left along a fixed AD (Figure 2.9, A → B).",
+     "clue": "Supply shocks move P and Y in opposite directions.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Figure 2.9",
+     "id": "g12.economics.u2.s2-3.29"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Demand shock or supply shock?",
+     "bins": [
+      "Demand shock",
+      "Supply shock"
+     ],
+     "items": [
+      [
+       "Expansionary fiscal policy",
+       "Demand shock",
+       "G or taxes"
+      ],
+      [
+       "A storm destroys crops",
+       "Supply shock",
+       "output lost"
+      ],
+      [
+       "Imports of oil are interrupted",
+       "Supply shock",
+       "input"
+      ],
+      [
+       "Foreign incomes rise",
+       "Demand shock",
+       "exports"
+      ],
+      [
+       "New production technology",
+       "Supply shock",
+       "productivity"
+      ],
+      [
+       "Expansionary monetary policy",
+       "Demand shock",
+       "interest rates"
+      ]
+     ],
+     "why": "Spending changes shift AD; cost, resource and technology changes shift SRAS.",
+     "clue": "Spending or production?",
+     "ref": "p.43–44",
+     "graded": true,
+     "level": 1,
+     "id": "g12.economics.u2.s2-3.30"
+    },
+    {
+     "kind": "match",
+     "title": "Match each shock with its effect",
+     "pairs": [
+      [
+       "Expansionary demand shock",
+       "P ↑ and Y ↑"
+      ],
+      [
+       "Contractionary demand shock",
+       "P ↓ and Y ↓"
+      ],
+      [
+       "Negative supply shock",
+       "P ↑ and Y ↓"
+      ],
+      [
+       "Positive supply shock",
+       "P ↓ and Y ↑"
+      ]
+     ],
+     "why": "Demand: same direction. Supply: opposite directions.",
+     "clue": "Which curve moves, and which way?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 2.3 Q2",
+     "id": "g12.economics.u2.s2-3.31"
+    },
+    {
+     "kind": "blank",
+     "ask": "Start: Qd = 1000 − 200P, Qs = 200 + 200P. New technology adds 200 to supply (Qs = 400 + 200P). New price level = ___",
+     "a": [
+      "1.5"
+     ],
+     "why": "1000 − 200P = 400 + 200P → 600 = 400P → P = 1.5; Q = 700. P falls, Y rises: a positive supply shock.",
+     "clue": "Set Qd equal to the new Qs.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.economics.u2.s2-3.32"
+    },
+    {
+     "kind": "mcq",
+     "text": "Spot the mistake. The book says an oil shock causes \"an increase in price from Y₁ to Y₂\". It should say",
+     "opts": [
+      "an increase in the price level from P₁ to P₂",
+      "an increase in output from Y₁ to Y₂",
+      "a fall in the price level from P₂ to P₁",
+      "a fall in AD"
+     ],
+     "ans": "an increase in the price level from P₁ to P₂",
+     "why": "Y is output and P is the price level. In Figure 2.9 output falls Y₁ → Y₂ and the price level rises P₁ → P₂.",
+     "clue": "Which letter stands for the price level?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.44",
+     "id": "g12.economics.u2.s2-3.33"
+    },
+    {
+     "kind": "mcq",
+     "text": "Ethiopian prices rise and real GDP falls at the same time. Which event best explains this?",
+     "opts": [
+      "A drought cuts harvests",
+      "The government raises spending",
+      "The Birr depreciates and exports rise",
+      "Income taxes are cut"
+     ],
+     "ans": "A drought cuts harvests",
+     "why": "P ↑ with Y ↓ is the sign of a negative supply shock (stagflation). The other three shift AD right and raise both P and Y.",
+     "clue": "Opposite directions point to which kind of shock?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.economics.u2.s2-3.34"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Short-run equilibrium is where",
+   "opts": [
+    "AD crosses SRAS",
+    "AD crosses the vertical axis",
+    "SRAS is highest",
+    "AD is highest"
+   ],
+   "ans": "AD crosses SRAS",
+   "why": "p.43.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.economics.u2.s2-3.35"
+  },
+  {
+   "kind": "mcq",
+   "text": "Below the equilibrium price level there is",
+   "opts": [
+    "a shortage",
+    "a surplus",
+    "equilibrium",
+    "no demand"
+   ],
+   "ans": "a shortage",
+   "why": "Figure 2.6 at P₂.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.economics.u2.s2-3.36"
+  },
+  {
+   "kind": "mcq",
+   "text": "A negative supply shock moves the price level and real GDP",
+   "opts": [
+    "P up, Y down",
+    "both up",
+    "both down",
+    "P down, Y up"
+   ],
+   "ans": "P up, Y down",
+   "why": "Figure 2.9.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.economics.u2.s2-3.37"
+  },
+  {
+   "kind": "blank",
+   "ask": "Qd = 1100 − 200P and Qs = 300 + 200P. Pₑ = ___",
+   "a": [
+    "2"
+   ],
+   "why": "800 = 400P → P = 2.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "added": true,
+   "id": "g12.economics.u2.s2-3.38"
+  },
+  {
+   "kind": "mcq",
+   "text": "Real GDP and the price level both fall. The most likely cause is",
+   "opts": [
+    "a contractionary demand shock",
+    "a negative supply shock",
+    "a positive supply shock",
+    "an expansionary demand shock"
+   ],
+   "ans": "a contractionary demand shock",
+   "why": "Same-direction changes come from AD shifts.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.economics.u2.s2-3.39"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.44: \"an increase in price from Y₁ to Y₂\" should be \"an increase in the price level from P₁ to P₂\", and \"shift … from SRAS\" should be \"from SRAS₁ to SRAS₂\". The text never cites Figure 2.9, which it describes."
+  },
+  {
+   "kind": "review",
+   "text": "p.42: \"how the market price of a product is determined\" should be \"how the general price level and real GDP are determined\". Figure 2.6 labels the AD curve \"Short-run Aggregate Demand\"; there is only one AD curve."
+  },
+  {
+   "kind": "note",
+   "text": "The linear model (Qd = 1000 − 200P, Qs = 200 + 200P), its shocks, both sliders and the numeric items are added for practice; they follow the book's figures."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

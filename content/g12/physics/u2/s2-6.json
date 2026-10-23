@@ -353,7 +353,188 @@
    "chapter_test": true,
    "count": 20,
    "minutes": 25,
-   "items": []
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "Equilibrium is the state of an object when",
+     "opts": [
+      "A. the net force acting on it is constant.",
+      "B. the object has a constant linear acceleration.",
+      "C. the net force and net torque are both zero.",
+      "D. the object has constant angular acceleration."
+     ],
+     "ans": "C. the net force and net torque are both zero.",
+     "why": "First condition (translational equilibrium): ΣF = 0, so no linear acceleration. Second condition (rotational equilibrium): Στ = 0 about any axis, so no angular acceleration. An object is in (full) equilibrium only when both hold: net force = 0 and net torque = 0. A constant non-zero net force (A) gives constant acceleration; B and D describe accelerating objects, so they are not in equilibrium.",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "EUEE 2013 Physics Q11",
+     "id": "g12.physics.u2.s2-6.18"
+    },
+    {
+     "kind": "mcq",
+     "text": "The fulcrum of a uniform 20 kg seesaw that is 4.0 m long is located 2.5 m from one end. A 30 kg child sits on the long end. The weight of a person sitting on the other end in order to balance the seesaw is (g = 10 m/s²)",
+     "opts": [
+      "A. 750 N",
+      "B. 850 N",
+      "C. 433 N",
+      "D. 567 N"
+     ],
+     "ans": "D. 567 N",
+     "why": "Long side = 2.5 m, short side = 4.0 − 2.5 = 1.5 m. The seesaw's weight (20 × 10 = 200 N) acts at its centre, 2.0 m from the end, i.e. 2.5 − 2.0 = 0.5 m from the fulcrum on the long side. Torque on the long side: (30 × 10 N)(2.5 m) + (200 N)(0.5 m) = 750 + 100 = 850 N·m. Balance: W × 1.5 m = 850 N·m → W = 850 ÷ 1.5 ≈ 567 N. 750 N ignores the seesaw's own weight and uses the wrong arm; 850 N is the torque value, not a force; 433 N comes from wrong lever arms.",
+     "clue": "",
+     "graded": true,
+     "level": 3,
+     "step": "test",
+     "ref": "EUEE 2013 Physics Q12",
+     "id": "g12.physics.u2.s2-6.19"
+    },
+    {
+     "kind": "mcq",
+     "text": "For a rigid body rotating about a fixed axis,",
+     "opts": [
+      "A. a point closer to the axis has smaller linear speed than a point farther from the axis.",
+      "B. a point closer to the axis has greater linear speed than a point farther from the axis.",
+      "C. for the same time interval, a point closer to the axis and a point farther from the axis travel the same linear distance.",
+      "D. for the same time interval, a point closer to the axis turns through a smaller angle than a point farther from the axis."
+     ],
+     "ans": "A. a point closer to the axis has smaller linear speed than a point farther from the axis.",
+     "why": "In a rigid body every point has the same angular displacement θ and angular speed ω. Linear speed v = ωr, so v grows with distance r from the axis. So a point nearer the axis has smaller linear speed. B reverses v = ωr; C is wrong because arc length s = rθ depends on r; D is wrong because all points turn through the same angle.",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "EUEE 2013 Physics Q28",
+     "id": "g12.physics.u2.s2-6.20"
+    },
+    {
+     "kind": "mcq",
+     "text": "A disk of radius 0.10 m and mass 0.1 kg is set into motion by a tangential force of 2.0 N applied at the edge of the disk. If the angular acceleration of the disk is 400 rad/s², the torque and angular velocity at 2.0 s are, respectively (the disk starts from rest)",
+     "opts": [
+      "A. 0.2 N·m and 400 rad/s",
+      "B. 0.1 N·m and 200 rad/s",
+      "C. 0.5 N·m and 100 rad/s",
+      "D. 0.2 N·m and 800 rad/s"
+     ],
+     "ans": "D. 0.2 N·m and 800 rad/s",
+     "why": "Tangential force at the rim: τ = F r = 2.0 N × 0.10 m = 0.20 N·m. Check: I = ½mr² = ½(0.1)(0.10)² = 5×10⁻⁴ kg·m², α = τ/I = 0.20 ÷ 5×10⁻⁴ = 400 rad/s² (agrees). Starting from rest: ω = ω₀ + αt = 0 + 400 × 2.0 = 800 rad/s. A uses t = 1 s; B and C use wrong torques (τ ≠ 0.1 or 0.5 N·m).",
+     "clue": "",
+     "graded": true,
+     "level": 3,
+     "step": "test",
+     "ref": "EUEE 2013 Physics Q29",
+     "id": "g12.physics.u2.s2-6.21"
+    },
+    {
+     "kind": "mcq",
+     "text": "Choose a correct statement about centripetal force and centripetal acceleration.",
+     "opts": [
+      "A. Centripetal force on an object moving in a circular path is perpendicular to the radius of the path.",
+      "B. Centripetal force on an object moving in a circular path tends to pull the object outward from the path.",
+      "C. For an object moving in a circular path, its centripetal force and centripetal acceleration are parallel and directed toward the center of the path.",
+      "D. Centripetal acceleration and centripetal force are constant in direction, but vary in magnitude."
+     ],
+     "ans": "C. For an object moving in a circular path, its centripetal force and centripetal acceleration are parallel and directed toward the center of the path.",
+     "why": "Centripetal acceleration a_c = v²/r points toward the centre. By Newton's 2nd law F_c = m a_c, so the force points the same way: both are along the radius, toward the centre. A is wrong (they are along the radius, perpendicular to the velocity); B describes an outward pull, which is wrong; D is wrong because their direction changes continuously while (in uniform motion) the magnitude is constant.",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "EUEE 2013 Physics Q39",
+     "id": "g12.physics.u2.s2-6.22"
+    },
+    {
+     "kind": "mcq",
+     "text": "According to Newton's law of Universal Gravitation,",
+     "opts": [
+      "A. the period of a satellite orbiting the Earth in a circular orbit increases as the radius of its orbit increases.",
+      "B. the gravitational attraction between two objects is directly proportional to the square of the distance between them.",
+      "C. the speed of a satellite moving around the Earth in a circular orbit depends on the mass of the satellite.",
+      "D. for two interacting objects, the gravitational force exerted on a light object is less than the force on the heavy one."
+     ],
+     "ans": "A. the period of a satellite orbiting the Earth in a circular orbit increases as the radius of its orbit increases.",
+     "why": "For a circular orbit, gravity gives the centripetal force: GMm/r² = mv²/r → v = √(GM/r). Period T = 2πr/v = 2π√(r³/GM), so T² ∝ r³ (Kepler's third law): T increases as r increases. B is wrong: F ∝ 1/r² (inverse square). C is wrong: v = √(GM/r) does not contain m. D is wrong: by Newton's third law the forces on the two objects are equal in size.",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "EUEE 2013 Physics Q40",
+     "id": "g12.physics.u2.s2-6.23"
+    },
+    {
+     "kind": "mcq",
+     "text": "A wheel rotating at angular speed of 20 rev/s is brought to rest after 40 rev under a constant angular acceleration. The angular acceleration of a point on the wheel is",
+     "opts": [
+      "A. −0.5 rev/s²",
+      "B. 0.25 rev/s²",
+      "C. 5 rev/s²",
+      "D. −5 rev/s²"
+     ],
+     "ans": "D. −5 rev/s²",
+     "why": "Given ω₀ = 20 rev/s, ω = 0, Δθ = 40 rev; time is not given, so use ω² = ω₀² + 2αΔθ. 0 = (20)² + 2α(40) → 80α = −400. α = −5 rev/s² (negative: the wheel is slowing down). C has the right size but the wrong sign; A and B come from wrong formulas (e.g. dividing ω₀ by Δθ).",
+     "clue": "",
+     "graded": true,
+     "level": 3,
+     "step": "test",
+     "ref": "ESSLCE 2014 Physics Q2",
+     "id": "g12.physics.u2.s2-6.24"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which of the following is true about satellite motion?",
+     "opts": [
+      "A. For equal orbital radius, a satellite moving around the Earth has smaller speed than a satellite moving about the Moon.",
+      "B. A satellite closer to the Earth is faster than a satellite farther from the Earth.",
+      "C. A satellite closer to the Earth takes longer time to complete one revolution than a satellite farther from the Earth.",
+      "D. For two satellites moving around the Earth at equal orbital radius, a heavier satellite has larger speed than a lighter one."
+     ],
+     "ans": "B. A satellite closer to the Earth is faster than a satellite farther from the Earth.",
+     "why": "Gravity provides the centripetal force: GMm/r² = mv²/r → v = √(GM/r). Smaller r → larger v, so a closer satellite is faster (B). A is wrong: Earth's mass M is larger than the Moon's, so at equal r the Earth satellite is faster. C is wrong: T = 2π√(r³/GM) is shorter for smaller r. D is wrong: v does not depend on the satellite's mass m.",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "ESSLCE 2014 Physics Q17",
+     "id": "g12.physics.u2.s2-6.25"
+    },
+    {
+     "kind": "mcq",
+     "text": "A torque τ rotates an object of mass m and moment of inertia I through an angle θ. The work done on the object by the torque is",
+     "opts": [
+      "A. τθ",
+      "B. τd",
+      "C. Iθ",
+      "D. mθ"
+     ],
+     "ans": "A. τθ",
+     "why": "Linear work: W = F s, with s = rθ for a force applied tangentially at radius r. W = F rθ = (F r)θ = τθ (θ in radians). B mixes torque with a linear distance; C (Iθ) and D (mθ) do not have units of energy.",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "ESSLCE 2014 Physics Q32",
+     "id": "g12.physics.u2.s2-6.26"
+    },
+    {
+     "kind": "mcq",
+     "text": "A 30 kg rigid object has a moment of inertia 45 kg·m² about its center of mass. What is the object's moment of inertia when it rotates through an axis 2 m away and parallel to the axis through its center of mass?",
+     "opts": [
+      "A. 90 kg·m²",
+      "B. 165 kg·m²",
+      "C. 180 kg·m²",
+      "D. 105 kg·m²"
+     ],
+     "ans": "B. 165 kg·m²",
+     "why": "Parallel-axis theorem: I = I_cm + Md². Md² = 30 kg × (2 m)² = 120 kg·m². I = 45 + 120 = 165 kg·m². D uses d instead of d² (45 + 60); A is 2 × 45; C is 45 × 4 (squares the wrong quantity).",
+     "clue": "",
+     "graded": true,
+     "level": 3,
+     "step": "test",
+     "ref": "ESSLCE 2015 Physics Q4",
+     "id": "g12.physics.u2.s2-6.27"
+    }
+   ]
   }
  ],
  "test": [
@@ -369,7 +550,7 @@
    "graded": true,
    "level": 1,
    "step": "test",
-   "id": "g12.physics.u2.s2-6.18"
+   "id": "g12.physics.u2.s2-6.28"
   },
   {
    "kind": "mcq",
@@ -386,7 +567,7 @@
    "graded": true,
    "level": 1,
    "step": "test",
-   "id": "g12.physics.u2.s2-6.19"
+   "id": "g12.physics.u2.s2-6.29"
   },
   {
    "kind": "blank",
@@ -400,7 +581,7 @@
    "graded": true,
    "level": 1,
    "step": "test",
-   "id": "g12.physics.u2.s2-6.20"
+   "id": "g12.physics.u2.s2-6.30"
   },
   {
    "kind": "blank",
@@ -414,7 +595,7 @@
    "graded": true,
    "level": 2,
    "step": "test",
-   "id": "g12.physics.u2.s2-6.21"
+   "id": "g12.physics.u2.s2-6.31"
   },
   {
    "kind": "blank",
@@ -428,7 +609,7 @@
    "graded": true,
    "level": 3,
    "step": "test",
-   "id": "g12.physics.u2.s2-6.22"
+   "id": "g12.physics.u2.s2-6.32"
   }
  ],
  "notes": [
@@ -442,7 +623,7 @@
   },
   {
    "kind": "note",
-   "text": "No national-exam (ESSLCE) physics bank yet; the chapter test draws from the five section tests."
+   "text": "The chapter test mixes section-test items with past national-exam (EUEE 2013, ESSLCE 2014–2015) questions; items whose key we dispute are left out."
   }
  ],
  "review": {
