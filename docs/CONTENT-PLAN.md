@@ -16,7 +16,7 @@ G7: Maths U1–3, Citizenship U1–3, CTE U1–3, Science U2–3, Social U2–3 
 | 8 | **built** | **built** | built U1–2: Science U1–2, Social U1–2, Citizenship U1–2, English U1–2, IT U1–2, CTE U1–2, Amharic U1–2 · todo: — |
 | 7 (session A) | **built** | **built** | built: maths U1, maths U2, maths U3, citizenship U1, citizenship U2, citizenship U3, cte U1, cte U2, cte U3, science U2, science U3, social U2, social U3 · todo: — |
 | 6 | todo | todo | English, Science (Amharic) |
-| 5 | **built** | **built** | built: — · todo: Science, English, Amharic |
+| 5 | **built** | **built** | built: Science U1 · todo: Science U2, English, Amharic |
 | 9 | U1 older version exists (rebuild queued) | todo | Physics, Biology, English, Geography, History, Economics, Citizenship, IT, HPE, PVA, Amharic queued. Chemistry: book missing |
 
 ## Pipeline (each stage done once)

@@ -1,0 +1,516 @@
+{
+ "id": "g5.science.u1.s1-2",
+ "book": {
+  "title": "የአካባቢ ሳይንስ 5ኛ ክፍል",
+  "grade": 5,
+  "subject": "science",
+  "unit": 1,
+  "unit_title": "የኢትዮጵያ መገኛ",
+  "pages": "4–7",
+  "section": "1.2"
+ },
+ "title": "የኢትዮጵያ አንጻራዊና ፍጹማዊ መገኛ",
+ "competency": "የኢትዮጵያን አንጻራዊና ፍጹማዊ መገኛ በካርታ ላይ ማመልከት።",
+ "minutes": 16,
+ "keywords": [
+  {
+   "en": "direction",
+   "am": "አቅጣጫ",
+   "def": "ሰሜን፣ ደቡብ፣ ምሥራቅ፣ ምዕራብ እና በመካከላቸው ያሉት፤ አንድ ቦታ በየት በኩል እንዳለ ያሳያል።",
+   "machine": true
+  },
+  {
+   "en": "latitude",
+   "am": "ኬክሮስ",
+   "def": "ከወገብ ዛቢያ ወደ ሰሜንና ወደ ደቡብ ያለውን ርቀት በዲግሪ የሚያሳዩ ከምሥራቅ ወደ ምዕራብ የተዘረጉ ምናባዊ መስመሮች።",
+   "machine": true
+  },
+  {
+   "en": "longitude",
+   "am": "ኬንትሮስ",
+   "def": "ከመነሻ ኬንትሮስ ወደ ምሥራቅና ወደ ምዕራብ ያለውን ርቀት በዲግሪ የሚያሳዩ ከሰሜን ዋልታ ወደ ደቡብ ዋልታ የተዘረጉ ምናባዊ መስመሮች።",
+   "machine": true
+  },
+  {
+   "en": "landlocked",
+   "am": "የባህር በር የሌላት",
+   "def": "በሁሉም አቅጣጫ በመሬት የተከበበ፣ ወደ ባህር መውጫ የሌለው ሀገር።",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "sci.g5-ethiopia-relative",
+   "name": "የኢትዮጵያ አንጻራዊ መገኛ",
+   "explain": {
+    "en": {
+     "text": "Ethiopia shares borders with countries in every direction, so it has no sea outlet: it is landlocked. Its relative location is described using its neighbours: Eritrea is to the north, Djibouti to the north-east, Somalia to the east and south-east, Kenya to the south, South Sudan to the west and Sudan to the north-west."
+    },
+    "am": {
+     "text": "ኢትዮጵያ በስድስት ሀገራት ትዋሰናለች፤ የባህር በር የላትም። ኤርትራ በሰሜን፣ ጂቡቲ በሰሜን ምሥራቅ፣ ሶማሊያ በምሥራቅ፣ ኬንያ በደቡብ፣ ደቡብ ሱዳን በምዕራብ፣ ሱዳን በሰሜን ምዕራብ ናቸው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "የባህር በር",
+     "ask": "ኢትዮጵያ በሁሉም አቅጣጫ በመሬት ከተከበበች ምን ማለት ነው?",
+     "opts": [
+      "የባህር በር የላትም",
+      "ደሴት ናት",
+      "በባህር ተከባለች",
+      "ጎረቤት የላትም"
+     ],
+     "after": "በሁሉም አቅጣጫ በመሬት ስለምትዋሰን የባህር በር የላትም።",
+     "ref": "ገጽ 5",
+     "machine": true,
+     "id": "g5.science.u1.s1-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "የኢትዮጵያ አንጻራዊ መገኛ",
+     "paras": [
+      "ኢትዮጵያ በተለያዩ አቅጣጫዎች በተለያዩ ሀገራት ትዋሰናለች። በእነዚህ ሀገራት በመጠቀም የኢትዮጵያን አንጻራዊ መገኛ መግለጽ ይቻላል።",
+      "ኢትዮጵያ በሁሉም አቅጣጫዎች በመሬት በመዋሰኗ የባህር በር የላትም።",
+      "በሁሉም አቅጣጫ በውሃ ክፍል የተከበበ አካባቢ ደሴት ይባላል።"
+     ],
+     "table": [
+      [
+       "ሀገር",
+       "ከኢትዮጵያ በየት በኩል?"
+      ],
+      [
+       "ኤርትራ",
+       "በሰሜን"
+      ],
+      [
+       "ጂቡቲ",
+       "በሰሜን ምሥራቅ"
+      ],
+      [
+       "ሶማሊያ",
+       "በምሥራቅና በደቡብ ምሥራቅ"
+      ],
+      [
+       "ኬንያ",
+       "በደቡብ"
+      ],
+      [
+       "ደቡብ ሱዳን",
+       "በምዕራብ"
+      ],
+      [
+       "ሱዳን",
+       "በሰሜን ምዕራብ"
+      ]
+     ],
+     "note": "ሰንጠረዡ ከስዕል 1.1 ካርታ የተወሰደ ነው።",
+     "ref": "ገጽ 5",
+     "machine": true,
+     "id": "g5.science.u1.s1-2.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "ቁልፍ ቃላት",
+     "defs": [
+      [
+       "አቅጣጫ",
+       "ሰሜን፣ ደቡብ፣ ምሥራቅ፣ ምዕራብ እና በመካከላቸው ያሉት፤ አንድ ቦታ በየት በኩል እንዳለ ያሳያል።"
+      ],
+      [
+       "የባህር በር የሌላት",
+       "በሁሉም አቅጣጫ በመሬት የተከበበ፣ ወደ ባህር መውጫ የሌለው ሀገር።"
+      ]
+     ],
+     "id": "g5.science.u1.s1-2.3"
+    },
+    {
+     "kind": "match",
+     "step": "check",
+     "graded": true,
+     "text": "እያንዳንዱ ሀገር ከኢትዮጵያ በየትኛው አቅጣጫ ይገኛል?",
+     "pairs": [
+      [
+       "ኤርትራ",
+       "በሰሜን"
+      ],
+      [
+       "ኬንያ",
+       "በደቡብ"
+      ],
+      [
+       "ጂቡቲ",
+       "በሰሜን ምሥራቅ"
+      ],
+      [
+       "ደቡብ ሱዳን",
+       "በምዕራብ"
+      ]
+     ],
+     "why": "ስዕል 1.1።",
+     "clue": "ካርታውን አስቡ፤ ሰሜን ከላይ ነው።",
+     "level": 1,
+     "machine": true,
+     "id": "g5.science.u1.s1-2.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "ኢትዮጵያን በደቡብ አቅጣጫ የሚያዋስናት ሀገር ማን ናት?",
+     "opts": [
+      "ኬንያ",
+      "ኤርትራ",
+      "ጂቡቲ",
+      "ሱዳን"
+     ],
+     "ans": "ኬንያ",
+     "why": "ኢትዮጵያ ከኬንያ በስተሰሜን ትገኛለች፤ ስለዚህ ኬንያ በደቡብ ናት።",
+     "clue": "ከታች ያለችው።",
+     "level": 1,
+     "ref": "1.2 መልመጃ Q2",
+     "id": "g5.science.u1.s1-2.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "ከኢትዮጵያ በስተ ደቡብ ምሥራቅ የምትገኝ ሀገር ማን ናት?",
+     "opts": [
+      "ሶማሊያ",
+      "ሱዳን",
+      "ኤርትራ",
+      "ደቡብ ሱዳን"
+     ],
+     "ans": "ሶማሊያ",
+     "why": "በካርታው ሶማሊያ በምሥራቅና በደቡብ ምሥራቅ ናት።",
+     "clue": "የአፍሪካ ቀንድ ጫፍ።",
+     "level": 1,
+     "ref": "1.2 መልመጃ Q4",
+     "id": "g5.science.u1.s1-2.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "«ኢትዮጵያ ከኤርትራ በስተደቡብ ትገኛለች።» ስለዚህ ኤርትራ ከኢትዮጵያ በየት በኩል ናት?",
+     "opts": [
+      "በሰሜን",
+      "በደቡብ",
+      "በምሥራቅ",
+      "በምዕራብ"
+     ],
+     "ans": "በሰሜን",
+     "why": "አቅጣጫው ይገለበጣል፤ ሀ ከለ በስተደቡብ ከሆነ ለ ከሀ በስተሰሜን ነው።",
+     "clue": "ተገላብጦ ይታያል።",
+     "level": 2,
+     "machine": true,
+     "id": "g5.science.u1.s1-2.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "ካርቱም (የሱዳን ዋና ከተማ) ከኢትዮጵያ በየትኛው አቅጣጫ ትገኛለች?",
+     "opts": [
+      "በሰሜን ምዕራብ",
+      "በደቡብ ምሥራቅ",
+      "በደቡብ",
+      "በምሥራቅ"
+     ],
+     "ans": "በሰሜን ምዕራብ",
+     "why": "ሱዳን ከኢትዮጵያ በላይኛው ግራ (ሰሜን ምዕራብ) ናት፤ ካርቱም የሱዳን ዋና ከተማ ናት።",
+     "clue": "ሱዳን የት ናት?",
+     "level": 3,
+     "ref": "ገጽ 5 ጥያቄ",
+     "added": true,
+     "id": "g5.science.u1.s1-2.8"
+    }
+   ]
+  },
+  {
+   "id": "sci.g5-ethiopia-absolute",
+   "name": "የኢትዮጵያ ፍጹማዊ መገኛ",
+   "requires": [
+    "sci.g5-ethiopia-relative"
+   ],
+   "explain": {
+    "en": {
+     "text": "Ethiopia's absolute location is from 3° to 15° north latitude and from 33° to 48° east longitude. So from north to south it spans 15 − 3 = 12 degrees of latitude, and from west to east 48 − 33 = 15 degrees of longitude."
+    },
+    "am": {
+     "text": "የኢትዮጵያ ፍጹማዊ መገኛ ከ3° እስከ 15° ሰሜን ኬክሮስ እና ከ33° እስከ 48° ምሥራቅ ኬንትሮስ ነው፤ 12 ዲግሪ ኬክሮስ እና 15 ዲግሪ ኬንትሮስ ትሸፍናለች።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "ሰሜንና ምሥራቅ",
+     "ask": "የኢትዮጵያ ፍጹማዊ መገኛ «ሰሜን» እና «ምሥራቅ» የሚሉ ቃላትን ይጠቀማል። ይህ ኢትዮጵያ ከወገብ ዛቢያና ከመነሻ ኬንትሮስ በየት በኩል መሆኗን ያሳያል?",
+     "opts": [
+      "ከወገብ ዛቢያ በሰሜን፣ ከመነሻ ኬንትሮስ በምሥራቅ",
+      "ከወገብ ዛቢያ በደቡብ",
+      "ከመነሻ ኬንትሮስ በምዕራብ",
+      "በወገብ ዛቢያ ላይ"
+     ],
+     "after": "ዲግሪ ሰሜን = ከወገብ ዛቢያ በሰሜን፤ ዲግሪ ምሥራቅ = ከመነሻ ኬንትሮስ በምሥራቅ።",
+     "added": true,
+     "machine": true,
+     "id": "g5.science.u1.s1-2.9"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "የኢትዮጵያ ፍጹማዊ መገኛ",
+     "paras": [
+      "የኢትዮጵያ ፍጹማዊ መገኛ ከ3 ዲግሪ ሰሜን እስከ 15 ዲግሪ ሰሜን እንዲሁም ከ33 ዲግሪ ምሥራቅ እስከ 48 ዲግሪ ምሥራቅ ነው።",
+      "ስለዚህ ከሰሜን እስከ ደቡባዊ ጫፍ 12 ዲግሪ የኬክሮስ፣ ከምሥራቃዊ ጫፍ እስከ ምዕራባዊ ጫፍ 15 ዲግሪ የኬንትሮስ ርዝመት አላት።"
+     ],
+     "ref": "ገጽ 6",
+     "id": "g5.science.u1.s1-2.10"
+    },
+    {
+     "kind": "coord",
+     "min": 32,
+     "max": 48,
+     "ymin": 2,
+     "ymax": 16,
+     "lines": [
+      {
+       "x": 33,
+       "label": "33°"
+      },
+      {
+       "x": 48,
+       "label": "48°"
+      },
+      {
+       "m": 0,
+       "b": 3,
+       "label": "3°ሰ",
+       "at": 44
+      },
+      {
+       "m": 0,
+       "b": 15,
+       "label": "15°ሰ",
+       "at": 44
+      }
+     ],
+     "step": "explore",
+     "title": "ስዕል 1.2፦ የኢትዮጵያ ሳጥን በኬክሮስና በኬንትሮስ",
+     "points": [
+      {
+       "x": 39,
+       "y": 9,
+       "name": "አዲስ አበባ",
+       "info": "አዲስ አበባ፦ በግምት 9° ሰሜን፣ 38.7° ምሥራቅ።"
+      },
+      {
+       "x": 39,
+       "y": 14,
+       "name": "አክሱም",
+       "info": "አክሱም ሐውልት፦ በግምት 14° ሰሜን፣ 38.7° ምሥራቅ።"
+      },
+      {
+       "x": 38,
+       "y": 8,
+       "name": "ጥያ",
+       "info": "የጥያ ትክል ድንጋይ፦ በግምት 8.4° ሰሜን፣ 38.6° ምሥራቅ።"
+      }
+     ],
+     "ask": "ነጥቦቹ በቅርብ ሙሉ ዲግሪ ተቀምጠዋል። ቀጥ ያሉት መስመሮች ኬንትሮስ (33° እና 48° ምሥራቅ)፣ አግድም መስመሮቹ ኬክሮስ (3° እና 15° ሰሜን) ናቸው። ነጥቦቹን ንኩ።",
+     "machine": true,
+     "id": "g5.science.u1.s1-2.11"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "ቁልፍ ቃላት",
+     "defs": [
+      [
+       "ኬክሮስ",
+       "ከወገብ ዛቢያ ወደ ሰሜንና ወደ ደቡብ ያለውን ርቀት በዲግሪ የሚያሳዩ ከምሥራቅ ወደ ምዕራብ የተዘረጉ ምናባዊ መስመሮች።"
+      ],
+      [
+       "ኬንትሮስ",
+       "ከመነሻ ኬንትሮስ ወደ ምሥራቅና ወደ ምዕራብ ያለውን ርቀት በዲግሪ የሚያሳዩ ከሰሜን ዋልታ ወደ ደቡብ ዋልታ የተዘረጉ ምናባዊ መስመሮች።"
+      ]
+     ],
+     "id": "g5.science.u1.s1-2.12"
+    },
+    {
+     "kind": "blank",
+     "step": "check",
+     "graded": true,
+     "num": true,
+     "ask": "የኢትዮጵያ ፍጹማዊ መገኛ ከ3° እስከ ___° ሰሜን ነው።",
+     "a": [
+      "15"
+     ],
+     "why": "ከ3° ሰሜን እስከ 15° ሰሜን።",
+     "clue": "የሰሜኑ ጫፍ።",
+     "level": 1,
+     "ref": "1.2 መልመጃ Q1",
+     "id": "g5.science.u1.s1-2.13"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "የኢትዮጵያ ፍጹማዊ መገኛ ከ33° እስከ ___° ምሥራቅ ነው።",
+     "a": [
+      "48"
+     ],
+     "why": "ከ33° ምሥራቅ እስከ 48° ምሥራቅ።",
+     "clue": "የምሥራቁ ጫፍ።",
+     "level": 1,
+     "ref": "1.2 መልመጃ Q1",
+     "id": "g5.science.u1.s1-2.14"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "ኢትዮጵያ ከሰሜን እስከ ደቡብ ስንት ዲግሪ ኬክሮስ ትሸፍናለች? መልስ፦ ___",
+     "a": [
+      "12"
+     ],
+     "why": "15 − 3 = 12 ዲግሪ።",
+     "clue": "ትልቁን ከትንሹ ቀንሱ።",
+     "level": 2,
+     "ref": "ገጽ 6",
+     "machine": true,
+     "id": "g5.science.u1.s1-2.15"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "አንድ ቦታ 20° ሰሜን፣ 40° ምሥራቅ ላይ ነው። በኢትዮጵያ ውስጥ ይገኛል?",
+     "opts": [
+      "አይገኝም፤ 20° ከ15° ሰሜን በላይ ነው",
+      "አዎ ይገኛል",
+      "አዎ፤ 40° ከ33° እና 48° መካከል ስለሆነ ብቻ",
+      "መናገር አይቻልም"
+     ],
+     "ans": "አይገኝም፤ 20° ከ15° ሰሜን በላይ ነው",
+     "why": "በኢትዮጵያ ውስጥ ለመሆን ኬክሮሱ ከ3° እስከ 15°፣ ኬንትሮሱም ከ33° እስከ 48° መሆን አለባቸው። ኬንትሮሱ ቢስማማም ኬክሮሱ አይስማማም።",
+     "clue": "ሁለቱንም ፈትሹ።",
+     "level": 3,
+     "machine": true,
+     "added": true,
+     "id": "g5.science.u1.s1-2.16"
+    }
+   ]
+  }
+ ],
+ "lang": "am",
+ "main": "am",
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "ኢትዮጵያን በሰሜን አቅጣጫ የምታዋስናት",
+   "opts": [
+    "ኤርትራ",
+    "ኬንያ",
+    "ሶማሊያ",
+    "ደቡብ ሱዳን"
+   ],
+   "ans": "ኤርትራ",
+   "why": "1.2 መልመጃ Q3።",
+   "clue": "",
+   "level": 1,
+   "id": "g5.science.u1.s1-2.17"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "በሁሉም አቅጣጫ በውሃ የተከበበ አካባቢ ምን ይባላል?",
+   "opts": [
+    "ደሴት",
+    "ሀገር",
+    "ተራራ",
+    "በረሃ"
+   ],
+   "ans": "ደሴት",
+   "why": "ገጽ 5።",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g5.science.u1.s1-2.18"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "የኢትዮጵያ ፍጹማዊ መገኛ በኬንትሮስ",
+   "opts": [
+    "ከ33° እስከ 48° ምሥራቅ",
+    "ከ3° እስከ 15° ሰሜን",
+    "ከ0° እስከ 10° ምዕራብ",
+    "ከ15° እስከ 33° ምሥራቅ"
+   ],
+   "ans": "ከ33° እስከ 48° ምሥራቅ",
+   "why": "ገጽ 6።",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g5.science.u1.s1-2.19"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "ጂቡቲ ከኢትዮጵያ በየት በኩል ናት?",
+   "opts": [
+    "በሰሜን ምሥራቅ",
+    "በደቡብ",
+    "በምዕራብ",
+    "በደቡብ ምዕራብ"
+   ],
+   "ans": "በሰሜን ምሥራቅ",
+   "why": "ስዕል 1.1።",
+   "clue": "",
+   "level": 2,
+   "machine": true,
+   "id": "g5.science.u1.s1-2.20"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "ኢትዮጵያ ከምዕራብ እስከ ምሥራቅ ስንት ዲግሪ ኬንትሮስ ትሸፍናለች? መልስ፦ ___",
+   "a": [
+    "15"
+   ],
+   "why": "48 − 33 = 15።",
+   "clue": "",
+   "level": 2,
+   "machine": true,
+   "id": "g5.science.u1.s1-2.21"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Table 1.1 has three wrong directions: Ethiopia is EAST (not south-east) of South Sudan, SOUTH-EAST (not north-east) of Sudan, and WEST (not south-west) of Somalia. The compass rose on Figure 1.1 has East and West swapped. The lesson uses directions from the map, written as \"neighbour → direction from Ethiopia\"."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

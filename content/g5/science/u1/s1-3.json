@@ -1,0 +1,283 @@
+{
+ "id": "g5.science.u1.s1-3",
+ "book": {
+  "title": "የአካባቢ ሳይንስ 5ኛ ክፍል",
+  "grade": 5,
+  "subject": "science",
+  "unit": 1,
+  "unit_title": "የኢትዮጵያ መገኛ",
+  "pages": "7–8",
+  "section": "1.3"
+ },
+ "title": "የኢትዮጵያ አጎራባች ሀገራት",
+ "competency": "የኢትዮጵያን አጎራባች ሀገራት መዘርዘርና በካርታ ማሳየት።",
+ "minutes": 10,
+ "keywords": [
+  {
+   "en": "neighbouring countries",
+   "am": "አጎራባች ሀገራት",
+   "def": "ከአንድ ሀገር ጋር ድንበር የሚጋሩ ሀገራት፤ ኢትዮጵያ ስድስት አጎራባች ሀገራት አሏት።",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "sci.g5-neighbours",
+   "name": "ስድስቱ አጎራባች ሀገራት",
+   "explain": {
+    "en": {
+     "text": "Ethiopia borders six countries: Eritrea, Djibouti, Somalia, Kenya, South Sudan and Sudan. They lie in different directions and are used to describe Ethiopia's relative location. Egypt does not border Ethiopia; it lies north of Sudan."
+    },
+    "am": {
+     "text": "ኢትዮጵያ ከስድስት ሀገራት ጋር ትዋሰናለች፦ ኤርትራ፣ ሶማሊያ፣ ሱዳን፣ ኬንያ፣ ጂቡቲ እና ደቡብ ሱዳን። ግብፅ ጎረቤቷ አይደለችም።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "ስንት ጎረቤት?",
+     "ask": "ኢትዮጵያ ስንት አጎራባች ሀገራት አሏት?",
+     "opts": [
+      "ስድስት",
+      "ሁለት",
+      "አራት",
+      "አስር"
+     ],
+     "after": "ኢትዮጵያ ከስድስት ጎረቤት ሀገራት ጋር ትዋሰናለች።",
+     "ref": "ገጽ 7",
+     "machine": true,
+     "id": "g5.science.u1.s1-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "የኢትዮጵያ አጎራባች ሀገራት",
+     "paras": [
+      "ኢትዮጵያ ከስድስት ጎረቤት ሀገራት ጋር ትዋሰናለች። እነዚህ ሀገራት በተለያዩ አቅጣጫዎች ኢትዮጵያን የሚያዋስኑ ሲሆን የኢትዮጵያን አንጻራዊ መገኛ ለመግለጽም ያገለግላሉ።",
+      "እነርሱም፦ 1. ኤርትራ 2. ሶማሊያ 3. ሱዳን 4. ኬንያ 5. ጂቡቲ 6. ደቡብ ሱዳን"
+     ],
+     "ref": "ገጽ 7",
+     "id": "g5.science.u1.s1-3.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "ቁልፍ ቃል",
+     "defs": [
+      [
+       "አጎራባች ሀገራት",
+       "ከአንድ ሀገር ጋር ድንበር የሚጋሩ ሀገራት፤ ኢትዮጵያ ስድስት አጎራባች ሀገራት አሏት።"
+      ]
+     ],
+     "id": "g5.science.u1.s1-3.3"
+    },
+    {
+     "kind": "pick",
+     "step": "check",
+     "graded": true,
+     "text": "የኢትዮጵያ አጎራባች ሀገራትን ምረጡ።",
+     "pool": [
+      "ኤርትራ",
+      "ሶማሊያ",
+      "ሱዳን",
+      "ኬንያ",
+      "ጂቡቲ",
+      "ደቡብ ሱዳን",
+      "ግብፅ",
+      "ታንዛንያ"
+     ],
+     "a": [
+      "ኤርትራ",
+      "ሶማሊያ",
+      "ሱዳን",
+      "ኬንያ",
+      "ጂቡቲ",
+      "ደቡብ ሱዳን"
+     ],
+     "why": "ግብፅና ታንዛንያ ከኢትዮጵያ ጋር ድንበር አይጋሩም።",
+     "clue": "ስድስት ሀገራት።",
+     "level": 1,
+     "machine": true,
+     "id": "g5.science.u1.s1-3.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "ከሚከተሉት ሀገራት ውስጥ ኢትዮጵያን የማያዋስነው የቱ ነው?",
+     "opts": [
+      "ግብፅ",
+      "ኤርትራ",
+      "ሱዳን",
+      "ኬንያ"
+     ],
+     "ans": "ግብፅ",
+     "why": "ግብፅ ከሱዳን በስተሰሜን ትገኛለች።",
+     "clue": "ስድስቱን አስታውሱ።",
+     "level": 1,
+     "ref": "የማጠቃለያ ጥያቄ II.1",
+     "id": "g5.science.u1.s1-3.5"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "text": "ሥዕል 1.13፦ ጎረቤቶቹን በአቅጣጫ ደርድሩ።",
+     "bins": [
+      "በሰሜን በኩል",
+      "በደቡብ በኩል",
+      "በምሥራቅ በኩል",
+      "በምዕራብ በኩል"
+     ],
+     "items": [
+      [
+       "ኤርትራ",
+       "በሰሜን በኩል",
+       "ከላይ።"
+      ],
+      [
+       "ኬንያ",
+       "በደቡብ በኩል",
+       "ከታች።"
+      ],
+      [
+       "ሶማሊያ",
+       "በምሥራቅ በኩል",
+       "በቀኝ።"
+      ],
+      [
+       "ደቡብ ሱዳን",
+       "በምዕራብ በኩል",
+       "በግራ።"
+      ]
+     ],
+     "why": "ሥዕል 1.13 ካርታ።",
+     "clue": "በካርታ ሰሜን ከላይ፣ ምሥራቅ በቀኝ ነው።",
+     "level": 2,
+     "ref": "ሥዕል 1.13",
+     "machine": true,
+     "id": "g5.science.u1.s1-3.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "የትኛዋ ጎረቤት ሀገር የኢትዮጵያን ምሥራቅና ደቡብ ምሥራቅ ጠርዝ ትሸፍናለች?",
+     "opts": [
+      "ሶማሊያ",
+      "ጂቡቲ",
+      "ኬንያ",
+      "ሱዳን"
+     ],
+     "ans": "ሶማሊያ",
+     "why": "በስዕል 1.3 ሶማሊያ የአፍሪካ ቀንድን ጫፍ ዞራ በምሥራቅና በደቡብ ምሥራቅ ትገኛለች።",
+     "clue": "የአፍሪካ ቀንድ ጫፍ።",
+     "level": 3,
+     "machine": true,
+     "added": true,
+     "id": "g5.science.u1.s1-3.7"
+    }
+   ]
+  }
+ ],
+ "lang": "am",
+ "main": "am",
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "ኢትዮጵያ ስንት ጎረቤት ሀገራት አሏት?",
+   "opts": [
+    "6",
+    "4",
+    "8",
+    "3"
+   ],
+   "ans": "6",
+   "why": "ገጽ 7።",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g5.science.u1.s1-3.8"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "የኢትዮጵያ ጎረቤት የሆነችው",
+   "opts": [
+    "ጂቡቲ",
+    "ግብፅ",
+    "ናይጄሪያ",
+    "ታንዛንያ"
+   ],
+   "ans": "ጂቡቲ",
+   "why": "ገጽ 7።",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g5.science.u1.s1-3.9"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "ኬንያ ከኢትዮጵያ በየት በኩል ናት?",
+   "opts": [
+    "በደቡብ",
+    "በሰሜን",
+    "በምሥራቅ",
+    "በምዕራብ"
+   ],
+   "ans": "በደቡብ",
+   "why": "ስዕል 1.3።",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g5.science.u1.s1-3.10"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "አጎራባች ሀገራት የኢትዮጵያን አንጻራዊ መገኛ ለመግለጽ ያገለግላሉ።",
+   "a": true,
+   "why": "ገጽ 7።",
+   "clue": "",
+   "level": 2,
+   "machine": true,
+   "id": "g5.science.u1.s1-3.11"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "ሱዳን ከኢትዮጵያ በየት በኩል ናት?",
+   "opts": [
+    "በሰሜን ምዕራብ",
+    "በደቡብ ምሥራቅ",
+    "በደቡብ",
+    "በምሥራቅ"
+   ],
+   "ans": "በሰሜን ምዕራብ",
+   "why": "ስዕል 1.3።",
+   "clue": "",
+   "level": 2,
+   "machine": true,
+   "id": "g5.science.u1.s1-3.12"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "correction",
+   "text": "The book numbers the neighbour list 1, 1, 2, 4, 5, 6; the lesson uses 1–6."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
