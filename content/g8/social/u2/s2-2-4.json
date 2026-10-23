@@ -1,0 +1,371 @@
+{
+ "id": "g8.social.u2.s2-2-4",
+ "book": {
+  "title": "Social Studies Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "social",
+  "unit": 2,
+  "unit_title": "People and Socio-Economic Activities",
+  "pages": "45–46",
+  "section": "2.2.4"
+ },
+ "title": "Economic activities and countries' development",
+ "competency": "Relate economic activities to levels of development and compare agriculture in developed and developing countries.",
+ "minutes": 10,
+ "keywords": [
+  {
+   "en": "Primary economic activity",
+   "am": "የመጀመሪያ ደረጃ የኢኮኖሚ እንቅስቃሴ",
+   "def": "Taking resources directly from the environment: agriculture, forestry, fishing, mining.",
+   "machine": true
+  },
+  {
+   "en": "Secondary economic activity",
+   "am": "ሁለተኛ ደረጃ የኢኮኖሚ እንቅስቃሴ",
+   "def": "Adding value to products by processing them: manufacturing, construction, power production.",
+   "machine": true
+  },
+  {
+   "en": "Tertiary economic activity",
+   "am": "ሦስተኛ ደረጃ የኢኮኖሚ እንቅስቃሴ",
+   "def": "Support services that do not produce goods: transport, communication, trade, tourism, health, education.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "soc.economy.development",
+   "name": "Developed and developing economies",
+   "explain": {
+    "en": {
+     "text": "Developed countries have large manufacturing industries; most people work in secondary activities and few in agriculture, yet modern methods give surplus food. In developing countries most people still work in agriculture, but production is low; agriculture can be over a quarter of national output."
+    },
+    "am": {
+     "text": "በበለጸጉ ሀገሮች ብዙ ሰዎች በማምረቻ ይሠራሉ፤ ጥቂት ገበሬዎች በዘመናዊ ዘዴ ብዙ ያመርታሉ። በታዳጊ ሀገሮች ብዙዎች በግብርና ይሠራሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Few farmers, lots of food",
+     "ask": "In some rich countries, 2 in every 100 workers are farmers, yet they export food. How?",
+     "opts": [
+      "Modern methods and machines",
+      "They do not eat",
+      "Rain is free",
+      "They import all food"
+     ],
+     "after": "Modern methods let few workers produce a lot. That is a mark of developed countries.",
+     "added": true,
+     "id": "g8.social.u2.s2-2-4.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Economic basis of countries",
+     "paras": [
+      "Developed countries have a large share of manufacturing.",
+      "Many people work in secondary activities and few in primary ones.",
+      "In developing countries, most people still work in agriculture. Their economies are agrarian."
+     ],
+     "ref": "p.45",
+     "id": "g8.social.u2.s2-2-4.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Agriculture compared",
+     "paras": [
+      "Compare agriculture in the two kinds of country."
+     ],
+     "table": [
+      [
+       "",
+       "Developing countries",
+       "Developed countries"
+      ],
+      [
+       "Workers in farming",
+       "Many",
+       "Very few"
+      ],
+      [
+       "Production",
+       "Little",
+       "Surplus"
+      ],
+      [
+       "Methods",
+       "Traditional",
+       "Modern"
+      ],
+      [
+       "Share of national output",
+       "Substantial (often over a quarter)",
+       "Tiny"
+      ]
+     ],
+     "ref": "p.45",
+     "id": "g8.social.u2.s2-2-4.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words again",
+     "defs": [
+      [
+       "Primary economic activity",
+       "Taking resources directly from the environment: agriculture, forestry, fishing, mining."
+      ],
+      [
+       "Secondary economic activity",
+       "Adding value to products by processing them: manufacturing, construction, power production."
+      ],
+      [
+       "Tertiary economic activity",
+       "Support services that do not produce goods: transport, communication, trade, tourism, health, education."
+      ]
+     ],
+     "id": "g8.social.u2.s2-2-4.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "In developing countries, the great majority of people work in",
+     "opts": [
+      "agriculture",
+      "manufacturing",
+      "banking",
+      "tourism"
+     ],
+     "ans": "agriculture",
+     "why": "p.45.",
+     "clue": "Agrarian economies.",
+     "level": 1,
+     "id": "g8.social.u2.s2-2-4.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Why can developed countries produce surplus food with few farmers?",
+     "opts": [
+      "They use modern methods",
+      "They have more rain",
+      "They have more farmers",
+      "They grow only teff"
+     ],
+     "ans": "They use modern methods",
+     "why": "p.45.",
+     "clue": "Machines and technology.",
+     "level": 1,
+     "id": "g8.social.u2.s2-2-4.6"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Agriculture's share of output is tiny in developed countries.",
+     "a": true,
+     "why": "p.45.",
+     "clue": "Most people work in industry.",
+     "level": 1,
+     "id": "g8.social.u2.s2-2-4.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "A country wants more people to move from farming to factory jobs without less food. What must happen in farming?",
+     "opts": [
+      "Use modern methods so fewer farmers grow more",
+      "Stop farming",
+      "Use more traditional tools",
+      "Import all factories"
+     ],
+     "ans": "Use modern methods so fewer farmers grow more",
+     "why": "Developed countries produce a surplus with few workers because of modern methods, freeing people for secondary activities.",
+     "clue": "How do developed countries manage it?",
+     "level": 3,
+     "added": true,
+     "id": "g8.social.u2.s2-2-4.8"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activity 2.2",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Define tourism",
+     "opts": [
+      "Travel from home for leisure, business or other purposes",
+      "Moving goods",
+      "Making goods",
+      "Selling goods"
+     ],
+     "ans": "Travel from home for leisure, business or other purposes",
+     "why": "p.44.",
+     "clue": "Visitors.",
+     "level": 1,
+     "ref": "Q1 f",
+     "id": "g8.social.u2.s2-2-4.9"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which list shows the three major types of economic activity?",
+     "opts": [
+      "Primary, secondary, tertiary",
+      "Import, export, entrepot",
+      "Wholesale, retail, barter",
+      "Folding, faulting, volcanism"
+     ],
+     "ans": "Primary, secondary, tertiary",
+     "why": "pp.41–43.",
+     "clue": "Three levels.",
+     "level": 1,
+     "ref": "Q5",
+     "id": "g8.social.u2.s2-2-4.10"
+    },
+    {
+     "kind": "sort",
+     "step": "exercise",
+     "graded": true,
+     "text": "Sort these activities in Addis Ababa.",
+     "bins": [
+      "Primary",
+      "Secondary",
+      "Tertiary"
+     ],
+     "items": [
+      [
+       "Quarrying stone",
+       "Primary",
+       "Taking from nature."
+      ],
+      [
+       "A shoe factory",
+       "Secondary",
+       "Processing leather."
+      ],
+      [
+       "Light rail transport",
+       "Tertiary",
+       "A service."
+      ],
+      [
+       "Dairy farming",
+       "Primary",
+       "Rearing livestock."
+      ],
+      [
+       "Shops in Merkato",
+       "Tertiary",
+       "Trade."
+      ]
+     ],
+     "why": "Use 2.2.1–2.2.3.",
+     "clue": "Nature, processing or service?",
+     "level": 2,
+     "ref": "B",
+     "id": "g8.social.u2.s2-2-4.11"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Developing economies are basically",
+   "opts": [
+    "agrarian",
+    "industrial",
+    "tourist",
+    "mining"
+   ],
+   "ans": "agrarian",
+   "why": "p.45.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.social.u2.s2-2-4.12"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "In developed countries most people work in",
+   "opts": [
+    "secondary activities",
+    "agriculture",
+    "fishing",
+    "forestry"
+   ],
+   "ans": "secondary activities",
+   "why": "p.45.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.social.u2.s2-2-4.13"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "In developing countries, farming production is",
+   "opts": [
+    "little",
+    "in surplus",
+    "zero",
+    "all exported"
+   ],
+   "ans": "little",
+   "why": "p.45.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.social.u2.s2-2-4.14"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "In many developing countries agriculture is more than ___ of national output",
+   "opts": [
+    "a quarter",
+    "all",
+    "none",
+    "a tenth"
+   ],
+   "ans": "a quarter",
+   "why": "p.45.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.social.u2.s2-2-4.15"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Developed countries have a large share of manufacturing industries.",
+   "a": true,
+   "why": "p.45.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.social.u2.s2-2-4.16"
+  }
+ ],
+ "notes": [],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
