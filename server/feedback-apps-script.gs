@@ -18,7 +18,7 @@ function doPost(e) {
     let shotUrl = '';
     if (d.shot && String(d.shot).length < 1500000) shotUrl = saveShot(d.shot, d.at);
     sheet.appendRow([
-      d.at ? new Date(d.at) : new Date(), clip(d.type, 60), msg, clip(d.where, 300), clip(d.question, 500),
+      d.at ? new Date(d.at) : new Date(), clip(d.type, 60), msg, clip(d.where, 600), clip(d.question, 500),
       clip(d.grades, 40), clip(d.lang, 10), clip(d.contact, 120), clip(d.device, 200), clip(d.version, 20), shotUrl, 'New', '',
       /^https:\/\/[\w.-]+\.github\.io\//.test(String(d.link || '')) ? '=HYPERLINK("' + String(d.link).replace(/"/g, '') + '","Open")' : ''
     ]);
