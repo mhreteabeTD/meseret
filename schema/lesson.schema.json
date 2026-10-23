@@ -363,7 +363,8 @@
             "slider",
             "cubes",
             "ladder",
-            "figure"
+            "figure",
+            "coord"
           ]
         },
         "step": {
@@ -562,11 +563,11 @@
         },
         "points": {
           "type": "array",
-          "description": "numline show: [{v:'-3/2', label?, info?}] tap to explore"
+          "description": "numline show: [{v:'-3/2', label?, info?}] tap to explore; coord show: [{x, y, name?, info?}]"
         },
         "targets": {
           "type": "array",
-          "description": "numline place (graded): [{v:'2/5', label?}] the student taps where each goes"
+          "description": "numline place (graded): [{v:'2/5', label?}] the student taps where each goes; coord place (graded): [{x, y, name?, label?}] the student taps each grid point"
         },
         "hops": {
           "type": "array",
@@ -727,6 +728,22 @@
             3
           ],
           "description": "difficulty: 1 ★ basic (book level), 2 ★★ standard, 3 ★★★ challenge"
+        },
+        "ymin": {
+          "type": "number",
+          "description": "coord: bottom of the grid (min/max are the x range)"
+        },
+        "ymax": {
+          "type": "number",
+          "description": "coord: top of the grid"
+        },
+        "lines": {
+          "type": "array",
+          "description": "coord: lines to draw: [{m, b, label?}] for y = mx + b, [{x: k}] vertical, or [{pts: [[x1,y1],[x2,y2]], segment?}]"
+        },
+        "quadrants": {
+          "type": "boolean",
+          "description": "coord: label the four quadrants I–IV"
         }
       },
       "allOf": [

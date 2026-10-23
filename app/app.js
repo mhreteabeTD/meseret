@@ -26,7 +26,7 @@ async function loadLang(l) {
 /* Lesson language: the words INSIDE a lesson (Quick check, pop-ups, prompts, Practise) follow the lesson's own
    language ("lang" on the lesson), not the UI language. Page chrome (back, timer, settings) keeps the UI language. */
 let LL = null;
-const LESSON_KEYS = new Set(['ladder_tap', 'continue', 'check', 'not_yet', 'try_again', 'true', 'false', 'tap_explore', 'next_step', 'skipped_note', 'skip', 'quick_check', 'answer_is', 'worked_example', 'undo', 'order_hint', 'match_hint', 'pick_size', 'guess_note', 'step_hook', 'step_explore', 'step_notice', 'step_check', 'step_practise', 'step_name', 'show_answer', 'section_done', 'practise_n', 'practise_sub', 'replay_note', 'replay_n', 'show_worked', 'retry', 'first_try', 'spot_on', 'right_idea', 'correct', 'your_guess', 'your_answer', 'wrong_pick', 'not_quite_guess', 'lock_guess', 'includes', 'activity', 'spelling_note', 'num_note', 'signed_note', 'v_retry', 'v_ok', 'v_answer', 'need_reminder', 'offer_refresher', 'yes_reminder', 'no_continue', 'refresher', 'book_exercise', 'unit_test', 'fresh_test', 'test_note', 'all_done', 'in_a_row', 'back_to_question', 'back_to_book', 'back_lesson', 'start_again', 'missing_pick', 'sign', 'remove', 'learned', 'comes_back', 'try_more', 'next_section', 'nl_place', 'nl_opposites', 'nl_move1', 'nl_move', 'nl_hop', 'nl_between', 'one_whole', 'row_w', 'layer_w', 'cells_w', 'cubes_w', 'whole_w', 'half_w', 'cell_hint', 'count_total', 'tr_btn_back', 'tile_answer']);
+const LESSON_KEYS = new Set(['ladder_tap', 'continue', 'check', 'not_yet', 'try_again', 'true', 'false', 'tap_explore', 'next_step', 'skipped_note', 'skip', 'quick_check', 'answer_is', 'worked_example', 'undo', 'order_hint', 'match_hint', 'pick_size', 'guess_note', 'step_hook', 'step_explore', 'step_notice', 'step_check', 'step_practise', 'step_name', 'show_answer', 'section_done', 'practise_n', 'practise_sub', 'replay_note', 'replay_n', 'show_worked', 'retry', 'first_try', 'spot_on', 'right_idea', 'correct', 'your_guess', 'your_answer', 'wrong_pick', 'not_quite_guess', 'lock_guess', 'includes', 'activity', 'spelling_note', 'num_note', 'signed_note', 'v_retry', 'v_ok', 'v_answer', 'need_reminder', 'offer_refresher', 'yes_reminder', 'no_continue', 'refresher', 'book_exercise', 'unit_test', 'fresh_test', 'test_note', 'all_done', 'in_a_row', 'back_to_question', 'back_to_book', 'back_lesson', 'start_again', 'missing_pick', 'sign', 'remove', 'learned', 'comes_back', 'try_more', 'next_section', 'nl_place', 'nl_opposites', 'nl_move1', 'nl_move', 'nl_hop', 'nl_between', 'one_whole', 'row_w', 'layer_w', 'cells_w', 'cubes_w', 'whole_w', 'half_w', 'cell_hint', 'count_total', 'tr_btn_back', 'tile_answer', 'co_place', 'co_hint', 'co_info']);
 const t = (k, v = {}) => { const src = LL && LESSON_KEYS.has(k) && S.i18n[LL] && S.i18n[LL][k]; return (src || T[k] || k).replace(/\{(\w+)\}/g, (_, n) => v[n] != null ? v[n] : ''); };
 async function loadDict(l) { if (l && !S.i18n[l]) { try { S.i18n[l] = await (await fetch(`i18n/${l}.json`)).json(); } catch (_) { S.i18n[l] = {}; } } }
 // switch the lesson language on/off (also tags the app container so the Ethiopic type rules apply)
@@ -525,6 +525,56 @@ const Gen = (() => {
       if (st === 'cm3') return { kind: 'blank', num: true, ask: am ? `${base} በሙሉ ___ ሳ.ሜ³ ይይዛሉ።` : `${base} hold ___ cm³ in all.`, a: [String(L * 1000), nf(L * 1000)], why: `${n} × ${k} = ${L} ሊ፤ ${L} × 1,000 = ${nf(L * 1000)} ሳ.ሜ³` + dot, clue: am ? '1 ሊ = 1,000 ሳ.ሜ³። መጀመሪያ ሊትሩን ደምር።' : '1 litre = 1,000 cm³. Find the litres first.', machine: true };
       if (st === 'm3') return { kind: 'blank', num: true, ask: am ? `${base} በሙሉ ___ ሜ³ ይይዛሉ።` : `${base} hold ___ m³ in all.`, a: [String(L / 1000)], why: `${n} × ${k} = ${L} ሊ፤ ${L} ÷ 1,000 = ${L / 1000} ሜ³` + dot, clue: am ? '1 ሊ = 1/1000 ሜ³። ሊትሩን በ1,000 አካፍል።' : '1 litre = 1/1000 m³. Divide the litres by 1,000.', machine: true };
       return { kind: 'blank', num: true, ask: am ? `${base} በሙሉ ___ ሊትር ነው።` : `${base} hold ___ litres in all.`, a: [String(L)], why: `${n} × ${k} = ${L}` + dot, clue: am ? 'ብዛቱን በአንዱ ሊትር አባዛ።' : 'Multiply the number by the litres of one.', machine: true }; },
+
+    /* ---- Grade 7: integers, sets, linear equations, coordinates ---- */
+    int(o) { const t = o.op || 'add', big = o.big || 12, nz = (m = big) => { let v = 0; while (!v) v = int(-m, m); return v; }, P = v => v < 0 ? `(${M(v)})` : String(v);
+      if (t === 'cmp') { const a = nz(), b = r() < .15 ? a : nz(), ans = a < b ? '<' : a > b ? '>' : '=';
+        return { kind: 'mcq', text: `Which sign is correct? ${M(a)} ? ${M(b)}`, opts: ['<', '>', '='], ans, why: `${a === b ? 'They are the same number' : `On the number line ${M(Math.min(a, b))} is to the left of ${M(Math.max(a, b))}`}. So ${M(a)} ${ans} ${M(b)}.`, clue: 'The number further left on the number line is smaller.' }; }
+      if (t === 'order') { const desc = o.desc != null ? o.desc : r() < .5, vs = []; while (vs.length < (o.n || 5)) { const v = int(-big, big); if (!vs.includes(v)) vs.push(v); } const srt = vs.slice().sort((a, b) => desc ? b - a : a - b).map(M);
+        return { kind: 'order', text: `Tap them in ${desc ? 'descending order (largest first)' : 'ascending order (smallest first)'}.`, items: srt, why: srt.join(desc ? ' > ' : ' < '), clue: 'Negative numbers are less than 0. The further a negative is from 0, the smaller it is.' }; }
+      let a = nz(), b = nz(); if (a > 0 && b > 0) { if (r() < .5) a = -a; else b = -b; }
+      const addWhy = (x, y) => { const s = x + y; if ((x < 0) === (y < 0)) return `Both numbers are ${x < 0 ? 'negative' : 'positive'}. Add the sizes: ${Math.abs(x)} + ${Math.abs(y)} = ${Math.abs(s)}. Keep the sign: ${M(s)}.`;
+        const bx = Math.abs(x) > Math.abs(y) ? x : y; return `The signs are different. Subtract the sizes: ${Math.max(Math.abs(x), Math.abs(y))} − ${Math.min(Math.abs(x), Math.abs(y))} = ${Math.abs(s)}. ${s === 0 ? 'The answer is 0.' : `${M(bx)} has the bigger size, so the answer is ${s < 0 ? 'negative' : 'positive'}: ${M(s)}.`}`; };
+      const sgnWhy = (x, y, op) => `Signs: ${(x < 0) === (y < 0) ? 'the same, so the answer is positive' : 'different, so the answer is negative'}.`;
+      let ask, res, why, clue;
+      if (t === 'add') { res = a + b; ask = `${M(a)} + ${P(b)} = ___`; why = addWhy(a, b); clue = 'Same signs: add the sizes. Different signs: subtract the sizes and take the sign of the bigger size.';
+        if (o.word) ask = `In Debre Birhan the temperature was ${M(a)} °C. It ${b > 0 ? 'rose' : 'fell'} by ${Math.abs(b)} °C. Now it is ___ °C.`; }
+      else if (t === 'sub') { res = a - b; ask = `${M(a)} − ${P(b)} = ___`; why = `Subtracting ${P(b)} means adding its opposite, ${M(-b)}: ${M(a)} + ${P(-b)}. ` + addWhy(a, -b); clue = 'Change subtraction to adding the opposite.'; }
+      else if (t === 'mul') { res = a * b; ask = `${M(a)} × ${P(b)} = ___`; why = `${sgnWhy(a, b)} Sizes: ${Math.abs(a)} × ${Math.abs(b)} = ${Math.abs(res)}. So the answer is ${M(res)}.`; clue = 'First decide the sign, then multiply the sizes.'; }
+      else { const q = nz(Math.min(big, 12)); do b = nz(Math.min(big, 12)); while (Math.abs(b) < 2); a = b * q; res = q; ask = `${M(a)} ÷ ${P(b)} = ___`; why = `${sgnWhy(a, b)} Sizes: ${Math.abs(a)} ÷ ${Math.abs(b)} = ${Math.abs(q)}. So the answer is ${M(q)}.`; clue = 'First decide the sign, then divide the sizes.'; }
+      return { kind: 'blank', num: true, input: 'signed', ask, a: [M(res)], why, worked: why, clue }; },
+    sets(o) { const t = o.op || 'union', mk = (n, lo = 1, hi = 15) => { const s = []; while (s.length < n) { const v = int(lo, hi); if (!s.includes(v)) s.push(v); } return s.sort((x, y) => x - y); }, br = s => s.length ? `{${s.join(', ')}}` : '{ }';
+      if (t === 'count') { const s = mk(int(2, 5)), rep = s.concat(shuffle(s).slice(0, int(1, 3))); const shown = shuffle(rep);
+        return { kind: 'blank', num: true, ask: `A = ${br(shown)} has ___ elements.`, a: [String(s.length)], why: `Repeated elements count once. A = ${br(s)}, so it has ${s.length} elements.`, clue: 'Cross out any element you have already counted.' }; }
+      if (t === 'subsets' || t === 'proper') { const n = int(1, 4), L = 'abcdpqrsxyz'.split(''), s = shuffle(L).slice(0, n).sort(), all = 2 ** n, ans = t === 'proper' ? all - 1 : all;
+        return { kind: 'blank', num: true, ask: `How many ${t === 'proper' ? 'proper subsets' : 'subsets'} does ${br(s)} have? ___`, a: [String(ans)], why: `A set with ${n} element${n > 1 ? 's' : ''} has 2${'⁰¹²³⁴'[n]} = ${all} subsets (count them: no element, one, two, …).${t === 'proper' ? ` Leave out the set itself: ${all} − 1 = ${ans}.` : ''}`, clue: t === 'proper' ? 'List all subsets, then remove the set itself.' : 'List them by size: the empty set, one element, two elements, …' }; }
+      if (t === 'elem') { const A = mk(int(3, 6)), inA = r() < .5, x = inA ? pick(A) : (() => { let v; do v = int(1, 15); while (A.includes(v)); return v; })(), useNot = r() < .4;
+        return { kind: 'tf', text: `${x} ${useNot ? '∉' : '∈'} ${br(A)}`, a: useNot ? !inA : inA, why: `${x} is ${inA ? '' : 'not '}listed in the set, so ${x} ${inA ? '∈' : '∉'} ${br(A)}.`, clue: useNot ? '∉ means "is not an element of".' : '∈ means "is an element of".' }; }
+      const A = mk(int(3, 5)), B = mk(int(3, 5)); if (!A.some(v => B.includes(v))) B[0] = A[int(0, A.length - 1)];
+      const Bs = [...new Set(B)].sort((x, y) => x - y), U = [...new Set(A.concat(Bs))].sort((x, y) => x - y), I = A.filter(v => Bs.includes(v)), ans = t === 'inter' ? I : U;
+      const extra = mk(2, 1, 20).filter(v => !U.includes(v)), pool = shuffle(U.concat(extra)).map(String);
+      return { kind: 'pick', text: `A = ${br(A)} and B = ${br(Bs)}. Tap every element of A ${t === 'inter' ? '∩' : '∪'} B.`, pool, a: ans.map(String), why: t === 'inter' ? `Check each element of A in B: ${A.map(v => `${v} ${Bs.includes(v) ? '∈' : '∉'} B`).join(', ')}. So A ∩ B = ${br(I)}.` : `List A: ${A.join(', ')}. Add the elements of B not yet listed: ${Bs.filter(v => !A.includes(v)).join(', ') || 'none'}. So A ∪ B = ${br(U)}.`, clue: t === 'inter' ? 'Keep only the elements that are in both sets.' : 'Everything in A, plus everything in B. Write each element once.' }; },
+    lineq(o) { const f = o.form || 'two', nz = m => { let v = 0; while (!v) v = int(-m, m); return v; }, x = nz(o.big || 9), v = o.v || 'x';
+      const term = (k, s0) => k === 1 ? v : k === -1 ? '−' + v : M(k) + v, cst = c => c === 0 ? '' : c < 0 ? ` − ${-c}` : ` + ${c}`, lin = (k, c) => term(k) + cst(c), P = n => n < 0 ? `(${M(n)})` : String(n);
+      let eq, L = [];
+      if (f === 'eval') { const k = nz(6), c = nz(10), val = k * x + c, y = o.y;
+        return { kind: 'blank', num: true, input: 'signed', ask: y ? `For y = ${lin(k, c)}, when ${v} = ${M(x)}, y = ___` : `If ${v} = ${M(x)}, then ${lin(k, c)} = ___`, a: [M(val)], why: `Put ${M(x)} in for ${v}: ${M(k)} × ${P(x)}${cst(c)} = ${M(k * x)}${cst(c)} = ${M(val)}.`, worked: `${M(k)} × ${P(x)} = ${M(k * x)}; ${M(k * x)}${cst(c)} = ${M(val)}.`, clue: `Replace ${v} with ${M(x)}. Multiply first, then add.` }; }
+      if (f === 'one') { if (r() < .5) { const b = nz(12), c = x + b; eq = `${v}${cst(b)} = ${M(c)}`; L.push(`${b > 0 ? 'Subtract' : 'Add'} ${Math.abs(b)} ${b > 0 ? 'from' : 'to'} both sides: ${v} = ${M(c)} ${b > 0 ? '−' : '+'} ${Math.abs(b)} = ${M(x)}.`); }
+        else { const a = int(2, 9) * (r() < .3 ? -1 : 1), c = a * x; eq = `${term(a)} = ${M(c)}`; L.push(`Divide both sides by ${M(a)}: ${v} = ${M(c)} ÷ ${P(a)} = ${M(x)}.`); } }
+      else if (f === 'bracket') { const a = int(2, 6) * (r() < .3 ? -1 : 1), b = nz(8), c = a * (x + b); eq = `${M(a)}(${lin(1, b)}) = ${M(c)}`;
+        L.push(`Open the bracket: ${M(a)} × ${v} = ${term(a)} and ${M(a)} × ${P(b)} = ${M(a * b)}. So ${lin(a, a * b)} = ${M(c)}.`, `${a * b > 0 ? 'Subtract' : 'Add'} ${Math.abs(a * b)} ${a * b > 0 ? 'from' : 'to'} both sides: ${term(a)} = ${M(c - a * b)}.`, `Divide both sides by ${M(a)}: ${v} = ${M(c - a * b)} ÷ ${P(a)} = ${M(x)}.`); }
+      else if (f === 'both') { let a = nz(7), c = nz(7); while (a === c) c = nz(7); const b = nz(10), d = (a - c) * x + b; eq = `${lin(a, b)} = ${lin(c, d)}`;
+        L.push(`${c > 0 ? 'Subtract' : 'Add'} ${term(Math.abs(c))} ${c > 0 ? 'from' : 'to'} both sides: ${lin(a - c, b)} = ${M(d)}.`, `${b > 0 ? 'Subtract' : 'Add'} ${Math.abs(b)} ${b > 0 ? 'from' : 'to'} both sides: ${term(a - c)} = ${M(d - b)}.`, a - c === 1 ? `So ${v} = ${M(x)}.` : `Divide both sides by ${M(a - c)}: ${v} = ${M(d - b)} ÷ ${P(a - c)} = ${M(x)}.`); }
+      else if (f === 'frac') { const a = int(2, 6), q = nz(6), xx = a * q, b = nz(9), c = q + b; eq = `${v}/${a}${cst(b)} = ${M(c)}`;
+        L.push(`${b > 0 ? 'Subtract' : 'Add'} ${Math.abs(b)} ${b > 0 ? 'from' : 'to'} both sides: ${v}/${a} = ${M(q)}.`, `Multiply both sides by ${a}: ${v} = ${M(q)} × ${a} = ${M(xx)}.`);
+        return { kind: 'blank', num: true, input: 'signed', ask: `Solve: ${eq}. ${v} = ___`, a: [M(xx)], why: L.join(' ') + ` Check: ${M(xx)} ÷ ${a}${cst(b)} = ${M(c)} ✓`, worked: L.join(' '), clue: 'Undo the adding first, then undo the dividing.' }; }
+      else { const a = int(2, 9) * (r() < .3 ? -1 : 1), b = nz(12), c = a * x + b; eq = `${lin(a, b)} = ${M(c)}`;
+        L.push(`${b > 0 ? 'Subtract' : 'Add'} ${Math.abs(b)} ${b > 0 ? 'from' : 'to'} both sides: ${term(a)} = ${M(c - b)}.`, `Divide both sides by ${M(a)}: ${v} = ${M(c - b)} ÷ ${P(a)} = ${M(x)}.`); }
+      return { kind: 'blank', num: true, input: 'signed', ask: `Solve: ${eq}. ${v} = ___`, a: [M(x)], why: L.join(' ') + ` Check: put ${M(x)} back in and both sides are equal.`, worked: L.join(' '), clue: 'Do the same thing to both sides. Undo + and − first, then × and ÷.' }; },
+    quad(o) { const nz = () => { let v = 0; while (!v) v = int(-6, 6); return v; }; let x = nz(), y = nz(); if (o.axes !== false && r() < .15) (r() < .5 ? x = 0 : y = 0);
+      if (o.place) return { kind: 'coord', min: -6, max: 6, ymin: -6, ymax: 6, targets: [{ x, y, label: `(${M(x)}, ${M(y)})` }], ask: `Tap the point (${M(x)}, ${M(y)}).`, why: `Start at the origin. ${x ? `Go ${Math.abs(x)} ${x < 0 ? 'left' : 'right'}` : 'Do not move left or right'}, then ${y ? `${Math.abs(y)} ${y < 0 ? 'down' : 'up'}` : 'do not move up or down'}.`, clue: 'The first number tells you left or right. The second tells you up or down.' };
+      const Qs = ['Quadrant I', 'Quadrant II', 'Quadrant III', 'Quadrant IV', 'On an axis'], ans = !x || !y ? Qs[4] : x > 0 ? (y > 0 ? Qs[0] : Qs[3]) : (y > 0 ? Qs[1] : Qs[2]);
+      return { kind: 'mcq', text: `Where is the point (${M(x)}, ${M(y)})?`, opts: Qs, ans, why: !x || !y ? `One coordinate is 0, so the point lies on ${!x ? 'the y-axis' : 'the x-axis'}.` : `x is ${x > 0 ? 'positive (right)' : 'negative (left)'} and y is ${y > 0 ? 'positive (up)' : 'negative (down)'}. That is ${ans}.`, clue: 'Look at the signs of x and y. Quadrant I is (+, +); go anticlockwise.' }; },
   };
   /* ---- difficulty levels: ★ basic (book level), ★★ standard, ★★★ challenge ----
      LV[t](level) returns option overrides; HARD[t] makes a ★★★ question of a different shape (missing number, spot the mistake, multi-step). */
@@ -536,6 +586,8 @@ const Gen = (() => {
     abs: L => ({ form: L === 1 ? 'in' : 'sum' }),
     abseq: L => (L === 3 ? { shift: true } : {}),
     interest: L => (L === 1 ? { find: 'I' } : L === 2 ? { find: pick(['P', 'T', 'I']) } : {}),
+    int: L => ({ big: [10, 30, 30][L - 1] }),
+    lineq: L => ({ big: [6, 9, 12][L - 1] }),
   };
   const NM = () => pick(NAMES);
   const HARD = {
@@ -570,6 +622,37 @@ const Gen = (() => {
       return { kind: 'blank', num: true, ask: `${nm}'s mother takes 1/${k} of a cake. The father takes 1/${m} of what is left. ${n} children share the rest equally. Each child gets ___ of the cake.`, a: forms(each), why: `After the mother: 1 − 1/${k} = ${fq(rest1)}. The father takes 1/${m} of ${fq(rest1)} = ${fq(fatherPart)}. Left: ${fq(rest1)} − ${fq(fatherPart)} = ${fq(rest2)}. Each child: ${fq(rest2)} ÷ ${n} = ${fq(each)}.`, worked: `1 − 1/${k} = ${fq(rest1)}; 1/${m} × ${fq(rest1)} = ${fq(fatherPart)}; ${fq(rest1)} − ${fq(fatherPart)} = ${fq(rest2)}; ${fq(rest2)} ÷ ${n} = ${fq(each)}.`, clue: 'Go one step at a time: what is left after each person?' }; },
     interest() { const nm = NM(), P = int(10, 60) * 100, R = int(5, 15), T2 = int(2, 4), I = P * R / 100 * T2, A = P + I;
       return { kind: 'blank', num: true, ask: `${nm} saves Birr ${P} at ${R}% simple interest per year. How much money will ${nm} have after ${T2} years (savings + interest)? Birr ___`, a: [String(A)], why: `First the interest: I = P × R × T = ${P} × ${R / 100} × ${T2} = ${I}. Then add it to the savings: ${P} + ${I} = ${A}.`, worked: `I = ${P} × ${R / 100} × ${T2} = ${I}; total = ${P} + ${I} = ${A}.`, clue: 'Find the interest first, then add the savings.' }; },
+    int(o) { const t = o.op || 'add'; if (t === 'cmp' || t === 'order') return T.int(Object.assign({}, o, { big: 60, n: 6 }));
+      const nz = m => { let v = 0; while (!v) v = int(-m, m); return v; }, P = v => v < 0 ? `(${M(v)})` : String(v), k = pick(['missing', 'mistake', 'three']);
+      if (k === 'three') { if (t === 'mul' || t === 'div') { const x = nz(6), y = nz(6), z = nz(5), p = x * y * z, ng = [x, y, z].filter(v => v < 0).length;
+          return { kind: 'blank', num: true, input: 'signed', ask: `${M(x)} × ${P(y)} × ${P(z)} = ___`, a: [M(p)], why: `Count the negative factors: ${ng}. ${ng % 2 ? 'Odd, so the answer is negative' : 'Even, so the answer is positive'}. Sizes: ${Math.abs(x)} × ${Math.abs(y)} × ${Math.abs(z)} = ${Math.abs(p)}. So the answer is ${M(p)}.`, clue: 'An even number of negative factors gives +; an odd number gives −.' }; }
+        const a = nz(20), b = nz(20), c = nz(20), v = a - b + c;
+        return { kind: 'blank', num: true, input: 'signed', ask: `${M(a)} − ${P(b)} + ${P(c)} = ___`, a: [M(v)], why: `Go left to right. ${M(a)} − ${P(b)} = ${M(a)} + ${P(-b)} = ${M(a - b)}. Then ${M(a - b)} + ${P(c)} = ${M(v)}.`, worked: `${M(a)} + ${P(-b)} = ${M(a - b)}; ${M(a - b)} + ${P(c)} = ${M(v)}.`, clue: 'Change each subtraction into adding the opposite, then work left to right.' }; }
+      let a = nz(25), b = nz(25); if (t === 'mul') { a = nz(12); b = nz(12); } if (t === 'div') { const q = nz(12); b = nz(12); a = b * q; }
+      const res = { add: a + b, sub: a - b, mul: a * b, div: a / b }[t], sym = { add: '+', sub: '−', mul: '×', div: '÷' }[t];
+      const wrong = { add: -(a + b) || a - b, sub: a + b, mul: -res, div: -res }[t];
+      if (k === 'mistake' && wrong !== res) { const nm = NM(), right = `No, it is ${M(res)}`;
+        const why = { add: `Check the sign: ${Math.abs(a) > Math.abs(b) ? M(a) : M(b)} has the bigger size, so the answer takes its sign.`, sub: `${nm} forgot to change the sign. ${M(a)} − ${P(b)} = ${M(a)} + ${P(-b)}.`, mul: `The sign is wrong. ${(a < 0) === (b < 0) ? 'Same signs give a positive answer.' : 'Different signs give a negative answer.'}`, div: `The sign is wrong. ${(a < 0) === (b < 0) ? 'Same signs give a positive answer.' : 'Different signs give a negative answer.'}` }[t];
+        return { kind: 'mcq', text: `${nm} worked out ${M(a)} ${sym} ${P(b)} and got ${M(wrong)}. Is ${nm} right?`, opts: shuffle([`Yes, ${M(wrong)} is right`, right, `No, it is ${M([res + 2, res - 2, res + 4].find(v => v !== wrong && v !== res))}`]), ans: right, why: `${why} The answer is ${M(res)}.`, clue: 'Work it out yourself first, then compare.' }; }
+      const q = { add: [`___ + ${P(b)} = ${M(res)}`, a, `Undo the adding: ${M(res)} − ${P(b)} = ${M(res)} + ${P(-b)} = ${M(a)}.`],
+                  sub: [`${M(a)} − ___ = ${M(res)}`, b, `The missing number is ${M(a)} − ${P(res)} = ${M(b)}.`],
+                  mul: [`${M(a)} × ___ = ${M(res)}`, b, `Undo the multiplying: ${M(res)} ÷ ${P(a)} = ${M(b)}.`],
+                  div: [`___ ÷ ${P(b)} = ${M(res)}`, a, `Undo the dividing: ${M(res)} × ${P(b)} = ${M(a)}.`] }[t];
+      return { kind: 'blank', num: true, input: 'signed', ask: `Find the missing number: ${q[0]}`, a: [M(q[1])], why: `${q[2]} Check: put it back and both sides are equal.`, worked: q[2], clue: 'Undo the operation with its opposite.' }; },
+    sets(o) { const t = o.op || 'union'; if (t === 'count' || t === 'elem' || t === 'subsets' || t === 'proper') { const n = int(3, 4), all = 2 ** n, pr = r() < .5, s = shuffle('abcdmnpqxyz'.split('')).slice(0, n).sort();
+        return { kind: 'blank', num: true, ask: `How many ${pr ? 'proper subsets' : 'subsets'} does {${s.join(', ')}} have? ___`, a: [String(pr ? all - 1 : all)], why: `With ${n} elements there are 2 × 2 × … (${n} times) = ${all} subsets.${pr ? ` Leave out the set itself: ${all} − 1 = ${all - 1}.` : ''} Each element is either in or out.`, clue: 'Try a smaller set first: {a} has 2 subsets, {a, b} has 4. Each new element doubles the count.' }; }
+      const mk = n => { const s = []; while (s.length < n) { const v = int(1, 12); if (!s.includes(v)) s.push(v); } return s.sort((x, y) => x - y); }, br = s => s.length ? `{${s.join(', ')}}` : '{ }';
+      const A = mk(4), B = mk(4), C = mk(3); if (!A.some(v => B.includes(v))) B[0] = A[1]; B.sort((x, y) => x - y); if (!C.some(v => A.includes(v) || B.includes(v))) C[0] = A[0]; C.sort((x, y) => x - y); const AB = t === 'inter' ? A.filter(v => B.includes(v)) : [...new Set(A.concat(B))], res = (t === 'inter' ? [...new Set(AB.concat(C))] : AB.filter(v => C.includes(v))).sort((x, y) => x - y);
+      const all = [...new Set(A.concat(B, C))], pool = res.concat(shuffle(all.filter(v => !res.includes(v))).slice(0, Math.max(2, 8 - res.length)));
+      const e = t === 'inter' ? `(A ∩ B) ∪ C` : `(A ∪ B) ∩ C`;
+      return { kind: 'pick', text: `A = ${br(A)}, B = ${br(B)}, C = ${br(C)}. Tap every element of ${e}.`, pool: shuffle([...new Set(pool)]).map(String), a: res.map(String), why: `First the bracket: A ${t === 'inter' ? '∩' : '∪'} B = ${br(AB.sort((x, y) => x - y))}. Then ${t === 'inter' ? '∪' : '∩'} C: ${br(res)}.`, clue: 'Do the bracket first.' }; },
+    lineq(o) { if (o.form === 'eval') return T.lineq(Object.assign({}, o, { big: 12 }));
+      const k = pick(['both', 'word', 'frac', 'bracket']); if (k !== 'word') return T.lineq(Object.assign({}, o, { form: k }));
+      const nm = NM(), x = int(2, 20), a = int(2, 6), b = int(1, 15) * (r() < .4 ? -1 : 1), c = a * x + b;
+      return { kind: 'blank', num: true, ask: `${nm} thinks of a number, multiplies it by ${a}, then ${b > 0 ? `adds ${b}` : `subtracts ${-b}`}. The answer is ${c}. The number is ___`, a: [String(x)], why: `Let the number be n. Then ${a}n ${b > 0 ? '+' : '−'} ${Math.abs(b)} = ${c}. ${b > 0 ? 'Subtract' : 'Add'} ${Math.abs(b)}: ${a}n = ${c - b}. Divide by ${a}: n = ${x}.`, worked: `${a}n ${b > 0 ? '+' : '−'} ${Math.abs(b)} = ${c}; ${a}n = ${c - b}; n = ${x}.`, clue: 'Write an equation with a letter for the number, then solve it.' }; },
+    quad(o) { if (o.place) return T.quad(o); const nz = () => { let v = 0; while (!v) v = int(-5, 5); return v; }, x = nz(), y = nz(), dx = nz(), dy = nz(), X2 = x + dx, Y2 = y + dy;
+      const Qs = ['Quadrant I', 'Quadrant II', 'Quadrant III', 'Quadrant IV', 'On an axis'], ans = !X2 || !Y2 ? Qs[4] : X2 > 0 ? (Y2 > 0 ? Qs[0] : Qs[3]) : (Y2 > 0 ? Qs[1] : Qs[2]);
+      return { kind: 'mcq', text: `Point P is at (${M(x)}, ${M(y)}). It moves ${Math.abs(dx)} ${dx > 0 ? 'right' : 'left'} and ${Math.abs(dy)} ${dy > 0 ? 'up' : 'down'}. Where is it now?`, opts: Qs, ans, why: `New x = ${M(x)} ${dx > 0 ? '+' : '−'} ${Math.abs(dx)} = ${M(X2)}. New y = ${M(y)} ${dy > 0 ? '+' : '−'} ${Math.abs(dy)} = ${M(Y2)}. (${M(X2)}, ${M(Y2)}) is ${ans === Qs[4] ? 'on an axis' : 'in ' + ans}.`, clue: 'Right and up add; left and down subtract. Then look at the signs.' }; },
   };
   const api = {
     has: s => !!(s && s.gen && T[s.gen.t]),
@@ -577,7 +660,7 @@ const Gen = (() => {
     make(s, seed, lang, level) { if (!api.has(s)) return s; r = seed == null ? Math.random : rng(seed);
       try { const L = level || s.gen.level || 0, t = s.gen.t, o = Object.assign({ lang: lang || (typeof LL !== 'undefined' && LL) || 'en' }, s.gen, L && LV[t] ? LV[t](L) : {});
         const v = L === 3 && HARD[t] && (!LV[t] || r() < .7) ? HARD[t](o, s) : T[t](o, s); if (L) v.level = L; const out = Object.assign({}, s, { title: s.title ? s.title.replace(/^(Example|Exercise|Activity|Group work)[^:]*:\s*/i, '') : s.title }, v, { _gen: true });
-        ['ask', 'text', 'worked', 'opts', 'ans', 'pool', 'items', 'targets', 'min', 'max', 'sub', 'num'].forEach(k => { if (!(k in v)) delete out[k]; });
+        ['ask', 'text', 'worked', 'opts', 'ans', 'pool', 'items', 'targets', 'min', 'max', 'sub', 'num', 'ymin', 'ymax', 'a', 'points', 'lines'].forEach(k => { if (!(k in v)) delete out[k]; });
         if (['grid', 'cubes', 'ladder', 'blank'].includes(v.kind) && ['area', 'count', 'volume', 'convert', 'litres'].includes(s.gen.t)) ['say', 'intro', 'w', 'h', 'l', 'cube', 'layers', 'from', 'to', 'value', 'mode', 'unit', 'a', 'poly', 'cols', 'rows', 'graded'].forEach(k => { if (!(k in v)) delete out[k]; }); delete out.ref; return out; }
       catch (e) { return s; } finally { r = Math.random; } },
   };
@@ -906,6 +989,51 @@ function makeR(env) {
       return { el, label: mode === 'place' ? t('check') : t('continue'),
         ready: () => mode === 'place' ? tgs.every((_, k) => placed[k] != null && marks[k] !== 'no') : mode === 'hop' ? hk >= hops.length : pts.length ? seen.size >= Math.min(s.need || 2, pts.length) : true,
         check: mode !== 'place' ? undefined : () => { tries++; const bad = fails(); marks = tgs.map((_, k) => bad.includes(k) ? 'no' : 'ok'); if (!bad.length) { draw(); tip.textContent = ''; return { ok: true, body: s.why }; } if (tries >= 2) reveal = true; draw(); const lo = Math.floor(tgs[bad[0]].x); return { ok: false, body: `${s.clue ? s.clue + ' ' : ''}${tries < 2 ? t('nl_between', { x: tgs[bad[0]].label, a: fmt(lo), b: fmt(lo + 1) }) : ''}`.trim() }; },
+        retry() { prompt(); } };
+    },
+    coord(s) { // coordinate plane: show points and lines (tap to explore) or place targets (graded: tap a grid point, it snaps)
+      const x0 = s.min != null ? s.min : -5, x1 = s.max != null ? s.max : 5, y0 = s.ymin != null ? s.ymin : x0, y1 = s.ymax != null ? s.ymax : x1;
+      const pad = 20, cell = Math.min(300 / (x1 - x0), 300 / (y1 - y0), 34), W = cell * (x1 - x0) + 2 * pad, H = cell * (y1 - y0) + 2 * pad, X = v => pad + (v - x0) * cell, Y = v => pad + (y1 - v) * cell, fmt = v => v < 0 ? '−' + -v : String(v);
+      const pts = s.points || [], tgs = s.targets || [], lines = s.lines || [], mode = tgs.length ? 'place' : 'show', placed = [], seen = new Set(); let sel = -1, tries = 0, marks = [], last = 0, reveal = false;
+      const cid = 'cc' + Math.random().toString(36).slice(2, 8), lab = p => p.label || `(${fmt(p.x)}, ${fmt(p.y)})`;
+      const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="fig nl co"><svg viewBox="0 0 ${W} ${H}" class="nlsvg" role="img" aria-label="${esc(s.title || s.ask || 'coordinate plane')}"></svg>${mode === 'show' && pts.length ? `<div class="vchips">${pts.map((p, k) => `<button class="vchip" data-k="${k}">${esc(lab(p))}</button>`).join('')}</div>` : ''}<p class="small muted nlp"></p><div class="ginfo" hidden data-text></div></div>`);
+      const svg = el.querySelector('svg'), info = el.querySelector('.ginfo'), tip = el.querySelector('.nlp');
+      const dot = (p, col, r = 6, dash) => `<circle cx="${X(p.x)}" cy="${Y(p.y)}" r="${r}" style="fill:${dash ? 'none' : col};stroke:${col}" stroke-width="${dash ? 3 : 2}" ${dash ? 'stroke-dasharray="4 3"' : ''}/>`;
+      const tag = (p, txt, col) => `<text x="${X(p.x) + (p.x >= x1 - .5 ? -6 : 6)}" y="${Y(p.y) - 8}" font-size="12" font-weight="800" text-anchor="${p.x >= x1 - .5 ? 'end' : 'start'}" style="fill:${col};paint-order:stroke;stroke:var(--bg);stroke-width:3px">${esc(txt)}</text>`;
+      const draw = () => {
+        let g = `<defs><clipPath id="${cid}"><rect x="${X(x0)}" y="${Y(y1)}" width="${X(x1) - X(x0)}" height="${Y(y0) - Y(y1)}"/></clipPath></defs>`;
+        for (let v = Math.ceil(x0); v <= x1; v++) g += `<line x1="${X(v)}" x2="${X(v)}" y1="${Y(y1)}" y2="${Y(y0)}" style="stroke:var(--line, #ccc)" stroke-width="${v ? 1 : 0}"/>`;
+        for (let v = Math.ceil(y0); v <= y1; v++) g += `<line x1="${X(x0)}" x2="${X(x1)}" y1="${Y(v)}" y2="${Y(v)}" style="stroke:var(--line, #ccc)" stroke-width="${v ? 1 : 0}"/>`;
+        if (x0 <= 0 && x1 >= 0) g += `<line x1="${X(0)}" x2="${X(0)}" y1="${Y(y1) - 8}" y2="${Y(y0)}" style="stroke:var(--fg)" stroke-width="2"/><path d="M${X(0)} ${Y(y1) - 12}l-5 9h10z" style="fill:var(--fg)"/><text x="${X(0) + 8}" y="${Y(y1) - 4}" font-size="13" font-weight="800" style="fill:var(--fg)">y</text>`;
+        if (y0 <= 0 && y1 >= 0) g += `<line x1="${X(x0)}" x2="${X(x1) + 8}" y1="${Y(0)}" y2="${Y(0)}" style="stroke:var(--fg)" stroke-width="2"/><path d="M${X(x1) + 12} ${Y(0)}l-9 -5v10z" style="fill:var(--fg)"/><text x="${X(x1) + 4}" y="${Y(0) + 16}" font-size="13" font-weight="800" style="fill:var(--fg)">x</text>`;
+        const every = x1 - x0 > 12 ? 2 : 1, ox = x0 <= 0 && x1 >= 0 ? X(0) : X(x0), oy = y0 <= 0 && y1 >= 0 ? Y(0) : Y(y0);
+        for (let v = Math.ceil(x0); v <= x1; v++) if (v && !(v % every)) g += `<text x="${X(v)}" y="${oy + 14}" font-size="10" text-anchor="middle" style="fill:var(--muted)">${fmt(v)}</text>`;
+        for (let v = Math.ceil(y0); v <= y1; v++) if (v && !(v % every)) g += `<text x="${ox - 4}" y="${Y(v) + 4}" font-size="10" text-anchor="end" style="fill:var(--muted)">${fmt(v)}</text>`;
+        if (s.quadrants) [['I', 1, 1], ['II', -1, 1], ['III', -1, -1], ['IV', 1, -1]].forEach(([q, a, b]) => { g += `<text x="${X(a > 0 ? x1 * .55 : x0 * .55)}" y="${Y(b > 0 ? y1 * .55 : y0 * .55)}" font-size="20" font-weight="800" text-anchor="middle" style="fill:var(--sky);opacity:.35">${q}</text>`; });
+        lines.forEach((ln, k) => { const col = ['var(--coral)', 'var(--accent)', 'var(--sky)'][k % 3]; let a, b;
+          if (ln.x != null) { a = { x: ln.x, y: y0 - 1 }; b = { x: ln.x, y: y1 + 1 }; } else if (ln.pts) { a = { x: ln.pts[0][0], y: ln.pts[0][1] }; b = { x: ln.pts[1][0], y: ln.pts[1][1] }; const dx = b.x - a.x, dy = b.y - a.y, far = 4 * (x1 - x0 + y1 - y0); if (!ln.segment) { a = { x: a.x - dx * far, y: a.y - dy * far }; b = { x: b.x + dx * far, y: b.y + dy * far }; } }
+          else { const m = ln.m || 0, c = ln.b || 0; a = { x: x0 - 1, y: m * (x0 - 1) + c }; b = { x: x1 + 1, y: m * (x1 + 1) + c }; }
+          g += `<line clip-path="url(#${cid})" x1="${X(a.x)}" y1="${Y(a.y)}" x2="${X(b.x)}" y2="${Y(b.y)}" style="stroke:${col}" stroke-width="2.5"/>`;
+          if (ln.label) { const lx = Math.min(x1 - .3, Math.max(x0 + .3, ln.at != null ? ln.at : x1 * .6)), ly = ln.x != null ? y1 * .8 : ln.pts ? null : (ln.m || 0) * lx + (ln.b || 0); if (ly != null && ly <= y1 && ly >= y0) g += tag({ x: ln.x != null ? ln.x : lx, y: ly }, ln.label, col); } });
+        if (mode === 'show') pts.forEach((p, k) => { const on = k === sel, col = on ? 'var(--coral)' : 'var(--sky)';
+          if (on) g += `<path d="M${X(p.x)} ${Y(0 > y1 ? y1 : 0 < y0 ? y0 : 0)}V${Y(p.y)}M${X(0 > x1 ? x1 : 0 < x0 ? x0 : 0)} ${Y(p.y)}H${X(p.x)}" fill="none" style="stroke:var(--coral)" stroke-width="1.6" stroke-dasharray="4 3"/>`;
+          g += dot(p, col, on ? 8 : 6) + (p.name ? tag(p, p.name, col) : ''); });
+        if (mode === 'place') tgs.forEach((tg, k) => { if (reveal && marks[k] === 'no') g += dot(tg, 'var(--accent)', 9, true);
+          if (!placed[k]) return; const col = marks[k] === 'ok' ? 'var(--accent)' : marks[k] === 'no' ? 'var(--bad)' : 'var(--coral)'; g += dot(placed[k], col, 7) + tag(placed[k], tg.name || lab(tg), col); });
+        svg.innerHTML = g; el.querySelectorAll('.vchip').forEach(b => b.classList.toggle('on', +b.dataset.k === sel));
+      };
+      const prompt = () => { if (mode !== 'place') return; const i = tgs.findIndex((_, k) => !placed[k] || marks[k] === 'no'); tip.textContent = i >= 0 ? t('co_place', { p: tgs[i].name ? `${tgs[i].name} ${lab(tgs[i])}` : lab(tgs[i]) }) : t(tgs.length > 1 ? 'nl_move' : 'nl_move1'); };
+      const pick = k => { sel = k; seen.add(k); draw(); const p = pts[k]; info.hidden = false; info.innerHTML = `<b>${esc((p.name ? p.name + ' ' : '') + `(${fmt(p.x)}, ${fmt(p.y)})`)}</b> ${esc(p.info || t('co_info', { x: fmt(p.x), y: fmt(p.y) }))}`; info.classList.remove('pop'); void info.offsetWidth; info.classList.add('pop'); env.update(); };
+      svg.addEventListener('click', e => { const ctm = svg.getScreenCTM(); if (!ctm) return; const pt = svg.createSVGPoint(); pt.x = e.clientX; pt.y = e.clientY; const q = pt.matrixTransform(ctm.inverse()), vx = (q.x - pad) / cell + x0, vy = y1 - (q.y - pad) / cell;
+        if (mode === 'place') { if (env.phase() !== 'answer' || marks.length && marks.every(m => m === 'ok')) return; const p = { x: Math.max(x0, Math.min(x1, Math.round(vx))), y: Math.max(y0, Math.min(y1, Math.round(vy))) }; let i = tgs.findIndex((_, k) => !placed[k] || marks[k] === 'no'); if (i < 0) i = last; placed[i] = p; last = i; marks[i] = undefined; draw(); prompt(); env.update(); }
+        else { let best = -1, bd = .6; pts.forEach((p, k) => { const d = Math.hypot(p.x - vx, p.y - vy); if (d < bd) { bd = d; best = k; } }); if (best >= 0) pick(best); } });
+      const chips = el.querySelector('.vchips'); if (chips) chips.onclick = e => { const b = e.target.closest('.vchip'); if (b) pick(+b.dataset.k); };
+      draw(); prompt();
+      const fails = () => tgs.map((g, k) => placed[k] && placed[k].x === g.x && placed[k].y === g.y ? -1 : k).filter(k => k >= 0);
+      return { el, label: mode === 'place' ? t('check') : t('continue'),
+        ready: () => mode === 'place' ? tgs.every((_, k) => placed[k] && marks[k] !== 'no') : pts.length ? seen.size >= Math.min(s.need || 2, pts.length) : true,
+        check: mode !== 'place' ? undefined : () => { tries++; const bad = fails(); marks = tgs.map((_, k) => bad.includes(k) ? 'no' : 'ok'); if (!bad.length) { draw(); tip.textContent = ''; return { ok: true, body: s.why }; } if (tries >= 2) reveal = true; draw(); const g = tgs[bad[0]];
+          return { ok: false, body: `${s.clue ? s.clue + ' ' : ''}${tries < 2 ? t('co_hint', { x: fmt(g.x), y: fmt(g.y) }) : ''}`.trim() }; },
         retry() { prompt(); } };
     },
   };
@@ -1408,7 +1536,7 @@ async function viewBook(id, goItem) {
       wrong(el) { streak = 0; buzz(60); const sk = el && el.querySelector('.skip'); if (sk && !el.classList.contains('done')) sk.hidden = false; },
       done(el, s, pts) { el.classList.add('done'); const sk = el.querySelector('.skip'); if (sk) sk.remove(); if (!(s._key in B.got) || B.got[s._key] === 's') { B.got[s._key] = pts; save(); } progress(); doneCheck(); }
     };
-    rows.forEach(s => { const el = renderBlock(s, ctx); if (s.graded || ['guess', 'reveal', 'sort', 'tap', 'steps', 'tiles', 'order', 'match', 'tree', 'venn', 'gallery', 'numline', 'fracbar', 'grid', 'cubes', 'ladder', 'figure', 'nest', 'slider'].includes(s.kind)) { const u = { key: s._key, q: !!s.graded }; units.push(u); secUnits[si].push(u); } box.appendChild(el); });
+    rows.forEach(s => { const el = renderBlock(s, ctx); if (s.graded || ['guess', 'reveal', 'sort', 'tap', 'steps', 'tiles', 'order', 'match', 'tree', 'venn', 'gallery', 'numline', 'fracbar', 'grid', 'cubes', 'ladder', 'figure', 'nest', 'slider', 'coord'].includes(s.kind)) { const u = { key: s._key, q: !!s.graded }; units.push(u); secUnits[si].push(u); } box.appendChild(el); });
     box.querySelectorAll('.kwt').forEach(b => b.onclick = () => { const k = kws[+b.dataset.k]; const mk = kwMain(k, k.en, ls.main); sheet(`<div class="kcard big"><div class="kt">📘 ${esc(mk[0])}</div>${mk[1] ? `<div class="kam" lang="${ls.main === 'am' ? 'en' : 'am'}">${esc(mk[1])}</div>` : ''}${k.om ? `<div class="kam" lang="om">${esc(k.om)}</div>` : ''}<div class="kd" data-text>${esc(k.def || '')}</div></div><button class="btn" id="kok">${t('continue')}</button>`); $('#kok').onclick = () => sheet(''); });
     // end of section: celebration, practise set, book exercises
     const end = document.createElement('div'); end.className = 'secend';

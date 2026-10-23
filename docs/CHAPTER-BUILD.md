@@ -32,3 +32,7 @@ Add one entry to `content/index.json` → `chapters` (copy the shape of `g7-scie
 - Commit as "Mhreteabe Tesfaye <mhreteabetesfaye71624@gmail.com>", push to `main`, check `gh run list --workflow pages.yml`.
 - Update the table in `docs/CONTENT-PLAN.md` (your row only).
 - Tell the owner in 2–3 lines: chapter live, link `#book/<id>`, review flags for a teacher.
+
+## Generators and blocks added for Grade 7 (2026-10-23)
+- `gen` types: `int` (`op`: add, sub, mul, div, cmp, order; integers with sign-first answers), `sets` (`op`: union, inter, count, subsets, proper, elem), `lineq` (`form`: one, two, bracket, both, frac, eval; `y: true` for "y = …, when x = …"), `quad` (which quadrant; `place: true` → a coord item). Each has ★★★ shapes (missing number, spot the mistake, three terms, think-of-a-number, moved point).
+- `coord` block: a coordinate grid. `min`/`max` (x), `ymin`/`ymax`, `points` [{x, y, name?, info?}] to explore, `lines` [{m, b} | {x} | {pts}], `quadrants: true`, graded `targets` [{x, y, name?}] (tap a grid point; it snaps). Points must be whole numbers inside the grid (validator checks).

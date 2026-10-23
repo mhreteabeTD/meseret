@@ -8,7 +8,7 @@ const root = process.argv[2] || 'content';
 const schema = JSON.parse(readFileSync(new URL('../schema/lesson.schema.json', import.meta.url)));
 const KINDS = schema.$defs.screen.properties.kind.enum;
 const STEPS = schema.$defs.screen.properties.step.enum;
-const REQ = { mcq: ['opts', 'ans', 'why', 'clue'], tf: ['text', 'a', 'why', 'clue'], blank: ['ask', 'a', 'why', 'clue'], sort: ['bins', 'items'], match: ['pairs', 'why'], order: ['items', 'why'], name: ['defs'], steps: ['steps'], tap: ['items'], pick: ['pool', 'a', 'why'], guess: ['opts'], tiles: ['sizes', 'need'], read: ['paras'], picture: ['pic'], gallery: ['items'], people: ['people'], reveal: ['ask', 'answer'], tree: ['root'], venn: ['sets'], numline: ['min', 'max'], nest: ['rings'], slider: ['vars', 'formula'], figure: ['items'], grid: [], fracbar: [] };
+const REQ = { mcq: ['opts', 'ans', 'why', 'clue'], tf: ['text', 'a', 'why', 'clue'], blank: ['ask', 'a', 'why', 'clue'], sort: ['bins', 'items'], match: ['pairs', 'why'], order: ['items', 'why'], name: ['defs'], steps: ['steps'], tap: ['items'], pick: ['pool', 'a', 'why'], guess: ['opts'], tiles: ['sizes', 'need'], read: ['paras'], picture: ['pic'], gallery: ['items'], people: ['people'], reveal: ['ask', 'answer'], tree: ['root'], venn: ['sets'], numline: ['min', 'max'], nest: ['rings'], slider: ['vars', 'formula'], figure: ['items'], grid: [], fracbar: [], coord: [] };
 // generators live in app.js between GEN-START and GEN-END; each item with "gen" is generated many times and checked
 const appSrc = readFileSync(new URL('../app/app.js', import.meta.url), 'utf8'), qa = appSrc.indexOf('const Q = {'), qb = appSrc.indexOf('// a number label in SVG');
 const { Q, numMatch, Gen } = new Function(appSrc.slice(qa, qb) + '; return { Q, numMatch, Gen };')();
@@ -53,6 +53,8 @@ for (const file of files) {
     if (s.kind === 'grid' && s.mode === 'tile' && s.graded && s.ans == null) errs.push(`${where}: graded tile grid needs ans`);
     if (s.kind === 'grid' && s.mode === 'shape' && !(s.cols && s.rows && (s.poly || s.ellipse))) errs.push(`${where}: shape grid needs cols, rows and poly (or ellipse)`);
     if (s.kind === 'numline' && s.graded && !(s.targets || []).length) errs.push(`${where}: graded numline needs targets`);
+    if (s.kind === 'coord' && s.graded && !(s.targets || []).length) errs.push(`${where}: graded coord needs targets`);
+    if (s.kind === 'coord') { const lo = s.min ?? -5, hi = s.max ?? 5, ylo = s.ymin ?? lo, yhi = s.ymax ?? hi; [...(s.targets || []), ...(s.points || [])].forEach(p => { if (!Number.isInteger(p.x) || !Number.isInteger(p.y) || p.x < lo || p.x > hi || p.y < ylo || p.y > yhi) errs.push(`${where}: coord point (${p.x}, ${p.y}) must be whole numbers inside the grid`); }); }
     if (s.kind === 'blank' && s.num && Array.isArray(s.a) && !s.a.some(x => /^[≈~]?\s*[−-]?[\d.]/.test(String(x)))) errs.push(`${where}: num blank has no numeric accepted answer`);
     if (s.gen) { if (!Gen.has(s)) errs.push(`${where}: unknown generator "${s.gen.t}"`); else for (let n = 0; n < 90; n++) { const g = Gen.make(s, n * 7919 + 1, L.lang, (n % 3) + 1), bad = m => { errs.push(`${where}: generator ${s.gen.t} level ${(n % 3) + 1} seed ${n}: ${m}`); n = 999; };
       if (g.kind === 'blank' && (!g.ask || !g.ask.includes('___') || !g.a || !g.a.length)) bad('blank without ___ or answers');
@@ -60,6 +62,9 @@ for (const file of files) {
       else if (g.kind === 'mcq' && (!g.opts.includes(g.ans) || new Set(g.opts).size !== g.opts.length)) bad('mcq answer missing or duplicate options: ' + g.opts.join(' | '));
       else if (g.kind === 'pick' && (!g.a.every(x => g.pool.includes(x)) || new Set(g.pool).size !== g.pool.length)) bad('pick answers not in pool or duplicates: ' + g.pool.join(' | '));
       else if (g.kind === 'order' && new Set(g.items).size !== g.items.length) bad('order items repeat');
+      else if (g.kind === 'tf' && typeof g.a !== 'boolean') bad('tf answer must be true or false');
+      else if (g.kind === 'coord' && g.targets.some(p => p.x < g.min || p.x > g.max || p.y < g.ymin || p.y > g.ymax)) bad('coord target off the grid');
+      else if (g.kind === 'pick' && !g.a.length) bad('pick has no answer');
       else if (g.kind === 'numline' && g.targets.some(x => { const q = Q.parse(x.v); return !q || Q.val(q) < g.min || Q.val(q) > g.max; })) bad('target off the line'); } }
     if (s.step === 'challenge' && !s.graded) errs.push(`${where}: a challenge must be graded`);
     if (s.step === 'test' && s.clue) errs.push(`${where}: test items must not carry a clue`);
