@@ -38,7 +38,7 @@ You are continuing work on **Meseret (መሰረት)** with me, Mhreteabe (founde
 - Teacher review and Amharic speaker review run in parallel; all Amharic is machine-made (`"machine": true`) and needs a speaker's check.
 
 ## Grade 8 Maths Unit 1 (built 2026-10-22)
-- Spec: `docs/G8-MATHS-U1-DESIGN.md`. Whole unit live at `#book/g8-maths-u1` (13 sections incl. ★ summary, review, chapter test).
+- Spec: `docs/G8-MATHS-U1-DESIGN.md`. Whole unit live at `#book/g8-maths-u1` (13 sections incl. ★ summary, review, timed chapter test 20 q / 25 min; section tests 5 items each). Grade 5 Unit 1 has the timed test too (15 q / 20 min). Rule 13 in `CLAUDE.md`.
 - New blocks: `numline`, `fracbar`, `grid`, `nest`, `slider`; numeric blanks (`num`), sign-first input (`input: signed`); fractions drawn stacked automatically.
 - Fresh questions: `gen` on a screen → new numbers on practice replays and tests (rules in the spec). Book page and book exercises stay the book's.
 - Students choose one or more grades in setup; home shows only those grades (`meseret:grades`).

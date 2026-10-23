@@ -190,6 +190,16 @@
           "test": {
             "type": "boolean",
             "description": "a test with fresh generated questions every time, no clues"
+          },
+          "chapter_test": {
+            "type": "boolean",
+            "description": "a timed chapter test built from every section's test bank plus these items; no clues"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "minutes": {
+            "type": "integer"
           }
         }
       }

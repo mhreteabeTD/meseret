@@ -68,7 +68,7 @@ Decisions made:
 ## Order of work (each step: build, test at 360 px, deploy, tell me)
 1. **Read and plan Grade 5.** Read every PDF page. Write `docs/G5-MATHS-U<n>-DESIGN.md` in the style of the G8 design doc: lesson map, ideas per section, hooks, which blocks, which generators, new blocks needed, verified exercise answers, book issues. Show me a short summary. Because this handoff already decides the approach, go straight on unless something in the book contradicts it.
 2. **Engine: Amharic lessons for all of Grades 1–6** (`lang`, `main` key words, lesson-language UI words, Amharic generator templates, reverse translation, Grades 1–6 in setup) + any new blocks the design needs.
-3. **Content:** all sections of the chapter, plus summary, review exercise and a generated chapter test. Add the chapter to `content/index.json` with `"view": "book"`, `"free": true`.
+3. **Content:** all sections of the chapter, plus summary, review exercise and a timed chapter test (`chapter_test`, 15 questions / 20 minutes; rule 13 in `CLAUDE.md`). Add the chapter to `content/index.json` with `"view": "book"`, `"free": true`.
 4. Update `docs/HANDOFF.md` and the design doc's status section.
 
 ## Testing and finishing (every session)
