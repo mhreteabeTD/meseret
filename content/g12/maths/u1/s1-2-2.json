@@ -1,0 +1,952 @@
+{
+ "id": "g12.maths.u1.s1-2-2",
+ "book": {
+  "title": "Mathematics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "Sequences and Series",
+  "pages": "15–20",
+  "section": "1.2.2"
+ },
+ "title": "Geometric sequences",
+ "competency": "Find the common ratio, the nth term and geometric means of a geometric sequence.",
+ "minutes": 14,
+ "keywords": [
+  {
+   "en": "Geometric sequence",
+   "am": "ጂኦሜትሪክ ቅደም ተከተል",
+   "def": "A sequence where each term is the previous term times a fixed non-zero number.",
+   "machine": true
+  },
+  {
+   "en": "Common ratio",
+   "am": "የጋራ ሬሾ",
+   "def": "The fixed number r: r = next term ÷ this term.",
+   "machine": true
+  },
+  {
+   "en": "Geometric mean",
+   "am": "ጂኦሜትሪክ አማካይ",
+   "def": "A term m between a and b in a geometric sequence; m = ±√(ab).",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.geometric-sequence",
+   "name": "Geometric sequences",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "In a geometric sequence you multiply by the same non-zero number every time. That number is the common ratio r = next term ÷ this term. A negative ratio makes the signs alternate."
+    },
+    "am": {
+     "text": "በጂኦሜትሪክ ቅደም ተከተል በየጊዜው በአንድ አይነት ዜሮ ያልሆነ ቁጥር እናባዛለን። ይህ ቁጥር የጋራ ሬሾ r ይባላል፤ r = ቀጣዩ ተርም ÷ ይህ ተርም።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Not adding this time",
+     "ask": "2, 6, 18, 54, … What happens each time?",
+     "opts": [
+      "Add 4",
+      "Multiply by 3",
+      "Add 12",
+      "Multiply by 2"
+     ],
+     "after": "6 ÷ 2 = 3, 18 ÷ 6 = 3, 54 ÷ 18 = 3. We multiply by 3 each time.",
+     "ref": "Activity 1.4 a",
+     "id": "g12.maths.u1.s1-2-2.1"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "graded": false,
+     "title": "Find the ratio",
+     "text": "Tap each sequence. Activity 1.4.",
+     "need": 3,
+     "items": [
+      [
+       "2, 6, 18, 54, …",
+       "Ratio 3: 6 ÷ 2 = 18 ÷ 6 = 54 ÷ 18 = 3."
+      ],
+      [
+       "2, −2, 2, −2, …",
+       "Ratio −1: −2 ÷ 2 = −1. The sign flips each time."
+      ],
+      [
+       "3, −3/2, 3/4, −3/8, …",
+       "Ratio −1/2: (−3/2) ÷ 3 = (−3/2) × (1/3) = −1/2."
+      ]
+     ],
+     "id": "g12.maths.u1.s1-2-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Geometric sequence",
+     "paras": [
+      "The ratio between consecutive terms is a non-zero constant.",
+      "This constant is the common ratio r.",
+      "r = Gₙ₊₁/Gₙ, and r ≠ 0."
+     ],
+     "ref": "Definition 1.3",
+     "id": "g12.maths.u1.s1-2-2.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Geometric sequence",
+       "A sequence where each term is the previous term times a fixed non-zero number."
+      ],
+      [
+       "Common ratio",
+       "The fixed number r: r = next term ÷ this term."
+      ]
+     ],
+     "id": "g12.maths.u1.s1-2-2.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "3, 6, 12, 24, 48, … What is r?",
+     "opts": [
+      "2",
+      "3",
+      "6",
+      "1/2"
+     ],
+     "ans": "2",
+     "why": "6 ÷ 3 = 2, 12 ÷ 6 = 2.",
+     "clue": "Divide a term by the one before it.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example 1",
+     "id": "g12.maths.u1.s1-2-2.5"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "G₁ = −1/2, r = 1/2: terms 2 to 5",
+     "steps": [
+      "G₂ = −1/2 × 1/2 = −1/4.",
+      "G₃ = −1/4 × 1/2 = −1/8.",
+      "G₄ = −1/8 × 1/2 = −1/16.",
+      "G₅ = −1/16 × 1/2 = −1/32."
+     ],
+     "ref": "Example 2",
+     "id": "g12.maths.u1.s1-2-2.6"
+    },
+    {
+     "kind": "blank",
+     "ask": "3, 6, 12, 24, 48, … The 6th term is ___",
+     "a": [
+      "96"
+     ],
+     "why": "48 × 2 = 96.",
+     "clue": "Multiply the 5th term by r.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Example 1",
+     "id": "g12.maths.u1.s1-2-2.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "G₁ = 1, r = 3. G₅ = ___",
+     "a": [
+      "81"
+     ],
+     "why": "1, 3, 9, 27, 81.",
+     "clue": "Multiply by 3 four times.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 1.7 Q2",
+     "id": "g12.maths.u1.s1-2-2.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is geometric?",
+     "opts": [
+      "5, −10, 20, −40, …",
+      "5, 10, 15, 20, …",
+      "1, 4, 9, 16, …",
+      "2, 3, 5, 8, …"
+     ],
+     "ans": "5, −10, 20, −40, …",
+     "why": "Each term × (−2). The others do not have a constant ratio.",
+     "clue": "Divide neighbours. Is the answer always the same?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "id": "g12.maths.u1.s1-2-2.9"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Arithmetic, geometric or neither?",
+     "bins": [
+      "Arithmetic",
+      "Geometric",
+      "Neither"
+     ],
+     "items": [
+      [
+       "4, 8, 16, 32",
+       "Geometric",
+       "× 2"
+      ],
+      [
+       "4, 8, 12, 16",
+       "Arithmetic",
+       "+ 4"
+      ],
+      [
+       "1, 4, 9, 16",
+       "Neither",
+       "Gaps 3, 5, 7"
+      ],
+      [
+       "81, 27, 9, 3",
+       "Geometric",
+       "× 1/3"
+      ],
+      [
+       "7, 7, 7, 7",
+       "Arithmetic",
+       "d = 0 (also r = 1)"
+      ]
+     ],
+     "why": "Constant gap → arithmetic; constant ratio → geometric.",
+     "clue": "Check the gaps and the ratios.",
+     "added": true,
+     "graded": true,
+     "level": 2,
+     "id": "g12.maths.u1.s1-2-2.10"
+    },
+    {
+     "kind": "blank",
+     "ask": "A geometric sequence: 4, ___, 36, 108. The missing term is",
+     "a": [
+      "12"
+     ],
+     "why": "108 ÷ 36 = 3, so r = 3. 4 × 3 = 12, and 12 × 3 = 36.",
+     "clue": "Find r from the last two terms.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u1.s1-2-2.11"
+    }
+   ]
+  },
+  {
+   "id": "math.geometric-nth-term",
+   "name": "The nth term Gₙ = G₁ rⁿ⁻¹",
+   "requires": [
+    "math.exponents"
+   ],
+   "explain": {
+    "en": {
+     "text": "To reach the nth term, start at G₁ and multiply by r one time fewer than n: Gₙ = G₁ rⁿ⁻¹. From two terms, divide them: the G₁ cancels and you get a power of r. An even power gives two roots, ± ."
+    },
+    "am": {
+     "text": "n-ኛውን ተርም ለማግኘት ከ G₁ ተነስተን በ r (n − 1) ጊዜ እናባዛለን፤ Gₙ = G₁ rⁿ⁻¹።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "How many times?",
+     "ask": "2, 6, 18, 54, … To get the 4th term from 2, how many times do you multiply by 3?",
+     "opts": [
+      "4",
+      "3",
+      "2",
+      "1"
+     ],
+     "after": "2 × 3 × 3 × 3 = 54. Three times: G₄ = 2 × 3³.",
+     "id": "g12.maths.u1.s1-2-2.12"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "nth term",
+     "paras": [
+      "G₂ = G₁ r.  G₃ = G₁ r².  G₄ = G₁ r³.",
+      "Each step gives one more factor r."
+     ],
+     "note": "Theorem 1.2: Gₙ = G₁ rⁿ⁻¹.",
+     "ref": "Theorem 1.2",
+     "id": "g12.maths.u1.s1-2-2.13"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Explore Gₙ = G₁ rⁿ⁻¹",
+     "ask": "Move r and n. Watch how fast the terms grow or shrink.",
+     "vars": [
+      {
+       "k": "g",
+       "label": "G₁",
+       "min": 1,
+       "max": 10,
+       "step": 1,
+       "v": 3
+      },
+      {
+       "k": "r",
+       "label": "r",
+       "min": -3,
+       "max": 3,
+       "step": 0.5,
+       "v": 2
+      },
+      {
+       "k": "n",
+       "label": "n",
+       "min": 1,
+       "max": 12,
+       "step": 1,
+       "v": 6
+      }
+     ],
+     "formula": "g * r ** (n - 1)",
+     "out": "Gₙ = {v}",
+     "note": "Try r = 0.5: the terms get smaller. Try r = −2: the signs flip.",
+     "id": "g12.maths.u1.s1-2-2.14"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Common ratio",
+       "The fixed number r: r = next term ÷ this term."
+      ]
+     ],
+     "id": "g12.maths.u1.s1-2-2.15"
+    },
+    {
+     "kind": "mcq",
+     "text": "G₁ = 3, r = 2. Gₙ =",
+     "opts": [
+      "3 × 2ⁿ⁻¹",
+      "2 × 3ⁿ⁻¹",
+      "3 × 2ⁿ",
+      "6ⁿ⁻¹"
+     ],
+     "ans": "3 × 2ⁿ⁻¹",
+     "why": "Gₙ = G₁ rⁿ⁻¹ = 3 × 2ⁿ⁻¹.",
+     "clue": "Put G₁ and r into the formula.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example 1",
+     "id": "g12.maths.u1.s1-2-2.16"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "G₁ = 5 and G₄ = 1/25: find G₈",
+     "steps": [
+      "G₄ = G₁ r³, so 5r³ = 1/25.",
+      "Divide by 5: r³ = 1/125 = (1/5)³.",
+      "So r = 1/5.",
+      "G₈ = G₁ r⁷ = 5 × (1/5)⁷ = 5/5⁷ = 1/5⁶."
+     ],
+     "ref": "Example 3",
+     "id": "g12.maths.u1.s1-2-2.17"
+    },
+    {
+     "kind": "mcq",
+     "text": "The nth term of 1, −2, 4, −8, 16, … is",
+     "opts": [
+      "(−2)ⁿ⁻¹",
+      "−2ⁿ⁻¹",
+      "2ⁿ⁻¹",
+      "(−2)ⁿ"
+     ],
+     "ans": "(−2)ⁿ⁻¹",
+     "why": "G₁ = 1 and r = −2.",
+     "clue": "r is negative. Keep it in brackets.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Example 2",
+     "needs": "math.exponents",
+     "id": "g12.maths.u1.s1-2-2.18"
+    },
+    {
+     "kind": "blank",
+     "ask": "G₁ = −3, r = −1/2. G₅ = ___",
+     "a": [
+      "-3/16",
+      "-0.1875"
+     ],
+     "why": "(−1/2)⁴ = 1/16 (even power), so G₅ = −3 × 1/16 = −3/16.",
+     "clue": "Work out (−1/2)⁴ first. An even power is positive.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.8 Q3",
+     "needs": "math.exponents",
+     "id": "g12.maths.u1.s1-2-2.19"
+    },
+    {
+     "kind": "mcq",
+     "text": "The nth term of 27, 9, 3, 1, … is",
+     "opts": [
+      "27(1/3)ⁿ⁻¹",
+      "27 × 3ⁿ⁻¹",
+      "(1/3)ⁿ⁻¹",
+      "27 − 6(n − 1)"
+     ],
+     "ans": "27(1/3)ⁿ⁻¹",
+     "why": "r = 9/27 = 1/3. Gₙ = 27(1/3)ⁿ⁻¹, also 3⁴⁻ⁿ.",
+     "clue": "Find r = 9 ÷ 27.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 1.8 Q2 c",
+     "id": "g12.maths.u1.s1-2-2.20"
+    },
+    {
+     "kind": "pick",
+     "text": "G₂ = 12 and G₆ = 192. Which values of r are possible?",
+     "pool": [
+      "2",
+      "−2",
+      "4",
+      "16"
+     ],
+     "a": [
+      "2",
+      "−2"
+     ],
+     "why": "G₆/G₂ = r⁴ = 16. Both 2⁴ and (−2)⁴ are 16.",
+     "clue": "Divide G₆ by G₂. An even power has two roots.",
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Exercise 1.9 Q2",
+     "id": "g12.maths.u1.s1-2-2.21"
+    },
+    {
+     "kind": "blank",
+     "ask": "G₂ = 12, G₆ = 192 and r > 0. G₁₁ = ___",
+     "a": [
+      "6144"
+     ],
+     "why": "r = 2. G₁₁ = G₂ r⁹ = 12 × 512 = 6144.",
+     "clue": "From term 2 to term 11 is 9 steps.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Exercise 1.9 Q2",
+     "id": "g12.maths.u1.s1-2-2.22"
+    },
+    {
+     "kind": "blank",
+     "ask": "A geometric sequence has G₃ = 18 and G₆ = −486. G₁ = ___",
+     "a": [
+      "2"
+     ],
+     "why": "r³ = −486/18 = −27, so r = −3. G₁ = G₃/r² = 18/9 = 2.",
+     "clue": "Divide to get r³. An odd power has one real root.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u1.s1-2-2.23"
+    }
+   ]
+  },
+  {
+   "id": "math.geometric-mean",
+   "name": "Geometric means",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "If a, m, b are in a geometric sequence, m is a geometric mean of a and b. Equal ratios m/a = b/m give m² = ab, so m = ±√(ab). For three terms with a known product, write them as a/r, a, ar: the r cancels in the product."
+    },
+    "am": {
+     "text": "a, m, b ጂኦሜትሪክ ቅደም ተከተል ከሆኑ m የ a እና b ጂኦሜትሪክ አማካይ ነው። m² = ab ስለሆነ m = ±√(ab)።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "The middle of 2 and 8",
+     "ask": "2, m, 8 is geometric. Which m works?",
+     "opts": [
+      "5",
+      "4",
+      "6",
+      "16"
+     ],
+     "after": "2, 4, 8 has ratio 2. Also 2, −4, 8 has ratio −2. So m = ±4.",
+     "ref": "Example 2",
+     "id": "g12.maths.u1.s1-2-2.24"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Geometric mean",
+     "paras": [
+      "If a, m, b are terms in a geometric sequence, m is the geometric mean.",
+      "r = m/a = b/m, so m² = ab."
+     ],
+     "note": "m = ±√(ab), with a, b, m ≠ 0.",
+     "ref": "p.19",
+     "id": "g12.maths.u1.s1-2-2.25"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Geometric mean",
+       "A term m between a and b in a geometric sequence; m = ±√(ab)."
+      ]
+     ],
+     "id": "g12.maths.u1.s1-2-2.26"
+    },
+    {
+     "kind": "mcq",
+     "text": "Geometric mean between 3 and 12:",
+     "opts": [
+      "±6",
+      "7.5",
+      "±36",
+      "9"
+     ],
+     "ans": "±6",
+     "why": "m² = 3 × 12 = 36, so m = ±6.",
+     "clue": "m² = ab.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Exercise 1.9 Q1",
+     "id": "g12.maths.u1.s1-2-2.27"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "2, x, 5 is geometric",
+     "steps": [
+      "Equal ratios: x/2 = 5/x.",
+      "Cross-multiply: x² = 10.",
+      "x = ±√10."
+     ],
+     "ref": "Example 1",
+     "id": "g12.maths.u1.s1-2-2.28"
+    },
+    {
+     "kind": "tf",
+     "text": "The geometric mean of 4 and 9 is 6.5.",
+     "a": false,
+     "why": "6.5 is the arithmetic mean. The geometric mean is ±√36 = ±6.",
+     "clue": "Multiply, then take the square root.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "added": true,
+     "id": "g12.maths.u1.s1-2-2.29"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Three terms: sum 35, product 1000",
+     "steps": [
+      "Let them be a/r, a, ar. Product = a³ = 1000, so a = 10.",
+      "10/r + 10 + 10r = 35, so 10/r + 10r = 25.",
+      "Multiply by r: 10r² − 25r + 10 = 0, so 2r² − 5r + 2 = 0.",
+      "(2r − 1)(r − 2) = 0, so r = 2 or r = 1/2.",
+      "The terms are 5, 10, 20."
+     ],
+     "ref": "Exercise 1.9 Q4",
+     "id": "g12.maths.u1.s1-2-2.30"
+    },
+    {
+     "kind": "blank",
+     "ask": "x, 4x + 3, 7x + 6 are geometric, x ≠ 0. x = ___",
+     "a": [
+      "-1"
+     ],
+     "why": "(4x + 3)² = x(7x + 6) gives 9x² + 18x + 9 = 0, so (x + 1)² = 0 and x = −1.",
+     "clue": "Equal ratios: (4x + 3)/x = (7x + 6)/(4x + 3).",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Exercise 1.9 Q3",
+     "id": "g12.maths.u1.s1-2-2.31"
+    },
+    {
+     "kind": "blank",
+     "ask": "A positive geometric mean of 5 and 45 is ___",
+     "a": [
+      "15"
+     ],
+     "why": "√(5 × 45) = √225 = 15.",
+     "clue": "m = √(ab).",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "added": true,
+     "id": "g12.maths.u1.s1-2-2.32"
+    },
+    {
+     "kind": "blank",
+     "ask": "Three geometric terms have product 216 and sum 21. The middle term is ___",
+     "a": [
+      "6"
+     ],
+     "why": "With a/r, a, ar the product is a³ = 216, so a = 6. (The terms are 3, 6, 12.)",
+     "clue": "Write the terms as a/r, a, ar.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u1.s1-2-2.33"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 1.7",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "1, 2, 4, 8, 16, … The 6th term is ___",
+     "a": [
+      "32"
+     ],
+     "why": "r = 2. 16 × 2 = 32.",
+     "clue": "Multiply by r.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1",
+     "id": "g12.maths.u1.s1-2-2.34"
+    },
+    {
+     "kind": "mcq",
+     "text": "G₁ = 1, r = 3. Terms 2 to 5:",
+     "opts": [
+      "3, 9, 27, 81",
+      "4, 7, 10, 13",
+      "3, 6, 9, 12",
+      "3, 9, 18, 36"
+     ],
+     "ans": "3, 9, 27, 81",
+     "why": "Multiply by 3 each time.",
+     "clue": "r is a ratio, not a difference.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q2",
+     "id": "g12.maths.u1.s1-2-2.35"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.8",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "G₁ = 2, r = 5. Gₙ =",
+     "opts": [
+      "2 × 5ⁿ⁻¹",
+      "5 × 2ⁿ⁻¹",
+      "2 × 5ⁿ",
+      "10ⁿ⁻¹"
+     ],
+     "ans": "2 × 5ⁿ⁻¹",
+     "why": "G₁ rⁿ⁻¹.",
+     "clue": "Use the formula.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 a",
+     "id": "g12.maths.u1.s1-2-2.36"
+    },
+    {
+     "kind": "mcq",
+     "text": "G₁ = 2, r = −2. Gₙ =",
+     "opts": [
+      "2(−2)ⁿ⁻¹",
+      "−2(2)ⁿ⁻¹",
+      "2(−2)ⁿ",
+      "(−4)ⁿ⁻¹"
+     ],
+     "ans": "2(−2)ⁿ⁻¹",
+     "why": "G₁ rⁿ⁻¹ = 2(−2)ⁿ⁻¹.",
+     "clue": "Keep −2 in brackets.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1 c",
+     "id": "g12.maths.u1.s1-2-2.37"
+    },
+    {
+     "kind": "mcq",
+     "text": "3/2, 3/4, 3/8, 3/16, … Gₙ =",
+     "opts": [
+      "3/2ⁿ",
+      "3/2ⁿ⁻¹",
+      "(3/2)ⁿ",
+      "3 × 2ⁿ"
+     ],
+     "ans": "3/2ⁿ",
+     "why": "r = 1/2. (3/2)(1/2)ⁿ⁻¹ = 3/2ⁿ.",
+     "clue": "Find r first.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q2 b",
+     "id": "g12.maths.u1.s1-2-2.38"
+    },
+    {
+     "kind": "blank",
+     "ask": "G₁ = −3, r = −1/2. G₅ = ___",
+     "a": [
+      "-3/16"
+     ],
+     "why": "−3 × (−1/2)⁴ = −3/16.",
+     "clue": "Even power.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q3",
+     "id": "g12.maths.u1.s1-2-2.39"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.9",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "Geometric mean between 3 and 12:",
+     "opts": [
+      "±6",
+      "7.5",
+      "6 only",
+      "36"
+     ],
+     "ans": "±6",
+     "why": "m² = 36.",
+     "clue": "m² = ab.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1",
+     "id": "g12.maths.u1.s1-2-2.40"
+    },
+    {
+     "kind": "pick",
+     "text": "G₂ = 12 and G₆ = 192. Possible G₁₁:",
+     "pool": [
+      "6144",
+      "−6144",
+      "3072",
+      "12288"
+     ],
+     "a": [
+      "6144",
+      "−6144"
+     ],
+     "why": "r = ±2; G₁₁ = 12 × (±2)⁹ = ±6144.",
+     "clue": "r⁴ = 16.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q2",
+     "id": "g12.maths.u1.s1-2-2.41"
+    },
+    {
+     "kind": "blank",
+     "ask": "x, 4x + 3, 7x + 6 are geometric. x = ___",
+     "a": [
+      "-1"
+     ],
+     "why": "(x + 1)² = 0.",
+     "clue": "Equal ratios.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q3",
+     "id": "g12.maths.u1.s1-2-2.42"
+    },
+    {
+     "kind": "mcq",
+     "text": "Three geometric terms: sum 35, product 1000.",
+     "opts": [
+      "5, 10, 20",
+      "10, 10, 15",
+      "2, 10, 50",
+      "4, 10, 25"
+     ],
+     "ans": "5, 10, 20",
+     "why": "a = 10, r = 2.",
+     "clue": "a/r, a, ar.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q4",
+     "id": "g12.maths.u1.s1-2-2.43"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "ask": "G₁ = 4, r = 3. G₄ = ___",
+   "a": [
+    "108"
+   ],
+   "why": "4 × 3³ = 108.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u1.s1-2-2.44"
+  },
+  {
+   "kind": "mcq",
+   "text": "Common ratio of 48, −24, 12, −6, …",
+   "opts": [
+    "−1/2",
+    "1/2",
+    "−2",
+    "−24"
+   ],
+   "ans": "−1/2",
+   "why": "−24 ÷ 48 = −1/2.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u1.s1-2-2.45"
+  },
+  {
+   "kind": "blank",
+   "ask": "G₁ = 2 and G₄ = 54. r = ___",
+   "a": [
+    "3"
+   ],
+   "why": "r³ = 27.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u1.s1-2-2.46"
+  },
+  {
+   "kind": "mcq",
+   "text": "Geometric mean of 2 and 18:",
+   "opts": [
+    "±6",
+    "10",
+    "±36",
+    "9"
+   ],
+   "ans": "±6",
+   "why": "m² = 36.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u1.s1-2-2.47"
+  },
+  {
+   "kind": "blank",
+   "ask": "G₃ = 20 and G₅ = 80, r > 0. G₁ = ___",
+   "a": [
+    "5"
+   ],
+   "why": "r² = 4, r = 2, G₁ = 20/4 = 5.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.maths.u1.s1-2-2.48"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "Exercise 1.9 Q2 has two answers (r = ±2 gives G₁₁ = ±6144); the book expects both."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.exponents": {
+   "name": "Powers of negatives and fractions",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "(−1/2)⁴ and (−1/2)³",
+     "steps": [
+      "(−1/2)⁴ = (−1)⁴/2⁴ = 1/16: an even power is positive.",
+      "(−1/2)³ = (−1)³/2³ = −1/8: an odd power is negative.",
+      "Any non-zero number to the power 0 is 1."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "text": "(−3)⁴ = ?",
+     "opts": [
+      "81",
+      "−81",
+      "12",
+      "−12"
+     ],
+     "ans": "81",
+     "why": "(−3)(−3)(−3)(−3) = 81. Even power → positive.",
+     "clue": "Count the minus signs.",
+     "graded": true,
+     "level": 1,
+     "step": "check"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,641 @@
+{
+ "id": "g12.maths.u1.s1-3",
+ "book": {
+  "title": "Mathematics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "Sequences and Series",
+  "pages": "21–24",
+  "section": "1.3"
+ },
+ "title": "The sigma notation and partial sums",
+ "competency": "Find partial sums and read and write sums in sigma notation.",
+ "minutes": 12,
+ "keywords": [
+  {
+   "en": "Partial sum",
+   "am": "ከፊል ድምር",
+   "def": "Sₙ, the sum of the first n terms of a sequence.",
+   "machine": true
+  },
+  {
+   "en": "Sigma notation",
+   "am": "የሲግማ ምልክት",
+   "def": "The symbol ∑ for adding the terms aₖ from a lower to an upper limit.",
+   "machine": true
+  },
+  {
+   "en": "Index of summation",
+   "am": "የድምር ጠቋሚ",
+   "def": "The letter (like k) that runs from the lower to the upper limit.",
+   "machine": true
+  },
+  {
+   "en": "Series",
+   "am": "ተከታታይ ድምር",
+   "def": "The sum of the terms of a sequence.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.partial-sum",
+   "name": "Partial sums",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "A partial sum Sₙ adds the first n terms of a sequence: Sₙ = a₁ + a₂ + … + aₙ. Some sums telescope: when each term is a difference like 1/n − 1/(n + 1), the middle parts cancel and only the first and last parts remain."
+    },
+    "am": {
+     "text": "ከፊል ድምር Sₙ የመጀመሪያዎቹን n ተርሞች ይደምራል። አንዳንድ ድምሮች ይታጠፋሉ (ቴሌስኮፒንግ)፤ መካከለኛዎቹ ይሰረዛሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Add the first five",
+     "ask": "What is 2 + 4 + 6 + 8 + 10?",
+     "opts": [
+      "20",
+      "30",
+      "25",
+      "40"
+     ],
+     "after": "30. Adding the first terms of a sequence gives a partial sum.",
+     "ref": "Example 1",
+     "id": "g12.maths.u1.s1-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Partial sums",
+     "paras": [
+      "S₁ = a₁.  S₂ = a₁ + a₂.  S₃ = a₁ + a₂ + a₃.",
+      "Sₙ = a₁ + a₂ + … + aₙ is the sum of the first n terms.",
+      "Sₙ is called the partial sum."
+     ],
+     "ref": "Definition 1.4",
+     "id": "g12.maths.u1.s1-3.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Partial sum",
+       "Sₙ, the sum of the first n terms of a sequence."
+      ]
+     ],
+     "id": "g12.maths.u1.s1-3.3"
+    },
+    {
+     "kind": "blank",
+     "ask": "aₙ = 3n + 1. S₆ = ___",
+     "a": [
+      "69"
+     ],
+     "why": "Terms 4, 7, 10, 13, 16, 19. Their sum is 69.",
+     "clue": "List a₁ to a₆ first.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example 2",
+     "id": "g12.maths.u1.s1-3.4"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "aₙ = 1/(n(n + 1)): the sum of 99 terms",
+     "steps": [
+      "Split: 1/(n(n + 1)) = 1/n − 1/(n + 1).",
+      "S₉₉ = (1 − 1/2) + (1/2 − 1/3) + … + (1/99 − 1/100).",
+      "Each middle fraction appears with + and with −, so they cancel.",
+      "Only 1 and −1/100 are left: S₉₉ = 99/100 = 0.99.",
+      "In general Sₙ = 1 − 1/(n + 1) = n/(n + 1)."
+     ],
+     "ref": "Example 3",
+     "id": "g12.maths.u1.s1-3.5"
+    },
+    {
+     "kind": "blank",
+     "ask": "The sum of the first ten odd numbers is ___",
+     "a": [
+      "100"
+     ],
+     "why": "1 + 3 + … + 19: five pairs of 20 make 100.",
+     "clue": "Pair the first and last terms.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 1.10 Q1 b",
+     "id": "g12.maths.u1.s1-3.6"
+    },
+    {
+     "kind": "blank",
+     "ask": "aₙ = 3 − 5n. S₈ = ___",
+     "a": [
+      "-156"
+     ],
+     "why": "Terms −2, −7, …, −37. Four pairs of (−2 − 37) = −39 make −156.",
+     "clue": "a₁ = −2 and a₈ = −37.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.10 Q2 b",
+     "id": "g12.maths.u1.s1-3.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "aₙ = n² + 1. S₆ = ___",
+     "a": [
+      "97"
+     ],
+     "why": "2 + 5 + 10 + 17 + 26 + 37 = 97.",
+     "clue": "Square, add 1, then add up.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.10 Q2 c",
+     "id": "g12.maths.u1.s1-3.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "aₙ = 2/((n + 2)(n + 3)). Sₙ =",
+     "opts": [
+      "2n/(3(n + 3))",
+      "2/(n + 3)",
+      "n/(n + 3)",
+      "2n/(n + 2)"
+     ],
+     "ans": "2n/(3(n + 3))",
+     "why": "aₙ = 2[1/(n + 2) − 1/(n + 3)]. It telescopes to 2[1/3 − 1/(n + 3)] = 2n/(3(n + 3)).",
+     "clue": "Split into two fractions. The first part left is 1/3.",
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Exercise 1.10 Q3",
+     "id": "g12.maths.u1.s1-3.9"
+    },
+    {
+     "kind": "blank",
+     "ask": "S₂₀ for aₙ = 1/(n(n + 1)) is ___",
+     "a": [
+      "20/21"
+     ],
+     "why": "Sₙ = n/(n + 1), so S₂₀ = 20/21.",
+     "clue": "Use the telescoping result.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u1.s1-3.10"
+    }
+   ]
+  },
+  {
+   "id": "math.sigma-notation",
+   "name": "Sigma notation",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Sigma ∑ writes a long sum in short form. ∑ from k = m to n of aₖ means: put k = m, m + 1, …, n into aₖ and add. There are n − m + 1 terms. Renaming the index or shifting it carefully does not change the sum."
+    },
+    "am": {
+     "text": "ሲግማ ∑ ረጅም ድምርን በአጭሩ ይጽፋል። ከ k = m እስከ n ያሉትን እሴቶች በ aₖ ውስጥ አስገብተን እንደምራለን። ተርሞቹ n − m + 1 ናቸው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A short way to write a sum",
+     "ask": "3 + 6 + 9 + … + 24 has how many terms?",
+     "opts": [
+      "8",
+      "24",
+      "7",
+      "9"
+     ],
+     "after": "3 × 1, 3 × 2, …, 3 × 8: eight terms. Sigma writes this as ∑ₖ₌₁⁸ 3k.",
+     "id": "g12.maths.u1.s1-3.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Sigma notation",
+     "paras": [
+      "∑ is the Greek capital letter sigma.",
+      "∑ₖ₌₁ⁿ aₖ = a₁ + a₂ + … + aₙ.",
+      "k is the index, 1 is the lower limit, n is the upper limit."
+     ],
+     "ref": "Definition 1.4",
+     "id": "g12.maths.u1.s1-3.12"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "graded": false,
+     "title": "Read the parts",
+     "text": "Tap each part of ∑ₖ₌₁ⁿ aₖ.",
+     "need": 4,
+     "items": [
+      [
+       "∑",
+       "Sigma: add the terms."
+      ],
+      [
+       "k = 1 (below)",
+       "The lower limit: the first value of k."
+      ],
+      [
+       "n (above)",
+       "The upper limit: the last value of k."
+      ],
+      [
+       "aₖ",
+       "The rule for each term."
+      ]
+     ],
+     "id": "g12.maths.u1.s1-3.13"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Sigma notation",
+       "The symbol ∑ for adding the terms aₖ from a lower to an upper limit."
+      ],
+      [
+       "Index of summation",
+       "The letter (like k) that runs from the lower to the upper limit."
+      ]
+     ],
+     "id": "g12.maths.u1.s1-3.14"
+    },
+    {
+     "kind": "blank",
+     "ask": "∑ₖ₌₁⁸ 3k = ___",
+     "a": [
+      "108"
+     ],
+     "why": "3 + 6 + 9 + 12 + 15 + 18 + 21 + 24 = 108.",
+     "clue": "Put k = 1, 2, …, 8.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example 1 a",
+     "id": "g12.maths.u1.s1-3.15"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "∑ₖ₌₂⁶ k²",
+     "steps": [
+      "k starts at 2, not 1. So 1² is not included.",
+      "k = 2, 3, 4, 5, 6 gives 4 + 9 + 16 + 25 + 36.",
+      "The sum is 90."
+     ],
+     "ref": "Example 1 b",
+     "id": "g12.maths.u1.s1-3.16"
+    },
+    {
+     "kind": "pick",
+     "text": "Which express 3² + 4² + 5² + 6² + 7²?",
+     "pool": [
+      "∑ₖ₌₃⁷ k²",
+      "∑ᵢ₌₃⁷ i²",
+      "∑ₖ₌₂⁶ (k + 1)²",
+      "∑ₖ₌₁⁷ k²"
+     ],
+     "a": [
+      "∑ₖ₌₃⁷ k²",
+      "∑ᵢ₌₃⁷ i²",
+      "∑ₖ₌₂⁶ (k + 1)²"
+     ],
+     "why": "Renaming k to i changes nothing. With k = 2 to 6, k + 1 runs 3 to 7. Starting at k = 1 adds 1² + 2².",
+     "clue": "Write out the first and last term of each.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Example 2",
+     "id": "g12.maths.u1.s1-3.17"
+    },
+    {
+     "kind": "blank",
+     "ask": "∑ₖ₌₃⁵ k³ = ___",
+     "a": [
+      "216"
+     ],
+     "why": "27 + 64 + 125 = 216.",
+     "clue": "Three terms: k = 3, 4, 5.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 1.11 Q1 d",
+     "id": "g12.maths.u1.s1-3.18"
+    },
+    {
+     "kind": "mcq",
+     "text": "2² + 4² + 6² + 8² + 10² + 12² in sigma notation:",
+     "opts": [
+      "∑ₖ₌₁⁶ (2k)²",
+      "∑ₖ₌₂¹² k²",
+      "∑ₖ₌₁⁶ 2k²",
+      "∑ₖ₌₁¹² (2k)²"
+     ],
+     "ans": "∑ₖ₌₁⁶ (2k)²",
+     "why": "The numbers squared are 2k for k = 1 to 6.",
+     "clue": "What is being squared each time?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.11 Q2",
+     "id": "g12.maths.u1.s1-3.19"
+    },
+    {
+     "kind": "blank",
+     "ask": "How many terms are in ∑ₖ₌₄²⁰ (2k − 1)? ___",
+     "a": [
+      "17"
+     ],
+     "why": "n − m + 1 = 20 − 4 + 1 = 17.",
+     "clue": "Not 20, and not 16.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u1.s1-3.20"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 1.10",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "Sum of the first five odd natural numbers = ___",
+     "a": [
+      "25"
+     ],
+     "why": "1 + 3 + 5 + 7 + 9 = 25.",
+     "clue": "List them.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 a",
+     "id": "g12.maths.u1.s1-3.21"
+    },
+    {
+     "kind": "blank",
+     "ask": "Sum of the first ten odd natural numbers = ___",
+     "a": [
+      "100"
+     ],
+     "why": "Five pairs of 20.",
+     "clue": "Pair first and last.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 b",
+     "id": "g12.maths.u1.s1-3.22"
+    },
+    {
+     "kind": "blank",
+     "ask": "aₙ = 4n − 3. S₅ = ___",
+     "a": [
+      "45"
+     ],
+     "why": "1 + 5 + 9 + 13 + 17.",
+     "clue": "List the terms.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q2 a",
+     "id": "g12.maths.u1.s1-3.23"
+    },
+    {
+     "kind": "blank",
+     "ask": "aₙ = 3 − 5n. S₈ = ___",
+     "a": [
+      "-156"
+     ],
+     "why": "4 × (−39).",
+     "clue": "Pair first and last.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q2 b",
+     "id": "g12.maths.u1.s1-3.24"
+    },
+    {
+     "kind": "blank",
+     "ask": "aₙ = n² + 1. S₆ = ___",
+     "a": [
+      "97"
+     ],
+     "why": "91 + 6.",
+     "clue": "Sum of squares plus 6.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q2 c",
+     "id": "g12.maths.u1.s1-3.25"
+    },
+    {
+     "kind": "mcq",
+     "text": "aₙ = 2/(n² + 5n + 6). Sₙ =",
+     "opts": [
+      "2n/(3n + 9)",
+      "n/(n + 3)",
+      "2/(n + 3)",
+      "2n/(n + 6)"
+     ],
+     "ans": "2n/(3n + 9)",
+     "why": "Telescopes to 2(1/3 − 1/(n + 3)).",
+     "clue": "Factor n² + 5n + 6.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q3",
+     "id": "g12.maths.u1.s1-3.26"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.11",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "∑ₖ₌₁⁶ 2k = ___",
+     "a": [
+      "42"
+     ],
+     "why": "2 + 4 + 6 + 8 + 10 + 12.",
+     "clue": "k = 1 to 6.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 a",
+     "id": "g12.maths.u1.s1-3.27"
+    },
+    {
+     "kind": "blank",
+     "ask": "∑ₖ₌₃⁵ k² = ___",
+     "a": [
+      "50"
+     ],
+     "why": "9 + 16 + 25.",
+     "clue": "Start at k = 3.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 b",
+     "id": "g12.maths.u1.s1-3.28"
+    },
+    {
+     "kind": "mcq",
+     "text": "∑ₖ₌₁ⁿ 3ᵏ as a sum:",
+     "opts": [
+      "3 + 9 + 27 + … + 3ⁿ",
+      "1 + 3 + 9 + … + 3ⁿ",
+      "3 + 6 + 9 + … + 3n",
+      "3 + 9 + 27 + … + 3ⁿ⁺¹"
+     ],
+     "ans": "3 + 9 + 27 + … + 3ⁿ",
+     "why": "k = 1 gives 3; the last term is 3ⁿ.",
+     "clue": "Put k = 1 first.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1 c",
+     "id": "g12.maths.u1.s1-3.29"
+    },
+    {
+     "kind": "blank",
+     "ask": "∑ₖ₌₃⁵ k³ = ___",
+     "a": [
+      "216"
+     ],
+     "why": "27 + 64 + 125.",
+     "clue": "k = 3, 4, 5.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 d",
+     "id": "g12.maths.u1.s1-3.30"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "ask": "aₙ = 4n − 3. S₅ = ___",
+   "a": [
+    "45"
+   ],
+   "why": "1 + 5 + 9 + 13 + 17 = 45.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u1.s1-3.31"
+  },
+  {
+   "kind": "blank",
+   "ask": "∑ₖ₌₁⁶ 2k = ___",
+   "a": [
+    "42"
+   ],
+   "why": "2 + 4 + … + 12 = 42.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u1.s1-3.32"
+  },
+  {
+   "kind": "blank",
+   "ask": "∑ₖ₌₂⁴ k² = ___",
+   "a": [
+    "29"
+   ],
+   "why": "4 + 9 + 16 = 29.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u1.s1-3.33"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which equals ∑ₖ₌₁⁵ k?",
+   "opts": [
+    "∑ⱼ₌₁⁵ j",
+    "∑ₖ₌₀⁵ (k + 1)",
+    "∑ₖ₌₁⁵ 2k",
+    "∑ₖ₌₂⁶ k"
+   ],
+   "ans": "∑ⱼ₌₁⁵ j",
+   "why": "Only the index name changes.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u1.s1-3.34"
+  },
+  {
+   "kind": "blank",
+   "ask": "aₙ = 1/(n(n + 1)). S₉ = ___",
+   "a": [
+    "9/10",
+    "0.9"
+   ],
+   "why": "Sₙ = n/(n + 1).",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.maths.u1.s1-3.35"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "Example 3 (telescoping) uses partial fractions; the split 1/(n(n + 1)) = 1/n − 1/(n + 1) is shown with its check."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

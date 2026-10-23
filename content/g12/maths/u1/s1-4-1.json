@@ -1,0 +1,818 @@
+{
+ "id": "g12.maths.u1.s1-4-1",
+ "book": {
+  "title": "Mathematics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "Sequences and Series",
+  "pages": "35–42",
+  "section": "1.4.1"
+ },
+ "title": "Divergence and convergence of infinite sequences",
+ "competency": "Decide whether rⁿ and a geometric series converge, and find the sum of an infinite geometric series.",
+ "minutes": 16,
+ "keywords": [
+  {
+   "en": "Infinite series",
+   "am": "ኢውሱን ተከታታይ ድምር",
+   "def": "A sum a₁ + a₂ + a₃ + … that never ends.",
+   "machine": true
+  },
+  {
+   "en": "Convergent",
+   "am": "ተሰባሳቢ",
+   "def": "A sequence or series that gets closer and closer to one number.",
+   "machine": true
+  },
+  {
+   "en": "Divergent",
+   "am": "ተበታታኝ",
+   "def": "A sequence or series that does not settle at one number.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.sequence-convergence",
+   "name": "Convergence of rⁿ",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "As n grows, rⁿ goes to infinity when r > 1, stays 1 when r = 1, shrinks to 0 when −1 < r < 1, and jumps without a limit when r ≤ −1. A negative r between −1 and 0 still goes to 0: the signs flip but the size shrinks."
+    },
+    "am": {
+     "text": "n ሲያድግ፤ r > 1 ሲሆን rⁿ ወደ ኢንፊኒቲ ይሄዳል፤ r = 1 ሲሆን 1 ይቀራል፤ −1 < r < 1 ሲሆን ወደ 0 ይቀርባል፤ r ≤ −1 ሲሆን ወሰን የለውም።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A tree that slows down",
+     "ask": "A tree of height 1 grows 1/2, then 1/4, then 1/8, … each year. How tall can it get?",
+     "opts": [
+      "It grows forever",
+      "Close to 2, never more",
+      "Exactly 1.5",
+      "Close to 3"
+     ],
+     "after": "Heights 1, 1.5, 1.75, 1.875, 1.9375, … get closer and closer to 2 but never pass it.",
+     "ref": "Activity 1.7",
+     "id": "g12.maths.u1.s1-4-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Convergence and divergence",
+     "paras": [
+      "A sequence converges to α if aₙ gets closer to α as n → ∞.",
+      "It diverges if aₙ → ∞ or aₙ → −∞.",
+      "It vibrates if it keeps jumping and has no limit."
+     ],
+     "ref": "p.36",
+     "id": "g12.maths.u1.s1-4-1.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The sequence Gₙ = rⁿ",
+     "paras": [
+      "The value of r decides what happens."
+     ],
+     "table": [
+      [
+       "r",
+       "As n → ∞",
+       "Result"
+      ],
+      [
+       "r > 1",
+       "rⁿ → ∞",
+       "diverges"
+      ],
+      [
+       "r = 1",
+       "rⁿ = 1",
+       "converges to 1"
+      ],
+      [
+       "|r| < 1",
+       "rⁿ → 0",
+       "converges to 0"
+      ],
+      [
+       "r ≤ −1",
+       "no limit",
+       "vibrates"
+      ]
+     ],
+     "ref": "p.36",
+     "id": "g12.maths.u1.s1-4-1.3"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Watch rⁿ",
+     "ask": "Move r. Then make n large. Where does rⁿ go?",
+     "vars": [
+      {
+       "k": "r",
+       "label": "r",
+       "min": -2,
+       "max": 2,
+       "step": 0.1,
+       "v": 0.5
+      },
+      {
+       "k": "n",
+       "label": "n",
+       "min": 1,
+       "max": 40,
+       "step": 1,
+       "v": 10
+      }
+     ],
+     "formula": "r ** n",
+     "out": "rⁿ = {v}",
+     "note": "Try r = 0.9, r = −0.5, r = 1.1 and r = −1.",
+     "id": "g12.maths.u1.s1-4-1.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Convergent",
+       "A sequence or series that gets closer and closer to one number."
+      ],
+      [
+       "Divergent",
+       "A sequence or series that does not settle at one number."
+      ]
+     ],
+     "id": "g12.maths.u1.s1-4-1.5"
+    },
+    {
+     "kind": "mcq",
+     "text": "Gₙ = (√2)ⁿ as n → ∞:",
+     "opts": [
+      "diverges",
+      "converges to 0",
+      "converges to 1",
+      "vibrates"
+     ],
+     "ans": "diverges",
+     "why": "√2 ≈ 1.41 > 1, so the terms grow without end.",
+     "clue": "Is √2 bigger than 1?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example a",
+     "id": "g12.maths.u1.s1-4-1.6"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Where does rⁿ go?",
+     "bins": [
+      "Diverges",
+      "Converges",
+      "Vibrates"
+     ],
+     "items": [
+      [
+       "(√3)ⁿ",
+       "Diverges",
+       "√3 > 1"
+      ],
+      [
+       "(3/4)ⁿ",
+       "Converges",
+       "|3/4| < 1 → 0"
+      ],
+      [
+       "(−1/2)ⁿ",
+       "Converges",
+       "|−1/2| < 1 → 0"
+      ],
+      [
+       "(−3)ⁿ",
+       "Vibrates",
+       "−3 ≤ −1"
+      ],
+      [
+       "(2/3)ⁿ",
+       "Converges",
+       "→ 0"
+      ],
+      [
+       "1ⁿ",
+       "Converges",
+       "always 1"
+      ]
+     ],
+     "why": "Compare r with 1 and −1.",
+     "clue": "Look only at r. Is |r| < 1? Is r ≤ −1?",
+     "ref": "Exercise 1.18",
+     "graded": true,
+     "level": 2,
+     "id": "g12.maths.u1.s1-4-1.7"
+    },
+    {
+     "kind": "tf",
+     "text": "(−1/2)ⁿ vibrates because its signs alternate.",
+     "a": false,
+     "why": "Its size halves each time, so it converges to 0. Only r ≤ −1 vibrates.",
+     "clue": "Look at |r|.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.18 c",
+     "id": "g12.maths.u1.s1-4-1.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which sequence converges?",
+     "opts": [
+      "(0.99)ⁿ",
+      "(1.01)ⁿ",
+      "(−1)ⁿ",
+      "(−1.5)ⁿ"
+     ],
+     "ans": "(0.99)ⁿ",
+     "why": "|0.99| < 1, so it goes to 0 (slowly).",
+     "clue": "Only one has |r| < 1.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u1.s1-4-1.9"
+    }
+   ]
+  },
+  {
+   "id": "math.infinite-geometric-series",
+   "name": "Sum of an infinite geometric series",
+   "requires": [
+    "math.geometric-series"
+   ],
+   "explain": {
+    "en": {
+     "text": "An infinite series converges when its partial sums Sₙ get closer to a number s. For a geometric series with |r| < 1, rⁿ → 0, so Sₙ → G₁/(1 − r). If |r| ≥ 1 there is no sum. To use the formula, rewrite the term as G₁ rᵏ⁻¹."
+    },
+    "am": {
+     "text": "ኢንፊኒት ጂኦሜትሪክ ተከታታይ |r| < 1 ሲሆን ድምር አለው፤ S∞ = G₁/(1 − r)። |r| ≥ 1 ከሆነ ድምር የለም።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Adding forever",
+     "ask": "What does 1/2 + 1/4 + 1/8 + 1/16 + … add up to?",
+     "opts": [
+      "∞",
+      "1",
+      "2",
+      "1/2"
+     ],
+     "after": "Partial sums 1/2, 3/4, 7/8, 15/16, … approach 1.",
+     "ref": "Activity 1.8 ii",
+     "id": "g12.maths.u1.s1-4-1.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Infinite series",
+     "paras": [
+      "a₁ + a₂ + a₃ + … is an infinite series.",
+      "It converges if Sₙ tends to a real number s. Then ∑ aₙ = s.",
+      "If no such s exists, it diverges."
+     ],
+     "ref": "Definition 1.5",
+     "id": "g12.maths.u1.s1-4-1.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Sum to infinity",
+     "paras": [
+      "Sₙ = G₁/(1 − r) − G₁rⁿ/(1 − r).",
+      "If |r| < 1, rⁿ → 0, so Sₙ → G₁/(1 − r)."
+     ],
+     "table": [
+      [
+       "n",
+       "1",
+       "5",
+       "10",
+       "20"
+      ],
+      [
+       "(2/3)ⁿ",
+       "0.667",
+       "0.132",
+       "0.017",
+       "0.0003"
+      ]
+     ],
+     "note": "S∞ = G₁/(1 − r), only when |r| < 1.",
+     "ref": "p.38–39",
+     "id": "g12.maths.u1.s1-4-1.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Infinite series",
+       "A sum a₁ + a₂ + a₃ + … that never ends."
+      ],
+      [
+       "Convergent",
+       "A sequence or series that gets closer and closer to one number."
+      ]
+     ],
+     "id": "g12.maths.u1.s1-4-1.13"
+    },
+    {
+     "kind": "blank",
+     "ask": "5 − 10/3 + 20/9 − 40/27 + … = ___",
+     "a": [
+      "3"
+     ],
+     "why": "G₁ = 5, r = −2/3. S∞ = 5/(1 + 2/3) = 5/(5/3) = 3.",
+     "clue": "r = (−10/3) ÷ 5.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example 2",
+     "id": "g12.maths.u1.s1-4-1.14"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "∑ₖ₌₁^(∞) 5³⁻ᵏ",
+     "steps": [
+      "5³⁻ᵏ = 5³ × (1/5)ᵏ = 5² × (1/5)ᵏ⁻¹.",
+      "So G₁ = 25 and r = 1/5.",
+      "S∞ = 25/(1 − 1/5) = 25/(4/5) = 125/4."
+     ],
+     "ref": "Further on infinite series, Example 1",
+     "id": "g12.maths.u1.s1-4-1.15"
+    },
+    {
+     "kind": "blank",
+     "ask": "3 + 1 + 1/3 + 1/9 + … = ___",
+     "a": [
+      "9/2",
+      "4.5"
+     ],
+     "why": "r = 1/3. 3/(1 − 1/3) = 3/(2/3) = 9/2.",
+     "clue": "Find r first.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 1.19 a",
+     "id": "g12.maths.u1.s1-4-1.16"
+    },
+    {
+     "kind": "blank",
+     "ask": "1/5 − 1/10 + 1/20 − 1/40 + … = ___",
+     "a": [
+      "2/15"
+     ],
+     "why": "r = −1/2. (1/5)/(3/2) = 2/15.",
+     "clue": "1 − (−1/2) = 3/2.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.19 d",
+     "id": "g12.maths.u1.s1-4-1.17"
+    },
+    {
+     "kind": "mcq",
+     "text": "∑ₖ₌₁^(∞) 5ᵏ⁻³ =",
+     "opts": [
+      "no sum (diverges)",
+      "1/100",
+      "1/20",
+      "25/4"
+     ],
+     "ans": "no sum (diverges)",
+     "why": "r = 5 > 1. The terms 1/25, 1/5, 1, 5, … grow.",
+     "clue": "Check |r| before using the formula.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.20 c",
+     "id": "g12.maths.u1.s1-4-1.18"
+    },
+    {
+     "kind": "blank",
+     "ask": "∑ₖ₌₁^(∞) 2¹⁻ᵏ = ___",
+     "a": [
+      "2"
+     ],
+     "why": "2¹⁻ᵏ = (1/2)ᵏ⁻¹. G₁ = 1, r = 1/2. 1/(1/2) = 2.",
+     "clue": "Rewrite as (1/2)ᵏ⁻¹.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.20 b",
+     "id": "g12.maths.u1.s1-4-1.19"
+    },
+    {
+     "kind": "blank",
+     "ask": "∑ₖ₌₁^(∞) (−1)ᵏ⁺¹(2/3)ᵏ = ___",
+     "a": [
+      "2/5"
+     ],
+     "why": "G₁ = 2/3, r = −2/3. (2/3)/(5/3) = 2/5.",
+     "clue": "Write the first two terms.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Further on infinite series, Example 2",
+     "id": "g12.maths.u1.s1-4-1.20"
+    },
+    {
+     "kind": "blank",
+     "ask": "An infinite geometric series has sum 12 and first term 4. r = ___",
+     "a": [
+      "2/3"
+     ],
+     "why": "4/(1 − r) = 12, so 1 − r = 1/3 and r = 2/3 (|r| < 1 ✓).",
+     "clue": "Solve G₁/(1 − r) = 12 for r.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u1.s1-4-1.21"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activity 1.8",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "1, 2, 3, 4, … as an infinite series:",
+     "opts": [
+      "diverges to ∞",
+      "sum 10",
+      "sum 1",
+      "vibrates"
+     ],
+     "ans": "diverges to ∞",
+     "why": "Sₙ = n(n + 1)/2 grows without end.",
+     "clue": "Do the partial sums settle?",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "i",
+     "id": "g12.maths.u1.s1-4-1.22"
+    },
+    {
+     "kind": "blank",
+     "ask": "1/2 + 1/4 + 1/8 + … = ___",
+     "a": [
+      "1"
+     ],
+     "why": "(1/2)/(1 − 1/2) = 1.",
+     "clue": "r = 1/2.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "ii",
+     "id": "g12.maths.u1.s1-4-1.23"
+    },
+    {
+     "kind": "mcq",
+     "text": "−1 + 1 − 1 + 1 − … :",
+     "opts": [
+      "vibrates (no sum)",
+      "sum 0",
+      "sum −1",
+      "converges to 1/2"
+     ],
+     "ans": "vibrates (no sum)",
+     "why": "Partial sums −1, 0, −1, 0, … never settle. r = −1.",
+     "clue": "r ≤ −1.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "iii",
+     "id": "g12.maths.u1.s1-4-1.24"
+    },
+    {
+     "kind": "blank",
+     "ask": "0.12 + 0.0012 + 0.000012 + … = ___",
+     "a": [
+      "4/33"
+     ],
+     "why": "r = 0.01. 0.12/0.99 = 12/99 = 4/33.",
+     "clue": "r = 0.0012 ÷ 0.12.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "v",
+     "id": "g12.maths.u1.s1-4-1.25"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.19",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "3 + 1 + 1/3 + 1/9 + … = ___",
+     "a": [
+      "9/2"
+     ],
+     "why": "r = 1/3.",
+     "clue": "G₁/(1 − r).",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "a",
+     "id": "g12.maths.u1.s1-4-1.26"
+    },
+    {
+     "kind": "blank",
+     "ask": "1 + 3/4 + 9/16 + 27/64 + … = ___",
+     "a": [
+      "4"
+     ],
+     "why": "1/(1/4).",
+     "clue": "r = 3/4.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "b",
+     "id": "g12.maths.u1.s1-4-1.27"
+    },
+    {
+     "kind": "blank",
+     "ask": "1/5 + 1/10 + 1/20 + … = ___",
+     "a": [
+      "2/5"
+     ],
+     "why": "(1/5)/(1/2).",
+     "clue": "r = 1/2.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "c",
+     "id": "g12.maths.u1.s1-4-1.28"
+    },
+    {
+     "kind": "blank",
+     "ask": "1/5 − 1/10 + 1/20 − 1/40 + … = ___",
+     "a": [
+      "2/15"
+     ],
+     "why": "(1/5)/(3/2).",
+     "clue": "r = −1/2.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "d",
+     "id": "g12.maths.u1.s1-4-1.29"
+    },
+    {
+     "kind": "blank",
+     "ask": "7 + 7/10 + 7/100 + … = ___",
+     "a": [
+      "70/9"
+     ],
+     "why": "7/(9/10).",
+     "clue": "r = 1/10.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "e",
+     "id": "g12.maths.u1.s1-4-1.30"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.20",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "∑ₖ₌₁^(∞) 5(1/3)ᵏ⁻¹ = ___",
+     "a": [
+      "15/2"
+     ],
+     "why": "5/(2/3).",
+     "clue": "G₁ = 5.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "a",
+     "id": "g12.maths.u1.s1-4-1.31"
+    },
+    {
+     "kind": "blank",
+     "ask": "∑ₖ₌₁^(∞) 2¹⁻ᵏ = ___",
+     "a": [
+      "2"
+     ],
+     "why": "1/(1/2).",
+     "clue": "G₁ = 1, r = 1/2.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "b",
+     "id": "g12.maths.u1.s1-4-1.32"
+    },
+    {
+     "kind": "mcq",
+     "text": "∑ₖ₌₁^(∞) 5ᵏ⁻³:",
+     "opts": [
+      "diverges",
+      "1/100",
+      "1/20",
+      "25/4"
+     ],
+     "ans": "diverges",
+     "why": "r = 5.",
+     "clue": "|r| ≥ 1?",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "c",
+     "id": "g12.maths.u1.s1-4-1.33"
+    },
+    {
+     "kind": "blank",
+     "ask": "∑ₖ₌₁^(∞) (3/4)ᵏ⁺³(2/3)ᵏ⁻² = ___",
+     "a": [
+      "243/256"
+     ],
+     "why": "G₁ = 243/512, r = 1/2.",
+     "clue": "Make both powers k − 1.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "d",
+     "id": "g12.maths.u1.s1-4-1.34"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "(5/4)ⁿ as n → ∞:",
+   "opts": [
+    "diverges",
+    "converges to 0",
+    "converges to 1",
+    "vibrates"
+   ],
+   "ans": "diverges",
+   "why": "5/4 > 1.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u1.s1-4-1.35"
+  },
+  {
+   "kind": "blank",
+   "ask": "4 + 2 + 1 + 1/2 + … = ___",
+   "a": [
+    "8"
+   ],
+   "why": "4/(1/2).",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u1.s1-4-1.36"
+  },
+  {
+   "kind": "blank",
+   "ask": "6 − 2 + 2/3 − … = ___",
+   "a": [
+    "9/2",
+    "4.5"
+   ],
+   "why": "r = −1/3; 6/(4/3).",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u1.s1-4-1.37"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which infinite geometric series has a sum?",
+   "opts": [
+    "1 − 0.9 + 0.81 − …",
+    "1 + 1.1 + 1.21 + …",
+    "2 − 2 + 2 − …",
+    "1 + 3 + 9 + …"
+   ],
+   "ans": "1 − 0.9 + 0.81 − …",
+   "why": "|r| = 0.9 < 1.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u1.s1-4-1.38"
+  },
+  {
+   "kind": "blank",
+   "ask": "∑ₖ₌₁^(∞) 3(1/4)ᵏ = ___",
+   "a": [
+    "1"
+   ],
+   "why": "G₁ = 3/4, r = 1/4; (3/4)/(3/4).",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.maths.u1.s1-4-1.39"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Example b on p.37: the book says (2/3)ⁿ \"diverges\"; it converges to 0 because |2/3| < 1 (case iii on p.36). Lessons use \"converges\"."
+  },
+  {
+   "kind": "review",
+   "text": "Note on p.39: Sₙ is written as a sum to ∞; the upper limit should be n."
+  },
+  {
+   "kind": "note",
+   "text": "Activity 1.8 asks where \"the sequence converges\"; it means the sum of the series."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.geometric-series": {
+   "name": "Sum of n terms of a geometric sequence",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "1 + 1/2 + 1/4 + 1/8",
+     "steps": [
+      "G₁ = 1, r = 1/2, n = 4.",
+      "S₄ = (1 − (1/2)⁴)/(1 − 1/2) = (15/16)/(1/2) = 15/8."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "text": "G₁ = 2, r = 3. S₃ = ?",
+     "opts": [
+      "26",
+      "18",
+      "24",
+      "54"
+     ],
+     "ans": "26",
+     "why": "2(3³ − 1)/(3 − 1) = 2 × 26/2 = 26. (2 + 6 + 18.)",
+     "clue": "Use G₁(rⁿ − 1)/(r − 1).",
+     "graded": true,
+     "level": 1,
+     "step": "check"
+    }
+   ]
+  }
+ }
+}

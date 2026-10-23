@@ -1,0 +1,1165 @@
+{
+ "id": "g12.maths.u1.s1-2-1",
+ "book": {
+  "title": "Mathematics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "Sequences and Series",
+  "pages": "9–15",
+  "section": "1.2.1"
+ },
+ "title": "Arithmetic sequences",
+ "competency": "Find the common difference, the nth term and arithmetic means of an arithmetic sequence.",
+ "minutes": 16,
+ "keywords": [
+  {
+   "en": "Arithmetic sequence",
+   "am": "አሪትሜቲክ ቅደም ተከተል",
+   "def": "A sequence where each term is the previous term plus a fixed number.",
+   "machine": true
+  },
+  {
+   "en": "Common difference",
+   "am": "የጋራ ልዩነት",
+   "def": "The fixed number d added each time: d = next term − this term.",
+   "machine": true
+  },
+  {
+   "en": "General term",
+   "am": "አጠቃላይ ተርም",
+   "def": "The rule aₙ that gives the nth term.",
+   "machine": true
+  },
+  {
+   "en": "Arithmetic mean",
+   "am": "አሪትሜቲክ አማካይ",
+   "def": "A term between two given terms of an arithmetic sequence.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.arithmetic-sequence",
+   "name": "Arithmetic sequences",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "In an arithmetic sequence you add the same number every time. That fixed number is the common difference d = next term − this term. It can be positive, negative or a fraction."
+    },
+    "am": {
+     "text": "በአሪትሜቲክ ቅደም ተከተል በየጊዜው አንድ አይነት ቁጥር እንደምራለን። ይህ ቋሚ ቁጥር የጋራ ልዩነት d ይባላል፤ d = ቀጣዩ ተርም − ይህ ተርም።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Spot the jump",
+     "ask": "What is added each time in 3, 7, 11, 15, …?",
+     "opts": [
+      "3",
+      "4",
+      "7",
+      "11"
+     ],
+     "after": "7 − 3 = 4, 11 − 7 = 4, 15 − 11 = 4. The same jump each time.",
+     "ref": "Activity 1.3 a",
+     "id": "g12.maths.u1.s1-2-1.1"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "graded": false,
+     "title": "Find the difference",
+     "text": "Tap each sequence. Activity 1.3.",
+     "need": 3,
+     "items": [
+      [
+       "3, 7, 11, 15, …",
+       "Difference 4: 7 − 3 = 11 − 7 = 15 − 11 = 4."
+      ],
+      [
+       "3, −1, −5, −9, …",
+       "Difference −4: −1 − 3 = −4 and −5 − (−1) = −5 + 1 = −4."
+      ],
+      [
+       "2, 7/3, 8/3, 3, …",
+       "Difference 1/3: 2 = 6/3 and 3 = 9/3, so each step adds 1/3."
+      ]
+     ],
+     "id": "g12.maths.u1.s1-2-1.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Arithmetic sequence",
+     "paras": [
+      "Each term except the first is the term before plus a fixed number.",
+      "The fixed number can be positive or negative.",
+      "It is called the common difference, d."
+     ],
+     "ref": "Definition 1.2",
+     "id": "g12.maths.u1.s1-2-1.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Arithmetic sequence",
+       "A sequence where each term is the previous term plus a fixed number."
+      ],
+      [
+       "Common difference",
+       "The fixed number d added each time: d = next term − this term."
+      ]
+     ],
+     "id": "g12.maths.u1.s1-2-1.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "2, 5, 8, 11, 14, … What is the common difference?",
+     "opts": [
+      "3",
+      "2",
+      "5",
+      "−3"
+     ],
+     "ans": "3",
+     "why": "5 − 2 = 3, 8 − 5 = 3, …",
+     "clue": "Subtract a term from the next one.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example 1",
+     "id": "g12.maths.u1.s1-2-1.5"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "A₁ = 10, d = −4: terms 2 to 5",
+     "steps": [
+      "2nd term: 10 + (−4) = 6.",
+      "3rd term: 6 + (−4) = 2.",
+      "4th term: 2 + (−4) = −2.",
+      "5th term: −2 + (−4) = −6.",
+      "So the terms are 6, 2, −2, −6."
+     ],
+     "ref": "Example 2",
+     "id": "g12.maths.u1.s1-2-1.6"
+    },
+    {
+     "kind": "blank",
+     "ask": "9, 6, 3, 0, −3, … The 6th term is ___",
+     "a": [
+      "-6"
+     ],
+     "why": "d = 6 − 9 = −3. 6th term = −3 + (−3) = −6.",
+     "clue": "Find d first. It is negative.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.3 Q1 b",
+     "id": "g12.maths.u1.s1-2-1.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "A₁ = 2, d = −1/2. The 3rd term is ___",
+     "a": [
+      "1"
+     ],
+     "why": "2 + (−1/2) = 3/2, then 3/2 + (−1/2) = 2/2 = 1.",
+     "clue": "Add −1/2 twice.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.3 Q2 b",
+     "id": "g12.maths.u1.s1-2-1.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is an arithmetic sequence?",
+     "opts": [
+      "10, 7, 4, 1, …",
+      "1, 2, 4, 8, …",
+      "1, 4, 9, 16, …",
+      "1, 1, 2, 3, …"
+     ],
+     "ans": "10, 7, 4, 1, …",
+     "why": "10, 7, 4, 1 goes down by 3 each time. The others have changing gaps.",
+     "clue": "Check if the gap stays the same.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "id": "g12.maths.u1.s1-2-1.9"
+    },
+    {
+     "kind": "blank",
+     "ask": "An arithmetic sequence: 5, ___, 13, 17. The missing term is",
+     "a": [
+      "9"
+     ],
+     "why": "From 13 to 17 the jump is 4. So 5 + 4 = 9, and 9 + 4 = 13.",
+     "clue": "Find the jump from 13 to 17.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u1.s1-2-1.10"
+    }
+   ]
+  },
+  {
+   "id": "math.arithmetic-nth-term",
+   "name": "The nth term Aₙ = A₁ + (n − 1)d",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "To reach the nth term you start at A₁ and add d one time fewer than n: Aₙ = A₁ + (n − 1)d. Put in A₁ and d, then simplify to a rule like 3n − 2. The 31st term needs only n = 31."
+    },
+    "am": {
+     "text": "n-ኛውን ተርም ለማግኘት ከ A₁ ተነስተን d ን (n − 1) ጊዜ እንደምራለን፤ Aₙ = A₁ + (n − 1)d።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Jump to a far term",
+     "ask": "1, 4, 7, 10, … How many times do you add 3 to go from the 1st term to the 31st term?",
+     "opts": [
+      "31",
+      "30",
+      "32",
+      "3"
+     ],
+     "after": "From term 1 to term 31 there are 30 jumps. So A₃₁ = 1 + 30 × 3 = 91.",
+     "id": "g12.maths.u1.s1-2-1.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "General term",
+     "paras": [
+      "A₂ = A₁ + d.",
+      "A₃ = A₁ + 2d.  A₄ = A₁ + 3d.",
+      "Each step adds one more d. So the nth term has (n − 1) d's."
+     ],
+     "note": "Theorem 1.1: Aₙ = A₁ + (n − 1)d.",
+     "ref": "Theorem 1.1",
+     "id": "g12.maths.u1.s1-2-1.12"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Explore Aₙ = A₁ + (n − 1)d",
+     "ask": "Move A₁, d and n. See the nth term.",
+     "vars": [
+      {
+       "k": "a",
+       "label": "A₁ (first term)",
+       "min": -10,
+       "max": 20,
+       "step": 1,
+       "v": 1
+      },
+      {
+       "k": "d",
+       "label": "d (common difference)",
+       "min": -5,
+       "max": 5,
+       "step": 1,
+       "v": 3
+      },
+      {
+       "k": "n",
+       "label": "n (term number)",
+       "min": 1,
+       "max": 40,
+       "step": 1,
+       "v": 31
+      }
+     ],
+     "formula": "a + (n - 1) * d",
+     "out": "Aₙ = {v}",
+     "note": "With A₁ = 1, d = 3 and n = 31 you get 91.",
+     "id": "g12.maths.u1.s1-2-1.13"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "General term",
+       "The rule aₙ that gives the nth term."
+      ]
+     ],
+     "id": "g12.maths.u1.s1-2-1.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "A₁ = 5, d = 4. Which is the general term?",
+     "opts": [
+      "Aₙ = 4n + 1",
+      "Aₙ = 5n + 4",
+      "Aₙ = 4n + 5",
+      "Aₙ = 5n − 1"
+     ],
+     "ans": "Aₙ = 4n + 1",
+     "why": "5 + (n − 1)(4) = 5 + 4n − 4 = 4n + 1.",
+     "clue": "Put the numbers into A₁ + (n − 1)d and expand.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example 1",
+     "id": "g12.maths.u1.s1-2-1.15"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "The 31st term of 1, 4, 7, 10, …",
+     "steps": [
+      "A₁ = 1. d = 4 − 1 = 3.",
+      "Aₙ = 1 + (n − 1)(3) = 1 + 3n − 3 = 3n − 2.",
+      "A₃₁ = 3(31) − 2 = 93 − 2 = 91."
+     ],
+     "ref": "Example 2",
+     "id": "g12.maths.u1.s1-2-1.16"
+    },
+    {
+     "kind": "mcq",
+     "text": "A₁ = 10, d = −5. The general term is",
+     "opts": [
+      "Aₙ = 15 − 5n",
+      "Aₙ = 10 − 5n",
+      "Aₙ = 5n + 5",
+      "Aₙ = 15 + 5n"
+     ],
+     "ans": "Aₙ = 15 − 5n",
+     "why": "10 + (n − 1)(−5) = 10 − 5n + 5 = 15 − 5n.",
+     "clue": "(n − 1)(−5) = −5n + 5.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.4 Q1 b",
+     "id": "g12.maths.u1.s1-2-1.17"
+    },
+    {
+     "kind": "blank",
+     "ask": "10, 6, 2, −2, … The 10th term is ___",
+     "a": [
+      "-26"
+     ],
+     "why": "d = −4. A₁₀ = 10 + 9(−4) = 10 − 36 = −26.",
+     "clue": "There are 9 jumps of −4.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.4 Q2",
+     "id": "g12.maths.u1.s1-2-1.18"
+    },
+    {
+     "kind": "blank",
+     "ask": "A₁ = 7, d = 2. A₅₀ = ___",
+     "a": [
+      "105"
+     ],
+     "why": "A₅₀ = 7 + 49 × 2 = 7 + 98 = 105.",
+     "clue": "n − 1 = 49.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "added": true,
+     "id": "g12.maths.u1.s1-2-1.19"
+    },
+    {
+     "kind": "tf",
+     "text": "In Aₙ = A₁ + (n − 1)d, the 20th term has 20 jumps of d.",
+     "a": false,
+     "why": "Only 19 jumps: from term 1 to term 20.",
+     "clue": "Count the gaps between term 1 and term 3.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "added": true,
+     "id": "g12.maths.u1.s1-2-1.20"
+    },
+    {
+     "kind": "blank",
+     "ask": "5, 8, 11, 14, … Which term is 50? Term number ___",
+     "a": [
+      "16"
+     ],
+     "why": "Aₙ = 5 + (n − 1)3 = 3n + 2. 3n + 2 = 50 gives 3n = 48, n = 16.",
+     "clue": "Write Aₙ as a rule in n, then solve Aₙ = 50.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u1.s1-2-1.21"
+    }
+   ]
+  },
+  {
+   "id": "math.arithmetic-two-terms",
+   "name": "Finding A₁ and d from two terms",
+   "requires": [
+    "math.simultaneous-equations"
+   ],
+   "explain": {
+    "en": {
+     "text": "If you know two terms, write each one as A₁ + (k − 1)d. Subtract the two equations: A₁ cancels and you get d. Then put d back to find A₁. To test whether a rule is arithmetic, work out aₙ₊₁ − aₙ; if no n is left, it is arithmetic."
+    },
+    "am": {
+     "text": "ሁለት ተርሞች ከተሰጡ እያንዳንዱን በ A₁ + (k − 1)d መልክ እንጽፋለን። ሁለቱን እኩልታዎች ስንቀንስ A₁ ይጠፋል፤ d እናገኛለን።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Between two terms",
+     "ask": "An arithmetic sequence has A₃ = 10 and A₆ = 1. How many jumps of d are there from A₃ to A₆?",
+     "opts": [
+      "3",
+      "6",
+      "9",
+      "2"
+     ],
+     "after": "From term 3 to term 6 there are 3 jumps. They change 10 into 1, a change of −9. So d = −9 ÷ 3 = −3.",
+     "id": "g12.maths.u1.s1-2-1.22"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "A₃ = 10 and A₆ = 1",
+     "steps": [
+      "A₃ = A₁ + 2d, so A₁ + 2d = 10.",
+      "A₆ = A₁ + 5d, so A₁ + 5d = 1.",
+      "Subtract: (A₁ + 5d) − (A₁ + 2d) = 1 − 10, so 3d = −9 and d = −3.",
+      "A₁ + 2(−3) = 10, so A₁ = 16.",
+      "Aₙ = 16 + (n − 1)(−3) = 19 − 3n.",
+      "A₈ = 19 − 24 = −5."
+     ],
+     "ref": "Example 1",
+     "id": "g12.maths.u1.s1-2-1.23"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Is it arithmetic?",
+     "paras": [
+      "Work out aₙ₊₁ − aₙ.",
+      "If the answer has no n, the difference is constant: arithmetic.",
+      "If n is left, the difference changes: not arithmetic."
+     ],
+     "table": [
+      [
+       "General term",
+       "aₙ₊₁ − aₙ",
+       "Arithmetic?"
+      ],
+      [
+       "3n − 2",
+       "3",
+       "Yes"
+      ],
+      [
+       "3n² − 2",
+       "6n + 3",
+       "No"
+      ]
+     ],
+     "ref": "Example 2",
+     "id": "g12.maths.u1.s1-2-1.24"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Common difference",
+       "The fixed number d added each time: d = next term − this term."
+      ]
+     ],
+     "id": "g12.maths.u1.s1-2-1.25"
+    },
+    {
+     "kind": "mcq",
+     "text": "A₄ = 15 and A₈ = 27. What is d?",
+     "opts": [
+      "3",
+      "12",
+      "4",
+      "6"
+     ],
+     "ans": "3",
+     "why": "(A₁ + 7d) − (A₁ + 3d) = 27 − 15, so 4d = 12 and d = 3.",
+     "clue": "Term 4 to term 8 is 4 jumps.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Exercise 1.5 Q1 a",
+     "needs": "math.simultaneous-equations",
+     "id": "g12.maths.u1.s1-2-1.26"
+    },
+    {
+     "kind": "mcq",
+     "text": "A₄ = 15 and A₈ = 27. The general term is",
+     "opts": [
+      "Aₙ = 3n + 3",
+      "Aₙ = 3n + 6",
+      "Aₙ = 4n − 1",
+      "Aₙ = 3n − 3"
+     ],
+     "ans": "Aₙ = 3n + 3",
+     "why": "d = 3, A₁ = 15 − 9 = 6. Aₙ = 6 + 3(n − 1) = 3n + 3.",
+     "clue": "Find A₁ from A₁ + 3d = 15.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.5 Q1 a",
+     "id": "g12.maths.u1.s1-2-1.27"
+    },
+    {
+     "kind": "blank",
+     "ask": "A₂ = 3 and A₅ = 24. A₁₁ = ___",
+     "a": [
+      "66"
+     ],
+     "why": "3d = 21, d = 7, A₁ = −4. Aₙ = 7n − 11, so A₁₁ = 77 − 11 = 66.",
+     "clue": "Find d from 3 jumps.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.5 Q2",
+     "needs": "math.simultaneous-equations",
+     "id": "g12.maths.u1.s1-2-1.28"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Arithmetic or not?",
+     "bins": [
+      "Arithmetic",
+      "Not arithmetic"
+     ],
+     "items": [
+      [
+       "aₙ = 7n − 3",
+       "Arithmetic",
+       "aₙ₊₁ − aₙ = 7."
+      ],
+      [
+       "aₙ = 5n − 3",
+       "Arithmetic",
+       "Difference 5."
+      ],
+      [
+       "aₙ = n² + n + 1",
+       "Not arithmetic",
+       "Difference 2n + 2 changes."
+      ],
+      [
+       "aₙ = 3ⁿ",
+       "Not arithmetic",
+       "Difference 2 × 3ⁿ changes."
+      ]
+     ],
+     "why": "Linear rules pn + q are arithmetic; squares and powers are not.",
+     "clue": "Work out aₙ₊₁ − aₙ.",
+     "ref": "Exercise 1.5 Q3",
+     "graded": true,
+     "level": 2,
+     "id": "g12.maths.u1.s1-2-1.29"
+    },
+    {
+     "kind": "blank",
+     "ask": "A₅ = 20 and A₁₀ = 0. d = ___",
+     "a": [
+      "-4"
+     ],
+     "why": "5d = 0 − 20 = −20, so d = −4.",
+     "clue": "Term 5 to term 10 is 5 jumps.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.5 Q1 b",
+     "id": "g12.maths.u1.s1-2-1.30"
+    },
+    {
+     "kind": "blank",
+     "ask": "An arithmetic sequence has A₇ = 2A₃ and A₅ = 18. A₁ = ___",
+     "a": [
+      "6"
+     ],
+     "why": "A₁ + 6d = 2(A₁ + 2d) gives A₁ = 2d. A₁ + 4d = 18 gives 6d = 18, d = 3, A₁ = 6.",
+     "clue": "Write both as A₁ + (k − 1)d. The first gives A₁ in terms of d.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u1.s1-2-1.31"
+    }
+   ]
+  },
+  {
+   "id": "math.arithmetic-mean",
+   "name": "Arithmetic means",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "The terms between two given terms of an arithmetic sequence are arithmetic means. One mean between a and b is (a + b)/2. To insert k means between a and b, there are k + 2 terms, so b = a + (k + 1)d."
+    },
+    "am": {
+     "text": "በሁለት ቁጥሮች መካከል ያሉት የአሪትሜቲክ ቅደም ተከተል ተርሞች የአሪትሜቲክ አማካዮች ይባላሉ። አንድ አማካይ (a + b)/2 ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "The middle number",
+     "ask": "1, x, 8 is arithmetic. What is x?",
+     "opts": [
+      "9/2",
+      "4",
+      "7",
+      "9"
+     ],
+     "after": "x − 1 = 8 − x, so 2x = 9 and x = 9/2. It is halfway between 1 and 8.",
+     "ref": "Example 1",
+     "id": "g12.maths.u1.s1-2-1.32"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Arithmetic mean",
+     "paras": [
+      "The terms between two given terms are the arithmetic means.",
+      "One mean between a and b is (a + b)/2."
+     ],
+     "ref": "p.14",
+     "id": "g12.maths.u1.s1-2-1.33"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Arithmetic mean",
+       "A term between two given terms of an arithmetic sequence."
+      ]
+     ],
+     "id": "g12.maths.u1.s1-2-1.34"
+    },
+    {
+     "kind": "mcq",
+     "text": "The arithmetic mean of 4 and 14 is",
+     "opts": [
+      "9",
+      "10",
+      "18",
+      "5"
+     ],
+     "ans": "9",
+     "why": "(4 + 14)/2 = 18/2 = 9.",
+     "clue": "Add and halve.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Exercise 1.6 Q3",
+     "id": "g12.maths.u1.s1-2-1.35"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "A₁ = 4, A₆ = 29: terms 2 to 5",
+     "steps": [
+      "4, A₂, A₃, A₄, A₅, 29 is arithmetic.",
+      "A₆ = A₁ + 5d, so 29 = 4 + 5d.",
+      "25 = 5d, so d = 5.",
+      "A₂ = 9, A₃ = 14, A₄ = 19, A₅ = 24."
+     ],
+     "ref": "Example 2",
+     "id": "g12.maths.u1.s1-2-1.36"
+    },
+    {
+     "kind": "blank",
+     "ask": "3, x, 7 is arithmetic. x = ___",
+     "a": [
+      "5"
+     ],
+     "why": "x − 3 = 7 − x, so 2x = 10, x = 5.",
+     "clue": "x is halfway.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 1.6 Q1",
+     "id": "g12.maths.u1.s1-2-1.37"
+    },
+    {
+     "kind": "mcq",
+     "text": "Insert four arithmetic means between 4 and 14.",
+     "opts": [
+      "6, 8, 10, 12",
+      "5, 7, 9, 11",
+      "6, 9, 12, 15",
+      "7, 9, 11, 13"
+     ],
+     "ans": "6, 8, 10, 12",
+     "why": "There are 6 terms. 14 = 4 + 5d, so d = 2: 4, 6, 8, 10, 12, 14.",
+     "clue": "Four means plus the two ends makes 6 terms.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.6 Q4",
+     "id": "g12.maths.u1.s1-2-1.38"
+    },
+    {
+     "kind": "blank",
+     "ask": "1/12, 1/x, 1/6 is arithmetic. x = ___",
+     "a": [
+      "8"
+     ],
+     "why": "2/x = 1/6 + 1/12 = 3/12 = 1/4, so x = 8.",
+     "clue": "The middle term is the average of the ends.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Exercise 1.6 Q2",
+     "id": "g12.maths.u1.s1-2-1.39"
+    },
+    {
+     "kind": "blank",
+     "ask": "Insert 5 arithmetic means between −3 and 21. The 3rd mean is ___",
+     "a": [
+      "9"
+     ],
+     "why": "7 terms in all: 21 = −3 + 6d, d = 4. Terms −3, 1, 5, 9, 13, 17, 21. The 3rd mean is 9.",
+     "clue": "k means give k + 2 terms. Find d first.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u1.s1-2-1.40"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 1.3",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "3, 5, 7, 9, 11, … First term, third term, d and 6th term:",
+     "opts": [
+      "3, 7, 2, 13",
+      "3, 5, 2, 12",
+      "3, 7, 3, 13",
+      "5, 9, 2, 13"
+     ],
+     "ans": "3, 7, 2, 13",
+     "why": "d = 5 − 3 = 2. 6th term = 11 + 2 = 13.",
+     "clue": "The 6th term is the 5th term + d.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 a",
+     "id": "g12.maths.u1.s1-2-1.41"
+    },
+    {
+     "kind": "blank",
+     "ask": "9, 6, 3, 0, −3, … 6th term = ___",
+     "a": [
+      "-6"
+     ],
+     "why": "d = −3. −3 + (−3) = −6.",
+     "clue": "d is negative.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1 b",
+     "id": "g12.maths.u1.s1-2-1.42"
+    },
+    {
+     "kind": "blank",
+     "ask": "A₁ = 1, d = 5. The 5th term is ___",
+     "a": [
+      "21"
+     ],
+     "why": "1, 6, 11, 16, 21.",
+     "clue": "Add 5 four times.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q2 a",
+     "id": "g12.maths.u1.s1-2-1.43"
+    },
+    {
+     "kind": "blank",
+     "ask": "A₁ = 2, d = −1/2. The 5th term is ___",
+     "a": [
+      "0"
+     ],
+     "why": "2, 3/2, 1, 1/2, 0.",
+     "clue": "Add −1/2 four times.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q2 b",
+     "id": "g12.maths.u1.s1-2-1.44"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.4",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "A₁ = 2, d = 3. Aₙ =",
+     "opts": [
+      "3n − 1",
+      "2n + 3",
+      "3n + 2",
+      "3n − 3"
+     ],
+     "ans": "3n − 1",
+     "why": "2 + 3(n − 1) = 3n − 1.",
+     "clue": "Expand 3(n − 1).",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 a",
+     "id": "g12.maths.u1.s1-2-1.45"
+    },
+    {
+     "kind": "mcq",
+     "text": "A₁ = 10, d = −5. Aₙ =",
+     "opts": [
+      "15 − 5n",
+      "10 − 5n",
+      "5n + 5",
+      "5 − 5n"
+     ],
+     "ans": "15 − 5n",
+     "why": "10 − 5(n − 1) = 15 − 5n.",
+     "clue": "−5(n − 1) = −5n + 5.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1 b",
+     "id": "g12.maths.u1.s1-2-1.46"
+    },
+    {
+     "kind": "blank",
+     "ask": "10th term of 10, 6, 2, −2, … = ___",
+     "a": [
+      "-26"
+     ],
+     "why": "10 + 9(−4) = −26.",
+     "clue": "9 jumps of −4.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q2",
+     "id": "g12.maths.u1.s1-2-1.47"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.5",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "A₄ = 15, A₈ = 27. Aₙ =",
+     "opts": [
+      "3n + 3",
+      "3n + 6",
+      "4n − 1",
+      "3n"
+     ],
+     "ans": "3n + 3",
+     "why": "d = 3, A₁ = 6.",
+     "clue": "4 jumps make 12.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1 a",
+     "id": "g12.maths.u1.s1-2-1.48"
+    },
+    {
+     "kind": "mcq",
+     "text": "A₅ = 20, A₁₀ = 0. Aₙ =",
+     "opts": [
+      "40 − 4n",
+      "36 − 4n",
+      "20 − 4n",
+      "4n − 40"
+     ],
+     "ans": "40 − 4n",
+     "why": "d = −4, A₁ = 36. 36 − 4(n − 1) = 40 − 4n.",
+     "clue": "5 jumps make −20.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1 b",
+     "id": "g12.maths.u1.s1-2-1.49"
+    },
+    {
+     "kind": "blank",
+     "ask": "A₂ = 3, A₅ = 24. A₁₁ = ___",
+     "a": [
+      "66"
+     ],
+     "why": "d = 7, Aₙ = 7n − 11, A₁₁ = 66.",
+     "clue": "3 jumps make 21.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q2",
+     "id": "g12.maths.u1.s1-2-1.50"
+    },
+    {
+     "kind": "pick",
+     "text": "Which general terms are arithmetic?",
+     "pool": [
+      "7n − 3",
+      "5n − 3",
+      "n² + n + 1",
+      "3ⁿ"
+     ],
+     "a": [
+      "7n − 3",
+      "5n − 3"
+     ],
+     "why": "Only linear rules give a constant aₙ₊₁ − aₙ (7 and 5).",
+     "clue": "Work out aₙ₊₁ − aₙ for each.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q3",
+     "id": "g12.maths.u1.s1-2-1.51"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.6",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "3, x, 7 is arithmetic. x = ___",
+     "a": [
+      "5"
+     ],
+     "why": "x = (3 + 7)/2 = 5.",
+     "clue": "Halfway.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1",
+     "id": "g12.maths.u1.s1-2-1.52"
+    },
+    {
+     "kind": "blank",
+     "ask": "1/12, 1/x, 1/6 is arithmetic. x = ___",
+     "a": [
+      "8"
+     ],
+     "why": "2/x = 1/4, x = 8.",
+     "clue": "Add the ends and halve.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q2",
+     "id": "g12.maths.u1.s1-2-1.53"
+    },
+    {
+     "kind": "blank",
+     "ask": "Arithmetic mean of 4 and 14 = ___",
+     "a": [
+      "9"
+     ],
+     "why": "(4 + 14)/2 = 9.",
+     "clue": "Add and halve.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q3",
+     "id": "g12.maths.u1.s1-2-1.54"
+    },
+    {
+     "kind": "mcq",
+     "text": "Insert four arithmetic means between 4 and 14.",
+     "opts": [
+      "6, 8, 10, 12",
+      "5, 7, 9, 11",
+      "6, 9, 12, 15",
+      "8, 10, 12, 14"
+     ],
+     "ans": "6, 8, 10, 12",
+     "why": "d = 2.",
+     "clue": "6 terms in all.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q4",
+     "id": "g12.maths.u1.s1-2-1.55"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "ask": "A₁ = 3, d = 4. A₂₀ = ___",
+   "a": [
+    "79"
+   ],
+   "why": "3 + 19 × 4 = 79.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u1.s1-2-1.56"
+  },
+  {
+   "kind": "mcq",
+   "text": "Common difference of 12, 9, 6, 3, …",
+   "opts": [
+    "−3",
+    "3",
+    "−9",
+    "12"
+   ],
+   "ans": "−3",
+   "why": "9 − 12 = −3.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u1.s1-2-1.57"
+  },
+  {
+   "kind": "blank",
+   "ask": "A₃ = 7 and A₇ = 19. d = ___",
+   "a": [
+    "3"
+   ],
+   "why": "4d = 12.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u1.s1-2-1.58"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which general term is NOT arithmetic?",
+   "opts": [
+    "n² + 1",
+    "4n − 9",
+    "2 − n",
+    "(n + 3)/2"
+   ],
+   "ans": "n² + 1",
+   "why": "Its difference 2n + 1 depends on n.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u1.s1-2-1.59"
+  },
+  {
+   "kind": "blank",
+   "ask": "Insert 3 arithmetic means between 2 and 18. The middle one is ___",
+   "a": [
+    "10"
+   ],
+   "why": "18 = 2 + 4d, d = 4: 2, 6, 10, 14, 18.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.maths.u1.s1-2-1.60"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "The book writes the sequence as Aₙ in 1.2.1 and aₙ elsewhere; lessons keep the book's letters."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.simultaneous-equations": {
+   "name": "Two equations, two unknowns",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Solve A₁ + 2d = 10 and A₁ + 5d = 1",
+     "steps": [
+      "Both equations have A₁ once.",
+      "Subtract the first from the second: 3d = −9.",
+      "Divide by 3: d = −3.",
+      "Put d back: A₁ + 2(−3) = 10, so A₁ = 16."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "text": "Solve x + 3y = 11 and x + y = 5. What is y?",
+     "opts": [
+      "3",
+      "2",
+      "6",
+      "8"
+     ],
+     "ans": "3",
+     "why": "Subtract: 2y = 6, so y = 3 (and x = 2).",
+     "clue": "Subtract the equations so x disappears.",
+     "graded": true,
+     "level": 1,
+     "step": "check"
+    }
+   ]
+  }
+ }
+}

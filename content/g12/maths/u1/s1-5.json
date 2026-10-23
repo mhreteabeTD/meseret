@@ -1,0 +1,997 @@
+{
+ "id": "g12.maths.u1.s1-5",
+ "book": {
+  "title": "Mathematics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "Sequences and Series",
+  "pages": "44–54",
+  "section": "1.5"
+ },
+ "title": "Applications of sequence and series in daily life",
+ "competency": "Solve real-life problems with arithmetic and geometric sequences and series.",
+ "minutes": 18,
+ "keywords": [
+  {
+   "en": "Arithmetic sequence",
+   "am": "አሪትሜቲክ ቅደም ተከተል",
+   "def": "A sequence where each term is the previous term plus a fixed number.",
+   "machine": true
+  },
+  {
+   "en": "Common ratio",
+   "am": "የጋራ ሬሾ",
+   "def": "The fixed number r: r = next term ÷ this term.",
+   "machine": true
+  },
+  {
+   "en": "Infinite series",
+   "am": "ኢውሱን ተከታታይ ድምር",
+   "def": "A sum a₁ + a₂ + a₃ + … that never ends.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.arithmetic-applications",
+   "name": "Arithmetic sequences in daily life",
+   "requires": [
+    "math.arithmetic-series"
+   ],
+   "explain": {
+    "en": {
+     "text": "A fixed raise, a fixed extra amount each day, or a pattern that grows by the same number is arithmetic. Use Aₙ for one value (the 10th salary) and Sₙ for a total (pay over 12 months). If n is unknown, Sₙ = total gives a quadratic; keep only the positive whole-number root."
+    },
+    "am": {
+     "text": "ቋሚ የደሞዝ ጭማሪ ወይም በየቀኑ ቋሚ ተጨማሪ አሪትሜቲክ ነው። ለአንድ እሴት Aₙ፣ ለድምር Sₙ እንጠቀማለን።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A rising salary",
+     "ask": "A salary starts at 5200 ETB a month and rises 320 ETB every month. What is it in month 10?",
+     "opts": [
+      "8080 ETB",
+      "8400 ETB",
+      "7760 ETB",
+      "3200 ETB"
+     ],
+     "after": "A₁₀ = 5200 + 9 × 320 = 8080 ETB. Nine raises, not ten.",
+     "ref": "Activity 1.9 Q1 a",
+     "id": "g12.maths.u1.s1-5.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Applications of sequences and series",
+     "paras": [
+      "Many real problems are arithmetic or geometric sequences.",
+      "Ask: is the same amount added each time? Then it is arithmetic.",
+      "One value → use Aₙ.  A total → use Sₙ."
+     ],
+     "id": "g12.maths.u1.s1-5.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Arithmetic sequence",
+       "A sequence where each term is the previous term plus a fixed number."
+      ]
+     ],
+     "id": "g12.maths.u1.s1-5.3"
+    },
+    {
+     "kind": "blank",
+     "ask": "Same salary (5200 ETB, +320 each month). Total earned in the first year = ___ ETB",
+     "a": [
+      "83520"
+     ],
+     "why": "A₁₂ = 5200 + 11 × 320 = 8720. S₁₂ = 6(5200 + 8720) = 6 × 13 920 = 83 520 ETB.",
+     "clue": "A year is 12 months. Find A₁₂, then S₁₂.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Activity 1.9 Q1 b",
+     "id": "g12.maths.u1.s1-5.4"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "192 window frames: 5 on day 1, 2 more each day",
+     "steps": [
+      "5, 7, 9, … : A₁ = 5, d = 2.",
+      "(n/2)[10 + 2(n − 1)] = 192, so n(n + 4) = 192.",
+      "n² + 4n − 192 = 0, so (n + 16)(n − 12) = 0.",
+      "Days cannot be negative: n = 12 days."
+     ],
+     "ref": "Activity 1.9 Q2",
+     "id": "g12.maths.u1.s1-5.5"
+    },
+    {
+     "kind": "blank",
+     "ask": "A theatre fills by 4, 6, 8, … people each minute. After 6 minutes it is half full. It is full after ___ minutes",
+     "a": [
+      "9"
+     ],
+     "why": "S₆ = 3(8 + 10) = 54, so it holds 108. (n/2)(2n + 6) = 108 gives n² + 3n − 108 = 0, (n + 12)(n − 9) = 0, n = 9.",
+     "clue": "First find the capacity: 2 × S₆.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Example 2",
+     "id": "g12.maths.u1.s1-5.6"
+    },
+    {
+     "kind": "blank",
+     "ask": "A salary of Birr 32 500 a year rises Birr 1 400 a year. Total over the first 10 years = Birr ___",
+     "a": [
+      "388000"
+     ],
+     "why": "A₁₀ = 32 500 + 9 × 1 400 = 45 100. S₁₀ = 5(32 500 + 45 100) = 388 000.",
+     "clue": "10 times the average of the first and last salary.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Example 3",
+     "id": "g12.maths.u1.s1-5.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "Bontu saves Birr 1 000 in year 1 and Birr 200 more each year. In year 8 she saves Birr ___",
+     "a": [
+      "2400"
+     ],
+     "why": "A₈ = 1 000 + 7 × 200 = 2 400.",
+     "clue": "Seven raises.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 1.22 Q2",
+     "id": "g12.maths.u1.s1-5.8"
+    },
+    {
+     "kind": "blank",
+     "ask": "18 prizes: the first is Birr 10 000 and each is Birr 500 less. Total value = Birr ___",
+     "a": [
+      "103500"
+     ],
+     "why": "A₁₈ = 10 000 − 17 × 500 = 1 500. S₁₈ = 9(10 000 + 1 500) = 103 500.",
+     "clue": "d = −500.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.24 Q2",
+     "id": "g12.maths.u1.s1-5.9"
+    },
+    {
+     "kind": "blank",
+     "ask": "Letters in columns: A has 1, B has 3, C has 5, … The pattern has 361 letters in all. The last column's letter is the ___ th letter of the alphabet",
+     "a": [
+      "19"
+     ],
+     "why": "Sₙ = (n/2)[2 + 2(n − 1)] = n² = 361, so n = 19 (the letter S).",
+     "clue": "The sum of the first n odd numbers is n².",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Example 1 b",
+     "added": true,
+     "id": "g12.maths.u1.s1-5.10"
+    }
+   ]
+  },
+  {
+   "id": "math.geometric-applications",
+   "name": "Geometric sequences in daily life",
+   "requires": [
+    "math.geometric-nth-term"
+   ],
+   "explain": {
+    "en": {
+     "text": "When a quantity changes by the same percentage each period, multiply by (1 + rate) for growth or (1 − rate) for loss. After n periods: amount × (1 ± rate)ⁿ. Interest, population growth, depreciation and radioactive decay all work this way."
+    },
+    "am": {
+     "text": "አንድ መጠን በየጊዜው በአንድ መቶኛ ሲለወጥ ለዕድገት በ (1 + ምጣኔ) ለቅናሽ በ (1 − ምጣኔ) እናባዛለን። ከ n ጊዜ በኋላ፡ መጠን × (1 ± ምጣኔ)ⁿ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Interest on a deposit",
+     "ask": "Birr 3 500 earns 6% interest a year. How much is in the account after 1 year?",
+     "opts": [
+      "3 710",
+      "3 560",
+      "5 600",
+      "3 506"
+     ],
+     "after": "6% of 3 500 is 210, so 3 710 = 3 500 × 1.06. Each year multiplies by 1.06.",
+     "ref": "Exercise 1.23 Q4 a",
+     "id": "g12.maths.u1.s1-5.11"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Why the amounts are geometric",
+     "steps": [
+      "G₂ = G₁ + 0.06G₁ = G₁(1.06).",
+      "G₃ = G₂(1.06) = G₁(1.06)².",
+      "The ratio of neighbours is always 1.06.",
+      "So the amounts form a geometric sequence."
+     ],
+     "ref": "Example 4",
+     "id": "g12.maths.u1.s1-5.12"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Grow or shrink by a percentage",
+     "ask": "Set the start amount, the yearly rate (negative for a loss) and the years.",
+     "vars": [
+      {
+       "k": "P",
+       "label": "Start (Birr)",
+       "min": 1000,
+       "max": 50000,
+       "step": 1000,
+       "v": 28000
+      },
+      {
+       "k": "p",
+       "label": "Rate (% per year)",
+       "min": -20,
+       "max": 20,
+       "step": 0.5,
+       "v": -10
+      },
+      {
+       "k": "n",
+       "label": "Years",
+       "min": 0,
+       "max": 30,
+       "step": 1,
+       "v": 4
+      }
+     ],
+     "formula": "P * (1 + p / 100) ** n",
+     "out": "Amount = Birr {v}",
+     "note": "−10% for 4 years from Birr 28 000 gives Birr 18 370.80.",
+     "id": "g12.maths.u1.s1-5.13"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Common ratio",
+       "The fixed number r: r = next term ÷ this term."
+      ]
+     ],
+     "id": "g12.maths.u1.s1-5.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "An item loses one tenth of its value each year. What is the common ratio?",
+     "opts": [
+      "0.9",
+      "0.1",
+      "1.1",
+      "10"
+     ],
+     "ans": "0.9",
+     "why": "It keeps 1 − 1/10 = 9/10 of its value.",
+     "clue": "What fraction of the value is kept?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Exercise 1.23 Q1",
+     "id": "g12.maths.u1.s1-5.15"
+    },
+    {
+     "kind": "blank",
+     "ask": "100 g of a substance loses half its mass each year. After 10 years ___ g is left",
+     "a": [
+      "0.09765625",
+      "≈0.098",
+      "100/1024"
+     ],
+     "why": "100 × (1/2)¹⁰ = 100/1 024 ≈ 0.098 g.",
+     "clue": "Multiply by 1/2 ten times.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Example 5",
+     "id": "g12.maths.u1.s1-5.16"
+    },
+    {
+     "kind": "blank",
+     "ask": "The item worth Birr 28 000 loses 1/10 each year. After 4 years it is worth Birr ___",
+     "a": [
+      "18370.8",
+      "≈18370.80"
+     ],
+     "why": "28 000 × 0.9⁴ = 28 000 × 0.6561 = 18 370.80.",
+     "clue": "0.9⁴ = 0.81 × 0.81.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.23 Q1",
+     "id": "g12.maths.u1.s1-5.17"
+    },
+    {
+     "kind": "blank",
+     "ask": "A town of 100 000 grows 2.5% a year. In 10 years it has about ___ people",
+     "a": [
+      "≈128008",
+      "128008"
+     ],
+     "why": "100 000 × 1.025¹⁰ ≈ 128 008.",
+     "clue": "Multiply by 1.025 each year.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.23 Q3",
+     "id": "g12.maths.u1.s1-5.18"
+    },
+    {
+     "kind": "mcq",
+     "text": "Sofia deposits Birr 3 500 at 6%. The amount at the end of year n is",
+     "opts": [
+      "3500(1.06)ⁿ",
+      "3500(1.06)ⁿ⁻¹",
+      "3500 + 0.06n",
+      "3500(0.06)ⁿ"
+     ],
+     "ans": "3500(1.06)ⁿ",
+     "why": "After 1 year: 3500(1.06). After n years: n factors of 1.06.",
+     "clue": "Count the years of interest.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.23 Q4 e",
+     "id": "g12.maths.u1.s1-5.19"
+    },
+    {
+     "kind": "blank",
+     "ask": "A boat worth Birr 34 000 loses 12% a year. After 5 years it is worth about Birr ___",
+     "a": [
+      "≈17942.89",
+      "17942.89"
+     ],
+     "why": "It keeps 88%: 34 000 × 0.88⁵ ≈ 34 000 × 0.52773 ≈ 17 942.89.",
+     "clue": "Multiply by 0.88 five times.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Exercise 1.23 Q2",
+     "added": true,
+     "id": "g12.maths.u1.s1-5.20"
+    }
+   ]
+  },
+  {
+   "id": "math.limit-applications",
+   "name": "Totals that never pass a limit",
+   "requires": [
+    "math.infinite-geometric-series"
+   ],
+   "explain": {
+    "en": {
+     "text": "If each new amount is a fixed fraction of the last, the total is an infinite geometric series. Its sum G₁/(1 − r) is the limit the total approaches but never passes, like a flower whose growth halves each year or nested squares whose areas halve."
+    },
+    "am": {
+     "text": "እያንዳንዱ አዲስ መጠን የቀደመው ቋሚ ክፍልፋይ ከሆነ ድምሩ ኢውሱን ጂኦሜትሪክ ተከታታይ ነው። G₁/(1 − r) ድምሩ የማያልፈው ወሰን ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A flower that slows down",
+     "ask": "A 110 cm flower grows 10 cm in year 1, then half as much each year. Can it reach 140 cm?",
+     "opts": [
+      "Yes, after enough years",
+      "No, it stays below 130 cm",
+      "It stops at 120 cm",
+      "Yes, after 10 years"
+     ],
+     "after": "Growth 10 + 5 + 2.5 + … has sum 10/(1 − 1/2) = 20. So the height stays below 110 + 20 = 130 cm.",
+     "ref": "Example 7",
+     "id": "g12.maths.u1.s1-5.21"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "A limit for the total",
+     "paras": [
+      "Growth each year: 10, 5, 5/2, 5/4, … cm.",
+      "Total growth S∞ = 10/(1 − 1/2) = 20 cm.",
+      "Every partial sum is less than 20, so the height never passes 130 cm."
+     ],
+     "ref": "Example 7",
+     "id": "g12.maths.u1.s1-5.22"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Infinite series",
+       "A sum a₁ + a₂ + a₃ + … that never ends."
+      ]
+     ],
+     "id": "g12.maths.u1.s1-5.23"
+    },
+    {
+     "kind": "mcq",
+     "text": "Nested squares: each square's area is half the one before. The first area is a². The total area is",
+     "opts": [
+      "2a²",
+      "a²",
+      "4a²",
+      "√2 a²"
+     ],
+     "ans": "2a²",
+     "why": "a² + a²/2 + a²/4 + … = a²/(1 − 1/2) = 2a².",
+     "clue": "G₁ = a², r = 1/2.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example 8",
+     "id": "g12.maths.u1.s1-5.24"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "A bouncing ball",
+     "steps": [
+      "Drop from h. Each bounce reaches r × the last height.",
+      "Distance: h + 2rh + 2r²h + …",
+      "r + r² + … = r/(1 − r).",
+      "Total = h + 2hr/(1 − r) = h(1 + r)/(1 − r)."
+     ],
+     "ref": "Exercise 1.25 Q1",
+     "id": "g12.maths.u1.s1-5.25"
+    },
+    {
+     "kind": "blank",
+     "ask": "A ball dropped from 10 m rebounds to 50% of its height each time. Total distance = ___ m",
+     "a": [
+      "30"
+     ],
+     "why": "10(1 + 0.5)/(1 − 0.5) = 10 × 1.5/0.5 = 30 m.",
+     "clue": "Use r = 0.5, not 50.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.25 Q1",
+     "id": "g12.maths.u1.s1-5.26"
+    },
+    {
+     "kind": "blank",
+     "ask": "Equilateral triangles: each side is the height of the one before. The first has side 2. The total area is ___ (as a decimal, 2 places)",
+     "a": [
+      "≈6.93",
+      "6.928"
+     ],
+     "why": "Areas have r = (√3/2)² = 3/4. First area √3. Total = √3/(1/4) = 4√3 ≈ 6.93.",
+     "clue": "Area ratio = (side ratio)².",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Exercise 1.25 Q2",
+     "id": "g12.maths.u1.s1-5.27"
+    },
+    {
+     "kind": "tf",
+     "text": "Growth of 6 cm, then 3 cm, then 1.5 cm, … can add up to more than 12 cm.",
+     "a": false,
+     "why": "6/(1 − 1/2) = 12, and every partial sum is less than 12.",
+     "clue": "Find S∞.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "added": true,
+     "id": "g12.maths.u1.s1-5.28"
+    },
+    {
+     "kind": "blank",
+     "ask": "A ball dropped from 8 m rebounds to 3/4 of its height each time. Total distance = ___ m",
+     "a": [
+      "56"
+     ],
+     "why": "8(1 + 3/4)/(1 − 3/4) = 8 × (7/4) ÷ (1/4) = 8 × 7 = 56 m.",
+     "clue": "h(1 + r)/(1 − r) with r = 3/4.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u1.s1-5.29"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activity 1.9",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "Salary in month 10 (5200 ETB, +320 a month) = ___ ETB",
+     "a": [
+      "8080"
+     ],
+     "why": "5200 + 9 × 320.",
+     "clue": "Nine raises.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 a",
+     "id": "g12.maths.u1.s1-5.30"
+    },
+    {
+     "kind": "blank",
+     "ask": "Total in the first year = ___ ETB",
+     "a": [
+      "83520"
+     ],
+     "why": "6(5200 + 8720).",
+     "clue": "S₁₂.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1 b",
+     "id": "g12.maths.u1.s1-5.31"
+    },
+    {
+     "kind": "blank",
+     "ask": "192 frames, 5 on day 1, +2 each day: ___ days",
+     "a": [
+      "12"
+     ],
+     "why": "n(n + 4) = 192.",
+     "clue": "Solve the quadratic; keep n > 0.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q2",
+     "id": "g12.maths.u1.s1-5.32"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.22",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "Starting salary Birr 25 250 a year, raise Birr 250 every 6 months. Salary at the end of year 3 = Birr ___",
+     "a": [
+      "26750"
+     ],
+     "why": "6 raises: 25 250 + 1 500.",
+     "clue": "Two raises a year.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1",
+     "id": "g12.maths.u1.s1-5.33"
+    },
+    {
+     "kind": "blank",
+     "ask": "Bontu: Birr 1 000 in year 1, +200 each year. Year 8 = Birr ___",
+     "a": [
+      "2400"
+     ],
+     "why": "1 000 + 7 × 200.",
+     "clue": "Seven raises.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q2",
+     "id": "g12.maths.u1.s1-5.34"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.23",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "Birr 28 000, losing 1/10 a year. After 4 years: Birr ___",
+     "a": [
+      "18370.8",
+      "≈18370.80"
+     ],
+     "why": "28 000 × 0.9⁴.",
+     "clue": "r = 0.9.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1",
+     "id": "g12.maths.u1.s1-5.35"
+    },
+    {
+     "kind": "blank",
+     "ask": "Boat Birr 34 000, losing 12% a year. After 5 years: about Birr ___",
+     "a": [
+      "≈17942.89"
+     ],
+     "why": "34 000 × 0.88⁵.",
+     "clue": "r = 0.88.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q2",
+     "id": "g12.maths.u1.s1-5.36"
+    },
+    {
+     "kind": "blank",
+     "ask": "Town of 100 000 growing 2.5% a year. In 10 years: about ___ people",
+     "a": [
+      "≈128008"
+     ],
+     "why": "100 000 × 1.025¹⁰.",
+     "clue": "r = 1.025.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q3",
+     "id": "g12.maths.u1.s1-5.37"
+    },
+    {
+     "kind": "blank",
+     "ask": "Birr 3 500 at 6%. End of year 2: Birr ___",
+     "a": [
+      "3932.6",
+      "3932.60"
+     ],
+     "why": "3 500 × 1.06².",
+     "clue": "Multiply by 1.06 twice.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q4 b",
+     "id": "g12.maths.u1.s1-5.38"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.24",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "Firm A: Birr 31 100, +1 200 a year. Year 11 salary = Birr ___",
+     "a": [
+      "43100"
+     ],
+     "why": "31 100 + 10 × 1 200.",
+     "clue": "Ten raises.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 a",
+     "id": "g12.maths.u1.s1-5.39"
+    },
+    {
+     "kind": "blank",
+     "ask": "Firm B: Birr 35 100, +900 a year. Total over 11 years = Birr ___",
+     "a": [
+      "435600"
+     ],
+     "why": "(11/2)(35 100 + 44 100).",
+     "clue": "Find B₁₁ first.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1 d",
+     "id": "g12.maths.u1.s1-5.40"
+    },
+    {
+     "kind": "mcq",
+     "text": "Over 11 years, which firm pays more, and by how much?",
+     "opts": [
+      "B, by Birr 27 500",
+      "A, by Birr 27 500",
+      "B, by Birr 1 000",
+      "They are equal"
+     ],
+     "ans": "B, by Birr 27 500",
+     "why": "435 600 − 408 100 = 27 500.",
+     "clue": "Compare S₁₁ for both.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1 e",
+     "id": "g12.maths.u1.s1-5.41"
+    },
+    {
+     "kind": "blank",
+     "ask": "10 prizes total Birr 13 250, each Birr 250 less than the one before. The first prize = Birr ___",
+     "a": [
+      "2450"
+     ],
+     "why": "5[2A₁ − 2 250] = 13 250, so A₁ = 2 450.",
+     "clue": "d = −250.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q3",
+     "id": "g12.maths.u1.s1-5.42"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.25",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "A ball dropped from h rebounds to a fraction r of its height. Total distance:",
+     "opts": [
+      "h(1 + r)/(1 − r)",
+      "h/(1 − r)",
+      "2h/(1 − r)",
+      "h(1 − r)/(1 + r)"
+     ],
+     "ans": "h(1 + r)/(1 − r)",
+     "why": "h + 2hr/(1 − r).",
+     "clue": "Each bounce goes up and down.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q1",
+     "id": "g12.maths.u1.s1-5.43"
+    },
+    {
+     "kind": "mcq",
+     "text": "Equilateral triangles, each side = the height of the one before; first side a. Total area:",
+     "opts": [
+      "√3 a²",
+      "(√3/4)a²",
+      "2a²",
+      "(4/3)a²"
+     ],
+     "ans": "√3 a²",
+     "why": "G₁ = (√3/4)a², r = 3/4. Sum = (√3/4)a² × 4.",
+     "clue": "Area ratio is (√3/2)².",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q2",
+     "id": "g12.maths.u1.s1-5.44"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "ask": "A raise of Birr 300 a year on Birr 6 000. Salary in year 5 = Birr ___",
+   "a": [
+    "7200"
+   ],
+   "why": "6 000 + 4 × 300.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u1.s1-5.45"
+  },
+  {
+   "kind": "blank",
+   "ask": "Saving 50, 60, 70, … birr a week. Total after 10 weeks = ___ birr",
+   "a": [
+    "950"
+   ],
+   "why": "5(100 + 90).",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u1.s1-5.46"
+  },
+  {
+   "kind": "blank",
+   "ask": "Birr 10 000 at 10% a year. After 2 years = Birr ___",
+   "a": [
+    "12100"
+   ],
+   "why": "10 000 × 1.1².",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u1.s1-5.47"
+  },
+  {
+   "kind": "blank",
+   "ask": "A car worth Birr 400 000 loses 20% a year. After 3 years = Birr ___",
+   "a": [
+    "204800"
+   ],
+   "why": "400 000 × 0.8³.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u1.s1-5.48"
+  },
+  {
+   "kind": "blank",
+   "ask": "A ball dropped from 6 m rebounds to 1/3 of its height. Total distance = ___ m",
+   "a": [
+    "12"
+   ],
+   "why": "6(4/3)/(2/3).",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.maths.u1.s1-5.49"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Exercise 1.22 Q1 is ambiguous: counting the raise at the 3-year mark gives Birr 26 750 (used here); not counting it gives Birr 26 500."
+  },
+  {
+   "kind": "review",
+   "text": "Example 6 b compares total (cumulative) expenses and income and gets n ≈ 30.3; if it means yearly expenses vs yearly grant, expenses are higher from year 16. Example 6 is not used in graded items."
+  },
+  {
+   "kind": "review",
+   "text": "Example 4 uses G₁ = the deposit, so Gₙ is the amount after n − 1 years; Exercise 1.23 Q4 e asks for the amount after n years, 3500(1.06)ⁿ. Lessons say this explicitly."
+  },
+  {
+   "kind": "review",
+   "text": "Exercise 1.25 Q1 says \"r %\" but the formula needs r as a fraction (60% → 0.6)."
+  },
+  {
+   "kind": "review",
+   "text": "Exercise 1.24 Q3 assumes the first prize is the largest (d = −250)."
+  },
+  {
+   "kind": "note",
+   "text": "The book uses Figure 1.5 twice (tree, p.35; letter pattern, p.45)."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.arithmetic-series": {
+   "name": "Sum of an arithmetic sequence",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "5 + 9 + 13 + … (10 terms)",
+     "steps": [
+      "A₁ = 5, d = 4, n = 10.",
+      "S₁₀ = (10/2)[2(5) + 9(4)] = 5(10 + 36) = 230."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "text": "A₁ = 2, A₈ = 23. S₈ = ?",
+     "opts": [
+      "100",
+      "200",
+      "92",
+      "50"
+     ],
+     "ans": "100",
+     "why": "8(2 + 23)/2 = 4 × 25 = 100.",
+     "clue": "n(A₁ + Aₙ)/2.",
+     "graded": true,
+     "level": 1,
+     "step": "check"
+    }
+   ]
+  },
+  "math.geometric-nth-term": {
+   "name": "The nth term of a geometric sequence",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "G₁ = 3, r = 2: G₅",
+     "steps": [
+      "Gₙ = G₁ rⁿ⁻¹.",
+      "G₅ = 3 × 2⁴ = 48."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "text": "G₁ = 100, r = 0.5. G₃ = ?",
+     "opts": [
+      "25",
+      "50",
+      "12.5",
+      "150"
+     ],
+     "ans": "25",
+     "why": "100 × 0.5² = 25.",
+     "clue": "r is squared.",
+     "graded": true,
+     "level": 1,
+     "step": "check"
+    }
+   ]
+  },
+  "math.infinite-geometric-series": {
+   "name": "Sum to infinity",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "9 + 3 + 1 + …",
+     "steps": [
+      "G₁ = 9, r = 1/3.",
+      "S∞ = 9/(2/3) = 27/2."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "text": "20 + 10 + 5 + … = ?",
+     "opts": [
+      "40",
+      "35",
+      "30",
+      "∞"
+     ],
+     "ans": "40",
+     "why": "20/(1 − 1/2) = 40.",
+     "clue": "G₁/(1 − r).",
+     "graded": true,
+     "level": 1,
+     "step": "check"
+    }
+   ]
+  }
+ }
+}

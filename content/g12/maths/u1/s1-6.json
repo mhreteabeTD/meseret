@@ -1,0 +1,589 @@
+{
+ "id": "g12.maths.u1.s1-6",
+ "book": {
+  "title": "Mathematics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "Sequences and Series",
+  "pages": "55–60",
+  "section": "1.6"
+ },
+ "title": "Summary, review and chapter test",
+ "competency": "Review the whole unit and take the timed chapter test.",
+ "minutes": 20,
+ "keywords": [
+  {
+   "en": "Partial sum",
+   "am": "ከፊል ድምር",
+   "def": "Sₙ, the sum of the first n terms of a sequence.",
+   "machine": true
+  },
+  {
+   "en": "Convergent",
+   "am": "ተሰባሳቢ",
+   "def": "A sequence or series that gets closer and closer to one number.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.sequences-review",
+   "name": "Unit 1 summary",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Arithmetic: add d, Aₙ = A₁ + (n − 1)d, Sₙ = (n/2)[2A₁ + (n − 1)d]. Geometric: multiply by r, Gₙ = G₁ rⁿ⁻¹, Sₙ = G₁(1 − rⁿ)/(1 − r). An infinite geometric series converges only when |r| < 1, to G₁/(1 − r)."
+    },
+    "am": {
+     "text": "አሪትሜቲክ፡ d እንደምራለን። ጂኦሜትሪክ፡ በ r እናባዛለን። ኢውሱን ጂኦሜትሪክ ተከታታይ |r| < 1 ሲሆን ብቻ ወደ G₁/(1 − r) ይሰበሰባል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "title": "Warm up: which kind?",
+     "bins": [
+      "Arithmetic",
+      "Geometric",
+      "Neither"
+     ],
+     "items": [
+      [
+       "7, 12, 17, 22, …",
+       "Arithmetic",
+       "+5"
+      ],
+      [
+       "5, 25, 125, …",
+       "Geometric",
+       "×5"
+      ],
+      [
+       "1, 1, 2, 3, 5, …",
+       "Neither",
+       "Fibonacci: add the last two"
+      ],
+      [
+       "25, 22, 19, …",
+       "Arithmetic",
+       "−3"
+      ],
+      [
+       "729, 486, 324, …",
+       "Geometric",
+       "×2/3"
+      ]
+     ],
+     "graded": false,
+     "id": "g12.maths.u1.s1-6.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Summary for Unit 1",
+     "paras": [
+      "1. A sequence is a function on the positive integers. It is finite or infinite.",
+      "2. A recursion formula makes a term from the terms before it."
+     ],
+     "table": [
+      [
+       "",
+       "Arithmetic",
+       "Geometric"
+      ],
+      [
+       "Rule",
+       "add d",
+       "multiply by r"
+      ],
+      [
+       "nth term",
+       "A₁ + (n − 1)d",
+       "G₁ rⁿ⁻¹"
+      ],
+      [
+       "Sum of n terms",
+       "(n/2)[2A₁ + (n − 1)d]",
+       "G₁(1 − rⁿ)/(1 − r), r ≠ 1"
+      ],
+      [
+       "Mean of a and b",
+       "(a + b)/2",
+       "±√(ab)"
+      ]
+     ],
+     "ref": "p.55–56",
+     "id": "g12.maths.u1.s1-6.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Series",
+     "paras": [
+      "Sₙ is the partial sum of the first n terms.",
+      "An infinite series converges to s if Sₙ → s. Otherwise it diverges.",
+      "Infinite geometric series: S∞ = G₁/(1 − r) when |r| < 1."
+     ],
+     "ref": "p.56",
+     "id": "g12.maths.u1.s1-6.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Partial sum",
+       "Sₙ, the sum of the first n terms of a sequence."
+      ],
+      [
+       "Convergent",
+       "A sequence or series that gets closer and closer to one number."
+      ]
+     ],
+     "id": "g12.maths.u1.s1-6.4"
+    },
+    {
+     "kind": "match",
+     "title": "Match each formula",
+     "pairs": [
+      [
+       "A₁ + (n − 1)d",
+       "nth term, arithmetic"
+      ],
+      [
+       "G₁ rⁿ⁻¹",
+       "nth term, geometric"
+      ],
+      [
+       "n(A₁ + Aₙ)/2",
+       "sum, arithmetic"
+      ],
+      [
+       "G₁(1 − rⁿ)/(1 − r)",
+       "sum, geometric"
+      ],
+      [
+       "G₁/(1 − r)",
+       "sum to infinity"
+      ]
+     ],
+     "why": "Each formula belongs to one type.",
+     "clue": "Which ones add, which ones multiply?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "id": "g12.maths.u1.s1-6.5"
+    },
+    {
+     "kind": "blank",
+     "ask": "Arithmetic mean between 1 and 9 = ___",
+     "a": [
+      "5"
+     ],
+     "why": "(1 + 9)/2 = 5.",
+     "clue": "Add and halve.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Review Exercise Q4",
+     "id": "g12.maths.u1.s1-6.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "Insert two numbers between 3 and 81 to make a geometric progression:",
+     "opts": [
+      "9 and 27",
+      "29 and 55",
+      "27 and 54",
+      "6 and 12"
+     ],
+     "ans": "9 and 27",
+     "why": "3r³ = 81, so r = 3: 3, 9, 27, 81.",
+     "clue": "There are 4 terms in all.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Review Exercise Q33",
+     "id": "g12.maths.u1.s1-6.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "The nth partial sum of an arithmetic sequence is 4n². A₁₀ = ___",
+     "a": [
+      "76"
+     ],
+     "why": "A₁₀ = S₁₀ − S₉ = 400 − 324 = 76.",
+     "clue": "Aₙ = Sₙ − Sₙ₋₁.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Review Exercise Q14",
+     "id": "g12.maths.u1.s1-6.8"
+    },
+    {
+     "kind": "blank",
+     "ask": "4 × 4^(1/2) × 4^(1/4) × 4^(1/8) × … = ___",
+     "a": [
+      "16"
+     ],
+     "why": "Add the powers: 1 + 1/2 + 1/4 + … = 2. So the product is 4² = 16.",
+     "clue": "Same base: add the exponents. They form a geometric series.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Review Exercise Q19",
+     "added": true,
+     "id": "g12.maths.u1.s1-6.9"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Review Exercise",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "aₙ = Sgn(3 − n). The first five terms:",
+     "opts": [
+      "1, 1, 0, −1, −1",
+      "1, 1, 1, 0, −1",
+      "2, 1, 0, −1, −2",
+      "−1, −1, 0, 1, 1"
+     ],
+     "ans": "1, 1, 0, −1, −1",
+     "why": "Sgn gives 1 for positive, 0 for 0, −1 for negative. 3 − n = 2, 1, 0, −1, −2.",
+     "clue": "Work out 3 − n first.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1 c",
+     "id": "g12.maths.u1.s1-6.10"
+    },
+    {
+     "kind": "mcq",
+     "text": "aₙ = (n² + 5n + 6)/(n + 2). Is it arithmetic?",
+     "opts": [
+      "Yes, d = 1",
+      "Yes, d = 5",
+      "No",
+      "Yes, d = 3"
+     ],
+     "ans": "Yes, d = 1",
+     "why": "(n + 2)(n + 3)/(n + 2) = n + 3.",
+     "clue": "Factor the top.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q3 a",
+     "id": "g12.maths.u1.s1-6.11"
+    },
+    {
+     "kind": "blank",
+     "ask": "5, 25, 125, … G₁₀ = ___",
+     "a": [
+      "9765625"
+     ],
+     "why": "Gₙ = 5ⁿ, so G₁₀ = 5¹⁰ = 9 765 625.",
+     "clue": "r = 5 and G₁ = 5.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q5",
+     "id": "g12.maths.u1.s1-6.12"
+    },
+    {
+     "kind": "blank",
+     "ask": "∑ₖ₌₁⁵ 1/(k² + 5k + 6) = ___",
+     "a": [
+      "5/24"
+     ],
+     "why": "Telescopes to 1/3 − 1/8 = 5/24.",
+     "clue": "k² + 5k + 6 = (k + 2)(k + 3).",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q7 c",
+     "id": "g12.maths.u1.s1-6.13"
+    },
+    {
+     "kind": "blank",
+     "ask": "Σx = 37, Σy = 127 (5 values each). Σ(2x − 5y + 3) = ___",
+     "a": [
+      "-546"
+     ],
+     "why": "2(37) − 5(127) + 5 × 3 = 74 − 635 + 15 = −546.",
+     "clue": "The 3 is added five times.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q8 e",
+     "id": "g12.maths.u1.s1-6.14"
+    },
+    {
+     "kind": "blank",
+     "ask": "The sum of the multiples of 5 between 100 and 1000 is ___",
+     "a": [
+      "98450"
+     ],
+     "why": "105 to 995: 179 terms. 179 × 550 = 98 450.",
+     "clue": "\"Between\" leaves out 100 and 1000.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q9",
+     "id": "g12.maths.u1.s1-6.15"
+    },
+    {
+     "kind": "pick",
+     "text": "How many terms of −6, −11/2, −5, … give the sum −25?",
+     "pool": [
+      "5",
+      "20",
+      "10",
+      "25"
+     ],
+     "a": [
+      "5",
+      "20"
+     ],
+     "why": "n² − 25n + 100 = 0 gives n = 5 or n = 20.",
+     "clue": "d = 1/2. Solve the quadratic.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q11",
+     "id": "g12.maths.u1.s1-6.16"
+    },
+    {
+     "kind": "blank",
+     "ask": "25 + 22 + 19 + … = 116. The last term is ___",
+     "a": [
+      "4"
+     ],
+     "why": "3n² − 53n + 232 = 0 gives n = 8 (29/3 rejected). A₈ = 25 − 21 = 4.",
+     "clue": "Find n first; it must be a whole number.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q12",
+     "id": "g12.maths.u1.s1-6.17"
+    },
+    {
+     "kind": "blank",
+     "ask": "0.3171717… (17 repeats) = ___",
+     "a": [
+      "157/495"
+     ],
+     "why": "0.3 + 17/990 = 297/990 + 17/990 = 314/990 = 157/495.",
+     "clue": "Split off 0.3.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q15",
+     "id": "g12.maths.u1.s1-6.18"
+    },
+    {
+     "kind": "blank",
+     "ask": "x + 1, x − 1, 2x − 5 begin a convergent geometric series. Its sum to infinity = ___",
+     "a": [
+      "8"
+     ],
+     "why": "x = 3 gives 4, 2, 1 with r = 1/2: 4/(1/2) = 8. (x = −2 gives r = 3: rejected.)",
+     "clue": "(x − 1)² = (x + 1)(2x − 5).",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q17",
+     "id": "g12.maths.u1.s1-6.19"
+    },
+    {
+     "kind": "blank",
+     "ask": "∑ₖ₌₁^(∞) 27pᵏ = ∑ₓ₌₁¹² (24 − 3x). p = ___",
+     "a": [
+      "2/3"
+     ],
+     "why": "Right side 54. 27p/(1 − p) = 54 gives p = 2/3.",
+     "clue": "Work out the right-hand sum first.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q18",
+     "id": "g12.maths.u1.s1-6.20"
+    },
+    {
+     "kind": "blank",
+     "ask": "3 + 3² + 3³ + … = 120. How many terms? ___",
+     "a": [
+      "4"
+     ],
+     "why": "3(3ⁿ − 1)/2 = 120, so 3ⁿ = 81 and n = 4.",
+     "clue": "Solve for 3ⁿ.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q24",
+     "id": "g12.maths.u1.s1-6.21"
+    },
+    {
+     "kind": "pick",
+     "text": "G₁ = 729 and G₇ = 64. Possible values of S₇:",
+     "pool": [
+      "2059",
+      "463",
+      "2187",
+      "665"
+     ],
+     "a": [
+      "2059",
+      "463"
+     ],
+     "why": "r⁶ = 64/729 gives r = ±2/3: S₇ = 2059 or 463.",
+     "clue": "An even power gives ± roots.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q26",
+     "id": "g12.maths.u1.s1-6.22"
+    },
+    {
+     "kind": "blank",
+     "ask": "150 workers; 4 drop out each day from day 2. The job took 8 days longer than planned. It took ___ days",
+     "a": [
+      "25"
+     ],
+     "why": "m(152 − 2m) = 150(m − 8) gives m² − m − 600 = 0, m = 25.",
+     "clue": "Total worker-days must match.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q36",
+     "id": "g12.maths.u1.s1-6.23"
+    }
+   ]
+  },
+  {
+   "book_name": "Chapter test",
+   "test": true,
+   "chapter_test": true,
+   "count": 20,
+   "minutes": 25,
+   "items": []
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "ask": "A₁ = 6, d = −2. A₈ = ___",
+   "a": [
+    "-8"
+   ],
+   "why": "6 + 7(−2) = −8.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u1.s1-6.24"
+  },
+  {
+   "kind": "blank",
+   "ask": "G₁ = 2, r = 3. S₅ = ___",
+   "a": [
+    "242"
+   ],
+   "why": "2(243 − 1)/2.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u1.s1-6.25"
+  },
+  {
+   "kind": "blank",
+   "ask": "12 + 6 + 3 + … = ___",
+   "a": [
+    "24"
+   ],
+   "why": "12/(1/2).",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u1.s1-6.26"
+  },
+  {
+   "kind": "blank",
+   "ask": "0.2727… = ___",
+   "a": [
+    "3/11"
+   ],
+   "why": "27/99.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u1.s1-6.27"
+  },
+  {
+   "kind": "blank",
+   "ask": "Sₙ = n² + 2n for an arithmetic sequence. d = ___",
+   "a": [
+    "2"
+   ],
+   "why": "Aₙ = Sₙ − Sₙ₋₁ = 2n + 1, so d = 2.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.maths.u1.s1-6.28"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Summary p.55: \"with the first term Gₙ\" should be \"first term G₁\"."
+  },
+  {
+   "kind": "review",
+   "text": "Review Q8: the given sums cannot come from real numbers (Σy² = 50 is too small for Σy = 127). Only the sigma rules are tested; item kept."
+  },
+  {
+   "kind": "review",
+   "text": "Review Q9: \"between 100 and 1000\" read as excluding both ends (98 450); including them gives 99 550."
+  },
+  {
+   "kind": "review",
+   "text": "Review Q26 does not fix the sign of r; both 2059 (r = 2/3) and 463 (r = −2/3) are accepted."
+  },
+  {
+   "kind": "note",
+   "text": "Review Q1 a, Q2 (n!, e, sin, cos) and the proofs Q27–Q35 are not turned into graded items; they need written proofs."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

@@ -1,0 +1,598 @@
+{
+ "id": "g12.maths.u1.s1-3-3",
+ "book": {
+  "title": "Mathematics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "Sequences and Series",
+  "pages": "31–35",
+  "section": "1.3.3"
+ },
+ "title": "Sum of geometric sequences",
+ "competency": "Find the sum of the first n terms of a geometric sequence.",
+ "minutes": 14,
+ "keywords": [
+  {
+   "en": "Geometric series",
+   "am": "ጂኦሜትሪክ ተከታታይ ድምር",
+   "def": "The sum of the terms of a geometric sequence.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.geometric-series",
+   "name": "Sum of a geometric sequence",
+   "requires": [
+    "math.geometric-nth-term"
+   ],
+   "explain": {
+    "en": {
+     "text": "Multiply the sum by r and subtract: all the middle terms cancel and (1 − r)Sₙ = G₁(1 − rⁿ). So Sₙ = G₁(1 − rⁿ)/(1 − r) when r ≠ 1, and Sₙ = nG₁ when r = 1."
+    },
+    "am": {
+     "text": "ድምሩን በ r አባዝተን ስንቀንስ መካከለኛዎቹ ተርሞች ይሰረዛሉ። ስለዚህ r ≠ 1 ሲሆን Sₙ = G₁(1 − rⁿ)/(1 − r)፤ r = 1 ሲሆን Sₙ = nG₁።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Doubling sums",
+     "ask": "2 + 4 + 8 + 16 + 32 = ?",
+     "opts": [
+      "62",
+      "64",
+      "60",
+      "32"
+     ],
+     "after": "62. Notice 62 = 64 − 2 = 2(2⁵ − 1). Geometric sums have a pattern like this.",
+     "ref": "Activity 1.6 Q1 a",
+     "id": "g12.maths.u1.s1-3-3.1"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Multiply by r and subtract",
+     "steps": [
+      "Sₙ = G₁(1 + r + r² + … + rⁿ⁻¹).",
+      "rSₙ = G₁(r + r² + … + rⁿ⁻¹ + rⁿ).",
+      "Subtract: the middle terms cancel. Sₙ − rSₙ = G₁(1 − rⁿ).",
+      "(1 − r)Sₙ = G₁(1 − rⁿ).",
+      "Divide by 1 − r (only if r ≠ 1): Sₙ = G₁(1 − rⁿ)/(1 − r)."
+     ],
+     "ref": "p.32",
+     "id": "g12.maths.u1.s1-3-3.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Theorem 1.4",
+     "paras": [
+      "If r = 1, every term is G₁, so Sₙ = nG₁.",
+      "If r ≠ 1, Sₙ = G₁(1 − rⁿ)/(1 − r) = G₁(rⁿ − 1)/(r − 1)."
+     ],
+     "note": "Use (rⁿ − 1)/(r − 1) when r > 1: the signs stay positive.",
+     "ref": "Theorem 1.4",
+     "id": "g12.maths.u1.s1-3-3.3"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Watch the sum grow",
+     "ask": "Change r and n. Compare r = 2 with r = 0.5.",
+     "vars": [
+      {
+       "k": "g",
+       "label": "G₁",
+       "min": 1,
+       "max": 10,
+       "step": 1,
+       "v": 1
+      },
+      {
+       "k": "r",
+       "label": "r",
+       "min": -2,
+       "max": 3,
+       "step": 0.5,
+       "v": 0.5
+      },
+      {
+       "k": "n",
+       "label": "n",
+       "min": 1,
+       "max": 20,
+       "step": 1,
+       "v": 5
+      }
+     ],
+     "formula": "r == 1 ? n * g : g * (1 - r ** n) / (1 - r)",
+     "out": "Sₙ = {v}",
+     "note": "With r = 0.5 the sums stop near 2G₁. With r = 2 they keep growing.",
+     "id": "g12.maths.u1.s1-3-3.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Geometric series",
+       "The sum of the terms of a geometric sequence."
+      ]
+     ],
+     "id": "g12.maths.u1.s1-3-3.5"
+    },
+    {
+     "kind": "blank",
+     "ask": "1 + 2/3 + 4/9 + 8/27 = ___",
+     "a": [
+      "65/27"
+     ],
+     "why": "G₁ = 1, r = 2/3, n = 4. S₄ = (1 − 16/81)/(1/3) = (65/81) × 3 = 65/27.",
+     "clue": "Use a common denominator 27, or the formula.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Activity 1.6 Q1 b",
+     "id": "g12.maths.u1.s1-3-3.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "G₁ = 3, r = 2. Sₙ =",
+     "opts": [
+      "3(2ⁿ − 1)",
+      "3(2ⁿ − 1)/2",
+      "2(3ⁿ − 1)",
+      "3 × 2ⁿ"
+     ],
+     "ans": "3(2ⁿ − 1)",
+     "why": "3(2ⁿ − 1)/(2 − 1) = 3(2ⁿ − 1).",
+     "clue": "r − 1 = 1.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 1.16 Q1 a",
+     "id": "g12.maths.u1.s1-3-3.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "1, 3, 9, 27, … Sₙ =",
+     "opts": [
+      "(3ⁿ − 1)/2",
+      "3ⁿ − 1",
+      "(3ⁿ − 1)/3",
+      "3(3ⁿ − 1)/2"
+     ],
+     "ans": "(3ⁿ − 1)/2",
+     "why": "G₁ = 1, r = 3: (3ⁿ − 1)/(3 − 1).",
+     "clue": "Divide by r − 1 = 2.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 1.16 Q2",
+     "id": "g12.maths.u1.s1-3-3.8"
+    },
+    {
+     "kind": "blank",
+     "ask": "1 + 1/2 + 1/4 + … (6 terms) = ___",
+     "a": [
+      "63/32"
+     ],
+     "why": "2(1 − (1/2)⁶) = 2(1 − 1/64) = 2 × 63/64 = 63/32.",
+     "clue": "Sₙ = 2(1 − (1/2)ⁿ).",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.16 Q1 b",
+     "id": "g12.maths.u1.s1-3-3.9"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "First three terms sum to 7; terms 4 to 6 sum to 56",
+     "steps": [
+      "G₁ + G₁r + G₁r² = 7.",
+      "G₁r³ + G₁r⁴ + G₁r⁵ = r³(G₁ + G₁r + G₁r²) = 56.",
+      "So 7r³ = 56, r³ = 8, r = 2.",
+      "G₁(1 + 2 + 4) = 7, so G₁ = 1."
+     ],
+     "ref": "Further on sums, Example",
+     "id": "g12.maths.u1.s1-3-3.10"
+    },
+    {
+     "kind": "blank",
+     "ask": "How many terms of 3, 3/2, 3/4, 3/8, … give the sum 3069/512? ___",
+     "a": [
+      "10"
+     ],
+     "why": "Sₙ = 6(1 − 1/2ⁿ) = 3069/512 gives 1/2ⁿ = 1/1024, so 2ⁿ = 1024 and n = 10.",
+     "clue": "Write Sₙ with r = 1/2, then solve for 2ⁿ.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Exercise 1.17 Q2",
+     "id": "g12.maths.u1.s1-3-3.11"
+    },
+    {
+     "kind": "mcq",
+     "text": "0.15 + 0.015 + 0.0015 + … (n terms) =",
+     "opts": [
+      "(1/6)(1 − 0.1ⁿ)",
+      "0.15(1 − 0.1ⁿ)",
+      "(1/6)(0.1ⁿ − 1)",
+      "1.5(1 − 0.1ⁿ)"
+     ],
+     "ans": "(1/6)(1 − 0.1ⁿ)",
+     "why": "r = 0.1. 0.15(1 − 0.1ⁿ)/0.9, and 0.15/0.9 = 1/6.",
+     "clue": "r = 0.015 ÷ 0.15.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.17 Q3 a",
+     "id": "g12.maths.u1.s1-3-3.12"
+    },
+    {
+     "kind": "tf",
+     "text": "For 5, 5, 5, 5, … the sum of 8 terms is 40.",
+     "a": true,
+     "why": "r = 1, so Sₙ = nG₁ = 8 × 5 = 40.",
+     "clue": "The formula with 1 − r cannot be used when r = 1.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "added": true,
+     "id": "g12.maths.u1.s1-3-3.13"
+    },
+    {
+     "kind": "blank",
+     "ask": "A geometric sequence has G₁ = 2 and S₃ = 26 with r > 0. r = ___",
+     "a": [
+      "3"
+     ],
+     "why": "2(1 + r + r²) = 26, so r² + r − 12 = 0, (r + 4)(r − 3) = 0. With r > 0, r = 3 (2 + 6 + 18 = 26).",
+     "clue": "S₃ = G₁(1 + r + r²).",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u1.s1-3-3.14"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activity 1.6",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "2 + 4 + 8 + 16 + 32 = ___",
+     "a": [
+      "62"
+     ],
+     "why": "2(2⁵ − 1)/(2 − 1) = 62.",
+     "clue": "Add or use the formula.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 a",
+     "id": "g12.maths.u1.s1-3-3.15"
+    },
+    {
+     "kind": "blank",
+     "ask": "1 + 2/3 + 4/9 + 8/27 = ___",
+     "a": [
+      "65/27"
+     ],
+     "why": "27/27 + 18/27 + 12/27 + 8/27.",
+     "clue": "Denominator 27.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1 b",
+     "id": "g12.maths.u1.s1-3-3.16"
+    },
+    {
+     "kind": "blank",
+     "ask": "1 + 2/3 + 4/9 + 8/27 + 16/81 = ___",
+     "a": [
+      "211/81"
+     ],
+     "why": "(81 + 54 + 36 + 24 + 16)/81.",
+     "clue": "Denominator 81.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q2",
+     "id": "g12.maths.u1.s1-3-3.17"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.16",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "G₁ = 3, r = 2. Sₙ =",
+     "opts": [
+      "3(2ⁿ − 1)",
+      "3(2ⁿ − 1)/2",
+      "3 × 2ⁿ",
+      "6ⁿ − 1"
+     ],
+     "ans": "3(2ⁿ − 1)",
+     "why": "r − 1 = 1.",
+     "clue": "Theorem 1.4.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 a",
+     "id": "g12.maths.u1.s1-3-3.18"
+    },
+    {
+     "kind": "mcq",
+     "text": "G₁ = 1, r = 1/2. Sₙ =",
+     "opts": [
+      "2(1 − (1/2)ⁿ)",
+      "(1 − (1/2)ⁿ)/2",
+      "2 − (1/2)ⁿ",
+      "1 − (1/2)ⁿ"
+     ],
+     "ans": "2(1 − (1/2)ⁿ)",
+     "why": "Divide by 1 − 1/2 = 1/2, i.e. multiply by 2.",
+     "clue": "1 − r = 1/2.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1 b",
+     "id": "g12.maths.u1.s1-3-3.19"
+    },
+    {
+     "kind": "mcq",
+     "text": "1, 3, 9, 27, … Sₙ =",
+     "opts": [
+      "(3ⁿ − 1)/2",
+      "3ⁿ − 1",
+      "(3ⁿ − 1)/3",
+      "3ⁿ/2"
+     ],
+     "ans": "(3ⁿ − 1)/2",
+     "why": "r = 3.",
+     "clue": "r − 1 = 2.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q2",
+     "id": "g12.maths.u1.s1-3-3.20"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.17",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "First three terms sum to 9; terms 4 to 6 sum to −18. r =",
+     "opts": [
+      "−∛2",
+      "−2",
+      "∛2",
+      "−1/2"
+     ],
+     "ans": "−∛2",
+     "why": "9r³ = −18, so r³ = −2 and r = −∛2.",
+     "clue": "Factor r³ out of the second sum.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q1",
+     "id": "g12.maths.u1.s1-3-3.21"
+    },
+    {
+     "kind": "blank",
+     "ask": "Terms of 3, 3/2, 3/4, … needed for the sum 3069/512: ___",
+     "a": [
+      "10"
+     ],
+     "why": "2ⁿ = 1024.",
+     "clue": "Sₙ = 6(1 − 1/2ⁿ).",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q2",
+     "id": "g12.maths.u1.s1-3-3.22"
+    },
+    {
+     "kind": "mcq",
+     "text": "0.15, 0.015, 0.0015, … n terms:",
+     "opts": [
+      "(1 − 10⁻ⁿ)/6",
+      "0.15(1 − 10⁻ⁿ)",
+      "(1 − 10ⁿ)/6",
+      "1.5(1 − 10⁻ⁿ)"
+     ],
+     "ans": "(1 − 10⁻ⁿ)/6",
+     "why": "G₁ = 0.15, r = 0.1.",
+     "clue": "r = 0.1.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q3 a",
+     "id": "g12.maths.u1.s1-3-3.23"
+    },
+    {
+     "kind": "mcq",
+     "text": "1, −a, a², −a³, … n terms (a ≠ −1):",
+     "opts": [
+      "(1 − (−a)ⁿ)/(1 + a)",
+      "(1 − aⁿ)/(1 − a)",
+      "(1 + aⁿ)/(1 + a)",
+      "(1 − (−a)ⁿ)/(1 − a)"
+     ],
+     "ans": "(1 − (−a)ⁿ)/(1 + a)",
+     "why": "r = −a, so 1 − r = 1 + a.",
+     "clue": "r = −a.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q3 b (second)",
+     "id": "g12.maths.u1.s1-3-3.24"
+    },
+    {
+     "kind": "mcq",
+     "text": "x³, x⁵, x⁷, … n terms (x ≠ ±1):",
+     "opts": [
+      "x³(1 − x²ⁿ)/(1 − x²)",
+      "x³(1 − xⁿ)/(1 − x)",
+      "x³(1 − x²ⁿ)/(1 − x)",
+      "(1 − x²ⁿ)/(1 − x²)"
+     ],
+     "ans": "x³(1 − x²ⁿ)/(1 − x²)",
+     "why": "r = x², so rⁿ = x²ⁿ.",
+     "clue": "r = x⁵ ÷ x³.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q3 d",
+     "id": "g12.maths.u1.s1-3-3.25"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "ask": "G₁ = 1, r = 2. S₈ = ___",
+   "a": [
+    "255"
+   ],
+   "why": "2⁸ − 1.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u1.s1-3-3.26"
+  },
+  {
+   "kind": "blank",
+   "ask": "3 + 6 + 12 + 24 + 48 = ___",
+   "a": [
+    "93"
+   ],
+   "why": "3(2⁵ − 1).",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u1.s1-3-3.27"
+  },
+  {
+   "kind": "blank",
+   "ask": "G₁ = 4, r = 1/2. S₄ = ___",
+   "a": [
+    "15/2",
+    "7.5"
+   ],
+   "why": "4(1 − 1/16)/(1/2) = 8 × 15/16.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u1.s1-3-3.28"
+  },
+  {
+   "kind": "blank",
+   "ask": "G₁ = 2, r = −3. S₄ = ___",
+   "a": [
+    "-40"
+   ],
+   "why": "2(1 − 81)/(1 + 3) = 2(−80)/4.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u1.s1-3-3.29"
+  },
+  {
+   "kind": "blank",
+   "ask": "The sum of the first 3 terms is 13 and of terms 4 to 6 is 351. r = ___",
+   "a": [
+    "3"
+   ],
+   "why": "r³ = 351/13 = 27.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.maths.u1.s1-3-3.30"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "correction",
+   "text": "The book prints \"1.3.2\" for both Sum of Arithmetic Sequences (p.26) and Sum of Geometric Sequences (p.31). This lesson is numbered 1.3.3 so each section has its own number."
+  },
+  {
+   "kind": "review",
+   "text": "Exercise 1.17 Q1 (sums 9 and −18) gives r = −∛2 and G₁ = 3(1 + ∛2) ≈ 6.78, not a whole-number answer like the worked example. Please confirm the printed numbers."
+  },
+  {
+   "kind": "review",
+   "text": "Exercise 1.17 Q3 labels the parts a, b, b, d; the second \"b\" should be \"c\"."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.geometric-nth-term": {
+   "name": "The nth term of a geometric sequence",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "G₁ = 3, r = 2: find G₅",
+     "steps": [
+      "Gₙ = G₁ rⁿ⁻¹.",
+      "G₅ = 3 × 2⁴ = 3 × 16 = 48."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "text": "G₁ = 5, r = −2. G₄ = ?",
+     "opts": [
+      "−40",
+      "40",
+      "−80",
+      "20"
+     ],
+     "ans": "−40",
+     "why": "5 × (−2)³ = 5 × (−8) = −40.",
+     "clue": "The power is n − 1 = 3.",
+     "graded": true,
+     "level": 1,
+     "step": "check"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,727 @@
+{
+ "id": "g12.maths.u1.s1-3-2",
+ "book": {
+  "title": "Mathematics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "Sequences and Series",
+  "pages": "26–31",
+  "section": "1.3.2"
+ },
+ "title": "Sum of arithmetic sequences",
+ "competency": "Find the sum of the first n terms of an arithmetic sequence.",
+ "minutes": 14,
+ "keywords": [
+  {
+   "en": "Series",
+   "am": "ተከታታይ ድምር",
+   "def": "The sum of the terms of a sequence.",
+   "machine": true
+  },
+  {
+   "en": "Arithmetic series",
+   "am": "አሪትሜቲክ ተከታታይ ድምር",
+   "def": "The sum of the terms of an arithmetic sequence.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.gauss-sum",
+   "name": "Sum of the first n natural numbers",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Write the sum forwards and backwards and add: every pair makes n + 1, and there are n pairs. So twice the sum is n(n + 1), and 1 + 2 + … + n = n(n + 1)/2."
+    },
+    "am": {
+     "text": "ድምሩን ወደፊትና ወደኋላ ጽፈን ስንደምር እያንዳንዱ ጥንድ n + 1 ይሆናል፤ n ጥንዶች አሉ። ስለዚህ 1 + 2 + … + n = n(n + 1)/2።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Gauss at school",
+     "ask": "Young Gauss added 1 + 2 + 3 + … + 100 in a few moments. What is the sum?",
+     "opts": [
+      "5000",
+      "5050",
+      "10100",
+      "4950"
+     ],
+     "after": "5050. He paired 1 + 100, 2 + 99, … : each pair is 101.",
+     "ref": "Historical note",
+     "id": "g12.maths.u1.s1-3-2.1"
+    },
+    {
+     "kind": "people",
+     "step": "read",
+     "title": "Carl Friedrich Gauss",
+     "people": [
+      {
+       "name": "Carl Friedrich Gauss",
+       "years": "1777–1855",
+       "from": "Germany",
+       "did": "As a schoolboy he added 1 to 100 in moments by pairing the numbers.",
+       "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Carl_Friedrich_Gauss_1840_by_Jensen.jpg?width=240"
+      }
+     ],
+     "id": "g12.maths.u1.s1-3-2.2"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Forwards and backwards",
+     "steps": [
+      "S = 1 + 2 + 3 + … + 100.",
+      "S = 100 + 99 + 98 + … + 1.",
+      "Add the two lines: each column is 101.",
+      "2S = 100 × 101, so S = 5050.",
+      "In general 2Sₙ = n(n + 1), so Sₙ = n(n + 1)/2."
+     ],
+     "ref": "p.26–27",
+     "id": "g12.maths.u1.s1-3-2.3"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Try any n",
+     "ask": "Move n. The sum 1 + 2 + … + n appears.",
+     "vars": [
+      {
+       "k": "n",
+       "label": "n",
+       "min": 1,
+       "max": 200,
+       "step": 1,
+       "v": 100
+      }
+     ],
+     "formula": "n * (n + 1) / 2",
+     "out": "1 + 2 + … + n = {v}",
+     "id": "g12.maths.u1.s1-3-2.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Series",
+       "The sum of the terms of a sequence."
+      ]
+     ],
+     "id": "g12.maths.u1.s1-3-2.5"
+    },
+    {
+     "kind": "blank",
+     "ask": "1 + 2 + … + 40 = ___",
+     "a": [
+      "820"
+     ],
+     "why": "(40/2)(41) = 20 × 41 = 820.",
+     "clue": "Use n(n + 1)/2.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example a",
+     "id": "g12.maths.u1.s1-3-2.6"
+    },
+    {
+     "kind": "blank",
+     "ask": "The sum of the first 150 natural numbers is ___",
+     "a": [
+      "11325"
+     ],
+     "why": "(150/2)(151) = 75 × 151 = 11 325.",
+     "clue": "n = 150.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Example b",
+     "id": "g12.maths.u1.s1-3-2.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "The sum of the first 99 natural numbers is ___",
+     "a": [
+      "4950"
+     ],
+     "why": "(99/2)(100) = 99 × 50 = 4950.",
+     "clue": "Halve the 100, not the 99.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 1.13 Q1 b",
+     "id": "g12.maths.u1.s1-3-2.8"
+    },
+    {
+     "kind": "blank",
+     "ask": "1 + 2 + … + n = 3240. n = ___",
+     "a": [
+      "80"
+     ],
+     "why": "n(n + 1) = 6480. 80 × 81 = 6480, so n = 80 (n = −81 is rejected).",
+     "clue": "Double 3240 and look for two consecutive numbers with that product.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Exercise 1.13 Q2",
+     "id": "g12.maths.u1.s1-3-2.9"
+    },
+    {
+     "kind": "blank",
+     "ask": "51 + 52 + 53 + … + 100 = ___",
+     "a": [
+      "3775"
+     ],
+     "why": "(1 + … + 100) − (1 + … + 50) = 5050 − 1275 = 3775.",
+     "clue": "Subtract the sum up to 50 from the sum up to 100.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u1.s1-3-2.10"
+    }
+   ]
+  },
+  {
+   "id": "math.arithmetic-series",
+   "name": "Sum of an arithmetic sequence",
+   "requires": [
+    "math.arithmetic-nth-term"
+   ],
+   "explain": {
+    "en": {
+     "text": "For an arithmetic sequence Sₙ = (n/2)[2A₁ + (n − 1)d]. When you know the first and last terms, use Sₙ = n(A₁ + Aₙ)/2: the number of terms times the average of the ends."
+    },
+    "am": {
+     "text": "የአሪትሜቲክ ቅደም ተከተል ድምር Sₙ = (n/2)[2A₁ + (n − 1)d] ነው። የመጀመሪያውንና የመጨረሻውን ተርም ካወቅን Sₙ = n(A₁ + Aₙ)/2።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Pairing again",
+     "ask": "5, 15, 25, …, 95 has 10 terms. What is the sum?",
+     "opts": [
+      "500",
+      "1000",
+      "950",
+      "100"
+     ],
+     "after": "5 + 95 = 100, 15 + 85 = 100, … Five pairs of 100 make 500.",
+     "ref": "Activity 1.5",
+     "id": "g12.maths.u1.s1-3-2.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Theorem 1.3",
+     "paras": [
+      "Sₙ = (n/2)[2A₁ + (n − 1)d].",
+      "Also Sₙ = n(A₁ + Aₙ)/2, where Aₙ is the last term.",
+      "The second form is useful when the first and last terms are known."
+     ],
+     "ref": "Theorem 1.3",
+     "id": "g12.maths.u1.s1-3-2.12"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Where the formula comes from",
+     "steps": [
+      "Sₙ = A₁ + (A₁ + d) + … + (A₁ + (n − 1)d).",
+      "Collect the n copies of A₁: Sₙ = nA₁ + d[1 + 2 + … + (n − 1)].",
+      "1 + 2 + … + (n − 1) = (n − 1)n/2.",
+      "So Sₙ = nA₁ + n(n − 1)d/2 = (n/2)[2A₁ + (n − 1)d]."
+     ],
+     "ref": "p.27–28",
+     "id": "g12.maths.u1.s1-3-2.13"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Arithmetic series",
+       "The sum of the terms of an arithmetic sequence."
+      ]
+     ],
+     "id": "g12.maths.u1.s1-3-2.14"
+    },
+    {
+     "kind": "blank",
+     "ask": "A₁ = 4, d = 5. S₄₀ = ___",
+     "a": [
+      "4060"
+     ],
+     "why": "(40/2)[2(4) + 39(5)] = 20(8 + 195) = 20 × 203 = 4060.",
+     "clue": "Use (n/2)[2A₁ + (n − 1)d].",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example 2",
+     "id": "g12.maths.u1.s1-3-2.15"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Aₙ = 5n: sum of 35 terms",
+     "steps": [
+      "A₁ = 5 and A₃₅ = 5(35) = 175.",
+      "S₃₅ = 35(5 + 175)/2 = 35 × 90.",
+      "S₃₅ = 3150."
+     ],
+     "ref": "Example 1",
+     "id": "g12.maths.u1.s1-3-2.16"
+    },
+    {
+     "kind": "blank",
+     "ask": "A₁ = 30, d = −5, n = 12. S₁₂ = ___",
+     "a": [
+      "30"
+     ],
+     "why": "6[60 + 11(−5)] = 6(60 − 55) = 6 × 5 = 30.",
+     "clue": "11 × (−5) = −55.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.14 Q2 b",
+     "id": "g12.maths.u1.s1-3-2.17"
+    },
+    {
+     "kind": "blank",
+     "ask": "A₁ = 40 and the last term A₂₆ = 0. S₂₆ = ___",
+     "a": [
+      "520"
+     ],
+     "why": "26(40 + 0)/2 = 13 × 40 = 520.",
+     "clue": "Use the first and last terms.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 1.14 Q1 b",
+     "id": "g12.maths.u1.s1-3-2.18"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "A₄ = 2 and A₇ = 17: find S₇",
+     "steps": [
+      "A₁ + 3d = 2 and A₁ + 6d = 17.",
+      "Subtract: 3d = 15, so d = 5.",
+      "A₁ = 2 − 15 = −13.",
+      "S₇ = 7(−13 + 17)/2 = 7 × 2 = 14."
+     ],
+     "ref": "Further on sums, Example 1",
+     "id": "g12.maths.u1.s1-3-2.19"
+    },
+    {
+     "kind": "blank",
+     "ask": "S₁₀ = 165 and A₁ = 3. A₁₀ = ___",
+     "a": [
+      "30"
+     ],
+     "why": "165 = 10(3 + A₁₀)/2 = 5(3 + A₁₀), so 3 + A₁₀ = 33 and A₁₀ = 30.",
+     "clue": "Divide 165 by 5.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Further on sums, Example 2",
+     "id": "g12.maths.u1.s1-3-2.20"
+    },
+    {
+     "kind": "blank",
+     "ask": "A₃ = 5 and A₅ = 11. S₅ = ___",
+     "a": [
+      "25"
+     ],
+     "why": "d = 3, A₁ = −1. Terms −1, 2, 5, 8, 11 sum to 25.",
+     "clue": "Find d from 2 jumps.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 1.15 Q1",
+     "id": "g12.maths.u1.s1-3-2.21"
+    },
+    {
+     "kind": "blank",
+     "ask": "The sum of the integers from 1 to 100 divisible by 10 is ___",
+     "a": [
+      "550"
+     ],
+     "why": "10, 20, …, 100: 10 terms. 10(10 + 100)/2 = 550.",
+     "clue": "How many multiples of 10 are there?",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Example 3",
+     "id": "g12.maths.u1.s1-3-2.22"
+    },
+    {
+     "kind": "blank",
+     "ask": "The sum of the odd integers from 1 to 2001 is ___",
+     "a": [
+      "1002001"
+     ],
+     "why": "n = 1001 terms. S = 1001(1 + 2001)/2 = 1001 × 1001 = 1 002 001.",
+     "clue": "First find how many odd numbers there are: 1 + (n − 1)2 = 2001.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Exercise 1.15 Q4",
+     "id": "g12.maths.u1.s1-3-2.23"
+    },
+    {
+     "kind": "blank",
+     "ask": "The sum of the integers from 1 to 100 divisible by 2 or 5 is ___",
+     "a": [
+      "3050"
+     ],
+     "why": "By 2: 2550. By 5: 1050. By both (10): 550. 2550 + 1050 − 550 = 3050.",
+     "clue": "Add the multiples of 2 and of 5, then take away the multiples of 10 counted twice.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u1.s1-3-2.24"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 1.13",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "Sum of the first 30 natural numbers = ___",
+     "a": [
+      "465"
+     ],
+     "why": "15 × 31.",
+     "clue": "n(n + 1)/2.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 a",
+     "id": "g12.maths.u1.s1-3-2.25"
+    },
+    {
+     "kind": "blank",
+     "ask": "Sum of the first 99 natural numbers = ___",
+     "a": [
+      "4950"
+     ],
+     "why": "99 × 50.",
+     "clue": "n(n + 1)/2.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 b",
+     "id": "g12.maths.u1.s1-3-2.26"
+    },
+    {
+     "kind": "blank",
+     "ask": "Sum of the first 200 natural numbers = ___",
+     "a": [
+      "20100"
+     ],
+     "why": "100 × 201.",
+     "clue": "n(n + 1)/2.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 c",
+     "id": "g12.maths.u1.s1-3-2.27"
+    },
+    {
+     "kind": "blank",
+     "ask": "1 + 2 + … + n = 3240. n = ___",
+     "a": [
+      "80"
+     ],
+     "why": "80 × 81 = 6480.",
+     "clue": "n(n + 1) = 6480.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q2",
+     "id": "g12.maths.u1.s1-3-2.28"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.14",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "A₁ = 2, last term A₁₀ = 21. S₁₀ = ___",
+     "a": [
+      "115"
+     ],
+     "why": "5 × 23.",
+     "clue": "n(A₁ + Aₙ)/2.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 a",
+     "id": "g12.maths.u1.s1-3-2.29"
+    },
+    {
+     "kind": "blank",
+     "ask": "A₁ = 40, last term A₂₆ = 0. S₂₆ = ___",
+     "a": [
+      "520"
+     ],
+     "why": "13 × 40.",
+     "clue": "n(A₁ + Aₙ)/2.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 b",
+     "id": "g12.maths.u1.s1-3-2.30"
+    },
+    {
+     "kind": "blank",
+     "ask": "A₁ = 2, d = 3, n = 10. S₁₀ = ___",
+     "a": [
+      "155"
+     ],
+     "why": "5(4 + 27).",
+     "clue": "(n/2)[2A₁ + (n − 1)d].",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q2 a",
+     "id": "g12.maths.u1.s1-3-2.31"
+    },
+    {
+     "kind": "blank",
+     "ask": "A₁ = 30, d = −5, n = 12. S₁₂ = ___",
+     "a": [
+      "30"
+     ],
+     "why": "6(60 − 55).",
+     "clue": "(n − 1)d = −55.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q2 b",
+     "id": "g12.maths.u1.s1-3-2.32"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.15",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "A₃ = 5, A₅ = 11. S₅ = ___",
+     "a": [
+      "25"
+     ],
+     "why": "d = 3, A₁ = −1.",
+     "clue": "Find d first.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1",
+     "id": "g12.maths.u1.s1-3-2.33"
+    },
+    {
+     "kind": "mcq",
+     "text": "S₈ = 120 and A₁ = 1. A₈ and Aₙ:",
+     "opts": [
+      "29 and 4n − 3",
+      "30 and 4n − 4",
+      "29 and 3n + 5",
+      "15 and 2n − 1"
+     ],
+     "ans": "29 and 4n − 3",
+     "why": "120 = 4(1 + A₈), A₈ = 29; 7d = 28, d = 4.",
+     "clue": "Use Sₙ = n(A₁ + Aₙ)/2.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q2",
+     "id": "g12.maths.u1.s1-3-2.34"
+    },
+    {
+     "kind": "blank",
+     "ask": "Sum of the integers from 1 to 100 divisible by 2 or 5 = ___",
+     "a": [
+      "3050"
+     ],
+     "why": "2550 + 1050 − 550.",
+     "clue": "Do not count multiples of 10 twice.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q3",
+     "id": "g12.maths.u1.s1-3-2.35"
+    },
+    {
+     "kind": "blank",
+     "ask": "Sum of the odd integers from 1 to 2001 = ___",
+     "a": [
+      "1002001"
+     ],
+     "why": "1001².",
+     "clue": "1001 terms.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q4",
+     "id": "g12.maths.u1.s1-3-2.36"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "ask": "1 + 2 + … + 60 = ___",
+   "a": [
+    "1830"
+   ],
+   "why": "30 × 61.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u1.s1-3-2.37"
+  },
+  {
+   "kind": "blank",
+   "ask": "A₁ = 3, d = 4. S₁₀ = ___",
+   "a": [
+    "210"
+   ],
+   "why": "5(6 + 36).",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u1.s1-3-2.38"
+  },
+  {
+   "kind": "blank",
+   "ask": "An arithmetic sequence has 20 terms, first term 7, last term 64. S₂₀ = ___",
+   "a": [
+    "710"
+   ],
+   "why": "20 × 71/2.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u1.s1-3-2.39"
+  },
+  {
+   "kind": "blank",
+   "ask": "S₁₂ = 156 and A₁ = 2. A₁₂ = ___",
+   "a": [
+    "24"
+   ],
+   "why": "156 = 6(2 + A₁₂).",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u1.s1-3-2.40"
+  },
+  {
+   "kind": "blank",
+   "ask": "Sum of the multiples of 3 from 3 to 99 = ___",
+   "a": [
+    "1683"
+   ],
+   "why": "33 terms; 33(3 + 99)/2.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.maths.u1.s1-3-2.41"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "Exercise 1.13 Q2: n² + n − 6480 = 0 gives n = 80 or n = −81; only n = 80 is a natural number."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.arithmetic-nth-term": {
+   "name": "The nth term of an arithmetic sequence",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "A₁ = 2, d = 3: find A₁₀",
+     "steps": [
+      "Aₙ = A₁ + (n − 1)d.",
+      "A₁₀ = 2 + 9 × 3 = 29."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "text": "A₁ = 7, d = −2. A₆ = ?",
+     "opts": [
+      "−3",
+      "−5",
+      "17",
+      "−1"
+     ],
+     "ans": "−3",
+     "why": "7 + 5(−2) = 7 − 10 = −3.",
+     "clue": "There are 5 jumps of −2.",
+     "graded": true,
+     "level": 1,
+     "step": "check"
+    }
+   ]
+  }
+ }
+}
