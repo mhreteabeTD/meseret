@@ -1,0 +1,436 @@
+{
+ "id": "g8.cte.u1.s1-3",
+ "book": {
+  "title": "Career and Technical Education Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "cte",
+  "unit": 1,
+  "unit_title": "Personal Career Selection",
+  "pages": "6–9",
+  "section": "1.3"
+ },
+ "title": "Finding the right career",
+ "competency": "Follow seven steps to find the right career and make a career action plan.",
+ "minutes": 14,
+ "keywords": [
+  {
+   "en": "Shortlist",
+   "am": "የተመረጡ ጥቂት አማራጮች ዝርዝር",
+   "def": "A short list of the two to five careers left after removing the ones you do not want.",
+   "machine": true
+  },
+  {
+   "en": "Short-term goal",
+   "am": "የአጭር ጊዜ ግብ",
+   "def": "A goal you can usually reach in six months to three years.",
+   "machine": true
+  },
+  {
+   "en": "Long-term goal",
+   "am": "የረጅም ጊዜ ግብ",
+   "def": "A goal that typically takes about three to five years to reach.",
+   "machine": true
+  },
+  {
+   "en": "Career action plan",
+   "am": "የሙያ የድርጊት ዕቅድ",
+   "def": "A written document listing all the steps to reach your career goals: a roadmap from A to B to C to D.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "cte.g8.seven-steps-list",
+   "name": "From a long list to a choice",
+   "explain": {
+    "en": {
+     "text": "To find the right career, follow seven steps. 1: make one master list of occupations. 2: explore it and reduce it to five to ten options. 3: narrow it to a shortlist of two to five. 4: get in-depth information, especially from people working in those careers. 5: make your choice, the career that will bring you most satisfaction. You can change your mind later in life."
+    },
+    "am": {
+     "text": "ትክክለኛ ሙያ ለማግኘት ሰባት ደረጃዎች አሉ፤ ዝርዝር ማውጣት፣ ማሳጠር፣ መረጃ መሰብሰብ፣ መምረጥ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Too many choices",
+     "ask": "You have 30 possible careers on your list. What is the next sensible step?",
+     "opts": [
+      "Explore them and reduce the list to 5–10",
+      "Choose one at random",
+      "Add 30 more",
+      "Stop and wait"
+     ],
+     "after": "Step 2: explore the list and reduce it to five to ten options.",
+     "ref": "p.6",
+     "id": "g8.cte.u1.s1-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Steps 1–5",
+     "paras": [
+      "Step 1: make a list of occupations to explore; combine your lists into one master list.",
+      "Step 2: explore the list and reduce it to five to ten options.",
+      "Step 3: narrow down the list; keep two to five on your shortlist.",
+      "Step 4: get more information; ask people who work in those careers for firsthand knowledge.",
+      "Step 5: make your career choice: the one that will bring the most satisfaction. You may change your mind later."
+     ],
+     "ref": "pp.6–8",
+     "id": "g8.cte.u1.s1-3.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Shortlist",
+       "A short list of the two to five careers left after removing the ones you do not want."
+      ]
+     ],
+     "id": "g8.cte.u1.s1-3.3"
+    },
+    {
+     "kind": "order",
+     "step": "check",
+     "graded": true,
+     "text": "Put steps 1–5 in order.",
+     "items": [
+      "Make a master list",
+      "Explore and reduce to 5–10",
+      "Narrow to a shortlist of 2–5",
+      "Get more information",
+      "Make your career choice"
+     ],
+     "why": "pp.6–8.",
+     "clue": "The list gets shorter each time.",
+     "level": 1,
+     "id": "g8.cte.u1.s1-3.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "At step 4, the best source of firsthand knowledge is",
+     "opts": [
+      "people working in that career",
+      "a random video",
+      "a guess",
+      "a calendar"
+     ],
+     "ans": "people working in that career",
+     "why": "p.8.",
+     "clue": "Who knows the job best?",
+     "level": 1,
+     "id": "g8.cte.u1.s1-3.5"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Once you choose a career, you can never change your mind.",
+     "a": false,
+     "why": "p.8: \"you are allowed to change your mind about your choice at any point in your life.\"",
+     "clue": "Read step 5.",
+     "level": 1,
+     "id": "g8.cte.u1.s1-3.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Meron's shortlist is nurse, tailor and electrician. What should she do before choosing?",
+     "opts": [
+      "Talk to a nurse, a tailor and an electrician about their work",
+      "Add ten more careers",
+      "Choose the one her friend chose",
+      "Skip to the action plan"
+     ],
+     "ans": "Talk to a nurse, a tailor and an electrician about their work",
+     "why": "Step 4: seek advice from people engaged in the careers on your shortlist to get firsthand knowledge.",
+     "clue": "Which step comes after the shortlist?",
+     "level": 3,
+     "added": true,
+     "id": "g8.cte.u1.s1-3.7"
+    }
+   ]
+  },
+  {
+   "id": "cte.g8.goals-action-plan",
+   "name": "Goals and a career action plan",
+   "requires": [
+    "cte.g8.seven-steps-list"
+   ],
+   "explain": {
+    "en": {
+     "text": "Step 6: identify your goals. Short-term goals take six months to three years; long-term goals take about three to five years. Step 7: write a career action plan, a document that lists every step to reach your goals, like a roadmap from A to B to C to D."
+    },
+    "am": {
+     "text": "6ኛ ደረጃ፡ ግቦችን መለየት (አጭርና ረጅም ጊዜ)። 7ኛ ደረጃ፡ ወደ ግቡ የሚያደርሱ ደረጃዎችን የያዘ የሙያ የድርጊት ዕቅድ መጻፍ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Near and far goals",
+     "ask": "\"Finish Grade 10 next year\" and \"own an electrical shop in five years\". Which is long-term?",
+     "opts": [
+      "Own an electrical shop in five years",
+      "Finish Grade 10 next year",
+      "Both are short-term",
+      "Neither is a goal"
+     ],
+     "after": "Long-term goals take about three to five years.",
+     "ref": "p.9",
+     "id": "g8.cte.u1.s1-3.8"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Steps 6 and 7",
+     "paras": [
+      "Step 6: identify your goals. Short-term: six months to three years. Long-term: about three to five years.",
+      "Step 7: make a career action plan, a written document with all the steps to reach your goals: a roadmap from A to B to C to D."
+     ],
+     "table": [
+      [
+       "Example plan: electrician",
+       ""
+      ],
+      [
+       "A",
+       "Finish school (short-term)"
+      ],
+      [
+       "B",
+       "TVET training in electrical installation"
+      ],
+      [
+       "C",
+       "Work under an experienced electrician"
+      ],
+      [
+       "D",
+       "Open my own shop (long-term)"
+      ]
+     ],
+     "note": "Example answer for Activity 5.",
+     "ref": "p.9",
+     "id": "g8.cte.u1.s1-3.9"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Short-term goal",
+       "A goal you can usually reach in six months to three years."
+      ],
+      [
+       "Long-term goal",
+       "A goal that typically takes about three to five years to reach."
+      ],
+      [
+       "Career action plan",
+       "A written document listing all the steps to reach your career goals: a roadmap from A to B to C to D."
+      ]
+     ],
+     "id": "g8.cte.u1.s1-3.10"
+    },
+    {
+     "kind": "sort",
+     "step": "check",
+     "graded": true,
+     "text": "Short-term or long-term goal?",
+     "bins": [
+      "Short-term",
+      "Long-term"
+     ],
+     "items": [
+      [
+       "Pass Grade 8 exams this year",
+       "Short-term",
+       "Within a year."
+      ],
+      [
+       "Earn a TVET diploma in 4 years",
+       "Long-term",
+       "3–5 years."
+      ],
+      [
+       "Help a carpenter on weekends this term",
+       "Short-term",
+       "Months."
+      ],
+      [
+       "Open my own bakery in 5 years",
+       "Long-term",
+       "5 years."
+      ]
+     ],
+     "why": "Short: 6 months–3 years; long: 3–5 years.",
+     "clue": "How long will it take?",
+     "level": 1,
+     "id": "g8.cte.u1.s1-3.11"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "In the process of finding the right career, what is the importance of identifying your goals?",
+     "opts": [
+      "It helps you implement your career choice",
+      "It reduces the number of careers listed",
+      "It selects a single career",
+      "It lists all careers"
+     ],
+     "ans": "It helps you implement your career choice",
+     "why": "Goals come after the choice and turn it into action.",
+     "clue": "Goals come after step 5.",
+     "level": 2,
+     "ref": "Review III Q3",
+     "id": "g8.cte.u1.s1-3.12"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Which one is a correct statement about finding the right career?",
+     "opts": [
+      "All are correct",
+      "Narrowing the list helps focus on some careers",
+      "Getting more information gives in-depth knowledge",
+      "Identifying goals helps put the choice into action"
+     ],
+     "ans": "All are correct",
+     "why": "Each statement matches a step.",
+     "clue": "Check each one.",
+     "level": 1,
+     "ref": "Review III Q2",
+     "id": "g8.cte.u1.s1-3.13"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "A career action plan is described as a roadmap. Why?",
+     "opts": [
+      "It shows the steps from where you are now (A) to your goal (D)",
+      "It shows the roads in your town",
+      "It replaces school",
+      "It lists all careers in the world"
+     ],
+     "ans": "It shows the steps from where you are now (A) to your goal (D)",
+     "why": "p.9: it \"lays out all the steps you will have to take to reach your goals… from point A to B, then to C and D\".",
+     "clue": "Start and end points.",
+     "level": 3,
+     "added": true,
+     "id": "g8.cte.u1.s1-3.14"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "At step 3 your shortlist should have about",
+   "opts": [
+    "two to five occupations",
+    "fifty occupations",
+    "one occupation",
+    "none"
+   ],
+   "ans": "two to five occupations",
+   "why": "p.7.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.cte.u1.s1-3.15"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "A short-term goal can usually be reached in",
+   "opts": [
+    "six months to three years",
+    "one day",
+    "ten years",
+    "twenty years"
+   ],
+   "ans": "six months to three years",
+   "why": "p.9.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.cte.u1.s1-3.16"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "A career action plan is a",
+   "opts": [
+    "written document of steps to reach your goals",
+    "school timetable",
+    "shopping list",
+    "calendar"
+   ],
+   "ans": "written document of steps to reach your goals",
+   "why": "p.9.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.cte.u1.s1-3.17"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Step 2 reduces the list to",
+   "opts": [
+    "five to ten options",
+    "one option",
+    "two options",
+    "a hundred options"
+   ],
+   "ans": "five to ten options",
+   "why": "p.7.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.cte.u1.s1-3.18"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "How many steps does the book give for finding the right career?",
+   "opts": [
+    "Seven",
+    "Four",
+    "Five",
+    "Ten"
+   ],
+   "ans": "Seven",
+   "why": "p.6.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.cte.u1.s1-3.19"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Step 3 keeps \"two to five\" careers but Step 4 says \"three to five\"; the lesson uses the Step 3 wording. Review III Q3 has no answer key; b is used, but c (\"helps develop a career action plan\") is also defensible."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

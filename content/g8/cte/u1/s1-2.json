@@ -1,0 +1,485 @@
+{
+ "id": "g8.cte.u1.s1-2",
+ "book": {
+  "title": "Career and Technical Education Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "cte",
+  "unit": 1,
+  "unit_title": "Personal Career Selection",
+  "pages": "2–5",
+  "section": "1.2"
+ },
+ "title": "Four main steps of personal career selection",
+ "competency": "Discuss the four steps of career selection: research, evaluation, discussion and decision.",
+ "minutes": 16,
+ "keywords": [
+  {
+   "en": "Career research",
+   "am": "የሙያ ፍለጋ",
+   "def": "Step 1: listing all the career opportunities available in your area.",
+   "machine": true
+  },
+  {
+   "en": "Career evaluation",
+   "am": "የሙያ ግምገማ",
+   "def": "Step 2: comparing the most suitable careers by resources, knowledge, skills and experience needed.",
+   "machine": true
+  },
+  {
+   "en": "Career discussion",
+   "am": "የሙያ ውይይት",
+   "def": "Step 3: talking with peers to compare selected careers and learn about new ones.",
+   "machine": true
+  },
+  {
+   "en": "Career decision",
+   "am": "የሙያ ውሳኔ",
+   "def": "Step 4: choosing one single career based on research, evaluation and discussion.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "cte.g8.research-evaluate",
+   "name": "Research and evaluate",
+   "explain": {
+    "en": {
+     "text": "Step 1, research: list all careers available in your area: crop production, animal production, manufacturing, construction and services. Step 2, evaluation: compare the most suitable careers on the list, thinking about resources, knowledge level, skills and experience needed. Start from the one you think suits you best."
+    },
+    "am": {
+     "text": "1ኛ ደረጃ፡ በአካባቢህ ያሉ ሙያዎችን በሙሉ መዘርዘር። 2ኛ ደረጃ፡ ተስማሚ ሙያዎችን በሀብት፣ በዕውቀት፣ በክህሎትና በልምድ ማወዳደር።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Where to start",
+     "ask": "What should you do first when choosing a career?",
+     "opts": [
+      "List all careers available in your area",
+      "Pick the first job you hear about",
+      "Ask only one friend",
+      "Wait until Grade 12"
+     ],
+     "after": "Step 1 is research: list all available career opportunities comprehensively.",
+     "ref": "1.2.1",
+     "id": "g8.cte.u1.s1-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Step 1: Research",
+     "paras": [
+      "Several career opportunities are available in each locality.",
+      "They may be related to animal production, crop production, manufacturing, construction, or services.",
+      "Career searching is listing all available career opportunities in the area, comprehensively."
+     ],
+     "ref": "p.3",
+     "id": "g8.cte.u1.s1-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Step 2: Evaluate",
+     "paras": [
+      "Compare and contrast the most relevant careers on the list.",
+      "Consider: availability of resources, required knowledge level, skills and experience.",
+      "Start from the career you think is most appropriate for you, and learn each one in detail."
+     ],
+     "table": [
+      [
+       "Career",
+       "Example qualification"
+      ],
+      [
+       "Carpenter",
+       "TVET certificate or apprenticeship"
+      ],
+      [
+       "Electrician",
+       "TVET certificate/diploma and licence"
+      ],
+      [
+       "Nurse",
+       "Grade 12 plus nursing diploma or degree"
+      ],
+      [
+       "Teacher",
+       "Grade 12 plus teacher education"
+      ]
+     ],
+     "note": "Example answers for Activity 2.",
+     "ref": "pp.3–4",
+     "id": "g8.cte.u1.s1-2.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Career research",
+       "Step 1: listing all the career opportunities available in your area."
+      ],
+      [
+       "Career evaluation",
+       "Step 2: comparing the most suitable careers by resources, knowledge, skills and experience needed."
+      ]
+     ],
+     "id": "g8.cte.u1.s1-2.4"
+    },
+    {
+     "kind": "sort",
+     "step": "check",
+     "graded": true,
+     "text": "Activity 1: which career group?",
+     "bins": [
+      "Crop production",
+      "Animal production",
+      "Manufacturing",
+      "Construction",
+      "Services"
+     ],
+     "items": [
+      [
+       "Coffee grower",
+       "Crop production",
+       "Plants."
+      ],
+      [
+       "Beekeeper",
+       "Animal production",
+       "Animals."
+      ],
+      [
+       "Tailor",
+       "Manufacturing",
+       "Makes goods."
+      ],
+      [
+       "Mason",
+       "Construction",
+       "Builds."
+      ],
+      [
+       "Barber",
+       "Services",
+       "Serves people."
+      ],
+      [
+       "Poultry farmer",
+       "Animal production",
+       "Chickens."
+      ]
+     ],
+     "why": "p.3 names these five groups.",
+     "clue": "Does it grow, raise, make, build or serve?",
+     "level": 1,
+     "ref": "Activity 1",
+     "id": "g8.cte.u1.s1-2.5"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "___ is a process of listing all available career opportunities in the area.",
+     "a": [
+      "Career searching",
+      "career searching",
+      "Career researching",
+      "career researching",
+      "Career research"
+     ],
+     "why": "p.3.",
+     "clue": "Searching / researching.",
+     "level": 1,
+     "ref": "Review II Q2",
+     "id": "g8.cte.u1.s1-2.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Researching or listing career opportunities helps to",
+     "opts": [
+      "know all available career opportunities in the area",
+      "discuss each career",
+      "understand each career in detail",
+      "select among the alternatives"
+     ],
+     "ans": "know all available career opportunities in the area",
+     "why": "The other options belong to later steps.",
+     "clue": "What does a list give you?",
+     "level": 1,
+     "ref": "Review III Q1",
+     "id": "g8.cte.u1.s1-2.7"
+    },
+    {
+     "kind": "pick",
+     "step": "practise",
+     "graded": true,
+     "text": "In evaluating careers, what should you consider?",
+     "pool": [
+      "Availability of resources",
+      "Required knowledge level",
+      "Skills",
+      "Experience",
+      "Your favourite colour"
+     ],
+     "a": [
+      "Availability of resources",
+      "Required knowledge level",
+      "Skills",
+      "Experience"
+     ],
+     "why": "p.4.",
+     "clue": "What does the job need?",
+     "level": 1,
+     "id": "g8.cte.u1.s1-2.8"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Hana loves dairy farming but her family has no land or cows. Which evaluation factor shows a challenge?",
+     "opts": [
+      "Availability of resources",
+      "Mass media",
+      "Discussion with peers",
+      "Her shoe size"
+     ],
+     "ans": "Availability of resources",
+     "why": "Evaluation weighs resources, knowledge, skills and experience; dairy farming needs land and animals.",
+     "clue": "What does the farm need to start?",
+     "level": 3,
+     "added": true,
+     "id": "g8.cte.u1.s1-2.9"
+    }
+   ]
+  },
+  {
+   "id": "cte.g8.discuss-decide",
+   "name": "Discuss and decide",
+   "requires": [
+    "cte.g8.research-evaluate"
+   ],
+   "explain": {
+    "en": {
+     "text": "Step 3, discussion: talk with classmates, compare your chosen careers, explain why you like them, learn about new careers, and sometimes drop a choice. Step 4, decision: choose a single career based on research, evaluation and discussion. Sarkabo's story shows why: doing many businesses at once, he could not manage them and none was profitable, so he chose only poultry."
+    },
+    "am": {
+     "text": "3ኛ ደረጃ፡ ከጓደኞች ጋር መወያየት። 4ኛ ደረጃ፡ አንድ ሙያ መምረጥ። ሳርካቦ ብዙ ሥራ ሲሠራ ትርፍ ስላላገኘ የዶሮ እርባታ ብቻ መረጠ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Sarkabo's story",
+     "ask": "Sarkabo grew barley, teff and coffee, kept 50 chickens and ran a shop, but none made a profit. What did he do?",
+     "opts": [
+      "He chose only poultry production",
+      "He added more businesses",
+      "He stopped working",
+      "He moved to the city"
+     ],
+     "after": "He decided to engage only in poultry production, so he could manage it properly.",
+     "ref": "p.5",
+     "id": "g8.cte.u1.s1-2.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Step 3: Discuss",
+     "paras": [
+      "Discussion lets you compare the careers you chose and why you liked them.",
+      "You may learn about new job tracks from peers.",
+      "Two people with the same interest can discuss the requirements further.",
+      "You might drop your preferred choice during discussion."
+     ],
+     "ref": "pp.4–5",
+     "id": "g8.cte.u1.s1-2.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Step 4: Decide",
+     "paras": [
+      "Select a single career that seems appropriate, based on research, evaluation and discussion.",
+      "Story: Sarkabo finished primary school in 2010 E.C. He farmed barley, teff and coffee, kept 50 chickens and ran a shop. He was not profitable in all of them and could not manage properly. Finally, he chose only poultry production."
+     ],
+     "ref": "p.5",
+     "id": "g8.cte.u1.s1-2.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Career discussion",
+       "Step 3: talking with peers to compare selected careers and learn about new ones."
+      ],
+      [
+       "Career decision",
+       "Step 4: choosing one single career based on research, evaluation and discussion."
+      ]
+     ],
+     "id": "g8.cte.u1.s1-2.13"
+    },
+    {
+     "kind": "order",
+     "step": "check",
+     "graded": true,
+     "text": "Put the four steps of career selection in order.",
+     "items": [
+      "Research",
+      "Evaluation",
+      "Discussion",
+      "Decision"
+     ],
+     "why": "p.2.",
+     "clue": "List, compare, talk, choose.",
+     "level": 1,
+     "id": "g8.cte.u1.s1-2.14"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "To be effective, one person should engage in all careers available in his/her area.",
+     "a": false,
+     "why": "The last step is choosing a single career; Sarkabo failed doing many at once.",
+     "clue": "Remember Sarkabo.",
+     "level": 1,
+     "ref": "Review I Q1",
+     "id": "g8.cte.u1.s1-2.15"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "What can happen during the discussion step?",
+     "opts": [
+      "You may drop your preferred choice",
+      "You must keep every career",
+      "You stop thinking",
+      "You list all careers again"
+     ],
+     "ans": "You may drop your preferred choice",
+     "why": "p.4.",
+     "clue": "Learning from others.",
+     "level": 1,
+     "id": "g8.cte.u1.s1-2.16"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Why did Sarkabo's many businesses fail to make a profit?",
+     "opts": [
+      "He could not manage them all properly",
+      "Chickens are always unprofitable",
+      "Coffee cannot grow in the south",
+      "He had too much money"
+     ],
+     "ans": "He could not manage them all properly",
+     "why": "The story says he \"has engaged in different income-generating businesses and he has not been able to manage properly\".",
+     "clue": "Read the story again.",
+     "level": 3,
+     "added": true,
+     "id": "g8.cte.u1.s1-2.17"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The first step of career selection is",
+   "opts": [
+    "research",
+    "decision",
+    "discussion",
+    "evaluation"
+   ],
+   "ans": "research",
+   "why": "p.2.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.cte.u1.s1-2.18"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Comparing the most suitable careers on your list is",
+   "opts": [
+    "evaluation",
+    "research",
+    "decision",
+    "discussion"
+   ],
+   "ans": "evaluation",
+   "why": "p.3.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.cte.u1.s1-2.19"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "In each locality, there are a lot of career opportunities.",
+   "a": true,
+   "why": "Review I Q2.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.cte.u1.s1-2.20"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "At the decision step you choose",
+   "opts": [
+    "a single career",
+    "every career",
+    "no career",
+    "three careers"
+   ],
+   "ans": "a single career",
+   "why": "p.5.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.cte.u1.s1-2.21"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Learning about new job tracks from peers happens in the",
+   "opts": [
+    "discussion step",
+    "research step",
+    "decision step",
+    "evaluation step"
+   ],
+   "ans": "discussion step",
+   "why": "p.4.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.cte.u1.s1-2.22"
+  }
+ ],
+ "notes": [],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
