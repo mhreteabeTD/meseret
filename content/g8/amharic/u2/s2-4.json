@@ -1,0 +1,263 @@
+{
+ "id": "g8.amharic.u2.s2-4",
+ "book": {
+  "title": "አማርኛ የ8ኛ ክፍል የተማሪ መጽሐፍ",
+  "grade": 8,
+  "subject": "amharic",
+  "unit": 2,
+  "unit_title": "ባሕላዊ ቅርስ",
+  "pages": "25",
+  "section": "ክፍል አራት"
+ },
+ "title": "ጽሕፈት፡ አከራካሪ ድርሰት",
+ "competency": "የድርሰት ዓይነቶችን ማወቅና አከራካሪ ድርሰት መጻፍ።",
+ "minutes": 12,
+ "keywords": [
+  {
+   "en": "Essay",
+   "am": "ድርሰት",
+   "def": "በአንድ ርዕሰ ጉዳይ ዙሪያ የሚያጠነጥኑ አንቀጾችን የያዘ የሥነ ጽሑፍ ክፍል።",
+   "machine": true
+  },
+  {
+   "en": "Argumentative essay",
+   "am": "አከራካሪ ድርሰት",
+   "def": "ሁለት ወይም ከዚያ በላይ ተቃራኒ ሀሳቦችን በማመዛዘን የትኛው እንደሚሻል የሚያሳይ ድርሰት።",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "amh.g8.argumentative-essay",
+   "name": "አከራካሪ ድርሰት",
+   "explain": {
+    "en": {
+     "text": "An essay is a piece of writing whose paragraphs all turn around one topic. There are four common types: narrative, descriptive, argumentative and expository. An argumentative essay weighs two or more opposing ideas and shows which is better. A three-paragraph plan: paragraph 1 presents one side, paragraph 2 the opposite side, and paragraph 3 weighs them and concludes."
+    },
+    "am": {
+     "text": "ድርሰት በአንድ ርዕስ ዙሪያ የሚያጠነጥኑ አንቀጾች ስብስብ ነው። አከራካሪ ድርሰት ተቃራኒ ሀሳቦችን አመዛዝኖ የሚሻለውን ያሳያል፤ አንዱ ሀሳብ፣ ተቃራኒው፣ ማመዛዘን።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "የትኛው ዓይነት?",
+     "ask": "«ቅርሶችን የመጠበቅ ሀላፊነት የመንግሥት ብቻ ወይስ የእያንዳንዱ ግለሰብ?» የሚለው ርዕስ ምን ዓይነት ድርሰት ይፈልጋል?",
+     "opts": [
+      "አከራካሪ ድርሰት",
+      "ተራኪ ድርሰት",
+      "ስዕላዊ ድርሰት",
+      "ግጥም"
+     ],
+     "after": "ሁለት ተቃራኒ ሀሳቦችን ማመዛዘን ይጠይቃል።",
+     "ref": "ተግባር",
+     "machine": true,
+     "id": "g8.amharic.u2.s2-4.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "ድርሰትና ዓይነቶቹ",
+     "paras": [
+      "ድርሰት በአንድ ርዕሰ ጉዳይ ዙሪያ የሚያጠነጥኑ አንቀጾችን የያዘ የሥነ ጽሑፍ ክፍል ነው።",
+      "የተለመዱ የድርሰት ዓይነቶች አራት ናቸው፦ ተራኪ፣ ስዕላዊ፣ አመዛዛኝ ወይም አከራካሪ፣ ገላጭ ወይም አስረጂ።",
+      "አከራካሪ ድርሰት ሁለት ወይም ከዚያ በላይ ተቃራኒ ሀሳቦችን በማመዛዘን የትኛው እንደሚሻል የሚያሳይ ድርሰት ነው።",
+      "የባለ ሦስት አንቀጽ እቅድ፦ 1. አንዱ ሀሳብ፤ 2. ተቃራኒው ሀሳብ፤ 3. ማመዛዘንና መደምደሚያ።"
+     ],
+     "ref": "ገጽ 25",
+     "id": "g8.amharic.u2.s2-4.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "ቃላቱን እንወቅ",
+     "defs": [
+      [
+       "ድርሰት",
+       "በአንድ ርዕሰ ጉዳይ ዙሪያ የሚያጠነጥኑ አንቀጾችን የያዘ የሥነ ጽሑፍ ክፍል።"
+      ],
+      [
+       "አከራካሪ ድርሰት",
+       "ሁለት ወይም ከዚያ በላይ ተቃራኒ ሀሳቦችን በማመዛዘን የትኛው እንደሚሻል የሚያሳይ ድርሰት።"
+      ]
+     ],
+     "id": "g8.amharic.u2.s2-4.3"
+    },
+    {
+     "kind": "pick",
+     "step": "check",
+     "graded": true,
+     "text": "የተለመዱት አራቱ የድርሰት ዓይነቶች የትኞቹ ናቸው?",
+     "pool": [
+      "ተራኪ",
+      "ስዕላዊ",
+      "አከራካሪ",
+      "ገላጭ",
+      "ቅኔ"
+     ],
+     "a": [
+      "ተራኪ",
+      "ስዕላዊ",
+      "አከራካሪ",
+      "ገላጭ"
+     ],
+     "why": "ቅኔ የግጥም ጥበብ እንጂ የድርሰት ዓይነት አይደለም።",
+     "clue": "አራቱን ብቻ።",
+     "level": 1,
+     "machine": true,
+     "id": "g8.amharic.u2.s2-4.4"
+    },
+    {
+     "kind": "order",
+     "step": "practise",
+     "graded": true,
+     "text": "የባለ ሦስት አንቀጽ አከራካሪ ድርሰትን አንቀጾች በቅደም ተከተል አስቀምጡ።",
+     "items": [
+      "አንዳንዶች ቅርስን መጠበቅ የመንግሥት ብቻ ሀላፊነት ነው ይላሉ…",
+      "በሌላ በኩል ቅርሶች የጋራ ሀብት ስለሆኑ የእያንዳንዱ ግለሰብም ሀላፊነት ነው…",
+      "ስለዚህ ሁለቱን ስናመዛዝን ሀላፊነቱ የሁላችንም ነው ማለት ይሻላል…"
+     ],
+     "why": "አንዱ ሀሳብ፣ ተቃራኒው፣ ከዚያ ማመዛዘን።",
+     "clue": "መደምደሚያው መጨረሻ ነው።",
+     "level": 1,
+     "ref": "ተግባር",
+     "machine": true,
+     "id": "g8.amharic.u2.s2-4.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "በአከራካሪ ድርሰት የመጨረሻው አንቀጽ ምን ይሠራል?",
+     "opts": [
+      "ሀሳቦቹን አመዛዝኖ የሚሻለውን ይደመድማል",
+      "አዲስ ርዕስ ይጀምራል",
+      "ታሪክ ይተርካል",
+      "ምስል ይስላል"
+     ],
+     "ans": "ሀሳቦቹን አመዛዝኖ የሚሻለውን ይደመድማል",
+     "why": "ማመዛዘንና መደምደም።",
+     "clue": "ማጠቃለያ።",
+     "level": 1,
+     "machine": true,
+     "id": "g8.amharic.u2.s2-4.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "መጽሐፉ «ደራሲ በመድኃኒት ቀማሚ ይመሰላል» ይላል። ለምን?",
+     "opts": [
+      "ሁለቱም ሥራቸውን ከመጀመራቸው በፊት በሚገባ ማጥናትና መማር ስላለባቸው",
+      "ሁለቱም መድኃኒት ስለሚሸጡ",
+      "ሁለቱም ግጥም ስለሚጽፉ",
+      "ሁለቱም ሐኪም ስለሆኑ"
+     ],
+     "ans": "ሁለቱም ሥራቸውን ከመጀመራቸው በፊት በሚገባ ማጥናትና መማር ስላለባቸው",
+     "why": "ሳይማር መድኃኒት ቀማሚ መሆን እንደማይቻል ሁሉ ደራሲም የጽሑፉን ሥርዓት ጠንቅቆ ማጥናት አለበት።",
+     "clue": "ሁለቱ ምን ይጋራሉ?",
+     "level": 3,
+     "ref": "ገጽ 25",
+     "machine": true,
+     "added": true,
+     "id": "g8.amharic.u2.s2-4.7"
+    }
+   ]
+  }
+ ],
+ "lang": "am",
+ "main": "am",
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "ሁለት ተቃራኒ ሀሳቦችን የሚያመዛዝን ድርሰት",
+   "opts": [
+    "አከራካሪ",
+    "ተራኪ",
+    "ስዕላዊ",
+    "ገላጭ"
+   ],
+   "ans": "አከራካሪ",
+   "why": "ገጽ 25።",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g8.amharic.u2.s2-4.8"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "የተለመዱ የድርሰት ዓይነቶች ስንት ናቸው?",
+   "opts": [
+    "አራት",
+    "ሁለት",
+    "ስድስት",
+    "አንድ"
+   ],
+   "ans": "አራት",
+   "why": "ገጽ 25።",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g8.amharic.u2.s2-4.9"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "ድርሰት ምንድን ነው?",
+   "opts": [
+    "በአንድ ርዕስ ዙሪያ የሚያጠነጥኑ አንቀጾች",
+    "አንድ ቃል",
+    "የቃላት ዝርዝር",
+    "አንድ ዓረፍተ ነገር"
+   ],
+   "ans": "በአንድ ርዕስ ዙሪያ የሚያጠነጥኑ አንቀጾች",
+   "why": "ገጽ 25።",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g8.amharic.u2.s2-4.10"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "ገላጭ ድርሰት በሌላ ስም ምን ይባላል?",
+   "opts": [
+    "አስረጂ ድርሰት",
+    "አከራካሪ ድርሰት",
+    "ተራኪ ድርሰት",
+    "ስዕላዊ ድርሰት"
+   ],
+   "ans": "አስረጂ ድርሰት",
+   "why": "ገጽ 25።",
+   "clue": "",
+   "level": 2,
+   "machine": true,
+   "id": "g8.amharic.u2.s2-4.11"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "በአከራካሪ ድርሰት አንድ ሀሳብ ብቻ ይቀርባል።",
+   "a": false,
+   "why": "ሁለት ወይም ከዚያ በላይ ተቃራኒ ሀሳቦች ይመዛዘናሉ።",
+   "clue": "",
+   "level": 2,
+   "machine": true,
+   "id": "g8.amharic.u2.s2-4.12"
+  }
+ ],
+ "notes": [],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

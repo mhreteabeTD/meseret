@@ -1,0 +1,316 @@
+{
+ "id": "g8.amharic.u2.s2-5",
+ "book": {
+  "title": "አማርኛ የ8ኛ ክፍል የተማሪ መጽሐፍ",
+  "grade": 8,
+  "subject": "amharic",
+  "unit": 2,
+  "unit_title": "ባሕላዊ ቅርስ",
+  "pages": "26",
+  "section": "ክፍል አምስት"
+ },
+ "title": "ቃላት፡ ዐውዳዊ ፍቺና ተመሳሳይ ቃላት",
+ "competency": "አዳዲስ ቃላትን በተለያየ አገባብ መጠቀም።",
+ "minutes": 12,
+ "keywords": [
+  {
+   "en": "Contextual meaning",
+   "am": "ዐውዳዊ ፍቺ",
+   "def": "አንድ ቃል በዓረፍተ ነገር ውስጥ ሲገባ የሚሰጠው ፍቺ።",
+   "machine": true
+  },
+  {
+   "en": "Synonym",
+   "am": "ተመሳሳይ ቃል",
+   "def": "ተቀራራቢ ፍቺ ያለው ሌላ ቃል።",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "amh.g8.buhe-vocabulary",
+   "name": "ከቡሄ ምንባብ የተገኙ ቃላት",
+   "explain": {
+    "en": {
+     "text": "Words from the Buhe passage get their meaning from context. ጓዳ is the inner storeroom («ወደ ጓዳ አታሩጭው»), ባልትና is housekeeping and cooking skill, ዝና is a good reputation («ዝና ጠይቆ የመጣ እንግዳ»), and ሙልሙል is a small round loaf. Synonyms: ወገግታ = ፀዳል, ቀዳሚ = መጀመሪያ, መገለጥ = መታየት, ማብሰር = መንገር, ስሙኒ = 25 cents, ለአብነት = ለምሳሌ."
+    },
+    "am": {
+     "text": "የቡሄ ምንባብ ቃላት ፍቺያቸውን ከዐውዱ ያገኛሉ፤ ጓዳ፣ ባልትና፣ ዝና፣ ሙልሙል። ወገግታ = ፀዳል፣ ቀዳሚ = መጀመሪያ፣ ለአብነት = ለምሳሌ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "ጓዳ",
+     "ask": "«አንዱን አምጭው አታማርጭው ወደ ጓዳ አታሩጭው» በሚለው «ጓዳ» ምንድን ነው?",
+     "opts": [
+      "የቤቱ ውስጠኛ ክፍል፣ እህልና ምግብ የሚቀመጥበት",
+      "የቤቱ ጣሪያ",
+      "ገበያ",
+      "ትምህርት ቤት"
+     ],
+     "after": "ዳቦውን ለማምጣት ወደ ውስጠኛው ክፍል አትመላለሺ ማለት ነው።",
+     "ref": "ተግባር አንድ ሀ",
+     "machine": true,
+     "id": "g8.amharic.u2.s2-5.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "ዐውዳዊ ፍቺዎች",
+     "paras": [
+      "ጓዳ፦ የቤቱ ውስጠኛ ክፍል።",
+      "እማወራ፦ የቤት እመቤት።",
+      "አባወራ፦ የቤቱ ራስ።",
+      "ዝና፦ መልካም ስም።",
+      "መጠለል፦ ከዝናብ ወይም ከፀሐይ ለመከለል ከጣሪያ ወይም ከዛፍ ሥር መሆን።",
+      "ባልትና፦ ምግብና መጠጥ የማዘጋጀትና ቤት የማስተዳደር ሙያ።",
+      "ሙልሙል፦ ክብ ሆኖ የሚጋገር ትንሽ ዳቦ።"
+     ],
+     "ref": "ተግባር አንድ",
+     "machine": true,
+     "id": "g8.amharic.u2.s2-5.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "ቃላቱን እንወቅ",
+     "defs": [
+      [
+       "ዐውዳዊ ፍቺ",
+       "አንድ ቃል በዓረፍተ ነገር ውስጥ ሲገባ የሚሰጠው ፍቺ።"
+      ],
+      [
+       "ተመሳሳይ ቃል",
+       "ተቀራራቢ ፍቺ ያለው ሌላ ቃል።"
+      ]
+     ],
+     "id": "g8.amharic.u2.s2-5.3"
+    },
+    {
+     "kind": "match",
+     "step": "check",
+     "graded": true,
+     "text": "ተግባር ሁለት፦ ቃላቱን ከተመሳሳያቸው ጋር አዛምዱ።",
+     "pairs": [
+      [
+       "ወገግታ",
+       "ፀዳል"
+      ],
+      [
+       "ቀዳሚ",
+       "መጀመሪያ"
+      ],
+      [
+       "መገለጥ",
+       "መታየት"
+      ],
+      [
+       "ማብሰር",
+       "መንገር"
+      ]
+     ],
+     "why": "«የብርሃን ወገግታ»፣ «ቀዳሚና የበዓላት መነሻ»፣ «የክርስቶስ መገለጥ ቀን»፣ «የምስራች ማብሰር»።",
+     "clue": "ምንባቡ ውስጥ ቃሉን ፈልጉ።",
+     "level": 1,
+     "ref": "ተግባር ሁለት",
+     "machine": true,
+     "id": "g8.amharic.u2.s2-5.4"
+    },
+    {
+     "kind": "match",
+     "step": "practise",
+     "graded": true,
+     "text": "ተጨማሪ ተመሳሳይ ቃላትን አዛምዱ።",
+     "pairs": [
+      [
+       "ስሙኒ",
+       "ሀያ አምስት ሳንቲም"
+      ],
+      [
+       "አውድ",
+       "ቦታ፣ ሁኔታ"
+      ],
+      [
+       "ለአብነት",
+       "ለምሳሌ"
+      ],
+      [
+       "አውራጅ",
+       "አቀንቃኝ"
+      ]
+     ],
+     "why": "ተግባር ሁለት።",
+     "clue": "ስሙኒ ሩብ ብር ነው።",
+     "level": 1,
+     "ref": "ተግባር ሁለት",
+     "machine": true,
+     "id": "g8.amharic.u2.s2-5.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "«የኔማ እመቤት መጣንልሽ የቤት ባልትና ልናይልሽ» በሚለው «ባልትና» ምን ማለት ነው?",
+     "opts": [
+      "የቤት ውስጥ ሙያ፣ ምግብ የማዘጋጀት ችሎታ",
+      "የቤት ዕቃ",
+      "ገንዘብ",
+      "ልብስ"
+     ],
+     "ans": "የቤት ውስጥ ሙያ፣ ምግብ የማዘጋጀት ችሎታ",
+     "why": "«ወይዘሮዋን በሙያዋና በባልትናዋ ያወድሷታል»።",
+     "clue": "ምን ያወድሳሉ?",
+     "level": 1,
+     "ref": "ተግባር አንድ ሰ",
+     "machine": true,
+     "id": "g8.amharic.u2.s2-5.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "«ዝና ጠይቆ የመጣ እንግዳ» በሚለው «ዝና» ምን ማለት ነው?",
+     "opts": [
+      "መልካም ስም",
+      "ዝናብ",
+      "ስጦታ",
+      "መንገድ"
+     ],
+     "ans": "መልካም ስም",
+     "why": "የባለቤቱን ለጋስነት ሰምቶ የመጣ እንግዳ ማለት ነው።",
+     "clue": "እንግዳው ምን ሰምቶ መጣ?",
+     "level": 2,
+     "ref": "ተግባር አንድ ሠ",
+     "machine": true,
+     "id": "g8.amharic.u2.s2-5.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "«ወይ የኔ ጌታ ዋርካ ነህ ዋርካ ቢጠለሉብህ የማታስነካ» ሲሉ አባወራውን በምን ያሞግሱታል?",
+     "opts": [
+      "እንደ ዋርካ ዛፍ ለሌሎች ጥላና ከለላ የሚሆን ለጋስ መሆኑን",
+      "ረጅም መሆኑን",
+      "ዛፍ መትከሉን",
+      "መቆጣቱን"
+     ],
+     "ans": "እንደ ዋርካ ዛፍ ለሌሎች ጥላና ከለላ የሚሆን ለጋስ መሆኑን",
+     "why": "«መጠለል» ከዝናብና ከፀሐይ መከለል ነው፤ ዋርካ ትልቅ ጥላ ያለው ዛፍ ነው። የተጠለለበትን የሚጠብቅ ሰው ማለት ነው።",
+     "clue": "ዋርካ ምን ይሰጣል?",
+     "level": 3,
+     "machine": true,
+     "added": true,
+     "id": "g8.amharic.u2.s2-5.8"
+    }
+   ]
+  }
+ ],
+ "lang": "am",
+ "main": "am",
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "«ለአብነት» ማለት",
+   "opts": [
+    "ለምሳሌ",
+    "ለመጨረሻ",
+    "ለዘላለም",
+    "ለብቻ"
+   ],
+   "ans": "ለምሳሌ",
+   "why": "ተግባር ሁለት።",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g8.amharic.u2.s2-5.9"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "«ሙልሙል» ምንድን ነው?",
+   "opts": [
+    "ክብ ትንሽ ዳቦ",
+    "ችቦ",
+    "ጅራፍ",
+    "ግጥም"
+   ],
+   "ans": "ክብ ትንሽ ዳቦ",
+   "why": "ተግባር አንድ ሸ።",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g8.amharic.u2.s2-5.10"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "«እማወራ» ማለት",
+   "opts": [
+    "የቤት እመቤት",
+    "የቤቱ ልጅ",
+    "እንግዳ",
+    "ጎረቤት"
+   ],
+   "ans": "የቤት እመቤት",
+   "why": "ተግባር አንድ ለ።",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g8.amharic.u2.s2-5.11"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "የ«መገለጥ» ተመሳሳይ ቃል",
+   "opts": [
+    "መታየት",
+    "መደበቅ",
+    "መሸሽ",
+    "መተኛት"
+   ],
+   "ans": "መታየት",
+   "why": "ተግባር ሁለት።",
+   "clue": "",
+   "level": 2,
+   "machine": true,
+   "id": "g8.amharic.u2.s2-5.12"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "«ስሙኒ» ስንት ሳንቲም ነው?",
+   "opts": [
+    "25 ሳንቲም",
+    "50 ሳንቲም",
+    "10 ሳንቲም",
+    "5 ሳንቲም"
+   ],
+   "ans": "25 ሳንቲም",
+   "why": "ተግባር ሁለት።",
+   "clue": "",
+   "level": 2,
+   "machine": true,
+   "id": "g8.amharic.u2.s2-5.13"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "«ማበርከት» (Activity 1 መ) does not occur in the passage (perhaps «ማብሰር» was meant); it is not used. «ንዑሳን» is the unused distractor in Activity 2."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
