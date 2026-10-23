@@ -3,7 +3,10 @@
 Goal: units 1 and 2 of each grade live as interactive book chapters (`view: "book"`, `free: true`).
 Sources live in **github.com/mhreteabeTD/meseret-sources**: read `SOURCES.md` and `catalog.json` there. Never ask the owner to upload a book again.
 
-## Order
+## Tester requests first (2026-10-23)
+G7: Maths U1–3, Citizenship U1–3, CTE U1–3, Science U2–3, Social U2–3 (session A). G8 + G5 all subjects U1–2 (session B, `docs/HANDOFF-G8-G5.md`). G9 + G12 all subjects U1–2 (session C, `docs/HANDOFF-G9-G12.md`). How: `docs/CHAPTER-BUILD.md`.
+
+## Order (after the tester list)
 1. **Grade 12, Grade 8, Grade 6 first** (national/regional exam grades), then 7, 9–11, 5, 1–4.
 2. Within a grade: **Maths first**, then English, then Science (Gen. Science 7–8; Physics, Chemistry, Biology 9–12), then the rest.
 
