@@ -1,0 +1,337 @@
+{
+ "id": "g7.cte.u1.s1-3",
+ "book": {
+  "title": "Career and Technical Education Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "cte",
+  "unit": 1,
+  "unit_title": "Introduction to Career and Technical Education (CTE)",
+  "pages": "6",
+  "section": "1.3"
+ },
+ "title": "Meaning of Career and Technical Education",
+ "competency": "Describe Career and Technical Education.",
+ "minutes": 9,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Career and Technical Education",
+   "am": "የሙያና ቴክኒክ ትምህርት",
+   "def": "Teaching skills-based careers to students. Short form: CTE.",
+   "machine": true
+  },
+  {
+   "en": "Academic education",
+   "am": "አካዳሚያዊ ትምህርት",
+   "def": "Education whose main purpose is learning.",
+   "machine": true
+  },
+  {
+   "en": "Technical education",
+   "am": "ቴክኒካል ትምህርት",
+   "def": "Education that focuses on practical skills for doing a task.",
+   "machine": true
+  },
+  {
+   "en": "Workplace competencies",
+   "am": "የሥራ ቦታ ብቃቶች",
+   "def": "The knowledge, skills and attitudes needed at work.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "cte.what-is-cte",
+   "name": "What CTE is",
+   "explain": {
+    "en": {
+     "text": "Career and Technical Education, or CTE, joins academic education and technical education. Academic education has learning as its main purpose. Technical education focuses on practical skills for a task. CTE prepares students for further education and for the world of work."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Phones and maths",
+     "ask": "A school teaches students to repair phones and also to read and do maths. What kind of education is this?",
+     "opts": [
+      "Only academic",
+      "Academic and technical together",
+      "Not education at all"
+     ],
+     "after": "It joins learning with practical skills. That is the idea of CTE.",
+     "added": true,
+     "id": "g7.cte.u1.s1-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "1.3 Meaning of CTE",
+     "paras": [
+      "Career and Technical Education (CTE) combines academic and technical skills.",
+      "It gives the knowledge and training needed for further education and jobs.",
+      "It teaches technology-based and career-oriented skills.",
+      "CTE offers skills to begin working in different economic sectors."
+     ],
+     "id": "g7.cte.u1.s1-3.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Two kinds of education",
+     "paras": [
+      "CTE combines academic education and technical education."
+     ],
+     "table": [
+      [
+       "Academic education",
+       "Technical education"
+      ],
+      [
+       "Learning is its main purpose.",
+       "Focuses on practical or technical skills for a task."
+      ],
+      [
+       "Example: reading, maths, science.",
+       "Example: metal work, hairdressing, farming skills."
+      ]
+     ],
+     "id": "g7.cte.u1.s1-3.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Ready for work",
+     "paras": [
+      "CTE prepares students for the world of work.",
+      "It introduces workplace competencies: knowledge, skills and attitudes.",
+      "Students practise them in a real-world, applied context."
+     ],
+     "id": "g7.cte.u1.s1-3.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Career and Technical Education",
+       "Teaching skills-based careers to students. Short form: CTE."
+      ],
+      [
+       "Academic education",
+       "Education whose main purpose is learning."
+      ],
+      [
+       "Technical education",
+       "Education that focuses on practical skills for doing a task."
+      ],
+      [
+       "Workplace competencies",
+       "The knowledge, skills and attitudes needed at work."
+      ]
+     ],
+     "id": "g7.cte.u1.s1-3.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "CTE combines which two kinds of education?",
+     "opts": [
+      "Academic and technical",
+      "Sport and music",
+      "Religious and political"
+     ],
+     "ans": "Academic and technical",
+     "why": "CTE joins academic learning with technical skills.",
+     "clue": "Read \"Two kinds of education\".",
+     "level": 1,
+     "id": "g7.cte.u1.s1-3.6"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "bins": [
+      "Academic",
+      "Technical"
+     ],
+     "items": [
+      [
+       "Learning to solve equations",
+       "Academic",
+       "Learning is the main purpose."
+      ],
+      [
+       "Learning to weld metal",
+       "Technical",
+       "A practical skill for a task."
+      ],
+      [
+       "Reading a history book",
+       "Academic",
+       "Learning knowledge."
+      ],
+      [
+       "Learning to cut hair",
+       "Technical",
+       "A practical skill."
+      ]
+     ],
+     "why": "Academic = learning as the main aim. Technical = practical skills for a task.",
+     "clue": "Is the main aim knowing, or doing a task?",
+     "level": 1,
+     "id": "g7.cte.u1.s1-3.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Is education from Grade 1–6 mainly academic or technical?",
+     "opts": [
+      "Mainly academic",
+      "Mainly technical"
+     ],
+     "ans": "Mainly academic",
+     "why": "Grades 1–6 mostly teach reading, writing, maths and science: learning is the main purpose.",
+     "clue": "What is the main purpose of those grades?",
+     "level": 2,
+     "ref": "Activity 3",
+     "id": "g7.cte.u1.s1-3.8"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "Workplace competencies are knowledge, skills and ___.",
+     "a": [
+      "attitudes",
+      "attitude"
+     ],
+     "why": "The book lists knowledge, skills and attitudes.",
+     "clue": "Think about how you behave at work.",
+     "level": 1,
+     "id": "g7.cte.u1.s1-3.9"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "CTE does not involve acquiring knowledge.",
+     "a": false,
+     "why": "CTE combines academic knowledge with technical skills.",
+     "clue": "What does the A in \"academic\" side bring?",
+     "level": 1,
+     "ref": "Unit Review I Q3",
+     "id": "g7.cte.u1.s1-3.10"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Tigist learns maths in class and then uses it to measure cloth in a tailoring workshop. Which part of CTE does the workshop show?",
+     "opts": [
+      "Applying knowledge in a real-world context",
+      "Only academic learning",
+      "Learning with no purpose"
+     ],
+     "ans": "Applying knowledge in a real-world context",
+     "why": "CTE introduces workplace competencies in a real-world, applied context. She uses classroom maths for a real task.",
+     "clue": "Where is she using what she learned?",
+     "level": 3,
+     "added": true,
+     "id": "g7.cte.u1.s1-3.11"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "CTE stands for:",
+   "opts": [
+    "Career and Technical Education",
+    "Class Test Exam",
+    "Computer Technology Education"
+   ],
+   "ans": "Career and Technical Education",
+   "why": "C-T-E.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.cte.u1.s1-3.12"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Technical education focuses on practical skills for doing a task.",
+   "a": true,
+   "why": "That is its definition.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.cte.u1.s1-3.13"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Education whose main purpose is learning is called:",
+   "opts": [
+    "Academic education",
+    "Technical education"
+   ],
+   "ans": "Academic education",
+   "why": "Academic = learning is the main aim.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.cte.u1.s1-3.14"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "CTE prepares students for further education and for the world of ___.",
+   "a": [
+    "work"
+   ],
+   "why": "CTE prepares students for the world of work.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.cte.u1.s1-3.15"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is a workplace competency?",
+   "opts": [
+    "Being on time and polite (attitude)",
+    "Your height",
+    "Your birthday"
+   ],
+   "ans": "Being on time and polite (attitude)",
+   "why": "Competencies are knowledge, skills and attitudes.",
+   "level": 3,
+   "clue": "",
+   "id": "g7.cte.u1.s1-3.16"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "Activity 3 is open; asked as a choice with the book-based model answer (mainly academic)."
+  },
+  {
+   "kind": "note",
+   "text": "The academic/technical examples in the table are added for clarity."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

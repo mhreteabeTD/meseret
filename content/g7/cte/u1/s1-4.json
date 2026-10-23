@@ -1,0 +1,300 @@
+{
+ "id": "g7.cte.u1.s1-4",
+ "book": {
+  "title": "Career and Technical Education Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "cte",
+  "unit": 1,
+  "unit_title": "Introduction to Career and Technical Education (CTE)",
+  "pages": "7–8",
+  "section": "1.4"
+ },
+ "title": "Importance of Career and Technical Education",
+ "competency": "Describe the importance of Career and Technical Education.",
+ "minutes": 9,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Career and Technical Education",
+   "am": "የሙያና ቴክኒክ ትምህርት",
+   "def": "Teaching skills-based careers to students. Short form: CTE.",
+   "machine": true
+  },
+  {
+   "en": "Skilled manpower",
+   "am": "የሰለጠነ የሰው ኃይል",
+   "def": "Workers who have the skills to do a job well.",
+   "machine": true
+  },
+  {
+   "en": "Hands-on learning",
+   "am": "በተግባር መማር",
+   "def": "Learning by doing a real task with your hands.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "cte.importance",
+   "name": "Why CTE matters",
+   "explain": {
+    "en": {
+     "text": "CTE covers fields like agriculture, construction, pottery, leather, metal work, pharmacy, crafts, hotel service and business. It creates skilled workers, helps the economy and improves life. It links classroom learning to real problems, reduces unemployment, and is a base for further education."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "No work in town",
+     "ask": "Many young people in a town have no work. How could CTE help?",
+     "opts": [
+      "By teaching skills people can use to get or create work",
+      "By closing schools",
+      "It cannot help"
+     ],
+     "after": "CTE gives practical skills. Skills open job opportunities and reduce unemployment.",
+     "added": true,
+     "id": "g7.cte.u1.s1-4.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "1.4 Importance of CTE",
+     "paras": [
+      "CTE covers courses in agriculture, construction, pottery and leather processing.",
+      "It also covers metal work, pharmacy, crafts, hotel service and business.",
+      "It creates skilled manpower for the country.",
+      "It helps socioeconomic development and improves the quality of life."
+     ],
+     "id": "g7.cte.u1.s1-4.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Ready for college and career",
+     "paras": [
+      "CTE programs prepare students for college and careers.",
+      "They give technical training and hands-on learning experiences.",
+      "Students build skills that all employers value."
+     ],
+     "id": "g7.cte.u1.s1-4.3"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Benefits of CTE",
+     "ask": "Tap each benefit.",
+     "items": [
+      [
+       "Connects learning to real problems",
+       "CTE links classroom learning with applied knowledge and skills."
+      ],
+      [
+       "Opportunities for employment",
+       "It reduces the problem of unemployment."
+      ],
+      [
+       "Base for further education",
+       "It prepares for higher education and career growth."
+      ],
+      [
+       "Hands-on experience",
+       "It creates engaged workers ready for technical careers."
+      ]
+     ],
+     "need": 4,
+     "id": "g7.cte.u1.s1-4.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Skilled manpower",
+       "Workers who have the skills to do a job well."
+      ],
+      [
+       "Hands-on learning",
+       "Learning by doing a real task with your hands."
+      ]
+     ],
+     "id": "g7.cte.u1.s1-4.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Which is a benefit of CTE given in the book?",
+     "opts": [
+      "It reduces the problem of unemployment",
+      "It removes the need for school",
+      "It makes all jobs the same"
+     ],
+     "ans": "It reduces the problem of unemployment",
+     "why": "CTE offers good employment opportunities.",
+     "clue": "Read the benefits list.",
+     "level": 1,
+     "id": "g7.cte.u1.s1-4.6"
+    },
+    {
+     "kind": "pick",
+     "step": "practise",
+     "graded": true,
+     "text": "Tap every field that CTE covers.",
+     "pool": [
+      "Agriculture",
+      "Construction",
+      "Pottery",
+      "Hotel service",
+      "Sleeping"
+     ],
+     "a": [
+      "Agriculture",
+      "Construction",
+      "Pottery",
+      "Hotel service"
+     ],
+     "why": "The book lists agriculture, construction, pottery, hotel service and more.",
+     "clue": "Which ones are skills for work?",
+     "level": 1,
+     "id": "g7.cte.u1.s1-4.7"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "___ links school learning with the world of work.",
+     "a": [
+      "CTE",
+      "Career and Technical Education",
+      "career and technical education"
+     ],
+     "why": "CTE connects classroom learning with real-world skills.",
+     "clue": "Which kind of education is this unit about?",
+     "level": 1,
+     "ref": "Unit Review II Q3",
+     "id": "g7.cte.u1.s1-4.8"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "CTE focuses more on academic learning.",
+     "a": false,
+     "why": "CTE stresses technical, hands-on, career-oriented skills, combined with academic learning.",
+     "clue": "What does the \"T\" in CTE stand for?",
+     "level": 2,
+     "ref": "Unit Review I Q5",
+     "id": "g7.cte.u1.s1-4.9"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Does CTE contribute to individual development?",
+     "opts": [
+      "No, it only helps the country",
+      "Yes, it gives skills, experience and job chances that help a person grow",
+      "Only for adults"
+     ],
+     "ans": "Yes, it gives skills, experience and job chances that help a person grow",
+     "why": "CTE gives technical skills and hands-on experience, opens jobs and prepares for further study. So the person grows in skills and income.",
+     "clue": "Think about what CTE gives one student.",
+     "level": 3,
+     "ref": "Activity 4",
+     "added": true,
+     "id": "g7.cte.u1.s1-4.10"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which field is covered by CTE?",
+   "opts": [
+    "Leather processing",
+    "Watching films",
+    "Sleeping"
+   ],
+   "ans": "Leather processing",
+   "why": "The book lists leather processing among CTE fields.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.cte.u1.s1-4.11"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "CTE creates skilled manpower for a country.",
+   "a": true,
+   "why": "It plays a vital role in human resource development.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.cte.u1.s1-4.12"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "CTE gives students:",
+   "opts": [
+    "Technical training and hands-on experience",
+    "Only exams",
+    "Only holidays"
+   ],
+   "ans": "Technical training and hands-on experience",
+   "why": "That is how CTE prepares students.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.cte.u1.s1-4.13"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "CTE serves as a base for further ___ at a higher level.",
+   "a": [
+    "education",
+    "study",
+    "learning"
+   ],
+   "why": "It is a base for further education and career growth.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.cte.u1.s1-4.14"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "A student learns to fix bicycles in a CTE class and starts a small repair business. Which benefit does this show?",
+   "opts": [
+    "Reducing unemployment",
+    "Avoiding all work",
+    "Only academic learning"
+   ],
+   "ans": "Reducing unemployment",
+   "why": "CTE skills open employment and self-employment.",
+   "level": 3,
+   "clue": "",
+   "id": "g7.cte.u1.s1-4.15"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "Activity 4 is open; used as the challenge with a book-based model answer."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

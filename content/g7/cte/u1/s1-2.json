@@ -1,0 +1,522 @@
+{
+ "id": "g7.cte.u1.s1-2",
+ "book": {
+  "title": "Career and Technical Education Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "cte",
+  "unit": 1,
+  "unit_title": "Introduction to Career and Technical Education (CTE)",
+  "pages": "2–5",
+  "section": "1.2"
+ },
+ "title": "Job vs career",
+ "competency": "Differentiate between career and job.",
+ "minutes": 12,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Job",
+   "am": "ሥራ",
+   "def": "Legal work that gives a service or goods and earns money.",
+   "machine": true
+  },
+  {
+   "en": "Career",
+   "am": "ሙያ",
+   "def": "The path of progress a person follows to reach their life goals.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "cte.job",
+   "name": "What a job is",
+   "explain": {
+    "en": {
+     "text": "A job is any legal activity where a person gives a service or produces goods and earns money. It is what a person does now to bring home an income. Cleaner, plumber and teacher are jobs."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Earning money",
+     "ask": "Your neighbour drives a bajaj every day and earns money. What is this called?",
+     "opts": [
+      "A job",
+      "A hobby",
+      "A holiday"
+     ],
+     "after": "Legal work that earns money is a job.",
+     "added": true,
+     "id": "g7.cte.u1.s1-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "1.2 Job vs career",
+     "paras": [
+      "A career is a journey through learning, work and life.",
+      "What about a job? Are job and career the same?"
+     ],
+     "id": "g7.cte.u1.s1-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "What a job is",
+     "paras": [
+      "A job is any legal activity that gives a service or produces goods.",
+      "In return the person earns money to buy things.",
+      "People say: \"I have a job as a cleaner.\" \"I have a job as a plumber.\" \"I have a job as a teacher.\"",
+      "They are telling what they do at the moment: their current job."
+     ],
+     "ref": "Key Words",
+     "id": "g7.cte.u1.s1-2.3"
+    },
+    {
+     "kind": "reveal",
+     "step": "explore",
+     "title": "Jobs around you",
+     "ask": "List the types of jobs in your locality.",
+     "answer": "Examples: teacher, farmer, shopkeeper, driver, carpenter, tailor, hairdresser, nurse, mechanic, daily labourer.",
+     "ref": "Activity 1",
+     "id": "g7.cte.u1.s1-2.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Job",
+       "Legal work that gives a service or goods and earns money."
+      ]
+     ],
+     "id": "g7.cte.u1.s1-2.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Which one is a job?",
+     "opts": [
+      "Working as a plumber for pay",
+      "Sleeping",
+      "Playing with friends"
+     ],
+     "ans": "Working as a plumber for pay",
+     "why": "A job is legal work that earns money.",
+     "clue": "Which one earns money?",
+     "level": 1,
+     "id": "g7.cte.u1.s1-2.6"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "A job must be legal.",
+     "a": true,
+     "why": "The book says a job is any legal activity that earns money.",
+     "clue": "Read the definition of a job.",
+     "level": 1,
+     "id": "g7.cte.u1.s1-2.7"
+    },
+    {
+     "kind": "pick",
+     "step": "practise",
+     "graded": true,
+     "text": "Tap every job.",
+     "pool": [
+      "Teacher",
+      "Farmer",
+      "Cleaner",
+      "Watching TV",
+      "Plumber"
+     ],
+     "a": [
+      "Teacher",
+      "Farmer",
+      "Cleaner",
+      "Plumber"
+     ],
+     "why": "Each earns money by giving a service or producing goods. Watching TV does not.",
+     "clue": "Does it give a service or goods for money?",
+     "level": 1,
+     "id": "g7.cte.u1.s1-2.8"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Does having a job contribute to society?",
+     "opts": [
+      "No, a job only helps the worker",
+      "Yes, jobs give services and goods that other people need",
+      "Only government jobs do"
+     ],
+     "ans": "Yes, jobs give services and goods that other people need",
+     "why": "A farmer grows food, a teacher teaches and a nurse cares for the sick. Workers also support their families.",
+     "clue": "Who uses the goods and services that workers make?",
+     "level": 3,
+     "ref": "Activity 2",
+     "added": true,
+     "id": "g7.cte.u1.s1-2.9"
+    }
+   ]
+  },
+  {
+   "id": "cte.job-vs-career",
+   "name": "How job and career differ",
+   "explain": {
+    "en": {
+     "text": "Job and career are related but different. A job is what you do now for income. It can be short-term. A career is a long-term journey of connected jobs and growth. Getting a job is a one-time event; a career is a lifelong process, like climbing a ladder."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Same or different?",
+     "ask": "Are \"job\" and \"career\" the same thing?",
+     "opts": [
+      "Yes, exactly the same",
+      "Related, but different",
+      "Not related at all"
+     ],
+     "after": "They are related, but they mean different things. See the table.",
+     "id": "g7.cte.u1.s1-2.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Table 1.1: Differences between career and job",
+     "paras": [
+      "Career and job are related, but they are different."
+     ],
+     "table": [
+      [
+       "Career",
+       "Job"
+      ],
+      [
+       "A series of connected employment opportunities.",
+       "Something you do at a particular time."
+      ],
+      [
+       "A satisfying, productive activity through your lifetime.",
+       "What you do at work now to bring home income."
+      ],
+      [
+       "A long-term view of many jobs and experiences.",
+       "A regular activity in exchange for payment."
+      ],
+      [
+       "A long-term journey based on your passions.",
+       "Can be full-time or part-time; may be short-term."
+      ],
+      [
+       "Changes over time as you move between jobs.",
+       "Relatively stable; you can work long in it."
+      ]
+     ],
+     "ref": "Table 1.1",
+     "id": "g7.cte.u1.s1-2.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Climbing a ladder",
+     "paras": [
+      "A career aims to improve your skills so you can grow or move to another job.",
+      "Getting a job is a one-time event. A career is a lifelong process.",
+      "Progress is like climbing a ladder: elementary, high school, then college or training.",
+      "Any work pursued over a long time can be a career. It can even be schoolwork, homemaking or volunteer work."
+     ],
+     "ref": "Figure 1.1",
+     "id": "g7.cte.u1.s1-2.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Job and career side by side",
+     "defs": [
+      [
+       "Job",
+       "What you do now for income. It may be short-term."
+      ],
+      [
+       "Career",
+       "A lifelong journey of connected jobs and growth."
+      ]
+     ],
+     "id": "g7.cte.u1.s1-2.13"
+    },
+    {
+     "kind": "sort",
+     "step": "check",
+     "graded": true,
+     "bins": [
+      "Career",
+      "Job"
+     ],
+     "items": [
+      [
+       "A series of connected jobs",
+       "Career",
+       "Career links jobs over time."
+      ],
+      [
+       "What I do now for income",
+       "Job",
+       "Now, for money."
+      ],
+      [
+       "Lifelong process",
+       "Career",
+       "Like climbing a ladder."
+      ],
+      [
+       "Can be part-time and short-term",
+       "Job",
+       "From Table 1.1."
+      ],
+      [
+       "Based on your passions",
+       "Career",
+       "A long-term journey."
+      ]
+     ],
+     "why": "Career = long-term growth. Job = what you do now.",
+     "clue": "Ask: is it about now, or about a long path?",
+     "level": 1,
+     "ref": "Table 1.1",
+     "id": "g7.cte.u1.s1-2.14"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "\"I am a grade 7 physics teacher.\" Does this describe a career or a job?",
+     "opts": [
+      "Career",
+      "Job"
+     ],
+     "ans": "Job",
+     "why": "It only tells what the person does at the moment.",
+     "clue": "Does it show progress over time?",
+     "level": 1,
+     "ref": "Career or job? Q2",
+     "id": "g7.cte.u1.s1-2.15"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "\"I worked as a recruiting clerk, then assistant personnel head, now personnel manager.\" Career or job?",
+     "opts": [
+      "Career",
+      "Job"
+     ],
+     "ans": "Career",
+     "why": "It shows progress through connected positions in one field.",
+     "clue": "Look for steps up over time.",
+     "level": 2,
+     "ref": "Career or job? Q3",
+     "id": "g7.cte.u1.s1-2.16"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Career is for immediate gain, but job is future oriented.",
+     "a": false,
+     "why": "It is the other way round. A job is for income now; a career is about the future.",
+     "clue": "Which one is like climbing a ladder?",
+     "level": 1,
+     "ref": "Unit Review I Q4",
+     "id": "g7.cte.u1.s1-2.17"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "Getting a job is a one-time event; a ___ is a lifelong process.",
+     "a": [
+      "career"
+     ],
+     "why": "The book compares a career to climbing a ladder over a lifetime.",
+     "clue": "Which word means a long path?",
+     "level": 1,
+     "id": "g7.cte.u1.s1-2.18"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Selam works in a café on Saturdays to earn pocket money. She dreams of running her own hotel one day and plans to study hotel service. Which is correct?",
+     "opts": [
+      "The café work is her job; the hotel plan is part of her career",
+      "The café work is her career",
+      "She has neither a job nor a career"
+     ],
+     "ans": "The café work is her job; the hotel plan is part of her career",
+     "why": "The café is what she does now for money, so it is a job. Her long-term path toward running a hotel is her career.",
+     "clue": "Which part is \"now\" and which is \"future growth\"?",
+     "level": 3,
+     "added": true,
+     "id": "g7.cte.u1.s1-2.19"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Career or job?",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "\"I have worked as a Home Health Aid, a Nursing Assistant, and a Nurse. I am in health care.\" Career or job?",
+     "opts": [
+      "Career",
+      "Job"
+     ],
+     "ans": "Career",
+     "why": "A series of connected jobs with advancement in one field.",
+     "clue": "Look for steps up over time.",
+     "level": 1,
+     "ref": "Q1",
+     "id": "g7.cte.u1.s1-2.20"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "\"I am a grade 7 physics teacher.\" Career or job?",
+     "opts": [
+      "Career",
+      "Job"
+     ],
+     "ans": "Job",
+     "why": "It tells only the current work.",
+     "clue": "Is it about now?",
+     "level": 1,
+     "ref": "Q2",
+     "id": "g7.cte.u1.s1-2.21"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "\"I have worked as a recruiting clerk, an assistant personnel head and now a personnel manager. I am in Human Resource Management.\" Career or job?",
+     "opts": [
+      "Career",
+      "Job"
+     ],
+     "ans": "Career",
+     "why": "Progress through positions in one field.",
+     "clue": "Look for steps up.",
+     "level": 1,
+     "ref": "Q3",
+     "id": "g7.cte.u1.s1-2.22"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "A job is:",
+   "opts": [
+    "Legal work that earns money",
+    "A lifelong path of growth",
+    "A school subject"
+   ],
+   "ans": "Legal work that earns money",
+   "why": "That is the definition of a job.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.cte.u1.s1-2.23"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Career and job are not related.",
+   "a": false,
+   "why": "They are related but different.",
+   "level": 1,
+   "ref": "Unit Review I Q2",
+   "clue": "",
+   "id": "g7.cte.u1.s1-2.24"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is like climbing a ladder?",
+   "opts": [
+    "A career",
+    "A one-day job"
+   ],
+   "ans": "A career",
+   "why": "A career is a lifelong process of progress.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.cte.u1.s1-2.25"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "___ is future-oriented and job is short-term.",
+   "a": [
+    "Career",
+    "A career"
+   ],
+   "why": "A career looks to future growth; a job may be short-term.",
+   "level": 2,
+   "ref": "Unit Review II Q1",
+   "clue": "",
+   "id": "g7.cte.u1.s1-2.26"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Dawit was a carpenter's helper, then a carpenter, and now owns a furniture shop. This is an example of:",
+   "opts": [
+    "A career",
+    "Only one job",
+    "Neither"
+   ],
+   "ans": "A career",
+   "why": "Connected jobs with advancement form a career.",
+   "level": 3,
+   "clue": "",
+   "id": "g7.cte.u1.s1-2.27"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "The book's \"Career or job?\" table gives only Yes/No columns; the lesson asks \"career or job\" directly. Teacher to confirm intent."
+  },
+  {
+   "kind": "correction",
+   "text": "Book prints \"We oten hear\"; shown as \"often\". The text says \"see Fig. 1\"; the figure is Figure 1.1."
+  },
+  {
+   "kind": "note",
+   "text": "Activity 1 is open; shown as a think-then-reveal block. Activity 2 is used as the challenge with a model answer."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
