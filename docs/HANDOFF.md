@@ -56,6 +56,13 @@ You are continuing work on **Meseret (መሰረት)** with me, Mhreteabe (founde
 - Floating 💬 button on every lesson screen: attaches a picture of the screen and the context (grade, chapter, section, lesson ID, item ID, question text). Each row has an **Open ↗** link (`#book/<chapter>/item/<item id>`) that opens the app at that exact question, highlighted.
 - If the Apps Script changes: paste it, then Deploy → Manage deployments → Edit → New version (keeps the same URL).
 
+## Analytics (retention, engagement, learning)
+- Anonymous student id (`meseret:sid`, no name/phone). Events: session, chapter_open, section_done, answer, practice/test/book start+done (score, time, by level), feedback, install, refresher, translate.
+- Batched to Supabase table `events` (insert-only with the anon key) by `Analytics` in app.js: on load, every 2 min, when the app goes to the background, and when 40 events pile up. Offline queue in `meseret:evq`.
+- `server/analytics.sql` creates the table, the insert-only policy and the views: students, daily_active, weekly_active, retention (day 1/7/30 by cohort), funnel, lesson_scores, hard_items, test_results, drop_off, class_summary.
+- Setup: Supabase project → SQL Editor → run analytics.sql → put the project URL and anon key in `ANALYTICS` in app.js. Dashboard: Supabase Table Editor on the views, or Looker Studio.
+- Decided: no forced login. A soft "Save my progress" sign-in (Google, or username + PIN, plus class code) comes next, on Supabase Auth; anonymous progress merges into the account.
+
 ## Open items / next steps
 - **TODO (on hold, owner): Ask Meseret AI chat.** Design is decided in `docs/G5-MATHS-HANDOFF.md` ("Ask Meseret"). Blocked on payment: the owner will create an Anthropic API key (Default workspace is fine), set up billing and a monthly spend limit, and a free Cloudflare Worker with the key as secret `ANTHROPIC_API_KEY`. Do not build it until the owner says so. Never put the key in the repo or the chat.
 1. Get my feedback on the live Science trial and adjust.

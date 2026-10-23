@@ -37,7 +37,11 @@ async function loadIndex() { if (!S.index) S.index = await (await fetch(BASE + '
 async function loadLesson(path) { if (!S.lessons[path]) S.lessons[path] = await (await fetch(BASE + 'content/' + path)).json(); return S.lessons[path]; }
 
 /* ---------- events + mastery ---------- */
-function logEvent(e) { const ev = store.get('events', []); ev.push(Object.assign({ at: Date.now() }, e)); if (ev.length > 2000) ev.splice(0, ev.length - 2000); store.set('events', ev); }
+/* ---------- Analytics: an anonymous student id and the events that show retention, engagement and learning ----------
+   No name, phone or location. Events are batched and sent to Supabase (server/analytics.sql) when online; see Analytics below. */
+const SID = (() => { let id = store.get('sid', null); if (!id) { id = 's_' + Array.from(crypto.getRandomValues(new Uint8Array(10)), b => b.toString(16).padStart(2, '0')).join(''); store.set('sid', id); store.set('first', new Date().toISOString().slice(0, 10)); } return id; })();
+function logEvent(e) { const ev = store.get('events', []); ev.push(Object.assign({ at: Date.now() }, e)); if (ev.length > 2000) ev.splice(0, ev.length - 2000); store.set('events', ev);
+  const q = store.get('evq', []); q.push(Object.assign({ at: Date.now() }, e)); if (q.length > 500) q.splice(0, q.length - 500); store.set('evq', q); if (q.length >= 40) Analytics.flush(); }
 const DAY = 864e5, STEPS = [1, 3, 7, 21];
 function bumpMastery(idea, ok) {
   const m = store.get('mastery', {}); const cur = m[idea] || { box: 0, due: 0, seen: 0 };
@@ -62,6 +66,16 @@ function hideTray() { tray.hidden = true; }
 function sheet(html) { sheetEl.innerHTML = html ? `<div class="sheet" id="sheetbg"><div class="in">${html}</div></div>` : ''; if (html) $('#sheetbg').addEventListener('click', e => { if (e.target.id === 'sheetbg') sheet(''); }); }
 /* ---------- Feedback: reports and ideas reach the team (Google Sheet via Apps Script, server/feedback-apps-script.gs) ----------
    Every message is queued on the phone first and sent when online, so nothing is lost offline. */
+const ANALYTICS = { url: store.get('anurl', '') || '', key: store.get('ankey', '') || '' }; // Supabase project URL and anon key go here
+const Analytics = {
+  busy: false, last: 0,
+  async flush(force) { if (!ANALYTICS.url || !navigator.onLine || Analytics.busy) return; const q = store.get('evq', []); if (!q.length || (!force && Date.now() - Analytics.last < 60000)) return; Analytics.busy = true;
+    try { const batch = q.slice(0, 200), rows = batch.map(e => ({ sid: SID, at: new Date(e.at).toISOString(), kind: e.kind || (e.correct != null ? 'answer' : e.feedback ? 'feedback' : e.install ? 'install' : e.refresher ? 'refresher' : e.translate ? 'translate' : e.tool ? 'tool' : 'event'), lesson: e.lesson || null, item: e.item != null ? String(e.item) : null, data: e, grades: (S.grades || []).join(','), lang: S.lang, code: S.code || null, version: APP_VERSION }));
+      const r = await fetch(ANALYTICS.url + '/rest/v1/events', { method: 'POST', headers: { 'Content-Type': 'application/json', apikey: ANALYTICS.key, Authorization: 'Bearer ' + ANALYTICS.key, Prefer: 'return=minimal' }, body: JSON.stringify(rows) });
+      if (r.ok || r.status === 409) { store.set('evq', store.get('evq', []).slice(batch.length)); Analytics.last = Date.now(); if (store.get('evq', []).length) setTimeout(() => Analytics.flush(true), 500); } }
+    catch (_) {} finally { Analytics.busy = false; } },
+  session() { const now = Date.now(), lastSeen = store.get('seen', 0); if (now - lastSeen > 30 * 60000) { const n = store.get('sessions', 0) + 1; store.set('sessions', n); logEvent({ kind: 'session', n, first: store.get('first', null), days: store.get('days', []).length, installed: Install.installed(), sw: screen.width, ua: (navigator.userAgent || '').slice(0, 120) }); } store.set('seen', now); }
+};
 const FEEDBACK_URL = store.get('fburl', '') || 'https://script.google.com/macros/s/AKfycby7tvA6JjQxUCDW7wkeyDhdNgNsIhh4m9TP_wFtdtbsaWiQSvSPOUtmCdG04qKAxUkh/exec'; // paste the Apps Script Web app URL between the last quotes (…/exec); 'fburl' in storage is for testing only
 const APP_VERSION = '0.2';
 const Feedback = {
@@ -919,6 +933,7 @@ function runPlayer(cfg) {
     Feedback.here = () => { const sc = screens[order[pos]] || {}; return Object.assign({}, cfg.where || {}, { lesson: (cfg.id || '').split(':')[0], label: `${cfg.where ? '' : cfg.title + ' · '}${cfg.mode === 'practice' ? t('step_practise') : cfg.mode === 'test' ? t('unit_test') : cfg.mode === 'book' ? cfg.title : cfg.mode} ${Math.min(pos + 1, order.length)}/${order.length}`, item: sc.id || '', generated: !!sc._gen, link: cfg.where && cfg.where.chapterId ? Feedback.link(cfg.where.chapterId, sc.id) : '', question: [sc.ask, sc.text, sc.title].filter(Boolean).join(' | ') }); }; FAB.show(true);
     const k0 = order[pos]; if (cfg.adapt && k0 !== SUM && screens[k0] && screens[k0]._adapt && !screens[k0]._shown) screens[k0] = Object.assign(Gen.make(screens[k0], null, null, lvl), { _adapt: true, _shown: true });
     const k = order[pos], s = k === SUM ? { kind: 'summary' } : screens[k];
+    if (cur && cur.summary === undefined && s.kind === 'summary' && !cfg._logged) { cfg._logged = true; const g = screens.map((x, i) => x.graded ? i : -1).filter(i => i >= 0); logEvent({ kind: cfg.mode + '_done', lesson: cfg.id, n: g.length, right: g.filter(i => firstTry[i]).length, ms: Date.now() - (cfg._t0 || Date.now()), byLevel: g.reduce((o, i) => { const L = screens[i].level || 1; o[L] = (o[L] || 0) + (firstTry[i] ? 1 : 0); o['n' + L] = (o['n' + L] || 0) + 1; return o; }, {}) }); }
     cur = (R[s.kind] || R.name)(s); app.replaceChildren(cur.el);
     const ex = cur.el.querySelector('#ex-play'); if (ex) ex.onclick = () => speak(cur.el.querySelector('#ex-text').textContent);
     const rf = s.needs && cfg.refreshers && cfg.refreshers[s.needs];
@@ -948,6 +963,7 @@ function runPlayer(cfg) {
     go.disabled = false; go.focus();
     if (pos === order.length - 1 && cfg.onDone && !cfg._done) { cfg._done = true; const byIdea = {}; screens.forEach((x, i) => { if (x.graded) { const id = x._idea || cfg.idea; byIdea[id] = (byIdea[id] !== false) && !!firstTry[i]; } }); cfg.onDone({ byIdea, firstTry, missed }); }
   };
+  cfg._t0 = Date.now(); logEvent({ kind: cfg.mode + '_start', lesson: cfg.id, n: screens.length });
   go.onclick = onGo; order = order.concat(SUM); show();
 }
 
@@ -1335,7 +1351,7 @@ async function viewBook(id, goItem) {
   const secs = c.sections.filter(x => x.lesson);
   const [lessons] = await Promise.all([Promise.all(secs.map(x => loadLesson(x.lesson))), loadPictures()]);
   const bookLang = (lessons.find(x => x.lang) || {}).lang || null; await loadDict(bookLang); setLessonLang(bookLang); Translate.dir(bookLang);
-  setNav(false); hideTray(); markStudied();
+  setNav(false); hideTray(); markStudied(); logEvent({ kind: 'chapter_open', chapter: id });
   const all = store.get('bk', {}), B = all[id] = Object.assign({ got: {}, seen: {}, pts: 0, prac: {} }, all[id]); B.seen = B.seen || {};
   const save = () => { const a = store.get('bk', {}); a[id] = B; store.set('bk', a); };
   store.set('last', { route: 'book/' + id, title: `${t('unit')} ${c.unit} · ${L(c.title)}`, sub: `${L(idx.subjects[c.subject])} · ${t('grade')} ${c.grade}` });
@@ -1370,7 +1386,7 @@ async function viewBook(id, goItem) {
     rows.filter(s => s.step === 'challenge').forEach(c => { rows.splice(rows.indexOf(c), 1); rows.splice(rows.map(r => r._idea).lastIndexOf(c._idea) + 1, 0, c); });
     const qKeys = rows.filter(s => s.graded).map(s => s._key);
     const doneCheck = () => { const ban = box.querySelector('.secdone'); if (!ban || !qKeys.every(k => k in B.got) || box.classList.contains('complete')) return; box.classList.add('complete'); ban.hidden = false;
-      if (!B.got['done:' + sec.lesson]) { B.got['done:' + sec.lesson] = 1; setLessonProgress(sec.lesson, { done: true }); const by = {}; qKeys.forEach(k => { const s = rows.find(r => r._key === k); by[s._idea] = (by[s._idea] !== false) && B.got[k] >= 10; }); Object.keys(by).forEach(i => bumpMastery(i, by[i])); B.pts += 20; save(); bumpPts(); Fx.at(ban, true); buzz([20, 40, 20]); } };
+      if (!B.got['done:' + sec.lesson]) { B.got['done:' + sec.lesson] = 1; setLessonProgress(sec.lesson, { done: true }); logEvent({ kind: 'section_done', lesson: sec.lesson, chapter: id, pts: B.pts }); const by = {}; qKeys.forEach(k => { const s = rows.find(r => r._key === k); by[s._idea] = (by[s._idea] !== false) && B.got[k] >= 10; }); Object.keys(by).forEach(i => bumpMastery(i, by[i])); B.pts += 20; save(); bumpPts(); Fx.at(ban, true); buzz([20, 40, 20]); } };
     const ctx = { kws, used: new Set(), hue, main: ls.main,
       complete(s) { if (B.seen[s._key]) return; B.seen[s._key] = 1; save(); progress(); }, isDone(s) { return !!B.seen[s._key]; }, log(s, ok, attempt) { logEvent({ lesson: ls.id, idea: s._idea, item: s._key, correct: ok, attempt, mode: 'book' }); },
       question(el, s, api) { // shared behaviour for every question: skip, restore, finishing
@@ -1463,5 +1479,6 @@ window.addEventListener('hashchange', route);
 window.addEventListener('online', () => {}); window.addEventListener('offline', () => toast(t('offline')));
 if ('serviceWorker' in navigator) { try { const had = !!navigator.serviceWorker.controller; navigator.serviceWorker.register('sw.js').then(r => r.update()).catch(() => {}); let once = false; navigator.serviceWorker.addEventListener('controllerchange', () => { if (had && !once) { once = true; location.reload(); } }); } catch (_) {} }
 route();
-setTimeout(() => Feedback.flush(), 4000);
+Analytics.session(); setTimeout(() => { Feedback.flush(); Analytics.flush(true); }, 4000); setInterval(() => Analytics.flush(), 120000);
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') Analytics.flush(true); });
 })();
