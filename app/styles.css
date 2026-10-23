@@ -434,3 +434,5 @@ body:has(#tray:not([hidden])) .fbfab { bottom: calc(150px + env(safe-area-inset-
 .fbshot img { width: 92px; border-radius: 10px; border: 2px solid var(--line); }
 /* bottom sheets never grow taller than the screen: they scroll */
 .sheet .in { max-height: 92vh; max-height: 92dvh; overflow-y: auto; overscroll-behavior: contain; }
+/* a reported item opened from a link */
+.flash { outline: 4px solid var(--coral); outline-offset: 4px; border-radius: 18px; transition: outline-color .4s ease; }

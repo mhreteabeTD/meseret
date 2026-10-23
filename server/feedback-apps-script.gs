@@ -6,7 +6,7 @@
  */
 const SHEET_NAME = 'Feedback';
 const FOLDER_NAME = 'Meseret feedback screenshots';
-const HEADERS = ['Time', 'Type', 'Message', 'Where', 'Question on screen', 'Grades', 'Language', 'Name / phone', 'Device', 'App version', 'Screenshot', 'Status', 'Notes'];
+const HEADERS = ['Time', 'Type', 'Message', 'Where', 'Question on screen', 'Grades', 'Language', 'Name / phone', 'Device', 'App version', 'Screenshot', 'Status', 'Notes', 'Open'];
 
 function doPost(e) {
   try {
@@ -19,8 +19,10 @@ function doPost(e) {
     if (d.shot && String(d.shot).length < 1500000) shotUrl = saveShot(d.shot, d.at);
     sheet.appendRow([
       d.at ? new Date(d.at) : new Date(), clip(d.type, 60), msg, clip(d.where, 300), clip(d.question, 500),
-      clip(d.grades, 40), clip(d.lang, 10), clip(d.contact, 120), clip(d.device, 200), clip(d.version, 20), shotUrl, 'New', ''
+      clip(d.grades, 40), clip(d.lang, 10), clip(d.contact, 120), clip(d.device, 200), clip(d.version, 20), shotUrl, 'New', '',
+      /^https:\/\/[\w.-]+\.github\.io\//.test(String(d.link || '')) ? '=HYPERLINK("' + String(d.link).replace(/"/g, '') + '","Open")' : ''
     ]);
+    if (sheet.getRange(1, 14).getValue() !== 'Open') sheet.getRange(1, 14).setValue('Open').setFontWeight('bold').setBackground('#DAF4E6');
     return out({ ok: true });
   } catch (err) {
     return out({ ok: false, error: String(err) });

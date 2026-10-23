@@ -65,7 +65,8 @@ function sheet(html) { sheetEl.innerHTML = html ? `<div class="sheet" id="sheetb
 const FEEDBACK_URL = store.get('fburl', '') || 'https://script.google.com/macros/s/AKfycby7tvA6JjQxUCDW7wkeyDhdNgNsIhh4m9TP_wFtdtbsaWiQSvSPOUtmCdG04qKAxUkh/exec'; // paste the Apps Script Web app URL between the last quotes (…/exec); 'fburl' in storage is for testing only
 const APP_VERSION = '0.2';
 const Feedback = {
-  where: ctx => [ctx.chapter, ctx.section, ctx.label, ctx.lesson && `lesson ${ctx.lesson}`, ctx.item && `item ${ctx.item}${ctx.generated ? ' (new numbers)' : ''}`].filter(Boolean).join(' · '),
+  link: (chapterId, item) => chapterId ? `${location.origin}${location.pathname}#book/${chapterId}${item ? '/item/' + encodeURIComponent(item) : ''}` : '',
+  where: ctx => [ctx.chapter, ctx.section, ctx.label, ctx.lesson && `lesson ${ctx.lesson}`, ctx.item && `item ${ctx.item}${ctx.generated ? ' (new numbers)' : ''}`, ctx.link && `open: ${ctx.link}`].filter(Boolean).join(' · '),
   device() { const ua = navigator.userAgent || ''; const m = ua.match(/\(([^)]+)\)/); return `${m ? m[1].split(';').slice(0, 3).join(';') : ''} · ${innerWidth}×${innerHeight}${Install.installed() ? ' · installed' : ''}`.slice(0, 200); },
   busy: false,
   async flush() { if (!FEEDBACK_URL || !navigator.onLine || Feedback.busy) return; Feedback.busy = true;
@@ -91,7 +92,7 @@ const Feedback = {
     $('#fbsend').onclick = () => { const message = $('#fbmsg').value.trim(), contact = $('#fbcontact').value.trim();
       if (!kind && !message) { toast(t('fb_empty')); return; }
       store.set('fbcontact', contact);
-      const r = { app: 'meseret', at: new Date().toISOString(), type: kind ? (T[kind] && S.i18n.en && S.i18n.en[kind]) || kind : 'Message', message, where: Feedback.where(ctx), question: (ctx.question || '').slice(0, 500), grades: (S.grades || []).join(','), lang: S.lang, contact, device: Feedback.device(), version: APP_VERSION, shot };
+      const r = { app: 'meseret', at: new Date().toISOString(), type: kind ? (T[kind] && S.i18n.en && S.i18n.en[kind]) || kind : 'Message', message, where: Feedback.where(ctx), question: (ctx.question || '').slice(0, 500), link: ctx.link || '', grades: (S.grades || []).join(','), lang: S.lang, contact, device: Feedback.device(), version: APP_VERSION, shot };
       Feedback.send(r); logEvent({ feedback: kind || 'message', lesson: ctx.lesson }); sheet(''); toast(t('sent')); };
   }
 };
@@ -915,7 +916,7 @@ function runPlayer(cfg) {
   function bindTop(k) { const rep = $('#rep'); if (rep) rep.onclick = () => Feedback.open(Feedback.here ? Feedback.here() : {}); const rb = $('#rback'); if (rb) rb.onclick = () => cfg.resume && cfg.resume(); }
   function addSkip() { const k = order[pos], s = screens[k] || {}; const osk = $('#skipb'); if (osk) osk.remove(); if (s.graded && order.length - pos > 2 && (!['mcq', 'tf'].includes(s.kind) || tries[k])) { const sb = document.createElement('button'); sb.className = 'btn ghost'; sb.id = 'skipb'; sb.style.width = 'auto'; sb.textContent = t('skip'); sb.onclick = () => { order.splice(pos, 1); order.splice(order.length - 1, 0, k); show(); }; go.parentNode.insertBefore(sb, go); } }
   function show() {
-    Feedback.here = () => { const sc = screens[order[pos]] || {}; return Object.assign({}, cfg.where || {}, { lesson: (cfg.id || '').split(':')[0], label: `${cfg.where ? '' : cfg.title + ' · '}${cfg.mode === 'practice' ? t('step_practise') : cfg.mode === 'test' ? t('unit_test') : cfg.mode === 'book' ? cfg.title : cfg.mode} ${Math.min(pos + 1, order.length)}/${order.length}`, item: sc.id || '', generated: !!sc._gen, question: [sc.ask, sc.text, sc.title].filter(Boolean).join(' | ') }); }; FAB.show(true);
+    Feedback.here = () => { const sc = screens[order[pos]] || {}; return Object.assign({}, cfg.where || {}, { lesson: (cfg.id || '').split(':')[0], label: `${cfg.where ? '' : cfg.title + ' · '}${cfg.mode === 'practice' ? t('step_practise') : cfg.mode === 'test' ? t('unit_test') : cfg.mode === 'book' ? cfg.title : cfg.mode} ${Math.min(pos + 1, order.length)}/${order.length}`, item: sc.id || '', generated: !!sc._gen, link: cfg.where && cfg.where.chapterId ? Feedback.link(cfg.where.chapterId, sc.id) : '', question: [sc.ask, sc.text, sc.title].filter(Boolean).join(' | ') }); }; FAB.show(true);
     const k0 = order[pos]; if (cfg.adapt && k0 !== SUM && screens[k0] && screens[k0]._adapt && !screens[k0]._shown) screens[k0] = Object.assign(Gen.make(screens[k0], null, null, lvl), { _adapt: true, _shown: true });
     const k = order[pos], s = k === SUM ? { kind: 'summary' } : screens[k];
     cur = (R[s.kind] || R.name)(s); app.replaceChildren(cur.el);
@@ -1329,7 +1330,7 @@ function renderBlock(s, ctx) {
 
 async function loadPictures() { if (window.PICS) return; await new Promise(r => { const sc = document.createElement('script'); sc.src = 'pictures.js'; sc.onload = sc.onerror = r; document.head.appendChild(sc); }); }
 
-async function viewBook(id) {
+async function viewBook(id, goItem) {
   const idx = await loadIndex(); const c = idx.chapters.find(x => x.id === id); if (!c) { location.hash = 'home'; return; }
   const secs = c.sections.filter(x => x.lesson);
   const [lessons] = await Promise.all([Promise.all(secs.map(x => loadLesson(x.lesson))), loadPictures()]);
@@ -1387,10 +1388,10 @@ async function viewBook(id) {
     const end = document.createElement('div'); end.className = 'secend';
     end.innerHTML = `<div class="secdone" hidden>🎉 ${t('section_done', { s: esc(sec.n) })} <b>+20 ⭐</b></div><div class="prac"></div>${(ls.exercises || []).map((ex, k) => `<button class="pcard soft" data-a="ex" data-k="${k}"><span class="pi">${ex.test ? '🏁' : '📝'}</span><span class="grow"><b>${esc(ex.book_name)}</b><small>${ex.test ? t('fresh_test') : t('book_exercise')} · ${ex.items.length}</small></span><span>›</span></button>`).join('')}`;
     end.insertAdjacentHTML('beforeend', `<button class="btn link small fbsec">🚩 ${t('report_section')}</button>`);
-    end.querySelector('.fbsec').onclick = () => Feedback.open({ lesson: ls.id, chapter: chapterLabel, section: `${sec.n} ${ls.title}` });
+    end.querySelector('.fbsec').onclick = () => Feedback.open({ lesson: ls.id, chapter: chapterLabel, section: `${sec.n} ${ls.title}`, link: Feedback.link(id, ls.ideas[0] && ls.ideas[0].screens[0] && ls.ideas[0].screens[0].id) });
     function updPrac() { const pr = B.prac[sec.lesson]; end.querySelector('.prac').innerHTML = practise.length ? `<button class="pcard" data-a="prac"><span class="pi">🎯</span><span class="grow"><b>${t('practise_n', { n: practise.length })}</b><small>${pr ? `${t('best')} ${pr}` : t('practise_sub')}</small></span><span>›</span></button>` : ''; }
     updPrac();
-    const runHere = cfg => { const keep = { app: [...app.childNodes], top: [...topin.childNodes], y: window.scrollY }; away = true; cfg.where = { chapter: chapterLabel, section: `${sec.n} ${ls.title}` };
+    const runHere = cfg => { const keep = { app: [...app.childNodes], top: [...topin.childNodes], y: window.scrollY }; away = true; cfg.where = { chapter: chapterLabel, section: `${sec.n} ${ls.title}`, chapterId: id };
       runPlayer(Object.assign({ backRoute: null, refreshers: ls.refreshers || {}, tool: ls.tool, cheer: true, resume: () => { app.replaceChildren(...keep.app); topin.replaceChildren(...keep.top); top.hidden = false; hideTray(); setNav(false); away = false; Feedback.here = bookHere; FAB.show(true); bumpPts(); Focus.tick(); requestAnimationFrame(() => window.scrollTo(0, keep.y)); } }, cfg)); };
     end.addEventListener('click', e => { const b = e.target.closest('.pcard'); if (!b) return;
       if (b.dataset.a === 'prac') { B.runs = B.runs || {}; const again = (B.runs[sec.lesson] = (B.runs[sec.lesson] || 0) + 1) > 1; save(); runHere({ id: ls.id, title: `${sec.n} · ${ls.title}`, mode: 'practice', vary: true, adapt: true, startLevel: (B.lvl && B.lvl[sec.lesson]) || 2, onLevel: L => { B.lvl = B.lvl || {}; B.lvl[sec.lesson] = L; save(); }, screens: mixPractise(practise, again), onDone: res => { const right = Object.values(res.firstTry).filter(Boolean).length; B.prac[sec.lesson] = `${right}/${practise.length}`; B.pts += right * 5; practise.forEach((s, i) => { if (B.got[s._key] === 's' && res.firstTry[i]) B.got[s._key] = 5; }); save(); Object.keys(res.byIdea).forEach(i => bumpMastery(i, res.byIdea[i])); updPrac(); } }); }
@@ -1401,7 +1402,7 @@ async function viewBook(id) {
   // what the student is looking at: the section in view and the block nearest the middle of the screen
   function bookHere() { const on = page.querySelector('#secnav .chip.on'), i = on ? +on.dataset.go : 0, sec = secs[i], ls = lessons[i]; let best = null, bd = 1e9;
     page.querySelectorAll('[data-id]').forEach(el => { const r = el.getBoundingClientRect(); if (r.bottom < 70 || r.top > innerHeight) return; const d = Math.abs(r.top + r.height / 2 - innerHeight / 2) + (el.classList.contains('quiz') ? 0 : 250); if (d < bd) { bd = d; best = el; } });
-    return { chapter: chapterLabel, section: sec ? `${sec.n} ${ls.title}` : '', lesson: ls ? ls.id : '', item: best ? best.dataset.id : '', question: best ? best.innerText.replace(/\s+/g, ' ').trim().slice(0, 400) : '' }; }
+    return { chapter: chapterLabel, section: sec ? `${sec.n} ${ls.title}` : '', lesson: ls ? ls.id : '', item: best ? best.dataset.id : '', link: Feedback.link(id, best ? best.dataset.id : ''), question: best ? best.innerText.replace(/\s+/g, ' ').trim().slice(0, 400) : '' }; }
   Feedback.here = bookHere; FAB.show(true);
   progress(); Translate.bind(page);
   page.querySelector('#secnav').addEventListener('click', e => { const a = e.target.closest('[data-go]'); if (!a) return; e.preventDefault(); $('#sec' + a.dataset.go).scrollIntoView({ behavior: 'smooth', block: 'start' }); });
@@ -1409,7 +1410,12 @@ async function viewBook(id) {
     const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { page.querySelectorAll('#secnav .chip').forEach(ch => ch.classList.toggle('on', ch.dataset.go === en.target.dataset.i)); const on = page.querySelector('#secnav .chip.on'); if (on) on.scrollIntoView({ block: 'nearest', inline: 'center' }); } }), { rootMargin: '-45% 0px -50% 0px' });
     page.querySelectorAll('.sec').forEach(s => io.observe(s));
   } catch (_) {}
-  if (B.y) requestAnimationFrame(() => window.scrollTo(0, B.y)); else window.scrollTo(0, 0);
+  if (goItem) { const el = page.querySelector(`[data-id="${CSS.escape(goItem)}"]`);
+    if (el) setTimeout(() => { el.scrollIntoView({ block: 'center' }); el.classList.add('flash'); setTimeout(() => el.classList.remove('flash'), 4000); }, 150);
+    else { let found = null, li = -1; lessons.forEach((ls, i) => [...ls.ideas.flatMap(x => x.screens), ...(ls.exercises || []).flatMap(e => e.items), ...(ls.test || [])].forEach(sc => { if (sc.id === goItem) { found = sc; li = i; } }));
+      if (found) { window.scrollTo(0, 0); setTimeout(() => runPlayer({ id: lessons[li].id, title: `${secs[li].n} · ${t('reported_q')}`, mode: 'book', screens: [Object.assign({}, found, { _from: goItem })], backRoute: 'book/' + id }), 200); }
+      else toast(t('item_missing')); } }
+  else if (B.y) requestAnimationFrame(() => window.scrollTo(0, B.y)); else window.scrollTo(0, 0);
   let tm; const onScroll = () => { if (away || !page.isConnected) return; clearTimeout(tm); tm = setTimeout(() => { if (page.isConnected && !away) { B.y = Math.round(window.scrollY); save(); } }, 400); };
   window.removeEventListener('scroll', viewBook._s || (() => {})); viewBook._s = onScroll; window.addEventListener('scroll', onScroll, { passive: true });
 }
@@ -1417,7 +1423,7 @@ async function viewBook(id) {
 /* ---------- router ---------- */
 async function route() {
   sheet(''); closePanel(); FAB.show(false); Feedback.here = null;
-  const h = location.hash.replace(/^#/, ''), [r, a, b] = h.split('/');
+  const h = location.hash.replace(/^#/, ''), [r, a, b, c4] = h.split('/');
   if (!S.lang && r !== 'welcome') { await viewWelcome(); return; }
   if (!T.app) await loadLang(S.lang);
   if (!/^(book|lesson)\//.test(h)) { setLessonLang(null); Translate.dir(null); }
@@ -1427,7 +1433,7 @@ async function route() {
     case 'setup': return viewSetup();
     case 'home': return viewHome();
     case 'chapter': return viewChapter(a);
-    case 'book': return viewBook(a);
+    case 'book': return viewBook(a, b === 'item' ? decodeURIComponent(c4 || '') : '');
     case 'lesson': return viewLesson(decodeURIComponent(a), 'learn');
     case 'exercise': return viewLesson(decodeURIComponent(a), 'book', +b || 0);
     case 'test': return viewLesson(decodeURIComponent(a), 'test');
