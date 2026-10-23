@@ -1,0 +1,771 @@
+{
+ "id": "g7.science.u2.s2-3-3",
+ "book": {
+  "title": "General Science Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "science",
+  "unit": 2,
+  "unit_title": "Matter in Our Surrounding",
+  "pages": "43–47",
+  "section": "2.3.3"
+ },
+ "title": "Mixtures",
+ "competency": "Describe and classify mixtures as homogeneous and heterogeneous.",
+ "minutes": 12,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Mixture",
+   "am": "ቅልቅል",
+   "def": "A physical combination of two or more pure substances; each keeps its own properties.",
+   "machine": true
+  },
+  {
+   "en": "Homogeneous mixture",
+   "am": "ወጥ ቅልቅል",
+   "def": "A mixture with the same composition throughout and no visible boundary. Also called a solution.",
+   "machine": true
+  },
+  {
+   "en": "Heterogeneous mixture",
+   "am": "ወጥ ያልሆነ ቅልቅል",
+   "def": "A mixture with no uniform composition; its parts can be seen.",
+   "machine": true
+  },
+  {
+   "en": "Solution",
+   "am": "ሟሟት",
+   "def": "Another name for a homogeneous mixture, like salt water.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "sci.mixture",
+   "name": "What a mixture is",
+   "explain": {
+    "en": {
+     "text": "A mixture is a physical combination of two or more pure substances. Each substance keeps its own properties, because they are mixed, not chemically joined. Salt and sand mixed together are still salt and sand. Soil, cooking oil, ink, milk and air are mixtures."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Salt and sand",
+     "ask": "Hiwot mixes rock salt crystals with sand. Is the salt still salt?",
+     "opts": [
+      "Yes, mixing changes neither",
+      "No, it becomes sand",
+      "No, a new substance forms"
+     ],
+     "after": "Mixing does not change the salt or the sand. Each keeps its own properties.",
+     "id": "g7.science.u2.s2-3-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "2.3.3 Mixtures",
+     "paras": [
+      "A mixture is a physical combination of two or more pure substances.",
+      "Each substance keeps its own properties.",
+      "They are physically mixed, not chemically combined."
+     ],
+     "id": "g7.science.u2.s2-3-3.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Common mixtures",
+     "paras": [],
+     "table": [
+      [
+       "Mixture",
+       "Contains"
+      ],
+      [
+       "Soil",
+       "Particles of different sizes and plant material"
+      ],
+      [
+       "Cooking oil",
+       "Different vegetable oils"
+      ],
+      [
+       "Ink",
+       "Dyes dissolved in alcohol and water"
+      ],
+      [
+       "Milk",
+       "Proteins, carbohydrates, fats, water, minerals"
+      ],
+      [
+       "Air",
+       "Oxygen, nitrogen, carbon dioxide"
+      ]
+     ],
+     "id": "g7.science.u2.s2-3-3.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Mixture",
+       "A physical combination of two or more pure substances; each keeps its own properties."
+      ]
+     ],
+     "id": "g7.science.u2.s2-3-3.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Do you think air is a pure substance or a mixture?",
+     "opts": [
+      "Pure substance: it is one gas",
+      "Mixture: it contains several gases",
+      "Element: it is oxygen only"
+     ],
+     "ans": "Mixture: it contains several gases",
+     "why": "Air contains oxygen, nitrogen, carbon dioxide and more, physically mixed.",
+     "clue": "Is air only one substance?",
+     "level": 1,
+     "ref": "Activity 2.10 Q3",
+     "id": "g7.science.u2.s2-3-3.5"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "In a mixture, each substance keeps its own properties.",
+     "a": true,
+     "why": "That is why iron in an iron–sulfur mixture still sticks to a magnet.",
+     "clue": "Think of Experiment 2.2 Part I.",
+     "level": 1,
+     "id": "g7.science.u2.s2-3-3.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Which is true for a mixture but NOT for a compound?",
+     "opts": [
+      "Its parts keep their own properties and can be separated physically",
+      "It has new properties",
+      "It has a fixed composition",
+      "It can only be split chemically"
+     ],
+     "ans": "Its parts keep their own properties and can be separated physically",
+     "why": "In a compound the elements are chemically joined and properties change. In a mixture nothing is joined.",
+     "clue": "Recall Experiment 2.2.",
+     "level": 3,
+     "added": true,
+     "id": "g7.science.u2.s2-3-3.7"
+    }
+   ]
+  },
+  {
+   "id": "sci.homogeneous-heterogeneous",
+   "name": "Homogeneous and heterogeneous mixtures",
+   "explain": {
+    "en": {
+     "text": "A homogeneous mixture has the same composition throughout and no visible boundary. It is also called a solution, like salt water or air. A heterogeneous mixture is not uniform and its parts can be seen, like soil, blood, milk, or oil and water."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Can you see the parts?",
+     "ask": "Which one has parts you can see?",
+     "opts": [
+      "Sugar dissolved in water",
+      "Sand in water",
+      "Air"
+     ],
+     "after": "In sand and water you can see the sand. Sugar water and air look the same everywhere.",
+     "id": "g7.science.u2.s2-3-3.8"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Homogeneous mixtures",
+     "paras": [
+      "A homogeneous mixture has the same composition throughout. It has no visible boundary.",
+      "It is also called a solution.",
+      "Salt water is the same salt-water mix in every part.",
+      "Solutions can be solid, liquid or gas."
+     ],
+     "id": "g7.science.u2.s2-3-3.9"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Table 2.4 Types of homogeneous mixture (solution)",
+     "paras": [],
+     "table": [
+      [
+       "State",
+       "Type",
+       "Examples"
+      ],
+      [
+       "Gas",
+       "Gas in gas",
+       "Air (oxygen and nitrogen)"
+      ],
+      [
+       "Liquid",
+       "Gas in liquid",
+       "Soft drinks such as Pepsi, Mirinda, Coca-Cola"
+      ],
+      [
+       "Liquid",
+       "Liquid in liquid",
+       "Alcohol in water"
+      ],
+      [
+       "Liquid",
+       "Solid in liquid",
+       "Salt solution, sugar solution"
+      ],
+      [
+       "Solid",
+       "Solid in solid",
+       "Brass (Zn/Cu), bronze (Cu/Sn)"
+      ]
+     ],
+     "ref": "Table 2.4",
+     "id": "g7.science.u2.s2-3-3.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Heterogeneous mixtures",
+     "paras": [
+      "A heterogeneous mixture has no uniform composition. It has visible boundaries.",
+      "We can see its parts by eye, or with a microscope or magnifying glass.",
+      "Examples: sulfur and iron filings, blood, milk, sand and water, muddy water, oil and water, dusty air, soil."
+     ],
+     "id": "g7.science.u2.s2-3-3.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Table 2.5 Homogeneous and heterogeneous",
+     "paras": [],
+     "table": [
+      [
+       "Homogeneous",
+       "Heterogeneous"
+      ],
+      [
+       "Uniform composition",
+       "Non-uniform composition"
+      ],
+      [
+       "One phase",
+       "Two or more phases"
+      ],
+      [
+       "Parts not easily seen",
+       "Parts easily seen"
+      ],
+      [
+       "\"Homo\" means the same",
+       "\"Hetero\" means different"
+      ],
+      [
+       "Sugar solution, soft drinks, salt solution",
+       "Milk, soil, sand and water, oil and water"
+      ]
+     ],
+     "ref": "Table 2.5 (p.46)",
+     "id": "g7.science.u2.s2-3-3.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Homogeneous mixture",
+       "A mixture with the same composition throughout and no visible boundary. Also called a solution."
+      ],
+      [
+       "Heterogeneous mixture",
+       "A mixture with no uniform composition; its parts can be seen."
+      ],
+      [
+       "Solution",
+       "Another name for a homogeneous mixture, like salt water."
+      ]
+     ],
+     "id": "g7.science.u2.s2-3-3.13"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Which substance makes a homogeneous mixture with water?",
+     "opts": [
+      "Benzene",
+      "Oil",
+      "Sugar",
+      "Sulfur"
+     ],
+     "ans": "Sugar",
+     "why": "Sugar dissolves to form a sugar solution.",
+     "clue": "Which one dissolves?",
+     "level": 1,
+     "ref": "Exercise 2.6 II Q3",
+     "id": "g7.science.u2.s2-3-3.14"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "bins": [
+      "Homogeneous",
+      "Heterogeneous"
+     ],
+     "items": [
+      [
+       "Air",
+       "Homogeneous",
+       "Gas in gas."
+      ],
+      [
+       "Soil",
+       "Heterogeneous",
+       "Parts visible."
+      ],
+      [
+       "Salt solution",
+       "Homogeneous",
+       "Solid in liquid."
+      ],
+      [
+       "Blood",
+       "Heterogeneous",
+       "The book lists it."
+      ],
+      [
+       "Brass",
+       "Homogeneous",
+       "Solid in solid."
+      ],
+      [
+       "Oil and water",
+       "Heterogeneous",
+       "Two layers."
+      ]
+     ],
+     "why": "Homogeneous: looks the same everywhere. Heterogeneous: parts can be seen.",
+     "clue": "Are there layers or visible bits?",
+     "level": 1,
+     "ref": "Activities 2.11–2.12",
+     "id": "g7.science.u2.s2-3-3.15"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "A heterogeneous mixture contains only one phase.",
+     "a": false,
+     "why": "It has two or more phases. A homogeneous mixture has one.",
+     "clue": "Think of oil on water.",
+     "level": 1,
+     "ref": "Review Exercise I Q5",
+     "id": "g7.science.u2.s2-3-3.16"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Pepsi is a homogeneous mixture of which type?",
+     "opts": [
+      "Gas in liquid",
+      "Solid in solid",
+      "Gas in gas",
+      "Liquid in liquid"
+     ],
+     "ans": "Gas in liquid",
+     "why": "Carbon dioxide gas is dissolved in the liquid drink.",
+     "clue": "What makes the bubbles?",
+     "level": 2,
+     "ref": "Table 2.4",
+     "id": "g7.science.u2.s2-3-3.17"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Which statement is correct?",
+     "opts": [
+      "Every solution is a homogeneous mixture",
+      "Milk is a solution",
+      "Brass is heterogeneous",
+      "Air is a pure substance"
+     ],
+     "ans": "Every solution is a homogeneous mixture",
+     "why": "The book: a homogeneous mixture is also called a solution. Milk is heterogeneous, brass homogeneous, air a mixture.",
+     "clue": "Check each against Tables 2.4 and 2.5.",
+     "level": 3,
+     "added": true,
+     "id": "g7.science.u2.s2-3-3.18"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 2.6",
+   "items": [
+    {
+     "kind": "sort",
+     "step": "exercise",
+     "graded": true,
+     "title": "I Q1. Classify (a–g)",
+     "bins": [
+      "Element",
+      "Compound",
+      "Mixture"
+     ],
+     "items": [
+      [
+       "a. Water",
+       "Compound",
+       ""
+      ],
+      [
+       "b. Uranium",
+       "Element",
+       ""
+      ],
+      [
+       "c. Blood",
+       "Mixture",
+       ""
+      ],
+      [
+       "d. Alcohol",
+       "Compound",
+       ""
+      ],
+      [
+       "e. The oceans",
+       "Mixture",
+       ""
+      ],
+      [
+       "f. Iron",
+       "Element",
+       ""
+      ],
+      [
+       "g. Table salt",
+       "Compound",
+       ""
+      ]
+     ],
+     "why": "Elements have one kind of atom; compounds are elements chemically joined; mixtures are physically mixed.",
+     "clue": "First ask: pure or mixture?",
+     "level": 2,
+     "ref": "I Q1 a–g",
+     "id": "g7.science.u2.s2-3-3.19"
+    },
+    {
+     "kind": "sort",
+     "step": "exercise",
+     "graded": true,
+     "title": "I Q1. Classify (h–n)",
+     "bins": [
+      "Element",
+      "Compound",
+      "Mixture"
+     ],
+     "items": [
+      [
+       "h. Brass",
+       "Mixture",
+       ""
+      ],
+      [
+       "i. Hydrogen",
+       "Element",
+       ""
+      ],
+      [
+       "j. Gold",
+       "Element",
+       ""
+      ],
+      [
+       "k. Sugar",
+       "Compound",
+       ""
+      ],
+      [
+       "l. Milk",
+       "Mixture",
+       ""
+      ],
+      [
+       "m. Honey",
+       "Mixture",
+       ""
+      ],
+      [
+       "n. Benzene",
+       "Compound",
+       ""
+      ]
+     ],
+     "why": "Brass, milk and honey are mixtures. Hydrogen and gold are elements. Sugar and benzene are compounds.",
+     "clue": "First ask: pure or mixture?",
+     "level": 2,
+     "ref": "I Q1 h–n",
+     "id": "g7.science.u2.s2-3-3.20"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which of the following is a metallic liquid element at room temperature?",
+     "opts": [
+      "Bromine",
+      "Mercury",
+      "Sodium",
+      "Iron"
+     ],
+     "ans": "Mercury",
+     "why": "Mercury is the liquid metal; bromine is a liquid non-metal.",
+     "clue": "Bromine is not a metal.",
+     "level": 1,
+     "ref": "II Q1",
+     "id": "g7.science.u2.s2-3-3.21"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Substance Y is a hard, lustrous solid which readily conducts heat and electricity. Y is likely to be:",
+     "opts": [
+      "Salt",
+      "Metalloid",
+      "Metal",
+      "Non-metal"
+     ],
+     "ans": "Metal",
+     "why": "These are metal properties.",
+     "clue": "Shiny and conducting.",
+     "level": 1,
+     "ref": "II Q2",
+     "id": "g7.science.u2.s2-3-3.22"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which substance makes a homogeneous mixture with water?",
+     "opts": [
+      "Benzene",
+      "Oil",
+      "Sugar",
+      "Sulfur"
+     ],
+     "ans": "Sugar",
+     "why": "Sugar dissolves completely.",
+     "clue": "Which one dissolves?",
+     "level": 1,
+     "ref": "II Q3",
+     "id": "g7.science.u2.s2-3-3.23"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which of the following substances is not a mixture?",
+     "opts": [
+      "Air",
+      "Sea water",
+      "Pure water",
+      "Brass"
+     ],
+     "ans": "Pure water",
+     "why": "Pure water is a single compound.",
+     "clue": "Which is one substance only?",
+     "level": 1,
+     "ref": "II Q4",
+     "id": "g7.science.u2.s2-3-3.24"
+    }
+   ]
+  },
+  {
+   "book_name": "Activities 2.11–2.12",
+   "items": [
+    {
+     "kind": "pick",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which of these are homogeneous mixtures?",
+     "pool": [
+      "Air",
+      "Milk",
+      "Soil",
+      "Salt solution",
+      "Brass",
+      "Water",
+      "Gold",
+      "Sugar solution",
+      "Pepsi"
+     ],
+     "a": [
+      "Air",
+      "Salt solution",
+      "Brass",
+      "Sugar solution",
+      "Pepsi"
+     ],
+     "why": "These are uniform throughout (Table 2.4). Milk and soil are heterogeneous; water and gold are pure.",
+     "clue": "Mixtures that look the same everywhere.",
+     "level": 1,
+     "ref": "Activity 2.11",
+     "id": "g7.science.u2.s2-3-3.25"
+    },
+    {
+     "kind": "pick",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which of these are heterogeneous mixtures?",
+     "pool": [
+      "Ethanol",
+      "Bronze",
+      "Milk",
+      "Iron",
+      "Air",
+      "Soil",
+      "Ink"
+     ],
+     "a": [
+      "Milk",
+      "Soil"
+     ],
+     "why": "The book names milk and soil. Bronze, air and ink are homogeneous; ethanol and iron are pure.",
+     "clue": "Mixtures whose parts can be seen.",
+     "level": 1,
+     "ref": "Activity 2.12",
+     "id": "g7.science.u2.s2-3-3.26"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is a heterogeneous mixture?",
+   "opts": [
+    "Sea water",
+    "Blood",
+    "Bronze",
+    "Air"
+   ],
+   "ans": "Blood",
+   "why": "Blood is a heterogeneous mixture.",
+   "level": 1,
+   "ref": "Review Exercise II Q14",
+   "clue": "",
+   "id": "g7.science.u2.s2-3-3.27"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "A homogeneous mixture is also called a solution.",
+   "a": true,
+   "why": "The book says so.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.science.u2.s2-3-3.28"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "All of these are heterogeneous mixtures EXCEPT …",
+   "opts": [
+    "soil",
+    "water and oil",
+    "salt solution",
+    "blood"
+   ],
+   "ans": "salt solution",
+   "why": "Salt solution is homogeneous.",
+   "level": 2,
+   "ref": "Review Exercise II Q8",
+   "clue": "",
+   "id": "g7.science.u2.s2-3-3.29"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Brass (zinc and copper) is a …",
+   "opts": [
+    "solid-in-solid solution",
+    "heterogeneous mixture",
+    "compound",
+    "element"
+   ],
+   "ans": "solid-in-solid solution",
+   "why": "Table 2.4.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.science.u2.s2-3-3.30"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which shows a mixture, not a compound?",
+   "opts": [
+    "Iron filings and sulfur that a magnet can separate",
+    "Water made of hydrogen and oxygen",
+    "Table salt",
+    "Iron sulfide"
+   ],
+   "ans": "Iron filings and sulfur that a magnet can separate",
+   "why": "In a mixture parts keep their properties and separate physically.",
+   "level": 3,
+   "clue": "",
+   "id": "g7.science.u2.s2-3-3.31"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Activity 2.11: the book never classifies cooking oil or chalk; they are left out of the graded pick."
+  },
+  {
+   "kind": "review",
+   "text": "The book uses \"Table 2.5\" twice (here and for separation techniques on p.60)."
+  },
+  {
+   "kind": "review",
+   "text": "Exercise 2.6 Q1: \"alcohol\" is taken as pure ethanol (a compound)."
+  },
+  {
+   "kind": "note",
+   "text": "Exercise 2.6 I Q2 (define and give four examples) is covered by the name blocks and sorts."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

@@ -1,0 +1,311 @@
+{
+ "id": "g7.science.u2.s2-3-1",
+ "book": {
+  "title": "General Science Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "science",
+  "unit": 2,
+  "unit_title": "Matter in Our Surrounding",
+  "pages": "37–38",
+  "section": "2.3.1"
+ },
+ "title": "A pure substance",
+ "competency": "Use the particle theory to tell pure substances from mixtures.",
+ "minutes": 8,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Pure substance",
+   "am": "ንጹህ ቁስ",
+   "def": "A single kind of matter that cannot be separated into other kinds by physical means.",
+   "machine": true
+  },
+  {
+   "en": "Mixture",
+   "am": "ቅልቅል",
+   "def": "A physical combination of two or more substances.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "sci.pure-substance",
+   "name": "Pure substances and mixtures",
+   "explain": {
+    "en": {
+     "text": "Matter can be classified as pure substances or mixtures. A pure substance is a single kind of matter. It has a definite, constant composition and cannot be separated by physical means. Pure water, oxygen, gold, sugar and table salt are pure substances. Pure substances are elements or compounds."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Just one thing",
+     "ask": "Which one is \"only one substance and nothing else\"?",
+     "opts": [
+      "Pure water",
+      "Tea with sugar",
+      "Soil",
+      "Air"
+     ],
+     "after": "Pure water is water and nothing else. The others contain several substances: they are mixtures.",
+     "id": "g7.science.u2.s2-3-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "2.3 Classification of substances",
+     "paras": [
+      "Matter can also be classified by its chemical composition.",
+      "There are two classes: pure substances and mixtures."
+     ],
+     "id": "g7.science.u2.s2-3-1.2"
+    },
+    {
+     "kind": "tree",
+     "step": "explore",
+     "title": "Figures 2.5 and 2.6",
+     "root": {
+      "label": "Matter",
+      "info": "Anything that has mass and occupies space.",
+      "children": [
+       {
+        "label": "Pure substance",
+        "info": "Only one substance present.",
+        "children": [
+         {
+          "label": "Element",
+          "info": "Cannot be broken down into simpler substances."
+         },
+         {
+          "label": "Compound",
+          "info": "Can be broken down into its elements by chemical, not physical, means."
+         }
+        ]
+       },
+       {
+        "label": "Mixture",
+        "info": "Physical combination of two or more substances."
+       }
+      ]
+     },
+     "ref": "Figures 2.5–2.6",
+     "id": "g7.science.u2.s2-3-1.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "2.3.1 A pure substance",
+     "paras": [
+      "A pure substance is a single kind of matter.",
+      "It cannot be separated into other kinds of matter by physical means.",
+      "Pure water is water and nothing else.",
+      "A pure substance has a definite and constant composition.",
+      "Examples: oxygen, sulfur, copper, silver, gold, sugar, table salt, water, carbon dioxide."
+     ],
+     "id": "g7.science.u2.s2-3-1.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Pure substance",
+       "A single kind of matter that cannot be separated into other kinds by physical means."
+      ],
+      [
+       "Mixture",
+       "A physical combination of two or more substances."
+      ]
+     ],
+     "id": "g7.science.u2.s2-3-1.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Which is a pure substance?",
+     "opts": [
+      "Air",
+      "Milk",
+      "Table salt",
+      "Soil"
+     ],
+     "ans": "Table salt",
+     "why": "Table salt has a definite, constant composition.",
+     "clue": "Which one is only one substance?",
+     "level": 1,
+     "id": "g7.science.u2.s2-3-1.6"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "bins": [
+      "Pure substance",
+      "Mixture"
+     ],
+     "items": [
+      [
+       "Iron",
+       "Pure substance",
+       "Element."
+      ],
+      [
+       "Sugar solution",
+       "Mixture",
+       "Sugar + water."
+      ],
+      [
+       "Oxygen",
+       "Pure substance",
+       "Element."
+      ],
+      [
+       "Milk",
+       "Mixture",
+       "Water, fat, protein …"
+      ],
+      [
+       "Sugar",
+       "Pure substance",
+       "Compound."
+      ],
+      [
+       "Air",
+       "Mixture",
+       "Several gases."
+      ]
+     ],
+     "why": "A mixture contains two or more substances.",
+     "clue": "Is it one substance, or several?",
+     "level": 1,
+     "ref": "Activity 2.8",
+     "id": "g7.science.u2.s2-3-1.7"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "A pure substance can be separated into other substances by sieving or filtering.",
+     "a": false,
+     "why": "A pure substance cannot be separated by any physical means.",
+     "clue": "Read the definition.",
+     "level": 1,
+     "id": "g7.science.u2.s2-3-1.8"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Pure water and a salt solution both look clear. What is the difference?",
+     "opts": [
+      "Salt solution is a mixture; salt can be separated by evaporation",
+      "They are the same",
+      "Pure water is a mixture",
+      "Salt solution is an element"
+     ],
+     "ans": "Salt solution is a mixture; salt can be separated by evaporation",
+     "why": "Pure water is one substance with a fixed composition. Salt water contains two substances, and the salt is left when the water evaporates.",
+     "clue": "Can you get anything out of each by a physical method?",
+     "level": 3,
+     "ref": "Activity 2.10 Q2",
+     "added": true,
+     "id": "g7.science.u2.s2-3-1.9"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Matter is classified by composition into …",
+   "opts": [
+    "solids and liquids",
+    "pure substances and mixtures",
+    "metals and gases"
+   ],
+   "ans": "pure substances and mixtures",
+   "why": "Those are the two classes.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.science.u2.s2-3-1.10"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "A pure substance always has a definite and constant composition.",
+   "a": true,
+   "why": "That is a property of pure substances.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.science.u2.s2-3-1.11"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Pure substances are classified as …",
+   "opts": [
+    "elements and compounds",
+    "solutions and suspensions",
+    "liquids and gases"
+   ],
+   "ans": "elements and compounds",
+   "why": "See Figure 2.6.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.science.u2.s2-3-1.12"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is NOT a pure substance?",
+   "opts": [
+    "Gold",
+    "Carbon dioxide",
+    "Ink",
+    "Sugar"
+   ],
+   "ans": "Ink",
+   "why": "Ink is dyes dissolved in alcohol and water: a mixture.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.science.u2.s2-3-1.13"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which has a variable composition?",
+   "opts": [
+    "Water",
+    "Salt",
+    "Milk",
+    "Silver"
+   ],
+   "ans": "Milk",
+   "why": "Milk is a mixture, so its parts can vary.",
+   "level": 3,
+   "ref": "Review Exercise II Q10",
+   "clue": "",
+   "id": "g7.science.u2.s2-3-1.14"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Activity 2.8: chalk and cooking oil are debatable (school chalk may be a mixture; cooking oil is a mixture of oils). They are left out of the graded sort."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

@@ -1,0 +1,341 @@
+{
+ "id": "g7.science.u2.s2-1-3",
+ "book": {
+  "title": "General Science Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "science",
+  "unit": 2,
+  "unit_title": "Matter in Our Surrounding",
+  "pages": "24",
+  "section": "2.1.3"
+ },
+ "title": "Particle theory of matter",
+ "competency": "State the postulates of the particle theory of matter.",
+ "minutes": 8,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Particle model of matter",
+   "am": "የቁስ የቅንጣት ሞዴል",
+   "def": "A theory that explains matter as tiny moving particles with spaces and forces between them.",
+   "machine": true
+  },
+  {
+   "en": "Postulate",
+   "am": "መሰረታዊ ሀሳብ",
+   "def": "A main idea of a theory.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "sci.particle-theory",
+   "name": "The six ideas of the particle model",
+   "explain": {
+    "en": {
+     "text": "The particle model has six main ideas. All matter is made of tiny particles. The particles move all the time. There are spaces between them. Heating makes them move faster. There are forces between them. Particles of one substance differ from those of another."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Where did the sugar go?",
+     "ask": "Sugar dissolves in tea and seems to disappear. Where did it go?",
+     "opts": [
+      "It was destroyed",
+      "Its tiny particles spread into the spaces between water particles",
+      "It turned into heat",
+      "It went into the cup"
+     ],
+     "after": "Sugar is still there: you can taste it. Its particles moved into spaces between the water particles.",
+     "added": true,
+     "id": "g7.science.u2.s2-1-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "2.1.3 Particle theory of matter",
+     "paras": [
+      "Particulate nature of matter means all matter is made of tiny particles.",
+      "Many years later, scientists went back to Democritus' idea and added to it.",
+      "The theory they made is the particle model of matter."
+     ],
+     "id": "g7.science.u2.s2-1-3.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Main ideas (postulates) of the particle model",
+     "paras": [],
+     "table": [
+      [
+       "No.",
+       "Postulate"
+      ],
+      [
+       "1",
+       "All matter is made up of tiny particles."
+      ],
+      [
+       "2",
+       "The particles of matter move continuously."
+      ],
+      [
+       "3",
+       "The particles have spaces between them."
+      ],
+      [
+       "4",
+       "Adding heat to matter makes the particles move faster."
+      ],
+      [
+       "5",
+       "There are forces between the particles."
+      ],
+      [
+       "6",
+       "Particles of one substance differ from the particles of other substances."
+      ]
+     ],
+     "note": "Democritus was an ancient Greek thinker. He first said matter is made of tiny pieces.",
+     "id": "g7.science.u2.s2-1-3.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Particle model of matter",
+       "A theory that explains matter as tiny moving particles with spaces and forces between them."
+      ],
+      [
+       "Postulate",
+       "A main idea of a theory."
+      ]
+     ],
+     "id": "g7.science.u2.s2-1-3.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Which is a postulate of the particle model?",
+     "opts": [
+      "Particles never move",
+      "There are spaces between particles",
+      "All particles are the same",
+      "Heat makes particles stop"
+     ],
+     "ans": "There are spaces between particles",
+     "why": "Postulate 3: the particles have spaces between them.",
+     "clue": "Read the six postulates again.",
+     "level": 1,
+     "id": "g7.science.u2.s2-1-3.5"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Adding heat to matter makes its particles move faster.",
+     "a": true,
+     "why": "Postulate 4.",
+     "clue": "Think of hot and cold water.",
+     "level": 1,
+     "id": "g7.science.u2.s2-1-3.6"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Particles of water are the same as particles of salt.",
+     "a": false,
+     "why": "Postulate 6: particles of one substance differ from those of another.",
+     "clue": "Is water the same substance as salt?",
+     "level": 2,
+     "id": "g7.science.u2.s2-1-3.7"
+    },
+    {
+     "kind": "match",
+     "step": "practise",
+     "graded": true,
+     "pairs": [
+      [
+       "Sugar seems to disappear in tea",
+       "There are spaces between particles"
+      ],
+      [
+       "Steam escapes fast from hot water",
+       "Heat makes particles move faster"
+      ],
+      [
+       "A smell spreads in a room",
+       "Particles move continuously"
+      ],
+      [
+       "A stone holds together",
+       "There are forces between particles"
+      ]
+     ],
+     "why": "Each everyday event matches one postulate.",
+     "clue": "Which idea explains each event?",
+     "level": 2,
+     "added": true,
+     "id": "g7.science.u2.s2-1-3.8"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "A syringe full of air can be pushed in, but a syringe full of sand hardly moves. Which postulate explains the air?",
+     "opts": [
+      "Particles of one substance differ",
+      "There are big spaces between gas particles",
+      "Particles are always cold",
+      "There are no forces anywhere"
+     ],
+     "ans": "There are big spaces between gas particles",
+     "why": "Gas particles are far apart. Pushing moves them closer into the empty spaces. Sand grains already touch.",
+     "clue": "What is between the air particles?",
+     "level": 3,
+     "added": true,
+     "id": "g7.science.u2.s2-1-3.9"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 2.2",
+   "items": [
+    {
+     "kind": "order",
+     "step": "exercise",
+     "graded": true,
+     "title": "1. List the postulates of particle theory (book order)",
+     "items": [
+      "All matter is made up of tiny particles.",
+      "The particles of matter move continuously.",
+      "The particles have spaces between them.",
+      "Adding heat makes the particles move faster.",
+      "There are forces between the particles.",
+      "Particles of one substance differ from others."
+     ],
+     "why": "These are postulates 1 to 6 in the book's order.",
+     "clue": "Start with what matter is made of.",
+     "level": 2,
+     "ref": "I Q1",
+     "id": "g7.science.u2.s2-1-3.10"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Describe the particulate nature of matter.",
+     "opts": [
+      "All matter is made of discrete tiny particles",
+      "Matter is one solid piece",
+      "Matter is made of light",
+      "Only gases have particles"
+     ],
+     "ans": "All matter is made of discrete tiny particles",
+     "why": "Particulate nature means all matter is made of tiny separate particles.",
+     "clue": "What is everything made of?",
+     "level": 1,
+     "ref": "I Q2",
+     "id": "g7.science.u2.s2-1-3.11"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "According to the particle model, particles of matter move continuously.",
+   "a": true,
+   "why": "Postulate 2.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.science.u2.s2-1-3.12"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "How many main ideas (postulates) does the book list for the particle model?",
+   "opts": [
+    "3",
+    "4",
+    "6",
+    "8"
+   ],
+   "ans": "6",
+   "why": "There are six postulates.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.science.u2.s2-1-3.13"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which postulate explains why particles of salt differ from particles of sugar?",
+   "opts": [
+    "Particles have spaces",
+    "Particles of one substance differ from those of another",
+    "Heat makes particles faster",
+    "Particles move"
+   ],
+   "ans": "Particles of one substance differ from those of another",
+   "why": "Postulate 6.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.science.u2.s2-1-3.14"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "There are ___ between the particles that hold them together.",
+   "a": [
+    "forces",
+    "force",
+    "attractive forces"
+   ],
+   "why": "Postulate 5: there are forces between the particles.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.science.u2.s2-1-3.15"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Ink spreads faster in hot water than in cold water. Which postulate explains this?",
+   "opts": [
+    "Heat makes particles move faster",
+    "Particles have no spaces",
+    "All particles are the same",
+    "Particles never move"
+   ],
+   "ans": "Heat makes particles move faster",
+   "why": "Hot water particles move faster, so they mix the ink quicker.",
+   "level": 3,
+   "clue": "",
+   "id": "g7.science.u2.s2-1-3.16"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "The book says \"scientists came back to Democritus' idea\" without introducing Democritus. A one-line note is added (ancient Greek thinker). Teacher to confirm."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

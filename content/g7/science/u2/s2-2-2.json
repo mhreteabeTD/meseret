@@ -1,0 +1,519 @@
+{
+ "id": "g7.science.u2.s2-2-2",
+ "book": {
+  "title": "General Science Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "science",
+  "unit": 2,
+  "unit_title": "Matter in Our Surrounding",
+  "pages": "35–37",
+  "section": "2.2.2"
+ },
+ "title": "Chemical properties of matter",
+ "competency": "Identify chemical properties and distinguish them from physical properties.",
+ "minutes": 9,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Chemical property",
+   "am": "ኬሚካዊ ባህሪ",
+   "def": "Describes how a substance changes, or resists change, to form a new substance.",
+   "machine": true
+  },
+  {
+   "en": "Flammability",
+   "am": "ተቀጣጣይነት",
+   "def": "The ability of a substance to burn.",
+   "machine": true
+  },
+  {
+   "en": "Reactivity",
+   "am": "ተግባቢነት",
+   "def": "How a substance reacts with other substances.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "sci.chemical-property",
+   "name": "Chemical properties",
+   "explain": {
+    "en": {
+     "text": "A chemical property describes how a substance changes, or resists change, to form a new substance. We cannot find it just by looking or touching. Flammability and reactivity are chemical properties. Iron rusting in moist air shows a chemical property of iron."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Will it burn?",
+     "ask": "Paper burns but a stone does not. Can you tell this just by looking at them?",
+     "opts": [
+      "Yes, by colour",
+      "No, you must try to change them",
+      "Yes, by size"
+     ],
+     "after": "You cannot see flammability. You find it only when the substance changes (or does not). That is a chemical property.",
+     "added": true,
+     "id": "g7.science.u2.s2-2-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "2.2.2 Chemical properties of matter",
+     "paras": [
+      "A chemical property describes how a substance undergoes or resists change to form a new substance.",
+      "It cannot be found just by viewing or touching the substance.",
+      "Flammability is one chemical property. Reactivity is another."
+     ],
+     "id": "g7.science.u2.s2-2-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Table 2.2 Physical and chemical properties",
+     "paras": [],
+     "table": [
+      [
+       "Physical properties",
+       "Chemical properties"
+      ],
+      [
+       "Measured without changing the substance",
+       "Describe how a substance changes to form a new one"
+      ],
+      [
+       "Easily identified",
+       "Cannot be seen just by looking or touching"
+      ],
+      [
+       "Identity does not change",
+       "Internal structure must be affected to test it"
+      ],
+      [
+       "Colour, density, volume, melting point, boiling point, conductivity",
+       "Flammability, reactivity"
+      ]
+     ],
+     "ref": "Table 2.2",
+     "id": "g7.science.u2.s2-2-2.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Chemical property",
+       "Describes how a substance changes, or resists change, to form a new substance."
+      ],
+      [
+       "Flammability",
+       "The ability of a substance to burn."
+      ],
+      [
+       "Reactivity",
+       "How a substance reacts with other substances."
+      ]
+     ],
+     "id": "g7.science.u2.s2-2-2.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Which is a chemical property?",
+     "opts": [
+      "Copper is reddish brown",
+      "Plastic is flammable",
+      "Lead is dense",
+      "Potassium melts at 63 °C"
+     ],
+     "ans": "Plastic is flammable",
+     "why": "Flammability describes forming new substances by burning.",
+     "clue": "Which one is about forming something new?",
+     "level": 1,
+     "ref": "Exercise 2.5 Q1 j",
+     "id": "g7.science.u2.s2-2-2.5"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "bins": [
+      "Physical property",
+      "Chemical property"
+     ],
+     "items": [
+      [
+       "Iron rusts in moist air",
+       "Chemical property",
+       "Rust is a new substance."
+      ],
+      [
+       "Mercury is liquid at room temperature",
+       "Physical property",
+       "A state."
+      ],
+      [
+       "Nickel dissolves in acid to give a green solution",
+       "Chemical property",
+       "Reacts with acid."
+      ],
+      [
+       "Copper is reddish brown",
+       "Physical property",
+       "A colour."
+      ],
+      [
+       "Lead is denser than aluminium",
+       "Physical property",
+       "Density."
+      ],
+      [
+       "Silver shows no reaction in hydrochloric acid",
+       "Chemical property",
+       "Resists change."
+      ]
+     ],
+     "why": "Chemical: how it reacts or resists reacting. Physical: observed without change.",
+     "clue": "Does a new substance form, or could it?",
+     "level": 2,
+     "ref": "Exercise 2.5 Q1",
+     "id": "g7.science.u2.s2-2-2.6"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "A chemical property can be found just by looking at a substance.",
+     "a": false,
+     "why": "The substance must be changed (or tried) to see its chemical property.",
+     "clue": "Can you see flammability?",
+     "level": 1,
+     "id": "g7.science.u2.s2-2-2.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "\"Silver shows no sign of reaction in hydrochloric acid.\" Why is this a CHEMICAL property, even though nothing happens?",
+     "opts": [
+      "It describes how silver resists change",
+      "It is about colour",
+      "It is about mass",
+      "Nothing happening is always physical"
+     ],
+     "ans": "It describes how silver resists change",
+     "why": "A chemical property describes how a substance undergoes OR resists change. Silver's low reactivity is a chemical property.",
+     "clue": "Read the definition carefully: \"undergoes or resists\".",
+     "level": 3,
+     "ref": "Exercise 2.5 Q1 h",
+     "added": true,
+     "id": "g7.science.u2.s2-2-2.8"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 2.5",
+   "items": [
+    {
+     "kind": "sort",
+     "step": "exercise",
+     "graded": true,
+     "title": "1. Physical or chemical? (a–e)",
+     "bins": [
+      "Physical property",
+      "Chemical property"
+     ],
+     "items": [
+      [
+       "a. Iron rusts in moist air",
+       "Chemical property",
+       "Forms rust."
+      ],
+      [
+       "b. Mercury is a liquid at room temperature",
+       "Physical property",
+       "State."
+      ],
+      [
+       "c. Nickel dissolves in acid to give a green solution",
+       "Chemical property",
+       "Reacts."
+      ],
+      [
+       "d. Potassium melts at 63 °C",
+       "Physical property",
+       "Melting point."
+      ],
+      [
+       "e. Copper is reddish brown",
+       "Physical property",
+       "Colour."
+      ]
+     ],
+     "why": "Rusting and reacting with acid form new substances.",
+     "clue": "Does a new substance form?",
+     "level": 1,
+     "ref": "Q1 a–e",
+     "id": "g7.science.u2.s2-2-2.9"
+    },
+    {
+     "kind": "sort",
+     "step": "exercise",
+     "graded": true,
+     "title": "1. Physical or chemical? (f–j)",
+     "bins": [
+      "Physical property",
+      "Chemical property"
+     ],
+     "items": [
+      [
+       "f. Titanium can be drawn into thin wires",
+       "Physical property",
+       "Shape only."
+      ],
+      [
+       "g. Inhaled beryllium dust causes lung disease",
+       "Chemical property",
+       "It reacts with body tissue."
+      ],
+      [
+       "h. Silver shows no reaction in hydrochloric acid",
+       "Chemical property",
+       "Resists change."
+      ],
+      [
+       "i. Lead is denser than aluminium",
+       "Physical property",
+       "Density."
+      ],
+      [
+       "j. Flammability of plastics",
+       "Chemical property",
+       "Burning."
+      ]
+     ],
+     "why": "Chemical properties describe reacting or resisting reaction.",
+     "clue": "Does it describe a reaction?",
+     "level": 2,
+     "ref": "Q1 f–j",
+     "id": "g7.science.u2.s2-2-2.10"
+    },
+    {
+     "kind": "sort",
+     "step": "exercise",
+     "graded": true,
+     "title": "2. Intensive or extensive?",
+     "bins": [
+      "Intensive",
+      "Extensive"
+     ],
+     "items": [
+      [
+       "a. Boiling point",
+       "Intensive",
+       ""
+      ],
+      [
+       "b. Length",
+       "Extensive",
+       ""
+      ],
+      [
+       "c. Mass",
+       "Extensive",
+       ""
+      ],
+      [
+       "d. Colour",
+       "Intensive",
+       ""
+      ],
+      [
+       "e. Density",
+       "Intensive",
+       ""
+      ],
+      [
+       "f. Volume",
+       "Extensive",
+       ""
+      ],
+      [
+       "g. Melting point",
+       "Intensive",
+       ""
+      ]
+     ],
+     "why": "Extensive properties depend on the amount; intensive ones do not.",
+     "clue": "Imagine twice as much.",
+     "level": 1,
+     "ref": "Q2",
+     "id": "g7.science.u2.s2-2-2.11"
+    },
+    {
+     "kind": "sort",
+     "step": "exercise",
+     "graded": true,
+     "title": "3. Sense organs or measurable?",
+     "bins": [
+      "Sense organs",
+      "Measurable"
+     ],
+     "items": [
+      [
+       "a. Density",
+       "Measurable",
+       ""
+      ],
+      [
+       "b. Odour",
+       "Sense organs",
+       ""
+      ],
+      [
+       "c. Taste",
+       "Sense organs",
+       ""
+      ],
+      [
+       "d. Melting point",
+       "Measurable",
+       ""
+      ],
+      [
+       "e. Colour",
+       "Sense organs",
+       ""
+      ],
+      [
+       "f. Conductivity",
+       "Measurable",
+       ""
+      ]
+     ],
+     "why": "Colour, odour and taste are sensed; the rest need apparatus.",
+     "clue": "Do you need a tool?",
+     "level": 1,
+     "ref": "Q3",
+     "id": "g7.science.u2.s2-2-2.12"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is a chemical property?",
+   "opts": [
+    "Colour",
+    "Density",
+    "Flammability",
+    "Boiling point"
+   ],
+   "ans": "Flammability",
+   "why": "Flammability describes burning to form new substances.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.science.u2.s2-2-2.13"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Reactivity between two substances is a chemical property.",
+   "a": true,
+   "why": "The book names reactivity as a chemical property.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.science.u2.s2-2-2.14"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "\"Iron metal rusts in moist air\" describes a …",
+   "opts": [
+    "physical property",
+    "chemical property",
+    "state of matter"
+   ],
+   "ans": "chemical property",
+   "why": "Rust is a new substance.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.science.u2.s2-2-2.15"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which statement is true of chemical properties?",
+   "opts": [
+    "They are easily seen by looking",
+    "They describe how a substance forms new substances",
+    "They never change anything",
+    "They are the same as colour"
+   ],
+   "ans": "They describe how a substance forms new substances",
+   "why": "See Table 2.2.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.science.u2.s2-2-2.16"
+  },
+  {
+   "kind": "sort",
+   "step": "test",
+   "graded": true,
+   "bins": [
+    "Physical",
+    "Chemical"
+   ],
+   "items": [
+    [
+     "Charcoal burns",
+     "Chemical",
+     ""
+    ],
+    [
+     "Gold is yellow",
+     "Physical",
+     ""
+    ],
+    [
+     "Iron is attracted by a magnet",
+     "Physical",
+     ""
+    ],
+    [
+     "Magnesium reacts with acid",
+     "Chemical",
+     ""
+    ]
+   ],
+   "why": "Burning and reacting are chemical; colour and magnetism are physical.",
+   "level": 3,
+   "id": "g7.science.u2.s2-2-2.17"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "correction",
+   "text": "The book numbers this subsection \"2.1.5\" inside section 2.2. It is numbered 2.2.2 here."
+  },
+  {
+   "kind": "note",
+   "text": "Exercise 2.5 Q1 g (beryllium lung disease) is taken as chemical (it reacts with tissue), following the transcription."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

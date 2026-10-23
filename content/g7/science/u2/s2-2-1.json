@@ -1,0 +1,768 @@
+{
+ "id": "g7.science.u2.s2-2-1",
+ "book": {
+  "title": "General Science Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "science",
+  "unit": 2,
+  "unit_title": "Matter in Our Surrounding",
+  "pages": "32–35",
+  "section": "2.2.1"
+ },
+ "title": "Physical properties of matter",
+ "competency": "Describe physical properties and use them to identify substances.",
+ "minutes": 12,
+ "lang": "en",
+ "keywords": [
+  {
+   "en": "Physical property",
+   "am": "ፊዚካዊ ባህሪ",
+   "def": "A property we can measure or observe without changing what the substance is.",
+   "machine": true
+  },
+  {
+   "en": "Extensive property",
+   "am": "በመጠን የሚወሰን ባህሪ",
+   "def": "A property that depends on the amount of sample: length, mass, volume.",
+   "machine": true
+  },
+  {
+   "en": "Intensive property",
+   "am": "በመጠን የማይወሰን ባህሪ",
+   "def": "A property that does not depend on the amount: density, colour, melting point, hardness.",
+   "machine": true
+  },
+  {
+   "en": "Melting point",
+   "am": "የመቅለጫ ነጥብ",
+   "def": "The temperature at which a solid changes to a liquid. Ice: 0 °C.",
+   "machine": true
+  },
+  {
+   "en": "Boiling point",
+   "am": "የመፍያ ነጥብ",
+   "def": "The temperature at which a liquid boils. Water at sea level: 100 °C.",
+   "machine": true
+  },
+  {
+   "en": "Density",
+   "am": "እፍጋት",
+   "def": "Mass per unit volume: d = m/V, in kg/m³.",
+   "machine": true
+  },
+  {
+   "en": "Electrical conductivity",
+   "am": "ኤሌክትሪክ የማስተላለፍ ችሎታ",
+   "def": "The ability of a substance to conduct electricity.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "sci.physical-property",
+   "name": "What a physical property is",
+   "explain": {
+    "en": {
+     "text": "A physical property can be measured or observed without changing what the substance is. Colour, odour, taste, state, melting point, boiling point, density and conductivity are physical properties. Melting ice is still water, so melting point is a physical property."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Still water?",
+     "ask": "You measure the temperature at which ice melts. Is the water still water afterwards?",
+     "opts": [
+      "Yes, it is still water",
+      "No, it becomes a new substance"
+     ],
+     "after": "It is still water. Measuring the melting point did not change what it is. That is a physical property.",
+     "id": "g7.science.u2.s2-2-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "2.2.1 Physical properties of matter",
+     "paras": [
+      "Substances are identified by their properties.",
+      "A physical property can be measured and observed without changing the composition.",
+      "Melting ice gives water. Water differs from ice only in appearance.",
+      "We can freeze the water to get ice back.",
+      "So melting point is a physical property."
+     ],
+     "id": "g7.science.u2.s2-2-1.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Physical properties detected by sense organs",
+     "paras": [],
+     "table": [
+      [
+       "Property",
+       "Sense",
+       "Examples"
+      ],
+      [
+       "Colour",
+       "Eyes (light)",
+       "Chalk is white, water is colourless, gold is yellow"
+      ],
+      [
+       "Odour",
+       "Nose",
+       "Water is odourless, flowers are fragrant, orange is fruity"
+      ],
+      [
+       "Taste",
+       "Tongue",
+       "Honey is sweet, lemon is sour, table salt is salty"
+      ]
+     ],
+     "note": "Caution! Smell and taste only safe substances. Never taste anything in the laboratory.",
+     "id": "g7.science.u2.s2-2-1.3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Physical state",
+     "paras": [
+      "Physical state is the form of a substance at a given temperature and pressure.",
+      "Water is solid below 0 °C, liquid between 0 °C and 100 °C, and gas above 100 °C."
+     ],
+     "id": "g7.science.u2.s2-2-1.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Physical property",
+       "A property we can measure or observe without changing what the substance is."
+      ]
+     ],
+     "id": "g7.science.u2.s2-2-1.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Which is a physical property?",
+     "opts": [
+      "Colour of copper",
+      "Iron rusting",
+      "Paper burning",
+      "Food spoiling"
+     ],
+     "ans": "Colour of copper",
+     "why": "Looking at colour does not change the copper.",
+     "clue": "Which one leaves the substance the same?",
+     "level": 1,
+     "id": "g7.science.u2.s2-2-1.6"
+    },
+    {
+     "kind": "match",
+     "step": "practise",
+     "graded": true,
+     "pairs": [
+      [
+       "Colour",
+       "Eyes"
+      ],
+      [
+       "Odour",
+       "Nose"
+      ],
+      [
+       "Taste",
+       "Tongue"
+      ]
+     ],
+     "why": "We see colour, smell odour and taste with the tongue.",
+     "clue": "Which sense organ detects each?",
+     "level": 1,
+     "ref": "Activity 2.6 Q5",
+     "id": "g7.science.u2.s2-2-1.7"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "Honey is sweet, table salt is salty and lemon is ___.",
+     "a": [
+      "sour"
+     ],
+     "why": "The book: lemon is sour.",
+     "clue": "Think of lemon juice.",
+     "level": 1,
+     "ref": "Activity 2.6 Q6",
+     "id": "g7.science.u2.s2-2-1.8"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "You may taste lemon at home but never an acid in the laboratory. Why?",
+     "opts": [
+      "Laboratory acids may be strong and harmful",
+      "Lemons are not acids",
+      "Laboratory acids have no taste",
+      "Tasting is always safe"
+     ],
+     "ans": "Laboratory acids may be strong and harmful",
+     "why": "Tasting is only used when the substance is not harmful. Lab acids can burn or poison.",
+     "clue": "Read the Caution box.",
+     "level": 2,
+     "ref": "Activity 2.7",
+     "id": "g7.science.u2.s2-2-1.9"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "At what temperatures is water a liquid (at sea level)?",
+     "opts": [
+      "Below 0 °C",
+      "Between 0 °C and 100 °C",
+      "Above 100 °C",
+      "Only at 50 °C"
+     ],
+     "ans": "Between 0 °C and 100 °C",
+     "why": "Below 0 °C water freezes; above 100 °C it is a gas. In between it is a liquid.",
+     "clue": "Use the melting point and the boiling point.",
+     "level": 3,
+     "added": true,
+     "id": "g7.science.u2.s2-2-1.10"
+    }
+   ]
+  },
+  {
+   "id": "sci.extensive-intensive",
+   "name": "Extensive and intensive properties",
+   "explain": {
+    "en": {
+     "text": "Extensive properties depend on how much sample you have: length, mass, volume. Intensive properties do not: density, colour, melting point, hardness. Intensive properties help us tell substances apart, because they do not change from sample to sample."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Cup or bucket",
+     "ask": "A cup of water and a bucket of water. Which is the same for both?",
+     "opts": [
+      "Mass",
+      "Volume",
+      "Boiling point"
+     ],
+     "after": "Both boil at 100 °C. Mass and volume depend on how much water there is.",
+     "id": "g7.science.u2.s2-2-1.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Two kinds of physical property",
+     "paras": [
+      "Extensive physical properties depend on the amount of sample. Examples: length, diameter, mass, volume.",
+      "Intensive physical properties do not depend on the amount. Examples: density, colour, melting point, hardness.",
+      "Intensive properties help us tell substances apart."
+     ],
+     "id": "g7.science.u2.s2-2-1.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Extensive property",
+       "A property that depends on the amount of sample: length, mass, volume."
+      ],
+      [
+       "Intensive property",
+       "A property that does not depend on the amount: density, colour, melting point, hardness."
+      ]
+     ],
+     "id": "g7.science.u2.s2-2-1.13"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Which is an intensive property?",
+     "opts": [
+      "Mass",
+      "Volume",
+      "Melting point",
+      "Length"
+     ],
+     "ans": "Melting point",
+     "why": "A small or big piece of ice melts at 0 °C.",
+     "clue": "Does it change if you have more?",
+     "level": 1,
+     "id": "g7.science.u2.s2-2-1.14"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "bins": [
+      "Extensive",
+      "Intensive"
+     ],
+     "items": [
+      [
+       "Boiling point",
+       "Intensive",
+       "Same for any amount."
+      ],
+      [
+       "Length",
+       "Extensive",
+       "Depends on the sample."
+      ],
+      [
+       "Mass",
+       "Extensive",
+       "More sample, more mass."
+      ],
+      [
+       "Colour",
+       "Intensive",
+       "Same for any amount."
+      ],
+      [
+       "Density",
+       "Intensive",
+       "Same for any amount."
+      ],
+      [
+       "Volume",
+       "Extensive",
+       "More sample, more volume."
+      ]
+     ],
+     "why": "Extensive: changes with the amount. Intensive: stays the same.",
+     "clue": "Imagine twice as much. Does it change?",
+     "level": 1,
+     "ref": "Exercise 2.5 Q2",
+     "id": "g7.science.u2.s2-2-1.15"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Dawit has two gold rings: a small one and a big one. Which property helps prove both are gold?",
+     "opts": [
+      "Mass",
+      "Volume",
+      "Density",
+      "Length"
+     ],
+     "ans": "Density",
+     "why": "Density is intensive: pure gold has the same density in any amount. Mass and volume differ between the rings.",
+     "clue": "Choose a property that does not depend on size.",
+     "level": 3,
+     "added": true,
+     "id": "g7.science.u2.s2-2-1.16"
+    }
+   ]
+  },
+  {
+   "id": "sci.measurable-properties",
+   "name": "Measurable physical properties",
+   "explain": {
+    "en": {
+     "text": "Some physical properties are measured with apparatus. They have constant values under set conditions. Melting point is when a solid melts: ice at 0 °C. Boiling point: water boils at 100 °C at sea level. Density is mass per volume, d = m/V. Electrical conductivity is how well a substance carries electricity; metals conduct well."
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Measure it",
+     "ask": "Which tool do you need to find the melting point of ice?",
+     "opts": [
+      "A thermometer",
+      "A ruler",
+      "Your tongue",
+      "A magnet"
+     ],
+     "after": "Melting point is a temperature, so we measure it with a thermometer.",
+     "id": "g7.science.u2.s2-2-1.17"
+    },
+    {
+     "kind": "picture",
+     "step": "read",
+     "pic": "thermometer",
+     "caption": "A thermometer measures melting and boiling points.",
+     "id": "g7.science.u2.s2-2-1.18"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Measurable physical properties",
+     "paras": [
+      "These can be measured with apparatus.",
+      "They have constant values under specific conditions."
+     ],
+     "table": [
+      [
+       "Property",
+       "Meaning",
+       "Example"
+      ],
+      [
+       "Melting point",
+       "Temperature at which a solid becomes liquid",
+       "Ice melts at 0 °C"
+      ],
+      [
+       "Boiling point",
+       "Temperature at which a liquid boils",
+       "Water boils at 100 °C at sea level"
+      ],
+      [
+       "Density",
+       "Mass per unit volume: d = m/V (kg/m³)",
+       "Lead has a high density"
+      ],
+      [
+       "Electrical conductivity",
+       "Ability to conduct electricity",
+       "Copper, aluminium, iron, silver, zinc"
+      ]
+     ],
+     "id": "g7.science.u2.s2-2-1.19"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Melting point",
+       "The temperature at which a solid changes to a liquid. Ice: 0 °C."
+      ],
+      [
+       "Boiling point",
+       "The temperature at which a liquid boils. Water at sea level: 100 °C."
+      ],
+      [
+       "Density",
+       "Mass per unit volume: d = m/V, in kg/m³."
+      ],
+      [
+       "Electrical conductivity",
+       "The ability of a substance to conduct electricity."
+      ]
+     ],
+     "id": "g7.science.u2.s2-2-1.20"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Density is …",
+     "opts": [
+      "mass × volume",
+      "mass per unit volume",
+      "volume per unit mass",
+      "the colour of a substance"
+     ],
+     "ans": "mass per unit volume",
+     "why": "d = m/V.",
+     "clue": "Look at the formula.",
+     "level": 1,
+     "id": "g7.science.u2.s2-2-1.21"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "bins": [
+      "Detected by sense organs",
+      "Measurable"
+     ],
+     "items": [
+      [
+       "Density",
+       "Measurable",
+       "Needs a balance and a cylinder."
+      ],
+      [
+       "Odour",
+       "Detected by sense organs",
+       "Nose."
+      ],
+      [
+       "Taste",
+       "Detected by sense organs",
+       "Tongue."
+      ],
+      [
+       "Melting point",
+       "Measurable",
+       "Thermometer."
+      ],
+      [
+       "Colour",
+       "Detected by sense organs",
+       "Eyes."
+      ],
+      [
+       "Conductivity",
+       "Measurable",
+       "Needs a circuit."
+      ]
+     ],
+     "why": "Colour, odour and taste are sensed. The others are measured.",
+     "clue": "Do you need a tool?",
+     "level": 1,
+     "ref": "Exercise 2.5 Q3",
+     "id": "g7.science.u2.s2-2-1.22"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "A stone has a mass of 60 g and a volume of 20 cm³. Its density is ___ g/cm³.",
+     "a": [
+      "3"
+     ],
+     "num": true,
+     "why": "d = m/V = 60 ÷ 20 = 3 g/cm³.",
+     "clue": "Divide the mass by the volume.",
+     "level": 2,
+     "added": true,
+     "id": "g7.science.u2.s2-2-1.23"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "ask": "A block of wood has a density of 0.5 g/cm³ and a volume of 40 cm³. Its mass is ___ g.",
+     "a": [
+      "20"
+     ],
+     "num": true,
+     "why": "d = m/V, so m = d × V = 0.5 × 40 = 20 g.",
+     "clue": "Turn d = m/V around: m = d × V.",
+     "level": 3,
+     "added": true,
+     "id": "g7.science.u2.s2-2-1.24"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activity 2.6",
+   "items": [
+    {
+     "kind": "pick",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which of these physical properties have constant values under specific conditions?",
+     "pool": [
+      "Odour",
+      "Colour",
+      "Taste",
+      "Melting point",
+      "Boiling point",
+      "Density"
+     ],
+     "a": [
+      "Melting point",
+      "Boiling point",
+      "Density"
+     ],
+     "why": "Measurable properties have constant values under set conditions.",
+     "clue": "Which are measured with apparatus?",
+     "level": 1,
+     "ref": "Q1",
+     "id": "g7.science.u2.s2-2-1.25"
+    },
+    {
+     "kind": "pick",
+     "step": "exercise",
+     "graded": true,
+     "text": "Which can be recognized directly by our sense organs?",
+     "pool": [
+      "Odour",
+      "Colour",
+      "Taste",
+      "Melting point",
+      "Boiling point",
+      "Density"
+     ],
+     "a": [
+      "Odour",
+      "Colour",
+      "Taste"
+     ],
+     "why": "We smell odour, see colour and taste with the tongue.",
+     "clue": "Which need no tool?",
+     "level": 1,
+     "ref": "Q2",
+     "id": "g7.science.u2.s2-2-1.26"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "What will happen to ice kept in a cup in the classroom?",
+     "opts": [
+      "It melts into water",
+      "It stays ice",
+      "It becomes salt",
+      "It burns"
+     ],
+     "ans": "It melts into water",
+     "why": "The room is warmer than 0 °C, the melting point of ice.",
+     "clue": "Is the classroom colder than 0 °C?",
+     "level": 1,
+     "ref": "Q4",
+     "id": "g7.science.u2.s2-2-1.27"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "How do you describe the taste of lemon?",
+     "opts": [
+      "Sweet",
+      "Sour",
+      "Salty",
+      "Bitter"
+     ],
+     "ans": "Sour",
+     "why": "Lemon is sour.",
+     "clue": "Think of lemon juice.",
+     "level": 1,
+     "ref": "Q6",
+     "id": "g7.science.u2.s2-2-1.28"
+    }
+   ]
+  },
+  {
+   "book_name": "Activity 2.7",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Why are you never allowed to taste any acid in the laboratory?",
+     "opts": [
+      "Laboratory acids may be strong, harmful or contaminated",
+      "Acids have no taste",
+      "Lemon is not an acid",
+      "Tasting is a chemical change"
+     ],
+     "ans": "Laboratory acids may be strong, harmful or contaminated",
+     "why": "Tasting is used only when a substance is not harmful.",
+     "clue": "Read the Caution boxes.",
+     "level": 1,
+     "id": "g7.science.u2.s2-2-1.29"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is a physical property?",
+   "opts": [
+    "Melting point",
+    "Flammability",
+    "Rusting",
+    "Reactivity"
+   ],
+   "ans": "Melting point",
+   "why": "Measuring it does not change the substance.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.science.u2.s2-2-1.30"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "Water boils at ___ °C at sea level.",
+   "a": [
+    "100"
+   ],
+   "num": true,
+   "why": "The boiling point of water at sea level is 100 °C.",
+   "level": 1,
+   "clue": "",
+   "id": "g7.science.u2.s2-2-1.31"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is an extensive property?",
+   "opts": [
+    "Colour",
+    "Density",
+    "Mass",
+    "Melting point"
+   ],
+   "ans": "Mass",
+   "why": "Mass depends on the amount of sample.",
+   "level": 2,
+   "clue": "",
+   "id": "g7.science.u2.s2-2-1.32"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The interaction of a substance with light results in its …",
+   "opts": [
+    "taste",
+    "odour",
+    "colour",
+    "texture"
+   ],
+   "ans": "colour",
+   "why": "Colour results from the interaction with light.",
+   "level": 2,
+   "ref": "Review Exercise II Q6",
+   "clue": "",
+   "id": "g7.science.u2.s2-2-1.33"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "An object has a mass of 50 g and a volume of 10 cm³. Its density is ___ g/cm³.",
+   "a": [
+    "5"
+   ],
+   "num": true,
+   "why": "d = m/V = 50 ÷ 10 = 5 g/cm³.",
+   "level": 3,
+   "clue": "",
+   "id": "g7.science.u2.s2-2-1.34"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "correction",
+   "text": "The book numbers this subsection \"2.1.4\" inside section 2.2 (2.1.4 is already Diffusion). It is numbered 2.2.1 here."
+  },
+  {
+   "kind": "note",
+   "text": "Density practice items (stone, wood) are added; the book gives only the formula."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
