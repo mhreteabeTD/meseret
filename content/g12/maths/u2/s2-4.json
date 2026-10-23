@@ -428,7 +428,116 @@
    "chapter_test": true,
    "count": 20,
    "minutes": 25,
-   "items": []
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "The product of two positive numbers is 100 such that the sum of two times the first number and eight times the second number is minimum. Which one of the following pairs of numbers are the first and the second numbers respectively?",
+     "opts": [
+      "A. 25 and 4",
+      "B. 20 and 5",
+      "C. 1 and 99",
+      "D. 50 and 2"
+     ],
+     "ans": "B. 20 and 5",
+     "why": "Let the numbers be x, y > 0 with xy = 100, so y = 100/x. S(x) = 2x + 8y = 2x + 800/x. S′(x) = 2 − 800/x² = 0 ⇒ x² = 400 ⇒ x = 20 (x > 0); y = 100/20 = 5. S″(x) = 1600/x³ > 0, so this is a minimum: S = 40 + 40 = 80. Check others: (25,4) gives 82, (50,2) gives 116; (1,99) has product 99, not 100.",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "EUEE 2013 Q19",
+     "id": "g12.maths.u2.s2-4.20"
+    },
+    {
+     "kind": "mcq",
+     "text": "The maximum profit that a company can make if the profit function is given by P(x) = 36 + 72x − 18x² is ____.",
+     "opts": [
+      "A. 124",
+      "B. 31",
+      "C. 2232",
+      "D. 108"
+     ],
+     "ans": "D. 108",
+     "why": "P′(x) = 72 − 36x = 0 ⇒ x = 2. P″(x) = −36 < 0, so x = 2 gives a maximum. P(2) = 36 + 144 − 72 = 108.",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "EUEE 2013 Q20",
+     "id": "g12.maths.u2.s2-4.21"
+    },
+    {
+     "kind": "mcq",
+     "text": "If the perimeter of a rectangle is 120 m, what are the length l and width w maximizing its area?",
+     "opts": [
+      "A. l = 30 m, w = 30 m",
+      "B. l = 50 m, w = 10 m",
+      "C. l = 40 m, w = 20 m",
+      "D. l = 35 m, w = 25 m"
+     ],
+     "ans": "A. l = 30 m, w = 30 m",
+     "why": "2l + 2w = 120 ⇒ w = 60 − l. A(l) = l(60 − l) = 60l − l². A′(l) = 60 − 2l = 0 ⇒ l = 30, so w = 30; A″ = −2 < 0 (maximum). Areas: 30×30 = 900 > 35×25 = 875 > 40×20 = 800 > 50×10 = 500.",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "ESSLCE 2014 Q27",
+     "id": "g12.maths.u2.s2-4.22"
+    },
+    {
+     "kind": "mcq",
+     "text": "Let f(x) = 1/√x and g(x) = 2 − (1/6)x³ be two functions. For what value of x do the graphs of f and g have tangent lines with the same slope?",
+     "opts": [
+      "A. 1",
+      "B. √3/2",
+      "C. 1/4",
+      "D. 4"
+     ],
+     "ans": "A. 1",
+     "why": "f′(x) = −(1/2)x^(−3/2); g′(x) = −(1/2)x². f′(x) = g′(x) ⇒ x^(−3/2) = x² ⇒ x^(7/2) = 1. Domain of f is x > 0, so x = 1. Check: f′(1) = −1/2 = g′(1).",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "ESSLCE 2015 Q46",
+     "id": "g12.maths.u2.s2-4.23"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which of the following describes the mechanical meaning of the derivative?",
+     "opts": [
+      "A. Area under curve",
+      "B. Gradient of graph of functions",
+      "C. Slope of tangent line",
+      "D. Instantaneous rate of change"
+     ],
+     "ans": "D. Instantaneous rate of change",
+     "why": "The mechanical (physical) meaning of f′(t) is the instantaneous rate of change, e.g. velocity = rate of change of position. B and C describe the geometric meaning (slope of the tangent line). A (area under a curve) is the meaning of a definite integral.",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "ESSLCE 2015 Q47",
+     "id": "g12.maths.u2.s2-4.24"
+    },
+    {
+     "kind": "mcq",
+     "text": "Let f and g be differentiable functions and h(x) = g(f(3x + 1)). If f′(1) = f(1) = 2 and g′(2) = 1, then what is the value of h′(0)?",
+     "opts": [
+      "A. 1",
+      "B. 2",
+      "C. 4",
+      "D. 6"
+     ],
+     "ans": "D. 6",
+     "why": "Chain rule: h′(x) = g′(f(3x + 1)) · f′(3x + 1) · 3. At x = 0: 3x + 1 = 1, so h′(0) = 3·g′(f(1))·f′(1). f(1) = 2 ⇒ g′(f(1)) = g′(2) = 1; f′(1) = 2. h′(0) = 3·1·2 = 6.",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "ESSLCE 2015 Q49",
+     "id": "g12.maths.u2.s2-4.25"
+    }
+   ]
   }
  ],
  "test": [
@@ -447,7 +556,7 @@
    "graded": true,
    "level": 1,
    "step": "test",
-   "id": "g12.maths.u2.s2-4.20"
+   "id": "g12.maths.u2.s2-4.26"
   },
   {
    "kind": "blank",
@@ -461,7 +570,7 @@
    "graded": true,
    "level": 1,
    "step": "test",
-   "id": "g12.maths.u2.s2-4.21"
+   "id": "g12.maths.u2.s2-4.27"
   },
   {
    "kind": "blank",
@@ -475,7 +584,7 @@
    "graded": true,
    "level": 2,
    "step": "test",
-   "id": "g12.maths.u2.s2-4.22"
+   "id": "g12.maths.u2.s2-4.28"
   },
   {
    "kind": "blank",
@@ -489,7 +598,7 @@
    "graded": true,
    "level": 2,
    "step": "test",
-   "id": "g12.maths.u2.s2-4.23"
+   "id": "g12.maths.u2.s2-4.29"
   },
   {
    "kind": "blank",
@@ -503,7 +612,7 @@
    "graded": true,
    "level": 3,
    "step": "test",
-   "id": "g12.maths.u2.s2-4.24"
+   "id": "g12.maths.u2.s2-4.30"
   }
  ],
  "notes": [

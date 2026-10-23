@@ -485,7 +485,116 @@
    "chapter_test": true,
    "count": 20,
    "minutes": 25,
-   "items": []
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "The general term of a sequence is given by aₙ = (1/2)¹⁻ⁿ. Then, which one of the following is true about this sequence?",
+     "opts": [
+      "A. 0 is one of its terms.",
+      "B. Its terms are non-positive.",
+      "C. Its terms are odd numbers.",
+      "D. Its terms are natural numbers."
+     ],
+     "ans": "D. Its terms are natural numbers.",
+     "why": "(1/2)¹⁻ⁿ = 2ⁿ⁻¹. Terms for n = 1, 2, 3, 4, 5: 1, 2, 4, 8, 16, … All terms are positive (so A and B are false), they include even numbers (so C is false), and every term is a natural number (D true).",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "EUEE 2013 Q3",
+     "id": "g12.maths.u1.s1-6.24"
+    },
+    {
+     "kind": "mcq",
+     "text": "If the 1st and 4th terms of a geometric progression are 3 and 81 respectively, what is the common ratio of this progression?",
+     "opts": [
+      "A. 1/3",
+      "B. 9",
+      "C. 1/9",
+      "D. 3"
+     ],
+     "ans": "D. 3",
+     "why": "a₄ = a₁ r³ ⇒ 81 = 3r³. r³ = 27 ⇒ r = 3. Check: 3, 9, 27, 81. ✓",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "EUEE 2013 Q24",
+     "id": "g12.maths.u1.s1-6.25"
+    },
+    {
+     "kind": "mcq",
+     "text": "Consider a sequence whose terms are a₁ = 6 and aₙ₊₁ = −(1/3)aₙ for n ∈ ℕ. Then, what is the sum of the first ten terms?",
+     "opts": [
+      "A. 9(1 − (−1/3)¹⁰)",
+      "B. (9/2)(1 − (−1/3)¹⁰)",
+      "C. 9(1 − (−1/3)¹¹)",
+      "D. (9/2)(1 − (−1/3)¹¹)"
+     ],
+     "ans": "B. (9/2)(1 − (−1/3)¹⁰)",
+     "why": "aₙ₊₁/aₙ = −1/3, so the sequence is geometric with a₁ = 6, r = −1/3. Sₙ = a₁(1 − rⁿ)/(1 − r). S₁₀ = 6(1 − (−1/3)¹⁰)/(1 + 1/3) = 6(1 − (−1/3)¹⁰)/(4/3) = (9/2)(1 − (−1/3)¹⁰).",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "EUEE 2013 Q32",
+     "id": "g12.maths.u1.s1-6.26"
+    },
+    {
+     "kind": "mcq",
+     "text": "The sum of the first 8 terms of a geometric sequence with first term 0.3 and common ratio 1/10 is equal to:",
+     "opts": [
+      "A. (1/3)·(10⁸ − 1)/10⁷",
+      "B. (3/10)·(10⁸ − 1)/10⁹",
+      "C. (3/10)·(10⁸ − 1)/10⁸",
+      "D. (1/3)·(10⁸ − 1)/10⁸"
+     ],
+     "ans": "D. (1/3)·(10⁸ − 1)/10⁸",
+     "why": "Sₙ = a(1 − rⁿ)/(1 − r) with a = 0.3, r = 1/10, n = 8. S₈ = 0.3(1 − 10⁻⁸)/(9/10) = (0.3/0.9)(1 − 10⁻⁸) = (1/3)(1 − 10⁻⁸). 1 − 10⁻⁸ = (10⁸ − 1)/10⁸, so S₈ = (1/3)·(10⁸ − 1)/10⁸. Check: S₈ = 0.33333333 = 0.3 + 0.03 + … + 0.000000003. ✓",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "ESSLCE 2014 Q21",
+     "id": "g12.maths.u1.s1-6.27"
+    },
+    {
+     "kind": "mcq",
+     "text": "What is the seventh term of an arithmetic sequence whose third term is −4 and common difference is 5?",
+     "opts": [
+      "A. 16",
+      "B. −16",
+      "C. 15",
+      "D. −15"
+     ],
+     "ans": "A. 16",
+     "why": "a₇ = a₃ + (7 − 3)d. a₇ = −4 + 4(5) = 16. Check: a₁ = −14; −14, −9, −4, 1, 6, 11, 16. ✓",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "ESSLCE 2014 Q22",
+     "id": "g12.maths.u1.s1-6.28"
+    },
+    {
+     "kind": "mcq",
+     "text": "What is the fifth term of the sequence {2ⁿ + 4n − 5}_{n=0}^∞?",
+     "opts": [
+      "A. 17",
+      "B. 27",
+      "C. 15",
+      "D. 47"
+     ],
+     "ans": "B. 27",
+     "why": "The index starts at n = 0, so the fifth term is n = 4. 2⁴ + 4(4) − 5 = 16 + 16 − 5 = 27. Common error: using n = 5 gives 32 + 20 − 5 = 47 (option D).",
+     "clue": "",
+     "graded": true,
+     "level": 2,
+     "step": "test",
+     "ref": "ESSLCE 2015 Q63",
+     "id": "g12.maths.u1.s1-6.29"
+    }
+   ]
   }
  ],
  "test": [
@@ -501,7 +610,7 @@
    "graded": true,
    "level": 1,
    "step": "test",
-   "id": "g12.maths.u1.s1-6.24"
+   "id": "g12.maths.u1.s1-6.30"
   },
   {
    "kind": "blank",
@@ -515,7 +624,7 @@
    "graded": true,
    "level": 1,
    "step": "test",
-   "id": "g12.maths.u1.s1-6.25"
+   "id": "g12.maths.u1.s1-6.31"
   },
   {
    "kind": "blank",
@@ -529,7 +638,7 @@
    "graded": true,
    "level": 2,
    "step": "test",
-   "id": "g12.maths.u1.s1-6.26"
+   "id": "g12.maths.u1.s1-6.32"
   },
   {
    "kind": "blank",
@@ -543,7 +652,7 @@
    "graded": true,
    "level": 2,
    "step": "test",
-   "id": "g12.maths.u1.s1-6.27"
+   "id": "g12.maths.u1.s1-6.33"
   },
   {
    "kind": "blank",
@@ -557,7 +666,7 @@
    "graded": true,
    "level": 3,
    "step": "test",
-   "id": "g12.maths.u1.s1-6.28"
+   "id": "g12.maths.u1.s1-6.34"
   }
  ],
  "notes": [
