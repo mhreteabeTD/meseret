@@ -13,10 +13,10 @@ G7: Maths U1–3, Citizenship U1–3, CTE U1–3, Science U2–3, Social U2–3 
 | Grade | Maths U1 | Maths U2 | Next subjects |
 |---|---|---|---|
 | 12 | **built** (`g12-maths-u1`) | todo | Physics, Chemistry, Biology U1–2 next; then Geography, History, Economics, IT, Agriculture. English: book missing |
-| 8 | **built** | **built** | English, Gen. Science |
+| 8 | **built** | **built** | built U1–2: Science U1, U2 · todo: Social, Citizenship, English, IT, CTE, Amharic |
 | 7 (session A) | **built** | **built** | built: maths U1, maths U2, maths U3, citizenship U1, citizenship U2, citizenship U3, cte U1, cte U2, cte U3, science U2, science U3, social U2, social U3 · todo: — |
 | 6 | todo | todo | English, Science (Amharic) |
-| 5 | **built** | todo | |
+| 5 | **built** | todo | built: — · todo: Maths U2, Science, English, Amharic |
 | 9 | U1 older version exists (rebuild queued) | todo | Physics, Biology, English, Geography, History, Economics, Citizenship, IT, HPE, PVA, Amharic queued. Chemistry: book missing |
 
 ## Pipeline (each stage done once)

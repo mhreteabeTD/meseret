@@ -1,0 +1,550 @@
+{
+ "id": "g8.science.u2.s2-3",
+ "book": {
+  "title": "General Science Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "science",
+  "unit": 2,
+  "unit_title": "Composition of Matter",
+  "pages": "31–33",
+  "section": "2.3"
+ },
+ "title": "Molecules",
+ "competency": "Define molecules and classify molecules of elements and compounds.",
+ "minutes": 12,
+ "keywords": [
+  {
+   "en": "Molecule",
+   "am": "ሞለኪውል",
+   "def": "The smallest particle of an element or a compound that can exist freely in nature.",
+   "machine": true
+  },
+  {
+   "en": "Monoatomic molecule",
+   "am": "ባለ አንድ አቶም ሞለኪውል",
+   "def": "A molecule with one atom, like He or Ne.",
+   "machine": true
+  },
+  {
+   "en": "Diatomic molecule",
+   "am": "ባለ ሁለት አቶም ሞለኪውል",
+   "def": "A molecule with two atoms of the element, like O₂ or H₂.",
+   "machine": true
+  },
+  {
+   "en": "Polyatomic molecule",
+   "am": "ባለ ብዙ አቶም ሞለኪውል",
+   "def": "A molecule of an element with three or more atoms, like O₃, P₄ or S₈.",
+   "machine": true
+  },
+  {
+   "en": "Molecule of a compound",
+   "am": "የውሁድ ሞለኪውል",
+   "def": "A molecule with atoms of two or more different elements combined chemically, like H₂O.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "sci.molecules-elements",
+   "name": "Molecules of elements",
+   "explain": {
+    "en": {
+     "text": "A molecule is the smallest particle of an element or compound that can exist freely in nature. Molecules of elements have one kind of atom: monoatomic (He, Ne), diatomic (O₂, H₂) or polyatomic with three or more atoms (O₃, P₄, S₈)."
+    },
+    "am": {
+     "text": "ሞለኪውል በተፈጥሮ ራሱን ችሎ ሊገኝ የሚችል የንጥረ ነገር ወይም የውሁድ ትንሹ ቅንጣት ነው። የንጥረ ነገር ሞለኪውሎች ባለ አንድ (He)፣ ባለ ሁለት (O₂) ወይም ባለ ብዙ (O₃) አቶም ናቸው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "What does O₂ mean?",
+     "ask": "Oxygen gas in the air is O₂. What does the small 2 tell you?",
+     "opts": [
+      "Two oxygen atoms are joined",
+      "There are two kinds of atom",
+      "It weighs 2 g",
+      "It is the second gas"
+     ],
+     "after": "Two oxygen atoms are joined together to make one molecule.",
+     "added": true,
+     "id": "g8.science.u2.s2-3.1"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Figure 2.2: atoms alone, in pairs, in groups",
+     "ask": "Tap each gas.",
+     "need": 3,
+     "items": [
+      [
+       "Neon (Ne)",
+       "Single atoms flying around alone: a monoatomic gas."
+      ],
+      [
+       "Hydrogen (H₂)",
+       "Atoms in joined pairs: a diatomic gas."
+      ],
+      [
+       "Ozone (O₃)",
+       "Three oxygen atoms joined: a polyatomic molecule."
+      ]
+     ],
+     "ref": "Figure 2.2",
+     "id": "g8.science.u2.s2-3.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Molecules of elements",
+     "paras": [
+      "A molecule of an element has only one type of atom.",
+      "Monoatomic molecules have one atom: He, Ne, Ar, Kr, Xe, Rn.",
+      "Diatomic molecules have two atoms: O₂, H₂, F₂, Cl₂, I₂.",
+      "Polyatomic molecules have three or more atoms: O₃, P₄, S₈."
+     ],
+     "ref": "p.32",
+     "id": "g8.science.u2.s2-3.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Molecule",
+       "The smallest particle of an element or a compound that can exist freely in nature."
+      ],
+      [
+       "Monoatomic molecule",
+       "A molecule with one atom, like He or Ne."
+      ],
+      [
+       "Diatomic molecule",
+       "A molecule with two atoms of the element, like O₂ or H₂."
+      ],
+      [
+       "Polyatomic molecule",
+       "A molecule of an element with three or more atoms, like O₃, P₄ or S₈."
+      ]
+     ],
+     "id": "g8.science.u2.s2-3.4"
+    },
+    {
+     "kind": "sort",
+     "step": "check",
+     "graded": true,
+     "text": "Classify each molecule.",
+     "bins": [
+      "Monoatomic",
+      "Diatomic",
+      "Polyatomic"
+     ],
+     "items": [
+      [
+       "Ar",
+       "Monoatomic",
+       "One atom."
+      ],
+      [
+       "N₂",
+       "Diatomic",
+       "Two atoms."
+      ],
+      [
+       "S₈",
+       "Polyatomic",
+       "Eight atoms."
+      ],
+      [
+       "O₃",
+       "Polyatomic",
+       "Three atoms."
+      ],
+      [
+       "He",
+       "Monoatomic",
+       "One atom."
+      ],
+      [
+       "Br₂",
+       "Diatomic",
+       "Two atoms."
+      ]
+     ],
+     "why": "Count the atoms: the small number, or 1 if there is none.",
+     "clue": "Look at the small number after the symbol.",
+     "level": 1,
+     "ref": "Exercise 2.3 Q2",
+     "id": "g8.science.u2.s2-3.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Which molecule is diatomic?",
+     "opts": [
+      "O₂",
+      "O₃",
+      "P₄",
+      "S₈"
+     ],
+     "ans": "O₂",
+     "why": "O₂ has two atoms. The others have three or more.",
+     "clue": "Di- means two.",
+     "level": 1,
+     "ref": "Review Q12",
+     "id": "g8.science.u2.s2-3.6"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "A molecule of P₄ has ___ atoms",
+     "a": [
+      "4"
+     ],
+     "why": "The small 4 means four phosphorus atoms.",
+     "clue": "Read the small number.",
+     "level": 1,
+     "id": "g8.science.u2.s2-3.7"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Ne is a monoatomic molecule.",
+     "a": true,
+     "why": "Neon exists as single atoms, so it is monoatomic.",
+     "clue": "How many atoms in Ne?",
+     "level": 1,
+     "id": "g8.science.u2.s2-3.8"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "Ozone (O₃) and oxygen gas (O₂) are both made of oxygen. What is the difference?",
+     "opts": [
+      "O₃ has three atoms per molecule, O₂ has two",
+      "O₃ is a compound",
+      "O₂ has no oxygen",
+      "There is no difference"
+     ],
+     "ans": "O₃ has three atoms per molecule, O₂ has two",
+     "why": "Both are molecules of the same element, oxygen. They differ only in how many atoms are joined: O₂ is diatomic, O₃ is polyatomic.",
+     "clue": "Count the atoms in each.",
+     "level": 3,
+     "added": true,
+     "id": "g8.science.u2.s2-3.9"
+    }
+   ]
+  },
+  {
+   "id": "sci.molecules-compounds",
+   "name": "Molecules of compounds",
+   "explain": {
+    "en": {
+     "text": "A molecule of a compound contains atoms of two or more different elements joined chemically, like water H₂O, ammonia NH₃ and carbon dioxide CO₂. A molecule of an element has only one kind of atom."
+    },
+    "am": {
+     "text": "የውሁድ ሞለኪውል ከሁለት ወይም ከዚያ በላይ የተለያዩ ንጥረ ነገሮች አቶሞች በኬሚካል ተጣምረው የተሠራ ነው፤ ውሃ H₂O፣ አሞኒያ NH₃።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Kinds of atom in water",
+     "ask": "Water is H₂O. How many different KINDS of atom are in it?",
+     "opts": [
+      "2: hydrogen and oxygen",
+      "3",
+      "1",
+      "0"
+     ],
+     "after": "Two kinds: hydrogen (H) and oxygen (O). That makes water a compound.",
+     "added": true,
+     "id": "g8.science.u2.s2-3.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Molecules of compounds",
+     "paras": [
+      "A molecule of a compound always contains two or more atoms of different elements combined chemically.",
+      "Examples: water (H₂O), ammonia (NH₃), carbon dioxide (CO₂)."
+     ],
+     "ref": "p.32",
+     "id": "g8.science.u2.s2-3.11"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Molecule of a compound",
+       "A molecule with atoms of two or more different elements combined chemically, like H₂O."
+      ]
+     ],
+     "id": "g8.science.u2.s2-3.12"
+    },
+    {
+     "kind": "sort",
+     "step": "check",
+     "graded": true,
+     "text": "Element or compound?",
+     "bins": [
+      "Molecule of an element",
+      "Molecule of a compound"
+     ],
+     "items": [
+      [
+       "Ne",
+       "Molecule of an element",
+       "Only neon."
+      ],
+      [
+       "H₂O",
+       "Molecule of a compound",
+       "Hydrogen and oxygen."
+      ],
+      [
+       "HCl",
+       "Molecule of a compound",
+       "Hydrogen and chlorine."
+      ],
+      [
+       "Br₂",
+       "Molecule of an element",
+       "Only bromine."
+      ],
+      [
+       "NH₃",
+       "Molecule of a compound",
+       "Nitrogen and hydrogen."
+      ],
+      [
+       "P₄",
+       "Molecule of an element",
+       "Only phosphorus."
+      ]
+     ],
+     "why": "Count the kinds of symbol: one kind = element, two or more kinds = compound.",
+     "clue": "How many different symbols are there?",
+     "level": 1,
+     "ref": "Exercise 2.3 Q4",
+     "id": "g8.science.u2.s2-3.13"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Which is a molecule of an element?",
+     "opts": [
+      "H₂",
+      "H₂O",
+      "NH₃",
+      "HCl"
+     ],
+     "ans": "H₂",
+     "why": "H₂ has only hydrogen atoms. The others each have two kinds of atom.",
+     "clue": "One kind of symbol only.",
+     "level": 1,
+     "ref": "Review Q14",
+     "id": "g8.science.u2.s2-3.14"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Which statement is FALSE?",
+     "opts": [
+      "Molecules of compounds have only one type of atom",
+      "Molecules of elements have only one type of atom",
+      "The nucleus is positively charged",
+      "Neutrons have no charge"
+     ],
+     "ans": "Molecules of compounds have only one type of atom",
+     "why": "Molecules of compounds have two or more different types of atom.",
+     "clue": "Which one describes an element, not a compound?",
+     "level": 2,
+     "ref": "Review Q13",
+     "id": "g8.science.u2.s2-3.15"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "Carbon dioxide (CO₂) is a molecule of a compound.",
+     "a": true,
+     "why": "It contains carbon and oxygen, two different elements.",
+     "clue": "Count the kinds of symbol.",
+     "level": 1,
+     "id": "g8.science.u2.s2-3.16"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "A molecule has 2 hydrogen atoms and 2 oxygen atoms (H₂O₂). Which is correct?",
+     "opts": [
+      "It is a molecule of a compound with 4 atoms",
+      "It is a molecule of an element",
+      "It is diatomic",
+      "It is water"
+     ],
+     "ans": "It is a molecule of a compound with 4 atoms",
+     "why": "It has two kinds of atom (H and O), so it is a compound. 2 + 2 = 4 atoms. It is not water, which is H₂O.",
+     "clue": "How many kinds of atom? How many atoms in total?",
+     "level": 3,
+     "added": true,
+     "id": "g8.science.u2.s2-3.17"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 2.3",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "What is a molecule?",
+     "opts": [
+      "The smallest particle of an element or compound that can exist freely",
+      "A part of the nucleus",
+      "A charged particle",
+      "A kind of mixture"
+     ],
+     "ans": "The smallest particle of an element or compound that can exist freely",
+     "why": "Summary, p.34.",
+     "clue": "It can exist on its own.",
+     "level": 1,
+     "ref": "Q1",
+     "id": "g8.science.u2.s2-3.18"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "How do you draw a particle model of ozone (O₃)?",
+     "opts": [
+      "Three same-colour circles joined together",
+      "Two circles of different colours",
+      "One big circle",
+      "Three circles of three colours"
+     ],
+     "ans": "Three same-colour circles joined together",
+     "why": "O₃ has three atoms of one element, so the circles are all the same.",
+     "clue": "All three atoms are oxygen.",
+     "level": 2,
+     "ref": "Q3",
+     "id": "g8.science.u2.s2-3.19"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "He, Ne and Ar are",
+   "opts": [
+    "monoatomic",
+    "diatomic",
+    "polyatomic",
+    "compounds"
+   ],
+   "ans": "monoatomic",
+   "why": "p.32.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.science.u2.s2-3.20"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is a molecule of a compound?",
+   "opts": [
+    "NH₃",
+    "O₂",
+    "Ne",
+    "S₈"
+   ],
+   "ans": "NH₃",
+   "why": "Two kinds of atom.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.science.u2.s2-3.21"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "S₈ has ___ atoms per molecule",
+   "a": [
+    "8"
+   ],
+   "why": "The small 8.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.science.u2.s2-3.22"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Cl₂ is",
+   "opts": [
+    "a diatomic molecule of an element",
+    "a compound",
+    "monoatomic",
+    "polyatomic"
+   ],
+   "ans": "a diatomic molecule of an element",
+   "why": "Two chlorine atoms.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.science.u2.s2-3.23"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which has the MOST atoms in one molecule?",
+   "opts": [
+    "S₈",
+    "O₃",
+    "NH₃",
+    "CO₂"
+   ],
+   "ans": "S₈",
+   "why": "8 atoms; NH₃ has 4, O₃ and CO₂ have 3.",
+   "clue": "",
+   "level": 3,
+   "id": "g8.science.u2.s2-3.24"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "correction",
+   "text": "p.32 defines polyatomic molecules as \"more than three atoms\", but its own example O₃ has three. The lesson says \"three or more atoms\"."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
