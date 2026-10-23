@@ -1,0 +1,591 @@
+{
+ "id": "g12.it.u1.s1-1-3",
+ "book": {
+  "title": "Information Technology Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "it",
+  "unit": 1,
+  "unit_title": "Information systems and their applications",
+  "pages": "10–12",
+  "section": "1.1.3"
+ },
+ "title": "Environmental issues caused by information systems",
+ "competency": "Explain the environmental harm of devices and e-waste, and how e-waste management, green technology and paperless systems reduce it.",
+ "minutes": 15,
+ "keywords": [
+  {
+   "en": "E-waste",
+   "am": "ኤሌክትሮኒክ ቆሻሻ",
+   "def": "Discarded electronic devices; they contain toxic materials such as cadmium, lead and mercury.",
+   "machine": true
+  },
+  {
+   "en": "E-waste management",
+   "am": "የኤሌክትሮኒክ ቆሻሻ አያያዝ",
+   "def": "A systematic procedure for gathering e-waste, recovering and recycling material safely, and disposing of it with minimal harm.",
+   "machine": true
+  },
+  {
+   "en": "Green technology",
+   "am": "አረንጓዴ ቴክኖሎጂ",
+   "def": "Environmentally friendly (clean) technology that monitors or reduces the negative impact of technology on the environment.",
+   "machine": true
+  },
+  {
+   "en": "Paperless system",
+   "am": "ወረቀት አልባ ሥርዓት",
+   "def": "Using email, online portals and applications instead of paper records.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "it.e-waste",
+   "name": "Hazardous devices and e-waste management",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Technologies use a lot of resources and power, and electronic devices contain non-biodegradable materials and toxic heavy metals such as cadmium, lead and mercury. These can leak into the ground and contaminate our water, plants and animals. E-waste management is a systematic procedure for gathering e-waste, recovering and recycling materials safely, and disposing of the rest with minimal harm to the environment."
+    },
+    "am": {
+     "text": "ኤሌክትሮኒክ መሣሪያዎች ካድሚየም፣ እርሳስ እና ሜርኩሪ ይይዛሉ። በአግባቡ መሰብሰብ፣ መልሶ መጠቀምና ማስወገድ ያስፈልጋል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A buried battery",
+     "ask": "An old phone and its battery are thrown into a farm field. Over the years, what is the main danger?",
+     "opts": [
+      "Toxic metals leak into soil and water",
+      "It turns into fertiliser",
+      "Nothing, it is only plastic",
+      "It charges the soil"
+     ],
+     "after": "Devices contain cadmium, lead and mercury that can leak into the ground and reach the water we drink.",
+     "ref": "p.10–11",
+     "id": "g12.it.u1.s1-1-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Technology and the environment",
+     "paras": [
+      "Technologies consume lots of resources and power.",
+      "People excited by new technology may overlook its harm.",
+      "Use technology smartly and responsibly.",
+      "Devices contain non-biodegradable materials and heavy metals.",
+      "Cadmium, lead and mercury can leak into the ground.",
+      "They contaminate the water we drink, plants we eat and animals nearby."
+     ],
+     "ref": "p.10–11",
+     "id": "g12.it.u1.s1-1-3.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "E-waste management",
+     "paras": [
+      "It is our responsibility to protect the environment when we use and dispose of devices.",
+      "E-waste management is a systematic procedure.",
+      "Figure 1.11: phones, computers, monitors, printers and audio or video devices are all e-waste.",
+      "The crossed-out bin means: never put it in normal rubbish."
+     ],
+     "ref": "p.11, Figure 1.11",
+     "id": "g12.it.u1.s1-1-3.3"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "E-waste management",
+     "steps": [
+      "Gather the e-waste.",
+      "Recover and recycle materials in a safe manner.",
+      "Dispose of the rest in a way that minimises harm to the environment."
+     ],
+     "ref": "p.11",
+     "id": "g12.it.u1.s1-1-3.4"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "E-waste",
+       "Discarded electronic devices; they contain toxic materials such as cadmium, lead and mercury."
+      ],
+      [
+       "E-waste management",
+       "A systematic procedure for gathering e-waste, recovering and recycling material safely, and disposing of it with minimal harm."
+      ]
+     ],
+     "id": "g12.it.u1.s1-1-3.5"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which toxic metals does the book name in electronic devices?",
+     "opts": [
+      "Cadmium, lead and mercury",
+      "Gold, silver and copper",
+      "Iron, zinc and tin",
+      "Sodium, calcium and potassium"
+     ],
+     "ans": "Cadmium, lead and mercury",
+     "why": "p.11.",
+     "clue": "They are heavy and toxic.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.11",
+     "id": "g12.it.u1.s1-1-3.6"
+    },
+    {
+     "kind": "order",
+     "title": "Put the e-waste management steps in order",
+     "items": [
+      "Gather the e-waste",
+      "Recover and recycle materials safely",
+      "Dispose of the rest with minimal harm"
+     ],
+     "why": "p.11: gathering, recovering and recycling, then disposing.",
+     "clue": "You must collect it first.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.11",
+     "id": "g12.it.u1.s1-1-3.7"
+    },
+    {
+     "kind": "tf",
+     "text": "Most electronic devices are biodegradable, so they are safe in normal rubbish.",
+     "a": false,
+     "why": "p.11: most devices contain non-biodegradable and toxic materials.",
+     "clue": "Does plastic and metal rot away?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.11",
+     "id": "g12.it.u1.s1-1-3.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "The crossed-out wheelie bin in Figure 1.11 means",
+     "opts": [
+      "Do not put this in normal rubbish",
+      "Recycle it in any bin",
+      "Burn it",
+      "Bury it in the garden"
+     ],
+     "ans": "Do not put this in normal rubbish",
+     "why": "The symbol marks e-waste that needs special collection.",
+     "clue": "The bin is crossed out.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Figure 1.11",
+     "id": "g12.it.u1.s1-1-3.9"
+    },
+    {
+     "kind": "mcq",
+     "text": "Lead from a dumped computer reaches people mainly through",
+     "opts": [
+      "the water we drink and the plants we eat",
+      "the screen light",
+      "Wi-Fi signals",
+      "the keyboard sound"
+     ],
+     "ans": "the water we drink and the plants we eat",
+     "why": "p.11: toxic metals leak into the ground and contaminate water, plants and animals.",
+     "clue": "Where does it leak to first?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.11",
+     "id": "g12.it.u1.s1-1-3.10"
+    },
+    {
+     "kind": "mcq",
+     "text": "Your school replaces 30 old computers. What is the most responsible plan?",
+     "opts": [
+      "Reuse the working parts and send the rest to e-waste collection for safe recycling",
+      "Burn them behind the school",
+      "Throw them in the river",
+      "Bury them in the school compound"
+     ],
+     "ans": "Reuse the working parts and send the rest to e-waste collection for safe recycling",
+     "why": "E-waste management means gathering, safe recovery and recycling, then safe disposal (p.11).",
+     "clue": "Which option follows all three steps?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.11",
+     "added": true,
+     "id": "g12.it.u1.s1-1-3.11"
+    }
+   ]
+  },
+  {
+   "id": "it.green-tech",
+   "name": "Green technology and paperless systems",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "The harm technology does to the environment led to green or clean technologies that monitor or reduce that harm, moving towards a sustainable, low-carbon economy. Examples are solar panels, electric vehicles, smart meters and wind turbines. Paperless systems such as email and online portals reduce cutting trees for paper, and online collaboration lets experts work together without travelling, cutting carbon emissions."
+    },
+    "am": {
+     "text": "አረንጓዴ ቴክኖሎጂ የቴክኖሎጂን ጉዳት ይቀንሳል፡ ለምሳሌ የፀሐይ ኃይል፣ የነፋስ ተርባይን። ወረቀት አልባ ሥርዓት የዛፍ መቁረጥን ይቀንሳል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "title": "Helps or harms the environment?",
+     "bins": [
+      "Helps",
+      "Harms"
+     ],
+     "items": [
+      [
+       "Solar panel on a school roof",
+       "Helps",
+       "clean energy"
+      ],
+      [
+       "A paper file for every record",
+       "Harms",
+       "trees cut"
+      ],
+      [
+       "Online meeting instead of a long trip",
+       "Helps",
+       "less travel"
+      ],
+      [
+       "Old phones thrown in a river",
+       "Harms",
+       "toxic metals"
+      ],
+      [
+       "Wind turbines at Adama",
+       "Helps",
+       "clean energy"
+      ]
+     ],
+     "added": true,
+     "after": "Some technologies harm the environment, and others are designed to protect it.",
+     "graded": false,
+     "id": "g12.it.u1.s1-1-3.12"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Green (clean) technology",
+     "paras": [
+      "Environmental harm led to new environmentally friendly technologies.",
+      "Aim: a sustainable, low-carbon economy.",
+      "Green technology monitors or reduces the negative impact of technology on the environment.",
+      "Book examples: solar panels, electric vehicles, smart meters, wind turbines.",
+      "The book also lists natural gas, but it is a fossil fuel, not a clean technology."
+     ],
+     "ref": "p.11, Figure 1.12",
+     "id": "g12.it.u1.s1-1-3.13"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Paperless systems and virtual laboratories",
+     "paras": [
+      "Email, online portals and apps reduce the cutting of trees for paper.",
+      "Figure 1.13: paper-based systems increase deforestation; paperless systems reduce it.",
+      "Information systems make a worldwide virtual laboratory.",
+      "Experts share research and ideas without meeting in person.",
+      "This cuts the carbon emissions of travelling."
+     ],
+     "ref": "p.11–12, Figure 1.13",
+     "id": "g12.it.u1.s1-1-3.14"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Green technology",
+       "Environmentally friendly (clean) technology that monitors or reduces the negative impact of technology on the environment."
+      ],
+      [
+       "Paperless system",
+       "Using email, online portals and applications instead of paper records."
+      ]
+     ],
+     "id": "g12.it.u1.s1-1-3.15"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is a green technology?",
+     "opts": [
+      "Wind turbine",
+      "Diesel generator",
+      "Coal stove",
+      "Paper filing cabinet"
+     ],
+     "ans": "Wind turbine",
+     "why": "Wind turbines make electricity without burning fuel (p.11).",
+     "clue": "Which one burns nothing?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.11",
+     "id": "g12.it.u1.s1-1-3.16"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Green technology or not?",
+     "bins": [
+      "Green technology",
+      "Not green"
+     ],
+     "items": [
+      [
+       "Solar panel",
+       "Green technology",
+       "book example"
+      ],
+      [
+       "Electric vehicle",
+       "Green technology",
+       "book example"
+      ],
+      [
+       "Smart meter",
+       "Green technology",
+       "monitors energy use"
+      ],
+      [
+       "Wind turbine",
+       "Green technology",
+       "book example"
+      ],
+      [
+       "Coal power station",
+       "Not green",
+       "burns coal"
+      ],
+      [
+       "Natural gas",
+       "Not green",
+       "a fossil fuel; see note"
+      ]
+     ],
+     "why": "Green technology monitors or reduces harm. Coal and natural gas are fossil fuels that release CO₂.",
+     "clue": "Does it burn a fossil fuel?",
+     "ref": "p.11",
+     "graded": true,
+     "level": 2,
+     "id": "g12.it.u1.s1-1-3.17"
+    },
+    {
+     "kind": "mcq",
+     "text": "According to Figure 1.13, a paperless system",
+     "opts": [
+      "reduces deforestation",
+      "increases deforestation",
+      "needs more paper",
+      "has no effect on forests"
+     ],
+     "ans": "reduces deforestation",
+     "why": "Fewer trees are cut for paper.",
+     "clue": "Follow the green arrow.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Figure 1.13",
+     "id": "g12.it.u1.s1-1-3.18"
+    },
+    {
+     "kind": "mcq",
+     "text": "How do information systems cut carbon emissions from travel?",
+     "opts": [
+      "Experts meet and share research online instead of travelling",
+      "Computers absorb carbon",
+      "They make cars faster",
+      "They stop all travel"
+     ],
+     "ans": "Experts meet and share research online instead of travelling",
+     "why": "p.12: the worldwide virtual laboratory.",
+     "clue": "What replaces the trip?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.12",
+     "id": "g12.it.u1.s1-1-3.19"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which Ethiopian project is a large source of clean, renewable electricity?",
+     "opts": [
+      "The Grand Ethiopian Renaissance Dam (hydropower)",
+      "A coal mine",
+      "A diesel power plant",
+      "A paper factory"
+     ],
+     "ans": "The Grand Ethiopian Renaissance Dam (hydropower)",
+     "why": "Hydropower uses flowing water, not fossil fuel.",
+     "clue": "Which one uses water?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Activity 1.3 Q1",
+     "added": true,
+     "id": "g12.it.u1.s1-1-3.20"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which action makes a student an \"environment ambassador\"?",
+     "opts": [
+      "Taking old phones to e-waste collection and running an online awareness campaign",
+      "Printing every message",
+      "Leaving devices on all night",
+      "Throwing batteries in the bin"
+     ],
+     "ans": "Taking old phones to e-waste collection and running an online awareness campaign",
+     "why": "Protect the environment while using and disposing of devices (p.11), and use technology to spread awareness.",
+     "clue": "Which one uses technology to help?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 1.3 Q2",
+     "added": true,
+     "id": "g12.it.u1.s1-1-3.21"
+    },
+    {
+     "kind": "mcq",
+     "text": "A school office prints 500 pages of forms every week and stores them in cabinets. Which change helps the environment most?",
+     "opts": [
+      "Move the forms to an online portal and email",
+      "Print on both sides only",
+      "Buy a bigger cabinet",
+      "Burn old forms each month"
+     ],
+     "ans": "Move the forms to an online portal and email",
+     "why": "A paperless system cuts paper use, and so tree cutting, almost completely (p.11–12).",
+     "clue": "Which option removes the paper?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.11–12",
+     "added": true,
+     "id": "g12.it.u1.s1-1-3.22"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Which material in devices can leak and contaminate drinking water?",
+   "opts": [
+    "Mercury",
+    "Glass",
+    "Paper",
+    "Rubber"
+   ],
+   "ans": "Mercury",
+   "why": "p.11.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.it.u1.s1-1-3.23"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which is one of the book's examples of green technology?",
+   "opts": [
+    "Solar panel",
+    "Paper file",
+    "Coal stove",
+    "Printer"
+   ],
+   "ans": "Solar panel",
+   "why": "p.11.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.it.u1.s1-1-3.24"
+  },
+  {
+   "kind": "mcq",
+   "text": "E-waste management includes",
+   "opts": [
+    "gathering, safe recycling and safe disposal",
+    "burning devices in the open",
+    "burying devices",
+    "selling broken phones as new"
+   ],
+   "ans": "gathering, safe recycling and safe disposal",
+   "why": "p.11.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.it.u1.s1-1-3.25"
+  },
+  {
+   "kind": "mcq",
+   "text": "Paperless communication helps the environment by",
+   "opts": [
+    "reducing the cutting of trees",
+    "using more paper",
+    "increasing travel",
+    "producing e-waste"
+   ],
+   "ans": "reducing the cutting of trees",
+   "why": "p.11.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.it.u1.s1-1-3.26"
+  },
+  {
+   "kind": "mcq",
+   "text": "Why is natural gas not truly a green technology?",
+   "opts": [
+    "It is a fossil fuel that releases CO₂",
+    "It is a type of e-waste",
+    "It is a collaboration tool",
+    "It is never used"
+   ],
+   "ans": "It is a fossil fuel that releases CO₂",
+   "why": "See the review note.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.it.u1.s1-1-3.27"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.11 lists \"natural gas\" as a green technology. Natural gas is a fossil fuel that releases CO₂ when burned; at most it is a lower-carbon transition fuel. The lesson teaches it as not green."
+  },
+  {
+   "kind": "note",
+   "text": "The GERD hydropower and environment-ambassador items and the Adama wind farm example are added from the Activity 1.3 model answers."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

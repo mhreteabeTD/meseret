@@ -1,0 +1,801 @@
+{
+ "id": "g12.it.u1.s1-2",
+ "book": {
+  "title": "Information Technology Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "it",
+  "unit": 1,
+  "unit_title": "Information systems and their applications",
+  "pages": "14–17",
+  "section": "1.2"
+ },
+ "title": "Intellectual property",
+ "competency": "Recognize the basics of intellectual property rights and distinguish trade secrets, patents, copyrights and trademarks.",
+ "minutes": 25,
+ "keywords": [
+  {
+   "en": "Intellectual property right",
+   "am": "የአእምሮ ንብረት መብት",
+   "def": "A range of intangible rights of ownership of an asset such as a software program or designed information system.",
+   "machine": true
+  },
+  {
+   "en": "Trade secret",
+   "am": "የንግድ ሚስጥር",
+   "def": "Confidential business information that gives a competitive advantage; it may be sold or licensed.",
+   "machine": true
+  },
+  {
+   "en": "Patent",
+   "am": "የፈጠራ ባለቤትነት መብት (ፓተንት)",
+   "def": "An exclusive, limited-duration right granted for an invention that is new, non-obvious and useful; its technical details are published.",
+   "machine": true
+  },
+  {
+   "en": "Copyright",
+   "am": "የቅጂ መብት",
+   "def": "Protection of original works of authorship such as literary works, music, art and software; it is automatic.",
+   "machine": true
+  },
+  {
+   "en": "Trademark",
+   "am": "የንግድ ምልክት",
+   "def": "A sign, word or symbol that distinguishes the goods or services of one enterprise from those of others.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "it.ip-rights",
+   "name": "Intellectual property rights and trade secrets",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Intellectual property rights are intangible rights of ownership of an asset such as a software program or a designed information system. Ethiopia's Proclamation No. 320 of 2003 defines intellectual property as a legal right over a creative work of the human intellect. Four types matter for software: trade secrets, patents, copyrights and trademarks. A trade secret is confidential information that may be sold or licensed, such as customer lists, source code or a drink recipe."
+    },
+    "am": {
+     "text": "የአእምሮ ንብረት መብት በሶፍትዌርና በፈጠራ ሥራ ላይ ያለ የባለቤትነት መብት ነው። አራቱ ዓይነቶች፡ የንግድ ሚስጥር፣ ፓተንት፣ የቅጂ መብት፣ የንግድ ምልክት።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A secret recipe",
+     "ask": "Coca-Cola has never published its exact recipe. How is the recipe protected?",
+     "opts": [
+      "It is kept confidential as a trade secret",
+      "It is patented forever",
+      "It is a trademark",
+      "It is not protected at all"
+     ],
+     "after": "Confidential business information such as a recipe is protected as a trade secret (p.15).",
+     "ref": "p.15",
+     "id": "g12.it.u1.s1-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Intellectual property rights",
+     "paras": [
+      "Intellectual property rights are intangible rights of ownership.",
+      "They cover assets such as a software program or a designed information system.",
+      "Different methods protect each type.",
+      "Proclamation No. 320 of 2003 (Ethiopia): \"a legal right over a creative work of the human intellect\".",
+      "It includes patent, trademark, registration certificate and copyright.",
+      "Four types matter for software: trade secrets, patents, copyrights and trademarks (WIPO)."
+     ],
+     "ref": "p.14, Figure 1.15",
+     "id": "g12.it.u1.s1-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Trade secrets",
+     "paras": [
+      "Trade secrets are rights on confidential information.",
+      "They may be sold or licensed.",
+      "Getting, using or revealing them against honest commercial practice is unfair.",
+      "It violates trade secret protection.",
+      "Examples: customer lists, source code, software processes, recipes for drinks such as Pepsi, Coca-Cola and Sprite."
+     ],
+     "ref": "p.14–15",
+     "id": "g12.it.u1.s1-2.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Intellectual property right",
+       "A range of intangible rights of ownership of an asset such as a software program or designed information system."
+      ],
+      [
+       "Trade secret",
+       "Confidential business information that gives a competitive advantage; it may be sold or licensed."
+      ]
+     ],
+     "id": "g12.it.u1.s1-2.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is NOT one of the four types of intellectual property in the book?",
+     "opts": [
+      "Digital identity",
+      "Patent",
+      "Copyright",
+      "Trademark"
+     ],
+     "ans": "Digital identity",
+     "why": "The four types are trade secrets, patents, copyrights and trademarks (p.14).",
+     "clue": "Look at the words on the bulb in Figure 1.15.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.14",
+     "id": "g12.it.u1.s1-2.5"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is an example of a trade secret?",
+     "opts": [
+      "A company's customer list",
+      "The Ride logo",
+      "A published novel",
+      "The patented telephone"
+     ],
+     "ans": "A company's customer list",
+     "why": "p.15 lists customer lists, source code and recipes.",
+     "clue": "Which one is kept confidential?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.15",
+     "id": "g12.it.u1.s1-2.6"
+    },
+    {
+     "kind": "tf",
+     "text": "Ethiopian law defines intellectual property as a legal right over a creative work of the human intellect.",
+     "a": true,
+     "why": "Proclamation No. 320 of 2003, quoted on p.14.",
+     "clue": "Read the proclamation quote.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.14",
+     "id": "g12.it.u1.s1-2.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "Getting a competitor's secret source code by bribing its employee is",
+     "opts": [
+      "an unfair practice that violates trade secret protection",
+      "legal if you rename the variables",
+      "allowed for all software",
+      "a kind of copyright"
+     ],
+     "ans": "an unfair practice that violates trade secret protection",
+     "why": "WIPO (p.14): acquisition contrary to honest commercial practices is unfair.",
+     "clue": "Was it honest?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.14",
+     "id": "g12.it.u1.s1-2.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "Proclamation No. 320 of 2003 established the",
+     "opts": [
+      "Ethiopian Intellectual Property Office",
+      "Information Network Security Agency",
+      "Ministry of Health",
+      "National ID program"
+     ],
+     "ans": "Ethiopian Intellectual Property Office",
+     "why": "p.14: the \"Ethiopian Intellectual Property Office Establishment Proclamation\". It is now called the Ethiopian Intellectual Property Authority (EIPA).",
+     "clue": "Read its full title.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.14",
+     "id": "g12.it.u1.s1-2.9"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why might a company keep a software process as a trade secret instead of patenting it?",
+     "opts": [
+      "A patent requires publishing the technical details, but a secret stays hidden",
+      "Trade secrets are registered by INSA",
+      "Patents last forever",
+      "Trade secrets must be published"
+     ],
+     "ans": "A patent requires publishing the technical details, but a secret stays hidden",
+     "why": "p.15: in exchange for a patent, the owner makes technical information public. A trade secret stays confidential.",
+     "clue": "What does the patent owner have to give?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.14–15",
+     "added": true,
+     "id": "g12.it.u1.s1-2.10"
+    }
+   ]
+  },
+  {
+   "id": "it.patent",
+   "name": "Patents and the Ethiopian Intellectual Property Authority",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "A patent is an exclusive right granted for an invention: the owner decides how, or whether, others may use it, and in exchange publishes its technical details. Others may not make, use or sell it. Examples include the light bulb, the telephone, Bluetooth, Google's PageRank algorithm and Amazon's 1-Click ordering. Not all software can be patented: in Ethiopia the Ethiopian Intellectual Property Authority (EIPA) requires an invention to be new, to involve an inventive step and to be capable of industrial application."
+    },
+    "am": {
+     "text": "ፓተንት ለፈጠራ የሚሰጥ ልዩ መብት ነው። በኢትዮጵያ የአእምሮ ንብረት ባለሥልጣን ፈጠራው አዲስ፣ የፈጠራ ደረጃ ያለው እና ለኢንዱስትሪ የሚውል መሆን አለበት ይላል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "The price of a patent",
+     "ask": "An inventor gets a patent so nobody can copy her new machine. What must she give in return?",
+     "opts": [
+      "Publish the technical details of the invention",
+      "Keep everything secret",
+      "Give the machine to the government",
+      "Nothing at all"
+     ],
+     "after": "WIPO (p.15): in exchange for the right, the owner makes the technical information public in the patent document.",
+     "ref": "p.15",
+     "id": "g12.it.u1.s1-2.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Patents",
+     "paras": [
+      "A patent is an exclusive right granted for an invention.",
+      "The owner decides how, or whether, others may use it.",
+      "In return, the technical details are published.",
+      "Others are barred by law from making, using or selling it.",
+      "Examples: the light bulb, the telephone, Bluetooth, Google's PageRank algorithm, Amazon's 1-Click ordering.",
+      "Not all software can be patented; each country sets the standards."
+     ],
+     "ref": "p.15",
+     "id": "g12.it.u1.s1-2.12"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Patents in Ethiopia",
+     "paras": [
+      "The Ethiopian Intellectual Property Authority (EIPA) handles all IP applications.",
+      "It began as the Ethiopian Intellectual Property Office.",
+      "Applications can be made online through its portal: eipo.gov.et.",
+      "Figure 1.16: an invention must be new (novel).",
+      "It must involve an inventive step.",
+      "It must be capable of industrial application."
+     ],
+     "ref": "p.15–16, Figure 1.16",
+     "id": "g12.it.u1.s1-2.13"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Applying for a patent (outline)",
+     "steps": [
+      "Prepare a description, claims and drawings.",
+      "File the form with EIPA, online or in person, and pay the fee.",
+      "EIPA checks the form (formal examination).",
+      "EIPA checks novelty, inventive step and industrial application.",
+      "If accepted, the patent is granted and published in the IP Gazette."
+     ],
+     "ref": "Activity 1.5 Q2",
+     "added": true,
+     "id": "g12.it.u1.s1-2.14"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Patent",
+       "An exclusive, limited-duration right granted for an invention that is new, non-obvious and useful; its technical details are published."
+      ]
+     ],
+     "id": "g12.it.u1.s1-2.15"
+    },
+    {
+     "kind": "mcq",
+     "text": "A patent is an exclusive right granted for",
+     "opts": [
+      "an invention",
+      "a song",
+      "a company logo",
+      "a customer list"
+     ],
+     "ans": "an invention",
+     "why": "WIPO definition, p.15.",
+     "clue": "Patents are for inventors.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.15",
+     "id": "g12.it.u1.s1-2.16"
+    },
+    {
+     "kind": "pick",
+     "text": "Which conditions does EIPA list for a patentable invention?",
+     "pool": [
+      "New (novel)",
+      "Involves an inventive step",
+      "Capable of industrial application",
+      "Popular on social media",
+      "Written in Amharic"
+     ],
+     "a": [
+      "New (novel)",
+      "Involves an inventive step",
+      "Capable of industrial application"
+     ],
+     "why": "Figure 1.16: new, inventive step, industrial application.",
+     "clue": "Think new, clever, useful.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Figure 1.16",
+     "id": "g12.it.u1.s1-2.17"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which body manages patent applications in Ethiopia?",
+     "opts": [
+      "Ethiopian Intellectual Property Authority (EIPA)",
+      "Information Network Security Agency (INSA)",
+      "Ethiopian Investment Commission",
+      "Ministry of Education"
+     ],
+     "ans": "Ethiopian Intellectual Property Authority (EIPA)",
+     "why": "p.15–16.",
+     "clue": "Its website is eipo.gov.et.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.15",
+     "id": "g12.it.u1.s1-2.18"
+    },
+    {
+     "kind": "tf",
+     "text": "Every software product can get a patent.",
+     "a": false,
+     "why": "p.15: \"Not all software products can have a patent.\" It must meet the standards.",
+     "clue": "Re-read the last lines of the patent section.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.15",
+     "id": "g12.it.u1.s1-2.19"
+    },
+    {
+     "kind": "order",
+     "title": "Order the patent application steps",
+     "items": [
+      "Prepare description, claims and drawings",
+      "File with EIPA and pay the fee",
+      "Formal examination",
+      "Examination of novelty and inventive step",
+      "Grant and publication"
+     ],
+     "why": "Prepare, file, formal check, substantive check, grant.",
+     "clue": "The patent is published last.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 1.5 Q2",
+     "added": true,
+     "id": "g12.it.u1.s1-2.20"
+    },
+    {
+     "kind": "mcq",
+     "text": "Koket, a Grade 12 student, wrote software to automate the health system. When can she get a patent?",
+     "opts": [
+      "Only if it contains a new, inventive, industrially applicable technical solution",
+      "Always, because it is software",
+      "Never, because she is a student",
+      "Only if it is popular"
+     ],
+     "ans": "Only if it contains a new, inventive, industrially applicable technical solution",
+     "why": "Not all software can be patented (p.15); EIPA requires novelty, an inventive step and industrial application (Figure 1.16).",
+     "clue": "Check the three conditions.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Activity 1.5 Q2",
+     "added": true,
+     "id": "g12.it.u1.s1-2.21"
+    }
+   ]
+  },
+  {
+   "id": "it.copyright-trademark",
+   "name": "Copyrights and trademarks",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Copyright protects original works of authorship, such as literary works, music, art, computer software, architecture and graphical user interfaces. It is automatic once you create the work, but you must register it to file a lawsuit. A trademark is a sign that distinguishes the goods or services of one enterprise from others, such as the Ride, Microsoft and Meta logos. Patents and copyrights expire, but trademark rights come from use and can last indefinitely."
+    },
+    "am": {
+     "text": "የቅጂ መብት የመጀመሪያ ሥራዎችን ይጠብቃል፤ ሥራው ሲፈጠር ወዲያው ይጀምራል። የንግድ ምልክት የአንዱን ድርጅት ዕቃ ከሌላው ይለያል፤ ላልተወሰነ ጊዜ ሊቆይ ይችላል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "title": "Which protection fits?",
+     "bins": [
+      "Patent",
+      "Copyright",
+      "Trademark",
+      "Trade secret"
+     ],
+     "items": [
+      [
+       "A new kind of solar water pump",
+       "Patent",
+       "invention"
+      ],
+      [
+       "A song by an Ethiopian singer",
+       "Copyright",
+       "creative work"
+      ],
+      [
+       "The Ride logo",
+       "Trademark",
+       "brand sign"
+      ],
+      [
+       "A restaurant's secret berbere mix",
+       "Trade secret",
+       "kept confidential"
+      ]
+     ],
+     "added": true,
+     "after": "Each type of intellectual property protects a different kind of creation.",
+     "graded": false,
+     "id": "g12.it.u1.s1-2.22"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Copyrights",
+     "paras": [
+      "Copyrights and patents are not the same.",
+      "Copyright protects original works of authorship: literary works, music, art and more.",
+      "It also protects computer software and architecture.",
+      "Graphical User Interfaces (GUIs) can also be registered for copyright.",
+      "Protection is automatic: once you create something, it is yours.",
+      "To sue over infringement, you need to register the copyright."
+     ],
+     "ref": "p.16",
+     "id": "g12.it.u1.s1-2.23"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Trademarks",
+     "paras": [
+      "WIPO: a sign capable of distinguishing the goods or services of one enterprise from others.",
+      "Examples: the Ride, Microsoft and Meta logos (Figure 1.17).",
+      "Ride is Ethiopian; Microsoft and Meta are foreign companies.",
+      "Patents and copyrights can expire.",
+      "Trademark rights come from use and can be held indefinitely.",
+      "The book says registration is not required but gives extra advantages."
+     ],
+     "ref": "p.16–17, Figure 1.17",
+     "id": "g12.it.u1.s1-2.24"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Comparing the four",
+     "paras": [
+      "Activity 1.5 compares them."
+     ],
+     "table": [
+      [
+       "Type",
+       "Protects",
+       "How long"
+      ],
+      [
+       "Patent",
+       "an invention",
+       "limited; expires"
+      ],
+      [
+       "Copyright",
+       "original works: books, music, art, software",
+       "limited; expires"
+      ],
+      [
+       "Trademark",
+       "a sign that marks whose goods they are",
+       "indefinitely while used"
+      ],
+      [
+       "Trade secret",
+       "confidential business information",
+       "while it stays secret"
+      ]
+     ],
+     "ref": "p.14–17, Activity 1.5",
+     "id": "g12.it.u1.s1-2.25"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Copyright",
+       "Protection of original works of authorship such as literary works, music, art and software; it is automatic."
+      ],
+      [
+       "Trademark",
+       "A sign, word or symbol that distinguishes the goods or services of one enterprise from those of others."
+      ]
+     ],
+     "id": "g12.it.u1.s1-2.26"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which protection starts automatically as soon as you create a work?",
+     "opts": [
+      "Copyright",
+      "Patent",
+      "A registered trademark",
+      "A business licence"
+     ],
+     "ans": "Copyright",
+     "why": "p.16: \"Copyright protections are automatic; once you create something, it is yours.\"",
+     "clue": "Which needs no application?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.16",
+     "id": "g12.it.u1.s1-2.27"
+    },
+    {
+     "kind": "match",
+     "title": "Match each example to its protection",
+     "pairs": [
+      [
+       "Google's PageRank algorithm",
+       "Patent"
+      ],
+      [
+       "The Coca-Cola recipe",
+       "Trade secret"
+      ],
+      [
+       "The Ride logo",
+       "Trademark"
+      ],
+      [
+       "A novel written by a student",
+       "Copyright"
+      ]
+     ],
+     "why": "Invention, confidential recipe, brand sign, creative work.",
+     "clue": "Ask: invented, hidden, a sign, or written?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.14–17",
+     "id": "g12.it.u1.s1-2.28"
+    },
+    {
+     "kind": "tf",
+     "text": "Trademark rights expire after a fixed time, just like patents.",
+     "a": false,
+     "why": "p.17: trademark rights come from use and can be held indefinitely.",
+     "clue": "Re-read the end of the trademark section.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.17",
+     "id": "g12.it.u1.s1-2.29"
+    },
+    {
+     "kind": "tf",
+     "text": "If your copyright is infringed and you want to sue, the book says you need to register it.",
+     "a": true,
+     "why": "p.16: registration is necessary to file a lawsuit.",
+     "clue": "Creation is automatic; court is different.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.16",
+     "id": "g12.it.u1.s1-2.30"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which protects expressions of ideas and creations, like art and writing?",
+     "opts": [
+      "Copyright",
+      "Patent",
+      "Trademark",
+      "Trade secret"
+     ],
+     "ans": "Copyright",
+     "why": "Copyright protects original works of authorship such as literary works, music and art.",
+     "clue": "Art and writing are works of authorship.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Review Part II Q5 (reworded)",
+     "id": "g12.it.u1.s1-2.31"
+    },
+    {
+     "kind": "mcq",
+     "text": "A key difference between a patent and a trademark is",
+     "opts": [
+      "A patent protects an invention and expires; a trademark marks goods and can last indefinitely",
+      "Both protect songs",
+      "A trademark must publish technical details",
+      "A patent lasts forever"
+     ],
+     "ans": "A patent protects an invention and expires; a trademark marks goods and can last indefinitely",
+     "why": "p.15–17.",
+     "clue": "Think what each protects and how long.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 1.5 Q1",
+     "id": "g12.it.u1.s1-2.32"
+    },
+    {
+     "kind": "mcq",
+     "text": "A Hawassa start-up builds a delivery app. Its code, its logo and its secret customer list are protected, in that order, by",
+     "opts": [
+      "copyright, trademark and trade secret",
+      "patent, copyright and trademark",
+      "trademark, patent and copyright",
+      "trade secret, patent and trademark"
+     ],
+     "ans": "copyright, trademark and trade secret",
+     "why": "Software code is a work of authorship; the logo is a sign; the customer list is confidential.",
+     "clue": "Take the three items one at a time.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.14–17",
+     "added": true,
+     "id": "g12.it.u1.s1-2.33"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Which protects a sign that distinguishes one company's goods from others?",
+   "opts": [
+    "Trademark",
+    "Patent",
+    "Copyright",
+    "Trade secret"
+   ],
+   "ans": "Trademark",
+   "why": "p.16.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.it.u1.s1-2.34"
+  },
+  {
+   "kind": "mcq",
+   "text": "In Ethiopia, IP applications are handled by",
+   "opts": [
+    "EIPA",
+    "INSA",
+    "Ethio telecom",
+    "the Ministry of Health"
+   ],
+   "ans": "EIPA",
+   "why": "p.15.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.it.u1.s1-2.35"
+  },
+  {
+   "kind": "mcq",
+   "text": "Source code kept confidential by a company is an example of a",
+   "opts": [
+    "trade secret",
+    "trademark",
+    "patent",
+    "public domain work"
+   ],
+   "ans": "trade secret",
+   "why": "p.15.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.it.u1.s1-2.36"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which right can be held indefinitely, according to the book?",
+   "opts": [
+    "Trademark",
+    "Patent",
+    "Copyright",
+    "None"
+   ],
+   "ans": "Trademark",
+   "why": "p.17.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.it.u1.s1-2.37"
+  },
+  {
+   "kind": "mcq",
+   "text": "An inventor wants protection but does not want to reveal how her process works. Which is the better choice?",
+   "opts": [
+    "Trade secret, because a patent requires publishing the details",
+    "Patent, because it hides the details",
+    "Trademark, because it protects processes",
+    "Copyright, because it needs publication"
+   ],
+   "ans": "Trade secret, because a patent requires publishing the details",
+   "why": "p.14–15.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.it.u1.s1-2.38"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.15 lists \"Airbnb, Amazon, One-click\" as patented software. Airbnb and Amazon are companies; the well-known patents are Amazon's 1-Click ordering method and Google's PageRank algorithm (both now expired). The lesson uses this corrected wording."
+  },
+  {
+   "kind": "review",
+   "text": "The text says \"Ethiopian Intellectual Property Office\" while Figure 1.16 and Activity 1.5 say \"Authority\". It was set up as the Office in 2003 and is now the Ethiopian Intellectual Property Authority (EIPA, eipo.gov.et). The lesson uses EIPA."
+  },
+  {
+   "kind": "review",
+   "text": "p.16 says \"many companies in our country with registered trademarks. Examples are Ride, Meta, and Microsoft.\" Only Ride is Ethiopian. Local examples could be Ethio telecom, Ethiopian Airlines or Commercial Bank of Ethiopia."
+  },
+  {
+   "kind": "review",
+   "text": "The rules \"trademark registration is not required\" and \"copyright registration is needed to sue\" follow US practice. Under Ethiopian law (Trademark Proclamation No. 501 of 2006, Copyright Proclamation No. 410 of 2004) trademark rights generally come from registration with EIPA. Teacher please check before teaching these as Ethiopian rules."
+  },
+  {
+   "kind": "note",
+   "text": "Proclamation numbers are written \"No. 320 of 2003\" instead of a slash so the player does not show them as fractions. The patent application steps are added from the Activity 1.5 Q2 model answer; the 20-year patent term is not in the book and is not taught."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

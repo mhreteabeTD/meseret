@@ -1,0 +1,553 @@
+{
+ "id": "g12.it.u1.s1-1-4",
+ "book": {
+  "title": "Information Technology Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "it",
+  "unit": 1,
+  "unit_title": "Information systems and their applications",
+  "pages": "12–13",
+  "section": "1.1.4"
+ },
+ "title": "Health issues caused by information systems",
+ "competency": "Describe the benefits of health information systems and the health problems caused by unmanaged device use.",
+ "minutes": 15,
+ "keywords": [
+  {
+   "en": "Health information system",
+   "am": "የጤና መረጃ ሥርዓት",
+   "def": "A system that quickly produces high-quality health data for planning, review and monitoring.",
+   "machine": true
+  },
+  {
+   "en": "Musculoskeletal problems",
+   "am": "የጡንቻና የአጥንት ችግሮች",
+   "def": "Pain in the back, neck, chest, arms, shoulders and feet, for example from poor posture during long device use.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "it.health-is",
+   "name": "Health information systems",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Health information systems quickly produce high-quality data that informs stakeholders for planning, review and monitoring, and improves the whole health system. Mobile devices make it easier to offer and improve care, empower patients with personalised messages, and collect real-time data to use resources well. Figure 1.14 links the Ministry of Health, the Public Health Institute, hospitals, doctors, nurses, laboratories, pharmacies, insurers and patients."
+    },
+    "am": {
+     "text": "የጤና መረጃ ሥርዓት ፈጣንና ጥራት ያለው መረጃ ለዕቅድና ክትትል ይሰጣል። ሞባይል ለታካሚዎች መልእክት ይልካል፣ ቅጽበታዊ መረጃም ይሰበስባል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Where does the data go?",
+     "ask": "A health extension worker records a baby's vaccination on a tablet in a rural kebele. Who can use that record?",
+     "opts": [
+      "Health planners, such as the Ministry of Health, quickly",
+      "Nobody; it stays in the tablet",
+      "Only the baby",
+      "Only the tablet maker"
+     ],
+     "after": "A health information system sends fast, quality data to stakeholders for planning and monitoring.",
+     "ref": "p.12–13",
+     "added": true,
+     "id": "g12.it.u1.s1-1-4.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Health information systems",
+     "paras": [
+      "They rapidly produce high-quality health data.",
+      "The data informs stakeholders for planning, review and monitoring.",
+      "They improve the quality of all parts of the health system."
+     ],
+     "ref": "p.12",
+     "id": "g12.it.u1.s1-1-4.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Mobile devices in health care",
+     "paras": [
+      "They make it easier to offer care.",
+      "They improve care delivery.",
+      "They empower patients through personalised messages.",
+      "They collect real-time data to use resources well and make decisions."
+     ],
+     "table": [
+      [
+       "Figure 1.14: who is linked?",
+       ""
+      ],
+      [
+       "Ministry of Health",
+       "Public Health Institute"
+      ],
+      [
+       "Hospital",
+       "Laboratory"
+      ],
+      [
+       "Doctor",
+       "Nurse"
+      ],
+      [
+       "Pharmacy",
+       "Health insurance"
+      ],
+      [
+       "Patient",
+       ""
+      ]
+     ],
+     "ref": "p.13, Figure 1.14",
+     "id": "g12.it.u1.s1-1-4.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Health information system",
+       "A system that quickly produces high-quality health data for planning, review and monitoring."
+      ]
+     ],
+     "id": "g12.it.u1.s1-1-4.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "Health information systems mainly give",
+     "opts": [
+      "fast, high-quality data for planning, review and monitoring",
+      "free medicine",
+      "games for patients",
+      "paper files"
+     ],
+     "ans": "fast, high-quality data for planning, review and monitoring",
+     "why": "p.12.",
+     "clue": "What do planners need?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.12",
+     "id": "g12.it.u1.s1-1-4.5"
+    },
+    {
+     "kind": "pick",
+     "text": "Which are stakeholders in Figure 1.14?",
+     "pool": [
+      "Ministry of Health",
+      "Pharmacy",
+      "Laboratory",
+      "Patient",
+      "Football club",
+      "Car dealer"
+     ],
+     "a": [
+      "Ministry of Health",
+      "Pharmacy",
+      "Laboratory",
+      "Patient"
+     ],
+     "why": "Figure 1.14 links health bodies, health workers and patients.",
+     "clue": "Who works with health data?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Figure 1.14",
+     "id": "g12.it.u1.s1-1-4.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "How do mobile devices help health services, according to the book?",
+     "opts": [
+      "Personalised messages to patients and real-time data",
+      "They replace all doctors",
+      "They make medicine cheaper by themselves",
+      "They stop all diseases"
+     ],
+     "ans": "Personalised messages to patients and real-time data",
+     "why": "p.13 lists easier care, better delivery, personalised messaging and real-time data.",
+     "clue": "Think of SMS reminders.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Activity 1.4",
+     "id": "g12.it.u1.s1-1-4.7"
+    },
+    {
+     "kind": "tf",
+     "text": "SMS reminders about vaccination are an example of empowering patients through personalised messaging.",
+     "a": true,
+     "why": "p.13: mobile devices \"empower patients through personalized messaging\".",
+     "clue": "Who gets the message?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.13",
+     "added": true,
+     "id": "g12.it.u1.s1-1-4.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "A clinic in Afar sends daily malaria case counts by phone to the regional health office. Which benefit does this show?",
+     "opts": [
+      "Real-time data that helps use resources and make decisions",
+      "Entertainment for staff",
+      "Less need for nurses",
+      "Social media addiction"
+     ],
+     "ans": "Real-time data that helps use resources and make decisions",
+     "why": "p.13: collecting real-time data \"to optimize resources and decision-making\", e.g. sending drugs where cases rise.",
+     "clue": "What can the office do with daily counts?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.13",
+     "added": true,
+     "id": "g12.it.u1.s1-1-4.9"
+    }
+   ]
+  },
+  {
+   "id": "it.health-risks",
+   "name": "Health problems from device use",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Unmanaged use of information systems and devices causes sleeping disorders, lack of productivity, loss of attention and stress. It also causes physical problems: musculoskeletal pain in the back, neck, chest, arms, shoulders and feet, vision problems and eye strain, headaches, and obesity from long hours of sitting. Users should learn proper ways to use devices to get the benefits and reduce the harm."
+    },
+    "am": {
+     "text": "የመሣሪያ ከልክ በላይ መጠቀም የእንቅልፍ ችግር፣ ጭንቀት፣ የዓይን ድካም፣ የጀርባና የአንገት ህመም እና ውፍረት ያስከትላል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "tap",
+     "step": "hook",
+     "graded": false,
+     "title": "Where does it hurt?",
+     "text": "Tap each part to see how long device use can affect it.",
+     "need": 6,
+     "items": [
+      [
+       "Neck",
+       "Bending over a phone for hours strains the neck."
+      ],
+      [
+       "Back",
+       "Slouching in a chair hurts the back."
+      ],
+      [
+       "Eyes",
+       "Long screen time causes eye strain and vision problems."
+      ],
+      [
+       "Head",
+       "Headaches can follow long screen use."
+      ],
+      [
+       "Sleep",
+       "Phone use late at night disturbs sleep."
+      ],
+      [
+       "Weight",
+       "Long hours of sitting can lead to obesity."
+      ]
+     ],
+     "id": "g12.it.u1.s1-1-4.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Health challenges",
+     "paras": [
+      "Unmanaged use causes sleeping disorders and lack of productivity.",
+      "It causes loss of attention and stress.",
+      "Mobile devices also create computer-related health problems.",
+      "Musculoskeletal problems: back, neck, chest, arms, shoulders and feet.",
+      "Vision problems, eye strain and headaches.",
+      "Obesity from long hours of sitting.",
+      "Learn proper ways to use devices to reduce the harm."
+     ],
+     "ref": "p.13",
+     "id": "g12.it.u1.s1-1-4.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Healthy habits",
+     "paras": [
+      "Sit upright; keep the screen at eye level.",
+      "Take regular breaks and move.",
+      "20-20-20 rule: every 20 minutes, look 20 feet away for 20 seconds.",
+      "No screens just before sleep.",
+      "Exercise every day."
+     ],
+     "ref": "Review Part III Q2",
+     "added": true,
+     "id": "g12.it.u1.s1-1-4.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Musculoskeletal problems",
+       "Pain in the back, neck, chest, arms, shoulders and feet, for example from poor posture during long device use."
+      ]
+     ],
+     "id": "g12.it.u1.s1-1-4.13"
+    },
+    {
+     "kind": "mcq",
+     "text": "Health-related negative effects of information systems include all EXCEPT",
+     "opts": [
+      "Adaptability to use technology",
+      "Loss of attention and stress",
+      "Sleeping disorders",
+      "Internet addiction"
+     ],
+     "ans": "Adaptability to use technology",
+     "why": "Adapting to technology is a positive skill; the others are harms (p.7, p.13).",
+     "clue": "Which one is a good thing?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Review Part II Q4",
+     "id": "g12.it.u1.s1-1-4.14"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Physical, or attention and mood?",
+     "bins": [
+      "Physical problem",
+      "Attention or mood problem"
+     ],
+     "items": [
+      [
+       "Eye strain",
+       "Physical problem",
+       "eyes"
+      ],
+      [
+       "Neck pain",
+       "Physical problem",
+       "posture"
+      ],
+      [
+       "Obesity",
+       "Physical problem",
+       "sitting"
+      ],
+      [
+       "Loss of attention",
+       "Attention or mood problem",
+       "focus"
+      ],
+      [
+       "Stress",
+       "Attention or mood problem",
+       "feeling"
+      ],
+      [
+       "Lack of productivity",
+       "Attention or mood problem",
+       "work done"
+      ]
+     ],
+     "why": "Some harms are to the body; others affect focus, mood and output (p.13).",
+     "clue": "Can a doctor see it on the body?",
+     "ref": "p.13",
+     "added": true,
+     "graded": true,
+     "level": 1,
+     "id": "g12.it.u1.s1-1-4.15"
+    },
+    {
+     "kind": "mcq",
+     "text": "The book links obesity to",
+     "opts": [
+      "long hours of sitting",
+      "reading paper books",
+      "drinking water",
+      "walking to school"
+     ],
+     "ans": "long hours of sitting",
+     "why": "p.13.",
+     "clue": "What does the body not do while gaming for hours?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.13",
+     "id": "g12.it.u1.s1-1-4.16"
+    },
+    {
+     "kind": "blank",
+     "ask": "With the 20-20-20 rule, 6 hours of screen time needs ___ eye breaks",
+     "a": [
+      "18"
+     ],
+     "why": "6 × 60 = 360 minutes; 360 ÷ 20 = 18 breaks.",
+     "clue": "Change hours to minutes first.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Review Part III Q2",
+     "added": true,
+     "id": "g12.it.u1.s1-1-4.17"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which change best reduces neck and back pain from phone use?",
+     "opts": [
+      "Hold the phone at eye level and take breaks",
+      "Use the phone lying down all day",
+      "Make the font smaller",
+      "Use two phones"
+     ],
+     "ans": "Hold the phone at eye level and take breaks",
+     "why": "Good posture and breaks reduce musculoskeletal strain.",
+     "clue": "Where should your head be?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.13",
+     "added": true,
+     "id": "g12.it.u1.s1-1-4.18"
+    },
+    {
+     "kind": "mcq",
+     "text": "Meron studies on her phone until 1 a.m., then cannot focus in class and feels stressed. What are her problems, and what is the best fix?",
+     "opts": [
+      "Sleeping disorder and loss of attention; stop screens well before bedtime",
+      "Obesity; eat less",
+      "Eye strain only; use a bigger phone",
+      "No problem; this is normal"
+     ],
+     "ans": "Sleeping disorder and loss of attention; stop screens well before bedtime",
+     "why": "Late screen use causes sleep problems, which lead to loss of attention and stress (p.13).",
+     "clue": "Start with what happens at 1 a.m.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.13",
+     "added": true,
+     "id": "g12.it.u1.s1-1-4.19"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Which is a health problem from long device use listed in the book?",
+   "opts": [
+    "Eye strain",
+    "Better eyesight",
+    "Stronger bones",
+    "Faster running"
+   ],
+   "ans": "Eye strain",
+   "why": "p.13.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.it.u1.s1-1-4.20"
+  },
+  {
+   "kind": "mcq",
+   "text": "Mobile devices empower patients through",
+   "opts": [
+    "personalised messaging",
+    "paper files",
+    "longer queues",
+    "trademarks"
+   ],
+   "ans": "personalised messaging",
+   "why": "p.13.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.it.u1.s1-1-4.21"
+  },
+  {
+   "kind": "mcq",
+   "text": "Pain in the back, neck and shoulders from device use is called",
+   "opts": [
+    "musculoskeletal problems",
+    "identity theft",
+    "socialization gaps",
+    "e-waste"
+   ],
+   "ans": "musculoskeletal problems",
+   "why": "p.13.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.it.u1.s1-1-4.22"
+  },
+  {
+   "kind": "mcq",
+   "text": "Health information systems produce data for",
+   "opts": [
+    "planning, review and monitoring",
+    "games",
+    "advertising only",
+    "trade secrets"
+   ],
+   "ans": "planning, review and monitoring",
+   "why": "p.12.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.it.u1.s1-1-4.23"
+  },
+  {
+   "kind": "mcq",
+   "text": "A student games 8 hours a day sitting down and sleeps little. Which set of problems is most likely?",
+   "opts": [
+    "Obesity, sleeping disorders and loss of attention",
+    "Better grades and fitness",
+    "Copyright and patent issues",
+    "E-waste and deforestation"
+   ],
+   "ans": "Obesity, sleeping disorders and loss of attention",
+   "why": "p.13.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.it.u1.s1-1-4.24"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "The healthy-habits screen, the 20-20-20 rule and the posture items are added from the Review Part III Q2 model answer; the book only lists the problems."
+  },
+  {
+   "kind": "review",
+   "text": "Figure 1.14 shows nine named stakeholders although the transcription mentions ten; check the printed figure."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

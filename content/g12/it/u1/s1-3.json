@@ -1,0 +1,540 @@
+{
+ "id": "g12.it.u1.s1-3",
+ "book": {
+  "title": "Information Technology Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "it",
+  "unit": 1,
+  "unit_title": "Information systems and their applications",
+  "pages": "17–18",
+  "section": "1.3"
+ },
+ "title": "Digital identity management",
+ "competency": "Describe digital identity, how it is verified and managed, and the role of Ethiopia's National ID.",
+ "minutes": 15,
+ "keywords": [
+  {
+   "en": "Digital identity",
+   "am": "ዲጂታል ማንነት",
+   "def": "All the information about an individual, organisation or electronic device that exists online.",
+   "machine": true
+  },
+  {
+   "en": "Biometric verification",
+   "am": "ባዮሜትሪክ ማረጋገጫ",
+   "def": "Proving who you are with a body feature such as a fingerprint or face.",
+   "machine": true
+  },
+  {
+   "en": "Digital identity management",
+   "am": "የዲጂታል ማንነት አያያዝ",
+   "def": "Limiting the data you give out, checking and correcting stored data, and avoiding excessive or redundant data.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "it.digital-identity",
+   "name": "Digital identity and how it is verified",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "A digital identity is a collection of information about a person that exists online; more widely, all the information about an individual, organisation or electronic device online. Businesses use it to identify their clients, and everyone should have a trusted, secure digital identity to reach services such as finance, mobile connectivity, health and education. It is verified by database checks, document verification or biometric verification, such as a fingerprint."
+    },
+    "am": {
+     "text": "ዲጂታል ማንነት ስለ አንድ ሰው፣ ድርጅት ወይም መሣሪያ በመስመር ላይ ያለ መረጃ ሁሉ ነው። በመረጃ ቋት፣ በሰነድ ወይም በጣት አሻራ ይረጋገጣል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Who are you online?",
+     "ask": "Your physical identity is checked by seeing your face or ID card. How is your digital identity usually checked?",
+     "opts": [
+      "By passwords, codes, database checks or fingerprints",
+      "By looking at you",
+      "By measuring your height",
+      "It is never checked"
+     ],
+     "after": "Online, nobody sees you, so systems check data: database records, documents or biometrics.",
+     "ref": "p.17–18",
+     "added": true,
+     "id": "g12.it.u1.s1-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Digital identity",
+     "paras": [
+      "onfido.com: \"a collection of information about a person that exists online\".",
+      "Collected together, it creates a digital image of a person.",
+      "Businesses use it to identify their clients.",
+      "It covers an individual, an organisation or an electronic device.",
+      "Everyone should have a trusted, secure digital identity.",
+      "It opens services: finance, mobile connectivity, health, education."
+     ],
+     "ref": "p.17–18",
+     "id": "g12.it.u1.s1-3.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Verifying a digital identity",
+     "paras": [
+      "Database checks: compare details with stored records.",
+      "Document verification: check an ID card or passport.",
+      "Biometric verification: fingerprint or face (Figure 1.18).",
+      "After proving identity, users can access banking, health and travel services online."
+     ],
+     "ref": "p.18, Figure 1.18",
+     "id": "g12.it.u1.s1-3.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Digital identity",
+       "All the information about an individual, organisation or electronic device that exists online."
+      ],
+      [
+       "Biometric verification",
+       "Proving who you are with a body feature such as a fingerprint or face."
+      ]
+     ],
+     "id": "g12.it.u1.s1-3.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "A fingerprint attendance device (Figure 1.18) uses",
+     "opts": [
+      "biometric verification",
+      "a trademark",
+      "a trade secret",
+      "paper records"
+     ],
+     "ans": "biometric verification",
+     "why": "A fingerprint is a body feature.",
+     "clue": "Bio means life, body.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Figure 1.18",
+     "id": "g12.it.u1.s1-3.5"
+    },
+    {
+     "kind": "pick",
+     "text": "Which can have a digital identity, according to the book?",
+     "pool": [
+      "A person",
+      "An organisation",
+      "An electronic device",
+      "A mountain"
+     ],
+     "a": [
+      "A person",
+      "An organisation",
+      "An electronic device"
+     ],
+     "why": "p.17: \"an individual, organization, or electronic device\".",
+     "clue": "Which ones can exist online?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.17",
+     "id": "g12.it.u1.s1-3.6"
+    },
+    {
+     "kind": "match",
+     "title": "Match each check to its method",
+     "pairs": [
+      [
+       "A bank compares your account number with its records",
+       "Database check"
+      ],
+      [
+       "You upload a photo of your ID card",
+       "Document verification"
+      ],
+      [
+       "Your phone unlocks with your face",
+       "Biometric verification"
+      ]
+     ],
+     "why": "p.18 lists these verification methods.",
+     "clue": "Records, papers or body?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.18",
+     "id": "g12.it.u1.s1-3.7"
+    },
+    {
+     "kind": "tf",
+     "text": "Every individual should have the right to a trusted and secure digital identity.",
+     "a": true,
+     "why": "p.17: to access fundamental services.",
+     "clue": "Think of banking and health.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.17",
+     "id": "g12.it.u1.s1-3.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why do businesses collect digital identity information?",
+     "opts": [
+      "To identify their clients",
+      "To build devices",
+      "To create trademarks",
+      "To reduce e-waste"
+     ],
+     "ans": "To identify their clients",
+     "why": "p.17.",
+     "clue": "Who is the customer?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.17",
+     "id": "g12.it.u1.s1-3.9"
+    },
+    {
+     "kind": "mcq",
+     "text": "How is a digital identity different from a physical identity?",
+     "opts": [
+      "It is made of data that can be copied or stolen, and one person can have many accounts",
+      "It can never be stolen",
+      "It is only a photo",
+      "It is exactly a birth certificate"
+     ],
+     "ans": "It is made of data that can be copied or stolen, and one person can have many accounts",
+     "why": "A digital identity is information online (p.17); data can be copied, leading to identity theft (1.1.1).",
+     "clue": "Link this to identity theft.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Brainstorming 1.6",
+     "added": true,
+     "id": "g12.it.u1.s1-3.10"
+    }
+   ]
+  },
+  {
+   "id": "it.identity-management",
+   "name": "Managing your digital identity and the National ID",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Managing a digital identity means limiting the data a person gives out, avoiding excessive storage, checking what data is stored, correcting wrong personal data and avoiding redundant data. It brings organisations both opportunities and risks. In Ethiopia, the National ID project, part of the Digital Ethiopia 2025 strategy, is building a robust and reliable digital identification for all Ethiopians and legal residents."
+    },
+    "am": {
+     "text": "ዲጂታል ማንነትን መጠበቅ፡ ትንሽ መረጃ መስጠት፣ የተከማቸውን መፈተሽና ማረም። ብሔራዊ መታወቂያ የዲጂታል ኢትዮጵያ 2025 አካል ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "title": "Safe or risky?",
+     "bins": [
+      "Protects your identity",
+      "Puts it at risk"
+     ],
+     "items": [
+      [
+       "A strong, different password for each account",
+       "Protects your identity",
+       "hard to guess"
+      ],
+      [
+       "Telling a caller the code sent to your phone",
+       "Puts it at risk",
+       "phishing"
+      ],
+      [
+       "Posting a photo of your ID card",
+       "Puts it at risk",
+       "too much data"
+      ],
+      [
+       "Deleting accounts you no longer use",
+       "Protects your identity",
+       "less data"
+      ],
+      [
+       "One password for everything",
+       "Puts it at risk",
+       "one leak opens all"
+      ]
+     ],
+     "added": true,
+     "after": "Managing a digital identity starts with limiting what you give out.",
+     "graded": false,
+     "id": "g12.it.u1.s1-3.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Digital identity management",
+     "paras": [
+      "It brings organisations both opportunities and risks.",
+      "Limit the data you give out.",
+      "Avoid excessive use of storage.",
+      "Check what data is stored about each person.",
+      "Correct wrong personal data.",
+      "Avoid redundant (repeated) data."
+     ],
+     "ref": "p.18",
+     "id": "g12.it.u1.s1-3.12"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Ethiopia's National ID",
+     "paras": [
+      "A national effort improves citizens' digital identity management.",
+      "The National ID project is part of the Digital Ethiopia 2025 strategy.",
+      "It is a robust, reliable digital ID for all Ethiopians and legal residents.",
+      "Figure 1.19 shows its fingerprint logo: \"National ID\", ብሔራዊ መታወቂያ.",
+      "It is known as Fayda."
+     ],
+     "ref": "p.18, Figure 1.19",
+     "id": "g12.it.u1.s1-3.13"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Digital identity management",
+       "Limiting the data you give out, checking and correcting stored data, and avoiding excessive or redundant data."
+      ]
+     ],
+     "id": "g12.it.u1.s1-3.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is part of managing a digital identity, according to the book?",
+     "opts": [
+      "Correcting incorrect personal data",
+      "Giving out as much data as possible",
+      "Keeping many duplicate records",
+      "Storing everything forever"
+     ],
+     "ans": "Correcting incorrect personal data",
+     "why": "p.18.",
+     "clue": "Which one makes the data smaller and better?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.18",
+     "id": "g12.it.u1.s1-3.15"
+    },
+    {
+     "kind": "pick",
+     "text": "Which actions reduce risks to your digital identity?",
+     "pool": [
+      "Share only the data a service needs",
+      "Use two-factor authentication",
+      "Check privacy settings",
+      "Share your PIN with friends",
+      "Use the same password everywhere"
+     ],
+     "a": [
+      "Share only the data a service needs",
+      "Use two-factor authentication",
+      "Check privacy settings"
+     ],
+     "why": "Limit data and protect access (p.18, Activity 1.6).",
+     "clue": "Two options help an attacker.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Activity 1.6 Q1",
+     "id": "g12.it.u1.s1-3.16"
+    },
+    {
+     "kind": "mcq",
+     "text": "Ethiopia's National ID project is part of which strategy?",
+     "opts": [
+      "Digital Ethiopia 2025",
+      "Green Legacy",
+      "Education Roadmap",
+      "GERD filling plan"
+     ],
+     "ans": "Digital Ethiopia 2025",
+     "why": "p.18.",
+     "clue": "It is a digital strategy.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.18",
+     "id": "g12.it.u1.s1-3.17"
+    },
+    {
+     "kind": "mcq",
+     "text": "Who is the National ID for?",
+     "opts": [
+      "All Ethiopians and legal residents in the country",
+      "Only government workers",
+      "Only students",
+      "Only tourists"
+     ],
+     "ans": "All Ethiopians and legal residents in the country",
+     "why": "p.18.",
+     "clue": "Read the last sentence of the section.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "p.18",
+     "id": "g12.it.u1.s1-3.18"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is an advantage of the National ID?",
+     "opts": [
+      "One trusted ID to open bank accounts and get services faster, with less fraud",
+      "It replaces the need for any services",
+      "It lets anyone use your account",
+      "It makes data less accurate"
+     ],
+     "ans": "One trusted ID to open bank accounts and get services faster, with less fraud",
+     "why": "A trusted digital identity opens financial, mobile, health and education services (p.17–18).",
+     "clue": "What does a trusted ID let you prove?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 1.6 Q2",
+     "id": "g12.it.u1.s1-3.19"
+    },
+    {
+     "kind": "mcq",
+     "text": "A caller says he is from your bank and asks for the 6-digit code just sent to your phone. What should you do?",
+     "opts": [
+      "Refuse, end the call and report it to the bank",
+      "Give the code so he can help",
+      "Give half of the code",
+      "Post the code online"
+     ],
+     "ans": "Refuse, end the call and report it to the bank",
+     "why": "Limit the data you give out (p.18) and examine every request for credentials (p.4).",
+     "clue": "Would your real bank ask for this?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.4, p.18",
+     "added": true,
+     "id": "g12.it.u1.s1-3.20"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "A digital identity is information about a person that exists",
+   "opts": [
+    "online",
+    "only on paper",
+    "only in a passport",
+    "only in memory"
+   ],
+   "ans": "online",
+   "why": "p.17.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.it.u1.s1-3.21"
+  },
+  {
+   "kind": "mcq",
+   "text": "Checking a fingerprint to prove identity is",
+   "opts": [
+    "biometric verification",
+    "a database check",
+    "document verification",
+    "a trademark"
+   ],
+   "ans": "biometric verification",
+   "why": "p.18.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.it.u1.s1-3.22"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which is part of digital identity management?",
+   "opts": [
+    "Avoiding redundant data",
+    "Sharing every detail",
+    "Keeping wrong data",
+    "Using one password everywhere"
+   ],
+   "ans": "Avoiding redundant data",
+   "why": "p.18.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.it.u1.s1-3.23"
+  },
+  {
+   "kind": "mcq",
+   "text": "The National ID project started as part of",
+   "opts": [
+    "Digital Ethiopia 2025",
+    "the GERD",
+    "Green Legacy",
+    "the Computer Crime law"
+   ],
+   "ans": "Digital Ethiopia 2025",
+   "why": "p.18.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.it.u1.s1-3.24"
+  },
+  {
+   "kind": "mcq",
+   "text": "An app asks for your National ID number, bank PIN and contacts just to show the weather. Best response?",
+   "opts": [
+    "Refuse: give only data the service really needs",
+    "Give all of it",
+    "Give only the PIN",
+    "Post it publicly"
+   ],
+   "ans": "Refuse: give only data the service really needs",
+   "why": "p.4, p.18.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.it.u1.s1-3.25"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.18 lists \"identity verification\" twice (\"document and identity verification ... and identity verification\"). The lesson teaches three methods: database checks, document verification and biometric verification."
+  },
+  {
+   "kind": "note",
+   "text": "The name \"Fayda\" for the National ID and the phishing-call and password scenarios are added."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

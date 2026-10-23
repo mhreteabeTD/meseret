@@ -1,0 +1,798 @@
+{
+ "id": "g12.it.u1.s1-1-1",
+ "book": {
+  "title": "Information Technology Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "it",
+  "unit": 1,
+  "unit_title": "Information systems and their applications",
+  "pages": "1–5",
+  "section": "1.1.1"
+ },
+ "title": "Ethical and legal issues in information systems",
+ "competency": "Explain the main ethical and legal issues in information systems: privacy, digital ownership, information gathering, and security and liability.",
+ "minutes": 20,
+ "keywords": [
+  {
+   "en": "Ethics",
+   "am": "ሥነ ምግባር",
+   "def": "The discipline concerned with what is morally good and bad, right and wrong.",
+   "machine": true
+  },
+  {
+   "en": "Privacy",
+   "am": "ግላዊነት",
+   "def": "Keeping the personal data stored on computer systems safe from people who should not see it.",
+   "machine": true
+  },
+  {
+   "en": "Digital ownership",
+   "am": "ዲጂታል ባለቤትነት",
+   "def": "The ability to access, use and protect data, information and knowledge about ourselves or things we own.",
+   "machine": true
+  },
+  {
+   "en": "Information gathering",
+   "am": "መረጃ መሰብሰብ",
+   "def": "Applications collecting users' data and credentials as part of their operations.",
+   "machine": true
+  },
+  {
+   "en": "Consent",
+   "am": "ፈቃድ",
+   "def": "A person's permission before their information is collected or used.",
+   "machine": true
+  },
+  {
+   "en": "Information security",
+   "am": "የመረጃ ደህንነት",
+   "def": "Protecting stored and transferred information from breaches and unauthorized access.",
+   "machine": true
+  },
+  {
+   "en": "Identity theft",
+   "am": "የማንነት ስርቆት",
+   "def": "When a third party harvests the personal details of innocent people to use them for malicious purposes.",
+   "machine": true
+  },
+  {
+   "en": "Liability",
+   "am": "ተጠያቂነት",
+   "def": "The legal responsibility an organisation may face when information it holds is breached.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "it.ethics",
+   "name": "Ethics, law and information systems",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Ethics is about the principles of making right or wrong decisions; Britannica calls it the discipline concerned with what is morally good and bad, right and wrong. If ethical principles are not respected, legal consequences may follow. Many professions have ethical and legal oversight, but information systems still lack such standards because technology changes so fast."
+    },
+    "am": {
+     "text": "ሥነ ምግባር ትክክልና ስሕተት ውሳኔን የሚመራ መርህ ነው። ሥነ ምግባርን መጣስ ሕጋዊ መዘዝ ሊያስከትል ይችላል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Right, wrong or illegal?",
+     "ask": "Your friend left her Telegram open on a school computer. Reading her private chats would be",
+     "opts": [
+      "Wrong, and it could also become a legal issue",
+      "Fine, because the screen was open",
+      "Wrong only if she finds out",
+      "Fine if you do not share it"
+     ],
+     "after": "Viewing someone's private information is unethical in any way. It may also end up being a legal issue.",
+     "ref": "p.3",
+     "added": true,
+     "id": "g12.it.u1.s1-1-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "New technology, new questions",
+     "paras": [
+      "New technologies create situations we have never dealt with before.",
+      "They can change human behaviour deeply.",
+      "They give us new capabilities that ethics has not yet addressed.",
+      "Users must know the effects of their use and access.",
+      "They must also respect the rights of creators and innovators."
+     ],
+     "ref": "p.1, Unit overview",
+     "id": "g12.it.u1.s1-1-1.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "What is ethics?",
+     "paras": [
+      "Ethics is about the principles of making right or wrong decisions.",
+      "Britannica: the discipline concerned with what is morally good and bad, right and wrong.",
+      "If ethical principles are not respected, legal consequences may follow.",
+      "Doctors, teachers, officials and business people have ethical and legal oversight.",
+      "Information systems still lack such standards: the technology changes too fast.",
+      "The main issues: privacy, digital ownership, information gathering, and security."
+     ],
+     "ref": "p.2",
+     "id": "g12.it.u1.s1-1-1.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Ethics",
+       "The discipline concerned with what is morally good and bad, right and wrong."
+      ]
+     ],
+     "id": "g12.it.u1.s1-1-1.4"
+    },
+    {
+     "kind": "mcq",
+     "text": "According to the book, ethics is about",
+     "opts": [
+      "the principles of making right or wrong decisions",
+      "rules for typing fast",
+      "laws about tax only",
+      "the speed of computers"
+     ],
+     "ans": "the principles of making right or wrong decisions",
+     "why": "p.2: \"Ethics is all about the principles of making right or wrong decisions.\"",
+     "clue": "Think of good and bad choices.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.2",
+     "id": "g12.it.u1.s1-1-1.5"
+    },
+    {
+     "kind": "tf",
+     "text": "Questions of ethics and legality are important in many industries, including education.",
+     "a": true,
+     "why": "p.2: medical and education professionals have legal and ethical oversight.",
+     "clue": "Think of teachers and doctors.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Review Part I Q1",
+     "id": "g12.it.u1.s1-1-1.6"
+    },
+    {
+     "kind": "tf",
+     "text": "As information technology becomes more influential, ethical and legal issues become less important.",
+     "a": false,
+     "why": "p.2: \"The role of ethics in information systems has become more crucial as a result of technology.\"",
+     "clue": "More power brings more or less responsibility?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Review Part I Q3",
+     "id": "g12.it.u1.s1-1-1.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why do information systems lack standard ethical rules, according to the book?",
+     "opts": [
+      "The technology changes frequently and fast",
+      "Nobody uses information systems",
+      "Computers cannot store rules",
+      "Ethics does not apply to computers"
+     ],
+     "ans": "The technology changes frequently and fast",
+     "why": "p.2: information systems lack standards in \"the current frequently changing and dynamic technological ecosystem\".",
+     "clue": "Rules take time to write.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.2",
+     "id": "g12.it.u1.s1-1-1.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which shows an ethical issue becoming a legal issue?",
+     "opts": [
+      "Copying a paid app and selling it as your own",
+      "Choosing a blue phone cover",
+      "Turning off your laptop at night",
+      "Reading a public news website"
+     ],
+     "ans": "Copying a paid app and selling it as your own",
+     "why": "It ignores the creator's rights (unethical) and breaks intellectual property law (legal consequences).",
+     "clue": "Whose rights are ignored?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.2–3",
+     "id": "g12.it.u1.s1-1-1.9"
+    },
+    {
+     "kind": "mcq",
+     "text": "A new app shows where any phone is in real time. No law covers it yet. What does the book suggest?",
+     "opts": [
+      "It is a new situation; judge it ethically and keep assessing the issues over time",
+      "It is fine because no law forbids it",
+      "All apps are illegal",
+      "Only the app maker can decide"
+     ],
+     "ans": "It is a new situation; judge it ethically and keep assessing the issues over time",
+     "why": "New technologies create situations not yet addressed in ethical terms (p.1); issues evolve and should be assessed over time (p.5).",
+     "clue": "Legal is not the same as right.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.1, p.5",
+     "added": true,
+     "id": "g12.it.u1.s1-1-1.10"
+    }
+   ]
+  },
+  {
+   "id": "it.privacy-ownership-gathering",
+   "name": "Privacy, digital ownership and information gathering",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Privacy is about personal data stored on computer systems; viewing anyone's private information is unethical and may be illegal. Digital ownership is the ability to access, use and protect data about ourselves or things we own, so using someone's digital work needs the owner's permission. Many apps gather users' data and credentials, which raises the question of consent: always check why a service wants your data."
+    },
+    "am": {
+     "text": "ግላዊነት፣ ዲጂታል ባለቤትነት እና መረጃ መሰብሰብ ዋና የሥነ ምግባርና የሕግ ጉዳዮች ናቸው። መረጃ ከመስጠትህ በፊት ለምን እንደሚጠየቅ መርምር።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "title": "Which issue is it?",
+     "bins": [
+      "Privacy",
+      "Digital ownership",
+      "Information gathering"
+     ],
+     "items": [
+      [
+       "Someone reads your email without permission",
+       "Privacy",
+       "private account"
+      ],
+      [
+       "A website posts your photo as its own work",
+       "Digital ownership",
+       "whose work?"
+      ],
+      [
+       "A torch app asks for your contacts and SMS",
+       "Information gathering",
+       "why does it need them?"
+      ]
+     ],
+     "added": true,
+     "after": "These are three of the four ethical and legal issues in the book. The fourth is information security and liability.",
+     "graded": false,
+     "id": "g12.it.u1.s1-1-1.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Privacy",
+     "paras": [
+      "Information privacy is about personal data stored on computer systems.",
+      "Our data is spread across many digital systems.",
+      "It should be accessed with personal passwords.",
+      "But email, social media and bank accounts can be accessed by unauthorized people.",
+      "Viewing someone's private information is unethical. It may become a legal issue.",
+      "Organisations that check employees' computer habits must not damage their privacy."
+     ],
+     "ref": "p.3, Figure 1.1",
+     "id": "g12.it.u1.s1-1-1.12"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Digital ownership",
+     "paras": [
+      "Digital ownership: the ability to access, use and protect data about ourselves or things we own.",
+      "Online content is easy to copy and paste, so ownership is hard to control.",
+      "Using someone's digital work without permission is unethical.",
+      "Creators have the right to allow or deny use.",
+      "Permission promotes sharing, credits the source and protects consumers from false information."
+     ],
+     "ref": "p.3, Figure 1.2",
+     "id": "g12.it.u1.s1-1-1.13"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Information gathering",
+     "paras": [
+      "Many apps collect users' data and credentials as part of their work.",
+      "This raises a debate: what may be gathered, and why?",
+      "It raises the question of consent.",
+      "Check the intention of every request for your data.",
+      "Take special care when it asks for personal details or passwords."
+     ],
+     "ref": "p.4, Figure 1.3",
+     "id": "g12.it.u1.s1-1-1.14"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Privacy",
+       "Keeping the personal data stored on computer systems safe from people who should not see it."
+      ],
+      [
+       "Digital ownership",
+       "The ability to access, use and protect data, information and knowledge about ourselves or things we own."
+      ],
+      [
+       "Information gathering",
+       "Applications collecting users' data and credentials as part of their operations."
+      ],
+      [
+       "Consent",
+       "A person's permission before their information is collected or used."
+      ]
+     ],
+     "id": "g12.it.u1.s1-1-1.15"
+    },
+    {
+     "kind": "mcq",
+     "text": "A flashlight app asks for your contacts, SMS and location. Which issue is this?",
+     "opts": [
+      "Information gathering",
+      "Digital ownership",
+      "Plagiarism",
+      "Automation"
+     ],
+     "ans": "Information gathering",
+     "why": "The app gathers data it does not need; check its intention before giving consent.",
+     "clue": "What is the app trying to collect?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.4",
+     "id": "g12.it.u1.s1-1-1.16"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Sort the scenarios",
+     "bins": [
+      "Privacy",
+      "Digital ownership",
+      "Information gathering"
+     ],
+     "items": [
+      [
+       "A colleague logs in to your bank account",
+       "Privacy",
+       "unauthorized access"
+      ],
+      [
+       "A boss reads staff private messages",
+       "Privacy",
+       "monitoring that damages privacy"
+      ],
+      [
+       "A blog copies your song and posts it",
+       "Digital ownership",
+       "creator's right"
+      ],
+      [
+       "A student uses a cartoonist's drawing without asking",
+       "Digital ownership",
+       "permission"
+      ],
+      [
+       "A quiz app asks for your password",
+       "Information gathering",
+       "credentials"
+      ],
+      [
+       "A shop app records every purchase you make",
+       "Information gathering",
+       "data collection"
+      ]
+     ],
+     "why": "Privacy: someone sees private data. Ownership: someone uses a creator's work. Gathering: an app collects data.",
+     "clue": "Ask: is it seeing, using or collecting?",
+     "added": true,
+     "graded": true,
+     "level": 1,
+     "id": "g12.it.u1.s1-1-1.17"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is NOT one of the pressing ethical and legal issues in the book?",
+     "opts": [
+      "Data creation",
+      "Privacy",
+      "Data gathering",
+      "Digital ownership"
+     ],
+     "ans": "Data creation",
+     "why": "The four issues are privacy, digital ownership, information gathering, and information security and liability.",
+     "clue": "Recall the four headings on p.3–4.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Review Part II Q1",
+     "id": "g12.it.u1.s1-1-1.18"
+    },
+    {
+     "kind": "tf",
+     "text": "Most people have their data spread through the digital world, where unintended sources can access it.",
+     "a": true,
+     "why": "p.3: personal accounts \"can be accessed by unauthorized sources\".",
+     "clue": "Think of how many accounts you have.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Review Part I Q2",
+     "id": "g12.it.u1.s1-1-1.19"
+    },
+    {
+     "kind": "tf",
+     "text": "Many people do not even realize how their personal information is being collected and used.",
+     "a": true,
+     "why": "p.4: many apps collect users' data as part of their operations, which raises the question of consent.",
+     "clue": "Do you read every app permission?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Review Part I Q6",
+     "id": "g12.it.u1.s1-1-1.20"
+    },
+    {
+     "kind": "mcq",
+     "text": "Selam wants to use a blogger's photo in her school poster. What should she do first?",
+     "opts": [
+      "Ask the owner for permission and credit the source",
+      "Use it because it is online",
+      "Crop it so nobody notices",
+      "Change the colours and call it hers"
+     ],
+     "ans": "Ask the owner for permission and credit the source",
+     "why": "Creators have the right to allow or deny use of their content (p.3).",
+     "clue": "Who decides how the photo is used?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "p.3",
+     "added": true,
+     "id": "g12.it.u1.s1-1-1.21"
+    },
+    {
+     "kind": "mcq",
+     "text": "Why does asking permission before using digital content help everyone?",
+     "opts": [
+      "It promotes sharing, credits the source and protects consumers from false information",
+      "It makes the file smaller",
+      "It hides the creator",
+      "It removes the need for passwords"
+     ],
+     "ans": "It promotes sharing, credits the source and protects consumers from false information",
+     "why": "p.3 names three benefits of permission: sharing knowledge, crediting the source and protecting consumers from false information.",
+     "clue": "Think of the creator, the user and the reader.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.3",
+     "added": true,
+     "id": "g12.it.u1.s1-1-1.22"
+    }
+   ]
+  },
+  {
+   "id": "it.security-liability",
+   "name": "Information security, liability and reporting",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "More personal and financial data is stored and sent online, so a security breach can expose organisations to liability and lead to identity theft, when a third party harvests innocent people's details for malicious use. Accepted procedures and rules make systems more reliable. Users must report breaches promptly; in Ethiopia organisations report cyber attacks to the designated government unit, the Information Network Security Agency (INSA)."
+    },
+    "am": {
+     "text": "የመረጃ ደህንነት ጥሰት ድርጅቶችን ተጠያቂ ያደርጋል፤ የማንነት ስርቆትም ያስከትላል። ጥሰትን በፍጥነት ሪፖርት አድርግ፤ በኢትዮጵያ ለኢንሳ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Who is responsible?",
+     "ask": "Hackers steal a bank's customer data. Who may face legal liability?",
+     "opts": [
+      "The bank that held the data",
+      "Only the customers",
+      "Nobody, because hackers did it",
+      "Only the phone company"
+     ],
+     "after": "A breach can expose the organisation that stored the data to \"potential security liability\".",
+     "ref": "p.4",
+     "id": "g12.it.u1.s1-1-1.23"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Security and liability",
+     "paras": [
+      "Organisations store and transfer more personal and financial data online.",
+      "A breach in information security can expose them to liability.",
+      "Breaches can lead to identity theft.",
+      "Identity theft: a third party harvests innocent people's personal details for malicious use.",
+      "Blogs and instant messaging are other sources of liability.",
+      "Accepted procedures and rules make information systems more reliable."
+     ],
+     "ref": "p.4",
+     "id": "g12.it.u1.s1-1-1.24"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Report breaches promptly",
+     "paras": [
+      "Users report breaches to their IT unit or expert, or the government body.",
+      "In Ethiopia, organisations report cyber attacks to a designated government unit.",
+      "That unit protects the country's information and information infrastructure.",
+      "It is the Information Network Security Agency (INSA), named on p.8."
+     ],
+     "ref": "p.4, Activity 1.1",
+     "id": "g12.it.u1.s1-1-1.25"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Reporting a security incident",
+     "steps": [
+      "Notice and record what happened, when, and on which system.",
+      "Contain it. Do not delete evidence.",
+      "Report promptly to your IT unit or security expert.",
+      "The organisation reports to INSA through its official channel.",
+      "Follow the instructions and help with recovery."
+     ],
+     "ref": "Activity 1.1 Q2",
+     "added": true,
+     "id": "g12.it.u1.s1-1-1.26"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Information security",
+       "Protecting stored and transferred information from breaches and unauthorized access."
+      ],
+      [
+       "Identity theft",
+       "When a third party harvests the personal details of innocent people to use them for malicious purposes."
+      ],
+      [
+       "Liability",
+       "The legal responsibility an organisation may face when information it holds is breached."
+      ]
+     ],
+     "id": "g12.it.u1.s1-1-1.27"
+    },
+    {
+     "kind": "mcq",
+     "text": "When a third party harvests innocent people's personal details for malicious use, it is called",
+     "opts": [
+      "identity theft",
+      "digital ownership",
+      "consent",
+      "plagiarism"
+     ],
+     "ans": "identity theft",
+     "why": "p.4.",
+     "clue": "Whose identity is being used?",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "p.4",
+     "id": "g12.it.u1.s1-1-1.28"
+    },
+    {
+     "kind": "tf",
+     "text": "In today's digital world, locking the office door is enough to keep information secure.",
+     "a": false,
+     "why": "Data travels over networks, so attackers can act from far away. Procedures, rules and reporting are needed (p.4).",
+     "clue": "Can a hacker reach a server without entering the room?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Review Part I Q4",
+     "id": "g12.it.u1.s1-1-1.29"
+    },
+    {
+     "kind": "order",
+     "title": "Order the steps for reporting a security incident",
+     "items": [
+      "Record what happened",
+      "Contain it and keep evidence",
+      "Report to the IT unit",
+      "Organisation reports to INSA",
+      "Follow up and recover"
+     ],
+     "why": "Record, contain, report inside, report to INSA, follow up.",
+     "clue": "You cannot report what you have not recorded.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 1.1 Q2",
+     "added": true,
+     "id": "g12.it.u1.s1-1-1.30"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is a common way someone gains unauthorized access to an online bank account?",
+     "opts": [
+      "A phishing SMS that tricks the owner into typing the PIN",
+      "Updating the banking app",
+      "Using a strong password",
+      "Logging out after use"
+     ],
+     "ans": "A phishing SMS that tricks the owner into typing the PIN",
+     "why": "Phishing tricks the owner into giving credentials; the others protect the account.",
+     "clue": "Which one helps the attacker?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Brainstorming 1.1",
+     "added": true,
+     "id": "g12.it.u1.s1-1-1.31"
+    },
+    {
+     "kind": "mcq",
+     "text": "Which is the most balanced view on government gathering citizens' information for national security?",
+     "opts": [
+      "Allowed only by law, limited to what is needed, kept secure and overseen",
+      "Always allowed without limits",
+      "Never allowed for any reason",
+      "Allowed only for private companies"
+     ],
+     "ans": "Allowed only by law, limited to what is needed, kept secure and overseen",
+     "why": "Security matters, but gathering raises the question of consent and privacy (p.3–4).",
+     "clue": "Balance security and privacy.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 1.1 Q1",
+     "id": "g12.it.u1.s1-1-1.32"
+    },
+    {
+     "kind": "mcq",
+     "text": "A school clerk sees a strange login to the student records system at 2 a.m. What is the best first action?",
+     "opts": [
+      "Record what happened and report it promptly to the IT unit",
+      "Delete the logs to clean the system",
+      "Ignore it unless data is lost",
+      "Post about it on social media"
+     ],
+     "ans": "Record what happened and report it promptly to the IT unit",
+     "why": "Users must report breaches promptly to the concerned unit or expert (p.4); deleting logs destroys evidence.",
+     "clue": "Who must know, and what must be kept?",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "p.4",
+     "added": true,
+     "id": "g12.it.u1.s1-1-1.33"
+    }
+   ]
+  }
+ ],
+ "exercises": [],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "Viewing a person's private information without permission is mainly an issue of",
+   "opts": [
+    "privacy",
+    "automation",
+    "green technology",
+    "digital collaboration"
+   ],
+   "ans": "privacy",
+   "why": "p.3.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.it.u1.s1-1-1.34"
+  },
+  {
+   "kind": "mcq",
+   "text": "Information gathering by apps raises mainly the question of",
+   "opts": [
+    "consent",
+    "speed",
+    "price",
+    "colour"
+   ],
+   "ans": "consent",
+   "why": "p.4.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.it.u1.s1-1-1.35"
+  },
+  {
+   "kind": "mcq",
+   "text": "Digital ownership is hard to control because online content",
+   "opts": [
+    "is easily copied and pasted",
+    "cannot be seen",
+    "is always printed",
+    "has no creator"
+   ],
+   "ans": "is easily copied and pasted",
+   "why": "p.3.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.it.u1.s1-1-1.36"
+  },
+  {
+   "kind": "mcq",
+   "text": "In Ethiopia, organisations should report cyber attacks to",
+   "opts": [
+    "INSA, the designated government unit",
+    "their customers only",
+    "a social media page",
+    "nobody"
+   ],
+   "ans": "INSA, the designated government unit",
+   "why": "p.4, p.8.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.it.u1.s1-1-1.37"
+  },
+  {
+   "kind": "mcq",
+   "text": "A hacker leaks a hospital's patient records and uses them to open loans. Which two issues appear?",
+   "opts": [
+    "Security liability and identity theft",
+    "Plagiarism and automation",
+    "Green technology and e-waste",
+    "Digital citizenship and collaboration"
+   ],
+   "ans": "Security liability and identity theft",
+   "why": "p.4.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.it.u1.s1-1-1.38"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.8 names INSA as the \"Information Network Security Agency\". Its current official English name may be \"Information Network Security Administration\"; teacher please confirm."
+  },
+  {
+   "kind": "note",
+   "text": "The incident-reporting steps, the phishing item and the scenario items (Telegram, Selam, school clerk) are added from the Activity 1.1 and Brainstorming 1.1 model answers."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
