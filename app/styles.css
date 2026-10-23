@@ -420,3 +420,9 @@ body.panel-open main { padding-bottom: 60vh; }
 .quiz.chal { border: 2.5px solid var(--sun); background: linear-gradient(180deg, var(--sun-soft), var(--surface) 60%); }
 .quiz.chal .ql { color: var(--sun-ink); }
 .stack > .lvl, .stack > .ref { justify-self: start; width: fit-content; margin-left: 0; }
+/* feedback */
+.fbcard { display: flex; align-items: center; gap: 12px; text-align: left; width: 100%; cursor: pointer; color: var(--fg); font: inherit; }
+.fbcard small { display: block; }
+.fbsheet textarea:focus, .fbsheet input:focus { outline: 2px solid var(--sky); }
+.fbpic { width: auto; cursor: pointer; }
+.secend .fbsec { justify-self: start; }

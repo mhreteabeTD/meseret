@@ -60,14 +60,41 @@ function setNav(on) {
 function setTop(html) { top.hidden = !html; topin.innerHTML = html || ''; }
 function hideTray() { tray.hidden = true; }
 function sheet(html) { sheetEl.innerHTML = html ? `<div class="sheet" id="sheetbg"><div class="in">${html}</div></div>` : ''; if (html) $('#sheetbg').addEventListener('click', e => { if (e.target.id === 'sheetbg') sheet(''); }); }
-function reportSheet(ctx) {
-  const opts = ['report_wrong', 'report_unclear', 'report_spelling', 'report_broken'];
-  sheet(`<div style="width:40px;height:5px;border-radius:99px;background:var(--line);justify-self:center"></div><h2 class="display">${t('report_q')}</h2><p class="small muted">${esc(ctx.label || '')}</p><div class="opts" role="group">${opts.map(k => `<button class="opt" data-k="${k}" aria-pressed="false">${t(k)}</button>`).join('')}</div><label class="stack"><span class="small" style="font-weight:800">${t('report_more')}</span><textarea id="rnote" rows="3"></textarea></label><button class="btn" id="rsend">${t('send')}</button><button class="btn link" id="rcancel">${t('cancel')}</button>`);
-  let kind = null;
-  sheetEl.querySelector('.opts').addEventListener('click', e => { const b = e.target.closest('.opt'); if (!b) return; kind = b.dataset.k; sheetEl.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-pressed', x === b)); });
-  $('#rcancel').onclick = () => sheet('');
-  $('#rsend').onclick = () => { const r = store.get('reports', []); r.push(Object.assign({ kind, note: $('#rnote').value, lang: S.lang, at: new Date().toISOString() }, ctx)); store.set('reports', r); sheet(''); toast(t('sent')); };
-}
+/* ---------- Feedback: reports and ideas reach the team (Google Sheet via Apps Script, server/feedback-apps-script.gs) ----------
+   Every message is queued on the phone first and sent when online, so nothing is lost offline. */
+const FEEDBACK_URL = store.get('fburl', '') || ''; // paste the Apps Script Web app URL between the last quotes (…/exec); 'fburl' in storage is for testing only
+const APP_VERSION = '0.2';
+const Feedback = {
+  where: ctx => [ctx.chapter, ctx.section, ctx.label].filter(Boolean).join(' · '),
+  device() { const ua = navigator.userAgent || ''; const m = ua.match(/\(([^)]+)\)/); return `${m ? m[1].split(';').slice(0, 3).join(';') : ''} · ${innerWidth}×${innerHeight}${Install.installed() ? ' · installed' : ''}`.slice(0, 200); },
+  busy: false,
+  async flush() { if (!FEEDBACK_URL || !navigator.onLine || Feedback.busy) return; Feedback.busy = true;
+    try { let q; while ((q = store.get('fbq', [])).length) { const r = q[0]; try { await fetch(FEEDBACK_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(r) }); } catch (_) { break; }
+        store.set('fbq', store.get('fbq', []).filter(x => x.at !== r.at || x.message !== r.message)); } } finally { Feedback.busy = false; } },
+  send(r) { const q = store.get('fbq', []); q.push(r); store.set('fbq', q.slice(-50)); Feedback.flush(); },
+  shrink(file) { return new Promise(res => { const img = new Image(), url = URL.createObjectURL(file); img.onload = () => { const k = Math.min(1, 900 / Math.max(img.width, img.height)), c = document.createElement('canvas'); c.width = Math.round(img.width * k); c.height = Math.round(img.height * k); c.getContext('2d').drawImage(img, 0, 0, c.width, c.height); URL.revokeObjectURL(url); res(c.toDataURL('image/jpeg', .7)); }; img.onerror = () => res(''); img.src = url; }); },
+  // ctx: { lesson, chapter, section, label, question } — filled in automatically from where the student is
+  open(ctx = {}) {
+    const lessonKinds = ['report_wrong', 'report_unclear', 'report_spelling', 'report_broken'], general = ['fb_problem', 'fb_idea', 'fb_question', 'fb_praise'], kinds = ctx.lesson ? lessonKinds.concat(['fb_idea']) : general;
+    sheet(`<div class="stack fbsheet"><div style="width:40px;height:5px;border-radius:99px;background:var(--line);justify-self:center"></div><h2 class="display">${ctx.lesson ? t('report_q') : '💬 ' + t('fb_title')}</h2>${Feedback.where(ctx) ? `<p class="small muted">${esc(Feedback.where(ctx))}</p>` : `<p class="small muted">${t('fb_sub')}</p>`}
+      <div class="opts" role="group">${kinds.map(k => `<button class="opt" data-k="${k}" aria-pressed="false">${t(k)}</button>`).join('')}</div>
+      <label class="stack"><span class="small" style="font-weight:800">${t('report_more')}</span><textarea id="fbmsg" rows="4" maxlength="3000" style="padding:10px 12px;border-radius:12px;border:2px solid var(--line);background:var(--surface);color:var(--fg);font:inherit"></textarea></label>
+      <div class="row"><label class="btn ghost small fbpic">📷 ${t('fb_shot')}<input type="file" accept="image/*" id="fbfile" hidden></label><span class="small muted" id="fbshotok"></span></div>
+      <label class="stack"><span class="small" style="font-weight:800">${t('fb_contact')}</span><input id="fbcontact" maxlength="120" value="${esc(store.get('fbcontact', ''))}" style="min-height:48px;padding:0 12px;border-radius:12px;border:2px solid var(--line);background:var(--surface);color:var(--fg)"></label>
+      <div class="row"><button class="btn ghost" id="fbcancel">${t('cancel')}</button><button class="btn" id="fbsend">${t('send')}</button></div></div>`);
+    let kind = null, shot = '';
+    sheetEl.querySelector('.opts').addEventListener('click', e => { const b = e.target.closest('.opt'); if (!b) return; kind = b.dataset.k; sheetEl.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-pressed', x === b)); });
+    $('#fbfile').onchange = async e => { const f = e.target.files && e.target.files[0]; if (!f) return; $('#fbshotok').textContent = '…'; shot = await Feedback.shrink(f); $('#fbshotok').textContent = shot ? '✓ ' + t('fb_shot_ok') : ''; };
+    $('#fbcancel').onclick = () => sheet('');
+    $('#fbsend').onclick = () => { const message = $('#fbmsg').value.trim(), contact = $('#fbcontact').value.trim();
+      if (!kind && !message) { toast(t('fb_empty')); return; }
+      store.set('fbcontact', contact);
+      const r = { app: 'meseret', at: new Date().toISOString(), type: kind ? (T[kind] && S.i18n.en && S.i18n.en[kind]) || kind : 'Message', message, where: Feedback.where(ctx), question: (ctx.question || '').slice(0, 500), grades: (S.grades || []).join(','), lang: S.lang, contact, device: Feedback.device(), version: APP_VERSION, shot };
+      Feedback.send(r); logEvent({ feedback: kind || 'message', lesson: ctx.lesson }); sheet(''); toast(t('sent')); };
+  }
+};
+function reportSheet(ctx) { Feedback.open(ctx); } // older call sites
+window.addEventListener('online', () => Feedback.flush());
 const svgIcon = d => `<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="${d}" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 const BACK = 'M15 6l-6 6 6 6', FLAG = 'M4 21V4h12l-1 4 1 4H4', CLOSE = 'M6 6l12 12M18 6L6 18';
 
@@ -133,8 +160,9 @@ async function viewHome() {
   <div class="list">${mine.length ? mine.map(chapterCard).join('') : `<div class="item"><div class="s">${t('no_lessons_yet')}</div></div>`}</div>
   ${others.length ? `<h2 class="display">${t('all_grades')}</h2><div class="list">${others.map(chapterCard).join('')}</div>` : ''}
   <h2 class="display">${t('coming')}</h2><div class="list">${idx.coming.filter(c => S.grades.includes(c.grade)).map(c => `<div class="item"><div class="icon" style="background:var(--surface-2);color:var(--muted)">+</div><div class="grow"><div class="t muted">${esc(L(idx.subjects[c.subject] || { en: c.subject }))} · ${t('grade')} ${c.grade} · ${t('unit')} ${c.unit}</div><div class="s">${esc(L(c.title))}</div></div></div>`).join('')}</div>
-  ${last ? Install.card(true) : ''}`;
-  Install.bind(app);
+  ${last ? Install.card(true) : ''}
+  <button class="card fbcard" id="fbhome"><span class="instic">💬</span><span class="grow"><b>${t('fb_title')}</b><small class="muted">${t('fb_sub')}</small></span><span>›</span></button>`;
+  Install.bind(app); $('#fbhome').onclick = () => Feedback.open({});
 }
 
 async function viewChapter(id) {
@@ -183,8 +211,9 @@ async function viewSettings() {
   app.innerHTML = `<div class="card"><div style="font-weight:800">${t('language')}</div><div class="opts row3"><button class="opt center" data-l="am" style="font-family:var(--ethiopic)">አማርኛ</button><button class="opt center" data-l="en">English</button><button class="opt center" disabled>Oromoo</button></div></div>
   <div class="card"><div style="font-weight:800">${t('grade')}</div><a class="btn ghost" href="#setup">${S.grades.join(', ') || '?'} ›</a></div>
   ${Install.installed() ? `<div class="card"><div style="font-weight:800">✓ ${t('install_done')}</div></div>` : Install.card(false)}
-  <p class="small muted">Meseret v0.1 · ${S.code ? 'Class ' + esc(S.code) : ''}</p>`;
-  Install.bind(app);
+  <button class="card fbcard" id="fbset"><span class="instic">💬</span><span class="grow"><b>${t('fb_title')}</b><small class="muted">${t('fb_sub')}</small></span><span>›</span></button>
+  <p class="small muted">Meseret v${APP_VERSION} · ${S.code ? 'Class ' + esc(S.code) : ''}</p>`;
+  Install.bind(app); $('#fbset').onclick = () => Feedback.open({});
   app.querySelectorAll('[data-l]').forEach(b => { b.setAttribute('aria-pressed', b.dataset.l === S.lang); b.onclick = async () => { await loadLang(b.dataset.l); viewSettings(); }; });
 }
 
@@ -844,7 +873,7 @@ function runPlayer(cfg) {
       return { el, label: cfg.mode === 'refresher' ? t('back_to_question') : missed.size ? t('replay_n', { n: missed.size }) : cfg.resume ? t('back_to_book') : t('start_again'), ready: () => true, summary: true }; };
   function setTray(kind, title, body, label) { tray.className = 'tray' + (kind ? ' ' + kind : ''); msg.innerHTML = title ? `<strong>${esc(title)}</strong>${body ? `<span>${esc(body)}</span>` : ''}` : ''; go.textContent = label; }
   function update() { if (phase === 'answer' && cur) go.disabled = !cur.ready(); }
-  function bindTop(k) { const rep = $('#rep'); if (rep) rep.onclick = () => reportSheet({ lesson: cfg.id || cfg.title, screen: k, label: `${cfg.title} · ${Math.min(pos + 1, order.length)}/${order.length}` }); const rb = $('#rback'); if (rb) rb.onclick = () => cfg.resume && cfg.resume(); }
+  function bindTop(k) { const rep = $('#rep'); if (rep) rep.onclick = () => { const sc = screens[k] || {}; Feedback.open({ lesson: cfg.id || cfg.title, label: `${cfg.title} · ${Math.min(pos + 1, order.length)}/${order.length}`, question: [sc.ask, sc.text, sc.title].filter(Boolean).join(' | ') }); }; const rb = $('#rback'); if (rb) rb.onclick = () => cfg.resume && cfg.resume(); }
   function addSkip() { const k = order[pos], s = screens[k] || {}; const osk = $('#skipb'); if (osk) osk.remove(); if (s.graded && order.length - pos > 2 && (!['mcq', 'tf'].includes(s.kind) || tries[k])) { const sb = document.createElement('button'); sb.className = 'btn ghost'; sb.id = 'skipb'; sb.style.width = 'auto'; sb.textContent = t('skip'); sb.onclick = () => { order.splice(pos, 1); order.splice(order.length - 1, 0, k); show(); }; go.parentNode.insertBefore(sb, go); } }
   function show() {
     const k0 = order[pos]; if (cfg.adapt && k0 !== SUM && screens[k0] && screens[k0]._adapt && !screens[k0]._shown) screens[k0] = Object.assign(Gen.make(screens[k0], null, null, lvl), { _adapt: true, _shown: true });
@@ -1315,6 +1344,8 @@ async function viewBook(id) {
     // end of section: celebration, practise set, book exercises
     const end = document.createElement('div'); end.className = 'secend';
     end.innerHTML = `<div class="secdone" hidden>🎉 ${t('section_done', { s: esc(sec.n) })} <b>+20 ⭐</b></div><div class="prac"></div>${(ls.exercises || []).map((ex, k) => `<button class="pcard soft" data-a="ex" data-k="${k}"><span class="pi">${ex.test ? '🏁' : '📝'}</span><span class="grow"><b>${esc(ex.book_name)}</b><small>${ex.test ? t('fresh_test') : t('book_exercise')} · ${ex.items.length}</small></span><span>›</span></button>`).join('')}`;
+    end.insertAdjacentHTML('beforeend', `<button class="btn link small fbsec">🚩 ${t('report_section')}</button>`);
+    end.querySelector('.fbsec').onclick = () => Feedback.open({ lesson: ls.id, chapter: `${t('grade')} ${c.grade} · ${L(idx.subjects[c.subject])} · ${t('unit')} ${c.unit}`, section: `${sec.n} ${ls.title}` });
     function updPrac() { const pr = B.prac[sec.lesson]; end.querySelector('.prac').innerHTML = practise.length ? `<button class="pcard" data-a="prac"><span class="pi">🎯</span><span class="grow"><b>${t('practise_n', { n: practise.length })}</b><small>${pr ? `${t('best')} ${pr}` : t('practise_sub')}</small></span><span>›</span></button>` : ''; }
     updPrac();
     const runHere = cfg => { const keep = { app: [...app.childNodes], top: [...topin.childNodes], y: window.scrollY }; away = true;
@@ -1379,4 +1410,5 @@ window.addEventListener('hashchange', route);
 window.addEventListener('online', () => {}); window.addEventListener('offline', () => toast(t('offline')));
 if ('serviceWorker' in navigator) { try { const had = !!navigator.serviceWorker.controller; navigator.serviceWorker.register('sw.js').then(r => r.update()).catch(() => {}); let once = false; navigator.serviceWorker.addEventListener('controllerchange', () => { if (had && !once) { once = true; location.reload(); } }); } catch (_) {} }
 route();
+setTimeout(() => Feedback.flush(), 4000);
 })();
