@@ -1,0 +1,489 @@
+{
+ "id": "g8.cte.u2.s2-3-2",
+ "book": {
+  "title": "Career and Technical Education Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "cte",
+  "unit": 2,
+  "unit_title": "Self Employment Opportunities: Reception Skills, Photocopier Usage, and Enterprise Activity",
+  "pages": "27–33",
+  "section": "2.3.2–2.3.5"
+ },
+ "title": "Copier maintenance and problems",
+ "competency": "Maintain a photocopier and fix common copier problems.",
+ "minutes": 16,
+ "keywords": [
+  {
+   "en": "Paper jam",
+   "am": "የወረቀት መጣበቅ",
+   "def": "The most common copier error: paper gets stuck inside, often from wrong size, poor loading or paper dust.",
+   "machine": true
+  },
+  {
+   "en": "Toner",
+   "am": "ቶነር",
+   "def": "The powder ink in a copier cartridge; low or empty toner gives faint copies.",
+   "machine": true
+  },
+  {
+   "en": "Drum",
+   "am": "ድራም",
+   "def": "The copier part that transfers the image; a defective drum causes random spots or lines.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "cte.g8.copier-care",
+   "name": "Cleaning and caring for a copier",
+   "explain": {
+    "en": {
+     "text": "Clean the copier regularly: wipe the outside lightly, wipe the bypass and exit trays, and always wipe away from the entry areas so dirt does not fall into the paper path. Use a soft, dust-free cotton cloth just moistened with 70% isopropyl alcohol and 30% water. Never use paper towels or spray liquid directly on the machine. Good habits: switch it off, warm it up, clean the glass, use good paper, load paper correctly, empty waste toner."
+    },
+    "am": {
+     "text": "ኮፒ ማሽንን በየጊዜው በለስላሳ፣ ትንሽ እርጥብ የጥጥ ጨርቅ አጽዳ፤ ፈሳሽ በቀጥታ አትርጭ። ጥሩ ወረቀት ተጠቀም፣ መስታወቱን አጽዳ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Cleaning cloth",
+     "ask": "Which cloth should you use to clean a copier?",
+     "opts": [
+      "A soft, dust-free cotton cloth, slightly moist",
+      "A paper towel",
+      "A dripping wet rag",
+      "Sandpaper"
+     ],
+     "after": "p.27: a clean, soft, dust-free cotton cloth moistened with rubbing alcohol; no paper towels, no dripping.",
+     "ref": "p.27",
+     "id": "g8.cte.u2.s2-3-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Cleaning the copier",
+     "paras": [
+      "Wipe the exterior lightly; wipe the bypass and exit trays regularly.",
+      "Always wipe away from the entry areas so dirt does not fall into the paper path.",
+      "Use a soft, dust-free cotton cloth moistened with 70% isopropyl alcohol and 30% water (rubbing alcohol).",
+      "Do not use fibrous materials such as paper towels. No free liquid; never spray directly onto the machine."
+     ],
+     "ref": "p.27",
+     "id": "g8.cte.u2.s2-3-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Maintenance tips",
+     "paras": [
+      "Shut it off when not in use.",
+      "Warm it up.",
+      "Clean the glass regularly.",
+      "Use better, quality paper and products.",
+      "Load paper correctly.",
+      "Empty waste toner.",
+      "Keep dust and debris away from the cartridge and machine."
+     ],
+     "ref": "pp.32–33",
+     "id": "g8.cte.u2.s2-3-2.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Toner",
+       "The powder ink in a copier cartridge; low or empty toner gives faint copies."
+      ]
+     ],
+     "id": "g8.cte.u2.s2-3-2.4"
+    },
+    {
+     "kind": "tf",
+     "step": "check",
+     "graded": true,
+     "text": "You should spray cleaning liquid directly onto the copier glass.",
+     "a": false,
+     "why": "Never spray liquids directly onto the product; moisten the cloth instead.",
+     "clue": "Where does the liquid go?",
+     "level": 1,
+     "id": "g8.cte.u2.s2-3-2.5"
+    },
+    {
+     "kind": "pick",
+     "step": "practise",
+     "graded": true,
+     "text": "Which are copier maintenance tips from the book?",
+     "pool": [
+      "Clean the glass",
+      "Load paper correctly",
+      "Empty waste toner",
+      "Use better paper",
+      "Use paper towels to clean"
+     ],
+     "a": [
+      "Clean the glass",
+      "Load paper correctly",
+      "Empty waste toner",
+      "Use better paper"
+     ],
+     "why": "pp.32–33. Paper towels are not allowed.",
+     "clue": "Which one is a mistake?",
+     "level": 1,
+     "id": "g8.cte.u2.s2-3-2.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Why should you wipe away from the entry areas?",
+     "opts": [
+      "So dirt does not fall into the paper path",
+      "To make it shine",
+      "To save time",
+      "There is no reason"
+     ],
+     "ans": "So dirt does not fall into the paper path",
+     "why": "p.27.",
+     "clue": "Where does the paper travel?",
+     "level": 1,
+     "id": "g8.cte.u2.s2-3-2.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "A photocopy shop owner wants her machine to last many years. What does the book say is a major factor for longevity?",
+     "opts": [
+      "Regular maintenance",
+      "Using it as little as possible",
+      "Never cleaning it",
+      "Buying cheap paper"
+     ],
+     "ans": "Regular maintenance",
+     "why": "Unit summary: regular maintenance extends the lifespan of the machine and reduces breakdowns.",
+     "clue": "Read the unit summary.",
+     "level": 3,
+     "added": true,
+     "id": "g8.cte.u2.s2-3-2.8"
+    }
+   ]
+  },
+  {
+   "id": "cte.g8.copier-problems",
+   "name": "Common copier problems",
+   "requires": [
+    "cte.g8.copier-care"
+   ],
+   "explain": {
+    "en": {
+     "text": "Match the symptom to its cause. Paper jam, the most common error: wrong size, poor loading or paper dust, so remove the paper and reload correctly. Lines on paper: dirt on the glass or mirrors, or a drum or fuser problem. Faint copies: low or empty toner, so replace it. Wrinkled pages: worn rollers, worn trays or damp paper. Too light or too dark: reset the density controls. Spots in the same place: clean the glass; random spots: replace the drum."
+    },
+    "am": {
+     "text": "የወረቀት መጣበቅ በጣም የተለመደ ችግር ነው። የቶነር ማለቅ ደካማ ኮፒ፣ የድራም ጉድለት ነጠብጣብ ያስከትላል፤ ችግሩን ከምክንያቱ ጋር አዛምድ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "The same spot",
+     "ask": "Every copy has a black dot in exactly the same place. What is the likely cause?",
+     "opts": [
+      "Dirt or a smudge on the copier glass",
+      "Low toner",
+      "Wrong paper size",
+      "A power cut"
+     ],
+     "after": "Spots in the same place every time usually come from smudges or debris on the mirror or glass.",
+     "ref": "p.32",
+     "id": "g8.cte.u2.s2-3-2.9"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Problems and fixes",
+     "paras": [
+      "Find the symptom, then the cause and the fix."
+     ],
+     "table": [
+      [
+       "Problem",
+       "Cause",
+       "Fix"
+      ],
+      [
+       "Paper jam",
+       "Wrong size, poor loading, paper dust",
+       "Remove paper, reload correctly, wipe feed tires"
+      ],
+      [
+       "Lines on paper",
+       "Dirt on glass/mirrors; drum, blade or fuser fault",
+       "Clean glass; service parts"
+      ],
+      [
+       "Faint copies",
+       "Low or empty toner",
+       "Replace the cartridge"
+      ],
+      [
+       "Wrinkled pages",
+       "Worn rollers or trays, humidity, fuser",
+       "Replace worn parts; keep paper dry"
+      ],
+      [
+       "Too light/dark",
+       "Density settings changed",
+       "Reset density levels"
+      ],
+      [
+       "Spots",
+       "Same place: dirty glass; random: drum defect",
+       "Clean glass or replace drum"
+      ]
+     ],
+     "ref": "pp.28–32",
+     "id": "g8.cte.u2.s2-3-2.10"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Paper jam",
+       "The most common copier error: paper gets stuck inside, often from wrong size, poor loading or paper dust."
+      ],
+      [
+       "Drum",
+       "The copier part that transfers the image; a defective drum causes random spots or lines."
+      ]
+     ],
+     "id": "g8.cte.u2.s2-3-2.11"
+    },
+    {
+     "kind": "match",
+     "step": "check",
+     "graded": true,
+     "text": "Match each problem with its fix.",
+     "pairs": [
+      [
+       "Paper jam",
+       "Remove the stuck paper and reload correctly"
+      ],
+      [
+       "Copies too dark",
+       "Reset the density levels"
+      ],
+      [
+       "Faint copies from empty toner",
+       "Replace the toner cartridge"
+      ],
+      [
+       "Random spots all over",
+       "Replace the drum"
+      ]
+     ],
+     "why": "pp.28–32.",
+     "clue": "What causes each problem?",
+     "level": 1,
+     "id": "g8.cte.u2.s2-3-2.12"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "What is the most common copy machine error?",
+     "opts": [
+      "Paper jam",
+      "Spots",
+      "Too dark copies",
+      "Wrinkled pages"
+     ],
+     "ans": "Paper jam",
+     "why": "p.28.",
+     "clue": "Stuck paper.",
+     "level": 1,
+     "id": "g8.cte.u2.s2-3-2.13"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "Wrinkled pages are often caused by",
+     "opts": [
+      "worn-out feed and exit rollers",
+      "a clean glass",
+      "new toner",
+      "the colour setting"
+     ],
+     "ans": "worn-out feed and exit rollers",
+     "why": "p.30.",
+     "clue": "Moving parts.",
+     "level": 1,
+     "id": "g8.cte.u2.s2-3-2.14"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "After a rainy week, many copies come out wrinkled even though the rollers are new. What is the likely cause?",
+     "opts": [
+      "Moisture in the paper from humidity",
+      "Too much toner",
+      "A dirty glass",
+      "Wrong number of copies"
+     ],
+     "ans": "Moisture in the paper from humidity",
+     "why": "p.30: moisture caused by humidity can also lead to wrinkled pages; keep paper dry.",
+     "clue": "What changed this week?",
+     "level": 3,
+     "added": true,
+     "id": "g8.cte.u2.s2-3-2.15"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Review Part IV Q1",
+   "items": [
+    {
+     "kind": "sort",
+     "step": "exercise",
+     "graded": true,
+     "text": "Diagnose: which part is most likely at fault?",
+     "bins": [
+      "Glass",
+      "Toner",
+      "Drum"
+     ],
+     "items": [
+      [
+       "Spots in the same place every copy",
+       "Glass",
+       "Smudges on the glass."
+      ],
+      [
+       "Copies getting fainter",
+       "Toner",
+       "Low toner."
+      ],
+      [
+       "Random spots throughout",
+       "Drum",
+       "Drum defect."
+      ]
+     ],
+     "why": "p.30–32.",
+     "clue": "Same place or random?",
+     "level": 2,
+     "id": "g8.cte.u2.s2-3-2.16"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The cleaning mixture in the book is",
+   "opts": [
+    "70% isopropyl alcohol and 30% water",
+    "pure water",
+    "oil",
+    "soap and sand"
+   ],
+   "ans": "70% isopropyl alcohol and 30% water",
+   "why": "p.27.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.cte.u2.s2-3-2.17"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Low or empty toner causes",
+   "opts": [
+    "problems with print quality",
+    "paper jams only",
+    "too much colour",
+    "nothing"
+   ],
+   "ans": "problems with print quality",
+   "why": "p.30.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.cte.u2.s2-3-2.18"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Paper dust can be avoided by",
+   "opts": [
+    "wiping the feed tires and vacuuming dust",
+    "adding water",
+    "using paper towels",
+    "never cleaning"
+   ],
+   "ans": "wiping the feed tires and vacuuming dust",
+   "why": "p.28.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.cte.u2.s2-3-2.19"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which are common copier problems?",
+   "opts": [
+    "All of these",
+    "Paper jam",
+    "Lines on the paper",
+    "Toner or cartridge problems"
+   ],
+   "ans": "All of these",
+   "why": "Review III Q1.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.cte.u2.s2-3-2.20"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Copies are too dark after someone changed the settings. The fix is to",
+   "opts": [
+    "reset the density levels",
+    "replace the drum",
+    "unplug forever",
+    "use wet paper"
+   ],
+   "ans": "reset the density levels",
+   "why": "p.31.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.cte.u2.s2-3-2.21"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Review III Q1 includes over-heating, which the unit does not cover, and \"cartilage\" (cartridge). Review III Q2 (service interval) has no basis in the text and is not used."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
