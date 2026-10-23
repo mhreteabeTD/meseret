@@ -66,7 +66,7 @@ function hideTray() { tray.hidden = true; }
 function sheet(html) { sheetEl.innerHTML = html ? `<div class="sheet" id="sheetbg"><div class="in">${html}</div></div>` : ''; if (html) $('#sheetbg').addEventListener('click', e => { if (e.target.id === 'sheetbg') sheet(''); }); }
 /* ---------- Feedback: reports and ideas reach the team (Google Sheet via Apps Script, server/feedback-apps-script.gs) ----------
    Every message is queued on the phone first and sent when online, so nothing is lost offline. */
-const ANALYTICS = { url: store.get('anurl', '') || '', key: store.get('ankey', '') || '' }; // Supabase project URL and anon key go here
+const ANALYTICS = { url: store.get('anurl', '') || 'https://ungalmkalfrxkunvkxiz.supabase.co', key: store.get('ankey', '') || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVuZ2FsbWthbGZyeGt1bnZreGl6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3NDI4MTAsImV4cCI6MjEwODMxODgxMH0.Wcp1pGzqDmnht59CjZvLb-XiEFNJpM5-J83-ByWRDtY' }; // Supabase project URL and anon key go here
 const Analytics = {
   busy: false, last: 0,
   async flush(force) { if (!ANALYTICS.url || !navigator.onLine || Analytics.busy) return; const q = store.get('evq', []); if (!q.length || (!force && Date.now() - Analytics.last < 60000)) return; Analytics.busy = true;
