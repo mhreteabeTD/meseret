@@ -1,0 +1,460 @@
+{
+ "id": "g12.maths.u2.s2-1-4-4",
+ "book": {
+  "title": "Mathematics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "Introduction to Calculus",
+  "pages": "95–97",
+  "section": "2.1.4.4"
+ },
+ "title": "The chain rule",
+ "competency": "Differentiate composite functions with the chain rule.",
+ "minutes": 12,
+ "keywords": [
+  {
+   "en": "Chain rule",
+   "am": "የሰንሰለት ሕግ",
+   "def": "(f ∘ g)′(x) = f′(g(x)) · g′(x).",
+   "machine": true
+  },
+  {
+   "en": "Composite function",
+   "am": "ውሁድ ፋንክሽን",
+   "def": "A function inside another, f(g(x)).",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.chain-rule",
+   "name": "The chain rule",
+   "requires": [
+    "math.power-rule"
+   ],
+   "explain": {
+    "en": {
+     "text": "For a function inside a function, f(g(x)): differentiate the outside at the inside, then multiply by the derivative of the inside. (f ∘ g)′(x) = f′(g(x)) · g′(x). Forgetting the inner derivative is the most common mistake."
+    },
+    "am": {
+     "text": "ለፋንክሽን ውስጥ ያለ ፋንክሽን፡ የውጪውን ዴሪቫቲቭ በውስጡ ላይ፣ በውስጠኛው ዴሪቫቲቭ እናባዛለን። (f ∘ g)′ = f′(g(x)) · g′(x)።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Expand or not?",
+     "ask": "f(x) = (3x² + 2)². Expanded, f = 9x⁴ + 12x² + 4, so f′ = 36x³ + 24x. Which shortcut gives the same?",
+     "opts": [
+      "2(3x² + 2) × 6x",
+      "2(3x² + 2)",
+      "2 × 6x",
+      "(6x)²"
+     ],
+     "after": "2(3x² + 2) × 6x = 36x³ + 24x. Outer power rule, times the inner derivative 6x.",
+     "ref": "Activity 2.11 Q2 a",
+     "id": "g12.maths.u2.s2-1-4-4.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Chain rule",
+     "paras": [
+      "If g is differentiable at a and f at g(a):",
+      "(f ∘ g)′(a) = f′(g(a)) · g′(a)."
+     ],
+     "note": "Derivative of the outside at the inside × derivative of the inside.",
+     "ref": "Theorem 2.6",
+     "id": "g12.maths.u2.s2-1-4-4.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Chain rule",
+       "(f ∘ g)′(x) = f′(g(x)) · g′(x)."
+      ],
+      [
+       "Composite function",
+       "A function inside another, f(g(x))."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-1-4-4.3"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = (5x + 4)²¹. f′(x) =",
+     "opts": [
+      "105(5x + 4)²⁰",
+      "21(5x + 4)²⁰",
+      "5(5x + 4)²⁰",
+      "105(5x + 4)²¹"
+     ],
+     "ans": "105(5x + 4)²⁰",
+     "why": "21(5x + 4)²⁰ × 5 = 105(5x + 4)²⁰.",
+     "clue": "Do not forget × 5 from the inside.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example 1 b",
+     "id": "g12.maths.u2.s2-1-4-4.4"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "y = √(4 + x⁵) at x = 2",
+     "steps": [
+      "Outside √u: derivative 1/(2√u). Inside u = 4 + x⁵: derivative 5x⁴.",
+      "dy/dx = 5x⁴/(2√(4 + x⁵)).",
+      "At x = 2: 5(16)/(2√36) = 80/12 = 20/3."
+     ],
+     "ref": "Example 2",
+     "id": "g12.maths.u2.s2-1-4-4.5"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = (2x + 1)⁴. f′(x) =",
+     "opts": [
+      "8(2x + 1)³",
+      "4(2x + 1)³",
+      "8(2x + 1)⁴",
+      "2(2x + 1)³"
+     ],
+     "ans": "8(2x + 1)³",
+     "why": "4(2x + 1)³ × 2.",
+     "clue": "Inner derivative 2.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 2.13 a",
+     "id": "g12.maths.u2.s2-1-4-4.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = √(x² + 3x − 1). f′(x) =",
+     "opts": [
+      "(2x + 3)/(2√(x² + 3x − 1))",
+      "1/(2√(x² + 3x − 1))",
+      "(2x + 3)√(x² + 3x − 1)",
+      "(2x + 3)/√(x² + 3x − 1)"
+     ],
+     "ans": "(2x + 3)/(2√(x² + 3x − 1))",
+     "why": "1/(2√u) × u′.",
+     "clue": "√u = u^(1/2).",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.13 c",
+     "id": "g12.maths.u2.s2-1-4-4.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = 1/(3x + 2)². f′(x) =",
+     "opts": [
+      "−6/(3x + 2)³",
+      "−2/(3x + 2)³",
+      "6/(3x + 2)³",
+      "−6/(3x + 2)²"
+     ],
+     "ans": "−6/(3x + 2)³",
+     "why": "(3x + 2)⁻²: −2(3x + 2)⁻³ × 3.",
+     "clue": "Write it as a negative power.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.13 d",
+     "id": "g12.maths.u2.s2-1-4-4.8"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = (x² + 1)³. f′(1) = ___",
+     "a": [
+      "24"
+     ],
+     "why": "f′ = 3(x² + 1)² × 2x. At 1: 3(4)(2) = 24.",
+     "clue": "Outer 3u², inner 2x.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.maths.u2.s2-1-4-4.9"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = ((3x − 5)/(2 − 7x))⁶. f′(x) =",
+     "opts": [
+      "−174(3x − 5)⁵/(2 − 7x)⁷",
+      "6(3x − 5)⁵/(2 − 7x)⁵",
+      "174(3x − 5)⁵/(2 − 7x)⁷",
+      "−29/(2 − 7x)²"
+     ],
+     "ans": "−174(3x − 5)⁵/(2 − 7x)⁷",
+     "why": "Inner derivative −29/(2 − 7x)². 6u⁵ × (−29)/(2 − 7x)².",
+     "clue": "Quotient rule for the inside.",
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Exercise 2.13 f",
+     "id": "g12.maths.u2.s2-1-4-4.10"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = √(x² + 16). The slope at x = 3 is ___",
+     "a": [
+      "3/5",
+      "0.6"
+     ],
+     "why": "f′ = x/√(x² + 16). At 3: 3/√25 = 3/5.",
+     "clue": "1/(2√u) × 2x.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u2.s2-1-4-4.11"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 2.13",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "(2x + 1)⁴:",
+     "opts": [
+      "8(2x + 1)³",
+      "4(2x + 1)³",
+      "2(2x + 1)³",
+      "8(2x + 1)⁴"
+     ],
+     "ans": "8(2x + 1)³",
+     "why": "× 2.",
+     "clue": "Inner 2.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "a",
+     "id": "g12.maths.u2.s2-1-4-4.12"
+    },
+    {
+     "kind": "mcq",
+     "text": "(x³ + 2x)²⁵:",
+     "opts": [
+      "25(x³ + 2x)²⁴(3x² + 2)",
+      "25(x³ + 2x)²⁴",
+      "25(3x² + 2)²⁴",
+      "(3x² + 2)²⁵"
+     ],
+     "ans": "25(x³ + 2x)²⁴(3x² + 2)",
+     "why": "Outer × inner.",
+     "clue": "Inner 3x² + 2.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "b",
+     "id": "g12.maths.u2.s2-1-4-4.13"
+    },
+    {
+     "kind": "mcq",
+     "text": "√(x² + 3x − 1):",
+     "opts": [
+      "(2x + 3)/(2√(x² + 3x − 1))",
+      "1/(2√(x² + 3x − 1))",
+      "(2x + 3)/√(x² + 3x − 1)",
+      "√(2x + 3)"
+     ],
+     "ans": "(2x + 3)/(2√(x² + 3x − 1))",
+     "why": "1/(2√u) × u′.",
+     "clue": "√u.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "c",
+     "id": "g12.maths.u2.s2-1-4-4.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "1/(3x + 2)²:",
+     "opts": [
+      "−6/(3x + 2)³",
+      "−2/(3x + 2)³",
+      "6/(3x + 2)³",
+      "−3/(3x + 2)³"
+     ],
+     "ans": "−6/(3x + 2)³",
+     "why": "−2 × 3.",
+     "clue": "Negative power.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "d",
+     "id": "g12.maths.u2.s2-1-4-4.15"
+    },
+    {
+     "kind": "mcq",
+     "text": "√(x² + 1/x²):",
+     "opts": [
+      "(x − 1/x³)/√(x² + 1/x²)",
+      "(x + 1/x³)/√(x² + 1/x²)",
+      "1/(2√(x² + 1/x²))",
+      "(2x − 2/x³)√(x² + 1/x²)"
+     ],
+     "ans": "(x − 1/x³)/√(x² + 1/x²)",
+     "why": "u′ = 2x − 2/x³; halve it.",
+     "clue": "Inner x² + x⁻².",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "e",
+     "id": "g12.maths.u2.s2-1-4-4.16"
+    },
+    {
+     "kind": "mcq",
+     "text": "((3x − 5)/(2 − 7x))⁶:",
+     "opts": [
+      "−174(3x − 5)⁵/(2 − 7x)⁷",
+      "174(3x − 5)⁵/(2 − 7x)⁷",
+      "6(3x − 5)⁵/(2 − 7x)⁵",
+      "−29(3x − 5)⁵/(2 − 7x)⁶"
+     ],
+     "ans": "−174(3x − 5)⁵/(2 − 7x)⁷",
+     "why": "6 × (−29) = −174.",
+     "clue": "Quotient rule inside.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "f",
+     "id": "g12.maths.u2.s2-1-4-4.17"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "((x + 1)⁵)′ =",
+   "opts": [
+    "5(x + 1)⁴",
+    "(x + 1)⁴",
+    "5(x + 1)⁵",
+    "4(x + 1)⁵"
+   ],
+   "ans": "5(x + 1)⁴",
+   "why": "inner derivative 1.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-4-4.18"
+  },
+  {
+   "kind": "mcq",
+   "text": "((4x − 3)³)′ =",
+   "opts": [
+    "12(4x − 3)²",
+    "3(4x − 3)²",
+    "4(4x − 3)²",
+    "12(4x − 3)³"
+   ],
+   "ans": "12(4x − 3)²",
+   "why": "3 × 4.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-4-4.19"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = √(2x + 1). f′(4) = ___",
+   "a": [
+    "1/3"
+   ],
+   "why": "1/√(2x + 1) = 1/3.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-4-4.20"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = (x² − 3)⁴. f′(2) = ___",
+   "a": [
+    "16"
+   ],
+   "why": "4(1)³(4) = 16.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-4-4.21"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = 1/(x² + 1). f′(1) = ___",
+   "a": [
+    "-1/2",
+    "-0.5"
+   ],
+   "why": "−2x/(x² + 1)² = −2/4.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-4-4.22"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Example 1 b first writes 21(5x + 4)²¹⁻¹ without the inner factor 5; the next step includes it. Lessons show the × 5 from the start."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.power-rule": {
+   "name": "The power rule",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "(x⁵)′",
+     "steps": [
+      "Bring 5 down, lower the power: 5x⁴."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "text": "(u³)′ with respect to u = ?",
+     "opts": [
+      "3u²",
+      "u²",
+      "3u³",
+      "3u"
+     ],
+     "ans": "3u²",
+     "why": "Power rule.",
+     "clue": "n uⁿ⁻¹.",
+     "graded": true,
+     "level": 1,
+     "step": "check"
+    }
+   ]
+  }
+ }
+}

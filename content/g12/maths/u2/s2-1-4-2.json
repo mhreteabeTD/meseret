@@ -1,0 +1,458 @@
+{
+ "id": "g12.maths.u2.s2-1-4-2",
+ "book": {
+  "title": "Mathematics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "Introduction to Calculus",
+  "pages": "82–84",
+  "section": "2.1.4.2"
+ },
+ "title": "The derivative as a function",
+ "competency": "Find the derivative function from the definition and use its notations.",
+ "minutes": 12,
+ "keywords": [
+  {
+   "en": "Derivative",
+   "am": "ተዋጽኦ (ዴሪቫቲቭ)",
+   "def": "f′(a): the gradient of the tangent to y = f(x) at (a, f(a)).",
+   "machine": true
+  },
+  {
+   "en": "Differentiable",
+   "am": "ዴሪቫቲቭ ያለው",
+   "def": "Having a derivative: the difference quotient settles at one value from both sides.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.derivative-function",
+   "name": "The derivative as a function",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Doing the limit at a general x gives a new function f′(x) = what (f(x + h) − f(x))/h approaches as h → 0. It is defined only where that value exists and is the same from both sides. Other names: dy/dx, d/dx f(x), Df(x). Basic results: (k)′ = 0, (x²)′ = 2x, (√x)′ = 1/(2√x), (1/x)′ = −1/x²."
+    },
+    "am": {
+     "text": "በአጠቃላይ x ላይ ገደቡን ስንሰራ አዲስ ፋንክሽን f′(x) እናገኛለን። ሌሎች ምልክቶች፡ dy/dx, d/dx f(x), Df(x)።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "One formula for every point",
+     "ask": "For f(x) = x², the gradient is 4 at x = 2 and −2 at x = −1. Which formula gives the gradient at any x?",
+     "opts": [
+      "2x",
+      "x²",
+      "x + 2",
+      "2"
+     ],
+     "after": "2x: 2(2) = 4 and 2(−1) = −2. The formula 2x is the derivative function f′(x).",
+     "id": "g12.maths.u2.s2-1-4-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The derivative as a function",
+     "paras": [
+      "f′(x) is what (f(x + h) − f(x))/h approaches as h → 0.",
+      "Its domain is the x-values where f is differentiable.",
+      "Another form: f′(x) = (f(t) − f(x))/(t − x) as t gets very close to x."
+     ],
+     "note": "The derivative is the exact rate at which one quantity changes with respect to another.",
+     "ref": "Definition 2.7",
+     "id": "g12.maths.u2.s2-1-4-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Notations",
+     "paras": [
+      "If y = f(x), these all mean the derivative:"
+     ],
+     "table": [
+      [
+       "Notation",
+       "Read as"
+      ],
+      [
+       "f′(x)",
+       "f prime of x"
+      ],
+      [
+       "dy/dx",
+       "dee y by dee x"
+      ],
+      [
+       "d/dx f(x)",
+       "d by dx of f(x)"
+      ],
+      [
+       "Df(x) or Dₓ f",
+       "D of f"
+      ]
+     ],
+     "ref": "p.83",
+     "id": "g12.maths.u2.s2-1-4-2.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key word",
+     "defs": [
+      [
+       "Derivative",
+       "f′(a): the gradient of the tangent to y = f(x) at (a, f(a))."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-1-4-2.4"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "(√x)′ from the definition",
+     "steps": [
+      "(√(x + h) − √x)/h × (√(x + h) + √x)/(√(x + h) + √x).",
+      "= (x + h − x)/(h(√(x + h) + √x)) = 1/(√(x + h) + √x).",
+      "As h → 0: 1/(2√x). So (√x)′ = 1/(2√x)."
+     ],
+     "ref": "Example c",
+     "id": "g12.maths.u2.s2-1-4-2.5"
+    },
+    {
+     "kind": "mcq",
+     "text": "From the definition, (x³)′ =",
+     "opts": [
+      "3x²",
+      "x²",
+      "3x",
+      "3x³"
+     ],
+     "ans": "3x²",
+     "why": "(3x²h + 3xh² + h³)/h = 3x² + 3xh + h² → 3x².",
+     "clue": "Expand (x + h)³.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Exercise 2.7 b",
+     "id": "g12.maths.u2.s2-1-4-2.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = |x|. Where is f′(x) NOT defined?",
+     "opts": [
+      "at x = 0",
+      "for x < 0",
+      "for x > 0",
+      "nowhere"
+     ],
+     "ans": "at x = 0",
+     "why": "At 0, |h|/h is 1 from the right and −1 from the left. No single value.",
+     "clue": "Compare h > 0 and h < 0.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 2.6 b",
+     "id": "g12.maths.u2.s2-1-4-2.7"
+    },
+    {
+     "kind": "mcq",
+     "text": "(1/x)′ =",
+     "opts": [
+      "−1/x²",
+      "1/x²",
+      "−1/x",
+      "ln x"
+     ],
+     "ans": "−1/x²",
+     "why": "(1/(x + h) − 1/x)/h = −1/(x(x + h)) → −1/x².",
+     "clue": "Combine the fractions first.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.7 c",
+     "id": "g12.maths.u2.s2-1-4-2.8"
+    },
+    {
+     "kind": "tf",
+     "text": "If f(x) = 7 for every x, then f′(x) = 0.",
+     "a": true,
+     "why": "(7 − 7)/h = 0. A constant does not change.",
+     "clue": "What is k − k?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Example a",
+     "id": "g12.maths.u2.s2-1-4-2.9"
+    },
+    {
+     "kind": "mcq",
+     "text": "(2√x)′ =",
+     "opts": [
+      "1/√x",
+      "1/(2√x)",
+      "2/√x",
+      "√x"
+     ],
+     "ans": "1/√x",
+     "why": "2 × 1/(2√x) = 1/√x.",
+     "clue": "Twice the result for √x.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 2.7 d",
+     "id": "g12.maths.u2.s2-1-4-2.10"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = 1/x. The tangent to y = 1/x has gradient −1/9 at x = ___ (x > 0)",
+     "a": [
+      "3"
+     ],
+     "why": "−1/x² = −1/9 gives x² = 9, x = 3.",
+     "clue": "Set f′(x) = −1/9.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u2.s2-1-4-2.11"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 2.7",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "f(x) = x: f′(x) =",
+     "opts": [
+      "1",
+      "x",
+      "0",
+      "2x"
+     ],
+     "ans": "1",
+     "why": "h/h = 1.",
+     "clue": "Definition 2.7.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "a",
+     "id": "g12.maths.u2.s2-1-4-2.12"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = x³: f′(x) =",
+     "opts": [
+      "3x²",
+      "x²",
+      "3x",
+      "x³"
+     ],
+     "ans": "3x²",
+     "why": "Expand (x + h)³.",
+     "clue": "Cancel h.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "b",
+     "id": "g12.maths.u2.s2-1-4-2.13"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = 1/x: f′(x) =",
+     "opts": [
+      "−1/x²",
+      "1/x²",
+      "−1/x",
+      "x"
+     ],
+     "ans": "−1/x²",
+     "why": "Combine fractions.",
+     "clue": "Common denominator x(x + h).",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "c",
+     "id": "g12.maths.u2.s2-1-4-2.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = 2√x: f′(x) =",
+     "opts": [
+      "1/√x",
+      "1/(2√x)",
+      "√x",
+      "2/√x"
+     ],
+     "ans": "1/√x",
+     "why": "Rationalise.",
+     "clue": "Use the conjugate.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "d",
+     "id": "g12.maths.u2.s2-1-4-2.15"
+    }
+   ]
+  },
+  {
+   "book_name": "Activity 2.6",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "f(x) = x²: f′(x₀) exists for",
+     "opts": [
+      "all real x₀",
+      "x₀ ≠ 0",
+      "x₀ > 0",
+      "no x₀"
+     ],
+     "ans": "all real x₀",
+     "why": "2x₀ + h → 2x₀ for every x₀.",
+     "clue": "Is there any problem point?",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "a",
+     "id": "g12.maths.u2.s2-1-4-2.16"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = |x|: f′(x₀) exists for",
+     "opts": [
+      "x₀ ≠ 0",
+      "all real x₀",
+      "x₀ > 0 only",
+      "x₀ = 0 only"
+     ],
+     "ans": "x₀ ≠ 0",
+     "why": "A sharp corner at 0.",
+     "clue": "Left and right at 0.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "b",
+     "id": "g12.maths.u2.s2-1-4-2.17"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = 1/x: f′(x₀) exists for",
+     "opts": [
+      "x₀ ≠ 0",
+      "all real x₀",
+      "x₀ > 0",
+      "x₀ < 0"
+     ],
+     "ans": "x₀ ≠ 0",
+     "why": "f is not defined at 0.",
+     "clue": "Domain first.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "c",
+     "id": "g12.maths.u2.s2-1-4-2.18"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "(5)′ =",
+   "opts": [
+    "0",
+    "5",
+    "1",
+    "x"
+   ],
+   "ans": "0",
+   "why": "constant.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-4-2.19"
+  },
+  {
+   "kind": "mcq",
+   "text": "d/dx (x²) =",
+   "opts": [
+    "2x",
+    "x",
+    "2",
+    "x²"
+   ],
+   "ans": "2x",
+   "why": "Example b.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-4-2.20"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = √x. f′(4) = ___",
+   "a": [
+    "1/4"
+   ],
+   "why": "1/(2 × 2).",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-4-2.21"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = 1/x. f′(−2) = ___",
+   "a": [
+    "-1/4"
+   ],
+   "why": "−1/4.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-4-2.22"
+  },
+  {
+   "kind": "mcq",
+   "text": "Which function is not differentiable at x = 0?",
+   "opts": [
+    "|x|",
+    "x²",
+    "x³",
+    "3x + 1"
+   ],
+   "ans": "|x|",
+   "why": "Corner at 0.",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-4-2.23"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "The Example on p.83–84 cites Definition 2.6 in parts a and b; it should be Definition 2.7 (part c is right). Results are correct."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

@@ -1,0 +1,1199 @@
+{
+ "id": "g12.maths.u2.s2-1-4-3",
+ "book": {
+  "title": "Mathematics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "Introduction to Calculus",
+  "pages": "85–95",
+  "section": "2.1.4.3"
+ },
+ "title": "Derivatives of various functions",
+ "competency": "Differentiate powers, sums, constant multiples, products and quotients.",
+ "minutes": 24,
+ "keywords": [
+  {
+   "en": "Power rule",
+   "am": "የኃይል ሕግ",
+   "def": "(xⁿ)′ = n xⁿ⁻¹.",
+   "machine": true
+  },
+  {
+   "en": "Sum rule",
+   "am": "የድምር ሕግ",
+   "def": "(f + g)′ = f′ + g′: differentiate term by term.",
+   "machine": true
+  },
+  {
+   "en": "Product rule",
+   "am": "የብዜት ሕግ",
+   "def": "(fg)′ = f′g + fg′.",
+   "machine": true
+  },
+  {
+   "en": "Quotient rule",
+   "am": "የክፍልፋይ ሕግ",
+   "def": "(f/g)′ = (f′g − fg′)/g², g ≠ 0.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.power-rule",
+   "name": "The power rule",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "To differentiate xⁿ, bring the power down and reduce it by 1: (xⁿ)′ = n xⁿ⁻¹. It works for negative powers too, and with a constant in front: (kxⁿ)′ = knxⁿ⁻¹. Rewrite 1/xⁿ as x⁻ⁿ and √x as x^(1/2) first."
+    },
+    "am": {
+     "text": "xⁿ ን ለመዋጽኦ ኃይሉን ወደ ፊት አውርደን በ1 እንቀንሳለን፤ (xⁿ)′ = n xⁿ⁻¹። ለአሉታዊ ኃይሎችም ይሠራል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Spot the pattern",
+     "ask": "(x)′ = 1, (x²)′ = 2x, (x³)′ = 3x². What is (x⁴)′?",
+     "opts": [
+      "4x³",
+      "4x⁴",
+      "x³",
+      "3x⁴"
+     ],
+     "after": "4x³: bring the 4 down and lower the power by 1.",
+     "ref": "Activity 2.7",
+     "id": "g12.maths.u2.s2-1-4-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Power rule",
+     "paras": [
+      "If f(x) = xⁿ, n a positive integer, then f′(x) = n xⁿ⁻¹.",
+      "For x⁻ⁿ: f′(x) = −n x^(−(n+1)).",
+      "For kxⁿ: f′(x) = knxⁿ⁻¹."
+     ],
+     "note": "Rewrite first: 1/x⁷ = x⁻⁷ and √x = x^(1/2).",
+     "ref": "Theorem 2.1, Corollaries 2.1–2.2",
+     "id": "g12.maths.u2.s2-1-4-3.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Power rule",
+       "(xⁿ)′ = n xⁿ⁻¹."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-1-4-3.3"
+    },
+    {
+     "kind": "mcq",
+     "text": "(x¹⁵)′ =",
+     "opts": [
+      "15x¹⁴",
+      "15x¹⁵",
+      "x¹⁴",
+      "14x¹⁵"
+     ],
+     "ans": "15x¹⁴",
+     "why": "Bring 15 down; power 15 − 1 = 14.",
+     "clue": "n xⁿ⁻¹.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example 1 a",
+     "id": "g12.maths.u2.s2-1-4-3.4"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "f(x) = −3/x⁷",
+     "steps": [
+      "Rewrite: f(x) = −3x⁻⁷.",
+      "Multiply by the power: −3 × (−7) = 21.",
+      "Lower the power: −7 − 1 = −8.",
+      "f′(x) = 21x⁻⁸ = 21/x⁸."
+     ],
+     "ref": "Example 4 c",
+     "id": "g12.maths.u2.s2-1-4-3.5"
+    },
+    {
+     "kind": "mcq",
+     "text": "(x⁻⁵)′ =",
+     "opts": [
+      "−5x⁻⁶",
+      "−5x⁻⁴",
+      "5x⁻⁶",
+      "−4x⁻⁵"
+     ],
+     "ans": "−5x⁻⁶",
+     "why": "−5 − 1 = −6, not −4.",
+     "clue": "Subtract 1 from −5.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Example 2 a",
+     "id": "g12.maths.u2.s2-1-4-3.6"
+    },
+    {
+     "kind": "mcq",
+     "text": "(4x⁻⁷)′ =",
+     "opts": [
+      "−28/x⁸",
+      "−28/x⁶",
+      "28/x⁸",
+      "−7/x⁸"
+     ],
+     "ans": "−28/x⁸",
+     "why": "4(−7)x⁻⁸.",
+     "clue": "k × n, then n − 1.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.8 Q1 e",
+     "id": "g12.maths.u2.s2-1-4-3.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = x⁻⁹. f′(1) = ___",
+     "a": [
+      "-9"
+     ],
+     "why": "f′(x) = −9x⁻¹⁰, and 1⁻¹⁰ = 1.",
+     "clue": "Differentiate first, then put x = 1.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 2.8 Q2 a",
+     "id": "g12.maths.u2.s2-1-4-3.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "(−10x^(−2/5))′ =",
+     "opts": [
+      "4x^(−7/5)",
+      "−4x^(−7/5)",
+      "4x^(−3/5)",
+      "25x^(−7/5)"
+     ],
+     "ans": "4x^(−7/5)",
+     "why": "−10 × (−2/5) = 4; −2/5 − 1 = −7/5.",
+     "clue": "Write 1 as 5/5.",
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Exercise 2.8 Q1 h",
+     "id": "g12.maths.u2.s2-1-4-3.9"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = x⁻⁶. f′(1/3) = ___",
+     "a": [
+      "-13122"
+     ],
+     "why": "f′(x) = −6x⁻⁷. (1/3)⁻⁷ = 3⁷ = 2187. −6 × 2187 = −13 122.",
+     "clue": "A negative power of 1/3 is a power of 3.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Example 3 b",
+     "added": true,
+     "id": "g12.maths.u2.s2-1-4-3.10"
+    }
+   ]
+  },
+  {
+   "id": "math.sum-rule",
+   "name": "Sum, difference and constant multiple rules",
+   "requires": [
+    "math.power-rule"
+   ],
+   "explain": {
+    "en": {
+     "text": "Differentiate a sum or difference term by term: (f ± g)′ = f′ ± g′. A constant factor stays: (kf)′ = kf′. So a polynomial is differentiated one term at a time, and a constant term gives 0. dy/dx at x = a means: differentiate first, then substitute."
+    },
+    "am": {
+     "text": "ድምርን ወይም ልዩነትን በየተርሙ እንዋጽኦ፤ ቋሚ ቁጥር ይቀራል። ቋሚ ተርም 0 ይሰጣል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Add first or after?",
+     "ask": "f(x) = x² and g(x) = x³ + 2x. Is (f + g)′ equal to f′ + g′?",
+     "opts": [
+      "Yes, both are 3x² + 2x + 2",
+      "No, never",
+      "Only at x = 0",
+      "Only for constants"
+     ],
+     "after": "Both give 3x² + 2x + 2. You may differentiate each term separately.",
+     "ref": "Activity 2.8",
+     "id": "g12.maths.u2.s2-1-4-3.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Rules for combinations",
+     "paras": [
+      "(f + g)′ = f′ + g′ and (f − g)′ = f′ − g′.",
+      "(kf)′ = k f′ for any constant k."
+     ],
+     "note": "Polynomial: differentiate each term. The derivative of a constant is 0.",
+     "ref": "Theorems 2.2, 2.3",
+     "id": "g12.maths.u2.s2-1-4-3.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Sum rule",
+       "(f + g)′ = f′ + g′: differentiate term by term."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-1-4-3.13"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = x³ + 3x². f′(2) = ___",
+     "a": [
+      "24"
+     ],
+     "why": "f′(x) = 3x² + 6x. 3(4) + 12 = 24.",
+     "clue": "Differentiate, then put x = 2.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example 1",
+     "id": "g12.maths.u2.s2-1-4-3.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = x⁴ − 2x³ + 3x − 2. f′(x) =",
+     "opts": [
+      "4x³ − 6x² + 3",
+      "4x³ − 6x² + 3x",
+      "4x³ − 2x² + 3",
+      "4x³ − 6x² + 1"
+     ],
+     "ans": "4x³ − 6x² + 3",
+     "why": "Term by term; the constant −2 gives 0.",
+     "clue": "Do each term separately.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 2.10 Q1 d",
+     "id": "g12.maths.u2.s2-1-4-3.15"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = x⁴ − 3x² + 2. f′(3) = ___",
+     "a": [
+      "90"
+     ],
+     "why": "f′(x) = 4x³ − 6x. 108 − 18 = 90.",
+     "clue": "f′ first.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 2.9 Q1",
+     "id": "g12.maths.u2.s2-1-4-3.16"
+    },
+    {
+     "kind": "mcq",
+     "text": "(√3 x³)′ =",
+     "opts": [
+      "3√3 x²",
+      "√3 x²",
+      "3x²",
+      "(3/2)√3 x²"
+     ],
+     "ans": "3√3 x²",
+     "why": "√3 is a constant: √3 × 3x².",
+     "clue": "Is √3 a variable?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.10 Q1 c",
+     "id": "g12.maths.u2.s2-1-4-3.17"
+    },
+    {
+     "kind": "blank",
+     "ask": "y = 9/x³. dy/dx at x = 3 = ___",
+     "a": [
+      "-1/3"
+     ],
+     "why": "dy/dx = −27/x⁴ = −27/81 = −1/3.",
+     "clue": "Write y = 9x⁻³.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.10 Q2 b",
+     "id": "g12.maths.u2.s2-1-4-3.18"
+    },
+    {
+     "kind": "blank",
+     "ask": "y = x³ + (1/2)x² − 2/√x. dy/dx at x = 1 = ___",
+     "a": [
+      "5"
+     ],
+     "why": "dy/dx = 3x² + x + x^(−3/2) = 3 + 1 + 1 = 5.",
+     "clue": "Write 2/√x = 2x^(−1/2).",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Exercise 2.10 Q2 c",
+     "id": "g12.maths.u2.s2-1-4-3.19"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = ax² + 3x and f′(2) = 15. a = ___",
+     "a": [
+      "3"
+     ],
+     "why": "f′(x) = 2ax + 3. 4a + 3 = 15, so a = 3.",
+     "clue": "Differentiate with a as a constant.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u2.s2-1-4-3.20"
+    }
+   ]
+  },
+  {
+   "id": "math.product-rule",
+   "name": "The product rule",
+   "requires": [
+    "math.power-rule"
+   ],
+   "explain": {
+    "en": {
+     "text": "The derivative of a product is NOT the product of the derivatives. Use (fg)′ = f′g + fg′: derivative of the first times the second, plus the first times the derivative of the second. You can check by expanding first."
+    },
+    "am": {
+     "text": "የብዜት ዴሪቫቲቭ የዴሪቫቲቮች ብዜት አይደለም። (fg)′ = f′g + fg′።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A tempting mistake",
+     "ask": "f(x) = x² and g(x) = x. fg = x³, so (fg)′ = 3x². What is f′ × g′?",
+     "opts": [
+      "2x",
+      "3x²",
+      "x²",
+      "2"
+     ],
+     "after": "f′g′ = 2x × 1 = 2x, not 3x². A product needs its own rule.",
+     "ref": "Activity 2.10",
+     "id": "g12.maths.u2.s2-1-4-3.21"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Product rule",
+     "paras": [
+      "(fg)′ = f′g + fg′."
+     ],
+     "note": "First′ × second + first × second′.",
+     "ref": "Theorem 2.4",
+     "id": "g12.maths.u2.s2-1-4-3.22"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Product rule",
+       "(fg)′ = f′g + fg′."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-1-4-3.23"
+    },
+    {
+     "kind": "mcq",
+     "text": "g(x) = (x + 6)(x² + 4). g′(x) =",
+     "opts": [
+      "3x² + 12x + 4",
+      "2x",
+      "2x(x + 6)",
+      "x² + 12x + 4"
+     ],
+     "ans": "3x² + 12x + 4",
+     "why": "1 × (x² + 4) + (x + 6)(2x) = 3x² + 12x + 4.",
+     "clue": "Use f′g + fg′.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example a",
+     "id": "g12.maths.u2.s2-1-4-3.24"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "f(x) = (2x + 1)(x² + x − 5)",
+     "steps": [
+      "u = 2x + 1, u′ = 2. v = x² + x − 5, v′ = 2x + 1.",
+      "f′ = 2(x² + x − 5) + (2x + 1)(2x + 1).",
+      "= 2x² + 2x − 10 + 4x² + 4x + 1.",
+      "= 6x² + 6x − 9."
+     ],
+     "ref": "Exercise 2.11 a",
+     "id": "g12.maths.u2.s2-1-4-3.25"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = (x² − 2)(x³ + 4x). f′(x) =",
+     "opts": [
+      "5x⁴ + 6x² − 8",
+      "5x⁴ + 2x² − 8",
+      "6x³ + 8x",
+      "5x⁴ + 6x² + 8"
+     ],
+     "ans": "5x⁴ + 6x² − 8",
+     "why": "2x(x³ + 4x) + (x² − 2)(3x² + 4) = 5x⁴ + 6x² − 8. (Expand to check: x⁵ + 2x³ − 8x.)",
+     "clue": "Find u′ and v′ first.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.11 b",
+     "id": "g12.maths.u2.s2-1-4-3.26"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = (3x − 1)(x² + 2). f′(1) = ___",
+     "a": [
+      "13"
+     ],
+     "why": "f′ = 3(x² + 2) + (3x − 1)(2x). At 1: 9 + 4 = 13.",
+     "clue": "Use the rule, then x = 1.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.maths.u2.s2-1-4-3.27"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = x(x² + √x). f′(x) =",
+     "opts": [
+      "3x² + (3/2)√x",
+      "3x² + √x",
+      "2x + 1/(2√x)",
+      "3x² + 1/(2√x)"
+     ],
+     "ans": "3x² + (3/2)√x",
+     "why": "Expand: x³ + x^(3/2). Derivative 3x² + (3/2)x^(1/2).",
+     "clue": "Expanding first is quicker here.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.11 c",
+     "id": "g12.maths.u2.s2-1-4-3.28"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = (x² + 1)(x² − 1). f′(2) = ___",
+     "a": [
+      "32"
+     ],
+     "why": "Expand: x⁴ − 1, so f′ = 4x³ = 32. (Product rule gives 2x(x² − 1) + (x² + 1)2x = 4x³.)",
+     "clue": "Either rule or expand.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u2.s2-1-4-3.29"
+    }
+   ]
+  },
+  {
+   "id": "math.quotient-rule",
+   "name": "The quotient rule",
+   "requires": [
+    "math.power-rule"
+   ],
+   "explain": {
+    "en": {
+     "text": "For a quotient: (f/g)′ = (f′g − fg′)/g², with g ≠ 0. Keep the order on top (bottom times top′ first, i.e. f′g − fg′) and square the bottom. For 1/g: (1/g)′ = −g′/g²."
+    },
+    "am": {
+     "text": "ለክፍልፋይ፡ (f/g)′ = (f′g − fg′)/g²። ለ 1/g፡ (1/g)′ = −g′/g²።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Order matters",
+     "ask": "In (f/g)′ = (f′g − fg′)/g², what happens if you swap to fg′ − f′g on top?",
+     "opts": [
+      "The sign of the answer flips",
+      "Nothing changes",
+      "The answer doubles",
+      "It becomes 0"
+     ],
+     "after": "Subtraction is not commutative: the sign flips. Keep f′g − fg′.",
+     "id": "g12.maths.u2.s2-1-4-3.30"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Quotient rule",
+     "paras": [
+      "If g(a) ≠ 0: (1/g)′ = −g′/g².",
+      "(f/g)′ = (f′g − fg′)/g²."
+     ],
+     "ref": "Theorem 2.5",
+     "id": "g12.maths.u2.s2-1-4-3.31"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Quotient rule",
+       "(f/g)′ = (f′g − fg′)/g², g ≠ 0."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-1-4-3.32"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = 1/(x² + 1). f′(x) =",
+     "opts": [
+      "−2x/(x² + 1)²",
+      "2x/(x² + 1)²",
+      "−1/(2x)",
+      "−2x/(x² + 1)"
+     ],
+     "ans": "−2x/(x² + 1)²",
+     "why": "(1/g)′ = −g′/g² with g′ = 2x.",
+     "clue": "Square the bottom.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Exercise 2.12 a",
+     "id": "g12.maths.u2.s2-1-4-3.33"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "f(x) = 8x⁵/(x³ + 2x)",
+     "steps": [
+      "Top: 8x⁵, top′ = 40x⁴. Bottom: x³ + 2x, bottom′ = 3x² + 2.",
+      "f′ = (40x⁴(x³ + 2x) − 8x⁵(3x² + 2))/(x³ + 2x)².",
+      "= (40x⁷ + 80x⁵ − 24x⁷ − 16x⁵)/(x³ + 2x)².",
+      "= (16x⁷ + 64x⁵)/(x³ + 2x)²."
+     ],
+     "ref": "Example b",
+     "id": "g12.maths.u2.s2-1-4-3.34"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = (2x³ + 3)/(x − 5). f′(x) =",
+     "opts": [
+      "(4x³ − 30x² − 3)/(x − 5)²",
+      "(4x³ − 30x² + 3)/(x − 5)²",
+      "6x²",
+      "(8x³ − 30x² − 3)/(x − 5)²"
+     ],
+     "ans": "(4x³ − 30x² − 3)/(x − 5)²",
+     "why": "6x²(x − 5) − (2x³ + 3) = 4x³ − 30x² − 3.",
+     "clue": "Expand 6x²(x − 5) carefully.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.12 b",
+     "id": "g12.maths.u2.s2-1-4-3.35"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = (x³ + 3x)/x². f′(1) = ___",
+     "a": [
+      "-2"
+     ],
+     "why": "f′(x) = 1 − 3/x². At 1: 1 − 3 = −2.",
+     "clue": "Simplify first: x + 3/x.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.12 c",
+     "id": "g12.maths.u2.s2-1-4-3.36"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = 2x⁴/√x. f′(x) =",
+     "opts": [
+      "7x^(5/2)",
+      "8x³",
+      "7x^(7/2)",
+      "4x^(5/2)"
+     ],
+     "ans": "7x^(5/2)",
+     "why": "2x⁴/x^(1/2) = 2x^(7/2), so f′ = 7x^(5/2).",
+     "clue": "Simplify the power first.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.12 d",
+     "id": "g12.maths.u2.s2-1-4-3.37"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = x/(x + 1). f′(1) = ___",
+     "a": [
+      "1/4"
+     ],
+     "why": "f′ = ((x + 1) − x)/(x + 1)² = 1/(x + 1)². At 1: 1/4.",
+     "clue": "Top′ = 1, bottom′ = 1.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u2.s2-1-4-3.38"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 2.8",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "f(x) = x⁸:",
+     "opts": [
+      "8x⁷",
+      "8x⁸",
+      "x⁷",
+      "7x⁸"
+     ],
+     "ans": "8x⁷",
+     "why": "Power rule.",
+     "clue": "n xⁿ⁻¹.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 a",
+     "id": "g12.maths.u2.s2-1-4-3.39"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = 10x¹⁵:",
+     "opts": [
+      "150x¹⁴",
+      "15x¹⁴",
+      "150x¹⁵",
+      "10x¹⁴"
+     ],
+     "ans": "150x¹⁴",
+     "why": "10 × 15.",
+     "clue": "k × n.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 d",
+     "id": "g12.maths.u2.s2-1-4-3.40"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = 3x⁻²⁰:",
+     "opts": [
+      "−60/x²¹",
+      "−60/x¹⁹",
+      "60/x²¹",
+      "−20/x²¹"
+     ],
+     "ans": "−60/x²¹",
+     "why": "3(−20)x⁻²¹.",
+     "clue": "Power −21.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1 f",
+     "id": "g12.maths.u2.s2-1-4-3.41"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = 4x^(−3/2):",
+     "opts": [
+      "−6x^(−5/2)",
+      "−6x^(−1/2)",
+      "6x^(−5/2)",
+      "−2x^(−5/2)"
+     ],
+     "ans": "−6x^(−5/2)",
+     "why": "4(−3/2) = −6; −3/2 − 1 = −5/2.",
+     "clue": "1 = 2/2.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q1 g",
+     "id": "g12.maths.u2.s2-1-4-3.42"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = x⁻⁹. f′(1/3) = ___",
+     "a": [
+      "-531441"
+     ],
+     "why": "−9 × 3¹⁰.",
+     "clue": "(1/3)⁻¹⁰ = 3¹⁰.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q2 b",
+     "id": "g12.maths.u2.s2-1-4-3.43"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 2.9",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "f(x) = x⁴ − 3x² + 2. f′(3) = ___",
+     "a": [
+      "90"
+     ],
+     "why": "108 − 18.",
+     "clue": "Term by term.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1",
+     "id": "g12.maths.u2.s2-1-4-3.44"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = 5x⁴ + √x:",
+     "opts": [
+      "20x³ + 1/(2√x)",
+      "20x³ + √x/2",
+      "5x³ + 1/(2√x)",
+      "20x³ + 2√x"
+     ],
+     "ans": "20x³ + 1/(2√x)",
+     "why": "√x = x^(1/2).",
+     "clue": "Rewrite √x.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q2 a",
+     "id": "g12.maths.u2.s2-1-4-3.45"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = x + 1/x²:",
+     "opts": [
+      "1 − 2/x³",
+      "1 + 2/x³",
+      "1 − 2/x",
+      "1 − 1/x³"
+     ],
+     "ans": "1 − 2/x³",
+     "why": "1/x² = x⁻².",
+     "clue": "Rewrite 1/x².",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q2 b",
+     "id": "g12.maths.u2.s2-1-4-3.46"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = (1/6)x⁶ − 2x − 4:",
+     "opts": [
+      "x⁵ − 2",
+      "x⁵ − 2x",
+      "6x⁵ − 2",
+      "x⁵ − 6"
+     ],
+     "ans": "x⁵ − 2",
+     "why": "(1/6)(6x⁵) = x⁵.",
+     "clue": "Constant term → 0.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q2 c",
+     "id": "g12.maths.u2.s2-1-4-3.47"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = x¹⁰ + 1/x + 6x^(5/3):",
+     "opts": [
+      "10x⁹ − 1/x² + 10x^(2/3)",
+      "10x⁹ + 1/x² + 10x^(2/3)",
+      "10x⁹ − 1/x² + 6x^(2/3)",
+      "10x⁹ − 1/x + 10x^(2/3)"
+     ],
+     "ans": "10x⁹ − 1/x² + 10x^(2/3)",
+     "why": "6 × 5/3 = 10.",
+     "clue": "Each term separately.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q2 e",
+     "id": "g12.maths.u2.s2-1-4-3.48"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 2.10",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "f(x) = (1/10)x¹⁰:",
+     "opts": [
+      "x⁹",
+      "10x⁹",
+      "x¹⁰",
+      "(1/10)x⁹"
+     ],
+     "ans": "x⁹",
+     "why": "(1/10)(10x⁹).",
+     "clue": "Constant multiple.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 a",
+     "id": "g12.maths.u2.s2-1-4-3.49"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = 3x^(4/3):",
+     "opts": [
+      "4x^(1/3)",
+      "4x^(4/3)",
+      "x^(1/3)",
+      "4x^(7/3)"
+     ],
+     "ans": "4x^(1/3)",
+     "why": "3 × 4/3 = 4.",
+     "clue": "4/3 − 1 = 1/3.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1 b",
+     "id": "g12.maths.u2.s2-1-4-3.50"
+    },
+    {
+     "kind": "pick",
+     "text": "y = 2√x. Values of dy/dx at x = 1 and x = 4:",
+     "pool": [
+      "1",
+      "1/2",
+      "2",
+      "1/4"
+     ],
+     "a": [
+      "1",
+      "1/2"
+     ],
+     "why": "dy/dx = 1/√x.",
+     "clue": "(2√x)′ = 1/√x.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q2 a",
+     "id": "g12.maths.u2.s2-1-4-3.51"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 2.11",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "(2x + 1)(x² + x − 5):",
+     "opts": [
+      "6x² + 6x − 9",
+      "6x² + 6x + 9",
+      "2(2x + 1)",
+      "4x² + 4x + 1"
+     ],
+     "ans": "6x² + 6x − 9",
+     "why": "u′v + uv′.",
+     "clue": "Product rule.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "a",
+     "id": "g12.maths.u2.s2-1-4-3.52"
+    },
+    {
+     "kind": "mcq",
+     "text": "(x² − 2)(x³ + 4x):",
+     "opts": [
+      "5x⁴ + 6x² − 8",
+      "5x⁴ − 6x² − 8",
+      "6x³ + 8x",
+      "5x⁴ + 8"
+     ],
+     "ans": "5x⁴ + 6x² − 8",
+     "why": "u′v + uv′.",
+     "clue": "Product rule.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "b",
+     "id": "g12.maths.u2.s2-1-4-3.53"
+    },
+    {
+     "kind": "mcq",
+     "text": "(x + 2√x)(x² − 2):",
+     "opts": [
+      "3x² + 5x√x − 2 − 2/√x",
+      "3x² + 4x√x − 2",
+      "2x(1 + 1/√x)",
+      "3x² + 5x√x + 2 − 2/√x"
+     ],
+     "ans": "3x² + 5x√x − 2 − 2/√x",
+     "why": "(1 + 1/√x)(x² − 2) + (x + 2√x)(2x).",
+     "clue": "u′ = 1 + 1/√x.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "d",
+     "id": "g12.maths.u2.s2-1-4-3.54"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 2.12",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "1/(x² + 1):",
+     "opts": [
+      "−2x/(x² + 1)²",
+      "2x/(x² + 1)²",
+      "−2x/(x² + 1)",
+      "1/(2x)"
+     ],
+     "ans": "−2x/(x² + 1)²",
+     "why": "−g′/g².",
+     "clue": "Reciprocal rule.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "a",
+     "id": "g12.maths.u2.s2-1-4-3.55"
+    },
+    {
+     "kind": "mcq",
+     "text": "(2x³ + 3)/(x − 5):",
+     "opts": [
+      "(4x³ − 30x² − 3)/(x − 5)²",
+      "(4x³ − 30x² + 3)/(x − 5)²",
+      "6x²",
+      "(2x³ − 3)/(x − 5)²"
+     ],
+     "ans": "(4x³ − 30x² − 3)/(x − 5)²",
+     "why": "Quotient rule.",
+     "clue": "f′g − fg′.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "b",
+     "id": "g12.maths.u2.s2-1-4-3.56"
+    },
+    {
+     "kind": "mcq",
+     "text": "(x³ + 3x)/x²:",
+     "opts": [
+      "1 − 3/x²",
+      "1 + 3/x²",
+      "3x",
+      "1 − 3/x"
+     ],
+     "ans": "1 − 3/x²",
+     "why": "x + 3x⁻¹.",
+     "clue": "Simplify first.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "c",
+     "id": "g12.maths.u2.s2-1-4-3.57"
+    },
+    {
+     "kind": "mcq",
+     "text": "2x⁴/√x:",
+     "opts": [
+      "7x^(5/2)",
+      "8x³",
+      "7x^(7/2)",
+      "2x^(5/2)"
+     ],
+     "ans": "7x^(5/2)",
+     "why": "2x^(7/2) → 7x^(5/2).",
+     "clue": "Simplify first.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "d",
+     "id": "g12.maths.u2.s2-1-4-3.58"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "(x²⁴)′ =",
+   "opts": [
+    "24x²³",
+    "24x²⁴",
+    "x²³",
+    "23x²⁴"
+   ],
+   "ans": "24x²³",
+   "why": "power rule.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-4-3.59"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = 2x³ − 5x. f′(2) = ___",
+   "a": [
+    "19"
+   ],
+   "why": "24 − 5.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-4-3.60"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = 6√x. f′(4) = ___",
+   "a": [
+    "3/2",
+    "1.5"
+   ],
+   "why": "3/√4.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-4-3.61"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = (x + 1)(x² − 3). f′(1) = ___",
+   "a": [
+    "2"
+   ],
+   "why": "f′ = (x² − 3) + (x + 1)(2x). At 1: −2 + 4 = 2.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-4-3.62"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = (x + 3)/(x − 1). f′(2) = ___",
+   "a": [
+    "-4"
+   ],
+   "why": "((x − 1) − (x + 3))/(x − 1)² = −4/(x − 1)². At 2: −4.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-4-3.63"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Exercise 2.8 g, h and 2.9–2.12 use rational powers (x^(−3/2), √x), but Corollary 2.2 is stated only for integer n. Lessons say the rule also holds for fractional powers."
+  },
+  {
+   "kind": "review",
+   "text": "Exercise 2.8 Q2 c prints \"f′(k) = k, k ≠ 0\"; read as \"find f′(k), k ≠ 0\" (answer −9/k¹⁰), as in Example 3 c."
+  },
+  {
+   "kind": "note",
+   "text": "Engine: no symbolic-answer checker; derivative formulas are asked as choices, values at a point as typed numbers."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.power-rule": {
+   "name": "The power rule",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "(3x⁴)′",
+     "steps": [
+      "Bring 4 down: 3 × 4 = 12.",
+      "Lower the power: 4 − 1 = 3.",
+      "(3x⁴)′ = 12x³."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "text": "(x⁻²)′ = ?",
+     "opts": [
+      "−2x⁻³",
+      "−2x⁻¹",
+      "2x⁻³",
+      "−x⁻³"
+     ],
+     "ans": "−2x⁻³",
+     "why": "−2 − 1 = −3.",
+     "clue": "Subtract 1 from the power.",
+     "graded": true,
+     "level": 1,
+     "step": "check"
+    }
+   ]
+  }
+ }
+}

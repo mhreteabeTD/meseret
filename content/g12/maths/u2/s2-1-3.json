@@ -1,0 +1,447 @@
+{
+ "id": "g12.maths.u2.s2-1-3",
+ "book": {
+  "title": "Mathematics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "Introduction to Calculus",
+  "pages": "75–80",
+  "section": "2.1.3"
+ },
+ "title": "Gradient at a point on a curve",
+ "competency": "Find the gradient of the tangent line to a curve at a point.",
+ "minutes": 14,
+ "keywords": [
+  {
+   "en": "Tangent line",
+   "am": "ታንጀንት መስመር",
+   "def": "A line that touches a curve at one point and has its steepness there.",
+   "machine": true
+  },
+  {
+   "en": "Point of tangency",
+   "am": "የመነካካት ነጥብ",
+   "def": "The point where the tangent line touches the curve.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.gradient-at-point",
+   "name": "Gradient at a point",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Move the second point Q towards P: the secant lines turn into the tangent line. So the gradient at a is what (f(x) − f(a))/(x − a) approaches as x approaches a. Factor (difference of squares or cubes) or rationalise, cancel x − a, then put x = a. For y = x² the gradient is 2a."
+    },
+    "am": {
+     "text": "ሁለተኛውን ነጥብ Q ወደ P ስናቀርብ ሴካንቶቹ ታንጀንት ይሆናሉ። በ a ላይ ያለው ግራዲየንት x ወደ a ሲቀርብ (f(x) − f(a))/(x − a) የሚቀርበው ነው። ለ y = x² ግራዲየንቱ 2a ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Secants that turn",
+     "ask": "Q moves along a curve closer and closer to P. The secant line PQ becomes",
+     "opts": [
+      "the tangent line at P",
+      "a vertical line",
+      "the x-axis",
+      "longer and longer"
+     ],
+     "after": "The secant slopes get closer and closer to the slope of the tangent at P.",
+     "ref": "Figure 2.7",
+     "id": "g12.maths.u2.s2-1-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "From secant to tangent",
+     "paras": [
+      "P is (a, f(a)) and Q is (a + h, f(a + h)).",
+      "Slope of PQ: (f(a + h) − f(a))/h.",
+      "As h gets closer to 0, Q moves to P and PQ becomes the tangent."
+     ],
+     "note": "Slope of the tangent = instantaneous rate of change.",
+     "ref": "Definition 2.5",
+     "id": "g12.maths.u2.s2-1-3.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Procedure",
+     "paras": [
+      "Step 1: write (f(x) − f(a))/(x − a).",
+      "Step 2: simplify; cancel x − a.",
+      "Step 3: let x approach a."
+     ],
+     "ref": "p.78",
+     "id": "g12.maths.u2.s2-1-3.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Tangent line",
+       "A line that touches a curve at one point and has its steepness there."
+      ],
+      [
+       "Point of tangency",
+       "The point where the tangent line touches the curve."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-1-3.4"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "f(x) = x² at x = 2",
+     "steps": [
+      "(x² − 4)/(x − 2) = (x − 2)(x + 2)/(x − 2) = x + 2.",
+      "Let x approach 2: 2 + 2 = 4.",
+      "The gradient at x = 2 is 4."
+     ],
+     "ref": "Example 1",
+     "id": "g12.maths.u2.s2-1-3.5"
+    },
+    {
+     "kind": "mcq",
+     "text": "For y = x², the gradient of the tangent at (a, a²) is",
+     "opts": [
+      "2a",
+      "a²",
+      "a",
+      "2"
+     ],
+     "ans": "2a",
+     "why": "(x² − a²)/(x − a) = x + a → 2a.",
+     "clue": "Factor x² − a².",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example 2",
+     "id": "g12.maths.u2.s2-1-3.6"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Gradients on y = x²",
+     "paras": [
+      "Double the x-coordinate."
+     ],
+     "table": [
+      [
+       "x",
+       "−5",
+       "−2",
+       "0",
+       "3",
+       "4"
+      ],
+      [
+       "x²",
+       "25",
+       "4",
+       "0",
+       "9",
+       "16"
+      ],
+      [
+       "Gradient",
+       "−10",
+       "−4",
+       "0",
+       "6",
+       "8"
+      ]
+     ],
+     "ref": "Figure 2.9",
+     "id": "g12.maths.u2.s2-1-3.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = 3x² − 5x + 4. Gradient at x = 2 = ___",
+     "a": [
+      "7"
+     ],
+     "why": "(x − 2)(3x + 1)/(x − 2) = 3x + 1 → 7. (In general 6a − 5.)",
+     "clue": "f(2) = 6. Factor 3x² − 5x − 2.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.5 Q1 b",
+     "id": "g12.maths.u2.s2-1-3.8"
+    },
+    {
+     "kind": "blank",
+     "ask": "g(x) = √x. Gradient at x = 4 = ___",
+     "a": [
+      "1/4",
+      "0.25"
+     ],
+     "why": "(√x − 2)/(x − 4) = 1/(√x + 2) → 1/4.",
+     "clue": "x − 4 = (√x − 2)(√x + 2).",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.5 Q1 c",
+     "id": "g12.maths.u2.s2-1-3.9"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = 1/x. Gradient at (2, 1/2) = ___",
+     "a": [
+      "-1/4",
+      "-0.25"
+     ],
+     "why": "(1/x − 1/2)/(x − 2) = −1/(2x) → −1/4.",
+     "clue": "Combine 1/x − 1/2 first.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Exercise 2.5 Q1 d",
+     "id": "g12.maths.u2.s2-1-3.10"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = x³. Gradient at (a, a³):",
+     "opts": [
+      "3a²",
+      "3a",
+      "a²",
+      "3"
+     ],
+     "ans": "3a²",
+     "why": "(x³ − a³)/(x − a) = x² + ax + a² → 3a².",
+     "clue": "Difference of cubes.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.5 Q2",
+     "id": "g12.maths.u2.s2-1-3.11"
+    },
+    {
+     "kind": "blank",
+     "ask": "On y = x², at which x is the tangent gradient −6? x = ___",
+     "a": [
+      "-3"
+     ],
+     "why": "Gradient = 2a = −6, so a = −3.",
+     "clue": "Gradient = 2a.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u2.s2-1-3.12"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 2.5",
+   "items": [
+    {
+     "kind": "pick",
+     "text": "f(x) = x². Gradients at x = −1 and x = 4:",
+     "pool": [
+      "−2",
+      "8",
+      "1",
+      "16"
+     ],
+     "a": [
+      "−2",
+      "8"
+     ],
+     "why": "2a: −2 and 8.",
+     "clue": "Double x.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 a",
+     "id": "g12.maths.u2.s2-1-3.13"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = 3x² − 5x + 4 at x = 2: ___",
+     "a": [
+      "7"
+     ],
+     "why": "6(2) − 5.",
+     "clue": "Gradient 6a − 5.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1 b",
+     "id": "g12.maths.u2.s2-1-3.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = 3x² − 5x + 4 at x = −√2:",
+     "opts": [
+      "−6√2 − 5",
+      "6√2 − 5",
+      "−6√2 + 5",
+      "−√2 − 5"
+     ],
+     "ans": "−6√2 − 5",
+     "why": "6a − 5 with a = −√2.",
+     "clue": "Gradient 6a − 5.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q1 b",
+     "id": "g12.maths.u2.s2-1-3.15"
+    },
+    {
+     "kind": "blank",
+     "ask": "g(x) = √x at x = 4: ___",
+     "a": [
+      "1/4"
+     ],
+     "why": "1/(2 + 2).",
+     "clue": "Rationalise.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1 c",
+     "id": "g12.maths.u2.s2-1-3.16"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = 1/x at (2, 1/2): ___",
+     "a": [
+      "-1/4"
+     ],
+     "why": "−1/(2 × 2).",
+     "clue": "Combine fractions.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q1 d",
+     "id": "g12.maths.u2.s2-1-3.17"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = x³ at (a, a³):",
+     "opts": [
+      "3a²",
+      "3a",
+      "a³",
+      "2a"
+     ],
+     "ans": "3a²",
+     "why": "Difference of cubes.",
+     "clue": "x³ − a³ = (x − a)(x² + ax + a²).",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q2",
+     "id": "g12.maths.u2.s2-1-3.18"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "ask": "f(x) = x². Gradient at x = 7 = ___",
+   "a": [
+    "14"
+   ],
+   "why": "2 × 7.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-3.19"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = x² + 5x. Gradient at x = 1 = ___",
+   "a": [
+    "7"
+   ],
+   "why": "2 + 5.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-3.20"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = x³. Gradient at x = 2 = ___",
+   "a": [
+    "12"
+   ],
+   "why": "3 × 4.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-3.21"
+  },
+  {
+   "kind": "mcq",
+   "text": "The gradient of a curve at a point equals",
+   "opts": [
+    "the slope of the tangent there",
+    "the y-value there",
+    "the slope of any secant",
+    "zero"
+   ],
+   "ans": "the slope of the tangent there",
+   "why": "p.77.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-3.22"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = 2/x. Gradient at x = 1 = ___",
+   "a": [
+    "-2"
+   ],
+   "why": "(2/x − 2)/(x − 1) = −2/x → −2.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-3.23"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "p.79: \"at the point P(4, 16) is equal to m_tan = 2(2) = 8\" should read 2(4) = 8."
+  },
+  {
+   "kind": "note",
+   "text": "Engine: an interactive secant-to-tangent picture needs a graph block; a slider on h is used instead (lesson 2.1.1)."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

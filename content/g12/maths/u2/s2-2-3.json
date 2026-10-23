@@ -1,0 +1,360 @@
+{
+ "id": "g12.maths.u2.s2-2-3",
+ "book": {
+  "title": "Mathematics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "Introduction to Calculus",
+  "pages": "121–122",
+  "section": "2.2.3"
+ },
+ "title": "Application of derivative in road taxation",
+ "competency": "Find a minimum cost or best design with derivatives.",
+ "minutes": 12,
+ "keywords": [
+  {
+   "en": "Optimisation",
+   "am": "ምርጥ ማድረግ",
+   "def": "Finding the input that gives the largest or smallest value of a quantity.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.optimisation",
+   "name": "Minimum cost and best design",
+   "requires": [
+    "math.first-derivative-test"
+   ],
+   "explain": {
+    "en": {
+     "text": "Write the quantity to make smallest or largest as a function of one variable (use the given constraint to remove the other variable). Differentiate, set the derivative to 0, reject impossible values like negative lengths, and check the sign change."
+    },
+    "am": {
+     "text": "ትንሽ ወይም ትልቅ የምናደርገውን መጠን በአንድ ተለዋዋጭ እንጽፋለን፤ ዴሪቫቲቩን 0 እናደርጋለን፤ አሉታዊ ርዝመቶችን እንጥላለን።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Driving more to pay less per mile?",
+     "ask": "A car has fixed yearly costs (tax, insurance) plus costs that grow with mileage. As yearly mileage grows, the average cost per mile",
+     "opts": [
+      "first falls, then rises",
+      "always falls",
+      "always rises",
+      "stays the same"
+     ],
+     "after": "Fixed costs are shared over more miles, but depreciation grows with mileage². So there is a best mileage.",
+     "ref": "p.121",
+     "id": "g12.maths.u2.s2-2-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Road taxation",
+     "paras": [
+      "Tax 50 birr and insurance 110 birr a year. Petrol 0.75x/30, service 20x/3000, depreciation 0.00001x².",
+      "Average cost per mile M = C/x = 160/x + 0.025 + 0.0067 + 0.00001x."
+     ],
+     "ref": "Example p.121",
+     "id": "g12.maths.u2.s2-2-3.2"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Average cost per mile",
+     "ask": "Move the yearly mileage x. Where is M smallest?",
+     "vars": [
+      {
+       "k": "x",
+       "label": "Miles per year",
+       "min": 500,
+       "max": 10000,
+       "step": 100,
+       "v": 2000
+      }
+     ],
+     "formula": "160 / x + 0.75 / 30 + 20 / 3000 + 0.00001 * x",
+     "out": "M = {v} birr per mile",
+     "note": "The minimum is at 4000 miles (about 0.11 birr per mile).",
+     "id": "g12.maths.u2.s2-2-3.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Optimisation",
+       "Finding the input that gives the largest or smallest value of a quantity."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-2-3.4"
+    },
+    {
+     "kind": "blank",
+     "ask": "M′(x) = −160/x² + 0.00001 = 0. The best mileage x = ___ miles",
+     "a": [
+      "4000"
+     ],
+     "why": "x² = 16 000 000, x = ±4000. Mileage cannot be negative: 4000.",
+     "clue": "Reject the negative root.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example p.121",
+     "id": "g12.maths.u2.s2-2-3.5"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Fence 3200 ft²: two sides cost $1/ft, two sides $2/ft",
+     "steps": [
+      "xy = 3200, so y = 3200/x.",
+      "Cost C = 2x + 4y = 2x + 12 800/x.",
+      "C′ = 2 − 12 800/x² = 0 gives x = 80, y = 40.",
+      "C′ goes − to +: least cost $320."
+     ],
+     "ref": "Exercise 2.20 Q1",
+     "id": "g12.maths.u2.s2-2-3.6"
+    },
+    {
+     "kind": "blank",
+     "ask": "An open box with a square base has surface area 48. The base side for the largest volume is ___",
+     "a": [
+      "4"
+     ],
+     "why": "x² + 4xh = 48, V = 12x − x³/4. V′ = 12 − 3x²/4 = 0 gives x = 4 (height 2).",
+     "clue": "No top: area = x² + 4xh.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Exercise 2.20 Q2",
+     "id": "g12.maths.u2.s2-2-3.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "A closed can holds 128π cm³. The radius that uses the least material is ___ cm",
+     "a": [
+      "4"
+     ],
+     "why": "S = 2πr² + 256π/r. S′ = 4πr − 256π/r² = 0 gives r³ = 64, r = 4 (height 8).",
+     "clue": "Include the top and bottom: 2πr².",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Exercise 2.20 Q3",
+     "id": "g12.maths.u2.s2-2-3.8"
+    },
+    {
+     "kind": "tf",
+     "text": "In optimisation you keep every root of the derivative, even negative lengths.",
+     "a": false,
+     "why": "A length or a mileage cannot be negative; reject such roots.",
+     "clue": "Is x = −4000 miles possible?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "id": "g12.maths.u2.s2-2-3.9"
+    },
+    {
+     "kind": "blank",
+     "ask": "Two positive numbers add to 20. Their product is largest when the smaller number is ___",
+     "a": [
+      "10"
+     ],
+     "why": "P = x(20 − x), P′ = 20 − 2x = 0 at x = 10: both are 10.",
+     "clue": "Write the product with one variable.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u2.s2-2-3.10"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 2.20",
+   "items": [
+    {
+     "kind": "pick",
+     "text": "3200 ft² fence: the dimensions of least cost",
+     "pool": [
+      "80 ft",
+      "40 ft",
+      "56.6 ft",
+      "160 ft"
+     ],
+     "a": [
+      "80 ft",
+      "40 ft"
+     ],
+     "why": "x = 80 ($1 sides), y = 40 ($2 sides).",
+     "clue": "C = 2x + 12 800/x.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q1",
+     "id": "g12.maths.u2.s2-2-3.11"
+    },
+    {
+     "kind": "blank",
+     "ask": "Open box, area 48: the largest volume = ___",
+     "a": [
+      "32"
+     ],
+     "why": "4 × 4 × 2.",
+     "clue": "V = 12x − x³/4.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q2",
+     "id": "g12.maths.u2.s2-2-3.12"
+    },
+    {
+     "kind": "blank",
+     "ask": "Closed can, 128π cm³: the height for least material = ___ cm",
+     "a": [
+      "8"
+     ],
+     "why": "h = 128/r² = 8.",
+     "clue": "r = 4.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q3",
+     "id": "g12.maths.u2.s2-2-3.13"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "ask": "M(x) = 100/x + x/4 (x > 0). The best x = ___",
+   "a": [
+    "20"
+   ],
+   "why": "−100/x² + 1/4 = 0.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-2-3.14"
+  },
+  {
+   "kind": "blank",
+   "ask": "A rectangle has perimeter 40 m. Its largest area = ___ m²",
+   "a": [
+    "100"
+   ],
+   "why": "10 × 10.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-2-3.15"
+  },
+  {
+   "kind": "tf",
+   "text": "A cost function can have a minimum where its derivative is 0.",
+   "a": true,
+   "why": "with a − to + sign change.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-2-3.16"
+  },
+  {
+   "kind": "blank",
+   "ask": "x + y = 12, x, y > 0. The largest xy = ___",
+   "a": [
+    "36"
+   ],
+   "why": "6 × 6.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-2-3.17"
+  },
+  {
+   "kind": "blank",
+   "ask": "C(x) = x + 64/x for x > 0. The least cost = ___",
+   "a": [
+    "16"
+   ],
+   "why": "x = 8: 8 + 8.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.maths.u2.s2-2-3.18"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "The road-tax example mixes birr and pence (100 pence = 1 birr) as the book does."
+  },
+  {
+   "kind": "note",
+   "text": "Exercise 2.20 (fencing, open box, can) uses dollars and units as printed."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.first-derivative-test": {
+   "name": "First derivative test",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "R′(x) = 6 − x",
+     "steps": [
+      "R′ = 0 at x = 6.",
+      "R′ > 0 before 6 and < 0 after.",
+      "+ to −: a maximum at x = 6."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "text": "f′ goes − to + at c. f(c) is a",
+     "opts": [
+      "minimum",
+      "maximum",
+      "zero",
+      "mistake"
+     ],
+     "ans": "minimum",
+     "why": "Falling then rising.",
+     "clue": "Valley or hill?",
+     "graded": true,
+     "level": 1,
+     "step": "check"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,393 @@
+{
+ "id": "g12.maths.u2.s2-2-2",
+ "book": {
+  "title": "Mathematics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "Introduction to Calculus",
+  "pages": "116–120",
+  "section": "2.2.2"
+ },
+ "title": "Applications of derivatives in business and economics",
+ "competency": "Use marginal cost, revenue and profit to find the best level.",
+ "minutes": 14,
+ "keywords": [
+  {
+   "en": "Marginal profit",
+   "am": "የህዳግ ትርፍ",
+   "def": "P′(x): the extra profit from one more unit.",
+   "machine": true
+  },
+  {
+   "en": "Revenue",
+   "am": "ገቢ",
+   "def": "Money taken in: number sold × price.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.marginal-analysis",
+   "name": "Derivatives in business and economics",
+   "requires": [
+    "math.first-derivative-test"
+   ],
+   "explain": {
+    "en": {
+     "text": "Marginal cost, revenue and profit are the derivatives C′(x), R′(x), P′(x). Profit P = R − C, and revenue R = (number sold) × (price). The best level is where the marginal function is 0; a sign change from + to − confirms a maximum."
+    },
+    "am": {
+     "text": "የህዳግ ወጪ፣ ገቢና ትርፍ C′(x), R′(x), P′(x) ናቸው። ትርፍ P = R − C፤ ገቢ = ብዛት × ዋጋ። ምርጡ ደረጃ የህዳግ ፋንክሽኑ 0 የሆነበት ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Selling more, earning less?",
+     "ask": "The price is P = 6 − x/2 birr for x items. Revenue is R = x(6 − x/2). Selling more items always gives more revenue?",
+     "opts": [
+      "No, revenue peaks then falls",
+      "Yes, always",
+      "Revenue is constant",
+      "Only if x < 0"
+     ],
+     "after": "R = 6x − x²/2 rises to 18 birr at x = 6, then falls.",
+     "ref": "Example 2",
+     "id": "g12.maths.u2.s2-2-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Marginal functions",
+     "paras": [
+      "Marginal cost C′(x), marginal revenue R′(x), marginal profit P′(x).",
+      "Profit P(x) = R(x) − C(x).",
+      "Revenue R(x) = x × price."
+     ],
+     "note": "Set the marginal function to 0, then check the sign change.",
+     "ref": "p.116–118",
+     "id": "g12.maths.u2.s2-2-2.2"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Find the best price",
+     "ask": "Theatre: 1000 people at 26 birr; each 1 birr off brings 50 more; each spends 4 birr on snacks. x = birr off the price.",
+     "vars": [
+      {
+       "k": "x",
+       "label": "Price drop x (birr)",
+       "min": 0,
+       "max": 15,
+       "step": 1,
+       "v": 0
+      }
+     ],
+     "formula": "(1000 + 50 * x) * (26 - x) + (1000 + 50 * x) * 4",
+     "out": "Revenue = {v} birr",
+     "note": "The peak is at x = 5: a 21 birr ticket.",
+     "id": "g12.maths.u2.s2-2-2.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Marginal profit",
+       "P′(x): the extra profit from one more unit."
+      ],
+      [
+       "Revenue",
+       "Money taken in: number sold × price."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-2-2.4"
+    },
+    {
+     "kind": "blank",
+     "ask": "P(x) = x − 0.00001x². The optimal sales volume is ___ units",
+     "a": [
+      "50000"
+     ],
+     "why": "P′ = 1 − 0.00002x = 0 gives x = 50 000; P′ goes + to −.",
+     "clue": "Set P′(x) = 0.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example 1",
+     "id": "g12.maths.u2.s2-2-2.5"
+    },
+    {
+     "kind": "blank",
+     "ask": "At that volume the profit is ___ birr",
+     "a": [
+      "25000"
+     ],
+     "why": "50 000 − 0.00001 × 50 000² = 50 000 − 25 000.",
+     "clue": "Put x = 50 000 into P.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Example 1",
+     "id": "g12.maths.u2.s2-2-2.6"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Theatre ticket price",
+     "steps": [
+      "R(x) = (1000 + 50x)(26 − x) + 4(1000 + 50x).",
+      "= −50x² + 500x + 30 000.",
+      "R′ = −100x + 500 = 0, so x = 5.",
+      "R′ goes + to −: maximum. Ticket 26 − 5 = 21 birr."
+     ],
+     "ref": "Example 3",
+     "id": "g12.maths.u2.s2-2-2.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "R(x) = 1000x − x², C(x) = 3000 + 20x. Adding 10 homes a day at x = 400, profit grows ___ birr per day",
+     "a": [
+      "1800"
+     ],
+     "why": "dR/dt = (1000 − 800)(10) = 2000, dC/dt = 20 × 10 = 200. 2000 − 200 = 1800.",
+     "clue": "Chain rule: dR/dt = R′(x) dx/dt.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Example 4",
+     "id": "g12.maths.u2.s2-2-2.8"
+    },
+    {
+     "kind": "blank",
+     "ask": "C(x) = 62x² + 27 500 and R(x) = x³ − 12x² + 40x + 10. Marginal profit at x = 50 = ___",
+     "a": [
+      "140"
+     ],
+     "why": "P′(x) = 3x² − 148x + 40: 7500 − 7400 + 40 = 140.",
+     "clue": "P′ = R′ − C′.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.19 c",
+     "id": "g12.maths.u2.s2-2-2.9"
+    },
+    {
+     "kind": "tf",
+     "text": "A positive marginal profit means total profit is positive.",
+     "a": false,
+     "why": "At x = 50, P′(50) = 140 > 0 but P(50) = −85 490: a loss that is shrinking.",
+     "clue": "Compare P(50) and P′(50).",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.19",
+     "id": "g12.maths.u2.s2-2-2.10"
+    },
+    {
+     "kind": "blank",
+     "ask": "Demand P = 40 − 2x birr. The revenue is largest at x = ___",
+     "a": [
+      "10"
+     ],
+     "why": "R = 40x − 2x². R′ = 40 − 4x = 0 at x = 10.",
+     "clue": "R = x × price.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u2.s2-2-2.11"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 2.19",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "Total profit P(x):",
+     "opts": [
+      "x³ − 74x² + 40x − 27 490",
+      "x³ + 50x² + 40x + 27 510",
+      "x³ − 74x² + 40x + 27 490",
+      "62x² − x³"
+     ],
+     "ans": "x³ − 74x² + 40x − 27 490",
+     "why": "R − C.",
+     "clue": "Subtract every term of C.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "a",
+     "id": "g12.maths.u2.s2-2-2.12"
+    },
+    {
+     "kind": "blank",
+     "ask": "P(50) = ___",
+     "a": [
+      "-85490"
+     ],
+     "why": "97 010 − 182 500.",
+     "clue": "R(50) − C(50).",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "b",
+     "id": "g12.maths.u2.s2-2-2.13"
+    },
+    {
+     "kind": "pick",
+     "text": "Marginal cost and revenue at x = 50:",
+     "pool": [
+      "6200",
+      "6340",
+      "140",
+      "182500"
+     ],
+     "a": [
+      "6200",
+      "6340"
+     ],
+     "why": "C′ = 124x, R′ = 3x² − 24x + 40.",
+     "clue": "Differentiate C and R.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "c",
+     "id": "g12.maths.u2.s2-2-2.14"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "ask": "P(x) = 40x − x². Best x = ___",
+   "a": [
+    "20"
+   ],
+   "why": "40 − 2x = 0.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-2-2.15"
+  },
+  {
+   "kind": "blank",
+   "ask": "R(x) = 8x − 0.5x². Maximum revenue = ___",
+   "a": [
+    "32"
+   ],
+   "why": "x = 8: 64 − 32.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-2-2.16"
+  },
+  {
+   "kind": "mcq",
+   "text": "Profit P(x) equals",
+   "opts": [
+    "R(x) − C(x)",
+    "C(x) − R(x)",
+    "R(x) × C(x)",
+    "R′(x)"
+   ],
+   "ans": "R(x) − C(x)",
+   "why": "definition.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-2-2.17"
+  },
+  {
+   "kind": "blank",
+   "ask": "C(x) = 500 + 3x². Marginal cost at x = 10 = ___",
+   "a": [
+    "60"
+   ],
+   "why": "6x.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-2-2.18"
+  },
+  {
+   "kind": "blank",
+   "ask": "Price p = 100 − 4x. The x giving the largest revenue = ___",
+   "a": [
+    "12.5"
+   ],
+   "why": "R = 100x − 4x², 100 − 8x = 0.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.maths.u2.s2-2-2.19"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Example 3 (p.119) says the sign \"changes from negative to positive at x = 5\"; its own chart shows + to −, which gives the maximum. The answer (21 birr) is correct."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.first-derivative-test": {
+   "name": "First derivative test",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "R′(x) = 6 − x",
+     "steps": [
+      "R′ = 0 at x = 6.",
+      "R′ > 0 before 6 and < 0 after.",
+      "+ to −: a maximum at x = 6."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "text": "f′ goes − to + at c. f(c) is a",
+     "opts": [
+      "minimum",
+      "maximum",
+      "zero",
+      "mistake"
+     ],
+     "ans": "minimum",
+     "why": "Falling then rising.",
+     "clue": "Valley or hill?",
+     "graded": true,
+     "level": 1,
+     "step": "check"
+    }
+   ]
+  }
+ }
+}

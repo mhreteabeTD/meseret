@@ -1,0 +1,460 @@
+{
+ "id": "g12.maths.u2.s2-2-1",
+ "book": {
+  "title": "Mathematics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "Introduction to Calculus",
+  "pages": "112–116",
+  "section": "2.2.1"
+ },
+ "title": "Applications of derivatives in finding rate of change",
+ "competency": "Solve problems where quantities change with time.",
+ "minutes": 14,
+ "keywords": [
+  {
+   "en": "Related rates",
+   "am": "ተያያዥ የለውጥ መጠኖች",
+   "def": "Rates of change with time of quantities linked by one formula.",
+   "machine": true
+  },
+  {
+   "en": "Velocity",
+   "am": "ፍጥነት",
+   "def": "The rate of change of displacement with time: v = dS/dt.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.related-rates",
+   "name": "Rates of change in time",
+   "requires": [
+    "math.chain-rule"
+   ],
+   "explain": {
+    "en": {
+     "text": "When two quantities are linked by a formula and both change with time, differentiate the formula with respect to t using the chain rule (A = πr² gives dA/dt = 2πr dr/dt). Put in the numbers for that instant only after differentiating. Velocity is dS/dt and acceleration is dv/dt."
+    },
+    "am": {
+     "text": "ሁለት መጠኖች በቀመር ሲያያዙና ሁለቱም በጊዜ ሲለወጡ ቀመሩን በ t እንዋጽኦ (dA/dt = 2πr dr/dt)። ቁጥሮቹን ከዋጽኦ በኋላ እናስገባለን።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A spreading circle",
+     "ask": "The radius of a circle grows 1.5 cm every second. Does the area grow by the same amount each second?",
+     "opts": [
+      "No, it grows faster as the circle gets bigger",
+      "Yes, always 1.5 cm²",
+      "No, it slows down",
+      "It does not change"
+     ],
+     "after": "dA/dt = 2πr dr/dt depends on r: a bigger circle gains more area each second.",
+     "ref": "Example 1",
+     "id": "g12.maths.u2.s2-2-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Related rates",
+     "paras": [
+      "If two variables are related, their rates of change with time are related too.",
+      "Write the formula, differentiate both sides with respect to t, then substitute."
+     ],
+     "note": "Velocity v = dS/dt. Acceleration a = dv/dt.",
+     "ref": "p.113",
+     "id": "g12.maths.u2.s2-2-1.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Related rates",
+       "Rates of change with time of quantities linked by one formula."
+      ],
+      [
+       "Velocity",
+       "The rate of change of displacement with time: v = dS/dt."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-2-1.3"
+    },
+    {
+     "kind": "mcq",
+     "text": "dr/dt = 1.5 cm/s. When the diameter is 12 cm, dA/dt =",
+     "opts": [
+      "18π cm²/s",
+      "36π cm²/s",
+      "9π cm²/s",
+      "1.5π cm²/s"
+     ],
+     "ans": "18π cm²/s",
+     "why": "r = 6 (not 12). dA/dt = 2π(6)(1.5) = 18π.",
+     "clue": "Use the radius, half the diameter.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example 1",
+     "id": "g12.maths.u2.s2-2-1.4"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "A balloon gets 4 cm³/min of air. Find dr/dt at r = 2 cm",
+     "steps": [
+      "V = (4/3)πr³, so dV/dt = 4πr² dr/dt.",
+      "4 = 4π(2)² dr/dt = 16π dr/dt.",
+      "dr/dt = 4/(16π) = 1/(4π) ≈ 0.08 cm/min."
+     ],
+     "ref": "Example 4",
+     "id": "g12.maths.u2.s2-2-1.5"
+    },
+    {
+     "kind": "blank",
+     "ask": "S = t³ − 3t² + 5t + 7 (km, hours). Velocity at t = 2 = ___ km/h",
+     "a": [
+      "5"
+     ],
+     "why": "v = 3t² − 6t + 5 = 12 − 12 + 5 = 5.",
+     "clue": "Velocity is dS/dt.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Example 5",
+     "id": "g12.maths.u2.s2-2-1.6"
+    },
+    {
+     "kind": "blank",
+     "ask": "Same S. Acceleration at t = 2 = ___ km/h²",
+     "a": [
+      "6"
+     ],
+     "why": "a = dv/dt = 6t − 6 = 6.",
+     "clue": "Differentiate v.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Example 5",
+     "id": "g12.maths.u2.s2-2-1.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "Path 3y = x². dx/dt = 2 ft/min at x = 6. dy/dt = ___ ft/min",
+     "a": [
+      "8"
+     ],
+     "why": "3 dy/dt = 2x dx/dt, so dy/dt = (2 × 6 × 2)/3 = 8.",
+     "clue": "Differentiate both sides with respect to t.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Example 2",
+     "id": "g12.maths.u2.s2-2-1.8"
+    },
+    {
+     "kind": "blank",
+     "ask": "A square plate: the side grows 0.2 cm/s. At side 20 cm, dA/dt = ___ cm²/s",
+     "a": [
+      "8"
+     ],
+     "why": "A = s², dA/dt = 2s ds/dt = 2(20)(0.2) = 8.",
+     "clue": "A = s².",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 2.18 Q3",
+     "id": "g12.maths.u2.s2-2-1.9"
+    },
+    {
+     "kind": "blank",
+     "ask": "A sphere's volume grows 0.2π cm³/s. At r = 10 cm, dr/dt = ___ cm/s",
+     "a": [
+      "0.0005",
+      "1/2000"
+     ],
+     "why": "0.2π = 4π(100) dr/dt, so dr/dt = 0.2/400.",
+     "clue": "dV/dt = 4πr² dr/dt.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.18 Q2",
+     "id": "g12.maths.u2.s2-2-1.10"
+    },
+    {
+     "kind": "blank",
+     "ask": "A man 2 m tall walks at 8 m/min away from a 6 m lamp post. His shadow grows at ___ m/min",
+     "a": [
+      "4"
+     ],
+     "why": "Similar triangles: 6/(x + s) = 2/s, so s = x/2 and ds/dt = 8/2 = 4.",
+     "clue": "Set up similar triangles with base x + s.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Exercise 2.18 Q4",
+     "added": true,
+     "id": "g12.maths.u2.s2-2-1.11"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activity 2.15",
+   "items": [
+    {
+     "kind": "pick",
+     "text": "f(x) = 3x + 2 on the closed interval [3, 7]: smallest and largest values",
+     "pool": [
+      "11",
+      "23",
+      "9",
+      "21"
+     ],
+     "a": [
+      "11",
+      "23"
+     ],
+     "why": "f(3) = 11, f(7) = 23.",
+     "clue": "Endpoints.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q3",
+     "id": "g12.maths.u2.s2-2-1.12"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = 3x + 2 on the open interval (3, 7): smallest value",
+     "opts": [
+      "there is none",
+      "11",
+      "14",
+      "9"
+     ],
+     "ans": "there is none",
+     "why": "11 is not reached because 3 is not in (3, 7).",
+     "clue": "Is x = 3 allowed?",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q2 c",
+     "id": "g12.maths.u2.s2-2-1.13"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 2.18",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "dr/dt = 0.3 cm/s, r = 15 cm: dA/dt =",
+     "opts": [
+      "9π cm²/s",
+      "4.5π cm²/s",
+      "30π cm²/s",
+      "0.3π cm²/s"
+     ],
+     "ans": "9π cm²/s",
+     "why": "2π(15)(0.3).",
+     "clue": "2πr dr/dt.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1",
+     "id": "g12.maths.u2.s2-2-1.14"
+    },
+    {
+     "kind": "blank",
+     "ask": "dV/dt = 0.2π cm³/s, r = 10: dr/dt = ___ cm/s",
+     "a": [
+      "0.0005"
+     ],
+     "why": "0.2/400.",
+     "clue": "4πr² dr/dt.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q2",
+     "id": "g12.maths.u2.s2-2-1.15"
+    },
+    {
+     "kind": "blank",
+     "ask": "ds/dt = 0.2 cm/s, s = 20 cm: dA/dt = ___ cm²/s",
+     "a": [
+      "8"
+     ],
+     "why": "2(20)(0.2).",
+     "clue": "A = s².",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q3",
+     "id": "g12.maths.u2.s2-2-1.16"
+    },
+    {
+     "kind": "blank",
+     "ask": "Lamp post 6 m, man 2 m, speed 8 m/min: shadow rate = ___ m/min",
+     "a": [
+      "4"
+     ],
+     "why": "s = x/2.",
+     "clue": "Similar triangles.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q4",
+     "id": "g12.maths.u2.s2-2-1.17"
+    },
+    {
+     "kind": "blank",
+     "ask": "Unit mass, force grows 2 N/s: acceleration grows ___ m/s² per second",
+     "a": [
+      "2"
+     ],
+     "why": "a = F/m, so da/dt = 2.",
+     "clue": "F = ma with m = 1.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q5",
+     "id": "g12.maths.u2.s2-2-1.18"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "ask": "A = s². ds/dt = 3 cm/s. At s = 5, dA/dt = ___",
+   "a": [
+    "30"
+   ],
+   "why": "2(5)(3).",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-2-1.19"
+  },
+  {
+   "kind": "blank",
+   "ask": "S = 4t² + t (m). Velocity at t = 3 s = ___ m/s",
+   "a": [
+    "25"
+   ],
+   "why": "8t + 1.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-2-1.20"
+  },
+  {
+   "kind": "blank",
+   "ask": "S = t³ (m). Acceleration at t = 2 s = ___ m/s²",
+   "a": [
+    "12"
+   ],
+   "why": "6t.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-2-1.21"
+  },
+  {
+   "kind": "mcq",
+   "text": "dr/dt = 2 cm/s. At r = 5 cm, dA/dt for a circle =",
+   "opts": [
+    "20π cm²/s",
+    "10π cm²/s",
+    "25π cm²/s",
+    "4π cm²/s"
+   ],
+   "ans": "20π cm²/s",
+   "why": "2π(5)(2).",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-2-1.22"
+  },
+  {
+   "kind": "blank",
+   "ask": "y = x³. dx/dt = 2 when x = 1. dy/dt = ___",
+   "a": [
+    "6"
+   ],
+   "why": "3x² × 2.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.maths.u2.s2-2-1.23"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Example 3 (p.114) prints \"2 × √3/4 = 4√3\": the substitution s = 4, ds/dt = 2 is missing. Correct: 2(4)(√3/4)(2) = 4√3 cm²/s."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.chain-rule": {
+   "name": "The chain rule",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "d/dt (r²) when r changes with t",
+     "steps": [
+      "Outside: u² → 2u. Inside: r → dr/dt.",
+      "d/dt (r²) = 2r dr/dt."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "text": "d/dt (s³) = ?",
+     "opts": [
+      "3s² ds/dt",
+      "3s²",
+      "s³ ds/dt",
+      "3s ds/dt"
+     ],
+     "ans": "3s² ds/dt",
+     "why": "Chain rule: × ds/dt.",
+     "clue": "Do not forget the inner rate.",
+     "graded": true,
+     "level": 1,
+     "step": "check"
+    }
+   ]
+  }
+ }
+}

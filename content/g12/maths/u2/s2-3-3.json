@@ -1,0 +1,481 @@
+{
+ "id": "g12.maths.u2.s2-3-3",
+ "book": {
+  "title": "Mathematics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "Introduction to Calculus",
+  "pages": "138–143",
+  "section": "2.3.3"
+ },
+ "title": "Area and definite integrals",
+ "competency": "Evaluate definite integrals with anti-derivatives and use their properties.",
+ "minutes": 14,
+ "keywords": [
+  {
+   "en": "Definite integral",
+   "am": "ዴፊኒት ኢንቲግራል",
+   "def": "The exact area under f from a to b: the limit of the Riemann sums.",
+   "machine": true
+  },
+  {
+   "en": "Limits of integration",
+   "am": "የኢንቲግሬሽን ወሰኖች",
+   "def": "The numbers a and b in ∫ from a to b.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.ftc",
+   "name": "Evaluating definite integrals",
+   "requires": [
+    "math.antiderivative"
+   ],
+   "explain": {
+    "en": {
+     "text": "To evaluate ∫ from a to b of f(x) dx: find any anti-derivative F (take C = 0), then compute F(b) − F(a). Write it as [F(x)] from a to b. The Fundamental Theorem says the area function A(x) has A′(x) = f(x). Be careful with signs when substituting a negative lower limit."
+    },
+    "am": {
+     "text": "ዴፊኒት ኢንቲግራልን ለማስላት ማንኛውንም ፀረ-ዴሪቫቲቭ F አግኝተን F(b) − F(a) እናሰላለን።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Area without rectangles",
+     "ask": "For y = x² + 1 on [−1, 2], Riemann sums would take long. F(x) = x³/3 + x has F′ = x² + 1. What is F(2) − F(−1)?",
+     "opts": [
+      "6",
+      "14/3",
+      "4/3",
+      "5"
+     ],
+     "after": "F(2) = 14/3, F(−1) = −4/3. 14/3 + 4/3 = 18/3 = 6: the exact area.",
+     "ref": "Example 1",
+     "id": "g12.maths.u2.s2-3-3.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Definite integral by anti-derivatives",
+     "paras": [
+      "If F is any anti-derivative of f: ∫ from a to b of f(x) dx = F(b) − F(a).",
+      "a and b are the limits of integration.",
+      "Notation: [F(x)] from a to b = F(b) − F(a)."
+     ],
+     "note": "Fundamental Theorem: the area function A(x) has A′(x) = f(x).",
+     "ref": "Definition 2.15, Theorem 2.7",
+     "id": "g12.maths.u2.s2-3-3.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Properties",
+     "paras": [
+      "∫ from a to a = 0.",
+      "∫ from a to b = ∫ from a to c + ∫ from c to b.",
+      "∫ from a to b = −∫ from b to a.",
+      "∫ kf = k ∫ f, and ∫ (f ± g) = ∫ f ± ∫ g (same limits)."
+     ],
+     "ref": "p.142",
+     "id": "g12.maths.u2.s2-3-3.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Definite integral",
+       "The exact area under f from a to b: the limit of the Riemann sums."
+      ],
+      [
+       "Limits of integration",
+       "The numbers a and b in ∫ from a to b."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-3-3.4"
+    },
+    {
+     "kind": "blank",
+     "ask": "∫ from 1 to 3 (3x² + 2x) dx = ___",
+     "a": [
+      "34"
+     ],
+     "why": "F = x³ + x². F(3) − F(1) = 36 − 2 = 34.",
+     "clue": "Anti-derivative first, then subtract.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Exercise 2.26 Q2 a",
+     "id": "g12.maths.u2.s2-3-3.5"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "∫ from -1 to 4 (x² − x) dx",
+     "steps": [
+      "F(x) = x³/3 − x²/2.",
+      "F(4) = 64/3 − 8 = 40/3.",
+      "F(−1) = −1/3 − 1/2 = −5/6.",
+      "F(4) − F(−1) = 40/3 + 5/6 = 85/6 = 14 1/6."
+     ],
+     "ref": "Example 4",
+     "id": "g12.maths.u2.s2-3-3.6"
+    },
+    {
+     "kind": "blank",
+     "ask": "∫ from 0 to 5 (x² + 1) dx = ___",
+     "a": [
+      "140/3"
+     ],
+     "why": "F(5) = 125/3 + 5 = 140/3; F(0) = 0.",
+     "clue": "F(x) = x³/3 + x.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 2.26 Q1 a",
+     "id": "g12.maths.u2.s2-3-3.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "∫ from -1 to 0 (x³ − 3x + 1) dx = ___",
+     "a": [
+      "9/4",
+      "2.25"
+     ],
+     "why": "F(−1) = 1/4 − 3/2 − 1 = −9/4. 0 − (−9/4) = 9/4.",
+     "clue": "Careful: subtracting a negative.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.26 Q2 b",
+     "id": "g12.maths.u2.s2-3-3.8"
+    },
+    {
+     "kind": "blank",
+     "ask": "∫ from 1 to 4 (2x + 1/x²) dx = ___",
+     "a": [
+      "63/4",
+      "15.75"
+     ],
+     "why": "F = x² − 1/x. F(4) − F(1) = 63/4 − 0.",
+     "clue": "Write 1/x² = x⁻².",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.27 d",
+     "id": "g12.maths.u2.s2-3-3.9"
+    },
+    {
+     "kind": "blank",
+     "ask": "∫ from -2 to 3 (−3x² + 4x − 5) dx = ___",
+     "a": [
+      "-50"
+     ],
+     "why": "F = −x³ + 2x² − 5x. F(3) = −24, F(−2) = 26. −24 − 26 = −50.",
+     "clue": "F(−2) = 8 + 8 + 10.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Exercise 2.27 c",
+     "id": "g12.maths.u2.s2-3-3.10"
+    },
+    {
+     "kind": "tf",
+     "text": "A power plant makes x³ kW on day x. The area under y = x³ on [0, 5] (156 1/4) is the total made in the first 5 days.",
+     "a": true,
+     "why": "Integrating a rate gives the total.",
+     "clue": "What does area under a rate mean?",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Example 2",
+     "id": "g12.maths.u2.s2-3-3.11"
+    },
+    {
+     "kind": "blank",
+     "ask": "∫ from 0 to k 3x² dx = 64. k = ___",
+     "a": [
+      "4"
+     ],
+     "why": "k³ = 64, so k = 4.",
+     "clue": "The anti-derivative of 3x² is x³.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u2.s2-3-3.12"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 2.26",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "∫ from 0 to 5 (x² + 1) dx = ___",
+     "a": [
+      "140/3"
+     ],
+     "why": "140/3.",
+     "clue": "F(5) − F(0).",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 a",
+     "id": "g12.maths.u2.s2-3-3.13"
+    },
+    {
+     "kind": "blank",
+     "ask": "∫ from -2 to 2 (x² + 1) dx = ___",
+     "a": [
+      "28/3"
+     ],
+     "why": "14/3 − (−14/3).",
+     "clue": "Or double ∫ from 0 to 2.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1 b",
+     "id": "g12.maths.u2.s2-3-3.14"
+    },
+    {
+     "kind": "blank",
+     "ask": "∫ from 1 to 3 (3x² + 2x) dx = ___",
+     "a": [
+      "34"
+     ],
+     "why": "36 − 2.",
+     "clue": "F = x³ + x².",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q2 a",
+     "id": "g12.maths.u2.s2-3-3.15"
+    },
+    {
+     "kind": "blank",
+     "ask": "∫ from 4 to 15 (0.002x⁴ − 0.3x² + 4x − 7) dx = ___",
+     "a": [
+      "313.2404",
+      "≈313.24"
+     ],
+     "why": "311.25 − (−1.9904).",
+     "clue": "F = 0.0004x⁵ − 0.1x³ + 2x² − 7x.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q2 c",
+     "id": "g12.maths.u2.s2-3-3.16"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 2.27",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "∫ from 1 to 3 x² dx = ___",
+     "a": [
+      "26/3"
+     ],
+     "why": "9 − 1/3.",
+     "clue": "F = x³/3.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "a",
+     "id": "g12.maths.u2.s2-3-3.17"
+    },
+    {
+     "kind": "blank",
+     "ask": "∫ from 0 to 2 (x² − 2x + 8) dx = ___",
+     "a": [
+      "44/3"
+     ],
+     "why": "8/3 − 4 + 16.",
+     "clue": "F(0) = 0.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "b",
+     "id": "g12.maths.u2.s2-3-3.18"
+    },
+    {
+     "kind": "blank",
+     "ask": "∫ from -2 to 3 (−3x² + 4x − 5) dx = ___",
+     "a": [
+      "-50"
+     ],
+     "why": "−24 − 26.",
+     "clue": "Careful with F(−2).",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "c",
+     "id": "g12.maths.u2.s2-3-3.19"
+    },
+    {
+     "kind": "blank",
+     "ask": "∫ from 1 to 4 (2x + 1/x²) dx = ___",
+     "a": [
+      "63/4"
+     ],
+     "why": "63/4 − 0.",
+     "clue": "F = x² − 1/x.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "d",
+     "id": "g12.maths.u2.s2-3-3.20"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "ask": "∫ from 0 to 3 x² dx = ___",
+   "a": [
+    "9"
+   ],
+   "why": "27/3.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-3-3.21"
+  },
+  {
+   "kind": "blank",
+   "ask": "∫ from 1 to 2 4x³ dx = ___",
+   "a": [
+    "15"
+   ],
+   "why": "16 − 1.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-3-3.22"
+  },
+  {
+   "kind": "blank",
+   "ask": "∫ from -1 to 1 (3x² + 1) dx = ___",
+   "a": [
+    "4"
+   ],
+   "why": "[x³ + x] = 2 − (−2).",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-3-3.23"
+  },
+  {
+   "kind": "mcq",
+   "text": "∫ from 5 to 2 f(x) dx equals",
+   "opts": [
+    "−∫ from 2 to 5 f(x) dx",
+    "∫ from 2 to 5 f(x) dx",
+    "0",
+    "2 × ∫ from 2 to 5 f(x) dx"
+   ],
+   "ans": "−∫ from 2 to 5 f(x) dx",
+   "why": "Reversing limits changes the sign.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-3-3.24"
+  },
+  {
+   "kind": "blank",
+   "ask": "∫ from 0 to 2 (6x² − 2x) dx = ___",
+   "a": [
+    "12"
+   ],
+   "why": "[2x³ − x²] = 16 − 4.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.maths.u2.s2-3-3.25"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Property e (p.142) is printed with the limits reversed on the right; correct: ∫ from a to b (f ± g) = ∫ from a to b f ± ∫ from a to b g."
+  },
+  {
+   "kind": "review",
+   "text": "Example 1 step 1 has a stray \"of x = b\"."
+  },
+  {
+   "kind": "note",
+   "text": "Engine: no integral-sign layout; integrals are written \"∫ from a to b\"."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.antiderivative": {
+   "name": "Anti-derivatives",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "∫ 4x³ dx",
+     "steps": [
+      "Raise the power: x⁴.",
+      "Divide by 4 and multiply by 4: x⁴ + C."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "text": "∫ (2x + 3) dx = ?",
+     "opts": [
+      "x² + 3x + C",
+      "2 + C",
+      "x² + C",
+      "2x² + 3x + C"
+     ],
+     "ans": "x² + 3x + C",
+     "why": "Term by term.",
+     "clue": "Check by differentiating.",
+     "graded": true,
+     "level": 1,
+     "step": "check"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,552 @@
+{
+ "id": "g12.maths.u2.s2-1-5-1",
+ "book": {
+  "title": "Mathematics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "Introduction to Calculus",
+  "pages": "98–102",
+  "section": "2.1.5.1"
+ },
+ "title": "Increasing and decreasing functions",
+ "competency": "Find critical numbers and the intervals where a function increases or decreases.",
+ "minutes": 16,
+ "keywords": [
+  {
+   "en": "Increasing function",
+   "am": "ጨማሪ ፋንክሽን",
+   "def": "A function whose graph rises from left to right: x₁ < x₂ gives f(x₁) ≤ f(x₂).",
+   "machine": true
+  },
+  {
+   "en": "Critical number",
+   "am": "ወሳኝ ቁጥር",
+   "def": "A number c in the domain where f′(c) = 0 or f′(c) does not exist.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.increasing-decreasing",
+   "name": "Increasing and decreasing functions",
+   "requires": [
+    "math.sum-rule"
+   ],
+   "explain": {
+    "en": {
+     "text": "A function is increasing where its graph rises from left to right (f′ ≥ 0) and decreasing where it falls (f′ ≤ 0). Critical numbers are where f′ = 0 or f′ does not exist, inside the domain. Mark them on a sign chart of f′ to see where f rises and falls."
+    },
+    "am": {
+     "text": "ፋንክሽን f′ ≥ 0 በሆነበት ይጨምራል፣ f′ ≤ 0 በሆነበት ይቀንሳል። ወሳኝ ቁጥሮች f′ = 0 ወይም f′ የሌለበት ናቸው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Uphill and downhill",
+     "ask": "f(x) = x². Where does its graph go downhill as you move right?",
+     "opts": [
+      "x < 0",
+      "x > 0",
+      "everywhere",
+      "nowhere"
+     ],
+     "after": "For x < 0 the slope 2x is negative: downhill. For x > 0 it is positive: uphill.",
+     "id": "g12.maths.u2.s2-1-5-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Increasing and decreasing",
+     "paras": [
+      "For x₁ < x₂ in I:",
+      "if f(x₁) ≤ f(x₂), f is increasing on I;",
+      "if f(x₁) ≥ f(x₂), f is decreasing on I.",
+      "With < or >, it is strictly increasing or decreasing."
+     ],
+     "note": "A function that is increasing or decreasing is monotonic.",
+     "ref": "Definition 2.8",
+     "id": "g12.maths.u2.s2-1-5-1.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The derivative test",
+     "paras": [
+      "If f′(x) ≥ 0 inside I, f is increasing on I.",
+      "If f′(x) ≤ 0 inside I, f is decreasing on I."
+     ],
+     "ref": "p.99",
+     "id": "g12.maths.u2.s2-1-5-1.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Increasing function",
+       "A function whose graph rises from left to right: x₁ < x₂ gives f(x₁) ≤ f(x₂)."
+      ],
+      [
+       "Critical number",
+       "A number c in the domain where f′(c) = 0 or f′(c) does not exist."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-1-5-1.4"
+    },
+    {
+     "kind": "pick",
+     "text": "f(x) = 4x³ − 5x² − 8x + 20. Critical numbers:",
+     "pool": [
+      "−1/2",
+      "4/3",
+      "0",
+      "2"
+     ],
+     "a": [
+      "−1/2",
+      "4/3"
+     ],
+     "why": "f′ = 12x² − 10x − 8 = 2(2x + 1)(3x − 4) = 0.",
+     "clue": "Factor f′(x).",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example 1 a",
+     "id": "g12.maths.u2.s2-1-5-1.5"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "f(x) = 3x⁴ − 4x³ − 12x² + 5",
+     "steps": [
+      "f′(x) = 12x³ − 12x² − 24x = 12x(x − 2)(x + 1).",
+      "Critical numbers: −1, 0, 2.",
+      "Sign of f′: − on x < −1, + on (−1, 0), − on (0, 2), + on x > 2.",
+      "Increasing on [−1, 0] and [2, ∞). Decreasing on (−∞, −1] and [0, 2]."
+     ],
+     "ref": "Example 2",
+     "id": "g12.maths.u2.s2-1-5-1.6"
+    },
+    {
+     "kind": "pick",
+     "text": "f(x) = 2√x(6 − x). Critical numbers:",
+     "pool": [
+      "0",
+      "2",
+      "6",
+      "3"
+     ],
+     "a": [
+      "0",
+      "2"
+     ],
+     "why": "f′ = 3(2 − x)/√x: zero at 2, undefined at 0 (0 is in the domain).",
+     "clue": "Also look where f′ does not exist.",
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Example 1 b",
+     "id": "g12.maths.u2.s2-1-5-1.7"
+    },
+    {
+     "kind": "pick",
+     "text": "f(x) = 2x³ + 9x² − 24x. Critical numbers:",
+     "pool": [
+      "−4",
+      "1",
+      "4",
+      "−1"
+     ],
+     "a": [
+      "−4",
+      "1"
+     ],
+     "why": "f′ = 6(x + 4)(x − 1).",
+     "clue": "Factor out 6.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.14 Q1 c",
+     "id": "g12.maths.u2.s2-1-5-1.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = 2x² + 6x − 10 is increasing on",
+     "opts": [
+      "[−3/2, ∞)",
+      "(−∞, −3/2]",
+      "[3/2, ∞)",
+      "all real x"
+     ],
+     "ans": "[−3/2, ∞)",
+     "why": "f′ = 4x + 6 ≥ 0 when x ≥ −3/2.",
+     "clue": "Solve 4x + 6 ≥ 0.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 2.14 Q2 b",
+     "id": "g12.maths.u2.s2-1-5-1.9"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = −2x³ + 3x² + 12x + 6 is increasing on",
+     "opts": [
+      "[−1, 2]",
+      "(−∞, −1]",
+      "[2, ∞)",
+      "[−2, 1]"
+     ],
+     "ans": "[−1, 2]",
+     "why": "f′ = −6(x − 2)(x + 1) > 0 between −1 and 2.",
+     "clue": "Test x = 0 in f′.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.14 Q2 c",
+     "id": "g12.maths.u2.s2-1-5-1.10"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = 2x²/(1 − x²). Which are critical numbers?",
+     "opts": [
+      "only 0",
+      "0, 1 and −1",
+      "1 and −1",
+      "none"
+     ],
+     "ans": "only 0",
+     "why": "f′ = 4x/(1 − x²)². ±1 are not in the domain.",
+     "clue": "Critical numbers must be in the domain.",
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Exercise 2.14 Q1 b",
+     "id": "g12.maths.u2.s2-1-5-1.11"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = x − 6√(x − 1) is decreasing on",
+     "opts": [
+      "[1, 10]",
+      "[10, ∞)",
+      "[1, 4]",
+      "[0, 10]"
+     ],
+     "ans": "[1, 10]",
+     "why": "f′ = 1 − 3/√(x − 1) < 0 when √(x − 1) < 3, i.e. x < 10.",
+     "clue": "Solve f′ = 0, remember x ≥ 1.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Exercise 2.14 Q2 d",
+     "added": true,
+     "id": "g12.maths.u2.s2-1-5-1.12"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activity 2.12",
+   "items": [
+    {
+     "kind": "pick",
+     "text": "Zeros of x² − x − 12:",
+     "pool": [
+      "−3",
+      "4",
+      "3",
+      "−4"
+     ],
+     "a": [
+      "−3",
+      "4"
+     ],
+     "why": "(x − 4)(x + 3).",
+     "clue": "Factor.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 b",
+     "id": "g12.maths.u2.s2-1-5-1.13"
+    },
+    {
+     "kind": "mcq",
+     "text": "Solve 2x² + 3x − 2 ≥ 0:",
+     "opts": [
+      "x ≤ −2 or x ≥ 1/2",
+      "−2 ≤ x ≤ 1/2",
+      "x ≥ 1/2",
+      "x ≤ −2"
+     ],
+     "ans": "x ≤ −2 or x ≥ 1/2",
+     "why": "(2x − 1)(x + 2) ≥ 0.",
+     "clue": "Sign chart.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q3 a",
+     "id": "g12.maths.u2.s2-1-5-1.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "Solve x² + 3x − 4 < 0:",
+     "opts": [
+      "−4 < x < 1",
+      "x < −4 or x > 1",
+      "−1 < x < 4",
+      "x < 1"
+     ],
+     "ans": "−4 < x < 1",
+     "why": "(x + 4)(x − 1) < 0.",
+     "clue": "Between the zeros.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q3 b",
+     "id": "g12.maths.u2.s2-1-5-1.15"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 2.14",
+   "items": [
+    {
+     "kind": "pick",
+     "text": "x³ + 6x²: critical numbers",
+     "pool": [
+      "−4",
+      "0",
+      "4",
+      "6"
+     ],
+     "a": [
+      "−4",
+      "0"
+     ],
+     "why": "3x(x + 4).",
+     "clue": "Factor f′.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 a",
+     "id": "g12.maths.u2.s2-1-5-1.16"
+    },
+    {
+     "kind": "mcq",
+     "text": "2x²/(1 − x²): critical numbers",
+     "opts": [
+      "0",
+      "0, ±1",
+      "±1",
+      "none"
+     ],
+     "ans": "0",
+     "why": "Domain excludes ±1.",
+     "clue": "Domain first.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q1 b",
+     "id": "g12.maths.u2.s2-1-5-1.17"
+    },
+    {
+     "kind": "pick",
+     "text": "8x√(1 − x²): critical numbers",
+     "pool": [
+      "−1",
+      "−√2/2",
+      "√2/2",
+      "1"
+     ],
+     "a": [
+      "−1",
+      "−√2/2",
+      "√2/2",
+      "1"
+     ],
+     "why": "f′ = 8(1 − 2x²)/√(1 − x²): zero at ±√2/2, undefined at ±1.",
+     "clue": "Zeros and undefined points.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q1 d",
+     "id": "g12.maths.u2.s2-1-5-1.18"
+    },
+    {
+     "kind": "mcq",
+     "text": "x³ + 6x² is decreasing on",
+     "opts": [
+      "[−4, 0]",
+      "(−∞, −4]",
+      "[0, ∞)",
+      "[−6, 0]"
+     ],
+     "ans": "[−4, 0]",
+     "why": "f′ < 0 between −4 and 0.",
+     "clue": "Sign chart.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q2 a",
+     "id": "g12.maths.u2.s2-1-5-1.19"
+    },
+    {
+     "kind": "mcq",
+     "text": "(x + 3)²(x − 1)² is increasing on",
+     "opts": [
+      "[−3, −1] and [1, ∞)",
+      "(−∞, −3] and [−1, 1]",
+      "[−3, 1]",
+      "[1, ∞) only"
+     ],
+     "ans": "[−3, −1] and [1, ∞)",
+     "why": "f′ = 4(x + 3)(x + 1)(x − 1).",
+     "clue": "Three critical numbers.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q2 e",
+     "id": "g12.maths.u2.s2-1-5-1.20"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "pick",
+   "text": "f(x) = x² − 6x. Critical number:",
+   "pool": [
+    "3",
+    "6",
+    "0",
+    "−3"
+   ],
+   "a": [
+    "3"
+   ],
+   "why": "2x − 6 = 0.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-5-1.21"
+  },
+  {
+   "kind": "mcq",
+   "text": "f(x) = x³ − 3x is decreasing on",
+   "opts": [
+    "[−1, 1]",
+    "(−∞, −1]",
+    "[1, ∞)",
+    "[0, 3]"
+   ],
+   "ans": "[−1, 1]",
+   "why": "3(x² − 1) ≤ 0.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-5-1.22"
+  },
+  {
+   "kind": "tf",
+   "text": "If f′(x) > 0 on an interval, f is increasing there.",
+   "a": true,
+   "why": "Derivative test.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-5-1.23"
+  },
+  {
+   "kind": "mcq",
+   "text": "f(x) = 5 − 2x is",
+   "opts": [
+    "decreasing everywhere",
+    "increasing everywhere",
+    "constant",
+    "increasing for x > 0"
+   ],
+   "ans": "decreasing everywhere",
+   "why": "f′ = −2.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-5-1.24"
+  },
+  {
+   "kind": "pick",
+   "text": "f(x) = x³ − 12x. Critical numbers:",
+   "pool": [
+    "2",
+    "−2",
+    "12",
+    "0"
+   ],
+   "a": [
+    "2",
+    "−2"
+   ],
+   "why": "3x² − 12 = 0.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-5-1.25"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Increasing/decreasing test (p.99) has two misprints: the clause \"f(x₁) ≥ f(x₂)\" should be \"f is continuous on I\", and c, d say \"f′(x) > 0 and f′(x) = 0\", which should be \"f′(x) > 0 (zero only at isolated points)\". Lessons use the corrected test."
+  },
+  {
+   "kind": "note",
+   "text": "Example 2 writes \"increasing on [−1, 0] ∪ [2, ∞)\". It increases on each interval separately, not on the union (f(0) = 5 > f(1) = −8); lessons say \"on [−1, 0] and [2, ∞)\"."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.sum-rule": {
+   "name": "Differentiating polynomials",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "f(x) = x³ − 6x² + 5",
+     "steps": [
+      "Term by term: 3x² − 12x + 0.",
+      "f′(x) = 3x² − 12x = 3x(x − 4)."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = 2x³ + 3x². f′(x) = ?",
+     "opts": [
+      "6x² + 6x",
+      "6x² + 3x",
+      "2x² + 3x",
+      "6x³ + 6x²"
+     ],
+     "ans": "6x² + 6x",
+     "why": "2 × 3x² + 3 × 2x.",
+     "clue": "Each term separately.",
+     "graded": true,
+     "level": 1,
+     "step": "check"
+    }
+   ]
+  }
+ }
+}

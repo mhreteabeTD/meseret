@@ -1,0 +1,527 @@
+{
+ "id": "g12.maths.u2.s2-4",
+ "book": {
+  "title": "Mathematics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "Introduction to Calculus",
+  "pages": "151–158",
+  "section": "2.4"
+ },
+ "title": "Summary, review and chapter test",
+ "competency": "Review the whole unit and take the timed chapter test.",
+ "minutes": 20,
+ "keywords": [
+  {
+   "en": "Derivative",
+   "am": "ተዋጽኦ (ዴሪቫቲቭ)",
+   "def": "f′(a): the gradient of the tangent to y = f(x) at (a, f(a)).",
+   "machine": true
+  },
+  {
+   "en": "Definite integral",
+   "am": "ዴፊኒት ኢንቲግራል",
+   "def": "The exact area under f from a to b: the limit of the Riemann sums.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.calculus-review",
+   "name": "Unit 2 summary",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Derivative = gradient of the tangent = instantaneous rate of change. Rules: power, sum, constant multiple, product, quotient, chain. Uses: tangents and normals, increasing/decreasing, maxima and minima, rates and optimisation. Integration reverses differentiation: ∫ from a to b of f dx = F(b) − F(a), the net area."
+    },
+    "am": {
+     "text": "ዴሪቫቲቭ = የታንጀንት ግራዲየንት = ቅጽበታዊ የለውጥ መጠን። ኢንቲግሬሽን ዴሪቫቲቭን ይገለብጣል፤ ∫ = F(b) − F(a)።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "title": "Warm up: which rule?",
+     "bins": [
+      "Power",
+      "Product",
+      "Quotient",
+      "Chain"
+     ],
+     "items": [
+      [
+       "x⁹",
+       "Power",
+       "n xⁿ⁻¹"
+      ],
+      [
+       "x²(2x + 5)",
+       "Product",
+       "two factors (or expand)"
+      ],
+      [
+       "x²/(x + 1)",
+       "Quotient",
+       "a fraction"
+      ],
+      [
+       "(5x + 4)²¹",
+       "Chain",
+       "a function inside a power"
+      ],
+      [
+       "√(x² + 1)",
+       "Chain",
+       "inside a root"
+      ]
+     ],
+     "graded": false,
+     "id": "g12.maths.u2.s2-4.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Summary: derivatives",
+     "paras": [
+      "Average rate on [a, b]: (f(b) − f(a))/(b − a).",
+      "f′(a): the gradient of the tangent at (a, f(a)), as h → 0 in (f(a + h) − f(a))/h."
+     ],
+     "table": [
+      [
+       "Rule",
+       "Formula"
+      ],
+      [
+       "Constant",
+       "(k)′ = 0"
+      ],
+      [
+       "Power",
+       "(xⁿ)′ = n xⁿ⁻¹"
+      ],
+      [
+       "Product",
+       "(fg)′ = f′g + fg′"
+      ],
+      [
+       "Quotient",
+       "(f/g)′ = (f′g − fg′)/g²"
+      ],
+      [
+       "Chain",
+       "(f∘g)′ = f′(g(x))·g′(x)"
+      ],
+      [
+       "Tangent",
+       "y = f′(a)(x − a) + f(a)"
+      ],
+      [
+       "Normal",
+       "y = −(x − a)/f′(a) + f(a)"
+      ]
+     ],
+     "ref": "p.151–152",
+     "id": "g12.maths.u2.s2-4.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Summary: integrals",
+     "paras": [
+      "Anti-derivative: F(x) + C with F′ = f.",
+      "Riemann sum ∑ f(tₖ)Δxₖ approximates area.",
+      "∫ from a to b of f(x) dx = F(b) − F(a): area above minus area below the x-axis."
+     ],
+     "ref": "p.153–154",
+     "id": "g12.maths.u2.s2-4.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Derivative",
+       "f′(a): the gradient of the tangent to y = f(x) at (a, f(a))."
+      ],
+      [
+       "Definite integral",
+       "The exact area under f from a to b: the limit of the Riemann sums."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-4.4"
+    },
+    {
+     "kind": "match",
+     "title": "Match the idea",
+     "pairs": [
+      [
+       "f′ goes + to −",
+       "relative maximum"
+      ],
+      [
+       "f′ goes − to +",
+       "relative minimum"
+      ],
+      [
+       "f′(c) = 0 or undefined",
+       "critical number"
+      ],
+      [
+       "F(b) − F(a)",
+       "definite integral"
+      ],
+      [
+       "−1/f′(a)",
+       "normal slope"
+      ]
+     ],
+     "why": "Each is a key fact of the unit.",
+     "clue": "Think back to each section.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "id": "g12.maths.u2.s2-4.5"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = (x³ + 3x)/x². f′(2) = ___",
+     "a": [
+      "1/4"
+     ],
+     "why": "f = x + 3/x, f′ = 1 − 3/x² = 1 − 3/4.",
+     "clue": "Simplify first.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Review Q1 a",
+     "id": "g12.maths.u2.s2-4.6"
+    },
+    {
+     "kind": "blank",
+     "ask": "An object falls: y = 80 − 4.9t². Its velocity at t = 1 s = ___ m/s",
+     "a": [
+      "-9.8"
+     ],
+     "why": "y′ = −9.8t.",
+     "clue": "Velocity = dy/dt. Negative: falling.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Review Q3",
+     "id": "g12.maths.u2.s2-4.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "A farmer has 240 m of fence for a field by a river (no fence on the river side). The largest area = ___ m²",
+     "a": [
+      "7200"
+     ],
+     "why": "A = x(240 − 2x). A′ = 240 − 4x = 0: x = 60, area 60 × 120 = 7200.",
+     "clue": "Two sides x and one side 240 − 2x.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Review Q13",
+     "added": true,
+     "id": "g12.maths.u2.s2-4.8"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Review Exercise",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "f(x) = 4√x/(2x + 1). f′(4) = ___",
+     "a": [
+      "-7/81"
+     ],
+     "why": "u = 4√x, u′ = 2/√x = 1 at 4; v = 9, v′ = 2, u = 8. (1 × 9 − 8 × 2)/81 = −7/81.",
+     "clue": "Quotient rule.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q1 d",
+     "id": "g12.maths.u2.s2-4.9"
+    },
+    {
+     "kind": "mcq",
+     "text": "y = 1/x. Slope of the secant from x = 3 to x = 3 + Δx:",
+     "opts": [
+      "−1/(9 + 3Δx)",
+      "−1/9",
+      "1/(9 + 3Δx)",
+      "−1/(3 + Δx)"
+     ],
+     "ans": "−1/(9 + 3Δx)",
+     "why": "(1/(3 + Δx) − 1/3)/Δx = −1/(3(3 + Δx)).",
+     "clue": "Combine the fractions.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q2 d",
+     "id": "g12.maths.u2.s2-4.10"
+    },
+    {
+     "kind": "blank",
+     "ask": "y = t². Average speed from t = 2 to t = 2.1 = ___ m/s",
+     "a": [
+      "4.1"
+     ],
+     "why": "(4.41 − 4)/0.1 = 4.1.",
+     "clue": "4 + Δt.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q4 b",
+     "id": "g12.maths.u2.s2-4.11"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = x³(1 − 1/x)(x² − 1/x²). f′(x) =",
+     "opts": [
+      "5x⁴ − 4x³ − 1",
+      "5x⁴ − 4x³ + 1",
+      "5x⁴ − 1",
+      "3x² − 1"
+     ],
+     "ans": "5x⁴ − 4x³ − 1",
+     "why": "Expand: x⁵ − x⁴ − x + 1.",
+     "clue": "Multiply out first.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q6 d",
+     "id": "g12.maths.u2.s2-4.12"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = 6x⁵ − 50x³ − 120 is decreasing on",
+     "opts": [
+      "[−√5, √5]",
+      "(−∞, −√5]",
+      "[√5, ∞)",
+      "[−5, 5]"
+     ],
+     "ans": "[−√5, √5]",
+     "why": "f′ = 30x²(x² − 5) ≤ 0 there.",
+     "clue": "Factor f′.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q7 b",
+     "id": "g12.maths.u2.s2-4.13"
+    },
+    {
+     "kind": "mcq",
+     "text": "2y = x² + 4. Where does y change 4 times as fast as x?",
+     "opts": [
+      "(4, 10)",
+      "(2, 4)",
+      "(8, 34)",
+      "(1, 2.5)"
+     ],
+     "ans": "(4, 10)",
+     "why": "dy/dt = x dx/dt = 4 dx/dt, so x = 4, y = 10.",
+     "clue": "Differentiate with respect to t.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q8",
+     "id": "g12.maths.u2.s2-4.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = x² + px + q has an extreme value f(1) = 3. p and q:",
+     "opts": [
+      "p = −2, q = 4",
+      "p = 2, q = 0",
+      "p = −2, q = 2",
+      "p = −1, q = 3"
+     ],
+     "ans": "p = −2, q = 4",
+     "why": "f′(1) = 2 + p = 0; 1 − 2 + q = 3.",
+     "clue": "f′(1) = 0 and f(1) = 3.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q9",
+     "id": "g12.maths.u2.s2-4.15"
+    },
+    {
+     "kind": "blank",
+     "ask": "A 5 ft board slides down a wall. Bottom 4 ft from the wall, top moving down 2 ft/s. The bottom slides out at ___ ft/s",
+     "a": [
+      "1.5",
+      "3/2"
+     ],
+     "why": "x² + y² = 25, x = 4, y = 3: 2x x′ + 2y y′ = 0 → 4x′ = 3(2), x′ = 1.5.",
+     "clue": "Pythagoras, then differentiate.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q12 a",
+     "id": "g12.maths.u2.s2-4.16"
+    },
+    {
+     "kind": "blank",
+     "ask": "A balloon radius grows 0.5 cm/s. At r = 4, the surface area grows ___π cm²/s",
+     "a": [
+      "16"
+     ],
+     "why": "S = 4πr², dS/dt = 8πr dr/dt = 8π(4)(0.5) = 16π.",
+     "clue": "S = 4πr².",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q14",
+     "id": "g12.maths.u2.s2-4.17"
+    },
+    {
+     "kind": "blank",
+     "ask": "A cyclist slows steadily from 30 km/h to 0 in 45 s. Distance covered = ___ m",
+     "a": [
+      "187.5"
+     ],
+     "why": "30 km/h = 25/3 m/s. Triangle (1/2)(45)(25/3) = 187.5.",
+     "clue": "Area under the v–t line.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q15 b",
+     "id": "g12.maths.u2.s2-4.18"
+    },
+    {
+     "kind": "blank",
+     "ask": "Pollution rate N′(t) = 280t^(3/2) lb per month. Total in 16 months = ___ lb",
+     "a": [
+      "114688"
+     ],
+     "why": "[112t^(5/2)] = 112 × 1024.",
+     "clue": "280 ÷ (5/2) = 112.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q16 a",
+     "id": "g12.maths.u2.s2-4.19"
+    }
+   ]
+  },
+  {
+   "book_name": "Chapter test",
+   "test": true,
+   "chapter_test": true,
+   "count": 20,
+   "minutes": 25,
+   "items": []
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "(x⁴ − 3x)′ =",
+   "opts": [
+    "4x³ − 3",
+    "4x³ − 3x",
+    "x³ − 3",
+    "4x⁴ − 3"
+   ],
+   "ans": "4x³ − 3",
+   "why": "term by term.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-4.20"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = x³ − 3x². f′(1) = ___",
+   "a": [
+    "-3"
+   ],
+   "why": "3 − 6.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-4.21"
+  },
+  {
+   "kind": "blank",
+   "ask": "∫ from 0 to 2 (3x² + 2x) dx = ___",
+   "a": [
+    "12"
+   ],
+   "why": "[x³ + x²] = 8 + 4.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-4.22"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = x³ − 12x. The relative minimum value = ___",
+   "a": [
+    "-16"
+   ],
+   "why": "x = 2: 8 − 24.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-4.23"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = (2x − 1)³. f′(1) = ___",
+   "a": [
+    "6"
+   ],
+   "why": "3(1)²(2).",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.maths.u2.s2-4.24"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Summary p.154 lists the same property (∫ (f ± g)) three times; ∫ from a to a = 0 and ∫ kf = k∫ f are missing."
+  },
+  {
+   "kind": "review",
+   "text": "Summary p.153: \"any portion of [a, b]\" should be \"partition\"."
+  },
+  {
+   "kind": "note",
+   "text": "Review Q10–Q11 and Q16 b (solving 112T^(5/2) = 50 000) are left out of graded items; Q5 asks for tangents without a point (the transcription uses x = −1 and x = 1)."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

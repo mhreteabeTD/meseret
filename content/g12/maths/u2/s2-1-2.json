@@ -1,0 +1,346 @@
+{
+ "id": "g12.maths.u2.s2-1-2",
+ "book": {
+  "title": "Mathematics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "Introduction to Calculus",
+  "pages": "73–75",
+  "section": "2.1.2"
+ },
+ "title": "Gradient of curves and rate of changes",
+ "competency": "Find the slope of a secant line and link it to the average rate of change.",
+ "minutes": 10,
+ "keywords": [
+  {
+   "en": "Secant line",
+   "am": "ሴካንት መስመር",
+   "def": "A line through two points of a curve.",
+   "machine": true
+  },
+  {
+   "en": "Tangent line",
+   "am": "ታንጀንት መስመር",
+   "def": "A line that touches a curve at one point and has its steepness there.",
+   "machine": true
+  },
+  {
+   "en": "Gradient",
+   "am": "ግራዲየንት (ስሎፕ)",
+   "def": "The slope of a line: rise ÷ run.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.secant-slope",
+   "name": "Slope of a secant line",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "A secant line passes through two points of a curve. Its slope (y₁ − y₀)/(x₁ − x₀) is the average rate of change of the function between those points. A tangent line touches the curve at one point and shows its steepness there."
+    },
+    "am": {
+     "text": "ሴካንት መስመር በኩርባው ሁለት ነጥቦች ያልፋል። ስሎፑ በሁለቱ ነጥቦች መካከል ያለው አማካይ የለውጥ መጠን ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Two kinds of line",
+     "ask": "A line cuts a curve at two points A and B. Its slope equals",
+     "opts": [
+      "the average rate of change from A to B",
+      "the value of f at A",
+      "always 0",
+      "the length AB"
+     ],
+     "after": "Slope of a secant = average rate of change. A tangent touches at one point.",
+     "ref": "Activity 2.3",
+     "id": "g12.maths.u2.s2-1-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Secant and tangent",
+     "paras": [
+      "A secant line passes through two points of a curve.",
+      "A tangent line touches the curve at one point, the point of tangency.",
+      "Gradient (slope) describes steepness and direction: positive goes up, negative goes down, zero is horizontal."
+     ],
+     "ref": "Definition 2.4",
+     "id": "g12.maths.u2.s2-1-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Slope of a secant",
+     "paras": [
+      "For A(x₀, y₀) and B(x₁, y₁): slope = Δy/Δx = (y₁ − y₀)/(x₁ − x₀)."
+     ],
+     "note": "Slope of a secant line = average rate of change.",
+     "ref": "p.74",
+     "id": "g12.maths.u2.s2-1-2.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Secant line",
+       "A line through two points of a curve."
+      ],
+      [
+       "Tangent line",
+       "A line that touches a curve at one point and has its steepness there."
+      ],
+      [
+       "Gradient",
+       "The slope of a line: rise ÷ run."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-1-2.4"
+    },
+    {
+     "kind": "blank",
+     "ask": "Slope of the line through (−3, −5) and (3, 11) = ___",
+     "a": [
+      "8/3"
+     ],
+     "why": "(11 + 5)/(3 + 3) = 16/6 = 8/3.",
+     "clue": "Subtracting a negative adds.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Exercise 2.4 Q1 a",
+     "id": "g12.maths.u2.s2-1-2.5"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "f(x) = 2x³ + 3x − 5 on [1, 3]",
+     "steps": [
+      "f(3) = 54 + 9 − 5 = 58.",
+      "f(1) = 2 + 3 − 5 = 0.",
+      "Slope = (58 − 0)/(3 − 1) = 29."
+     ],
+     "ref": "Example 2",
+     "id": "g12.maths.u2.s2-1-2.6"
+    },
+    {
+     "kind": "blank",
+     "ask": "(3, −5) and (−2, 9): slope = ___",
+     "a": [
+      "-14/5",
+      "-2.8"
+     ],
+     "why": "(9 + 5)/(−2 − 3) = 14/(−5).",
+     "clue": "Keep the same order on top and bottom.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Example 1 b",
+     "id": "g12.maths.u2.s2-1-2.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = x² + 1 on [−1, 3]: secant slope = ___",
+     "a": [
+      "2"
+     ],
+     "why": "(10 − 2)/4 = 2.",
+     "clue": "f(3) = 10, f(−1) = 2.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 2.4 Q2 a",
+     "id": "g12.maths.u2.s2-1-2.8"
+    },
+    {
+     "kind": "blank",
+     "ask": "g(x) = x³ − 4x + 6 on [1, 2]: secant slope = ___",
+     "a": [
+      "3"
+     ],
+     "why": "(6 − 3)/1 = 3.",
+     "clue": "g(2) = 6, g(1) = 3.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 2.4 Q2 b",
+     "id": "g12.maths.u2.s2-1-2.9"
+    },
+    {
+     "kind": "blank",
+     "ask": "For f(x) = x², the secant slope on [a, b] is a + b. On [2, 7] it is ___",
+     "a": [
+      "9"
+     ],
+     "why": "(49 − 4)/(7 − 2) = 45/5 = 9 = 2 + 7.",
+     "clue": "(b² − a²)/(b − a) = a + b.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u2.s2-1-2.10"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 2.4",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "(−3, −5) and (3, 11): ___",
+     "a": [
+      "8/3"
+     ],
+     "why": "16/6.",
+     "clue": "Δy/Δx.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1 a",
+     "id": "g12.maths.u2.s2-1-2.11"
+    },
+    {
+     "kind": "blank",
+     "ask": "(4, −9) and (5, −7): ___",
+     "a": [
+      "2"
+     ],
+     "why": "2/1.",
+     "clue": "−7 − (−9) = 2.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 b",
+     "id": "g12.maths.u2.s2-1-2.12"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = x² + 1 on [−1, 3]: ___",
+     "a": [
+      "2"
+     ],
+     "why": "8/4.",
+     "clue": "Secant slope.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q2 a",
+     "id": "g12.maths.u2.s2-1-2.13"
+    },
+    {
+     "kind": "blank",
+     "ask": "g(x) = x³ − 4x + 6 on [1, 2]: ___",
+     "a": [
+      "3"
+     ],
+     "why": "3/1.",
+     "clue": "Secant slope.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q2 b",
+     "id": "g12.maths.u2.s2-1-2.14"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "ask": "Slope through (0, 3) and (2, −1) = ___",
+   "a": [
+    "-2"
+   ],
+   "why": "−4/2.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-2.15"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = x² − x on [1, 3]: secant slope = ___",
+   "a": [
+    "3"
+   ],
+   "why": "(6 − 0)/2.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-2.16"
+  },
+  {
+   "kind": "tf",
+   "text": "The slope of a secant line equals the average rate of change.",
+   "a": true,
+   "why": "p.74.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-2.17"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = x³ on [−1, 2]: secant slope = ___",
+   "a": [
+    "3"
+   ],
+   "why": "(8 + 1)/3.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-2.18"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = 1/x on [1, 4]: secant slope = ___",
+   "a": [
+    "-1/4",
+    "-0.25"
+   ],
+   "why": "(1/4 − 1)/3 = −1/4.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-2.19"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Definition 2.4 a says a tangent \"does not cross the curve\". This fails at inflection points (y = x³ at 0), so no graded item depends on it."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

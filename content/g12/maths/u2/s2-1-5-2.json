@@ -1,0 +1,665 @@
+{
+ "id": "g12.maths.u2.s2-1-5-2",
+ "book": {
+  "title": "Mathematics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "Introduction to Calculus",
+  "pages": "102–108",
+  "section": "2.1.5.2"
+ },
+ "title": "Minimum and maximum values of a function",
+ "competency": "Find absolute extrema on closed intervals and relative extrema by the first derivative test.",
+ "minutes": 16,
+ "keywords": [
+  {
+   "en": "Absolute maximum",
+   "am": "ፍጹም ከፍተኛ",
+   "def": "The largest value of f on its whole domain or interval.",
+   "machine": true
+  },
+  {
+   "en": "Relative maximum",
+   "am": "አንጻራዊ ከፍተኛ",
+   "def": "A value f(c) bigger than every nearby value of f.",
+   "machine": true
+  },
+  {
+   "en": "First derivative test",
+   "am": "የመጀመሪያ ዴሪቫቲቭ ፈተና",
+   "def": "Using the sign change of f′ at a critical number to find maxima and minima.",
+   "machine": true
+  },
+  {
+   "en": "Critical number",
+   "am": "ወሳኝ ቁጥር",
+   "def": "A number c in the domain where f′(c) = 0 or f′(c) does not exist.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.absolute-extrema",
+   "name": "Absolute maximum and minimum on [a, b]",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "On a closed interval the largest and smallest values happen at a critical number or at an endpoint. So: find the critical numbers inside [a, b], work out f there and at a and b, then pick the largest and smallest."
+    },
+    "am": {
+     "text": "በዝግ ክፍተት [a, b] ላይ ትልቁና ትንሹ እሴት በወሳኝ ቁጥር ወይም በጫፍ ላይ ይገኛሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Where is the top?",
+     "ask": "f(x) = x² − 2x on [−1, 2]. Where is f largest?",
+     "opts": [
+      "x = −1",
+      "x = 1",
+      "x = 2",
+      "x = 0"
+     ],
+     "after": "f(−1) = 3, f(1) = −1, f(2) = 0. The largest is at the endpoint x = −1.",
+     "ref": "Example",
+     "id": "g12.maths.u2.s2-1-5-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Relative and absolute extrema",
+     "paras": [
+      "f(c) is a relative (local) maximum if f(c) is bigger than f(x) for all other x near c.",
+      "It is an absolute maximum if f(x) ≤ f(c) for every x in the domain.",
+      "Minimum: the same with smaller."
+     ],
+     "ref": "Definitions 2.10, 2.11",
+     "id": "g12.maths.u2.s2-1-5-2.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Procedure on [a, b]",
+     "paras": [
+      "Step 1: find all critical numbers of f.",
+      "Step 2: evaluate f at the critical numbers in [a, b] and at a and b.",
+      "Step 3: the largest is the maximum, the smallest is the minimum."
+     ],
+     "ref": "p.104",
+     "id": "g12.maths.u2.s2-1-5-2.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Absolute maximum",
+       "The largest value of f on its whole domain or interval."
+      ],
+      [
+       "Relative maximum",
+       "A value f(c) bigger than every nearby value of f."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-1-5-2.4"
+    },
+    {
+     "kind": "pick",
+     "text": "f(x) = x² + 2x + 3 on [−2, 2]. Absolute max and min values:",
+     "pool": [
+      "11",
+      "2",
+      "3",
+      "6"
+     ],
+     "a": [
+      "11",
+      "2"
+     ],
+     "why": "Critical number −1: f(−2) = 3, f(−1) = 2, f(2) = 11.",
+     "clue": "Check both endpoints too.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Exercise 2.15 a",
+     "id": "g12.maths.u2.s2-1-5-2.5"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "f(x) = x³ + 3x² − 9x + 5 on [−2, 2]",
+     "steps": [
+      "f′ = 3(x + 3)(x − 1): critical numbers −3 and 1.",
+      "Only x = 1 is in [−2, 2].",
+      "f(−2) = 27, f(1) = 0, f(2) = 7.",
+      "Maximum 27, minimum 0."
+     ],
+     "ref": "Exercise 2.15 b",
+     "id": "g12.maths.u2.s2-1-5-2.6"
+    },
+    {
+     "kind": "tf",
+     "text": "On a closed interval, the absolute maximum is always where f′ = 0.",
+     "a": false,
+     "why": "It can be at an endpoint, like f(−1) = 3 for x² − 2x on [−1, 2].",
+     "clue": "Look at the example.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "id": "g12.maths.u2.s2-1-5-2.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = (x² − 2x + 4)/(x − 2) on [−3, 1]. Absolute maximum value = ___",
+     "a": [
+      "-2"
+     ],
+     "why": "f′ = x(x − 4)/(x − 2)². In [−3, 1] only x = 0. f(−3) = −19/5, f(0) = −2, f(1) = −3.",
+     "clue": "Use the quotient rule; keep only critical numbers in the interval.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Exercise 2.15 d",
+     "id": "g12.maths.u2.s2-1-5-2.8"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = 12x − x³ on [0, 3]. Absolute maximum value = ___",
+     "a": [
+      "16"
+     ],
+     "why": "f′ = 12 − 3x² = 0 at x = 2. f(0) = 0, f(2) = 16, f(3) = 9.",
+     "clue": "x = −2 is outside the interval.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u2.s2-1-5-2.9"
+    }
+   ]
+  },
+  {
+   "id": "math.first-derivative-test",
+   "name": "The first derivative test",
+   "requires": [
+    "math.increasing-decreasing"
+   ],
+   "explain": {
+    "en": {
+     "text": "At a critical number c look at the sign of f′ on each side. − to + means a relative minimum; + to − means a relative maximum; no change means neither. The value is f(c); the place is x = c."
+    },
+    "am": {
+     "text": "በወሳኝ ቁጥር c ዙሪያ የ f′ ምልክትን እንመለከታለን፤ ከ − ወደ + ዝቅተኛ፣ ከ + ወደ − ከፍተኛ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Valley or hill?",
+     "ask": "f′ is negative just left of c and positive just right of c. At c the graph has",
+     "opts": [
+      "a valley (minimum)",
+      "a hill (maximum)",
+      "nothing special",
+      "a jump"
+     ],
+     "after": "Falling then rising: a valley. That is a relative minimum.",
+     "id": "g12.maths.u2.s2-1-5-2.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "First derivative test",
+     "paras": [
+      "If f′ changes from − to + at c, f has a relative minimum at c.",
+      "If f′ changes from + to − at c, f has a relative maximum at c.",
+      "If the sign does not change, there is no extremum at c."
+     ],
+     "ref": "p.105",
+     "id": "g12.maths.u2.s2-1-5-2.11"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "First derivative test",
+       "Using the sign change of f′ at a critical number to find maxima and minima."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-1-5-2.12"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "f(x) = 2x³ + 3x² − 12x − 3",
+     "steps": [
+      "f′ = 6(x + 2)(x − 1): critical numbers −2 and 1.",
+      "Signs: + before −2, − between, + after 1.",
+      "At −2: + to −, a relative maximum f(−2) = 17.",
+      "At 1: − to +, a relative minimum f(1) = −10."
+     ],
+     "ref": "Example 1 a",
+     "id": "g12.maths.u2.s2-1-5-2.13"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = (x − 1)²(x − 3)². At x = 2 there is",
+     "opts": [
+      "a relative maximum, value 1",
+      "a relative minimum, value 1",
+      "a relative maximum, value 0",
+      "no extremum"
+     ],
+     "ans": "a relative maximum, value 1",
+     "why": "f′ = 4(x − 1)(x − 2)(x − 3) goes + to − at 2. f(2) = 1 × 1 = 1.",
+     "clue": "Sign of f′ just before and after 2.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example 1 b",
+     "id": "g12.maths.u2.s2-1-5-2.14"
+    },
+    {
+     "kind": "pick",
+     "text": "f(x) = 2x³ − 9x² − 24. Relative max and min values:",
+     "pool": [
+      "−24",
+      "−51",
+      "0",
+      "3"
+     ],
+     "a": [
+      "−24",
+      "−51"
+     ],
+     "why": "f′ = 6x(x − 3): max f(0) = −24, min f(3) = −51.",
+     "clue": "Critical numbers 0 and 3.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.16 Q1 a",
+     "id": "g12.maths.u2.s2-1-5-2.15"
+    },
+    {
+     "kind": "pick",
+     "text": "f(x) = (1/4)x³ − 3x. Relative max and min values:",
+     "pool": [
+      "4",
+      "−4",
+      "2",
+      "−2"
+     ],
+     "a": [
+      "4",
+      "−4"
+     ],
+     "why": "f′ = (3/4)(x − 2)(x + 2): max f(−2) = 4, min f(2) = −4.",
+     "clue": "Critical numbers ±2.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.16 Q1 b",
+     "id": "g12.maths.u2.s2-1-5-2.16"
+    },
+    {
+     "kind": "tf",
+     "text": "f(x) = x³ has a relative minimum at x = 0.",
+     "a": false,
+     "why": "f′ = 3x² is + on both sides: no sign change, so no extremum.",
+     "clue": "Does f′ change sign?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "added": true,
+     "id": "g12.maths.u2.s2-1-5-2.17"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "f(x) = ax³ + bx − 5 has a relative minimum −6 at x = 1/2",
+     "steps": [
+      "f(1/2) = a/8 + b/2 − 5 = −6, so a + 4b = −8.",
+      "f′(1/2) = 3a/4 + b = 0, so 3a + 4b = 0.",
+      "Subtract: 2a = 8, a = 4. Then b = −3."
+     ],
+     "ref": "Example 2",
+     "id": "g12.maths.u2.s2-1-5-2.18"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = x³ + ax + b has a relative minimum 4 at x = 2. b = ___",
+     "a": [
+      "20"
+     ],
+     "why": "f′(2) = 12 + a = 0, a = −12. f(2) = 8 − 24 + b = 4, so b = 20.",
+     "clue": "Use f′(2) = 0 and f(2) = 4.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Exercise 2.16 Q2",
+     "added": true,
+     "id": "g12.maths.u2.s2-1-5-2.19"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 2.15",
+   "items": [
+    {
+     "kind": "pick",
+     "text": "x² + 2x + 3 on [−2, 2]: max and min",
+     "pool": [
+      "11",
+      "2",
+      "3",
+      "7"
+     ],
+     "a": [
+      "11",
+      "2"
+     ],
+     "why": "f(2) = 11, f(−1) = 2.",
+     "clue": "Endpoints and −1.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "a",
+     "id": "g12.maths.u2.s2-1-5-2.20"
+    },
+    {
+     "kind": "pick",
+     "text": "x³ + 3x² − 9x + 5 on [−2, 2]: max and min",
+     "pool": [
+      "27",
+      "0",
+      "7",
+      "32"
+     ],
+     "a": [
+      "27",
+      "0"
+     ],
+     "why": "f(−2) = 27, f(1) = 0.",
+     "clue": "x = −3 is outside.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "b",
+     "id": "g12.maths.u2.s2-1-5-2.21"
+    },
+    {
+     "kind": "pick",
+     "text": "3x⁴ − 26x³ − 60x² − 11 on [1, 5]: max and min",
+     "pool": [
+      "−94",
+      "−2886",
+      "−11",
+      "0"
+     ],
+     "a": [
+      "−94",
+      "−2886"
+     ],
+     "why": "No critical number in [1, 5]: f(1) = −94, f(5) = −2886.",
+     "clue": "Check the endpoints.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "c",
+     "id": "g12.maths.u2.s2-1-5-2.22"
+    },
+    {
+     "kind": "pick",
+     "text": "(x² − 2x + 4)/(x − 2) on [−3, 1]: max and min",
+     "pool": [
+      "−2",
+      "−19/5",
+      "−3",
+      "2"
+     ],
+     "a": [
+      "−2",
+      "−19/5"
+     ],
+     "why": "f(0) = −2, f(−3) = −19/5.",
+     "clue": "Only 0 is inside.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "d",
+     "id": "g12.maths.u2.s2-1-5-2.23"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 2.16",
+   "items": [
+    {
+     "kind": "pick",
+     "text": "2x³ − 9x² − 24: relative extreme values",
+     "pool": [
+      "−24",
+      "−51",
+      "0",
+      "−27"
+     ],
+     "a": [
+      "−24",
+      "−51"
+     ],
+     "why": "Max −24, min −51.",
+     "clue": "f′ = 6x(x − 3).",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1 a",
+     "id": "g12.maths.u2.s2-1-5-2.24"
+    },
+    {
+     "kind": "pick",
+     "text": "(1/4)x³ − 3x: relative extreme values",
+     "pool": [
+      "4",
+      "−4",
+      "8",
+      "−8"
+     ],
+     "a": [
+      "4",
+      "−4"
+     ],
+     "why": "Max 4, min −4.",
+     "clue": "f′ = (3/4)(x² − 4).",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1 b",
+     "id": "g12.maths.u2.s2-1-5-2.25"
+    },
+    {
+     "kind": "pick",
+     "text": "(x² + x + 1)/(x² − x + 1): relative extreme values",
+     "pool": [
+      "3",
+      "1/3",
+      "1",
+      "−1"
+     ],
+     "a": [
+      "3",
+      "1/3"
+     ],
+     "why": "f′ = −2(x² − 1)/(x² − x + 1)²: min 1/3 at −1, max 3 at 1.",
+     "clue": "Quotient rule.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q1 c",
+     "id": "g12.maths.u2.s2-1-5-2.26"
+    },
+    {
+     "kind": "blank",
+     "ask": "x³ + ax + b has a relative minimum 4 at x = 2. a = ___",
+     "a": [
+      "-12"
+     ],
+     "why": "12 + a = 0.",
+     "clue": "f′(2) = 0.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q2",
+     "id": "g12.maths.u2.s2-1-5-2.27"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "pick",
+   "text": "f(x) = x² − 4x on [0, 5]: max and min values",
+   "pool": [
+    "5",
+    "−4",
+    "0",
+    "4"
+   ],
+   "a": [
+    "5",
+    "−4"
+   ],
+   "why": "f(5) = 5, f(2) = −4.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-5-2.28"
+  },
+  {
+   "kind": "mcq",
+   "text": "f′ goes from + to − at c. Then f(c) is",
+   "opts": [
+    "a relative maximum",
+    "a relative minimum",
+    "zero",
+    "undefined"
+   ],
+   "ans": "a relative maximum",
+   "why": "test.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-5-2.29"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = x² − 6x + 1. The relative minimum value = ___",
+   "a": [
+    "-8"
+   ],
+   "why": "x = 3: 9 − 18 + 1.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-5-2.30"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = −x² + 4x on [0, 3]. Absolute maximum value = ___",
+   "a": [
+    "4"
+   ],
+   "why": "f(2) = 4.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-5-2.31"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = x³ − 3x. Relative maximum value = ___",
+   "a": [
+    "2"
+   ],
+   "why": "x = −1: −1 + 3.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-5-2.32"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Example 1 b (p.107) ends \"0 is a relative maximum value and 1 is a relative minimum value\"; it should be the reverse (max 1 at x = 2, min 0 at x = 1 and 3)."
+  },
+  {
+   "kind": "review",
+   "text": "Note p.103 \"At either local maximum or local minimum point the gradient is zero\" holds only where f is differentiable (|x| has a minimum at 0 with no derivative)."
+  },
+  {
+   "kind": "review",
+   "text": "Exercise 2.15 c: as printed, no critical number lies in [1, 5]; the answer uses the endpoints. Please confirm the printed function."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.increasing-decreasing": {
+   "name": "Sign charts for f′",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "f′(x) = 3(x − 1)(x − 4)",
+     "steps": [
+      "Zeros at 1 and 4.",
+      "Test x = 0: 3(−1)(−4) = 12 > 0.",
+      "Test x = 2: 3(1)(−2) < 0. Test x = 5: > 0.",
+      "So +, −, + : f rises, falls, rises."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "text": "f′(x) = x − 5. Where is f decreasing?",
+     "opts": [
+      "x ≤ 5",
+      "x ≥ 5",
+      "everywhere",
+      "x ≤ 0"
+     ],
+     "ans": "x ≤ 5",
+     "why": "f′ ≤ 0 when x ≤ 5.",
+     "clue": "Solve f′ ≤ 0.",
+     "graded": true,
+     "level": 1,
+     "step": "check"
+    }
+   ]
+  }
+ }
+}

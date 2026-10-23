@@ -1,0 +1,724 @@
+{
+ "id": "g12.maths.u2.s2-3-2",
+ "book": {
+  "title": "Mathematics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "Introduction to Calculus",
+  "pages": "133–138",
+  "section": "2.3.2"
+ },
+ "title": "Definite integrals",
+ "competency": "Find definite integrals by geometry and find anti-derivatives with the power rule.",
+ "minutes": 16,
+ "keywords": [
+  {
+   "en": "Definite integral",
+   "am": "ዴፊኒት ኢንቲግራል",
+   "def": "The exact area under f from a to b: the limit of the Riemann sums.",
+   "machine": true
+  },
+  {
+   "en": "Anti-derivative",
+   "am": "ፀረ-ዴሪቫቲቭ",
+   "def": "A function F with F′(x) = f(x).",
+   "machine": true
+  },
+  {
+   "en": "Indefinite integral",
+   "am": "ኢንዴፊኒት ኢንቲግራል",
+   "def": "The set of all anti-derivatives, ∫ f(x) dx = F(x) + C.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.definite-integral",
+   "name": "The definite integral",
+   "requires": [
+    "math.riemann-sum"
+   ],
+   "explain": {
+    "en": {
+     "text": "If n grows without limit, Δx → 0 and the Riemann sums approach the exact area. That exact area is the definite integral ∫ from a to b of f(x) dx. For a straight-line graph you can get it from a triangle or trapezoid."
+    },
+    "am": {
+     "text": "n ያለገደብ ሲያድግ Δx → 0 ይሆናል፤ የሪማን ድምሮች ትክክለኛውን ስፋት ይቀርባሉ። ይህ ስፋት ዴፊኒት ኢንቲግራል ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "From sum to integral",
+     "ask": "For 3x² on [0, 5], left sums are 90 (5 strips) and 106.875 (10 strips). Right sums are 165 and 144.375. The exact area is about",
+     "opts": [
+      "125",
+      "90",
+      "165",
+      "200"
+     ],
+     "after": "Both kinds of sum close in on 125. That exact value is the definite integral.",
+     "ref": "Activity 2.19",
+     "id": "g12.maths.u2.s2-3-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Definite integral",
+     "paras": [
+      "For f(x) ≥ 0 on [a, b], let n grow without limit (Δx → 0).",
+      "The exact area is ∫ from a to b of f(x) dx.",
+      "The sign ∫ is a long \"s\" for sum; Δx becomes dx."
+     ],
+     "ref": "Definition 2.13",
+     "id": "g12.maths.u2.s2-3-2.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Definite integral",
+       "The exact area under f from a to b: the limit of the Riemann sums."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-3-2.3"
+    },
+    {
+     "kind": "blank",
+     "ask": "∫ from 0 to 2 (3x + 2) dx = ___",
+     "a": [
+      "10"
+     ],
+     "why": "Trapezoid with sides f(0) = 2 and f(2) = 8, width 2: (1/2)(10)(2) = 10.",
+     "clue": "Draw the line; the region is a trapezoid.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example p.134",
+     "id": "g12.maths.u2.s2-3-2.4"
+    },
+    {
+     "kind": "blank",
+     "ask": "∫ from 0 to 4 2x dx = ___",
+     "a": [
+      "16"
+     ],
+     "why": "Triangle (1/2)(4)(8) = 16.",
+     "clue": "f(4) = 8.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 2.23 b",
+     "id": "g12.maths.u2.s2-3-2.5"
+    },
+    {
+     "kind": "blank",
+     "ask": "∫ from 1 to 5 x dx = ___",
+     "a": [
+      "12"
+     ],
+     "why": "Trapezoid (1/2)(1 + 5)(4) = 12.",
+     "clue": "Not a triangle: f(1) = 1.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.23 c",
+     "id": "g12.maths.u2.s2-3-2.6"
+    },
+    {
+     "kind": "blank",
+     "ask": "∫ from -2 to 3 (x + 2) dx = ___",
+     "a": [
+      "12.5",
+      "25/2"
+     ],
+     "why": "Triangle: base 5, height 5. (1/2)(5)(5) = 12.5.",
+     "clue": "f(−2) = 0.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.23 d",
+     "id": "g12.maths.u2.s2-3-2.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "∫ from 0 to 3 5 dx = ___",
+     "a": [
+      "15"
+     ],
+     "why": "Rectangle 3 × 5.",
+     "clue": "A constant gives a rectangle.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "added": true,
+     "id": "g12.maths.u2.s2-3-2.8"
+    },
+    {
+     "kind": "blank",
+     "ask": "∫ from 0 to k 2x dx = 49. k = ___ (k > 0)",
+     "a": [
+      "7"
+     ],
+     "why": "Triangle area (1/2)(k)(2k) = k² = 49, so k = 7.",
+     "clue": "Write the triangle area in terms of k.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u2.s2-3-2.9"
+    }
+   ]
+  },
+  {
+   "id": "math.antiderivative",
+   "name": "Anti-derivatives and indefinite integrals",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "Anti-differentiation undoes differentiation. All anti-derivatives of f differ by a constant, so ∫ f(x) dx = F(x) + C. Power rule: ∫ x^α dx = x^(α+1)/(α + 1) + C when α ≠ −1. Constants come out and sums split. Check every answer by differentiating."
+    },
+    "am": {
+     "text": "ኢንቲግሬሽን ዴሪቫቲቭን ይገለብጣል። ∫ x^α dx = x^(α+1)/(α + 1) + C (α ≠ −1)። መልሱን በዴሪቫቲቭ እናረጋግጣለን።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Many answers",
+     "ask": "Which functions have derivative 2x?",
+     "opts": [
+      "x², x² + 5 and x² − 3",
+      "only x²",
+      "only 2",
+      "2x²"
+     ],
+     "after": "Adding any constant does not change the derivative: x² + C.",
+     "ref": "Activity 2.20",
+     "id": "g12.maths.u2.s2-3-2.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Anti-derivative",
+     "paras": [
+      "Finding f(x) from f′(x) is anti-differentiation, or integration.",
+      "The set of all anti-derivatives is the indefinite integral ∫ f(x) dx.",
+      "If F′(x) = f(x), then ∫ f(x) dx = F(x) + C. C is the constant of integration."
+     ],
+     "ref": "Definition 2.14, p.136",
+     "id": "g12.maths.u2.s2-3-2.11"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Power rule for integrals",
+     "paras": [
+      "∫ x^α dx = x^(α+1)/(α + 1) + C, for α ≠ −1.",
+      "∫ k dx = kx + C.",
+      "∫ kf dx = k∫ f dx, and ∫ (f ± g) dx = ∫ f dx ± ∫ g dx."
+     ],
+     "note": "Raise the power by 1, divide by the new power.",
+     "ref": "p.136–137",
+     "id": "g12.maths.u2.s2-3-2.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Anti-derivative",
+       "A function F with F′(x) = f(x)."
+      ],
+      [
+       "Indefinite integral",
+       "The set of all anti-derivatives, ∫ f(x) dx = F(x) + C."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-3-2.13"
+    },
+    {
+     "kind": "mcq",
+     "text": "∫ x⁷ dx =",
+     "opts": [
+      "x⁸/8 + C",
+      "7x⁶ + C",
+      "x⁸ + C",
+      "x⁷/7 + C"
+     ],
+     "ans": "x⁸/8 + C",
+     "why": "Power 7 + 1 = 8; divide by 8.",
+     "clue": "Raise the power, then divide.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example 2 a",
+     "id": "g12.maths.u2.s2-3-2.14"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "∫ x^(−4/3) dx",
+     "steps": [
+      "α + 1 = −4/3 + 1 = −1/3.",
+      "Divide by −1/3: multiply by −3.",
+      "∫ x^(−4/3) dx = −3x^(−1/3) + C.",
+      "Check: d/dx(−3x^(−1/3)) = −3 × (−1/3)x^(−4/3) = x^(−4/3). ✓"
+     ],
+     "ref": "Example 2 d",
+     "id": "g12.maths.u2.s2-3-2.15"
+    },
+    {
+     "kind": "mcq",
+     "text": "∫ x⁻⁴ dx =",
+     "opts": [
+      "−1/(3x³) + C",
+      "1/(3x³) + C",
+      "−4x⁻⁵ + C",
+      "−1/(5x⁵) + C"
+     ],
+     "ans": "−1/(3x³) + C",
+     "why": "x⁻³/(−3).",
+     "clue": "−4 + 1 = −3.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.24 b",
+     "id": "g12.maths.u2.s2-3-2.16"
+    },
+    {
+     "kind": "mcq",
+     "text": "∫ x^(1/3) dx =",
+     "opts": [
+      "(3/4)x^(4/3) + C",
+      "(4/3)x^(4/3) + C",
+      "(1/3)x^(−2/3) + C",
+      "(3/4)x^(1/3) + C"
+     ],
+     "ans": "(3/4)x^(4/3) + C",
+     "why": "1/3 + 1 = 4/3; dividing by 4/3 multiplies by 3/4.",
+     "clue": "New power 4/3.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.24 c",
+     "id": "g12.maths.u2.s2-3-2.17"
+    },
+    {
+     "kind": "mcq",
+     "text": "∫ (3x² − 2x + 5) dx =",
+     "opts": [
+      "x³ − x² + 5x + C",
+      "6x − 2 + C",
+      "x³ − x² + C",
+      "3x³ − 2x² + 5x + C"
+     ],
+     "ans": "x³ − x² + 5x + C",
+     "why": "Term by term: x³, x², 5x.",
+     "clue": "One C at the end.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 2.25 e",
+     "id": "g12.maths.u2.s2-3-2.18"
+    },
+    {
+     "kind": "tf",
+     "text": "∫ x⁻¹ dx = x⁰/0 + C",
+     "a": false,
+     "why": "The power rule fails for α = −1 (division by 0). ∫ (1/x) dx = ln|x| + C.",
+     "clue": "What is −1 + 1?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.25 c",
+     "id": "g12.maths.u2.s2-3-2.19"
+    },
+    {
+     "kind": "mcq",
+     "text": "F′(x) = 6x² + 2 and F(0) = 3. F(x) =",
+     "opts": [
+      "2x³ + 2x + 3",
+      "2x³ + 2x",
+      "12x + 3",
+      "6x³ + 2x + 3"
+     ],
+     "ans": "2x³ + 2x + 3",
+     "why": "∫ = 2x³ + 2x + C, and F(0) = C = 3.",
+     "clue": "Integrate, then use F(0) to find C.",
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "added": true,
+     "id": "g12.maths.u2.s2-3-2.20"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 2.23",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "∫ from 0 to 2 (2x + 1) dx = ___",
+     "a": [
+      "6"
+     ],
+     "why": "(1/2)(1 + 5)(2).",
+     "clue": "Trapezoid.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "a",
+     "id": "g12.maths.u2.s2-3-2.21"
+    },
+    {
+     "kind": "blank",
+     "ask": "∫ from 0 to 4 2x dx = ___",
+     "a": [
+      "16"
+     ],
+     "why": "Triangle.",
+     "clue": "Height 8.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "b",
+     "id": "g12.maths.u2.s2-3-2.22"
+    },
+    {
+     "kind": "blank",
+     "ask": "∫ from 1 to 5 x dx = ___",
+     "a": [
+      "12"
+     ],
+     "why": "Trapezoid.",
+     "clue": "Sides 1 and 5.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "c",
+     "id": "g12.maths.u2.s2-3-2.23"
+    },
+    {
+     "kind": "blank",
+     "ask": "∫ from -2 to 3 (x + 2) dx = ___",
+     "a": [
+      "12.5"
+     ],
+     "why": "Triangle 5 × 5 / 2.",
+     "clue": "f(−2) = 0.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "d",
+     "id": "g12.maths.u2.s2-3-2.24"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 2.24",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "∫ x⁵ dx",
+     "opts": [
+      "x⁶/6 + C",
+      "5x⁴ + C",
+      "x⁶ + C",
+      "x⁵/5 + C"
+     ],
+     "ans": "x⁶/6 + C",
+     "why": "Power rule.",
+     "clue": "New power 6.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "a",
+     "id": "g12.maths.u2.s2-3-2.25"
+    },
+    {
+     "kind": "mcq",
+     "text": "∫ x^(−3/2) dx",
+     "opts": [
+      "−2/√x + C",
+      "2/√x + C",
+      "−(2/5)x^(−5/2) + C",
+      "−1/(2√x) + C"
+     ],
+     "ans": "−2/√x + C",
+     "why": "−3/2 + 1 = −1/2.",
+     "clue": "Divide by −1/2.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "d",
+     "id": "g12.maths.u2.s2-3-2.26"
+    },
+    {
+     "kind": "mcq",
+     "text": "∫ x⁻² dx",
+     "opts": [
+      "−1/x + C",
+      "1/x + C",
+      "−2/x³ + C",
+      "−1/x² + C"
+     ],
+     "ans": "−1/x + C",
+     "why": "x⁻¹/(−1).",
+     "clue": "−2 + 1 = −1.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "f",
+     "id": "g12.maths.u2.s2-3-2.27"
+    },
+    {
+     "kind": "mcq",
+     "text": "∫ x^(−3/5) dx",
+     "opts": [
+      "(5/2)x^(2/5) + C",
+      "(2/5)x^(2/5) + C",
+      "(5/8)x^(8/5) + C",
+      "−(3/5)x^(−8/5) + C"
+     ],
+     "ans": "(5/2)x^(2/5) + C",
+     "why": "−3/5 + 1 = 2/5.",
+     "clue": "Divide by 2/5.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "h",
+     "id": "g12.maths.u2.s2-3-2.28"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 2.25",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "∫ 99 dx",
+     "opts": [
+      "99x + C",
+      "99 + C",
+      "0",
+      "99x²/2 + C"
+     ],
+     "ans": "99x + C",
+     "why": "∫ k dx = kx + C.",
+     "clue": "Constant rule.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "a",
+     "id": "g12.maths.u2.s2-3-2.29"
+    },
+    {
+     "kind": "mcq",
+     "text": "∫ 10x⁴ dx",
+     "opts": [
+      "2x⁵ + C",
+      "10x⁵ + C",
+      "40x³ + C",
+      "2x⁴ + C"
+     ],
+     "ans": "2x⁵ + C",
+     "why": "10 × x⁵/5.",
+     "clue": "Constant out.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "b",
+     "id": "g12.maths.u2.s2-3-2.30"
+    },
+    {
+     "kind": "mcq",
+     "text": "∫ (x² − x) dx",
+     "opts": [
+      "x³/3 − x²/2 + C",
+      "2x − 1 + C",
+      "x³ − x² + C",
+      "x³/3 − x + C"
+     ],
+     "ans": "x³/3 − x²/2 + C",
+     "why": "Term by term.",
+     "clue": "Each power + 1.",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "d",
+     "id": "g12.maths.u2.s2-3-2.31"
+    },
+    {
+     "kind": "mcq",
+     "text": "∫ (x⁻² − 4x³ + √x) dx",
+     "opts": [
+      "−1/x − x⁴ + (2/3)x^(3/2) + C",
+      "1/x − x⁴ + (2/3)x^(3/2) + C",
+      "−1/x − x⁴ + (3/2)x^(3/2) + C",
+      "−2x⁻³ − 12x² + 1/(2√x) + C"
+     ],
+     "ans": "−1/x − x⁴ + (2/3)x^(3/2) + C",
+     "why": "Three power rules.",
+     "clue": "√x = x^(1/2).",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "g",
+     "id": "g12.maths.u2.s2-3-2.32"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "ask": "∫ from 0 to 3 4x dx = ___",
+   "a": [
+    "18"
+   ],
+   "why": "(1/2)(3)(12).",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-3-2.33"
+  },
+  {
+   "kind": "mcq",
+   "text": "∫ x³ dx =",
+   "opts": [
+    "x⁴/4 + C",
+    "3x² + C",
+    "x⁴ + C",
+    "x³/3 + C"
+   ],
+   "ans": "x⁴/4 + C",
+   "why": "power rule.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-3-2.34"
+  },
+  {
+   "kind": "mcq",
+   "text": "∫ (6x + 1) dx =",
+   "opts": [
+    "3x² + x + C",
+    "6 + C",
+    "6x² + x + C",
+    "3x² + C"
+   ],
+   "ans": "3x² + x + C",
+   "why": "term by term.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-3-2.35"
+  },
+  {
+   "kind": "blank",
+   "ask": "∫ from 2 to 4 (x + 1) dx = ___",
+   "a": [
+    "8"
+   ],
+   "why": "Trapezoid (3 + 5)/2 × 2.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-3-2.36"
+  },
+  {
+   "kind": "mcq",
+   "text": "∫ 1/x³ dx =",
+   "opts": [
+    "−1/(2x²) + C",
+    "1/(2x²) + C",
+    "−3/x⁴ + C",
+    "ln|x³| + C"
+   ],
+   "ans": "−1/(2x²) + C",
+   "why": "x⁻²/(−2).",
+   "clue": "",
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.maths.u2.s2-3-2.37"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Example 2 d (p.137): the book gives (5/2)x^(−1/3) + c; correct is −3x^(−1/3) + c (−4/3 + 1 = −1/3). Lessons use the corrected answer."
+  },
+  {
+   "kind": "review",
+   "text": "Exercise 2.25 c, ∫ (3/x) dx, needs ln|x|, which the unit has not taught; it is shown as a \"power rule fails\" true/false item."
+  },
+  {
+   "kind": "review",
+   "text": "p.133: \"As the number of subdivisions dx = (b − a)/n increases\" is garbled; n increases and dx decreases."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.riemann-sum": {
+   "name": "Riemann sums",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "x on [0, 2], 2 strips",
+     "steps": [
+      "Δx = 1. Left ends 0 and 1.",
+      "Sum = 0 + 1 = 1 (true area 2)."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "text": "Δx for [0, 6] with 3 strips:",
+     "opts": [
+      "2",
+      "3",
+      "6",
+      "18"
+     ],
+     "ans": "2",
+     "why": "6/3.",
+     "clue": "(b − a)/n.",
+     "graded": true,
+     "level": 1,
+     "step": "check"
+    }
+   ]
+  }
+ }
+}

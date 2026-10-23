@@ -1,0 +1,612 @@
+{
+ "id": "g12.maths.u2.s2-3-1",
+ "book": {
+  "title": "Mathematics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "Introduction to Calculus",
+  "pages": "123–133",
+  "section": "2.3.1"
+ },
+ "title": "Areas of regions",
+ "competency": "Find areas under rate graphs and approximate areas with Riemann sums.",
+ "minutes": 16,
+ "keywords": [
+  {
+   "en": "Rate function",
+   "am": "የለውጥ መጠን ፋንክሽን",
+   "def": "A function whose output is a rate, like km per hour or birr per item.",
+   "machine": true
+  },
+  {
+   "en": "Riemann sum",
+   "am": "የሪማን ድምር",
+   "def": "An approximation ∑ f(xᵢ)Δx of the area under a curve using rectangles.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.area-under-rate",
+   "name": "Area under a rate graph",
+   "requires": [],
+   "explain": {
+    "en": {
+     "text": "For a rate function such as velocity or marginal cost, the area under its graph is the total amount: distance, total cost or total profit. Its units are input units × output units. For constant and straight-line rates, rectangles, triangles and trapezoids give the exact area."
+    },
+    "am": {
+     "text": "ለለውጥ መጠን ፋንክሽን (ፍጥነት፣ የህዳግ ወጪ) ከግራፉ ስር ያለው ስፋት ጠቅላላ መጠኑ ነው፤ ርቀት፣ ጠቅላላ ወጪ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Speed and distance",
+     "ask": "A car goes 50 mi/h for 2 hours. On a speed–time graph, the distance is",
+     "opts": [
+      "the area of the rectangle under the line",
+      "the height of the line",
+      "the slope of the line",
+      "50 + 2"
+     ],
+     "after": "The rectangle is 2 wide and 50 high: area 100, which is 100 miles.",
+     "ref": "Example 1",
+     "id": "g12.maths.u2.s2-3-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Areas of regions",
+     "paras": [
+      "Here every function is non-negative: f(x) ≥ 0.",
+      "The area under a rate graph is the total change.",
+      "Units of the area = input units × output units."
+     ],
+     "ref": "p.124–126",
+     "id": "g12.maths.u2.s2-3-1.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Rate function",
+       "A function whose output is a rate, like km per hour or birr per item."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-3-1.3"
+    },
+    {
+     "kind": "blank",
+     "ask": "Skateboards cost 40 birr each for the first 50. Total cost of 50 = ___ birr",
+     "a": [
+      "2000"
+     ],
+     "why": "Rectangle 50 × 40 = 2000.",
+     "clue": "Width × height.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example 2",
+     "id": "g12.maths.u2.s2-3-1.4"
+    },
+    {
+     "kind": "blank",
+     "ask": "v(x) = 3x mi/h. Distance in the first 3 hours = ___ miles",
+     "a": [
+      "13.5",
+      "27/2"
+     ],
+     "why": "Triangle: (1/2)(3)(9) = 13.5.",
+     "clue": "v(3) = 9 is the height.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Example 3",
+     "id": "g12.maths.u2.s2-3-1.5"
+    },
+    {
+     "kind": "blank",
+     "ask": "v(x) = 3x mi/h. Distance from hour 3 to hour 5 = ___ miles",
+     "a": [
+      "24"
+     ],
+     "why": "Trapezoid: (1/2)(9 + 15)(2) = 24.",
+     "clue": "Parallel sides v(3) and v(5).",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.21 Q1",
+     "id": "g12.maths.u2.s2-3-1.6"
+    },
+    {
+     "kind": "blank",
+     "ask": "P′(x) = 0.15x (thousand $ per month). Profit in the first 12 months = ___ thousand $",
+     "a": [
+      "10.8"
+     ],
+     "why": "Triangle (1/2)(12)(1.8) = 10.8.",
+     "clue": "P′(12) = 1.8.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.21 Q2",
+     "id": "g12.maths.u2.s2-3-1.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "Cost per skateboard: 40 birr up to 50, 30 birr for 51–125, 25 birr for 126–150. Total for 150 = ___ birr",
+     "a": [
+      "4875"
+     ],
+     "why": "40(50) + 30(75) + 25(25) = 2000 + 2250 + 625.",
+     "clue": "Three rectangles.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Riemann summation, Example 1",
+     "id": "g12.maths.u2.s2-3-1.8"
+    },
+    {
+     "kind": "blank",
+     "ask": "v(t) = t/2 ft/min. Distance from t = 60 to t = 120 = ___ ft",
+     "a": [
+      "2700"
+     ],
+     "why": "Trapezoid (1/2)(30 + 60)(60) = 2700.",
+     "clue": "v(60) = 30 and v(120) = 60.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Activity 2.17 Q3 b",
+     "added": true,
+     "id": "g12.maths.u2.s2-3-1.9"
+    }
+   ]
+  },
+  {
+   "id": "math.riemann-sum",
+   "name": "Riemann sums",
+   "requires": [
+    "math.sigma-notation"
+   ],
+   "explain": {
+    "en": {
+     "text": "To find the area under a curve, split [a, b] into n equal strips of width Δx = (b − a)/n. Use the height at each left endpoint, multiply by Δx and add: ∑ f(xᵢ)Δx. More, thinner rectangles give a better approximation. For an increasing function the left-endpoint sum is too small."
+    },
+    "am": {
+     "text": "ከኩርባ ስር ያለውን ስፋት ለማግኘት [a, b] ን n እኩል ክፍሎች Δx = (b − a)/n አድርገን ∑ f(xᵢ)Δx እንደምራለን። ብዙ ቀጭን አራት ማዕዘኖች የተሻለ ግምት ይሰጣሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Rectangles under a line",
+     "ask": "Under y = 2x on [0, 6], rectangles of width 1 using left heights give 30, right heights give 42. The true area is",
+     "opts": [
+      "36",
+      "30",
+      "42",
+      "72"
+     ],
+     "after": "The triangle has area (1/2)(6)(12) = 36: lower sum < area < upper sum.",
+     "ref": "Activity 2.17 Q4–7",
+     "id": "g12.maths.u2.s2-3-1.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Riemann sum",
+     "paras": [
+      "Divide [a, b] into n subintervals of width Δx = (b − a)/n.",
+      "Area ≈ f(x₁)Δx + f(x₂)Δx + … + f(xₙ)Δx = ∑ f(xᵢ)Δx.",
+      "In this book the height is taken at the left endpoint."
+     ],
+     "ref": "Definition 2.12, p.131–132",
+     "id": "g12.maths.u2.s2-3-1.11"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "More rectangles",
+     "ask": "f(x) = x² + 1 on [1, 5]. Change n. The exact area is 136/3 ≈ 45.33.",
+     "vars": [
+      {
+       "k": "n",
+       "label": "n (rectangles)",
+       "min": 1,
+       "max": 60,
+       "step": 1,
+       "v": 4
+      }
+     ],
+     "formula": "Array.from({length: n}, (_, i) => { const x = 1 + i * 4 / n; return (x * x + 1) * 4 / n; }).reduce((s, v) => s + v, 0)",
+     "out": "Left sum = {v}",
+     "note": "n = 4 gives 34; n = 8 gives 39.5; the sum creeps up to 45.33.",
+     "id": "g12.maths.u2.s2-3-1.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Riemann sum",
+       "An approximation ∑ f(xᵢ)Δx of the area under a curve using rectangles."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-3-1.13"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = x² + 1 on [1, 5] with 4 rectangles (left ends 1, 2, 3, 4). The sum = ___",
+     "a": [
+      "34"
+     ],
+     "why": "(2 + 5 + 10 + 17) × 1 = 34.",
+     "clue": "Δx = 1. Add f(1) to f(4).",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Exercise 2.22 Q1 a",
+     "id": "g12.maths.u2.s2-3-1.14"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Same area with 8 rectangles",
+     "steps": [
+      "Δx = 0.5; left ends 1, 1.5, 2, …, 4.5.",
+      "Heights 2, 3.25, 5, 7.25, 10, 13.25, 17, 21.25: total 79.",
+      "Area ≈ 79 × 0.5 = 39.5. Closer to 45.33."
+     ],
+     "ref": "Exercise 2.22 Q1 b",
+     "id": "g12.maths.u2.s2-3-1.15"
+    },
+    {
+     "kind": "blank",
+     "ask": "∑ᵢ₌₁⁴ 3ⁱ = ___",
+     "a": [
+      "120"
+     ],
+     "why": "3 + 9 + 27 + 81 = 120.",
+     "clue": "i = 1 to 4.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Example 2",
+     "id": "g12.maths.u2.s2-3-1.16"
+    },
+    {
+     "kind": "blank",
+     "ask": "∑ᵢ₌₁⁶ (i² + i) = ___",
+     "a": [
+      "112"
+     ],
+     "why": "2 + 6 + 12 + 20 + 30 + 42 = 112.",
+     "clue": "Add i² + i for each i.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.22 Q2",
+     "id": "g12.maths.u2.s2-3-1.17"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = 3x² on [0, 5], 5 equal strips, left endpoints. The Riemann sum = ___",
+     "a": [
+      "90"
+     ],
+     "why": "Δx = 1; heights 0, 3, 12, 27, 48: total 90.",
+     "clue": "Left ends are 0, 1, 2, 3, 4.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Activity 2.19 a",
+     "id": "g12.maths.u2.s2-3-1.18"
+    },
+    {
+     "kind": "tf",
+     "text": "For an increasing function, the left-endpoint sum is larger than the true area.",
+     "a": false,
+     "why": "Left heights are the lowest in each strip, so the sum is too small.",
+     "clue": "Look at y = 2x: 30 < 36.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "id": "g12.maths.u2.s2-3-1.19"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = 2x on [0, 6] with n equal strips: the left sum is 36 − 36/n. With n = 12 it is ___",
+     "a": [
+      "33"
+     ],
+     "why": "36 − 3 = 33.",
+     "clue": "Put n = 12.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Activity 2.17",
+     "added": true,
+     "id": "g12.maths.u2.s2-3-1.20"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activity 2.17",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "v(t) = t/2 ft/min. Distance in the first 30 min = ___ ft",
+     "a": [
+      "225"
+     ],
+     "why": "(1/2)(30)(15).",
+     "clue": "Triangle.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q3 a",
+     "id": "g12.maths.u2.s2-3-1.21"
+    },
+    {
+     "kind": "pick",
+     "text": "y = 2x on [0, 6], 6 strips: lower and upper sums",
+     "pool": [
+      "30",
+      "42",
+      "36",
+      "72"
+     ],
+     "a": [
+      "30",
+      "42"
+     ],
+     "why": "Left 30, right 42.",
+     "clue": "Left vs right heights.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q4–5",
+     "id": "g12.maths.u2.s2-3-1.22"
+    },
+    {
+     "kind": "blank",
+     "ask": "Exact area under y = 2x on [0, 6] = ___",
+     "a": [
+      "36"
+     ],
+     "why": "(1/2)(6)(12).",
+     "clue": "Triangle.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q6",
+     "id": "g12.maths.u2.s2-3-1.23"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 2.21",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "v(x) = 3x, 3 ≤ x ≤ 5: distance = ___ miles",
+     "a": [
+      "24"
+     ],
+     "why": "Trapezoid.",
+     "clue": "v(3) = 9, v(5) = 15.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1",
+     "id": "g12.maths.u2.s2-3-1.24"
+    },
+    {
+     "kind": "blank",
+     "ask": "P′(x) = 0.15x, 0 ≤ x ≤ 12: profit = ___ thousand dollars",
+     "a": [
+      "10.8"
+     ],
+     "why": "Triangle.",
+     "clue": "Height 1.8.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q2",
+     "id": "g12.maths.u2.s2-3-1.25"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 2.22",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "x² + 1 on [1, 5], 4 strips: ___",
+     "a": [
+      "34"
+     ],
+     "why": "2 + 5 + 10 + 17.",
+     "clue": "Δx = 1.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 a",
+     "id": "g12.maths.u2.s2-3-1.26"
+    },
+    {
+     "kind": "blank",
+     "ask": "x² + 1 on [1, 5], 8 strips: ___",
+     "a": [
+      "39.5"
+     ],
+     "why": "79 × 0.5.",
+     "clue": "Δx = 0.5.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1 b",
+     "id": "g12.maths.u2.s2-3-1.27"
+    },
+    {
+     "kind": "blank",
+     "ask": "∑ᵢ₌₁⁶ (i² + i) = ___",
+     "a": [
+      "112"
+     ],
+     "why": "2 + 6 + … + 42.",
+     "clue": "Each term i² + i.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q2",
+     "id": "g12.maths.u2.s2-3-1.28"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "ask": "A rate of 12 L/min for 5 minutes gives ___ L",
+   "a": [
+    "60"
+   ],
+   "why": "12 × 5.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-3-1.29"
+  },
+  {
+   "kind": "blank",
+   "ask": "v(t) = 4t m/s. Distance for 0 ≤ t ≤ 3 = ___ m",
+   "a": [
+    "18"
+   ],
+   "why": "(1/2)(3)(12).",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-3-1.30"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = x on [0, 4], 4 strips, left endpoints: the sum = ___",
+   "a": [
+    "6"
+   ],
+   "why": "0 + 1 + 2 + 3.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-3-1.31"
+  },
+  {
+   "kind": "blank",
+   "ask": "Δx for [2, 10] with 4 equal strips = ___",
+   "a": [
+    "2"
+   ],
+   "why": "8/4.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-3-1.32"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = x² on [0, 3], 3 strips, left endpoints: the sum = ___",
+   "a": [
+    "5"
+   ],
+   "why": "0 + 1 + 4.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.maths.u2.s2-3-1.33"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Figure 2.16 (Activity 2.17) is schematic: rectangle widths look unequal. Answers use 6 equal strips of width 1."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.sigma-notation": {
+   "name": "Sigma notation",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "∑ᵢ₌₁³ 2i",
+     "steps": [
+      "Put i = 1, 2, 3 into 2i: 2 + 4 + 6.",
+      "Sum = 12."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "text": "∑ᵢ₌₁⁴ i² = ?",
+     "opts": [
+      "30",
+      "16",
+      "10",
+      "20"
+     ],
+     "ans": "30",
+     "why": "1 + 4 + 9 + 16.",
+     "clue": "Square, then add.",
+     "graded": true,
+     "level": 1,
+     "step": "check"
+    }
+   ]
+  }
+ }
+}

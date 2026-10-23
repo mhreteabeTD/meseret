@@ -1,0 +1,432 @@
+{
+ "id": "g12.maths.u2.s2-1-6",
+ "book": {
+  "title": "Mathematics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "Introduction to Calculus",
+  "pages": "108–111",
+  "section": "2.1.6"
+ },
+ "title": "Equation of tangents and normal lines to curves",
+ "competency": "Write the equations of tangent and normal lines and find vertical tangents.",
+ "minutes": 12,
+ "keywords": [
+  {
+   "en": "Normal line",
+   "am": "ኖርማል መስመር",
+   "def": "The line perpendicular to the tangent at the point of tangency.",
+   "machine": true
+  },
+  {
+   "en": "Tangent line",
+   "am": "ታንጀንት መስመር",
+   "def": "A line that touches a curve at one point and has its steepness there.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.tangent-normal",
+   "name": "Tangent and normal lines",
+   "requires": [
+    "math.derivative-at-point"
+   ],
+   "explain": {
+    "en": {
+     "text": "The tangent at x = a has slope f′(a): y = f′(a)(x − a) + f(a). The normal is perpendicular, slope −1/f′(a). If f′(a) = 0 the tangent is horizontal and the normal is the vertical line x = a. A vertical tangent can occur where f′ is undefined because its denominator becomes 0."
+    },
+    "am": {
+     "text": "በ x = a ላይ ያለው ታንጀንት ስሎፕ f′(a) አለው፤ y = f′(a)(x − a) + f(a)። ኖርማሉ ቀጥ ያለ ነው፣ ስሎፑ −1/f′(a)።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A line that touches",
+     "ask": "A curve has slope 3 at (−2, 5). Which line is the tangent there?",
+     "opts": [
+      "y = 3x + 11",
+      "y = 3x + 5",
+      "y = −x/3 + 13/3",
+      "y = 5"
+     ],
+     "after": "y − 5 = 3(x + 2), so y = 3x + 11.",
+     "ref": "Activity 2.14 Q3",
+     "id": "g12.maths.u2.s2-1-6.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Tangent and normal lines",
+     "paras": [
+      "Tangent at (a, f(a)): y = f′(a)(x − a) + f(a).",
+      "The normal line is perpendicular to the tangent at the point of tangency.",
+      "Normal: y = −(1/f′(a))(x − a) + f(a)."
+     ],
+     "note": "If f′(a) = 0: tangent y = f(a), normal x = a.",
+     "ref": "p.108–109",
+     "id": "g12.maths.u2.s2-1-6.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Normal line",
+       "The line perpendicular to the tangent at the point of tangency."
+      ],
+      [
+       "Tangent line",
+       "A line that touches a curve at one point and has its steepness there."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-1-6.3"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = x³ − 2x at (1, −1). The tangent is",
+     "opts": [
+      "y = x − 2",
+      "y = −x",
+      "y = x + 2",
+      "y = 3x − 4"
+     ],
+     "ans": "y = x − 2",
+     "why": "f′(1) = 3 − 2 = 1. y = 1(x − 1) − 1 = x − 2.",
+     "clue": "Find f′(1) first.",
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example 1 a",
+     "id": "g12.maths.u2.s2-1-6.4"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "f(x) = √(20 − x²) at (2, 4)",
+     "steps": [
+      "f′(x) = −x/√(20 − x²), so f′(2) = −2/4 = −1/2.",
+      "Tangent: y = −(1/2)(x − 2) + 4 = −x/2 + 5.",
+      "Normal slope = −1/(−1/2) = 2.",
+      "Normal: y = 2(x − 2) + 4 = 2x."
+     ],
+     "ref": "Example 1 b",
+     "id": "g12.maths.u2.s2-1-6.5"
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = x³ + x + 2 at (0, 2). The normal line is",
+     "opts": [
+      "y = −x + 2",
+      "y = x + 2",
+      "y = 2",
+      "x = 0"
+     ],
+     "ans": "y = −x + 2",
+     "why": "f′(0) = 1, so the normal slope is −1.",
+     "clue": "Normal slope = −1/f′(0).",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 2.17 Q1 a",
+     "id": "g12.maths.u2.s2-1-6.6"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = (1 − x³)√(x + 2). The tangent slope at (−1, 2) is ___",
+     "a": [
+      "-2"
+     ],
+     "why": "f′ = −3x²√(x + 2) + (1 − x³)/(2√(x + 2)). At −1: −3 + 1 = −2.",
+     "clue": "Product rule.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "practise",
+     "ref": "Exercise 2.17 Q1 b",
+     "id": "g12.maths.u2.s2-1-6.7"
+    },
+    {
+     "kind": "pick",
+     "text": "f(x) = √(x² − x) has vertical tangents at",
+     "pool": [
+      "(0, 0)",
+      "(1, 0)",
+      "(1/2, 0)",
+      "(−1, √2)"
+     ],
+     "a": [
+      "(0, 0)",
+      "(1, 0)"
+     ],
+     "why": "f′ = (2x − 1)/(2√(x² − x)) is undefined where x² − x = 0.",
+     "clue": "Where is the denominator of f′ zero?",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.17 Q2 a",
+     "id": "g12.maths.u2.s2-1-6.8"
+    },
+    {
+     "kind": "tf",
+     "text": "If the tangent slope is 4, the normal slope is −4.",
+     "a": false,
+     "why": "Normal slope = −1/4.",
+     "clue": "Negative reciprocal.",
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "added": true,
+     "id": "g12.maths.u2.s2-1-6.9"
+    },
+    {
+     "kind": "blank",
+     "ask": "f(x) = x² + ax + b and g(x) = x³ − c share the tangent at (1, 2). a = ___",
+     "a": [
+      "1"
+     ],
+     "why": "g′(1) = 3 = f′(1) = 2 + a, so a = 1 (then b = 0, c = −1).",
+     "clue": "Equal slopes at x = 1.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Exercise 2.17 Q3",
+     "added": true,
+     "id": "g12.maths.u2.s2-1-6.10"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 2.17",
+   "items": [
+    {
+     "kind": "mcq",
+     "text": "x³ + x + 2 at (0, 2): tangent",
+     "opts": [
+      "y = x + 2",
+      "y = −x + 2",
+      "y = 3x + 2",
+      "y = 2"
+     ],
+     "ans": "y = x + 2",
+     "why": "f′(0) = 1.",
+     "clue": "Slope f′(0).",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 a",
+     "id": "g12.maths.u2.s2-1-6.11"
+    },
+    {
+     "kind": "mcq",
+     "text": "(1 − x³)√(x + 2) at (−1, 2): normal",
+     "opts": [
+      "y = x/2 + 5/2",
+      "y = −2x",
+      "y = 2x + 4",
+      "y = −x/2 + 3/2"
+     ],
+     "ans": "y = x/2 + 5/2",
+     "why": "Tangent slope −2, normal slope 1/2.",
+     "clue": "Find f′(−1).",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q1 b",
+     "id": "g12.maths.u2.s2-1-6.12"
+    },
+    {
+     "kind": "pick",
+     "text": "√(x² − x): vertical tangents at",
+     "pool": [
+      "(0, 0)",
+      "(1, 0)",
+      "(1/2, 0)",
+      "(2, √2)"
+     ],
+     "a": [
+      "(0, 0)",
+      "(1, 0)"
+     ],
+     "why": "x² − x = 0.",
+     "clue": "Denominator of f′.",
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q2 a",
+     "id": "g12.maths.u2.s2-1-6.13"
+    },
+    {
+     "kind": "pick",
+     "text": "2√x: vertical tangent at",
+     "pool": [
+      "(0, 0)",
+      "(1, 2)",
+      "(4, 4)",
+      "none"
+     ],
+     "a": [
+      "(0, 0)"
+     ],
+     "why": "f′ = 1/√x undefined at 0.",
+     "clue": "Where is f′ undefined?",
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q2 b",
+     "id": "g12.maths.u2.s2-1-6.14"
+    },
+    {
+     "kind": "mcq",
+     "text": "x² + ax + b and x³ − c share the tangent at (1, 2). Common normal:",
+     "opts": [
+      "y = −x/3 + 7/3",
+      "y = 3x − 1",
+      "y = −3x + 5",
+      "y = x/3 + 5/3"
+     ],
+     "ans": "y = −x/3 + 7/3",
+     "why": "Tangent slope 3, normal −1/3.",
+     "clue": "Normal slope −1/3.",
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q3",
+     "id": "g12.maths.u2.s2-1-6.15"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "text": "f(x) = x² at (2, 4): tangent",
+   "opts": [
+    "y = 4x − 4",
+    "y = 2x",
+    "y = 4x + 4",
+    "y = −x/4 + 9/2"
+   ],
+   "ans": "y = 4x − 4",
+   "why": "slope 4.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-6.16"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = x² at (2, 4): the normal slope is ___",
+   "a": [
+    "-1/4"
+   ],
+   "why": "−1/4.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-6.17"
+  },
+  {
+   "kind": "mcq",
+   "text": "f(x) = x² − 4x at x = 2: the normal line is",
+   "opts": [
+    "x = 2",
+    "y = −4",
+    "y = 2",
+    "x = −4"
+   ],
+   "ans": "x = 2",
+   "why": "f′(2) = 0: tangent horizontal, normal vertical.",
+   "clue": "",
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-6.18"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = √x. The tangent at x = 4 meets the y-axis at y = ___",
+   "a": [
+    "1"
+   ],
+   "why": "y = (1/4)(x − 4) + 2.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-6.19"
+  },
+  {
+   "kind": "blank",
+   "ask": "f(x) = 1/x at (1, 1): the tangent meets the x-axis at x = ___",
+   "a": [
+    "2"
+   ],
+   "why": "y = −(x − 1) + 1 = 2 − x.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.maths.u2.s2-1-6.20"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Example 1 c prints no point; the solution works at (1, −5). It also prints \"2x, if x > 3\" (should be x < 3) and \"+ f(2)\" (should be f(1)). Not used in graded items."
+  },
+  {
+   "kind": "review",
+   "text": "Note 2 p.109: an undefined f′(a) does not always give a vertical tangent (|x| at 0 has a corner). Lessons say \"can occur\"."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.derivative-at-point": {
+   "name": "Slope from the derivative",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "f(x) = x² at x = 3",
+     "steps": [
+      "f′(x) = 2x.",
+      "f′(3) = 6: the tangent at (3, 9) has slope 6."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "text": "f(x) = x³. Slope of the tangent at x = −1?",
+     "opts": [
+      "3",
+      "−3",
+      "1",
+      "−1"
+     ],
+     "ans": "3",
+     "why": "f′ = 3x² = 3.",
+     "clue": "Square of a negative is positive.",
+     "graded": true,
+     "level": 1,
+     "step": "check"
+    }
+   ]
+  }
+ }
+}

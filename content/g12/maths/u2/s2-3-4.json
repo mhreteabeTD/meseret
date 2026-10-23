@@ -1,0 +1,404 @@
+{
+ "id": "g12.maths.u2.s2-3-4",
+ "book": {
+  "title": "Mathematics Grade 12 Student Textbook",
+  "grade": 12,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "Introduction to Calculus",
+  "pages": "143–148",
+  "section": "2.3.4"
+ },
+ "title": "More on area",
+ "competency": "Find areas of regions above and below the x-axis.",
+ "minutes": 12,
+ "keywords": [
+  {
+   "en": "Signed area",
+   "am": "ምልክት ያለው ስፋት",
+   "def": "Area counted positive above the x-axis and negative below it.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.signed-area",
+   "name": "Area above and below the x-axis",
+   "requires": [
+    "math.ftc"
+   ],
+   "explain": {
+    "en": {
+     "text": "A definite integral counts area above the x-axis as positive and below as negative. For the true area, find where the graph crosses the axis, split the interval there, and add the absolute values: below the axis use −∫."
+    },
+    "am": {
+     "text": "ዴፊኒት ኢንቲግራል ከ x-ዘንግ በላይ ያለውን አዎንታዊ፣ በታች ያለውን አሉታዊ ይቆጥራል። እውነተኛ ስፋት ለማግኘት በመቋረጫ ነጥቦቹ ከፍለን እንደምራለን።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A negative area?",
+     "ask": "∫ from 0 to 2 x² dx = 8/3. What is ∫ from 0 to 2 (−x²) dx?",
+     "opts": [
+      "−8/3",
+      "8/3",
+      "0",
+      "16/3"
+     ],
+     "after": "−8/3. The region has the same size, but it is below the axis, so the integral is negative.",
+     "ref": "Example 2",
+     "id": "g12.maths.u2.s2-3-4.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Area below the axis",
+     "paras": [
+      "If f(x) ≥ 0 on [a, b], the area is ∫ from a to b of f(x) dx.",
+      "If f(x) ≤ 0 on [a, b], the area is −∫ from a to b of f(x) dx.",
+      "If f changes sign, split at the x-intercepts and add the areas."
+     ],
+     "note": "The integral = (area above) − (area below).",
+     "ref": "p.144–147",
+     "id": "g12.maths.u2.s2-3-4.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Signed area",
+       "Area counted positive above the x-axis and negative below it."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-3-4.3"
+    },
+    {
+     "kind": "blank",
+     "ask": "Area between f(x) = x² − 1 and the x-axis on [−1, 1] = ___",
+     "a": [
+      "4/3"
+     ],
+     "why": "∫ from -1 to 1 (x² − 1) dx = −4/3, so the area is 4/3.",
+     "clue": "The graph is below the axis here.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "check",
+     "ref": "Example 3 b",
+     "id": "g12.maths.u2.s2-3-4.4"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "f(x) = x² − 1 on [0, 2]",
+     "steps": [
+      "The graph crosses the axis at x = 1.",
+      "Below on [0, 1]: −∫ from 0 to 1 = −(−2/3) = 2/3.",
+      "Above on [1, 2]: ∫ from 1 to 2 = 4/3.",
+      "Area = 2/3 + 4/3 = 2. (The integral alone is 2/3.)"
+     ],
+     "ref": "Example 4",
+     "id": "g12.maths.u2.s2-3-4.5"
+    },
+    {
+     "kind": "blank",
+     "ask": "Area enclosed by f(x) = x² − 4 and the x-axis = ___",
+     "a": [
+      "32/3"
+     ],
+     "why": "∫ from -2 to 2 (x² − 4) dx = −32/3; area 32/3.",
+     "clue": "Intercepts at ±2.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.28 Q1 a",
+     "id": "g12.maths.u2.s2-3-4.6"
+    },
+    {
+     "kind": "blank",
+     "ask": "Area enclosed by f(x) = x² − 2x and the x-axis = ___",
+     "a": [
+      "4/3"
+     ],
+     "why": "∫ from 0 to 2 (x² − 2x) dx = −4/3; area 4/3.",
+     "clue": "Intercepts 0 and 2.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Exercise 2.28 Q1 c",
+     "id": "g12.maths.u2.s2-3-4.7"
+    },
+    {
+     "kind": "blank",
+     "ask": "Area under f(x) = x² + 3 between x = −1 and x = 3 = ___",
+     "a": [
+      "64/3"
+     ],
+     "why": "18 − (−10/3) = 64/3.",
+     "clue": "x² + 3 is always positive.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "practise",
+     "ref": "Exercise 2.28 Q2 b",
+     "id": "g12.maths.u2.s2-3-4.8"
+    },
+    {
+     "kind": "mcq",
+     "text": "∫ from -1 to 2 (−x³ + 3x − 1) dx is",
+     "opts": [
+      "−9/4",
+      "9/4",
+      "0",
+      "−3"
+     ],
+     "ans": "−9/4",
+     "why": "(−4 + 6 − 2) − (−1/4 + 3/2 + 1) = 0 − 9/4.",
+     "clue": "More of this graph is below the axis.",
+     "graded": true,
+     "level": 2,
+     "step": "practise",
+     "ref": "Example 5",
+     "id": "g12.maths.u2.s2-3-4.9"
+    },
+    {
+     "kind": "blank",
+     "ask": "Area enclosed by f(x) = x(x + 2)(x − 1) and the x-axis = ___",
+     "a": [
+      "37/12"
+     ],
+     "why": "Above on [−2, 0]: 8/3. Below on [0, 1]: 5/12. 8/3 + 5/12 = 37/12.",
+     "clue": "Split at −2, 0 and 1. The integral alone (9/4) is not the area.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "challenge",
+     "ref": "Exercise 2.28 Q3",
+     "added": true,
+     "id": "g12.maths.u2.s2-3-4.10"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 2.28",
+   "items": [
+    {
+     "kind": "blank",
+     "ask": "x² − 4 and the x-axis: S = ___",
+     "a": [
+      "32/3"
+     ],
+     "why": "−(−32/3).",
+     "clue": "Below the axis.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1 a",
+     "id": "g12.maths.u2.s2-3-4.11"
+    },
+    {
+     "kind": "blank",
+     "ask": "−x² + 4 and the x-axis: S = ___",
+     "a": [
+      "32/3"
+     ],
+     "why": "16/3 − (−16/3).",
+     "clue": "Above the axis.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q1 b",
+     "id": "g12.maths.u2.s2-3-4.12"
+    },
+    {
+     "kind": "blank",
+     "ask": "x² − 2x and the x-axis: S = ___",
+     "a": [
+      "4/3"
+     ],
+     "why": "−(−4/3).",
+     "clue": "Below.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1 c",
+     "id": "g12.maths.u2.s2-3-4.13"
+    },
+    {
+     "kind": "blank",
+     "ask": "−x² − 2x and the x-axis: S = ___",
+     "a": [
+      "4/3"
+     ],
+     "why": "0 − (−4/3).",
+     "clue": "Intercepts −2 and 0.",
+     "num": true,
+     "graded": true,
+     "level": 2,
+     "step": "exercise",
+     "ref": "Q1 d",
+     "id": "g12.maths.u2.s2-3-4.14"
+    },
+    {
+     "kind": "blank",
+     "ask": "x², x = 0 to x = 4: S = ___",
+     "a": [
+      "64/3"
+     ],
+     "why": "64/3.",
+     "clue": "x³/3.",
+     "num": true,
+     "graded": true,
+     "level": 1,
+     "step": "exercise",
+     "ref": "Q2 a",
+     "id": "g12.maths.u2.s2-3-4.15"
+    },
+    {
+     "kind": "blank",
+     "ask": "x(x + 2)(x − 1) and the x-axis: S = ___",
+     "a": [
+      "37/12"
+     ],
+     "why": "8/3 + 5/12.",
+     "clue": "Split at 0.",
+     "num": true,
+     "graded": true,
+     "level": 3,
+     "step": "exercise",
+     "ref": "Q3",
+     "id": "g12.maths.u2.s2-3-4.16"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "ask": "Area between y = −x² and the x-axis from 0 to 3 = ___",
+   "a": [
+    "9"
+   ],
+   "why": "−(−9).",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-3-4.17"
+  },
+  {
+   "kind": "blank",
+   "ask": "∫ from 0 to 3 (x − 1) dx = ___",
+   "a": [
+    "1.5",
+    "3/2"
+   ],
+   "why": "[x²/2 − x] = 1.5.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-3-4.18"
+  },
+  {
+   "kind": "blank",
+   "ask": "Area between y = x − 1 and the x-axis on [0, 3] = ___",
+   "a": [
+    "2.5",
+    "5/2"
+   ],
+   "why": "1/2 + 2.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 3,
+   "step": "test",
+   "id": "g12.maths.u2.s2-3-4.19"
+  },
+  {
+   "kind": "tf",
+   "text": "If f(x) < 0 on [a, b], the integral from a to b is negative.",
+   "a": true,
+   "why": "Area below counts negative.",
+   "clue": "",
+   "graded": true,
+   "level": 1,
+   "step": "test",
+   "id": "g12.maths.u2.s2-3-4.20"
+  },
+  {
+   "kind": "blank",
+   "ask": "Area enclosed by y = 1 − x² and the x-axis = ___",
+   "a": [
+    "4/3"
+   ],
+   "why": "[x − x³/3] from −1 to 1.",
+   "clue": "",
+   "num": true,
+   "graded": true,
+   "level": 2,
+   "step": "test",
+   "id": "g12.maths.u2.s2-3-4.21"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Example 4 (p.146) writes S = ∫ from 0 to 2 (x² − 1) dx (that is 2/3, not the area) and says the area above exceeds the area below \"by 2\" (it is by 2/3). The final area 2 is correct."
+  },
+  {
+   "kind": "review",
+   "text": "Example 3 labels both parts \"a\"; the second is part b."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.ftc": {
+   "name": "Evaluating a definite integral",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "∫ from 0 to 3 2x dx",
+     "steps": [
+      "F(x) = x².",
+      "F(3) − F(0) = 9 − 0 = 9."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "text": "∫ from 1 to 2 3x² dx = ?",
+     "opts": [
+      "7",
+      "8",
+      "9",
+      "3"
+     ],
+     "ans": "7",
+     "why": "[x³] = 8 − 1.",
+     "clue": "F(2) − F(1).",
+     "graded": true,
+     "level": 1,
+     "step": "check"
+    }
+   ]
+  }
+ }
+}
