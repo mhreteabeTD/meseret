@@ -135,6 +135,51 @@
      "id": "g7.maths.u3.s3-3-2.4"
     },
     {
+     "kind": "coord",
+     "step": "explore",
+     "title": "The lines x = 4 and y = 5",
+     "min": -5,
+     "max": 5,
+     "ymin": -4,
+     "ymax": 6,
+     "lines": [
+      {
+       "x": 4,
+       "label": "x = 4"
+      },
+      {
+       "m": 0,
+       "b": 5,
+       "label": "y = 5",
+       "at": -3
+      }
+     ],
+     "points": [
+      {
+       "x": 4,
+       "y": 2,
+       "info": "On x = 4: the x-coordinate is always 4."
+      },
+      {
+       "x": 4,
+       "y": -3,
+       "info": "Still on x = 4."
+      },
+      {
+       "x": -2,
+       "y": 5,
+       "info": "On y = 5: the y-coordinate is always 5."
+      },
+      {
+       "x": 4,
+       "y": 5,
+       "info": "On both lines: where x = 4 meets y = 5."
+      }
+     ],
+     "need": 3,
+     "id": "g7.maths.u3.s3-3-2.38"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -228,6 +273,39 @@
      "level": 2,
      "ref": "Example 7 b",
      "id": "g7.maths.u3.s3-3-2.9"
+    },
+    {
+     "kind": "coord",
+     "step": "practise",
+     "graded": true,
+     "level": 2,
+     "ask": "The lines x = −2 and y = 3 cross at one point. Tap it.",
+     "min": -5,
+     "max": 5,
+     "ymin": -5,
+     "ymax": 5,
+     "lines": [
+      {
+       "x": -2,
+       "label": "x = −2"
+      },
+      {
+       "m": 0,
+       "b": 3,
+       "label": "y = 3",
+       "at": 2
+      }
+     ],
+     "targets": [
+      {
+       "x": -2,
+       "y": 3
+      }
+     ],
+     "why": "Every point on x = −2 has x = −2. Every point on y = 3 has y = 3. They meet at (−2, 3).",
+     "clue": "Find the point whose x is −2 and whose y is 3.",
+     "added": true,
+     "id": "g7.maths.u3.s3-3-2.39"
     },
     {
      "kind": "mcq",
@@ -348,6 +426,59 @@
      "id": "g7.maths.u3.s3-3-2.14"
     },
     {
+     "kind": "coord",
+     "step": "explore",
+     "title": "Example 9: y = 2x and y = −2x",
+     "min": -4,
+     "max": 4,
+     "ymin": -7,
+     "ymax": 7,
+     "ref": "Example 9",
+     "lines": [
+      {
+       "m": 2,
+       "b": 0,
+       "label": "y = 2x",
+       "at": 2.6
+      },
+      {
+       "m": -2,
+       "b": 0,
+       "label": "y = −2x",
+       "at": -2.6
+      }
+     ],
+     "points": [
+      {
+       "x": 1,
+       "y": 2,
+       "info": "y = 2 × 1 = 2: on y = 2x, Quadrant I."
+      },
+      {
+       "x": -2,
+       "y": -4,
+       "info": "y = 2 × (−2) = −4: on y = 2x, Quadrant III."
+      },
+      {
+       "x": -1,
+       "y": 2,
+       "info": "y = −2 × (−1) = 2: on y = −2x, Quadrant II."
+      },
+      {
+       "x": 3,
+       "y": -6,
+       "info": "y = −2 × 3 = −6: on y = −2x, Quadrant IV."
+      },
+      {
+       "x": 0,
+       "y": 0,
+       "info": "Both lines pass through the origin."
+      }
+     ],
+     "need": 3,
+     "id": "g7.maths.u3.s3-3-2.40"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -390,7 +521,13 @@
      "clue": "Positive times negative is negative.",
      "level": 1,
      "ref": "Exercise 3.3.3 Q1",
-     "id": "g7.maths.u3.s3-3-2.17"
+     "id": "g7.maths.u3.s3-3-2.17",
+     "gen": {
+      "t": "lineq",
+      "form": "eval",
+      "y": true
+     },
+     "input": "signed"
     },
     {
      "kind": "pick",
@@ -429,6 +566,35 @@
      "level": 2,
      "ref": "Exercise 3.3.3 Q4",
      "id": "g7.maths.u3.s3-3-2.19"
+    },
+    {
+     "kind": "coord",
+     "step": "practise",
+     "graded": true,
+     "level": 2,
+     "ask": "y = 3x. Tap the point on this line where x = −1.",
+     "min": -4,
+     "max": 4,
+     "ymin": -6,
+     "ymax": 6,
+     "lines": [
+      {
+       "m": 3,
+       "b": 0,
+       "label": "y = 3x",
+       "at": 1.6
+      }
+     ],
+     "targets": [
+      {
+       "x": -1,
+       "y": -3
+      }
+     ],
+     "why": "y = 3 × (−1) = −3. The point is (−1, −3).",
+     "clue": "Put x = −1 into y = 3x first.",
+     "added": true,
+     "id": "g7.maths.u3.s3-3-2.41"
     },
     {
      "kind": "blank",
@@ -710,7 +876,13 @@
    "why": "2 × (−2) = −4.",
    "level": 1,
    "clue": "",
-   "id": "g7.maths.u3.s3-3-2.34"
+   "id": "g7.maths.u3.s3-3-2.34",
+   "gen": {
+    "t": "lineq",
+    "form": "eval",
+    "y": true
+   },
+   "input": "signed"
   },
   {
    "kind": "mcq",
@@ -774,7 +946,11 @@
   },
   {
    "kind": "note",
-   "text": "No generator in the engine fits algebra or linear equations yet, so practice and tests reuse the hand-written items (no fresh numbers)."
+   "text": "Coordinate-plane blocks (coord) added: tap-to-explore figures from the book examples and graded \"plot the point\" items."
+  },
+  {
+   "kind": "note",
+   "text": "Practice replays and tests now use fresh numbers from the int / sets / lineq / quad generators."
   }
  ],
  "review": {

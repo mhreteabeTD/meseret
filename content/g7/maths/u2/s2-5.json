@@ -173,7 +173,11 @@
      "level": 1,
      "ref": "Exercise 2.5.1 Q1 c",
      "input": "signed",
-     "id": "g7.maths.u2.s2-5.6"
+     "id": "g7.maths.u2.s2-5.6",
+     "gen": {
+      "t": "int",
+      "op": "mul"
+     }
     },
     {
      "kind": "blank",
@@ -190,7 +194,11 @@
      "level": 1,
      "ref": "Exercise 2.5.1 Q1 d",
      "input": "signed",
-     "id": "g7.maths.u2.s2-5.7"
+     "id": "g7.maths.u2.s2-5.7",
+     "gen": {
+      "t": "int",
+      "op": "mul"
+     }
     },
     {
      "kind": "blank",
@@ -207,7 +215,11 @@
      "level": 2,
      "ref": "Exercise 2.5.1 Q1 e",
      "input": "signed",
-     "id": "g7.maths.u2.s2-5.8"
+     "id": "g7.maths.u2.s2-5.8",
+     "gen": {
+      "t": "int",
+      "op": "mul"
+     }
     },
     {
      "kind": "mcq",
@@ -241,7 +253,11 @@
      "level": 3,
      "input": "signed",
      "added": true,
-     "id": "g7.maths.u2.s2-5.10"
+     "id": "g7.maths.u2.s2-5.10",
+     "gen": {
+      "t": "int",
+      "op": "mul"
+     }
     }
    ]
   },
@@ -697,7 +713,11 @@
      "level": 1,
      "ref": "Exercise 2.5.4 Q2 b",
      "input": "signed",
-     "id": "g7.maths.u2.s2-5.33"
+     "id": "g7.maths.u2.s2-5.33",
+     "gen": {
+      "t": "int",
+      "op": "div"
+     }
     },
     {
      "kind": "blank",
@@ -714,7 +734,11 @@
      "level": 1,
      "ref": "Exercise 2.5.4 Q3 a",
      "input": "signed",
-     "id": "g7.maths.u2.s2-5.34"
+     "id": "g7.maths.u2.s2-5.34",
+     "gen": {
+      "t": "int",
+      "op": "div"
+     }
     },
     {
      "kind": "blank",
@@ -731,7 +755,11 @@
      "level": 1,
      "ref": "Exercise 2.5.4 Q2 c",
      "input": "signed",
-     "id": "g7.maths.u2.s2-5.35"
+     "id": "g7.maths.u2.s2-5.35",
+     "gen": {
+      "t": "int",
+      "op": "div"
+     }
     },
     {
      "kind": "mcq",
@@ -1157,7 +1185,11 @@
    "level": 1,
    "input": "signed",
    "clue": "",
-   "id": "g7.maths.u2.s2-5.55"
+   "id": "g7.maths.u2.s2-5.55",
+   "gen": {
+    "t": "int",
+    "op": "mul"
+   }
   },
   {
    "kind": "blank",
@@ -1173,7 +1205,11 @@
    "level": 1,
    "input": "signed",
    "clue": "",
-   "id": "g7.maths.u2.s2-5.56"
+   "id": "g7.maths.u2.s2-5.56",
+   "gen": {
+    "t": "int",
+    "op": "div"
+   }
   },
   {
    "kind": "mcq",
@@ -1247,7 +1283,7 @@
   },
   {
    "kind": "note",
-   "text": "Integer arithmetic has no generator in the engine yet: practice and tests reuse these hand-written integer items (no fresh numbers). An integer generator (add/sub/mul/div with signs) is needed in an engine session."
+   "text": "Practice replays and tests now use fresh numbers from the int / sets / lineq / quad generators."
   }
  ],
  "review": {

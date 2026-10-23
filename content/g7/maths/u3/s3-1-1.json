@@ -302,7 +302,13 @@
      "clue": "Multiply 2 × 5 first, then add 3.",
      "level": 1,
      "ref": "Exercise 3.1.1 Q4 b",
-     "id": "g7.maths.u3.s3-1-1.15"
+     "id": "g7.maths.u3.s3-1-1.15",
+     "gen": {
+      "t": "lineq",
+      "form": "eval",
+      "y": true
+     },
+     "input": "signed"
     },
     {
      "kind": "blank",
@@ -349,7 +355,13 @@
      "level": 2,
      "ref": "Exercise 3.1.1 Q4 c",
      "needs": "math.integer-signs",
-     "id": "g7.maths.u3.s3-1-1.18"
+     "id": "g7.maths.u3.s3-1-1.18",
+     "gen": {
+      "t": "lineq",
+      "form": "eval",
+      "y": true
+     },
+     "input": "signed"
     },
     {
      "kind": "blank",
@@ -627,7 +639,13 @@
    "why": "3 × 4 = 12, and 12 + 1 = 13.",
    "level": 2,
    "clue": "",
-   "id": "g7.maths.u3.s3-1-1.32"
+   "id": "g7.maths.u3.s3-1-1.32",
+   "gen": {
+    "t": "lineq",
+    "form": "eval",
+    "y": true
+   },
+   "input": "signed"
   },
   {
    "kind": "blank",
@@ -641,7 +659,13 @@
    "why": "2(−2) = −4, and −4 + 3 = −1.",
    "level": 2,
    "clue": "",
-   "id": "g7.maths.u3.s3-1-1.33"
+   "id": "g7.maths.u3.s3-1-1.33",
+   "gen": {
+    "t": "lineq",
+    "form": "eval",
+    "y": true
+   },
+   "input": "signed"
   },
   {
    "kind": "mcq",
@@ -676,7 +700,7 @@
   },
   {
    "kind": "note",
-   "text": "No generator in the engine fits algebra or linear equations yet, so practice and tests reuse the hand-written items (no fresh numbers)."
+   "text": "Practice replays and tests now use fresh numbers from the int / sets / lineq / quad generators."
   }
  ],
  "review": {

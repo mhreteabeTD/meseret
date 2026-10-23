@@ -494,7 +494,12 @@
    "why": "x + 15 = 21, so x = 6.",
    "level": 1,
    "clue": "",
-   "id": "g7.maths.u3.s3-2-2.27"
+   "id": "g7.maths.u3.s3-2-2.27",
+   "gen": {
+    "t": "lineq",
+    "form": "frac"
+   },
+   "input": "signed"
   },
   {
    "kind": "mcq",
@@ -567,7 +572,7 @@
   },
   {
    "kind": "note",
-   "text": "No generator in the engine fits algebra or linear equations yet, so practice and tests reuse the hand-written items (no fresh numbers)."
+   "text": "Practice replays and tests now use fresh numbers from the int / sets / lineq / quad generators."
   }
  ],
  "review": {

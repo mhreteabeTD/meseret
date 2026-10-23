@@ -92,6 +92,25 @@
      "id": "g7.maths.u3.s3-3-1.2"
     },
     {
+     "kind": "coord",
+     "step": "explore",
+     "title": "The coordinate plane",
+     "min": -5,
+     "max": 5,
+     "ymin": -5,
+     "ymax": 5,
+     "points": [
+      {
+       "x": 0,
+       "y": 0,
+       "name": "O",
+       "info": "The origin: the x-axis and the y-axis meet here."
+      }
+     ],
+     "need": 1,
+     "id": "g7.maths.u3.s3-3-1.41"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -291,6 +310,52 @@
      "id": "g7.maths.u3.s3-3-1.12"
     },
     {
+     "kind": "coord",
+     "step": "explore",
+     "title": "Example 5: tap each point",
+     "min": -5,
+     "max": 5,
+     "ymin": -5,
+     "ymax": 5,
+     "ref": "Example 5",
+     "points": [
+      {
+       "x": 3,
+       "y": 4,
+       "name": "A"
+      },
+      {
+       "x": -3,
+       "y": 4,
+       "name": "B"
+      },
+      {
+       "x": 3,
+       "y": -4,
+       "name": "C"
+      },
+      {
+       "x": -3,
+       "y": -4,
+       "name": "D"
+      },
+      {
+       "x": -1,
+       "y": 0,
+       "name": "E",
+       "info": "On the x-axis: y = 0."
+      },
+      {
+       "x": 0,
+       "y": -1,
+       "name": "F",
+       "info": "On the y-axis: x = 0."
+      }
+     ],
+     "need": 3,
+     "id": "g7.maths.u3.s3-3-1.42"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -372,6 +437,59 @@
      "id": "g7.maths.u3.s3-3-1.17"
     },
     {
+     "kind": "coord",
+     "step": "practise",
+     "graded": true,
+     "level": 1,
+     "ask": "Plot the point C(3, −4).",
+     "min": -5,
+     "max": 5,
+     "ymin": -5,
+     "ymax": 5,
+     "targets": [
+      {
+       "x": 3,
+       "y": -4,
+       "name": "C"
+      }
+     ],
+     "why": "Start at the origin. Go 3 right, then 4 down.",
+     "clue": "The first number moves you left or right. The second moves you up or down.",
+     "gen": {
+      "t": "quad",
+      "place": true
+     },
+     "ref": "Example 5",
+     "id": "g7.maths.u3.s3-3-1.43"
+    },
+    {
+     "kind": "coord",
+     "step": "practise",
+     "graded": true,
+     "level": 2,
+     "ask": "Plot B(−3, 4) and E(−1, 0).",
+     "min": -5,
+     "max": 5,
+     "ymin": -5,
+     "ymax": 5,
+     "targets": [
+      {
+       "x": -3,
+       "y": 4,
+       "name": "B"
+      },
+      {
+       "x": -1,
+       "y": 0,
+       "name": "E"
+      }
+     ],
+     "why": "B: 3 left, then 4 up. E: 1 left and no move up or down, so E is on the x-axis.",
+     "clue": "Negative x means go left. A y of 0 means stay on the x-axis.",
+     "ref": "Example 5",
+     "id": "g7.maths.u3.s3-3-1.44"
+    },
+    {
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
@@ -451,6 +569,51 @@
      "id": "g7.maths.u3.s3-3-1.20"
     },
     {
+     "kind": "coord",
+     "step": "explore",
+     "title": "Example 6: which quadrant?",
+     "min": -5,
+     "max": 5,
+     "ymin": -5,
+     "ymax": 5,
+     "quadrants": true,
+     "ref": "Example 6",
+     "points": [
+      {
+       "x": 4,
+       "y": 1,
+       "name": "K",
+       "info": "x > 0 and y > 0: Quadrant I."
+      },
+      {
+       "x": -2,
+       "y": 3,
+       "name": "Q",
+       "info": "x < 0 and y > 0: Quadrant II."
+      },
+      {
+       "x": -3,
+       "y": -3,
+       "name": "T",
+       "info": "x < 0 and y < 0: Quadrant III."
+      },
+      {
+       "x": 0,
+       "y": 4,
+       "name": "N",
+       "info": "x = 0: on the y-axis, in no quadrant."
+      },
+      {
+       "x": -3,
+       "y": 0,
+       "name": "P",
+       "info": "y = 0: on the x-axis, in no quadrant."
+      }
+     ],
+     "need": 3,
+     "id": "g7.maths.u3.s3-3-1.45"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -478,7 +641,10 @@
      "clue": "Look at the two signs.",
      "level": 1,
      "ref": "Example 6 b",
-     "id": "g7.maths.u3.s3-3-1.22"
+     "id": "g7.maths.u3.s3-3-1.22",
+     "gen": {
+      "t": "quad"
+     }
     },
     {
      "kind": "sort",
@@ -541,6 +707,32 @@
      "level": 2,
      "ref": "Exercise 3.3.1 Q3 i",
      "id": "g7.maths.u3.s3-3-1.24"
+    },
+    {
+     "kind": "coord",
+     "step": "practise",
+     "graded": true,
+     "level": 2,
+     "ask": "Plot a point in Quadrant III: tap (−2, −4).",
+     "min": -5,
+     "max": 5,
+     "ymin": -5,
+     "ymax": 5,
+     "quadrants": true,
+     "targets": [
+      {
+       "x": -2,
+       "y": -4
+      }
+     ],
+     "why": "Go 2 left, then 4 down. Both coordinates are negative: Quadrant III.",
+     "clue": "Quadrant III is lower left.",
+     "gen": {
+      "t": "quad",
+      "place": true
+     },
+     "added": true,
+     "id": "g7.maths.u3.s3-3-1.46"
     },
     {
      "kind": "mcq",
@@ -812,7 +1004,10 @@
    "why": "(+, +).",
    "level": 1,
    "clue": "",
-   "id": "g7.maths.u3.s3-3-1.37"
+   "id": "g7.maths.u3.s3-3-1.37",
+   "gen": {
+    "t": "quad"
+   }
   },
   {
    "kind": "mcq",
@@ -880,7 +1075,11 @@
   },
   {
    "kind": "note",
-   "text": "No generator in the engine fits algebra or linear equations yet, so practice and tests reuse the hand-written items (no fresh numbers)."
+   "text": "Coordinate-plane blocks (coord) added: tap-to-explore figures from the book examples and graded \"plot the point\" items."
+  },
+  {
+   "kind": "note",
+   "text": "Practice replays and tests now use fresh numbers from the int / sets / lineq / quad generators."
   }
  ],
  "review": {

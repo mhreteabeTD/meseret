@@ -331,7 +331,13 @@
      "clue": "Which rule undoes \"times 8\"?",
      "level": 1,
      "ref": "Example 4 a",
-     "id": "g7.maths.u3.s3-2-1.15"
+     "id": "g7.maths.u3.s3-2-1.15",
+     "gen": {
+      "t": "lineq",
+      "form": "one",
+      "v": "y"
+     },
+     "input": "signed"
     },
     {
      "kind": "blank",
@@ -457,7 +463,12 @@
      "clue": "Get all the x terms on the left.",
      "level": 1,
      "ref": "Example 5 a",
-     "id": "g7.maths.u3.s3-2-1.23"
+     "id": "g7.maths.u3.s3-2-1.23",
+     "gen": {
+      "t": "lineq",
+      "form": "both"
+     },
+     "input": "signed"
     },
     {
      "kind": "blank",
@@ -472,7 +483,12 @@
      "clue": "Move 2x left and 5 right.",
      "level": 1,
      "ref": "Exercise 3.2.2 Q1 f",
-     "id": "g7.maths.u3.s3-2-1.24"
+     "id": "g7.maths.u3.s3-2-1.24",
+     "gen": {
+      "t": "lineq",
+      "form": "both"
+     },
+     "input": "signed"
     },
     {
      "kind": "blank",
@@ -488,7 +504,12 @@
      "level": 2,
      "ref": "Exercise 3.2.2 Q1 a",
      "needs": "math.integer-signs",
-     "id": "g7.maths.u3.s3-2-1.25"
+     "id": "g7.maths.u3.s3-2-1.25",
+     "gen": {
+      "t": "lineq",
+      "form": "both"
+     },
+     "input": "signed"
     },
     {
      "kind": "blank",
@@ -637,7 +658,12 @@
      "clue": "Remove the bracket first.",
      "level": 1,
      "ref": "Activity 3.2.2 Q2 a",
-     "id": "g7.maths.u3.s3-2-1.33"
+     "id": "g7.maths.u3.s3-2-1.33",
+     "gen": {
+      "t": "lineq",
+      "form": "bracket"
+     },
+     "input": "signed"
     },
     {
      "kind": "mcq",
@@ -1125,7 +1151,12 @@
    "why": "Subtract 4: x = −10.",
    "level": 1,
    "clue": "",
-   "id": "g7.maths.u3.s3-2-1.61"
+   "id": "g7.maths.u3.s3-2-1.61",
+   "gen": {
+    "t": "lineq",
+    "form": "one"
+   },
+   "input": "signed"
   },
   {
    "kind": "blank",
@@ -1139,7 +1170,12 @@
    "why": "2x = 12, so x = 6.",
    "level": 2,
    "clue": "",
-   "id": "g7.maths.u3.s3-2-1.62"
+   "id": "g7.maths.u3.s3-2-1.62",
+   "gen": {
+    "t": "lineq",
+    "form": "two"
+   },
+   "input": "signed"
   },
   {
    "kind": "blank",
@@ -1188,7 +1224,7 @@
   },
   {
    "kind": "note",
-   "text": "No generator in the engine fits algebra or linear equations yet, so practice and tests reuse the hand-written items (no fresh numbers)."
+   "text": "Practice replays and tests now use fresh numbers from the int / sets / lineq / quad generators."
   }
  ],
  "review": {

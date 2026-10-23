@@ -189,7 +189,11 @@
      "ref": "Review Exercise Q9 h",
      "needs": "math.add-integers-rules",
      "input": "signed",
-     "id": "g7.maths.u2.s2-7.5"
+     "id": "g7.maths.u2.s2-7.5",
+     "gen": {
+      "t": "int",
+      "op": "add"
+     }
     },
     {
      "kind": "blank",
@@ -494,7 +498,7 @@
   },
   {
    "kind": "note",
-   "text": "Integer arithmetic has no generator in the engine yet: practice and tests reuse these hand-written integer items (no fresh numbers). An integer generator (add/sub/mul/div with signs) is needed in an engine session."
+   "text": "Practice replays and tests now use fresh numbers from the int / sets / lineq / quad generators."
   }
  ],
  "review": {

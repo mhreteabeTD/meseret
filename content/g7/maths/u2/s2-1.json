@@ -311,7 +311,12 @@
      "clue": "Add ones, then tens, then hundreds. Carry when needed.",
      "level": 1,
      "ref": "Exercise 2.1.1 Q1 a",
-     "id": "g7.maths.u2.s2-1.14"
+     "id": "g7.maths.u2.s2-1.14",
+     "gen": {
+      "t": "int",
+      "op": "add"
+     },
+     "input": "signed"
     },
     {
      "kind": "blank",
@@ -327,7 +332,12 @@
      "clue": "Borrow from the tens when the ones are too small.",
      "level": 1,
      "ref": "Exercise 2.1.1 Q1 c",
-     "id": "g7.maths.u2.s2-1.15"
+     "id": "g7.maths.u2.s2-1.15",
+     "gen": {
+      "t": "int",
+      "op": "sub"
+     },
+     "input": "signed"
     },
     {
      "kind": "blank",
@@ -522,7 +532,12 @@
    "why": "2 + 9 = 11 (1, carry 1); 5 + 8 + 1 = 14 (4, carry 1); 4 + 5 + 1 = 10. 1041.",
    "level": 2,
    "clue": "",
-   "id": "g7.maths.u2.s2-1.27"
+   "id": "g7.maths.u2.s2-1.27",
+   "gen": {
+    "t": "int",
+    "op": "add"
+   },
+   "input": "signed"
   },
   {
    "kind": "blank",
@@ -537,7 +552,12 @@
    "why": "Borrow: 900 = 8 hundreds 9 tens 10 ones. 10 − 7 = 3, 9 − 5 = 4, 8 − 4 = 4. 443.",
    "level": 2,
    "clue": "",
-   "id": "g7.maths.u2.s2-1.28"
+   "id": "g7.maths.u2.s2-1.28",
+   "gen": {
+    "t": "int",
+    "op": "sub"
+   },
+   "input": "signed"
   },
   {
    "kind": "mcq",
@@ -567,7 +587,7 @@
   },
   {
    "kind": "note",
-   "text": "Integer arithmetic has no generator in the engine yet: practice and tests reuse these hand-written integer items (no fresh numbers). An integer generator (add/sub/mul/div with signs) is needed in an engine session."
+   "text": "Practice replays and tests now use fresh numbers from the int / sets / lineq / quad generators."
   }
  ],
  "review": {

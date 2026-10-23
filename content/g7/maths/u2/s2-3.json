@@ -163,7 +163,11 @@
      "clue": "Which one is further left?",
      "level": 1,
      "ref": "Example 2 a",
-     "id": "g7.maths.u2.s2-3.6"
+     "id": "g7.maths.u2.s2-3.6",
+     "gen": {
+      "t": "int",
+      "op": "cmp"
+     }
     },
     {
      "kind": "mcq",
@@ -180,7 +184,11 @@
      "clue": "For negatives, further from 0 means smaller.",
      "level": 2,
      "ref": "Exercise 2.3.1 Q1 c",
-     "id": "g7.maths.u2.s2-3.7"
+     "id": "g7.maths.u2.s2-3.7",
+     "gen": {
+      "t": "int",
+      "op": "cmp"
+     }
     },
     {
      "kind": "mcq",
@@ -197,7 +205,11 @@
      "clue": "Which is closer to 0?",
      "level": 2,
      "ref": "Exercise 2.3.1 Q1 f",
-     "id": "g7.maths.u2.s2-3.8"
+     "id": "g7.maths.u2.s2-3.8",
+     "gen": {
+      "t": "int",
+      "op": "cmp"
+     }
     },
     {
      "kind": "pick",
@@ -478,7 +490,13 @@
      "clue": "Negatives first, furthest from 0 first.",
      "level": 1,
      "ref": "Exercise 2.3.2 Q3 a",
-     "id": "g7.maths.u2.s2-3.22"
+     "id": "g7.maths.u2.s2-3.22",
+     "gen": {
+      "t": "int",
+      "op": "order",
+      "desc": false,
+      "n": 5
+     }
     },
     {
      "kind": "order",
@@ -496,7 +514,13 @@
      "clue": "Largest first. For negatives, closest to 0 first.",
      "level": 1,
      "ref": "Exercise 2.3.2 Q4 a",
-     "id": "g7.maths.u2.s2-3.23"
+     "id": "g7.maths.u2.s2-3.23",
+     "gen": {
+      "t": "int",
+      "op": "order",
+      "desc": true,
+      "n": 5
+     }
     },
     {
      "kind": "order",
@@ -514,7 +538,13 @@
      "clue": "The negative furthest from 0 is the smallest.",
      "level": 2,
      "ref": "Exercise 2.3.2 Q3 b",
-     "id": "g7.maths.u2.s2-3.24"
+     "id": "g7.maths.u2.s2-3.24",
+     "gen": {
+      "t": "int",
+      "op": "order",
+      "desc": false,
+      "n": 5
+     }
     },
     {
      "kind": "mcq",
@@ -911,7 +941,11 @@
    "why": "A negative integer is less than a positive integer.",
    "level": 1,
    "clue": "",
-   "id": "g7.maths.u2.s2-3.44"
+   "id": "g7.maths.u2.s2-3.44",
+   "gen": {
+    "t": "int",
+    "op": "cmp"
+   }
   },
   {
    "kind": "blank",
@@ -943,7 +977,11 @@
    "why": "−250 is further from 0, so it is smaller.",
    "level": 2,
    "clue": "",
-   "id": "g7.maths.u2.s2-3.46"
+   "id": "g7.maths.u2.s2-3.46",
+   "gen": {
+    "t": "int",
+    "op": "cmp"
+   }
   },
   {
    "kind": "order",
@@ -959,7 +997,13 @@
    ],
    "why": "−12 < −7 < 0 < 3 < 15",
    "level": 2,
-   "id": "g7.maths.u2.s2-3.47"
+   "id": "g7.maths.u2.s2-3.47",
+   "gen": {
+    "t": "int",
+    "op": "order",
+    "desc": false,
+    "n": 5
+   }
   },
   {
    "kind": "pick",
@@ -996,7 +1040,7 @@
   },
   {
    "kind": "note",
-   "text": "Integer arithmetic has no generator in the engine yet: practice and tests reuse these hand-written integer items (no fresh numbers). An integer generator (add/sub/mul/div with signs) is needed in an engine session."
+   "text": "Practice replays and tests now use fresh numbers from the int / sets / lineq / quad generators."
   }
  ],
  "review": {

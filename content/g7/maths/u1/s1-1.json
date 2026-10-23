@@ -292,7 +292,11 @@
      "why": "8 is listed in N.",
      "clue": "Look between the braces.",
      "level": 1,
-     "id": "g7.maths.u1.s1-1.14"
+     "id": "g7.maths.u1.s1-1.14",
+     "gen": {
+      "t": "sets",
+      "op": "elem"
+     }
     },
     {
      "kind": "tf",
@@ -472,7 +476,11 @@
      "clue": "How many different numbers are listed?",
      "level": 1,
      "ref": "Exercise 1.1.1 Q3 a",
-     "id": "g7.maths.u1.s1-1.24"
+     "id": "g7.maths.u1.s1-1.24",
+     "gen": {
+      "t": "sets",
+      "op": "count"
+     }
     },
     {
      "kind": "blank",
@@ -760,7 +768,11 @@
    "why": "b is not a vowel, so b ∉ A.",
    "level": 1,
    "clue": "",
-   "id": "g7.maths.u1.s1-1.39"
+   "id": "g7.maths.u1.s1-1.39",
+   "gen": {
+    "t": "sets",
+    "op": "elem"
+   }
   },
   {
    "kind": "blank",
@@ -775,7 +787,11 @@
    "why": "The different elements are 3 and 7.",
    "level": 2,
    "clue": "",
-   "id": "g7.maths.u1.s1-1.40"
+   "id": "g7.maths.u1.s1-1.40",
+   "gen": {
+    "t": "sets",
+    "op": "count"
+   }
   },
   {
    "kind": "mcq",
@@ -815,12 +831,12 @@
    "text": "Activity 1.1.1 Q1, Q3 are discussion; Q2 and Q5 are used as hooks."
   },
   {
-   "kind": "note",
-   "text": "No set generator exists in the engine yet, so practice and tests reuse the hand-written items (no fresh numbers)."
-  },
-  {
    "kind": "review",
    "text": "Exercise 1.1.1 Q2 c (natural numbers between 20 and 21): the answer \"a set, the empty set\" follows the book's own Example 4 c. Teacher to confirm."
+  },
+  {
+   "kind": "note",
+   "text": "Practice replays and tests now use fresh numbers from the int / sets / lineq / quad generators."
   }
  ],
  "review": {
