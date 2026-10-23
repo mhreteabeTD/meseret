@@ -1,0 +1,30 @@
+# Content plan: first two chapters of every grade
+
+Goal: units 1 and 2 of each grade live as interactive book chapters (`view: "book"`, `free: true`).
+Sources live in **github.com/mhreteabeTD/meseret-sources**: read `SOURCES.md` and `catalog.json` there. Never ask the owner to upload a book again.
+
+## Order
+1. **Grade 12, Grade 8, Grade 6 first** (national/regional exam grades), then 7, 9–11, 5, 1–4.
+2. Within a grade: **Maths first**, then English, then Science (Gen. Science 7–8; Physics, Chemistry, Biology 9–12), then the rest.
+
+| Grade | Maths U1 | Maths U2 | Next subjects |
+|---|---|---|---|
+| 12 | todo | todo | English (book missing), Physics, Chemistry, Biology |
+| 8 | **built** | todo | English, Gen. Science |
+| 6 | todo | todo | English, Science (Amharic) |
+| 5 | **built** | todo | |
+| 9 | U1 older version exists | todo | |
+
+## Pipeline (each stage done once)
+0. **Storage**: PDFs out of git into Releases (repo is at ~4.3 GB of a 5 GB comfort limit).
+1. **Transcribe** (the only stage that opens a PDF): cut the unit's pages, write `meseret-sources/textbooks/g<n>/<subject>/u<k>/source.md` per the README rules: faithful text, page refs, every exercise answered with full steps, `[review: …]` when unsure.
+2. **Exam map** (grades 12, 8, 6): questions from the exam books on this unit's topics go into `exams/<exam>/bank.json` with answer, explanation, `maps_to`, `key: paper|generated`, `verified`. Used for ★★★ items and the chapter test.
+3. **Design**: one short lesson map in the G8 design doc format (sections, blocks, generators, ★★★ shapes). Batch per subject.
+4. **Build**: lesson JSON from `source.md` + map, existing blocks only; generators for every computational idea; challenge per idea; section tests (5 items); timed chapter test (rule 13).
+5. **Check**: validator, 360 px Playwright, other chapters still load; review list for a teacher (and an Amharic speaker for G1–6).
+
+## Rules that keep it fast
+- **Engine freeze during content work.** New blocks or engine changes only with the owner's OK, in their own commit.
+- **One subject across grades**, so templates and generators get reused.
+- **Parallel sessions by grade band** (1–6 Amharic · 7–8 · 9–12), each reading this file and `CLAUDE.md`.
+- A session ends with: validated, deployed, `CONTENT-PLAN.md` table updated.
