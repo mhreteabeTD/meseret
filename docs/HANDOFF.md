@@ -52,7 +52,9 @@ You are continuing work on **Meseret (መሰረት)** with me, Mhreteabe (founde
 
 ## Feedback (reports and ideas)
 - 💬 Feedback & ideas on home and Settings, 🚩 at the end of every book section and in the player. One form (Feedback in app.js): type, message, optional screenshot and name/phone; where the student was is added automatically. Messages queue on the phone and send when online.
-- Goes to a Google Sheet through `server/feedback-apps-script.gs` (Apps Script web app). The web app URL goes in `FEEDBACK_URL` in app.js. Until it is set, messages wait safely in the queue on each phone.
+- **Live (2026-10-23):** goes to the owner's Google Sheet "Meseret Feedback" through `server/feedback-apps-script.gs` (Apps Script web app; URL in `FEEDBACK_URL` in app.js). Messages queue on the phone and send when online.
+- Floating 💬 button on every lesson screen: attaches a picture of the screen and the context (grade, chapter, section, lesson ID, item ID, question text). Each row has an **Open ↗** link (`#book/<chapter>/item/<item id>`) that opens the app at that exact question, highlighted.
+- If the Apps Script changes: paste it, then Deploy → Manage deployments → Edit → New version (keeps the same URL).
 
 ## Open items / next steps
 - **TODO (on hold, owner): Ask Meseret AI chat.** Design is decided in `docs/G5-MATHS-HANDOFF.md` ("Ask Meseret"). Blocked on payment: the owner will create an Anthropic API key (Default workspace is fine), set up billing and a monthly spend limit, and a free Cloudflare Worker with the key as secret `ANTHROPIC_API_KEY`. Do not build it until the owner says so. Never put the key in the repo or the chat.
