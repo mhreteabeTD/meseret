@@ -1,0 +1,312 @@
+{
+ "id": "g8.it.u1.s1-3-2",
+ "book": {
+  "title": "Information Technology Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "it",
+  "unit": 1,
+  "unit_title": "Basics of Computer",
+  "pages": "11–14",
+  "section": "1.3 II"
+ },
+ "title": "Types of computer by method of operation",
+ "competency": "Distinguish analog, digital and hybrid computers.",
+ "minutes": 12,
+ "keywords": [
+  {
+   "en": "Analog computer",
+   "am": "አናሎግ ኮምፒውተር",
+   "def": "A computer that works with continuous data such as speed or temperature, e.g. a speedometer.",
+   "machine": true
+  },
+  {
+   "en": "Digital computer",
+   "am": "ዲጂታል ኮምፒውተር",
+   "def": "A computer that works with discrete data in the form of digits.",
+   "machine": true
+  },
+  {
+   "en": "Hybrid computer",
+   "am": "ቅይጥ ኮምፒውተር",
+   "def": "A computer with features of both analog and digital computers, e.g. in a petrol pump.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "it.types.operation",
+   "name": "Analog, digital, hybrid",
+   "explain": {
+    "en": {
+     "text": "By method of operation there are three types. Analog computers work with continuous data such as speed, temperature or pressure and show a reading on a dial, like a speedometer or a mercury thermometer. Digital computers work with discrete data in the form of digits, using stored programs. Hybrid computers combine both: they convert analog signals to digital, as in a petrol pump that turns fuel flow into quantity and price."
+    },
+    "am": {
+     "text": "በአሠራር ዘዴ ሦስት ዓይነቶች አሉ፤ አናሎግ ተከታታይ መረጃ፣ ዲጂታል በአሃዝ የተከፋፈለ መረጃ፣ ቅይጥ ሁለቱንም ይጠቀማል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "The needle",
+     "ask": "A car's needle speedometer moves smoothly as the car speeds up. What kind of data is this?",
+     "opts": [
+      "Continuous",
+      "Discrete digits",
+      "Text",
+      "No data"
+     ],
+     "after": "Continuous: it changes smoothly, not in steps. Analog computers use continuous data.",
+     "ref": "p.12",
+     "id": "g8.it.u1.s1-3-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Three types by operation",
+     "paras": [
+      "Analog: continuous data; accepts data directly from measuring devices; output on a dial or scale; limited memory.",
+      "Digital: discrete values (digits); stored programs; fast calculations and logical operations.",
+      "Hybrid: both continuous and discrete; converts analog signals to digital before processing; used in petrol pumps, airplanes, hospitals."
+     ],
+     "table": [
+      [
+       "Type",
+       "Data",
+       "Example"
+      ],
+      [
+       "Analog",
+       "Continuous",
+       "Speedometer, mercury thermometer"
+      ],
+      [
+       "Digital",
+       "Discrete (digits)",
+       "Desktop computer"
+      ],
+      [
+       "Hybrid",
+       "Both",
+       "Petrol pump processor"
+      ]
+     ],
+     "ref": "pp.12–13",
+     "id": "g8.it.u1.s1-3-2.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Analog computer",
+       "A computer that works with continuous data such as speed or temperature, e.g. a speedometer."
+      ],
+      [
+       "Digital computer",
+       "A computer that works with discrete data in the form of digits."
+      ],
+      [
+       "Hybrid computer",
+       "A computer with features of both analog and digital computers, e.g. in a petrol pump."
+      ]
+     ],
+     "id": "g8.it.u1.s1-3-2.3"
+    },
+    {
+     "kind": "sort",
+     "step": "check",
+     "graded": true,
+     "text": "Activity 1.3: analog or digital?",
+     "bins": [
+      "Analog computer",
+      "Digital computer"
+     ],
+     "items": [
+      [
+       "Works with continuous data",
+       "Analog computer",
+       "Speed, temperature."
+      ],
+      [
+       "Works with discrete digits",
+       "Digital computer",
+       "Numbers."
+      ],
+      [
+       "Output on a dial or scale",
+       "Analog computer",
+       "Needle."
+      ],
+      [
+       "Uses programs stored in memory",
+       "Digital computer",
+       "Stored programs."
+      ],
+      [
+       "Mercury thermometer",
+       "Analog computer",
+       "Continuous reading."
+      ]
+     ],
+     "why": "pp.12–13.",
+     "clue": "Smooth change or digits?",
+     "level": 1,
+     "ref": "Activity 1.3",
+     "id": "g8.it.u1.s1-3-2.4"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "___ has characteristics of both analog and digital computers.",
+     "a": [
+      "Hybrid computer",
+      "hybrid computer",
+      "Hybrid",
+      "hybrid"
+     ],
+     "why": "p.13.",
+     "clue": "A mix.",
+     "level": 1,
+     "ref": "Review IV Q5",
+     "id": "g8.it.u1.s1-3-2.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "A petrol pump that turns fuel flow into quantity and price uses a",
+     "opts": [
+      "hybrid computer",
+      "supercomputer",
+      "vacuum tube",
+      "mainframe"
+     ],
+     "ans": "hybrid computer",
+     "why": "p.13.",
+     "clue": "Both kinds of data.",
+     "level": 1,
+     "id": "g8.it.u1.s1-3-2.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "A hospital machine measures a patient's heartbeat as a smooth wave and shows the beats per minute as a number. What type is it best described as?",
+     "opts": [
+      "Hybrid",
+      "Purely analog",
+      "Purely digital",
+      "Special purpose only"
+     ],
+     "ans": "Hybrid",
+     "why": "It takes continuous (analog) signals and converts them into digits: the hybrid pattern. The book notes hybrids are used in hospitals.",
+     "clue": "Wave in, number out.",
+     "level": 3,
+     "added": true,
+     "id": "g8.it.u1.s1-3-2.7"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "An analog computer works with",
+   "opts": [
+    "continuous data",
+    "only digits",
+    "no data",
+    "text only"
+   ],
+   "ans": "continuous data",
+   "why": "p.12.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.it.u1.s1-3-2.8"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "A digital computer accepts data in the form of",
+   "opts": [
+    "digits",
+    "needles",
+    "heat",
+    "light only"
+   ],
+   "ans": "digits",
+   "why": "p.12.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.it.u1.s1-3-2.9"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which is an example of an analog computer?",
+   "opts": [
+    "Speedometer",
+    "Desktop PC",
+    "Tablet",
+    "Laptop"
+   ],
+   "ans": "Speedometer",
+   "why": "p.12.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.it.u1.s1-3-2.10"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "A hybrid computer converts analog signals into",
+   "opts": [
+    "digital form",
+    "heat",
+    "sound",
+    "paper"
+   ],
+   "ans": "digital form",
+   "why": "p.13.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.it.u1.s1-3-2.11"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Analog computers were used mainly in the",
+   "opts": [
+    "1950s and 1960s",
+    "2020s",
+    "1800s",
+    "1990s only"
+   ],
+   "ans": "1950s and 1960s",
+   "why": "p.12.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.it.u1.s1-3-2.12"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Figure 1.18 shows a modern heart-rate monitor as an \"analog computer\"; such monitors are digital or hybrid. The book also says hybrids are \"fast like analog computers\"."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

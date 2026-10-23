@@ -1,0 +1,526 @@
+{
+ "id": "g8.it.u1.s1-1",
+ "book": {
+  "title": "Information Technology Grade 8 Student Textbook",
+  "grade": 8,
+  "subject": "it",
+  "unit": 1,
+  "unit_title": "Basics of Computer",
+  "pages": "2–6",
+  "section": "1.1"
+ },
+ "title": "Computer generations",
+ "competency": "Identify the five computer generations and their core technologies.",
+ "minutes": 16,
+ "keywords": [
+  {
+   "en": "Computer generation",
+   "am": "የኮምፒውተር ትውልድ",
+   "def": "A period in the development of computers, marked by a major new technology.",
+   "machine": true
+  },
+  {
+   "en": "Vacuum tube",
+   "am": "ቫኪዩም ቲዩብ",
+   "def": "An electronic device that controls the flow of electrons in a vacuum; used in first-generation computers.",
+   "machine": true
+  },
+  {
+   "en": "Transistor",
+   "am": "ትራንዚስተር",
+   "def": "An electronic device that controls the flow of electricity; used in second-generation computers.",
+   "machine": true
+  },
+  {
+   "en": "Integrated circuit (IC)",
+   "am": "የተቀናጀ ዑደት (አይሲ)",
+   "def": "Many small interconnected components on one semiconductor chip; used in third-generation computers.",
+   "machine": true
+  },
+  {
+   "en": "VLSI circuit",
+   "am": "በጣም ሰፊ የተቀናጀ ዑደት",
+   "def": "Very large scale integration: a microchip with hundreds of thousands of transistors; used in fourth-generation computers.",
+   "machine": true
+  },
+  {
+   "en": "Artificial intelligence (AI)",
+   "am": "ሰው ሠራሽ አስተውሎት",
+   "def": "Machines programmed to think like humans and copy their actions; the aim of the fifth generation.",
+   "machine": true
+  },
+  {
+   "en": "Parallel processing",
+   "am": "ትይዩ ማቀነባበር",
+   "def": "Doing many processing tasks at the same time to work faster.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "it.generations.early",
+   "name": "First to third generations",
+   "explain": {
+    "en": {
+     "text": "A computer generation is a period of development marked by a major new technology. The first generation (1940–1956) used vacuum tubes: huge, very expensive, power-hungry and hot. The second (1956–1963) used transistors. The third (1964–1971) used integrated circuits, many tiny components on one chip."
+    },
+    "am": {
+     "text": "የኮምፒውተር ትውልድ በአዲስ ቴክኖሎጂ የሚለይ የዕድገት ዘመን ነው። 1ኛው ቫኪዩም ቲዩብ፣ 2ኛው ትራንዚስተር፣ 3ኛው የተቀናጀ ዑደት ተጠቅመዋል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Room-sized computers",
+     "ask": "The first computers filled whole rooms. Why were they so big?",
+     "opts": [
+      "They used thousands of large vacuum tubes",
+      "People liked big machines",
+      "They had big screens",
+      "They used tablets"
+     ],
+     "after": "Vacuum tubes were large and hot, so the machines were room-sized.",
+     "ref": "Figure 1.1",
+     "id": "g8.it.u1.s1-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Generations 1–3",
+     "paras": [
+      "The term generation refers to the period of development of computers. Each generation is marked by a major technological development."
+     ],
+     "table": [
+      [
+       "Generation",
+       "Years",
+       "Core technology"
+      ],
+      [
+       "First",
+       "1940–1956",
+       "Vacuum tube: large, very expensive, high power, lots of heat"
+      ],
+      [
+       "Second",
+       "1956–1963",
+       "Transistor (invented 1947, used in computers from the late 1950s)"
+      ],
+      [
+       "Third",
+       "1964–1971",
+       "Integrated circuit (IC) made from semiconductor materials"
+      ]
+     ],
+     "ref": "pp.2–4",
+     "id": "g8.it.u1.s1-1.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "Computer generation",
+       "A period in the development of computers, marked by a major new technology."
+      ],
+      [
+       "Vacuum tube",
+       "An electronic device that controls the flow of electrons in a vacuum; used in first-generation computers."
+      ],
+      [
+       "Transistor",
+       "An electronic device that controls the flow of electricity; used in second-generation computers."
+      ],
+      [
+       "Integrated circuit (IC)",
+       "Many small interconnected components on one semiconductor chip; used in third-generation computers."
+      ]
+     ],
+     "id": "g8.it.u1.s1-1.3"
+    },
+    {
+     "kind": "tf",
+     "step": "check",
+     "graded": true,
+     "text": "The computers that used transistors are called the First Generation Computers.",
+     "a": false,
+     "why": "Transistors = second generation; the first used vacuum tubes.",
+     "clue": "Vacuum tube or transistor?",
+     "level": 1,
+     "ref": "Review I Q2",
+     "id": "g8.it.u1.s1-1.4"
+    },
+    {
+     "kind": "match",
+     "step": "practise",
+     "graded": true,
+     "text": "Match each generation with its core technology.",
+     "pairs": [
+      [
+       "First generation",
+       "Vacuum tube"
+      ],
+      [
+       "Second generation",
+       "Transistor"
+      ],
+      [
+       "Third generation",
+       "Integrated circuit"
+      ]
+     ],
+     "why": "pp.2–4.",
+     "clue": "Oldest = vacuum tube.",
+     "level": 1,
+     "id": "g8.it.u1.s1-1.5"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "The computers that used ___ were called the first generation computers.",
+     "a": [
+      "vacuum tubes",
+      "vacuum tube",
+      "Vacuum tubes"
+     ],
+     "why": "p.2.",
+     "clue": "A glass tube.",
+     "level": 1,
+     "ref": "Review IV Q3",
+     "id": "g8.it.u1.s1-1.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "The transistor was invented in 1947. Why is the second generation dated from 1956, not 1947?",
+     "opts": [
+      "Transistors were not widely used in computers until the late 1950s",
+      "The book has a mistake",
+      "Transistors were banned",
+      "Computers were not invented yet"
+     ],
+     "ans": "Transistors were not widely used in computers until the late 1950s",
+     "why": "p.3: invented in 1947 \"but was not seen widely spread… in computers until the late 1950s\". Generations are dated by use, not invention.",
+     "clue": "Invention vs wide use.",
+     "level": 3,
+     "added": true,
+     "id": "g8.it.u1.s1-1.7"
+    }
+   ]
+  },
+  {
+   "id": "it.generations.modern",
+   "name": "Fourth and fifth generations",
+   "requires": [
+    "it.generations.early"
+   ],
+   "explain": {
+    "en": {
+     "text": "The fourth generation (1971–present) uses very large scale integrated (VLSI) circuits and microprocessors. These made computers powerful, compact, reliable and affordable, and led to the personal computer (PC). The fifth generation (present and beyond) aims at artificial intelligence: machines that learn, using parallel processing to do many tasks at once."
+    },
+    "am": {
+     "text": "4ኛው ትውልድ (1971–አሁን) ማይክሮፕሮሰሰር ተጠቅሞ የግል ኮምፒውተርን አስገኘ። 5ኛው ትውልድ ሰው ሠራሽ አስተውሎትን ያልማል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A computer in your pocket",
+     "ask": "Your phone is far more powerful than a room-sized 1950 computer. What made this possible?",
+     "opts": [
+      "Millions of transistors on one tiny chip",
+      "Bigger vacuum tubes",
+      "More rooms",
+      "Paper tape"
+     ],
+     "after": "Very large scale integration puts huge numbers of transistors on a microchip.",
+     "added": true,
+     "id": "g8.it.u1.s1-1.8"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Generations 4–5",
+     "paras": [
+      "Each generation became smaller, cheaper, faster and more powerful."
+     ],
+     "table": [
+      [
+       "Generation",
+       "Years",
+       "Core technology",
+       "Features"
+      ],
+      [
+       "Fourth",
+       "1971–present",
+       "VLSI circuit / microprocessor",
+       "Powerful, compact, reliable, affordable; gave rise to the PC"
+      ],
+      [
+       "Fifth",
+       "Present and beyond",
+       "Artificial intelligence, parallel processing",
+       "Robotics, game playing, natural language processing; machines that learn"
+      ]
+     ],
+     "ref": "pp.4–6",
+     "id": "g8.it.u1.s1-1.9"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key words",
+     "defs": [
+      [
+       "VLSI circuit",
+       "Very large scale integration: a microchip with hundreds of thousands of transistors; used in fourth-generation computers."
+      ],
+      [
+       "Artificial intelligence (AI)",
+       "Machines programmed to think like humans and copy their actions; the aim of the fifth generation."
+      ],
+      [
+       "Parallel processing",
+       "Doing many processing tasks at the same time to work faster."
+      ]
+     ],
+     "id": "g8.it.u1.s1-1.10"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "Which generation used microprocessors and gave rise to the personal computer?",
+     "opts": [
+      "Fourth",
+      "First",
+      "Second",
+      "Fifth"
+     ],
+     "ans": "Fourth",
+     "why": "p.5.",
+     "clue": "VLSI.",
+     "level": 1,
+     "id": "g8.it.u1.s1-1.11"
+    },
+    {
+     "kind": "order",
+     "step": "practise",
+     "graded": true,
+     "text": "Activity 1.1: put the core technologies in time order.",
+     "items": [
+      "Vacuum tube",
+      "Transistor",
+      "Integrated circuit",
+      "VLSI / microprocessor",
+      "Artificial intelligence"
+     ],
+     "why": "Generations 1 to 5.",
+     "clue": "Oldest first.",
+     "level": 1,
+     "ref": "Activity 1.1",
+     "id": "g8.it.u1.s1-1.12"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "___ computer generation will have the power to learn and apply knowledge to solve a problem.",
+     "a": [
+      "Fifth",
+      "fifth",
+      "5th"
+     ],
+     "why": "Its goal is machines that learn and organise themselves.",
+     "clue": "The newest one.",
+     "level": 1,
+     "ref": "Review IV Q4",
+     "id": "g8.it.u1.s1-1.13"
+    },
+    {
+     "kind": "pick",
+     "step": "practise",
+     "graded": true,
+     "text": "Review IV Q2: each new generation brought a decrease in…",
+     "pool": [
+      "size",
+      "price",
+      "speed",
+      "power"
+     ],
+     "a": [
+      "size",
+      "price"
+     ],
+     "why": "Smaller and cheaper; speed and power increased.",
+     "clue": "What got smaller?",
+     "level": 2,
+     "ref": "Review IV Q2",
+     "id": "g8.it.u1.s1-1.14"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "A robot listens to a question in Amharic and answers it. Which fifth-generation feature is this?",
+     "opts": [
+      "Natural language processing (AI)",
+      "Vacuum tubes",
+      "Punch cards",
+      "Transistors only"
+     ],
+     "ans": "Natural language processing (AI)",
+     "why": "Understanding human language is a fifth-generation AI application, like robotics and game playing.",
+     "clue": "Which generation is about AI?",
+     "level": 3,
+     "added": true,
+     "id": "g8.it.u1.s1-1.15"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Review Part III",
+   "items": [
+    {
+     "kind": "match",
+     "step": "exercise",
+     "graded": true,
+     "text": "Match each technology with its generation.",
+     "pairs": [
+      [
+       "Artificial Intelligence",
+       "Fifth Generation"
+      ],
+      [
+       "Integrated Circuits",
+       "Third Generation"
+      ],
+      [
+       "Vacuum Tubes",
+       "First Generation"
+      ],
+      [
+       "Transistors",
+       "Second Generation"
+      ],
+      [
+       "Microprocessors",
+       "Fourth Generation"
+      ]
+     ],
+     "why": "Section 1.1.",
+     "clue": "Oldest to newest.",
+     "level": 1,
+     "id": "g8.it.u1.s1-1.16"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "There are ___ computer generations.",
+   "opts": [
+    "five",
+    "three",
+    "four",
+    "ten"
+   ],
+   "ans": "five",
+   "why": "p.2.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.it.u1.s1-1.17"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The third generation used",
+   "opts": [
+    "integrated circuits",
+    "vacuum tubes",
+    "AI",
+    "transistors only"
+   ],
+   "ans": "integrated circuits",
+   "why": "p.4.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.it.u1.s1-1.18"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "First-generation computers were",
+   "opts": [
+    "large and very expensive",
+    "small and cheap",
+    "pocket-sized",
+    "solar-powered"
+   ],
+   "ans": "large and very expensive",
+   "why": "p.2.",
+   "clue": "",
+   "level": 1,
+   "id": "g8.it.u1.s1-1.19"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Parallel processing means",
+   "opts": [
+    "doing many tasks at the same time",
+    "doing one task slowly",
+    "printing in colour",
+    "storing on CD"
+   ],
+   "ans": "doing many tasks at the same time",
+   "why": "p.5.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.it.u1.s1-1.20"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "The fourth generation began in",
+   "opts": [
+    "1971",
+    "1940",
+    "1956",
+    "1964"
+   ],
+   "ans": "1971",
+   "why": "p.4.",
+   "clue": "",
+   "level": 2,
+   "id": "g8.it.u1.s1-1.21"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Figure 1.5 labels a PC with floppy drives as a third-generation computer; such PCs are fourth generation. \"VLSI… hundreds of thousands of transistors\" is outdated (modern chips hold billions). The book says fourth-generation computers fit \"in the palm of the hand\"."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
