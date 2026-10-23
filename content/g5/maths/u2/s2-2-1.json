@@ -1,0 +1,740 @@
+{
+ "id": "g5.maths.u2.s2-2-1",
+ "book": {
+  "title": "ሒሳብ 5ኛ ክፍል",
+  "grade": 5,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "ክፍልፋዮች",
+  "pages": "33–38",
+  "section": "2.2.1"
+ },
+ "title": "ክፍልፋዮችን መደመርና መቀነስ",
+ "competency": "የተለያዩ ታህት ያላቸውን ክፍልፋዮች መደመርና መቀነስ።",
+ "minutes": 20,
+ "keywords": [
+  {
+   "en": "equivalent fractions",
+   "am": "አቻ ክፍልፋዮች",
+   "def": "ተመሳሳይ ዋጋ ያላቸው ክፍልፋዮች፤ ለምሳሌ 1/2 እና 3/6።"
+  },
+  {
+   "en": "least common multiple (LCM)",
+   "am": "ትንሹ የጋራ ብዜት (ት.ጋ.ብ)",
+   "def": "የሁለት ቁጥሮች የጋራ ብዜቶች ውስጥ ትንሹ፤ የ7 እና የ5 ት.ጋ.ብ 35 ነው።"
+  },
+  {
+   "en": "lowest terms",
+   "am": "ዝቅተኛ ሒሳባዊ ቃል",
+   "def": "ላዕልና ታህት ከ1 በስተቀር የጋራ አካፋይ የሌላቸው ክፍልፋይ፤ ለምሳሌ 4/6 = 2/3።",
+   "machine": true
+  },
+  {
+   "en": "mixed number",
+   "am": "ድብልቅ ቁጥር",
+   "def": "ከዜሮ የተለየ ሙሉ ቁጥርና ህገኛ ክፍልፋይ በአንድ ላይ፤ ለምሳሌ 2 1/2።"
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.g5-equiv-same-den",
+   "name": "አቻ ክፍልፋዮችና ተመሳሳይ ታህት",
+   "explain": {
+    "en": {
+     "text": "To add or subtract fractions with the same denominator, add or subtract the numerators and keep the denominator: 3/8 + 2/8 = 5/8. Equivalent fractions have the same value: multiply the numerator and denominator by the same non-zero number, so 1/2 = 3/6. Simplify by dividing both by their common factor."
+    },
+    "am": {
+     "text": "ተመሳሳይ ታህት ሲኖራቸው ላዕሎቹን ደምሩ ወይም ቀንሱ፤ ታህቱ እንዳለ ይቆያል። አቻ ክፍልፋይ ለማግኘት ላዕልና ታህቱን በአንድ ቁጥር አባዙ፤ 1/2 = 3/6።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "fracbar",
+     "step": "hook",
+     "title": "3/8 + 2/8",
+     "bars": [
+      {
+       "parts": 8,
+       "shade": [
+        {
+         "n": 3,
+         "color": "a",
+         "label": "3/8"
+        },
+        {
+         "n": 2,
+         "color": "b",
+         "label": "2/8"
+        }
+       ]
+      }
+     ],
+     "after": "3 + 2 = 5 ክፍሎች ከ8 → 5/8።",
+     "ref": "አስተውሉ ገጽ 34",
+     "machine": true,
+     "id": "g5.maths.u2.s2-2-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "አስተውሉ",
+     "paras": [
+      "ተመሳሳይ ታህት ያላቸውን ክፍልፋዮች ለመደመር ወይም ለመቀነስ ላዕላቸውን እንደምራለን ወይም እንቀንሳለን፤ ውጤቱን በላዕሉ ቦታ አስቀምጠን አንዱን ታህት እንወስዳለን።",
+      "3/8 + 2/8 = (3 + 2)/8 = 5/8",
+      "ለማንኛውም ክፍልፋይ ሀ/ለ እና ከዜሮ የተለየ ሙሉ ቁጥር ሠ፣ ሀ/ለ እና (ሀ×ሠ)/(ለ×ሠ) አቻ ክፍልፋዮች ተብለው ይጠራሉ።",
+      "ሁለት ክፍልፋዮች አቻ የሚባሉት ተመሳሳይ ዋጋ ሲኖራቸው ወይም በቁጥር መስመር ላይ ተመሳሳይ ነጥብ ሲወክሉ ነው።",
+      "1/2 = (1 × 3)/(2 × 3) = 3/6"
+     ],
+     "ref": "ገጽ 34",
+     "id": "g5.maths.u2.s2-2-1.2"
+    },
+    {
+     "kind": "fracbar",
+     "step": "explore",
+     "title": "1/2 እና 3/6",
+     "bars": [
+      {
+       "parts": 2,
+       "shade": [
+        {
+         "n": 1,
+         "color": "a",
+         "label": "1/2"
+        }
+       ]
+      },
+      {
+       "parts": 6,
+       "shade": [
+        {
+         "n": 3,
+         "color": "b",
+         "label": "3/6"
+        }
+       ]
+      }
+     ],
+     "after": "ሁለቱ አሞሌዎች እኩል ርዝመት ተቀብተዋል። 1/2 = 3/6።",
+     "machine": true,
+     "id": "g5.maths.u2.s2-2-1.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "ቃላቱን እንወቅ",
+     "defs": [
+      [
+       "አቻ ክፍልፋዮች",
+       "ተመሳሳይ ዋጋ ያላቸው ክፍልፋዮች፤ ለምሳሌ 1/2 እና 3/6።"
+      ],
+      [
+       "ዝቅተኛ ሒሳባዊ ቃል",
+       "ላዕልና ታህት ከ1 በስተቀር የጋራ አካፋይ የሌላቸው ክፍልፋይ፤ ለምሳሌ 4/6 = 2/3።"
+      ]
+     ],
+     "id": "g5.maths.u2.s2-2-1.4"
+    },
+    {
+     "kind": "blank",
+     "step": "check",
+     "graded": true,
+     "num": true,
+     "ask": "6/10 − 2/10 = ___ (በዝቅተኛ ቃል)",
+     "a": [
+      "2/5"
+     ],
+     "why": "(6 − 2)/10 = 4/10፤ ት.የ.አ(4፣ 10) = 2 → 4÷2/10÷2 = 2/5።",
+     "clue": "ላዕሎቹን ቀንሱ፤ ታህቱ እንዳለ ነው።",
+     "level": 1,
+     "ref": "ተግባር 2.3 Q1 መ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-2-1.5"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "4/7 + 5/7 = ___",
+     "a": [
+      "9/7"
+     ],
+     "why": "(4 + 5)/7 = 9/7 = 1 2/7።",
+     "clue": "ላዕሎቹን ደምሩ።",
+     "level": 1,
+     "ref": "ተግባር 2.3 Q1 ሐ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-2-1.6"
+    },
+    {
+     "kind": "match",
+     "step": "practise",
+     "graded": true,
+     "text": "ተግባር 2.3 Q2፦ አቻ ናቸው ወይስ አይደሉም?",
+     "pairs": [
+      [
+       "1/2 እና 6/12",
+       "አቻ ናቸው"
+      ],
+      [
+       "3/5 እና 6/15",
+       "አቻ አይደሉም"
+      ],
+      [
+       "9/2 እና 36/8",
+       "አቻ ናቸው (×4)"
+      ]
+     ],
+     "why": "3/5 = 9/15 እንጂ 6/15 አይደለም።",
+     "clue": "ላዕልና ታህቱን በአንድ ቁጥር አባዙ።",
+     "level": 2,
+     "ref": "ተግባር 2.3 Q2",
+     "machine": true,
+     "id": "g5.maths.u2.s2-2-1.7"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "የ1/2 አቻ፦ 1/2 = ___/8",
+     "a": [
+      "4"
+     ],
+     "why": "(1 × 4)/(2 × 4) = 4/8።",
+     "clue": "2ን በስንት ስናባዛ 8 ይሆናል?",
+     "level": 1,
+     "ref": "ተግባር 2.3 Q4 ለ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-2-1.8"
+    },
+    {
+     "kind": "tf",
+     "step": "challenge",
+     "graded": true,
+     "text": "4/7 እና 16/28 አቻ ክፍልፋዮች ናቸው።",
+     "a": true,
+     "why": "(4 × 4)/(7 × 4) = 16/28።",
+     "clue": "7ን በስንት ስናባዛ 28 ይሆናል?",
+     "level": 3,
+     "ref": "የማጠቃለያ ጥያቄ 1 መ",
+     "machine": true,
+     "added": true,
+     "id": "g5.maths.u2.s2-2-1.9"
+    }
+   ]
+  },
+  {
+   "id": "math.g5-different-den",
+   "name": "የተለያዩ ታህት ያላቸውን መደመርና መቀነስ",
+   "requires": [
+    "math.g5-equiv-same-den"
+   ],
+   "explain": {
+    "en": {
+     "text": "When the denominators differ, first find the least common multiple (LCM) of the denominators. Change each fraction to an equivalent fraction with that denominator, then add or subtract the numerators. Example: 1/3 + 1/4: the LCM of 3 and 4 is 12, so 4/12 + 3/12 = 7/12."
+    },
+    "am": {
+     "text": "ታህቶቹ ሲለያዩ መጀመሪያ የታህቶቹን ትንሹ የጋራ ብዜት ፈልጉ። ሁሉንም ወደዚያ ታህት ቀይሩ፤ ከዚያ ላዕሎቹን ደምሩ ወይም ቀንሱ። 1/3 + 1/4 = 4/12 + 3/12 = 7/12።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "fracbar",
+     "step": "hook",
+     "title": "1/3 + 1/8 (ምሳሌ 13)",
+     "bars": [
+      {
+       "parts": 3,
+       "shade": [
+        {
+         "n": 1,
+         "color": "a",
+         "label": "1/3"
+        }
+       ]
+      },
+      {
+       "parts": 8,
+       "shade": [
+        {
+         "n": 1,
+         "color": "b",
+         "label": "1/8"
+        }
+       ]
+      }
+     ],
+     "after": "ታህቶቹ ይለያያሉ፤ መጀመሪያ አንድ አይነት ታህት እንፈልጋለን።",
+     "ref": "ምሳሌ 13",
+     "machine": true,
+     "id": "g5.maths.u2.s2-2-1.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "ማስታወሻ፦ የተለያዩ ታህቶች",
+     "paras": [
+      "የተለያዩ ታህት ያላቸውን ክፍልፋዮች ለመደመር ወይም ለመቀነስ በቅድሚያ ተመሳሳይ ታህት ወዳላቸው አቻ ክፍልፋዮች እንቀይራለን።",
+      "በመጀመሪያ የታህቶቹን ትንሹ የጋራ ብዜት (ት.ጋ.ብ) እንፈልጋለን።",
+      "የ7 ብዜት፦ 7፣ 14፣ 21፣ 28፣ 35፣ 42…",
+      "የ5 ብዜት፦ 5፣ 10፣ 15፣ 20፣ 25፣ 30፣ 35፣ 40…",
+      "የ7 እና የ5 ት.ጋ.ብ 35 ነው።"
+     ],
+     "ref": "ገጽ 35",
+     "id": "g5.maths.u2.s2-2-1.11"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "ምሳሌ 11፦ 1/3 + 1/4",
+     "steps": [
+      "ታህቶቹ 3 እና 4 ናቸው። የ3 እና የ4 ት.ጋ.ብ 12 ነው።",
+      "1/3 = (1 × 4)/(3 × 4) = 4/12፤ ምክንያቱም 12 ÷ 3 = 4።",
+      "1/4 = (1 × 3)/(4 × 3) = 3/12፤ ምክንያቱም 12 ÷ 4 = 3።",
+      "ላዕሎቹን ደምሩ፦ 4 + 3 = 7 → 7/12።",
+      "ስለዚህ የገበሬው ወጭ የገቢውን 7/12 ነው።"
+     ],
+     "ref": "ምሳሌ 11 ሀ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-2-1.12"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "ቃሉን እንወቅ",
+     "defs": [
+      [
+       "ትንሹ የጋራ ብዜት (ት.ጋ.ብ)",
+       "የሁለት ቁጥሮች የጋራ ብዜቶች ውስጥ ትንሹ፤ የ7 እና የ5 ት.ጋ.ብ 35 ነው።"
+      ]
+     ],
+     "id": "g5.maths.u2.s2-2-1.13"
+    },
+    {
+     "kind": "blank",
+     "step": "check",
+     "graded": true,
+     "num": true,
+     "ask": "1/3 + 1/8 = ___",
+     "a": [
+      "11/24"
+     ],
+     "why": "ት.ጋ.ብ(3፣ 8) = 24፤ 1/3 = 8/24፣ 1/8 = 3/24፤ 8 + 3 = 11 → 11/24።",
+     "clue": "የ3 እና የ8 ት.ጋ.ብ ፈልጉ።",
+     "level": 1,
+     "ref": "ምሳሌ 13",
+     "machine": true,
+     "id": "g5.maths.u2.s2-2-1.14"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "ምሳሌ 11 ለ፦ ገበሬው ወጭው 7/12 ነው። የሚያስቀምጠው የገቢውን ስንት ስንተኛ ነው? 1 − 7/12 = ___",
+     "a": [
+      "5/12"
+     ],
+     "why": "ሙሉ ገቢ = 1 = 12/12፤ 12/12 − 7/12 = 5/12።",
+     "clue": "1ን እንደ 12/12 ጻፉ።",
+     "level": 1,
+     "ref": "ምሳሌ 11 ለ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-2-1.15"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "4/3 − 3/4 = ___",
+     "a": [
+      "7/12"
+     ],
+     "why": "ት.ጋ.ብ(3፣ 4) = 12፤ 4/3 = 16/12፣ 3/4 = 9/12፤ 16 − 9 = 7 → 7/12።",
+     "clue": "የጋራ ታህቱ 12 ነው።",
+     "level": 1,
+     "ref": "መልመጃ 2ለ Q2 ሐ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-2-1.16"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "2/5 + 9/7 = ___",
+     "a": [
+      "59/35"
+     ],
+     "why": "ት.ጋ.ብ(5፣ 7) = 35፤ 2/5 = 14/35፣ 9/7 = 45/35፤ 14 + 45 = 59 → 59/35 = 1 24/35።",
+     "clue": "የ5 እና የ7 ት.ጋ.ብ 35 ነው።",
+     "level": 2,
+     "ref": "መልመጃ 2ለ Q2 ሀ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-2-1.17"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "9/7 − 5/4 = ___",
+     "a": [
+      "1/28"
+     ],
+     "why": "ት.ጋ.ብ(7፣ 4) = 28፤ 9/7 = 36/28፣ 5/4 = 35/28፤ 36 − 35 = 1 → 1/28።",
+     "clue": "የጋራ ታህቱ 28 ነው።",
+     "level": 2,
+     "ref": "ምሳሌ 12 መ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-2-1.18"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "num": true,
+     "ask": "ሰራተኛው ደመወዙን 2/5 ለቤት ኪራይ፣ 1/5 ለምግብ፣ 1/10 ለሌሎች ወጭዎች ያወጣል። ወጭዎቹ የደመወዙ ስንት ስንተኛ ናቸው? መልስ፦ ___",
+     "a": [
+      "7/10"
+     ],
+     "why": "ት.ጋ.ብ = 10፤ 2/5 = 4/10፣ 1/5 = 2/10፤ 4 + 2 + 1 = 7 → 7/10።",
+     "clue": "ሦስቱንም ወደ አስረኛ ቀይሩ።",
+     "level": 3,
+     "ref": "የማጠቃለያ ጥያቄ 10 ሀ",
+     "machine": true,
+     "added": true,
+     "id": "g5.maths.u2.s2-2-1.19"
+    }
+   ]
+  },
+  {
+   "id": "math.g5-add-mixed",
+   "name": "ድብልቅ ቁጥሮችን መደመርና መቀነስ",
+   "requires": [
+    "math.g5-different-den",
+    "math.g5-mixed-improper"
+   ],
+   "explain": {
+    "en": {
+     "text": "To add or subtract mixed numbers, first change each one to an improper fraction, then use a common denominator. Example: 2 1/4 + 1/5 = 9/4 + 1/5 = 45/20 + 4/20 = 49/20 = 2 9/20. Write the answer in lowest terms and, if you like, as a mixed number."
+    },
+    "am": {
+     "text": "ድብልቅ ቁጥሮችን ለመደመር ወይም ለመቀነስ መጀመሪያ ወደ ህገ-ወጥ ክፍልፋይ ቀይሩ፤ ከዚያ የጋራ ታህት ፈልጉ። መልሱን በዝቅተኛ ቃል ጻፉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "ሽቦው",
+     "ask": "20 ሜትር ሽቦ ለሁለት ተቆረጠ። አንዱ ቁራጭ 11 1/4 ሜትር ነው። ሌላው ከ8 ሜትር ይበልጣል ወይስ ያንሳል?",
+     "opts": [
+      "ይበልጣል",
+      "ያንሳል",
+      "እኩል ነው"
+     ],
+     "after": "20 − 11 = 9፤ ከዚያ 1/4 ሲቀነስ 8 3/4 ይሆናል፤ ከ8 ይበልጣል።",
+     "ref": "መልመጃ 2ለ Q4",
+     "machine": true,
+     "id": "g5.maths.u2.s2-2-1.20"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "ምሳሌ 12 ሐ፦ 2 1/4 + 1/5",
+     "steps": [
+      "2 1/4ን ወደ ህገ-ወጥ ቀይሩ፦ (2 × 4 + 1)/4 = 9/4።",
+      "የ4 እና የ5 ት.ጋ.ብ 20 ነው።",
+      "9/4 = (9 × 5)/(4 × 5) = 45/20፤ 1/5 = (1 × 4)/(5 × 4) = 4/20።",
+      "45 + 4 = 49 → 49/20።",
+      "49 ÷ 20 = 2 ቀሪ 9 → 2 9/20።"
+     ],
+     "ref": "ምሳሌ 12 ሐ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-2-1.21"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "ቃሉን እናስታውስ",
+     "defs": [
+      [
+       "ድብልቅ ቁጥር",
+       "ከዜሮ የተለየ ሙሉ ቁጥርና ህገኛ ክፍልፋይ በአንድ ላይ፤ ለምሳሌ 2 1/2።"
+      ]
+     ],
+     "id": "g5.maths.u2.s2-2-1.22"
+    },
+    {
+     "kind": "blank",
+     "step": "check",
+     "graded": true,
+     "num": true,
+     "ask": "20 − 11 1/4 = ___ ሜትር",
+     "a": [
+      "8 3/4"
+     ],
+     "why": "20 = 80/4፤ 11 1/4 = 45/4፤ 80/4 − 45/4 = 35/4 = 8 3/4።",
+     "clue": "ሁለቱንም በአራተኛ ጻፉ።",
+     "level": 2,
+     "ref": "መልመጃ 2ለ Q4",
+     "machine": true,
+     "id": "g5.maths.u2.s2-2-1.23"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "3 1/2 − 1 2/3 = ___",
+     "a": [
+      "11/6"
+     ],
+     "why": "7/2 − 5/3 = 21/6 − 10/6 = 11/6 = 1 5/6።",
+     "clue": "መጀመሪያ ወደ ህገ-ወጥ ቀይሩ።",
+     "level": 2,
+     "ref": "መልመጃ 2ለ Q3 ለ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-2-1.24"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "4 2/3 − 2 5/7 = ___",
+     "a": [
+      "41/21"
+     ],
+     "why": "14/3 − 19/7 = 98/21 − 57/21 = 41/21 = 1 20/21።",
+     "clue": "ት.ጋ.ብ(3፣ 7) = 21።",
+     "level": 2,
+     "ref": "የቡድን ስራ 2.4 ለ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-2-1.25"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "1 1/3 + 4/6 = ___ ኪ.ሜ",
+     "a": [
+      "2"
+     ],
+     "why": "1 1/3 = 4/3 = 8/6፤ 8/6 + 4/6 = 12/6 = 2።",
+     "clue": "ት.ጋ.ብ(3፣ 6) = 6።",
+     "level": 1,
+     "ref": "የማጠቃለያ ጥያቄ 11",
+     "machine": true,
+     "id": "g5.maths.u2.s2-2-1.26"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "num": true,
+     "ask": "6 1/2 + 5 2/7 + 4 1/5 = ___",
+     "a": [
+      "15 69/70"
+     ],
+     "why": "ሙሉዎቹ፦ 6 + 5 + 4 = 15። ክፍልፋዮቹ፦ 1/2 + 2/7 + 1/5 = 35/70 + 20/70 + 14/70 = 69/70። ስለዚህ 15 69/70።",
+     "clue": "ሙሉዎቹን ለብቻ፣ ክፍልፋዮቹን ለብቻ ደምሩ።",
+     "level": 3,
+     "ref": "መልመጃ 2ለ Q2 ሠ",
+     "machine": true,
+     "added": true,
+     "id": "g5.maths.u2.s2-2-1.27"
+    }
+   ]
+  }
+ ],
+ "lang": "am",
+ "main": "am",
+ "exercises": [
+  {
+   "book_name": "መልመጃ 2ለ",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "የ5/6 አቻ፦ 5/6 = ___/12",
+     "a": [
+      "10"
+     ],
+     "why": "(5 × 2)/(6 × 2) = 10/12።",
+     "clue": "6 × 2 = 12።",
+     "level": 1,
+     "ref": "Q1 ሀ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-2-1.28"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "2/9 + 2 1/6 = ___",
+     "a": [
+      "43/18"
+     ],
+     "why": "13/6 = 39/18፣ 2/9 = 4/18፤ 4 + 39 = 43 → 43/18 = 2 7/18።",
+     "clue": "ት.ጋ.ብ(9፣ 6) = 18።",
+     "level": 2,
+     "ref": "Q2 ለ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-2-1.29"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "4 2/5 − 3 1/6 = ___",
+     "a": [
+      "37/30"
+     ],
+     "why": "22/5 − 19/6 = 132/30 − 95/30 = 37/30 = 1 7/30።",
+     "clue": "ት.ጋ.ብ(5፣ 6) = 30።",
+     "level": 2,
+     "ref": "Q2 መ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-2-1.30"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "7/12 + 4/6 = ___",
+     "a": [
+      "5/4"
+     ],
+     "why": "4/6 = 8/12፤ 7/12 + 8/12 = 15/12 = 5/4 = 1 1/4።",
+     "clue": "ት.ጋ.ብ(12፣ 6) = 12።",
+     "level": 1,
+     "ref": "Q3 ሀ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-2-1.31"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "ትምህርት ቤቱ 90 ክፍሎች አሉት፤ 60 የመማሪያ እና 10 የመፀዳጃ ክፍሎች ናቸው። እነዚህ የጠቅላላው ስንት ስንተኛ ናቸው? መልስ፦ ___",
+     "a": [
+      "7/9"
+     ],
+     "why": "60 + 10 = 70 → 70/90 = 7/9 (ት.የ.አ 10)።",
+     "clue": "መጀመሪያ ደምሩ።",
+     "level": 2,
+     "ref": "Q5 ሐ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-2-1.32"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "2/5 + 3/5 = ___",
+   "a": [
+    "1"
+   ],
+   "why": "(2 + 3)/5 = 5/5 = 1።",
+   "clue": "",
+   "level": 1,
+   "ref": "ተግባር 2.3 Q1 ሀ",
+   "machine": true,
+   "id": "g5.maths.u2.s2-2-1.33"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "1/2 + 1/3 = ___",
+   "a": [
+    "5/6"
+   ],
+   "why": "3/6 + 2/6 = 5/6።",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g5.maths.u2.s2-2-1.34"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "የ6 እና የ4 ት.ጋ.ብ",
+   "opts": [
+    "12",
+    "24",
+    "10",
+    "2"
+   ],
+   "ans": "12",
+   "why": "የ6 ብዜቶች፦ 6፣ 12…፤ የ4 ብዜቶች፦ 4፣ 8፣ 12…",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g5.maths.u2.s2-2-1.35"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "15/2 − 3/4 = ___",
+   "a": [
+    "27/4"
+   ],
+   "why": "30/4 − 3/4 = 27/4 = 6 3/4።",
+   "clue": "",
+   "level": 2,
+   "ref": "የማጠቃለያ ጥያቄ 6 ሐ",
+   "machine": true,
+   "id": "g5.maths.u2.s2-2-1.36"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "num": true,
+   "ask": "9/5 + 6 2/4 = ___",
+   "a": [
+    "83/10"
+   ],
+   "why": "6 2/4 = 6 1/2 = 13/2 = 65/10፤ 9/5 = 18/10፤ 18 + 65 = 83 → 83/10 = 8 3/10።",
+   "clue": "",
+   "level": 2,
+   "ref": "የቡድን ስራ 2.4 ሀ",
+   "machine": true,
+   "id": "g5.maths.u2.s2-2-1.37"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Activity 2.3 Q1 ሠ prints «4 3/2», a mixed number with an improper fraction part; not used. In Example 12 the last item is labelled ሠ in the question but ረ in the solution. Figure 2.10 ሀ shading is ambiguous (3/6 or 2/6); not used."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}

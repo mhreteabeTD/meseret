@@ -1,0 +1,790 @@
+{
+ "id": "g5.maths.u2.s2-1",
+ "book": {
+  "title": "ሒሳብ 5ኛ ክፍል",
+  "grade": 5,
+  "subject": "maths",
+  "unit": 2,
+  "unit_title": "ክፍልፋዮች",
+  "pages": "26–33",
+  "section": "2.1"
+ },
+ "title": "የክፍልፋይ አይነቶች",
+ "competency": "የተለያዩ የክፍልፋይ አይነቶችን መግለጽ፤ ህገ-ወጥ ክፍልፋዮችን ወደ ድብልቅ ቁጥር እና ድብልቅ ቁጥርን ወደ ህገ-ወጥ ክፍልፋይ መለወጥ።",
+ "minutes": 18,
+ "keywords": [
+  {
+   "en": "fraction",
+   "am": "ክፍልፋይ",
+   "def": "በሀ/ለ መልክ የሚገለጽ ቁጥር፤ ሀ እና ለ ሙሉ ቁጥሮች ሆነው ለ ከዜሮ የተለየ ነው።"
+  },
+  {
+   "en": "numerator",
+   "am": "ላዕል",
+   "def": "ከሰረዙ በላይ ያለው ቁጥር፤ የክፍልፋዩን መጠን ይገልጻል።"
+  },
+  {
+   "en": "denominator",
+   "am": "ታህት",
+   "def": "ከሰረዙ በታች ያለው ቁጥር፤ ሙሉው በስንት እኩል ክፍሎች እንደተከፈለ ያሳያል።"
+  },
+  {
+   "en": "proper fraction",
+   "am": "ህገኛ ክፍልፋይ",
+   "def": "ላዕሉ ከታህቱ ያነሰ ክፍልፋይ፤ ዋጋው ከአንድ ያነሰ ነው።"
+  },
+  {
+   "en": "improper fraction",
+   "am": "ህገ-ወጥ ክፍልፋይ",
+   "def": "ላዕሉ ከታህቱ የበለጠ ወይም እኩል የሆነ ክፍልፋይ፤ ዋጋው ከአንድ የበለጠ ወይም እኩል ነው።"
+  },
+  {
+   "en": "mixed number",
+   "am": "ድብልቅ ቁጥር",
+   "def": "ከዜሮ የተለየ ሙሉ ቁጥርና ህገኛ ክፍልፋይ በአንድ ላይ፤ ለምሳሌ 2 1/2።"
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.g5-fraction-parts",
+   "name": "ክፍልፋይ፣ ላዕልና ታህት",
+   "explain": {
+    "en": {
+     "text": "A fraction a/b shows equal parts of one whole. The denominator (ታህት), below the line, says into how many equal parts the whole is cut. The numerator (ላዕል), above the line, says how many parts we take. In 3/12, the whole is cut into 12 equal parts and 3 are shaded."
+    },
+    "am": {
+     "text": "ክፍልፋይ የአንድ ሙሉ እኩል ክፍሎችን ያሳያል። ታህት ሙሉው በስንት እኩል ክፍሎች እንደተከፈለ፣ ላዕል ደግሞ ስንት ክፍሎች እንደወሰድን ይነግረናል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "ድፎ ዳቦ",
+     "ask": "እናት አንድ ድፎ ዳቦ ለ12 እኩል ቆረሰች። 3ቱን ለጎረቤት ሰጠች። ጎረቤቱ የዳቦውን ስንተኛ አገኘ?",
+     "opts": [
+      "3/12",
+      "12/3",
+      "3",
+      "1/3"
+     ],
+     "after": "3 ክፍሎች ከ12 እኩል ክፍሎች ውስጥ = 3/12።",
+     "ref": "ምሳሌ 4",
+     "machine": true,
+     "id": "g5.maths.u2.s2-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "ክፍልፋይ ምንድን ነው?",
+     "paras": [
+      "ክፍልፋይ የሚባለው በ ሀ/ለ መልክ የተገለፀ እና ሀ እና ለ ተለዋዋጭ ሙሉ ቁጥሮች ሆነው ለ ከዜሮ የተለዩ ሲሆን ነው።",
+      "ሀ/ለ በሚለው ክፍልፋይ ከሰረዙ በላይ ያለው ቁጥር \"ሀ\" ላዕል ይባላል። ከሰረዙ በታች ያለው ቁጥር \"ለ\" ታህት ይባላል።",
+      "ታህት አንድ ሙሉ በምን ያህል እኩል ክፍሎች እንደተከፋፈለ ያመለክታል። ላዕሉ የክፍልፋዩን መጠን ይገልጻል።"
+     ],
+     "note": "ምሳሌ 1፦ በ5/8፣ 2/3፣ 11/7፣ 6/6 ውስጥ 5፣ 2፣ 11፣ 6 ላዕል፤ 8፣ 3፣ 7፣ 6 ታህት ናቸው።",
+     "ref": "ገጽ 27",
+     "id": "g5.maths.u2.s2-1.2"
+    },
+    {
+     "kind": "fracbar",
+     "step": "explore",
+     "title": "ምስል 2.3፦ ክብ ለ5 እኩል ቦታ",
+     "bars": [
+      {
+       "parts": 5,
+       "shade": [
+        {
+         "n": 3,
+         "color": "a",
+         "label": "3/5"
+        }
+       ]
+      }
+     ],
+     "after": "ለ5 እኩል ክፍሎች ተከፍሏል። 3ቱ የተቀቡ ክፍሎች 3/5 ናቸው።",
+     "ref": "ምሳሌ 2",
+     "intro": "ክቡን እንደ አሞሌ እናየዋለን።",
+     "machine": true,
+     "id": "g5.maths.u2.s2-1.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "ቃላቱን እንወቅ",
+     "defs": [
+      [
+       "ክፍልፋይ",
+       "በሀ/ለ መልክ የሚገለጽ ቁጥር፤ ሀ እና ለ ሙሉ ቁጥሮች ሆነው ለ ከዜሮ የተለየ ነው።"
+      ],
+      [
+       "ላዕል",
+       "ከሰረዙ በላይ ያለው ቁጥር፤ የክፍልፋዩን መጠን ይገልጻል።"
+      ],
+      [
+       "ታህት",
+       "ከሰረዙ በታች ያለው ቁጥር፤ ሙሉው በስንት እኩል ክፍሎች እንደተከፈለ ያሳያል።"
+      ]
+     ],
+     "id": "g5.maths.u2.s2-1.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "text": "በ11/7 ውስጥ ታህቱ የትኛው ነው?",
+     "opts": [
+      "7",
+      "11",
+      "18",
+      "4"
+     ],
+     "ans": "7",
+     "why": "ታህት ከሰረዙ በታች ያለው ቁጥር ነው።",
+     "clue": "ከሰረዙ በታች።",
+     "level": 1,
+     "machine": true,
+     "id": "g5.maths.u2.s2-1.5"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "ምስል 2.1 ሀ፦ ሬክታንግሉ 12 እኩል ክፍሎች አሉት፤ 3ቱ ተቀብተዋል። ያልተቀባው ክፍል ___ ነው።",
+     "a": [
+      "9/12"
+     ],
+     "why": "12 − 3 = 9 ያልተቀቡ ክፍሎች → 9/12 (= 3/4)።",
+     "clue": "ከ12 ውስጥ የተቀቡትን ቀንሱ።",
+     "level": 1,
+     "ref": "ተግባር 2.1 Q1 ሀ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-1.6"
+    },
+    {
+     "kind": "fracbar",
+     "step": "practise",
+     "graded": true,
+     "title": "3/5ን ቀቡ",
+     "parts": 5,
+     "need": 3,
+     "ask": "3/5ን ለማሳየት 3 ክፍሎችን ቀቡ።",
+     "why": "ታህት 5 = 5 እኩል ክፍሎች፤ ላዕል 3 = 3 የተቀቡ ክፍሎች።",
+     "clue": "ላዕሉ ስንት ነው?",
+     "level": 1,
+     "ref": "ተግባር 2.1 Q4 ሀ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-1.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "text": "2/7 ___ 5/7",
+     "opts": [
+      "<",
+      ">",
+      "="
+     ],
+     "ans": "<",
+     "why": "ታህቶቹ እኩል ናቸው፤ 2 < 5 ስለሆነ 2/7 < 5/7።",
+     "clue": "ታህቱ አንድ ሲሆን ላዕሎቹን አወዳድሩ።",
+     "level": 1,
+     "ref": "ተግባር 2.1 Q3 ሀ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-1.8"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "num": true,
+     "ask": "ወ/ሮ አሰለፈች 200 ብር ይዛ ሄደች። ድንች በ60 ብር ገዛች። ድንቹ የጠቅላላው ብር ስንት ስንተኛ ነው? (በዝቅተኛ ቃል) መልስ፦ ___",
+     "a": [
+      "3/10"
+     ],
+     "why": "60/200፤ ት.የ.አ(60፣ 200) = 20 → 60÷20/200÷20 = 3/10።",
+     "clue": "መጀመሪያ 60/200 ጻፉ፤ ከዚያ አቃልሉ።",
+     "level": 3,
+     "ref": "የቡድን ስራ 2.1 Q2 ሀ",
+     "machine": true,
+     "added": true,
+     "id": "g5.maths.u2.s2-1.9"
+    }
+   ]
+  },
+  {
+   "id": "math.g5-proper-improper",
+   "name": "ህገኛ፣ ህገ-ወጥ እና ድብልቅ",
+   "requires": [
+    "math.g5-fraction-parts"
+   ],
+   "explain": {
+    "en": {
+     "text": "A proper fraction has a numerator smaller than its denominator, so its value is less than 1 (3/5). An improper fraction has a numerator equal to or bigger than its denominator, so its value is 1 or more (7/4, 6/6). A mixed number is a whole number with a proper fraction (2 1/2)."
+    },
+    "am": {
+     "text": "ህገኛ ክፍልፋይ ላዕሉ ከታህቱ ያንሳል (ከ1 ያነሰ)፤ ህገ-ወጥ ክፍልፋይ ላዕሉ ከታህቱ ይበልጣል ወይም እኩል ነው (1 ወይም ከዚያ በላይ)፤ ድብልቅ ቁጥር ሙሉ ቁጥርና ህገኛ ክፍልፋይ ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "fracbar",
+     "step": "hook",
+     "title": "ምስል 2.7 ለ፦ ሁለት አሞሌዎች",
+     "bars": [
+      {
+       "parts": 4,
+       "shade": [
+        {
+         "n": 4,
+         "color": "a",
+         "label": "4/4 = 1"
+        }
+       ]
+      },
+      {
+       "parts": 4,
+       "shade": [
+        {
+         "n": 3,
+         "color": "b",
+         "label": "3/4"
+        }
+       ]
+      }
+     ],
+     "after": "የተቀቡ ክፍሎች 4 + 3 = 7 አራተኛዎች = 7/4። ይህ ከ1 ይበልጣል።",
+     "ref": "የቡድን ስራ 2.2 Q1 ለ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-1.10"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "ሦስቱ አይነቶች",
+     "paras": [
+      "ትርጓሜ 2.1፦ ህገኛ ክፍልፋይ ከአንድ ያነሰ ዋጋ ያለውና ላዕሉ ከታህቱ ያነሰ ነው።",
+      "ትርጓሜ 2.2፦ ላዕሉ ከታህቱ የበለጠ ወይም እኩል የሆነ ክፍልፋይ ህገ-ወጥ ክፍልፋይ ይባላል። ዋጋው ከአንድ የበለጠ ወይም እኩል ነው።",
+      "ትርጓሜ 2.3፦ ማንኛውም ክፍልፋይ ከዜሮ በተለየ ሙሉ ቁጥርና በህገኛ ክፍልፋይ የሚገለጽ ከሆነ ድብልቅ ቁጥር ተብሎ ይጠራል።"
+     ],
+     "table": [
+      [
+       "አይነት",
+       "ምሳሌ"
+      ],
+      [
+       "ህገኛ",
+       "1/3፣ 3/5፣ 7/9፣ 19/20"
+      ],
+      [
+       "ህገ-ወጥ",
+       "5/3፣ 9/9፣ 4/3፣ 6/1"
+      ],
+      [
+       "ድብልቅ ቁጥር",
+       "2 1/2፣ 3 5/7፣ 1 3/4"
+      ]
+     ],
+     "ref": "ገጽ 28–30",
+     "id": "g5.maths.u2.s2-1.11"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "ቃላቱን እንወቅ",
+     "defs": [
+      [
+       "ህገኛ ክፍልፋይ",
+       "ላዕሉ ከታህቱ ያነሰ ክፍልፋይ፤ ዋጋው ከአንድ ያነሰ ነው።"
+      ],
+      [
+       "ህገ-ወጥ ክፍልፋይ",
+       "ላዕሉ ከታህቱ የበለጠ ወይም እኩል የሆነ ክፍልፋይ፤ ዋጋው ከአንድ የበለጠ ወይም እኩል ነው።"
+      ],
+      [
+       "ድብልቅ ቁጥር",
+       "ከዜሮ የተለየ ሙሉ ቁጥርና ህገኛ ክፍልፋይ በአንድ ላይ፤ ለምሳሌ 2 1/2።"
+      ]
+     ],
+     "id": "g5.maths.u2.s2-1.12"
+    },
+    {
+     "kind": "sort",
+     "step": "check",
+     "graded": true,
+     "text": "ምሳሌ 6፦ ህገኛ ወይስ ህገ-ወጥ?",
+     "bins": [
+      "ህገኛ",
+      "ህገ-ወጥ"
+     ],
+     "items": [
+      [
+       "6/7",
+       "ህገኛ",
+       "6 < 7"
+      ],
+      [
+       "3/2",
+       "ህገ-ወጥ",
+       "3 > 2"
+      ],
+      [
+       "5/8",
+       "ህገኛ",
+       "5 < 8"
+      ],
+      [
+       "15/11",
+       "ህገ-ወጥ",
+       "15 > 11"
+      ],
+      [
+       "1/2",
+       "ህገኛ",
+       "1 < 2"
+      ],
+      [
+       "6/2",
+       "ህገ-ወጥ",
+       "6 > 2"
+      ]
+     ],
+     "why": "ላዕሉ ከታህቱ ካነሰ ህገኛ ነው።",
+     "clue": "ላዕሉንና ታህቱን አወዳድሩ።",
+     "level": 1,
+     "ref": "ምሳሌ 6",
+     "machine": true,
+     "id": "g5.maths.u2.s2-1.13"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "text": "መልመጃ 2ሀ Q2፦ ለዩ።",
+     "bins": [
+      "ህገኛ",
+      "ህገ-ወጥ",
+      "ድብልቅ"
+     ],
+     "items": [
+      [
+       "2/7",
+       "ህገኛ",
+       "2 < 7"
+      ],
+      [
+       "4 3/7",
+       "ድብልቅ",
+       "ሙሉ ቁጥርና ህገኛ ክፍልፋይ።"
+      ],
+      [
+       "9/5",
+       "ህገ-ወጥ",
+       "9 > 5"
+      ],
+      [
+       "6/6",
+       "ህገ-ወጥ",
+       "6 = 6፤ እኩል ሲሆንም ህገ-ወጥ ነው።"
+      ],
+      [
+       "1 3/5",
+       "ድብልቅ",
+       "ሙሉ ቁጥርና ህገኛ ክፍልፋይ።"
+      ]
+     ],
+     "why": "ትርጓሜ 2.1–2.3።",
+     "clue": "6/6 ላዕልና ታህቱ እኩል ናቸው።",
+     "level": 2,
+     "ref": "መልመጃ 2ሀ Q2",
+     "machine": true,
+     "id": "g5.maths.u2.s2-1.14"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "text": "6/7 ህገ-ወጥ ክፍልፋይ ነው።",
+     "a": false,
+     "why": "6 < 7 ስለሆነ ህገኛ ክፍልፋይ ነው።",
+     "clue": "ላዕሉ ከታህቱ ያንሳል?",
+     "level": 1,
+     "ref": "መልመጃ 2ሀ Q1 ሐ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-1.15"
+    },
+    {
+     "kind": "mcq",
+     "step": "challenge",
+     "graded": true,
+     "text": "የትኛው ክፍልፋይ ዋጋው በትክክል 1 ነው?",
+     "opts": [
+      "9/9",
+      "9/10",
+      "10/9",
+      "1/9"
+     ],
+     "ans": "9/9",
+     "why": "9 ÷ 9 = 1። ላዕልና ታህቱ እኩል ሲሆኑ ዋጋው 1 ነው።",
+     "clue": "ላዕልን በታህት አካፍሉ።",
+     "level": 3,
+     "machine": true,
+     "added": true,
+     "id": "g5.maths.u2.s2-1.16"
+    }
+   ]
+  },
+  {
+   "id": "math.g5-mixed-improper",
+   "name": "ድብልቅ ቁጥርና ህገ-ወጥ ክፍልፋይ መለዋወጥ",
+   "requires": [
+    "math.g5-proper-improper"
+   ],
+   "explain": {
+    "en": {
+     "text": "Improper to mixed: divide the numerator by the denominator. The quotient is the whole number, and the remainder goes over the same denominator: 9/4 = 9 ÷ 4 = 2 remainder 1 = 2 1/4. Mixed to improper: multiply the denominator by the whole number, add the numerator, and keep the denominator: 3 4/5 = (5 × 3 + 4)/5 = 19/5."
+    },
+    "am": {
+     "text": "ህገ-ወጥን ወደ ድብልቅ፦ ላዕሉን በታህቱ አካፍሉ፤ ድርሻው ሙሉ ቁጥር፣ ቀሪው አዲሱ ላዕል ነው። ድብልቅን ወደ ህገ-ወጥ፦ ታህት × ሙሉ ቁጥር + ላዕል፣ ታህቱ እንዳለ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "ስንት ሙሉ?",
+     "ask": "9/4ን ወደ ድብልቅ ቁጥር ስንለውጥ ስንት ሙሉ ይገኛል?",
+     "opts": [
+      "2",
+      "9",
+      "4",
+      "1"
+     ],
+     "after": "9 ÷ 4 = 2 ቀሪ 1፤ ሁለት ሙሉ እና 1/4።",
+     "ref": "ገጽ 30",
+     "machine": true,
+     "id": "g5.maths.u2.s2-1.17"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "ህገ-ወጥ → ድብልቅ",
+     "paras": [
+      "የህገ-ወጥ ክፍልፋይ ላዕል ለታህቱ ስናካፍል ሙሉ ቁጥር ይደርሳል ወይም ሙሉ ቁጥር ይደርስና ቀሪ ይኖረዋል።",
+      "ለምሳሌ፦ 9 ሲካፈል ለ4፣ ድርሻው 2 ይሆንና 1 ቀሪ ይኖረዋል። ቀሪው በህገኛ ክፍልፋይ ይገለጻል።",
+      "9 ÷ 4 = 2 ቀሪ 1 ወይም 9/4 = 2 1/4"
+     ],
+     "ref": "ገጽ 30",
+     "id": "g5.maths.u2.s2-1.18"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "ድብልቅ → ህገ-ወጥ፦ 3 4/5",
+     "steps": [
+      "ደረጃ 1፦ ታህቱን በሙሉ ቁጥር አባዙ፦ 5 × 3 = 15።",
+      "ደረጃ 2፦ ብዜቱን ከላዕሉ ጋር ደምሩ፦ 15 + 4 = 19።",
+      "ደረጃ 3፦ ድምሩን ከላይ፣ ታህቱን እንዳለ ከታች ጻፉ፦ 19/5።",
+      "ስለዚህ 3 4/5 = 19/5።"
+     ],
+     "ref": "የቡድን ስራ 2.3 Q2 ሀ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-1.19"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "ቃላቱን እናስታውስ",
+     "defs": [
+      [
+       "ድብልቅ ቁጥር",
+       "ከዜሮ የተለየ ሙሉ ቁጥርና ህገኛ ክፍልፋይ በአንድ ላይ፤ ለምሳሌ 2 1/2።"
+      ],
+      [
+       "ህገ-ወጥ ክፍልፋይ",
+       "ላዕሉ ከታህቱ የበለጠ ወይም እኩል የሆነ ክፍልፋይ፤ ዋጋው ከአንድ የበለጠ ወይም እኩል ነው።"
+      ]
+     ],
+     "id": "g5.maths.u2.s2-1.20"
+    },
+    {
+     "kind": "blank",
+     "step": "check",
+     "graded": true,
+     "ask": "6/5ን ወደ ድብልቅ ቁጥር ቀይሩ። 6/5 = ___",
+     "a": [
+      "1 1/5"
+     ],
+     "why": "6 ÷ 5 = 1 ቀሪ 1 → 1 1/5።",
+     "clue": "ላዕሉን በታህቱ አካፍሉ።",
+     "level": 1,
+     "ref": "መልመጃ 2ሀ Q3 ሀ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-1.21"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "2 5/6ን ወደ ህገ-ወጥ ክፍልፋይ ቀይሩ። 2 5/6 = ___",
+     "a": [
+      "17/6"
+     ],
+     "why": "6 × 2 = 12፤ 12 + 5 = 17 → 17/6።",
+     "clue": "ታህት × ሙሉ ቁጥር + ላዕል።",
+     "level": 1,
+     "ref": "የቡድን ስራ 2.3 Q2 ለ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-1.22"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "16/3 = ___ (ድብልቅ ቁጥር)",
+     "a": [
+      "5 1/3"
+     ],
+     "why": "16 ÷ 3 = 5 ቀሪ 1 (3 × 5 = 15፣ 16 − 15 = 1) → 5 1/3።",
+     "clue": "3 × 5 = 15።",
+     "level": 2,
+     "ref": "መልመጃ 2ሀ Q3 ሐ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-1.23"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "ask": "20 1/2 = ___ (ህገ-ወጥ ክፍልፋይ)",
+     "a": [
+      "41/2"
+     ],
+     "why": "2 × 20 = 40፤ 40 + 1 = 41 → 41/2።",
+     "clue": "ታህት × ሙሉ ቁጥር + ላዕል።",
+     "level": 2,
+     "ref": "የቡድን ስራ 2.3 Q2 መ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-1.24"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "num": true,
+     "ask": "8/2 = ___ (ሙሉ ቁጥር)",
+     "a": [
+      "4"
+     ],
+     "why": "8 ÷ 2 = 4 ቀሪ 0 → 4።",
+     "clue": "ቀሪ ከሌለ ሙሉ ቁጥር ይሆናል።",
+     "level": 1,
+     "ref": "መልመጃ 2ሀ Q3 ለ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-1.25"
+    },
+    {
+     "kind": "blank",
+     "step": "challenge",
+     "graded": true,
+     "ask": "8 ሰዎች እያንዳንዳቸው 1/5 ሊትር ወተት ጠጡ። በጠቅላላ የጠጡት ስንት ሊትር ነው? (በድብልቅ ቁጥር) መልስ፦ ___",
+     "a": [
+      "1 3/5"
+     ],
+     "why": "1/5 ስምንት ጊዜ = 8/5 ሊትር፤ 8 ÷ 5 = 1 ቀሪ 3 → 1 3/5 ሊትር።",
+     "clue": "መጀመሪያ 1/5ን 8 ጊዜ ደምሩ።",
+     "level": 3,
+     "ref": "ምሳሌ 9",
+     "machine": true,
+     "added": true,
+     "id": "g5.maths.u2.s2-1.26"
+    }
+   ]
+  }
+ ],
+ "lang": "am",
+ "main": "am",
+ "exercises": [
+  {
+   "book_name": "መልመጃ 2ሀ",
+   "items": [
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "ከዜሮ በስተቀር ለማንኛውም ሙሉ ቁጥር በ፣ በ/በ = 1።",
+     "a": true,
+     "why": "ማንኛውም ቁጥር በራሱ ሲካፈል 1 ይሆናል፤ ለምሳሌ 6/6 = 1።",
+     "clue": "ለምሳሌ 6/6።",
+     "level": 1,
+     "ref": "Q1 ሀ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-1.27"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "ማንኛውም ሙሉ ቁጥር በክፍልፋይ ማስቀመጥ ይቻላል።",
+     "a": true,
+     "why": "ሙሉ ቁጥር በታህት 1 ይጻፋል፦ 6 = 6/1።",
+     "clue": "6/1ን አስቡ።",
+     "level": 1,
+     "ref": "Q1 ለ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-1.28"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "11/6 = ___ (ድብልቅ ቁጥር)",
+     "a": [
+      "1 5/6"
+     ],
+     "why": "11 ÷ 6 = 1 ቀሪ 5 → 1 5/6።",
+     "clue": "አካፍሉ።",
+     "level": 1,
+     "ref": "Q3 መ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-1.29"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "ምስል 2.9 ሀ፦ 6 እኩል ክፍሎች ውስጥ 4ቱ ጠቁረዋል። የጠቆረው ክፍልፋይ ___ ነው።",
+     "a": [
+      "4/6"
+     ],
+     "why": "4/6 = 2/3 (ት.የ.አ 2)።",
+     "clue": "የጠቆሩትን ቁጠሩ።",
+     "level": 1,
+     "ref": "Q4 ሀ",
+     "machine": true,
+     "id": "g5.maths.u2.s2-1.30"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "num": true,
+     "ask": "የእንግሊዘኛ አናባቢዎች (a, e, i, o, u) ከ26ቱ ፊደላት ስንት ስንተኛ ናቸው? መልስ፦ ___",
+     "a": [
+      "5/26"
+     ],
+     "why": "5 አናባቢዎች ከ26 ፊደላት → 5/26።",
+     "clue": "አናባቢዎቹን ቁጠሩ።",
+     "level": 2,
+     "ref": "Q5",
+     "machine": true,
+     "id": "g5.maths.u2.s2-1.31"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "በ5/8 ውስጥ ላዕሉ",
+   "opts": [
+    "5",
+    "8",
+    "13",
+    "3"
+   ],
+   "ans": "5",
+   "why": "ከሰረዙ በላይ።",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g5.maths.u2.s2-1.32"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "ህገኛ ክፍልፋይ የትኛው ነው?",
+   "opts": [
+    "19/20",
+    "20/19",
+    "9/9",
+    "6/1"
+   ],
+   "ans": "19/20",
+   "why": "19 < 20።",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g5.maths.u2.s2-1.33"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "1 7/11 = ___ (ህገ-ወጥ ክፍልፋይ)",
+   "a": [
+    "18/11"
+   ],
+   "why": "11 × 1 + 7 = 18 → 18/11።",
+   "clue": "",
+   "level": 1,
+   "machine": true,
+   "id": "g5.maths.u2.s2-1.34"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "7/3 = ___ (ድብልቅ ቁጥር)",
+   "a": [
+    "2 1/3"
+   ],
+   "why": "7 ÷ 3 = 2 ቀሪ 1 → 2 1/3።",
+   "clue": "",
+   "level": 2,
+   "machine": true,
+   "id": "g5.maths.u2.s2-1.35"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "6/4 ___ 10/4",
+   "opts": [
+    "<",
+    ">",
+    "="
+   ],
+   "ans": "<",
+   "why": "6 < 10።",
+   "clue": "",
+   "level": 2,
+   "ref": "ተግባር 2.1 Q3 ለ",
+   "machine": true,
+   "id": "g5.maths.u2.s2-1.36"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "review",
+   "text": "Example 5 lists 7/8 as an improper fraction; 7 < 8, so it is proper (probably a typo for 8/7). It is left out of the lesson. Activity 2.2 asks for a model of 2 1/4, but its instructions (two rectangles in quarters, one whole plus 3 parts) give 1 3/4. Exercise 2A Q6 (a maths period as a fraction of an hour) depends on the period length and is not used."
+  },
+  {
+   "kind": "note",
+   "text": "Fraction generators (op, mixed) have English templates only, so this chapter uses the book items without generated practise. Amharic fraction generator templates would need an engine change."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
+}
