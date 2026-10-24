@@ -49,7 +49,8 @@
       "Air"
      ],
      "after": "Pure water is water and nothing else. The others contain several substances: they are mixtures.",
-     "id": "g7.science.u2.s2-3-1.1"
+     "id": "g7.science.u2.s2-3-1.1",
+     "best": "Pure water"
     },
     {
      "kind": "read",
@@ -106,6 +107,49 @@
      "id": "g7.science.u2.s2-3-1.4"
     },
     {
+     "kind": "tap",
+     "step": "explore",
+     "title": "The book's pure substances",
+     "ask": "Tap each one. Element or compound?",
+     "need": 4,
+     "items": [
+      [
+       "Oxygen",
+       "Element. It cannot be broken down into simpler substances."
+      ],
+      [
+       "Sulfur",
+       "Element. A yellow solid."
+      ],
+      [
+       "Copper",
+       "Element. A reddish-brown metal."
+      ],
+      [
+       "Gold",
+       "Element. A yellow metal."
+      ],
+      [
+       "Sugar",
+       "Compound. Made of the elements carbon, hydrogen and oxygen."
+      ],
+      [
+       "Table salt",
+       "Compound. Made of the elements sodium and chlorine."
+      ],
+      [
+       "Water",
+       "Compound. Made of the elements hydrogen and oxygen."
+      ],
+      [
+       "Carbon dioxide",
+       "Compound. Made of the elements carbon and oxygen."
+      ]
+     ],
+     "id": "g7.science.u2.s2-3-1.15",
+     "added": true
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -125,7 +169,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Which is a pure substance?",
+     "text": "Pure substance: which one is a pure substance?",
      "opts": [
       "Air",
       "Milk",
@@ -133,7 +177,7 @@
       "Soil"
      ],
      "ans": "Table salt",
-     "why": "Table salt has a definite, constant composition.",
+     "why": "A pure substance is one kind of matter with a fixed composition.\nAir is several gases. Milk is water, fat and protein. Soil is many things.\nTable salt is one substance only.\nAnswer: table salt.",
      "clue": "Which one is only one substance?",
      "level": 1,
      "id": "g7.science.u2.s2-3-1.6"
@@ -178,19 +222,20 @@
        "Several gases."
       ]
      ],
-     "why": "A mixture contains two or more substances.",
+     "why": "Ask: is it one substance, or several mixed together?\nIron and oxygen are elements; sugar is a compound: pure substances.\nSugar solution (sugar + water), milk and air contain several substances: mixtures.",
      "clue": "Is it one substance, or several?",
      "level": 1,
      "ref": "Activity 2.8",
-     "id": "g7.science.u2.s2-3-1.7"
+     "id": "g7.science.u2.s2-3-1.7",
+     "text": "Sort each one: pure substance or mixture?"
     },
     {
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "A pure substance can be separated into other substances by sieving or filtering.",
+     "text": "True or false: a pure substance can be separated into other substances by sieving or filtering.",
      "a": false,
-     "why": "A pure substance cannot be separated by any physical means.",
+     "why": "Sieving and filtering are physical means.\nA pure substance is a single kind of matter.\nIt cannot be separated by physical means.\nSo the statement is false.",
      "clue": "Read the definition.",
      "level": 1,
      "id": "g7.science.u2.s2-3-1.8"
@@ -199,7 +244,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Pure water and a salt solution both look clear. What is the difference?",
+     "text": "Pure or mixture: pure water and a salt solution both look clear. What is the difference?",
      "opts": [
       "Salt solution is a mixture; salt can be separated by evaporation",
       "They are the same",
@@ -207,7 +252,7 @@
       "Salt solution is an element"
      ],
      "ans": "Salt solution is a mixture; salt can be separated by evaporation",
-     "why": "Pure water is one substance with a fixed composition. Salt water contains two substances, and the salt is left when the water evaporates.",
+     "why": "Pure water: one substance with a fixed composition.\nSalt solution: salt + water, two substances.\nLet the water evaporate and the salt is left behind.\nSo the salt solution is a mixture that can be separated by a physical method.",
      "clue": "Can you get anything out of each by a physical method?",
      "level": 3,
      "ref": "Activity 2.10 Q2",
@@ -223,14 +268,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Matter is classified by composition into …",
+   "text": "Classification by composition: matter is classified into …",
    "opts": [
     "solids and liquids",
     "pure substances and mixtures",
     "metals and gases"
    ],
    "ans": "pure substances and mixtures",
-   "why": "Those are the two classes.",
+   "why": "By chemical composition there are two classes.\nPure substances have one kind of matter; mixtures have two or more.\nSolid and liquid are states, not composition classes.\nAnswer: pure substances and mixtures.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u2.s2-3-1.10"
@@ -239,9 +284,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "A pure substance always has a definite and constant composition.",
+   "text": "True or false: a pure substance always has a definite and constant composition.",
    "a": true,
-   "why": "That is a property of pure substances.",
+   "why": "A pure substance is one kind of matter.\nPure water is always water and nothing else.\nSo its composition never changes.\nThe statement is true.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u2.s2-3-1.11"
@@ -250,14 +295,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Pure substances are classified as …",
+   "text": "Figure 2.6: pure substances are further classified as …",
    "opts": [
     "elements and compounds",
     "solutions and suspensions",
     "liquids and gases"
    ],
    "ans": "elements and compounds",
-   "why": "See Figure 2.6.",
+   "why": "Figure 2.6 splits pure substances into two groups.\nElements cannot be broken down into simpler substances.\nCompounds can be broken down into elements by chemical means.\nAnswer: elements and compounds.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u2.s2-3-1.12"
@@ -266,7 +311,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which is NOT a pure substance?",
+   "text": "Pure substance or mixture: which one is NOT a pure substance?",
    "opts": [
     "Gold",
     "Carbon dioxide",
@@ -274,7 +319,7 @@
     "Sugar"
    ],
    "ans": "Ink",
-   "why": "Ink is dyes dissolved in alcohol and water: a mixture.",
+   "why": "Gold is an element. Carbon dioxide and sugar are compounds.\nInk is dyes dissolved in alcohol and water.\nThat is several substances mixed: a mixture.\nAnswer: ink.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u2.s2-3-1.13"
@@ -283,7 +328,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which has a variable composition?",
+   "text": "Composition (Review Exercise): which one has a variable composition?",
    "opts": [
     "Water",
     "Salt",
@@ -291,7 +336,7 @@
     "Silver"
    ],
    "ans": "Milk",
-   "why": "Milk is a mixture, so its parts can vary.",
+   "why": "Pure substances have a fixed composition: water, salt, silver.\nMilk is a mixture of water, fat, protein and sugar.\nThe amounts can differ from one milk to another.\nAnswer: milk.",
    "level": 3,
    "ref": "Review Exercise II Q10",
    "clue": "",

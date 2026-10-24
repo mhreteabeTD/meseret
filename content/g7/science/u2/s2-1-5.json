@@ -67,7 +67,8 @@
      ],
      "after": "Water is a liquid. Its particles can slide past each other, so it flows.",
      "ref": "Activity 2.4",
-     "id": "g7.science.u2.s2-1-5.1"
+     "id": "g7.science.u2.s2-1-5.1",
+     "best": "Water"
     },
     {
      "kind": "read",
@@ -126,14 +127,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "In which state do particles only vibrate in a fixed place?",
+     "text": "Particles in solids: in which state do particles only vibrate in a fixed place?",
      "opts": [
       "Solid",
       "Liquid",
       "Gas"
      ],
      "ans": "Solid",
-     "why": "Solid particles are held strongly and stay in place.",
+     "why": "Solid particles are packed tightly in a fixed pattern.\nStrong forces hold each one in place.\nThey can only vibrate (shake) where they are.\nLiquid particles slide; gas particles move freely.\nAnswer: solid.",
      "clue": "Which state keeps its own shape?",
      "level": 1,
      "id": "g7.science.u2.s2-1-5.5"
@@ -180,16 +181,17 @@
        "Spreads out."
       ]
      ],
-     "why": "Use shape and flow to decide.",
+     "why": "Does it keep its own shape? Then it is a solid: stone, wood.\nDoes it flow but keep its volume? Then it is a liquid: cooking oil, ethanol.\nDoes it spread out to fill the container? Then it is a gas: oxygen, carbon dioxide.",
      "clue": "Does it keep its shape? Does it fill the whole container?",
      "level": 1,
-     "id": "g7.science.u2.s2-1-5.6"
+     "id": "g7.science.u2.s2-1-5.6",
+     "text": "Sort each substance by its state at room temperature."
     },
     {
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "In which state are particles very close together in a regular pattern?",
+     "text": "Particle arrangement: in which state are particles very close together in a regular pattern?",
      "opts": [
       "Solid",
       "Liquid",
@@ -197,7 +199,7 @@
       "All"
      ],
      "ans": "Solid",
-     "why": "Solid particles are very close in a regular pattern. Gas particles are far apart.",
+     "why": "Solid: particles very close, in a regular (orderly) pattern.\nLiquid: close, but less orderly.\nGas: very far apart and disorderly.\nOnly the solid is both very close and regular.\nAnswer: solid.",
      "clue": "Look at Figure 2.1.",
      "level": 1,
      "ref": "Exercise 2.4 II Q2",
@@ -207,7 +209,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Why can a gas fill a whole room but a liquid stays at the bottom of a cup?",
+     "text": "Particles in gases and liquids: why can a gas fill a whole room but a liquid stays at the bottom of a cup?",
      "opts": [
       "Gas particles are far apart and move freely in all directions",
       "Gas particles are heavier",
@@ -215,7 +217,7 @@
       "Gas particles are packed tightly"
      ],
      "ans": "Gas particles are far apart and move freely in all directions",
-     "why": "Gas particles have almost no attraction, so they spread everywhere. Liquid particles stay close together.",
+     "why": "Gas particles are very far apart, with almost no attraction between them.\nThey move freely in all directions, so they spread to fill the room.\nLiquid particles stay close together, held by stronger forces.\nSo the liquid stays at the bottom of the cup.\n\"Gas particles are heavier\" is wrong: gases have the lowest density.",
      "clue": "Compare the forces between particles.",
      "level": 3,
      "added": true,
@@ -245,7 +247,8 @@
      ],
      "after": "Air is a gas. Its particles are far apart, so it can be squeezed into less space.",
      "added": true,
-     "id": "g7.science.u2.s2-1-5.9"
+     "id": "g7.science.u2.s2-1-5.9",
+     "best": "It moves in: air can be squeezed"
     },
     {
      "kind": "read",
@@ -300,6 +303,55 @@
      "id": "g7.science.u2.s2-1-5.10"
     },
     {
+     "kind": "venn",
+     "step": "explore",
+     "title": "What the three states share",
+     "ref": "Table 2.1",
+     "sets": [
+      [
+       "Solid",
+       "Definite shape and volume. Not compressible. Particles vibrate in a fixed place."
+      ],
+      [
+       "Liquid",
+       "Definite volume, no definite shape. Only very slightly compressible."
+      ],
+      [
+       "Gas",
+       "No definite shape or volume. Highly compressible. Fills its container."
+      ]
+     ],
+     "overlaps": [
+      [
+       [
+        0,
+        1
+       ],
+       "Definite volume",
+       "Solids and liquids both keep their volume."
+      ],
+      [
+       [
+        1,
+        2
+       ],
+       "Fluids",
+       "Liquids and gases both flow and take the shape of their container."
+      ],
+      [
+       [
+        0,
+        1,
+        2
+       ],
+       "All three",
+       "All are matter, made of tiny moving particles."
+      ]
+     ],
+     "id": "g7.science.u2.s2-1-5.30",
+     "added": true
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -319,14 +371,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Which state of matter can be compressed easily?",
+     "text": "Compressibility: which state of matter can be compressed easily?",
      "opts": [
       "Solid",
       "Liquid",
       "Gas"
      ],
      "ans": "Gas",
-     "why": "A gas is mostly empty space, so it squeezes easily.",
+     "why": "To compress means to squeeze into a smaller volume.\nGas particles are very far apart: a gas is mostly empty space.\nPushing moves the particles closer into that space.\nSolid and liquid particles are already close.\nAnswer: gas.",
      "clue": "Which particles are far apart?",
      "level": 1,
      "ref": "Exercise 2.4 I Q8",
@@ -336,7 +388,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Which states of matter are fluids?",
+     "text": "Fluids: which states of matter are fluids?",
      "opts": [
       "Solid only",
       "Liquid only",
@@ -344,7 +396,7 @@
       "Solid and gas"
      ],
      "ans": "Liquid and gas",
-     "why": "Liquids and gases flow, so both are fluids.",
+     "why": "A fluid is a substance that can flow.\nLiquids flow: water pours.\nGases flow too: moving air is wind.\nSolids keep their shape and do not flow.\nAnswer: liquid and gas.",
      "clue": "Which ones can flow?",
      "level": 1,
      "ref": "Exercise 2.4 II Q1",
@@ -368,18 +420,19 @@
        "No definite shape or volume, fills the container"
       ]
      ],
-     "why": "These are the shape and volume rows of Table 2.1.",
+     "why": "Solid: particles fixed in place, so definite shape and definite volume.\nLiquid: particles slide but stay close, so definite volume but the shape of the container.\nGas: particles far apart and free, so no definite shape or volume; it fills the container.",
      "clue": "Which one keeps its own shape?",
      "level": 1,
-     "id": "g7.science.u2.s2-1-5.14"
+     "id": "g7.science.u2.s2-1-5.14",
+     "text": "Match each state to its shape and volume."
     },
     {
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "Liquids and solids both have a definite volume.",
+     "text": "True or false: liquids and solids both have a definite volume.",
      "a": true,
-     "why": "Table 2.1: both have a definite volume.",
+     "why": "A solid keeps its own volume.\n1 litre of water poured into another bottle is still 1 litre.\nSo a liquid keeps its volume too; only its shape changes.\nThe statement is true.",
      "clue": "Does 1 litre of water stay 1 litre in a new bottle?",
      "level": 2,
      "ref": "Exercise 2.4 I Q5",
@@ -389,7 +442,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "A 1-litre bottle of water is poured into a 2-litre jug. What is true?",
+     "text": "Shape and volume of a liquid: a 1-litre bottle of water is poured into a 2-litre jug. What is true?",
      "opts": [
       "The water now has a volume of 2 litres",
       "The water keeps 1 litre but takes the jug's shape",
@@ -397,7 +450,7 @@
       "The water becomes a gas"
      ],
      "ans": "The water keeps 1 litre but takes the jug's shape",
-     "why": "A liquid has a definite volume but no definite shape. Only a gas would spread to fill the whole jug.",
+     "why": "A liquid has a definite volume: the water stays 1 litre.\nA liquid has no definite shape: it takes the shape of the jug.\nIt does not spread to fill 2 litres; only a gas would.\nAnswer: the water keeps 1 litre but takes the jug's shape.",
      "clue": "Which properties does a liquid keep?",
      "level": 3,
      "added": true,
@@ -414,7 +467,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "What are the three states of matter?",
+     "text": "Exercise 2.4: what are the three states of matter?",
      "opts": [
       "Solid, liquid and gas",
       "Ice, water and steam only",
@@ -422,7 +475,7 @@
       "Mass, volume and shape"
      ],
      "ans": "Solid, liquid and gas",
-     "why": "Matter exists as solids, liquids and gases.",
+     "why": "Matter exists in three states.\nIce, water and steam are one example: solid, liquid and gas.\n\"Ice, water and steam only\" is too narrow: those are the states of one substance.\nAnswer: solid, liquid and gas.",
      "clue": "Think of ice, water and steam.",
      "level": 1,
      "ref": "I Q1",
@@ -432,7 +485,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Which is a property of solids?",
+     "text": "Exercise 2.4: which is a property of solids?",
      "opts": [
       "They flow",
       "They have a definite shape and volume",
@@ -440,7 +493,7 @@
       "They are easily compressed"
      ],
      "ans": "They have a definite shape and volume",
-     "why": "Solid particles are fixed in place.",
+     "why": "Solid particles are fixed in place.\nSo a solid keeps its own shape and its own volume.\nIt does not flow and is not easily compressed.\nAnswer: they have a definite shape and volume.",
      "clue": "Does a stone change shape in a cup?",
      "level": 1,
      "ref": "I Q2",
@@ -450,7 +503,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Name a property of liquids that solids do not share.",
+     "text": "Exercise 2.4: name a property of liquids that solids do not share.",
      "opts": [
       "Liquids can flow and take the shape of their container",
       "Liquids have a definite volume",
@@ -458,7 +511,7 @@
       "Liquids have mass"
      ],
      "ans": "Liquids can flow and take the shape of their container",
-     "why": "Solids do not flow and keep their shape.",
+     "why": "Liquid particles slide past each other.\nSo a liquid flows and takes the shape of its container.\nSolid particles are fixed, so a solid keeps its shape.\nVolume, mass and particles are shared by both, so those options are wrong.",
      "clue": "What can water do that a stone cannot?",
      "level": 1,
      "ref": "I Q3",
@@ -468,7 +521,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Name a property of gases that liquids do not share.",
+     "text": "Exercise 2.4: name a property of gases that liquids do not share.",
      "opts": [
       "Gases have no definite volume and fill the container",
       "Gases can flow",
@@ -476,7 +529,7 @@
       "Gases have particles"
      ],
      "ans": "Gases have no definite volume and fill the container",
-     "why": "Liquids keep their volume; gases spread out.",
+     "why": "Liquids and gases can both flow.\nA liquid keeps its volume; a gas does not.\nGas particles spread out to fill any container.\nAnswer: gases have no definite volume and fill the container.",
      "clue": "Both flow. What else differs?",
      "level": 1,
      "ref": "I Q4",
@@ -486,7 +539,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Give a characteristic that is the same for gases and liquids.",
+     "text": "Exercise 2.4: give a characteristic that is the same for gases and liquids.",
      "opts": [
       "Both can flow",
       "Both have a definite shape",
@@ -494,7 +547,7 @@
       "Both have a definite volume"
      ],
      "ans": "Both can flow",
-     "why": "Both are fluids with no definite shape.",
+     "why": "Liquids and gases are both fluids.\nThat means both can flow, and neither has a definite shape.\nOnly a liquid has a definite volume; only a gas is easily compressed.\nAnswer: both can flow.",
      "clue": "Think of the word \"fluid\".",
      "level": 1,
      "ref": "I Q6",
@@ -504,14 +557,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Which state of matter cannot be poured?",
+     "text": "Exercise 2.4: which state of matter cannot be poured?",
      "opts": [
       "Solid",
       "Liquid",
       "Gas"
      ],
      "ans": "Solid",
-     "why": "Solid particles do not flow.",
+     "why": "Pouring needs a substance that flows.\nLiquids and gases are fluids: they flow.\nSolid particles are fixed in place, so a solid keeps its shape.\nAnswer: solid.",
      "clue": "Which one keeps its own shape?",
      "level": 1,
      "ref": "I Q7",
@@ -521,7 +574,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Which state of matter is fluid?",
+     "text": "Exercise 2.4: which state of matter is fluid? (A solid, B liquid, C gas)",
      "opts": [
       "Solid",
       "Liquid",
@@ -529,7 +582,7 @@
       "B and C"
      ],
      "ans": "B and C",
-     "why": "Liquids and gases both flow.",
+     "why": "A fluid can flow.\nLiquid (B) flows and gas (C) flows.\nSolid (A) keeps its shape.\nSo the answer is B and C: liquid and gas.",
      "clue": "Fluids can flow.",
      "level": 1,
      "ref": "II Q1",
@@ -539,7 +592,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "In which state of matter are particles close together?",
+     "text": "Exercise 2.4: in which state of matter are particles close together?",
      "opts": [
       "Solid",
       "Liquid",
@@ -547,7 +600,7 @@
       "All"
      ],
      "ans": "Solid",
-     "why": "Solid particles are very close in a regular pattern.",
+     "why": "Solid particles are very close, in a regular pattern.\nLiquid particles are also fairly close, but less orderly.\nGas particles are far apart.\nThe book's answer is solid: its particles are the closest.",
      "clue": "Look at Figure 2.1.",
      "level": 1,
      "ref": "II Q2",
@@ -561,14 +614,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which state has a definite shape and a definite volume?",
+   "text": "Shape and volume: which state has a definite shape and a definite volume?",
    "opts": [
     "Solid",
     "Liquid",
     "Gas"
    ],
    "ans": "Solid",
-   "why": "Solids keep both their shape and volume.",
+   "why": "Solid particles are fixed in place.\nSo a solid keeps its shape and its volume.\nA liquid keeps only its volume; a gas keeps neither.\nAnswer: solid.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u2.s2-1-5.25"
@@ -577,9 +630,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "A gas has neither a definite volume nor a definite shape.",
+   "text": "True or false: a gas has neither a definite volume nor a definite shape.",
    "a": true,
-   "why": "A gas fills its container.",
+   "why": "Gas particles are far apart and move freely.\nThey spread out to fill any container.\nSo a gas takes the shape and volume of its container.\nThe statement is true.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u2.s2-1-5.26"
@@ -588,7 +641,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Why are gases easy to compress?",
+   "text": "Compressibility: why are gases easy to compress?",
    "opts": [
     "Their particles are far apart",
     "Their particles are tightly packed",
@@ -596,7 +649,7 @@
     "They are heavy"
    ],
    "ans": "Their particles are far apart",
-   "why": "A gas is mostly empty space.",
+   "why": "A gas is mostly empty space.\nIts particles are far apart.\nSqueezing pushes them closer together.\nAnswer: their particles are far apart.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u2.s2-1-5.27"
@@ -605,14 +658,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which two states are fluids?",
+   "text": "Fluids: which two states are fluids?",
    "opts": [
     "Solid and liquid",
     "Liquid and gas",
     "Solid and gas"
    ],
    "ans": "Liquid and gas",
-   "why": "Both can flow.",
+   "why": "A fluid is a substance that can flow.\nLiquids pour and gases spread: both flow.\nSolids keep their shape.\nAnswer: liquid and gas.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u2.s2-1-5.28"
@@ -621,7 +674,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Going from solid to liquid to gas, which decreases?",
+   "text": "Solid → liquid → gas: which of these decreases?",
    "opts": [
     "Distance between particles",
     "Speed of particles",
@@ -629,7 +682,7 @@
     "Energy of particles"
    ],
    "ans": "Order among particles",
-   "why": "Solid particles are orderly, liquids less, gases disorderly. The other three increase.",
+   "why": "Distance between particles increases: close → far.\nSpeed and energy of the particles increase.\nOrder goes orderly → less orderly → disorderly.\nSo order among particles is the one that decreases.",
    "level": 3,
    "clue": "",
    "id": "g7.science.u2.s2-1-5.29"

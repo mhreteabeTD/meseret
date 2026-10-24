@@ -55,7 +55,8 @@
      ],
      "after": "You cannot see flammability. You find it only when the substance changes (or does not). That is a chemical property.",
      "added": true,
-     "id": "g7.science.u2.s2-2-2.1"
+     "id": "g7.science.u2.s2-2-2.1",
+     "best": "No, you must try to change them"
     },
     {
      "kind": "read",
@@ -99,6 +100,31 @@
      "id": "g7.science.u2.s2-2-2.3"
     },
     {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Chemical properties you can test",
+     "ask": "Tap each one. How do we find it?",
+     "need": 3,
+     "items": [
+      [
+       "Flammability",
+       "How easily a substance burns. Paper and plastic burn; a stone does not. Burning forms new substances.",
+       "flammable"
+      ],
+      [
+       "Reactivity",
+       "How a substance reacts with others. Iron rusts in moist air. Nickel dissolves in acid.",
+       "test-tube"
+      ],
+      [
+       "Resisting change",
+       "Silver shows no reaction in hydrochloric acid. Resisting change is also a chemical property."
+      ]
+     ],
+     "id": "g7.science.u2.s2-2-2.18",
+     "added": true
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -122,7 +148,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Which is a chemical property?",
+     "text": "Chemical property: which one is a chemical property?",
      "opts": [
       "Copper is reddish brown",
       "Plastic is flammable",
@@ -130,7 +156,7 @@
       "Potassium melts at 63 °C"
      ],
      "ans": "Plastic is flammable",
-     "why": "Flammability describes forming new substances by burning.",
+     "why": "Colour, density and melting point are found without change: physical.\nFlammability is about burning.\nBurning forms new substances such as ash, smoke and gases.\nSo \"plastic is flammable\" is the chemical property.",
      "clue": "Which one is about forming something new?",
      "level": 1,
      "ref": "Exercise 2.5 Q1 j",
@@ -176,19 +202,20 @@
        "Resists change."
       ]
      ],
-     "why": "Chemical: how it reacts or resists reacting. Physical: observed without change.",
+     "why": "Ask: does it describe forming a new substance, or resisting that?\nRusting and nickel dissolving in acid form new substances: chemical.\nSilver not reacting with acid is resisting change: also chemical.\nState, colour and density are seen without change: physical.",
      "clue": "Does a new substance form, or could it?",
      "level": 2,
      "ref": "Exercise 2.5 Q1",
-     "id": "g7.science.u2.s2-2-2.6"
+     "id": "g7.science.u2.s2-2-2.6",
+     "text": "Sort each statement: physical property or chemical property?"
     },
     {
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "A chemical property can be found just by looking at a substance.",
+     "text": "True or false: a chemical property can be found just by looking at a substance.",
      "a": false,
-     "why": "The substance must be changed (or tried) to see its chemical property.",
+     "why": "Looking shows physical properties, like colour.\nTo find a chemical property you must try to change the substance.\nFor flammability you must try to burn it.\nSo the statement is false.",
      "clue": "Can you see flammability?",
      "level": 1,
      "id": "g7.science.u2.s2-2-2.7"
@@ -205,7 +232,7 @@
       "Nothing happening is always physical"
      ],
      "ans": "It describes how silver resists change",
-     "why": "A chemical property describes how a substance undergoes OR resists change. Silver's low reactivity is a chemical property.",
+     "why": "The definition: how a substance undergoes OR resists change.\nSilver is tested with acid, and it resists change.\nThis low reactivity is a chemical property.\n\"Nothing happening is always physical\" is the trap: here it is the result of a chemical test.",
      "clue": "Read the definition carefully: \"undergoes or resists\".",
      "level": 3,
      "ref": "Exercise 2.5 Q1 h",
@@ -255,11 +282,12 @@
        "Colour."
       ]
      ],
-     "why": "Rusting and reacting with acid form new substances.",
+     "why": "a. Rusting forms rust, a new substance: chemical.\nb. Being liquid is a state: physical.\nc. Dissolving in acid to give a green solution is a reaction: chemical.\nd. A melting point and e. a colour are found without change: physical.",
      "clue": "Does a new substance form?",
      "level": 1,
      "ref": "Q1 a–e",
-     "id": "g7.science.u2.s2-2-2.9"
+     "id": "g7.science.u2.s2-2-2.9",
+     "text": "Exercise 2.5 Q1: sort each statement (a–e) as a physical or a chemical property."
     },
     {
      "kind": "sort",
@@ -297,11 +325,12 @@
        "Burning."
       ]
      ],
-     "why": "Chemical properties describe reacting or resisting reaction.",
+     "why": "f. Being drawn into wires changes only the shape: physical.\ng. Beryllium dust reacts with body tissue: chemical.\nh. Silver resisting acid is about reactivity: chemical.\ni. Density is physical. j. Flammability is chemical.",
      "clue": "Does it describe a reaction?",
      "level": 2,
      "ref": "Q1 f–j",
-     "id": "g7.science.u2.s2-2-2.10"
+     "id": "g7.science.u2.s2-2-2.10",
+     "text": "Exercise 2.5 Q1: sort each statement (f–j) as a physical or a chemical property."
     },
     {
      "kind": "sort",
@@ -349,11 +378,12 @@
        ""
       ]
      ],
-     "why": "Extensive properties depend on the amount; intensive ones do not.",
+     "why": "Imagine twice as much sample.\nLength, mass and volume double: extensive.\nBoiling point, colour, density and melting point stay the same: intensive.",
      "clue": "Imagine twice as much.",
      "level": 1,
      "ref": "Q2",
-     "id": "g7.science.u2.s2-2-2.11"
+     "id": "g7.science.u2.s2-2-2.11",
+     "text": "Exercise 2.5 Q2: sort each property as intensive or extensive."
     },
     {
      "kind": "sort",
@@ -396,11 +426,12 @@
        ""
       ]
      ],
-     "why": "Colour, odour and taste are sensed; the rest need apparatus.",
+     "why": "Odour, taste and colour are sensed by the nose, tongue and eyes.\nDensity needs a balance and a cylinder; melting point needs a thermometer.\nConductivity needs a circuit.\nSo density, melting point and conductivity are measurable.",
      "clue": "Do you need a tool?",
      "level": 1,
      "ref": "Q3",
-     "id": "g7.science.u2.s2-2-2.12"
+     "id": "g7.science.u2.s2-2-2.12",
+     "text": "Exercise 2.5 Q3: sort each property: detected by sense organs, or measurable?"
     }
    ]
   }
@@ -410,7 +441,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which is a chemical property?",
+   "text": "Chemical property: which one of these is a chemical property?",
    "opts": [
     "Colour",
     "Density",
@@ -418,7 +449,7 @@
     "Boiling point"
    ],
    "ans": "Flammability",
-   "why": "Flammability describes burning to form new substances.",
+   "why": "Colour, density and boiling point are found without changing the substance: physical.\nFlammability is found by trying to burn it.\nBurning forms new substances.\nAnswer: flammability.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u2.s2-2-2.13"
@@ -427,9 +458,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "Reactivity between two substances is a chemical property.",
+   "text": "True or false: reactivity between two substances is a chemical property.",
    "a": true,
-   "why": "The book names reactivity as a chemical property.",
+   "why": "Reactivity tells how a substance reacts with others.\nReacting forms new substances.\nThe book names reactivity as a chemical property.\nSo the statement is true.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u2.s2-2-2.14"
@@ -438,14 +469,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "\"Iron metal rusts in moist air\" describes a …",
+   "text": "Physical or chemical: \"Iron metal rusts in moist air\" describes a …",
    "opts": [
     "physical property",
     "chemical property",
     "state of matter"
    ],
    "ans": "chemical property",
-   "why": "Rust is a new substance.",
+   "why": "Iron rusting forms rust, a new substance.\nA property about changing into a new substance is chemical.\nAnswer: chemical property.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u2.s2-2-2.15"
@@ -454,7 +485,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which statement is true of chemical properties?",
+   "text": "Chemical properties: which statement is true of chemical properties?",
    "opts": [
     "They are easily seen by looking",
     "They describe how a substance forms new substances",
@@ -462,7 +493,7 @@
     "They are the same as colour"
    ],
    "ans": "They describe how a substance forms new substances",
-   "why": "See Table 2.2.",
+   "why": "Table 2.2: chemical properties describe how a substance changes to form new ones.\nThey cannot be seen just by looking, so the first option is wrong.\nColour is a physical property.\nAnswer: they describe how a substance forms new substances.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u2.s2-2-2.16"
@@ -497,9 +528,11 @@
      ""
     ]
    ],
-   "why": "Burning and reacting are chemical; colour and magnetism are physical.",
+   "why": "Charcoal burning forms ash and gases: chemical.\nMagnesium reacting with acid forms new substances: chemical.\nGold's yellow colour is seen without change: physical.\nBeing pulled by a magnet does not change iron: physical.",
    "level": 3,
-   "id": "g7.science.u2.s2-2-2.17"
+   "id": "g7.science.u2.s2-2-2.17",
+   "text": "Sort each statement: physical or chemical property?",
+   "clue": ""
   }
  ],
  "notes": [

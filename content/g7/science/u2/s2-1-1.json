@@ -56,7 +56,8 @@
      ],
      "after": "Sound is energy. It has no mass and takes no space. Air, soil and water are all matter.",
      "ref": "Activity 2.1 Q2",
-     "id": "g7.science.u2.s2-1-1.1"
+     "id": "g7.science.u2.s2-1-1.1",
+     "best": "Sound"
     },
     {
      "kind": "read",
@@ -93,6 +94,52 @@
       "So heat, light and sound are not matter."
      ],
      "id": "g7.science.u2.s2-1-1.4"
+    },
+    {
+     "kind": "tree",
+     "step": "explore",
+     "title": "Things around us",
+     "root": {
+      "label": "Things around us",
+      "info": "Tap a box. Is it matter or energy?",
+      "children": [
+       {
+        "label": "Matter",
+        "info": "Has mass and occupies space.",
+        "children": [
+         {
+          "label": "Living things",
+          "pic": "biology",
+          "info": "Plants, animals and bacteria. Bacteria are too small to see, but they are matter."
+         },
+         {
+          "label": "Nonliving things",
+          "info": "Water, soil, rocks, a table, this book. Air too: we cannot see it, but it is matter."
+         }
+        ]
+       },
+       {
+        "label": "Energy (not matter)",
+        "info": "Known only by its effect. It cannot be seen, touched, smelt or weighed.",
+        "children": [
+         {
+          "label": "Heat",
+          "info": "Makes things warm. It has no mass."
+         },
+         {
+          "label": "Light",
+          "info": "Lets us see. It takes up no space."
+         },
+         {
+          "label": "Sound",
+          "info": "We hear it. It cannot be weighed."
+         }
+        ]
+       }
+      ]
+     },
+     "id": "g7.science.u2.s2-1-1.19",
+     "added": true
     },
     {
      "kind": "tap",
@@ -148,7 +195,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "What is matter?",
+     "text": "Definition check: what is matter?",
      "opts": [
       "Anything we can see",
       "Anything that has mass and occupies space",
@@ -156,7 +203,7 @@
       "Only living things"
      ],
      "ans": "Anything that has mass and occupies space",
-     "why": "That is the definition. Air is matter even though we cannot see it.",
+     "why": "Matter is anything that has mass and occupies space.\nAir is matter: we cannot see it, but it fills a balloon.\n\"Anything we can see\" is wrong: air and bacteria are invisible matter.\nSo matter is anything that has mass and occupies space.",
      "clue": "Think of air: we cannot see it, but it fills a balloon.",
      "level": 1,
      "id": "g7.science.u2.s2-1-1.7"
@@ -201,19 +248,21 @@
        "It cannot be weighed."
       ]
      ],
-     "why": "Matter has mass and takes space. Heat, light and sound are energy.",
+     "why": "Ask two questions: does it have mass? Does it take up space?\nSoil, a plant and water: yes to both, so they are matter.\nLight, sound and heat: no mass and no space.\nWe know them only by their effect, so they are energy.",
      "clue": "Can you weigh it or put it in a box?",
      "level": 1,
      "ref": "Activity 2.1 Q2",
-     "id": "g7.science.u2.s2-1-1.8"
+     "id": "g7.science.u2.s2-1-1.8",
+     "title": "Matter or energy?",
+     "text": "Sort each thing: is it matter or energy?"
     },
     {
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "Air is not matter because we cannot see it.",
+     "text": "True or false: air is not matter because we cannot see it.",
      "a": false,
-     "why": "Air has mass and occupies space. It fills a balloon. So it is matter.",
+     "why": "Matter is anything with mass that takes up space.\nAir fills a balloon, so it takes up space.\nA ball pumped full of air is a little heavier, so air has mass.\nSeeing it does not matter. The statement is false: air is matter.",
      "clue": "Does air fill a balloon?",
      "level": 2,
      "id": "g7.science.u2.s2-1-1.9"
@@ -222,11 +271,11 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "Heat, light and sound are forms of ___, not matter.",
+     "ask": "Matter or energy? Heat, light and sound are forms of ___, not matter.",
      "a": [
       "energy"
      ],
-     "why": "They are energy. Energy is known by its effect.",
+     "why": "Heat, light and sound cannot be weighed or held.\nWe know them only by their effects: warmth, brightness, noise.\nThings known only by their effect are forms of energy.\nAnswer: energy.",
      "clue": "What makes things warm or bright?",
      "level": 1,
      "id": "g7.science.u2.s2-1-1.10"
@@ -235,7 +284,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Hana weighs a flat football. She pumps it full of air and weighs it again. What happens?",
+     "text": "Matter has mass. Hana weighs a flat football. She pumps it full of air and weighs it again. What happens?",
      "opts": [
       "It is lighter",
       "It is a little heavier",
@@ -243,7 +292,7 @@
       "It has no mass"
      ],
      "ans": "It is a little heavier",
-     "why": "The air pumped in is matter. Matter has mass, so the ball gets slightly heavier.",
+     "why": "Step 1: air is matter.\nStep 2: all matter has mass.\nStep 3: pumping puts more air into the ball.\nSo the ball gets a little heavier.\n\"Nothing changes\" is tempting because air is light, but it still has some mass.",
      "clue": "Is the air inside the ball matter?",
      "level": 3,
      "added": true,
@@ -307,11 +356,12 @@
        "Tiny living things."
       ]
      ],
-     "why": "Sound, light and heat are energy. All the others are matter.",
+     "why": "Matter has mass and takes up space; energy does not.\nAir, pizza, gold, a virus and bacteria all have mass, so they are matter.\nSound, light and heat are known only by their effects.\nSo sound, light and heat are energy.",
      "clue": "Can it be weighed?",
      "level": 1,
      "ref": "Q1 a–h",
-     "id": "g7.science.u2.s2-1-1.12"
+     "id": "g7.science.u2.s2-1-1.12",
+     "text": "Sort each item: matter or energy?"
     },
     {
      "kind": "sort",
@@ -344,11 +394,12 @@
        "A metal."
       ]
      ],
-     "why": "All four have mass and take up space.",
+     "why": "Silver and magnesium are metals: they have mass.\nCake and water have mass and fill space too.\nNone of them is heat, light or sound.\nSo all four are matter.",
      "clue": "Can it be weighed?",
      "level": 1,
      "ref": "Q1 i–l",
-     "id": "g7.science.u2.s2-1-1.13"
+     "id": "g7.science.u2.s2-1-1.13",
+     "text": "Sort each item: matter or energy?"
     }
    ]
   }
@@ -358,7 +409,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which one is matter?",
+   "text": "Matter or energy: which one of these is matter?",
    "opts": [
     "Sound",
     "Light",
@@ -366,7 +417,7 @@
     "Heat"
    ],
    "ans": "Stone",
-   "why": "A stone has mass and takes up space.",
+   "why": "Matter has mass and takes up space.\nSound, light and heat are energy: they cannot be weighed.\nA stone can be weighed and it fills space.\nSo the stone is matter.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u2.s2-1-1.14"
@@ -375,9 +426,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "Matter is anything that has mass and occupies space.",
+   "text": "True or false: matter is anything that has mass and occupies space.",
    "a": true,
-   "why": "That is the definition of matter.",
+   "why": "This is the book's definition of matter.\nIt has two parts: having mass, and taking up space.\nAir, water, rocks and living things all fit both parts.\nSo the statement is true.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u2.s2-1-1.15"
@@ -386,7 +437,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Why is light not matter?",
+   "text": "Matter or energy: why is light not matter?",
    "opts": [
     "It is too fast",
     "It has no mass and takes no space",
@@ -394,7 +445,7 @@
     "It is hot"
    ],
    "ans": "It has no mass and takes no space",
-   "why": "Light is energy, known only by its effect.",
+   "why": "Matter must have mass and occupy space.\nLight cannot be weighed and fills no space.\nWe know light only by its effect: it lets us see.\nSo light is energy, not matter.\n\"It is invisible\" is wrong: air is invisible but is matter.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u2.s2-1-1.16"
@@ -403,11 +454,11 @@
    "kind": "blank",
    "step": "test",
    "graded": true,
-   "ask": "The amount of matter in a sample is its ___.",
+   "ask": "Key word: the amount of matter in a sample is its ___.",
    "a": [
     "mass"
    ],
-   "why": "Mass is the amount of matter in a sample.",
+   "why": "The book defines mass as the amount of matter in a sample.\nMore matter means more mass.\nAnswer: mass.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u2.s2-1-1.17"
@@ -416,7 +467,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which list has ONLY matter?",
+   "text": "Which list contains ONLY matter (no energy)?",
    "opts": [
     "Air, bacteria, water",
     "Air, heat, water",
@@ -424,7 +475,7 @@
     "Light, rock, table"
    ],
    "ans": "Air, bacteria, water",
-   "why": "Air and bacteria cannot be seen, but they have mass. The other lists include energy.",
+   "why": "Check each list for heat, light or sound.\nList 2 has heat. List 3 has sound. List 4 has light.\nList 1: air, bacteria and water all have mass.\nSo \"Air, bacteria, water\" is the only list of matter.",
    "level": 3,
    "clue": "",
    "id": "g7.science.u2.s2-1-1.18"

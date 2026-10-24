@@ -53,7 +53,8 @@
      ],
      "after": "Students near the bottle smell it first. The perfume particles spread out slowly to the rest of the room.",
      "ref": "Experiment 2.1",
-     "id": "g7.science.u2.s2-1-4.1"
+     "id": "g7.science.u2.s2-1-4.1",
+     "best": "Students near the bottle"
     },
     {
      "kind": "read",
@@ -126,6 +127,35 @@
      "id": "g7.science.u2.s2-1-4.6"
     },
     {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Diffusion around us",
+     "ask": "Tap each one. What spreads, and where to?",
+     "need": 3,
+     "items": [
+      [
+       "Tea bag in hot water",
+       "Tea particles leave the bag and colour all the water.",
+       "beaker"
+      ],
+      [
+       "Perfume",
+       "Perfume particles spread from one part of the room to the rest."
+      ],
+      [
+       "Food colouring",
+       "One drop colours a whole glass of water.",
+       "dropper"
+      ],
+      [
+       "Open soda bottle",
+       "Carbon dioxide spreads out into the air. The soda goes flat."
+      ]
+     ],
+     "id": "g7.science.u2.s2-1-4.22",
+     "added": true
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -145,7 +175,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "In diffusion, particles move from …",
+     "text": "Diffusion: in diffusion, particles move from …",
      "opts": [
       "low to high concentration",
       "high to low concentration",
@@ -153,7 +183,7 @@
       "cold to dark places"
      ],
      "ans": "high to low concentration",
-     "why": "Particles spread from where they are crowded to where they are few.",
+     "why": "At first the perfume particles are crowded near the bottle: high concentration.\nFar away there are few: low concentration.\nMoving particles spread from crowded places to less crowded places.\nSo diffusion goes from high to low concentration.",
      "clue": "Where are the perfume particles crowded at first?",
      "level": 1,
      "id": "g7.science.u2.s2-1-4.8"
@@ -168,19 +198,20 @@
       "Liquid",
       "Gas"
      ],
-     "why": "Diffusion: solids (very, very slow) < liquids (slower) < gases (very fast).",
+     "why": "Solid particles hardly move: diffusion is very, very slow.\nLiquid particles slide past each other: slower than in a gas.\nGas particles move fast in all directions: very fast.\nSo the order is solid → liquid → gas.",
      "clue": "Which state has the fastest particles?",
      "level": 1,
      "ref": "Exercise 2.3 Q2",
-     "id": "g7.science.u2.s2-1-4.9"
+     "id": "g7.science.u2.s2-1-4.9",
+     "text": "Put the states in increasing order of the rate of diffusion (slowest first)."
     },
     {
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "A tea bag in hot water colouring the water is an example of diffusion.",
+     "text": "True or false: a tea bag in hot water colouring the water is an example of diffusion.",
      "a": true,
-     "why": "The tea particles spread through the water.",
+     "why": "Tea particles start crowded inside the bag.\nThey move out into the water, where there are few.\nSpreading out because particles move is diffusion.\nSo the statement is true.",
      "clue": "Do the tea particles spread out?",
      "level": 1,
      "id": "g7.science.u2.s2-1-4.10"
@@ -189,7 +220,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "An open bottle of soda goes flat. Why?",
+     "text": "Diffusion in daily life: an open bottle of soda goes flat. Why?",
      "opts": [
       "Carbon dioxide diffuses out into the air",
       "The soda freezes",
@@ -197,7 +228,7 @@
       "The bottle gets bigger"
      ],
      "ans": "Carbon dioxide diffuses out into the air",
-     "why": "The drink has more carbon dioxide than the air. So the gas spreads out into the air.",
+     "why": "The soda holds a lot of carbon dioxide gas: high concentration.\nThe air has little carbon dioxide: low concentration.\nThe gas particles spread from the drink into the air.\nSo the soda goes flat: carbon dioxide diffuses out.",
      "clue": "Where is the gas more crowded: in the drink or in the air?",
      "level": 2,
      "id": "g7.science.u2.s2-1-4.11"
@@ -206,7 +237,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Almaz puts one drop of ink in cold water and one in hot water. Which colours the water first, and why?",
+     "text": "Diffusion and heat: Almaz puts one drop of ink in cold water and one in hot water. Which colours the water first, and why?",
      "opts": [
       "Cold water: particles are slower",
       "Hot water: particles move faster",
@@ -214,7 +245,7 @@
       "Neither: ink cannot diffuse in water"
      ],
      "ans": "Hot water: particles move faster",
-     "why": "Heat makes particles move faster, so diffusion is quicker in hot water.",
+     "why": "Step 1: hot water particles have more energy.\nStep 2: they move faster and push the ink particles around more.\nStep 3: faster motion means faster spreading.\nSo the hot water is coloured first.",
      "clue": "Which postulate is about heat and speed?",
      "level": 3,
      "added": true,
@@ -241,14 +272,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "What happens to particles when matter is heated?",
+     "text": "Particle model: what happens to particles when matter is heated?",
      "opts": [
       "They stop",
       "They move faster",
       "They disappear"
      ],
      "ans": "They move faster",
-     "why": "Heat gives particles more energy.",
+     "why": "Heat is a form of energy.\nParticles that gain energy move faster.\nSo heated particles move faster.",
      "clue": "Think of hot and cold water.",
      "level": 1
     }
@@ -263,12 +294,12 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "You smell deodorant in the classroom after someone sprays it in the hallway. The ___ moves from high concentration to low concentration.",
+     "ask": "Exercise 2.3, word box: you smell deodorant in the classroom after someone sprays it in the hallway. The ___ moves from high concentration to low concentration.",
      "a": [
       "scent",
       "smell"
      ],
-     "why": "The scent particles spread out.",
+     "why": "The deodorant was sprayed in the hallway.\nWhat travels to your nose is its scent (smell) particles.\nAnswer: scent.",
      "clue": "Word box: diffusion, low, scent, high.",
      "level": 1,
      "ref": "Q1",
@@ -278,14 +309,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "The scent moves from ___ concentration in the hallway to ___ concentration in the classroom.",
+     "text": "Exercise 2.3: the scent moves from ___ concentration in the hallway to ___ concentration in the classroom.",
      "opts": [
       "high … low",
       "low … high",
       "low … low"
      ],
      "ans": "high … low",
-     "why": "It was sprayed in the hallway, so it is crowded there.",
+     "why": "It was sprayed in the hallway, so its particles are crowded there: high.\nThe classroom has few at first: low.\nDiffusion goes from high to low.\nAnswer: high … low.",
      "clue": "Where was it sprayed?",
      "level": 1,
      "ref": "Q1",
@@ -295,11 +326,11 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "This is an example of ___.",
+     "ask": "Exercise 2.3: the scent spreading from the hallway into the classroom is an example of ___.",
      "a": [
       "diffusion"
      ],
-     "why": "Spreading out because particles move is diffusion.",
+     "why": "The scent particles move and spread out.\nSpreading from high to low concentration is diffusion.\nAnswer: diffusion.",
      "clue": "Word box.",
      "level": 1,
      "ref": "Q1",
@@ -315,11 +346,12 @@
       "Liquids",
       "Gases"
      ],
-     "why": "solids < liquids < gases",
+     "why": "Solids: particles hardly move, so diffusion is very, very slow.\nLiquids: particles slide past each other, so diffusion is slower.\nGases: particles move fast in all directions, so diffusion is very fast.\nSo: solids < liquids < gases.",
      "clue": "Slowest first.",
      "level": 1,
      "ref": "Q2",
-     "id": "g7.science.u2.s2-1-4.16"
+     "id": "g7.science.u2.s2-1-4.16",
+     "text": "Arrange solids, liquids and gases in increasing order of the rate of diffusion (slowest first)."
     }
    ]
   }
@@ -329,11 +361,11 @@
    "kind": "blank",
    "step": "test",
    "graded": true,
-   "ask": "The spreading out of a substance because its particles move is called ___.",
+   "ask": "Key word: the spreading out of a substance because its particles move is called ___.",
    "a": [
     "diffusion"
    ],
-   "why": "That is diffusion.",
+   "why": "Particles of a substance are always moving.\nSo they mix and spread out from high to low concentration.\nThis process is called diffusion.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u2.s2-1-4.17"
@@ -342,14 +374,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "In which state is diffusion fastest?",
+   "text": "Rate of diffusion: in which state is diffusion fastest?",
    "opts": [
     "Solid",
     "Liquid",
     "Gas"
    ],
    "ans": "Gas",
-   "why": "Gas particles move very quickly in all directions.",
+   "why": "Gas particles are far apart and move fast in all directions.\nLiquid particles move slower; solid particles hardly move.\nSo diffusion is fastest in a gas.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u2.s2-1-4.18"
@@ -358,9 +390,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "Diffusion in solids is very, very slow.",
+   "text": "True or false: diffusion in solids is very, very slow.",
    "a": true,
-   "why": "Solid particles can hardly move.",
+   "why": "Solid particles are packed tightly.\nThey only vibrate in place and hardly move.\nSo other particles can barely spread through a solid.\nThe statement is true.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u2.s2-1-4.19"
@@ -369,7 +401,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which is NOT an example of diffusion?",
+   "text": "Diffusion: which of these is NOT an example of diffusion?",
    "opts": [
     "Smell of food spreading",
     "Ink colouring water",
@@ -377,7 +409,7 @@
     "Tea colouring hot water"
    ],
    "ans": "Water freezing to ice",
-   "why": "Freezing is a change of state, not spreading out.",
+   "why": "Diffusion: particles spread out from high to low concentration.\nFood smell, ink in water and tea in hot water all spread out.\nWater freezing to ice is a change of state: nothing spreads out.\nSo water freezing is not diffusion.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u2.s2-1-4.20"
@@ -386,7 +418,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Why does the smell of cooking wat reach the next room faster than ink spreads in a cup of water?",
+   "text": "Diffusion in gases and liquids: why does the smell of cooking wat reach the next room faster than ink spreads in a cup of water?",
    "opts": [
     "Gas particles move faster than liquid particles",
     "Water has no particles",
@@ -394,7 +426,7 @@
     "Smells are solids"
    ],
    "ans": "Gas particles move faster than liquid particles",
-   "why": "The smell travels as a gas; diffusion in gases is faster than in liquids.",
+   "why": "The smell of wat reaches us as a gas.\nThe ink spreads in a liquid.\nGas particles move faster than liquid particles.\nSo diffusion in the air is faster than in the water.",
    "level": 3,
    "clue": "",
    "id": "g7.science.u2.s2-1-4.21"
