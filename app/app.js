@@ -63,7 +63,8 @@ function setNav(on) {
   navin.innerHTML = items.map(([r, k, d]) => `<a href="#${r}" class="${cur === r ? 'on' : ''}"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="${d}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>${t(k)}</a>`).join('');
 }
 function setTop(html) { top.hidden = !html; topin.innerHTML = html || ''; }
-function hideTray() { tray.hidden = true; }
+function hideTray() { tray.hidden = true; trayPad(); }
+function trayPad() { document.documentElement.style.setProperty('--trayh', (tray.hidden ? 0 : tray.offsetHeight) + 'px'); }
 function sheet(html) { sheetEl.innerHTML = html ? `<div class="sheet" id="sheetbg"><div class="in">${html}</div></div>` : ''; if (html) $('#sheetbg').addEventListener('click', e => { if (e.target.id === 'sheetbg') sheet(''); }); }
 /* ---------- Feedback: reports and ideas reach the team (Google Sheet via Apps Script, server/feedback-apps-script.gs) ----------
    Every message is queued on the phone first and sent when online, so nothing is lost offline. */
@@ -78,7 +79,7 @@ const Analytics = {
   session() { const now = Date.now(), lastSeen = store.get('seen', 0); if (now - lastSeen > 30 * 60000) { const n = store.get('sessions', 0) + 1; store.set('sessions', n); logEvent({ kind: 'session', n, first: store.get('first', null), days: store.get('days', []).length, installed: Install.installed(), sw: screen.width, ua: (navigator.userAgent || '').slice(0, 120) }); } store.set('seen', now); }
 };
 const FEEDBACK_URL = store.get('fburl', '') || 'https://script.google.com/macros/s/AKfycby7tvA6JjQxUCDW7wkeyDhdNgNsIhh4m9TP_wFtdtbsaWiQSvSPOUtmCdG04qKAxUkh/exec'; // paste the Apps Script Web app URL between the last quotes (…/exec); 'fburl' in storage is for testing only
-const APP_VERSION = '0.2';
+const APP_VERSION = '0.3';
 const Feedback = {
   link: (chapterId, item) => chapterId ? `${location.origin}${location.pathname}#book/${chapterId}${item ? '/item/' + encodeURIComponent(item) : ''}` : '',
   where: ctx => [ctx.chapter, ctx.section, ctx.label, ctx.lesson && `lesson ${ctx.lesson}`, ctx.item && `item ${ctx.item}${ctx.generated ? ' (new numbers)' : ''}`, ctx.link && `open: ${ctx.link}`].filter(Boolean).join(' · '),
@@ -181,14 +182,12 @@ async function viewSetup() {
   <div class="stack"><h1 class="display">${t('which_grade')}</h1><p class="small muted">${t('grades_many')} ${t('change_later')}</p></div>
   <div class="opts row3" role="group">${grades.map(g => `<button class="opt center" data-g="${g}" style="min-height:64px;font-size:22px">${g}</button>`).join('')}</div>
   <label class="stack"><span class="small" style="font-weight:800">${t('your_name')}</span><input id="nm" value="${esc(S.name)}" style="min-height:52px;padding:0 14px;border-radius:12px;border:2px solid var(--line);background:var(--surface)"></label>
-  <div class="card"><div class="row"><button class="play" aria-label="play" id="hear"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l12 7-12 7z" fill="#fff"/></svg></button><div class="grow"><div style="font-weight:800">${t('explain_me')} · 0:35</div><div class="small muted">${t('lang_note')}</div></div></div></div>
   <button class="btn" id="next">${t('continue')} ›</button>`;
   const g = new Set(S.grades);
   const mark = () => app.querySelectorAll('[data-g]').forEach(b => b.setAttribute('aria-pressed', g.has(+b.dataset.g)));
   mark();
   app.querySelector('.opts').addEventListener('click', e => { const b = e.target.closest('[data-g]'); if (!b) return; const v = +b.dataset.g; g.has(v) ? g.delete(v) : g.add(v); mark(); });
-  $('#hear').onclick = () => speak(t('lang_note'));
-  $('#next').onclick = () => { if (!g.size) { toast(t('which_grade')); return; } S.grades = [...g].sort((a, b) => a - b); store.set('grades', S.grades); S.name = $('#nm').value.trim(); store.set('name', S.name); location.hash = 'home'; };
+  $('#next').onclick = () => { if (!g.size) { toast(t('which_grade')); return; } { const added = [...g].filter(x => !S.grades.includes(x)); if (added.length) store.set('homeg', Math.max(...added)); else if (!g.has(store.get('homeg', 0))) store.set('homeg', Math.max(...g)); } S.grades = [...g].sort((a, b) => a - b); store.set('grades', S.grades); S.name = $('#nm').value.trim(); store.set('name', S.name); location.hash = store.get('tour', 0) ? 'home' : 'tour'; };
 }
 
 function speak(text) {
@@ -205,6 +204,8 @@ function dueReview() {
 const SUBJ_ORDER = ['maths', 'english', 'science', 'physics', 'chemistry', 'biology', 'amharic', 'social', 'geography', 'history', 'citizenship', 'economics', 'it', 'cte', 'agriculture', 'hpe', 'pva'];
 const SUBJ_HUE = { maths: 'g', english: 's', science: 'v', physics: 'v', chemistry: 'c', biology: 'g', amharic: 'y', social: 'y', geography: 's', history: 'c', citizenship: 'c', economics: 'y', it: 's', cte: 'y', agriculture: 'g', hpe: 'c', pva: 'v' };
 const subjSort = (a, b) => (SUBJ_ORDER.indexOf(a) + 1 || 99) - (SUBJ_ORDER.indexOf(b) + 1 || 99);
+function setLast(g, v) { v.grade = g; store.set('last', v); if (g) { const m = store.get('lastg', {}); m[g] = v; store.set('lastg', m); } }
+function lastFor(g) { const m = store.get('lastg', {}); if (m[g]) return m[g]; const l = store.get('last', null); if (!l) return null; const gg = l.grade || +((l.route.match(/g(\d+)[-/.%]/) || [])[1] || 0); return gg === g ? l : null; }
 function homeGrade() { const g = store.get('homeg', null); return S.grades.includes(g) ? g : S.grades[S.grades.length - 1]; }
 function bookStats() { const bk = store.get('bk', {}); let pts = 0; Object.values(bk).forEach(b => pts += b.pts || 0); return { pts }; }
 function streakDays() { const d = new Set(store.get('days', [])); let n = 0; for (let i = 0; ; i++) { const k = new Date(Date.now() - i * DAY).toISOString().slice(0, 10); if (d.has(k)) n++; else if (i > 0) break; if (i > 400) break; } return n; }
@@ -214,8 +215,8 @@ const progBar = (p, hue) => `<div class="pbar ${hue ? 'h-' + hue : ''}"><i style
 async function loadExams() { if (!S.exams) { try { S.exams = await (await fetch('exams/index.json')).json(); } catch (_) { S.exams = { papers: [] }; } } return S.exams; }
 
 async function viewHome() {
-  const [idx, ex] = await Promise.all([loadIndex(), loadExams()]); setTop(''); hideTray(); setNav(true);
-  const g = homeGrade(), mine = idx.chapters.filter(c => c.grade === g), last = store.get('last', null), due = dueReview();
+  const [idx, ex, tour] = await Promise.all([loadIndex(), loadExams(), loadTour()]); setTop(''); hideTray(); setNav(true);
+  const g = homeGrade(), mine = idx.chapters.filter(c => c.grade === g), last = lastFor(g), due = dueReview();
   const subjects = [...new Set(mine.map(c => c.subject))].sort(subjSort);
   const streak = streakDays(), { pts } = bookStats();
   // the one next step: last place, else Unit 1 of the first subject (maths first)
@@ -229,6 +230,7 @@ async function viewHome() {
   app.innerHTML = `<div class="hhead"><div class="grow"><h1 class="display">${t('hello')}${S.name ? ', ' + esc(S.name) : ''} 👋</h1></div><a class="iconbtn" href="#settings" aria-label="${t('settings')}">${svgIcon('M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM19 12l2-1-1-3-2 .3-1.5-1.5.3-2-3-1-1 2h-2l-1-2-3 1 .3 2L5.6 8.3 3.6 8l-1 3 2 1v2l-2 1 1 3 2-.3 1.5 1.5-.3 2 3 1 1-2h2l1 2 3-1-.3-2 1.5-1.5 2 .3 1-3-2-1z')}</a></div>
   ${S.grades.length > 1 ? `<div class="gtabs" role="tablist">${S.grades.map(x => `<button role="tab" aria-selected="${x === g}" data-g="${x}">${t('grade')} ${x}</button>`).join('')}</div>` : `<div class="small muted" style="font-weight:800">${t('grade')} ${g}</div>`}
   <div class="stats"><span>🔥 <b>${streak}</b> ${t(streak === 1 ? 'day' : 'days')}</span><span>⭐ <b>${pts}</b> ${t('stars')}</span>${due.length ? `<a href="#review">🔁 <b>${due.length}</b> ${t('to_review')}</a>` : ''}</div>
+  ${(store.get('tour', 0) || 0) < (tour.version || 0) ? `<a class="tourcard" href="#tour"><span class="eico">👋</span><span class="grow"><b>${t('tour_card')}</b><small>${t('tour_card_sub', { n: (tour.slides || []).length })}</small></span><span>›</span></a>` : ''}
   ${hero}
   ${papers.length ? `<a class="examcard" href="#exam/${papers[0].id}"><span class="eico">📝</span><span class="grow"><b>${t('exam_prep')}</b><small>${esc(L(papers[0].title))} · ${t('q_n', { n: papers[0].count })} · ${papers[0].minutes} ${t('min')}</small></span><span>›</span></a>` : ''}
   <h2 class="display sec">${t('your_subjects')}</h2>
@@ -249,10 +251,12 @@ async function viewSubject(grade, subject) {
     return `<a class="ucard ${state} h-${hue}" href="#book/${c.id}"><span class="unum">${p >= 100 ? '✓' : c.unit}</span><span class="grow"><span class="ulabel">${t('unit')} ${c.unit}${cur ? ` · <b>${t('continue')}</b>` : ''}</span><span class="utitle">${esc(L(c.title))}</span><span class="umeta">${t('sections_n', { n: secs.length })} · ~${mins} ${t('min')}</span>${progBar(p, hue)}</span><span class="uarrow">›</span></a>`; }).join('')}</div>`;
 }
 
-async function viewExam(id) {
+async function viewExam(id, sub) {
   setNav(false); hideTray();
   const ex = await loadExams(), p = (ex.papers || []).find(x => x.id === id); if (!p) { location.hash = 'exams'; return; }
   let paper; try { paper = await (await fetch('exams/' + p.file)).json(); } catch (_) { toast(t('offline')); return; }
+  if (sub === 'sit') return runExam(p, paper, false);
+  if (sub === 'result') { const xr = ExamRun.get(p.id); if (xr && xr.done) return examResult(p, paper, xr); location.replace('#exam/' + p.id); return; }
   const LET = 'ABCDEFG';
   const screens = paper.items.map(q => { const opts = q.opts.map((o, i) => `${LET[i]}. ${o}`); const ai = LET.indexOf(q.answer);
     return { kind: 'mcq', step: 'test', graded: true, id: `${p.id}.${q.n}`, level: q.level || 2, ref: `Q${q.n}`, _sec: (q.topics || [''])[0], _secTitle: (q.topics || [''])[0],
@@ -266,7 +270,154 @@ async function viewExam(id) {
   <p class="small muted">${t('exam_source')} ${esc(paper.source_note || '')}</p>`;
   const run = (mode) => runPlayer({ id: p.id, title: L(p.title), mode, minutes: mode === 'test' ? p.minutes : 0, label: t('exam_prep'), screens: screens.map(s => Object.assign({}, s, { step: mode === 'test' ? 'test' : 'exercise' })), backRoute: 'exam/' + p.id,
     onDone: res => { if (mode !== 'test') return; const right = Object.values(res.firstTry).filter(Boolean).length; const b = store.get('exbest', {}); if (b[p.id] == null || right > b[p.id]) { b[p.id] = right; store.set('exbest', b); } } });
-  $('#exprac').onclick = () => run('book'); $('#exreal').onclick = () => run('test');
+  $('#exprac').onclick = () => run('book'); $('#exreal').onclick = () => { const r = ExamRun.get(p.id); if (!(r && !r.done && ExamRun.left(p, r) > 0)) ExamRun.put(p.id, null); location.hash = 'exam/' + p.id + '/sit'; };
+  const xr = ExamRun.get(p.id), live = xr && !xr.done && ExamRun.left(p, xr) > 0;
+  if (live || (xr && xr.done)) { const box = document.createElement('div'); box.className = 'h-s'; box.style.cssText = 'display:grid;gap:12px';
+    box.innerHTML = live ? `<button class="pcard" id="exresume"><span class="pi">⏯</span><span class="grow"><b>${t('exam_resume')}</b><small>${t('exam_resume_sub', { a: Object.keys(xr.ans).length, N: paper.items.length, m: mmss(ExamRun.left(p, xr)) })}</small></span><span>›</span></button>`
+      : `<button class="pcard soft" id="exlast"><span class="pi">📊</span><span class="grow"><b>${t('exam_last')}</b><small>${new Date(xr.at).toLocaleDateString()}</small></span><span>›</span></button>`;
+    app.querySelector('.stats').after(box);
+    if (live) { $('#exresume').onclick = () => { location.hash = 'exam/' + p.id + '/sit'; }; $('#exreal').querySelector('b').textContent = t('exam_restart'); $('#exreal').onclick = () => { ExamRun.put(p.id, null); location.hash = 'exam/' + p.id + '/sit'; }; }
+    else $('#exlast').onclick = () => { location.hash = 'exam/' + p.id + '/result'; }; }
+}
+
+/* ---------- Real-exam mode (owner feedback 2026-10-24): like the real day. No checking per question; move freely with
+   Previous / Next and a question map; mark questions to come back to; submit (or time runs out), then a result page
+   with the score, topics and every question's worked answer. Progress survives closing the app. ---------- */
+const ExamRun = {
+  get(id) { return (store.get('exrun', {}) || {})[id] || null; },
+  put(id, v) { const m = store.get('exrun', {}) || {}; if (v) m[id] = v; else delete m[id]; store.set('exrun', m); },
+  left(p, r) { return Math.max(0, r.t0 + p.minutes * 60000 - Date.now()); },
+};
+const mmss = ms => { const m = Math.floor(ms / 60000), s = Math.floor(ms % 60000 / 1000); return m >= 60 ? `${Math.floor(m / 60)}:${String(m % 60).padStart(2, '0')}:${String(s).padStart(2, '0')}` : `${m}:${String(s).padStart(2, '0')}`; };
+
+function runExam(p, paper, fresh) {
+  const Q = paper.items, N = Q.length, LET = 'ABCDEFG';
+  let r = !fresh && ExamRun.get(p.id);
+  if (!r || r.done || ExamRun.left(p, r) <= 0) { r = { t0: Date.now(), ans: {}, flag: [], cur: 0 }; logEvent({ kind: 'exam_start', lesson: p.id, n: N, minutes: p.minutes }); }
+  const save = () => ExamRun.put(p.id, r);
+  save(); setNav(false); hideTray(); FAB.show(false); sheet('');
+  let clock = null; const stop = () => { if (clock) clearInterval(clock); clock = null; };
+  const answered = () => Q.filter(q => r.ans[q.n]).length;
+  const leave = () => { stop(); bar.remove(); location.hash = 'exam/' + p.id; };
+
+  const bar = document.createElement('div'); bar.className = 'xbar'; document.body.appendChild(bar);
+  const gone = () => { if (!app.isConnected || location.hash !== '#exam/' + p.id + '/sit' || !bar.isConnected) { stop(); bar.remove(); window.removeEventListener('hashchange', gone); return true; } return false; };
+  window.addEventListener('hashchange', gone);
+
+  function top() {
+    setTop(`<button class="iconbtn" id="xclose" aria-label="${t('close')}">${svgIcon(CLOSE)}</button><div class="grow xtt"><div class="eyebrow">${t('exam_mode')}</div><div class="xtn">${t('q_of', { n: r.cur + 1, N })}</div></div><span class="clock" id="clock"></span><button class="iconbtn xmapb" id="xmap" aria-label="${t('exam_map')}">${svgIcon('M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z')}</button>`);
+    $('#xclose').onclick = () => sheet(`<h2 class="display">${t('exam_pause_q')}</h2><p class="small muted">${t('exam_pause_sub')}</p><button class="btn" id="xkeep">${t('exam_keep')}</button><button class="btn ghost" id="xleave">${t('exam_leave')}</button>`) || ($('#xkeep').onclick = () => sheet(''), $('#xleave').onclick = () => { sheet(''); leave(); });
+    $('#xmap').onclick = openMap;
+    tick();
+  }
+  function tick() { if (gone()) return; const left = ExamRun.left(p, r), el = $('#clock'); if (el) { el.textContent = '⏱ ' + mmss(left); el.classList.toggle('low', left < 5 * 60000); }
+    if (left < 5 * 60000 && !r.warned) { r.warned = true; save(); toast(t('five_left')); buzz([40, 60, 40]); }
+    if (left <= 0) { stop(); toast(t('time_up')); submit(true); } }
+
+  function show() {
+    const q = Q[r.cur], mine = r.ans[q.n], fl = r.flag.includes(q.n);
+    top();
+    app.innerHTML = `<div class="xpaper"><div class="xhead"><span class="xnum">${q.n}</span><span class="grow small muted">${esc((q.topics || []).join(' · '))}</span><button class="xflag" id="xflag" aria-pressed="${fl}">${fl ? '🚩 ' + t('exam_marked') : '⚐ ' + t('exam_mark')}</button></div>
+      ${q.figure ? `<div class="xfig"><b>📐 ${t('exam_figure')}</b><span>${esc(q.figure)}</span></div>` : ''}
+      <p class="xq">${esc(q.text)}</p>
+      <div class="xopts" role="radiogroup">${q.opts.map((o, i) => `<button class="xopt" role="radio" data-l="${LET[i]}" aria-checked="${mine === LET[i]}"><span class="xl">${LET[i]}</span><span class="grow">${esc(o)}</span></button>`).join('')}</div>
+      ${mine ? `<button class="btn link xclear" id="xclear">${t('exam_clear')}</button>` : ''}</div>`;
+    app.querySelectorAll('.xopt').forEach(b => b.onclick = () => { r.ans[q.n] = b.dataset.l; r.ms = r.ms || {}; r.ms[q.n] = Date.now(); save(); buzz(10); show(); });
+    const c = $('#xclear'); if (c) c.onclick = () => { delete r.ans[q.n]; save(); show(); };
+    $('#xflag').onclick = () => { r.flag = fl ? r.flag.filter(x => x !== q.n) : r.flag.concat(q.n); save(); show(); };
+    const last = r.cur === N - 1;
+    bar.innerHTML = `<div class="in"><button class="btn ghost" id="xprev" ${r.cur ? '' : 'disabled'} aria-label="${t('previous')}">‹</button><button class="xcount" id="xcount"><b>${answered()}</b> / ${N} ${t('exam_answered')}<i style="width:${answered() / N * 100}%"></i></button><button class="btn ${last ? "sun" : ""}" id="xnext">${last ? t('exam_finish') : t('next') + ' ›'}</button></div>`;
+    $('#xprev').onclick = () => go(r.cur - 1); $('#xcount').onclick = openMap;
+    $('#xnext').onclick = () => last ? confirmSubmit() : go(r.cur + 1);
+    window.scrollTo(0, 0);
+  }
+  function go(i) { r.cur = Math.max(0, Math.min(N - 1, i)); save(); show(); }
+
+  function openMap() {
+    const un = N - answered();
+    sheet(`<div class="xmaphd"><h2 class="display">${t('exam_map')}</h2><span class="small muted">${t('exam_left', { m: mmss(ExamRun.left(p, r)) })}</span></div>
+      <div class="xlegend small"><span><i class="lg a"></i>${t('exam_answered')} ${answered()}</span><span><i class="lg"></i>${t('exam_unanswered')} ${un}</span><span><i class="lg f"></i>${t('exam_marked')} ${r.flag.length}</span></div>
+      <div class="xgrid">${Q.map((q, i) => `<button data-i="${i}" class="${r.ans[q.n] ? 'a' : ''} ${r.flag.includes(q.n) ? 'f' : ''} ${i === r.cur ? 'c' : ''}" aria-label="${t('q_of', { n: i + 1, N })}">${q.n}</button>`).join('')}</div>
+      <button class="btn sun" id="xsub">${t('exam_submit')}</button>`);
+    document.querySelectorAll('.xgrid [data-i]').forEach(b => b.onclick = () => { sheet(''); go(+b.dataset.i); });
+    $('#xsub').onclick = confirmSubmit;
+  }
+  function confirmSubmit() {
+    const un = N - answered();
+    sheet(`<h2 class="display">${t('exam_submit_q')}</h2><p>${t('exam_submit_sub', { a: answered(), N })}</p>${un ? `<p class="xwarn">⚠️ ${t('exam_unans_warn', { n: un })}</p>` : ''}${r.flag.length ? `<p class="small muted">🚩 ${t('exam_marked_left', { n: r.flag.length })}</p>` : ''}
+      <button class="btn ghost" id="xback">${t('exam_keep')}</button><button class="btn sun" id="xgo">${t('exam_submit')}</button>`);
+    $('#xback').onclick = () => sheet(''); $('#xgo').onclick = () => { sheet(''); submit(false); };
+  }
+  function submit(timeUp) {
+    stop(); bar.remove(); window.removeEventListener('hashchange', gone);
+    const res = Q.map(q => ({ n: q.n, mine: r.ans[q.n] || null, ok: r.ans[q.n] === q.answer }));
+    const right = res.filter(x => x.ok).length, used = Math.min(p.minutes * 60000, Date.now() - r.t0);
+    res.forEach(x => logEvent({ lesson: p.id, idea: (Q.find(q => q.n === x.n).topics || [''])[0], item: `${p.id}.${x.n}`, correct: x.ok, attempt: 1, mode: 'exam', answered: !!x.mine }));
+    logEvent({ kind: 'exam_done', lesson: p.id, n: N, right, ms: used, timeUp: !!timeUp });
+    const b = store.get('exbest', {}); if (b[p.id] == null || right > b[p.id]) { b[p.id] = right; store.set('exbest', b); }
+    const hist = store.get('exhist', {}); (hist[p.id] = hist[p.id] || []).push({ at: Date.now(), right, n: N, ms: used }); store.set('exhist', hist);
+    ExamRun.put(p.id, { done: true, at: Date.now(), ans: r.ans, flag: r.flag, t0: r.t0, ms: used, timeUp: !!timeUp });
+    location.replace('#exam/' + p.id + '/result');
+  }
+  show(); clock = setInterval(tick, 1000);
+}
+
+function examResult(p, paper, r) {
+  const Q = paper.items, N = Q.length, LET = 'ABCDEFG';
+  setNav(false); hideTray(); FAB.show(true); window.scrollTo(0, 0);
+  const res = Q.map(q => ({ q, mine: r.ans[q.n] || null, ok: r.ans[q.n] === q.answer, f: (r.flag || []).includes(q.n) }));
+  const right = res.filter(x => x.ok).length, pct = Math.round(100 * right / N), skipped = res.filter(x => !x.mine).length;
+  const topics = {}; res.forEach(x => { const k = (x.q.topics || ['—'])[0]; topics[k] = topics[k] || { n: 0, r: 0 }; topics[k].n++; if (x.ok) topics[k].r++; });
+  const tk = Object.keys(topics).sort((a, b) => topics[a].r / topics[a].n - topics[b].r / topics[b].n);
+  const msg = pct >= 75 ? t('exam_great') : pct >= 50 ? t('exam_pass') : t('exam_keepgoing');
+  setTop(`<a class="iconbtn" href="#exam/${p.id}" aria-label="back">${svgIcon(BACK)}</a><div class="grow"><div class="eyebrow">${t('exam_result')}</div><div class="display" style="font-size:17px">${esc(L(p.title))}</div></div>`);
+  const ring = `<svg viewBox="0 0 120 120" class="xring" aria-hidden="true"><circle cx="60" cy="60" r="50" fill="none" stroke="var(--line)" stroke-width="12"/><circle cx="60" cy="60" r="50" fill="none" stroke="${pct >= 50 ? 'var(--accent)' : 'var(--sun)'}" stroke-width="12" stroke-linecap="round" stroke-dasharray="${(pct / 100 * 314.16).toFixed(1)} 400" transform="rotate(-90 60 60)"/><text x="60" y="58" text-anchor="middle" class="xrp">${pct}%</text><text x="60" y="80" text-anchor="middle" class="xrs">${right} / ${N}</text></svg>`;
+  const card = x => `<div class="xrev ${x.ok ? 'ok' : x.mine ? 'no' : 'skip'}" data-k="${x.ok ? 'ok' : x.mine ? 'no' : 'skip'}${x.f ? ' f' : ''}"><div class="xrh"><span class="xnum sm">${x.q.n}</span><span class="grow small">${x.ok ? '✓ ' + t('correct') : x.mine ? '✗ ' + t('exam_wrong') : '— ' + t('exam_unanswered')}${x.f ? ' · 🚩' : ''}</span></div>
+    <p class="xq sm">${esc(x.q.text)}</p>
+    <div class="small">${x.mine && !x.ok ? `<div class="xmine">${t('your_answer')}: <b>${x.mine}. ${esc(x.q.opts[LET.indexOf(x.mine)] || '')}</b></div>` : ''}<div class="xright">${t('exam_correct_ans')}: <b>${x.q.answer}. ${esc(x.q.opts[LET.indexOf(x.q.answer)] || '')}</b></div></div>
+    <button class="btn link xwhy" aria-expanded="false">${t('exam_show_why')}</button><div class="xwhyt" hidden>${esc(x.q.why || '')}</div></div>`;
+  app.innerHTML = `<div class="xres">${ring}<div><div class="display" style="font-size:22px">${msg}</div><div class="small muted">${t('exam_time_used', { m: Math.round((r.ms || 0) / 60000), M: p.minutes })}${r.timeUp ? ' · ' + t('time_up') : ''}${skipped ? ' · ' + t('exam_skipped_n', { n: skipped }) : ''}</div></div></div>
+  <div class="card"><b>${t('exam_by_topic')}</b><div class="xtopics">${tk.map((k, ti) => { const v = topics[k], q = v.r / v.n; return `<div class="xtp" ${ti >= 6 ? 'hidden' : ''}><span class="grow">${esc(k)}</span><span class="small muted">${v.r}/${v.n}</span><span class="xtb"><i style="width:${q * 100}%;background:${q >= .6 ? 'var(--accent)' : 'var(--sun)'}"></i></span></div>`; }).join('')}</div>${tk.length > 6 ? `<button class="btn link" id="xtall" style="width:auto;padding:0">${t('exam_all_topics', { n: tk.length })}</button>` : ''}</div>
+  <div class="gtabs xfilt" role="tablist">${[['all', t('exam_all')], ['no', t('exam_wrong')], ['skip', t('exam_unanswered')], ['f', '🚩']].map(([k, l], i) => `<button role="tab" data-f="${k}" aria-selected="${!i}">${l}</button>`).join('')}</div>
+  <div class="xrevs">${res.map(card).join('')}</div>
+  <div class="h-g" style="display:grid;gap:12px"><button class="pcard" id="xagain"><span class="pi">🏁</span><span class="grow"><b>${t('exam_again')}</b><small>${t('exam_real_sub')}</small></span><span>›</span></button></div>
+  <a class="btn ghost" href="#exams">${t('back_exams')}</a>`;
+  app.querySelectorAll('.xwhy').forEach(b => b.onclick = () => { const w = b.nextElementSibling; w.hidden = !w.hidden; b.setAttribute('aria-expanded', !w.hidden); b.textContent = w.hidden ? t('exam_show_why') : t('exam_hide_why'); });
+  app.querySelectorAll('.xfilt [data-f]').forEach(b => b.onclick = () => { app.querySelectorAll('.xfilt [data-f]').forEach(x => x.setAttribute('aria-selected', x === b)); const f = b.dataset.f;
+    app.querySelectorAll('.xrev').forEach(c => c.hidden = !(f === 'all' || c.dataset.k.split(' ').includes(f))); });
+  const ta = $('#xtall'); if (ta) ta.onclick = () => { app.querySelectorAll('.xtp').forEach(x => x.hidden = false); ta.remove(); };
+  $('#xagain').onclick = () => { ExamRun.put(p.id, null); location.hash = 'exam/' + p.id + '/sit'; };
+}
+
+/* ---------- Welcome tour (owner feedback 2026-10-24). Content lives in tour.json so it can be edited without code;
+   raising its "version" shows the tour again to everyone. ---------- */
+const TOUR_ART = {
+  book: `<div class="ta-page"><div class="ta-eb">Unit 1 · 1.2</div><div class="ta-h"></div><div class="ta-l"></div><div class="ta-l s"></div><div class="ta-fig"><i></i><i></i><i></i><i class="on"></i><i></i></div><div class="ta-l"></div></div>`,
+  think: `<div class="ta-q"><div class="ta-bub">🤔 ?</div><div class="ta-ch"><span></span><span class="on">✓</span><span></span></div></div>`,
+  touch: `<div class="ta-touch"><div class="ta-sq">${'<i></i>'.repeat(9)}</div><div class="ta-sl"><i></i><b>👆</b></div><div class="ta-tree"><span>36</span><span>6</span><span>6</span></div></div>`,
+  answer: `<div class="ta-ans"><div class="ta-opt no">✗</div><div class="ta-clue">💡</div><div class="ta-tray"><b>✓</b><div class="ta-l"></div><div class="ta-l s"></div><div class="ta-l"></div></div></div>`,
+  levels: `<div class="ta-lv"><span>★</span><span>★★</span><span>★★★</span><b>↗</b></div>`,
+  reminder: `<div class="ta-rm"><div class="ta-l"></div><div class="ta-link">↩ ?</div><div class="ta-card"><div class="ta-l s"></div><div class="ta-l"></div></div></div>`,
+  test: `<div class="ta-test"><div class="ta-clock">⏱ 25:00</div><div class="ta-flag">🏁</div><div class="ta-bars"><i style="width:90%"></i><i style="width:55%"></i><i style="width:75%"></i></div></div>`,
+  exam: `<div class="ta-exam">${Array.from({ length: 15 }, (_, i) => `<i class="${i < 9 ? 'a' : ''} ${i === 11 ? 'f' : ''}">${i + 1}</i>`).join('')}</div>`,
+  review: `<div class="ta-rv"><span>🔁</span><span>🔥 7</span><span>⭐ 120</span></div>`,
+  feedback: `<div class="ta-fb"><span>💬</span><span>🚩</span><span>📲</span></div>`,
+};
+async function loadTour() { if (!S.tour) { try { S.tour = await (await fetch('tour.json')).json(); } catch (_) { S.tour = { version: 0, slides: [] }; } } return S.tour; }
+async function viewTour(from) {
+  const tour = await loadTour(); const sl = tour.slides || []; if (!sl.length) { location.hash = 'home'; return; }
+  setNav(false); hideTray(); setTop(''); FAB.show(false);
+  let i = 0; const done = () => { store.set('tour', tour.version); location.hash = from === 'settings' ? 'settings' : 'home'; };
+  const draw = () => { const s = sl[i], last = i === sl.length - 1;
+    app.innerHTML = `<div class="tour"><div class="tour-top"><div class="tdots">${sl.map((_, k) => `<i class="${k === i ? 'on' : k < i ? 'past' : ''}"></i>`).join('')}</div><button class="btn link" id="tskip" style="width:auto">${t('skip')}</button></div>
+      <div class="tart h-${'gsyvc'[i % 5]}">${TOUR_ART[s.art] || ''}</div>
+      <div class="tcopy"><div class="eyebrow">${i + 1} / ${sl.length}</div><h1 class="display">${esc(L(s.title))}</h1><p>${esc(L(s.text))}</p></div>
+      <div class="tnav">${i ? `<button class="btn ghost" id="tprev" aria-label="${t('previous')}" style="width:64px">‹</button>` : ''}<button class="btn" id="tnext">${last ? t('tour_go') : t('next') + ' ›'}</button></div></div>`;
+    $('#tskip').onclick = done; $('#tnext').onclick = () => { if (last) done(); else { i++; draw(); } };
+    const pv = $('#tprev'); if (pv) pv.onclick = () => { i--; draw(); }; };
+  let x0 = null; app.ontouchstart = e => { x0 = e.touches[0].clientX; };
+  app.ontouchend = e => { if (x0 == null || !app.querySelector('.tour')) return; const dx = e.changedTouches[0].clientX - x0; x0 = null; if (dx < -50 && i < sl.length - 1) { i++; draw(); } else if (dx > 50 && i) { i--; draw(); } };
+  draw();
 }
 
 async function viewChapter(id) {
@@ -285,7 +436,7 @@ async function viewChapter(id) {
   <a class="btn" href="${c.classic}">${t('open_chapter')} ›</a>
   ${p ? `<p class="small muted">${t('lessons_read', { d: p.done, t: p.total })}</p>` : ''}
   <div class="list">${rows}</div>`;
-  store.set('last', { route: 'chapter/' + c.id, title: `${t('unit')} ${c.unit} · ${L(c.title)}`, sub: `${L(idx.subjects[c.subject])} · ${t('grade')} ${c.grade}` });
+  setLast(c.grade, { route: 'chapter/' + c.id, title: `${t('unit')} ${c.unit} · ${L(c.title)}`, sub: `${L(idx.subjects[c.subject])} · ${t('grade')} ${c.grade}` });
 }
 
 async function viewReview() {
@@ -316,6 +467,7 @@ async function viewSettings() {
   app.innerHTML = `<div class="card"><div style="font-weight:800">${t('language')}</div><div class="opts row3"><button class="opt center" data-l="am" style="font-family:var(--ethiopic)">አማርኛ</button><button class="opt center" data-l="en">English</button><button class="opt center" disabled>Oromoo</button></div></div>
   <div class="card"><div style="font-weight:800">${t('grade')}</div><a class="btn ghost" href="#setup">${S.grades.join(', ') || '?'} ›</a></div>
   ${Install.installed() ? `<div class="card"><div style="font-weight:800">✓ ${t('install_done')}</div></div>` : Install.card(false)}
+  <a class="card fbcard" href="#tour/settings"><span class="instic">🧭</span><span class="grow"><b>${t('tour_card')}</b><small class="muted">${t('tour_set_sub')}</small></span><span>›</span></a>
   <button class="card fbcard" id="fbset"><span class="instic">💬</span><span class="grow"><b>${t('fb_title')}</b><small class="muted">${t('fb_sub')}</small></span><span>›</span></button>
   <p class="small muted">Meseret v${APP_VERSION} · ${S.code ? 'Class ' + esc(S.code) : ''}</p>`;
   Install.bind(app); $('#fbset').onclick = () => Feedback.open({});
@@ -1190,7 +1342,7 @@ function makeR(env) {
       return Object.assign({ el }, graded ? gradedResult(s, ci, () => k >= n) : { label: t('continue'), ready: () => k >= n });
     },
   };
-  const explainCard = s => { const ex = s._explain || env.explain; if (!ex) return ''; const txt = (ex[S.lang] && ex[S.lang].text) || (ex.en && ex.en.text) || ''; return txt ? `<div class="explain"><button class="play" id="ex-play" aria-label="${t('explain_me')}"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l12 7-12 7z" fill="#fff"/></svg></button><div class="grow"><div style="font-weight:800">${t('explain_me')}</div><div class="small muted" id="ex-text">${esc(txt)}</div></div></div>` : ''; };
+  const explainCard = s => ''; const _explainCardVoice = s => { const ex = s._explain || env.explain; if (!ex) return ''; const txt = (ex[S.lang] && ex[S.lang].text) || (ex.en && ex.en.text) || ''; return txt ? `<div class="explain"><button class="play" id="ex-play" aria-label="${t('explain_me')}"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l12 7-12 7z" fill="#fff"/></svg></button><div class="grow"><div style="font-weight:800">${t('explain_me')}</div><div class="small muted" id="ex-text">${esc(txt)}</div></div></div>` : ''; };
 
   return { R, div, explainCard };
 }
@@ -1210,7 +1362,7 @@ function runPlayer(cfg) {
       const bySec = Object.keys(secs).length > 1 ? `<div class="defn"><b>${t('by_section')}</b><div class="secres">${Object.keys(secs).map(k => `<div class="sr ${secs[k].r / secs[k].n >= .6 ? 'ok' : 'weak'}"><span class="srn">${esc(k)}</span><span class="grow">${esc(secs[k].title || '')}</span><b>${secs[k].r} / ${secs[k].n}</b></div>`).join('')}</div>${weak.length ? `<p class="small">${t('go_back_to', { s: weak.join(', ') })}</p>` : `<p class="small">${t('all_strong')}</p>`}</div>` : '';
       const el = div(`<span class="eyebrow sky">${t('done')}</span><h1 class="display" tabindex="-1">${esc(cfg.title)}</h1><div class="score"><span class="big">${right} / ${graded.length}</span><span>${cfg.mode === 'test' ? `${pct}%${mins ? ` · ${mins} ${t('min')}` : ''}${cfg.timeUp ? ` · ${t('time_up')}` : ''}` : t('first_try')}</span></div>${bySec}<p>${cfg.mode === 'test' ? '' : missed.size ? t('replay_note', { n: missed.size }) : t('all_done')}</p>${cfg.learned ? `<div class="defn"><b>${t('learned')}</b><ul class="steps" style="padding-left:20px">${cfg.learned.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}${cfg.mode === 'learn' ? `<div class="card sky"><div class="small">${t('comes_back')}</div></div>` : ''}${cfg.backRoute ? `<a class="btn link" href="#${cfg.backRoute}">${t('back_chapter')}</a>` : ''}`);
       return { el, label: cfg.mode === 'refresher' ? t('back_to_question') : cfg.mode === 'test' && cfg.resume ? t('back_to_book') : missed.size ? t('replay_n', { n: missed.size }) : cfg.resume ? t('back_to_book') : t('start_again'), ready: () => true, summary: true }; };
-  function setTray(kind, title, body, label) { tray.className = 'tray' + (kind ? ' ' + kind : ''); msg.innerHTML = title ? `<strong>${esc(title)}</strong>${body ? `<span>${esc(body)}</span>` : ''}` : ''; go.textContent = label; }
+  function setTray(kind, title, body, label) { tray.className = 'tray' + (kind ? ' ' + kind : ''); msg.innerHTML = title ? `<strong>${esc(title)}</strong>${body ? `<span>${esc(body)}</span>` : ''}` : ''; go.textContent = label; requestAnimationFrame(trayPad); }
   function update() { if (phase === 'answer' && cur) go.disabled = !cur.ready(); }
   function bindTop(k) { const rep = $('#rep'); if (rep) rep.onclick = () => Feedback.open(Feedback.here ? Feedback.here() : {}); const rb = $('#rback'); if (rb) rb.onclick = () => { if (cfg._clock) clearInterval(cfg._clock); cfg.resume && cfg.resume(); }; }
   function addSkip() { const k = order[pos], s = screens[k] || {}; const osk = $('#skipb'); if (osk) osk.remove(); if (s.graded && order.length - pos > 2 && (!['mcq', 'tf'].includes(s.kind) || tries[k])) { const sb = document.createElement('button'); sb.className = 'btn ghost'; sb.id = 'skipb'; sb.style.width = 'auto'; sb.textContent = t('skip'); sb.onclick = () => { order.splice(pos, 1); order.splice(order.length - 1, 0, k); show(); }; go.parentNode.insertBefore(sb, go); } }
@@ -1273,7 +1425,7 @@ async function viewLesson(path, mode, exIdx) {
   const saved = lessonProgress(key) || {}; const got = Object.assign({}, saved.got); const first = {};
   const state = { guess: null }; let tasks = 0, away = false;
   setNav(false); hideTray(); markStudied();
-  if (m === 'learn') store.set('last', { route: `lesson/${encodeURIComponent(path)}`, title: `${ls.book.section} · ${ls.title}`, sub: ch ? `${L(idx.subjects[ch.subject])} · ${t('grade')} ${ch.grade}` : '' });
+  if (m === 'learn') setLast(ch && ch.grade, { route: `lesson/${encodeURIComponent(path)}`, title: `${ls.book.section} · ${ls.title}`, sub: ch ? `${L(idx.subjects[ch.subject])} · ${t('grade')} ${ch.grade}` : '' });
   const back = m === 'learn' ? (ch ? 'chapter/' + ch.id : 'home') : `lesson/${encodeURIComponent(path)}`;
   setTop(`<a class="iconbtn" href="#${m === 'learn' ? back : 'exams'}" aria-label="back">${svgIcon(BACK)}</a><span class="mode ${m === 'learn' ? '' : 'book'}">${m === 'book' ? t('book_exercise') : m === 'test' ? t('unit_test') : esc(ls.book.section)}</span><div class="bar"><i id="pbar"></i></div><span class="count" id="pcount"></span><button class="iconbtn" id="rep" aria-label="${t('report')}">${svgIcon(FLAG)}</button>`);
   const page = document.createElement('div'); page.className = 'reader';
@@ -1650,7 +1802,7 @@ async function viewBook(id, goItem) {
   setNav(false); hideTray(); markStudied(); logEvent({ kind: 'chapter_open', chapter: id });
   const all = store.get('bk', {}), B = all[id] = Object.assign({ got: {}, seen: {}, pts: 0, prac: {} }, all[id]); B.seen = B.seen || {};
   const save = () => { const a = store.get('bk', {}); a[id] = B; store.set('bk', a); };
-  store.set('last', { route: 'book/' + id, title: `${t('unit')} ${c.unit} · ${L(c.title)}`, sub: `${L(idx.subjects[c.subject])} · ${t('grade')} ${c.grade}` });
+  setLast(c.grade, { route: 'book/' + id, title: `${t('unit')} ${c.unit} · ${L(c.title)}`, sub: `${L(idx.subjects[c.subject])} · ${t('grade')} ${c.grade}` });
   let streak = 0, away = false; const units = [], secUnits = secs.map(() => []);
   const chapterLabel = `${t('grade')} ${c.grade} · ${L(idx.subjects[c.subject])} · ${t('unit')} ${c.unit}`;
   const hues = ['g', 's', 'y', 'c', 'v'], topOf = n => n.split('.').slice(0, 2).join('.'), tops = [...new Set(secs.map(x => topOf(x.n)))], hueOf = n => hues[tops.indexOf(topOf(n)) % 5];
@@ -1752,20 +1904,21 @@ async function route() {
     case 'chapter': return viewChapter(a);
     case 'book': return viewBook(a, b === 'item' ? decodeURIComponent(c4 || '') : b === 'test' ? '__test' : '');
     case 'subject': return viewSubject(a, b);
-    case 'exam': return viewExam(a);
+    case 'exam': return viewExam(a, b);
     case 'lesson': return viewLesson(decodeURIComponent(a), 'learn');
     case 'exercise': return viewLesson(decodeURIComponent(a), 'book', +b || 0);
     case 'test': return viewLesson(decodeURIComponent(a), 'test');
     case 'review': return viewReview();
     case 'exams': return viewExams();
     case 'settings': return viewSettings();
+    case 'tour': return viewTour(a);
     default: return viewHome();
   }
 }
 /* ---------- fractions: any "3/5" in text is shown stacked like the book; textContent stays "3/5" so answers still compare ---------- */
 function fracify(root) {
   if (!root || !root.ownerDocument) return;
-  const skip = n => { const p = n.nodeType === 3 ? n.parentElement : n; return !p || !!p.closest('svg,script,style,textarea,input,.frac,.mixed,.fwrap,.nofrac'); };
+  const skip = n => { const p = n.nodeType === 3 ? n.parentElement : n; return !p || !!p.closest('svg,script,style,textarea,input,.frac,.mixed,.fwrap,.nofrac,.stats,.xtp,.xcount,.pcard small,.count'); };
   const split = n => { const s = n.nodeValue, frag = document.createDocumentFragment(); let last = 0;
     // a mixed number "2 1/2" is drawn as one tight unit (2½); a plain "3/4" is drawn stacked. Hidden text keeps textContent = "2 1/2".
     s.replace(/(?<![\d.\/])([−-])?(?:(\d+) )?(\d+)\/(\d+)/g, (m, sg, w, a, b, i) => { frag.append(s.slice(last, i)); const fr = `<span class="frac"><span class="fn">${a}</span><span class="fs">/</span><span class="fd">${b}</span></span>`;
