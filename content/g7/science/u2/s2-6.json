@@ -92,7 +92,8 @@
        "Can be recovered."
       ]
      ],
-     "id": "g7.science.u2.s2-6.1"
+     "id": "g7.science.u2.s2-6.1",
+     "text": "Before you start, sort each change: physical or chemical?"
     },
     {
      "kind": "read",
@@ -139,6 +140,47 @@
       "Methods: by hand, sieving, filtration, evaporation, magnetic separation, decantation, distillation."
      ],
      "id": "g7.science.u2.s2-6.3"
+    },
+    {
+     "kind": "tree",
+     "step": "explore",
+     "title": "Classification of matter",
+     "root": {
+      "label": "Matter",
+      "info": "Anything that has mass and occupies space.",
+      "children": [
+       {
+        "label": "Pure substance",
+        "info": "A single kind of matter. It cannot be separated by physical means.",
+        "children": [
+         {
+          "label": "Element",
+          "info": "One kind of atom. Cannot be broken down by ordinary chemical means. Metals (iron, gold) and non-metals (oxygen, sulfur)."
+         },
+         {
+          "label": "Compound",
+          "info": "Elements chemically combined in a definite proportion by mass. Examples: water, table salt."
+         }
+        ]
+       },
+       {
+        "label": "Mixture",
+        "info": "Two or more pure substances physically combined. Separated by physical methods.",
+        "children": [
+         {
+          "label": "Homogeneous",
+          "info": "Uniform composition, one phase: a solution. Examples: air, salt solution, brass."
+         },
+         {
+          "label": "Heterogeneous",
+          "info": "Not uniform; parts can be seen. Examples: soil, milk, oil and water."
+         }
+        ]
+       }
+      ]
+     },
+     "added": true,
+     "id": "g7.science.u2.s2-6.19"
     },
     {
      "kind": "name",
@@ -198,17 +240,18 @@
        "Gas to liquid"
       ]
      ],
-     "why": "These are the six changes of state.",
+     "why": "Melting: solid → liquid. Freezing is the reverse: liquid → solid.\nEvaporation: liquid → gas. Condensation is the reverse: gas → liquid.\nSublimation: solid → gas directly. Deposition is the reverse: gas → solid.",
      "clue": "Write \"from → to\" for each.",
      "level": 1,
      "ref": "Review Exercise Part III",
-     "id": "g7.science.u2.s2-6.5"
+     "id": "g7.science.u2.s2-6.5",
+     "text": "Review Part III: match each change of state to what happens."
     },
     {
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "All of the following are matter EXCEPT …",
+     "text": "What is matter? All of the following are matter EXCEPT …",
      "opts": [
       "plant",
       "stone",
@@ -216,7 +259,7 @@
       "sound"
      ],
      "ans": "sound",
-     "why": "Sound is energy.",
+     "why": "Matter has mass and occupies space.\nA plant, a stone and air all have mass and take up space.\nSound has no mass: it is a form of energy.\nSo sound is not matter.",
      "clue": "Which one has no mass?",
      "level": 1,
      "ref": "Review Exercise II Q1",
@@ -226,9 +269,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "Elements can be further decomposed by ordinary chemical means.",
+     "text": "True or false? Elements can be further decomposed by ordinary chemical means.",
      "a": false,
-     "why": "An element cannot be broken down by ordinary chemical means.",
+     "why": "An element has only one kind of atom.\nBy definition, it cannot be broken down by ordinary chemical means.\nCompounds can be broken down; elements cannot. So false.",
      "clue": "Read the definition of element.",
      "level": 1,
      "ref": "Review Exercise I Q4",
@@ -238,7 +281,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Which statement is FALSE?",
+     "text": "Spot the false statement: which statement is FALSE?",
      "opts": [
       "A compound has a fixed composition",
       "A homogeneous mixture has one phase",
@@ -246,7 +289,7 @@
       "Physical changes are easily reversed"
      ],
      "ans": "Diffusion is fastest in solids",
-     "why": "Diffusion is fastest in gases and very, very slow in solids. The other three statements are true.",
+     "why": "A compound has a fixed composition: true.\nA homogeneous mixture has one phase: true.\nPhysical changes are easily reversed: true.\nDiffusion is fastest in gases and very, very slow in solids. So \"fastest in solids\" is false.",
      "clue": "Check each against the summary.",
      "level": 3,
      "added": true,
@@ -263,9 +306,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "Depending upon the temperature, water can exist in solid, liquid or gas states.",
+     "text": "True or false? Depending upon the temperature, water can exist in solid, liquid or gas states.",
      "a": true,
-     "why": "Ice, water and steam.",
+     "why": "Below 0 °C water is ice: solid.\nBetween 0 °C and 100 °C it is liquid water.\nAt 100 °C it boils to steam: gas.\nSo the statement is true.",
      "clue": "Think of ice and steam.",
      "level": 1,
      "ref": "I Q1",
@@ -275,9 +318,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "A gas has neither a definite volume nor a definite shape.",
+     "text": "True or false? A gas has neither a definite volume nor a definite shape.",
      "a": true,
-     "why": "A gas fills its container.",
+     "why": "Gas particles are far apart and move freely.\nA gas spreads out to fill any container.\nSo it takes the shape and the volume of its container. True.",
      "clue": "Table 2.1.",
      "level": 1,
      "ref": "I Q2",
@@ -287,9 +330,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "Heterogeneous mixture contains one phase.",
+     "text": "True or false? A heterogeneous mixture contains one phase.",
      "a": false,
-     "why": "It has two or more phases.",
+     "why": "A heterogeneous mixture has visible parts with boundaries.\nEach part is a phase, so it has two or more phases.\nExample: oil and water form two layers. So false.",
      "clue": "Think of oil and water.",
      "level": 1,
      "ref": "I Q5",
@@ -299,7 +342,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Which of the following decreases during the changes solid → liquid → gas?",
+     "text": "Particles and states: which of the following decreases during the changes solid → liquid → gas?",
      "opts": [
       "Degree of order among particles",
       "Energies of particles",
@@ -307,7 +350,7 @@
       "Distance among particles"
      ],
      "ans": "Degree of order among particles",
-     "why": "Particles become less orderly; energy, speed and distance increase.",
+     "why": "From solid to liquid to gas, particles gain energy.\nThey move faster and spread further apart.\nSo energy, speed and distance all increase.\nOnly the degree of order decreases: gas particles are the least orderly.",
      "clue": "Which one goes down?",
      "level": 2,
      "ref": "II Q2",
@@ -317,7 +360,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Which of the following is not a property of solids?",
+     "text": "Properties of solids: which of the following is not a property of solids?",
      "opts": [
       "Little tendency to diffuse",
       "Extremely difficult to compress",
@@ -325,7 +368,7 @@
       "Definite volume and shape"
      ],
      "ans": "Solids are fluids",
-     "why": "Only liquids and gases flow.",
+     "why": "Solids have a definite shape and volume.\nThey are very hard to compress and diffuse very little.\nA fluid is something that flows. Only liquids and gases flow.\nSo \"solids are fluids\" is not true.",
      "clue": "Can a solid flow?",
      "level": 1,
      "ref": "II Q3",
@@ -335,7 +378,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "The physical state of a substance depends on …",
+     "text": "What decides the state? The physical state of a substance depends on …",
      "opts": [
       "temperature",
       "pressure",
@@ -343,7 +386,7 @@
       "all"
      ],
      "ans": "all",
-     "why": "All three affect the state.",
+     "why": "Temperature: heating ice makes it melt.\nPressure: squeezing a gas can turn it into a liquid.\nIntermolecular force: strong forces hold particles together as a solid.\nAll three matter, so the answer is \"all\".",
      "clue": "More than one is right.",
      "level": 2,
      "ref": "II Q4",
@@ -361,7 +404,7 @@
       "Gold"
      ],
      "ans": "Carbon dioxide",
-     "why": "Carbon dioxide is a gas.",
+     "why": "Only a gas has no definite shape and no definite volume.\nWater is a liquid: definite volume.\nIron and gold are solids: definite shape and volume.\nCarbon dioxide is a gas, so it is the answer.",
      "clue": "Which is a gas?",
      "level": 1,
      "ref": "II Q5",
@@ -379,7 +422,7 @@
       "Plasma and solid"
      ],
      "ans": "Liquid and gas",
-     "why": "Both flow.",
+     "why": "A fluid is matter that can flow.\nLiquids flow and take the shape of their container.\nGases flow and spread out.\nSolids do not flow. So liquid and gas are fluids.",
      "clue": "Which can flow?",
      "level": 1,
      "ref": "II Q17",
@@ -389,13 +432,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "When rain falls, it is because water vapour in the clouds is condensing into liquid ___.",
+     "ask": "Changes of state in nature: when rain falls, it is because water vapour in the clouds is condensing into liquid ___.",
      "a": [
       "water",
       "water droplets",
       "drops"
      ],
-     "why": "Condensation turns vapour into liquid water.",
+     "why": "Water vapour is a gas.\nHigh in the sky it cools and condenses: gas → liquid.\nThe tiny drops join and fall as rain.\nSo the vapour becomes liquid water.",
      "clue": "Gas → liquid.",
      "level": 1,
      "ref": "IV Q4",
@@ -405,11 +448,11 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "The separation technique that heats a solution until the liquid becomes a gas, leaving a solid, is ___.",
+     "ask": "Name the separation technique: heating a solution until the liquid becomes a gas, leaving a solid, is ___.",
      "a": [
       "evaporation"
      ],
-     "why": "Evaporation leaves the dissolved solid.",
+     "why": "The liquid is heated and escapes as vapour.\nThe dissolved solid is left behind.\nThis is evaporation, as in getting salt from salt water.",
      "clue": "Think of getting salt from salt water.",
      "level": 1,
      "ref": "IV Q3",

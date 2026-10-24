@@ -52,9 +52,10 @@
       "Useful",
       "Harmful"
      ],
-     "after": "Fermentation is a useful chemical change. It makes injera, bread and tella.",
+     "after": "Useful. Fermentation is a chemical change: yeast forms new substances in the batter.\nIt gives injera its sour taste and soft holes.\nThe same useful change makes bread and tella.",
      "added": true,
-     "id": "g7.science.u2.s2-4-4.1"
+     "id": "g7.science.u2.s2-4-4.1",
+     "best": "Useful"
     },
     {
      "kind": "read",
@@ -101,6 +102,47 @@
      "id": "g7.science.u2.s2-4-4.5"
     },
     {
+     "kind": "tree",
+     "step": "explore",
+     "title": "Useful and harmful changes",
+     "root": {
+      "label": "Changes around us",
+      "info": "Changes are physical or chemical. Each kind can be useful or harmful.",
+      "children": [
+       {
+        "label": "Physical change",
+        "info": "No new substance forms.",
+        "children": [
+         {
+          "label": "Useful physical",
+          "info": "Water cycle (evaporation and condensation), freezing food and medicine, melting and moulding metal into tools, mixing and separating."
+         },
+         {
+          "label": "Harmful physical",
+          "info": "Cutting trees, bad weather, oil spills."
+         }
+        ]
+       },
+       {
+        "label": "Chemical change",
+        "info": "New substances form.",
+        "children": [
+         {
+          "label": "Useful chemical",
+          "info": "Photosynthesis, energy from fuels, making food and medicine, digestion, fermentation, cooking."
+         },
+         {
+          "label": "Harmful chemical",
+          "info": "Rusting of cars, bridges and ships; souring of food; smoke from burning fuel; plastic disposal; dumping chemicals."
+         }
+        ]
+       }
+      ]
+     },
+     "added": true,
+     "id": "g7.science.u2.s2-4-4.22"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -116,7 +158,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Which is a useful chemical change?",
+     "text": "Which of these is a useful chemical change?",
      "opts": [
       "Rusting of a bridge",
       "Cooking food",
@@ -124,7 +166,7 @@
       "Souring of milk you wanted fresh"
      ],
      "ans": "Cooking food",
-     "why": "Cooking makes food safe and tasty.",
+     "why": "Step 1: which ones are chemical? Rusting, cooking and souring form new substances. An oil spill is physical.\nStep 2: which helps us? Cooking makes food safe and tasty.\nRusting damages bridges, and souring spoils milk: harmful.\nSo cooking food is the useful chemical change.",
      "clue": "Which one helps us?",
      "level": 1,
      "id": "g7.science.u2.s2-4-4.7"
@@ -143,47 +185,48 @@
       [
        "Water cycle",
        "Useful physical",
-       "Evaporation and condensation."
+       "Evaporation and condensation give us rain."
       ],
       [
        "Oil spill",
        "Harmful physical",
-       ""
+       "The oil only spreads over the water, but it harms fish and birds."
       ],
       [
        "Digestion of food",
        "Useful chemical",
-       ""
+       "Food is broken into new substances our body uses."
       ],
       [
        "Rusting of a car",
        "Harmful chemical",
-       ""
+       "Rust is new and weakens the car."
       ],
       [
        "Freezing meat to keep it",
        "Useful physical",
-       ""
+       "Cold keeps meat fresh; it is still meat."
       ],
       [
        "Smoke from burning fuel",
        "Harmful chemical",
-       ""
+       "Burning forms new gases that pollute the air."
       ]
      ],
-     "why": "First decide physical or chemical, then useful or harmful.",
+     "why": "Step 1: does a new substance form? No → physical. Yes → chemical.\nStep 2: does it help us or harm us?\nWater cycle and freezing meat: useful physical. Oil spill: harmful physical.\nDigestion: useful chemical. Rusting and smoke: harmful chemical.",
      "clue": "Does it form something new? Does it help us?",
      "level": 2,
      "ref": "Activity 2.15",
-     "id": "g7.science.u2.s2-4-4.8"
+     "id": "g7.science.u2.s2-4-4.8",
+     "text": "Sort each change into one of four groups: useful or harmful, physical or chemical."
     },
     {
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "Cutting trees is a harmful physical change.",
+     "text": "True or false? Cutting trees is a harmful physical change.",
      "a": true,
-     "why": "The book lists cutting trees as harmful. The wood is still wood, so it is physical.",
+     "why": "Cutting changes only the size and shape of the wood. No new substance forms: physical.\nThe book lists cutting trees as harmful: forests and soil are lost.\nSo the statement is true.",
      "clue": "Does cutting form a new substance?",
      "level": 1,
      "id": "g7.science.u2.s2-4-4.9"
@@ -192,7 +235,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Painting an iron gate stops it from rusting. Why does this help?",
+     "text": "Stop a harmful change: painting an iron gate stops it from rusting. Why does this help?",
      "opts": [
       "It stops a harmful chemical change by keeping air and water away",
       "It makes iron a non-metal",
@@ -200,7 +243,7 @@
       "It makes the gate heavier"
      ],
      "ans": "It stops a harmful chemical change by keeping air and water away",
-     "why": "Rust forms when iron reacts with air and water. Paint keeps them out.",
+     "why": "Rusting is a harmful chemical change.\nIn Experiment 2.3, iron rusted in water that contained air.\nPaint covers the iron and keeps air and water away.\nNo air and water → no rust. The gate is still iron, not a non-metal.",
      "clue": "What did the nail need in Experiment 2.3 to rust?",
      "level": 3,
      "added": true,
@@ -226,34 +269,35 @@
       [
        "a. Cutting of wood",
        "Physical change",
-       ""
+       "The pieces are still wood."
       ],
       [
        "b. Food with saliva and digestive enzymes",
        "Chemical change",
-       ""
+       "Digestion breaks food into new substances."
       ],
       [
        "c. Potassium reacting with water to give hydrogen",
        "Chemical change",
-       ""
+       "Hydrogen gas is a new substance."
       ],
       [
        "d. Straightening bent iron with a hammer",
        "Physical change",
-       ""
+       "Only the shape of the iron changes."
       ],
       [
        "e. Burning of a match",
        "Chemical change",
-       ""
+       "Burning forms ash, smoke and gases."
       ]
      ],
-     "why": "New substances form in b, c and e.",
+     "why": "Ask: does a new substance form?\na and d: wood is still wood, iron is still iron → physical.\nb: enzymes break food into new substances → chemical.\nc: potassium and water form hydrogen gas, a new substance → chemical.\ne: a burning match forms ash and smoke → chemical.",
      "clue": "Does something new form?",
      "level": 1,
      "ref": "I Q1 a–e",
-     "id": "g7.science.u2.s2-4-4.11"
+     "id": "g7.science.u2.s2-4-4.11",
+     "text": "Exercise 2.7 I Q1: classify each change as physical or chemical."
     },
     {
      "kind": "sort",
@@ -268,35 +312,36 @@
       [
        "f. Photosynthesis",
        "Chemical change",
-       ""
+       "Plants make food and oxygen: new substances."
       ],
       [
        "g. Boiling an egg",
        "Chemical change",
-       ""
+       "Cooking changes the egg; it cannot be reversed."
       ],
       [
        "h. Boiling water",
        "Physical change",
-       ""
+       "Steam is still water."
       ],
       [
        "i. Dissolving salt",
        "Physical change",
-       ""
+       "The salt can be got back by evaporation."
       ]
      ],
-     "why": "Photosynthesis and cooking an egg form new substances. Boiling water and dissolving salt do not.",
+     "why": "f: photosynthesis makes food and oxygen, new substances → chemical.\ng: a boiled egg cannot become raw again → chemical.\nh: boiling water turns it into steam, still water → physical.\ni: dissolved salt is recovered by evaporation → physical.",
      "clue": "Can it be reversed?",
      "level": 2,
      "ref": "I Q1 f–i",
-     "id": "g7.science.u2.s2-4-4.12"
+     "id": "g7.science.u2.s2-4-4.12",
+     "text": "Exercise 2.7 I Q1: classify each change as physical or chemical."
     },
     {
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Change in size, shape and state of a substance is a ___",
+     "text": "Name the kind of change: a change in size, shape and state of a substance is a ___",
      "opts": [
       "chemical change",
       "physical change",
@@ -304,7 +349,7 @@
       "none"
      ],
      "ans": "physical change",
-     "why": "These are physical properties.",
+     "why": "Size, shape and state are physical properties.\nChanging them forms no new substance.\nSo it is a physical change. \"Cyclic change\" is not one of the two kinds in the book.",
      "clue": "Is a new substance formed?",
      "level": 1,
      "ref": "II Q1",
@@ -314,7 +359,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Which of the following statements is correct?",
+     "text": "Physical or chemical? Which of the following statements is correct?",
      "opts": [
       "Evaporation is a chemical change",
       "Digestion of food is a chemical change",
@@ -322,7 +367,7 @@
       "All"
      ],
      "ans": "Digestion of food is a chemical change",
-     "why": "Digestion forms new substances.",
+     "why": "Evaporation: water becomes vapour, still water → physical. So the first is wrong.\nBurning paper: ash and gases form → chemical. So the third is wrong.\nDigestion: food is broken into new substances → chemical. Correct.\nSo \"All\" is wrong too.",
      "clue": "Check each one.",
      "level": 1,
      "ref": "II Q2",
@@ -340,7 +385,7 @@
       "All"
      ],
      "ans": "Making an iron bar magnetic",
-     "why": "The iron stays iron.",
+     "why": "Burning a candle forms carbon dioxide and water vapour: chemical.\nFermentation forms alcohol and carbon dioxide: chemical.\nA magnetised iron bar is still iron: physical.\nSo the answer is making an iron bar magnetic.",
      "clue": "Which one forms nothing new?",
      "level": 1,
      "ref": "II Q3",
@@ -363,48 +408,49 @@
       [
        "Burning of charcoal",
        "Chemical change",
-       ""
+       "Ash and gases form."
       ],
       [
        "Melting of ice",
        "Physical change",
-       ""
+       "Ice becomes water: still water."
       ],
       [
        "Dissolving sugar in water",
        "Physical change",
-       ""
+       "The sugar can be recovered."
       ],
       [
        "Fermentation",
        "Chemical change",
-       ""
+       "Alcohol and carbon dioxide form."
       ],
       [
        "Rusting of a nail",
        "Chemical change",
-       ""
+       "Rust is a new substance."
       ],
       [
        "Evaporation of water",
        "Physical change",
-       ""
+       "Vapour is still water."
       ],
       [
        "Spoilage of food",
        "Chemical change",
-       ""
+       "Spoiled food has new substances and a bad smell."
       ],
       [
        "Burning candle",
        "Chemical change",
-       ""
+       "Wax burns to carbon dioxide and water vapour."
       ]
      ],
-     "why": "New substances form in burning, fermentation, rusting and spoilage.",
+     "why": "Ask: does a new substance form?\nChemical (new substances): burning charcoal, fermentation, rusting, spoilage of food, burning candle.\nPhysical (same substance): melting ice, dissolving sugar, evaporation of water.",
      "clue": "Does a new substance form?",
      "level": 1,
-     "id": "g7.science.u2.s2-4-4.16"
+     "id": "g7.science.u2.s2-4-4.16",
+     "text": "Activity 2.13: classify each change as physical or chemical."
     }
    ]
   }
@@ -414,7 +460,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which is a useful physical change?",
+   "text": "Which of these is a useful physical change?",
    "opts": [
     "Freezing food to preserve it",
     "Rusting",
@@ -422,7 +468,7 @@
     "Food spoilage"
    ],
    "ans": "Freezing food to preserve it",
-   "why": "Freezing keeps food without changing it.",
+   "why": "Rusting, smoke and food spoilage form new substances: chemical, and harmful.\nFreezing only changes the state of the food: physical.\nIt keeps food fresh, so it is useful.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u2.s2-4-4.17"
@@ -431,9 +477,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "Rusting of ships and bridges is a harmful chemical change.",
+   "text": "True or false? Rusting of ships and bridges is a harmful chemical change.",
    "a": true,
-   "why": "The book lists it as harmful.",
+   "why": "Rust is a new substance, so rusting is chemical.\nIt weakens ships and bridges, so it is harmful.\nThe book lists it as a harmful chemical change. True.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u2.s2-4-4.18"
@@ -442,14 +488,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Photosynthesis is a …",
+   "text": "Classify photosynthesis: photosynthesis is a …",
    "opts": [
     "useful chemical change",
     "harmful chemical change",
     "useful physical change"
    ],
    "ans": "useful chemical change",
-   "why": "It makes the food plants and we depend on.",
+   "why": "Plants make food (sugar) and oxygen: new substances → chemical.\nPlants and we depend on this food → useful.\nSo photosynthesis is a useful chemical change.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u2.s2-4-4.19"
@@ -458,7 +504,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which is a harmful physical change?",
+   "text": "Which of these is a harmful physical change?",
    "opts": [
     "Water cycle",
     "Oil spill",
@@ -466,7 +512,7 @@
     "Cooking"
    ],
    "ans": "Oil spill",
-   "why": "The book lists oil spills as harmful physical changes.",
+   "why": "Fermentation and cooking are chemical changes.\nThe water cycle is physical but useful.\nAn oil spill: the oil only spreads (physical), but it harms water life.\nSo an oil spill is the harmful physical change.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u2.s2-4-4.20"
@@ -475,7 +521,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which pair is \"useful chemical change, harmful chemical change\"?",
+   "text": "Find the pair: which pair is \"useful chemical change, harmful chemical change\"?",
    "opts": [
     "Cooking food, dumping chemicals",
     "Melting ice, cutting trees",
@@ -483,7 +529,7 @@
     "Rusting, fermentation"
    ],
    "ans": "Cooking food, dumping chemicals",
-   "why": "Cooking is useful and chemical; dumping chemicals is harmful and chemical.",
+   "why": "Cooking food: new substances, helps us → useful chemical.\nDumping chemicals: pollutes land and water → harmful chemical.\nMelting ice, cutting trees and freezing food are physical, so the other pairs fail.\nRusting is harmful and fermentation useful: that pair is in the wrong order.",
    "level": 3,
    "clue": "",
    "id": "g7.science.u2.s2-4-4.21"

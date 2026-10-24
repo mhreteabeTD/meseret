@@ -40,9 +40,10 @@
       "Yes, only the colour changed",
       "No, a new substance (rust) formed"
      ],
-     "after": "Rust is a new substance. Iron reacted with air in the water. That is a chemical change.",
+     "after": "Rust is a new substance. It is reddish brown and flaky, not shiny and strong like iron.\nIron reacted with the air dissolved in the water.\nA change that forms a new substance is a chemical change.",
      "ref": "Experiment 2.3",
-     "id": "g7.science.u2.s2-4-2.1"
+     "id": "g7.science.u2.s2-4-2.1",
+     "best": "No, a new substance (rust) formed"
     },
     {
      "kind": "read",
@@ -74,6 +75,42 @@
      "id": "g7.science.u2.s2-4-2.4"
     },
     {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Chemical changes around us",
+     "ask": "Tap each one. What new substance forms?",
+     "need": 3,
+     "items": [
+      [
+       "A rusty iron nail",
+       "Iron reacts with air and water. Reddish brown rust forms.",
+       "test-tube"
+      ],
+      [
+       "Heating magnesium ribbon",
+       "It burns with a bright white light. A white powder forms.",
+       "bunsen-burner"
+      ],
+      [
+       "A burning candle",
+       "The wax burns. Carbon dioxide and water vapour form, with heat and light.",
+       "flask"
+      ],
+      [
+       "Photosynthesis",
+       "A plant uses sunlight, water and carbon dioxide to make food (sugar) and oxygen.",
+       "medicinal-plant"
+      ],
+      [
+       "Fermentation",
+       "Yeast changes sugar into alcohol and carbon dioxide, as in tella.",
+       "beaker"
+      ]
+     ],
+     "added": true,
+     "id": "g7.science.u2.s2-4-2.15"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -89,7 +126,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "What colour forms on the iron nail?",
+     "text": "Experiment 2.3: what colour forms on the iron nail after a few days in water?",
      "opts": [
       "Reddish brown (rust)",
       "Blue",
@@ -97,7 +134,7 @@
       "No change"
      ],
      "ans": "Reddish brown (rust)",
-     "why": "Iron reacts with oxygen dissolved in the water to form rust.",
+     "why": "Tap water contains dissolved air.\nIron reacts with the oxygen in it.\nThe new substance, rust, is reddish brown.\nThis is the same colour as an old, rusty roof sheet.",
      "clue": "Think of an old roof sheet.",
      "level": 1,
      "ref": "Experiment 2.3 Q1",
@@ -107,14 +144,14 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Is rusting a physical or a chemical change?",
+     "text": "Experiment 2.3: is rusting a physical or a chemical change?",
      "opts": [
       "Physical: only the colour changes",
       "Chemical: a new substance, rust, forms",
       "Neither"
      ],
      "ans": "Chemical: a new substance, rust, forms",
-     "why": "Rust is new and cannot easily turn back into iron.",
+     "why": "Rust is a new substance with new properties.\nIt cannot easily be turned back into iron.\nA change that forms a new substance is chemical.\nIt is not \"only colour\": the substance itself changed.",
      "clue": "Did a new substance form?",
      "level": 1,
      "ref": "Experiment 2.3 Q2",
@@ -124,7 +161,7 @@
      "kind": "pick",
      "step": "practise",
      "graded": true,
-     "text": "Tap every chemical change.",
+     "text": "Spot the chemical changes: tap every chemical change.",
      "pool": [
       "Fermentation of tella",
       "Melting butter",
@@ -137,7 +174,7 @@
       "Burning a candle",
       "Photosynthesis"
      ],
-     "why": "These form new substances. Melting and tearing are physical.",
+     "why": "Ask: does something new form?\nFermentation of tella: sugar → alcohol and carbon dioxide. New.\nBurning a candle: wax → carbon dioxide and water vapour. New.\nPhotosynthesis: water and carbon dioxide → food and oxygen. New.\nMelting butter and tearing cloth form nothing new: physical.",
      "clue": "Which ones form something new?",
      "level": 2,
      "id": "g7.science.u2.s2-4-2.8"
@@ -146,7 +183,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "A burning candle also melts. Which part is the chemical change?",
+     "text": "Two changes in one: a burning candle also melts. Which part is the chemical change?",
      "opts": [
       "The wax melting",
       "The wax burning to give carbon dioxide and water vapour",
@@ -154,7 +191,7 @@
       "None"
      ],
      "ans": "The wax burning to give carbon dioxide and water vapour",
-     "why": "Melting wax is physical. Burning forms new substances with heat and light: chemical.",
+     "why": "Melting wax: solid → liquid. Still wax, so physical.\nBurning wax: wax reacts with oxygen in the air.\nIt forms carbon dioxide and water vapour, with heat and light: new substances.\nSo the burning is the chemical change.",
      "clue": "Separate the melting from the burning.",
      "level": 3,
      "added": true,
@@ -169,13 +206,13 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Rusting of iron is a …",
+   "text": "Classify the change: rusting of iron is a …",
    "opts": [
     "physical change",
     "chemical change"
    ],
    "ans": "chemical change",
-   "why": "Rust is a new substance.",
+   "why": "Iron reacts with air and water.\nRust is a new substance.\nA new substance means a chemical change.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u2.s2-4-2.10"
@@ -184,9 +221,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "Fermentation is a chemical change.",
+   "text": "True or false? Fermentation is a chemical change.",
    "a": true,
-   "why": "New substances such as alcohol and carbon dioxide form.",
+   "why": "In fermentation, yeast changes sugar into alcohol and carbon dioxide.\nThese are new substances.\nSo fermentation is a chemical change. True.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u2.s2-4-2.11"
@@ -195,7 +232,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which is a chemical change?",
+   "text": "Which of these is a chemical change?",
    "opts": [
     "Boiling water",
     "Heating magnesium ribbon until it burns",
@@ -203,7 +240,7 @@
     "Dissolving salt"
    ],
    "ans": "Heating magnesium ribbon until it burns",
-   "why": "A new substance forms.",
+   "why": "Boiling water, breaking glass and dissolving salt form nothing new: physical.\nBurning magnesium ribbon gives a bright light and a white powder.\nThe powder is a new substance, so it is a chemical change.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u2.s2-4-2.12"
@@ -212,13 +249,13 @@
    "kind": "blank",
    "step": "test",
    "graded": true,
-   "ask": "A chemical change changes the chemical ___ of a substance.",
+   "ask": "Complete the definition: a chemical change changes the chemical ___ of a substance.",
    "a": [
     "composition",
     "make-up",
     "makeup"
    ],
-   "why": "That is the definition.",
+   "why": "A chemical change makes new substances.\nWhat the substance is made of changes.\nThat is its chemical composition.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u2.s2-4-2.13"
@@ -227,7 +264,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which is NOT a physical change?",
+   "text": "Find the odd one out: which is NOT a physical change?",
    "opts": [
     "Sublimation of iodine",
     "Burning of wax in a candle",
@@ -235,7 +272,7 @@
     "Dissolving sugar in tea"
    ],
    "ans": "Burning of wax in a candle",
-   "why": "Burning forms new substances.",
+   "why": "Sublimation of iodine: solid → gas. Still iodine, so physical.\nTearing cloth and dissolving sugar in tea: physical too.\nBurning wax forms carbon dioxide and water vapour: new substances.\nSo burning wax is a chemical change, not physical.",
    "level": 3,
    "ref": "Review Exercise II Q7",
    "clue": "",

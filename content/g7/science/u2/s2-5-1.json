@@ -114,9 +114,10 @@
       "Use a magnet",
       "Add oil"
      ],
-     "after": "Peas are much bigger than teff grains. Pick them out, or let the teff pass through a sieve.",
+     "after": "Peas are much bigger than teff grains.\nYou can pick them out by hand, or shake the mix in a sieve: the small teff falls through.\nBoiling, a magnet or oil would not help. Neither one is magnetic.",
      "ref": "Activity 2.16 A",
-     "id": "g7.science.u2.s2-5-1.1"
+     "id": "g7.science.u2.s2-5-1.1",
+     "best": "Pick the peas out by hand or use a sieve"
     },
     {
      "kind": "read",
@@ -130,6 +131,49 @@
       "Methods include separation by hand, sieving, filtration, evaporation, magnetic separation, decantation and distillation."
      ],
      "id": "g7.science.u2.s2-5-1.2"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Each method uses a difference",
+     "ask": "Tap each method. Which difference between the parts does it use?",
+     "need": 4,
+     "items": [
+      [
+       "By hand",
+       "Uses size: big pieces, like peas in teff, are picked out."
+      ],
+      [
+       "Sieving",
+       "Uses particle size: small grains fall through the holes, big ones stay."
+      ],
+      [
+       "Magnetic separation",
+       "Uses magnetism: a magnet pulls iron, not sand."
+      ],
+      [
+       "Filtration",
+       "Uses solubility: an insoluble solid stays on the filter paper.",
+       "funnel"
+      ],
+      [
+       "Evaporation",
+       "Uses boiling point: the liquid escapes as vapour, the dissolved solid stays.",
+       "bunsen-burner"
+      ],
+      [
+       "Decantation",
+       "The solid settles, or the liquids form layers. The top liquid is poured off.",
+       "beaker"
+      ],
+      [
+       "Distillation",
+       "Uses boiling point: the vapour is cooled and collected as a liquid.",
+       "flask"
+      ]
+     ],
+     "added": true,
+     "id": "g7.science.u2.s2-5-1.44"
     },
     {
      "kind": "read",
@@ -181,7 +225,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Why is the sand not attracted by the magnet?",
+     "text": "Experiment 2.4: why is the sand not attracted by the magnet?",
      "opts": [
       "Sand is non-magnetic",
       "Sand is too heavy",
@@ -189,7 +233,7 @@
       "Sand is a liquid"
      ],
      "ans": "Sand is non-magnetic",
-     "why": "Only magnetic substances such as iron are attracted.",
+     "why": "A magnet attracts only magnetic substances, such as iron.\nSand is non-magnetic.\nSo the iron filings collect on the magnet and the sand stays on the plate.\nThe plastic bag only makes it easy to remove the iron afterwards.",
      "clue": "What makes iron different from sand?",
      "level": 1,
      "ref": "Experiment 2.4 Q1",
@@ -199,7 +243,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "How would you separate iron and charcoal?",
+     "text": "Choose a separation method: how would you separate iron and charcoal?",
      "opts": [
       "Magnetic separation",
       "Distillation",
@@ -207,7 +251,7 @@
       "Separating funnel"
      ],
      "ans": "Magnetic separation",
-     "why": "Iron is attracted by a magnet; charcoal is not.",
+     "why": "Find the difference: iron is magnetic, charcoal is not.\nA method that uses magnetism: magnetic separation.\nPass a magnet (in a plastic bag) over the mixture. The iron sticks; the charcoal stays.",
      "clue": "Which one is magnetic?",
      "level": 1,
      "ref": "Exercise 2.8 I Q1 c",
@@ -217,7 +261,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "A sieve with 2 mm holes is shaken over soil. What is separated, and by which property?",
+     "text": "Sieving: a sieve with 2 mm holes is shaken over soil. What is separated, and by which property?",
      "opts": [
       "Larger particles from fine earth, by size",
       "Iron from sand, by magnetism",
@@ -225,7 +269,7 @@
       "Oil from water, by density"
      ],
      "ans": "Larger particles from fine earth, by size",
-     "why": "Fine earth passes through the 2 mm holes; larger particles stay. Sieving uses differences in particle size.",
+     "why": "Particles smaller than 2 mm fall through the holes: the fine earth.\nParticles larger than 2 mm stay in the sieve.\nWhat decides it is size only.\nSo sieving separates larger particles from fine earth, by size.",
      "clue": "What decides whether a grain falls through?",
      "level": 3,
      "ref": "Exercise 2.8 Q2 D",
@@ -254,9 +298,10 @@
       "Boil it away",
       "Freeze it"
      ],
-     "after": "Pouring off the clear liquid above the settled grounds is decantation.",
+     "after": "The heavy grounds settle at the bottom of the jebena.\nPour slowly and the clear coffee comes out on top, leaving the grounds behind.\nPouring off the clear liquid above a settled solid is decantation.",
      "ref": "Figure 2.18",
-     "id": "g7.science.u2.s2-5-1.9"
+     "id": "g7.science.u2.s2-5-1.9",
+     "best": "Pour slowly and leave the grounds behind"
     },
     {
      "kind": "read",
@@ -283,6 +328,22 @@
      ],
      "ref": "Figure 2.20",
      "id": "g7.science.u2.s2-5-1.11"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Decanting coffee from the jebena",
+     "ref": "Figure 2.18",
+     "steps": [
+      "Boil the coffee with the ground beans in the jebena.",
+      "Let it stand. The heavy grounds sink to the bottom.",
+      "This settling is called sedimentation.",
+      "Tilt the jebena slowly. Do not shake it.",
+      "The clear coffee pours out from the top: decantation.",
+      "The grounds stay behind in the jebena."
+     ],
+     "added": true,
+     "id": "g7.science.u2.s2-5-1.45"
     },
     {
      "kind": "picture",
@@ -315,7 +376,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Immiscible liquids can be separated by using a …",
+     "text": "Choose the apparatus: immiscible liquids can be separated by using a …",
      "opts": [
       "separating funnel",
       "magnet",
@@ -323,7 +384,7 @@
       "thermometer"
      ],
      "ans": "separating funnel",
-     "why": "The tap lets the lower layer run out first.",
+     "why": "Immiscible liquids, like oil and water, form two layers.\nA separating funnel has a tap in its stem.\nOpen the tap: the lower layer runs out first. Close it, then collect the upper layer.\nA magnet, sieve or thermometer cannot separate two liquids.",
      "clue": "Think of oil and water.",
      "level": 1,
      "ref": "Review Exercise IV Q1",
@@ -333,14 +394,14 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "In a separating funnel with kerosene and water, which layer runs out first through the tap?",
+     "text": "Separating funnel: kerosene and water are in the funnel. Which layer runs out first through the tap?",
      "opts": [
       "Water, the heavier lower layer",
       "Kerosene, the upper layer",
       "Both together"
      ],
      "ans": "Water, the heavier lower layer",
-     "why": "The heavier liquid is at the bottom, next to the tap.",
+     "why": "The heavier liquid forms the lower layer.\nWater is heavier than kerosene, so water is at the bottom.\nThe tap is at the bottom of the funnel.\nSo water runs out first, and kerosene is collected after.",
      "clue": "Which liquid is at the bottom?",
      "level": 2,
      "ref": "Figure 2.20",
@@ -350,7 +411,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Muddy water is left to stand, then the clear water is poured off. Which two steps are used?",
+     "text": "Two steps: muddy water is left to stand, then the clear water is poured off. Which two steps are used?",
      "opts": [
       "Sedimentation followed by decantation",
       "Evaporation followed by distillation",
@@ -358,7 +419,7 @@
       "Filtration followed by freezing"
      ],
      "ans": "Sedimentation followed by decantation",
-     "why": "First the mud settles (sedimentation). Then the clear water is poured off (decantation).",
+     "why": "Step 1: while it stands, the mud settles to the bottom. That is sedimentation.\nStep 2: the clear water on top is poured off. That is decantation.\nNo heating, filter paper or magnet is used.\nSo: sedimentation followed by decantation.",
      "clue": "What happens while it stands?",
      "level": 3,
      "ref": "Figure 2.19",
@@ -387,9 +448,10 @@
       "Use a magnet",
       "Sieve it"
      ],
-     "after": "Salt passes through filter paper, because it is dissolved. Evaporating the water leaves the salt.",
+     "after": "Salt dissolves, so it passes through filter paper with the water.\nA magnet and a sieve cannot catch dissolved salt either.\nHeat the solution: the water evaporates and the salt is left.",
      "ref": "Activity 2.17",
-     "id": "g7.science.u2.s2-5-1.17"
+     "id": "g7.science.u2.s2-5-1.17",
+     "best": "Evaporate the water"
     },
     {
      "kind": "read",
@@ -404,6 +466,36 @@
      ],
      "ref": "Figure 2.21",
      "id": "g7.science.u2.s2-5-1.18"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Figure 2.21 Filtration set-up",
+     "ask": "Tap each part of the set-up.",
+     "need": 3,
+     "ref": "Figure 2.21",
+     "items": [
+      [
+       "Funnel",
+       "Holds the filter paper. Pour the mixture in slowly.",
+       "funnel"
+      ],
+      [
+       "Filter paper",
+       "Folded into a cone. Its tiny pores let only the liquid through."
+      ],
+      [
+       "Residue",
+       "The insoluble solid, like chalk or soil, left on the filter paper."
+      ],
+      [
+       "Filtrate",
+       "The clear liquid that passes through the paper.",
+       "beaker"
+      ]
+     ],
+     "added": true,
+     "id": "g7.science.u2.s2-5-1.46"
     },
     {
      "kind": "read",
@@ -445,7 +537,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Dirty water is poured into a funnel lined with paper. Clean water comes out; dirt stays on the paper. This is …",
+     "text": "Name the method: dirty water is poured into a funnel lined with paper. Clean water comes out; dirt stays on the paper. This is …",
      "opts": [
       "filtration",
       "evaporation",
@@ -453,7 +545,7 @@
       "magnetic separation"
      ],
      "ans": "filtration",
-     "why": "The water is the filtrate; the dirt is the residue.",
+     "why": "The paper is filter paper: its tiny pores let only the liquid through.\nThe clean water that passes is the filtrate.\nThe dirt left on the paper is the residue.\nThis is filtration. Nothing is heated, so it is not evaporation or distillation.",
      "clue": "What is the paper doing?",
      "level": 1,
      "ref": "Review Exercise IV Q5",
@@ -481,21 +573,22 @@
        "Separating funnel"
       ]
      ],
-     "why": "Pick the method that uses the right difference in properties.",
+     "why": "Chalk does not dissolve → filter it off: filtration.\nSalt is dissolved → evaporate the water: evaporation.\nIron is magnetic → magnetic separation.\nOil and water form layers → separating funnel.",
      "clue": "Is the solid dissolved or not?",
      "level": 1,
      "ref": "Activity 2.16",
-     "id": "g7.science.u2.s2-5-1.22"
+     "id": "g7.science.u2.s2-5-1.22",
+     "text": "Match each mixture to the best separation method."
     },
     {
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "In filtration, the solid left on the filter paper is called the ___.",
+     "ask": "Name the part: in filtration, the solid left on the filter paper is called the ___.",
      "a": [
       "residue"
      ],
-     "why": "The liquid is the filtrate; the solid is the residue.",
+     "why": "The liquid that passes through the paper is the filtrate.\nThe solid that stays on the paper is the residue.\nSo the answer is residue.",
      "clue": "Not the filtrate.",
      "level": 2,
      "id": "g7.science.u2.s2-5-1.23"
@@ -504,7 +597,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "A mixture of salt and sand must be separated. Which order works?",
+     "text": "Plan the order: a mixture of salt and sand must be separated. Which order works?",
      "opts": [
       "Dissolve in water, filter, then evaporate the filtrate",
       "Evaporate, then filter",
@@ -512,7 +605,7 @@
       "Use a magnet only"
      ],
      "ans": "Dissolve in water, filter, then evaporate the filtrate",
-     "why": "Salt dissolves, sand does not. Filtering removes the sand. Evaporating the filtrate leaves the salt.",
+     "why": "Step 1: add water. The salt dissolves; the sand does not.\nStep 2: filter. The sand stays as the residue; salt water is the filtrate.\nStep 3: evaporate the filtrate. The salt is left.\nFiltering the dry mixture does nothing, and neither part is magnetic.",
      "clue": "Which one dissolves in water?",
      "level": 3,
      "ref": "Activity 2.18",
@@ -540,8 +633,9 @@
       "Water",
       "Both at once"
      ],
-     "after": "Ethanol has the lower boiling point, so it vaporizes first.",
-     "id": "g7.science.u2.s2-5-1.25"
+     "after": "Ethanol boils at 78 °C, water at 100 °C.\nAs the mixture warms, it reaches 78 °C first.\nSo ethanol, with the lower boiling point, vaporizes first.",
+     "id": "g7.science.u2.s2-5-1.25",
+     "best": "Ethanol"
     },
     {
      "kind": "read",
@@ -593,6 +687,22 @@
      "id": "g7.science.u2.s2-5-1.27"
     },
     {
+     "kind": "steps",
+     "step": "method",
+     "title": "Pure water from salt water, step by step",
+     "ref": "Figure 2.23",
+     "steps": [
+      "Put salt water in the distilling flask and heat it with the burner.",
+      "At 100 °C the water boils and turns into vapour.",
+      "The salt does not boil. It stays in the flask.",
+      "The vapour passes into the condenser, a tube cooled by running water.",
+      "The cool tube turns the vapour back into liquid water.",
+      "Pure water, the distillate, drips into the receiving flask."
+     ],
+     "added": true,
+     "id": "g7.science.u2.s2-5-1.47"
+    },
+    {
      "kind": "read",
      "step": "read",
      "title": "Miscible liquids",
@@ -628,7 +738,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "How would you separate a mixture of alcohol and water?",
+     "text": "Choose a separation method: how would you separate a mixture of alcohol and water?",
      "opts": [
       "Simple distillation",
       "Magnetic separation",
@@ -636,7 +746,7 @@
       "Filtration"
      ],
      "ans": "Simple distillation",
-     "why": "They are miscible liquids with different boiling points.",
+     "why": "Alcohol and water are miscible: they mix, so they form no layers.\nA separating funnel will not work, and nothing is magnetic or solid.\nThey have different boiling points: ethanol 78 °C, water 100 °C.\nSo use simple distillation: the alcohol boils off first and is collected.",
      "clue": "They mix, so a funnel will not work.",
      "level": 1,
      "ref": "Activity 2.16 F",
@@ -646,9 +756,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "In distillation, the condenser cools the vapour so it turns back into a liquid.",
+     "text": "True or false? In distillation, the condenser cools the vapour so it turns back into a liquid.",
      "a": true,
-     "why": "Cool water runs around the condenser tube.",
+     "why": "Cool water runs around the condenser tube.\nHot vapour loses heat inside the tube.\nIt condenses: gas → liquid. The liquid is the distillate.\nSo the statement is true.",
      "clue": "What does \"condense\" mean?",
      "level": 1,
      "id": "g7.science.u2.s2-5-1.31"
@@ -657,7 +767,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Which separation method collects BOTH the salt and the pure water from salt water?",
+     "text": "Compare methods: which separation method collects BOTH the salt and the pure water from salt water?",
      "opts": [
       "Distillation",
       "Evaporation in an open dish",
@@ -665,7 +775,7 @@
       "Decantation"
      ],
      "ans": "Distillation",
-     "why": "In distillation the water vapour is condensed and collected; the salt stays in the flask. Open evaporation loses the water to the air.",
+     "why": "Evaporation in an open dish: the salt stays, but the water vapour escapes into the air.\nDistillation: the vapour is caught in the condenser and collected as pure water.\nThe salt stays behind in the flask.\nFiltration and decantation cannot remove dissolved salt. So distillation.",
      "clue": "In which method is the vapour caught?",
      "level": 3,
      "added": true,
@@ -701,11 +811,12 @@
        "Separating funnel"
       ]
      ],
-     "why": "Use size, magnetism, solubility and layers.",
+     "why": "A: peas are much bigger than teff → by hand or sieving (size).\nB: iron is magnetic, sulfur is not → magnetic separation.\nC: chalk does not dissolve → filtration.\nD: oil and water form layers → separating funnel.",
      "clue": "What is different about the two parts?",
      "level": 1,
      "ref": "Q1 A–D",
-     "id": "g7.science.u2.s2-5-1.33"
+     "id": "g7.science.u2.s2-5-1.33",
+     "text": "Activity 2.16 Q1 A–D: match each mixture to a separation method."
     },
     {
      "kind": "match",
@@ -730,11 +841,12 @@
        "By hand"
       ]
      ],
-     "why": "Use solubility, boiling point and size.",
+     "why": "E: salt is dissolved → evaporate the water.\nF: alcohol and water mix, but boil at different temperatures → simple distillation.\nG: salt dissolves, sand does not → dissolve, filter, evaporate.\nH: the fruits are big and easy to see → separate by hand.",
      "clue": "Is anything dissolved?",
      "level": 2,
      "ref": "Q1 E–H",
-     "id": "g7.science.u2.s2-5-1.34"
+     "id": "g7.science.u2.s2-5-1.34",
+     "text": "Activity 2.16 Q1 E–H: match each mixture to a separation method."
     }
    ]
   },
@@ -745,7 +857,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "i. Mixture of salt, sand and water:",
+     "text": "Activity 2.18 i. How would you separate a mixture of salt, sand and water?",
      "opts": [
       "Filter off the sand, then evaporate the filtrate",
       "Use a magnet",
@@ -753,7 +865,7 @@
       "Sieve only"
      ],
      "ans": "Filter off the sand, then evaporate the filtrate",
-     "why": "Sand is the residue; salt stays in the filtrate until evaporated.",
+     "why": "The salt is already dissolved in the water; the sand is not.\nStep 1: filter. Sand stays on the paper as the residue.\nStep 2: evaporate the filtrate (salt water). The salt is left.\nNo part is magnetic, and there are no liquid layers.",
      "clue": "The salt is already dissolved.",
      "level": 1,
      "ref": "i",
@@ -763,7 +875,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "ii. Mixture of common salt, iron filings and sand:",
+     "text": "Activity 2.18 ii. How would you separate a mixture of common salt, iron filings and sand?",
      "opts": [
       "Magnet first, then dissolve, filter and evaporate",
       "Evaporate first",
@@ -771,7 +883,7 @@
       "Distil it"
      ],
      "ans": "Magnet first, then dissolve, filter and evaporate",
-     "why": "Remove iron while dry; then separate salt from sand.",
+     "why": "Step 1: while dry, pass a magnet over it. The iron filings are removed.\nStep 2: add water. The salt dissolves; the sand does not.\nStep 3: filter off the sand.\nStep 4: evaporate the filtrate to get the salt.",
      "clue": "Which part is magnetic?",
      "level": 2,
      "ref": "ii",
@@ -781,7 +893,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "iii. Mixture of oil, water and sand:",
+     "text": "Activity 2.18 iii. How would you separate a mixture of oil, water and sand?",
      "opts": [
       "Filter off the sand, then use a separating funnel",
       "Use a magnet",
@@ -789,7 +901,7 @@
       "Sieve only"
      ],
      "ans": "Filter off the sand, then use a separating funnel",
-     "why": "Sand is insoluble; oil and water form layers.",
+     "why": "Step 1: filter. The sand is insoluble and stays on the filter paper.\nStep 2: pour the oil and water into a separating funnel. They form two layers.\nStep 3: run the lower water layer out through the tap, then collect the oil.",
      "clue": "Two steps are needed.",
      "level": 2,
      "ref": "iii",
@@ -799,7 +911,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "iv. Sugar and clay:",
+     "text": "Activity 2.18 iv. How would you separate a mixture of sugar and clay?",
      "opts": [
       "Dissolve, filter off the clay, gently evaporate",
       "Use a magnet",
@@ -807,7 +919,7 @@
       "Sieve"
      ],
      "ans": "Dissolve, filter off the clay, gently evaporate",
-     "why": "Sugar dissolves; clay does not.",
+     "why": "Step 1: add water. Sugar dissolves; clay does not.\nStep 2: filter. The clay stays on the paper.\nStep 3: gently evaporate the filtrate. The sugar is left.\nHeat gently, because strong heat burns sugar. It is like salt and sand.",
      "clue": "Like salt and sand.",
      "level": 1,
      "ref": "iv",
@@ -821,14 +933,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which method separates iron filings from sand?",
+   "text": "Choose a separation method: which method separates iron filings from sand?",
    "opts": [
     "Magnetic separation",
     "Distillation",
     "Evaporation"
    ],
    "ans": "Magnetic separation",
-   "why": "Iron is magnetic.",
+   "why": "Iron is magnetic; sand is not.\nA magnet pulls out the iron and the sand stays.\nSo use magnetic separation. Nothing here needs boiling.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u2.s2-5-1.39"
@@ -837,11 +949,11 @@
    "kind": "blank",
    "step": "test",
    "graded": true,
-   "ask": "The liquid that passes through filter paper is called the ___.",
+   "ask": "Name the part: the liquid that passes through filter paper is called the ___.",
    "a": [
     "filtrate"
    ],
-   "why": "The solid left behind is the residue.",
+   "why": "Filter paper lets only the liquid through.\nThe liquid that passes is the filtrate.\nThe solid left behind is the residue.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u2.s2-5-1.40"
@@ -850,7 +962,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "A mixture of sand and sugar can be separated by …",
+   "text": "Plan the order: a mixture of sand and sugar can be separated by …",
    "opts": [
     "evaporation followed by distillation",
     "filtration followed by evaporation",
@@ -858,7 +970,7 @@
     "dissolution followed by evaporation and filtration"
    ],
    "ans": "dissolution followed by filtration and evaporation",
-   "why": "Dissolve the sugar, filter off the sand, evaporate to get the sugar.",
+   "why": "Step 1: dissolve. Add water: the sugar dissolves, the sand does not.\nStep 2: filter. The sand stays on the paper.\nStep 3: evaporate the filtrate. The sugar is left.\nSo: dissolution, then filtration, then evaporation. Evaporating before filtering would leave the sand mixed in.",
    "level": 2,
    "ref": "Review Exercise II Q11",
    "clue": "",
@@ -868,14 +980,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Kerosene and water are best separated using a …",
+   "text": "Choose the apparatus: kerosene and water are best separated using a …",
    "opts": [
     "separating funnel",
     "sieve",
     "magnet"
    ],
    "ans": "separating funnel",
-   "why": "They are immiscible liquids.",
+   "why": "Kerosene and water are immiscible: they form two layers.\nA separating funnel lets the lower water layer run out through its tap.\nThen the kerosene is collected.\nA sieve or a magnet cannot separate two liquids.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u2.s2-5-1.42"
@@ -884,7 +996,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Iron filings, sand and salt must be separated. Which order is most appropriate?",
+   "text": "Plan the order: iron filings, sand and salt must be separated. Which order is most appropriate?",
    "opts": [
     "Evaporation – dissolution – filtration – magnetic separation",
     "Dissolution – magnetic separation – filtration – evaporation",
@@ -892,7 +1004,7 @@
     "Magnetic separation – dissolution – evaporation – filtration"
    ],
    "ans": "Magnetic separation – dissolution – filtration – evaporation",
-   "why": "Magnet first while dry, then dissolve the salt, filter off sand, evaporate.",
+   "why": "Step 1: magnetic separation while dry, to remove the iron.\nStep 2: dissolution. Add water so the salt dissolves.\nStep 3: filtration, to remove the sand.\nStep 4: evaporation of the filtrate, to get the salt.\nEvaporating before filtering would leave the sand with the salt.",
    "level": 3,
    "ref": "Review Exercise II Q15",
    "clue": "",

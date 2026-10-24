@@ -84,9 +84,10 @@
       "Copper is cheaper than everything",
       "Sulfur is a liquid"
      ],
-     "after": "Copper is a metal: a good conductor and it can be drawn into wire. Sulfur is a non-metal and does not conduct.",
+     "after": "Copper is a metal. Metals are good conductors of electricity.\nCopper is also ductile: it can be drawn into thin wire.\nSulfur is a non-metal. It does not conduct, and it is a solid, not a liquid.",
      "added": true,
-     "id": "g7.science.u2.s2-3-2.1"
+     "id": "g7.science.u2.s2-3-2.1",
+     "best": "Copper conducts electricity well"
     },
     {
      "kind": "read",
@@ -161,6 +162,63 @@
      "id": "g7.science.u2.s2-3-2.5"
     },
     {
+     "kind": "tree",
+     "step": "explore",
+     "title": "Sort the elements: metals and non-metals",
+     "root": {
+      "label": "Elements",
+      "info": "118 elements are known. 92 occur naturally on Earth.",
+      "children": [
+       {
+        "label": "Metals",
+        "info": "Shiny, good conductors, malleable and ductile.",
+        "children": [
+         {
+          "label": "Gold",
+          "info": "Shiny and malleable. Used for jewellery."
+         },
+         {
+          "label": "Iron",
+          "info": "Hard and strong. Used for nails, roofs and tools."
+         },
+         {
+          "label": "Copper",
+          "info": "Conducts electricity well. Used for electric wires."
+         },
+         {
+          "label": "Mercury",
+          "info": "The only metal that is a liquid at room temperature."
+         }
+        ]
+       },
+       {
+        "label": "Non-metals",
+        "info": "Dull and poor conductors. Low melting and boiling points.",
+        "children": [
+         {
+          "label": "Carbon",
+          "info": "Dull black solid as charcoal. Diamond is a very hard form of carbon."
+         },
+         {
+          "label": "Oxygen",
+          "info": "A gas in the air. We breathe it to live."
+         },
+         {
+          "label": "Sulfur",
+          "info": "A yellow, dull, brittle solid."
+         },
+         {
+          "label": "Bromine",
+          "info": "A non-metal that is a liquid at room temperature."
+         }
+        ]
+       }
+      ]
+     },
+     "added": true,
+     "id": "g7.science.u2.s2-3-2.29"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -196,7 +254,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Which element is a liquid metal at room temperature?",
+     "text": "Which element is a metal that is liquid at room temperature?",
      "opts": [
       "Bromine",
       "Mercury",
@@ -204,7 +262,7 @@
       "Iron"
      ],
      "ans": "Mercury",
-     "why": "Metals are solid at room temperature except mercury. Bromine is liquid but a non-metal.",
+     "why": "Metals are solid at room temperature, except mercury.\nSo mercury is the liquid metal.\nBromine is also a liquid, but it is a non-metal.\nSodium and iron are solid metals.",
      "clue": "Bromine is a non-metal.",
      "level": 1,
      "ref": "Exercise 2.6 II Q1",
@@ -222,44 +280,45 @@
       [
        "Gold",
        "Metal",
-       "Shiny."
+       "Gold is shiny and malleable: a metal."
       ],
       [
        "Sulfur",
        "Non-metal",
-       "Yellow, dull."
+       "Sulfur is a dull yellow solid that does not conduct: a non-metal."
       ],
       [
        "Copper",
        "Metal",
-       "Conducts."
+       "Copper conducts electricity well: a metal."
       ],
       [
        "Oxygen",
        "Non-metal",
-       "A gas."
+       "Oxygen is a gas and a poor conductor: a non-metal."
       ],
       [
        "Aluminium",
        "Metal",
-       "Conducts."
+       "Aluminium is shiny and conducts: a metal."
       ],
       [
        "Carbon",
        "Non-metal",
-       "Dull."
+       "Carbon (charcoal) is dull: a non-metal."
       ]
      ],
-     "why": "Use the examples in the book.",
+     "why": "Step 1: is it shiny and a good conductor? Then it is a metal.\nGold, copper and aluminium are metals.\nStep 2: is it dull, or a gas, and a poor conductor? Then it is a non-metal.\nSulfur, oxygen and carbon are non-metals.",
      "clue": "Is it shiny and a good conductor?",
      "level": 1,
-     "id": "g7.science.u2.s2-3-2.8"
+     "id": "g7.science.u2.s2-3-2.8",
+     "text": "Sort each element: is it a metal or a non-metal?"
     },
     {
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Substance Y is a hard, shiny solid that conducts heat and electricity well. Y is likely a …",
+     "text": "Identify the type of element: Substance Y is a hard, shiny solid that conducts heat and electricity well. Y is likely a …",
      "opts": [
       "salt",
       "metalloid",
@@ -267,7 +326,7 @@
       "non-metal"
      ],
      "ans": "metal",
-     "why": "Shiny, hard and conducting: metal properties.",
+     "why": "List Y's properties: hard, shiny, solid, good conductor.\nTable 2.3: these are all properties of metals.\nA non-metal is dull and a poor conductor, so it is not a non-metal.\nY is a metal.",
      "clue": "Match the properties to Table 2.3.",
      "level": 1,
      "ref": "Exercise 2.6 II Q2",
@@ -277,11 +336,11 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "A metal that can be hammered into thin sheets is called ___.",
+     "ask": "Name the property: a metal that can be hammered into thin sheets is called ___.",
      "a": [
       "malleable"
      ],
-     "why": "Malleability is being pressed into sheets.",
+     "why": "Hammered into sheets → malleable.\nDrawn into thin wire → ductile.\nSo the word is malleable.",
      "clue": "Starts with \"m\".",
      "level": 2,
      "id": "g7.science.u2.s2-3-2.10"
@@ -290,7 +349,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Which non-metal is essential for our life because we breathe it?",
+     "text": "Which non-metal is essential for our life, because we breathe it?",
      "opts": [
       "Oxygen",
       "Sulfur",
@@ -298,7 +357,7 @@
       "Iron"
      ],
      "ans": "Oxygen",
-     "why": "We need oxygen to breathe and release energy from food. Iron is a metal.",
+     "why": "We breathe in air, which contains oxygen.\nOur bodies use oxygen to release energy from food.\nOxygen is a non-metal (a gas).\nSulfur and fluorine are non-metals we do not breathe. Iron is a metal.",
      "clue": "Which non-metal is in the air we breathe?",
      "level": 3,
      "ref": "Activity 2.9",
@@ -327,9 +386,10 @@
       "The iron melted away",
       "The magnet broke"
      ],
-     "after": "Heating joined iron and sulfur chemically into iron sulfide, a compound with new properties.",
+     "after": "Before heating, iron and sulfur are only mixed, so the magnet pulls out the iron.\nHeating joins them chemically into iron sulfide.\nIron sulfide is a new substance, a compound. It is not magnetic.",
      "ref": "Experiment 2.2",
-     "id": "g7.science.u2.s2-3-2.12"
+     "id": "g7.science.u2.s2-3-2.12",
+     "best": "A new substance, a compound, formed"
     },
     {
      "kind": "read",
@@ -370,6 +430,33 @@
      "id": "g7.science.u2.s2-3-2.15"
     },
     {
+     "kind": "venn",
+     "step": "explore",
+     "title": "Element or compound? Tap each part.",
+     "sets": [
+      [
+       "Element",
+       "One kind of atom only. Cannot be broken down by ordinary chemical means. Examples: iron, gold, hydrogen."
+      ],
+      [
+       "Compound",
+       "More than one kind of atom, chemically joined. Split into elements only by chemical means. Examples: water, table salt."
+      ]
+     ],
+     "overlaps": [
+      [
+       [
+        0,
+        1
+       ],
+       "Both",
+       "Both are pure substances. Neither can be separated by physical means like a magnet or a sieve."
+      ]
+     ],
+     "added": true,
+     "id": "g7.science.u2.s2-3-2.30"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -397,7 +484,7 @@
       "By sieving"
      ],
      "ans": "By an electric current (chemical means)",
-     "why": "A compound is broken into its elements only by chemical means.",
+     "why": "Water is a compound of hydrogen and oxygen.\nA compound is split into its elements only by chemical means.\nPassing an electric current through water does this.\nFiltering, a magnet and sieving are physical methods: they cannot split a compound.",
      "clue": "Physical methods cannot split a compound.",
      "level": 1,
      "id": "g7.science.u2.s2-3-2.17"
@@ -414,47 +501,48 @@
       [
        "Iron",
        "Element",
-       "One kind of atom."
+       "One kind of atom: iron atoms only."
       ],
       [
        "Water",
        "Compound",
-       "Hydrogen + oxygen."
+       "Hydrogen and oxygen joined: a compound."
       ],
       [
        "Gold",
        "Element",
-       "One kind of atom."
+       "One kind of atom: gold atoms only."
       ],
       [
        "Table salt",
        "Compound",
-       "Sodium + chlorine."
+       "Sodium and chlorine joined: a compound."
       ],
       [
        "Hydrogen",
        "Element",
-       "One kind of atom."
+       "One kind of atom: hydrogen atoms only."
       ],
       [
        "Carbon dioxide",
        "Compound",
-       "Carbon + oxygen."
+       "Carbon and oxygen joined: a compound."
       ]
      ],
-     "why": "Compounds contain more than one type of atom.",
+     "why": "Ask: how many kinds of atom does it have?\nOne kind → element: iron, gold, hydrogen.\nTwo or more kinds joined → compound: water (H + O), table salt (Na + Cl), carbon dioxide (C + O).",
      "clue": "Is it made of one kind of atom?",
      "level": 1,
      "ref": "Exercise 2.6 I Q1",
-     "id": "g7.science.u2.s2-3-2.18"
+     "id": "g7.science.u2.s2-3-2.18",
+     "text": "Sort each substance: is it an element or a compound?"
     },
     {
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "Sodium chloride has the same properties as sodium and chlorine.",
+     "text": "True or false? Sodium chloride (table salt) has the same properties as sodium and chlorine.",
      "a": false,
-     "why": "A compound's properties differ from those of its elements.",
+     "why": "Sodium is a soft metal. Chlorine is a poisonous gas.\nJoined, they form sodium chloride: table salt, which we eat.\nA compound's properties differ from those of its elements.\nSo the statement is false.",
      "clue": "Do we eat chlorine gas? We eat table salt.",
      "level": 2,
      "id": "g7.science.u2.s2-3-2.19"
@@ -463,7 +551,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Magnesium filings and sulfur are put in a beaker, then heated so they react to form magnesium sulfide. What is it before and after?",
+     "text": "Mixture or compound? Magnesium filings and sulfur are put in a beaker, then heated so they react to form magnesium sulfide. What is it before and after?",
      "opts": [
       "Mixture before, compound after",
       "Compound before, mixture after",
@@ -471,7 +559,7 @@
       "Element both times"
      ],
      "ans": "Mixture before, compound after",
-     "why": "Before heating they are only placed together: a mixture. The reaction joins them chemically into a new compound.",
+     "why": "Before heating: magnesium and sulfur are only placed together. They are not joined: a mixture.\nOn heating they react chemically.\nMagnesium sulfide is a new substance with new properties: a compound.\nSo: mixture before, compound after (like iron and sulfur in Experiment 2.2).",
      "clue": "Compare with Experiment 2.2.",
      "level": 3,
      "ref": "Activity 2.10 Q1",
@@ -489,7 +577,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "What do you observe as you bring the magnet close to the iron–sulfur mixture?",
+     "text": "Experiment 2.2 Part I: what do you observe as you bring the magnet close to the iron–sulfur mixture?",
      "opts": [
       "The iron filings stick to the magnet; the sulfur stays",
       "Both stick to the magnet",
@@ -497,7 +585,7 @@
       "The sulfur sticks"
      ],
      "ans": "The iron filings stick to the magnet; the sulfur stays",
-     "why": "Iron is magnetic, sulfur is not. In a mixture each keeps its properties.",
+     "why": "Iron is magnetic. Sulfur is not.\nIn a mixture, each substance keeps its own properties.\nSo the iron filings stick to the magnet and the sulfur stays behind.",
      "clue": "Which one is magnetic?",
      "level": 1,
      "ref": "Part I Q i",
@@ -507,7 +595,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "What do you see under the magnifying glass?",
+     "text": "Experiment 2.2 Part I: what do you see when you look at the mixture under a magnifying glass?",
      "opts": [
       "Separate grains of grey iron and yellow sulfur",
       "One new black substance",
@@ -515,7 +603,7 @@
       "Nothing"
      ],
      "ans": "Separate grains of grey iron and yellow sulfur",
-     "why": "In a mixture the particles are not joined.",
+     "why": "In Part I nothing has been heated, so it is still a mixture.\nIn a mixture the particles are not joined.\nSo you see separate grey iron grains and yellow sulfur grains.\nThe black substance forms only after heating in Part II.",
      "clue": "Is it still a mixture in Part I?",
      "level": 1,
      "ref": "Part I Q ii",
@@ -525,7 +613,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "After heating (Part II), the black product is not attracted by a magnet. Why?",
+     "text": "Experiment 2.2 Part II: after heating, the black product is not attracted by a magnet. Why?",
      "opts": [
       "A new compound, iron(II) sulfide, formed",
       "The magnet got hot",
@@ -533,7 +621,7 @@
       "It is still a mixture"
      ],
      "ans": "A new compound, iron(II) sulfide, formed",
-     "why": "A compound has properties different from its elements.",
+     "why": "Heating made iron and sulfur react chemically.\nThey formed iron(II) sulfide, a new compound.\nA compound has properties different from its elements.\nIron sulfide is not magnetic, so the magnet does not pick it up.",
      "clue": "Did a new substance form?",
      "level": 2,
      "ref": "Part II",
@@ -547,7 +635,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which is an element?",
+   "text": "Which of these substances is an element?",
    "opts": [
     "Water",
     "Iron",
@@ -555,7 +643,7 @@
     "Sugar"
    ],
    "ans": "Iron",
-   "why": "Iron has only one kind of atom.",
+   "why": "An element has only one kind of atom.\nIron has only iron atoms: an element.\nWater (H + O), table salt (Na + Cl) and sugar (C, H, O) each have more than one kind: compounds.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u2.s2-3-2.24"
@@ -564,9 +652,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "Metals are good conductors of heat and electricity.",
+   "text": "True or false? Metals are good conductors of heat and electricity.",
    "a": true,
-   "why": "That is a property of metals.",
+   "why": "Table 2.3: metals conduct heat and electricity well.\nThat is why pots and electric wires are made of metal.\nSo the statement is true.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u2.s2-3-2.25"
@@ -575,7 +663,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which is not a metal?",
+   "text": "Which of these elements is not a metal?",
    "opts": [
     "Iron",
     "Sulfur",
@@ -583,7 +671,7 @@
     "Sodium"
    ],
    "ans": "Sulfur",
-   "why": "Sulfur is a non-metal.",
+   "why": "Iron, copper and sodium are metals: they conduct and are shiny when cut.\nSulfur is dull, brittle and does not conduct.\nSo sulfur is the non-metal.",
    "level": 2,
    "ref": "Review Exercise II Q9",
    "clue": "",
@@ -593,7 +681,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "A compound can be broken into its elements by …",
+   "text": "How can a compound be broken into its elements? By …",
    "opts": [
     "physical means",
     "chemical means",
@@ -601,7 +689,7 @@
     "a sieve"
    ],
    "ans": "chemical means",
-   "why": "Only chemical means split a compound.",
+   "why": "In a compound the elements are chemically joined.\nOnly a chemical method can break these bonds.\nExample: an electric current splits water into hydrogen and oxygen.\nA magnet and a sieve are physical means: they cannot split a compound.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u2.s2-3-2.27"
@@ -610,7 +698,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Ductility means a metal can be …",
+   "text": "What does ductility mean? Ductility means a metal can be …",
    "opts": [
     "drawn into thin wire",
     "hammered into sheets",
@@ -618,7 +706,7 @@
     "broken into powder"
    ],
    "ans": "drawn into thin wire",
-   "why": "Ductile: drawn into wire. Malleable: hammered into sheets.",
+   "why": "Ductile → can be drawn into thin wire (like copper wire).\nMalleable → can be hammered into sheets (like iron roof sheets).\nDo not mix up the two words.\nSo ductility means drawn into thin wire.",
    "level": 3,
    "clue": "",
    "id": "g7.science.u2.s2-3-2.28"

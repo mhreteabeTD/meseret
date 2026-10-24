@@ -40,8 +40,9 @@
       "Yes",
       "No, it is a new substance"
      ],
-     "after": "Each piece is still paper. Only the size and shape changed: a physical change.",
-     "id": "g7.science.u2.s2-4-1.1"
+     "after": "Yes. Each small piece is still paper.\nOnly the size and shape changed. No new substance formed.\nThis is a physical change.",
+     "id": "g7.science.u2.s2-4-1.1",
+     "best": "Yes"
     },
     {
      "kind": "read",
@@ -95,6 +96,51 @@
      "id": "g7.science.u2.s2-4-1.4"
     },
     {
+     "kind": "sort",
+     "step": "explore",
+     "graded": false,
+     "title": "What changed: size and shape, or state?",
+     "text": "In each physical change, sort what changed.",
+     "bins": [
+      "Size or shape",
+      "State"
+     ],
+     "items": [
+      [
+       "Tearing paper",
+       "Size or shape",
+       "Small pieces of the same paper."
+      ],
+      [
+       "Melting ice",
+       "State",
+       "Solid water becomes liquid water."
+      ],
+      [
+       "Grinding salt",
+       "Size or shape",
+       "Big crystals become fine powder. Still salt."
+      ],
+      [
+       "Evaporation of water",
+       "State",
+       "Liquid water becomes water vapour."
+      ],
+      [
+       "Breaking a stick",
+       "Size or shape",
+       "Smaller pieces of the same wood."
+      ],
+      [
+       "Freezing water",
+       "State",
+       "Liquid water becomes ice."
+      ]
+     ],
+     "added": true,
+     "id": "g7.science.u2.s2-4-1.15"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -110,7 +156,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Which is a physical change?",
+     "text": "Which of these is a physical change?",
      "opts": [
       "Burning charcoal",
       "Evaporation of water",
@@ -118,7 +164,7 @@
       "Spoilage of food"
      ],
      "ans": "Evaporation of water",
-     "why": "Water vapour is still water and condenses back.",
+     "why": "A physical change forms no new substance.\nWhen water evaporates, the vapour is still water. It condenses back to liquid.\nBurning charcoal, rusting and food spoilage all form new substances: chemical changes.\nSo evaporation of water is the physical change.",
      "clue": "Which one forms no new substance?",
      "level": 1,
      "ref": "Activity 2.13",
@@ -128,9 +174,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "A new substance forms in a physical change.",
+     "text": "True or false? A new substance forms in a physical change.",
      "a": false,
-     "why": "A new substance is never formed in a physical change.",
+     "why": "A physical change alters only the appearance: size, shape or state.\nThe chemical composition stays the same.\nA new substance is never formed. So the statement is false.",
      "clue": "Read the definition.",
      "level": 1,
      "id": "g7.science.u2.s2-4-1.7"
@@ -139,7 +185,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Change in size, shape and state of a substance is a …",
+     "text": "Name the kind of change: a change in size, shape and state of a substance is a …",
      "opts": [
       "chemical change",
       "physical change",
@@ -147,7 +193,7 @@
       "none"
      ],
      "ans": "physical change",
-     "why": "Size, shape and state are physical properties.",
+     "why": "Size, shape and state are physical properties.\nChanging them does not change what the substance is made of.\nExample: ice melting is still water.\nSo it is a physical change.",
      "clue": "Does the substance stay the same?",
      "level": 1,
      "ref": "Exercise 2.7 II Q1",
@@ -157,7 +203,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Which one is a physical change?",
+     "text": "Which one of these is a physical change?",
      "opts": [
       "Burning a candle",
       "Fermentation",
@@ -165,7 +211,7 @@
       "All of them"
      ],
      "ans": "Making an iron bar magnetic",
-     "why": "The book lists making an iron bar magnetic as physical. Burning a candle and fermentation form new substances.",
+     "why": "Making an iron bar magnetic: the iron stays iron. Nothing new forms. Physical.\nBurning a candle forms carbon dioxide and water vapour: chemical.\nFermentation forms alcohol and carbon dioxide: chemical.\nSo \"All of them\" is wrong. The answer is making an iron bar magnetic.",
      "clue": "Which one leaves the substance unchanged?",
      "level": 3,
      "ref": "Exercise 2.7 II Q3",
@@ -181,13 +227,13 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Melting of ice is a …",
+   "text": "Classify the change: melting of ice is a …",
    "opts": [
     "physical change",
     "chemical change"
    ],
    "ans": "physical change",
-   "why": "Only the state changes.",
+   "why": "Melting turns solid ice into liquid water.\nIt is still water: only the state changed.\nSo melting is a physical change.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u2.s2-4-1.10"
@@ -196,9 +242,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "Dissolving sugar in water is a physical change.",
+   "text": "True or false? Dissolving sugar in water is a physical change.",
    "a": true,
-   "why": "The sugar can be recovered.",
+   "why": "The sugar spreads through the water, but it is still sugar.\nEvaporate the water and the sugar is left again.\nNo new substance forms, so it is a physical change. True.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u2.s2-4-1.11"
@@ -207,7 +253,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which is NOT a physical change?",
+   "text": "Find the odd one out: which is NOT a physical change?",
    "opts": [
     "Tearing paper",
     "Grinding salt",
@@ -215,7 +261,7 @@
     "Breaking a stick"
    ],
    "ans": "Burning wood",
-   "why": "Burning forms ash and gases: chemical.",
+   "why": "Tearing paper, grinding salt and breaking a stick change only size or shape.\nBurning wood makes ash, smoke and gases: new substances.\nSo burning wood is a chemical change, not a physical one.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u2.s2-4-1.12"
@@ -224,12 +270,12 @@
    "kind": "blank",
    "step": "test",
    "graded": true,
-   "ask": "In a physical change, no new ___ is formed.",
+   "ask": "Complete the definition: in a physical change, no new ___ is formed.",
    "a": [
     "substance",
     "substances"
    ],
-   "why": "Only the appearance changes.",
+   "why": "A physical change alters size, shape or state.\nThe chemical composition does not change.\nSo no new substance is formed.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u2.s2-4-1.13"
@@ -238,7 +284,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Abebe melts butter, then lets it cool and harden again. Which is true?",
+   "text": "Two changes in a row: Abebe melts butter, then lets it cool and harden again. Which is true?",
    "opts": [
     "Both steps are physical changes",
     "Both are chemical",
@@ -246,7 +292,7 @@
     "The butter becomes a new substance"
    ],
    "ans": "Both steps are physical changes",
-   "why": "Melting and freezing only change the state.",
+   "why": "Melting: solid butter → liquid butter. Only the state changes.\nCooling: liquid butter → solid butter. Only the state changes again.\nIt is still butter, so no new substance formed.\nBoth steps are physical changes.",
    "level": 3,
    "clue": "",
    "id": "g7.science.u2.s2-4-1.14"

@@ -59,8 +59,9 @@
       "No, it becomes sand",
       "No, a new substance forms"
      ],
-     "after": "Mixing does not change the salt or the sand. Each keeps its own properties.",
-     "id": "g7.science.u2.s2-3-3.1"
+     "after": "Yes. Mixing does not change the salt or the sand.\nThe salt still tastes salty and dissolves in water. The sand does not.\nEach keeps its own properties. That is a mixture.",
+     "id": "g7.science.u2.s2-3-3.1",
+     "best": "Yes, mixing changes neither"
     },
     {
      "kind": "read",
@@ -74,37 +75,34 @@
      "id": "g7.science.u2.s2-3-3.2"
     },
     {
-     "kind": "read",
-     "step": "read",
+     "kind": "tap",
+     "step": "explore",
      "title": "Common mixtures",
-     "paras": [],
-     "table": [
-      [
-       "Mixture",
-       "Contains"
-      ],
+     "id": "g7.science.u2.s2-3-3.3",
+     "ask": "Tap each mixture to see what is in it.",
+     "need": 3,
+     "items": [
       [
        "Soil",
-       "Particles of different sizes and plant material"
+       "Particles of different sizes and plant material."
       ],
       [
        "Cooking oil",
-       "Different vegetable oils"
+       "Different vegetable oils."
       ],
       [
        "Ink",
-       "Dyes dissolved in alcohol and water"
+       "Dyes dissolved in alcohol and water."
       ],
       [
        "Milk",
-       "Proteins, carbohydrates, fats, water, minerals"
+       "Proteins, carbohydrates, fats, water and minerals."
       ],
       [
        "Air",
-       "Oxygen, nitrogen, carbon dioxide"
+       "Oxygen, nitrogen and carbon dioxide."
       ]
-     ],
-     "id": "g7.science.u2.s2-3-3.3"
+     ]
     },
     {
      "kind": "name",
@@ -122,14 +120,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Do you think air is a pure substance or a mixture?",
+     "text": "Is air a pure substance or a mixture?",
      "opts": [
       "Pure substance: it is one gas",
       "Mixture: it contains several gases",
       "Element: it is oxygen only"
      ],
      "ans": "Mixture: it contains several gases",
-     "why": "Air contains oxygen, nitrogen, carbon dioxide and more, physically mixed.",
+     "why": "Air contains oxygen, nitrogen, carbon dioxide and more.\nThese gases are only physically mixed, not joined.\nSo air is a mixture, not a pure substance.\nIt is not oxygen only: most of the air is nitrogen.",
      "clue": "Is air only one substance?",
      "level": 1,
      "ref": "Activity 2.10 Q3",
@@ -139,9 +137,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "In a mixture, each substance keeps its own properties.",
+     "text": "True or false? In a mixture, each substance keeps its own properties.",
      "a": true,
-     "why": "That is why iron in an iron–sulfur mixture still sticks to a magnet.",
+     "why": "In a mixture the substances are not chemically joined.\nIn Experiment 2.2 Part I, iron in the iron–sulfur mixture still sticks to a magnet.\nSo each substance keeps its properties: true.",
      "clue": "Think of Experiment 2.2 Part I.",
      "level": 1,
      "id": "g7.science.u2.s2-3-3.6"
@@ -150,7 +148,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Which is true for a mixture but NOT for a compound?",
+     "text": "Mixture or compound? Which is true for a mixture but NOT for a compound?",
      "opts": [
       "Its parts keep their own properties and can be separated physically",
       "It has new properties",
@@ -158,7 +156,7 @@
       "It can only be split chemically"
      ],
      "ans": "Its parts keep their own properties and can be separated physically",
-     "why": "In a compound the elements are chemically joined and properties change. In a mixture nothing is joined.",
+     "why": "In a mixture nothing is joined, so each part keeps its properties.\nThat is why a mixture can be separated by physical means (like a magnet).\nNew properties, a fixed composition and splitting only by chemical means describe a compound.\nSo the answer is: its parts keep their properties and can be separated physically.",
      "clue": "Recall Experiment 2.2.",
      "level": 3,
      "added": true,
@@ -185,8 +183,9 @@
       "Sand in water",
       "Air"
      ],
-     "after": "In sand and water you can see the sand. Sugar water and air look the same everywhere.",
-     "id": "g7.science.u2.s2-3-3.8"
+     "after": "Sand in water: you can see the sand grains at the bottom.\nSugar dissolves completely, so sugar water looks the same everywhere.\nAir is a mixture of gases you cannot see apart.",
+     "id": "g7.science.u2.s2-3-3.8",
+     "best": "Sand in water"
     },
     {
      "kind": "read",
@@ -201,44 +200,35 @@
      "id": "g7.science.u2.s2-3-3.9"
     },
     {
-     "kind": "read",
-     "step": "read",
+     "kind": "tap",
+     "step": "explore",
      "title": "Table 2.4 Types of homogeneous mixture (solution)",
-     "paras": [],
-     "table": [
-      [
-       "State",
-       "Type",
-       "Examples"
-      ],
-      [
-       "Gas",
-       "Gas in gas",
-       "Air (oxygen and nitrogen)"
-      ],
-      [
-       "Liquid",
-       "Gas in liquid",
-       "Soft drinks such as Pepsi, Mirinda, Coca-Cola"
-      ],
-      [
-       "Liquid",
-       "Liquid in liquid",
-       "Alcohol in water"
-      ],
-      [
-       "Liquid",
-       "Solid in liquid",
-       "Salt solution, sugar solution"
-      ],
-      [
-       "Solid",
-       "Solid in solid",
-       "Brass (Zn/Cu), bronze (Cu/Sn)"
-      ]
-     ],
      "ref": "Table 2.4",
-     "id": "g7.science.u2.s2-3-3.10"
+     "id": "g7.science.u2.s2-3-3.10",
+     "ask": "Tap each type to see examples.",
+     "need": 3,
+     "items": [
+      [
+       "Gas in gas",
+       "State: gas. Example: air (oxygen and nitrogen)."
+      ],
+      [
+       "Gas in liquid",
+       "State: liquid. Example: soft drinks such as Pepsi, Mirinda, Coca-Cola."
+      ],
+      [
+       "Liquid in liquid",
+       "State: liquid. Example: alcohol in water."
+      ],
+      [
+       "Solid in liquid",
+       "State: liquid. Examples: salt solution, sugar solution."
+      ],
+      [
+       "Solid in solid",
+       "State: solid. Examples: brass (zinc and copper), bronze (copper and tin)."
+      ]
+     ]
     },
     {
      "kind": "read",
@@ -286,6 +276,33 @@
      "id": "g7.science.u2.s2-3-3.12"
     },
     {
+     "kind": "venn",
+     "step": "explore",
+     "title": "Homogeneous or heterogeneous? Tap each part.",
+     "sets": [
+      [
+       "Homogeneous",
+       "Uniform composition, one phase, parts not easily seen. \"Homo\" means the same. Examples: sugar solution, soft drinks, salt solution."
+      ],
+      [
+       "Heterogeneous",
+       "Non-uniform composition, two or more phases, parts easily seen. \"Hetero\" means different. Examples: milk, soil, sand and water, oil and water."
+      ]
+     ],
+     "overlaps": [
+      [
+       [
+        0,
+        1
+       ],
+       "Both",
+       "Both are mixtures. Each substance keeps its own properties, and the parts can be separated by physical means."
+      ]
+     ],
+     "added": true,
+     "id": "g7.science.u2.s2-3-3.32"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -309,7 +326,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Which substance makes a homogeneous mixture with water?",
+     "text": "Which substance makes a homogeneous mixture (a solution) with water?",
      "opts": [
       "Benzene",
       "Oil",
@@ -317,7 +334,7 @@
       "Sulfur"
      ],
      "ans": "Sugar",
-     "why": "Sugar dissolves to form a sugar solution.",
+     "why": "A homogeneous mixture forms when a substance dissolves completely.\nSugar dissolves in water and makes a sugar solution.\nOil and benzene form a layer on water. Sulfur does not dissolve.\nSo the answer is sugar.",
      "clue": "Which one dissolves?",
      "level": 1,
      "ref": "Exercise 2.6 II Q3",
@@ -335,47 +352,48 @@
       [
        "Air",
        "Homogeneous",
-       "Gas in gas."
+       "Gas in gas: the same everywhere."
       ],
       [
        "Soil",
        "Heterogeneous",
-       "Parts visible."
+       "You can see pieces of different sizes."
       ],
       [
        "Salt solution",
        "Homogeneous",
-       "Solid in liquid."
+       "Salt is dissolved: solid in liquid."
       ],
       [
        "Blood",
        "Heterogeneous",
-       "The book lists it."
+       "The book lists blood as heterogeneous. Under a microscope its parts can be seen."
       ],
       [
        "Brass",
        "Homogeneous",
-       "Solid in solid."
+       "Zinc and copper mixed evenly: solid in solid."
       ],
       [
        "Oil and water",
        "Heterogeneous",
-       "Two layers."
+       "Oil floats on water as a separate layer."
       ]
      ],
-     "why": "Homogeneous: looks the same everywhere. Heterogeneous: parts can be seen.",
+     "why": "Ask: does it look the same everywhere?\nYes → homogeneous: air, salt solution, brass.\nNo, parts or layers can be seen → heterogeneous: soil, blood, oil and water.",
      "clue": "Are there layers or visible bits?",
      "level": 1,
      "ref": "Activities 2.11–2.12",
-     "id": "g7.science.u2.s2-3-3.15"
+     "id": "g7.science.u2.s2-3-3.15",
+     "text": "Sort each mixture: homogeneous or heterogeneous?"
     },
     {
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "A heterogeneous mixture contains only one phase.",
+     "text": "True or false? A heterogeneous mixture contains only one phase.",
      "a": false,
-     "why": "It has two or more phases. A homogeneous mixture has one.",
+     "why": "A heterogeneous mixture has visible boundaries between its parts.\nEach visible part is a phase, so it has two or more phases.\nExample: oil and water form two layers.\nOnly a homogeneous mixture has one phase. So false.",
      "clue": "Think of oil on water.",
      "level": 1,
      "ref": "Review Exercise I Q5",
@@ -385,7 +403,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Pepsi is a homogeneous mixture of which type?",
+     "text": "Name the type of solution: Pepsi is a homogeneous mixture of which type?",
      "opts": [
       "Gas in liquid",
       "Solid in solid",
@@ -393,7 +411,7 @@
       "Liquid in liquid"
      ],
      "ans": "Gas in liquid",
-     "why": "Carbon dioxide gas is dissolved in the liquid drink.",
+     "why": "The bubbles in Pepsi are carbon dioxide gas.\nThe gas is dissolved in a liquid drink.\nSo it is a gas-in-liquid solution (Table 2.4).",
      "clue": "What makes the bubbles?",
      "level": 2,
      "ref": "Table 2.4",
@@ -403,7 +421,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Which statement is correct?",
+     "text": "Solutions and mixtures: which statement is correct?",
      "opts": [
       "Every solution is a homogeneous mixture",
       "Milk is a solution",
@@ -411,7 +429,7 @@
       "Air is a pure substance"
      ],
      "ans": "Every solution is a homogeneous mixture",
-     "why": "The book: a homogeneous mixture is also called a solution. Milk is heterogeneous, brass homogeneous, air a mixture.",
+     "why": "The book: a homogeneous mixture is also called a solution. So every solution is homogeneous.\nMilk is heterogeneous, so it is not a solution.\nBrass is homogeneous (solid in solid).\nAir is a mixture, not a pure substance.",
      "clue": "Check each against Tables 2.4 and 2.5.",
      "level": 3,
      "added": true,
@@ -438,44 +456,45 @@
       [
        "a. Water",
        "Compound",
-       ""
+       "Hydrogen and oxygen chemically joined."
       ],
       [
        "b. Uranium",
        "Element",
-       ""
+       "A metal element: one kind of atom."
       ],
       [
        "c. Blood",
        "Mixture",
-       ""
+       "Many substances mixed; parts seen under a microscope."
       ],
       [
        "d. Alcohol",
        "Compound",
-       ""
+       "Pure ethanol is one compound of carbon, hydrogen and oxygen."
       ],
       [
        "e. The oceans",
        "Mixture",
-       ""
+       "Salt water with many dissolved substances."
       ],
       [
        "f. Iron",
        "Element",
-       ""
+       "A metal element: one kind of atom."
       ],
       [
        "g. Table salt",
        "Compound",
-       ""
+       "Sodium chloride: sodium and chlorine joined."
       ]
      ],
-     "why": "Elements have one kind of atom; compounds are elements chemically joined; mixtures are physically mixed.",
+     "why": "Element: one kind of atom.\nCompound: elements chemically joined, a pure substance.\nMixture: substances physically mixed.\nFirst ask: is it pure or a mixture? If pure, ask: one kind of atom or more?\nHere: uranium and iron are elements; water, alcohol and table salt are compounds; blood and the oceans are mixtures.",
      "clue": "First ask: pure or mixture?",
      "level": 2,
      "ref": "I Q1 a–g",
-     "id": "g7.science.u2.s2-3-3.19"
+     "id": "g7.science.u2.s2-3-3.19",
+     "text": "Classify each substance as an element, a compound or a mixture."
     },
     {
      "kind": "sort",
@@ -491,44 +510,45 @@
       [
        "h. Brass",
        "Mixture",
-       ""
+       "Zinc and copper mixed together (a solid solution)."
       ],
       [
        "i. Hydrogen",
        "Element",
-       ""
+       "A gas element: one kind of atom."
       ],
       [
        "j. Gold",
        "Element",
-       ""
+       "A metal element: one kind of atom."
       ],
       [
        "k. Sugar",
        "Compound",
-       ""
+       "Carbon, hydrogen and oxygen chemically joined."
       ],
       [
        "l. Milk",
        "Mixture",
-       ""
+       "Fats, proteins and water mixed."
       ],
       [
        "m. Honey",
        "Mixture",
-       ""
+       "Sugars and water mixed."
       ],
       [
        "n. Benzene",
        "Compound",
-       ""
+       "Carbon and hydrogen chemically joined."
       ]
      ],
-     "why": "Brass, milk and honey are mixtures. Hydrogen and gold are elements. Sugar and benzene are compounds.",
+     "why": "Element: one kind of atom.\nCompound: elements chemically joined, a pure substance.\nMixture: substances physically mixed.\nFirst ask: is it pure or a mixture? If pure, ask: one kind of atom or more?\nHere: hydrogen and gold are elements; sugar and benzene are compounds; brass, milk and honey are mixtures.",
      "clue": "First ask: pure or mixture?",
      "level": 2,
      "ref": "I Q1 h–n",
-     "id": "g7.science.u2.s2-3-3.20"
+     "id": "g7.science.u2.s2-3-3.20",
+     "text": "Classify each substance as an element, a compound or a mixture."
     },
     {
      "kind": "mcq",
@@ -542,7 +562,7 @@
       "Iron"
      ],
      "ans": "Mercury",
-     "why": "Mercury is the liquid metal; bromine is a liquid non-metal.",
+     "why": "Metals are solid at room temperature, except mercury.\nBromine is also liquid, but it is a non-metal.\nSodium and iron are solid metals.\nSo the answer is mercury.",
      "clue": "Bromine is not a metal.",
      "level": 1,
      "ref": "II Q1",
@@ -552,7 +572,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Substance Y is a hard, lustrous solid which readily conducts heat and electricity. Y is likely to be:",
+     "text": "Identify the type of element: Substance Y is a hard, lustrous solid which readily conducts heat and electricity. Y is likely to be:",
      "opts": [
       "Salt",
       "Metalloid",
@@ -560,7 +580,7 @@
       "Non-metal"
      ],
      "ans": "Metal",
-     "why": "These are metal properties.",
+     "why": "Lustrous means shiny.\nHard, shiny and a good conductor of heat and electricity: these are metal properties (Table 2.3).\nNon-metals are dull and poor conductors.\nSo Y is a metal.",
      "clue": "Shiny and conducting.",
      "level": 1,
      "ref": "II Q2",
@@ -570,7 +590,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Which substance makes a homogeneous mixture with water?",
+     "text": "Which substance makes a homogeneous mixture (a solution) with water?",
      "opts": [
       "Benzene",
       "Oil",
@@ -578,7 +598,7 @@
       "Sulfur"
      ],
      "ans": "Sugar",
-     "why": "Sugar dissolves completely.",
+     "why": "Sugar dissolves completely in water: one phase, a solution.\nOil and benzene stay as a separate layer.\nSulfur does not dissolve.\nSo the answer is sugar.",
      "clue": "Which one dissolves?",
      "level": 1,
      "ref": "II Q3",
@@ -596,7 +616,7 @@
       "Brass"
      ],
      "ans": "Pure water",
-     "why": "Pure water is a single compound.",
+     "why": "Air is a mixture of gases. Sea water has salts dissolved in water.\nBrass is a mixture of zinc and copper.\nPure water is one compound only (hydrogen and oxygen joined).\nSo pure water is not a mixture.",
      "clue": "Which is one substance only?",
      "level": 1,
      "ref": "II Q4",
@@ -630,7 +650,7 @@
       "Sugar solution",
       "Pepsi"
      ],
-     "why": "These are uniform throughout (Table 2.4). Milk and soil are heterogeneous; water and gold are pure.",
+     "why": "A homogeneous mixture looks the same everywhere (one phase).\nAir, salt solution, sugar solution and Pepsi are solutions. Brass is a solid-in-solid solution.\nMilk and soil have visible parts: heterogeneous.\nWater and gold are pure substances, not mixtures at all.",
      "clue": "Mixtures that look the same everywhere.",
      "level": 1,
      "ref": "Activity 2.11",
@@ -654,7 +674,7 @@
       "Milk",
       "Soil"
      ],
-     "why": "The book names milk and soil. Bronze, air and ink are homogeneous; ethanol and iron are pure.",
+     "why": "A heterogeneous mixture has parts you can see.\nThe book names milk and soil as heterogeneous.\nBronze, air and ink are homogeneous (solutions).\nEthanol and iron are pure substances, not mixtures.",
      "clue": "Mixtures whose parts can be seen.",
      "level": 1,
      "ref": "Activity 2.12",
@@ -668,7 +688,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which is a heterogeneous mixture?",
+   "text": "Which of these is a heterogeneous mixture?",
    "opts": [
     "Sea water",
     "Blood",
@@ -676,7 +696,7 @@
     "Air"
    ],
    "ans": "Blood",
-   "why": "Blood is a heterogeneous mixture.",
+   "why": "Sea water, bronze and air are uniform: homogeneous.\nBlood has parts that can be seen under a microscope.\nThe book lists blood as heterogeneous.",
    "level": 1,
    "ref": "Review Exercise II Q14",
    "clue": "",
@@ -686,9 +706,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "A homogeneous mixture is also called a solution.",
+   "text": "True or false? A homogeneous mixture is also called a solution.",
    "a": true,
-   "why": "The book says so.",
+   "why": "A homogeneous mixture has the same composition throughout.\nThe book says it is also called a solution, like salt water.\nSo the statement is true.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u2.s2-3-3.28"
@@ -697,7 +717,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "All of these are heterogeneous mixtures EXCEPT …",
+   "text": "Find the odd one out: all of these are heterogeneous mixtures EXCEPT …",
    "opts": [
     "soil",
     "water and oil",
@@ -705,7 +725,7 @@
     "blood"
    ],
    "ans": "salt solution",
-   "why": "Salt solution is homogeneous.",
+   "why": "Soil, water and oil, and blood all have visible parts or layers: heterogeneous.\nIn salt solution the salt is fully dissolved. It looks the same everywhere.\nSo salt solution is the homogeneous one.",
    "level": 2,
    "ref": "Review Exercise II Q8",
    "clue": "",
@@ -715,7 +735,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Brass (zinc and copper) is a …",
+   "text": "Classify brass: brass (zinc and copper) is a …",
    "opts": [
     "solid-in-solid solution",
     "heterogeneous mixture",
@@ -723,7 +743,7 @@
     "element"
    ],
    "ans": "solid-in-solid solution",
-   "why": "Table 2.4.",
+   "why": "Brass is zinc and copper mixed evenly.\nIt looks the same throughout, so it is homogeneous.\nBoth parts are solids: a solid-in-solid solution (Table 2.4).\nIt is not a compound, because the metals are not chemically joined.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u2.s2-3-3.30"
@@ -732,7 +752,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which shows a mixture, not a compound?",
+   "text": "Mixture or compound? Which shows a mixture, not a compound?",
    "opts": [
     "Iron filings and sulfur that a magnet can separate",
     "Water made of hydrogen and oxygen",
@@ -740,7 +760,7 @@
     "Iron sulfide"
    ],
    "ans": "Iron filings and sulfur that a magnet can separate",
-   "why": "In a mixture parts keep their properties and separate physically.",
+   "why": "In a mixture each part keeps its properties.\nIron filings and sulfur: the magnet still pulls out the iron. So it is a mixture.\nWater, table salt and iron sulfide are compounds: their elements are chemically joined.",
    "level": 3,
    "clue": "",
    "id": "g7.science.u2.s2-3-3.31"

@@ -52,8 +52,9 @@
       "Yes, easily",
       "No"
      ],
-     "after": "Ash cannot become wood again. Chemical changes are not easily reversed; physical changes usually are.",
-     "id": "g7.science.u2.s2-4-3.1"
+     "after": "No. Ash cannot become wood again.\nBurning made new substances: ash, smoke and gases.\nChemical changes are not easily reversed. Physical changes, like melting ice, usually are.",
+     "id": "g7.science.u2.s2-4-3.1",
+     "best": "No"
     },
     {
      "kind": "read",
@@ -89,6 +90,33 @@
      "id": "g7.science.u2.s2-4-3.2"
     },
     {
+     "kind": "venn",
+     "step": "explore",
+     "title": "Physical or chemical change? Tap each part.",
+     "sets": [
+      [
+       "Physical change",
+       "No new substance. Composition not altered. Easily reversed by physical means. Energy changes not necessary. Example: melting ice."
+      ],
+      [
+       "Chemical change",
+       "New substances with new properties. Composition altered. Not easily reversed. Accompanied by energy changes. Example: burning wood."
+      ]
+     ],
+     "overlaps": [
+      [
+       [
+        0,
+        1
+       ],
+       "Both",
+       "Both are changes in matter. Both happen around us all the time."
+      ]
+     ],
+     "added": true,
+     "id": "g7.science.u2.s2-4-3.13"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -120,7 +148,7 @@
       "Only the shape changes"
      ],
      "ans": "New substances with new properties form",
-     "why": "That is the key sign of a chemical change.",
+     "why": "In a chemical change new substances form.\nThe new substances have new properties.\n\"Easily reversed\", \"composition stays the same\" and \"only shape changes\" describe a physical change.",
      "clue": "Look at the right column.",
      "level": 1,
      "id": "g7.science.u2.s2-4-3.4"
@@ -137,45 +165,46 @@
       [
        "No new substance",
        "Physical change",
-       ""
+       "Nothing new forms in a physical change."
       ],
       [
        "Accompanied by energy changes",
        "Chemical change",
-       ""
+       "Burning gives out heat and light: an energy change."
       ],
       [
        "Easily reversed",
        "Physical change",
-       ""
+       "Ice melts and freezes back easily."
       ],
       [
        "Composition altered",
        "Chemical change",
-       ""
+       "New substances mean a new composition."
       ],
       [
        "Not easily reversed",
        "Chemical change",
-       ""
+       "Ash cannot become wood again."
       ],
       [
        "Change in a physical property",
        "Physical change",
-       ""
+       "Size, shape or state change, but not composition."
       ]
      ],
-     "why": "These are the two lists on page 50.",
+     "why": "Physical change: no new substance, easily reversed, a change in a physical property.\nChemical change: composition altered, not easily reversed, accompanied by energy changes.\nThese are the two lists on page 50.",
      "clue": "Does it make something new?",
      "level": 1,
      "ref": "Activity 2.14",
-     "id": "g7.science.u2.s2-4-3.5"
+     "id": "g7.science.u2.s2-4-3.5",
+     "text": "Sort each characteristic: does it describe a physical change or a chemical change?"
     },
     {
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Which statements about physical changes are correct? I: easily reversible. II: no new substance. III: no change in mass.",
+     "text": "Check three statements about physical changes. I: easily reversible. II: no new substance. III: no change in mass. Which are correct?",
      "opts": [
       "I only",
       "I and III",
@@ -183,7 +212,7 @@
       "I, II and III"
      ],
      "ans": "I, II and III",
-     "why": "All three are true: easily reversed, nothing new forms, and the amount of matter stays the same.",
+     "why": "I: true. Melted ice can be frozen again.\nII: true. A physical change never forms a new substance.\nIII: true. The amount of matter stays the same; only its appearance changes.\nSo I, II and III are all correct.",
      "clue": "Check each statement.",
      "level": 2,
      "ref": "Review Exercise II Q16",
@@ -193,7 +222,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Chala boils an egg. It becomes solid and cannot be made raw again. Which change is it, and why?",
+     "text": "Physical or chemical? Chala boils an egg. It becomes solid and cannot be made raw again. Which change is it, and why?",
      "opts": [
       "Physical, because only the state changes",
       "Chemical, because a new substance forms and it cannot be reversed",
@@ -201,7 +230,7 @@
       "No change at all"
      ],
      "ans": "Chemical, because a new substance forms and it cannot be reversed",
-     "why": "Cooking changes the egg into a new substance. It is not reversible, so it is a chemical change.",
+     "why": "Heating changes the egg into a new substance: cooked egg.\nIt cannot be turned back into a raw egg.\nA new substance and not reversible → chemical change.\nIt is not just a change of state, like melting ice.",
      "clue": "Can you turn a boiled egg back into a raw one?",
      "level": 3,
      "ref": "Exercise 2.7 I Q1 g",
@@ -217,9 +246,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "A chemical change is easily reversed.",
+   "text": "True or false? A chemical change is easily reversed.",
    "a": false,
-   "why": "Chemical changes are not easily reversed.",
+   "why": "A chemical change makes new substances.\nThey cannot easily be turned back. Ash does not become wood again.\nSo the statement is false.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u2.s2-4-3.8"
@@ -228,13 +257,13 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "In a physical change, the composition of the substance …",
+   "text": "What happens to composition? In a physical change, the composition of the substance …",
    "opts": [
     "is altered",
     "is not altered"
    ],
    "ans": "is not altered",
-   "why": "Only appearance changes.",
+   "why": "A physical change alters only appearance: size, shape or state.\nWhat the substance is made of stays the same.\nSo the composition is not altered.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u2.s2-4-3.9"
@@ -251,7 +280,7 @@
     "Dissolving"
    ],
    "ans": "A new substance with new properties",
-   "why": "New substance means chemical change.",
+   "why": "Shape and size changes are physical.\nDissolving is physical too: the solid can be recovered.\nA new substance with new properties is the sign of a chemical change.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u2.s2-4-3.10"
@@ -260,9 +289,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "Chemical changes are accompanied by energy changes.",
+   "text": "True or false? Chemical changes are accompanied by energy changes.",
    "a": true,
-   "why": "For example heat and light when a candle burns.",
+   "why": "A burning candle gives out heat and light.\nHeat and light are forms of energy.\nThe book says chemical changes are accompanied by energy changes. True.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u2.s2-4-3.11"
@@ -271,7 +300,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which statement is correct?",
+   "text": "Physical or chemical? Which statement is correct?",
    "opts": [
     "Evaporation is a chemical change",
     "Digestion of food is a chemical change",
@@ -279,7 +308,7 @@
     "All"
    ],
    "ans": "Digestion of food is a chemical change",
-   "why": "Digestion breaks food into new substances.",
+   "why": "Evaporation only changes water to vapour: physical, so the first is wrong.\nBurning paper forms ash and gases: chemical, so the third is wrong.\nDigestion breaks food into new, simpler substances: chemical.\nSo only \"digestion of food is a chemical change\" is correct.",
    "level": 3,
    "ref": "Exercise 2.7 II Q2",
    "clue": "",
