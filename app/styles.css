@@ -578,7 +578,7 @@ body:has(.xbar) .fbfab { display: none; }
 .tart { display: grid; place-items: center; min-height: 230px; border-radius: 28px; background: var(--hs); border: 2px solid color-mix(in srgb, var(--h) 30%, transparent); overflow: hidden; animation: tin .35s ease; }
 .tcopy { display: grid; gap: 8px; animation: tin .35s ease; } .tcopy h1 { font-size: 28px; margin: 0; } .tcopy p { margin: 0; font-size: 18px; line-height: 1.55; color: var(--fg); }
 .tnav { display: flex; gap: 10px; }
-@keyframes tin { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes tin { from { transform: translateY(10px); } to { transform: none; } }
 @media (prefers-reduced-motion: reduce) { .tart, .tcopy { animation: none !important; } }
 /* tour examples: real lesson content in small cards */
 .tart > div { width: min(300px, 100%); }

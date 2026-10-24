@@ -27,6 +27,7 @@ jobs:
           cp -r content dist/content
           cp app/index.html dist/404.html
           echo "{\"v\":\"${GITHUB_SHA}\"}" > dist/version.json
+          sed -i "s#href=\"styles.css\"#href=\"styles.css?v=${GITHUB_SHA::8}\"#; s#src=\"app.js\"#src=\"app.js?v=${GITHUB_SHA::8}\"#" dist/index.html dist/404.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
