@@ -61,7 +61,8 @@
      ],
      "after": "Every point has x-coordinate 4. The line is x = 4, a vertical line.",
      "ref": "Activity 3.3.2 Q1",
-     "id": "g7.maths.u3.s3-3-2.1"
+     "id": "g7.maths.u3.s3-3-2.1",
+     "best": "x = 4"
     },
     {
      "kind": "read",
@@ -180,6 +181,41 @@
      "id": "g7.maths.u3.s3-3-2.38"
     },
     {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Where is the line?",
+     "added": true,
+     "need": 4,
+     "ask": "Tap each equation to see where its line is.",
+     "items": [
+      [
+       "x = 4",
+       "Vertical line, 4 units right of the y-axis."
+      ],
+      [
+       "x = −4",
+       "Vertical line, 4 units left of the y-axis."
+      ],
+      [
+       "x = 0",
+       "This is the y-axis itself."
+      ],
+      [
+       "y = 3",
+       "Horizontal line, 3 units above the x-axis."
+      ],
+      [
+       "y = −2",
+       "Horizontal line, 2 units below the x-axis."
+      ],
+      [
+       "y = 0",
+       "This is the x-axis itself."
+      ]
+     ],
+     "id": "g7.maths.u3.s3-3-2.42"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -203,14 +239,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "The graph of x = −4 is:",
+     "text": "Graph of x = a: the graph of x = −4 is:",
      "opts": [
       "A vertical line 4 units left of the y-axis",
       "A vertical line 4 units right of the y-axis",
       "A horizontal line 4 units below the x-axis"
      ],
      "ans": "A vertical line 4 units left of the y-axis",
-     "why": "x = a is vertical. a = −4 is negative, so it is to the left.",
+     "why": "x = a is a vertical line, parallel to the y-axis.\nHere a = −4, which is negative.\nNegative means left of the y-axis.\nSo it is a vertical line 4 units left.\nA horizontal line would be y = −4.",
      "clue": "x = a lines are parallel to the y-axis.",
      "level": 1,
      "ref": "Example 7 a",
@@ -220,7 +256,7 @@
      "kind": "pick",
      "step": "practise",
      "graded": true,
-     "text": "Tap every point that lies on the line y = 1.",
+     "text": "Points on a line: tap every point that lies on the line y = 1.",
      "pool": [
       "(−1, 1)",
       "(1, 1)",
@@ -236,7 +272,7 @@
       "(0, 1)",
       "(−12, 1)"
      ],
-     "why": "A point is on y = 1 only if its y-coordinate is 1.",
+     "why": "A point is on y = 1 only if its y-coordinate is 1.\n(−1, 1), (1, 1), (0, 1) and (−12, 1) have y = 1.\n(0, 0), (1, 2) and (1, 15) have other y values.\nThe x-coordinate can be any number.",
      "clue": "Look only at the second number.",
      "level": 1,
      "ref": "Exercise 3.3.2 Q2",
@@ -246,12 +282,12 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "(m, 5), (m, 6) and (m, −2) lie on the line x = −8. m = ___",
+     "ask": "Points on x = a: (m, 5), (m, 6) and (m, −2) lie on the line x = −8. m = ___",
      "a": [
       "−8"
      ],
      "num": true,
-     "why": "Every point on x = −8 has x-coordinate −8. So m = −8.",
+     "why": "Every point on x = −8 has x-coordinate −8.\nThe first number of each point is m.\nSo m = −8.",
      "clue": "What is x for every point on x = −8?",
      "level": 2,
      "ref": "Exercise 3.3.2 Q3",
@@ -261,14 +297,14 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "The graph of x + 3 = 0 is:",
+     "text": "Graph of x = a: the graph of x + 3 = 0 is:",
      "opts": [
       "The vertical line x = −3",
       "The vertical line x = 3",
       "The horizontal line y = −3"
      ],
      "ans": "The vertical line x = −3",
-     "why": "x + 3 = 0 gives x = −3: a vertical line 3 units left of the y-axis.",
+     "why": "Solve for x: subtract 3 from both sides.\nx = −3.\nx = a is a vertical line.\nSo it is the vertical line x = −3, 3 units left of the y-axis.",
      "clue": "Solve for x first.",
      "level": 2,
      "ref": "Example 7 b",
@@ -302,7 +338,7 @@
        "y": 3
       }
      ],
-     "why": "Every point on x = −2 has x = −2. Every point on y = 3 has y = 3. They meet at (−2, 3).",
+     "why": "Every point on x = −2 has x = −2.\nEvery point on y = 3 has y = 3.\nThe crossing point must have both.\nSo it is (−2, 3).",
      "clue": "Find the point whose x is −2 and whose y is 3.",
      "added": true,
      "id": "g7.maths.u3.s3-3-2.39"
@@ -311,7 +347,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Which line contains both (2, −5) and (7, −5)?",
+     "text": "Horizontal or vertical? Which line contains both (2, −5) and (7, −5)?",
      "opts": [
       "y = −5",
       "x = −5",
@@ -319,7 +355,7 @@
       "y = 7"
      ],
      "ans": "y = −5",
-     "why": "Both points have y-coordinate −5, so they lie on the horizontal line y = −5.",
+     "why": "Compare the points: x changes (2 and 7).\ny stays the same: −5.\nPoints with the same y lie on a horizontal line.\nThe line is y = −5.\nx = −5 is a vertical line, so it is wrong.",
      "clue": "Which coordinate is the same in both points?",
      "level": 3,
      "added": true,
@@ -348,7 +384,8 @@
       "1"
      ],
      "after": "y = 2 × 3 = 6. So (3, 6) is on the line.",
-     "id": "g7.maths.u3.s3-3-2.11"
+     "id": "g7.maths.u3.s3-3-2.11",
+     "best": "6"
     },
     {
      "kind": "read",
@@ -426,6 +463,40 @@
      "id": "g7.maths.u3.s3-3-2.14"
     },
     {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Explore y = mx",
+     "added": true,
+     "vars": [
+      {
+       "k": "m",
+       "label": "Slope m",
+       "min": -3,
+       "max": 3,
+       "step": 1,
+       "v": 2
+      },
+      {
+       "k": "x",
+       "label": "x",
+       "min": -3,
+       "max": 3,
+       "step": 1,
+       "v": 1
+      }
+     ],
+     "formula": "m*x+0",
+     "outs": [
+      [
+       "y = m × x",
+       "m*x+0",
+       "{v}"
+      ]
+     ],
+     "note": "Try m = 2, then m = −2. With m > 0, x and y have the same sign (Quadrants I and III). With m < 0 the signs differ (II and IV). x = 0 always gives y = 0: the origin.",
+     "id": "g7.maths.u3.s3-3-2.43"
+    },
+    {
      "kind": "coord",
      "step": "explore",
      "title": "Example 9: y = 2x and y = −2x",
@@ -494,7 +565,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Which quadrants does y = −2x pass through?",
+     "text": "Graph of y = mx: which quadrants does y = −2x pass through?",
      "opts": [
       "II and IV",
       "I and III",
@@ -502,7 +573,7 @@
       "III and IV"
      ],
      "ans": "II and IV",
-     "why": "m = −2 is negative, so Quadrants II and IV.",
+     "why": "In y = −2x, m = −2, which is negative.\nWhen x > 0, y < 0: Quadrant IV.\nWhen x < 0, y > 0: Quadrant II.\nSo the line passes through II and IV.",
      "clue": "Is m positive or negative?",
      "level": 1,
      "ref": "Example 9 b",
@@ -517,7 +588,7 @@
       "−12"
      ],
      "num": true,
-     "why": "y = 4 × (−3) = −12.",
+     "why": "Put x = −3 into y = 4x.\ny = 4 × (−3).\nPositive times negative is negative.\ny = −12.",
      "clue": "Positive times negative is negative.",
      "level": 1,
      "ref": "Exercise 3.3.3 Q1",
@@ -533,7 +604,7 @@
      "kind": "pick",
      "step": "practise",
      "graded": true,
-     "text": "Tap every line that passes through the 1st and 3rd quadrants.",
+     "text": "Sign of the slope: tap every line that passes through the 1st and 3rd quadrants.",
      "pool": [
       "y = 7x",
       "y = −10x",
@@ -546,7 +617,7 @@
       "y − 12x = 0",
       "y − x = 0"
      ],
-     "why": "Write each as y = mx: 7, −10, 12, 1, −6. Those with m > 0 are 7, 12 and 1.",
+     "why": "Write each as y = mx.\ny = 7x: m = 7. y − 12x = 0 is y = 12x: m = 12. y − x = 0 is y = x: m = 1.\ny = −10x: m = −10. y + 6x = 0 is y = −6x: m = −6.\nm > 0 means Quadrants I and III.\nSo tap y = 7x, y − 12x = 0 and y − x = 0.",
      "clue": "Rewrite each as y = mx first.",
      "level": 2,
      "ref": "Exercise 3.3.3 Q2",
@@ -556,12 +627,12 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "The point (2, 8) lies on the line y = mx. m = ___",
+     "ask": "Find the slope: the point (2, 8) lies on the line y = mx. m = ___",
      "a": [
       "4"
      ],
      "num": true,
-     "why": "8 = m × 2. Divide by 2: m = 4.",
+     "why": "Put x = 2 and y = 8 into y = mx.\n8 = m × 2.\nDivide both sides by 2: m = 4.\nCheck: 4 × 2 = 8.",
      "clue": "Put x = 2 and y = 8 into y = mx.",
      "level": 2,
      "ref": "Exercise 3.3.3 Q4",
@@ -591,7 +662,7 @@
        "y": -3
       }
      ],
-     "why": "y = 3 × (−1) = −3. The point is (−1, −3).",
+     "why": "Put x = −1 into y = 3x.\ny = 3 × (−1) = −3.\nThe point is (−1, −3).\nGo 1 left and 3 down.",
      "clue": "Put x = −1 into y = 3x first.",
      "added": true,
      "id": "g7.maths.u3.s3-3-2.41"
@@ -600,12 +671,12 @@
      "kind": "blank",
      "step": "challenge",
      "graded": true,
-     "ask": "2y + 6x = 0 can be written as y = mx. The slope m = ___",
+     "ask": "Find the slope: 2y + 6x = 0 can be written as y = mx. The slope m = ___",
      "a": [
       "−3"
      ],
      "num": true,
-     "why": "Shift 6x: 2y = −6x. Divide by 2: y = −3x. So m = −3.",
+     "why": "Shift 6x to the right: 2y = −6x.\nDivide both sides by 2: y = −3x.\nCompare with y = mx: m = −3.",
      "clue": "Get y alone on one side.",
      "level": 3,
      "added": true,
@@ -622,14 +693,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "The graph of y = 5 is:",
+     "text": "Graph of y = b: the graph of y = 5 is:",
      "opts": [
       "A horizontal line 5 units above the x-axis",
       "A vertical line 5 units right of the y-axis",
       "A line through the origin"
      ],
      "ans": "A horizontal line 5 units above the x-axis",
-     "why": "y = b is horizontal; b = 5 is positive.",
+     "why": "y = b is a horizontal line, parallel to the x-axis.\nb = 5 is positive.\nSo the line is 5 units above the x-axis.",
      "clue": "y = b lines are parallel to the x-axis.",
      "level": 1,
      "ref": "Q1 b",
@@ -639,14 +710,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "The graph of y = 0 is:",
+     "text": "Graph of y = b: the graph of y = 0 is:",
      "opts": [
       "The x-axis",
       "The y-axis",
       "The line x = 0"
      ],
      "ans": "The x-axis",
-     "why": "If b = 0, the line is the x-axis.",
+     "why": "Every point on y = 0 has y-coordinate 0.\nThose points are all on the x-axis.\nSo y = 0 is the x-axis.\nx = 0 is the y-axis, which is different.",
      "clue": "Read the Note on y = b.",
      "level": 1,
      "ref": "Q1 d",
@@ -656,7 +727,7 @@
      "kind": "pick",
      "step": "exercise",
      "graded": true,
-     "text": "Which points lie on y = 1?",
+     "text": "Points on a line: which points lie on y = 1?",
      "pool": [
       "(−1, 1)",
       "(1, 1)",
@@ -675,7 +746,7 @@
       "(−3, 1)",
       "(−12, 1)"
      ],
-     "why": "Their y-coordinate is 1.",
+     "why": "Look at the second number of each point.\nIt must be 1.\n(−1, 1), (1, 1), (0, 1), (−3, 1) and (−12, 1) have y = 1.\nThe others have y = 0, 2 or 15.",
      "clue": "Look at the second number.",
      "level": 1,
      "ref": "Q2",
@@ -685,12 +756,12 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "(m, 5), (m, 6) and (m, −2) lie on x = −8. m = ___",
+     "ask": "Points on x = a: (m, 5), (m, 6) and (m, −2) lie on x = −8. m = ___",
      "a": [
       "−8"
      ],
      "num": true,
-     "why": "All points on x = −8 have x = −8.",
+     "why": "Every point on x = −8 has x = −8.\nm is the x-coordinate of each point.\nSo m = −8.",
      "clue": "What is x on that line?",
      "level": 1,
      "ref": "Q3",
@@ -700,14 +771,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "The line through (2, 3), (1, 3) and (−2, 3) is:",
+     "text": "Find the line: which line passes through (2, 3), (1, 3) and (−2, 3)?",
      "opts": [
       "y = 3",
       "x = 3",
       "y = x"
      ],
      "ans": "y = 3",
-     "why": "All three points have y = 3.",
+     "why": "The x-coordinates change: 2, 1, −2.\nThe y-coordinate is always 3.\nSo the line is y = 3, a horizontal line.",
      "clue": "Which coordinate stays the same?",
      "level": 1,
      "ref": "Q4 a",
@@ -717,14 +788,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "The line through (0, 0), (0, 1) and (0, −2) is:",
+     "text": "Find the line: which line passes through (0, 0), (0, 1) and (0, −2)?",
      "opts": [
       "The y-axis (x = 0)",
       "The x-axis (y = 0)",
       "y = x"
      ],
      "ans": "The y-axis (x = 0)",
-     "why": "All three points have x = 0.",
+     "why": "The y-coordinates change: 0, 1, −2.\nThe x-coordinate is always 0.\nSo the line is x = 0, which is the y-axis.",
      "clue": "Which coordinate stays the same?",
      "level": 1,
      "ref": "Q4 c",
@@ -734,7 +805,7 @@
      "kind": "pick",
      "step": "exercise",
      "graded": true,
-     "text": "Which points lie on the line x = −2?",
+     "text": "Points on a line: which points lie on the line x = −2?",
      "pool": [
       "(−2, 0)",
       "(−2, 1)",
@@ -747,7 +818,7 @@
       "(−2, 1)",
       "(−2, −3)"
      ],
-     "why": "Their x-coordinate is −2.",
+     "why": "Look at the first number of each point.\nIt must be −2.\n(−2, 0), (−2, 1) and (−2, −3) have x = −2.\n(0, −2) and (2, −2) have y = −2, not x = −2.",
      "clue": "Look at the first number.",
      "level": 1,
      "ref": "Q5",
@@ -762,12 +833,12 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "y = 4x. When x = 2, y = ___",
+     "ask": "Table of values for y = 4x: when x = 2, y = ___",
      "a": [
       "8"
      ],
      "num": true,
-     "why": "4 × 2 = 8.",
+     "why": "Put x = 2 into y = 4x.\ny = 4 × 2 = 8.\nThe point (2, 8) is on the line.",
      "clue": "Multiply x by 4.",
      "level": 1,
      "ref": "Q1",
@@ -777,12 +848,12 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "y = 4x. When x = −1, y = ___",
+     "ask": "Table of values for y = 4x: when x = −1, y = ___",
      "a": [
       "−4"
      ],
      "num": true,
-     "why": "4 × (−1) = −4.",
+     "why": "Put x = −1 into y = 4x.\ny = 4 × (−1) = −4.\nThe point (−1, −4) is on the line.",
      "clue": "Multiply x by 4.",
      "level": 1,
      "ref": "Q1",
@@ -792,7 +863,7 @@
      "kind": "pick",
      "step": "exercise",
      "graded": true,
-     "text": "Which lines pass through the 1st and 3rd quadrants?",
+     "text": "Sign of the slope: which lines pass through the 1st and 3rd quadrants?",
      "pool": [
       "y = 7x",
       "y = −10x",
@@ -806,7 +877,7 @@
       "y − 12x = 0",
       "y − x = 0"
      ],
-     "why": "m > 0 for y = 7x, y = 12x and y = x.",
+     "why": "Rewrite each as y = mx.\ny = 7x, y = 12x and y = x have m > 0.\ny = −10x, y = −6x and y = −(3/2)x have m < 0.\nm > 0 gives Quadrants I and III.",
      "clue": "Rewrite as y = mx.",
      "level": 2,
      "ref": "Q2",
@@ -816,14 +887,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "y + x = 0 passes through:",
+     "text": "Sign of the slope: the line y + x = 0 passes through:",
      "opts": [
       "Quadrants II and IV",
       "Quadrants I and III",
       "Only the origin"
      ],
      "ans": "Quadrants II and IV",
-     "why": "y = −x, so m = −1 < 0.",
+     "why": "Shift x: y = −x.\nSo m = −1, which is negative.\nm < 0 gives Quadrants II and IV.\nIt passes through the origin too, but not only the origin.",
      "clue": "Rewrite as y = mx.",
      "level": 2,
      "ref": "Q3 d",
@@ -833,12 +904,12 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "(2, 8) lies on y = mx. m = ___",
+     "ask": "Find the slope: (2, 8) lies on y = mx. m = ___",
      "a": [
       "4"
      ],
      "num": true,
-     "why": "8 = 2m, so m = 4.",
+     "why": "Substitute x = 2 and y = 8 into y = mx.\n8 = 2m.\nDivide by 2: m = 4.",
      "clue": "Substitute x = 2, y = 8.",
      "level": 1,
      "ref": "Q4",
@@ -852,14 +923,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "The graph of x = 3 is:",
+   "text": "Graph of x = a: the graph of x = 3 is:",
    "opts": [
     "A vertical line",
     "A horizontal line",
     "A line through the origin"
    ],
    "ans": "A vertical line",
-   "why": "x = a is parallel to the y-axis.",
+   "why": "x = a is always a vertical line.\nIt is parallel to the y-axis.\nx = 3 is 3 units right of the y-axis.",
    "level": 1,
    "clue": "",
    "id": "g7.maths.u3.s3-3-2.33"
@@ -873,7 +944,7 @@
     "−4"
    ],
    "num": true,
-   "why": "2 × (−2) = −4.",
+   "why": "Put x = −2 into y = 2x.\ny = 2 × (−2) = −4.",
    "level": 1,
    "clue": "",
    "id": "g7.maths.u3.s3-3-2.34",
@@ -888,14 +959,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "y = 5x passes through which quadrants?",
+   "text": "Sign of the slope: y = 5x passes through which quadrants?",
    "opts": [
     "I and III",
     "II and IV",
     "I and IV"
    ],
    "ans": "I and III",
-   "why": "m = 5 > 0.",
+   "why": "In y = 5x, m = 5, which is positive.\nm > 0 gives Quadrants I and III.",
    "level": 2,
    "clue": "",
    "id": "g7.maths.u3.s3-3-2.35"
@@ -904,14 +975,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which point lies on y = −3?",
+   "text": "Points on y = b: which point lies on the line y = −3?",
    "opts": [
     "(4, −3)",
     "(−3, 4)",
     "(−3, 0)"
    ],
    "ans": "(4, −3)",
-   "why": "Its y-coordinate is −3.",
+   "why": "A point on y = −3 has y-coordinate −3.\n(4, −3) has y = −3. Yes.\n(−3, 4) has x = −3, not y = −3.\n(−3, 0) has y = 0.",
    "level": 2,
    "clue": "",
    "id": "g7.maths.u3.s3-3-2.36"
@@ -920,12 +991,12 @@
    "kind": "blank",
    "step": "test",
    "graded": true,
-   "ask": "The line y = mx passes through (−3, 12). m = ___",
+   "ask": "Find the slope: the line y = mx passes through (−3, 12). m = ___",
    "a": [
     "−4"
    ],
    "num": true,
-   "why": "12 = m × (−3), so m = 12 ÷ (−3) = −4.",
+   "why": "Put x = −3 and y = 12 into y = mx.\n12 = m × (−3).\nDivide by −3: m = 12 ÷ (−3) = −4.\nCheck: −4 × (−3) = 12.",
    "level": 3,
    "clue": "",
    "id": "g7.maths.u3.s3-3-2.37"

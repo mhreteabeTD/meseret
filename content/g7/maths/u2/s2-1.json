@@ -59,9 +59,10 @@
       "1,000,000",
       "There is no greatest one"
      ],
-     "after": "Add 1 to any number and you get a bigger one. The list never ends.",
+     "after": "Add 1 to any natural number and you get a bigger one.\n100 + 1 = 101. 1,000,000 + 1 = 1,000,001.\nThe list never ends, so there is no greatest natural number.",
      "ref": "Activity 2.1.1 Q3",
-     "id": "g7.maths.u2.s2-1.1"
+     "id": "g7.maths.u2.s2-1.1",
+     "best": "There is no greatest one"
     },
     {
      "kind": "read",
@@ -113,6 +114,40 @@
      "id": "g7.maths.u2.s2-1.3"
     },
     {
+     "kind": "numline",
+     "step": "explore",
+     "title": "Counting on the number line",
+     "min": 0,
+     "max": 10,
+     "sub": 1,
+     "points": [
+      {
+       "v": "0",
+       "label": "0",
+       "info": "Whole, not natural. We do not start counting at 0."
+      },
+      {
+       "v": "1",
+       "label": "1",
+       "info": "The first natural number. Counting starts here."
+      },
+      {
+       "v": "5",
+       "label": "5",
+       "info": "Natural and whole. Add 1 and you get 6."
+      },
+      {
+       "v": "10",
+       "label": "10",
+       "info": "Add 1 again: 11, 12, … The line never ends."
+      }
+     ],
+     "ask": "Tap each point. Where does counting start?",
+     "need": 3,
+     "id": "g7.maths.u2.s2-1.30",
+     "added": true
+    },
+    {
      "kind": "read",
      "step": "read",
      "title": "Note",
@@ -143,14 +178,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "What is the smallest whole number?",
+     "text": "Natural and whole numbers: what is the smallest whole number?",
      "opts": [
       "0",
       "1",
       "−1"
      ],
      "ans": "0",
-     "why": "𝕎 = {0, 1, 2, …} starts at 0.",
+     "why": "Whole numbers are 𝕎 = {0, 1, 2, 3, …}.\nThe list starts at 0.\nSo the smallest whole number is 0.\n1 is the smallest natural number, not the smallest whole number.\n−1 is not a whole number at all.",
      "clue": "Look at the first element of 𝕎.",
      "level": 1,
      "ref": "Activity 2.1.1 Q4",
@@ -160,9 +195,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "All whole numbers are natural numbers.",
+     "text": "True or false? All whole numbers are natural numbers.",
      "a": false,
-     "why": "0 is a whole number but not a natural number.",
+     "why": "Whole numbers: 0, 1, 2, 3, …\nNatural numbers: 1, 2, 3, …\n0 is in the first list but not in the second.\nSo not all whole numbers are natural. False.",
      "clue": "Think about 0.",
      "level": 1,
      "ref": "Note",
@@ -172,7 +207,7 @@
      "kind": "pick",
      "step": "practise",
      "graded": true,
-     "text": "Tap the first five whole numbers.",
+     "text": "Whole numbers: tap the first five whole numbers.",
      "pool": [
       "0",
       "1",
@@ -188,7 +223,7 @@
       "3",
       "4"
      ],
-     "why": "Whole numbers start at 0: 0, 1, 2, 3, 4.",
+     "why": "Whole numbers start at 0.\nCount five of them: 0, 1, 2, 3, 4.\n5 is the sixth whole number, so leave it out.",
      "clue": "Do not forget 0.",
      "level": 1,
      "ref": "Activity 2.1.1 Q2",
@@ -198,13 +233,13 @@
      "kind": "blank",
      "step": "challenge",
      "graded": true,
-     "ask": "How many natural numbers are less than 10? ___",
+     "ask": "Count the natural numbers: how many natural numbers are less than 10? ___",
      "a": [
       "9",
       "nine"
      ],
      "num": true,
-     "why": "They are 1, 2, 3, 4, 5, 6, 7, 8, 9. That is 9 numbers. 0 is not natural.",
+     "why": "Natural numbers start at 1.\nThose less than 10 are 1, 2, 3, 4, 5, 6, 7, 8, 9.\nCount them: 9 numbers.\n0 is not natural, and 10 is not less than 10.",
      "clue": "Natural numbers start at 1, not 0.",
      "level": 3,
      "added": true,
@@ -230,8 +265,9 @@
       "Yes",
       "No"
      ],
-     "after": "You cannot take 5 from 3 and stay in 𝕎. We need negative numbers for this. That is the topic of this unit.",
-     "id": "g7.maths.u2.s2-1.10"
+     "after": "3 − 5 asks: take 5 from 3.\nWhole numbers stop at 0, so we run out after taking 3.\n3 − 5 is not a whole number.\nWe need negative numbers for this. That is the topic of this unit.",
+     "id": "g7.maths.u2.s2-1.10",
+     "best": "No"
     },
     {
      "kind": "steps",
@@ -251,35 +287,39 @@
      "kind": "read",
      "step": "read",
      "title": "Note",
-     "paras": [],
-     "table": [
-      [
-       "Operation",
-       "Natural numbers",
-       "Whole numbers"
-      ],
+     "paras": [
+      "Adding or multiplying stays inside the set.",
+      "Subtracting or dividing can leave the set.",
+      "Tap each card below to see why."
+     ],
+     "id": "g7.maths.u2.s2-1.12"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Which operations stay whole?",
+     "ask": "Tap each operation.",
+     "need": 4,
+     "items": [
       [
        "Sum",
-       "always natural",
-       "always whole"
+       "Natural + natural is always natural. Whole + whole is always whole. 4 + 0 = 4."
       ],
       [
        "Product",
-       "always natural",
-       "always whole"
+       "Natural × natural is always natural. Whole × whole is always whole. 3 × 0 = 0."
       ],
       [
        "Difference",
-       "not always natural",
-       "not always whole"
+       "Not always natural, not always whole. 3 − 5 is neither."
       ],
       [
        "Quotient",
-       "not always natural",
-       "—"
+       "Not always natural. 7 ÷ 2 = 3.5 is not natural."
       ]
      ],
-     "id": "g7.maths.u2.s2-1.12"
+     "id": "g7.maths.u2.s2-1.31",
+     "added": true
     },
     {
      "kind": "name",
@@ -307,7 +347,7 @@
       "+1237"
      ],
      "num": true,
-     "why": "Ones 5 + 2 = 7. Tens 4 + 9 = 13: write 3, carry 1. Hundreds 3 + 8 + 1 = 12. So 1237.",
+     "why": "Ones: 5 + 2 = 7.\nTens: 4 + 9 = 13. Write 3, carry 1.\nHundreds: 3 + 8 + 1 = 12.\nSo 345 + 892 = 1237.\nCheck: 1237 − 892 = 345.",
      "clue": "Add ones, then tens, then hundreds. Carry when needed.",
      "level": 1,
      "ref": "Exercise 2.1.1 Q1 a",
@@ -328,7 +368,7 @@
       "+6309"
      ],
      "num": true,
-     "why": "Ones: 3 − 4 cannot be done. Borrow a ten: 13 − 4 = 9. Tens: 3 − 3 = 0. Hundreds: 5 − 2 = 3. Thousands 6. So 6309.",
+     "why": "Ones: 3 − 4 cannot be done. Borrow 1 ten: 13 − 4 = 9.\nTens: 4 − 1 = 3 tens left. 3 − 3 = 0.\nHundreds: 5 − 2 = 3.\nThousands: 6.\nSo 6543 − 234 = 6309. Check: 6309 + 234 = 6543.",
      "clue": "Borrow from the tens when the ones are too small.",
      "level": 1,
      "ref": "Exercise 2.1.1 Q1 c",
@@ -343,13 +383,13 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "23 + (654 − 345) = ___",
+     "ask": "Brackets first: work out 23 + (654 − 345) = ___",
      "a": [
       "332",
       "+332"
      ],
      "num": true,
-     "why": "Brackets first: 654 − 345 = 309. Then 23 + 309 = 332.",
+     "why": "Step 1: do the bracket: 654 − 345.\nOnes: 14 − 5 = 9 (borrow). Tens: 4 − 4 = 0. Hundreds: 6 − 3 = 3. So 309.\nStep 2: 23 + 309 = 332.\nSo 23 + (654 − 345) = 332.",
      "clue": "Work out the bracket first.",
      "level": 2,
      "ref": "Exercise 2.1.1 Q1 d",
@@ -359,9 +399,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "The difference of any two whole numbers is always a whole number.",
+     "text": "True or false? The difference of any two whole numbers is always a whole number.",
      "a": false,
-     "why": "3 − 5 is not a whole number.",
+     "why": "Try a small number minus a big one: 3 − 5.\nWe cannot take 5 from 3 and stay at 0 or above.\n3 − 5 is not a whole number.\nOne example is enough to show the statement is false.",
      "clue": "Try a small number minus a big one.",
      "level": 1,
      "ref": "Note",
@@ -371,7 +411,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Which result is NOT a whole number?",
+     "text": "Operations on whole numbers: which result is NOT a whole number?",
      "opts": [
       "12 + 0",
       "7 × 8",
@@ -379,7 +419,7 @@
       "9 − 9"
      ],
      "ans": "20 ÷ 8",
-     "why": "20 ÷ 8 = 2.5, which has a decimal part. 12 + 0 = 12, 7 × 8 = 56 and 9 − 9 = 0 are whole.",
+     "why": "Work out each one.\n12 + 0 = 12, a whole number.\n7 × 8 = 56, a whole number.\n9 − 9 = 0, a whole number.\n20 ÷ 8 = 2.5. It has a decimal part, so it is not whole.\nAnswer: 20 ÷ 8.",
      "clue": "Work each one out.",
      "level": 3,
      "added": true,
@@ -396,13 +436,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "345 + 892 = ___",
+     "ask": "Add the whole numbers: 345 + 892 = ___",
      "a": [
       "1237",
       "+1237"
      ],
      "num": true,
-     "why": "Ones 7; tens 13 (write 3, carry 1); hundreds 3 + 8 + 1 = 12. 1237.",
+     "why": "Ones: 5 + 2 = 7.\nTens: 4 + 9 = 13. Write 3, carry 1.\nHundreds: 3 + 8 + 1 = 12.\nSo the sum is 1237.",
      "clue": "Carry when a column passes 9.",
      "level": 1,
      "ref": "Q1 a",
@@ -412,13 +452,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "342 + 435 = ___",
+     "ask": "Add the whole numbers: 342 + 435 = ___",
      "a": [
       "777",
       "+777"
      ],
      "num": true,
-     "why": "2 + 5 = 7, 4 + 3 = 7, 3 + 4 = 7.",
+     "why": "Ones: 2 + 5 = 7.\nTens: 4 + 3 = 7.\nHundreds: 3 + 4 = 7.\nNo carrying is needed. The sum is 777.",
      "clue": "Add column by column.",
      "level": 1,
      "ref": "Q1 b",
@@ -428,13 +468,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "6543 − 234 = ___",
+     "ask": "Subtract the whole numbers: 6543 − 234 = ___",
      "a": [
       "6309",
       "+6309"
      ],
      "num": true,
-     "why": "Borrow a ten: 13 − 4 = 9; 3 − 3 = 0; 5 − 2 = 3; 6. So 6309.",
+     "why": "Ones: 3 − 4 cannot be done. Borrow 1 ten: 13 − 4 = 9.\nTens: 3 − 3 = 0.\nHundreds: 5 − 2 = 3.\nThousands: 6.\nSo the difference is 6309. Check: 6309 + 234 = 6543.",
      "clue": "Borrow when needed.",
      "level": 1,
      "ref": "Q1 c",
@@ -444,13 +484,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "23 + (654 − 345) = ___",
+     "ask": "Brackets first: work out 23 + (654 − 345) = ___",
      "a": [
       "332",
       "+332"
      ],
      "num": true,
-     "why": "654 − 345 = 309; 23 + 309 = 332.",
+     "why": "Step 1: the bracket: 654 − 345 = 309.\nStep 2: 23 + 309 = 332.\nSo the answer is 332.",
      "clue": "Bracket first.",
      "level": 2,
      "ref": "Q1 d",
@@ -460,13 +500,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "5427 ÷ 9 = ___",
+     "ask": "Divide the whole numbers: 5427 ÷ 9 = ___",
      "a": [
       "603",
       "+603"
      ],
      "num": true,
-     "why": "54 ÷ 9 = 6. Bring down 2: 2 ÷ 9 = 0 r 2. Bring down 7: 27 ÷ 9 = 3. So 603. Check 9 × 603 = 5427.",
+     "why": "54 ÷ 9 = 6. Write 6.\nBring down 2: 2 ÷ 9 = 0 remainder 2. Write 0.\nBring down 7: 27 ÷ 9 = 3. Write 3.\nSo 5427 ÷ 9 = 603.\nCheck: 9 × 603 = 5427.",
      "clue": "Use long division.",
      "level": 2,
      "ref": "Q1 e",
@@ -476,13 +516,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "342 × 345 = ___",
+     "ask": "Multiply the whole numbers: 342 × 345 = ___",
      "a": [
       "117990",
       "+117990"
      ],
      "num": true,
-     "why": "342 × 300 = 102600; 342 × 40 = 13680; 342 × 5 = 1710. Total 117990.",
+     "why": "Split 345 into 300 + 40 + 5.\n342 × 300 = 102600.\n342 × 40 = 13680.\n342 × 5 = 1710.\nAdd: 102600 + 13680 + 1710 = 117990.",
      "clue": "Split 345 into 300 + 40 + 5.",
      "level": 2,
      "ref": "Q1 f",
@@ -496,14 +536,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which number is a natural number?",
+   "text": "Natural numbers: which number is a natural number?",
    "opts": [
     "0",
     "7",
     "−2"
    ],
    "ans": "7",
-   "why": "ℕ = {1, 2, 3, …}.",
+   "why": "Natural numbers are ℕ = {1, 2, 3, …}.\n7 is in this list, so 7 is natural.\n0 is whole but not natural.\n−2 is negative, so it is not natural.",
    "level": 1,
    "clue": "",
    "id": "g7.maths.u2.s2-1.25"
@@ -512,9 +552,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "0 is a whole number.",
+   "text": "True or false? 0 is a whole number.",
    "a": true,
-   "why": "𝕎 = {0, 1, 2, …}.",
+   "why": "Whole numbers are 𝕎 = {0, 1, 2, 3, …}.\nThe list starts with 0.\nSo 0 is a whole number. True.",
    "level": 1,
    "clue": "",
    "id": "g7.maths.u2.s2-1.26"
@@ -529,7 +569,7 @@
     "+1041"
    ],
    "num": true,
-   "why": "2 + 9 = 11 (1, carry 1); 5 + 8 + 1 = 14 (4, carry 1); 4 + 5 + 1 = 10. 1041.",
+   "why": "Ones: 2 + 9 = 11. Write 1, carry 1.\nTens: 5 + 8 + 1 = 14. Write 4, carry 1.\nHundreds: 4 + 5 + 1 = 10.\nSo 452 + 589 = 1041.",
    "level": 2,
    "clue": "",
    "id": "g7.maths.u2.s2-1.27",
@@ -549,7 +589,7 @@
     "+443"
    ],
    "num": true,
-   "why": "Borrow: 900 = 8 hundreds 9 tens 10 ones. 10 − 7 = 3, 9 − 5 = 4, 8 − 4 = 4. 443.",
+   "why": "900 has no ones or tens to take from. Borrow from the hundreds.\n900 = 8 hundreds + 9 tens + 10 ones.\nOnes: 10 − 7 = 3. Tens: 9 − 5 = 4. Hundreds: 8 − 4 = 4.\nSo 900 − 457 = 443. Check: 443 + 457 = 900.",
    "level": 2,
    "clue": "",
    "id": "g7.maths.u2.s2-1.28",
@@ -563,14 +603,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "The product of two whole numbers is",
+   "text": "Operations on whole numbers: the product of two whole numbers is",
    "opts": [
     "always whole",
     "never whole",
     "sometimes negative"
    ],
    "ans": "always whole",
-   "why": "Multiplying whole numbers stays in 𝕎.",
+   "why": "Multiplying is repeated adding: 3 × 4 = 4 + 4 + 4 = 12.\nAdding whole numbers always gives a whole number.\nSo the product of two whole numbers is always whole.\nIt is never negative: there are no negative whole numbers.",
    "level": 3,
    "clue": "",
    "id": "g7.maths.u2.s2-1.29"

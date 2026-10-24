@@ -53,9 +53,10 @@
       "−7/9 + 4/3",
       "No"
      ],
-     "after": "Yes: subtracting 4/3 means adding −4/3.",
+     "after": "Subtracting a number means adding its opposite.\nThe opposite of 4/3 is −4/3.\nSo 7/9 − 4/3 = 7/9 + (−4/3).\n(−7/9 + 4/3 changes the wrong number's sign.)",
      "id": "g8.maths.u1.s1-3-2.1",
-     "ref": "Activity 1.4"
+     "ref": "Activity 1.4",
+     "best": "7/9 + (−4/3)"
     },
     {
      "kind": "fracbar",
@@ -77,7 +78,7 @@
        }
       }
      ],
-     "after": "One shaded part is left: 7/9 − 2/3 = 1/9.",
+     "after": "7/9 is shaded.\n2/3 = (2 × 3)/(3 × 3) = 6/9, so cross out 6 of the shaded ninths.\nOne shaded part is left: 7/9 − 2/3 = 1/9.",
      "id": "g8.maths.u1.s1-3-2.2",
      "ref": "Example 1.23"
     },
@@ -87,10 +88,32 @@
      "title": "Subtraction",
      "paras": [
       "Subtraction is the inverse of addition.",
-      "Subtracting c/d from a/b means adding the negative of c/d: a/b − c/d = a/b + (−c/d)."
+      "Subtracting c/d means adding the negative of c/d.",
+      "a/b − c/d = a/b + (−c/d)."
      ],
      "note": "The difference of two rational numbers is always a rational number.",
      "id": "g8.maths.u1.s1-3-2.3"
+    },
+    {
+     "kind": "numline",
+     "step": "explore",
+     "title": "3 − 5 is the same as 3 + (−5)",
+     "min": -3,
+     "max": 4,
+     "hops": [
+      {
+       "from": 0,
+       "by": 3
+      },
+      {
+       "from": 3,
+       "by": -5
+      }
+     ],
+     "ask": "Start at 0. Hop 1 is +3. Hop 2 adds the opposite of 5, which is −5. Tap Hop twice.",
+     "after": "Hop 1: +3 means 3 steps right. You land on 3.\nHop 2: subtracting 5 = adding −5, so 5 steps left. You land on −2.\nSo 3 − 5 = 3 + (−5) = −2.",
+     "id": "g8.maths.u1.s1-3-2.22",
+     "added": true
     },
     {
      "kind": "name",
@@ -126,13 +149,13 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Is 3/7 − 5/9 the same as 5/9 − 3/7?",
+     "text": "Is subtraction commutative? Is 3/7 − 5/9 the same as 5/9 − 3/7?",
      "opts": [
       "Yes",
       "No"
      ],
      "ans": "No",
-     "why": "One is −8/63 and the other is 8/63. Subtraction is not commutative.",
+     "why": "LCM of 7 and 9 is 63: 3/7 = 27/63 and 5/9 = 35/63.\n3/7 − 5/9 = 27/63 − 35/63 = −8/63.\n5/9 − 3/7 = 35/63 − 27/63 = 8/63.\n−8/63 ≠ 8/63, so the answer is No. Subtraction is not commutative.",
      "clue": "Try 3 − 5 and 5 − 3.",
      "id": "g8.maths.u1.s1-3-2.6",
      "ref": "Activity 1.4 Q2",
@@ -143,11 +166,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "3/7 − (−5/9) = ___",
+     "ask": "Subtract a negative fraction: 3/7 − (−5/9) = ___",
      "a": [
       "62/63"
      ],
-     "why": "Subtracting −5/9 means adding 5/9. LCM of 7 and 9 is 63: 3/7 = (3 × 9)/(7 × 9) = 27/63 and 5/9 = (5 × 7)/(9 × 7) = 35/63. 27 + 35 = 62, so 62/63.",
+     "why": "Subtracting −5/9 means adding its opposite, 5/9.\nSo 3/7 − (−5/9) = 3/7 + 5/9.\nLCM of 7 and 9 is 63: 3/7 = (3 × 9)/(7 × 9) = 27/63 and 5/9 = (5 × 7)/(9 × 7) = 35/63.\n27 + 35 = 62, so the answer is 62/63.",
      "clue": "Subtracting a negative means adding.",
      "gen": {
       "t": "op",
@@ -162,15 +185,15 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "−1/12 − 9/8 = ___",
+     "ask": "Subtract fractions (the answer is negative): −1/12 − 9/8 = ___",
      "a": [
       "-29/24",
       "-1 5/24"
      ],
-     "why": "LCM of 12 and 8 is 24. −1/12 = (−1 × 2)/(12 × 2) = −2/24 and 9/8 = (9 × 3)/(8 × 3) = 27/24. −2/24 − 27/24 = −29/24.",
+     "why": "Subtracting 9/8 means adding −9/8.\nLCM of 12 and 8 is 24: −1/12 = (−1 × 2)/(12 × 2) = −2/24 and −9/8 = (−9 × 3)/(8 × 3) = −27/24.\nBoth negative: add the sizes, 2 + 27 = 29.\nAnswer: −29/24 = −1 5/24.",
      "clue": "Add the opposite of 9/8.",
      "input": "signed",
-     "worked": "Subtracting 9/8 means adding −9/8. LCM of 12 and 8 is 24. −1/12 = (−1 × 2)/(12 × 2) = −2/24. −9/8 = (−9 × 3)/(8 × 3) = −27/24. −2 + (−27) = −29, so −29/24.",
+     "worked": "Subtracting 9/8 means adding −9/8.\nLCM of 12 and 8 is 24.\n−1/12 = (−1 × 2)/(12 × 2) = −2/24.\n−9/8 = (−9 × 3)/(8 × 3) = −27/24.\n−2 + (−27) = −29, so −29/24.",
      "gen": {
       "t": "op",
       "op": "sub",
@@ -184,15 +207,15 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "A rope is 23 m. Pieces of 12/7 m and 7/4 m are cut off. Left = ___ m",
+     "ask": "Subtract fractions in a word problem: a rope is 23 m. Pieces of 12/7 m and 7/4 m are cut off. Left = ___ m",
      "a": [
       "547/28",
       "19 15/28",
       "≈19.54"
      ],
-     "why": "LCM of 7 and 4 is 28. 23 = (23 × 28)/28 = 644/28; 12/7 = (12 × 4)/(7 × 4) = 48/28; 7/4 = (7 × 7)/(4 × 7) = 49/28. 644 − 48 − 49 = 547, so 547/28 m.",
+     "why": "Left = 23 − 12/7 − 7/4.\nLCM of 7 and 4 is 28: 23 = (23 × 28)/28 = 644/28.\n12/7 = (12 × 4)/(7 × 4) = 48/28 and 7/4 = (7 × 7)/(4 × 7) = 49/28.\n644 − 48 − 49 = 547, so 547/28 m.\n547/28 = 19 15/28 ≈ 19.54 m.",
      "clue": "LCM of 7 and 4 is 28.",
-     "worked": "LCM of 7 and 4 is 28. 23 = 644/28 (23 × 28 = 644). 12/7 = (12 × 4)/(7 × 4) = 48/28. 7/4 = (7 × 7)/(4 × 7) = 49/28. 644 − 48 − 49 = 547. Left: 547/28 m ≈ 19.54 m.",
+     "worked": "LCM of 7 and 4 is 28.\n23 = 644/28 (23 × 28 = 644).\n12/7 = (12 × 4)/(7 × 4) = 48/28.\n7/4 = (7 × 7)/(4 × 7) = 49/28.\n644 − 48 − 49 = 547.\nLeft: 547/28 m ≈ 19.54 m.",
      "gen": {
       "t": "op",
       "op": "sub",
@@ -206,13 +229,13 @@
      "kind": "blank",
      "graded": true,
      "num": true,
-     "ask": "A tank had 7 1/2 litres. Selam used 2 3/4 litres, then added 1 1/3 litres. Litres now = ___",
+     "ask": "Add and subtract mixed numbers in a word problem: a tank had 7 1/2 litres. Selam used 2 3/4 litres, then added 1 1/3 litres. Litres now = ___",
      "a": [
       "73/12",
       "6 1/12",
       "≈6.08"
      ],
-     "why": "7 1/2 = 15/2, 2 3/4 = 11/4, 1 1/3 = 4/3. LCM of 2, 4 and 3 is 12: 15/2 = 90/12, 11/4 = 33/12, 4/3 = 16/12. 90 − 33 + 16 = 73, so 73/12 = 6 1/12 litres.",
+     "why": "Now = 7 1/2 − 2 3/4 + 1 1/3.\nImproper fractions: 15/2, 11/4 and 4/3.\nLCM of 2, 4 and 3 is 12: 90/12, 33/12 and 16/12.\n90 − 33 + 16 = 73, so 73/12.\n73/12 = 6 1/12 litres.",
      "clue": "Change all to twelfths. Subtract what was used, add what was added.",
      "step": "challenge",
      "level": 3,
@@ -231,12 +254,12 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "4 5/6 − 2 3/4 = ___",
+     "ask": "Subtract mixed numbers: 4 5/6 − 2 3/4 = ___",
      "a": [
       "25/12",
       "2 1/12"
      ],
-     "why": "4 5/6 = (4 × 6 + 5)/6 = 29/6 and 2 3/4 = (2 × 4 + 3)/4 = 11/4. LCM 12: 29/6 = (29 × 2)/(6 × 2) = 58/12 and 11/4 = (11 × 3)/(4 × 3) = 33/12. 58 − 33 = 25, so 25/12.",
+     "why": "Change to improper fractions: 4 5/6 = 29/6 and 2 3/4 = 11/4.\nLCM of 6 and 4 is 12.\n29/6 = (29 × 2)/(6 × 2) = 58/12 and 11/4 = (11 × 3)/(4 × 3) = 33/12.\n58 − 33 = 25, so 25/12 = 2 1/12.",
      "clue": "Change to improper fractions.",
      "id": "g8.maths.u1.s1-3-2.10",
      "ref": "Q1 a",
@@ -247,11 +270,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "−5.3 − 3.45 = ___",
+     "ask": "Subtract decimals: −5.3 − 3.45 = ___",
      "a": [
       "-8.75"
      ],
-     "why": "−5.3 + (−3.45) = −8.75.",
+     "why": "Subtracting 3.45 means adding −3.45.\n−5.3 + (−3.45): both negative, so the answer is negative.\nAdd the sizes: 5.30 + 3.45 = 8.75.\nAnswer: −8.75.",
      "clue": "Both negative: add the sizes.",
      "id": "g8.maths.u1.s1-3-2.11",
      "ref": "Q1 b",
@@ -262,11 +285,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "6/13 − |−7/13| = ___",
+     "ask": "Subtract an absolute value: 6/13 − |−7/13| = ___",
      "a": [
       "-1/13"
      ],
-     "why": "6/13 − 7/13 = −1/13.",
+     "why": "Find the absolute value first: |−7/13| = 7/13.\nSo 6/13 − 7/13.\nSame denominator: 6 − 7 = −1.\nAnswer: −1/13.",
      "clue": "|−7/13| = 7/13.",
      "id": "g8.maths.u1.s1-3-2.12",
      "ref": "Q1 c",
@@ -277,11 +300,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "|−5/7| − |3/4| = ___",
+     "ask": "Subtract absolute values: |−5/7| − |3/4| = ___",
      "a": [
       "-1/28"
      ],
-     "why": "|−5/7| = 5/7 and |3/4| = 3/4. LCM 28: 5/7 = (5 × 4)/(7 × 4) = 20/28 and 3/4 = (3 × 7)/(4 × 7) = 21/28. 20 − 21 = −1, so −1/28.",
+     "why": "|−5/7| = 5/7 and |3/4| = 3/4.\nLCM of 7 and 4 is 28: 5/7 = (5 × 4)/(7 × 4) = 20/28 and 3/4 = (3 × 7)/(4 × 7) = 21/28.\n20/28 − 21/28 = (20 − 21)/28.\nAnswer: −1/28.",
      "clue": "LCM of 7 and 4 is 28.",
      "id": "g8.maths.u1.s1-3-2.13",
      "ref": "Q1 d",
@@ -292,12 +315,12 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Y − (2/7 + 5) when y = 9/4: ___",
+     "ask": "Evaluate: y − (2/7 + 5) when y = 9/4. Answer: ___",
      "a": [
       "-85/28",
       "-3 1/28"
      ],
-     "why": "2/7 + 5 = 2/7 + 35/7 = 37/7. LCM of 4 and 7 is 28: 9/4 = (9 × 7)/(4 × 7) = 63/28 and 37/7 = (37 × 4)/(7 × 4) = 148/28. 63 − 148 = −85, so −85/28.",
+     "why": "Brackets first: 2/7 + 5 = 2/7 + 35/7 = 37/7.\nNow 9/4 − 37/7. LCM of 4 and 7 is 28.\n9/4 = (9 × 7)/(4 × 7) = 63/28 and 37/7 = (37 × 4)/(7 × 4) = 148/28.\n63 − 148 = −85, so −85/28 = −3 1/28.",
      "clue": "2/7 + 5 = 37/7.",
      "id": "g8.maths.u1.s1-3-2.14",
      "ref": "Q2 a",
@@ -308,13 +331,13 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "A basket of 58/3 kg has 18/7 kg apples and 11/9 kg oranges. Bananas = ___ kg",
+     "ask": "Subtract fractions in a word problem: a basket of 58/3 kg has 18/7 kg apples and 11/9 kg oranges. The rest is bananas. Bananas = ___ kg",
      "a": [
       "979/63",
       "15 34/63",
       "≈15.54"
      ],
-     "why": "LCM of 3, 7 and 9 is 63. 58/3 = (58 × 21)/(3 × 21) = 1218/63; 18/7 = (18 × 9)/(7 × 9) = 162/63; 11/9 = (11 × 7)/(9 × 7) = 77/63. 1218 − 162 − 77 = 979, so 979/63 kg.",
+     "why": "Bananas = 58/3 − 18/7 − 11/9.\nLCM of 3, 7 and 9 is 63.\n58/3 = (58 × 21)/63 = 1218/63; 18/7 = (18 × 9)/63 = 162/63; 11/9 = (11 × 7)/63 = 77/63.\n1218 − 162 − 77 = 979, so 979/63 kg.\n979/63 = 15 34/63 ≈ 15.54 kg.",
      "clue": "LCM of 3, 7 and 9 is 63.",
      "id": "g8.maths.u1.s1-3-2.15",
      "ref": "Q4",
@@ -329,11 +352,11 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "5/6 − 1/4 = ___",
+   "ask": "Subtract fractions with different denominators: 5/6 − 1/4 = ___",
    "a": [
     "7/12"
    ],
-   "why": "10/12 − 3/12.",
+   "why": "LCM of 6 and 4 is 12.\n5/6 = (5 × 2)/(6 × 2) = 10/12.\n1/4 = (1 × 3)/(4 × 3) = 3/12.\n10/12 − 3/12 = 7/12.",
    "clue": "",
    "gen": {
     "t": "op",
@@ -348,11 +371,11 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "−2/3 − 1/6 = ___",
+   "ask": "Subtract fractions (the answer is negative): −2/3 − 1/6 = ___",
    "a": [
     "-5/6"
    ],
-   "why": "−4/6 − 1/6.",
+   "why": "Subtracting 1/6 means adding −1/6.\nLCM of 3 and 6 is 6: −2/3 = −4/6.\nBoth negative: 4 + 1 = 5.\nAnswer: −5/6.",
    "clue": "",
    "gen": {
     "t": "op",
@@ -367,9 +390,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "Subtraction of rational numbers is commutative.",
+   "text": "Properties of subtraction: true or false? Subtraction of rational numbers is commutative.",
    "a": false,
-   "why": "3 − 5 ≠ 5 − 3.",
+   "why": "Commutative means the order does not matter.\nTry 3 − 5 = −2 and 5 − 3 = 2.\n−2 ≠ 2.\nSo subtraction is not commutative: false.",
    "clue": "",
    "id": "g8.maths.u1.s1-3-2.18",
    "level": 3
@@ -379,13 +402,13 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "4 − 2 3/5 = ___",
+   "ask": "Subtract a mixed number from a whole number: 4 − 2 3/5 = ___",
    "a": [
     "7/5",
     "1 2/5",
     "1.4"
    ],
-   "why": "20/5 − 13/5 = 7/5.",
+   "why": "Write both in fifths: 4 = 20/5 and 2 3/5 = 13/5.\n20/5 − 13/5 = 7/5.\n7/5 = 1 2/5 = 1.4.\nCheck: 2 3/5 + 1 2/5 = 4.",
    "clue": "",
    "level": 1,
    "gen": {
@@ -400,13 +423,13 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "A rope is 5 1/2 m. Pieces of 1 3/4 m and 2 1/3 m are cut off. Left = ___ m",
+   "ask": "Subtract mixed numbers in a word problem: a rope is 5 1/2 m. Pieces of 1 3/4 m and 2 1/3 m are cut off. Left = ___ m",
    "a": [
     "17/12",
     "1 5/12",
     "≈1.42"
    ],
-   "why": "66/12 − 21/12 − 28/12 = 17/12.",
+   "why": "Left = 5 1/2 − 1 3/4 − 2 1/3.\nImproper fractions: 11/2, 7/4 and 7/3.\nLCM 12: 66/12, 21/12 and 28/12.\n66 − 21 − 28 = 17, so 17/12 = 1 5/12 m.",
    "clue": "",
    "level": 3,
    "gen": {

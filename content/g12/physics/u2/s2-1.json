@@ -76,9 +76,10 @@
       "The thrown stone",
       "It depends on the stones' mass"
      ],
-     "after": "They land together. Gravity pulls both down the same way; sideways speed does not change the fall.",
+     "after": "They land together.\nBoth start with zero vertical velocity and fall with the same g.\nThe sideways speed does not change the fall: the motions are independent.",
      "ref": "Discussion question 2.4 Q3",
-     "id": "g12.physics.u2.s2-1.1"
+     "id": "g12.physics.u2.s2-1.1",
+     "best": "They land together"
     },
     {
      "kind": "read",
@@ -155,9 +156,40 @@
       }
      ],
      "formula": "v*Math.sqrt(2*h/9.8)",
-     "out": "Lands {v} m from the foot",
-     "note": "The time of flight depends only on h.",
-     "id": "g12.physics.u2.s2-1.4"
+     "note": "Change only v₀: the time stays the same. The time of flight depends only on h. g = 9.8 m/s².",
+     "id": "g12.physics.u2.s2-1.4",
+     "outs": [
+      [
+       "Time of flight t = √(2h/g)",
+       "Math.sqrt(2*h/9.8)",
+       "{v} s"
+      ],
+      [
+       "Range Δx = v₀t",
+       "v*Math.sqrt(2*h/9.8)",
+       "{v} m"
+      ],
+      [
+       "Landing speed √(v₀² + 2gh)",
+       "Math.sqrt(v*v+2*9.8*h)",
+       "{v} m/s"
+      ]
+     ]
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Worked example: a stone from a cliff",
+     "steps": [
+      "Given: h = 80 m, v₀ = 25 m/s horizontal, g = 10 m/s².",
+      "Time (vertical only): t = √(2h/g) = √(2 × 80 ÷ 10) = √16 = 4 s.",
+      "Distance (horizontal only): Δx = v₀t = 25 × 4 = 100 m.",
+      "Landing velocity parts: vₓ = 25 m/s, v_y = gt = 40 m/s.",
+      "Speed: v = √(25² + 40²) = √2225 ≈ 47.2 m/s.",
+      "Common trap: using v₀ to find the time. The time depends only on h."
+     ],
+     "id": "g12.physics.u2.s2-1.41",
+     "added": true
     },
     {
      "kind": "name",
@@ -177,7 +209,7 @@
     },
     {
      "kind": "mcq",
-     "text": "A rescue plane flies level and drops a food package. Ignoring air, where is the plane when the package lands?",
+     "text": "Horizontal projection: a rescue plane flies level and drops a food package. Ignoring air, where is the plane when the package lands?",
      "opts": [
       "Directly above the package",
       "Far behind the package",
@@ -185,7 +217,7 @@
       "It cannot be known"
      ],
      "ans": "Directly above the package",
-     "why": "The package keeps the plane's horizontal velocity, so they stay in line.",
+     "why": "The package leaves with the plane's horizontal velocity.\nNo horizontal force acts, so that velocity stays the same.\nPlane and package move sideways together.\nSo the plane is directly above the package when it lands.\nTrap: \"far behind\" assumes the package slows down sideways.",
      "clue": "What happens to the horizontal velocity of the package?",
      "graded": true,
      "level": 1,
@@ -195,12 +227,12 @@
     },
     {
      "kind": "blank",
-     "ask": "A package is dropped from a plane 300 m high. g = 10 m/s². It reaches the ground after ≈ ___ s (2 decimal places)",
+     "ask": "Time of flight, horizontal projection: a package is dropped from a plane 300 m high (g = 10 m/s²). It reaches the ground after ≈ ___ s (2 decimal places)",
      "a": [
       "≈7.75",
       "≈7.74"
      ],
-     "why": "t = √(2 × 300/10) = √60 = 7.75 s. (The book truncates to 7.74 s.)",
+     "why": "Formula: h = ½gt², so t = √(2h/g).\nSubstitute: t = √(2 × 300 m ÷ 10 m/s²).\nt = √60 s² = 7.75 s.\nTrap: the plane's speed does not change the fall time.\n(The book truncates to 7.74 s.)",
      "clue": "Use h = ½gt² with no starting vertical velocity.",
      "num": true,
      "graded": true,
@@ -211,12 +243,12 @@
     },
     {
      "kind": "blank",
-     "ask": "The plane flies at 360 km/h. It must release the package ≈ ___ m before it is over the driver (nearest metre)",
+     "ask": "Horizontal distance: the plane flies at 360 km/h. It must release the package ≈ ___ m before it is over the driver (nearest metre)",
      "a": [
       "≈775",
       "≈774"
      ],
-     "why": "360 km/h = 100 m/s. Δx = 100 × 7.75 = 775 m (book: 774 m).",
+     "why": "Convert: 360 km/h ÷ 3.6 = 100 m/s.\nFormula: Δx = v₀t, with t = 7.75 s from the fall.\nSubstitute: Δx = 100 m/s × 7.75 s.\nResult: Δx ≈ 775 m (book: 774 m).\nTrap: using 360 without converting gives a huge, wrong answer.",
      "clue": "Change km/h to m/s first, then use Δx = v₀t.",
      "num": true,
      "graded": true,
@@ -227,11 +259,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A ball is thrown horizontally at 20 m/s from a building 90 m high. g = 10 m/s². Time of flight ≈ ___ s (2 decimal places)",
+     "ask": "Time of flight, horizontal projection: a ball is thrown horizontally at 20 m/s from a building 90 m high (g = 10 m/s²). Time of flight ≈ ___ s (2 decimal places)",
      "a": [
       "≈4.24"
      ],
-     "why": "t = √(2 × 90/10) = √18 = 4.24 s.",
+     "why": "Formula: t = √(2h/g). Only the height decides the time.\nSubstitute: t = √(2 × 90 ÷ 10) = √18.\nResult: t ≈ 4.24 s.\nTrap: the 20 m/s is not used for the time.",
      "clue": "Only the height decides the time.",
      "num": true,
      "graded": true,
@@ -242,11 +274,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Same ball: it lands ≈ ___ m from the foot of the building (nearest metre)",
+     "ask": "Horizontal distance: same ball (20 m/s, t = 4.24 s). It lands ≈ ___ m from the foot of the building (nearest metre)",
      "a": [
       "≈85"
      ],
-     "why": "Δx = 20 × 4.24 = 84.9 m.",
+     "why": "Formula: Δx = v₀t.\nThe horizontal speed stays 20 m/s the whole time.\nSubstitute: Δx = 20 m/s × 4.24 s = 84.9 m.\nResult: ≈ 85 m.",
      "clue": "Horizontal speed stays 20 m/s.",
      "num": true,
      "graded": true,
@@ -257,11 +289,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Same ball: it hits the ground at ≈ ___ m/s (1 decimal place)",
+     "ask": "Landing speed: same ball (vₓ = 20 m/s, t = 4.24 s, g = 10 m/s²). It hits the ground at ≈ ___ m/s (1 decimal place)",
      "a": [
       "≈46.9"
      ],
-     "why": "v_y = 10 × 4.24 = 42.4 m/s. v = √(20² + 42.4²) = √2200 = 46.9 m/s.",
+     "why": "Vertical speed: v_y = gt = 10 × 4.24 = 42.4 m/s.\nHorizontal speed: vₓ = 20 m/s (unchanged).\nCombine with Pythagoras: v = √(vₓ² + v_y²) = √(400 + 1800).\nv = √2200 ≈ 46.9 m/s.\nTrap: adding 20 + 42.4 is wrong; the parts are at right angles.",
      "clue": "Combine vₓ and v_y with Pythagoras.",
      "num": true,
      "graded": true,
@@ -272,11 +304,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A gun with muzzle speed 500 m/s aims at a target 50 m away. g = 10 m/s². To hit it, aim ≈ ___ cm above the target",
+     "ask": "Bullet drop: a gun with muzzle speed 500 m/s aims at a target 50 m away (g = 10 m/s²). To hit it, aim ≈ ___ cm above the target",
      "a": [
       "≈5"
      ],
-     "why": "t = 50/500 = 0.1 s. Drop = ½ × 10 × 0.1² = 0.05 m = 5 cm.",
+     "why": "Time to reach the target: t = Δx/v₀ = 50 ÷ 500 = 0.1 s.\nIn that time the bullet falls: Δy = ½gt² = ½ × 10 × 0.1².\nΔy = 0.05 m = 5 cm.\nSo aim 5 cm above the target.",
      "clue": "Find the time to reach the target first.",
      "num": true,
      "graded": true,
@@ -313,9 +345,10 @@
       "Gravity stops acting",
       "It moves straight up"
      ],
-     "after": "At the top only the vertical velocity is zero. The ball still moves sideways, and gravity still pulls down.",
+     "after": "At the top only the vertical velocity is zero.\nThe horizontal velocity v₀cosθ never changes, so the ball still moves sideways.\nGravity never switches off: the acceleration is still g downward.",
      "ref": "Discussion question 2.4 Q2",
-     "id": "g12.physics.u2.s2-1.13"
+     "id": "g12.physics.u2.s2-1.13",
+     "best": "It still moves sideways"
     },
     {
      "kind": "read",
@@ -348,11 +381,56 @@
      "id": "g12.physics.u2.s2-1.14"
     },
     {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Split the launch velocity",
+     "ask": "Change the speed and the angle. Watch the two parts.",
+     "vars": [
+      {
+       "k": "v",
+       "label": "Speed v₀ (m/s)",
+       "min": 5,
+       "max": 40,
+       "step": 1,
+       "v": 25
+      },
+      {
+       "k": "a",
+       "label": "Angle θ (°)",
+       "min": 0,
+       "max": 90,
+       "step": 5,
+       "v": 55
+      }
+     ],
+     "formula": "v*Math.cos(a*Math.PI/180)",
+     "outs": [
+      [
+       "Horizontal v₀ₓ = v₀cosθ",
+       "v*Math.cos(a*Math.PI/180)",
+       "{v} m/s"
+      ],
+      [
+       "Vertical v₀y = v₀sinθ",
+       "v*Math.sin(a*Math.PI/180)",
+       "{v} m/s"
+      ],
+      [
+       "Time to the top v₀sinθ/g",
+       "v*Math.sin(a*Math.PI/180)/9.8",
+       "{v} s"
+      ]
+     ],
+     "note": "At 0° all the speed is horizontal; at 90° all of it is vertical. g = 9.8 m/s².",
+     "id": "g12.physics.u2.s2-1.42",
+     "added": true
+    },
+    {
      "kind": "read",
      "step": "read",
      "title": "Time of flight",
      "paras": [
-      "At the top v_y = 0, so the time to the top is t = v₀sinθ/g.",
+      "At the top v_y = 0. So the time to the top is t = v₀sinθ/g.",
       "Over level ground the fall takes the same time.",
       "Time of flight: T = 2v₀sinθ/g.",
       "Use T only when launch and landing are at the same level."
@@ -392,7 +470,7 @@
     },
     {
      "kind": "mcq",
-     "text": "At which point in an inclined flight is the speed least?",
+     "text": "Inclined projection: at which point of the flight is the speed least?",
      "opts": [
       "At maximum height",
       "At the start",
@@ -400,7 +478,7 @@
       "Speed is the same everywhere"
      ],
      "ans": "At maximum height",
-     "why": "There v_y = 0, so only vₓ is left.",
+     "why": "Speed = √(vₓ² + v_y²).\nvₓ is the same everywhere.\nv_y is zero only at maximum height.\nSo the speed is least there: v = vₓ = v₀cosθ.\nTrap: the speed is not zero at the top.",
      "clue": "Which part of the velocity disappears at the top?",
      "graded": true,
      "level": 1,
@@ -410,9 +488,9 @@
     },
     {
      "kind": "tf",
-     "text": "At the highest point the velocity and the acceleration are perpendicular.",
+     "text": "Velocity and acceleration at the top, true or false: they are perpendicular at the highest point.",
      "a": true,
-     "why": "The velocity is horizontal there and g points straight down.",
+     "why": "At the top v_y = 0, so the velocity is horizontal.\nThe acceleration is g, straight down.\nHorizontal and vertical are at 90°.\nSo the statement is true.",
      "clue": "Which way does each point at the top?",
      "graded": true,
      "level": 1,
@@ -422,11 +500,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A body launched at 30 m/s reaches its highest point after 1.5 s. g = 10 m/s². The launch angle is ___°",
+     "ask": "Launch angle from time to the top: a body launched at 30 m/s reaches its highest point after 1.5 s (g = 10 m/s²). The launch angle is ___°",
      "a": [
       "30"
      ],
-     "why": "v₀sinθ = gt = 15, so sinθ = 15/30 = 0.5 and θ = 30°.",
+     "why": "At the top v_y = 0: v₀sinθ − gt = 0.\nSo v₀sinθ = gt = 10 × 1.5 = 15 m/s.\nsinθ = 15 ÷ 30 = 0.5.\nθ = 30°.",
      "clue": "At the top v_y = 0: v₀sinθ = gt.",
      "num": true,
      "graded": true,
@@ -437,11 +515,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Same body: its range is ≈ ___ m (1 decimal place)",
+     "ask": "Range from the time of flight: same body (30 m/s at 30°, 1.5 s to the top). Its range is ≈ ___ m (1 decimal place)",
      "a": [
       "≈77.9"
      ],
-     "why": "T = 3 s. R = 30cos30° × 3 = 25.98 × 3 = 77.9 m.",
+     "why": "Time of flight: T = 2 × 1.5 = 3 s (level ground).\nHorizontal speed: vₓ = 30cos30° = 30 × 0.866 = 25.98 m/s.\nRange: R = vₓT = 25.98 × 3 = 77.9 m.\nCheck: R = v₀² sin2θ/g = 900 × 0.866 ÷ 10 = 77.9 m ✓",
      "clue": "Total time is twice the time to the top.",
      "num": true,
      "graded": true,
@@ -452,7 +530,7 @@
     },
     {
      "kind": "pick",
-     "text": "Which are true for a projectile (no air resistance)?",
+     "text": "Projectile facts: which are true for a projectile with no air resistance? Pick all that apply.",
      "pool": [
       "Its horizontal velocity is constant",
       "Its acceleration is g downward everywhere",
@@ -464,7 +542,7 @@
       "Its acceleration is g downward everywhere",
       "Its vertical velocity is zero at the top"
      ],
-     "why": "Gravity never switches off, so the acceleration is never zero.",
+     "why": "No horizontal force acts, so vₓ is constant.\nGravity acts all the time, so the acceleration is g downward everywhere.\nAt the top v_y = 0.\nThe acceleration is never zero, not even at the top.",
      "clue": "Think about what gravity does at the top.",
      "graded": true,
      "level": 2,
@@ -474,11 +552,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A projectile's launch speed is five times its speed at the top. The launch angle is ≈ ___° (1 decimal place)",
+     "ask": "Launch angle from speeds: a projectile's launch speed is five times its speed at the top. The launch angle is ≈ ___° (1 decimal place)",
      "a": [
       "≈78.5"
      ],
-     "why": "At the top speed = v₀cosθ. v₀ = 5v₀cosθ gives cosθ = 0.2, θ = 78.5°.",
+     "why": "At the top only vₓ is left: v_top = v₀cosθ.\nGiven: v₀ = 5 v_top = 5 v₀cosθ.\nSo cosθ = 1/5 = 0.2.\nθ = cos⁻¹(0.2) ≈ 78.5°.",
      "clue": "What speed is left at the top?",
      "num": true,
      "graded": true,
@@ -529,9 +607,25 @@
       }
      ],
      "formula": "v*v*Math.sin(2*a*Math.PI/180)/9.8",
-     "out": "Range = {v} m",
-     "note": "g = 9.8 m/s², level ground.",
-     "id": "g12.physics.u2.s2-1.24"
+     "note": "g = 9.8 m/s², level ground. 30° and 60° give the same range, but 60° goes higher and stays up longer.",
+     "id": "g12.physics.u2.s2-1.24",
+     "outs": [
+      [
+       "Range R = v₀² sin2θ/g",
+       "v*v*Math.sin(2*a*Math.PI/180)/9.8",
+       "{v} m"
+      ],
+      [
+       "Max height H = v₀² sin²θ/(2g)",
+       "v*v*Math.pow(Math.sin(a*Math.PI/180),2)/(2*9.8)",
+       "{v} m"
+      ],
+      [
+       "Time of flight T = 2v₀sinθ/g",
+       "2*v*Math.sin(a*Math.PI/180)/9.8",
+       "{v} s"
+      ]
+     ]
     },
     {
      "kind": "read",
@@ -566,7 +660,7 @@
     },
     {
      "kind": "mcq",
-     "text": "Which launch angle gives the greatest range over level ground?",
+     "text": "Maximum range: which launch angle gives the greatest range over level ground?",
      "opts": [
       "45°",
       "30°",
@@ -574,7 +668,7 @@
       "90°"
      ],
      "ans": "45°",
-     "why": "sin2θ is largest (1) when 2θ = 90°.",
+     "why": "Formula: R = v₀² sin2θ/g.\nR is largest when sin2θ = 1.\nsin2θ = 1 when 2θ = 90°, so θ = 45°.\nThen R_max = v₀²/g.",
      "clue": "When is sin2θ biggest?",
      "graded": true,
      "level": 1,
@@ -584,7 +678,7 @@
     },
     {
      "kind": "mcq",
-     "text": "Balls A (37°) and B (53°) are kicked with the same speed. Which statement is true?",
+     "text": "Complementary angles: balls A (37°) and B (53°) are kicked with the same speed. Which statement is true?",
      "opts": [
       "Same range; B goes higher",
       "A goes farther; same height",
@@ -592,7 +686,7 @@
       "Same range; same height"
      ],
      "ans": "Same range; B goes higher",
-     "why": "37° + 53° = 90°, so sin2θ is equal. The steeper ball rises higher.",
+     "why": "37° + 53° = 90°, so sin74° = sin106°.\nSo sin2θ is the same: equal ranges.\nH = v₀² sin²θ/(2g) grows with θ.\nSo the steeper ball B goes higher.\nAnswer: same range; B goes higher.",
      "clue": "Add the two angles.",
      "graded": true,
      "level": 2,
@@ -602,11 +696,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A ball is kicked at 40 m/s at 37°. g = 10 m/s², sin37° = 0.6. Maximum height H = ___ m",
+     "ask": "Maximum height: a ball is kicked at 40 m/s at 37° (g = 10 m/s², sin37° = 0.6). Maximum height H = ___ m",
      "a": [
       "28.8"
      ],
-     "why": "H = 1600 × 0.36 ÷ 20 = 28.8 m.",
+     "why": "Formula: H = v₀² sin²θ/(2g).\nSubstitute: H = 40² × 0.6² ÷ (2 × 10).\nH = 1600 × 0.36 ÷ 20 = 576 ÷ 20.\nResult: H = 28.8 m.\nTrap: forgetting to square sinθ gives 48 m.",
      "clue": "Square sin37° before you multiply.",
      "num": true,
      "graded": true,
@@ -617,11 +711,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Same kick, sin74° = 0.96. Range R ≈ ___ m (nearest metre)",
+     "ask": "Range: same kick (40 m/s at 37°, sin74° = 0.96, g = 10 m/s²). Range R ≈ ___ m (nearest metre)",
      "a": [
       "≈154"
      ],
-     "why": "R = 1600 × 0.96 ÷ 10 = 153.6 m (book 153.8 m with sin74° = 0.961).",
+     "why": "Formula: R = v₀² sin2θ/g.\n2θ = 74°, so sin2θ = 0.96.\nSubstitute: R = 1600 × 0.96 ÷ 10 = 153.6 m.\nResult: ≈ 154 m (book 153.8 m).\nTrap: using sin37° instead of sin74° gives 96 m.",
      "clue": "Use sin2θ, not sinθ.",
      "num": true,
      "graded": true,
@@ -632,7 +726,7 @@
     },
     {
      "kind": "mcq",
-     "text": "The range of a projectile is 3 times its maximum height. The launch angle is about",
+     "text": "Range and height: the range of a projectile is 3 times its maximum height. The launch angle is about",
      "opts": [
       "53°",
       "37°",
@@ -640,7 +734,7 @@
       "72°"
      ],
      "ans": "53°",
-     "why": "H = R tanθ/4, so tanθ = 4H/R = 4/3 and θ ≈ 53°.",
+     "why": "Link: H = R tanθ/4, so tanθ = 4H/R.\nGiven R = 3H: tanθ = 4H/(3H) = 4/3.\nθ = tan⁻¹(4/3) ≈ 53°.\nCheck: at 45°, R = 4H, not 3H.",
      "clue": "Use H = R tanθ/4.",
      "graded": true,
      "level": 3,
@@ -650,7 +744,7 @@
     },
     {
      "kind": "mcq",
-     "text": "The same launch is made on the Moon (g ≈ 1.6 m/s²). Compared with Earth, the range is",
+     "text": "Range on the Moon (g ≈ 1.6 m/s²): the same launch made on the Moon has a range, compared with Earth,",
      "opts": [
       "about 6 times greater",
       "the same",
@@ -658,7 +752,7 @@
       "about 36 times greater"
      ],
      "ans": "about 6 times greater",
-     "why": "R ∝ 1/g and 9.8 ÷ 1.6 ≈ 6. The height is also about 6 times greater.",
+     "why": "Formula: R = v₀² sin2θ/g, so R ∝ 1/g.\nRatio: 9.8 ÷ 1.6 ≈ 6.\nSo the range is about 6 times greater.\nH ∝ 1/g too, so it is also about 6 times greater.",
      "clue": "g is in the denominator.",
      "graded": true,
      "level": 2,
@@ -668,11 +762,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A long jumper leaves the ground at 11.0 m/s and 20.0° (sin40° = 0.643). g = 10 m/s². Jump length ≈ ___ m (1 decimal place)",
+     "ask": "Long jump range: a jumper leaves the ground at 11.0 m/s and 20.0° (sin40° = 0.643, g = 10 m/s²). Jump length ≈ ___ m (1 decimal place)",
      "a": [
       "≈7.8"
      ],
-     "why": "R = 121 × 0.643 ÷ 10 = 7.78 m.",
+     "why": "Treat as level ground: R = v₀² sin2θ/g.\n2θ = 40°, sin40° = 0.643.\nSubstitute: R = 11.0² × 0.643 ÷ 10 = 121 × 0.643 ÷ 10.\nResult: R ≈ 7.8 m.",
      "clue": "Treat the jump as level ground: R = v₀² sin2θ/g.",
      "num": true,
      "graded": true,
@@ -691,7 +785,7 @@
    "items": [
     {
      "kind": "mcq",
-     "text": "A gun with muzzle speed 500 m/s shoots at a target 50 m away. To hit it, the gun should be aimed",
+     "text": "Exercise 2.1 Q2, aiming a gun: muzzle speed 500 m/s, target 50 m away. To hit it, the gun should be aimed",
      "opts": [
       "5 cm above the target",
       "straight at the target",
@@ -699,7 +793,7 @@
       "5 cm below the target"
      ],
      "ans": "5 cm above the target",
-     "why": "The bullet drops ½ × 10 × 0.1² = 0.05 m in 0.1 s.",
+     "why": "Time to target: t = 50 ÷ 500 = 0.1 s.\nDrop: Δy = ½gt² = ½ × 10 × 0.01 = 0.05 m.\nThe bullet falls 5 cm, so aim 5 cm above.\nTrap: aiming straight at it misses low.",
      "clue": "How far does the bullet fall on the way?",
      "graded": true,
      "level": 2,
@@ -709,11 +803,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A long jumper (11.0 m/s, 20.0°, g = 10 m/s², sin20° = 0.342) rises ≈ ___ m (2 decimal places)",
+     "ask": "Exercise 2.1 Q4 b, long jump height: (11.0 m/s, 20.0°, g = 10 m/s², sin20° = 0.342). The jumper rises ≈ ___ m (2 decimal places)",
      "a": [
       "≈0.71"
      ],
-     "why": "H = 121 × 0.342²/20 = 121 × 0.117 ÷ 20 = 0.708 m.",
+     "why": "Formula: H = v₀² sin²θ/(2g).\nsin²20° = 0.342² = 0.117.\nSubstitute: H = 121 × 0.117 ÷ 20.\nResult: H ≈ 0.71 m.",
      "clue": "H = v₀² sin²θ/(2g).",
      "num": true,
      "graded": true,
@@ -728,11 +822,11 @@
  "test": [
   {
    "kind": "blank",
-   "ask": "A stone is thrown horizontally at 15 m/s from a 20 m cliff. g = 10 m/s². It lands after ___ s",
+   "ask": "Time of flight, horizontal throw: a stone is thrown horizontally at 15 m/s from a 20 m cliff (g = 10 m/s²). It lands after ___ s",
    "a": [
     "2"
    ],
-   "why": "t = √(2 × 20/10) = 2 s.",
+   "why": "Formula: t = √(2h/g).\nSubstitute: t = √(2 × 20 ÷ 10) = √4.\nResult: t = 2 s.\nThe 15 m/s does not change the fall time.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -742,11 +836,11 @@
   },
   {
    "kind": "blank",
-   "ask": "Same stone: it lands ___ m from the foot of the cliff",
+   "ask": "Horizontal distance: same stone (15 m/s, 2 s in the air). It lands ___ m from the foot of the cliff",
    "a": [
     "30"
    ],
-   "why": "Δx = 15 × 2 = 30 m.",
+   "why": "Formula: Δx = v₀t.\nSubstitute: Δx = 15 m/s × 2 s.\nResult: 30 m.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -756,7 +850,7 @@
   },
   {
    "kind": "mcq",
-   "text": "Which angle gives the same range as 30° for the same speed?",
+   "text": "Complementary angles: which angle gives the same range as 30° for the same speed?",
    "opts": [
     "60°",
     "45°",
@@ -764,7 +858,7 @@
     "90°"
    ],
    "ans": "60°",
-   "why": "30° + 60° = 90°.",
+   "why": "Angles that add to 90° give the same range.\n90° − 30° = 60°.\nCheck: sin60° = sin120°.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -773,11 +867,11 @@
   },
   {
    "kind": "blank",
-   "ask": "A ball is kicked at 20 m/s at 45°. g = 10 m/s². Range R = ___ m",
+   "ask": "Range: a ball is kicked at 20 m/s at 45° (g = 10 m/s²). Range R = ___ m",
    "a": [
     "40"
    ],
-   "why": "R = 400 × sin90°/10 = 40 m.",
+   "why": "Formula: R = v₀² sin2θ/g.\nsin90° = 1.\nR = 400 × 1 ÷ 10 = 40 m.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -787,11 +881,11 @@
   },
   {
    "kind": "blank",
-   "ask": "A ball is kicked at 20 m/s at 30°. g = 10 m/s². Maximum height H = ___ m",
+   "ask": "Maximum height: a ball is kicked at 20 m/s at 30° (g = 10 m/s²). H = ___ m",
    "a": [
     "5"
    ],
-   "why": "H = 400 × 0.25 ÷ 20 = 5 m.",
+   "why": "Formula: H = v₀² sin²θ/(2g).\nsin30° = 0.5, so sin²30° = 0.25.\nH = 400 × 0.25 ÷ 20 = 5 m.\nTrap: forgetting to square gives 10 m.",
    "clue": "",
    "num": true,
    "graded": true,

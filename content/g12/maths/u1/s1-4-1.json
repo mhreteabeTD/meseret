@@ -58,9 +58,10 @@
       "Exactly 1.5",
       "Close to 3"
      ],
-     "after": "Heights 1, 1.5, 1.75, 1.875, 1.9375, … get closer and closer to 2 but never pass it.",
+     "after": "Heights: 1, then 1.5, 1.75, 1.875, 1.9375, …\nEach year it adds half of the gap that is left to 2.\nSo it gets closer and closer to 2 but never passes it.\n(It does not grow forever: the growth shrinks too fast.)",
      "ref": "Activity 1.7",
-     "id": "g12.maths.u1.s1-4-1.1"
+     "id": "g12.maths.u1.s1-4-1.1",
+     "best": "Close to 2, never more"
     },
     {
      "kind": "read",
@@ -112,6 +113,50 @@
      "id": "g12.maths.u1.s1-4-1.3"
     },
     {
+     "kind": "numline",
+     "step": "explore",
+     "title": "Where is r?",
+     "ask": "Tap each value of r. What does rⁿ do?",
+     "min": -2,
+     "max": 2,
+     "sub": 2,
+     "need": 4,
+     "points": [
+      {
+       "v": "-3/2",
+       "label": "−3/2",
+       "info": "r ≤ −1: −1.5, 2.25, −3.4, … jumps wider: vibrates."
+      },
+      {
+       "v": "-1",
+       "label": "−1",
+       "info": "r = −1: −1, 1, −1, 1, … no limit: vibrates."
+      },
+      {
+       "v": "-1/2",
+       "label": "−1/2",
+       "info": "|r| < 1: −0.5, 0.25, −0.125, … → 0: converges."
+      },
+      {
+       "v": "1/2",
+       "label": "1/2",
+       "info": "|r| < 1: 0.5, 0.25, 0.125, … → 0: converges."
+      },
+      {
+       "v": "1",
+       "label": "1",
+       "info": "r = 1: 1, 1, 1, … converges to 1."
+      },
+      {
+       "v": "3/2",
+       "label": "3/2",
+       "info": "r > 1: 1.5, 2.25, 3.4, … → ∞: diverges."
+      }
+     ],
+     "added": true,
+     "id": "g12.maths.u1.s1-4-1.40"
+    },
+    {
      "kind": "slider",
      "step": "explore",
      "added": true,
@@ -158,7 +203,7 @@
     },
     {
      "kind": "mcq",
-     "text": "Gₙ = (√2)ⁿ as n → ∞:",
+     "text": "Convergence of rⁿ: what does Gₙ = (√2)ⁿ do as n → ∞?",
      "opts": [
       "diverges",
       "converges to 0",
@@ -166,7 +211,7 @@
       "vibrates"
      ],
      "ans": "diverges",
-     "why": "√2 ≈ 1.41 > 1, so the terms grow without end.",
+     "why": "Step 1: r = √2 ≈ 1.41.\nStep 2: r > 1, so each term is about 1.41 times the one before.\nStep 3: 1.41, 2, 2.83, 4, … grow without end.\nSo the sequence diverges. (Only |r| < 1 goes to 0.)",
      "clue": "Is √2 bigger than 1?",
      "graded": true,
      "level": 1,
@@ -215,18 +260,19 @@
        "always 1"
       ]
      ],
-     "why": "Compare r with 1 and −1.",
+     "why": "Step 1: (√3)ⁿ: r ≈ 1.73 > 1 → diverges.\nStep 2: (3/4)ⁿ, (−1/2)ⁿ, (2/3)ⁿ: |r| < 1 → converge to 0.\nStep 3: (−3)ⁿ: r ≤ −1 → vibrates (−3, 9, −27, …).\nStep 4: 1ⁿ = 1 always → converges to 1.\nRule: compare r with 1 and −1.",
      "clue": "Look only at r. Is |r| < 1? Is r ≤ −1?",
      "ref": "Exercise 1.18",
      "graded": true,
      "level": 2,
-     "id": "g12.maths.u1.s1-4-1.7"
+     "id": "g12.maths.u1.s1-4-1.7",
+     "text": "Sort each sequence rⁿ: diverges, converges or vibrates? Look only at r."
     },
     {
      "kind": "tf",
-     "text": "(−1/2)ⁿ vibrates because its signs alternate.",
+     "text": "Alternating signs: true or false? (−1/2)ⁿ vibrates because its signs alternate.",
      "a": false,
-     "why": "Its size halves each time, so it converges to 0. Only r ≤ −1 vibrates.",
+     "why": "Step 1: the terms are −1/2, 1/4, −1/8, 1/16, …\nStep 2: the signs alternate, but the size halves each time.\nStep 3: |r| = 1/2 < 1, so the terms go to 0.\nSo it converges to 0, and the statement is false. Only r ≤ −1 vibrates.",
      "clue": "Look at |r|.",
      "graded": true,
      "level": 2,
@@ -236,7 +282,7 @@
     },
     {
      "kind": "mcq",
-     "text": "Which sequence converges?",
+     "text": "Convergence of rⁿ: which sequence converges?",
      "opts": [
       "(0.99)ⁿ",
       "(1.01)ⁿ",
@@ -244,7 +290,7 @@
       "(−1.5)ⁿ"
      ],
      "ans": "(0.99)ⁿ",
-     "why": "|0.99| < 1, so it goes to 0 (slowly).",
+     "why": "Step 1: (0.99)ⁿ: |r| = 0.99 < 1 → converges to 0 (slowly).\nStep 2: (1.01)ⁿ: r > 1 → diverges, even though r is close to 1.\nStep 3: (−1)ⁿ: −1, 1, −1, … vibrates.\nStep 4: (−1.5)ⁿ: r ≤ −1 → vibrates.\nSo (0.99)ⁿ.",
      "clue": "Only one has |r| < 1.",
      "graded": true,
      "level": 3,
@@ -281,9 +327,10 @@
       "2",
       "1/2"
      ],
-     "after": "Partial sums 1/2, 3/4, 7/8, 15/16, … approach 1.",
+     "after": "Partial sums: 1/2, 3/4, 7/8, 15/16, …\nEach is 1 − (1/2)ⁿ: the gap to 1 halves each time.\nSo the sum approaches 1. (Not ∞: the terms shrink fast enough.)",
      "ref": "Activity 1.8 ii",
-     "id": "g12.maths.u1.s1-4-1.10"
+     "id": "g12.maths.u1.s1-4-1.10",
+     "best": "1"
     },
     {
      "kind": "read",
@@ -326,6 +373,54 @@
      "id": "g12.maths.u1.s1-4-1.12"
     },
     {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Partial sums approach S∞",
+     "ask": "Move r (|r| < 1) and n. Watch Sₙ get close to S∞.",
+     "vars": [
+      {
+       "k": "g",
+       "label": "G₁",
+       "min": 1,
+       "max": 10,
+       "step": 1,
+       "v": 1
+      },
+      {
+       "k": "r",
+       "label": "r",
+       "min": -0.9,
+       "max": 0.9,
+       "step": 0.1,
+       "v": 0.5
+      },
+      {
+       "k": "n",
+       "label": "n (terms added)",
+       "min": 1,
+       "max": 30,
+       "step": 1,
+       "v": 4
+      }
+     ],
+     "formula": "g*(1-r**n)/(1-r)",
+     "outs": [
+      [
+       "Sₙ = G₁(1 − rⁿ)/(1 − r)",
+       "g*(1-r**n)/(1-r)",
+       "{v}"
+      ],
+      [
+       "S∞ = G₁/(1 − r)",
+       "g/(1-r)",
+       "{v}"
+      ]
+     ],
+     "note": "With r near 1 you need many terms. With r near 0 Sₙ is close to S∞ quickly.",
+     "added": true,
+     "id": "g12.maths.u1.s1-4-1.41"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -343,11 +438,11 @@
     },
     {
      "kind": "blank",
-     "ask": "5 − 10/3 + 20/9 − 40/27 + … = ___",
+     "ask": "Sum to infinity, S∞ = G₁/(1 − r): 5 − 10/3 + 20/9 − 40/27 + … = ___",
      "a": [
       "3"
      ],
-     "why": "G₁ = 5, r = −2/3. S∞ = 5/(1 + 2/3) = 5/(5/3) = 3.",
+     "why": "Step 1: G₁ = 5 and r = (−10/3) ÷ 5 = −2/3.\nStep 2: |r| = 2/3 < 1, so the sum exists.\nStep 3: S∞ = 5/(1 − (−2/3)) = 5/(5/3).\nStep 4: 5 × 3/5 = 3.\n(Trap: 1 − r = 1/3 forgets that r is negative; it gives 15.)",
      "clue": "r = (−10/3) ÷ 5.",
      "num": true,
      "graded": true,
@@ -370,12 +465,12 @@
     },
     {
      "kind": "blank",
-     "ask": "3 + 1 + 1/3 + 1/9 + … = ___",
+     "ask": "Sum to infinity, S∞ = G₁/(1 − r): 3 + 1 + 1/3 + 1/9 + … = ___",
      "a": [
       "9/2",
       "4.5"
      ],
-     "why": "r = 1/3. 3/(1 − 1/3) = 3/(2/3) = 9/2.",
+     "why": "Step 1: G₁ = 3, r = 1 ÷ 3 = 1/3. |r| < 1 ✓.\nStep 2: S∞ = 3/(1 − 1/3) = 3/(2/3).\nStep 3: 3 × 3/2 = 9/2.\nSo the sum is 9/2 = 4.5.",
      "clue": "Find r first.",
      "num": true,
      "graded": true,
@@ -386,11 +481,11 @@
     },
     {
      "kind": "blank",
-     "ask": "1/5 − 1/10 + 1/20 − 1/40 + … = ___",
+     "ask": "Sum to infinity, S∞ = G₁/(1 − r): 1/5 − 1/10 + 1/20 − 1/40 + … = ___",
      "a": [
       "2/15"
      ],
-     "why": "r = −1/2. (1/5)/(3/2) = 2/15.",
+     "why": "Step 1: G₁ = 1/5, r = (−1/10) ÷ (1/5) = −1/2.\nStep 2: 1 − r = 1 + 1/2 = 3/2.\nStep 3: S∞ = (1/5) ÷ (3/2) = (1/5) × (2/3) = 2/15.\n(Using 1 − r = 1/2 gives 2/5: that is the all-plus series.)",
      "clue": "1 − (−1/2) = 3/2.",
      "num": true,
      "graded": true,
@@ -401,7 +496,7 @@
     },
     {
      "kind": "mcq",
-     "text": "∑ₖ₌₁^(∞) 5ᵏ⁻³ =",
+     "text": "Check |r| first: what is the sum to infinity ∑ₖ₌₁^(∞) 5ᵏ⁻³?",
      "opts": [
       "no sum (diverges)",
       "1/100",
@@ -409,7 +504,7 @@
       "25/4"
      ],
      "ans": "no sum (diverges)",
-     "why": "r = 5 > 1. The terms 1/25, 1/5, 1, 5, … grow.",
+     "why": "Step 1: k = 1, 2, 3, 4 give 5⁻², 5⁻¹, 5⁰, 5¹ = 1/25, 1/5, 1, 5.\nStep 2: r = 5. |r| > 1, so the terms grow.\nStep 3: the partial sums grow without end.\nSo there is no sum: the series diverges. (Using G₁/(1 − r) anyway gives a false answer.)",
      "clue": "Check |r| before using the formula.",
      "graded": true,
      "level": 2,
@@ -419,11 +514,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∑ₖ₌₁^(∞) 2¹⁻ᵏ = ___",
+     "ask": "Sum to infinity, S∞ = G₁/(1 − r): ∑ₖ₌₁^(∞) 2¹⁻ᵏ = ___",
      "a": [
       "2"
      ],
-     "why": "2¹⁻ᵏ = (1/2)ᵏ⁻¹. G₁ = 1, r = 1/2. 1/(1/2) = 2.",
+     "why": "Step 1: 2¹⁻ᵏ = (1/2)ᵏ⁻¹, so the terms are 1, 1/2, 1/4, …\nStep 2: G₁ = 1, r = 1/2.\nStep 3: S∞ = 1/(1 − 1/2) = 1/(1/2) = 2.",
      "clue": "Rewrite as (1/2)ᵏ⁻¹.",
      "num": true,
      "graded": true,
@@ -434,11 +529,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∑ₖ₌₁^(∞) (−1)ᵏ⁺¹(2/3)ᵏ = ___",
+     "ask": "Sum to infinity, S∞ = G₁/(1 − r): ∑ₖ₌₁^(∞) (−1)ᵏ⁺¹(2/3)ᵏ = ___",
      "a": [
       "2/5"
      ],
-     "why": "G₁ = 2/3, r = −2/3. (2/3)/(5/3) = 2/5.",
+     "why": "Step 1: k = 1: (+1)(2/3) = 2/3. k = 2: (−1)(4/9) = −4/9.\nStep 2: G₁ = 2/3 and r = (−4/9) ÷ (2/3) = −2/3.\nStep 3: S∞ = (2/3)/(1 + 2/3) = (2/3)/(5/3).\nStep 4: = 2/5.",
      "clue": "Write the first two terms.",
      "num": true,
      "graded": true,
@@ -449,11 +544,11 @@
     },
     {
      "kind": "blank",
-     "ask": "An infinite geometric series has sum 12 and first term 4. r = ___",
+     "ask": "Work backwards from S∞: an infinite geometric series has sum 12 and first term 4. r = ___",
      "a": [
       "2/3"
      ],
-     "why": "4/(1 − r) = 12, so 1 − r = 1/3 and r = 2/3 (|r| < 1 ✓).",
+     "why": "Step 1: G₁/(1 − r) = 12, so 4/(1 − r) = 12.\nStep 2: 1 − r = 4/12 = 1/3.\nStep 3: r = 1 − 1/3 = 2/3.\nCheck: |2/3| < 1 ✓, and 4/(1/3) = 12 ✓.",
      "clue": "Solve G₁/(1 − r) = 12 for r.",
      "num": true,
      "graded": true,
@@ -471,7 +566,7 @@
    "items": [
     {
      "kind": "mcq",
-     "text": "1, 2, 3, 4, … as an infinite series:",
+     "text": "Does the infinite series 1 + 2 + 3 + 4 + … have a sum?",
      "opts": [
       "diverges to ∞",
       "sum 10",
@@ -479,7 +574,7 @@
       "vibrates"
      ],
      "ans": "diverges to ∞",
-     "why": "Sₙ = n(n + 1)/2 grows without end.",
+     "why": "Step 1: Sₙ = n(n + 1)/2: 1, 3, 6, 10, 15, …\nStep 2: the partial sums grow without end.\nSo the series diverges to ∞. (10 is only S₄.)",
      "clue": "Do the partial sums settle?",
      "graded": true,
      "level": 1,
@@ -489,11 +584,11 @@
     },
     {
      "kind": "blank",
-     "ask": "1/2 + 1/4 + 1/8 + … = ___",
+     "ask": "Sum to infinity, S∞ = G₁/(1 − r): 1/2 + 1/4 + 1/8 + … = ___",
      "a": [
       "1"
      ],
-     "why": "(1/2)/(1 − 1/2) = 1.",
+     "why": "Step 1: G₁ = 1/2, r = 1/2.\nStep 2: S∞ = (1/2)/(1 − 1/2) = (1/2)/(1/2).\nStep 3: = 1.",
      "clue": "r = 1/2.",
      "num": true,
      "graded": true,
@@ -504,7 +599,7 @@
     },
     {
      "kind": "mcq",
-     "text": "−1 + 1 − 1 + 1 − … :",
+     "text": "Does the infinite series −1 + 1 − 1 + 1 − … have a sum?",
      "opts": [
       "vibrates (no sum)",
       "sum 0",
@@ -512,7 +607,7 @@
       "converges to 1/2"
      ],
      "ans": "vibrates (no sum)",
-     "why": "Partial sums −1, 0, −1, 0, … never settle. r = −1.",
+     "why": "Step 1: the partial sums are −1, 0, −1, 0, …\nStep 2: they jump and never settle on one number.\nStep 3: r = −1, and r ≤ −1 means no limit.\nSo it vibrates and has no sum. (0 is only an even partial sum.)",
      "clue": "r ≤ −1.",
      "graded": true,
      "level": 2,
@@ -522,11 +617,11 @@
     },
     {
      "kind": "blank",
-     "ask": "0.12 + 0.0012 + 0.000012 + … = ___",
+     "ask": "Sum to infinity, S∞ = G₁/(1 − r): 0.12 + 0.0012 + 0.000012 + … = ___",
      "a": [
       "4/33"
      ],
-     "why": "r = 0.01. 0.12 ÷ 0.99 = 12/99 = 4/33.",
+     "why": "Step 1: G₁ = 0.12, r = 0.0012 ÷ 0.12 = 0.01.\nStep 2: S∞ = 0.12/(1 − 0.01) = 0.12/0.99.\nStep 3: = 12/99 = 4/33.\nCheck: 4 ÷ 33 = 0.1212… ✓.",
      "clue": "r = 0.0012 ÷ 0.12.",
      "num": true,
      "graded": true,
@@ -542,11 +637,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "3 + 1 + 1/3 + 1/9 + … = ___",
+     "ask": "Sum to infinity, S∞ = G₁/(1 − r): 3 + 1 + 1/3 + 1/9 + … = ___",
      "a": [
       "9/2"
      ],
-     "why": "r = 1/3.",
+     "why": "Step 1: G₁ = 3, r = 1/3.\nStep 2: S∞ = 3/(2/3).\nStep 3: = 9/2.",
      "clue": "G₁/(1 − r).",
      "num": true,
      "graded": true,
@@ -557,11 +652,11 @@
     },
     {
      "kind": "blank",
-     "ask": "1 + 3/4 + 9/16 + 27/64 + … = ___",
+     "ask": "Sum to infinity, S∞ = G₁/(1 − r): 1 + 3/4 + 9/16 + 27/64 + … = ___",
      "a": [
       "4"
      ],
-     "why": "1/(1/4).",
+     "why": "Step 1: G₁ = 1, r = 3/4.\nStep 2: 1 − r = 1/4.\nStep 3: S∞ = 1/(1/4) = 4.",
      "clue": "r = 3/4.",
      "num": true,
      "graded": true,
@@ -572,11 +667,11 @@
     },
     {
      "kind": "blank",
-     "ask": "1/5 + 1/10 + 1/20 + … = ___",
+     "ask": "Sum to infinity, S∞ = G₁/(1 − r): 1/5 + 1/10 + 1/20 + … = ___",
      "a": [
       "2/5"
      ],
-     "why": "(1/5)/(1/2).",
+     "why": "Step 1: G₁ = 1/5, r = 1/2.\nStep 2: S∞ = (1/5)/(1/2) = (1/5) × 2.\nStep 3: = 2/5.",
      "clue": "r = 1/2.",
      "num": true,
      "graded": true,
@@ -587,11 +682,11 @@
     },
     {
      "kind": "blank",
-     "ask": "1/5 − 1/10 + 1/20 − 1/40 + … = ___",
+     "ask": "Sum to infinity, S∞ = G₁/(1 − r): 1/5 − 1/10 + 1/20 − 1/40 + … = ___",
      "a": [
       "2/15"
      ],
-     "why": "(1/5)/(3/2).",
+     "why": "Step 1: G₁ = 1/5, r = −1/2.\nStep 2: 1 − r = 3/2.\nStep 3: S∞ = (1/5) × (2/3) = 2/15.",
      "clue": "r = −1/2.",
      "num": true,
      "graded": true,
@@ -602,11 +697,11 @@
     },
     {
      "kind": "blank",
-     "ask": "7 + 7/10 + 7/100 + … = ___",
+     "ask": "Sum to infinity, S∞ = G₁/(1 − r): 7 + 7/10 + 7/100 + … = ___",
      "a": [
       "70/9"
      ],
-     "why": "7/(9/10).",
+     "why": "Step 1: G₁ = 7, r = 1/10.\nStep 2: 1 − r = 9/10.\nStep 3: S∞ = 7 × 10/9 = 70/9.\nCheck: 70/9 = 7.777… ✓.",
      "clue": "r = 1/10.",
      "num": true,
      "graded": true,
@@ -622,11 +717,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "∑ₖ₌₁^(∞) 5(1/3)ᵏ⁻¹ = ___",
+     "ask": "Sum to infinity, S∞ = G₁/(1 − r): ∑ₖ₌₁^(∞) 5(1/3)ᵏ⁻¹ = ___",
      "a": [
       "15/2"
      ],
-     "why": "5/(2/3).",
+     "why": "Step 1: k = 1 gives G₁ = 5; r = 1/3.\nStep 2: 1 − r = 2/3.\nStep 3: S∞ = 5 × 3/2 = 15/2.",
      "clue": "G₁ = 5.",
      "num": true,
      "graded": true,
@@ -637,11 +732,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∑ₖ₌₁^(∞) 2¹⁻ᵏ = ___",
+     "ask": "Sum to infinity, S∞ = G₁/(1 − r): ∑ₖ₌₁^(∞) 2¹⁻ᵏ = ___",
      "a": [
       "2"
      ],
-     "why": "1/(1/2).",
+     "why": "Step 1: the terms are 1, 1/2, 1/4, …\nStep 2: G₁ = 1, r = 1/2.\nStep 3: S∞ = 1/(1/2) = 2.",
      "clue": "G₁ = 1, r = 1/2.",
      "num": true,
      "graded": true,
@@ -652,7 +747,7 @@
     },
     {
      "kind": "mcq",
-     "text": "∑ₖ₌₁^(∞) 5ᵏ⁻³:",
+     "text": "Check |r| first: what is the sum to infinity ∑ₖ₌₁^(∞) 5ᵏ⁻³?",
      "opts": [
       "diverges",
       "1/100",
@@ -660,7 +755,7 @@
       "25/4"
      ],
      "ans": "diverges",
-     "why": "r = 5.",
+     "why": "Step 1: the terms are 1/25, 1/5, 1, 5, …\nStep 2: r = 5, and |r| ≥ 1.\nStep 3: the terms grow, so the series diverges (no sum).",
      "clue": "|r| ≥ 1?",
      "graded": true,
      "level": 2,
@@ -670,11 +765,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∑ₖ₌₁^(∞) (3/4)ᵏ⁺³(2/3)ᵏ⁻² = ___",
+     "ask": "Sum to infinity, S∞ = G₁/(1 − r): ∑ₖ₌₁^(∞) (3/4)ᵏ⁺³(2/3)ᵏ⁻² = ___",
      "a": [
       "243/256"
      ],
-     "why": "G₁ = 243/512, r = 1/2.",
+     "why": "Step 1: k = 1: (3/4)⁴(2/3)⁻¹ = (81/256)(3/2) = 243/512 = G₁.\nStep 2: each k step multiplies by (3/4)(2/3) = 1/2, so r = 1/2.\nStep 3: S∞ = (243/512)/(1/2) = 243/256.",
      "clue": "Make both powers k − 1.",
      "num": true,
      "graded": true,
@@ -689,7 +784,7 @@
  "test": [
   {
    "kind": "mcq",
-   "text": "(5/4)ⁿ as n → ∞:",
+   "text": "Convergence of rⁿ: what does (5/4)ⁿ do as n → ∞?",
    "opts": [
     "diverges",
     "converges to 0",
@@ -697,7 +792,7 @@
     "vibrates"
    ],
    "ans": "diverges",
-   "why": "5/4 > 1.",
+   "why": "r = 5/4 = 1.25.\nr > 1, so the terms grow.\nSo (5/4)ⁿ diverges.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -706,11 +801,11 @@
   },
   {
    "kind": "blank",
-   "ask": "4 + 2 + 1 + 1/2 + … = ___",
+   "ask": "Sum to infinity, S∞ = G₁/(1 − r): 4 + 2 + 1 + 1/2 + … = ___",
    "a": [
     "8"
    ],
-   "why": "4/(1/2).",
+   "why": "G₁ = 4, r = 1/2.\nS∞ = 4/(1/2).\n= 8.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -720,12 +815,12 @@
   },
   {
    "kind": "blank",
-   "ask": "6 − 2 + 2/3 − … = ___",
+   "ask": "Sum to infinity, S∞ = G₁/(1 − r): 6 − 2 + 2/3 − … = ___",
    "a": [
     "9/2",
     "4.5"
    ],
-   "why": "r = −1/3; 6/(4/3).",
+   "why": "G₁ = 6, r = −2 ÷ 6 = −1/3.\n1 − r = 4/3.\nS∞ = 6 × 3/4 = 9/2.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -735,7 +830,7 @@
   },
   {
    "kind": "mcq",
-   "text": "Which infinite geometric series has a sum?",
+   "text": "Which infinite geometric series has a sum? (Check |r| < 1.)",
    "opts": [
     "1 − 0.9 + 0.81 − …",
     "1 + 1.1 + 1.21 + …",
@@ -743,7 +838,7 @@
     "1 + 3 + 9 + …"
    ],
    "ans": "1 − 0.9 + 0.81 − …",
-   "why": "|r| = 0.9 < 1.",
+   "why": "1 − 0.9 + 0.81 − …: r = −0.9, |r| < 1 → it has a sum (1/1.9).\n1 + 1.1 + 1.21 + …: r = 1.1 → diverges.\n2 − 2 + 2 − …: r = −1 → vibrates.\n1 + 3 + 9 + …: r = 3 → diverges.",
    "clue": "",
    "graded": true,
    "level": 2,
@@ -752,11 +847,11 @@
   },
   {
    "kind": "blank",
-   "ask": "∑ₖ₌₁^(∞) 3(1/4)ᵏ = ___",
+   "ask": "Sum to infinity, S∞ = G₁/(1 − r): ∑ₖ₌₁^(∞) 3(1/4)ᵏ = ___",
    "a": [
     "1"
    ],
-   "why": "G₁ = 3/4, r = 1/4; (3/4)/(3/4).",
+   "why": "k = 1: G₁ = 3/4; r = 1/4.\n1 − r = 3/4.\nS∞ = (3/4)/(3/4) = 1.\n(Trap: G₁ = 3 would give 4.)",
    "clue": "",
    "num": true,
    "graded": true,
@@ -798,7 +893,7 @@
     },
     {
      "kind": "mcq",
-     "text": "G₁ = 2, r = 3. S₃ = ?",
+     "text": "Sum n terms with Sₙ = G₁(rⁿ − 1)/(r − 1): G₁ = 2, r = 3. S₃ = ?",
      "opts": [
       "26",
       "18",
@@ -806,7 +901,7 @@
       "54"
      ],
      "ans": "26",
-     "why": "2(3³ − 1)/(3 − 1) = 2 × 26/2 = 26. (2 + 6 + 18.)",
+     "why": "Step 1: S₃ = 2(3³ − 1)/(3 − 1).\nStep 2: 3³ = 27, so 2 × 26/2.\nStep 3: = 26.\nCheck: 2 + 6 + 18 = 26 ✓. (18 is only the 3rd term.)",
      "clue": "Use G₁(rⁿ − 1)/(r − 1).",
      "graded": true,
      "level": 1,

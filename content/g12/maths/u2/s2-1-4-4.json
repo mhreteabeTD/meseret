@@ -54,9 +54,10 @@
       "2 × 6x",
       "(6x)²"
      ],
-     "after": "2(3x² + 2) × 6x = 36x³ + 24x. Outer power rule, times the inner derivative 6x.",
+     "after": "2(3x² + 2) × 6x = 12x(3x² + 2) = 36x³ + 24x. It matches.\nThe outer power rule gives 2(3x² + 2).\nThen multiply by the inner derivative, 6x.\n2(3x² + 2) alone forgets the inner part.",
      "ref": "Activity 2.11 Q2 a",
-     "id": "g12.maths.u2.s2-1-4-4.1"
+     "id": "g12.maths.u2.s2-1-4-4.1",
+     "best": "2(3x² + 2) × 6x"
     },
     {
      "kind": "read",
@@ -69,6 +70,33 @@
      "note": "Derivative of the outside at the inside × derivative of the inside.",
      "ref": "Theorem 2.6",
      "id": "g12.maths.u2.s2-1-4-4.2"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Find the outside and the inside",
+     "ask": "Tap each function. Spot the inside u first.",
+     "items": [
+      [
+       "(5x + 4)²¹",
+       "Inside u = 5x + 4 (u′ = 5). Outside u²¹."
+      ],
+      [
+       "√(4 + x⁵)",
+       "Inside u = 4 + x⁵ (u′ = 5x⁴). Outside √u."
+      ],
+      [
+       "1/(3x + 2)²",
+       "Inside u = 3x + 2 (u′ = 3). Outside u⁻²."
+      ],
+      [
+       "(x³ + 2x)²⁵",
+       "Inside u = x³ + 2x (u′ = 3x² + 2). Outside u²⁵."
+      ]
+     ],
+     "need": 3,
+     "added": true,
+     "id": "g12.maths.u2.s2-1-4-4.23"
     },
     {
      "kind": "name",
@@ -88,7 +116,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = (5x + 4)²¹. f′(x) =",
+     "text": "Use the chain rule: f(x) = (5x + 4)²¹. f′(x) =",
      "opts": [
       "105(5x + 4)²⁰",
       "21(5x + 4)²⁰",
@@ -96,7 +124,7 @@
       "105(5x + 4)²¹"
      ],
      "ans": "105(5x + 4)²⁰",
-     "why": "21(5x + 4)²⁰ × 5 = 105(5x + 4)²⁰.",
+     "why": "Outside: u²¹ gives 21u²⁰. Inside: u = 5x + 4, u′ = 5.\nOutside at the inside: 21(5x + 4)²⁰.\nTimes the inside derivative: × 5.\nf′(x) = 105(5x + 4)²⁰.\nTrap: 21(5x + 4)²⁰ forgets the × 5.",
      "clue": "Do not forget × 5 from the inside.",
      "graded": true,
      "level": 1,
@@ -117,8 +145,25 @@
      "id": "g12.maths.u2.s2-1-4-4.5"
     },
     {
+     "kind": "order",
+     "step": "practise",
+     "title": "Put the chain rule steps in order for (x² + 1)³",
+     "items": [
+      "Name the inside: u = x² + 1",
+      "Differentiate the outside: 3u²",
+      "Differentiate the inside: u′ = 2x",
+      "Multiply: 3(x² + 1)² · 2x"
+     ],
+     "why": "First name the inside, u = x² + 1.\nThe outside u³ has derivative 3u².\nThe inside has derivative 2x.\nMultiply: 3(x² + 1)² · 2x = 6x(x² + 1)².",
+     "clue": "You cannot differentiate the outside until you know what u is.",
+     "graded": true,
+     "level": 1,
+     "added": true,
+     "id": "g12.maths.u2.s2-1-4-4.24"
+    },
+    {
      "kind": "mcq",
-     "text": "f(x) = (2x + 1)⁴. f′(x) =",
+     "text": "Use the chain rule: f(x) = (2x + 1)⁴. f′(x) =",
      "opts": [
       "8(2x + 1)³",
       "4(2x + 1)³",
@@ -126,7 +171,7 @@
       "2(2x + 1)³"
      ],
      "ans": "8(2x + 1)³",
-     "why": "4(2x + 1)³ × 2.",
+     "why": "Outside u⁴ → 4u³. Inside 2x + 1 → 2.\n4(2x + 1)³ × 2 = 8(2x + 1)³.\nTrap: 8(2x + 1)⁴ forgets to lower the power.",
      "clue": "Inner derivative 2.",
      "graded": true,
      "level": 1,
@@ -136,7 +181,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = √(x² + 3x − 1). f′(x) =",
+     "text": "Use the chain rule with a root: f(x) = √(x² + 3x − 1). f′(x) =",
      "opts": [
       "(2x + 3)/(2√(x² + 3x − 1))",
       "1/(2√(x² + 3x − 1))",
@@ -144,7 +189,7 @@
       "(2x + 3)/√(x² + 3x − 1)"
      ],
      "ans": "(2x + 3)/(2√(x² + 3x − 1))",
-     "why": "1/(2√u) × u′.",
+     "why": "Outside √u = u^(1/2) → 1/(2√u).\nInside u = x² + 3x − 1 → u′ = 2x + 3.\nMultiply: (2x + 3)/(2√(x² + 3x − 1)).\nTrap: dropping the 2 in the bottom doubles the answer.",
      "clue": "√u = u^(1/2).",
      "graded": true,
      "level": 2,
@@ -154,7 +199,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = 1/(3x + 2)². f′(x) =",
+     "text": "Use the chain rule with a negative power: f(x) = 1/(3x + 2)². f′(x) =",
      "opts": [
       "−6/(3x + 2)³",
       "−2/(3x + 2)³",
@@ -162,7 +207,7 @@
       "−6/(3x + 2)²"
      ],
      "ans": "−6/(3x + 2)³",
-     "why": "(3x + 2)⁻²: −2(3x + 2)⁻³ × 3.",
+     "why": "Rewrite: f(x) = (3x + 2)⁻².\nOutside: −2(3x + 2)⁻³.\nInside derivative: 3.\nf′(x) = −6(3x + 2)⁻³ = −6/(3x + 2)³.\nTrap: −2/(3x + 2)³ forgets the × 3.",
      "clue": "Write it as a negative power.",
      "graded": true,
      "level": 2,
@@ -172,11 +217,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = (x² + 1)³. f′(1) = ___",
+     "ask": "Use the chain rule, then evaluate: f(x) = (x² + 1)³. f′(1) = ___",
      "a": [
       "24"
      ],
-     "why": "f′ = 3(x² + 1)² × 2x. At 1: 3(4)(2) = 24.",
+     "why": "Outside 3u², inside u = x² + 1, u′ = 2x.\nf′(x) = 3(x² + 1)² × 2x = 6x(x² + 1)².\nAt x = 1: 6(1)(2)² = 6 × 4 = 24.",
      "clue": "Outer 3u², inner 2x.",
      "num": true,
      "graded": true,
@@ -187,7 +232,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = ((3x − 5)/(2 − 7x))⁶. f′(x) =",
+     "text": "Chain rule with a quotient inside: f(x) = ((3x − 5)/(2 − 7x))⁶. f′(x) =",
      "opts": [
       "−174(3x − 5)⁵/(2 − 7x)⁷",
       "6(3x − 5)⁵/(2 − 7x)⁵",
@@ -195,7 +240,7 @@
       "−29/(2 − 7x)²"
      ],
      "ans": "−174(3x − 5)⁵/(2 − 7x)⁷",
-     "why": "Inner derivative −29/(2 − 7x)². 6u⁵ × (−29)/(2 − 7x)².",
+     "why": "Inside u = (3x − 5)/(2 − 7x). Quotient rule:\nu′ = (3(2 − 7x) − (3x − 5)(−7))/(2 − 7x)² = (6 − 35)/(2 − 7x)² = −29/(2 − 7x)².\nOutside: 6u⁵ = 6(3x − 5)⁵/(2 − 7x)⁵.\nMultiply: 6 × (−29) = −174, and (2 − 7x)⁵ × (2 − 7x)² = (2 − 7x)⁷.\nf′(x) = −174(3x − 5)⁵/(2 − 7x)⁷.",
      "clue": "Quotient rule for the inside.",
      "graded": true,
      "level": 3,
@@ -205,12 +250,12 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = √(x² + 16). The slope at x = 3 is ___",
+     "ask": "Use the chain rule to find a slope: f(x) = √(x² + 16). The slope at x = 3 is ___",
      "a": [
       "3/5",
       "0.6"
      ],
-     "why": "f′ = x/√(x² + 16). At 3: 3/√25 = 3/5.",
+     "why": "Outside √u → 1/(2√u). Inside x² + 16 → 2x.\nf′(x) = 2x/(2√(x² + 16)) = x/√(x² + 16).\nAt x = 3: √(9 + 16) = √25 = 5.\nSlope = 3/5.",
      "clue": "1/(2√u) × 2x.",
      "num": true,
      "graded": true,
@@ -228,7 +273,7 @@
    "items": [
     {
      "kind": "mcq",
-     "text": "(2x + 1)⁴:",
+     "text": "Use the chain rule: f(x) = (2x + 1)⁴, f′(x) =",
      "opts": [
       "8(2x + 1)³",
       "4(2x + 1)³",
@@ -236,7 +281,7 @@
       "8(2x + 1)⁴"
      ],
      "ans": "8(2x + 1)³",
-     "why": "× 2.",
+     "why": "Outside: 4(2x + 1)³.\nInside derivative: 2.\nf′(x) = 8(2x + 1)³.",
      "clue": "Inner 2.",
      "graded": true,
      "level": 1,
@@ -246,7 +291,7 @@
     },
     {
      "kind": "mcq",
-     "text": "(x³ + 2x)²⁵:",
+     "text": "Use the chain rule: f(x) = (x³ + 2x)²⁵, f′(x) =",
      "opts": [
       "25(x³ + 2x)²⁴(3x² + 2)",
       "25(x³ + 2x)²⁴",
@@ -254,7 +299,7 @@
       "(3x² + 2)²⁵"
      ],
      "ans": "25(x³ + 2x)²⁴(3x² + 2)",
-     "why": "Outer × inner.",
+     "why": "Outside: 25(x³ + 2x)²⁴.\nInside derivative: 3x² + 2.\nf′(x) = 25(x³ + 2x)²⁴(3x² + 2).\nTrap: 25(x³ + 2x)²⁴ alone misses the inside.",
      "clue": "Inner 3x² + 2.",
      "graded": true,
      "level": 2,
@@ -264,7 +309,7 @@
     },
     {
      "kind": "mcq",
-     "text": "√(x² + 3x − 1):",
+     "text": "Use the chain rule: f(x) = √(x² + 3x − 1), f′(x) =",
      "opts": [
       "(2x + 3)/(2√(x² + 3x − 1))",
       "1/(2√(x² + 3x − 1))",
@@ -272,7 +317,7 @@
       "√(2x + 3)"
      ],
      "ans": "(2x + 3)/(2√(x² + 3x − 1))",
-     "why": "1/(2√u) × u′.",
+     "why": "Outside: 1/(2√u).\nInside derivative: 2x + 3.\nf′(x) = (2x + 3)/(2√(x² + 3x − 1)).",
      "clue": "√u.",
      "graded": true,
      "level": 2,
@@ -282,7 +327,7 @@
     },
     {
      "kind": "mcq",
-     "text": "1/(3x + 2)²:",
+     "text": "Use the chain rule: f(x) = 1/(3x + 2)², f′(x) =",
      "opts": [
       "−6/(3x + 2)³",
       "−2/(3x + 2)³",
@@ -290,7 +335,7 @@
       "−3/(3x + 2)³"
      ],
      "ans": "−6/(3x + 2)³",
-     "why": "−2 × 3.",
+     "why": "(3x + 2)⁻² → −2(3x + 2)⁻³.\nInside derivative: 3.\nf′(x) = −6/(3x + 2)³.",
      "clue": "Negative power.",
      "graded": true,
      "level": 2,
@@ -300,7 +345,7 @@
     },
     {
      "kind": "mcq",
-     "text": "√(x² + 1/x²):",
+     "text": "Use the chain rule: f(x) = √(x² + 1/x²), f′(x) =",
      "opts": [
       "(x − 1/x³)/√(x² + 1/x²)",
       "(x + 1/x³)/√(x² + 1/x²)",
@@ -308,7 +353,7 @@
       "(2x − 2/x³)√(x² + 1/x²)"
      ],
      "ans": "(x − 1/x³)/√(x² + 1/x²)",
-     "why": "u′ = 2x − 2/x³; halve it.",
+     "why": "Inside u = x² + x⁻², u′ = 2x − 2x⁻³ = 2x − 2/x³.\nOutside √u → 1/(2√u).\nf′ = (2x − 2/x³)/(2√u).\nCancel 2: (x − 1/x³)/√(x² + 1/x²).",
      "clue": "Inner x² + x⁻².",
      "graded": true,
      "level": 3,
@@ -318,7 +363,7 @@
     },
     {
      "kind": "mcq",
-     "text": "((3x − 5)/(2 − 7x))⁶:",
+     "text": "Use the chain rule: f(x) = ((3x − 5)/(2 − 7x))⁶, f′(x) =",
      "opts": [
       "−174(3x − 5)⁵/(2 − 7x)⁷",
       "174(3x − 5)⁵/(2 − 7x)⁷",
@@ -326,7 +371,7 @@
       "−29(3x − 5)⁵/(2 − 7x)⁶"
      ],
      "ans": "−174(3x − 5)⁵/(2 − 7x)⁷",
-     "why": "6 × (−29) = −174.",
+     "why": "Inside derivative (quotient rule): −29/(2 − 7x)².\nOutside: 6(3x − 5)⁵/(2 − 7x)⁵.\nMultiply: −174(3x − 5)⁵/(2 − 7x)⁷.",
      "clue": "Quotient rule inside.",
      "graded": true,
      "level": 3,
@@ -340,7 +385,7 @@
  "test": [
   {
    "kind": "mcq",
-   "text": "((x + 1)⁵)′ =",
+   "text": "Use the chain rule: ((x + 1)⁵)′ =",
    "opts": [
     "5(x + 1)⁴",
     "(x + 1)⁴",
@@ -348,7 +393,7 @@
     "4(x + 1)⁵"
    ],
    "ans": "5(x + 1)⁴",
-   "why": "inner derivative 1.",
+   "why": "Outside: 5(x + 1)⁴.\nInside x + 1 has derivative 1.\nSo ((x + 1)⁵)′ = 5(x + 1)⁴ × 1 = 5(x + 1)⁴.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -357,7 +402,7 @@
   },
   {
    "kind": "mcq",
-   "text": "((4x − 3)³)′ =",
+   "text": "Use the chain rule: ((4x − 3)³)′ =",
    "opts": [
     "12(4x − 3)²",
     "3(4x − 3)²",
@@ -365,7 +410,7 @@
     "12(4x − 3)³"
    ],
    "ans": "12(4x − 3)²",
-   "why": "3 × 4.",
+   "why": "Outside: 3(4x − 3)².\nInside derivative: 4.\n3 × 4 = 12, so the answer is 12(4x − 3)².",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -374,11 +419,11 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = √(2x + 1). f′(4) = ___",
+   "ask": "Use the chain rule, then evaluate: f(x) = √(2x + 1). f′(4) = ___",
    "a": [
     "1/3"
    ],
-   "why": "1/√(2x + 1) = 1/3.",
+   "why": "f′(x) = 2/(2√(2x + 1)) = 1/√(2x + 1).\nAt x = 4: √(8 + 1) = 3.\nf′(4) = 1/3.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -388,11 +433,11 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = (x² − 3)⁴. f′(2) = ___",
+   "ask": "Use the chain rule, then evaluate: f(x) = (x² − 3)⁴. f′(2) = ___",
    "a": [
     "16"
    ],
-   "why": "4(1)³(4) = 16.",
+   "why": "f′(x) = 4(x² − 3)³ × 2x.\nAt x = 2: x² − 3 = 1, and 2x = 4.\nf′(2) = 4 × 1³ × 4 = 16.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -402,12 +447,12 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = 1/(x² + 1). f′(1) = ___",
+   "ask": "Use the chain rule, then evaluate: f(x) = 1/(x² + 1). f′(1) = ___",
    "a": [
     "-1/2",
     "-0.5"
    ],
-   "why": "−2x/(x² + 1)² = −2/4.",
+   "why": "f = (x² + 1)⁻¹, so f′ = −(x² + 1)⁻² × 2x = −2x/(x² + 1)².\nAt x = 1: −2/(2)² = −2/4.\nf′(1) = −1/2.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -440,7 +485,7 @@
     },
     {
      "kind": "mcq",
-     "text": "(u³)′ with respect to u = ?",
+     "text": "Use the power rule with u as the variable: (u³)′ = ?",
      "opts": [
       "3u²",
       "u²",
@@ -448,7 +493,7 @@
       "3u"
      ],
      "ans": "3u²",
-     "why": "Power rule.",
+     "why": "Treat u like x.\nBring 3 down, lower the power: 3 − 1 = 2.\n(u³)′ = 3u².",
      "clue": "n uⁿ⁻¹.",
      "graded": true,
      "level": 1,

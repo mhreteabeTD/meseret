@@ -1,354 +1,400 @@
 {
-  "id": "g9.maths.u1.s1-2-2",
-  "book": {
-    "title": "Mathematics Grade 9 Student Textbook",
-    "grade": 9,
-    "subject": "maths",
-    "unit": 1,
-    "unit_title": "The Number System",
-    "section": "1.2.2",
-    "pages": "32–39"
+ "id": "g9.maths.u1.s1-2-2",
+ "book": {
+  "title": "Mathematics Grade 9 Student Textbook",
+  "grade": 9,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "The Number System",
+  "section": "1.2.2",
+  "pages": "32–39"
+ },
+ "title": "Repeating decimals to fractions",
+ "competency": "Convert a repeating decimal to a fraction in simplest form.",
+ "minutes": 9,
+ "keywords": [
+  {
+   "en": "Repeating decimal",
+   "am": "ተደጋጋሚ አስርዮሽ",
+   "def": "A decimal in which a block of digits repeats for ever, such as 0.333… or 0.2323…",
+   "machine": true
   },
-  "title": "Repeating decimals to fractions",
-  "competency": "Convert a repeating decimal to a fraction in simplest form.",
-  "minutes": 9,
-  "keywords": [
-    {
-      "en": "Repeating decimal",
-      "am": "ተደጋጋሚ አስርዮሽ",
-      "def": "A decimal in which a block of digits repeats for ever, such as 0.333… or 0.2323…",
-      "machine": true
-    },
-    {
-      "en": "Bar notation",
-      "am": "የመስመር ምልክት",
-      "def": "A line over the repeating digits of a decimal: 0.3̅ means 0.333…",
-      "machine": true
-    },
-    {
-      "en": "Rational number",
-      "am": "ምክንያታዊ ቁጥር",
-      "def": "A number that can be written a/b with integers a, b and b ≠ 0.",
-      "machine": true
-    }
-  ],
-  "ideas": [
-    {
-      "id": "math.repeating-to-fraction",
-      "name": "Repeating decimals to fractions",
-      "requires": [
-        "math.decimals"
-      ],
-      "explain": {
-        "en": {
-          "text": "Call the decimal d. Multiply d by a power of 10 so the repeating part lines up. Subtract to remove the repeating part. Then solve for d. For 0.555…, 10d = 5.555…, so 9d = 5 and d = 5/9. Every repeating decimal is a rational number."
-        },
-        "am": {
-          "text": "አስርዮሹን d በለው። የሚደጋገመው ክፍል እንዲሰለፍ dን በ10 ኃይል አባዛ። የሚደጋገመውን ክፍል ለማስወገድ ቀንስ። ከዚያ dን ፈልግ። ለ0.555…፣ 10d = 5.555… ስለሆነ 9d = 5 እና d = 5/9። እያንዳንዱ ተደጋጋሚ አስርዮሽ ምክንያታዊ ቁጥር ነው።",
-          "machine": true
-        }
-      },
-      "screens": [
-        {
-          "kind": "guess",
-          "step": "hook",
-          "title": "Which fraction is 0.555…?",
-          "text": "In 1.2.1 you saw that dividing gives decimals like 0.555… Now go the other way.",
-          "ask": "Which fraction do you think equals 0.555…?",
-          "opts": [
-            "5/10",
-            "1/2",
-            "5/9",
-            "5/99"
-          ],
-          "after": "Divide each fraction on your calculator, then read the method."
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Line up, then subtract",
-          "paras": [
-            "Multiply the decimal by a power of 10. Choose it so the repeating part lines up.",
-            "Then subtract to remove the repeating part.",
-            "What is left is a simple equation. Solve it for d."
-          ]
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "Name it",
-          "defs": [
-            [
-              "Repeating decimal",
-              "A decimal where a block of digits repeats for ever. Every repeating decimal can be written as a fraction, so it is rational."
-            ]
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Which power of 10?",
-          "text": "To convert 0.4̅7̅ to a fraction, you first multiply d by:",
-          "opts": [
-            "10",
-            "100",
-            "1000",
-            "47"
-          ],
-          "ans": "100",
-          "why": "Two digits repeat. So 100d = 47.4̅7̅ lines up with d.",
-          "clue": "Count the digits under the bar.",
-          "needs": "math.decimals"
-        },
-        {
-          "kind": "steps",
-          "step": "method",
-          "text": "The repeating part starts right after the point.",
-          "steps": [
-            "(a) Let d = 0.5̅. One digit repeats, so multiply by 10: 10d = 5.5̅.",
-            "Subtract d: 10d − d = 5.5̅ − 0.5̅. So 9d = 5.",
-            "Divide by 9: d = 5/9.",
-            "(b) Let d = 2.1̅2̅. Two digits repeat, so 100d = 212.1̅2̅.",
-            "Subtract d: 99d = 210.",
-            "So d = 210/99 = 70/33."
-          ],
-          "ref": "Example 1"
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "title": "Try one",
-          "text": "What fraction is 0.4̅?",
-          "opts": [
-            "4/10",
-            "4/9",
-            "4/99",
-            "2/5"
-          ],
-          "ans": "4/9",
-          "why": "10d − d = 4, so 9d = 4 and d = 4/9.",
-          "clue": "Follow Example 1(a) with 4 in place of 5."
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "When the repeat starts later",
-          "paras": [
-            "Sometimes a digit comes before the repeating block, as in 0.1222…",
-            "Then make two numbers that both line up.",
-            "Multiply so the point sits just before the first repeat. Multiply again so it sits after one full block."
-          ],
-          "note": "Correction: in Example 2(a) the printed book divides 90d = 11 \"by 99\" and gives d = 11/99. Dividing by 90 gives d = 11/90. Check: 11 ÷ 90 = 0.1222…, while 11/99 = 0.1111…"
-        },
-        {
-          "kind": "steps",
-          "step": "method",
-          "text": "One digit sits before the repeating block.",
-          "steps": [
-            "(a) Let d = 0.12̅ = 0.1222…",
-            "100d = 12.2̅ and 10d = 1.2̅. Both end in 2̅.",
-            "Subtract: 100d − 10d = 12.2̅ − 1.2̅. So 90d = 11.",
-            "Divide by 90: d = 11/90.",
-            "(b) Let d = 1.21̅6̅. Then 1000d = 1216.1̅6̅ and 10d = 12.1̅6̅.",
-            "Subtract: 990d = 1204. So d = 1204/990 = 602/495."
-          ],
-          "ref": "Example 2"
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "title": "Two repeating digits",
-          "text": "Let d = 0.1̅4̅. Then 100d = 14.1̅4̅.",
-          "ask": "0.1̅4̅ = ___ as a fraction.",
-          "a": [
-            "14/99"
-          ],
-          "why": "100d − d = 14, so 99d = 14 and d = 14/99.",
-          "clue": "Subtract d from 100d. What is left?",
-          "needs": "math.decimals"
-        },
-        {
-          "kind": "tf",
-          "step": "practise",
-          "graded": true,
-          "title": "Check the book",
-          "text": "0.12̅ = 11/99.",
-          "a": false,
-          "why": "11/99 = 0.1111… The right answer is 11/90 = 0.1222…",
-          "clue": "Divide 11 by 99 on your calculator. Does it give 0.1222…?"
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "added": true,
-          "title": "Sharing coffee beans",
-          "text": "A trader in Jimma says each bag holds 2.6̅ kg of coffee beans. That is 2.666… kg.",
-          "ask": "As a fraction in simplest form, each bag holds ___ kg.",
-          "a": [
-            "8/3",
-            "2 2/3",
-            "2⅔"
-          ],
-          "why": "10d = 26.6̅. Subtract d: 9d = 24, so d = 24/9 = 8/3.",
-          "clue": "One digit repeats. Multiply d by 10, then subtract d.",
-          "worked": "Let d = 2.6̅. Then 10d = 26.6̅. Subtract: 9d = 24. So d = 24/9 = 8/3 kg."
-        }
-      ]
-    }
-  ],
-  "exercises": [
-    {
-      "book_name": "Exercise 1.14",
-      "items": [
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "(a) 2.6̅ = ___",
-          "a": [
-            "8/3",
-            "2 2/3",
-            "2⅔"
-          ],
-          "why": "10d − d = 24, so d = 24/9 = 8/3.",
-          "clue": "One digit repeats: multiply by 10."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "(b) 0.1̅4̅ = ___",
-          "a": [
-            "14/99"
-          ],
-          "why": "100d − d = 14, so d = 14/99.",
-          "clue": "Two digits repeat: multiply by 100."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "(c) 0.71̅6̅ = ___",
-          "a": [
-            "709/990"
-          ],
-          "why": "1000d − 10d = 716.1̅6̅ − 7.1̅6̅ = 709, so d = 709/990.",
-          "clue": "Use 1000d and 10d, as in Example 2(b)."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "(d) 1.321̅2̅ = ___",
-          "a": [
-            "218/165",
-            "13080/9900"
-          ],
-          "why": "10000d − 100d = 13212.1̅2̅ − 132.1̅2̅ = 13080, so d = 13080/9900 = 218/165.",
-          "clue": "Use 10000d and 100d."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "(e) −0.532̅1̅3̅ = ___",
-          "a": [
-            "-886/1665",
-            "−886/1665",
-            "-53160/99900",
-            "−53160/99900"
-          ],
-          "why": "100000d − 100d = 53213.2̅1̅3̅ − 53.2̅1̅3̅ = 53160 (for the positive part). So d = −53160/99900 = −886/1665.",
-          "clue": "Work with 0.532̅1̅3̅ first. Use 100000d and 100d. Put the minus sign back at the end.",
-          "worked": "Let d = 0.532̅1̅3̅. 100000d = 53213.2̅1̅3̅ and 100d = 53.2̅1̅3̅. Subtract: 99900d = 53160. So d = 53160/99900 = 886/1665. The answer is −886/1665."
-        }
-      ]
-    }
-  ],
-  "test": [
-    {
-      "kind": "blank",
-      "step": "test",
-      "graded": true,
-      "ask": "0.7̅ = ___ as a fraction.",
-      "a": [
-        "7/9"
-      ],
-      "why": "10d − d = 7, so d = 7/9.",
-      "clue": ""
-    },
-    {
-      "kind": "mcq",
-      "step": "test",
-      "graded": true,
-      "text": "To convert 0.12̅ to a fraction, which two multiples of d line up?",
-      "opts": [
-        "100d and 10d",
-        "10d and d",
-        "100d and d",
-        "1000d and d"
-      ],
-      "ans": "100d and 10d",
-      "why": "100d = 12.2̅ and 10d = 1.2̅ both end in 2̅.",
-      "clue": ""
-    },
-    {
-      "kind": "tf",
-      "step": "test",
-      "graded": true,
-      "text": "2.1̅2̅ = 70/33.",
-      "a": true,
-      "why": "99d = 210, so d = 210/99 = 70/33.",
-      "clue": ""
-    }
-  ],
-  "notes": [
-    {
-      "kind": "correction",
-      "text": "In Example 2(a) the printed book divides 90d = 11 \"by 99\" and gives d = 11/99. Dividing by 90 gives d = 11/90. Check: 11 ÷ 90 = 0.1222…, while 11/99 = 0.1111…"
-    }
-  ],
-  "review": {
-    "status": "validated"
+  {
+   "en": "Bar notation",
+   "am": "የመስመር ምልክት",
+   "def": "A line over the repeating digits of a decimal: 0.3̅ means 0.333…",
+   "machine": true
   },
-  "version": 1,
-  "refreshers": {
-    "math.decimals": {
-      "name": "Repeating decimals and bar notation",
-      "screens": [
-        {
-          "kind": "steps",
-          "step": "method",
-          "title": "Read a bar",
-          "text": "A bar sits over the digits that repeat for ever.",
-          "steps": [
-            "0.3̅ means 0.333… One digit repeats.",
-            "0.2̅3̅ means 0.2323… Two digits repeat.",
-            "0.12̅ means 0.1222… Only the 2 repeats.",
-            "Count the digits under the bar. That tells you the length of the repeating block."
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Your turn",
-          "text": "What does 0.4̅7̅ mean?",
-          "opts": [
-            "0.474747…",
-            "0.4777…",
-            "0.47",
-            "0.4747"
-          ],
-          "ans": "0.474747…",
-          "why": "The bar covers both 4 and 7, so the block 47 repeats.",
-          "clue": "Which digits are under the bar?"
-        }
-      ]
-    }
+  {
+   "en": "Rational number",
+   "am": "ምክንያታዊ ቁጥር",
+   "def": "A number that can be written a/b with integers a, b and b ≠ 0.",
+   "machine": true
   }
+ ],
+ "ideas": [
+  {
+   "id": "math.repeating-to-fraction",
+   "name": "Repeating decimals to fractions",
+   "requires": [
+    "math.decimals"
+   ],
+   "explain": {
+    "en": {
+     "text": "Call the decimal d. Multiply d by a power of 10 so the repeating part lines up. Subtract to remove the repeating part. Then solve for d. For 0.555…, 10d = 5.555…, so 9d = 5 and d = 5/9. Every repeating decimal is a rational number."
+    },
+    "am": {
+     "text": "አስርዮሹን d በለው። የሚደጋገመው ክፍል እንዲሰለፍ dን በ10 ኃይል አባዛ። የሚደጋገመውን ክፍል ለማስወገድ ቀንስ። ከዚያ dን ፈልግ። ለ0.555…፣ 10d = 5.555… ስለሆነ 9d = 5 እና d = 5/9። እያንዳንዱ ተደጋጋሚ አስርዮሽ ምክንያታዊ ቁጥር ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Which fraction is 0.555…?",
+     "text": "In 1.2.1 you saw that dividing gives decimals like 0.555… Now go the other way.",
+     "ask": "Which fraction do you think equals 0.555…?",
+     "opts": [
+      "5/10",
+      "1/2",
+      "5/9",
+      "5/99"
+     ],
+     "after": "5/10 = 0.5 and 1/2 = 0.5: they stop.\n5/99 = 0.0505…: the block 05 repeats.\n5/9 = 0.555…: only the 5 repeats. That is the one.\nRead the method to see how to find it without guessing.",
+     "best": "5/9"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Line up, then subtract",
+     "paras": [
+      "Multiply the decimal by a power of 10. Choose it so the repeating part lines up.",
+      "Then subtract to remove the repeating part.",
+      "What is left is a simple equation. Solve it for d."
+     ]
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Name it",
+     "defs": [
+      [
+       "Repeating decimal",
+       "A decimal where a block of digits repeats for ever. Every repeating decimal can be written as a fraction, so it is rational."
+      ]
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Which power of 10?",
+     "text": "Repeating decimal to fraction: to convert 0.4̅7̅ to a fraction, you first multiply d by:",
+     "opts": [
+      "10",
+      "100",
+      "1000",
+      "47"
+     ],
+     "ans": "100",
+     "why": "Count the digits under the bar: 4 and 7, so two digits repeat.\nMultiply by 10² = 100: 100d = 47.4̅7̅.\nNow 100d and d have the same tail .4̅7̅.\nSubtracting removes the tail: 99d = 47.\n(10d = 4.7̅4̅ has a different tail, so it does not line up.)",
+     "clue": "Count the digits under the bar.",
+     "needs": "math.decimals"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "text": "The repeating part starts right after the point.",
+     "steps": [
+      "(a) Let d = 0.5̅. One digit repeats, so multiply by 10: 10d = 5.5̅.",
+      "Subtract d: 10d − d = 5.5̅ − 0.5̅. So 9d = 5.",
+      "Divide by 9: d = 5/9.",
+      "(b) Let d = 2.1̅2̅. Two digits repeat, so 100d = 212.1̅2̅.",
+      "Subtract d: 99d = 210.",
+      "So d = 210/99 = 70/33."
+     ],
+     "ref": "Example 1"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "Try one",
+     "text": "Repeating decimal to fraction: what fraction is 0.4̅?",
+     "opts": [
+      "4/10",
+      "4/9",
+      "4/99",
+      "2/5"
+     ],
+     "ans": "4/9",
+     "why": "Let d = 0.4̅ = 0.444…\nOne digit repeats, so 10d = 4.444…\nSubtract: 10d − d = 4.444… − 0.444… = 4. So 9d = 4.\nDivide by 9: d = 4/9.\nCheck: 4 ÷ 9 = 0.444… (4/10 = 0.4 stops.)",
+     "clue": "Follow Example 1(a) with 4 in place of 5."
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "When the repeat starts later",
+     "paras": [
+      "Sometimes a digit comes before the repeating block, as in 0.1222…",
+      "Then make two numbers that both line up.",
+      "Multiply so the point sits just before the first repeat. Multiply again so it sits after one full block."
+     ],
+     "note": "Correction: in Example 2(a) the printed book divides 90d = 11 \"by 99\" and gives d = 11/99. Dividing by 90 gives d = 11/90. Check: 11 ÷ 90 = 0.1222…, while 11/99 = 0.1111…"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "text": "One digit sits before the repeating block.",
+     "steps": [
+      "(a) Let d = 0.12̅ = 0.1222…",
+      "100d = 12.2̅ and 10d = 1.2̅. Both end in 2̅.",
+      "Subtract: 100d − 10d = 12.2̅ − 1.2̅. So 90d = 11.",
+      "Divide by 90: d = 11/90.",
+      "(b) Let d = 1.21̅6̅. Then 1000d = 1216.1̅6̅ and 10d = 12.1̅6̅.",
+      "Subtract: 990d = 1204. So d = 1204/990 = 602/495."
+     ],
+     "ref": "Example 2"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "title": "Two repeating digits",
+     "text": "Let d = 0.1̅4̅. Then 100d = 14.1̅4̅.",
+     "ask": "Two repeating digits to a fraction: 0.1̅4̅ = ___ as a fraction.",
+     "a": [
+      "14/99"
+     ],
+     "why": "Let d = 0.1̅4̅. Two digits repeat, so 100d = 14.1̅4̅.\nSubtract: 100d − d = 14.1̅4̅ − 0.1̅4̅ = 14.\nSo 99d = 14.\nDivide by 99: d = 14/99.",
+     "clue": "Subtract d from 100d. What is left?",
+     "needs": "math.decimals"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "title": "Check the book",
+     "text": "Check the book: 0.12̅ = 11/99.",
+     "a": false,
+     "why": "Let d = 0.1222… Then 100d = 12.2̅ and 10d = 1.2̅.\nSubtract: 90d = 11, so d = 11/90.\nBut 11/99 = 0.1111…, not 0.1222…\nSo 0.12̅ = 11/90, and the statement is false.",
+     "clue": "Divide 11 by 99 on your calculator. Does it give 0.1222…?"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "added": true,
+     "title": "Sharing coffee beans",
+     "text": "A trader in Jimma says each bag holds 2.6̅ kg of coffee beans. That is 2.666… kg.",
+     "ask": "Repeating decimal to fraction in simplest form: each bag holds ___ kg.",
+     "a": [
+      "8/3",
+      "2 2/3",
+      "2⅔"
+     ],
+     "why": "Let d = 2.6̅ = 2.666…\nOne digit repeats, so 10d = 26.666…\nSubtract: 10d − d = 24, so 9d = 24.\nd = 24/9. GCF(24, 9) = 3, so d = 8/3.\nCheck: 8 ÷ 3 = 2.666… kg.",
+     "clue": "One digit repeats. Multiply d by 10, then subtract d.",
+     "worked": "Let d = 2.6̅. Then 10d = 26.6̅. Subtract: 9d = 24. So d = 24/9 = 8/3 kg."
+    },
+    {
+     "kind": "order",
+     "step": "practise",
+     "graded": true,
+     "title": "Put the steps in order: 0.4̅7̅ as a fraction",
+     "items": [
+      "Let d = 0.4̅7̅.",
+      "Two digits repeat, so 100d = 47.4̅7̅.",
+      "Subtract: 100d − d = 47.",
+      "So 99d = 47.",
+      "Divide by 99: d = 47/99."
+     ],
+     "why": "First name the decimal: d = 0.4̅7̅.\nTwo digits repeat, so multiply by 100 to line up the tails.\nSubtract d to remove the tail: 99d = 47.\nDivide by 99: d = 47/99.",
+     "clue": "Name the decimal first. Divide only at the very end.",
+     "added": true,
+     "id": "g9.maths.u1.s1-2-2.1"
+    },
+    {
+     "kind": "match",
+     "step": "practise",
+     "graded": true,
+     "title": "Match each repeating decimal to its fraction",
+     "pairs": [
+      [
+       "0.5̅",
+       "5/9"
+      ],
+      [
+       "0.1̅4̅",
+       "14/99"
+      ],
+      [
+       "0.12̅",
+       "11/90"
+      ],
+      [
+       "2.6̅",
+       "8/3"
+      ]
+     ],
+     "why": "0.5̅: 9d = 5, so 5/9.\n0.1̅4̅: 99d = 14, so 14/99.\n0.12̅: 90d = 11, so 11/90.\n2.6̅: 9d = 24, so 24/9 = 8/3.",
+     "clue": "Count the digits under the bar. Is there a digit before the repeat?",
+     "added": true,
+     "id": "g9.maths.u1.s1-2-2.2"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 1.14",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "(a) Repeating decimal to fraction: 2.6̅ = ___",
+     "a": [
+      "8/3",
+      "2 2/3",
+      "2⅔"
+     ],
+     "why": "Let d = 2.6̅. One digit repeats, so 10d = 26.6̅.\nSubtract: 10d − d = 26.6̅ − 2.6̅ = 24.\nSo 9d = 24 and d = 24/9.\nSimplify by 3: d = 8/3 = 2⅔.",
+     "clue": "One digit repeats: multiply by 10."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "(b) Repeating decimal to fraction: 0.1̅4̅ = ___",
+     "a": [
+      "14/99"
+     ],
+     "why": "Let d = 0.1̅4̅. Two digits repeat, so 100d = 14.1̅4̅.\nSubtract: 100d − d = 14.\nSo 99d = 14 and d = 14/99.\nGCF(14, 99) = 1, so this is the simplest form.",
+     "clue": "Two digits repeat: multiply by 100."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "(c) Repeating decimal to fraction: 0.71̅6̅ = ___",
+     "a": [
+      "709/990"
+     ],
+     "why": "Let d = 0.71616… The 7 comes before the repeating block 16.\n10d = 7.1̅6̅ (the point sits just before the block).\n1000d = 716.1̅6̅ (one full block later).\nSubtract: 1000d − 10d = 716 − 7 = 709. So 990d = 709.\nd = 709/990.",
+     "clue": "Use 1000d and 10d, as in Example 2(b)."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "(d) Repeating decimal to fraction: 1.321̅2̅ = ___",
+     "a": [
+      "218/165",
+      "13080/9900"
+     ],
+     "why": "The bar is over the 1 and 2 after 1.32, so d = 1.32121212…\nThe digits 1.3 come before the repeat. 100d = 132.1̅2̅ puts the point just before a block.\n10000d = 13212.1̅2̅ is one block (two digits) later.\nSubtract: 9900d = 13212 − 132 = 13080.\nd = 13080/9900 = 218/165 (divide both by 60).",
+     "clue": "Use 10000d and 100d."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "(e) Repeating decimal to fraction: −0.532̅1̅3̅ = ___",
+     "a": [
+      "-886/1665",
+      "−886/1665",
+      "-53160/99900",
+      "−53160/99900"
+     ],
+     "why": "Work with d = 0.53213213… first. The block 213 repeats after 0.53.\n100d = 53.2̅1̅3̅ and 100000d = 53213.2̅1̅3̅.\nSubtract: 99900d = 53213 − 53 = 53160.\nd = 53160/99900. GCF = 60, so d = 886/1665.\nPut the minus sign back: −886/1665.",
+     "clue": "Work with 0.532̅1̅3̅ first. Use 100000d and 100d. Put the minus sign back at the end.",
+     "worked": "Let d = 0.532̅1̅3̅. 100000d = 53213.2̅1̅3̅ and 100d = 53.2̅1̅3̅. Subtract: 99900d = 53160. So d = 53160/99900 = 886/1665. The answer is −886/1665."
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "Repeating decimal to fraction: 0.7̅ = ___ as a fraction.",
+   "a": [
+    "7/9"
+   ],
+   "why": "Let d = 0.777…\n10d = 7.777…\nSubtract: 10d − d = 7, so 9d = 7.\nd = 7/9.",
+   "clue": ""
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Repeating decimal to fraction: to convert 0.12̅ to a fraction, which two multiples of d line up?",
+   "opts": [
+    "100d and 10d",
+    "10d and d",
+    "100d and d",
+    "1000d and d"
+   ],
+   "ans": "100d and 10d",
+   "why": "d = 0.1222… The 1 comes before the repeating 2.\n10d = 1.222… puts the point just before the repeat.\n100d = 12.222… puts it one block later.\nBoth end in 2̅, so 100d − 10d = 11 has no tail.\nSo use 100d and 10d.",
+   "clue": ""
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Repeating decimal to fraction: 2.1̅2̅ = 70/33.",
+   "a": true,
+   "why": "Let d = 2.1212… Two digits repeat, so 100d = 212.1212…\nSubtract: 100d − d = 210, so 99d = 210.\nd = 210/99. GCF(210, 99) = 3, so d = 70/33.\nTrue.",
+   "clue": ""
+  }
+ ],
+ "notes": [
+  {
+   "kind": "correction",
+   "text": "In Example 2(a) the printed book divides 90d = 11 \"by 99\" and gives d = 11/99. Dividing by 90 gives d = 11/90. Check: 11 ÷ 90 = 0.1222…, while 11/99 = 0.1111…"
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.decimals": {
+   "name": "Repeating decimals and bar notation",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Read a bar",
+     "text": "A bar sits over the digits that repeat for ever.",
+     "steps": [
+      "0.3̅ means 0.333… One digit repeats.",
+      "0.2̅3̅ means 0.2323… Two digits repeat.",
+      "0.12̅ means 0.1222… Only the 2 repeats.",
+      "Count the digits under the bar. That tells you the length of the repeating block."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Your turn",
+     "text": "Bar notation: what does 0.4̅7̅ mean?",
+     "opts": [
+      "0.474747…",
+      "0.4777…",
+      "0.47",
+      "0.4747"
+     ],
+     "ans": "0.474747…",
+     "why": "The bar covers both the 4 and the 7.\nSo the block 47 repeats for ever.\n0.4̅7̅ = 0.474747…\n(0.4777… would be written 0.47̅, with the bar over the 7 only.)",
+     "clue": "Which digits are under the bar?"
+    }
+   ]
+  }
+ }
 }

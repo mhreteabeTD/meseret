@@ -91,75 +91,88 @@
      ],
      "after": "−3x is one term: a number times a variable. 2x + 3 and x + y are two terms joined by + .",
      "ref": "Activity 3.1.2 Q1",
-     "id": "g7.maths.u3.s3-1-2.1"
+     "id": "g7.maths.u3.s3-1-2.1",
+     "best": "−3x"
     },
     {
      "kind": "read",
      "step": "read",
      "title": "Definition 3.2",
      "paras": [
-      "A constant (a number), a variable, or a product or quotient of a number and variable is called a term."
-     ],
-     "table": [
-      [
-       "Example",
-       "A term?"
-      ],
-      [
-       "4",
-       "Yes"
-      ],
-      [
-       "xy",
-       "Yes"
-      ],
-      [
-       "3x/y",
-       "Yes"
-      ],
-      [
-       "12xy − 4",
-       "No: two terms"
-      ],
-      [
-       "x − y",
-       "No: two terms"
-      ]
+      "A term can be a constant (a number) or a variable.",
+      "A term can also be a product or quotient of a number and a variable."
      ],
      "ref": "Example 1",
      "id": "g7.maths.u3.s3-1-2.2"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Example 1: a term or not?",
+     "ref": "Example 1",
+     "need": 3,
+     "ask": "Tap each one. Is it one term?",
+     "items": [
+      [
+       "4",
+       "A term: a constant."
+      ],
+      [
+       "xy",
+       "A term: a product of two variables."
+      ],
+      [
+       "3x/y",
+       "A term: a quotient."
+      ],
+      [
+       "12xy − 4",
+       "Not one term: − joins two terms, 12xy and −4."
+      ],
+      [
+       "x − y",
+       "Not one term: it has two terms, x and −y."
+      ]
+     ],
+     "id": "g7.maths.u3.s3-1-2.56"
     },
     {
      "kind": "read",
      "step": "read",
      "title": "Definition 3.3",
      "paras": [
-      "In the product of a number and variable, the number factor is called the numerical coefficient."
-     ],
-     "table": [
-      [
-       "Term",
-       "Numerical coefficient"
-      ],
-      [
-       "6ab",
-       "6"
-      ],
-      [
-       "−3xy",
-       "−3"
-      ],
-      [
-       "x",
-       "1"
-      ],
-      [
-       "−2ab/3",
-       "−2/3"
-      ]
+      "Look at a product of a number and a variable.",
+      "Its number factor is called the numerical coefficient."
      ],
      "ref": "Example 2",
      "id": "g7.maths.u3.s3-1-2.3"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Example 2: find the coefficient",
+     "ref": "Example 2",
+     "need": 3,
+     "ask": "Tap each term to see its numerical coefficient.",
+     "items": [
+      [
+       "6ab",
+       "Coefficient 6, because 6ab = 6 × ab."
+      ],
+      [
+       "−3xy",
+       "Coefficient −3. Keep the sign."
+      ],
+      [
+       "x",
+       "Coefficient 1, because x = 1 × x."
+      ],
+      [
+       "−2ab/3",
+       "Coefficient −2/3, because −2ab/3 = (−2/3) × ab."
+      ]
+     ],
+     "id": "g7.maths.u3.s3-1-2.57"
     },
     {
      "kind": "name",
@@ -181,7 +194,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "What is the numerical coefficient of −3x?",
+     "text": "Find the numerical coefficient of the term −3x.",
      "opts": [
       "−3",
       "3",
@@ -189,7 +202,7 @@
       "1"
      ],
      "ans": "−3",
-     "why": "−3x = (−3) × x. The number factor is −3.",
+     "why": "−3x means (−3) × x.\nThe number factor is −3.\nKeep the minus sign with the number.\n3 is wrong: it drops the sign.",
      "clue": "Keep the sign with the number.",
      "level": 1,
      "ref": "Activity 3.1.2 Q2 a",
@@ -235,22 +248,23 @@
        "A constant."
       ]
      ],
-     "why": "A term has no + or − joining parts.",
+     "why": "A term is one piece: a number, a letter, or a product or quotient of them.\n4 and 0 are constants, so they are terms.\nxy is a product and 3x/y is a quotient: terms.\n12xy − 4 and 5x − 4y have a − joining two parts.\nSo each of them is two terms, not one term.",
      "clue": "Look for a + or − sign between parts.",
      "level": 1,
      "ref": "Exercise 3.1.2 Q2",
-     "id": "g7.maths.u3.s3-1-2.6"
+     "id": "g7.maths.u3.s3-1-2.6",
+     "text": "Sort each one: is it a single term?"
     },
     {
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "The numerical coefficient of −z is ___",
+     "ask": "Find the numerical coefficient: in −z it is ___",
      "a": [
       "−1"
      ],
      "num": true,
-     "why": "−z = (−1) × z. The coefficient is −1.",
+     "why": "−z means (−1) × z.\nThe 1 is not written, but it is there.\nKeep the minus sign.\nThe coefficient is −1.",
      "clue": "What number is hidden in front of z?",
      "level": 2,
      "ref": "Exercise 3.1.3 Q3 f",
@@ -260,13 +274,13 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "The numerical coefficient of y/2 is ___",
+     "ask": "Find the numerical coefficient: in y/2 it is ___",
      "a": [
       "1/2",
       "0.5"
      ],
      "num": true,
-     "why": "y/2 = (1/2) × y. The coefficient is 1/2.",
+     "why": "y/2 means y ÷ 2.\nDividing by 2 is the same as multiplying by 1/2.\nSo y/2 = (1/2) × y.\nThe coefficient is 1/2.",
      "clue": "Dividing by 2 is the same as multiplying by 1/2.",
      "level": 2,
      "ref": "Exercise 3.1.2 Q3 e",
@@ -276,12 +290,12 @@
      "kind": "blank",
      "step": "challenge",
      "graded": true,
-     "ask": "In 5 − 3x²y, the numerical coefficient of x²y is ___",
+     "ask": "Find the coefficient: in 5 − 3x²y, the numerical coefficient of x²y is ___",
      "a": [
       "−3"
      ],
      "num": true,
-     "why": "The term with x²y is −3x²y. Its number factor is −3, with the minus sign.",
+     "why": "5 − 3x²y has two terms: 5 and −3x²y.\nThe term with x²y is −3x²y.\n−3x²y = (−3) × x²y.\nThe coefficient is −3, with its sign.\nThe 2 is an exponent, not a coefficient.",
      "clue": "Find the term that has x²y. Keep its sign.",
      "level": 3,
      "added": true,
@@ -310,7 +324,8 @@
      ],
      "after": "3x + 2x = 5x, like 3 oranges and 2 oranges. 3x and 2y are like oranges and bananas.",
      "added": true,
-     "id": "g7.maths.u3.s3-1-2.10"
+     "id": "g7.maths.u3.s3-1-2.10",
+     "best": "3x + 2x"
     },
     {
      "kind": "read",
@@ -325,37 +340,34 @@
      "id": "g7.maths.u3.s3-1-2.11"
     },
     {
-     "kind": "read",
-     "step": "read",
+     "kind": "tap",
+     "step": "explore",
      "title": "Example 3",
-     "paras": [],
-     "table": [
-      [
-       "Pair",
-       "Like or unlike?"
-      ],
+     "id": "g7.maths.u3.s3-1-2.12",
+     "need": 3,
+     "ask": "Tap each pair: like or unlike?",
+     "items": [
       [
        "2 and −5",
-       "Like: both constants"
+       "Like: both are constants."
       ],
       [
        "−20abc and acb",
-       "Like: same letters"
+       "Like: the same letters a, b, c, each with exponent 1."
       ],
       [
        "3xy and 3yx",
-       "Like"
+       "Like: yx is the same as xy."
       ],
       [
        "3xyz and x²y²z²",
-       "Unlike: exponents differ"
+       "Unlike: the exponents differ."
       ],
       [
        "−2a³b³c³ and −2a³b²c³",
-       "Unlike: b³ and b²"
+       "Unlike: b³ and b² differ."
       ]
-     ],
-     "id": "g7.maths.u3.s3-1-2.12"
+     ]
     },
     {
      "kind": "name",
@@ -377,9 +389,9 @@
      "kind": "tf",
      "step": "check",
      "graded": true,
-     "text": "3xy and 3yx are like terms.",
+     "text": "Like terms: true or false? 3xy and 3yx are like terms.",
      "a": true,
-     "why": "yx = xy. The variables and exponents are the same.",
+     "why": "yx means y × x, and y × x = x × y.\nSo 3yx = 3xy.\nBoth have x¹ and y¹.\nSame variables, same exponents: like terms. True.",
      "clue": "Does the order of letters matter?",
      "level": 1,
      "ref": "Example 3",
@@ -420,19 +432,20 @@
        "Exponents differ."
       ]
      ],
-     "why": "Like terms: same letters with the same exponents.",
+     "why": "Like terms need the same letters with the same exponents.\n3x and −5x are both x¹: like.\nxy² and y²x are both x¹y²: like.\n20xy and ab have different letters: unlike.\n3x² and 2x³, −80ab and 15a²b²: exponents differ, unlike.",
      "clue": "Compare the letters, then the exponents.",
      "level": 1,
      "ref": "Exercise 3.1.2 Q1",
-     "id": "g7.maths.u3.s3-1-2.15"
+     "id": "g7.maths.u3.s3-1-2.15",
+     "text": "Sort each pair: like terms or unlike terms?"
     },
     {
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "3a²b and 3ab² are like terms.",
+     "text": "Like terms: true or false? 3a²b and 3ab² are like terms.",
      "a": false,
-     "why": "In 3a²b, a has exponent 2. In 3ab², b has exponent 2. The exponents differ.",
+     "why": "In 3a²b, a has exponent 2 and b has exponent 1.\nIn 3ab², a has exponent 1 and b has exponent 2.\nThe exponents do not match.\nSo they are unlike terms. False.",
      "clue": "Check the exponent of a in each.",
      "level": 2,
      "ref": "Review Exercise Q3",
@@ -442,7 +455,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Which term is like 4x²y?",
+     "text": "Like terms: which term is like 4x²y?",
      "opts": [
       "−yx²",
       "4xy²",
@@ -450,7 +463,7 @@
       "x²y²"
      ],
      "ans": "−yx²",
-     "why": "−yx² = −x²y: the same x² and y. The coefficient can differ.",
+     "why": "4x²y has x² and y¹.\n−yx² = −x²y: also x² and y¹. Like!\n4xy² has x¹ and y²: unlike.\n4x² has no y, and x²y² has y²: unlike.\nThe coefficient (−1 or 4) does not matter.",
      "clue": "Rewrite each term with x first. Compare exponents.",
      "level": 3,
      "added": true,
@@ -479,7 +492,8 @@
      ],
      "after": "The parts joined by + or − are 3x, 2a and −5. That is 3 terms.",
      "ref": "Example 5",
-     "id": "g7.maths.u3.s3-1-2.18"
+     "id": "g7.maths.u3.s3-1-2.18",
+     "best": "3"
     },
     {
      "kind": "read",
@@ -494,34 +508,26 @@
      "id": "g7.maths.u3.s3-1-2.19"
     },
     {
-     "kind": "read",
-     "step": "read",
+     "kind": "tap",
+     "step": "explore",
      "title": "Definitions 3.6–3.8",
-     "paras": [],
-     "table": [
-      [
-       "Name",
-       "Number of terms",
-       "Examples"
-      ],
+     "ref": "Examples 6–8",
+     "id": "g7.maths.u3.s3-1-2.20",
+     "ask": "Tap each name to see how many terms it has.",
+     "items": [
       [
        "Monomial",
-       "1",
-       "5x, 12ab, 0.2ab"
+       "1 term. Examples: 5x, 12ab, 0.2ab."
       ],
       [
        "Binomial",
-       "2",
-       "5x + 3y, 12 − ab"
+       "2 terms. Examples: 5x + 3y, 12 − ab."
       ],
       [
        "Trinomial",
-       "3",
-       "2x + 3y − 3, x − y − z"
+       "3 terms. Examples: 2x + 3y − 3, x − y − z."
       ]
-     ],
-     "ref": "Examples 6–8",
-     "id": "g7.maths.u3.s3-1-2.20"
+     ]
     },
     {
      "kind": "name",
@@ -551,14 +557,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "5x − 3y − 4 is a:",
+     "text": "Name the expression by its number of terms: 5x − 3y − 4 is a:",
      "opts": [
       "Monomial",
       "Binomial",
       "Trinomial"
      ],
      "ans": "Trinomial",
-     "why": "It has three terms: 5x, −3y and −4.",
+     "why": "Split the expression at the + and − signs.\nThe terms are 5x, −3y and −4.\nThat is 3 terms.\nThree terms make a trinomial.",
      "clue": "Count the parts joined by + or −.",
      "level": 1,
      "ref": "Exercise 3.1.3 Q1 d",
@@ -605,22 +611,23 @@
        "Three terms."
       ]
      ],
-     "why": "Count the terms joined by + or −.",
+     "why": "Count the terms joined by + or −.\n24 and 5x have one term each: monomials.\n−21t − 2x and 20w + w² have two terms: binomials.\nz − y − 25x and 3x − 2y + 1 have three: trinomials.",
      "clue": "How many parts?",
      "level": 1,
      "ref": "Exercise 3.1.3 Q1",
-     "id": "g7.maths.u3.s3-1-2.23"
+     "id": "g7.maths.u3.s3-1-2.23",
+     "text": "Sort each expression: monomial, binomial or trinomial?"
     },
     {
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "The constant term of 3x − 2y + 1 is ___",
+     "ask": "Find the constant term: in 3x − 2y + 1 it is ___",
      "a": [
       "1"
      ],
      "num": true,
-     "why": "The term with no variable is 1.",
+     "why": "The terms are 3x, −2y and 1.\n3x and −2y have letters.\n1 has no letter.\nSo the constant term is 1.",
      "clue": "Which term has no letter?",
      "level": 1,
      "ref": "Exercise 3.1.3 Q1 f",
@@ -630,14 +637,14 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Simplify first: 3x + 5 − 3x + y is a:",
+     "text": "Simplify first, then name it: 3x + 5 − 3x + y is a:",
      "opts": [
       "Monomial",
       "Binomial",
       "Trinomial"
      ],
      "ans": "Binomial",
-     "why": "3x − 3x = 0, so it becomes y + 5. That has two terms.",
+     "why": "Collect the x terms: 3x − 3x = 0.\nWhat is left is y + 5.\ny + 5 has two terms.\nTwo terms make a binomial.\nTrinomial is tempting, but count after simplifying.",
      "clue": "Do the like terms cancel?",
      "level": 3,
      "added": true,
@@ -670,7 +677,8 @@
      ],
      "after": "3x − 4x = (3 − 4)x = −1x = −x. The y terms make 7y.",
      "ref": "Example 9 a",
-     "id": "g7.maths.u3.s3-1-2.26"
+     "id": "g7.maths.u3.s3-1-2.26",
+     "best": "−x"
     },
     {
      "kind": "read",
@@ -685,33 +693,29 @@
      "id": "g7.maths.u3.s3-1-2.27"
     },
     {
-     "kind": "read",
-     "step": "read",
+     "kind": "tap",
+     "step": "explore",
      "title": "Note",
-     "paras": [],
-     "table": [
-      [
-       "Rule",
-       "Example"
-      ],
+     "id": "g7.maths.u3.s3-1-2.28",
+     "ask": "Tap each rule to see an example.",
+     "items": [
       [
        "Add or subtract the coefficients of like terms",
-       "−3x + 5x = (−3 + 5)x = 2x"
+       "−3x + 5x = (−3 + 5)x = 2x."
       ],
       [
        "Unlike terms cannot be added",
-       "5x + 2y stays 5x + 2y"
+       "5x + 2y stays 5x + 2y."
       ],
       [
        "Be careful of signs with brackets",
-       "−2(x − 4) = −2x + 8"
+       "−2(x − 4) = −2x + 8."
       ],
       [
        "Write the number as coefficient",
-       "5 × (3y) = 15y"
+       "5 × (3y) = 15y."
       ]
-     ],
-     "id": "g7.maths.u3.s3-1-2.28"
+     ]
     },
     {
      "kind": "steps",
@@ -758,7 +762,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Simplify 3x + 35y − 8x.",
+     "text": "Collect like terms: simplify 3x + 35y − 8x.",
      "opts": [
       "−5x + 35y",
       "11x + 35y",
@@ -766,7 +770,7 @@
       "5x + 35y"
      ],
      "ans": "−5x + 35y",
-     "why": "3x − 8x = (3 − 8)x = −5x. 35y has no like term.",
+     "why": "The x terms are 3x and −8x.\n3x − 8x = (3 − 8)x = −5x.\n35y has no like term, so it stays.\nAnswer: −5x + 35y.\n30xy is wrong: unlike terms cannot be added.",
      "clue": "Collect the x terms first.",
      "level": 1,
      "ref": "Exercise 3.1.3 Q2 a",
@@ -776,7 +780,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Simplify 15 + 21b − 32b + 3.",
+     "text": "Collect like terms: simplify 15 + 21b − 32b + 3.",
      "opts": [
       "−11b + 18",
       "11b + 18",
@@ -784,7 +788,7 @@
       "7b"
      ],
      "ans": "−11b + 18",
-     "why": "21b − 32b = −11b and 15 + 3 = 18.",
+     "why": "The b terms: 21b − 32b = (21 − 32)b = −11b.\nThe numbers: 15 + 3 = 18.\nAnswer: −11b + 18.",
      "clue": "Group the b terms and the numbers.",
      "level": 1,
      "ref": "Exercise 3.1.3 Q2 b",
@@ -794,7 +798,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "−2(x − 4) = ?",
+     "text": "Remove the bracket: −2(x − 4) = ?",
      "opts": [
       "−2x + 8",
       "−2x − 8",
@@ -802,7 +806,7 @@
       "−2x − 4"
      ],
      "ans": "−2x + 8",
-     "why": "−2 × x = −2x and −2 × (−4) = +8.",
+     "why": "Multiply each term inside by −2.\n−2 × x = −2x.\n−2 × (−4) = +8 (same signs give +).\nAnswer: −2x + 8.\n−2x − 8 forgets that − × − = +.",
      "clue": "Negative times negative is positive.",
      "level": 2,
      "ref": "Note 3 a",
@@ -813,7 +817,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Simplify 3(3x − 6y) + x + 18y − 4.",
+     "text": "Simplify the expression: 3(3x − 6y) + x + 18y − 4.",
      "opts": [
       "10x − 4",
       "10x + 36y − 4",
@@ -821,7 +825,7 @@
       "10x − 36y − 4"
      ],
      "ans": "10x − 4",
-     "why": "3(3x − 6y) = 9x − 18y. Then 9x + x = 10x and −18y + 18y = 0. Answer 10x − 4.",
+     "why": "Remove the bracket: 3(3x − 6y) = 9x − 18y.\nNow we have 9x − 18y + x + 18y − 4.\nx terms: 9x + x = 10x.\ny terms: −18y + 18y = 0.\nAnswer: 10x − 4.",
      "clue": "Remove the bracket first.",
      "level": 2,
      "ref": "Exercise 3.1.3 Q2 c",
@@ -831,7 +835,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Simplify 2(3a − b) − 3(a − 2b).",
+     "text": "Simplify with two brackets: 2(3a − b) − 3(a − 2b).",
      "opts": [
       "3a + 4b",
       "3a − 8b",
@@ -839,7 +843,7 @@
       "9a + 4b"
      ],
      "ans": "3a + 4b",
-     "why": "2(3a − b) = 6a − 2b. −3(a − 2b) = −3a + 6b. 6a − 3a = 3a and −2b + 6b = 4b.",
+     "why": "2(3a − b) = 6a − 2b.\n−3(a − 2b) = −3a + 6b, because −3 × (−2b) = +6b.\na terms: 6a − 3a = 3a.\nb terms: −2b + 6b = 4b.\nAnswer: 3a + 4b.",
      "clue": "Watch the sign: −3 × (−2b) = +6b.",
      "level": 3,
      "added": true,
@@ -866,14 +870,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "(−3) × (−4) = ?",
+     "text": "Multiply the integers: (−3) × (−4) = ?",
      "opts": [
       "12",
       "−12",
       "−7"
      ],
      "ans": "12",
-     "why": "Same signs give a positive answer: 3 × 4 = 12.",
+     "why": "Both numbers are negative: the signs are the same.\nSame signs give a positive answer.\n3 × 4 = 12.\nSo (−3) × (−4) = 12. (−12 would need different signs.)",
      "clue": "Are the signs the same or different?",
      "level": 1
     }
@@ -888,13 +892,13 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "3x and −5x are:",
+     "text": "Like or unlike? 3x and −5x are:",
      "opts": [
       "Like terms",
       "Unlike terms"
      ],
      "ans": "Like terms",
-     "why": "Both have x¹.",
+     "why": "3x has x¹. −5x has x¹.\nSame letter, same exponent.\nThe coefficients 3 and −5 may differ.\nSo they are like terms.",
      "clue": "Compare letters and exponents.",
      "level": 1,
      "ref": "Q1 a",
@@ -904,13 +908,13 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "20xy and ab are:",
+     "text": "Like or unlike? 20xy and ab are:",
      "opts": [
       "Like terms",
       "Unlike terms"
      ],
      "ans": "Unlike terms",
-     "why": "Different letters.",
+     "why": "20xy has the letters x and y.\nab has the letters a and b.\nThe letters are different.\nSo they are unlike terms.",
      "clue": "Compare letters.",
      "level": 1,
      "ref": "Q1 b",
@@ -920,13 +924,13 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "xy² and y²x are:",
+     "text": "Like or unlike? xy² and y²x are:",
      "opts": [
       "Like terms",
       "Unlike terms"
      ],
      "ans": "Like terms",
-     "why": "y²x = xy².",
+     "why": "y²x = x × y², which is the same as xy².\nBoth have x¹ and y².\nThe order of letters does not matter.\nSo they are like terms.",
      "clue": "Order of letters does not matter.",
      "level": 1,
      "ref": "Q1 e",
@@ -936,13 +940,13 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "3x² and 2x³ are:",
+     "text": "Like or unlike? 3x² and 2x³ are:",
      "opts": [
       "Like terms",
       "Unlike terms"
      ],
      "ans": "Unlike terms",
-     "why": "The exponents 2 and 3 differ.",
+     "why": "3x² has x with exponent 2.\n2x³ has x with exponent 3.\nSame letter, but the exponents differ.\nSo they are unlike terms.",
      "clue": "Compare exponents.",
      "level": 1,
      "ref": "Q1 f",
@@ -952,13 +956,13 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "3/x and 5/x are:",
+     "text": "Like or unlike? 3/x and 5/x are:",
      "opts": [
       "Like terms",
       "Unlike terms"
      ],
      "ans": "Like terms",
-     "why": "Both are a number times 1/x.",
+     "why": "3/x = 3 × 1/x.\n5/x = 5 × 1/x.\nBoth have the same variable part, 1/x.\nSo they are like terms.",
      "clue": "What is the variable part?",
      "level": 2,
      "ref": "Q1 h",
@@ -968,13 +972,13 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Is (2x − y)/5 a term?",
+     "text": "Term or not? Is (2x − y)/5 a single term?",
      "opts": [
       "Yes",
       "No"
      ],
      "ans": "No",
-     "why": "(2x − y)/5 = 2x/5 − y/5: two terms.",
+     "why": "Divide each part by 5.\n(2x − y)/5 = 2x/5 − y/5.\nA − sign joins two parts.\nSo it is two terms, not one. No.",
      "clue": "Split the fraction.",
      "level": 2,
      "ref": "Q2 c",
@@ -984,12 +988,12 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "The numerical coefficient of −4x is ___",
+     "ask": "Find the numerical coefficient: in −4x it is ___",
      "a": [
       "−4"
      ],
      "num": true,
-     "why": "−4x = (−4) × x.",
+     "why": "−4x means (−4) × x.\nThe number factor is −4.\nKeep the sign.\nThe coefficient is −4.",
      "clue": "Keep the sign.",
      "level": 1,
      "ref": "Q3 c",
@@ -999,13 +1003,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "The numerical coefficient of 3x/4 is ___",
+     "ask": "Find the numerical coefficient: in 3x/4 it is ___",
      "a": [
       "3/4",
       "0.75"
      ],
      "num": true,
-     "why": "3x/4 = (3/4) × x.",
+     "why": "3x/4 means 3x ÷ 4.\nThis is (3/4) × x.\nThe number factor is 3/4.\nThe coefficient is 3/4 = 0.75.",
      "clue": "Divide 3 by 4.",
      "level": 1,
      "ref": "Q3 d",
@@ -1020,14 +1024,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Category of 24, and its constant term:",
+     "text": "Name the expression and its constant term: 24",
      "opts": [
       "Monomial; constant term 24",
       "Binomial; constant term 24",
       "Monomial; no constant term"
      ],
      "ans": "Monomial; constant term 24",
-     "why": "One term, and it is a number.",
+     "why": "24 is one term, so it is a monomial.\n24 has no letter.\nSo 24 is also the constant term.\nMonomial; constant term 24.",
      "clue": "Count terms. Is there a number term?",
      "level": 1,
      "ref": "Q1 a",
@@ -1037,14 +1041,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Category of 5x − 3y − 4, and its constant term:",
+     "text": "Name the expression and its constant term: 5x − 3y − 4",
      "opts": [
       "Trinomial; constant term −4",
       "Trinomial; constant term 4",
       "Binomial; constant term −4"
      ],
      "ans": "Trinomial; constant term −4",
-     "why": "Three terms: 5x, −3y, −4.",
+     "why": "The terms are 5x, −3y and −4.\nThree terms make a trinomial.\nThe term with no letter is −4.\nKeep its minus sign: the constant term is −4.",
      "clue": "Keep the sign of the constant.",
      "level": 1,
      "ref": "Q1 d",
@@ -1054,7 +1058,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Simplify 3z − 12 − 11y + x + y − 48z − 3.",
+     "text": "Collect like terms: simplify 3z − 12 − 11y + x + y − 48z − 3.",
      "opts": [
       "x − 10y − 45z − 15",
       "x − 12y − 45z − 15",
@@ -1062,7 +1066,7 @@
       "−10y − 45z − 15"
      ],
      "ans": "x − 10y − 45z − 15",
-     "why": "−11y + y = −10y; 3z − 48z = −45z; −12 − 3 = −15.",
+     "why": "x terms: only x.\ny terms: −11y + y = −10y.\nz terms: 3z − 48z = −45z.\nNumbers: −12 − 3 = −15.\nAnswer: x − 10y − 45z − 15.",
      "clue": "Group each letter, then the numbers.",
      "level": 2,
      "ref": "Q2 d",
@@ -1072,7 +1076,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Simplify −3(−a + 6) + x − (z + 4) − 2x.",
+     "text": "Remove the brackets and simplify: −3(−a + 6) + x − (z + 4) − 2x.",
      "opts": [
       "3a − x − z − 22",
       "−3a − x − z − 22",
@@ -1080,7 +1084,7 @@
       "3a − x + z − 22"
      ],
      "ans": "3a − x − z − 22",
-     "why": "−3(−a + 6) = 3a − 18. −(z + 4) = −z − 4. x − 2x = −x. −18 − 4 = −22.",
+     "why": "−3(−a + 6) = 3a − 18.\n−(z + 4) = −z − 4.\nx terms: x − 2x = −x.\nNumbers: −18 − 4 = −22.\nAnswer: 3a − x − z − 22.",
      "clue": "Remove each bracket carefully.",
      "level": 3,
      "ref": "Q2 e",
@@ -1090,7 +1094,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Simplify 3x² + 4x + 6 − x² − 3x − 3.",
+     "text": "Collect like terms: simplify 3x² + 4x + 6 − x² − 3x − 3.",
      "opts": [
       "2x² + x + 3",
       "2x² + 7x + 3",
@@ -1098,7 +1102,7 @@
       "2x² + x + 9"
      ],
      "ans": "2x² + x + 3",
-     "why": "3x² − x² = 2x²; 4x − 3x = x; 6 − 3 = 3.",
+     "why": "x² terms: 3x² − x² = 2x².\nx terms: 4x − 3x = x.\nNumbers: 6 − 3 = 3.\nx² and x are unlike, so they stay apart.\nAnswer: 2x² + x + 3.",
      "clue": "x² and x are unlike.",
      "level": 1,
      "ref": "Q2 g",
@@ -1108,7 +1112,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Simplify 5(2 − x²) − 3(x² − 4y).",
+     "text": "Remove the brackets and simplify: 5(2 − x²) − 3(x² − 4y).",
      "opts": [
       "−8x² + 12y + 10",
       "−2x² + 12y + 10",
@@ -1116,7 +1120,7 @@
       "8x² + 12y + 10"
      ],
      "ans": "−8x² + 12y + 10",
-     "why": "10 − 5x² − 3x² + 12y = −8x² + 12y + 10.",
+     "why": "5(2 − x²) = 10 − 5x².\n−3(x² − 4y) = −3x² + 12y.\nx² terms: −5x² − 3x² = −8x².\nAnswer: −8x² + 12y + 10.",
      "clue": "−3 × (−4y) = +12y.",
      "level": 2,
      "ref": "Q2 j",
@@ -1130,12 +1134,12 @@
    "kind": "blank",
    "step": "test",
    "graded": true,
-   "ask": "The numerical coefficient of 7ab is ___",
+   "ask": "Find the numerical coefficient: in 7ab it is ___",
    "a": [
     "7"
    ],
    "num": true,
-   "why": "The number factor is 7.",
+   "why": "7ab = 7 × a × b.\nThe number factor is 7.\nSo the coefficient is 7.",
    "level": 1,
    "clue": "",
    "id": "g7.maths.u3.s3-1-2.51"
@@ -1144,9 +1148,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "2 and −5 are like terms.",
+   "text": "Like terms: true or false? 2 and −5 are like terms.",
    "a": true,
-   "why": "All constant terms are like terms.",
+   "why": "2 and −5 have no variable.\nThey are constant terms.\nAll constant terms are like terms.\nTrue.",
    "level": 1,
    "clue": "",
    "id": "g7.maths.u3.s3-1-2.52"
@@ -1155,14 +1159,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which is a binomial?",
+   "text": "Count the terms: which expression is a binomial?",
    "opts": [
     "5x + 3y",
     "12ab",
     "x − y − z"
    ],
    "ans": "5x + 3y",
-   "why": "It has two terms.",
+   "why": "A binomial has exactly two terms.\n5x + 3y has the terms 5x and 3y: two terms.\n12ab has one term. x − y − z has three.\nSo 5x + 3y is the binomial.",
    "level": 2,
    "clue": "",
    "id": "g7.maths.u3.s3-1-2.53"
@@ -1171,7 +1175,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Simplify 3(2a + 3) − 2(a + 8).",
+   "text": "Remove the brackets and simplify: 3(2a + 3) − 2(a + 8).",
    "opts": [
     "4a − 7",
     "4a + 25",
@@ -1179,7 +1183,7 @@
     "4a − 13"
    ],
    "ans": "4a − 7",
-   "why": "6a + 9 − 2a − 16 = 4a − 7.",
+   "why": "3(2a + 3) = 6a + 9.\n−2(a + 8) = −2a − 16.\na terms: 6a − 2a = 4a.\nNumbers: 9 − 16 = −7.\nAnswer: 4a − 7.",
    "level": 2,
    "ref": "Example 9 e",
    "clue": "",
@@ -1189,7 +1193,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Simplify 20 + 4(x + 3y) − 4x − 8y.",
+   "text": "Remove the bracket and simplify: 20 + 4(x + 3y) − 4x − 8y.",
    "opts": [
     "4y + 20",
     "8x + 4y + 20",
@@ -1197,7 +1201,7 @@
     "20y"
    ],
    "ans": "4y + 20",
-   "why": "20 + 4x + 12y − 4x − 8y. The x terms cancel: 4y + 20.",
+   "why": "4(x + 3y) = 4x + 12y.\nNow we have 20 + 4x + 12y − 4x − 8y.\nx terms: 4x − 4x = 0.\ny terms: 12y − 8y = 4y.\nAnswer: 4y + 20.",
    "level": 3,
    "clue": "",
    "id": "g7.maths.u3.s3-1-2.55"

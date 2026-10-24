@@ -1,445 +1,468 @@
 {
-  "id": "g9.maths.u1.s1-4-1",
-  "book": {
-    "title": "Mathematics Grade 9 Student Textbook",
-    "grade": 9,
-    "subject": "maths",
-    "unit": 1,
-    "unit_title": "The Number System",
-    "section": "1.4.1",
-    "pages": "48–79"
+ "id": "g9.maths.u1.s1-4-1",
+ "book": {
+  "title": "Mathematics Grade 9 Student Textbook",
+  "grade": 9,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "The Number System",
+  "section": "1.4.1",
+  "pages": "48–79"
+ },
+ "title": "Intervals",
+ "competency": "Write sets of real numbers in interval notation and show them on the number line.",
+ "minutes": 8,
+ "keywords": [
+  {
+   "en": "Interval",
+   "am": "ክፍተት",
+   "machine": true,
+   "def": "The set of all real numbers between two end points, such as [2, 5) or (−∞, 3]."
   },
-  "title": "Intervals",
-  "competency": "Write sets of real numbers in interval notation and show them on the number line.",
-  "minutes": 8,
-  "keywords": [
-    {
-      "en": "Interval",
-      "am": "ክፍተት",
-      "machine": true,
-      "def": "The set of all real numbers between two end points, such as [2, 5) or (−∞, 3]."
-    },
-    {
-      "en": "Infinity (∞)",
-      "am": "ወሰን የሌለው (∞)",
-      "machine": true,
-      "def": "∞ means no end to the right; −∞ means no end to the left. They are not numbers."
-    },
-    {
-      "en": "Real number",
-      "am": "እውን ቁጥር",
-      "machine": true,
-      "def": "Any rational or irrational number. Every point on the number line is a real number."
-    }
-  ],
-  "ideas": [
-    {
-      "id": "math.intervals",
-      "name": "Intervals",
-      "requires": [
-        "math.inequality-symbols"
-      ],
-      "explain": {
-        "en": {
-          "text": "An interval is all the real numbers between two end points. A square bracket means the end point is included. A round bracket means it is not. Infinity is not a number, so it always takes a round bracket."
-        },
-        "am": {
-          "text": "ክፍተት በሁለት ጫፎች መካከል ያሉ ሁሉም እውን ቁጥሮች ነው። ካሬ ቅንፍ ጫፉ ተካቷል ማለት ነው። ክብ ቅንፍ ደግሞ አልተካተተም ማለት ነው። ∞ ቁጥር ስላልሆነ ሁልጊዜ ክብ ቅንፍ ይወስዳል።",
-          "machine": true
-        }
-      },
-      "screens": [
-        {
-          "kind": "guess",
-          "step": "hook",
-          "text": "List some real numbers between 2 and 6, including 2 but not 6.",
-          "ask": "Which list fits? Take a guess.",
-          "opts": [
-            "2, 2.5, 3, 4.75, 5.9",
-            "3, 4, 5 only",
-            "2 and 6 only",
-            "2.5, 6, 7"
-          ],
-          "after": "Such lists never end. Can you write the whole set with symbols? Read on.",
-          "ref": "Activity 1.15"
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Intervals",
-          "paras": [
-            "A real interval is the set of all real numbers between two numbers.",
-            "A square bracket [ ] means the end point is included. On the number line it is a filled circle ●.",
-            "A round bracket ( ) means the end point is not included. On the number line it is an empty circle ○.",
-            "The symbol ∞ (infinity) means no end to the right. −∞ means no end to the left. ∞ and −∞ are not numbers, so they always take round brackets."
-          ]
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "Intervals and infinity",
-          "defs": [
-            [
-              "Interval",
-              "The set of all real numbers between two end points. [ ] includes an end point; ( ) does not."
-            ],
-            [
-              "Infinity (∞)",
-              "∞ means no end to the right and −∞ means no end to the left. Neither is a number."
-            ]
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Pick the brackets",
-          "text": "Which interval means −1 ≤ x < 4?",
-          "opts": [
-            "(−1, 4)",
-            "[−1, 4)",
-            "(−1, 4]",
-            "[−1, 4]"
-          ],
-          "ans": "[−1, 4)",
-          "why": "−1 is included (square bracket); 4 is not (round bracket).",
-          "clue": "≤ means included; < means not included.",
-          "needs": "math.inequality-symbols"
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Tables 1.1 and 1.2",
-          "paras": [
-            "Each inequality has an interval that means the same set."
-          ],
-          "table": [
-            [
-              "Inequality",
-              "Interval",
-              "Meaning"
-            ],
-            [
-              "a < x < b",
-              "(a, b)",
-              "strictly between a and b"
-            ],
-            [
-              "a ≤ x < b",
-              "[a, b)",
-              "between, including a"
-            ],
-            [
-              "a < x ≤ b",
-              "(a, b]",
-              "between, including b"
-            ],
-            [
-              "a ≤ x ≤ b",
-              "[a, b]",
-              "between, including a and b"
-            ],
-            [
-              "x > a",
-              "(a, ∞)",
-              "greater than a"
-            ],
-            [
-              "x < a",
-              "(−∞, a)",
-              "less than a"
-            ],
-            [
-              "x ≥ a",
-              "[a, ∞)",
-              "greater than or equal to a"
-            ],
-            [
-              "x ≤ a",
-              "(−∞, a]",
-              "less than or equal to a"
-            ]
-          ],
-          "note": "Tables 1.1 and 1.2 combined."
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Examples (Figure 1.7)",
-          "paras": [
-            "(i) [3, 5) holds every real number from 3 up to, but not including, 5.",
-            "(ii) [−2, 3/2] includes both end points.",
-            "(iii) (−∞, 2) is every number left of 2.",
-            "(iv) [0, ∞) is 0 and every number to its right."
-          ],
-          "note": "Figure 1.7: filled circle means included; empty circle means not included."
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "title": "Spot the mistake",
-          "text": "Why is [2, ∞] wrong?",
-          "opts": [
-            "∞ is not a number, so it can never be included",
-            "2 cannot be included",
-            "Intervals cannot start at 2",
-            "It should be written [∞, 2]"
-          ],
-          "ans": "∞ is not a number, so it can never be included",
-          "why": "The interval has no right end, so it is written [2, ∞).",
-          "clue": "Can x ever equal ∞?"
-        },
-        {
-          "kind": "match",
-          "step": "practise",
-          "graded": true,
-          "title": "Match the sets",
-          "text": "Match each inequality with its interval.",
-          "pairs": [
-            [
-              "x > 3",
-              "(3, ∞)"
-            ],
-            [
-              "x ≤ −1",
-              "(−∞, −1]"
-            ],
-            [
-              "0 < x ≤ 5",
-              "(0, 5]"
-            ],
-            [
-              "−2 ≤ x ≤ 2",
-              "[−2, 2]"
-            ]
-          ],
-          "why": "≤ and ≥ give square brackets. < and > give round brackets. ∞ always takes a round bracket.",
-          "clue": "Look at each end: is the end point included?",
-          "needs": "math.inequality-symbols"
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "title": "Fill the end",
-          "text": "The real numbers greater than 7 form the interval (7, ?).",
-          "ask": "(7, ___)",
-          "a": [
-            "∞",
-            "infinity",
-            "+∞"
-          ],
-          "why": "There is no end to the right, so we write ∞ with a round bracket.",
-          "clue": "The numbers go on to the right with no end."
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "added": true,
-          "title": "A club in Mekelle",
-          "text": "A school club in Mekelle accepts students aged 14 or older, but younger than 18.",
-          "ask": "Which interval shows the allowed ages x?",
-          "opts": [
-            "[14, 18)",
-            "(14, 18]",
-            "(14, 18)",
-            "[14, 18]"
-          ],
-          "ans": "[14, 18)",
-          "why": "14 ≤ x < 18: 14 is included, 18 is not.",
-          "clue": "Write it as an inequality first. Which end can x equal?",
-          "worked": "'14 or older' gives 14 ≤ x. 'Younger than 18' gives x < 18. So 14 ≤ x < 18, which is [14, 18).",
-          "needs": "math.inequality-symbols"
-        }
-      ]
-    }
-  ],
-  "exercises": [
-    {
-      "book_name": "Exercise 1.24",
-      "items": [
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "Real numbers between −3 and 8, including both: ___",
-          "a": [
-            "[−3, 8]",
-            "[-3, 8]",
-            "[-3,8]",
-            "[−3,8]"
-          ],
-          "why": "Both end points are included, so both brackets are square.",
-          "clue": "Included end points take square brackets."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "Real numbers between 4 and 6, not including either: ___",
-          "a": [
-            "(4, 6)",
-            "(4,6)"
-          ],
-          "why": "Neither end point is included, so both brackets are round.",
-          "clue": "Ends not included take round brackets."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "Real numbers to the right of −1, including −1: ___",
-          "a": [
-            "[−1, ∞)",
-            "[-1, ∞)",
-            "[-1,∞)",
-            "[−1,∞)",
-            "[-1, infinity)",
-            "[−1, infinity)"
-          ],
-          "why": "−1 is included; there is no right end, so ∞ with a round bracket.",
-          "clue": "What goes at the right end when there is no end?"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "How is [1, 3) shown on the number line?",
-          "opts": [
-            "● at 1, ○ at 3, shaded between",
-            "○ at 1, ● at 3, shaded between",
-            "● at 1 and ● at 3, shaded between",
-            "○ at 1 and ○ at 3, shaded between"
-          ],
-          "ans": "● at 1, ○ at 3, shaded between",
-          "why": "[ includes 1 (filled); ) leaves out 3 (empty).",
-          "clue": "Square bracket: filled circle. Round bracket: empty circle."
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "How is (−∞, −5] shown on the number line?",
-          "opts": [
-            "● at −5, shaded to the left",
-            "○ at −5, shaded to the left",
-            "● at −5, shaded to the right",
-            "○ at −5, shaded to the right"
-          ],
-          "ans": "● at −5, shaded to the left",
-          "why": "−5 is included, and −∞ means no end to the left.",
-          "clue": "Which way does −∞ point?"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "How is (−2, 4) ∪ [5, ∞) shown on the number line?",
-          "opts": [
-            "○ at −2 and 4 with the part between shaded, then ● at 5 shaded to the right",
-            "● at −2 and 4 with the part between shaded, then ○ at 5 shaded to the right",
-            "○ at −2, shaded all the way to the right",
-            "○ at −2 and 4 with the part between shaded, then ○ at 5 shaded to the left"
-          ],
-          "ans": "○ at −2 and 4 with the part between shaded, then ● at 5 shaded to the right",
-          "why": "(−2, 4) leaves out both ends; [5, ∞) includes 5 and goes on to the right.",
-          "clue": "Draw each part separately, then put them together."
-        }
-      ]
-    }
-  ],
-  "test": [
-    {
-      "kind": "mcq",
-      "step": "test",
-      "graded": true,
-      "text": "Which interval means x ≤ 6?",
-      "opts": [
-        "(−∞, 6]",
-        "(−∞, 6)",
-        "[6, ∞)",
-        "(6, ∞)"
-      ],
-      "ans": "(−∞, 6]",
-      "why": "Less than or equal to 6: no left end, 6 included.",
-      "clue": ""
-    },
-    {
-      "kind": "tf",
-      "step": "test",
-      "graded": true,
-      "text": "The interval (−2, 3/2] includes the number −2.",
-      "a": false,
-      "why": "The round bracket means −2 is not included.",
-      "clue": ""
-    },
-    {
-      "kind": "blank",
-      "step": "test",
-      "graded": true,
-      "ask": "Write 3 ≤ x < 5 in interval notation: ___",
-      "a": [
-        "[3, 5)",
-        "[3,5)"
-      ],
-      "why": "3 is included, 5 is not.",
-      "clue": ""
-    }
-  ],
-  "notes": [
-    {
-      "kind": "note",
-      "text": "Tables 1.1 and 1.2 of the book are combined into one table, as in the source."
-    },
-    {
-      "kind": "note",
-      "text": "Exercise 1.24 question 2 asks students to draw on the number line; parts (a), (b) and (d) are given here as choices describing the drawing. Part (c) (1/2, 3) is left out to keep six items."
-    },
-    {
-      "kind": "note",
-      "text": "The Mekelle club item is an added example."
-    }
-  ],
-  "review": {
-    "status": "validated"
+  {
+   "en": "Infinity (∞)",
+   "am": "ወሰን የሌለው (∞)",
+   "machine": true,
+   "def": "∞ means no end to the right; −∞ means no end to the left. They are not numbers."
   },
-  "version": 1,
-  "refreshers": {
-    "math.inequality-symbols": {
-      "name": "Inequality symbols",
-      "screens": [
-        {
-          "kind": "steps",
-          "step": "method",
-          "title": "Read the symbols",
-          "text": "Four symbols compare numbers.",
-          "steps": [
-            "x < 4 means x is less than 4. x cannot be 4.",
-            "x ≤ 4 means x is less than or equal to 4. x can be 4.",
-            "x > 4 means x is greater than 4. x cannot be 4.",
-            "x ≥ 4 means x is greater than or equal to 4. x can be 4.",
-            "−1 ≤ x < 4 means x is at least −1 and less than 4."
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Your turn",
-          "text": "Which value of x fits −1 ≤ x < 4?",
-          "opts": [
-            "−1",
-            "4",
-            "−2",
-            "5"
-          ],
-          "ans": "−1",
-          "why": "≤ allows x to equal −1. The < at 4 does not allow 4.",
-          "clue": "Which end has the 'or equal to' line under it?"
-        }
-      ]
-    }
+  {
+   "en": "Real number",
+   "am": "እውን ቁጥር",
+   "machine": true,
+   "def": "Any rational or irrational number. Every point on the number line is a real number."
   }
+ ],
+ "ideas": [
+  {
+   "id": "math.intervals",
+   "name": "Intervals",
+   "requires": [
+    "math.inequality-symbols"
+   ],
+   "explain": {
+    "en": {
+     "text": "An interval is all the real numbers between two end points. A square bracket means the end point is included. A round bracket means it is not. Infinity is not a number, so it always takes a round bracket."
+    },
+    "am": {
+     "text": "ክፍተት በሁለት ጫፎች መካከል ያሉ ሁሉም እውን ቁጥሮች ነው። ካሬ ቅንፍ ጫፉ ተካቷል ማለት ነው። ክብ ቅንፍ ደግሞ አልተካተተም ማለት ነው። ∞ ቁጥር ስላልሆነ ሁልጊዜ ክብ ቅንፍ ይወስዳል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "text": "List some real numbers between 2 and 6, including 2 but not 6.",
+     "ask": "Which list fits? Take a guess.",
+     "opts": [
+      "2, 2.5, 3, 4.75, 5.9",
+      "3, 4, 5 only",
+      "2 and 6 only",
+      "2.5, 6, 7"
+     ],
+     "after": "The first list fits: each number is from 2 up to, but not including, 6.\n\"3, 4, 5 only\" misses numbers like 2.5. \"2.5, 6, 7\" includes 6 and 7.\nSuch lists never end. Can you write the whole set with symbols? Read on.",
+     "ref": "Activity 1.15",
+     "best": "2, 2.5, 3, 4.75, 5.9"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Intervals",
+     "paras": [
+      "A real interval is the set of all real numbers between two numbers.",
+      "A square bracket [ ] means the end point is included. On the number line it is a filled circle ●.",
+      "A round bracket ( ) means the end point is not included. On the number line it is an empty circle ○.",
+      "The symbol ∞ (infinity) means no end to the right. −∞ means no end to the left. ∞ and −∞ are not numbers, so they always take round brackets."
+     ]
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Intervals and infinity",
+     "defs": [
+      [
+       "Interval",
+       "The set of all real numbers between two end points. [ ] includes an end point; ( ) does not."
+      ],
+      [
+       "Infinity (∞)",
+       "∞ means no end to the right and −∞ means no end to the left. Neither is a number."
+      ]
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Pick the brackets",
+     "text": "Interval notation: which interval means −1 ≤ x < 4?",
+     "opts": [
+      "(−1, 4)",
+      "[−1, 4)",
+      "(−1, 4]",
+      "[−1, 4]"
+     ],
+     "ans": "[−1, 4)",
+     "why": "Left end: −1 ≤ x, so −1 is included: square bracket [.\nRight end: x < 4, so 4 is not included: round bracket ).\nSo the interval is [−1, 4).",
+     "clue": "≤ means included; < means not included.",
+     "needs": "math.inequality-symbols"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Tables 1.1 and 1.2",
+     "paras": [
+      "Each inequality has an interval that means the same set.",
+      "Tap each card below to see it."
+     ],
+     "note": "Tables 1.1 and 1.2 combined."
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Tables 1.1 and 1.2: inequality → interval",
+     "ref": "Tables 1.1 and 1.2",
+     "ask": "Tap each inequality to see its interval.",
+     "need": 4,
+     "items": [
+      [
+       "a < x < b",
+       "= (a, b): strictly between a and b."
+      ],
+      [
+       "a ≤ x < b",
+       "= [a, b): between, including a."
+      ],
+      [
+       "a < x ≤ b",
+       "= (a, b]: between, including b."
+      ],
+      [
+       "a ≤ x ≤ b",
+       "= [a, b]: between, including a and b."
+      ],
+      [
+       "x > a",
+       "= (a, ∞): greater than a."
+      ],
+      [
+       "x < a",
+       "= (−∞, a): less than a."
+      ],
+      [
+       "x ≥ a",
+       "= [a, ∞): greater than or equal to a."
+      ],
+      [
+       "x ≤ a",
+       "= (−∞, a]: less than or equal to a."
+      ]
+     ]
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Examples (Figure 1.7)",
+     "paras": [
+      "(i) [3, 5) holds every real number from 3 up to, but not including, 5.",
+      "(ii) [−2, 3/2] includes both end points.",
+      "(iii) (−∞, 2) is every number left of 2.",
+      "(iv) [0, ∞) is 0 and every number to its right."
+     ],
+     "note": "Figure 1.7: filled circle means included; empty circle means not included."
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "Spot the mistake",
+     "text": "Spot the mistake: why is [2, ∞] wrong?",
+     "opts": [
+      "∞ is not a number, so it can never be included",
+      "2 cannot be included",
+      "Intervals cannot start at 2",
+      "It should be written [∞, 2]"
+     ],
+     "ans": "∞ is not a number, so it can never be included",
+     "why": "∞ is not a number. x can never equal ∞.\nSo the right end can never be included.\n∞ always takes a round bracket.\nThe correct interval is [2, ∞).",
+     "clue": "Can x ever equal ∞?"
+    },
+    {
+     "kind": "pick",
+     "step": "practise",
+     "graded": true,
+     "title": "Which numbers are in [−1, 4)?",
+     "text": "Interval membership: tap every number that is in [−1, 4).",
+     "pool": [
+      "−2",
+      "−1",
+      "0",
+      "√2",
+      "3.9",
+      "4",
+      "5"
+     ],
+     "a": [
+      "−1",
+      "0",
+      "√2",
+      "3.9"
+     ],
+     "why": "[−1 means −1 is included.\n4) means 4 is not included.\n0, √2 ≈ 1.41 and 3.9 are between −1 and 4.\n−2 is too small, and 4 and 5 are too big.",
+     "clue": "Check each end. Which bracket is square?",
+     "needs": "math.inequality-symbols",
+     "added": true
+    },
+    {
+     "kind": "match",
+     "step": "practise",
+     "graded": true,
+     "title": "Match the sets",
+     "text": "Inequalities and intervals: match each inequality with its interval.",
+     "pairs": [
+      [
+       "x > 3",
+       "(3, ∞)"
+      ],
+      [
+       "x ≤ −1",
+       "(−∞, −1]"
+      ],
+      [
+       "0 < x ≤ 5",
+       "(0, 5]"
+      ],
+      [
+       "−2 ≤ x ≤ 2",
+       "[−2, 2]"
+      ]
+     ],
+     "why": "x > 3: 3 not included, no right end → (3, ∞).\nx ≤ −1: no left end, −1 included → (−∞, −1].\n0 < x ≤ 5: 0 out, 5 in → (0, 5].\n−2 ≤ x ≤ 2: both ends in → [−2, 2].",
+     "clue": "Look at each end: is the end point included?",
+     "needs": "math.inequality-symbols"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "title": "Fill the end",
+     "text": "The real numbers greater than 7 form the interval (7, ?).",
+     "ask": "Interval notation for x > 7: (7, ___)",
+     "a": [
+      "∞",
+      "infinity",
+      "+∞"
+     ],
+     "why": "x > 7 means every number to the right of 7.\nThere is no right end, so we write ∞.\n∞ is not a number, so it takes a round bracket.\nSo the interval is (7, ∞).",
+     "clue": "The numbers go on to the right with no end."
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "added": true,
+     "title": "A club in Mekelle",
+     "text": "A school club in Mekelle accepts students aged 14 or older, but younger than 18.",
+     "ask": "Which interval shows the allowed ages x?",
+     "opts": [
+      "[14, 18)",
+      "(14, 18]",
+      "(14, 18)",
+      "[14, 18]"
+     ],
+     "ans": "[14, 18)",
+     "why": "\"14 or older\" means x ≥ 14: 14 is included, so [.\n\"Younger than 18\" means x < 18: 18 is not included, so ).\n14 ≤ x < 18 is [14, 18).\n(14, 18] has the brackets the wrong way round.",
+     "clue": "Write it as an inequality first. Which end can x equal?",
+     "worked": "'14 or older' gives 14 ≤ x. 'Younger than 18' gives x < 18. So 14 ≤ x < 18, which is [14, 18).",
+     "needs": "math.inequality-symbols"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 1.24",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Write in interval notation: real numbers between −3 and 8, including both: ___",
+     "a": [
+      "[−3, 8]",
+      "[-3, 8]",
+      "[-3,8]",
+      "[−3,8]"
+     ],
+     "why": "Both ends are included.\nIncluded ends take square brackets.\nSmaller number first: [−3, 8].",
+     "clue": "Included end points take square brackets."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Write in interval notation: real numbers between 4 and 6, not including either: ___",
+     "a": [
+      "(4, 6)",
+      "(4,6)"
+     ],
+     "why": "Neither end is included.\nEnds not included take round brackets.\nSo the interval is (4, 6).",
+     "clue": "Ends not included take round brackets."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Write in interval notation: real numbers to the right of −1, including −1: ___",
+     "a": [
+      "[−1, ∞)",
+      "[-1, ∞)",
+      "[-1,∞)",
+      "[−1,∞)",
+      "[-1, infinity)",
+      "[−1, infinity)"
+     ],
+     "why": "−1 is included: square bracket, [−1.\nTo the right there is no end: ∞.\n∞ always takes a round bracket.\nSo the interval is [−1, ∞).",
+     "clue": "What goes at the right end when there is no end?"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Number line: how is [1, 3) shown?",
+     "opts": [
+      "● at 1, ○ at 3, shaded between",
+      "○ at 1, ● at 3, shaded between",
+      "● at 1 and ● at 3, shaded between",
+      "○ at 1 and ○ at 3, shaded between"
+     ],
+     "ans": "● at 1, ○ at 3, shaded between",
+     "why": "[ at 1: 1 is included, so a filled circle ● at 1.\n) at 3: 3 is not included, so an empty circle ○ at 3.\nShade the part between them.",
+     "clue": "Square bracket: filled circle. Round bracket: empty circle."
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Number line: how is (−∞, −5] shown?",
+     "opts": [
+      "● at −5, shaded to the left",
+      "○ at −5, shaded to the left",
+      "● at −5, shaded to the right",
+      "○ at −5, shaded to the right"
+     ],
+     "ans": "● at −5, shaded to the left",
+     "why": "] at −5: −5 is included, so ● at −5.\n−∞ means no end to the left.\nSo shade from −5 to the left.",
+     "clue": "Which way does −∞ point?"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Number line: how is (−2, 4) ∪ [5, ∞) shown?",
+     "opts": [
+      "○ at −2 and 4 with the part between shaded, then ● at 5 shaded to the right",
+      "● at −2 and 4 with the part between shaded, then ○ at 5 shaded to the right",
+      "○ at −2, shaded all the way to the right",
+      "○ at −2 and 4 with the part between shaded, then ○ at 5 shaded to the left"
+     ],
+     "ans": "○ at −2 and 4 with the part between shaded, then ● at 5 shaded to the right",
+     "why": "(−2, 4): ○ at −2 and ○ at 4, shaded between.\n[5, ∞): ● at 5, shaded to the right.\n∪ means both parts go on the same line.",
+     "clue": "Draw each part separately, then put them together."
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Interval notation: which interval means x ≤ 6?",
+   "opts": [
+    "(−∞, 6]",
+    "(−∞, 6)",
+    "[6, ∞)",
+    "(6, ∞)"
+   ],
+   "ans": "(−∞, 6]",
+   "why": "x ≤ 6: every number up to 6, with no left end: −∞.\n6 is included, so ].\nSo the interval is (−∞, 6].\n[6, ∞) is x ≥ 6, the other side.",
+   "clue": ""
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "True or false? The interval (−2, 3/2] includes the number −2.",
+   "a": false,
+   "why": "The left bracket is round: (.\nA round bracket means the end point is not included.\nSo −2 is not in the interval: false.\n3/2 is included, because of ].",
+   "clue": ""
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "Write 3 ≤ x < 5 in interval notation: ___",
+   "a": [
+    "[3, 5)",
+    "[3,5)"
+   ],
+   "why": "3 ≤ x: 3 is included, so [3.\nx < 5: 5 is not included, so 5).\nSo 3 ≤ x < 5 is [3, 5).",
+   "clue": ""
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "Tables 1.1 and 1.2 of the book are combined into one table, as in the source."
+  },
+  {
+   "kind": "note",
+   "text": "Exercise 1.24 question 2 asks students to draw on the number line; parts (a), (b) and (d) are given here as choices describing the drawing. Part (c) (1/2, 3) is left out to keep six items."
+  },
+  {
+   "kind": "note",
+   "text": "The Mekelle club item is an added example."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.inequality-symbols": {
+   "name": "Inequality symbols",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Read the symbols",
+     "text": "Four symbols compare numbers.",
+     "steps": [
+      "x < 4 means x is less than 4. x cannot be 4.",
+      "x ≤ 4 means x is less than or equal to 4. x can be 4.",
+      "x > 4 means x is greater than 4. x cannot be 4.",
+      "x ≥ 4 means x is greater than or equal to 4. x can be 4.",
+      "−1 ≤ x < 4 means x is at least −1 and less than 4."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Your turn",
+     "text": "Which value of x fits −1 ≤ x < 4?",
+     "opts": [
+      "−1",
+      "4",
+      "−2",
+      "5"
+     ],
+     "ans": "−1",
+     "why": "x = −1: −1 ≤ −1 is true and −1 < 4 is true. It fits.\nx = 4: 4 < 4 is false.\n−2 is less than −1, and 5 is more than 4.\nSo only −1 fits.",
+     "clue": "Which end has the 'or equal to' line under it?"
+    }
+   ]
+  }
+ }
 }

@@ -119,6 +119,45 @@
      "id": "g8.science.u1.s1-3.2"
     },
     {
+     "kind": "tree",
+     "step": "explore",
+     "title": "Unit 1 at a glance",
+     "root": {
+      "label": "Scientific investigation",
+      "info": "Measuring carefully and testing ideas in an orderly way.",
+      "children": [
+       {
+        "label": "Measurement",
+        "info": "Finding the size of a quantity by comparing it with an agreed standard.",
+        "children": [
+         {
+          "label": "Indigenous units",
+          "info": "Cubit, hand-span, digit, foot, pace; weqet, quntal, feresula; a tree's shadow; jog, tassa, sini, kubaya."
+         },
+         {
+          "label": "SI units",
+          "info": "Fundamental: m, kg, s, K. Derived: m², m³, m/s, kg/m³. Prefixes: kilo, centi, milli, micro."
+         },
+         {
+          "label": "Instruments",
+          "info": "Balance (mass), ruler and vernier caliper (length), stopwatch (time), thermometer (temperature)."
+         },
+         {
+          "label": "Accuracy & precision",
+          "info": "Accuracy: close to the true value. Precision: readings close to each other."
+         }
+        ]
+       },
+       {
+        "label": "Scientific method",
+        "info": "Question → research → hypothesis → test → conclude → communicate. Change only one factor: a fair test."
+       }
+      ]
+     },
+     "id": "g8.science.u1.s1-3.29",
+     "added": true
+    },
+    {
      "kind": "read",
      "step": "read",
      "title": "Summary (continued)",
@@ -153,7 +192,7 @@
      "kind": "match",
      "step": "check",
      "graded": true,
-     "text": "Match each word with its meaning.",
+     "text": "Unit 1 key words: match each word with its meaning.",
      "pairs": [
       [
        "Prefix",
@@ -172,7 +211,7 @@
        "Elbow to middle fingertip"
       ]
      ],
-     "why": "These are the key words of Unit 1.",
+     "why": "Prefix: a short-hand for big or small numbers, like kilo.\nHypothesis: a testable explanation, step 3 of the method.\nDerived quantity: built from fundamental quantities.\nCubit: elbow to middle fingertip, an indigenous unit of length.",
      "clue": "One is a unit of length, one is a step of the method.",
      "level": 1,
      "id": "g8.science.u1.s1-3.5"
@@ -182,11 +221,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "0.6 km = ___ m",
+     "ask": "Convert kilometres to metres: 0.6 km = ___ m",
      "a": [
       "600"
      ],
-     "why": "0.6 × 1000 = 600 m.",
+     "why": "1 km = 1000 m.\nBig unit to small unit: multiply.\n0.6 × 1000 = 600.\nSo 0.6 km = 600 m.",
      "clue": "km to m: × 1000.",
      "level": 1,
      "id": "g8.science.u1.s1-3.6"
@@ -195,7 +234,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "A thermometer is used to measure",
+     "text": "Instruments: a thermometer is used to measure",
      "opts": [
       "temperature",
       "mass",
@@ -203,7 +242,7 @@
       "time"
      ],
      "ans": "temperature",
-     "why": "p.14.",
+     "why": "Thermo- means heat.\nA thermometer measures temperature, like a fever of 38.5°C.\nMass needs a balance, length a ruler, time a clock.",
      "clue": "Think of fever.",
      "level": 1,
      "id": "g8.science.u1.s1-3.7"
@@ -212,18 +251,66 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "Derived units do not depend on any other unit.",
+     "text": "Units, true or false: derived units do not depend on any other unit.",
      "a": false,
-     "why": "Fundamental units do not depend on other units. Derived units depend on fundamental units.",
+     "why": "Derived units are built from fundamental units.\nExample: m/s is built from metres and seconds.\nSo derived units DO depend on other units.\nThe statement describes fundamental units. So it is false.",
      "clue": "Which kind is built from others?",
      "level": 2,
      "id": "g8.science.u1.s1-3.8"
     },
     {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "level": 1,
+     "title": "Indigenous or SI?",
+     "text": "Units review: sort each unit as indigenous or SI.",
+     "bins": [
+      "Indigenous",
+      "SI"
+     ],
+     "items": [
+      [
+       "Cubit",
+       "Indigenous",
+       "Elbow to middle fingertip."
+      ],
+      [
+       "Kilogram",
+       "SI",
+       "The SI unit of mass."
+      ],
+      [
+       "Feresula",
+       "Indigenous",
+       "17 kg, for pepper and coffee."
+      ],
+      [
+       "Second",
+       "SI",
+       "The SI unit of time."
+      ],
+      [
+       "Kubaya",
+       "Indigenous",
+       "A mug used in the market."
+      ],
+      [
+       "Metre",
+       "SI",
+       "The SI unit of length."
+      ]
+     ],
+     "why": "Indigenous units are local and traditional: cubit, feresula, kubaya.\nSI units are used by scientists everywhere: kilogram, second, metre.\nSI units are the same for everyone; indigenous units can vary.",
+     "clue": "Would a scientist in any country use it?",
+     "id": "g8.science.u1.s1-3.30",
+     "added": true
+    },
+    {
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "A shop scale gives 1.05, 1.05, 1.05 kg for a 1.00 kg standard mass. What should the shopkeeper do?",
+     "text": "Accuracy and precision: a shop scale gives 1.05, 1.05 and 1.05 kg for a 1.00 kg standard mass. What should the shopkeeper do?",
      "opts": [
       "Reset (calibrate) the scale: it is precise but not accurate",
       "Nothing: it is accurate",
@@ -231,7 +318,7 @@
       "Weigh faster"
      ],
      "ans": "Reset (calibrate) the scale: it is precise but not accurate",
-     "why": "The readings agree (precise) but are 0.05 kg too high (not accurate). Resetting the scale fixes the accuracy.",
+     "why": "The three readings are the same: precise.\nThey are 1.05 − 1.00 = 0.05 kg too high: not accurate.\nThe scale has the same error every time.\nResetting (calibrating) the scale fixes the accuracy.",
      "clue": "Are the readings the same? Are they correct?",
      "level": 3,
      "added": true,
@@ -248,7 +335,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Which is a fundamental quantity?",
+     "text": "Fundamental quantities: which one is fundamental?",
      "opts": [
       "Temperature",
       "Area",
@@ -256,7 +343,7 @@
       "Force"
      ],
      "ans": "Temperature",
-     "why": "Area, volume and force are derived.",
+     "why": "Fundamental quantities stand alone: length, mass, time, temperature.\nTemperature is one of them.\nArea = length × width: derived.\nVolume and force are also built from others.\nSo the answer is temperature.",
      "clue": "One of the base four.",
      "level": 1,
      "ref": "I Q1",
@@ -266,7 +353,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "The difference between fundamental and derived units is",
+     "text": "Units: what is the difference between fundamental and derived units?",
      "opts": [
       "Derived units are derived from fundamental units",
       "Fundamental units are bigger",
@@ -274,7 +361,7 @@
       "No difference"
      ],
      "ans": "Derived units are derived from fundamental units",
-     "why": "p.8.",
+     "why": "Fundamental units stand alone: m, kg, s, K.\nDerived units are built from them: m², m/s, kg/m³.\nSo derived units are derived from fundamental units.\nNot the other way round.",
      "clue": "Which is built from which?",
      "level": 1,
      "ref": "I Q2",
@@ -284,13 +371,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "Length, mass, time and temperature are ___ quantities",
+     "ask": "Kinds of quantity: length, mass, time and temperature are ___ quantities",
      "a": [
       "fundamental",
       "basic",
       "base"
      ],
-     "why": "p.7.",
+     "why": "Length, mass, time and temperature are not made from other quantities.\nSuch quantities are fundamental (base) quantities.\nSo the answer is fundamental.",
      "clue": "Base quantities.",
      "level": 1,
      "ref": "II Q1",
@@ -300,11 +387,11 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "Area, volume, density and force are ___ quantities",
+     "ask": "Kinds of quantity: area, volume, density and force are ___ quantities",
      "a": [
       "derived"
      ],
-     "why": "p.8.",
+     "why": "Area = length × width.\nVolume = length × width × height.\nDensity = mass ÷ volume. Force = mass × acceleration.\nEach is built from other quantities, so they are derived.",
      "clue": "Built from others.",
      "level": 1,
      "ref": "II Q2",
@@ -314,7 +401,7 @@
      "kind": "match",
      "step": "exercise",
      "graded": true,
-     "text": "Match each quantity with its unit.",
+     "text": "SI units: match each quantity with its unit.",
      "pairs": [
       [
        "Area",
@@ -337,7 +424,7 @@
        "kg"
       ]
      ],
-     "why": "Tables 1.1 and 1.2.",
+     "why": "Mass is fundamental: kilogram, kg.\nTemperature is fundamental: kelvin, K.\nArea = m × m = m².\nVolume = m × m × m = m³.\nDensity = kg ÷ m³ = kg/m³.",
      "clue": "Square for area, cubic for volume.",
      "level": 1,
      "ref": "III",
@@ -348,11 +435,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "0.005 m = ___ mm",
+     "ask": "Convert metres to millimetres: 0.005 m = ___ mm",
      "a": [
       "5"
      ],
-     "why": "0.005 ÷ 0.001 = 5 mm.",
+     "why": "1 mm = 0.001 m, so 1 m = 1000 mm.\nMultiply: 0.005 × 1000 = 5.\nSo 0.005 m = 5 mm.",
      "clue": "milli = 0.001.",
      "level": 2,
      "ref": "IV Q3",
@@ -363,11 +450,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "1000 cm = ___ km",
+     "ask": "Convert centimetres to kilometres: 1000 cm = ___ km",
      "a": [
       "0.01"
      ],
-     "why": "1000 cm = 10 m = 0.01 km.",
+     "why": "Step 1: cm to m. 100 cm = 1 m.\n1000 ÷ 100 = 10 m.\nStep 2: m to km. 1000 m = 1 km.\n10 ÷ 1000 = 0.01 km.\nSo 1000 cm = 0.01 km.",
      "clue": "cm → m → km.",
      "level": 2,
      "ref": "IV Q4",
@@ -377,7 +464,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "g = 9.81 m/s². Results 12.2, 12.3, 12.1, 12.08 m/s² are",
+     "text": "Accuracy and precision: g = 9.81 m/s². Results of 12.2, 12.3, 12.1 and 12.08 m/s² are",
      "opts": [
       "precise but not accurate",
       "accurate and precise",
@@ -385,7 +472,7 @@
       "neither"
      ],
      "ans": "precise but not accurate",
-     "why": "Close together, far from 9.81.",
+     "why": "Compare the results with each other: 12.08 to 12.3, close together. Precise.\nCompare them with the true value, 9.81.\nThey are more than 2 m/s² too high. Not accurate.\nSo they are precise but not accurate.",
      "clue": "Compare with 9.81.",
      "level": 2,
      "ref": "IV Q5",
@@ -404,7 +491,7 @@
      "kind": "mcq",
      "step": "test",
      "graded": true,
-     "text": "Which is a derived quantity?",
+     "text": "Derived quantities: which one is derived?",
      "opts": [
       "Area",
       "Mass",
@@ -412,7 +499,7 @@
       "Length"
      ],
      "ans": "Area",
-     "why": "Area = length × width.",
+     "why": "A derived quantity is built from others.\nArea = length × width.\nSo area is derived.\nMass, time and length are fundamental.",
      "clue": "",
      "level": 1,
      "ref": "Review I Q3",
@@ -422,7 +509,7 @@
      "kind": "mcq",
      "step": "test",
      "graded": true,
-     "text": "The prefix that represents 1/1000 is",
+     "text": "Prefixes: which prefix represents 1/1000?",
      "opts": [
       "milli",
       "kilo",
@@ -430,7 +517,7 @@
       "centi"
      ],
      "ans": "milli",
-     "why": "Table 1.3.",
+     "why": "1/1000 is one thousandth = 0.001.\nMilli means a thousandth: 1 mm = 0.001 m.\nKilo means 1000, the opposite.\nSo the answer is milli.",
      "clue": "",
      "level": 1,
      "ref": "Review I Q5",
@@ -440,7 +527,7 @@
      "kind": "mcq",
      "step": "test",
      "graded": true,
-     "text": "The SI unit of density is",
+     "text": "Derived units: the SI unit of density is",
      "opts": [
       "kg/m³",
       "kg/m²",
@@ -448,7 +535,7 @@
       "g/m³"
      ],
      "ans": "kg/m³",
-     "why": "Table 1.2.",
+     "why": "Density = mass ÷ volume.\nMass is in kg; volume is in m³.\nkg ÷ m³ = kg/m³.\nkg/m² would be mass per area.",
      "clue": "",
      "level": 1,
      "ref": "Review I Q4",
@@ -459,12 +546,12 @@
      "step": "test",
      "graded": true,
      "num": true,
-     "ask": "One million centimetres = ___ m",
+     "ask": "Convert centimetres to metres: one million centimetres = ___ m",
      "a": [
       "10000",
       "10 000"
      ],
-     "why": "1 000 000 ÷ 100.",
+     "why": "One million = 1 000 000.\n100 cm = 1 m, so divide by 100.\n1 000 000 ÷ 100 = 10 000.\nSo one million cm = 10 000 m.",
      "clue": "",
      "level": 2,
      "ref": "Review II Q3",
@@ -474,7 +561,7 @@
      "kind": "order",
      "step": "test",
      "graded": true,
-     "text": "Order the steps of the scientific method.",
+     "text": "Scientific method: put the six steps in order.",
      "items": [
       "Ask questions",
       "Background research",
@@ -483,7 +570,7 @@
       "Analyse and conclude",
       "Communicate"
      ],
-     "why": "Figure 1.9.",
+     "why": "1 Ask questions.\n2 Do background research.\n3 Make a hypothesis.\n4 Test it.\n5 Analyse the results and conclude.\n6 Communicate the results.",
      "clue": "",
      "level": 2,
      "ref": "Review IV Q6",
@@ -493,7 +580,7 @@
      "kind": "mcq",
      "step": "test",
      "graded": true,
-     "text": "Weqet is used to measure",
+     "text": "Indigenous units: weqet is used to measure",
      "opts": [
       "gold powder",
       "grain",
@@ -501,7 +588,7 @@
       "water"
      ],
      "ans": "gold powder",
-     "why": "p.5.",
+     "why": "Weqet is an indigenous unit of mass.\nIn local markets it is used for gold powder.\nGrain is sold by the quntal; pepper and coffee by the feresula.\nSo weqet measures gold powder.",
      "clue": "",
      "level": 1,
      "id": "g8.science.u1.s1-3.23"
@@ -514,7 +601,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "The SI unit of mass is",
+   "text": "SI units: the SI unit of mass is",
    "opts": [
     "kilogram",
     "gram",
@@ -522,7 +609,7 @@
     "tonne"
    ],
    "ans": "kilogram",
-   "why": "p.11.",
+   "why": "Mass is a fundamental quantity.\nIts SI unit is the kilogram (kg).\nGram and tonne are other units; quntal is indigenous.\nSo the answer is kilogram.",
    "clue": "",
    "level": 1,
    "id": "g8.science.u1.s1-3.24"
@@ -532,12 +619,12 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "5.5 km = ___ m",
+   "ask": "Convert kilometres to metres: 5.5 km = ___ m",
    "a": [
     "5500",
     "5 500"
    ],
-   "why": "5.5 × 1000.",
+   "why": "1 km = 1000 m.\nMultiply: 5.5 × 1000 = 5500.\nSo 5.5 km = 5500 m.",
    "clue": "",
    "level": 1,
    "id": "g8.science.u1.s1-3.25"
@@ -546,7 +633,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Darts all in the bullseye, close together, are",
+   "text": "Accuracy and precision: darts that are all in the bullseye, close together, are",
    "opts": [
     "accurate and precise",
     "precise only",
@@ -554,7 +641,7 @@
     "neither"
    ],
    "ans": "accurate and precise",
-   "why": "Exercise 1.9.",
+   "why": "Close together: the throws agree, so precise.\nIn the bullseye: they hit the target, so accurate.\nSo they are accurate and precise.",
    "clue": "",
    "level": 2,
    "id": "g8.science.u1.s1-3.26"
@@ -563,7 +650,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Changing only one factor in an experiment makes it",
+   "text": "Fair test: changing only one factor in an experiment makes it",
    "opts": [
     "a fair test",
     "a hypothesis",
@@ -571,7 +658,7 @@
     "a conclusion"
    ],
    "ans": "a fair test",
-   "why": "p.18.",
+   "why": "If only one factor changes, any difference comes from it.\nThis is called a fair test.\nA hypothesis is an explanation, not a way of testing.\nSo the answer is a fair test.",
    "clue": "",
    "level": 2,
    "id": "g8.science.u1.s1-3.27"
@@ -580,7 +667,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which is NOT an indigenous unit?",
+   "text": "Indigenous or SI: which is NOT an indigenous unit?",
    "opts": [
     "Kelvin",
     "Cubit",
@@ -588,7 +675,7 @@
     "Sini"
    ],
    "ans": "Kelvin",
-   "why": "Kelvin is the SI unit of temperature.",
+   "why": "Cubit is a body unit of length: indigenous.\nQuntal is a bag of grain: indigenous.\nSini is a small cup: indigenous.\nKelvin is the SI unit of temperature. So kelvin is NOT indigenous.",
    "clue": "",
    "level": 3,
    "id": "g8.science.u1.s1-3.28"

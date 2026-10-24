@@ -83,7 +83,8 @@
      ],
      "after": "The nucleus. Protons and neutrons are much heavier than electrons. But the electrons take up most of the space!",
      "added": true,
-     "id": "g8.science.u2.s2-2.1"
+     "id": "g8.science.u2.s2-2.1",
+     "best": "The nucleus"
     },
     {
      "kind": "tap",
@@ -167,6 +168,40 @@
      "id": "g8.science.u2.s2-2.4"
     },
     {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Balance the charges",
+     "vars": [
+      {
+       "k": "p",
+       "label": "Protons (+1 each)",
+       "min": 1,
+       "max": 10,
+       "step": 1,
+       "v": 3
+      },
+      {
+       "k": "e",
+       "label": "Electrons (−1 each)",
+       "min": 0,
+       "max": 10,
+       "step": 1,
+       "v": 2
+      }
+     ],
+     "formula": "p-e",
+     "outs": [
+      [
+       "Total charge = protons − electrons",
+       "p-e",
+       "{v}"
+      ]
+     ],
+     "note": "Make the protons and electrons equal. The total charge becomes 0: the atom is electrically neutral.",
+     "id": "g8.science.u2.s2-2.36",
+     "added": true
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -212,7 +247,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Which particles are in the nucleus?",
+     "text": "Parts of the atom: which particles are in the nucleus?",
      "opts": [
       "Protons and neutrons",
       "Protons and electrons",
@@ -220,7 +255,7 @@
       "All three"
      ],
      "ans": "Protons and neutrons",
-     "why": "The nucleus contains protons and neutrons. Electrons are outside, in shells.",
+     "why": "The nucleus is the tiny centre of the atom.\nIt holds the protons and the neutrons.\nThe electrons move outside it, in shells.\nSo the answer is protons and neutrons.",
      "clue": "Which one moves around the outside?",
      "level": 1,
      "ref": "Review Q8",
@@ -230,7 +265,7 @@
      "kind": "match",
      "step": "practise",
      "graded": true,
-     "text": "Match each particle with its relative charge.",
+     "text": "Subatomic particles: match each particle with its relative charge.",
      "pairs": [
       [
        "Proton",
@@ -245,7 +280,7 @@
        "0"
       ]
      ],
-     "why": "From Table 2.2.",
+     "why": "Proton: positive, +1.\nElectron: negative, −1.\nNeutron: neutral, 0. (Neutron sounds like neutral.)",
      "clue": "Neutron sounds like \"neutral\".",
      "level": 1,
      "ref": "Exercise 2.2 Q1",
@@ -255,19 +290,68 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "A proton and an electron have about the same mass.",
+     "text": "Mass of particles, true or false: a proton and an electron have about the same mass.",
      "a": false,
-     "why": "A proton and a NEUTRON have about the same mass. An electron is about 1800–2000 times lighter.",
+     "why": "Proton: 1.673 × 10⁻²⁴ g.\nElectron: 9.109 × 10⁻²⁸ g, about 1800–2000 times lighter.\nIt is the proton and the NEUTRON that have about the same mass.\nSo the statement is false.",
      "clue": "Compare 1.673 × 10⁻²⁴ g with 9.109 × 10⁻²⁸ g.",
      "level": 1,
      "ref": "Review Q4",
      "id": "g8.science.u2.s2-2.9"
     },
     {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "level": 1,
+     "title": "Proton, neutron or electron?",
+     "text": "Subatomic particles: sort each clue to the particle it describes.",
+     "bins": [
+      "Proton",
+      "Neutron",
+      "Electron"
+     ],
+     "items": [
+      [
+       "Relative charge +1",
+       "Proton",
+       "Protons are positive."
+      ],
+      [
+       "No charge",
+       "Neutron",
+       "Neutron sounds like neutral."
+      ],
+      [
+       "Relative charge −1",
+       "Electron",
+       "Electrons are negative."
+      ],
+      [
+       "Found outside the nucleus",
+       "Electron",
+       "Electrons move in shells."
+      ],
+      [
+       "Almost no mass",
+       "Electron",
+       "About 1800–2000 times lighter than a proton."
+      ],
+      [
+       "Its number is the atomic number",
+       "Proton",
+       "Z counts the protons."
+      ]
+     ],
+     "why": "Proton: charge +1, in the nucleus; the atomic number counts protons.\nNeutron: no charge, in the nucleus.\nElectron: charge −1, outside the nucleus, almost no mass.",
+     "clue": "Think of each particle's charge and where it is.",
+     "id": "g8.science.u2.s2-2.37",
+     "added": true
+    },
+    {
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Why is an atom electrically neutral?",
+     "text": "Charge of an atom: why is an atom electrically neutral?",
      "opts": [
       "It has equal numbers of protons and electrons",
       "It has no protons",
@@ -275,7 +359,7 @@
       "Electrons have no charge"
      ],
      "ans": "It has equal numbers of protons and electrons",
-     "why": "Each +1 from a proton is balanced by a −1 from an electron.",
+     "why": "Each proton has a charge of +1.\nEach electron has a charge of −1.\nAn atom has the same number of each.\nSo the charges cancel: total charge 0.\nNeutrons have no charge, so they do not change this.",
      "clue": "How do +1 and −1 combine?",
      "level": 2,
      "ref": "p.29",
@@ -285,7 +369,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Which statement about the nucleus is correct?",
+     "text": "The nucleus: which statement about it is correct?",
      "opts": [
       "It is always positively charged",
       "It contains only neutrons",
@@ -293,7 +377,7 @@
       "It fills most of the atom's volume"
      ],
      "ans": "It is always positively charged",
-     "why": "It holds positive protons and neutral neutrons, so its charge is positive.",
+     "why": "The nucleus holds protons (+1) and neutrons (0).\nThere are no negative particles inside it.\nSo its charge is always positive.\nIt is tiny: the electrons take up most of the volume.",
      "clue": "What charges are inside it?",
      "level": 2,
      "ref": "Review Q11",
@@ -303,7 +387,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "If a nucleus were the size of a football in the middle of Addis Ababa Stadium, where would the electrons be?",
+     "text": "Size of an atom: if a nucleus were the size of a football in the middle of Addis Ababa Stadium, where would the electrons be?",
      "opts": [
       "Far away, around the outer seats",
       "Inside the football",
@@ -311,7 +395,7 @@
       "There are no electrons"
      ],
      "ans": "Far away, around the outer seats",
-     "why": "The nucleus is tiny and most of the atom's volume is taken up by the electrons, far from the centre. An atom is mostly empty space.",
+     "why": "The nucleus is tiny compared with the whole atom.\nThe electrons move far out, in shells around it.\nMost of the atom's volume is taken up by the electrons.\nSo they would be far away, around the outer seats.\nAn atom is mostly empty space.",
      "clue": "Which part takes up most of the volume?",
      "level": 3,
      "added": true,
@@ -345,7 +429,8 @@
      ],
      "after": "6. The bottom number is the atomic number, which counts the protons.",
      "added": true,
-     "id": "g8.science.u2.s2-2.13"
+     "id": "g8.science.u2.s2-2.13",
+     "best": "6"
     },
     {
      "kind": "read",
@@ -394,6 +479,77 @@
      "id": "g8.science.u2.s2-2.15"
     },
     {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Read the label ¹²₆C",
+     "ask": "Tap each part of the label.",
+     "need": 4,
+     "items": [
+      [
+       "12 (top left)",
+       "Mass number A: protons + neutrons = 12."
+      ],
+      [
+       "6 (bottom left)",
+       "Atomic number Z: 6 protons. The neutral atom also has 6 electrons."
+      ],
+      [
+       "C",
+       "The symbol of the element: carbon."
+      ],
+      [
+       "12 − 6",
+       "Neutrons = A − Z = 12 − 6 = 6."
+      ]
+     ],
+     "id": "g8.science.u2.s2-2.38",
+     "added": true
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Build a nucleus",
+     "vars": [
+      {
+       "k": "p",
+       "label": "Protons",
+       "min": 1,
+       "max": 20,
+       "step": 1,
+       "v": 6
+      },
+      {
+       "k": "n",
+       "label": "Neutrons",
+       "min": 0,
+       "max": 22,
+       "step": 1,
+       "v": 6
+      }
+     ],
+     "formula": "p+n",
+     "outs": [
+      [
+       "Atomic number Z = protons",
+       "p",
+       "{v}"
+      ],
+      [
+       "Mass number A = protons + neutrons",
+       "p+n",
+       "{v}"
+      ],
+      [
+       "Electrons in the neutral atom = Z",
+       "p",
+       "{v}"
+      ]
+     ],
+     "note": "6 protons and 6 neutrons give ¹²₆C. Try 7 and 7 for nitrogen, ¹⁴₇N. Adding a neutron changes A, but not Z.",
+     "id": "g8.science.u2.s2-2.39",
+     "added": true
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -427,11 +583,11 @@
      "step": "check",
      "graded": true,
      "num": true,
-     "ask": "²⁴₁₂Mg has ___ neutrons",
+     "ask": "Neutrons from the notation: ²⁴₁₂Mg has ___ neutrons",
      "a": [
       "12"
      ],
-     "why": "Neutrons = A − Z = 24 − 12 = 12.",
+     "why": "Top number: mass number A = 24.\nBottom number: atomic number Z = 12.\nNeutrons = A − Z.\n24 − 12 = 12 neutrons.",
      "clue": "Subtract the bottom number from the top number.",
      "level": 1,
      "ref": "Review Q10",
@@ -441,7 +597,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "The sum of the numbers of protons and neutrons is the",
+     "text": "Key words: the sum of the numbers of protons and neutrons is the",
      "opts": [
       "mass number",
       "atomic number",
@@ -449,7 +605,7 @@
       "symbol"
      ],
      "ans": "mass number",
-     "why": "Mass number A = protons + neutrons.",
+     "why": "Protons and neutrons are both in the nucleus.\nTheir total is the mass number, A.\nThe atomic number, Z, counts only the protons.\nSo the answer is mass number.",
      "clue": "Which number counts everything in the nucleus?",
      "level": 1,
      "ref": "Review Q9",
@@ -460,11 +616,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "A nucleus has 9 protons and 10 neutrons. Its mass number = ___",
+     "ask": "Mass number: a nucleus has 9 protons and 10 neutrons. Its mass number = ___",
      "a": [
       "19"
      ],
-     "why": "A = protons + neutrons = 9 + 10 = 19.",
+     "why": "Mass number = protons + neutrons.\n9 + 10 = 19.\nSo A = 19.",
      "clue": "Add protons and neutrons.",
      "level": 1,
      "ref": "Exercise 2.2 Q2 ii",
@@ -474,7 +630,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "That atom (9 protons) is which element?",
+     "text": "Atomic number: that atom has 9 protons. Which element is it?",
      "opts": [
       "Fluorine",
       "Neon",
@@ -482,7 +638,7 @@
       "Potassium"
      ],
      "ans": "Fluorine",
-     "why": "Atomic number 9 is fluorine in the periodic table.",
+     "why": "The number of protons is the atomic number: Z = 9.\nEach element has its own atomic number.\nIn the periodic table, Z = 9 is fluorine (F).\nOxygen is 8 and neon is 10.",
      "clue": "The atomic number tells the element.",
      "level": 2,
      "ref": "Exercise 2.2 Q2 i",
@@ -493,11 +649,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "¹⁶₈O has ___ electrons",
+     "ask": "Electrons from the notation: ¹⁶₈O has ___ electrons",
      "a": [
       "8"
      ],
-     "why": "Electrons = Z = 8 in a neutral atom.",
+     "why": "Bottom number: Z = 8, so 8 protons.\nA neutral atom has as many electrons as protons.\nSo it has 8 electrons.\nThe top number, 16, is not the electron count.",
      "clue": "In a neutral atom, electrons = protons.",
      "level": 1,
      "ref": "Review Q17",
@@ -507,9 +663,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "Different elements have the same number of protons.",
+     "text": "Atomic number, true or false: different elements have the same number of protons.",
      "a": false,
-     "why": "Each element has its own atomic number: carbon 6, nitrogen 7, oxygen 8.",
+     "why": "The number of protons is the atomic number.\nIt tells you which element an atom is.\nCarbon has 6, nitrogen 7, oxygen 8.\nSo different elements have different numbers. False.",
      "clue": "What makes carbon different from oxygen?",
      "level": 2,
      "ref": "Review Q5",
@@ -520,11 +676,11 @@
      "step": "challenge",
      "graded": true,
      "num": true,
-     "ask": "An atom has 11 electrons and 12 neutrons. Its mass number = ___",
+     "ask": "Mass number: an atom has 11 electrons and 12 neutrons. Its mass number = ___",
      "a": [
       "23"
      ],
-     "why": "Neutral atom: protons = electrons = 11. A = 11 + 12 = 23 (sodium, Na).",
+     "why": "A neutral atom has equal numbers of protons and electrons.\nSo protons = 11.\nMass number = protons + neutrons = 11 + 12 = 23.\nThis atom is sodium (Na), Z = 11.",
      "clue": "First find the protons from the electrons.",
      "level": 3,
      "added": true,
@@ -542,11 +698,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Lithium: Z = 3, A = 7. Neutrons = ___",
+     "ask": "Activity 2.5, neutrons: lithium has Z = 3 and A = 7. Neutrons = ___",
      "a": [
       "4"
      ],
-     "why": "7 − 3 = 4.",
+     "why": "Neutrons = A − Z.\n7 − 3 = 4.\nSo lithium has 4 neutrons.",
      "clue": "A − Z.",
      "level": 1,
      "ref": "Q1",
@@ -557,11 +713,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Neon: Z = 10, A = 20. Neutrons = ___",
+     "ask": "Activity 2.5, neutrons: neon has Z = 10 and A = 20. Neutrons = ___",
      "a": [
       "10"
      ],
-     "why": "20 − 10 = 10.",
+     "why": "Neutrons = A − Z.\n20 − 10 = 10.\nSo neon has 10 neutrons.",
      "clue": "A − Z.",
      "level": 1,
      "ref": "Q1",
@@ -572,11 +728,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Helium: Z = 2. Electrons = ___",
+     "ask": "Activity 2.5, electrons: helium has Z = 2. Electrons = ___",
      "a": [
       "2"
      ],
-     "why": "Electrons = Z = 2.",
+     "why": "Z = 2, so helium has 2 protons.\nA neutral atom has equal protons and electrons.\nSo helium has 2 electrons.",
      "clue": "Neutral atom.",
      "level": 1,
      "ref": "Q1",
@@ -591,7 +747,7 @@
      "kind": "match",
      "step": "exercise",
      "graded": true,
-     "text": "Complete the table: match each particle with its location.",
+     "text": "Exercise 2.2, parts of the atom: match each particle with where it is found.",
      "pairs": [
       [
        "Proton",
@@ -606,7 +762,7 @@
        "Outside the nucleus"
       ]
      ],
-     "why": "Table 2.2.",
+     "why": "Protons are in the nucleus.\nNeutrons are in the nucleus too; they have no charge.\nElectrons are outside the nucleus, in shells.",
      "clue": "Only one particle is outside.",
      "level": 1,
      "ref": "Q1",
@@ -617,11 +773,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "A nucleus has 9 protons and 10 neutrons. Mass number = ___",
+     "ask": "Mass number: a nucleus has 9 protons and 10 neutrons. Mass number = ___",
      "a": [
       "19"
      ],
-     "why": "9 + 10 = 19.",
+     "why": "Mass number = protons + neutrons.\n9 + 10 = 19.\nSo A = 19.",
      "clue": "Add them.",
      "level": 1,
      "ref": "Q2",
@@ -632,11 +788,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "¹⁴₇N has ___ neutrons",
+     "ask": "Neutrons from the notation: ¹⁴₇N has ___ neutrons",
      "a": [
       "7"
      ],
-     "why": "14 − 7 = 7.",
+     "why": "A = 14 (top), Z = 7 (bottom).\nNeutrons = A − Z = 14 − 7 = 7.",
      "clue": "A − Z.",
      "level": 1,
      "ref": "Q3",
@@ -650,7 +806,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "The electron has a relative charge of",
+   "text": "Subatomic particles: the electron has a relative charge of",
    "opts": [
     "−1",
     "+1",
@@ -658,7 +814,7 @@
     "2"
    ],
    "ans": "−1",
-   "why": "Table 2.2.",
+   "why": "Electrons are negative particles.\nTheir relative charge is −1.\nProtons are +1 and neutrons are 0.",
    "clue": "",
    "level": 1,
    "id": "g8.science.u2.s2-2.31"
@@ -667,7 +823,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Atomic number is the number of",
+   "text": "Key words: atomic number is the number of",
    "opts": [
     "protons",
     "neutrons",
@@ -675,7 +831,7 @@
     "shells"
    ],
    "ans": "protons",
-   "why": "p.30.",
+   "why": "The atomic number, Z, counts the protons in the nucleus.\nProtons + neutrons is the mass number, A.\nSo the answer is protons.",
    "clue": "",
    "level": 1,
    "ref": "Review Q2",
@@ -686,11 +842,11 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "²³₁₁Na has ___ neutrons",
+   "ask": "Neutrons from the notation: ²³₁₁Na has ___ neutrons",
    "a": [
     "12"
    ],
-   "why": "23 − 11 = 12.",
+   "why": "A = 23 (top), Z = 11 (bottom).\nNeutrons = A − Z = 23 − 11 = 12.",
    "clue": "",
    "level": 2,
    "id": "g8.science.u2.s2-2.33"
@@ -700,11 +856,11 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "An atom has 17 protons and 18 neutrons. Mass number = ___",
+   "ask": "Mass number: an atom has 17 protons and 18 neutrons. Mass number = ___",
    "a": [
     "35"
    ],
-   "why": "17 + 18 = 35.",
+   "why": "Mass number = protons + neutrons.\n17 + 18 = 35.\nSo A = 35 (this atom is chlorine).",
    "clue": "",
    "level": 2,
    "id": "g8.science.u2.s2-2.34"
@@ -713,7 +869,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "An atom has 20 electrons. Its atomic number is",
+   "text": "Atomic number: an atom has 20 electrons. Its atomic number is",
    "opts": [
     "20",
     "40",
@@ -721,7 +877,7 @@
     "0"
    ],
    "ans": "20",
-   "why": "Neutral atom: protons = electrons.",
+   "why": "A neutral atom has equal protons and electrons.\nSo it has 20 protons.\nThe atomic number counts protons: Z = 20.\n40 would be a mass number, not an atomic number.",
    "clue": "",
    "level": 3,
    "id": "g8.science.u2.s2-2.35"

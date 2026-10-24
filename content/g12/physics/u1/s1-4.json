@@ -52,9 +52,10 @@
       "6 km away",
       "600 km away"
      ],
-     "after": "The wave travels there and back: 3 × 10⁸ × 0.0002 = 60 km in total, so the plane is 30 km away.",
+     "after": "The pulse goes to the plane and back.\nTotal path = 3 × 10⁸ m/s × 0.0002 s = 60 000 m = 60 km.\nHalf of that is the distance: 30 km.\nThe trap is 60 km: it forgets the return trip.",
      "ref": "Discussion question 1.7",
-     "id": "g12.physics.u1.s1-4.1"
+     "id": "g12.physics.u1.s1-4.1",
+     "best": "30 km away"
     },
     {
      "kind": "read",
@@ -63,7 +64,7 @@
      "paras": [
       "RADAR means RAdio Detection And Ranging.",
       "A transmitter sends a signal; the target reflects an echo back to the receiver.",
-      "The signal travels 2R in time t at speed c: 2R = ct, so R = ct/2."
+      "The signal travels 2R in time t at speed c. So 2R = ct and R = ct/2."
      ],
      "ref": "p.17–18, Figure 1.21",
      "id": "g12.physics.u1.s1-4.2"
@@ -85,21 +86,71 @@
       }
      ],
      "formula": "3e8 * t * 1e-6 / 2 / 1000",
-     "out": "Range = {v} km",
      "note": "R = ct/2. The 2 is because the wave goes there and back.",
-     "id": "g12.physics.u1.s1-4.3"
+     "id": "g12.physics.u1.s1-4.3",
+     "outs": [
+      [
+       "Total path ct (there and back)",
+       "3e8 * t * 1e-6 / 1000",
+       "{v} km"
+      ],
+      [
+       "Range R = ct/2",
+       "3e8 * t * 1e-6 / 2 / 1000",
+       "{v} km"
+      ]
+     ]
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Worked example: radar range",
+     "steps": [
+      "Given: echo time t = 0.8 ms = 8 × 10⁻⁴ s, c = 3 × 10⁸ m/s.",
+      "Formula: R = ct/2 (the pulse goes there and back).",
+      "Substitute: R = 3 × 10⁸ × 8 × 10⁻⁴ / 2.",
+      "R = 2.4 × 10⁵ / 2 = 1.2 × 10⁵ m.",
+      "Result: R = 120 km.",
+      "Common trap: forgetting ÷2 gives 240 km."
+     ],
+     "id": "g12.physics.u1.s1-4.19",
+     "added": true
     },
     {
      "kind": "read",
      "step": "read",
      "title": "Missiles and night vision",
      "paras": [
-      "Ballistic missiles are rocket-powered only at the start, then move under gravity in an arc (Newtonian mechanics).",
+      "Ballistic missiles are rocket-powered only at the start. Then gravity curves their path into an arc.",
       "Cruise missiles are jet-powered all the way.",
       "All objects give off infrared; hotter objects give off more. Night-vision devices show hotter objects brighter."
      ],
      "ref": "p.18–19",
      "id": "g12.physics.u1.s1-4.4"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "graded": false,
+     "title": "Physics in defence",
+     "text": "Tap each one.",
+     "need": 3,
+     "items": [
+      [
+       "Ballistic missile",
+       "Rocket only at the start. Then gravity alone curves its path into an arc."
+      ],
+      [
+       "Cruise missile",
+       "Jet-powered all the way. It flies like a small aircraft."
+      ],
+      [
+       "Night vision",
+       "Detects infrared. Warmer objects give off more, so they look brighter."
+      ]
+     ],
+     "id": "g12.physics.u1.s1-4.20",
+     "added": true
     },
     {
      "kind": "name",
@@ -119,7 +170,7 @@
     },
     {
      "kind": "mcq",
-     "text": "Why is the radar range R = ct/2 and not ct?",
+     "text": "Radar range formula: why is the range R = ct/2 and not ct?",
      "opts": [
       "The wave goes to the target and back",
       "Light slows down",
@@ -127,7 +178,7 @@
       "Radio waves travel at c/2"
      ],
      "ans": "The wave goes to the target and back",
-     "why": "ct is the total path, which is 2R.",
+     "why": "The pulse travels to the target.\nThe echo travels the same distance back.\nSo the total path is ct = 2R.\nDivide by 2: R = ct/2.\nTrap: radio waves do not travel at c/2; they travel at c.",
      "clue": "Think of an echo.",
      "graded": true,
      "level": 1,
@@ -137,11 +188,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A radar echo returns after 1.0 ms. The target is ___ km away",
+     "ask": "Radar range: an echo returns after 1.0 ms. The target is ___ km away",
      "a": [
       "150"
      ],
-     "why": "R = (3 × 10⁸ × 1.0 × 10⁻³)/2 = 1.5 × 10⁵ m = 150 km.",
+     "why": "Formula: R = ct/2.\nConvert: t = 1.0 ms = 1.0 × 10⁻³ s.\nSubstitute: R = (3 × 10⁸ m/s × 1.0 × 10⁻³ s)/2 = 1.5 × 10⁵ m.\nChange to km: 1.5 × 10⁵ m = 150 km.\nTrap: forgetting ÷2 gives 300 km.",
      "clue": "Use R = ct/2, then change m to km.",
      "num": true,
      "graded": true,
@@ -152,7 +203,7 @@
     },
     {
      "kind": "mcq",
-     "text": "A missile that is powered only at the start, then follows an arc, is",
+     "text": "Kinds of missile: a missile that is powered only at the start, then follows an arc, is",
      "opts": [
       "a ballistic missile",
       "a cruise missile",
@@ -160,7 +211,7 @@
       "a satellite"
      ],
      "ans": "a ballistic missile",
-     "why": "After the rocket stops, gravity shapes its path.",
+     "why": "A ballistic missile burns its rocket only at launch.\nAfter that only gravity acts on it (Newtonian mechanics).\nSo it follows a curved, projectile-like arc.\nA cruise missile is jet-powered all the way.",
      "clue": "Which one is powered all the way?",
      "graded": true,
      "level": 1,
@@ -170,7 +221,7 @@
     },
     {
      "kind": "mcq",
-     "text": "In infrared night vision, a person at night looks",
+     "text": "Infrared night vision: a person at night looks",
      "opts": [
       "brighter than the cool ground",
       "darker than the ground",
@@ -178,7 +229,7 @@
       "the same as the ground"
      ],
      "ans": "brighter than the cool ground",
-     "why": "The warm body gives off more infrared.",
+     "why": "All objects give off infrared.\nHotter objects give off more infrared.\nA person (about 37 °C) is warmer than the cool ground.\nSo the person looks brighter on the screen.",
      "clue": "Hotter = brighter.",
      "graded": true,
      "level": 1,
@@ -188,9 +239,9 @@
     },
     {
      "kind": "tf",
-     "text": "Radar and night vision both use electromagnetic waves.",
+     "text": "Waves in defence, true or false: radar and night vision both use electromagnetic waves.",
      "a": true,
-     "why": "Radar uses radio/microwaves; night vision uses infrared.",
+     "why": "Radar uses radio waves or microwaves.\nNight vision detects infrared.\nBoth are parts of the electromagnetic spectrum.\nSo the statement is true.",
      "clue": "Discussion question 1.8.",
      "graded": true,
      "level": 1,
@@ -199,11 +250,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A target is 45 km away. The radar echo returns after ___ microseconds",
+     "ask": "Radar echo time: a target is 45 km away. The echo returns after ___ microseconds",
      "a": [
       "300"
      ],
-     "why": "t = 2R/c = 2 × 45 000/(3 × 10⁸) = 3 × 10⁻⁴ s = 300 μs.",
+     "why": "Rearrange R = ct/2: t = 2R/c.\nConvert: R = 45 km = 45 000 m.\nSubstitute: t = 2 × 45 000 / (3 × 10⁸) = 3 × 10⁻⁴ s.\nChange to μs: 3 × 10⁻⁴ s = 300 μs.\nCheck: R = 3 × 10⁸ × 3 × 10⁻⁴ / 2 = 45 000 m ✓",
      "clue": "Rearrange R = ct/2 to t = 2R/c.",
      "num": true,
      "graded": true,
@@ -221,11 +272,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "Echo after 200 μs: range = ___ km",
+     "ask": "Discussion question, radar range: the echo returns after 200 μs. Range = ___ km",
      "a": [
       "30"
      ],
-     "why": "(3 × 10⁸ × 2 × 10⁻⁴)/2.",
+     "why": "Formula: R = ct/2.\nConvert: t = 200 μs = 2 × 10⁻⁴ s.\nSubstitute: R = (3 × 10⁸ × 2 × 10⁻⁴)/2 = 3 × 10⁴ m.\nChange to km: 30 km.",
      "clue": "R = ct/2.",
      "num": true,
      "graded": true,
@@ -236,7 +287,7 @@
     },
     {
      "kind": "pick",
-     "text": "Physics used in radar and night vision",
+     "text": "Discussion question 1.8: which physics is used in radar and night vision? Pick all that apply.",
      "pool": [
       "Electromagnetic waves",
       "Reflection (echo)",
@@ -248,7 +299,7 @@
       "Reflection (echo)",
       "Infrared emission by warm bodies"
      ],
-     "why": "Pascal's principle is about fluids.",
+     "why": "Both use electromagnetic waves.\nRadar works by reflection: the echo.\nNight vision detects infrared given off by warm bodies.\nPascal's principle is about pressure in fluids, so it is not used.",
      "clue": "Discussion question 1.8.",
      "graded": true,
      "level": 2,
@@ -262,11 +313,11 @@
  "test": [
   {
    "kind": "blank",
-   "ask": "Echo after 0.4 ms: range = ___ km",
+   "ask": "Radar range: the echo returns after 0.4 ms. Range = ___ km",
    "a": [
     "60"
    ],
-   "why": "ct/2.",
+   "why": "Formula: R = ct/2.\nConvert: t = 0.4 ms = 4 × 10⁻⁴ s.\nR = (3 × 10⁸ × 4 × 10⁻⁴)/2 = 6 × 10⁴ m.\nResult: 60 km.\nTrap: without ÷2 you get 120 km.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -276,7 +327,7 @@
   },
   {
    "kind": "mcq",
-   "text": "RADAR stands for",
+   "text": "Key word: RADAR stands for",
    "opts": [
     "RAdio Detection And Ranging",
     "Rapid Air Defence And Rescue",
@@ -284,7 +335,7 @@
     "Radio And Data Relay"
    ],
    "ans": "RAdio Detection And Ranging",
-   "why": "p.17.",
+   "why": "RA = RAdio, D = Detection, A = And, R = Ranging.\nIt finds objects (detection) and their distance (ranging) with radio echoes.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -293,7 +344,7 @@
   },
   {
    "kind": "mcq",
-   "text": "A cruise missile is",
+   "text": "Kinds of missile: a cruise missile is",
    "opts": [
     "jet-powered all the way",
     "powered only at launch",
@@ -301,7 +352,7 @@
     "unpowered"
    ],
    "ans": "jet-powered all the way",
-   "why": "p.18.",
+   "why": "A cruise missile has a jet engine that runs all the way.\nA ballistic missile is powered only at launch.\nAnswer: jet-powered all the way.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -310,7 +361,7 @@
   },
   {
    "kind": "mcq",
-   "text": "Night-vision images show",
+   "text": "Infrared night vision: night-vision images show",
    "opts": [
     "temperature differences",
     "true colours",
@@ -318,7 +369,7 @@
     "X-rays"
    ],
    "ans": "temperature differences",
-   "why": "p.19.",
+   "why": "Night-vision devices detect infrared.\nHotter objects give off more infrared.\nSo brightness on the screen shows temperature differences.",
    "clue": "",
    "graded": true,
    "level": 2,
@@ -327,11 +378,11 @@
   },
   {
    "kind": "blank",
-   "ask": "Range 75 km: echo time = ___ μs",
+   "ask": "Radar echo time: range 75 km. Echo time = ___ μs",
    "a": [
     "500"
    ],
-   "why": "2R/c.",
+   "why": "Formula: t = 2R/c.\nConvert: R = 75 km = 7.5 × 10⁴ m.\nt = 2 × 7.5 × 10⁴ / (3 × 10⁸) = 5 × 10⁻⁴ s.\nResult: 500 μs.",
    "clue": "",
    "num": true,
    "graded": true,

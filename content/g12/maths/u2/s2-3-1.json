@@ -52,9 +52,10 @@
       "the slope of the line",
       "50 + 2"
      ],
-     "after": "The rectangle is 2 wide and 50 high: area 100, which is 100 miles.",
+     "after": "On a speed–time graph, speed is the height and time is the width.\nThe region under the line is a rectangle 2 h wide and 50 mi/h high.\nArea = 2 × 50 = 100, and its unit is h × mi/h = miles.\nSo the area is the distance: 100 miles.",
      "ref": "Example 1",
-     "id": "g12.maths.u2.s2-3-1.1"
+     "id": "g12.maths.u2.s2-3-1.1",
+     "best": "the area of the rectangle under the line"
     },
     {
      "kind": "read",
@@ -67,6 +68,70 @@
      ],
      "ref": "p.124–126",
      "id": "g12.maths.u2.s2-3-1.2"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "added": true,
+     "title": "Which shape is under the rate graph?",
+     "ask": "Tap each shape.",
+     "items": [
+      [
+       "Rectangle",
+       "Constant rate. Area = width × height. 50 mi/h for 2 h → 100 miles."
+      ],
+      [
+       "Triangle",
+       "A straight-line rate starting at 0. Area = (1/2) × base × height."
+      ],
+      [
+       "Trapezoid",
+       "A straight-line rate not starting at 0. Area = (1/2) × (sum of parallel sides) × width."
+      ],
+      [
+       "Steps",
+       "A rate that jumps (40, 30, 25 birr). Add one rectangle per step."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-3-1.34"
+    },
+    {
+     "kind": "coord",
+     "step": "explore",
+     "added": true,
+     "title": "v(x) = 3x on a grid",
+     "ask": "Tap the points. The region under the line from x = 3 to x = 5 is a trapezoid.",
+     "min": 0,
+     "max": 6,
+     "ymin": 0,
+     "ymax": 18,
+     "lines": [
+      {
+       "m": 3,
+       "b": 0,
+       "label": "v = 3x",
+       "at": 5.5
+      },
+      {
+       "x": 3
+      },
+      {
+       "x": 5
+      }
+     ],
+     "points": [
+      {
+       "x": 3,
+       "y": 9,
+       "info": "v(3) = 9 mi/h: the left parallel side."
+      },
+      {
+       "x": 5,
+       "y": 15,
+       "info": "v(5) = 15 mi/h: the right parallel side."
+      }
+     ],
+     "id": "g12.maths.u2.s2-3-1.35"
     },
     {
      "kind": "name",
@@ -82,11 +147,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Skateboards cost 40 birr each for the first 50. Total cost of 50 = ___ birr",
+     "ask": "Area under a constant rate: skateboards cost 40 birr each for the first 50. The total cost of 50 is ___ birr",
      "a": [
       "2000"
      ],
-     "why": "Rectangle 50 × 40 = 2000.",
+     "why": "The rate (birr per board) is constant: a horizontal line at 40.\nThe region under it is a rectangle.\nWidth 50 boards, height 40 birr per board.\nArea = 50 × 40 = 2000 birr.",
      "clue": "Width × height.",
      "num": true,
      "graded": true,
@@ -97,12 +162,12 @@
     },
     {
      "kind": "blank",
-     "ask": "v(x) = 3x mi/h. Distance in the first 3 hours = ___ miles",
+     "ask": "Area under a straight-line rate: v(x) = 3x mi/h. The distance in the first 3 hours is ___ miles",
      "a": [
       "13.5",
       "27/2"
      ],
-     "why": "Triangle: (1/2)(3)(9) = 13.5.",
+     "why": "From x = 0 to x = 3 the region is a triangle.\nBase 3 h. Height v(3) = 3 × 3 = 9 mi/h.\nArea = (1/2)(3)(9) = 13.5.\nDistance = 13.5 miles.",
      "clue": "v(3) = 9 is the height.",
      "num": true,
      "graded": true,
@@ -113,11 +178,11 @@
     },
     {
      "kind": "blank",
-     "ask": "v(x) = 3x mi/h. Distance from hour 3 to hour 5 = ___ miles",
+     "ask": "Area as a trapezoid: v(x) = 3x mi/h. The distance from hour 3 to hour 5 is ___ miles",
      "a": [
       "24"
      ],
-     "why": "Trapezoid: (1/2)(9 + 15)(2) = 24.",
+     "why": "The region from x = 3 to x = 5 is a trapezoid.\nParallel sides: v(3) = 9 and v(5) = 15. Width: 5 − 3 = 2.\nArea = (1/2)(9 + 15)(2) = 24.\nDistance = 24 miles.\nCheck: first 5 h (37.5) − first 3 h (13.5) = 24. ✓",
      "clue": "Parallel sides v(3) and v(5).",
      "num": true,
      "graded": true,
@@ -128,11 +193,11 @@
     },
     {
      "kind": "blank",
-     "ask": "P′(x) = 0.15x (thousand $ per month). Profit in the first 12 months = ___ thousand $",
+     "ask": "Total profit from a marginal profit line: P′(x) = 0.15x thousand $ per month. Profit in the first 12 months = ___ thousand $",
      "a": [
       "10.8"
      ],
-     "why": "Triangle (1/2)(12)(1.8) = 10.8.",
+     "why": "The area under the marginal profit graph is the total profit.\nFrom 0 to 12 the region is a triangle.\nHeight P′(12) = 0.15 × 12 = 1.8.\nArea = (1/2)(12)(1.8) = 10.8 thousand $.",
      "clue": "P′(12) = 1.8.",
      "num": true,
      "graded": true,
@@ -143,11 +208,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Cost per skateboard: 40 birr up to 50, 30 birr for 51–125, 25 birr for 126–150. Total for 150 = ___ birr",
+     "ask": "Area made of rectangles: 40 birr each up to 50 boards, 30 birr for 51–125, 25 birr for 126–150. The total for 150 boards is ___ birr",
      "a": [
       "4875"
      ],
-     "why": "40(50) + 30(75) + 25(25) = 2000 + 2250 + 625.",
+     "why": "The rate graph is three steps, so the area is three rectangles.\nBoards 1–50: 50 × 40 = 2000.\nBoards 51–125: 75 × 30 = 2250.\nBoards 126–150: 25 × 25 = 625.\nTotal = 2000 + 2250 + 625 = 4875 birr.",
      "clue": "Three rectangles.",
      "num": true,
      "graded": true,
@@ -158,11 +223,11 @@
     },
     {
      "kind": "blank",
-     "ask": "v(t) = t/2 ft/min. Distance from t = 60 to t = 120 = ___ ft",
+     "ask": "Area as a trapezoid: v(t) = t/2 ft/min. The distance from t = 60 to t = 120 min is ___ ft",
      "a": [
       "2700"
      ],
-     "why": "Trapezoid (1/2)(30 + 60)(60) = 2700.",
+     "why": "Parallel sides: v(60) = 30 and v(120) = 60 ft/min.\nWidth: 120 − 60 = 60 min.\nArea = (1/2)(30 + 60)(60) = 45 × 60.\nDistance = 2700 ft.",
      "clue": "v(60) = 30 and v(120) = 60.",
      "num": true,
      "graded": true,
@@ -201,9 +266,47 @@
       "42",
       "72"
      ],
-     "after": "The triangle has area (1/2)(6)(12) = 36: lower sum < area < upper sum.",
+     "after": "y = 2x is increasing.\nLeft heights are the lowest in each strip: 30 is too small.\nRight heights are the highest: 42 is too big.\nThe triangle has area (1/2)(6)(12) = 36, between 30 and 42.",
      "ref": "Activity 2.17 Q4–7",
-     "id": "g12.maths.u2.s2-3-1.10"
+     "id": "g12.maths.u2.s2-3-1.10",
+     "best": "36"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Lower and upper sums for y = 2x",
+     "ask": "Area under y = 2x on [0, 6]. Change the number of strips n.",
+     "vars": [
+      {
+       "k": "n",
+       "label": "n (strips)",
+       "min": 1,
+       "max": 60,
+       "step": 1,
+       "v": 6
+      }
+     ],
+     "formula": "36 - 36/n",
+     "outs": [
+      [
+       "Left (lower) sum",
+       "36 - 36/n",
+       "{v}"
+      ],
+      [
+       "Right (upper) sum",
+       "36 + 36/n",
+       "{v}"
+      ],
+      [
+       "Exact area",
+       "36",
+       "{v}"
+      ]
+     ],
+     "note": "Both sums squeeze towards 36 as n grows. The gap between them is 72/n.",
+     "id": "g12.maths.u2.s2-3-1.36"
     },
     {
      "kind": "read",
@@ -252,11 +355,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = x² + 1 on [1, 5] with 4 rectangles (left ends 1, 2, 3, 4). The sum = ___",
+     "ask": "Riemann sum with 4 rectangles: f(x) = x² + 1 on [1, 5], left ends 1, 2, 3, 4. The sum = ___",
      "a": [
       "34"
      ],
-     "why": "(2 + 5 + 10 + 17) × 1 = 34.",
+     "why": "Δx = (5 − 1)/4 = 1.\nHeights: f(1) = 2, f(2) = 5, f(3) = 10, f(4) = 17.\nSum = (2 + 5 + 10 + 17) × 1 = 34.\nCheck: 34 < 136/3 ≈ 45.3, as expected for left ends of a rising curve.",
      "clue": "Δx = 1. Add f(1) to f(4).",
      "num": true,
      "graded": true,
@@ -279,11 +382,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∑ᵢ₌₁⁴ 3ⁱ = ___",
+     "ask": "Evaluate the sigma notation: ∑ᵢ₌₁⁴ 3ⁱ = ___",
      "a": [
       "120"
      ],
-     "why": "3 + 9 + 27 + 81 = 120.",
+     "why": "Put i = 1, 2, 3, 4 into 3ⁱ.\n3¹ = 3, 3² = 9, 3³ = 27, 3⁴ = 81.\nSum = 3 + 9 + 27 + 81 = 120.",
      "clue": "i = 1 to 4.",
      "num": true,
      "graded": true,
@@ -294,11 +397,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∑ᵢ₌₁⁶ (i² + i) = ___",
+     "ask": "Evaluate the sigma notation: ∑ᵢ₌₁⁶ (i² + i) = ___",
      "a": [
       "112"
      ],
-     "why": "2 + 6 + 12 + 20 + 30 + 42 = 112.",
+     "why": "Terms i² + i for i = 1 to 6: 2, 6, 12, 20, 30, 42.\nAdd: 2 + 6 + 12 + 20 + 30 + 42 = 112.\nOr: ∑i² = 91 and ∑i = 21, and 91 + 21 = 112.",
      "clue": "Add i² + i for each i.",
      "num": true,
      "graded": true,
@@ -309,11 +412,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = 3x² on [0, 5], 5 equal strips, left endpoints. The Riemann sum = ___",
+     "ask": "Left Riemann sum: f(x) = 3x² on [0, 5] with 5 equal strips. The sum = ___",
      "a": [
       "90"
      ],
-     "why": "Δx = 1; heights 0, 3, 12, 27, 48: total 90.",
+     "why": "Δx = (5 − 0)/5 = 1. Left ends: 0, 1, 2, 3, 4.\nHeights: 3(0) = 0, 3(1) = 3, 3(4) = 12, 3(9) = 27, 3(16) = 48.\nSum = (0 + 3 + 12 + 27 + 48) × 1 = 90.\nTrap: using x = 5 is the right end, not the left.",
      "clue": "Left ends are 0, 1, 2, 3, 4.",
      "num": true,
      "graded": true,
@@ -323,10 +426,48 @@
      "id": "g12.maths.u2.s2-3-1.18"
     },
     {
+     "kind": "sort",
+     "step": "practise",
+     "added": true,
+     "graded": true,
+     "level": 2,
+     "text": "Left-endpoint Riemann sums: is each sum too small, too big, or exact?",
+     "bins": [
+      "too small",
+      "too big",
+      "exact"
+     ],
+     "items": [
+      [
+       "y = 2x on [0, 6]",
+       "too small",
+       "Rising: the left end is the lowest point of each strip."
+      ],
+      [
+       "y = 10 − x on [0, 5]",
+       "too big",
+       "Falling: the left end is the highest point of each strip."
+      ],
+      [
+       "y = 5 on [0, 4]",
+       "exact",
+       "Constant: every rectangle fits the region exactly."
+      ],
+      [
+       "y = x² + 1 on [1, 5]",
+       "too small",
+       "Rising on [1, 5]: 34 < 45.33."
+      ]
+     ],
+     "why": "Rising function: left heights are the lowest, so the left sum is too small.\nFalling function: left heights are the highest, so it is too big.\nConstant function: the rectangles are exact.",
+     "clue": "Is the function rising or falling? Compare the left end with the rest of the strip.",
+     "id": "g12.maths.u2.s2-3-1.37"
+    },
+    {
      "kind": "tf",
-     "text": "For an increasing function, the left-endpoint sum is larger than the true area.",
+     "text": "True or false? For an increasing function, the left-endpoint sum is larger than the true area.",
      "a": false,
-     "why": "Left heights are the lowest in each strip, so the sum is too small.",
+     "why": "For an increasing function, the left end of each strip is the lowest point.\nSo each rectangle lies under the curve.\nThe left sum is smaller than the area (y = 2x: 30 < 36).\nFalse.",
      "clue": "Look at y = 2x: 30 < 36.",
      "graded": true,
      "level": 2,
@@ -335,11 +476,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = 2x on [0, 6] with n equal strips: the left sum is 36 − 36/n. With n = 12 it is ___",
+     "ask": "Riemann sum formula: for f(x) = 2x on [0, 6] with n equal strips, the left sum is 36 − 36/n. With n = 12 it is ___",
      "a": [
       "33"
      ],
-     "why": "36 − 3 = 33.",
+     "why": "Put n = 12 into 36 − 36/n.\n36/12 = 3.\n36 − 3 = 33.\nAs n grows, 36/n → 0 and the sum → 36, the exact area.",
      "clue": "Put n = 12.",
      "num": true,
      "graded": true,
@@ -358,11 +499,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "v(t) = t/2 ft/min. Distance in the first 30 min = ___ ft",
+     "ask": "Distance as a triangle: v(t) = t/2 ft/min. The distance in the first 30 min is ___ ft",
      "a": [
       "225"
      ],
-     "why": "(1/2)(30)(15).",
+     "why": "From 0 to 30 the region is a triangle.\nHeight v(30) = 15 ft/min.\nArea = (1/2)(30)(15) = 225 ft.",
      "clue": "Triangle.",
      "num": true,
      "graded": true,
@@ -373,7 +514,7 @@
     },
     {
      "kind": "pick",
-     "text": "y = 2x on [0, 6], 6 strips: lower and upper sums",
+     "text": "Lower and upper sums: y = 2x on [0, 6] with 6 strips of width 1. Pick the lower and the upper sum.",
      "pool": [
       "30",
       "42",
@@ -384,7 +525,7 @@
       "30",
       "42"
      ],
-     "why": "Left 30, right 42.",
+     "why": "Lower sum (left heights 0, 2, 4, 6, 8, 10): 30.\nUpper sum (right heights 2, 4, 6, 8, 10, 12): 42.\n36 is the exact area, not a sum.",
      "clue": "Left vs right heights.",
      "graded": true,
      "level": 2,
@@ -398,7 +539,7 @@
      "a": [
       "36"
      ],
-     "why": "(1/2)(6)(12).",
+     "why": "The region is a triangle.\nBase 6, height 2(6) = 12.\nArea = (1/2)(6)(12) = 36.\nIt lies between the sums 30 and 42. ✓",
      "clue": "Triangle.",
      "num": true,
      "graded": true,
@@ -414,11 +555,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "v(x) = 3x, 3 ≤ x ≤ 5: distance = ___ miles",
+     "ask": "Distance as a trapezoid: v(x) = 3x mi/h for 3 ≤ x ≤ 5. Distance = ___ miles",
      "a": [
       "24"
      ],
-     "why": "Trapezoid.",
+     "why": "Parallel sides v(3) = 9 and v(5) = 15, width 2.\nArea = (1/2)(9 + 15)(2) = 24 miles.",
      "clue": "v(3) = 9, v(5) = 15.",
      "num": true,
      "graded": true,
@@ -429,11 +570,11 @@
     },
     {
      "kind": "blank",
-     "ask": "P′(x) = 0.15x, 0 ≤ x ≤ 12: profit = ___ thousand dollars",
+     "ask": "Total profit as a triangle: P′(x) = 0.15x for 0 ≤ x ≤ 12. Profit = ___ thousand dollars",
      "a": [
       "10.8"
      ],
-     "why": "Triangle.",
+     "why": "Height P′(12) = 1.8, base 12.\nArea = (1/2)(12)(1.8) = 10.8 thousand dollars.",
      "clue": "Height 1.8.",
      "num": true,
      "graded": true,
@@ -449,11 +590,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "x² + 1 on [1, 5], 4 strips: ___",
+     "ask": "Riemann sum with 4 strips: f(x) = x² + 1 on [1, 5], left ends. Sum = ___",
      "a": [
       "34"
      ],
-     "why": "2 + 5 + 10 + 17.",
+     "why": "Δx = 1. Heights f(1), f(2), f(3), f(4) = 2, 5, 10, 17.\nSum = 34 × 1 = 34.",
      "clue": "Δx = 1.",
      "num": true,
      "graded": true,
@@ -464,11 +605,11 @@
     },
     {
      "kind": "blank",
-     "ask": "x² + 1 on [1, 5], 8 strips: ___",
+     "ask": "Riemann sum with 8 strips: f(x) = x² + 1 on [1, 5], left ends. Sum = ___",
      "a": [
       "39.5"
      ],
-     "why": "79 × 0.5.",
+     "why": "Δx = 4/8 = 0.5. Left ends 1, 1.5, …, 4.5.\nHeights: 2, 3.25, 5, 7.25, 10, 13.25, 17, 21.25. Total 79.\nSum = 79 × 0.5 = 39.5.\nTrap: forgetting × 0.5 gives 79.",
      "clue": "Δx = 0.5.",
      "num": true,
      "graded": true,
@@ -479,11 +620,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∑ᵢ₌₁⁶ (i² + i) = ___",
+     "ask": "Evaluate the sigma notation: ∑ᵢ₌₁⁶ (i² + i) = ___",
      "a": [
       "112"
      ],
-     "why": "2 + 6 + … + 42.",
+     "why": "Terms: 2, 6, 12, 20, 30, 42.\nSum = 112.",
      "clue": "Each term i² + i.",
      "num": true,
      "graded": true,
@@ -498,11 +639,11 @@
  "test": [
   {
    "kind": "blank",
-   "ask": "A rate of 12 L/min for 5 minutes gives ___ L",
+   "ask": "Total from a constant rate: 12 L/min for 5 minutes gives ___ L",
    "a": [
     "60"
    ],
-   "why": "12 × 5.",
+   "why": "Area of a rectangle: width 5 min, height 12 L/min.\n12 × 5 = 60.\nUnits: min × L/min = L. Answer 60 L.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -512,11 +653,11 @@
   },
   {
    "kind": "blank",
-   "ask": "v(t) = 4t m/s. Distance for 0 ≤ t ≤ 3 = ___ m",
+   "ask": "Distance as a triangle: v(t) = 4t m/s. The distance for 0 ≤ t ≤ 3 is ___ m",
    "a": [
     "18"
    ],
-   "why": "(1/2)(3)(12).",
+   "why": "Height v(3) = 12, base 3.\nArea = (1/2)(3)(12) = 18 m.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -526,11 +667,11 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = x on [0, 4], 4 strips, left endpoints: the sum = ___",
+   "ask": "Left Riemann sum: f(x) = x on [0, 4], 4 strips. The sum = ___",
    "a": [
     "6"
    ],
-   "why": "0 + 1 + 2 + 3.",
+   "why": "Δx = 1. Left ends 0, 1, 2, 3.\nSum = (0 + 1 + 2 + 3) × 1 = 6.\n(The exact area is 8: a left sum of a rising line is too small.)",
    "clue": "",
    "num": true,
    "graded": true,
@@ -540,11 +681,11 @@
   },
   {
    "kind": "blank",
-   "ask": "Δx for [2, 10] with 4 equal strips = ___",
+   "ask": "Strip width for a Riemann sum: Δx for [2, 10] with 4 equal strips = ___",
    "a": [
     "2"
    ],
-   "why": "8/4.",
+   "why": "Δx = (b − a)/n.\n(10 − 2)/4 = 8/4 = 2.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -554,11 +695,11 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = x² on [0, 3], 3 strips, left endpoints: the sum = ___",
+   "ask": "Left Riemann sum: f(x) = x² on [0, 3], 3 strips. The sum = ___",
    "a": [
     "5"
    ],
-   "why": "0 + 1 + 4.",
+   "why": "Δx = 1. Left ends 0, 1, 2.\nHeights 0, 1, 4.\nSum = (0 + 1 + 4) × 1 = 5.\nTrap: 1 + 4 + 9 = 14 uses right ends.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -592,7 +733,7 @@
     },
     {
      "kind": "mcq",
-     "text": "∑ᵢ₌₁⁴ i² = ?",
+     "text": "Evaluate the sigma notation: ∑ᵢ₌₁⁴ i² = ?",
      "opts": [
       "30",
       "16",
@@ -600,7 +741,7 @@
       "20"
      ],
      "ans": "30",
-     "why": "1 + 4 + 9 + 16.",
+     "why": "Put i = 1, 2, 3, 4 into i².\n1, 4, 9, 16.\nSum = 1 + 4 + 9 + 16 = 30.\nTrap: 16 is only the last term.",
      "clue": "Square, then add.",
      "graded": true,
      "level": 1,

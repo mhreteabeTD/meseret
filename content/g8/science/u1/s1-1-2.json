@@ -71,7 +71,8 @@
      ],
      "after": "The unit. 32 what? 32 kg is very different from 32 g. A measurement needs a number AND a unit.",
      "added": true,
-     "id": "g8.science.u1.s1-1-2.1"
+     "id": "g8.science.u1.s1-1-2.1",
+     "best": "The unit, like kg"
     },
     {
      "kind": "read",
@@ -122,7 +123,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "In \"the road is 5 km long\", what is the unit?",
+     "text": "Number and unit: in \"the road is 5 km long\", what is the unit?",
      "opts": [
       "km",
       "5",
@@ -130,7 +131,7 @@
       "long"
      ],
      "ans": "km",
-     "why": "The number is 5 and the unit is km (kilometre).",
+     "why": "A measurement has a number and a unit.\nThe number tells how many: 5.\nThe unit tells what we counted: km (kilometre).\nSo the unit is km.\n\"Road\" and \"long\" are just words in the sentence.",
      "clue": "The unit tells you what you counted.",
      "level": 1,
      "added": true,
@@ -140,7 +141,7 @@
      "kind": "pick",
      "step": "practise",
      "graded": true,
-     "text": "Which of these are physical quantities?",
+     "text": "Physical quantities: which of these can be measured with an instrument?",
      "pool": [
       "Length",
       "Mass",
@@ -155,7 +156,7 @@
       "Temperature",
       "Time"
      ],
-     "why": "Length, mass, temperature and time can be measured with instruments. Kindness and beauty cannot.",
+     "why": "A physical quantity can be measured.\nLength: a ruler. Mass: a balance.\nTemperature: a thermometer. Time: a clock.\nKindness and beauty have no instrument and no unit.\nSo they are not physical quantities.",
      "clue": "Can you measure it with an instrument?",
      "level": 1,
      "id": "g8.science.u1.s1-1-2.6"
@@ -164,19 +165,67 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "Every measurement has two parts: a number and a unit.",
+     "text": "Parts of a measurement, true or false: every measurement has two parts, a number and a unit.",
      "a": true,
-     "why": "The book says a measurement consists of the magnitude (number) and the unit.",
+     "why": "Look at 32 kg.\nThe number (magnitude) is 32.\nThe unit is kg.\nWithout both parts the measurement is not complete.\nSo it is true.",
      "clue": "Think of \"32 kg\".",
      "level": 1,
      "ref": "p.8",
      "id": "g8.science.u1.s1-1-2.7"
     },
     {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "level": 1,
+     "title": "Number or unit?",
+     "text": "Parts of a measurement: sort each part into number or unit.",
+     "bins": [
+      "Number",
+      "Unit"
+     ],
+     "items": [
+      [
+       "32",
+       "Number",
+       "It tells how many."
+      ],
+      [
+       "kg",
+       "Unit",
+       "Kilogram, a unit of mass."
+      ],
+      [
+       "5",
+       "Number",
+       "It tells how many."
+      ],
+      [
+       "km",
+       "Unit",
+       "Kilometre, a unit of length."
+      ],
+      [
+       "s",
+       "Unit",
+       "Second, a unit of time."
+      ],
+      [
+       "1.6",
+       "Number",
+       "It tells how many."
+      ]
+     ],
+     "why": "The number tells how many.\n32, 5 and 1.6 are numbers.\nThe unit tells what was counted.\nkg (kilogram), km (kilometre) and s (second) are units.\nA full measurement needs both, like 32 kg.",
+     "clue": "Does it say how many, or what was counted?",
+     "id": "g8.science.u1.s1-1-2.26",
+     "added": true
+    },
+    {
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Dawit writes his height as \"150\". Mekdes writes hers as \"1.6\". Who is taller?",
+     "text": "Why units matter: Dawit writes his height as \"150\". Mekdes writes hers as \"1.6\". Who is taller?",
      "opts": [
       "You cannot tell without the units",
       "Dawit",
@@ -184,7 +233,7 @@
       "They are the same"
      ],
      "ans": "You cannot tell without the units",
-     "why": "If Dawit means 150 cm (1.5 m) and Mekdes means 1.6 m, Mekdes is taller. Without units, the numbers cannot be compared.",
+     "why": "The numbers have no units.\nIf Dawit means 150 cm, he is 1.5 m tall.\nIf Mekdes means 1.6 m, she is taller.\nBut the numbers could mean other units.\nWithout units we cannot compare. So you cannot tell.",
      "clue": "What could \"150\" and \"1.6\" mean?",
      "level": 3,
      "added": true,
@@ -247,37 +296,50 @@
      "paras": [
       "Fundamental (base) quantities cannot be expressed in terms of any other quantity.",
       "There are seven: length, mass, time, temperature, electric current, luminous intensity and amount of substance.",
-      "Their units are fundamental units."
-     ],
-     "table": [
-      [
-       "Quantity",
-       "SI unit",
-       "Symbol"
-      ],
-      [
-       "Length",
-       "metre",
-       "m"
-      ],
-      [
-       "Mass",
-       "kilogram",
-       "kg"
-      ],
-      [
-       "Time",
-       "second",
-       "s"
-      ],
-      [
-       "Temperature",
-       "kelvin",
-       "K"
-      ]
+      "Their units are fundamental units. Tap each one below to see its SI unit."
      ],
      "ref": "Table 1.1",
      "id": "g8.science.u1.s1-1-2.10"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Table 1.1: the seven fundamental quantities",
+     "ask": "Tap each quantity to see its SI unit and symbol.",
+     "need": 4,
+     "items": [
+      [
+       "Length",
+       "SI unit: metre. Symbol: m."
+      ],
+      [
+       "Mass",
+       "SI unit: kilogram. Symbol: kg."
+      ],
+      [
+       "Time",
+       "SI unit: second. Symbol: s."
+      ],
+      [
+       "Temperature",
+       "SI unit: kelvin. Symbol: K."
+      ],
+      [
+       "Electric current",
+       "SI unit: ampere. Symbol: A."
+      ],
+      [
+       "Luminous intensity",
+       "How bright a light is. SI unit: candela. Symbol: cd."
+      ],
+      [
+       "Amount of substance",
+       "SI unit: mole. Symbol: mol."
+      ]
+     ],
+     "ref": "Table 1.1",
+     "id": "g8.science.u1.s1-1-2.27",
+     "added": true
     },
     {
      "kind": "read",
@@ -313,6 +375,53 @@
      "id": "g8.science.u1.s1-1-2.11"
     },
     {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Build derived units from metres",
+     "vars": [
+      {
+       "k": "l",
+       "label": "Length (m)",
+       "min": 1,
+       "max": 10,
+       "step": 1,
+       "v": 4
+      },
+      {
+       "k": "w",
+       "label": "Width (m)",
+       "min": 1,
+       "max": 10,
+       "step": 1,
+       "v": 3
+      },
+      {
+       "k": "h",
+       "label": "Height (m)",
+       "min": 1,
+       "max": 10,
+       "step": 1,
+       "v": 2
+      }
+     ],
+     "formula": "l*w",
+     "outs": [
+      [
+       "Area = length × width",
+       "l*w",
+       "{v} m²"
+      ],
+      [
+       "Volume = length × width × height",
+       "l*w*h",
+       "{v} m³"
+      ]
+     ],
+     "note": "Length, width and height are fundamental: they are in metres. Area and volume are derived: m × m = m² and m × m × m = m³.",
+     "id": "g8.science.u1.s1-1-2.28",
+     "added": true
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -346,7 +455,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Which is a fundamental quantity?",
+     "text": "Fundamental quantities: which one is fundamental?",
      "opts": [
       "Temperature",
       "Area",
@@ -354,7 +463,7 @@
       "Force"
      ],
      "ans": "Temperature",
-     "why": "Temperature is one of the seven fundamental quantities. Area, volume and force are derived.",
+     "why": "There are seven fundamental quantities, like length, mass, time and temperature.\nTemperature is on that list.\nArea = length × width, so area is derived.\nVolume and force are also built from others.\nSo the answer is temperature.",
      "clue": "Which one is not built from others?",
      "level": 1,
      "ref": "Review I Q1",
@@ -364,7 +473,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "The SI unit of density is",
+     "text": "Derived units: the SI unit of density is",
      "opts": [
       "kg/m³",
       "kg/m²",
@@ -372,7 +481,7 @@
       "g/m³"
      ],
      "ans": "kg/m³",
-     "why": "Density = mass ÷ volume = kg ÷ m³ = kg/m³.",
+     "why": "Density = mass ÷ volume.\nThe unit of mass is kg.\nThe unit of volume is m³.\nDivide the units: kg ÷ m³ = kg/m³.\nkg/m² would be mass per area, not per volume.",
      "clue": "Density is mass divided by volume.",
      "level": 1,
      "ref": "Review I Q4",
@@ -382,7 +491,7 @@
      "kind": "match",
      "step": "practise",
      "graded": true,
-     "text": "Match each quantity with its SI unit.",
+     "text": "SI units: match each quantity with its SI unit.",
      "pairs": [
       [
        "Area",
@@ -405,7 +514,7 @@
        "kg"
       ]
      ],
-     "why": "From Tables 1.1 and 1.2.",
+     "why": "Mass is fundamental: kilogram, kg.\nTemperature is fundamental: kelvin, K.\nArea = m × m = m².\nVolume = m × m × m = m³.\nDensity = kg ÷ m³ = kg/m³.",
      "clue": "Area is square metres; volume is cubic metres.",
      "level": 1,
      "ref": "Review III",
@@ -415,14 +524,14 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "Volume = length × width × height, so its unit is m × m × m = ___",
+     "ask": "Unit of volume: volume = length × width × height, so its unit is m × m × m = ___",
      "a": [
       "m³",
       "m3",
       "cubic metre",
       "cubic meter"
      ],
-     "why": "Each is a length in metres: m × m × m = m³.",
+     "why": "Length, width and height are all lengths.\nEach is measured in metres, m.\nm × m × m = m³ (cubic metre).\nSo the unit of volume is m³.",
      "clue": "Three metres multiplied.",
      "level": 2,
      "ref": "Exercise 1.4 a",
@@ -432,7 +541,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Pressure is force ÷ area. Is pressure fundamental or derived?",
+     "text": "Fundamental or derived? Pressure is force ÷ area. Which kind of quantity is pressure?",
      "opts": [
       "Derived, because it is made from other quantities",
       "Fundamental, because it is common",
@@ -440,7 +549,7 @@
       "Neither"
      ],
      "ans": "Derived, because it is made from other quantities",
-     "why": "Force and area are both derived from base quantities, so pressure is derived too.",
+     "why": "Pressure is made by dividing force by area.\nArea is built from length.\nForce is built from mass, length and time.\nAnything built from other quantities is derived.\nSo pressure is derived. Having a unit does not make it fundamental.",
      "clue": "Is it built from other quantities?",
      "level": 3,
      "added": true,
@@ -457,12 +566,12 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "Density = mass ÷ volume. Its unit = kg ÷ m³ = ___",
+     "ask": "Unit of density: density = mass ÷ volume. Its unit = kg ÷ m³ = ___",
      "a": [
       "kg/m³",
       "kg/m3"
      ],
-     "why": "Mass in kg, volume in m³, so kg/m³.",
+     "why": "Density = mass ÷ volume.\nThe unit of mass is kg.\nThe unit of volume is m³.\nDivide the units: kg ÷ m³ = kg/m³.",
      "clue": "Divide the mass unit by the volume unit.",
      "level": 1,
      "ref": "b",
@@ -472,7 +581,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Force = mass × acceleration. Its unit is",
+     "text": "Unit of force: force = mass × acceleration. Its unit is",
      "opts": [
       "kg·m/s² (newton)",
       "kg/m³",
@@ -480,7 +589,7 @@
       "m²"
      ],
      "ans": "kg·m/s² (newton)",
-     "why": "Acceleration is m/s², so force = kg × m/s² = kg·m/s², called the newton (N).",
+     "why": "The unit of mass is kg.\nAcceleration is change of speed per second: (m/s) ÷ s = m/s².\nMultiply: kg × m/s² = kg·m/s².\nThis unit is called the newton (N).\nm/s is the unit of speed; kg/m³ is density.",
      "clue": "Acceleration has unit m/s².",
      "level": 2,
      "ref": "c",
@@ -494,7 +603,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which is a derived quantity?",
+   "text": "Derived quantities: which one is derived?",
    "opts": [
     "Area",
     "Mass",
@@ -502,7 +611,7 @@
     "Length"
    ],
    "ans": "Area",
-   "why": "Area = length × width.",
+   "why": "A derived quantity is built from others.\nArea = length × width.\nSo area is derived.\nMass, time and length are fundamental.",
    "clue": "",
    "level": 1,
    "ref": "Review I Q3",
@@ -512,7 +621,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "The SI unit of time is",
+   "text": "SI units: the SI unit of time is",
    "opts": [
     "second",
     "minute",
@@ -520,7 +629,7 @@
     "day"
    ],
    "ans": "second",
-   "why": "Table 1.1.",
+   "why": "Time is a fundamental quantity.\nIts SI unit is the second, symbol s.\nMinutes, hours and days are bigger units made of seconds.\nSo the answer is second.",
    "clue": "",
    "level": 1,
    "id": "g8.science.u1.s1-1-2.22"
@@ -529,7 +638,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Derived units are",
+   "text": "Derived units: derived units are",
    "opts": [
     "made by combining fundamental units",
     "bigger than fundamental units",
@@ -537,7 +646,7 @@
     "the same as fundamental units"
    ],
    "ans": "made by combining fundamental units",
-   "why": "p.8.",
+   "why": "Derived quantities are built from fundamental quantities.\nSo their units are built from fundamental units.\nExamples: m × m = m², m ÷ s = m/s.\nSo derived units are made by combining fundamental units.",
    "clue": "",
    "level": 1,
    "ref": "Review I Q2",
@@ -547,14 +656,14 @@
    "kind": "blank",
    "step": "test",
    "graded": true,
-   "ask": "The SI unit of volume is ___",
+   "ask": "SI units: the SI unit of volume is ___",
    "a": [
     "m³",
     "m3",
     "cubic metre",
     "cubic meter"
    ],
-   "why": "Table 1.2.",
+   "why": "Volume = length × width × height.\nEach length is in metres.\nm × m × m = m³.\nSo the SI unit of volume is m³ (cubic metre).",
    "clue": "",
    "level": 2,
    "ref": "Review II Q5",
@@ -564,7 +673,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Speed = distance ÷ time. Its unit is",
+   "text": "Unit of speed: speed = distance ÷ time. Its unit is",
    "opts": [
     "m/s",
     "m²",
@@ -572,7 +681,7 @@
     "s/m"
    ],
    "ans": "m/s",
-   "why": "Metres divided by seconds.",
+   "why": "Distance is in metres, m.\nTime is in seconds, s.\nDivide: m ÷ s = m/s.\ns/m is upside down, so it is wrong.",
    "clue": "",
    "level": 2,
    "id": "g8.science.u1.s1-1-2.25"
@@ -586,6 +695,10 @@
   {
    "kind": "review",
    "text": "Exercise 1.4 c (force) needs F = m × a, which this unit never teaches. Kept as a ★★ exercise item."
+  },
+  {
+   "kind": "note",
+   "text": "Table 1.1 in the lesson lists only length, mass, time and temperature with units; the tap cards add the standard SI units of electric current (ampere), luminous intensity (candela) and amount of substance (mole)."
   }
  ],
  "review": {

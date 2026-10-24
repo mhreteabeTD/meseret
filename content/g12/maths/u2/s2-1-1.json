@@ -58,9 +58,10 @@
       "16 cm",
       "20 cm"
      ],
-     "after": "P = 4s. From 16 cm to 20 cm: the perimeter grows by 4 cm for each 1 cm of side.",
+     "after": "P = 4s, so the perimeter is 4 times the side.\nSide 4 cm: P = 16 cm. Side 5 cm: P = 20 cm.\nThe perimeter grows by 4 cm for each 1 cm of side.",
      "ref": "Activity 2.1 Q1 a",
-     "id": "g12.maths.u2.s2-1-1.1"
+     "id": "g12.maths.u2.s2-1-1.1",
+     "best": "4 cm"
     },
     {
      "kind": "read",
@@ -73,6 +74,46 @@
      ],
      "ref": "Definition 2.1",
      "id": "g12.maths.u2.s2-1-1.2"
+    },
+    {
+     "kind": "coord",
+     "step": "explore",
+     "title": "Rise over run",
+     "min": 0,
+     "max": 6,
+     "ymin": 0,
+     "ymax": 10,
+     "points": [
+      {
+       "x": 4,
+       "y": 6,
+       "name": "A",
+       "info": "Start here. x = 4, y = 6."
+      },
+      {
+       "x": 5,
+       "y": 9,
+       "name": "B",
+       "info": "From A: run 1 right (Δx = 1), rise 3 up (Δy = 3). Rate = 3/1 = 3."
+      }
+     ],
+     "lines": [
+      {
+       "pts": [
+        [
+         4,
+         6
+        ],
+        [
+         5,
+         9
+        ]
+       ]
+      }
+     ],
+     "ask": "Tap A, then B. How far right? How far up?",
+     "added": true,
+     "id": "g12.maths.u2.s2-1-1.49"
     },
     {
      "kind": "read",
@@ -112,6 +153,32 @@
      "id": "g12.maths.u2.s2-1-1.3"
     },
     {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Four kinds of rate",
+     "ask": "Tap each kind to see its graph and an example.",
+     "items": [
+      [
+       "Positive",
+       "The line rises left to right. (1, 2) to (3, 4): Δy/Δx = 2/2 = 1."
+      ],
+      [
+       "Negative",
+       "The line falls left to right. (2, 3) to (3, 1): Δy/Δx = −2/1 = −2."
+      ],
+      [
+       "Zero",
+       "The line is horizontal. (0, 2) to (2, 2): Δy/Δx = 0/2 = 0."
+      ],
+      [
+       "Undefined",
+       "The line is vertical. (2, 0) to (2, 2): Δy/Δx = 2/0, no value."
+      ]
+     ],
+     "added": true,
+     "id": "g12.maths.u2.s2-1-1.50"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -125,7 +192,7 @@
     },
     {
      "kind": "mcq",
-     "text": "Rate of change between (4, 6) and (5, 9):",
+     "text": "Find the rate of change between (4, 6) and (5, 9):",
      "opts": [
       "3",
       "1/3",
@@ -133,7 +200,7 @@
       "15"
      ],
      "ans": "3",
-     "why": "(9 − 6)/(5 − 4) = 3/1 = 3.",
+     "why": "Rate of change = Δy/Δx.\nΔy = 9 − 6 = 3.\nΔx = 5 − 4 = 1.\nRate = 3/1 = 3.\nTrap: 1/3 puts Δx on top.",
      "clue": "Change in y on top, change in x below.",
      "graded": true,
      "level": 1,
@@ -178,7 +245,7 @@
        "0/(−2) = 0"
       ]
      ],
-     "why": "0 on top gives 0; 0 below is undefined.",
+     "why": "Work out Δy and Δx for each pair first.\nΔy = 0 (Δx not 0): the rate is 0, a horizontal line.\nΔx = 0: you cannot divide by 0, so it is undefined (vertical line).\nOtherwise the sign of Δy/Δx gives positive or negative.\nExample: (1, 2), (3, −4) gives −6/2 = −3, negative.",
      "clue": "Work out the top and the bottom first.",
      "ref": "Exercise 2.1",
      "graded": true,
@@ -187,11 +254,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Rate of change between (−2, 4) and (3, −6) = ___",
+     "ask": "Find the rate of change between (−2, 4) and (3, −6): ___",
      "a": [
       "-2"
      ],
-     "why": "(−6 − 4)/(3 − (−2)) = −10/5 = −2.",
+     "why": "Δy = −6 − 4 = −10.\nΔx = 3 − (−2) = 3 + 2 = 5.\nRate = −10/5 = −2.\nTrap: 3 − 2 = 1 forgets the double negative.",
      "clue": "3 − (−2) = 5.",
      "num": true,
      "graded": true,
@@ -202,9 +269,9 @@
     },
     {
      "kind": "tf",
-     "text": "A line through (2, 0) and (2, 2) has rate of change 0.",
+     "text": "True or false: the line through (2, 0) and (2, 2) has rate of change 0.",
      "a": false,
-     "why": "(2 − 0)/(2 − 2) = 2/0: undefined. The line is vertical.",
+     "why": "Δy = 2 − 0 = 2.\nΔx = 2 − 2 = 0.\n2/0 has no value, so the rate is undefined.\nBoth x-values are 2: the line is vertical.\nRate 0 belongs to a horizontal line (Δy = 0). So: false.",
      "clue": "What is the change in x?",
      "graded": true,
      "level": 1,
@@ -213,11 +280,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A taxi fare is 30 birr for 2 km and 54 birr for 6 km (a straight-line rule). The rate of change is ___ birr per km",
+     "ask": "Rate of change in a word problem: a taxi fare is 30 birr for 2 km and 54 birr for 6 km (a straight-line rule). The rate of change is ___ birr per km",
      "a": [
       "6"
      ],
-     "why": "(54 − 30)/(6 − 2) = 24/4 = 6 birr per km.",
+     "why": "Input: distance. Output: fare.\nΔ fare = 54 − 30 = 24 birr.\nΔ distance = 6 − 2 = 4 km.\nRate = 24 ÷ 4 = 6 birr per km.\nCheck: 30 + 4 × 6 = 54. ✓",
      "clue": "Change in fare ÷ change in distance.",
      "num": true,
      "graded": true,
@@ -253,9 +320,10 @@
       "21.5 m/s",
       "10.75 m/s"
      ],
-     "after": "(43 − 10)/(4 − 2) = 33/2 = 16.5 m/s.",
+     "after": "Average speed = change in distance ÷ change in time.\n(43 − 10)/(4 − 2) = 33/2 = 16.5 m/s.\n33 m/s forgets to divide by the 2 seconds.",
      "ref": "Example 2",
-     "id": "g12.maths.u2.s2-1-1.10"
+     "id": "g12.maths.u2.s2-1-1.10",
+     "best": "16.5 m/s"
     },
     {
      "kind": "read",
@@ -288,6 +356,85 @@
      "id": "g12.maths.u2.s2-1-1.11"
     },
     {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Average rate of f(x) = x²",
+     "vars": [
+      {
+       "k": "a",
+       "label": "Start a",
+       "min": 0,
+       "max": 5,
+       "step": 1,
+       "v": 1
+      },
+      {
+       "k": "w",
+       "label": "Width b − a",
+       "min": 0.5,
+       "max": 4,
+       "step": 0.5,
+       "v": 2
+      }
+     ],
+     "formula": "((a + w) ** 2 - a * a) / w",
+     "outs": [
+      [
+       "f(a) = a²",
+       "a * a",
+       "{v}"
+      ],
+      [
+       "f(b) = b²",
+       "(a + w) ** 2",
+       "{v}"
+      ],
+      [
+       "Average rate (f(b) − f(a))/(b − a)",
+       "((a + w) ** 2 - a * a) / w",
+       "{v}"
+      ]
+     ],
+     "note": "For x² the average rate on [a, b] is a + b. It changes with the interval.",
+     "added": true,
+     "id": "g12.maths.u2.s2-1-1.52"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Average velocity of the car",
+     "ask": "Tap an interval of the car table. Each gives a different average.",
+     "items": [
+      [
+       "0 ≤ t ≤ 1",
+       "(2 − 0)/(1 − 0) = 2 m/s."
+      ],
+      [
+       "1 ≤ t ≤ 2",
+       "(10 − 2)/1 = 8 m/s."
+      ],
+      [
+       "2 ≤ t ≤ 3",
+       "(25 − 10)/1 = 15 m/s."
+      ],
+      [
+       "3 ≤ t ≤ 4",
+       "(43 − 25)/1 = 18 m/s."
+      ],
+      [
+       "4 ≤ t ≤ 5",
+       "(78 − 43)/1 = 35 m/s."
+      ],
+      [
+       "0 ≤ t ≤ 5",
+       "(78 − 0)/5 = 15.6 m/s over the whole trip."
+      ]
+     ],
+     "need": 3,
+     "added": true,
+     "id": "g12.maths.u2.s2-1-1.51"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -301,11 +448,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = 2x − 9. Average rate of change from x = 3 to x = 6 = ___",
+     "ask": "Find the average rate of change of f(x) = 2x − 9 from x = 3 to x = 6: ___",
      "a": [
       "2"
      ],
-     "why": "f(6) = 3, f(3) = −3. (3 − (−3))/3 = 6/3 = 2.",
+     "why": "f(6) = 2(6) − 9 = 3.\nf(3) = 2(3) − 9 = −3.\nAverage rate = (3 − (−3))/(6 − 3) = 6/3 = 2.\nCheck: f is a line with slope 2, so every interval gives 2.",
      "clue": "Work out f(6) and f(3).",
      "num": true,
      "graded": true,
@@ -328,11 +475,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Car table: average velocity for 2 ≤ t ≤ 3 = ___ m/s",
+     "ask": "Use the car table (S in metres, t in seconds). Average velocity for 2 ≤ t ≤ 3 = ___ m/s",
      "a": [
       "15"
      ],
-     "why": "(25 − 10)/(3 − 2) = 15 m/s.",
+     "why": "Read the table: S(2) = 10 m and S(3) = 25 m.\nΔS = 25 − 10 = 15 m.\nΔt = 3 − 2 = 1 s.\nAverage velocity = 15/1 = 15 m/s.",
      "clue": "Read S at t = 2 and t = 3.",
      "num": true,
      "graded": true,
@@ -343,7 +490,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = x² + 3x + 1 on [0, k]. The average rate of change is",
+     "text": "Find the average rate of change of f(x) = x² + 3x + 1 on [0, k] (k ≠ 0):",
      "opts": [
       "k + 3",
       "k² + 3k",
@@ -351,7 +498,7 @@
       "k + 4"
      ],
      "ans": "k + 3",
-     "why": "(k² + 3k + 1 − 1)/k = k(k + 3)/k = k + 3.",
+     "why": "f(k) = k² + 3k + 1 and f(0) = 1.\nf(k) − f(0) = k² + 3k.\nDivide by k − 0 = k: (k² + 3k)/k = k + 3.\nTrap: k² + 3k forgets to divide by k.\nTrap: 2k + 3 is the rate at one point, not the average.",
      "clue": "f(0) = 1.",
      "graded": true,
      "level": 3,
@@ -361,11 +508,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Petrol cost 2.84 Birr in 2007 and 2.41 Birr in 2009. Average rate of change = ___ Birr per year",
+     "ask": "Average rate of change of a price: petrol cost 2.84 Birr in 2007 and 2.41 Birr in 2009. Rate = ___ Birr per year",
      "a": [
       "-0.215"
      ],
-     "why": "(2.41 − 2.84)/2 = −0.43 ÷ 2 = −0.215.",
+     "why": "Δ cost = 2.41 − 2.84 = −0.43 Birr.\nΔ time = 2009 − 2007 = 2 years.\nRate = −0.43 ÷ 2 = −0.215 Birr per year.\nThe minus sign means the price fell.",
      "clue": "It is negative: the price fell.",
      "num": true,
      "graded": true,
@@ -376,11 +523,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A candle is 10 cm long. After 30 minutes it is 7 cm. Burning at a steady rate, it burns out after ___ minutes",
+     "ask": "Use a steady rate: a candle is 10 cm long. After 30 minutes it is 7 cm. It burns out after ___ minutes",
      "a": [
       "100"
      ],
-     "why": "Rate −3/30 = −0.1 cm/min. 10 − 0.1t = 0 gives t = 100.",
+     "why": "Rate = (7 − 10)/30 = −3/30 = −0.1 cm per minute.\nLength after t minutes: L = 10 − 0.1t.\nBurnt out when L = 0: 0.1t = 10.\nt = 10 ÷ 0.1 = 100 minutes.\nCheck: after 30 min, 10 − 3 = 7 cm. ✓",
      "clue": "Find the rate first.",
      "num": true,
      "graded": true,
@@ -417,9 +564,10 @@
       "1",
       "0"
      ],
-     "after": "As the interval shrinks, the average rate gets closer and closer to 3. That is the rate at the instant x = 1.",
+     "after": "The averages 3.31, then 3.003001, get closer and closer to 3.\nThat value, 3, is the rate at the instant x = 1.\n3.3 is only one average, over a wide interval.",
      "ref": "Activity 2.2",
-     "id": "g12.maths.u2.s2-1-1.19"
+     "id": "g12.maths.u2.s2-1-1.19",
+     "best": "3"
     },
     {
      "kind": "slider",
@@ -441,6 +589,37 @@
      "out": "Average rate = {v}",
      "note": "At h = 0.1 it is 3.31. Near h = 0 it is 3.",
      "id": "g12.maths.u2.s2-1-1.20"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Shrink h from both sides",
+     "ask": "Tap each h. Watch ((1 + h)³ − 1)/h for y = x³ at x = 1.",
+     "items": [
+      [
+       "h = 0.1",
+       "(1.331 − 1)/0.1 = 3.31"
+      ],
+      [
+       "h = 0.01",
+       "(1.030301 − 1)/0.01 = 3.0301"
+      ],
+      [
+       "h = 0.001",
+       "3.003001"
+      ],
+      [
+       "h = −0.01",
+       "(0.970299 − 1)/(−0.01) = 2.9701"
+      ],
+      [
+       "h = −0.001",
+       "2.997001"
+      ]
+     ],
+     "need": 3,
+     "added": true,
+     "id": "g12.maths.u2.s2-1-1.53"
     },
     {
      "kind": "read",
@@ -481,11 +660,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = 6x² − 3. Instantaneous rate of change at x = 1 = ___",
+     "ask": "Find the instantaneous rate of change of f(x) = 6x² − 3 at x = 1: ___",
      "a": [
       "12"
      ],
-     "why": "(6(1 + h)² − 3 − 3)/h = (12h + 6h²)/h = 12 + 6h → 12.",
+     "why": "f(1 + h) = 6(1 + 2h + h²) − 3 = 3 + 12h + 6h².\nf(1) = 6 − 3 = 3.\nf(1 + h) − f(1) = 12h + 6h².\nDivide by h: 12 + 6h.\nAs h → 0, 12 + 6h → 12.",
      "clue": "Expand (1 + h)², cancel, divide by h.",
      "num": true,
      "graded": true,
@@ -496,7 +675,7 @@
     },
     {
      "kind": "mcq",
-     "text": "For f(x) = √x, the instantaneous rate at x₀ is",
+     "text": "Find the instantaneous rate of change of f(x) = √x at x = x₀ (x₀ > 0):",
      "opts": [
       "1/(2√x₀)",
       "2√x₀",
@@ -504,7 +683,7 @@
       "1/√x₀"
      ],
      "ans": "1/(2√x₀)",
-     "why": "Multiply by the conjugate: h/(h(√(x₀ + h) + √x₀)) → 1/(2√x₀).",
+     "why": "Start with (√(x₀ + h) − √x₀)/h.\nMultiply top and bottom by √(x₀ + h) + √x₀.\nThe top becomes (x₀ + h) − x₀ = h.\nCancel h: 1/(√(x₀ + h) + √x₀).\nAs h → 0: 1/(√x₀ + √x₀) = 1/(2√x₀).",
      "clue": "Rationalise the numerator.",
      "graded": true,
      "level": 2,
@@ -514,11 +693,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Biomass f(t) = 81t³ + 90 mg. Growth rate at t = 3 min = ___ mg/min",
+     "ask": "Instantaneous rate of growth: biomass f(t) = 81t³ + 90 mg. Growth rate at t = 3 min = ___ mg/min",
      "a": [
       "2187"
      ],
-     "why": "81[(3 + h)³ − 27]/h = 81(27 + 9h + h²) → 81 × 27 = 2187.",
+     "why": "f(3 + h) − f(3) = 81[(3 + h)³ − 27]. The 90s cancel.\n(3 + h)³ − 27 = 27h + 9h² + h³.\nDivide by h: 81(27 + 9h + h²).\nAs h → 0: 81 × 27 = 2187 mg/min.",
      "clue": "(3 + h)³ = 27 + 27h + 9h² + h³.",
      "num": true,
      "graded": true,
@@ -529,9 +708,9 @@
     },
     {
      "kind": "tf",
-     "text": "To find the instantaneous rate, you put h = 0 first.",
+     "text": "True or false: to find the instantaneous rate, you put h = 0 first.",
      "a": false,
-     "why": "h = 0 gives 0/0. Cancel h first, then let h go to 0.",
+     "why": "Put h = 0 first and you get (f(x₀) − f(x₀))/0 = 0/0.\n0/0 has no value.\nRight order: expand, cancel h, then let h → 0.\nSo the statement is false.",
      "clue": "What is (f(x₀) − f(x₀))/0?",
      "graded": true,
      "level": 1,
@@ -541,11 +720,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = x² − 4x. The instantaneous rate of change at x = 5 = ___",
+     "ask": "Find the instantaneous rate of change of f(x) = x² − 4x at x = 5: ___",
      "a": [
       "6"
      ],
-     "why": "((5 + h)² − 4(5 + h) − 5)/h = (6h + h²)/h = 6 + h → 6.",
+     "why": "f(5) = 25 − 20 = 5.\nf(5 + h) = 25 + 10h + h² − 20 − 4h = 5 + 6h + h².\nf(5 + h) − f(5) = 6h + h².\nDivide by h: 6 + h.\nAs h → 0, 6 + h → 6.",
      "clue": "f(5) = 5. Expand f(5 + h).",
      "num": true,
      "graded": true,
@@ -563,11 +742,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "(4, 6) and (5, 9): ___",
+     "ask": "Find the rate of change between (4, 6) and (5, 9): ___",
      "a": [
       "3"
      ],
-     "why": "3/1.",
+     "why": "Δy = 9 − 6 = 3.\nΔx = 5 − 4 = 1.\nRate = 3/1 = 3.",
      "clue": "Δy/Δx.",
      "num": true,
      "graded": true,
@@ -578,11 +757,11 @@
     },
     {
      "kind": "blank",
-     "ask": "(4, 7) and (5, 6): ___",
+     "ask": "Find the rate of change between (4, 7) and (5, 6): ___",
      "a": [
       "-1"
      ],
-     "why": "−1/1.",
+     "why": "Δy = 6 − 7 = −1.\nΔx = 5 − 4 = 1.\nRate = −1/1 = −1 (the line goes down).",
      "clue": "Δy/Δx.",
      "num": true,
      "graded": true,
@@ -593,11 +772,11 @@
     },
     {
      "kind": "blank",
-     "ask": "(1, 2) and (3, −4): ___",
+     "ask": "Find the rate of change between (1, 2) and (3, −4): ___",
      "a": [
       "-3"
      ],
-     "why": "−6/2.",
+     "why": "Δy = −4 − 2 = −6.\nΔx = 3 − 1 = 2.\nRate = −6/2 = −3.",
      "clue": "Δy/Δx.",
      "num": true,
      "graded": true,
@@ -608,11 +787,11 @@
     },
     {
      "kind": "blank",
-     "ask": "(−2, 4) and (3, −6): ___",
+     "ask": "Find the rate of change between (−2, 4) and (3, −6): ___",
      "a": [
       "-2"
      ],
-     "why": "−10/5.",
+     "why": "Δy = −6 − 4 = −10.\nΔx = 3 − (−2) = 5.\nRate = −10/5 = −2.",
      "clue": "3 − (−2) = 5.",
      "num": true,
      "graded": true,
@@ -623,7 +802,7 @@
     },
     {
      "kind": "mcq",
-     "text": "(8, 0) and (8, 8):",
+     "text": "Find the rate of change between (8, 0) and (8, 8):",
      "opts": [
       "undefined",
       "0",
@@ -631,7 +810,7 @@
       "8"
      ],
      "ans": "undefined",
-     "why": "8/0.",
+     "why": "Δy = 8 − 0 = 8.\nΔx = 8 − 8 = 0.\n8/0 has no value: undefined.\nThe line x = 8 is vertical.\n0 would be the rate of a horizontal line.",
      "clue": "Δx = 0.",
      "graded": true,
      "level": 1,
@@ -641,11 +820,11 @@
     },
     {
      "kind": "blank",
-     "ask": "(3, −1) and (1, −1): ___",
+     "ask": "Find the rate of change between (3, −1) and (1, −1): ___",
      "a": [
       "0"
      ],
-     "why": "0/(−2).",
+     "why": "Δy = −1 − (−1) = 0.\nΔx = 1 − 3 = −2.\nRate = 0/(−2) = 0.\nBoth y-values are −1: the line is horizontal.",
      "clue": "Δy = 0.",
      "num": true,
      "graded": true,
@@ -661,11 +840,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "f(x) = 3x − 2 on 0 ≤ x ≤ 2: ___",
+     "ask": "Average rate of change of f(x) = 3x − 2 on 0 ≤ x ≤ 2: ___",
      "a": [
       "3"
      ],
-     "why": "6/2.",
+     "why": "f(2) = 6 − 2 = 4.\nf(0) = −2.\n(4 − (−2))/(2 − 0) = 6/2 = 3.",
      "clue": "f(2) − f(0).",
      "num": true,
      "graded": true,
@@ -676,11 +855,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = x³ − 3x on 1 ≤ x ≤ 6: ___",
+     "ask": "Average rate of change of f(x) = x³ − 3x on 1 ≤ x ≤ 6: ___",
      "a": [
       "40"
      ],
-     "why": "200/5.",
+     "why": "f(6) = 216 − 18 = 198.\nf(1) = 1 − 3 = −2.\n(198 − (−2))/(6 − 1) = 200/5 = 40.",
      "clue": "f(6) = 198.",
      "num": true,
      "graded": true,
@@ -691,11 +870,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = 3x − 2 on [1, 5]: ___",
+     "ask": "Average rate of change of f(x) = 3x − 2 on [1, 5]: ___",
      "a": [
       "3"
      ],
-     "why": "12/4.",
+     "why": "f(5) = 15 − 2 = 13.\nf(1) = 3 − 2 = 1.\n(13 − 1)/(5 − 1) = 12/4 = 3.\nA line has the same rate on every interval: its slope 3.",
      "clue": "A line has one slope.",
      "num": true,
      "graded": true,
@@ -706,7 +885,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = x² + 3x + 1 on [0, k]:",
+     "text": "Average rate of change of f(x) = x² + 3x + 1 on [0, k]:",
      "opts": [
       "k + 3",
       "k² + 3k",
@@ -714,7 +893,7 @@
       "3"
      ],
      "ans": "k + 3",
-     "why": "(k² + 3k)/k.",
+     "why": "f(k) = k² + 3k + 1 and f(0) = 1.\nf(k) − f(0) = k² + 3k.\nDivide by k: (k² + 3k)/k = k + 3.\nTrap: 3 is the slope of 3x only; it ignores x².",
      "clue": "f(0) = 1.",
      "graded": true,
      "level": 3,
@@ -724,11 +903,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Petrol 2007 → 2009: ___ Birr per year",
+     "ask": "Average rate of change of the petrol price from 2007 (2.84 Birr) to 2009 (2.41 Birr): ___ Birr per year",
      "a": [
       "-0.215"
      ],
-     "why": "−0.43 ÷ 2.",
+     "why": "Δ cost = 2.41 − 2.84 = −0.43 Birr.\nΔ time = 2 years.\nRate = −0.43 ÷ 2 = −0.215 Birr per year.",
      "clue": "c(2009) − c(2007).",
      "num": true,
      "graded": true,
@@ -739,11 +918,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Candle 10 cm → 7 cm in 30 min. Rate = ___ cm/min",
+     "ask": "Rate of change of a candle's length: 10 cm → 7 cm in 30 min. Rate = ___ cm/min",
      "a": [
       "-0.1"
      ],
-     "why": "−3/30.",
+     "why": "Δ length = 7 − 10 = −3 cm.\nΔ time = 30 min.\nRate = −3/30 = −0.1 cm/min.\nNegative: the candle gets shorter.",
      "clue": "Negative: it gets shorter.",
      "num": true,
      "graded": true,
@@ -759,11 +938,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "f(x) = 6x² − 3 at x = 1: ___",
+     "ask": "Instantaneous rate of change of f(x) = 6x² − 3 at x = 1: ___",
      "a": [
       "12"
      ],
-     "why": "12 + 6h → 12.",
+     "why": "f(1 + h) − f(1) = 6(1 + 2h + h²) − 3 − 3 = 12h + 6h².\nDivide by h: 12 + 6h.\nAs h → 0: 12.",
      "clue": "Expand (1 + h)².",
      "num": true,
      "graded": true,
@@ -774,7 +953,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = 2√x at x = x₀:",
+     "text": "Instantaneous rate of change of f(x) = 2√x at x = x₀:",
      "opts": [
       "1/√x₀",
       "1/(2√x₀)",
@@ -782,7 +961,7 @@
       "√x₀"
      ],
      "ans": "1/√x₀",
-     "why": "2 × 1/(2√x₀).",
+     "why": "(2√(x₀ + h) − 2√x₀)/h = 2 × (√(x₀ + h) − √x₀)/h.\nFor √x the rate is 1/(2√x₀).\nTwice that: 2 × 1/(2√x₀) = 1/√x₀.\nTrap: 1/(2√x₀) forgets the factor 2.",
      "clue": "Twice the √x result.",
      "graded": true,
      "level": 2,
@@ -792,11 +971,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(t) = 81t³ + 90 at t = 3: ___ mg/min",
+     "ask": "Instantaneous growth rate of biomass f(t) = 81t³ + 90 at t = 3: ___ mg/min",
      "a": [
       "2187"
      ],
-     "why": "81 × 27.",
+     "why": "f(3 + h) − f(3) = 81(27h + 9h² + h³).\nDivide by h: 81(27 + 9h + h²).\nAs h → 0: 81 × 27 = 2187.",
      "clue": "Expand (3 + h)³.",
      "num": true,
      "graded": true,
@@ -811,11 +990,11 @@
  "test": [
   {
    "kind": "blank",
-   "ask": "Rate of change between (1, 5) and (4, 11) = ___",
+   "ask": "Find the rate of change between (1, 5) and (4, 11): ___",
    "a": [
     "2"
    ],
-   "why": "6/3.",
+   "why": "Δy = 11 − 5 = 6.\nΔx = 4 − 1 = 3.\nRate = 6/3 = 2.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -825,7 +1004,7 @@
   },
   {
    "kind": "mcq",
-   "text": "A horizontal line has rate of change",
+   "text": "What is the rate of change of a horizontal line?",
    "opts": [
     "0",
     "undefined",
@@ -833,7 +1012,7 @@
     "negative"
    ],
    "ans": "0",
-   "why": "Δy = 0.",
+   "why": "On a horizontal line every y-value is the same.\nSo Δy = 0 and Δy/Δx = 0/Δx = 0.\nUndefined is the rate of a vertical line (Δx = 0).",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -842,11 +1021,11 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = x² on [1, 4]: average rate = ___",
+   "ask": "Average rate of change of f(x) = x² on [1, 4]: ___",
    "a": [
     "5"
    ],
-   "why": "(16 − 1)/3.",
+   "why": "f(4) = 16 and f(1) = 1.\n(16 − 1)/(4 − 1) = 15/3 = 5.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -856,11 +1035,11 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = 3x² + 1. Instantaneous rate at x = 2 = ___",
+   "ask": "Instantaneous rate of change of f(x) = 3x² + 1 at x = 2: ___",
    "a": [
     "12"
    ],
-   "why": "(12h + 3h²)/h → 12.",
+   "why": "f(2 + h) = 3(4 + 4h + h²) + 1 = 13 + 12h + 3h².\nf(2) = 13.\nDifference: 12h + 3h². Divide by h: 12 + 3h.\nAs h → 0: 12.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -870,11 +1049,11 @@
   },
   {
    "kind": "blank",
-   "ask": "S(t) = t³ (metres). Average velocity on [1, 3] = ___ m/s",
+   "ask": "Average velocity: S(t) = t³ metres. Average velocity on [1, 3] = ___ m/s",
    "a": [
     "13"
    ],
-   "why": "(27 − 1)/2.",
+   "why": "S(3) = 27 m and S(1) = 1 m.\nΔS = 26 m, Δt = 2 s.\nAverage velocity = 26/2 = 13 m/s.",
    "clue": "",
    "num": true,
    "graded": true,

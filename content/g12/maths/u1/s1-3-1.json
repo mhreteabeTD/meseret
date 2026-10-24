@@ -46,8 +46,9 @@
       "35",
       "5"
      ],
-     "after": "5 × 3 = 15. The sum of n copies of c is nc.",
-     "id": "g12.maths.u1.s1-3-1.1"
+     "after": "There are 5 copies of 3.\n3 + 3 + 3 + 3 + 3 = 5 × 3 = 15.\nThe sum of n copies of c is nc. (8 is 5 + 3: it adds the count to the number.)",
+     "id": "g12.maths.u1.s1-3-1.1",
+     "best": "15"
     },
     {
      "kind": "read",
@@ -82,6 +83,36 @@
      "id": "g12.maths.u1.s1-3-1.2"
     },
     {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Each property with numbers",
+     "ask": "Tap each property to see it work on k = 1, 2, 3.",
+     "items": [
+      [
+       "∑ 1 = n",
+       "∑ₖ₌₁³ 1 = 1 + 1 + 1 = 3. Three terms, so the sum is 3."
+      ],
+      [
+       "(1) ∑ c·aₖ = c ∑ aₖ",
+       "∑ₖ₌₁³ 5k = 5 + 10 + 15 = 30 = 5(1 + 2 + 3)."
+      ],
+      [
+       "(2) ∑ (aₖ + bₖ)",
+       "∑ₖ₌₁³ (k + k²) = (1 + 2 + 3) + (1 + 4 + 9) = 6 + 14 = 20."
+      ],
+      [
+       "(3) ∑ (aₖ − bₖ)",
+       "∑ₖ₌₁³ (k² − 1) = 14 − 3 = 11."
+      ],
+      [
+       "(4) Split",
+       "∑ₖ₌₁³ k = ∑ₖ₌₁¹ k + ∑ₖ₌₂³ k = 1 + 5 = 6."
+      ]
+     ],
+     "added": true,
+     "id": "g12.maths.u1.s1-3-1.21"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key word",
@@ -95,7 +126,7 @@
     },
     {
      "kind": "mcq",
-     "text": "∑ₖ₌₁⁵ (3k − 2) = 3 ∑ k − ∑ 2 = ?",
+     "text": "Use the sigma properties: ∑ₖ₌₁⁵ (3k − 2) = 3 ∑ k − ∑ 2 = ?",
      "opts": [
       "35",
       "43",
@@ -103,7 +134,7 @@
       "13"
      ],
      "ans": "35",
-     "why": "3(15) − 2(5) = 45 − 10 = 35.",
+     "why": "Step 1: split with properties (1) and (3): 3 ∑ₖ₌₁⁵ k − ∑ₖ₌₁⁵ 2.\nStep 2: ∑ₖ₌₁⁵ k = 1 + 2 + 3 + 4 + 5 = 15, so 3 × 15 = 45.\nStep 3: ∑ₖ₌₁⁵ 2 = 5 × 2 = 10 (five copies of 2).\nStep 4: 45 − 10 = 35.\nCheck by listing: 1 + 4 + 7 + 10 + 13 = 35 ✓. (43 subtracts 2 only once.)",
      "clue": "∑ 2 over five terms is 2 × 5, not 2.",
      "graded": true,
      "level": 1,
@@ -125,11 +156,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∑ₖ₌₁⁴ 5k = ___",
+     "ask": "Use the constant-multiple property: ∑ₖ₌₁⁴ 5k = ___",
      "a": [
       "50"
      ],
-     "why": "5(1 + 2 + 3 + 4) = 5 × 10 = 50.",
+     "why": "Step 1: take the 5 out: 5 ∑ₖ₌₁⁴ k.\nStep 2: ∑ₖ₌₁⁴ k = 1 + 2 + 3 + 4 = 10.\nStep 3: 5 × 10 = 50.\nCheck: 5 + 10 + 15 + 20 = 50 ✓.",
      "clue": "Take the 5 out first.",
      "num": true,
      "graded": true,
@@ -140,11 +171,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∑ₖ₌₂⁵ 3 = ___",
+     "ask": "Sum of a constant: ∑ₖ₌₂⁵ 3 = ___",
      "a": [
       "12"
      ],
-     "why": "k = 2, 3, 4, 5 is 4 terms. 4 × 3 = 12.",
+     "why": "Step 1: every term is 3; k does not appear.\nStep 2: count the terms: k = 2, 3, 4, 5 → 5 − 2 + 1 = 4 terms.\nStep 3: 4 × 3 = 12.\nSo the sum is 12. (Trap: 5 × 3 = 15 starts counting at k = 1.)",
      "clue": "Count the terms: 5 − 2 + 1.",
      "num": true,
      "graded": true,
@@ -155,11 +186,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∑ₖ₌₃⁶ (k² − 4) = ___",
+     "ask": "Use the difference property: ∑ₖ₌₃⁶ (k² − 4) = ___",
      "a": [
       "70"
      ],
-     "why": "(9 + 16 + 25 + 36) − 4 × 4 = 86 − 16 = 70.",
+     "why": "Step 1: split: ∑ₖ₌₃⁶ k² − ∑ₖ₌₃⁶ 4.\nStep 2: 9 + 16 + 25 + 36 = 86.\nStep 3: there are 4 terms, so ∑ 4 = 4 × 4 = 16.\nStep 4: 86 − 16 = 70.\nCheck: 5 + 12 + 21 + 32 = 70 ✓.",
      "clue": "There are 4 terms, so subtract 4 four times.",
      "num": true,
      "graded": true,
@@ -170,9 +201,9 @@
     },
     {
      "kind": "tf",
-     "text": "(∑ₖ₌₁³ k)² = ∑ₖ₌₁³ k²",
+     "text": "A common trap: true or false? (∑ₖ₌₁³ k)² = ∑ₖ₌₁³ k²",
      "a": false,
-     "why": "(1 + 2 + 3)² = 36 but 1 + 4 + 9 = 14.",
+     "why": "Step 1: left side: (1 + 2 + 3)² = 6² = 36.\nStep 2: right side: 1² + 2² + 3² = 1 + 4 + 9 = 14.\nStep 3: 36 ≠ 14.\nSo it is false: the square of a sum is not the sum of the squares.",
      "clue": "Work out both sides.",
      "graded": true,
      "level": 2,
@@ -181,12 +212,51 @@
      "id": "g12.maths.u1.s1-3-1.9"
     },
     {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "level": 1,
+     "title": "Which property is used?",
+     "text": "Sort each step by the property it uses.",
+     "bins": [
+      "Constant multiple",
+      "Sum or difference",
+      "Split"
+     ],
+     "items": [
+      [
+       "∑ 7k = 7 ∑ k",
+       "Constant multiple",
+       "The 7 comes out."
+      ],
+      [
+       "∑ (k + 2ᵏ) = ∑ k + ∑ 2ᵏ",
+       "Sum or difference",
+       "One sum becomes two."
+      ],
+      [
+       "∑ₖ₌₁¹⁰ aₖ = ∑ₖ₌₁⁴ aₖ + ∑ₖ₌₅¹⁰ aₖ",
+       "Split",
+       "Cut at k = 4."
+      ],
+      [
+       "∑ (k² − 3) = ∑ k² − ∑ 3",
+       "Sum or difference",
+       "A difference splits."
+      ]
+     ],
+     "why": "∑ 7k = 7 ∑ k: a constant factor comes out (property 1).\n∑ (k + 2ᵏ) and ∑ (k² − 3): a sum or difference splits into two sums (properties 2 and 3).\nCutting k = 1 to 10 at 4 and 5 is the split (property 4).",
+     "clue": "Ask: does a number come out, does a + or − split, or are the limits cut?",
+     "added": true,
+     "id": "g12.maths.u1.s1-3-1.22"
+    },
+    {
      "kind": "blank",
-     "ask": "If ∑ₖ₌₁¹⁰ aₖ = 40 and ∑ₖ₌₁¹⁰ bₖ = 15, then ∑ₖ₌₁¹⁰ (2aₖ − 3bₖ + 1) = ___",
+     "ask": "Combine the properties: if ∑ₖ₌₁¹⁰ aₖ = 40 and ∑ₖ₌₁¹⁰ bₖ = 15, then ∑ₖ₌₁¹⁰ (2aₖ − 3bₖ + 1) = ___",
      "a": [
       "45"
      ],
-     "why": "2(40) − 3(15) + 10 × 1 = 80 − 45 + 10 = 45.",
+     "why": "Step 1: split: 2 ∑ aₖ − 3 ∑ bₖ + ∑ 1.\nStep 2: 2 × 40 = 80 and 3 × 15 = 45.\nStep 3: ∑ₖ₌₁¹⁰ 1 = 10 (ten copies of 1).\nStep 4: 80 − 45 + 10 = 45.\n(Trap: adding 1 only once gives 36.)",
      "clue": "The +1 is added 10 times.",
      "num": true,
      "graded": true,
@@ -204,11 +274,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "∑ₖ₌₁⁴ 5k = ___",
+     "ask": "Use the constant-multiple property: ∑ₖ₌₁⁴ 5k = ___",
      "a": [
       "50"
      ],
-     "why": "5 × 10.",
+     "why": "Step 1: 5 ∑ₖ₌₁⁴ k.\nStep 2: 1 + 2 + 3 + 4 = 10.\nStep 3: 5 × 10 = 50.",
      "clue": "Constant out.",
      "num": true,
      "graded": true,
@@ -219,11 +289,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∑ₖ₌₁⁵ (4k − 1) = ___",
+     "ask": "Use the sigma properties: ∑ₖ₌₁⁵ (4k − 1) = ___",
      "a": [
       "55"
      ],
-     "why": "3 + 7 + 11 + 15 + 19.",
+     "why": "Step 1: 4 ∑ₖ₌₁⁵ k − ∑ₖ₌₁⁵ 1.\nStep 2: 4 × 15 = 60 and ∑ 1 = 5.\nStep 3: 60 − 5 = 55.\nCheck: 3 + 7 + 11 + 15 + 19 = 55 ✓.",
      "clue": "List the terms.",
      "num": true,
      "graded": true,
@@ -234,11 +304,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∑ₖ₌₃⁶ (k² − 4) = ___",
+     "ask": "Use the difference property: ∑ₖ₌₃⁶ (k² − 4) = ___",
      "a": [
       "70"
      ],
-     "why": "5 + 12 + 21 + 32.",
+     "why": "Step 1: k = 3 to 6: 4 terms.\nStep 2: the terms are 9 − 4 = 5, 16 − 4 = 12, 25 − 4 = 21, 36 − 4 = 32.\nStep 3: 5 + 12 + 21 + 32 = 70.",
      "clue": "k = 3 to 6.",
      "num": true,
      "graded": true,
@@ -249,11 +319,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∑ₖ₌₂⁵ 3 = ___",
+     "ask": "Sum of a constant: ∑ₖ₌₂⁵ 3 = ___",
      "a": [
       "12"
      ],
-     "why": "4 × 3.",
+     "why": "Step 1: k = 2 to 5 is 5 − 2 + 1 = 4 terms.\nStep 2: each term is 3.\nStep 3: 4 × 3 = 12.",
      "clue": "4 terms.",
      "num": true,
      "graded": true,
@@ -264,11 +334,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∑ₖ₌₁⁸ (k³ + 2k² − 3k + 5) = ___",
+     "ask": "Split into four sums: ∑ₖ₌₁⁸ (k³ + 2k² − 3k + 5) = ___",
      "a": [
       "1636"
      ],
-     "why": "1296 + 2(204) − 3(36) + 40 = 1636.",
+     "why": "Step 1: ∑ k³ + 2 ∑ k² − 3 ∑ k + ∑ 5, each for k = 1 to 8.\nStep 2: ∑ k = 36, ∑ k² = 204, ∑ k³ = 36² = 1296.\nStep 3: 2 × 204 = 408, 3 × 36 = 108, 8 × 5 = 40.\nStep 4: 1296 + 408 − 108 + 40 = 1636.",
      "clue": "Split into four sums.",
      "num": true,
      "graded": true,
@@ -283,11 +353,11 @@
  "test": [
   {
    "kind": "blank",
-   "ask": "∑ₖ₌₁³ 4k = ___",
+   "ask": "Use the constant-multiple property: ∑ₖ₌₁³ 4k = ___",
    "a": [
     "24"
    ],
-   "why": "4(1 + 2 + 3) = 24.",
+   "why": "Take the 4 out: 4 ∑ₖ₌₁³ k.\n1 + 2 + 3 = 6.\n4 × 6 = 24.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -297,11 +367,11 @@
   },
   {
    "kind": "blank",
-   "ask": "∑ₖ₌₁⁵ (4k − 1) = ___",
+   "ask": "Use the sigma properties: ∑ₖ₌₁⁵ (4k − 1) = ___",
    "a": [
     "55"
    ],
-   "why": "4(15) − 5 = 55.",
+   "why": "4 ∑ k − ∑ 1 for k = 1 to 5.\n4 × 15 = 60, and ∑ 1 = 5.\n60 − 5 = 55.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -311,11 +381,11 @@
   },
   {
    "kind": "blank",
-   "ask": "∑ₖ₌₄⁹ 2 = ___",
+   "ask": "Sum of a constant: ∑ₖ₌₄⁹ 2 = ___",
    "a": [
     "12"
    ],
-   "why": "6 terms × 2.",
+   "why": "Count the terms: 9 − 4 + 1 = 6.\nEach term is 2.\n6 × 2 = 12.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -325,7 +395,7 @@
   },
   {
    "kind": "mcq",
-   "text": "∑ₖ₌₁²⁰ aₖ − ∑ₖ₌₁¹² aₖ equals",
+   "text": "Use the split property (4): ∑ₖ₌₁²⁰ aₖ − ∑ₖ₌₁¹² aₖ equals",
    "opts": [
     "∑ₖ₌₁₃²⁰ aₖ",
     "∑ₖ₌₁₂²⁰ aₖ",
@@ -333,7 +403,7 @@
     "∑ₖ₌₈²⁰ aₖ"
    ],
    "ans": "∑ₖ₌₁₃²⁰ aₖ",
-   "why": "Property (4) with m = 12.",
+   "why": "Property (4): ∑ₖ₌₁²⁰ aₖ = ∑ₖ₌₁¹² aₖ + ∑ₖ₌₁₃²⁰ aₖ.\nSubtract ∑ₖ₌₁¹² aₖ from both sides.\nWhat is left starts at k = 13: ∑ₖ₌₁₃²⁰ aₖ.\n(Starting at 12 would remove a₁₂ twice.)",
    "clue": "",
    "graded": true,
    "level": 2,
@@ -342,11 +412,11 @@
   },
   {
    "kind": "blank",
-   "ask": "If ∑ₖ₌₁⁸ xₖ = 12, then ∑ₖ₌₁⁸ (3xₖ + 2) = ___",
+   "ask": "Combine the properties: if ∑ₖ₌₁⁸ xₖ = 12, then ∑ₖ₌₁⁸ (3xₖ + 2) = ___",
    "a": [
     "52"
    ],
-   "why": "3(12) + 8(2) = 52.",
+   "why": "Split: 3 ∑ xₖ + ∑ 2.\n3 × 12 = 36.\n∑ₖ₌₁⁸ 2 = 8 × 2 = 16.\n36 + 16 = 52.",
    "clue": "",
    "num": true,
    "graded": true,

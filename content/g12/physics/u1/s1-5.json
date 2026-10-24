@@ -52,9 +52,10 @@
       "Water",
       "Nothing"
      ],
-     "after": "Radio waves and microwaves travel through air, and even through space, at the speed of light.",
+     "after": "Radio waves and microwaves carry the message.\nThey are electromagnetic waves, so they need no wire and no medium.\nThey travel at the speed of light, even through space.",
      "ref": "Discussion question 1.9",
-     "id": "g12.physics.u1.s1-5.1"
+     "id": "g12.physics.u1.s1-5.1",
+     "best": "Electromagnetic waves"
     },
     {
      "kind": "read",
@@ -109,6 +110,38 @@
      "id": "g12.physics.u1.s1-5.3"
     },
     {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Radio wavelength",
+     "ask": "Change the frequency. The speed stays c. Watch the wavelength.",
+     "vars": [
+      {
+       "k": "f",
+       "label": "Frequency f (MHz)",
+       "min": 50,
+       "max": 2000,
+       "step": 50,
+       "v": 100
+      }
+     ],
+     "formula": "300/f",
+     "outs": [
+      [
+       "Wavelength λ = c/f",
+       "300/f",
+       "{v} m"
+      ],
+      [
+       "Speed v = fλ",
+       "300",
+       "{v} × 10⁶ m/s"
+      ]
+     ],
+     "note": "FM radio ≈ 100 MHz: λ ≈ 3 m. Mobile phones ≈ 900 MHz: λ ≈ 0.33 m.",
+     "id": "g12.physics.u1.s1-5.16",
+     "added": true
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -126,7 +159,7 @@
     },
     {
      "kind": "mcq",
-     "text": "Which is a wired communication system?",
+     "text": "Wired or wireless: which is a wired communication system?",
      "opts": [
       "Optical fibre",
       "Wi-Fi",
@@ -134,7 +167,7 @@
       "Satellite phone"
      ],
      "ans": "Optical fibre",
-     "why": "It uses a physical glass cable.",
+     "why": "A wired system sends the signal along a cable.\nAn optical fibre is a glass cable that carries light.\nWi-Fi, Bluetooth and satellite phones use waves through the air.\nAnswer: optical fibre.",
      "clue": "Which one has a cable?",
      "graded": true,
      "level": 1,
@@ -152,7 +185,7 @@
       "are sound waves"
      ],
      "ans": "need no medium to travel",
-     "why": "They even cross empty space at the speed of light.",
+     "why": "Sound needs air or another medium.\nElectromagnetic waves need no medium at all.\nThey even cross empty space, as from a satellite.\nAnswer: they need no medium to travel.",
      "clue": "Think of satellites.",
      "graded": true,
      "level": 1,
@@ -162,9 +195,9 @@
     },
     {
      "kind": "tf",
-     "text": "A TV remote control uses infrared.",
+     "text": "Wireless media, true or false: a TV remote control uses infrared.",
      "a": true,
-     "why": "Infrared is one of the wireless media listed.",
+     "why": "The book lists radio waves, microwaves and infrared as wireless media.\nA TV remote sends pulses of infrared light.\nSo the statement is true.",
      "clue": "Look at the list.",
      "graded": true,
      "level": 1,
@@ -173,7 +206,7 @@
     },
     {
      "kind": "mcq",
-     "text": "Mobile network radio waves travel at about",
+     "text": "Speed of radio waves: mobile network radio waves travel at about",
      "opts": [
       "3 × 10⁸ m/s",
       "340 m/s",
@@ -181,7 +214,7 @@
       "1500 m/s"
      ],
      "ans": "3 × 10⁸ m/s",
-     "why": "They are electromagnetic waves, like light.",
+     "why": "Radio waves are electromagnetic waves.\nAll electromagnetic waves travel at c ≈ 3 × 10⁸ m/s in air.\nTrap: 340 m/s is the speed of sound, not radio.\nTrap: 3 × 10⁵ is c in km/s, not m/s.",
      "clue": "340 m/s is sound.",
      "graded": true,
      "level": 2,
@@ -191,11 +224,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A signal goes up to a satellite 36 000 km high and back down. At 3 × 10⁵ km/s this takes ___ s",
+     "ask": "Satellite signal delay: a signal goes up to a satellite 36 000 km high and back down. At 3 × 10⁵ km/s this takes ___ s",
      "a": [
       "0.24"
      ],
-     "why": "Total 72 000 km ÷ 300 000 km/s = 0.24 s.",
+     "why": "Path: up and down = 2 × 36 000 km = 72 000 km.\nFormula: t = d/c.\nSubstitute: t = 72 000 km ÷ 300 000 km/s.\nResult: t = 0.24 s.\nTrap: one way only gives 0.12 s.",
      "clue": "Up and down: double the height.",
      "num": true,
      "graded": true,
@@ -213,7 +246,7 @@
    "items": [
     {
      "kind": "pick",
-     "text": "Which technologies are wireless?",
+     "text": "Brainstorming question 1.16: which technologies are wireless? Pick all that apply.",
      "pool": [
       "Mobile phone",
       "Wi-Fi",
@@ -225,7 +258,7 @@
       "Wi-Fi",
       "Bluetooth"
      ],
-     "why": "A landline uses wire.",
+     "why": "A mobile phone uses radio waves to the tower.\nWi-Fi uses radio waves (microwaves) in the home.\nBluetooth uses short-range radio waves.\nA landline telephone uses a wire, so it is wired.",
      "clue": "Which need a cable?",
      "graded": true,
      "level": 1,
@@ -238,7 +271,7 @@
  "test": [
   {
    "kind": "mcq",
-   "text": "Wireless systems use",
+   "text": "Wireless media: wireless systems use",
    "opts": [
     "radio waves, microwaves and infrared",
     "only sound",
@@ -246,7 +279,7 @@
     "wire"
    ],
    "ans": "radio waves, microwaves and infrared",
-   "why": "p.20.",
+   "why": "Wireless means no cable.\nThe signal is carried by electromagnetic waves.\nThe book lists radio waves, microwaves and infrared.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -255,7 +288,7 @@
   },
   {
    "kind": "mcq",
-   "text": "An optical fibre carries",
+   "text": "Wired media: an optical fibre carries",
    "opts": [
     "light",
     "sound",
@@ -263,7 +296,7 @@
     "electrons only"
    ],
    "ans": "light",
-   "why": "p.20.",
+   "why": "An optical fibre is a thin glass thread.\nLight signals travel along it by total internal reflection.\nAnswer: light.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -272,9 +305,9 @@
   },
   {
    "kind": "tf",
-   "text": "Communication needs a medium of transmission.",
+   "text": "How communication works, true or false: communication needs a medium of transmission.",
    "a": true,
-   "why": "p.20.",
+   "why": "A message must be carried from sender to receiver.\nThe book calls the carrier the medium of transmission.\nIt can be a wire, a fibre, or waves through air or space.\nSo the statement is true.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -283,7 +316,7 @@
   },
   {
    "kind": "mcq",
-   "text": "Which knowledge is essential for wireless communication?",
+   "text": "Physics for wireless: which knowledge is essential for wireless communication?",
    "opts": [
     "Electromagnetic theory",
     "Fluid mechanics",
@@ -291,7 +324,7 @@
     "Geology"
    ],
    "ans": "Electromagnetic theory",
-   "why": "p.20.",
+   "why": "Wireless signals are electromagnetic waves.\nTo make, send and receive them you need electromagnetic theory.\nFluid mechanics and geology do not carry signals.",
    "clue": "",
    "graded": true,
    "level": 2,
@@ -300,11 +333,11 @@
   },
   {
    "kind": "blank",
-   "ask": "A radio signal crosses 600 km at 3 × 10⁵ km/s in ___ s",
+   "ask": "Signal travel time: a radio signal crosses 600 km at 3 × 10⁵ km/s in ___ s",
    "a": [
     "0.002"
    ],
-   "why": "600/300 000.",
+   "why": "Formula: t = d/c.\nSubstitute: t = 600 km ÷ 300 000 km/s.\nResult: t = 0.002 s (2 ms).",
    "clue": "",
    "num": true,
    "graded": true,

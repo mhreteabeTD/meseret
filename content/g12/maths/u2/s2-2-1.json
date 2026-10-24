@@ -54,9 +54,42 @@
       "No, it slows down",
       "It does not change"
      ],
-     "after": "dA/dt = 2πr dr/dt depends on r: a bigger circle gains more area each second.",
+     "after": "A = πr², so dA/dt = 2πr × dr/dt.\nThe area gained each second depends on r.\nAt r = 1: 2π(1)(1.5) = 3π cm²/s. At r = 10: 30π cm²/s.\nA bigger circle has a longer edge, so it gains more area each second.",
      "ref": "Example 1",
-     "id": "g12.maths.u2.s2-2-1.1"
+     "id": "g12.maths.u2.s2-2-1.1",
+     "best": "No, it grows faster as the circle gets bigger"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Watch dA/dt grow with r",
+     "ask": "The radius grows at dr/dt = 1.5 cm/s. Move r and watch the rate of the area.",
+     "vars": [
+      {
+       "k": "r",
+       "label": "Radius r (cm)",
+       "min": 1,
+       "max": 20,
+       "step": 1,
+       "v": 2
+      }
+     ],
+     "formula": "2 * Math.PI * r * 1.5",
+     "outs": [
+      [
+       "Area A = πr²",
+       "Math.PI * r * r",
+       "{v} cm²"
+      ],
+      [
+       "dA/dt = 2πr × 1.5",
+       "2 * Math.PI * r * 1.5",
+       "{v} cm²/s"
+      ]
+     ],
+     "note": "The rate dr/dt stays 1.5, but dA/dt = 3πr grows with r. At r = 6, dA/dt = 18π ≈ 56.55 cm²/s.",
+     "id": "g12.maths.u2.s2-2-1.24"
     },
     {
      "kind": "read",
@@ -88,7 +121,7 @@
     },
     {
      "kind": "mcq",
-     "text": "dr/dt = 1.5 cm/s. When the diameter is 12 cm, dA/dt =",
+     "text": "Related rates for a circle: dr/dt = 1.5 cm/s. When the diameter is 12 cm, find dA/dt.",
      "opts": [
       "18π cm²/s",
       "36π cm²/s",
@@ -96,7 +129,7 @@
       "1.5π cm²/s"
      ],
      "ans": "18π cm²/s",
-     "why": "r = 6 (not 12). dA/dt = 2π(6)(1.5) = 18π.",
+     "why": "Formula: A = πr².\nDifferentiate with respect to t: dA/dt = 2πr × dr/dt.\nThe diameter is 12, so r = 6 (not 12).\ndA/dt = 2π(6)(1.5) = 18π cm²/s.\nTrap: using r = 12 gives 36π, double the answer.",
      "clue": "Use the radius, half the diameter.",
      "graded": true,
      "level": 1,
@@ -117,12 +150,29 @@
      "id": "g12.maths.u2.s2-2-1.5"
     },
     {
+     "kind": "order",
+     "step": "practise",
+     "added": true,
+     "graded": true,
+     "level": 1,
+     "text": "Put the steps for solving a related-rates problem in order.",
+     "items": [
+      "Write the formula that links the quantities",
+      "Differentiate both sides with respect to t",
+      "Substitute the values at that instant",
+      "Solve for the unknown rate"
+     ],
+     "why": "1. Write the formula first (A = πr², V = (4/3)πr³, Pythagoras …).\n2. Differentiate with respect to t, using the chain rule.\n3. Only now put in the numbers for that instant.\n4. Solve for the rate you want.\nTrap: substituting before differentiating makes the variable a constant, and its rate becomes 0.",
+     "clue": "Numbers go in only after you differentiate.",
+     "id": "g12.maths.u2.s2-2-1.25"
+    },
+    {
      "kind": "blank",
-     "ask": "S = t³ − 3t² + 5t + 7 (km, hours). Velocity at t = 2 = ___ km/h",
+     "ask": "Velocity from displacement: S = t³ − 3t² + 5t + 7 (km, t in hours). Velocity at t = 2 is ___ km/h",
      "a": [
       "5"
      ],
-     "why": "v = 3t² − 6t + 5 = 12 − 12 + 5 = 5.",
+     "why": "Velocity is v = dS/dt.\nv = 3t² − 6t + 5 (the constant 7 gives 0).\nAt t = 2: 3(4) − 6(2) + 5 = 12 − 12 + 5.\nv = 5 km/h.",
      "clue": "Velocity is dS/dt.",
      "num": true,
      "graded": true,
@@ -133,11 +183,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Same S. Acceleration at t = 2 = ___ km/h²",
+     "ask": "Acceleration from velocity: for the same S = t³ − 3t² + 5t + 7, acceleration at t = 2 is ___ km/h²",
      "a": [
       "6"
      ],
-     "why": "a = dv/dt = 6t − 6 = 6.",
+     "why": "Acceleration is a = dv/dt.\nv = 3t² − 6t + 5, so a = 6t − 6.\nAt t = 2: 6(2) − 6 = 6.\na = 6 km/h².\nTrap: do not differentiate S only once; a needs the second derivative.",
      "clue": "Differentiate v.",
      "num": true,
      "graded": true,
@@ -148,11 +198,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Path 3y = x². dx/dt = 2 ft/min at x = 6. dy/dt = ___ ft/min",
+     "ask": "Related rates on a path: a point moves on 3y = x². dx/dt = 2 ft/min when x = 6. Find dy/dt = ___ ft/min",
      "a": [
       "8"
      ],
-     "why": "3 dy/dt = 2x dx/dt, so dy/dt = (2 × 6 × 2)/3 = 8.",
+     "why": "Differentiate both sides with respect to t.\n3 dy/dt = 2x dx/dt (chain rule on x²).\nSubstitute x = 6, dx/dt = 2: 3 dy/dt = 2(6)(2) = 24.\ndy/dt = 24 ÷ 3 = 8 ft/min.",
      "clue": "Differentiate both sides with respect to t.",
      "num": true,
      "graded": true,
@@ -163,11 +213,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A square plate: the side grows 0.2 cm/s. At side 20 cm, dA/dt = ___ cm²/s",
+     "ask": "Related rates for a square plate: the side grows 0.2 cm/s. When the side is 20 cm, dA/dt = ___ cm²/s",
      "a": [
       "8"
      ],
-     "why": "A = s², dA/dt = 2s ds/dt = 2(20)(0.2) = 8.",
+     "why": "Formula: A = s².\nDifferentiate: dA/dt = 2s × ds/dt.\nSubstitute s = 20, ds/dt = 0.2.\ndA/dt = 2(20)(0.2) = 8 cm²/s.",
      "clue": "A = s².",
      "num": true,
      "graded": true,
@@ -178,12 +228,12 @@
     },
     {
      "kind": "blank",
-     "ask": "A sphere's volume grows 0.2π cm³/s. At r = 10 cm, dr/dt = ___ cm/s",
+     "ask": "Related rates for a sphere: the volume grows 0.2π cm³/s. When r = 10 cm, dr/dt = ___ cm/s",
      "a": [
       "0.0005",
       "1/2000"
      ],
-     "why": "0.2π = 4π(100) dr/dt, so dr/dt = 0.2 ÷ 400.",
+     "why": "Formula: V = (4/3)πr³.\nDifferentiate: dV/dt = 4πr² × dr/dt.\nSubstitute: 0.2π = 4π(10)² dr/dt = 400π dr/dt.\ndr/dt = 0.2π ÷ 400π = 0.0005 cm/s.\nCheck: π cancels, so the answer has no π.",
      "clue": "dV/dt = 4πr² dr/dt.",
      "num": true,
      "graded": true,
@@ -194,11 +244,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A man 2 m tall walks at 8 m/min away from a 6 m lamp post. His shadow grows at ___ m/min",
+     "ask": "Shadow problem: a man 2 m tall walks at 8 m/min away from a 6 m lamp post. His shadow grows at ___ m/min",
      "a": [
       "4"
      ],
-     "why": "Similar triangles: 6/(x + s) = 2/s, so s = x/2 and ds/dt = 8/2 = 4.",
+     "why": "Let x = his distance from the post, s = shadow length.\nSimilar triangles: 6/(x + s) = 2/s.\nCross-multiply: 6s = 2x + 2s, so 4s = 2x and s = x/2.\nDifferentiate: ds/dt = (1/2) dx/dt = (1/2)(8).\nds/dt = 4 m/min. It does not depend on where he is.",
      "clue": "Set up similar triangles with base x + s.",
      "num": true,
      "graded": true,
@@ -217,7 +267,7 @@
    "items": [
     {
      "kind": "pick",
-     "text": "f(x) = 3x + 2 on the closed interval [3, 7]: smallest and largest values",
+     "text": "Extreme values on a closed interval: f(x) = 3x + 2 on [3, 7]. Pick the smallest and the largest value.",
      "pool": [
       "11",
       "23",
@@ -228,7 +278,7 @@
       "11",
       "23"
      ],
-     "why": "f(3) = 11, f(7) = 23.",
+     "why": "f(x) = 3x + 2 is increasing (slope 3 > 0).\nSo the smallest value is at the left end, the largest at the right end.\nf(3) = 9 + 2 = 11. f(7) = 21 + 2 = 23.\nTrap: 9 and 21 forget the + 2.",
      "clue": "Endpoints.",
      "graded": true,
      "level": 1,
@@ -238,7 +288,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = 3x + 2 on the open interval (3, 7): smallest value",
+     "text": "Extreme values on an open interval: f(x) = 3x + 2 on (3, 7). What is the smallest value?",
      "opts": [
       "there is none",
       "11",
@@ -246,7 +296,7 @@
       "9"
      ],
      "ans": "there is none",
-     "why": "11 is not reached because 3 is not in (3, 7).",
+     "why": "(3, 7) does not contain x = 3.\nf gets close to 11 as x → 3, but never reaches it.\nAny value you name, like 11.01, has a smaller one after it.\nSo there is no smallest value.\nTrap: 11 is the answer only for the closed interval [3, 7].",
      "clue": "Is x = 3 allowed?",
      "graded": true,
      "level": 2,
@@ -261,7 +311,7 @@
    "items": [
     {
      "kind": "mcq",
-     "text": "dr/dt = 0.3 cm/s, r = 15 cm: dA/dt =",
+     "text": "Rate of change of a circle's area: dr/dt = 0.3 cm/s and r = 15 cm. Find dA/dt.",
      "opts": [
       "9π cm²/s",
       "4.5π cm²/s",
@@ -269,7 +319,7 @@
       "0.3π cm²/s"
      ],
      "ans": "9π cm²/s",
-     "why": "2π(15)(0.3).",
+     "why": "A = πr², so dA/dt = 2πr × dr/dt.\ndA/dt = 2π(15)(0.3).\n2 × 15 = 30, and 30 × 0.3 = 9.\ndA/dt = 9π cm²/s.\nTrap: 4.5π forgets the 2 in 2πr.",
      "clue": "2πr dr/dt.",
      "graded": true,
      "level": 1,
@@ -279,11 +329,11 @@
     },
     {
      "kind": "blank",
-     "ask": "dV/dt = 0.2π cm³/s, r = 10: dr/dt = ___ cm/s",
+     "ask": "Rate of change of a sphere's radius: dV/dt = 0.2π cm³/s and r = 10 cm. dr/dt = ___ cm/s",
      "a": [
       "0.0005"
      ],
-     "why": "0.2 ÷ 400.",
+     "why": "V = (4/3)πr³, so dV/dt = 4πr² × dr/dt.\n0.2π = 4π(100) dr/dt = 400π dr/dt.\ndr/dt = 0.2 ÷ 400 = 0.0005 cm/s.",
      "clue": "4πr² dr/dt.",
      "num": true,
      "graded": true,
@@ -294,11 +344,11 @@
     },
     {
      "kind": "blank",
-     "ask": "ds/dt = 0.2 cm/s, s = 20 cm: dA/dt = ___ cm²/s",
+     "ask": "Rate of change of a square's area: ds/dt = 0.2 cm/s and s = 20 cm. dA/dt = ___ cm²/s",
      "a": [
       "8"
      ],
-     "why": "2(20)(0.2).",
+     "why": "A = s², so dA/dt = 2s × ds/dt.\ndA/dt = 2(20)(0.2) = 8 cm²/s.",
      "clue": "A = s².",
      "num": true,
      "graded": true,
@@ -309,11 +359,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Lamp post 6 m, man 2 m, speed 8 m/min: shadow rate = ___ m/min",
+     "ask": "Shadow rate: lamp post 6 m, man 2 m, walking speed 8 m/min. The shadow grows at ___ m/min",
      "a": [
       "4"
      ],
-     "why": "s = x/2.",
+     "why": "Similar triangles: 6/(x + s) = 2/s.\n6s = 2x + 2s, so s = x/2.\nds/dt = (1/2) dx/dt = (1/2)(8) = 4 m/min.",
      "clue": "Similar triangles.",
      "num": true,
      "graded": true,
@@ -324,11 +374,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Unit mass, force grows 2 N/s: acceleration grows ___ m/s² per second",
+     "ask": "Force and acceleration: a unit mass (m = 1 kg); the force grows 2 N/s. The acceleration grows ___ m/s² per second",
      "a": [
       "2"
      ],
-     "why": "a = F/m, so da/dt = 2.",
+     "why": "Newton's law: F = ma, so a = F/m = F (m = 1).\nDifferentiate with respect to t: da/dt = dF/dt.\nda/dt = 2 m/s² per second.",
      "clue": "F = ma with m = 1.",
      "num": true,
      "graded": true,
@@ -343,11 +393,11 @@
  "test": [
   {
    "kind": "blank",
-   "ask": "A = s². ds/dt = 3 cm/s. At s = 5, dA/dt = ___",
+   "ask": "Rate of change of a square's area: A = s², ds/dt = 3 cm/s. At s = 5 cm, dA/dt = ___ cm²/s",
    "a": [
     "30"
    ],
-   "why": "2(5)(3).",
+   "why": "dA/dt = 2s × ds/dt.\nSubstitute s = 5, ds/dt = 3.\ndA/dt = 2(5)(3) = 30 cm²/s.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -357,11 +407,11 @@
   },
   {
    "kind": "blank",
-   "ask": "S = 4t² + t (m). Velocity at t = 3 s = ___ m/s",
+   "ask": "Velocity from displacement: S = 4t² + t (m). Velocity at t = 3 s is ___ m/s",
    "a": [
     "25"
    ],
-   "why": "8t + 1.",
+   "why": "v = dS/dt = 8t + 1.\nAt t = 3: 8(3) + 1 = 25.\nv = 25 m/s.\nTrap: S(3) = 39 is the position, not the velocity.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -371,11 +421,11 @@
   },
   {
    "kind": "blank",
-   "ask": "S = t³ (m). Acceleration at t = 2 s = ___ m/s²",
+   "ask": "Acceleration from displacement: S = t³ (m). Acceleration at t = 2 s is ___ m/s²",
    "a": [
     "12"
    ],
-   "why": "6t.",
+   "why": "v = dS/dt = 3t².\na = dv/dt = 6t.\nAt t = 2: a = 12 m/s².\nTrap: v(2) = 12 too here, but only by chance: always differentiate twice.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -385,7 +435,7 @@
   },
   {
    "kind": "mcq",
-   "text": "dr/dt = 2 cm/s. At r = 5 cm, dA/dt for a circle =",
+   "text": "Rate of change of a circle's area: dr/dt = 2 cm/s. At r = 5 cm, find dA/dt.",
    "opts": [
     "20π cm²/s",
     "10π cm²/s",
@@ -393,7 +443,7 @@
     "4π cm²/s"
    ],
    "ans": "20π cm²/s",
-   "why": "2π(5)(2).",
+   "why": "A = πr², so dA/dt = 2πr × dr/dt.\ndA/dt = 2π(5)(2) = 20π cm²/s.\nTrap: 10π forgets dr/dt = 2; 25π is the area itself.",
    "clue": "",
    "graded": true,
    "level": 2,
@@ -402,11 +452,11 @@
   },
   {
    "kind": "blank",
-   "ask": "y = x³. dx/dt = 2 when x = 1. dy/dt = ___",
+   "ask": "Related rates: y = x³ and dx/dt = 2 when x = 1. Find dy/dt = ___",
    "a": [
     "6"
    ],
-   "why": "3x² × 2.",
+   "why": "Differentiate with respect to t: dy/dt = 3x² × dx/dt.\nSubstitute x = 1, dx/dt = 2.\ndy/dt = 3(1)²(2) = 6.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -440,7 +490,7 @@
     },
     {
      "kind": "mcq",
-     "text": "d/dt (s³) = ?",
+     "text": "Chain rule with time: d/dt (s³) = ?",
      "opts": [
       "3s² ds/dt",
       "3s²",
@@ -448,7 +498,7 @@
       "3s ds/dt"
      ],
      "ans": "3s² ds/dt",
-     "why": "Chain rule: × ds/dt.",
+     "why": "Outside: s³ → 3s².\nInside: s depends on t, so multiply by ds/dt.\nd/dt (s³) = 3s² ds/dt.\nTrap: 3s² alone forgets the inner rate.",
      "clue": "Do not forget the inner rate.",
      "graded": true,
      "level": 1,

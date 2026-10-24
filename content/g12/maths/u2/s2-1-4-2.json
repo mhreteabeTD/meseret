@@ -52,8 +52,9 @@
       "x + 2",
       "2"
      ],
-     "after": "2x: 2(2) = 4 and 2(−1) = −2. The formula 2x is the derivative function f′(x).",
-     "id": "g12.maths.u2.s2-1-4-2.1"
+     "after": "Test each formula at both points.\n2x: 2(2) = 4 and 2(−1) = −2. Both match.\nx² gives 4 and 1, so it fails at x = −1.\nThe formula 2x is the derivative function f′(x).",
+     "id": "g12.maths.u2.s2-1-4-2.1",
+     "best": "2x"
     },
     {
      "kind": "read",
@@ -67,6 +68,47 @@
      "note": "The derivative is the exact rate at which one quantity changes with respect to another.",
      "ref": "Definition 2.7",
      "id": "g12.maths.u2.s2-1-4-2.2"
+    },
+    {
+     "kind": "coord",
+     "step": "explore",
+     "title": "A corner: y = |x|",
+     "min": -4,
+     "max": 4,
+     "ymin": -1,
+     "ymax": 4,
+     "ask": "The dots lie on y = |x|. Tap them and compare the slopes.",
+     "points": [
+      {
+       "x": -3,
+       "y": 3,
+       "info": "Left of 0, |x| = −x: slope −1."
+      },
+      {
+       "x": -1,
+       "y": 1,
+       "info": "Slope −1 again."
+      },
+      {
+       "x": 0,
+       "y": 0,
+       "name": "O",
+       "info": "The corner. Left slope −1, right slope +1. No single tangent, so f′(0) does not exist."
+      },
+      {
+       "x": 1,
+       "y": 1,
+       "info": "Right of 0, |x| = x: slope 1."
+      },
+      {
+       "x": 3,
+       "y": 3,
+       "info": "Slope 1 again."
+      }
+     ],
+     "need": 3,
+     "added": true,
+     "id": "g12.maths.u2.s2-1-4-2.24"
     },
     {
      "kind": "read",
@@ -126,7 +168,7 @@
     },
     {
      "kind": "mcq",
-     "text": "From the definition, (x³)′ =",
+     "text": "Use the definition to find the derivative of x³: (x³)′ =",
      "opts": [
       "3x²",
       "x²",
@@ -134,7 +176,7 @@
       "3x³"
      ],
      "ans": "3x²",
-     "why": "(3x²h + 3xh² + h³)/h = 3x² + 3xh + h² → 3x².",
+     "why": "(x + h)³ = x³ + 3x²h + 3xh² + h³.\nSubtract x³: 3x²h + 3xh² + h³.\nDivide by h: 3x² + 3xh + h².\nAs h → 0: 3x².\nTrap: 3x³ keeps the old power.",
      "clue": "Expand (x + h)³.",
      "graded": true,
      "level": 1,
@@ -143,8 +185,38 @@
      "id": "g12.maths.u2.s2-1-4-2.6"
     },
     {
+     "kind": "match",
+     "step": "practise",
+     "title": "Match each notation with how it is read",
+     "pairs": [
+      [
+       "f′(x)",
+       "f prime of x"
+      ],
+      [
+       "dy/dx",
+       "dee y by dee x"
+      ],
+      [
+       "d/dx f(x)",
+       "d by dx of f(x)"
+      ],
+      [
+       "Dₓ f",
+       "D of f"
+      ]
+     ],
+     "why": "All four mean the same thing: the derivative of y = f(x).\nf′(x) is read \"f prime of x\".\ndy/dx is read \"dee y by dee x\".\nd/dx f(x) is \"d by dx of f(x)\"; Dₓ f is \"D of f\".",
+     "clue": "The prime mark ′ is read \"prime\".",
+     "graded": true,
+     "level": 1,
+     "ref": "p.83",
+     "added": true,
+     "id": "g12.maths.u2.s2-1-4-2.25"
+    },
+    {
      "kind": "mcq",
-     "text": "f(x) = |x|. Where is f′(x) NOT defined?",
+     "text": "Differentiability of f(x) = |x|: where is f′(x) NOT defined?",
      "opts": [
       "at x = 0",
       "for x < 0",
@@ -152,7 +224,7 @@
       "nowhere"
      ],
      "ans": "at x = 0",
-     "why": "At 0, |h|/h is 1 from the right and −1 from the left. No single value.",
+     "why": "For x > 0, |x| = x: gradient 1.\nFor x < 0, |x| = −x: gradient −1.\nAt 0 the quotient is |h|/h: 1 if h > 0, −1 if h < 0.\nThe two sides differ, so f′(0) does not exist.\nThe graph has a sharp corner at 0.",
      "clue": "Compare h > 0 and h < 0.",
      "graded": true,
      "level": 2,
@@ -162,7 +234,7 @@
     },
     {
      "kind": "mcq",
-     "text": "(1/x)′ =",
+     "text": "Use the definition to find the derivative of 1/x: (1/x)′ =",
      "opts": [
       "−1/x²",
       "1/x²",
@@ -170,7 +242,7 @@
       "ln x"
      ],
      "ans": "−1/x²",
-     "why": "(1/(x + h) − 1/x)/h = −1/(x(x + h)) → −1/x².",
+     "why": "1/(x + h) − 1/x = (x − (x + h))/(x(x + h)) = −h/(x(x + h)).\nDivide by h: −1/(x(x + h)).\nAs h → 0: −1/x².\nTrap: 1/x² misses the minus sign. 1/x falls as x grows.",
      "clue": "Combine the fractions first.",
      "graded": true,
      "level": 2,
@@ -180,9 +252,9 @@
     },
     {
      "kind": "tf",
-     "text": "If f(x) = 7 for every x, then f′(x) = 0.",
+     "text": "True or false: if f(x) = 7 for every x, then f′(x) = 0.",
      "a": true,
-     "why": "(7 − 7)/h = 0. A constant does not change.",
+     "why": "f(x + h) − f(x) = 7 − 7 = 0.\nDivide by h: 0/h = 0.\nA constant never changes, so its rate is 0. True.",
      "clue": "What is k − k?",
      "graded": true,
      "level": 1,
@@ -192,7 +264,7 @@
     },
     {
      "kind": "mcq",
-     "text": "(2√x)′ =",
+     "text": "Find the derivative of 2√x: (2√x)′ =",
      "opts": [
       "1/√x",
       "1/(2√x)",
@@ -200,7 +272,7 @@
       "√x"
      ],
      "ans": "1/√x",
-     "why": "2 × 1/(2√x) = 1/√x.",
+     "why": "From the definition, (√x)′ = 1/(2√x).\nThe factor 2 multiplies every quotient, so it stays.\n2 × 1/(2√x) = 1/√x.\nTrap: 1/(2√x) forgets the factor 2.",
      "clue": "Twice the result for √x.",
      "graded": true,
      "level": 1,
@@ -210,11 +282,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = 1/x. The tangent to y = 1/x has gradient −1/9 at x = ___ (x > 0)",
+     "ask": "Work backwards: the tangent to y = 1/x has gradient −1/9 at x = ___ (x > 0)",
      "a": [
       "3"
      ],
-     "why": "−1/x² = −1/9 gives x² = 9, x = 3.",
+     "why": "f′(x) = −1/x².\nSet −1/x² = −1/9, so x² = 9.\nx = 3 or x = −3. With x > 0: x = 3.\nCheck: −1/3² = −1/9. ✓",
      "clue": "Set f′(x) = −1/9.",
      "num": true,
      "graded": true,
@@ -232,7 +304,7 @@
    "items": [
     {
      "kind": "mcq",
-     "text": "f(x) = x: f′(x) =",
+     "text": "Use the definition: for f(x) = x, f′(x) =",
      "opts": [
       "1",
       "x",
@@ -240,7 +312,7 @@
       "2x"
      ],
      "ans": "1",
-     "why": "h/h = 1.",
+     "why": "f(x + h) − f(x) = (x + h) − x = h.\nDivide by h: 1.\nSo f′(x) = 1: the line y = x has slope 1.",
      "clue": "Definition 2.7.",
      "graded": true,
      "level": 1,
@@ -250,7 +322,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = x³: f′(x) =",
+     "text": "Use the definition: for f(x) = x³, f′(x) =",
      "opts": [
       "3x²",
       "x²",
@@ -258,7 +330,7 @@
       "x³"
      ],
      "ans": "3x²",
-     "why": "Expand (x + h)³.",
+     "why": "(x + h)³ − x³ = 3x²h + 3xh² + h³.\nDivide by h: 3x² + 3xh + h².\nAs h → 0: 3x².",
      "clue": "Cancel h.",
      "graded": true,
      "level": 2,
@@ -268,7 +340,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = 1/x: f′(x) =",
+     "text": "Use the definition: for f(x) = 1/x, f′(x) =",
      "opts": [
       "−1/x²",
       "1/x²",
@@ -276,7 +348,7 @@
       "x"
      ],
      "ans": "−1/x²",
-     "why": "Combine fractions.",
+     "why": "1/(x + h) − 1/x = −h/(x(x + h)).\nDivide by h: −1/(x(x + h)).\nAs h → 0: −1/x².",
      "clue": "Common denominator x(x + h).",
      "graded": true,
      "level": 2,
@@ -286,7 +358,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = 2√x: f′(x) =",
+     "text": "Use the definition: for f(x) = 2√x, f′(x) =",
      "opts": [
       "1/√x",
       "1/(2√x)",
@@ -294,7 +366,7 @@
       "2/√x"
      ],
      "ans": "1/√x",
-     "why": "Rationalise.",
+     "why": "2(√(x + h) − √x)/h. Multiply by √(x + h) + √x.\nThe top becomes 2h. Cancel h: 2/(√(x + h) + √x).\nAs h → 0: 2/(2√x) = 1/√x.",
      "clue": "Use the conjugate.",
      "graded": true,
      "level": 2,
@@ -309,7 +381,7 @@
    "items": [
     {
      "kind": "mcq",
-     "text": "f(x) = x²: f′(x₀) exists for",
+     "text": "Where does the derivative of f(x) = x² exist? f′(x₀) exists for",
      "opts": [
       "all real x₀",
       "x₀ ≠ 0",
@@ -317,7 +389,7 @@
       "no x₀"
      ],
      "ans": "all real x₀",
-     "why": "2x₀ + h → 2x₀ for every x₀.",
+     "why": "(f(x₀ + h) − f(x₀))/h = 2x₀ + h.\nAs h → 0 this gives 2x₀ for every x₀.\nNo point causes trouble: all real x₀.",
      "clue": "Is there any problem point?",
      "graded": true,
      "level": 1,
@@ -327,7 +399,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = |x|: f′(x₀) exists for",
+     "text": "Where does the derivative of f(x) = |x| exist? f′(x₀) exists for",
      "opts": [
       "x₀ ≠ 0",
       "all real x₀",
@@ -335,7 +407,7 @@
       "x₀ = 0 only"
      ],
      "ans": "x₀ ≠ 0",
-     "why": "A sharp corner at 0.",
+     "why": "For x₀ > 0 the gradient is 1. For x₀ < 0 it is −1.\nAt x₀ = 0 the right side gives 1, the left side −1.\nNo single value, so f′(0) does not exist.\nAnswer: all x₀ ≠ 0.",
      "clue": "Left and right at 0.",
      "graded": true,
      "level": 2,
@@ -345,7 +417,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = 1/x: f′(x₀) exists for",
+     "text": "Where does the derivative of f(x) = 1/x exist? f′(x₀) exists for",
      "opts": [
       "x₀ ≠ 0",
       "all real x₀",
@@ -353,7 +425,7 @@
       "x₀ < 0"
      ],
      "ans": "x₀ ≠ 0",
-     "why": "f is not defined at 0.",
+     "why": "f is not defined at x = 0, so f′(0) cannot exist.\nFor x₀ ≠ 0, f′(x₀) = −1/x₀².\nAnswer: all x₀ ≠ 0.",
      "clue": "Domain first.",
      "graded": true,
      "level": 1,
@@ -367,7 +439,7 @@
  "test": [
   {
    "kind": "mcq",
-   "text": "(5)′ =",
+   "text": "Find the derivative of the constant 5: (5)′ =",
    "opts": [
     "0",
     "5",
@@ -375,7 +447,7 @@
     "x"
    ],
    "ans": "0",
-   "why": "constant.",
+   "why": "f(x + h) − f(x) = 5 − 5 = 0.\n0/h = 0.\nThe derivative of any constant is 0.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -384,7 +456,7 @@
   },
   {
    "kind": "mcq",
-   "text": "d/dx (x²) =",
+   "text": "Find the derivative: d/dx (x²) =",
    "opts": [
     "2x",
     "x",
@@ -392,7 +464,7 @@
     "x²"
    ],
    "ans": "2x",
-   "why": "Example b.",
+   "why": "(x + h)² − x² = 2xh + h².\nDivide by h: 2x + h.\nAs h → 0: 2x.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -401,11 +473,11 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = √x. f′(4) = ___",
+   "ask": "Find the derivative of f(x) = √x at x = 4: f′(4) = ___",
    "a": [
     "1/4"
    ],
-   "why": "1/(2 × 2).",
+   "why": "f′(x) = 1/(2√x).\nf′(4) = 1/(2 × 2) = 1/4.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -415,11 +487,11 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = 1/x. f′(−2) = ___",
+   "ask": "Find the derivative of f(x) = 1/x at x = −2: f′(−2) = ___",
    "a": [
     "-1/4"
    ],
-   "why": "−1/4.",
+   "why": "f′(x) = −1/x².\nf′(−2) = −1/(−2)² = −1/4.\nTrap: (−2)² = 4 is positive, so the answer stays negative.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -437,7 +509,7 @@
     "3x + 1"
    ],
    "ans": "|x|",
-   "why": "Corner at 0.",
+   "why": "|x| has slope −1 on the left of 0 and 1 on the right.\nAt 0 the two sides differ: a sharp corner.\nx², x³ and 3x + 1 are smooth there: f′(0) = 0, 0 and 3.",
    "clue": "",
    "graded": true,
    "level": 3,

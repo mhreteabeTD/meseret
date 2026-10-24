@@ -84,7 +84,8 @@
      ],
      "after": "Mg goes from 0 to +2: it loses two electrons (oxidation). H⁺ gains them and becomes H₂ (reduction).",
      "ref": "p.58",
-     "id": "g12.chemistry.u2.s2-1.1"
+     "id": "g12.chemistry.u2.s2-1.1",
+     "best": "They lose electrons and become Mg²⁺"
     },
     {
      "kind": "read",
@@ -100,6 +101,42 @@
      "id": "g12.chemistry.u2.s2-1.2"
     },
     {
+     "kind": "tap",
+     "step": "explore",
+     "graded": false,
+     "title": "Rules for oxidation numbers",
+     "ask": "Tap each card to see a rule and an example.",
+     "need": 4,
+     "items": [
+      [
+       "Free element",
+       "Every atom in an element is 0: Mg, O₂, Cl₂, S₈."
+      ],
+      [
+       "Oxygen",
+       "Usually −2, as in H₂O. In peroxides (H₂O₂) it is −1."
+      ],
+      [
+       "Hydrogen",
+       "Usually +1, as in HCl. In metal hydrides (NaH) it is −1."
+      ],
+      [
+       "Group 1 and 2 metals",
+       "Group 1 is always +1 (Na, K). Group 2 is always +2 (Mg, Ca)."
+      ],
+      [
+       "Simple ion",
+       "Equal to its charge: Cl⁻ is −1, Fe³⁺ is +3."
+      ],
+      [
+       "Adding up",
+       "The total is 0 in a compound and the charge in an ion."
+      ]
+     ],
+     "id": "g12.chemistry.u2.s2-1.38",
+     "added": true
+    },
+    {
      "kind": "read",
      "step": "read",
      "title": "Agents and oxidation numbers",
@@ -112,6 +149,21 @@
      ],
      "ref": "Activity 2.1",
      "id": "g12.chemistry.u2.s2-1.3"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Find Cr in K₂CrO₄, one step at a time",
+     "steps": [
+      "Write what you know: K = +1, O = −2, Cr = x.",
+      "K₂CrO₄ is neutral, so the total is 0.",
+      "2(+1) + x + 4(−2) = 0.",
+      "2 + x − 8 = 0, so x = +6.",
+      "Check: +2 + 6 − 8 = 0. Cr is +6."
+     ],
+     "ref": "Activity 2.1",
+     "id": "g12.chemistry.u2.s2-1.39",
+     "added": true
     },
     {
      "kind": "name",
@@ -143,7 +195,7 @@
     },
     {
      "kind": "mcq",
-     "text": "In Mg(s) + Zn²⁺(aq) → Zn(s) + Mg²⁺(aq), the oxidizing agent is",
+     "text": "Identify the oxidizing agent in Mg(s) + Zn²⁺(aq) → Zn(s) + Mg²⁺(aq):",
      "opts": [
       "Zn²⁺",
       "Mg",
@@ -151,7 +203,7 @@
       "Mg²⁺"
      ],
      "ans": "Zn²⁺",
-     "why": "Zn²⁺ gains 2e⁻ (it is reduced), so it is the oxidizing agent.",
+     "why": "Step 1: Mg goes 0 → +2. It loses 2e⁻, so Mg is oxidized.\nStep 2: Zn²⁺ goes +2 → 0. It gains 2e⁻, so Zn²⁺ is reduced.\nStep 3: the species that is reduced is the oxidizing agent.\nSo the oxidizing agent is Zn²⁺.\nTrap: Mg is the reducing agent. Zn and Mg²⁺ are products, not agents.",
      "clue": "The oxidizing agent is itself reduced.",
      "graded": true,
      "level": 1,
@@ -161,11 +213,11 @@
     },
     {
      "kind": "blank",
-     "ask": "The oxidation number of Cr in K₂CrO₄ is +___",
+     "ask": "Find the oxidation number of Cr in K₂CrO₄: +___",
      "a": [
       "6"
      ],
-     "why": "2(+1) + x + 4(−2) = 0, so x = +6.",
+     "why": "Step 1: K (Group 1) is +1; O is −2. Let Cr = x.\nStep 2: a neutral compound adds to 0: 2(+1) + x + 4(−2) = 0.\nStep 3: 2 + x − 8 = 0, so x = +6.\nCheck: +2 + 6 − 8 = 0. Cr is +6.",
      "clue": "Add up to zero.",
      "num": true,
      "graded": true,
@@ -176,11 +228,11 @@
     },
     {
      "kind": "blank",
-     "ask": "The oxidation number of Cl in HClO₄ is +___",
+     "ask": "Find the oxidation number of Cl in perchloric acid, HClO₄: +___",
      "a": [
       "7"
      ],
-     "why": "+1 + x − 8 = 0, so x = +7.",
+     "why": "Step 1: H is +1; each O is −2. Let Cl = x.\nStep 2: the acid is neutral: +1 + x + 4(−2) = 0.\nStep 3: 1 + x − 8 = 0, so x = +7.\nCheck: +1 + 7 − 8 = 0. Cl is +7, its highest state.",
      "clue": "H is +1, each O is −2.",
      "num": true,
      "graded": true,
@@ -191,11 +243,11 @@
     },
     {
      "kind": "blank",
-     "ask": "The oxidation number of C in C₂O₄²⁻ is +___",
+     "ask": "Find the oxidation number of C in the oxalate ion, C₂O₄²⁻: +___",
      "a": [
       "3"
      ],
-     "why": "2x + 4(−2) = −2, so 2x = 6 and x = +3.",
+     "why": "Step 1: each O is −2. Let each C = x.\nStep 2: an ion adds to its charge: 2x + 4(−2) = −2.\nStep 3: 2x − 8 = −2, so 2x = 6 and x = +3.\nTrap: do not set the sum to 0. This is an ion with charge −2.",
      "clue": "The numbers add to the ion's charge, −2.",
      "num": true,
      "graded": true,
@@ -234,16 +286,17 @@
        "Mg 0 → +2"
       ]
      ],
-     "why": "A reaction is redox only if some oxidation numbers change.",
+     "why": "Step 1: a reaction is redox only if some oxidation numbers change.\nStep 2: Ca + 2H₂O: Ca 0 → +2 and H +1 → 0. Redox.\nStep 3: Mg + 2HCl: Mg 0 → +2 and H +1 → 0. Redox.\nStep 4: H₂SO₄ + NaOH (neutralization) and AgNO₃ + NaCl (precipitation): ions only swap partners. No number changes, so not redox.\nTip: a free element on one side usually means redox.",
      "clue": "Look for an element on one side and an ion on the other.",
      "ref": "Activity 2.1 Q1",
      "graded": true,
      "level": 2,
-     "id": "g12.chemistry.u2.s2-1.9"
+     "id": "g12.chemistry.u2.s2-1.9",
+     "ask": "Sort the reactions: is each one a redox reaction or not?"
     },
     {
      "kind": "mcq",
-     "text": "In 2Hg²⁺ + N₂H₄ → 2Hg + N₂ + 4H⁺",
+     "text": "Decide what is oxidized and what is reduced in 2Hg²⁺ + N₂H₄ → 2Hg + N₂ + 4H⁺:",
      "opts": [
       "Hg²⁺ is reduced; N₂H₄ is oxidized",
       "Hg²⁺ is oxidized; N₂H₄ is reduced",
@@ -251,7 +304,7 @@
       "both are reduced"
      ],
      "ans": "Hg²⁺ is reduced; N₂H₄ is oxidized",
-     "why": "Hg: +2 → 0 (gain). N: −2 → 0 (loss).",
+     "why": "Step 1: Hg goes +2 → 0. A fall means a gain of electrons: Hg²⁺ is reduced.\nStep 2: N in N₂H₄: 2x + 4(+1) = 0, so x = −2.\nStep 3: N goes −2 → 0 in N₂. A rise means a loss of electrons: N₂H₄ is oxidized.\nSo Hg²⁺ is reduced and N₂H₄ is oxidized.\nCheck: 2 Hg gain 4e⁻; 2 N lose 4e⁻.",
      "clue": "Find the oxidation number of N in N₂H₄ first.",
      "graded": true,
      "level": 2,
@@ -261,7 +314,7 @@
     },
     {
      "kind": "mcq",
-     "text": "Oxidation numbers in Ni₂(SO₄)₃ are",
+     "text": "Find the oxidation numbers of Ni, S and O in Ni₂(SO₄)₃:",
      "opts": [
       "Ni +3, S +6, O −2",
       "Ni +2, S +4, O −2",
@@ -269,7 +322,7 @@
       "Ni +2, S +2, O −2"
      ],
      "ans": "Ni +3, S +6, O −2",
-     "why": "SO₄²⁻: S = +6. Three sulfates = −6, so 2 Ni = +6 and Ni = +3.",
+     "why": "Step 1: O is −2.\nStep 2: in SO₄²⁻: x + 4(−2) = −2, so S = +6.\nStep 3: three sulfates carry 3 × (−2) = −6.\nStep 4: 2 Ni must give +6, so Ni = +3.\nAnswer: Ni +3, S +6, O −2.\nTrap: Ni +2 would need NiSO₄, not Ni₂(SO₄)₃.",
      "clue": "Start with the sulfate ion.",
      "graded": true,
      "level": 3,
@@ -279,11 +332,11 @@
     },
     {
      "kind": "blank",
-     "ask": "The oxidation number of N in hydrazine, N₂H₄, is ___",
+     "ask": "Find the oxidation number of N in hydrazine, N₂H₄: ___",
      "a": [
       "-2"
      ],
-     "why": "2x + 4(+1) = 0, so x = −2.",
+     "why": "Step 1: H with a non-metal is +1. Let each N = x.\nStep 2: the molecule is neutral: 2x + 4(+1) = 0.\nStep 3: 2x = −4, so x = −2.\nCheck: 2(−2) + 4 = 0. N is −2 (write the minus sign).",
      "clue": "H is +1 here.",
      "num": true,
      "graded": true,
@@ -320,9 +373,10 @@
       "4",
       "8"
      ],
-     "after": "From −2 to +4 is a rise of 6, so each S loses 6 electrons.",
+     "after": "S goes from −2 to +4. That is a rise of 6.\nEach S loses 6 electrons.\nTrap: 4 is only the final number, not the change.",
      "ref": "Example 2.1",
-     "id": "g12.chemistry.u2.s2-1.13"
+     "id": "g12.chemistry.u2.s2-1.13",
+     "best": "6"
     },
     {
      "kind": "read",
@@ -338,6 +392,21 @@
      ],
      "ref": "p.59",
      "id": "g12.chemistry.u2.s2-1.14"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Balance PbS + O₂ → PbO + SO₂",
+     "steps": [
+      "Assign numbers: S is −2 in PbS and +4 in SO₂. O is 0 in O₂ and −2 in the products.",
+      "S loses 6e⁻. Each O₂ gains 2 × 2 = 4e⁻.",
+      "LCM of 6 and 4 is 12: 2 S lose 12e⁻; 3 O₂ gain 12e⁻.",
+      "Write 2PbS + 3O₂ → 2PbO + 2SO₂.",
+      "Check O: 6 on the left; 2 + 4 = 6 on the right."
+     ],
+     "ref": "Example 2.1 Q1",
+     "id": "g12.chemistry.u2.s2-1.40",
+     "added": true
     },
     {
      "kind": "steps",
@@ -366,7 +435,7 @@
     },
     {
      "kind": "mcq",
-     "text": "In Cu + HNO₃ → Cu(NO₃)₂ + NO + H₂O, nitrogen",
+     "text": "Track nitrogen in Cu + HNO₃ → Cu(NO₃)₂ + NO + H₂O. What does N do?",
      "opts": [
       "goes +5 → +2 and gains 3e⁻",
       "goes +5 → +2 and loses 3e⁻",
@@ -374,7 +443,7 @@
       "does not change"
      ],
      "ans": "goes +5 → +2 and gains 3e⁻",
-     "why": "N in HNO₃ is +5; in NO it is +2. A fall in oxidation number is a gain of electrons.",
+     "why": "Step 1: N in HNO₃: +1 + x − 6 = 0, so x = +5.\nStep 2: N in NO: x − 2 = 0, so x = +2.\nStep 3: +5 → +2 is a fall of 3.\nStep 4: a fall in oxidation number is a gain of electrons: 3e⁻ per N.\nTrap: \"loses 3e⁻\" mixes up the direction. Down = gain = reduction.",
      "clue": "Work out N in HNO₃ and in NO.",
      "graded": true,
      "level": 1,
@@ -384,11 +453,11 @@
     },
     {
      "kind": "blank",
-     "ask": "2PbS + ___O₂ → 2PbO + 2SO₂",
+     "ask": "Balance by change in oxidation number: 2PbS + ___O₂ → 2PbO + 2SO₂",
      "a": [
       "3"
      ],
-     "why": "Each S loses 6e⁻; each O₂ gains 4e⁻. 2 S lose 12e⁻, so 3 O₂.",
+     "why": "Step 1: S goes −2 → +4: each S loses 6e⁻. 2 S lose 12e⁻.\nStep 2: O goes 0 → −2: each O₂ gains 2 × 2 = 4e⁻.\nStep 3: electrons lost = gained: 12 ÷ 4 = 3 O₂.\nCheck O: left 3 × 2 = 6; right 2 (PbO) + 4 (SO₂) = 6. Answer: 3.",
      "clue": "Count O on the right: 2 + 4 = 6.",
      "num": true,
      "graded": true,
@@ -399,11 +468,11 @@
     },
     {
      "kind": "blank",
-     "ask": "KClO₃ + ___HBr → 3Br₂ + 3H₂O + KCl",
+     "ask": "Balance by change in oxidation number: KClO₃ + ___HBr → 3Br₂ + 3H₂O + KCl",
      "a": [
       "6"
      ],
-     "why": "Cl gains 6e⁻ (+5 → −1); each Br loses 1e⁻, so 6 Br.",
+     "why": "Step 1: Cl goes +5 (KClO₃) → −1 (KCl): one Cl gains 6e⁻.\nStep 2: Br goes −1 (HBr) → 0 (Br₂): each Br loses 1e⁻.\nStep 3: 6 Br must lose 6e⁻, so 6 HBr (that gives 3Br₂).\nCheck H: 6 H in 6HBr = 6 H in 3H₂O. O: 3 = 3. Answer: 6.",
      "clue": "One Cl gains 6 electrons.",
      "num": true,
      "graded": true,
@@ -414,7 +483,7 @@
     },
     {
      "kind": "mcq",
-     "text": "Which is the balanced equation?",
+     "text": "Choose the correctly balanced equation for H₂S + HNO₃ → S + NO + H₂O:",
      "opts": [
       "3H₂S + 2HNO₃ → 3S + 2NO + 4H₂O",
       "H₂S + HNO₃ → S + NO + H₂O",
@@ -422,7 +491,7 @@
       "3H₂S + 2HNO₃ → 3S + 2NO + 2H₂O"
      ],
      "ans": "3H₂S + 2HNO₃ → 3S + 2NO + 4H₂O",
-     "why": "S loses 2e⁻, N gains 3e⁻: 3 S and 2 N. H: 6 + 2 = 8, so 4H₂O.",
+     "why": "Step 1: S goes −2 → 0: loses 2e⁻. N goes +5 → +2: gains 3e⁻.\nStep 2: LCM of 2 and 3 is 6: 3 H₂S and 2 HNO₃.\nStep 3: H on the left: 3 × 2 + 2 = 8, so 4H₂O.\nStep 4: check O: left 2 × 3 = 6; right 2 + 4 = 6.\nAnswer: 3H₂S + 2HNO₃ → 3S + 2NO + 4H₂O.\nTrap: the option with 2H₂O balances electrons but not H and O.",
      "clue": "Check H and O last.",
      "graded": true,
      "level": 2,
@@ -432,11 +501,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Cu + ___HNO₃ → Cu(NO₃)₂ + 2NO₂ + 2H₂O",
+     "ask": "Balance copper with concentrated nitric acid: Cu + ___HNO₃ → Cu(NO₃)₂ + 2NO₂ + 2H₂O",
      "a": [
       "4"
      ],
-     "why": "Cu loses 2e⁻; each N (+5 → +4) gains 1e⁻, so 2NO₂. Plus 2 NO₃⁻ in Cu(NO₃)₂: 4HNO₃.",
+     "why": "Step 1: Cu goes 0 → +2: loses 2e⁻.\nStep 2: N goes +5 (HNO₃) → +4 (NO₂): gains 1e⁻ each. So 2 NO₂.\nStep 3: Cu(NO₃)₂ needs 2 more NO₃⁻ that are not reduced.\nStep 4: HNO₃ = 2 (reduced) + 2 (salt) = 4.\nCheck H: 4 = 2 × 2 in 2H₂O. O: 12 = 6 + 4 + 2. Answer: 4.",
      "clue": "Some HNO₃ is reduced, some just forms the salt.",
      "num": true,
      "graded": true,
@@ -446,12 +515,33 @@
      "id": "g12.chemistry.u2.s2-1.21"
     },
     {
+     "kind": "order",
+     "step": "practise",
+     "graded": true,
+     "level": 1,
+     "title": "The six steps in order",
+     "text": "Put the steps for balancing by oxidation number in order.",
+     "items": [
+      "Write the unbalanced equation",
+      "Assign oxidation numbers",
+      "Find the atoms oxidized and reduced",
+      "Count electrons lost and gained",
+      "Multiply so electrons lost = electrons gained",
+      "Balance the rest by inspection"
+     ],
+     "why": "Step 1: you need an equation before you can assign numbers.\nStep 2: the numbers show which atoms change.\nStep 3: the changes give the electrons lost and gained.\nStep 4: multipliers make lost = gained.\nStep 5: atoms that do not change (H, O, spectators) go last, by inspection.",
+     "clue": "You cannot count electrons until you have oxidation numbers.",
+     "ref": "p.59",
+     "id": "g12.chemistry.u2.s2-1.41",
+     "added": true
+    },
+    {
      "kind": "blank",
-     "ask": "2HNO₃ + 3H₃AsO₃ → 2NO + 3H₃AsO₄ + ___H₂O",
+     "ask": "Finish the balance with water: 2HNO₃ + 3H₃AsO₃ → 2NO + 3H₃AsO₄ + ___H₂O",
      "a": [
       "1"
      ],
-     "why": "H: 2 + 9 = 11 on the left; 9 in 3H₃AsO₄, so 1 H₂O. O: 15 = 15.",
+     "why": "Step 1: the electrons already match (N gains 3e⁻ × 2; As loses 2e⁻ × 3).\nStep 2: count H on the left: 2 + 3 × 3 = 11.\nStep 3: H on the right in 3H₃AsO₄: 9. 11 − 9 = 2 H, so 1 H₂O.\nCheck O: left 6 + 9 = 15; right 2 + 12 + 1 = 15. Answer: 1.",
      "clue": "Count H on both sides.",
      "num": true,
      "graded": true,
@@ -490,7 +580,8 @@
      ],
      "after": "Fe²⁺ → Fe³⁺ + e⁻. In oxidation the electrons are products; in reduction they are reactants.",
      "ref": "Example 2.2",
-     "id": "g12.chemistry.u2.s2-1.23"
+     "id": "g12.chemistry.u2.s2-1.23",
+     "best": "On the right, as a product"
     },
     {
      "kind": "read",
@@ -522,6 +613,21 @@
      "id": "g12.chemistry.u2.s2-1.25"
     },
     {
+     "kind": "steps",
+     "step": "method",
+     "title": "In basic solution: MnO₄⁻ + I⁻ → MnO₂ + I₂",
+     "steps": [
+      "Reduction (acid first): MnO₄⁻ + 4H⁺ + 3e⁻ → MnO₂ + 2H₂O.",
+      "Oxidation: 2I⁻ → I₂ + 2e⁻.",
+      "LCM of 3 and 2 is 6: 2MnO₄⁻ + 8H⁺ + 6I⁻ → 2MnO₂ + 3I₂ + 4H₂O.",
+      "Basic: add 8OH⁻ to both sides. 8H⁺ + 8OH⁻ become 8H₂O.",
+      "Cancel 4H₂O: 2MnO₄⁻ + 4H₂O + 6I⁻ → 2MnO₂ + 3I₂ + 8OH⁻.",
+      "Check charge: −8 on each side. O: 12 = 12. H: 8 = 8."
+     ],
+     "id": "g12.chemistry.u2.s2-1.42",
+     "added": true
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key word",
@@ -535,7 +641,7 @@
     },
     {
      "kind": "mcq",
-     "text": "The balanced reduction half-reaction for MnO₄⁻ → Mn²⁺ in acid is",
+     "text": "Choose the balanced reduction half-reaction for MnO₄⁻ → Mn²⁺ in acid:",
      "opts": [
       "MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O",
       "MnO₄⁻ + 4H⁺ + 3e⁻ → Mn²⁺ + 2H₂O",
@@ -543,7 +649,7 @@
       "MnO₄⁻ + 5e⁻ → Mn²⁺ + 4O"
      ],
      "ans": "MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O",
-     "why": "4 O → 4H₂O; 8H⁺; charge +7 vs +2 needs 5e⁻ on the left.",
+     "why": "Step 1: Mn is already balanced (1 = 1).\nStep 2: balance O with water: 4 O → 4H₂O on the right.\nStep 3: balance H with H⁺: 8H⁺ on the left.\nStep 4: charge: left −1 + 8 = +7; right +2. Add 5e⁻ to the left.\nAnswer: MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O.\nTrap: electrons on the right would make it an oxidation.",
      "clue": "Balance O, then H, then charge.",
      "graded": true,
      "level": 1,
@@ -553,11 +659,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Cr₂O₇²⁻ + ___Fe²⁺ + 14H⁺ → 2Cr³⁺ + 6Fe³⁺ + 7H₂O",
+     "ask": "Balance by half-reactions: Cr₂O₇²⁻ + ___Fe²⁺ + 14H⁺ → 2Cr³⁺ + 6Fe³⁺ + 7H₂O",
      "a": [
       "6"
      ],
-     "why": "The dichromate half takes 6e⁻; each Fe²⁺ gives 1e⁻.",
+     "why": "Step 1: Cr₂O₇²⁻ + 14H⁺ + 6e⁻ → 2Cr³⁺ + 7H₂O takes 6e⁻.\nStep 2: Fe²⁺ → Fe³⁺ + e⁻ gives 1e⁻ each.\nStep 3: 6 Fe²⁺ give the 6e⁻.\nCheck charge: left −2 + 12 + 14 = +24; right 6 + 18 = +24. Answer: 6.",
      "clue": "Match the 6 electrons.",
      "num": true,
      "graded": true,
@@ -568,11 +674,11 @@
     },
     {
      "kind": "blank",
-     "ask": "5H₂C₂O₄ + 2MnO₄⁻ + ___H⁺ → 10CO₂ + 2Mn²⁺ + 8H₂O",
+     "ask": "Balance oxalic acid with permanganate: 5H₂C₂O₄ + 2MnO₄⁻ + ___H⁺ → 10CO₂ + 2Mn²⁺ + 8H₂O",
      "a": [
       "6"
      ],
-     "why": "16H⁺ used, 10H⁺ made by oxalic acid: 16 − 10 = 6 left on the left.",
+     "why": "Step 1: reduction × 2: 2MnO₄⁻ + 16H⁺ + 10e⁻ → 2Mn²⁺ + 8H₂O.\nStep 2: oxidation × 5: 5H₂C₂O₄ → 10CO₂ + 10H⁺ + 10e⁻.\nStep 3: add; 10H⁺ cancel from 16H⁺, so 6H⁺ remain on the left.\nCheck charge: left −2 + 6 = +4; right 2 × (+2) = +4. Answer: 6.",
      "clue": "Check the charge: −2 + x = +4.",
      "num": true,
      "graded": true,
@@ -583,7 +689,7 @@
     },
     {
      "kind": "mcq",
-     "text": "To finish a half-reaction balance in basic solution you",
+     "text": "How do you finish a half-reaction balance in basic solution?",
      "opts": [
       "add OH⁻ equal to the H⁺ to both sides",
       "remove all H⁺ from one side",
@@ -591,7 +697,7 @@
       "add electrons to both sides"
      ],
      "ans": "add OH⁻ equal to the H⁺ to both sides",
-     "why": "Then each H⁺ + OH⁻ becomes H₂O and extra water cancels.",
+     "why": "Step 1: balance first as if the solution were acidic (with H⁺).\nStep 2: add as many OH⁻ as there are H⁺, to BOTH sides.\nStep 3: each H⁺ + OH⁻ on one side becomes H₂O.\nStep 4: cancel water that appears on both sides.\nTrap: adding OH⁻ to one side only breaks the balance.",
      "clue": "What neutralizes H⁺?",
      "graded": true,
      "level": 1,
@@ -600,8 +706,29 @@
      "id": "g12.chemistry.u2.s2-1.30"
     },
     {
+     "kind": "order",
+     "step": "practise",
+     "graded": true,
+     "level": 1,
+     "title": "Half-reaction steps in order",
+     "text": "Put the steps of the half-reaction method (acidic solution) in order.",
+     "items": [
+      "Split into oxidation and reduction halves",
+      "Balance atoms other than O and H",
+      "Balance O with H₂O",
+      "Balance H with H⁺",
+      "Balance charge with electrons",
+      "Multiply so electrons are equal, then add"
+     ],
+     "why": "Step 1: split the reaction into two halves.\nStep 2: balance the main atoms first (Cr, Mn, Fe …).\nStep 3: O comes from water, so add H₂O next.\nStep 4: the water brings H, so then add H⁺.\nStep 5: only now is the charge fixed with e⁻.\nStep 6: equal electrons cancel when the halves are added.",
+     "clue": "Electrons are added only after all atoms balance.",
+     "ref": "p.62–64",
+     "id": "g12.chemistry.u2.s2-1.43",
+     "added": true
+    },
+    {
      "kind": "mcq",
-     "text": "Pb(OH)₄²⁻ + ClO⁻ → PbO₂ + Cl⁻ + OH⁻ + H₂O (basic). After balancing:",
+     "text": "Balance in basic solution: Pb(OH)₄²⁻ + ClO⁻ → PbO₂ + Cl⁻ + OH⁻ + H₂O. How many OH⁻ and electrons?",
      "opts": [
       "2 OH⁻ and 2 electrons",
       "3 OH⁻ and 4 electrons",
@@ -609,7 +736,7 @@
       "2 OH⁻ and 4 electrons"
      ],
      "ans": "2 OH⁻ and 2 electrons",
-     "why": "Pb +2 → +4 and Cl +1 → −1: 2e⁻. Pb(OH)₄²⁻ + ClO⁻ → PbO₂ + Cl⁻ + 2OH⁻ + H₂O.",
+     "why": "Step 1: Pb +2 → +4 loses 2e⁻; Cl +1 → −1 gains 2e⁻. So 2 electrons move.\nStep 2: one of each reactant is enough: Pb(OH)₄²⁻ + ClO⁻ → PbO₂ + Cl⁻ + ?OH⁻ + ?H₂O.\nStep 3: charge: left −3. Right −1 − x = −3, so 2 OH⁻.\nStep 4: H: 4 = 2 (OH⁻) + 2 (H₂O). O: 5 = 2 + 2 + 1.\nAnswer: 2 OH⁻ and 2 electrons.",
      "clue": "Find the change in oxidation numbers first.",
      "graded": true,
      "level": 3,
@@ -619,11 +746,11 @@
     },
     {
      "kind": "blank",
-     "ask": "BrO₃⁻ + 6Fe²⁺ + ___H⁺ → Br⁻ + 6Fe³⁺ + 3H₂O",
+     "ask": "Balance by half-reactions: BrO₃⁻ + 6Fe²⁺ + ___H⁺ → Br⁻ + 6Fe³⁺ + 3H₂O",
      "a": [
       "6"
      ],
-     "why": "BrO₃⁻ → Br⁻ + 3H₂O needs 6H⁺; charge check: −1 + 12 + 6 = +17 = −1 + 18.",
+     "why": "Step 1: BrO₃⁻ → Br⁻: 3 O become 3H₂O.\nStep 2: 3H₂O hold 6 H, so 6H⁺ on the left.\nStep 3: Br +5 → −1 takes 6e⁻; 6Fe²⁺ give 6e⁻.\nCheck charge: left −1 + 12 + 6 = +17; right −1 + 18 = +17. Answer: 6.",
      "clue": "Three O become three H₂O.",
      "num": true,
      "graded": true,
@@ -640,11 +767,11 @@
  "test": [
   {
    "kind": "blank",
-   "ask": "The oxidation number of S in SO₄²⁻ is +___",
+   "ask": "Find the oxidation number of S in the sulfate ion, SO₄²⁻: +___",
    "a": [
     "6"
    ],
-   "why": "x − 8 = −2.",
+   "why": "Step 1: O is −2. Let S = x.\nStep 2: an ion adds to its charge: x + 4(−2) = −2.\nStep 3: x − 8 = −2, so x = +6.\nTrap: setting the sum to 0 gives +8, which is wrong.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -654,7 +781,7 @@
   },
   {
    "kind": "mcq",
-   "text": "A reducing agent is the substance that is",
+   "text": "Define a reducing agent. It is the substance that is",
    "opts": [
     "oxidized",
     "reduced",
@@ -662,7 +789,7 @@
     "a spectator"
    ],
    "ans": "oxidized",
-   "why": "It gives electrons.",
+   "why": "Step 1: a reducing agent gives electrons to another species.\nStep 2: losing electrons is oxidation.\nSo the reducing agent is itself oxidized.\nTrap: \"reduced\" describes the oxidizing agent.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -671,7 +798,7 @@
   },
   {
    "kind": "mcq",
-   "text": "In 2Na + Cl₂ → 2NaCl, Cl₂ is the",
+   "text": "Name the role of Cl₂ in 2Na + Cl₂ → 2NaCl:",
    "opts": [
     "oxidizing agent",
     "reducing agent",
@@ -679,7 +806,7 @@
     "catalyst"
    ],
    "ans": "oxidizing agent",
-   "why": "Cl 0 → −1.",
+   "why": "Step 1: Na goes 0 → +1: Na is oxidized.\nStep 2: Cl goes 0 → −1: Cl₂ gains electrons, so it is reduced.\nStep 3: the species reduced is the oxidizing agent.\nSo Cl₂ is the oxidizing agent; Na is the reducing agent.",
    "clue": "",
    "graded": true,
    "level": 2,
@@ -688,11 +815,11 @@
   },
   {
    "kind": "blank",
-   "ask": "In MnO₄⁻ → Mn²⁺, each Mn gains ___ electrons",
+   "ask": "Count the electrons: in MnO₄⁻ → Mn²⁺, each Mn gains ___ electrons",
    "a": [
     "5"
    ],
-   "why": "+7 → +2.",
+   "why": "Step 1: Mn in MnO₄⁻: x − 8 = −1, so x = +7.\nStep 2: Mn in Mn²⁺ is +2.\nStep 3: +7 → +2 is a fall of 5, so 5 electrons are gained.\nAnswer: 5.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -702,11 +829,11 @@
   },
   {
    "kind": "blank",
-   "ask": "Cu + SO₄²⁻ + ___H⁺ → Cu²⁺ + SO₂ + 2H₂O",
+   "ask": "Balance copper with hot concentrated sulfuric acid: Cu + SO₄²⁻ + ___H⁺ → Cu²⁺ + SO₂ + 2H₂O",
    "a": [
     "4"
    ],
-   "why": "Two H₂O need 4H⁺.",
+   "why": "Step 1: Cu 0 → +2 loses 2e⁻; S +6 → +4 gains 2e⁻. Electrons match 1 : 1.\nStep 2: O: SO₄²⁻ has 4 O; SO₂ keeps 2, so 2 O go to 2H₂O.\nStep 3: 2H₂O hold 4 H, so 4H⁺.\nCheck charge: left −2 + 4 = +2; right +2. Answer: 4.",
    "clue": "",
    "num": true,
    "graded": true,

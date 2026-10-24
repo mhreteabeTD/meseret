@@ -54,9 +54,10 @@
       "33/100",
       "3/100"
      ],
-     "after": "0.333… = 3/10 + 3/100 + … = 1/3.",
+     "after": "0.333… = 3/10 + 3/100 + 3/1000 + …: a geometric series with r = 1/10.\nIts sum is (3/10)/(1 − 1/10) = (3/10)/(9/10) = 1/3.\n(3/10 = 0.3 and 33/100 = 0.33 stop; 0.333… never stops.)",
      "ref": "Example 1",
-     "id": "g12.maths.u1.s1-4-2.1"
+     "id": "g12.maths.u1.s1-4-2.1",
+     "best": "1/3"
     },
     {
      "kind": "read",
@@ -89,11 +90,11 @@
     },
     {
      "kind": "blank",
-     "ask": "0.444… as a fraction = ___",
+     "ask": "Write the recurring decimal 0.444… as a fraction: ___",
      "a": [
       "4/9"
      ],
-     "why": "4/10 + 4/100 + … : (4/10)/(9/10) = 4/9.",
+     "why": "Step 1: 0.444… = 4/10 + 4/100 + 4/1000 + …\nStep 2: G₁ = 4/10, r = 1/10.\nStep 3: S∞ = (4/10)/(1 − 1/10) = (4/10)/(9/10) = 4/9.\nCheck: 4 ÷ 9 = 0.444… ✓.",
      "clue": "r = 1/10.",
      "num": true,
      "graded": true,
@@ -146,12 +147,42 @@
      "id": "g12.maths.u1.s1-4-2.6"
     },
     {
+     "kind": "tap",
+     "step": "method",
+     "title": "The 9s rule, one decimal at a time",
+     "ask": "Tap each decimal. See the series and the fraction.",
+     "items": [
+      [
+       "0.333…",
+       "1 digit repeats: 3/10 + 3/100 + … ; r = 1/10. Sum 3/9 = 1/3."
+      ],
+      [
+       "0.474747…",
+       "2 digits repeat: 47/100 + 47/10 000 + … ; r = 1/100. Sum 47/99."
+      ],
+      [
+       "0.123123…",
+       "3 digits repeat: r = 1/1000. Sum 123/999 = 41/333."
+      ],
+      [
+       "3.777…",
+       "Not less than 1: split off 3. 3 + 7/9 = 34/9."
+      ],
+      [
+       "0.1666…",
+       "Mixed: the 1 does not repeat. Split: 1/10 + 6/90 = 1/6. The plain 9s rule does not work here."
+      ]
+     ],
+     "added": true,
+     "id": "g12.maths.u1.s1-4-2.19"
+    },
+    {
      "kind": "blank",
-     "ask": "0.565656… = ___",
+     "ask": "Write the recurring decimal 0.565656… as a fraction: ___",
      "a": [
       "56/99"
      ],
-     "why": "Two repeating digits: 56/99.",
+     "why": "Step 1: the block 56 repeats: 2 digits.\nStep 2: 0.5656… = 56/100 + 56/10000 + …, so G₁ = 56/100, r = 1/100.\nStep 3: S∞ = (56/100)/(99/100) = 56/99.\nThe 9s rule gives the same: 56 over two 9s.",
      "clue": "Two 9s below.",
      "num": true,
      "graded": true,
@@ -162,11 +193,11 @@
     },
     {
      "kind": "blank",
-     "ask": "3.777… = ___",
+     "ask": "Write the recurring decimal 3.777… as a fraction: ___",
      "a": [
       "34/9"
      ],
-     "why": "3 + 7/9 = 27/9 + 7/9 = 34/9.",
+     "why": "Step 1: split: 3.777… = 3 + 0.777…\nStep 2: 0.777… = 7/9 (one repeating digit, one 9).\nStep 3: 3 = 27/9, so 27/9 + 7/9 = 34/9.\nCheck: 34 ÷ 9 = 3.777… ✓. (Trap: 37/9 puts the 3 into the top.)",
      "clue": "Do the 0.777… part, then add 3.",
      "num": true,
      "graded": true,
@@ -177,9 +208,9 @@
     },
     {
      "kind": "tf",
-     "text": "0.373737… = 37/100",
+     "text": "The 9s rule: true or false? 0.373737… = 37/100",
      "a": false,
-     "why": "37/100 = 0.37 exactly. 0.3737… = 37/99.",
+     "why": "Step 1: 37/100 = 0.37 exactly. It stops.\nStep 2: 0.3737… repeats forever: G₁ = 37/100, r = 1/100.\nStep 3: S∞ = (37/100)/(99/100) = 37/99.\nSo the statement is false. Use 9s, not 10s.",
      "clue": "Use 9s, not 10s.",
      "graded": true,
      "level": 1,
@@ -188,12 +219,42 @@
      "id": "g12.maths.u1.s1-4-2.9"
     },
     {
+     "kind": "match",
+     "step": "practise",
+     "graded": true,
+     "level": 1,
+     "title": "Match each decimal to its fraction",
+     "text": "Match each recurring decimal to the fraction it equals.",
+     "pairs": [
+      [
+       "0.777…",
+       "7/9"
+      ],
+      [
+       "0.121212…",
+       "12/99"
+      ],
+      [
+       "0.125125…",
+       "125/999"
+      ],
+      [
+       "0.5",
+       "1/2"
+      ]
+     ],
+     "why": "0.777…: 1 repeating digit → 7/9.\n0.1212…: 2 repeating digits → 12/99.\n0.125125…: 3 repeating digits → 125/999.\n0.5 stops: it is 5/10 = 1/2, not 5/9.",
+     "clue": "Count the repeating digits. That many 9s go below.",
+     "added": true,
+     "id": "g12.maths.u1.s1-4-2.20"
+    },
+    {
      "kind": "blank",
-     "ask": "0.1666… (only the 6 repeats) = ___",
+     "ask": "A mixed recurring decimal: write 0.1666… (only the 6 repeats) as a fraction: ___",
      "a": [
       "1/6"
      ],
-     "why": "0.1 + 0.0666… = 1/10 + (6/100)/(9/10) = 1/10 + 1/15 = 3/30 + 2/30 = 5/30 = 1/6.",
+     "why": "Step 1: split: 0.1666… = 0.1 + 0.0666…\nStep 2: 0.0666… = 6/100 + 6/1000 + …: G₁ = 6/100, r = 1/10.\nStep 3: S∞ = (6/100)/(9/10) = 6/90 = 1/15.\nStep 4: 1/10 + 1/15 = 3/30 + 2/30 = 5/30 = 1/6.\nCheck: 1 ÷ 6 = 0.1666… ✓. (16/99 = 0.1616…: wrong block.)",
      "clue": "Split off 0.1. The rest is 6/100 + 6/1000 + …",
      "num": true,
      "graded": true,
@@ -211,11 +272,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "0.444… = ___",
+     "ask": "Write the recurring decimal 0.444… as a fraction: ___",
      "a": [
       "4/9"
      ],
-     "why": "One repeating digit.",
+     "why": "Step 1: one digit repeats: 4.\nStep 2: 9s rule: 4 over one 9.\nStep 3: 0.444… = 4/9.",
      "clue": "One 9.",
      "num": true,
      "graded": true,
@@ -226,11 +287,11 @@
     },
     {
      "kind": "blank",
-     "ask": "3.777… = ___",
+     "ask": "Write the recurring decimal 3.777… as a fraction: ___",
      "a": [
       "34/9"
      ],
-     "why": "3 + 7/9.",
+     "why": "Step 1: whole part first: 3.777… = 3 + 0.777…\nStep 2: 0.777… = 7/9.\nStep 3: 3 + 7/9 = 27/9 + 7/9 = 34/9.",
      "clue": "Whole part first.",
      "num": true,
      "graded": true,
@@ -241,11 +302,11 @@
     },
     {
      "kind": "blank",
-     "ask": "0.565656… = ___",
+     "ask": "Write the recurring decimal 0.565656… as a fraction: ___",
      "a": [
       "56/99"
      ],
-     "why": "Two repeating digits.",
+     "why": "Step 1: two digits repeat: 56.\nStep 2: 9s rule: 56 over two 9s.\nStep 3: 0.5656… = 56/99.",
      "clue": "Two 9s.",
      "num": true,
      "graded": true,
@@ -260,11 +321,11 @@
  "test": [
   {
    "kind": "blank",
-   "ask": "0.888… = ___",
+   "ask": "Write the recurring decimal 0.888… as a fraction: ___",
    "a": [
     "8/9"
    ],
-   "why": "8/9.",
+   "why": "One digit repeats: 8.\n8/10 + 8/100 + … = (8/10)/(9/10).\n= 8/9.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -274,12 +335,12 @@
   },
   {
    "kind": "blank",
-   "ask": "0.272727… = ___",
+   "ask": "Write the recurring decimal 0.272727… as a fraction: ___",
    "a": [
     "3/11",
     "27/99"
    ],
-   "why": "27/99 = 3/11.",
+   "why": "Two digits repeat: 27.\n9s rule: 27/99.\nDivide top and bottom by 9: 3/11.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -289,11 +350,11 @@
   },
   {
    "kind": "blank",
-   "ask": "2.555… = ___",
+   "ask": "Write the recurring decimal 2.555… as a fraction: ___",
    "a": [
     "23/9"
    ],
-   "why": "2 + 5/9.",
+   "why": "2.555… = 2 + 0.555…\n0.555… = 5/9.\n2 + 5/9 = 18/9 + 5/9 = 23/9.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -303,12 +364,12 @@
   },
   {
    "kind": "blank",
-   "ask": "0.135135… = ___",
+   "ask": "Write the recurring decimal 0.135135… as a fraction: ___",
    "a": [
     "5/37",
     "135/999"
    ],
-   "why": "135/999 = 5/37.",
+   "why": "Three digits repeat: 135.\n9s rule: 135/999.\n135 = 27 × 5 and 999 = 27 × 37, so 135/999 = 5/37.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -318,11 +379,11 @@
   },
   {
    "kind": "blank",
-   "ask": "0.8333… (only the 3 repeats) = ___",
+   "ask": "A mixed recurring decimal: write 0.8333… (only the 3 repeats) as a fraction: ___",
    "a": [
     "5/6"
    ],
-   "why": "8/10 + 3/90 = 72/90 + 3/90 = 75/90.",
+   "why": "0.8333… = 8/10 + 0.0333…\n0.0333… = (3/100)/(9/10) = 3/90.\n8/10 + 3/90 = 72/90 + 3/90 = 75/90.\n75/90 = 5/6.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -360,7 +421,7 @@
     },
     {
      "kind": "mcq",
-     "text": "8 + 4 + 2 + 1 + … = ?",
+     "text": "Sum to infinity, S∞ = G₁/(1 − r): 8 + 4 + 2 + 1 + … = ?",
      "opts": [
       "16",
       "15",
@@ -368,7 +429,7 @@
       "12"
      ],
      "ans": "16",
-     "why": "8/(1 − 1/2) = 16.",
+     "why": "Step 1: G₁ = 8, r = 4 ÷ 8 = 1/2. |r| < 1 ✓.\nStep 2: S∞ = 8/(1 − 1/2) = 8/(1/2).\nStep 3: = 16.\n(15 is only S₄; the sum never reaches ∞ because the terms halve.)",
      "clue": "G₁/(1 − r).",
      "graded": true,
      "level": 1,

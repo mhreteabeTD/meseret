@@ -54,9 +54,10 @@
       "Revenue is constant",
       "Only if x < 0"
      ],
-     "after": "R = 6x − x²/2 rises to 18 birr at x = 6, then falls.",
+     "after": "R = x(6 − x/2) = 6x − x²/2.\nMore items means a lower price per item.\nR′ = 6 − x = 0 at x = 6, so R(6) = 36 − 18 = 18 birr is the peak.\nAfter x = 6 the price drop costs more than the extra sales bring: R falls.",
      "ref": "Example 2",
-     "id": "g12.maths.u2.s2-2-2.1"
+     "id": "g12.maths.u2.s2-2-2.1",
+     "best": "No, revenue peaks then falls"
     },
     {
      "kind": "read",
@@ -70,6 +71,36 @@
      "note": "Set the marginal function to 0, then check the sign change.",
      "ref": "p.116–118",
      "id": "g12.maths.u2.s2-2-2.2"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "added": true,
+     "title": "The marginal functions",
+     "ask": "Tap each card.",
+     "items": [
+      [
+       "C′(x)",
+       "Marginal cost: about the extra cost of one more unit."
+      ],
+      [
+       "R′(x)",
+       "Marginal revenue: about the extra money from one more unit sold."
+      ],
+      [
+       "P′(x) = R′(x) − C′(x)",
+       "Marginal profit: about the extra profit from one more unit."
+      ],
+      [
+       "R(x) = x × price",
+       "Revenue is the number sold times the price of each."
+      ],
+      [
+       "P′(x) = 0",
+       "A possible best level. P′ going + to − confirms a maximum."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-2-2.20"
     },
     {
      "kind": "slider",
@@ -110,11 +141,11 @@
     },
     {
      "kind": "blank",
-     "ask": "P(x) = x − 0.00001x². The optimal sales volume is ___ units",
+     "ask": "Optimal sales volume: profit P(x) = x − 0.00001x² birr. Profit is largest when x = ___ units",
      "a": [
       "50000"
      ],
-     "why": "P′ = 1 − 0.00002x = 0 gives x = 50 000; P′ goes + to −.",
+     "why": "Marginal profit: P′(x) = 1 − 0.00002x.\nSet P′(x) = 0: 0.00002x = 1.\nx = 1 ÷ 0.00002 = 50 000.\nCheck: P′ > 0 before 50 000 and < 0 after (+ to −), so it is a maximum.\nAnswer: 50 000 units.",
      "clue": "Set P′(x) = 0.",
      "num": true,
      "graded": true,
@@ -125,11 +156,11 @@
     },
     {
      "kind": "blank",
-     "ask": "At that volume the profit is ___ birr",
+     "ask": "Maximum profit: P(x) = x − 0.00001x². At x = 50 000 the profit is ___ birr",
      "a": [
       "25000"
      ],
-     "why": "50 000 − 0.00001 × 50 000² = 50 000 − 25 000.",
+     "why": "Substitute x = 50 000 into P, not into P′.\n50 000² = 2 500 000 000.\n0.00001 × 2 500 000 000 = 25 000.\nP = 50 000 − 25 000 = 25 000 birr.",
      "clue": "Put x = 50 000 into P.",
      "num": true,
      "graded": true,
@@ -153,11 +184,11 @@
     },
     {
      "kind": "blank",
-     "ask": "R(x) = 1000x − x², C(x) = 3000 + 20x. Adding 10 homes a day at x = 400, profit grows ___ birr per day",
+     "ask": "Profit growing with time: R(x) = 1000x − x², C(x) = 3000 + 20x, x homes. Adding 10 homes a day at x = 400, the profit grows ___ birr per day",
      "a": [
       "1800"
      ],
-     "why": "dR/dt = (1000 − 800)(10) = 2000, dC/dt = 20 × 10 = 200. 2000 − 200 = 1800.",
+     "why": "Chain rule: dR/dt = R′(x) × dx/dt, and the same for C.\nR′(x) = 1000 − 2x = 1000 − 800 = 200 at x = 400.\ndR/dt = 200 × 10 = 2000 birr per day.\nC′(x) = 20, so dC/dt = 20 × 10 = 200 birr per day.\ndP/dt = 2000 − 200 = 1800 birr per day.",
      "clue": "Chain rule: dR/dt = R′(x) dx/dt.",
      "num": true,
      "graded": true,
@@ -168,11 +199,11 @@
     },
     {
      "kind": "blank",
-     "ask": "C(x) = 62x² + 27 500 and R(x) = x³ − 12x² + 40x + 10. Marginal profit at x = 50 = ___",
+     "ask": "Marginal profit: C(x) = 62x² + 27 500 and R(x) = x³ − 12x² + 40x + 10. Find P′(50) = ___",
      "a": [
       "140"
      ],
-     "why": "P′(x) = 3x² − 148x + 40: 7500 − 7400 + 40 = 140.",
+     "why": "P′ = R′ − C′.\nR′(x) = 3x² − 24x + 40 and C′(x) = 124x.\nP′(x) = 3x² − 148x + 40.\nP′(50) = 3(2500) − 148(50) + 40 = 7500 − 7400 + 40.\nP′(50) = 140.",
      "clue": "P′ = R′ − C′.",
      "num": true,
      "graded": true,
@@ -182,10 +213,42 @@
      "id": "g12.maths.u2.s2-2-2.9"
     },
     {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Profit P and marginal profit P′",
+     "ask": "Exercise 2.19: P(x) = x³ − 74x² + 40x − 27 490. Move x and compare P with P′.",
+     "vars": [
+      {
+       "k": "x",
+       "label": "Units x",
+       "min": 40,
+       "max": 90,
+       "step": 1,
+       "v": 50
+      }
+     ],
+     "formula": "x*x*x - 74*x*x + 40*x - 27490",
+     "outs": [
+      [
+       "Profit P(x)",
+       "x*x*x - 74*x*x + 40*x - 27490",
+       "{v} birr"
+      ],
+      [
+       "Marginal profit P′(x)",
+       "3*x*x - 148*x + 40",
+       "{v} birr per unit"
+      ]
+     ],
+     "note": "From x ≈ 49 on, P′ > 0: the profit is rising. But P stays negative until about x = 78.",
+     "id": "g12.maths.u2.s2-2-2.21"
+    },
+    {
      "kind": "tf",
-     "text": "A positive marginal profit means total profit is positive.",
+     "text": "True or false? A positive marginal profit means the total profit is positive.",
      "a": false,
-     "why": "At x = 50, P′(50) = 140 > 0 but P(50) = −85 490: a loss that is shrinking.",
+     "why": "P′ tells how profit is changing, not how big it is.\nAt x = 50: P′(50) = 140 > 0.\nBut P(50) = 97 010 − 182 500 = −85 490: a loss.\nThe loss is shrinking, but it is still a loss. False.",
      "clue": "Compare P(50) and P′(50).",
      "graded": true,
      "level": 2,
@@ -195,11 +258,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Demand P = 40 − 2x birr. The revenue is largest at x = ___",
+     "ask": "Maximum revenue from a demand line: price p = 40 − 2x birr for x items. Revenue is largest at x = ___",
      "a": [
       "10"
      ],
-     "why": "R = 40x − 2x². R′ = 40 − 4x = 0 at x = 10.",
+     "why": "Revenue = number sold × price: R = x(40 − 2x) = 40x − 2x².\nR′(x) = 40 − 4x.\nR′ = 0 gives x = 10.\nR′ goes + to −, so it is a maximum: R(10) = 400 − 200 = 200 birr.\nTrap: setting the price 40 − 2x = 0 gives x = 20, where revenue is 0.",
      "clue": "R = x × price.",
      "num": true,
      "graded": true,
@@ -217,7 +280,7 @@
    "items": [
     {
      "kind": "mcq",
-     "text": "Total profit P(x):",
+     "text": "Total profit: C(x) = 62x² + 27 500 and R(x) = x³ − 12x² + 40x + 10. Find P(x) = R(x) − C(x).",
      "opts": [
       "x³ − 74x² + 40x − 27 490",
       "x³ + 50x² + 40x + 27 510",
@@ -225,7 +288,7 @@
       "62x² − x³"
      ],
      "ans": "x³ − 74x² + 40x − 27 490",
-     "why": "R − C.",
+     "why": "P = (x³ − 12x² + 40x + 10) − (62x² + 27 500).\nSubtract every term of C: −12x² − 62x² = −74x².\nConstants: 10 − 27 500 = −27 490.\nP(x) = x³ − 74x² + 40x − 27 490.\nTrap: + 27 490 forgets to subtract the 27 500.",
      "clue": "Subtract every term of C.",
      "graded": true,
      "level": 1,
@@ -235,11 +298,11 @@
     },
     {
      "kind": "blank",
-     "ask": "P(50) = ___",
+     "ask": "Total profit at x = 50 for the same R and C: P(50) = ___",
      "a": [
       "-85490"
      ],
-     "why": "97 010 − 182 500.",
+     "why": "R(50) = 125 000 − 30 000 + 2000 + 10 = 97 010.\nC(50) = 62(2500) + 27 500 = 155 000 + 27 500 = 182 500.\nP(50) = 97 010 − 182 500 = −85 490.\nNegative: the company makes a loss at x = 50.",
      "clue": "R(50) − C(50).",
      "num": true,
      "graded": true,
@@ -250,7 +313,7 @@
     },
     {
      "kind": "pick",
-     "text": "Marginal cost and revenue at x = 50:",
+     "text": "Marginal cost and marginal revenue at x = 50 (same C and R). Pick C′(50) and R′(50).",
      "pool": [
       "6200",
       "6340",
@@ -261,7 +324,7 @@
       "6200",
       "6340"
      ],
-     "why": "C′ = 124x, R′ = 3x² − 24x + 40.",
+     "why": "C′(x) = 124x, so C′(50) = 6200.\nR′(x) = 3x² − 24x + 40, so R′(50) = 7500 − 1200 + 40 = 6340.\nCheck: R′ − C′ = 140 = P′(50).\n182 500 is C(50), not C′(50).",
      "clue": "Differentiate C and R.",
      "graded": true,
      "level": 2,
@@ -275,11 +338,11 @@
  "test": [
   {
    "kind": "blank",
-   "ask": "P(x) = 40x − x². Best x = ___",
+   "ask": "Best level of output: P(x) = 40x − x². Profit is largest at x = ___",
    "a": [
     "20"
    ],
-   "why": "40 − 2x = 0.",
+   "why": "P′(x) = 40 − 2x.\nP′ = 0 gives x = 20.\nP′ goes + to − at 20: a maximum.\nAnswer: x = 20.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -289,11 +352,11 @@
   },
   {
    "kind": "blank",
-   "ask": "R(x) = 8x − 0.5x². Maximum revenue = ___",
+   "ask": "Maximum revenue: R(x) = 8x − 0.5x². The largest revenue is ___",
    "a": [
     "32"
    ],
-   "why": "x = 8: 64 − 32.",
+   "why": "R′(x) = 8 − x = 0 gives x = 8.\nR′ goes + to −: a maximum.\nR(8) = 64 − 0.5(64) = 64 − 32 = 32.\nTrap: 8 is the best x, not the revenue.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -303,7 +366,7 @@
   },
   {
    "kind": "mcq",
-   "text": "Profit P(x) equals",
+   "text": "Profit, revenue and cost: profit P(x) equals",
    "opts": [
     "R(x) − C(x)",
     "C(x) − R(x)",
@@ -311,7 +374,7 @@
     "R′(x)"
    ],
    "ans": "R(x) − C(x)",
-   "why": "definition.",
+   "why": "Profit is the money taken in minus the money spent.\nMoney in = revenue R(x). Money spent = cost C(x).\nSo P(x) = R(x) − C(x).\nC − R would be the loss; R′ is marginal revenue.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -320,11 +383,11 @@
   },
   {
    "kind": "blank",
-   "ask": "C(x) = 500 + 3x². Marginal cost at x = 10 = ___",
+   "ask": "Marginal cost: C(x) = 500 + 3x². C′(10) = ___",
    "a": [
     "60"
    ],
-   "why": "6x.",
+   "why": "Marginal cost is C′(x).\nC′(x) = 0 + 6x (the fixed 500 gives 0).\nC′(10) = 60.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -334,11 +397,11 @@
   },
   {
    "kind": "blank",
-   "ask": "Price p = 100 − 4x. The x giving the largest revenue = ___",
+   "ask": "Maximum revenue from a demand line: price p = 100 − 4x. Revenue is largest at x = ___",
    "a": [
     "12.5"
    ],
-   "why": "R = 100x − 4x², 100 − 8x = 0.",
+   "why": "R = x × p = 100x − 4x².\nR′ = 100 − 8x.\nR′ = 0 gives x = 100/8 = 12.5.\nR′ goes + to −: a maximum.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -373,7 +436,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f′ goes − to + at c. f(c) is a",
+     "text": "First derivative test: f′ changes from − to + at c. Then f(c) is a",
      "opts": [
       "minimum",
       "maximum",
@@ -381,7 +444,7 @@
       "mistake"
      ],
      "ans": "minimum",
-     "why": "Falling then rising.",
+     "why": "f′ < 0 before c: the graph falls.\nf′ > 0 after c: the graph rises.\nFalling then rising makes a valley.\nSo f(c) is a relative minimum.",
      "clue": "Valley or hill?",
      "graded": true,
      "level": 1,

@@ -1,487 +1,539 @@
 {
-  "id": "g9.maths.u1.s1-1-2",
-  "book": {
-    "title": "Mathematics Grade 9 Student Textbook",
-    "grade": 9,
-    "subject": "maths",
-    "unit": 1,
-    "unit_title": "The Number System",
-    "section": "1.1.2",
-    "pages": "18–32"
+ "id": "g9.maths.u1.s1-1-2",
+ "book": {
+  "title": "Mathematics Grade 9 Student Textbook",
+  "grade": 9,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "The Number System",
+  "section": "1.1.2",
+  "pages": "18–32"
+ },
+ "title": "Prime numbers and composite numbers",
+ "competency": "Use factors to tell prime numbers from composite numbers.",
+ "minutes": 9,
+ "tool": "factors",
+ "keywords": [
+  {
+   "en": "Factor",
+   "am": "አካፋይ",
+   "def": "p is a factor of h if h = p × q for some natural number q. Also called a divisor.",
+   "machine": true
   },
-  "title": "Prime numbers and composite numbers",
-  "competency": "Use factors to tell prime numbers from composite numbers.",
-  "minutes": 9,
-  "tool": "factors",
-  "keywords": [
-    {
-      "en": "Factor",
-      "am": "አካፋይ",
-      "def": "p is a factor of h if h = p × q for some natural number q. Also called a divisor.",
-      "machine": true
-    },
-    {
-      "en": "Multiple",
-      "am": "ብዜት",
-      "def": "h is a multiple of p if h = p × q for some natural number q.",
-      "machine": true
-    },
-    {
-      "en": "Prime number",
-      "am": "ብቸኛ ቁጥር",
-      "def": "A natural number with exactly two different factors, 1 and itself, such as 2, 3, 5, 7.",
-      "machine": true
-    },
-    {
-      "en": "Composite number",
-      "am": "ተዋሃጅ ቁጥር",
-      "def": "A natural number with more than two factors, such as 4, 6, 9. 1 is neither prime nor composite.",
-      "machine": true
-    }
-  ],
-  "ideas": [
-    {
-      "id": "math.prime-composite",
-      "name": "Prime and composite numbers",
-      "tool": "factors",
-      "explain": {
-        "en": {
-          "text": "A factor divides a number exactly. A prime number has exactly two factors: 1 and itself. Examples are 2, 3, 5 and 7. A composite number has more than two factors, like 4, 6 and 9. The number 1 is neither prime nor composite. 2 is the only even prime."
-        },
-        "am": {
-          "text": "አካፋይ አንድን ቁጥር ያለ ቀሪ ይካፍላል። ብቸኛ ቁጥር በትክክል ሁለት አካፋዮች አሉት፤ 1 እና ራሱ። ለምሳሌ 2፣ 3፣ 5 እና 7። ተዋሃጅ ቁጥር ከሁለት በላይ አካፋዮች አሉት፤ እንደ 4፣ 6 እና 9። ቁጥር 1 ብቸኛም ተዋሃጅም አይደለም። 2 ብቸኛው ጥንድ ብቸኛ ቁጥር ነው።",
-          "machine": true
-        }
-      },
-      "screens": [
-        {
-          "kind": "guess",
-          "step": "hook",
-          "added": true,
-          "title": "Rows of teff bags",
-          "text": "Selam stacks 12 teff bags in equal rows. She finds 1 × 12, 2 × 6 and 3 × 4.",
-          "ask": "In how many ways can she put 7 bags in equal rows?",
-          "opts": [
-            "1 way",
-            "2 ways",
-            "3 ways",
-            "4 ways"
-          ],
-          "after": "Only 1 × 7 works. 7 has just two factors: 1 and 7. Read on to see why that matters."
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Factors and multiples",
-          "paras": [
-            "Let h and p be natural numbers.",
-            "h is a multiple of p if h = p × q for some natural number q.",
-            "Then p and q are factors, or divisors, of h.",
-            "And h is divisible by p and by q.",
-            "Example 1: 249 = 3 × 83, so 249 is divisible by 3."
-          ]
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "Factor and multiple",
-          "defs": [
-            [
-              "Factor",
-              "p is a factor of h if h = p × q for a natural number q."
-            ],
-            [
-              "Multiple",
-              "h is a multiple of p if h = p × q for a natural number q."
-            ]
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Use 3 and 12",
-          "text": "Which sentence is true?",
-          "opts": [
-            "3 is a factor of 12",
-            "12 is a factor of 3",
-            "3 is divisible by 12",
-            "3 is a multiple of 12"
-          ],
-          "ans": "3 is a factor of 12",
-          "why": "12 = 3 × 4. So 3 is a factor of 12, and 12 is a multiple of 3.",
-          "clue": "Write 12 as 3 × something.",
-          "id": "g9.maths.u1.s1-1-2.1"
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Definition 1.1",
-          "paras": [
-            "Some numbers have exactly two different factors: 1 and the number itself.",
-            "Other numbers have more than two factors.",
-            "Example 2: 18 = 1 × 18 = 2 × 9 = 3 × 6.",
-            "So the factors of 18 are 1, 2, 3, 6, 9 and 18."
-          ]
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "Prime and composite",
-          "defs": [
-            [
-              "Prime number",
-              "A natural number with exactly two different factors, 1 and itself."
-            ],
-            [
-              "Composite number",
-              "A natural number with more than two factors. 18 is composite."
-            ]
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Spot the prime",
-          "text": "Which number is prime?",
-          "opts": [
-            "21",
-            "27",
-            "29",
-            "33"
-          ],
-          "ans": "29",
-          "why": "29 has only the factors 1 and 29. 21 = 3 × 7, 27 = 3 × 9, 33 = 3 × 11.",
-          "clue": "Try dividing each number by 3.",
-          "id": "g9.maths.u1.s1-1-2.2"
-        },
-        {
-          "kind": "steps",
-          "step": "method",
-          "text": "Find the primes between 50 and 55.",
-          "steps": [
-            "51 = 3 × 17, so 51 is composite.",
-            "52 = 2 × 26, so 52 is composite.",
-            "53 has only the factors 1 and 53.",
-            "54 = 2 × 27, so 54 is composite.",
-            "So 53 is the only prime between 50 and 55."
-          ],
-          "ref": "Example 3"
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Note",
-          "paras": [
-            "1 is neither prime nor composite.",
-            "2 is the only even prime.",
-            "A factor of a natural number is never larger than the number itself."
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "title": "Why is 1 not prime?",
-          "text": "Why is 1 not a prime number?",
-          "opts": [
-            "It has only one factor",
-            "It is odd",
-            "It is too small to divide",
-            "It is composite"
-          ],
-          "ans": "It has only one factor",
-          "why": "A prime needs exactly two different factors. 1 has just one.",
-          "clue": "Count the factors of 1.",
-          "id": "g9.maths.u1.s1-1-2.3"
-        },
-        {
-          "kind": "sort",
-          "step": "practise",
-          "graded": true,
-          "title": "Prime, composite or neither?",
-          "text": "Put each number in the right group.",
-          "bins": [
-            "Prime",
-            "Composite",
-            "Neither"
-          ],
-          "items": [
-            [
-              "1",
-              "Neither",
-              "1 has only one factor."
-            ],
-            [
-              "2",
-              "Prime",
-              "2 has factors 1 and 2 only."
-            ],
-            [
-              "9",
-              "Composite",
-              "9 = 3 × 3, so its factors are 1, 3, 9."
-            ],
-            [
-              "23",
-              "Prime",
-              "23 has factors 1 and 23 only."
-            ],
-            [
-              "51",
-              "Composite",
-              "51 = 3 × 17."
-            ]
-          ],
-          "why": "Count the factors: one, exactly two, or more than two.",
-          "clue": "Use the factor tool to list the factors of each number.",
-          "id": "g9.maths.u1.s1-1-2.4"
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "title": "Count the factors",
-          "ask": "36 has ___ factors.",
-          "a": [
-            "9",
-            "nine"
-          ],
-          "why": "The factors are 1, 2, 3, 4, 6, 9, 12, 18, 36.",
-          "clue": "Find the pairs: 1 × 36, 2 × 18, and so on.",
-          "worked": "Pairs: 1 × 36, 2 × 18, 3 × 12, 4 × 9, 6 × 6. Count 6 once. That gives 9 factors.",
-          "id": "g9.maths.u1.s1-1-2.5"
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "added": true,
-          "title": "Piles of coins",
-          "text": "Meron has 23 one-birr coins. She wants at least two equal piles, with more than one coin in each.",
-          "ask": "Can she do it?",
-          "opts": [
-            "No, because 23 is prime",
-            "Yes, 2 piles",
-            "Yes, 3 piles",
-            "Yes, because 23 is odd"
-          ],
-          "ans": "No, because 23 is prime",
-          "why": "23 has only the factors 1 and 23. No other pile size works.",
-          "clue": "Which numbers divide 23 exactly?",
-          "id": "g9.maths.u1.s1-1-2.6"
-        }
-      ]
-    }
-  ],
-  "exercises": [
-    {
-      "book_name": "Activity 1.3",
-      "items": [
-        {
-          "kind": "tf",
-          "step": "exercise",
-          "graded": true,
-          "text": "1 is a factor of every natural number.",
-          "a": true,
-          "why": "Every natural number n = 1 × n.",
-          "clue": "Write any number as 1 × something.",
-          "id": "g9.maths.u1.s1-1-2.7"
-        },
-        {
-          "kind": "tf",
-          "step": "exercise",
-          "graded": true,
-          "text": "There is no even prime number.",
-          "a": false,
-          "why": "2 is even and prime.",
-          "clue": "Look at the smallest prime.",
-          "id": "g9.maths.u1.s1-1-2.8"
-        },
-        {
-          "kind": "tf",
-          "step": "exercise",
-          "graded": true,
-          "text": "Every natural number is either prime or composite.",
-          "a": false,
-          "why": "1 is neither prime nor composite.",
-          "clue": "Think about the number 1.",
-          "id": "g9.maths.u1.s1-1-2.9"
-        },
-        {
-          "kind": "tf",
-          "step": "exercise",
-          "graded": true,
-          "text": "351 is divisible by 3.",
-          "a": true,
-          "why": "3 + 5 + 1 = 9, which is divisible by 3. Indeed 351 = 3 × 117.",
-          "clue": "Try 351 ÷ 3.",
-          "id": "g9.maths.u1.s1-1-2.10"
-        },
-        {
-          "kind": "tf",
-          "step": "exercise",
-          "graded": true,
-          "text": "2² × 3 × 7 is the prime factorization of 84.",
-          "a": true,
-          "why": "4 × 3 × 7 = 84, and 2, 3 and 7 are prime.",
-          "clue": "Multiply it out.",
-          "id": "g9.maths.u1.s1-1-2.11"
-        },
-        {
-          "kind": "tf",
-          "step": "exercise",
-          "graded": true,
-          "text": "63 is a multiple of 21.",
-          "a": true,
-          "why": "21 × 3 = 63.",
-          "clue": "Is 63 = 21 × some natural number?",
-          "id": "g9.maths.u1.s1-1-2.12"
-        }
-      ]
-    },
-    {
-      "book_name": "Exercise 1.3",
-      "items": [
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "text": "List the prime numbers less than 30.",
-          "ask": "The primes less than 30 are ___.",
-          "a": [
-            "2, 3, 5, 7, 11, 13, 17, 19, 23, 29",
-            "2,3,5,7,11,13,17,19,23,29",
-            "2 3 5 7 11 13 17 19 23 29",
-            "2, 3, 5, 7, 11, 13, 17, 19, 23 and 29"
-          ],
-          "why": "These ten numbers each have exactly two factors.",
-          "clue": "Start at 2. Cross out multiples of 2, 3 and 5.",
-          "id": "g9.maths.u1.s1-1-2.13"
-        },
-        {
-          "kind": "tf",
-          "step": "exercise",
-          "graded": true,
-          "text": "There are 7 primes between 1 and 20.",
-          "a": false,
-          "why": "There are 8: 2, 3, 5, 7, 11, 13, 17, 19.",
-          "clue": "List them and count carefully.",
-          "id": "g9.maths.u1.s1-1-2.14"
-        },
-        {
-          "kind": "tf",
-          "step": "exercise",
-          "graded": true,
-          "text": "The smallest composite number is 2.",
-          "a": false,
-          "why": "2 is prime. The smallest composite number is 4.",
-          "clue": "How many factors does 2 have?",
-          "id": "g9.maths.u1.s1-1-2.15"
-        },
-        {
-          "kind": "tf",
-          "step": "exercise",
-          "graded": true,
-          "text": "101 is the prime nearest to 100.",
-          "a": true,
-          "why": "101 is 1 away. The prime below, 97, is 3 away.",
-          "clue": "Check 99, 98, 97 and 101.",
-          "id": "g9.maths.u1.s1-1-2.16"
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "text": "28 is composite.",
-          "ask": "The factors of 28 are ___.",
-          "a": [
-            "1, 2, 4, 7, 14, 28",
-            "1,2,4,7,14,28",
-            "1 2 4 7 14 28",
-            "1, 2, 4, 7, 14 and 28"
-          ],
-          "why": "28 = 1 × 28 = 2 × 14 = 4 × 7.",
-          "clue": "Find factor pairs that multiply to 28.",
-          "id": "g9.maths.u1.s1-1-2.17"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Which is true about composite numbers?",
-          "opts": [
-            "They have 3 pairs of factors",
-            "They have no factors",
-            "They are always prime",
-            "They have more than two factors"
-          ],
-          "ans": "They have more than two factors",
-          "why": "That is Definition 1.1.",
-          "clue": "Reread the definition of composite.",
-          "id": "g9.maths.u1.s1-1-2.18"
-        }
-      ]
-    }
-  ],
-  "test": [
-    {
-      "kind": "mcq",
-      "step": "test",
-      "graded": true,
-      "text": "Which number is composite?",
-      "opts": [
-        "2",
-        "13",
-        "31",
-        "39"
-      ],
-      "ans": "39",
-      "why": "39 = 3 × 13, so it has more than two factors.",
-      "clue": "",
-      "id": "g9.maths.u1.s1-1-2.19"
-    },
-    {
-      "kind": "tf",
-      "step": "test",
-      "graded": true,
-      "text": "Every prime number is odd.",
-      "a": false,
-      "why": "2 is prime and even.",
-      "clue": "",
-      "id": "g9.maths.u1.s1-1-2.20"
-    },
-    {
-      "kind": "blank",
-      "step": "test",
-      "graded": true,
-      "ask": "The smallest composite number is ___.",
-      "a": [
-        "4",
-        "four"
-      ],
-      "why": "1 is neither, 2 and 3 are prime, and 4 = 2 × 2.",
-      "clue": "",
-      "id": "g9.maths.u1.s1-1-2.21"
-    }
-  ],
-  "notes": [
-    {
-      "kind": "note",
-      "text": "Activity 1.3 items 1 and 3, and 2(c) (23 is prime), are left out of the Activity items to keep 6 items; item 1 is the check after 'Factor and multiple'."
-    },
-    {
-      "kind": "note",
-      "text": "Exercise 1.3 items 2(b), 2(e) and 4 are left out to keep 6 items. Item 4 ('if odd, then prime?') answer: no, 9 = 3 × 3."
-    },
-    {
-      "kind": "note",
-      "text": "The teff-bag hook and the coin-piles word problem are added Ethiopian examples, marked added."
-    }
-  ],
-  "review": {
-    "status": "validated"
+  {
+   "en": "Multiple",
+   "am": "ብዜት",
+   "def": "h is a multiple of p if h = p × q for some natural number q.",
+   "machine": true
   },
-  "version": 1
+  {
+   "en": "Prime number",
+   "am": "ብቸኛ ቁጥር",
+   "def": "A natural number with exactly two different factors, 1 and itself, such as 2, 3, 5, 7.",
+   "machine": true
+  },
+  {
+   "en": "Composite number",
+   "am": "ተዋሃጅ ቁጥር",
+   "def": "A natural number with more than two factors, such as 4, 6, 9. 1 is neither prime nor composite.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.prime-composite",
+   "name": "Prime and composite numbers",
+   "tool": "factors",
+   "explain": {
+    "en": {
+     "text": "A factor divides a number exactly. A prime number has exactly two factors: 1 and itself. Examples are 2, 3, 5 and 7. A composite number has more than two factors, like 4, 6 and 9. The number 1 is neither prime nor composite. 2 is the only even prime."
+    },
+    "am": {
+     "text": "አካፋይ አንድን ቁጥር ያለ ቀሪ ይካፍላል። ብቸኛ ቁጥር በትክክል ሁለት አካፋዮች አሉት፤ 1 እና ራሱ። ለምሳሌ 2፣ 3፣ 5 እና 7። ተዋሃጅ ቁጥር ከሁለት በላይ አካፋዮች አሉት፤ እንደ 4፣ 6 እና 9። ቁጥር 1 ብቸኛም ተዋሃጅም አይደለም። 2 ብቸኛው ጥንድ ብቸኛ ቁጥር ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "added": true,
+     "title": "Rows of teff bags",
+     "text": "Selam stacks 12 teff bags in equal rows. She finds 1 × 12, 2 × 6 and 3 × 4.",
+     "ask": "In how many ways can she put 7 bags in equal rows?",
+     "opts": [
+      "1 way",
+      "2 ways",
+      "3 ways",
+      "4 ways"
+     ],
+     "after": "7 bags fit only as 1 row of 7 (or 7 rows of 1).\n2, 3, 4, 5 and 6 do not divide 7 exactly.\nSo 7 has just two factors: 1 and 7.\n12 has more: 1, 2, 3, 4, 6, 12. Read on to see why that matters.",
+     "best": "1 way"
+    },
+    {
+     "kind": "grid",
+     "step": "explore",
+     "mode": "tile",
+     "title": "12 bags in equal rows",
+     "w": 4,
+     "h": 3,
+     "intro": "Selam puts 12 bags in rows of 4. Tap ▶ to fill one row at a time.",
+     "say": [
+      "Row 1: 4 bags.",
+      "Row 2: 8 bags so far.",
+      "Row 3: 12 bags. So 12 = 3 × 4. 3 and 4 are factors of 12."
+     ],
+     "added": true,
+     "id": "g9.maths.u1.s1-1-2.23"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Factors and multiples",
+     "paras": [
+      "Let h and p be natural numbers.",
+      "h is a multiple of p if h = p × q for some natural number q.",
+      "Then p and q are factors, or divisors, of h.",
+      "And h is divisible by p and by q.",
+      "Example 1: 249 = 3 × 83, so 249 is divisible by 3."
+     ]
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Factor and multiple",
+     "defs": [
+      [
+       "Factor",
+       "p is a factor of h if h = p × q for a natural number q."
+      ],
+      [
+       "Multiple",
+       "h is a multiple of p if h = p × q for a natural number q."
+      ]
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Use 3 and 12",
+     "text": "Factors and multiples: which sentence about 3 and 12 is true?",
+     "opts": [
+      "3 is a factor of 12",
+      "12 is a factor of 3",
+      "3 is divisible by 12",
+      "3 is a multiple of 12"
+     ],
+     "ans": "3 is a factor of 12",
+     "why": "Write 12 = 3 × 4.\nSo 3 is a factor of 12.\nAnd 12 is a multiple of 3 (12 is divisible by 3).\n12 cannot be a factor of 3: a factor is never larger than the number.",
+     "clue": "Write 12 as 3 × something.",
+     "id": "g9.maths.u1.s1-1-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Definition 1.1",
+     "paras": [
+      "Some numbers have exactly two different factors: 1 and the number itself.",
+      "Other numbers have more than two factors.",
+      "Example 2: 18 = 1 × 18 = 2 × 9 = 3 × 6.",
+      "So the factors of 18 are 1, 2, 3, 6, 9 and 18."
+     ]
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Count the factors",
+     "ask": "Tap each number to see its factors.",
+     "items": [
+      [
+       "7",
+       "Factors: 1, 7. Exactly two, so 7 is prime."
+      ],
+      [
+       "12",
+       "Factors: 1, 2, 3, 4, 6, 12. More than two, so 12 is composite."
+      ],
+      [
+       "18",
+       "Factors: 1, 2, 3, 6, 9, 18. More than two, so 18 is composite."
+      ],
+      [
+       "2",
+       "Factors: 1, 2. Exactly two, so 2 is prime. It is the only even prime."
+      ],
+      [
+       "1",
+       "Factor: 1 only. One factor, so 1 is neither prime nor composite."
+      ],
+      [
+       "29",
+       "Factors: 1, 29. Exactly two, so 29 is prime."
+      ]
+     ],
+     "need": 4,
+     "added": true,
+     "id": "g9.maths.u1.s1-1-2.22"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Prime and composite",
+     "defs": [
+      [
+       "Prime number",
+       "A natural number with exactly two different factors, 1 and itself."
+      ],
+      [
+       "Composite number",
+       "A natural number with more than two factors. 18 is composite."
+      ]
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Spot the prime",
+     "text": "Prime numbers: which number is prime?",
+     "opts": [
+      "21",
+      "27",
+      "29",
+      "33"
+     ],
+     "ans": "29",
+     "why": "Test each number for small factors.\n21 = 3 × 7, 27 = 3 × 9, 33 = 3 × 11: all composite.\n29: not divisible by 2, 3 or 5 (and 7 × 7 = 49 is too big).\nSo 29 has only the factors 1 and 29. 29 is prime.",
+     "clue": "Try dividing each number by 3.",
+     "id": "g9.maths.u1.s1-1-2.2"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "text": "Find the primes between 50 and 55.",
+     "steps": [
+      "51 = 3 × 17, so 51 is composite.",
+      "52 = 2 × 26, so 52 is composite.",
+      "53 has only the factors 1 and 53.",
+      "54 = 2 × 27, so 54 is composite.",
+      "So 53 is the only prime between 50 and 55."
+     ],
+     "ref": "Example 3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Note",
+     "paras": [
+      "1 is neither prime nor composite.",
+      "2 is the only even prime.",
+      "A factor of a natural number is never larger than the number itself."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "Why is 1 not prime?",
+     "text": "The number 1: why is 1 not a prime number?",
+     "opts": [
+      "It has only one factor",
+      "It is odd",
+      "It is too small to divide",
+      "It is composite"
+     ],
+     "ans": "It has only one factor",
+     "why": "A prime needs exactly two different factors.\nThe only factor of 1 is 1.\nOne factor is not two, so 1 is not prime.\nIt is not composite either: 1 is neither.",
+     "clue": "Count the factors of 1.",
+     "id": "g9.maths.u1.s1-1-2.3"
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "title": "Prime, composite or neither?",
+     "text": "Prime, composite or neither? Put each number in the right group.",
+     "bins": [
+      "Prime",
+      "Composite",
+      "Neither"
+     ],
+     "items": [
+      [
+       "1",
+       "Neither",
+       "1 has only one factor."
+      ],
+      [
+       "2",
+       "Prime",
+       "2 has factors 1 and 2 only."
+      ],
+      [
+       "9",
+       "Composite",
+       "9 = 3 × 3, so its factors are 1, 3, 9."
+      ],
+      [
+       "23",
+       "Prime",
+       "23 has factors 1 and 23 only."
+      ],
+      [
+       "51",
+       "Composite",
+       "51 = 3 × 17."
+      ]
+     ],
+     "why": "Count the factors of each number.\n1 has one factor: neither.\n2 and 23 have exactly two factors: prime.\n9 = 3 × 3 and 51 = 3 × 17 have more than two: composite.",
+     "clue": "Use the factor tool to list the factors of each number.",
+     "id": "g9.maths.u1.s1-1-2.4"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "title": "Count the factors",
+     "ask": "Count the factors: 36 has ___ factors.",
+     "a": [
+      "9",
+      "nine"
+     ],
+     "why": "List the factor pairs of 36.\n1 × 36, 2 × 18, 3 × 12, 4 × 9, 6 × 6.\nThe factors are 1, 2, 3, 4, 6, 9, 12, 18, 36.\nCount 6 only once.\nSo 36 has 9 factors.",
+     "clue": "Find the pairs: 1 × 36, 2 × 18, and so on.",
+     "worked": "Pairs: 1 × 36, 2 × 18, 3 × 12, 4 × 9, 6 × 6. Count 6 once. That gives 9 factors.",
+     "id": "g9.maths.u1.s1-1-2.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "added": true,
+     "title": "Piles of coins",
+     "text": "Meron has 23 one-birr coins. She wants at least two equal piles, with more than one coin in each.",
+     "ask": "Prime numbers in a word problem: can she do it?",
+     "opts": [
+      "No, because 23 is prime",
+      "Yes, 2 piles",
+      "Yes, 3 piles",
+      "Yes, because 23 is odd"
+     ],
+     "ans": "No, because 23 is prime",
+     "why": "Equal piles need a pile size that divides 23.\nTry 2, 3, 4, 5: none divides 23 exactly.\n23 has only the factors 1 and 23: it is prime.\nSo only 1 pile of 23 or 23 piles of 1 work. No.\n(\"23 is odd\" is not the reason: 21 is odd, and 21 = 3 × 7 piles.)",
+     "clue": "Which numbers divide 23 exactly?",
+     "id": "g9.maths.u1.s1-1-2.6"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activity 1.3",
+   "items": [
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Factors: 1 is a factor of every natural number.",
+     "a": true,
+     "why": "Any natural number n can be written as n = 1 × n.\nSo 1 divides n exactly.\nThis works for every n. True.",
+     "clue": "Write any number as 1 × something.",
+     "id": "g9.maths.u1.s1-1-2.7"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Even primes: there is no even prime number.",
+     "a": false,
+     "why": "2 is even.\nThe factors of 2 are 1 and 2 only.\nSo 2 is prime, and it is even.\nThe statement is false. (2 is the only even prime.)",
+     "clue": "Look at the smallest prime.",
+     "id": "g9.maths.u1.s1-1-2.8"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Prime or composite: every natural number is either prime or composite.",
+     "a": false,
+     "why": "A prime has exactly two factors. A composite has more than two.\n1 has only one factor.\nSo 1 is neither prime nor composite.\nThe statement is false.",
+     "clue": "Think about the number 1.",
+     "id": "g9.maths.u1.s1-1-2.9"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Divisibility: 351 is divisible by 3.",
+     "a": true,
+     "why": "Add the digits: 3 + 5 + 1 = 9.\n9 is divisible by 3.\nCheck: 351 ÷ 3 = 117, so 351 = 3 × 117.\nTrue.",
+     "clue": "Try 351 ÷ 3.",
+     "id": "g9.maths.u1.s1-1-2.10"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Prime factorization: 2² × 3 × 7 is the prime factorization of 84.",
+     "a": true,
+     "why": "Multiply it out: 2² = 4, then 4 × 3 = 12, then 12 × 7 = 84.\n2, 3 and 7 are all prime.\nSo 84 = 2² × 3 × 7. True.",
+     "clue": "Multiply it out.",
+     "id": "g9.maths.u1.s1-1-2.11"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Multiples: 63 is a multiple of 21.",
+     "a": true,
+     "why": "A multiple of 21 is 21 × q for a natural number q.\n21 × 3 = 63.\nSo 63 is a multiple of 21. True.",
+     "clue": "Is 63 = 21 × some natural number?",
+     "id": "g9.maths.u1.s1-1-2.12"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.3",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "text": "List the prime numbers less than 30.",
+     "ask": "List the primes: the primes less than 30 are ___.",
+     "a": [
+      "2, 3, 5, 7, 11, 13, 17, 19, 23, 29",
+      "2,3,5,7,11,13,17,19,23,29",
+      "2 3 5 7 11 13 17 19 23 29",
+      "2, 3, 5, 7, 11, 13, 17, 19, 23 and 29"
+     ],
+     "why": "Write 2 to 29. 2 is prime; cross out the other even numbers.\n3 is prime; cross out 9, 15, 21, 27.\n5 is prime; cross out 25.\nWhat is left is prime: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29.\nThat is ten primes.",
+     "clue": "Start at 2. Cross out multiples of 2, 3 and 5.",
+     "id": "g9.maths.u1.s1-1-2.13"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Counting primes: there are 7 primes between 1 and 20.",
+     "a": false,
+     "why": "List the primes from 2 to 19.\n2, 3, 5, 7, 11, 13, 17, 19.\nCount them: 8 primes, not 7.\nSo the statement is false.",
+     "clue": "List them and count carefully.",
+     "id": "g9.maths.u1.s1-1-2.14"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Composite numbers: the smallest composite number is 2.",
+     "a": false,
+     "why": "2 has factors 1 and 2 only, so 2 is prime.\n3 is prime too.\n4 = 2 × 2 has factors 1, 2, 4: more than two.\nSo the smallest composite is 4. False.",
+     "clue": "How many factors does 2 have?",
+     "id": "g9.maths.u1.s1-1-2.15"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Primes near 100: 101 is the prime nearest to 100.",
+     "a": true,
+     "why": "Check numbers near 100.\n99 = 9 × 11 and 98 = 2 × 49: composite. 97 is prime, 3 away.\n101 is prime (no factor 2, 3, 5 or 7), only 1 away.\nSo 101 is the nearest prime. True.",
+     "clue": "Check 99, 98, 97 and 101.",
+     "id": "g9.maths.u1.s1-1-2.16"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "text": "28 is composite.",
+     "ask": "List the factors: the factors of 28 are ___.",
+     "a": [
+      "1, 2, 4, 7, 14, 28",
+      "1,2,4,7,14,28",
+      "1 2 4 7 14 28",
+      "1, 2, 4, 7, 14 and 28"
+     ],
+     "why": "Find the factor pairs of 28.\n1 × 28, 2 × 14, 4 × 7.\n3, 5 and 6 do not divide 28.\nSo the factors are 1, 2, 4, 7, 14, 28.",
+     "clue": "Find factor pairs that multiply to 28.",
+     "id": "g9.maths.u1.s1-1-2.17"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Composite numbers: which is true about composite numbers?",
+     "opts": [
+      "They have 3 pairs of factors",
+      "They have no factors",
+      "They are always prime",
+      "They have more than two factors"
+     ],
+     "ans": "They have more than two factors",
+     "why": "Definition 1.1: a composite number has more than two factors.\nExample: 18 has factors 1, 2, 3, 6, 9, 18.\nComposite numbers are never prime.\n\"3 pairs of factors\" is not always true: 4 has only the pairs 1 × 4 and 2 × 2.",
+     "clue": "Reread the definition of composite.",
+     "id": "g9.maths.u1.s1-1-2.18"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Composite numbers: which number is composite?",
+   "opts": [
+    "2",
+    "13",
+    "31",
+    "39"
+   ],
+   "ans": "39",
+   "why": "2, 13 and 31 have only two factors each: prime.\n39: the digits add to 12, so 3 divides it.\n39 = 3 × 13, so it has factors 1, 3, 13, 39.\nSo 39 is composite.",
+   "clue": "",
+   "id": "g9.maths.u1.s1-1-2.19"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Primes: every prime number is odd.",
+   "a": false,
+   "why": "2 is a prime number.\n2 is even.\nSo not every prime is odd. False.",
+   "clue": "",
+   "id": "g9.maths.u1.s1-1-2.20"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "Composite numbers: the smallest composite number is ___.",
+   "a": [
+    "4",
+    "four"
+   ],
+   "why": "1 is neither prime nor composite.\n2 and 3 are prime.\n4 = 2 × 2 has three factors: 1, 2, 4.\nSo the smallest composite number is 4.",
+   "clue": "",
+   "id": "g9.maths.u1.s1-1-2.21"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "Activity 1.3 items 1 and 3, and 2(c) (23 is prime), are left out of the Activity items to keep 6 items; item 1 is the check after 'Factor and multiple'."
+  },
+  {
+   "kind": "note",
+   "text": "Exercise 1.3 items 2(b), 2(e) and 4 are left out to keep 6 items. Item 4 ('if odd, then prime?') answer: no, 9 = 3 × 3."
+  },
+  {
+   "kind": "note",
+   "text": "The teff-bag hook and the coin-piles word problem are added Ethiopian examples, marked added."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
 }

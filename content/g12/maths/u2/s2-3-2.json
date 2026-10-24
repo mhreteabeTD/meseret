@@ -60,9 +60,42 @@
       "165",
       "200"
      ],
-     "after": "Both kinds of sum close in on 125. That exact value is the definite integral.",
+     "after": "Left sums are too small: 90, then 106.875.\nRight sums are too big: 165, then 144.375.\nThe exact area is squeezed between them, and both close in on 125.\nThat limit is the definite integral: ∫ from 0 to 5 of 3x² dx = 125.",
      "ref": "Activity 2.19",
-     "id": "g12.maths.u2.s2-3-2.1"
+     "id": "g12.maths.u2.s2-3-2.1",
+     "best": "125"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Squeeze the area of 3x² on [0, 5]",
+     "ask": "Change the number of strips n. Watch both sums close in.",
+     "vars": [
+      {
+       "k": "n",
+       "label": "n (strips)",
+       "min": 1,
+       "max": 100,
+       "step": 1,
+       "v": 5
+      }
+     ],
+     "formula": "375*(n-1)*(2*n-1)/(6*n*n)",
+     "outs": [
+      [
+       "Left sum",
+       "375*(n-1)*(2*n-1)/(6*n*n)",
+       "{v}"
+      ],
+      [
+       "Right sum",
+       "375*(n+1)*(2*n+1)/(6*n*n)",
+       "{v}"
+      ]
+     ],
+     "note": "n = 5: 90 and 165. n = 10: 106.88 and 144.38. n = 100: 123.13 and 126.88. The limit is 125.",
+     "id": "g12.maths.u2.s2-3-2.38"
     },
     {
      "kind": "read",
@@ -75,6 +108,44 @@
      ],
      "ref": "Definition 2.13",
      "id": "g12.maths.u2.s2-3-2.2"
+    },
+    {
+     "kind": "coord",
+     "step": "explore",
+     "added": true,
+     "title": "∫ from 1 to 3 (x + 1) dx as a shape",
+     "ask": "Tap the points. The region under y = x + 1 from x = 1 to x = 3 is a trapezoid.",
+     "min": -1,
+     "max": 5,
+     "ymin": -1,
+     "ymax": 7,
+     "lines": [
+      {
+       "m": 1,
+       "b": 1,
+       "label": "y = x + 1",
+       "at": 4.2
+      },
+      {
+       "x": 1
+      },
+      {
+       "x": 3
+      }
+     ],
+     "points": [
+      {
+       "x": 1,
+       "y": 2,
+       "info": "f(1) = 2: the left side."
+      },
+      {
+       "x": 3,
+       "y": 4,
+       "info": "f(3) = 4: the right side. Area = (1/2)(2 + 4)(2) = 6."
+      }
+     ],
+     "id": "g12.maths.u2.s2-3-2.39"
     },
     {
      "kind": "name",
@@ -90,11 +161,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∫ from 0 to 2 (3x + 2) dx = ___",
+     "ask": "Definite integral as an area: ∫ from 0 to 2 (3x + 2) dx = ___",
      "a": [
       "10"
      ],
-     "why": "Trapezoid with sides f(0) = 2 and f(2) = 8, width 2: (1/2)(10)(2) = 10.",
+     "why": "y = 3x + 2 is a straight line above the x-axis on [0, 2].\nThe region is a trapezoid.\nParallel sides: f(0) = 2 and f(2) = 8. Width 2.\nArea = (1/2)(2 + 8)(2) = 10.",
      "clue": "Draw the line; the region is a trapezoid.",
      "num": true,
      "graded": true,
@@ -105,11 +176,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∫ from 0 to 4 2x dx = ___",
+     "ask": "Definite integral as an area: ∫ from 0 to 4 2x dx = ___",
      "a": [
       "16"
      ],
-     "why": "Triangle (1/2)(4)(8) = 16.",
+     "why": "y = 2x starts at 0, so the region is a triangle.\nBase 4, height f(4) = 8.\nArea = (1/2)(4)(8) = 16.",
      "clue": "f(4) = 8.",
      "num": true,
      "graded": true,
@@ -120,11 +191,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∫ from 1 to 5 x dx = ___",
+     "ask": "Definite integral as an area: ∫ from 1 to 5 x dx = ___",
      "a": [
       "12"
      ],
-     "why": "Trapezoid (1/2)(1 + 5)(4) = 12.",
+     "why": "The region from 1 to 5 is a trapezoid, not a triangle.\nParallel sides f(1) = 1 and f(5) = 5. Width 4.\nArea = (1/2)(1 + 5)(4) = 12.\nTrap: (1/2)(5)(5) = 12.5 starts the region at 0.",
      "clue": "Not a triangle: f(1) = 1.",
      "num": true,
      "graded": true,
@@ -135,12 +206,12 @@
     },
     {
      "kind": "blank",
-     "ask": "∫ from -2 to 3 (x + 2) dx = ___",
+     "ask": "Definite integral as an area: ∫ from −2 to 3 (x + 2) dx = ___",
      "a": [
       "12.5",
       "25/2"
      ],
-     "why": "Triangle: base 5, height 5. (1/2)(5)(5) = 12.5.",
+     "why": "f(−2) = 0, so the line meets the axis at x = −2.\nThe region is a triangle: base 3 − (−2) = 5.\nHeight f(3) = 5.\nArea = (1/2)(5)(5) = 12.5.",
      "clue": "f(−2) = 0.",
      "num": true,
      "graded": true,
@@ -151,11 +222,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∫ from 0 to 3 5 dx = ___",
+     "ask": "Definite integral of a constant: ∫ from 0 to 3 5 dx = ___",
      "a": [
       "15"
      ],
-     "why": "Rectangle 3 × 5.",
+     "why": "y = 5 is a horizontal line.\nThe region is a rectangle, 3 wide and 5 high.\nArea = 3 × 5 = 15.",
      "clue": "A constant gives a rectangle.",
      "num": true,
      "graded": true,
@@ -166,11 +237,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∫ from 0 to k 2x dx = 49. k = ___ (k > 0)",
+     "ask": "Missing upper limit: ∫ from 0 to k 2x dx = 49 with k > 0. Find k = ___",
      "a": [
       "7"
      ],
-     "why": "Triangle area (1/2)(k)(2k) = k² = 49, so k = 7.",
+     "why": "The region is a triangle: base k, height 2k.\nArea = (1/2)(k)(2k) = k².\nk² = 49, so k = 7 (k > 0).\nCheck: (1/2)(7)(14) = 49. ✓",
      "clue": "Write the triangle area in terms of k.",
      "num": true,
      "graded": true,
@@ -206,9 +277,10 @@
       "only 2",
       "2x²"
      ],
-     "after": "Adding any constant does not change the derivative: x² + C.",
+     "after": "(x²)′ = 2x, (x² + 5)′ = 2x, (x² − 3)′ = 2x.\nThe derivative of a constant is 0.\nSo every x² + C has derivative 2x.\nThat is why an indefinite integral ends with + C.",
      "ref": "Activity 2.20",
-     "id": "g12.maths.u2.s2-3-2.10"
+     "id": "g12.maths.u2.s2-3-2.10",
+     "best": "x², x² + 5 and x² − 3"
     },
     {
      "kind": "read",
@@ -236,6 +308,36 @@
      "id": "g12.maths.u2.s2-3-2.12"
     },
     {
+     "kind": "tap",
+     "step": "explore",
+     "added": true,
+     "title": "Rules for integrals",
+     "ask": "Tap each rule for an example.",
+     "items": [
+      [
+       "∫ xⁿ dx",
+       "xⁿ⁺¹/(n + 1) + C for n ≠ −1. ∫ x⁴ dx = x⁵/5 + C."
+      ],
+      [
+       "∫ k dx",
+       "kx + C. ∫ 7 dx = 7x + C."
+      ],
+      [
+       "∫ k f(x) dx",
+       "k ∫ f(x) dx. ∫ 6x² dx = 6 × x³/3 = 2x³ + C."
+      ],
+      [
+       "∫ (f ± g) dx",
+       "∫ f dx ± ∫ g dx. Integrate term by term, one C at the end."
+      ],
+      [
+       "∫ x⁻¹ dx",
+       "Not the power rule: −1 + 1 = 0. It is ln|x| + C."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-3-2.40"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -253,7 +355,7 @@
     },
     {
      "kind": "mcq",
-     "text": "∫ x⁷ dx =",
+     "text": "Power rule for integrals: ∫ x⁷ dx =",
      "opts": [
       "x⁸/8 + C",
       "7x⁶ + C",
@@ -261,7 +363,7 @@
       "x⁷/7 + C"
      ],
      "ans": "x⁸/8 + C",
-     "why": "Power 7 + 1 = 8; divide by 8.",
+     "why": "Raise the power by 1: 7 + 1 = 8.\nDivide by the new power: x⁸/8.\nAdd the constant: x⁸/8 + C.\nCheck: (x⁸/8)′ = 8x⁷/8 = x⁷. ✓\nTrap: 7x⁶ is the derivative, not the integral.",
      "clue": "Raise the power, then divide.",
      "graded": true,
      "level": 1,
@@ -284,7 +386,7 @@
     },
     {
      "kind": "mcq",
-     "text": "∫ x⁻⁴ dx =",
+     "text": "Power rule with a negative power: ∫ x⁻⁴ dx =",
      "opts": [
       "−1/(3x³) + C",
       "1/(3x³) + C",
@@ -292,7 +394,7 @@
       "−1/(5x⁵) + C"
      ],
      "ans": "−1/(3x³) + C",
-     "why": "x⁻³/(−3).",
+     "why": "New power: −4 + 1 = −3.\nDivide by −3: x⁻³/(−3).\nx⁻³ = 1/x³, so the answer is −1/(3x³) + C.\nTrap: 1/(3x³) loses the minus sign; −4x⁻⁵ is the derivative.",
      "clue": "−4 + 1 = −3.",
      "graded": true,
      "level": 2,
@@ -302,7 +404,7 @@
     },
     {
      "kind": "mcq",
-     "text": "∫ x^(1/3) dx =",
+     "text": "Power rule with a fraction power: ∫ x^(1/3) dx =",
      "opts": [
       "(3/4)x^(4/3) + C",
       "(4/3)x^(4/3) + C",
@@ -310,7 +412,7 @@
       "(3/4)x^(1/3) + C"
      ],
      "ans": "(3/4)x^(4/3) + C",
-     "why": "1/3 + 1 = 4/3; dividing by 4/3 multiplies by 3/4.",
+     "why": "New power: 1/3 + 1 = 4/3.\nDivide by 4/3, which means multiply by 3/4.\n∫ x^(1/3) dx = (3/4)x^(4/3) + C.\nTrap: (4/3)x^(4/3) multiplies instead of dividing.",
      "clue": "New power 4/3.",
      "graded": true,
      "level": 2,
@@ -320,7 +422,7 @@
     },
     {
      "kind": "mcq",
-     "text": "∫ (3x² − 2x + 5) dx =",
+     "text": "Integrate term by term: ∫ (3x² − 2x + 5) dx =",
      "opts": [
       "x³ − x² + 5x + C",
       "6x − 2 + C",
@@ -328,7 +430,7 @@
       "3x³ − 2x² + 5x + C"
      ],
      "ans": "x³ − x² + 5x + C",
-     "why": "Term by term: x³, x², 5x.",
+     "why": "∫ 3x² dx = 3 × x³/3 = x³.\n∫ 2x dx = 2 × x²/2 = x².\n∫ 5 dx = 5x.\nSo the answer is x³ − x² + 5x + C (one C at the end).\nCheck: (x³ − x² + 5x)′ = 3x² − 2x + 5. ✓",
      "clue": "One C at the end.",
      "graded": true,
      "level": 1,
@@ -337,10 +439,43 @@
      "id": "g12.maths.u2.s2-3-2.18"
     },
     {
+     "kind": "match",
+     "step": "practise",
+     "added": true,
+     "graded": true,
+     "level": 2,
+     "text": "Match each function with its anti-derivative.",
+     "pairs": [
+      [
+       "x⁴",
+       "x⁵/5 + C"
+      ],
+      [
+       "4x³",
+       "x⁴ + C"
+      ],
+      [
+       "x⁻²",
+       "−1/x + C"
+      ],
+      [
+       "√x",
+       "(2/3)x^(3/2) + C"
+      ],
+      [
+       "7",
+       "7x + C"
+      ]
+     ],
+     "why": "x⁴: power 5, divide by 5 → x⁵/5.\n4x³: 4 × x⁴/4 = x⁴.\nx⁻²: power −1, divide by −1 → −1/x.\n√x = x^(1/2): power 3/2, divide by 3/2 → (2/3)x^(3/2).\n7: a constant integrates to 7x.",
+     "clue": "Check each pair by differentiating the right side.",
+     "id": "g12.maths.u2.s2-3-2.41"
+    },
+    {
      "kind": "tf",
-     "text": "∫ x⁻¹ dx = x⁰/0 + C",
+     "text": "True or false? By the power rule, ∫ x⁻¹ dx = x⁰/0 + C",
      "a": false,
-     "why": "The power rule fails for α = −1 (division by 0). ∫ (1/x) dx = ln|x| + C.",
+     "why": "The power rule needs α ≠ −1.\nFor α = −1: α + 1 = 0, and we cannot divide by 0.\nSo the power rule fails here.\nThe right result is ∫ (1/x) dx = ln|x| + C. False.",
      "clue": "What is −1 + 1?",
      "graded": true,
      "level": 2,
@@ -350,7 +485,7 @@
     },
     {
      "kind": "mcq",
-     "text": "F′(x) = 6x² + 2 and F(0) = 3. F(x) =",
+     "text": "Anti-derivative with a starting value: F′(x) = 6x² + 2 and F(0) = 3. F(x) =",
      "opts": [
       "2x³ + 2x + 3",
       "2x³ + 2x",
@@ -358,7 +493,7 @@
       "6x³ + 2x + 3"
      ],
      "ans": "2x³ + 2x + 3",
-     "why": "∫ = 2x³ + 2x + C, and F(0) = C = 3.",
+     "why": "Integrate: ∫ (6x² + 2) dx = 6x³/3 + 2x + C = 2x³ + 2x + C.\nUse F(0) = 3: 0 + 0 + C = 3, so C = 3.\nF(x) = 2x³ + 2x + 3.\nTrap: 6x³ forgets to divide by 3; 12x + 3 differentiates instead.",
      "clue": "Integrate, then use F(0) to find C.",
      "graded": true,
      "level": 3,
@@ -375,11 +510,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "∫ from 0 to 2 (2x + 1) dx = ___",
+     "ask": "Definite integral as an area: ∫ from 0 to 2 (2x + 1) dx = ___",
      "a": [
       "6"
      ],
-     "why": "(1/2)(1 + 5)(2).",
+     "why": "Trapezoid with parallel sides f(0) = 1 and f(2) = 5.\nWidth 2.\nArea = (1/2)(1 + 5)(2) = 6.",
      "clue": "Trapezoid.",
      "num": true,
      "graded": true,
@@ -390,11 +525,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∫ from 0 to 4 2x dx = ___",
+     "ask": "Definite integral as an area: ∫ from 0 to 4 2x dx = ___",
      "a": [
       "16"
      ],
-     "why": "Triangle.",
+     "why": "Triangle: base 4, height f(4) = 8.\nArea = (1/2)(4)(8) = 16.",
      "clue": "Height 8.",
      "num": true,
      "graded": true,
@@ -405,11 +540,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∫ from 1 to 5 x dx = ___",
+     "ask": "Definite integral as an area: ∫ from 1 to 5 x dx = ___",
      "a": [
       "12"
      ],
-     "why": "Trapezoid.",
+     "why": "Trapezoid: sides f(1) = 1 and f(5) = 5, width 4.\nArea = (1/2)(6)(4) = 12.",
      "clue": "Sides 1 and 5.",
      "num": true,
      "graded": true,
@@ -420,11 +555,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∫ from -2 to 3 (x + 2) dx = ___",
+     "ask": "Definite integral as an area: ∫ from −2 to 3 (x + 2) dx = ___",
      "a": [
       "12.5"
      ],
-     "why": "Triangle 5 × 5 / 2.",
+     "why": "Triangle from x = −2 (where f = 0) to x = 3.\nBase 5, height f(3) = 5.\nArea = 25/2 = 12.5.",
      "clue": "f(−2) = 0.",
      "num": true,
      "graded": true,
@@ -440,7 +575,7 @@
    "items": [
     {
      "kind": "mcq",
-     "text": "∫ x⁵ dx",
+     "text": "Power rule for integrals: ∫ x⁵ dx =",
      "opts": [
       "x⁶/6 + C",
       "5x⁴ + C",
@@ -448,7 +583,7 @@
       "x⁵/5 + C"
      ],
      "ans": "x⁶/6 + C",
-     "why": "Power rule.",
+     "why": "5 + 1 = 6; divide by 6.\n∫ x⁵ dx = x⁶/6 + C.\n5x⁴ is the derivative.",
      "clue": "New power 6.",
      "graded": true,
      "level": 1,
@@ -458,7 +593,7 @@
     },
     {
      "kind": "mcq",
-     "text": "∫ x^(−3/2) dx",
+     "text": "Power rule with a negative fraction power: ∫ x^(−3/2) dx =",
      "opts": [
       "−2/√x + C",
       "2/√x + C",
@@ -466,7 +601,7 @@
       "−1/(2√x) + C"
      ],
      "ans": "−2/√x + C",
-     "why": "−3/2 + 1 = −1/2.",
+     "why": "New power: −3/2 + 1 = −1/2.\nDivide by −1/2, which means multiply by −2.\n−2x^(−1/2) = −2/√x.\nAnswer: −2/√x + C.",
      "clue": "Divide by −1/2.",
      "graded": true,
      "level": 3,
@@ -476,7 +611,7 @@
     },
     {
      "kind": "mcq",
-     "text": "∫ x⁻² dx",
+     "text": "Power rule with a negative power: ∫ x⁻² dx =",
      "opts": [
       "−1/x + C",
       "1/x + C",
@@ -484,7 +619,7 @@
       "−1/x² + C"
      ],
      "ans": "−1/x + C",
-     "why": "x⁻¹/(−1).",
+     "why": "New power: −2 + 1 = −1.\nDivide by −1: −x⁻¹.\nAnswer: −1/x + C.\nCheck: (−1/x)′ = 1/x² = x⁻². ✓",
      "clue": "−2 + 1 = −1.",
      "graded": true,
      "level": 2,
@@ -494,7 +629,7 @@
     },
     {
      "kind": "mcq",
-     "text": "∫ x^(−3/5) dx",
+     "text": "Power rule with a negative fraction power: ∫ x^(−3/5) dx =",
      "opts": [
       "(5/2)x^(2/5) + C",
       "(2/5)x^(2/5) + C",
@@ -502,7 +637,7 @@
       "−(3/5)x^(−8/5) + C"
      ],
      "ans": "(5/2)x^(2/5) + C",
-     "why": "−3/5 + 1 = 2/5.",
+     "why": "New power: −3/5 + 1 = 2/5.\nDivide by 2/5, which means multiply by 5/2.\nAnswer: (5/2)x^(2/5) + C.",
      "clue": "Divide by 2/5.",
      "graded": true,
      "level": 3,
@@ -517,7 +652,7 @@
    "items": [
     {
      "kind": "mcq",
-     "text": "∫ 99 dx",
+     "text": "Integral of a constant: ∫ 99 dx =",
      "opts": [
       "99x + C",
       "99 + C",
@@ -525,7 +660,7 @@
       "99x²/2 + C"
      ],
      "ans": "99x + C",
-     "why": "∫ k dx = kx + C.",
+     "why": "∫ k dx = kx + C.\nSo ∫ 99 dx = 99x + C.\nCheck: (99x)′ = 99. ✓",
      "clue": "Constant rule.",
      "graded": true,
      "level": 1,
@@ -535,7 +670,7 @@
     },
     {
      "kind": "mcq",
-     "text": "∫ 10x⁴ dx",
+     "text": "Constant multiple rule: ∫ 10x⁴ dx =",
      "opts": [
       "2x⁵ + C",
       "10x⁵ + C",
@@ -543,7 +678,7 @@
       "2x⁴ + C"
      ],
      "ans": "2x⁵ + C",
-     "why": "10 × x⁵/5.",
+     "why": "Take the 10 out: 10 ∫ x⁴ dx.\n∫ x⁴ dx = x⁵/5.\n10 × x⁵/5 = 2x⁵.\nAnswer: 2x⁵ + C.",
      "clue": "Constant out.",
      "graded": true,
      "level": 1,
@@ -553,7 +688,7 @@
     },
     {
      "kind": "mcq",
-     "text": "∫ (x² − x) dx",
+     "text": "Integrate term by term: ∫ (x² − x) dx =",
      "opts": [
       "x³/3 − x²/2 + C",
       "2x − 1 + C",
@@ -561,7 +696,7 @@
       "x³/3 − x + C"
      ],
      "ans": "x³/3 − x²/2 + C",
-     "why": "Term by term.",
+     "why": "∫ x² dx = x³/3.\n∫ x dx = x²/2.\nAnswer: x³/3 − x²/2 + C.",
      "clue": "Each power + 1.",
      "graded": true,
      "level": 1,
@@ -571,7 +706,7 @@
     },
     {
      "kind": "mcq",
-     "text": "∫ (x⁻² − 4x³ + √x) dx",
+     "text": "Integrate term by term: ∫ (x⁻² − 4x³ + √x) dx =",
      "opts": [
       "−1/x − x⁴ + (2/3)x^(3/2) + C",
       "1/x − x⁴ + (2/3)x^(3/2) + C",
@@ -579,7 +714,7 @@
       "−2x⁻³ − 12x² + 1/(2√x) + C"
      ],
      "ans": "−1/x − x⁴ + (2/3)x^(3/2) + C",
-     "why": "Three power rules.",
+     "why": "∫ x⁻² dx = −x⁻¹ = −1/x.\n∫ 4x³ dx = 4 × x⁴/4 = x⁴.\n√x = x^(1/2), so ∫ √x dx = x^(3/2)/(3/2) = (2/3)x^(3/2).\nAnswer: −1/x − x⁴ + (2/3)x^(3/2) + C.\nTrap: (3/2)x^(3/2) multiplies by 3/2 instead of dividing.",
      "clue": "√x = x^(1/2).",
      "graded": true,
      "level": 3,
@@ -593,11 +728,11 @@
  "test": [
   {
    "kind": "blank",
-   "ask": "∫ from 0 to 3 4x dx = ___",
+   "ask": "Definite integral as an area: ∫ from 0 to 3 4x dx = ___",
    "a": [
     "18"
    ],
-   "why": "(1/2)(3)(12).",
+   "why": "Triangle: base 3, height 4(3) = 12.\nArea = (1/2)(3)(12) = 18.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -607,7 +742,7 @@
   },
   {
    "kind": "mcq",
-   "text": "∫ x³ dx =",
+   "text": "Power rule for integrals: ∫ x³ dx =",
    "opts": [
     "x⁴/4 + C",
     "3x² + C",
@@ -615,7 +750,7 @@
     "x³/3 + C"
    ],
    "ans": "x⁴/4 + C",
-   "why": "power rule.",
+   "why": "3 + 1 = 4; divide by 4.\nAnswer: x⁴/4 + C.\n3x² is the derivative, not the integral.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -624,7 +759,7 @@
   },
   {
    "kind": "mcq",
-   "text": "∫ (6x + 1) dx =",
+   "text": "Integrate term by term: ∫ (6x + 1) dx =",
    "opts": [
     "3x² + x + C",
     "6 + C",
@@ -632,7 +767,7 @@
     "3x² + C"
    ],
    "ans": "3x² + x + C",
-   "why": "term by term.",
+   "why": "∫ 6x dx = 6 × x²/2 = 3x².\n∫ 1 dx = x.\nAnswer: 3x² + x + C.",
    "clue": "",
    "graded": true,
    "level": 2,
@@ -641,11 +776,11 @@
   },
   {
    "kind": "blank",
-   "ask": "∫ from 2 to 4 (x + 1) dx = ___",
+   "ask": "Definite integral as an area: ∫ from 2 to 4 (x + 1) dx = ___",
    "a": [
     "8"
    ],
-   "why": "Trapezoid (3 + 5)/2 × 2.",
+   "why": "Trapezoid: parallel sides f(2) = 3 and f(4) = 5.\nWidth 2.\nArea = (1/2)(3 + 5)(2) = 8.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -655,7 +790,7 @@
   },
   {
    "kind": "mcq",
-   "text": "∫ 1/x³ dx =",
+   "text": "Power rule with a negative power: ∫ 1/x³ dx =",
    "opts": [
     "−1/(2x²) + C",
     "1/(2x²) + C",
@@ -663,7 +798,7 @@
     "ln|x³| + C"
    ],
    "ans": "−1/(2x²) + C",
-   "why": "x⁻²/(−2).",
+   "why": "Write 1/x³ = x⁻³.\nNew power: −3 + 1 = −2. Divide by −2.\nx⁻²/(−2) = −1/(2x²).\nAnswer: −1/(2x²) + C.",
    "clue": "",
    "graded": true,
    "level": 3,
@@ -704,7 +839,7 @@
     },
     {
      "kind": "mcq",
-     "text": "Δx for [0, 6] with 3 strips:",
+     "text": "Strip width for a Riemann sum: Δx for [0, 6] with 3 strips is",
      "opts": [
       "2",
       "3",
@@ -712,7 +847,7 @@
       "18"
      ],
      "ans": "2",
-     "why": "6/3.",
+     "why": "Δx = (b − a)/n.\n(6 − 0)/3 = 2.\nTrap: 3 is n, not the width.",
      "clue": "(b − a)/n.",
      "graded": true,
      "level": 1,

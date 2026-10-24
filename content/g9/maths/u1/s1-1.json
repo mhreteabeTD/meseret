@@ -1,418 +1,462 @@
 {
-  "id": "g9.maths.u1.s1-1",
-  "book": {
-    "title": "Mathematics Grade 9 Student Textbook",
-    "grade": 9,
-    "subject": "maths",
-    "unit": 1,
-    "unit_title": "The Number System",
-    "section": "1.1",
-    "pages": "18–32"
+ "id": "g9.maths.u1.s1-1",
+ "book": {
+  "title": "Mathematics Grade 9 Student Textbook",
+  "grade": 9,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "The Number System",
+  "section": "1.1",
+  "pages": "18–32"
+ },
+ "title": "Natural numbers and integers",
+ "competency": "Tell natural numbers from integers and describe how the two sets are related.",
+ "minutes": 7,
+ "keywords": [
+  {
+   "en": "Set",
+   "am": "ስብስብ",
+   "def": "A collection of well-defined, distinct objects. No object appears twice.",
+   "machine": true
   },
-  "title": "Natural numbers and integers",
-  "competency": "Tell natural numbers from integers and describe how the two sets are related.",
-  "minutes": 7,
-  "keywords": [
-    {
-      "en": "Set",
-      "am": "ስብስብ",
-      "def": "A collection of well-defined, distinct objects. No object appears twice.",
-      "machine": true
-    },
-    {
-      "en": "Natural number",
-      "am": "የተፈጥሮ ቁጥር",
-      "def": "A counting number: 1, 2, 3, … The set is written ℕ.",
-      "machine": true
-    },
-    {
-      "en": "Integer",
-      "am": "ኢንቲጀር (ሙሉ ቁጥር)",
-      "def": "A whole number or its negative: …, −2, −1, 0, 1, 2, … The set is written ℤ.",
-      "machine": true
-    }
-  ],
-  "ideas": [
-    {
-      "id": "math.natural-numbers-integers",
-      "name": "Natural numbers and integers",
-      "explain": {
-        "en": {
-          "text": "Natural numbers are the counting numbers 1, 2, 3 and so on. We write this set as ℕ. Integers are the natural numbers, zero, and their negatives. We write this set as ℤ. Every natural number is an integer. But not every integer is a natural number."
-        },
-        "am": {
-          "text": "የተፈጥሮ ቁጥሮች የመቁጠሪያ ቁጥሮች ናቸው፤ 1፣ 2፣ 3 እና የመሳሰሉት። ይህን ስብስብ ℕ ብለን እንጽፋለን። ኢንቲጀሮች የተፈጥሮ ቁጥሮች፣ ዜሮ እና አሉታዊዎቻቸው ናቸው። ይህን ስብስብ ℤ ብለን እንጽፋለን። ማንኛውም የተፈጥሮ ቁጥር ኢንቲጀር ነው፤ ግን ማንኛውም ኢንቲጀር የተፈጥሮ ቁጥር አይደለም።",
-          "machine": true
-        }
-      },
-      "screens": [
-        {
-          "kind": "guess",
-          "step": "hook",
-          "added": true,
-          "title": "Counting sheep",
-          "text": "Kebede counts his sheep: 1, 2, 3, … He never counts 0 sheep or −25 sheep.",
-          "ask": "Which of 6, 0 and −25 could be a count of sheep?",
-          "opts": [
-            "6",
-            "0",
-            "−25",
-            "All three"
-          ],
-          "after": "Only 6. Counting starts at 1. Read on to name these numbers."
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Sets of numbers",
-          "paras": [
-            "Recall that a set is a collection of well-defined, distinct objects.",
-            "Distinct means no object appears twice.",
-            "In Grade 7 you met two sets of numbers.",
-            "ℕ = {1, 2, 3, …} is the set of natural numbers.",
-            "ℤ = {…, −2, −1, 0, 1, 2, 3, …} is the set of integers."
-          ]
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "Name the sets",
-          "defs": [
-            [
-              "Set",
-              "A collection of well-defined, distinct objects. No object appears twice."
-            ],
-            [
-              "Natural number",
-              "A counting number: 1, 2, 3, … The set is ℕ."
-            ],
-            [
-              "Integer",
-              "A whole number or its negative: …, −2, −1, 0, 1, 2, … The set is ℤ."
-            ]
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Integer, not natural",
-          "text": "Which number is an integer but NOT a natural number?",
-          "opts": [
-            "7",
-            "0",
-            "100",
-            "1"
-          ],
-          "ans": "0",
-          "why": "ℕ starts at 1, so 0 is an integer but not a natural number.",
-          "clue": "Where does ℕ start?",
-          "id": "g9.maths.u1.s1-1.1"
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "How ℕ and ℤ are related",
-          "paras": [
-            "Every natural number is an integer. We write ℕ ⊆ ℤ.",
-            "Not every integer is a natural number. 5 is natural, but −5 is not.",
-            "Picture a circle for ℕ drawn inside a bigger circle for ℤ."
-          ],
-          "note": "The book shows this diagram as Figure 1.2 in lesson 1.2."
-        },
-        {
-          "kind": "sort",
-          "step": "practise",
-          "graded": true,
-          "title": "Sort the numbers",
-          "text": "Put each number in the right group.",
-          "bins": [
-            "Natural number",
-            "Integer, not natural"
-          ],
-          "items": [
-            [
-              "6",
-              "Natural number",
-              "6 is a counting number."
-            ],
-            [
-              "0",
-              "Integer, not natural",
-              "ℕ starts at 1, so 0 is not natural."
-            ],
-            [
-              "−25",
-              "Integer, not natural",
-              "Negative numbers are not in ℕ."
-            ],
-            [
-              "12",
-              "Natural number",
-              "12 is a counting number."
-            ],
-            [
-              "−1",
-              "Integer, not natural",
-              "Negative numbers are not in ℕ."
-            ]
-          ],
-          "why": "Natural numbers start at 1. Zero and the negatives are integers only.",
-          "clue": "Ask: could I count this many objects?",
-          "id": "g9.maths.u1.s1-1.2"
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "title": "Always, sometimes or never?",
-          "text": "−7 is a natural number.",
-          "opts": [
-            "Always true",
-            "Sometimes true",
-            "Never true"
-          ],
-          "ans": "Never true",
-          "why": "−7 is negative. Natural numbers are 1, 2, 3, …",
-          "clue": "Look at where the list for ℕ starts.",
-          "id": "g9.maths.u1.s1-1.3"
-        },
-        {
-          "kind": "tf",
-          "step": "practise",
-          "graded": true,
-          "title": "True or false?",
-          "text": "Every integer is a natural number.",
-          "a": false,
-          "why": "5 is natural, but −5 and 0 are integers that are not natural.",
-          "clue": "Try a negative integer.",
-          "id": "g9.maths.u1.s1-1.4"
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "added": true,
-          "title": "Lift buttons",
-          "text": "A lift in an Addis Ababa building has buttons −2, −1, 0, 1, 2, 3 and 4.",
-          "ask": "___ of these buttons show natural numbers.",
-          "a": [
-            "4",
-            "four"
-          ],
-          "why": "The natural numbers are 1, 2, 3 and 4. So there are 4.",
-          "clue": "Cross out 0 and the negatives. Count what is left.",
-          "worked": "Cross out −2, −1 and 0. Left: 1, 2, 3, 4. That is 4 buttons.",
-          "id": "g9.maths.u1.s1-1.5"
-        }
-      ]
-    }
-  ],
-  "exercises": [
-    {
-      "book_name": "Activity 1.1",
-      "items": [
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Which of 6, 0 and −25 are natural numbers?",
-          "opts": [
-            "6 only",
-            "6 and 0",
-            "0 and −25",
-            "All three"
-          ],
-          "ans": "6 only",
-          "why": "Natural numbers start at 1. All three are integers.",
-          "clue": "Natural numbers are the counting numbers.",
-          "id": "g9.maths.u1.s1-1.6"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Natural numbers are integers.",
-          "opts": [
-            "Always true",
-            "Sometimes true",
-            "Never true"
-          ],
-          "ans": "Always true",
-          "why": "Every natural number is an integer: ℕ ⊆ ℤ.",
-          "clue": "Is 1, 2 or 3 missing from ℤ?",
-          "id": "g9.maths.u1.s1-1.7"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Integers are natural numbers.",
-          "opts": [
-            "Always true",
-            "Sometimes true",
-            "Never true"
-          ],
-          "ans": "Sometimes true",
-          "why": "5 is a natural number, but −5 is not.",
-          "clue": "Try one positive and one negative integer.",
-          "id": "g9.maths.u1.s1-1.8"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "−7 is a natural number.",
-          "opts": [
-            "Always true",
-            "Sometimes true",
-            "Never true"
-          ],
-          "ans": "Never true",
-          "why": "Natural numbers are never negative.",
-          "clue": "Is −7 a counting number?",
-          "id": "g9.maths.u1.s1-1.9"
-        }
-      ]
-    },
-    {
-      "book_name": "Exercise 1.1",
-      "items": [
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "text": "Look at 8, −11, 23, 534, 0, −46, −19, 100.",
-          "ask": "___ of these numbers are natural numbers.",
-          "a": [
-            "4",
-            "four"
-          ],
-          "why": "Natural: 8, 23, 534, 100. All eight numbers are integers.",
-          "clue": "Leave out 0 and the negatives.",
-          "id": "g9.maths.u1.s1-1.10"
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "The last integer before one thousand is ___.",
-          "a": [
-            "999",
-            "nine hundred ninety-nine",
-            "nine hundred and ninety-nine"
-          ],
-          "why": "999 comes just before 1,000.",
-          "clue": "Subtract 1 from 1,000.",
-          "id": "g9.maths.u1.s1-1.11"
-        },
-        {
-          "kind": "tf",
-          "step": "exercise",
-          "graded": true,
-          "text": "For any natural numbers n₁ and n₂, n₁ + n₂ is always a natural number.",
-          "a": true,
-          "why": "For example 3 + 5 = 8. ℕ is closed under addition.",
-          "clue": "Add two counting numbers. Can you get 0 or a negative?",
-          "id": "g9.maths.u1.s1-1.12"
-        },
-        {
-          "kind": "tf",
-          "step": "exercise",
-          "graded": true,
-          "text": "For any natural numbers n₁ and n₂, n₁ − n₂ is always a natural number.",
-          "a": false,
-          "why": "3 − 5 = −2. So ℕ is not closed under subtraction.",
-          "clue": "Try a small number minus a bigger one.",
-          "id": "g9.maths.u1.s1-1.13"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "A triangle has perimeter 10. Its sides are natural numbers. Which side lengths are possible?",
-          "opts": [
-            "2, 4, 4 or 3, 3, 4",
-            "1, 4, 5 or 2, 4, 4",
-            "2, 3, 5 or 3, 3, 4",
-            "1, 1, 8 only"
-          ],
-          "ans": "2, 4, 4 or 3, 3, 4",
-          "why": "The longest side must be less than half the perimeter, so less than 5.",
-          "clue": "In a triangle, the two short sides must add to more than the long side.",
-          "id": "g9.maths.u1.s1-1.14"
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "text": "m and n are positive integers with m + n < 10.",
-          "ask": "mn can take ___ different values.",
-          "a": [
-            "16",
-            "sixteen"
-          ],
-          "why": "The values are 1–10, 12, 14, 15, 16, 18 and 20.",
-          "clue": "List the products for m = 1, then m = 2, and so on. Count each value once.",
-          "worked": "m = 1 gives 1–8. m = 2 adds 10, 12, 14. m = 3 adds 9, 15, 18. m = 4 adds 16, 20. Total 16.",
-          "id": "g9.maths.u1.s1-1.15"
-        }
-      ]
-    }
-  ],
-  "test": [
-    {
-      "kind": "mcq",
-      "step": "test",
-      "graded": true,
-      "text": "Which set contains 0?",
-      "opts": [
-        "ℕ only",
-        "ℤ only",
-        "Both ℕ and ℤ",
-        "Neither ℕ nor ℤ"
-      ],
-      "ans": "ℤ only",
-      "why": "ℕ = {1, 2, 3, …} has no 0. ℤ includes 0.",
-      "clue": "",
-      "id": "g9.maths.u1.s1-1.16"
-    },
-    {
-      "kind": "tf",
-      "step": "test",
-      "graded": true,
-      "text": "ℕ ⊆ ℤ means every natural number is an integer.",
-      "a": true,
-      "why": "ℕ sits inside ℤ.",
-      "clue": "",
-      "id": "g9.maths.u1.s1-1.17"
-    },
-    {
-      "kind": "blank",
-      "step": "test",
-      "graded": true,
-      "ask": "The smallest natural number is ___.",
-      "a": [
-        "1",
-        "one"
-      ],
-      "why": "ℕ = {1, 2, 3, …} starts at 1.",
-      "clue": "",
-      "id": "g9.maths.u1.s1-1.18"
-    }
-  ],
-  "notes": [
-    {
-      "kind": "note",
-      "text": "Activity 1.1 items 1, 3 and 5 are open-ended (list, describe, draw). They are covered by the read blocks, not graded."
-    },
-    {
-      "kind": "note",
-      "text": "The sheep hook and the lift word problem are added Ethiopian examples, marked added."
-    }
-  ],
-  "review": {
-    "status": "validated"
+  {
+   "en": "Natural number",
+   "am": "የተፈጥሮ ቁጥር",
+   "def": "A counting number: 1, 2, 3, … The set is written ℕ.",
+   "machine": true
   },
-  "version": 1
+  {
+   "en": "Integer",
+   "am": "ኢንቲጀር (ሙሉ ቁጥር)",
+   "def": "A whole number or its negative: …, −2, −1, 0, 1, 2, … The set is written ℤ.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.natural-numbers-integers",
+   "name": "Natural numbers and integers",
+   "explain": {
+    "en": {
+     "text": "Natural numbers are the counting numbers 1, 2, 3 and so on. We write this set as ℕ. Integers are the natural numbers, zero, and their negatives. We write this set as ℤ. Every natural number is an integer. But not every integer is a natural number."
+    },
+    "am": {
+     "text": "የተፈጥሮ ቁጥሮች የመቁጠሪያ ቁጥሮች ናቸው፤ 1፣ 2፣ 3 እና የመሳሰሉት። ይህን ስብስብ ℕ ብለን እንጽፋለን። ኢንቲጀሮች የተፈጥሮ ቁጥሮች፣ ዜሮ እና አሉታዊዎቻቸው ናቸው። ይህን ስብስብ ℤ ብለን እንጽፋለን። ማንኛውም የተፈጥሮ ቁጥር ኢንቲጀር ነው፤ ግን ማንኛውም ኢንቲጀር የተፈጥሮ ቁጥር አይደለም።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "added": true,
+     "title": "Counting sheep",
+     "text": "Kebede counts his sheep: 1, 2, 3, … He never counts 0 sheep or −25 sheep.",
+     "ask": "Which of 6, 0 and −25 could be a count of sheep?",
+     "opts": [
+      "6",
+      "0",
+      "−25",
+      "All three"
+     ],
+     "after": "Only 6. You can count 6 sheep.\nCounting starts at 1, so 0 is not a count.\nYou cannot have −25 sheep, so negatives are not counts.\nRead on to name these numbers.",
+     "best": "6"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Sets of numbers",
+     "paras": [
+      "Recall that a set is a collection of well-defined, distinct objects.",
+      "Distinct means no object appears twice.",
+      "In Grade 7 you met two sets of numbers.",
+      "ℕ = {1, 2, 3, …} is the set of natural numbers.",
+      "ℤ = {…, −2, −1, 0, 1, 2, 3, …} is the set of integers."
+     ]
+    },
+    {
+     "kind": "nest",
+     "step": "explore",
+     "title": "ℕ sits inside ℤ",
+     "ask": "Tap a circle. Then tap each number to see its sets.",
+     "rings": [
+      [
+       "ℤ",
+       "Integers",
+       "…, −2, −1, 0, 1, 2, … Zero and the negatives are here too."
+      ],
+      [
+       "ℕ",
+       "Natural numbers",
+       "1, 2, 3, … the counting numbers."
+      ]
+     ],
+     "numbers": [
+      [
+       "6",
+       1,
+       "A counting number. It is in ℕ, so it is in ℤ too."
+      ],
+      [
+       "0",
+       0,
+       "0 is an integer. It is not a counting number."
+      ],
+      [
+       "−25",
+       0,
+       "A negative integer. It is not natural."
+      ],
+      [
+       "12",
+       1,
+       "A counting number, so it is in both sets."
+      ]
+     ],
+     "need": 4,
+     "added": true,
+     "id": "g9.maths.u1.s1-1.19"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Name the sets",
+     "defs": [
+      [
+       "Set",
+       "A collection of well-defined, distinct objects. No object appears twice."
+      ],
+      [
+       "Natural number",
+       "A counting number: 1, 2, 3, … The set is ℕ."
+      ],
+      [
+       "Integer",
+       "A whole number or its negative: …, −2, −1, 0, 1, 2, … The set is ℤ."
+      ]
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Integer, not natural",
+     "text": "Which number is an integer but NOT a natural number?",
+     "opts": [
+      "7",
+      "0",
+      "100",
+      "1"
+     ],
+     "ans": "0",
+     "why": "ℕ = {1, 2, 3, …} starts at 1.\nℤ = {…, −1, 0, 1, …} also holds 0 and the negatives.\n7, 100 and 1 are counting numbers, so they are in both sets.\n0 is in ℤ but not in ℕ. So the answer is 0.",
+     "clue": "Where does the list for ℕ start?",
+     "id": "g9.maths.u1.s1-1.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "How ℕ and ℤ are related",
+     "paras": [
+      "Every natural number is an integer. We write ℕ ⊆ ℤ.",
+      "Not every integer is a natural number. 5 is natural, but −5 is not.",
+      "Picture a circle for ℕ drawn inside a bigger circle for ℤ."
+     ],
+     "note": "The book shows this diagram as Figure 1.2 in lesson 1.2."
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "title": "Sort the numbers",
+     "text": "Sort into sets: put each number in the right group.",
+     "bins": [
+      "Natural number",
+      "Integer, not natural"
+     ],
+     "items": [
+      [
+       "6",
+       "Natural number",
+       "6 is a counting number."
+      ],
+      [
+       "0",
+       "Integer, not natural",
+       "ℕ starts at 1, so 0 is not natural."
+      ],
+      [
+       "−25",
+       "Integer, not natural",
+       "Negative numbers are not in ℕ."
+      ],
+      [
+       "12",
+       "Natural number",
+       "12 is a counting number."
+      ],
+      [
+       "−1",
+       "Integer, not natural",
+       "Negative numbers are not in ℕ."
+      ]
+     ],
+     "why": "Natural numbers are the counting numbers 1, 2, 3, …\n6 and 12 are counting numbers: natural.\n0 is not a counting number: an integer only.\n−25 and −1 are negative: integers only.",
+     "clue": "Ask: could I count this many objects?",
+     "id": "g9.maths.u1.s1-1.2"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "Always, sometimes or never?",
+     "text": "Natural numbers: is the sentence \"−7 is a natural number\" always, sometimes or never true?",
+     "opts": [
+      "Always true",
+      "Sometimes true",
+      "Never true"
+     ],
+     "ans": "Never true",
+     "why": "Natural numbers are 1, 2, 3, … All are positive.\n−7 is negative.\nSo −7 is never in ℕ. Never true.\n(\"Sometimes\" would need −7 to be natural in some cases, but −7 is one fixed number.)",
+     "clue": "Look at where the list for ℕ starts.",
+     "id": "g9.maths.u1.s1-1.3"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "title": "True or false?",
+     "text": "Natural numbers and integers: every integer is a natural number.",
+     "a": false,
+     "why": "Test one integer that is not positive.\n−5 is an integer, but not a counting number.\n0 is an integer, but ℕ starts at 1.\nSo not every integer is natural. False.\n(The opposite is true: every natural number is an integer.)",
+     "clue": "Try a negative integer.",
+     "id": "g9.maths.u1.s1-1.4"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "added": true,
+     "title": "Lift buttons",
+     "text": "A lift in an Addis Ababa building has buttons −2, −1, 0, 1, 2, 3 and 4.",
+     "ask": "Count the natural numbers: ___ of these buttons show natural numbers.",
+     "a": [
+      "4",
+      "four"
+     ],
+     "why": "The buttons are −2, −1, 0, 1, 2, 3, 4.\nCross out the negatives −2 and −1.\nCross out 0: ℕ starts at 1.\nLeft: 1, 2, 3, 4.\nSo 4 buttons show natural numbers.",
+     "clue": "Cross out 0 and the negatives. Count what is left.",
+     "worked": "Cross out −2, −1 and 0. Left: 1, 2, 3, 4. That is 4 buttons.",
+     "id": "g9.maths.u1.s1-1.5"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Activity 1.1",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Natural numbers: which of 6, 0 and −25 are natural numbers?",
+     "opts": [
+      "6 only",
+      "6 and 0",
+      "0 and −25",
+      "All three"
+     ],
+     "ans": "6 only",
+     "why": "Natural numbers are the counting numbers 1, 2, 3, …\n6 is a counting number: natural.\n0 is not: ℕ starts at 1.\n−25 is negative: not natural.\nSo 6 only. (All three are integers.)",
+     "clue": "Natural numbers are the counting numbers.",
+     "id": "g9.maths.u1.s1-1.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Sets of numbers: \"Natural numbers are integers.\" Always, sometimes or never true?",
+     "opts": [
+      "Always true",
+      "Sometimes true",
+      "Never true"
+     ],
+     "ans": "Always true",
+     "why": "ℤ = {…, −2, −1, 0, 1, 2, 3, …}.\nEvery counting number 1, 2, 3, … is in this list.\nSo every natural number is an integer: ℕ ⊆ ℤ.\nAlways true.",
+     "clue": "Is 1, 2 or 3 missing from ℤ?",
+     "id": "g9.maths.u1.s1-1.7"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Sets of numbers: \"Integers are natural numbers.\" Always, sometimes or never true?",
+     "opts": [
+      "Always true",
+      "Sometimes true",
+      "Never true"
+     ],
+     "ans": "Sometimes true",
+     "why": "Try a positive integer: 5 is natural. So it can be true.\nTry a negative integer: −5 is not natural.\nTry 0: it is not natural either.\nIt is true for some integers only. Sometimes true.",
+     "clue": "Try one positive and one negative integer.",
+     "id": "g9.maths.u1.s1-1.8"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Natural numbers: \"−7 is a natural number.\" Always, sometimes or never true?",
+     "opts": [
+      "Always true",
+      "Sometimes true",
+      "Never true"
+     ],
+     "ans": "Never true",
+     "why": "Natural numbers are 1, 2, 3, …\nThey are never negative.\n−7 is negative, so it is not natural.\nNever true.",
+     "clue": "Is −7 a counting number?",
+     "id": "g9.maths.u1.s1-1.9"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.1",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "text": "Look at 8, −11, 23, 534, 0, −46, −19, 100.",
+     "ask": "Count the natural numbers: ___ of these numbers are natural numbers.",
+     "a": [
+      "4",
+      "four"
+     ],
+     "why": "Natural numbers are positive counting numbers.\nLeave out 0 and the negatives −11, −46, −19.\nLeft: 8, 23, 534, 100.\nThat is 4 natural numbers. (All eight are integers.)",
+     "clue": "Leave out 0 and the negatives.",
+     "id": "g9.maths.u1.s1-1.10"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Integers in order: the last integer before one thousand is ___.",
+     "a": [
+      "999",
+      "nine hundred ninety-nine",
+      "nine hundred and ninety-nine"
+     ],
+     "why": "Integers go up in steps of 1.\nThe integer just before 1,000 is 1,000 − 1.\n1,000 − 1 = 999.\nSo the answer is 999.",
+     "clue": "Subtract 1 from 1,000.",
+     "id": "g9.maths.u1.s1-1.11"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Closure: for any natural numbers n₁ and n₂, n₁ + n₂ is always a natural number.",
+     "a": true,
+     "why": "Take two counting numbers, for example 3 and 5.\n3 + 5 = 8, a counting number.\nAdding two positive numbers always gives a bigger positive number.\nIt can never be 0 or negative.\nSo ℕ is closed under addition. True.",
+     "clue": "Add two counting numbers. Can you get 0 or a negative?",
+     "id": "g9.maths.u1.s1-1.12"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Closure: for any natural numbers n₁ and n₂, n₁ − n₂ is always a natural number.",
+     "a": false,
+     "why": "Try a small number minus a bigger one.\n3 − 5 = −2, which is not natural.\nAlso 4 − 4 = 0, which is not natural.\nOne example is enough to show \"always\" is wrong.\nSo ℕ is not closed under subtraction. False.",
+     "clue": "Try a small number minus a bigger one.",
+     "id": "g9.maths.u1.s1-1.13"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Triangle with natural-number sides: the perimeter is 10. Which side lengths are possible?",
+     "opts": [
+      "2, 4, 4 or 3, 3, 4",
+      "1, 4, 5 or 2, 4, 4",
+      "2, 3, 5 or 3, 3, 4",
+      "1, 1, 8 only"
+     ],
+     "ans": "2, 4, 4 or 3, 3, 4",
+     "why": "The sides add to 10.\nIn a triangle, the two short sides must add to more than the long side.\nSo the longest side is less than half of 10: at most 4.\nWith longest side 4: 2, 4, 4 and 3, 3, 4 work.\nWith longest side 3 or less, the sum is at most 9.\nSo the answer is 2, 4, 4 or 3, 3, 4. (2, 3, 5 fails: 2 + 3 = 5 is not more than 5.)",
+     "clue": "In a triangle, the two short sides must add to more than the long side.",
+     "id": "g9.maths.u1.s1-1.14"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "text": "m and n are positive integers with m + n < 10.",
+     "ask": "Count the products: mn can take ___ different values.",
+     "a": [
+      "16",
+      "sixteen"
+     ],
+     "why": "m + n < 10, so m + n is at most 9.\nm = 1: n = 1 to 8 gives 1, 2, 3, 4, 5, 6, 7, 8.\nm = 2: n = 1 to 7 adds 10, 12, 14.\nm = 3: n = 1 to 6 adds 9, 15, 18.\nm = 4: n = 1 to 5 adds 16, 20. Larger m gives no new products.\nCount: 8 + 3 + 3 + 2 = 16 different values.",
+     "clue": "List the products for m = 1, then m = 2, and so on. Count each value once.",
+     "worked": "m = 1 gives 1–8. m = 2 adds 10, 12, 14. m = 3 adds 9, 15, 18. m = 4 adds 16, 20. Total 16.",
+     "id": "g9.maths.u1.s1-1.15"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Sets of numbers: which set contains 0?",
+   "opts": [
+    "ℕ only",
+    "ℤ only",
+    "Both ℕ and ℤ",
+    "Neither ℕ nor ℤ"
+   ],
+   "ans": "ℤ only",
+   "why": "ℕ = {1, 2, 3, …} starts at 1, so 0 is not in ℕ.\nℤ = {…, −1, 0, 1, …} includes 0.\nSo 0 is in ℤ only.",
+   "clue": "",
+   "id": "g9.maths.u1.s1-1.16"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Set symbols: ℕ ⊆ ℤ means every natural number is an integer.",
+   "a": true,
+   "why": "⊆ means \"is a subset of\".\nℕ ⊆ ℤ says every element of ℕ is also in ℤ.\n1, 2, 3, … all appear in ℤ.\nSo the sentence is true.",
+   "clue": "",
+   "id": "g9.maths.u1.s1-1.17"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "Natural numbers: the smallest natural number is ___.",
+   "a": [
+    "1",
+    "one"
+   ],
+   "why": "ℕ = {1, 2, 3, …}.\nThe list starts at 1.\n0 is not a natural number.\nSo the smallest natural number is 1.",
+   "clue": "",
+   "id": "g9.maths.u1.s1-1.18"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "Activity 1.1 items 1, 3 and 5 are open-ended (list, describe, draw). They are covered by the read blocks, not graded."
+  },
+  {
+   "kind": "note",
+   "text": "The sheep hook and the lift word problem are added Ethiopian examples, marked added."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
 }

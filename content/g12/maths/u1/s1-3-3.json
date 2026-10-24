@@ -48,9 +48,42 @@
       "60",
       "32"
      ],
-     "after": "62. Notice 62 = 64 − 2 = 2(2⁵ − 1). Geometric sums have a pattern like this.",
+     "after": "Add: 2 + 4 = 6, 6 + 8 = 14, 14 + 16 = 30, 30 + 32 = 62.\nNotice 62 = 64 − 2 = 2(2⁵ − 1).\nGeometric sums have a pattern like this. (64 is the next term, not the sum.)",
      "ref": "Activity 1.6 Q1 a",
-     "id": "g12.maths.u1.s1-3-3.1"
+     "id": "g12.maths.u1.s1-3-3.1",
+     "best": "62"
+    },
+    {
+     "kind": "fracbar",
+     "step": "explore",
+     "title": "1/2 + 1/4 + 1/8 + 1/16",
+     "ask": "Tap ▶ to add each term to one bar.",
+     "parts": 16,
+     "shade": [
+      {
+       "n": 8,
+       "color": "a",
+       "label": "1/2"
+      },
+      {
+       "n": 4,
+       "color": "b",
+       "label": "+ 1/4"
+      },
+      {
+       "n": 2,
+       "color": "c",
+       "label": "+ 1/8"
+      },
+      {
+       "n": 1,
+       "color": "d",
+       "label": "+ 1/16"
+      }
+     ],
+     "after": "S₄ = 15/16 = 1 − 1/16. One piece is always missing: Sₙ = 1 − (1/2)ⁿ.",
+     "added": true,
+     "id": "g12.maths.u1.s1-3-3.31"
     },
     {
      "kind": "steps",
@@ -77,6 +110,32 @@
      "note": "Use (rⁿ − 1)/(r − 1) when r > 1: the signs stay positive.",
      "ref": "Theorem 1.4",
      "id": "g12.maths.u1.s1-3-3.3"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Which form of the formula?",
+     "ask": "Tap each case to see which form to use.",
+     "items": [
+      [
+       "r = 1",
+       "Every term is G₁. Sₙ = nG₁. (The formula would divide by 0.)"
+      ],
+      [
+       "r > 1, e.g. r = 3",
+       "Use Sₙ = G₁(rⁿ − 1)/(r − 1). Top and bottom stay positive."
+      ],
+      [
+       "0 < r < 1, e.g. r = 1/2",
+       "Use Sₙ = G₁(1 − rⁿ)/(1 − r). Top and bottom stay positive."
+      ],
+      [
+       "r < 0, e.g. r = −3",
+       "Either form works. Keep r in brackets: (−3)ⁿ."
+      ]
+     ],
+     "added": true,
+     "id": "g12.maths.u1.s1-3-3.32"
     },
     {
      "kind": "slider",
@@ -129,11 +188,11 @@
     },
     {
      "kind": "blank",
-     "ask": "1 + 2/3 + 4/9 + 8/27 = ___",
+     "ask": "Sum a geometric series: 1 + 2/3 + 4/9 + 8/27 = ___",
      "a": [
       "65/27"
      ],
-     "why": "G₁ = 1, r = 2/3, n = 4. S₄ = (1 − 16/81)/(1/3) = (65/81) × 3 = 65/27.",
+     "why": "Step 1: G₁ = 1, r = 2/3, n = 4.\nStep 2: S₄ = (1 − (2/3)⁴)/(1 − 2/3) = (1 − 16/81)/(1/3).\nStep 3: 1 − 16/81 = 65/81, and dividing by 1/3 means × 3: 65/27.\nCheck: 27/27 + 18/27 + 12/27 + 8/27 = 65/27 ✓.",
      "clue": "Use a common denominator 27, or the formula.",
      "num": true,
      "graded": true,
@@ -144,7 +203,7 @@
     },
     {
      "kind": "mcq",
-     "text": "G₁ = 3, r = 2. Sₙ =",
+     "text": "Write the sum of n terms of a geometric series with G₁ = 3 and r = 2: Sₙ =",
      "opts": [
       "3(2ⁿ − 1)",
       "3(2ⁿ − 1)/2",
@@ -152,7 +211,7 @@
       "3 × 2ⁿ"
      ],
      "ans": "3(2ⁿ − 1)",
-     "why": "3(2ⁿ − 1)/(2 − 1) = 3(2ⁿ − 1).",
+     "why": "Step 1: r > 1, so use Sₙ = G₁(rⁿ − 1)/(r − 1).\nStep 2: Sₙ = 3(2ⁿ − 1)/(2 − 1).\nStep 3: 2 − 1 = 1, so Sₙ = 3(2ⁿ − 1).\nCheck n = 2: 3 + 6 = 9 and 3(4 − 1) = 9 ✓.",
      "clue": "r − 1 = 1.",
      "graded": true,
      "level": 1,
@@ -162,7 +221,7 @@
     },
     {
      "kind": "mcq",
-     "text": "1, 3, 9, 27, … Sₙ =",
+     "text": "Write the sum of n terms of the geometric series 1 + 3 + 9 + 27 + …: Sₙ =",
      "opts": [
       "(3ⁿ − 1)/2",
       "3ⁿ − 1",
@@ -170,7 +229,7 @@
       "3(3ⁿ − 1)/2"
      ],
      "ans": "(3ⁿ − 1)/2",
-     "why": "G₁ = 1, r = 3: (3ⁿ − 1)/(3 − 1).",
+     "why": "Step 1: G₁ = 1, r = 3.\nStep 2: Sₙ = 1 × (3ⁿ − 1)/(3 − 1) = (3ⁿ − 1)/2.\nCheck n = 3: 1 + 3 + 9 = 13 and (27 − 1)/2 = 13 ✓.\n(3ⁿ − 1 forgets to divide by r − 1.)",
      "clue": "Divide by r − 1 = 2.",
      "graded": true,
      "level": 1,
@@ -180,11 +239,11 @@
     },
     {
      "kind": "blank",
-     "ask": "1 + 1/2 + 1/4 + … (6 terms) = ___",
+     "ask": "Sum a geometric series: 1 + 1/2 + 1/4 + … (6 terms) = ___",
      "a": [
       "63/32"
      ],
-     "why": "2(1 − (1/2)⁶) = 2(1 − 1/64) = 2 × 63/64 = 63/32.",
+     "why": "Step 1: G₁ = 1, r = 1/2, n = 6.\nStep 2: S₆ = (1 − (1/2)⁶)/(1 − 1/2) = (1 − 1/64)/(1/2).\nStep 3: dividing by 1/2 means × 2: 2 × 63/64 = 63/32.\nCheck: 1 + 1/2 + 1/4 + 1/8 + 1/16 + 1/32 = 63/32 ✓.",
      "clue": "Sₙ = 2(1 − (1/2)ⁿ).",
      "num": true,
      "graded": true,
@@ -208,11 +267,11 @@
     },
     {
      "kind": "blank",
-     "ask": "How many terms of 3, 3/2, 3/4, 3/8, … give the sum 3069/512? ___",
+     "ask": "Work backwards from the sum: how many terms of 3, 3/2, 3/4, 3/8, … give the sum 3069/512? ___",
      "a": [
       "10"
      ],
-     "why": "Sₙ = 6(1 − 1/2ⁿ) = 3069/512 gives 1/2ⁿ = 1/1024, so 2ⁿ = 1024 and n = 10.",
+     "why": "Step 1: G₁ = 3, r = 1/2: Sₙ = 3(1 − 1/2ⁿ)/(1/2) = 6(1 − 1/2ⁿ).\nStep 2: 6(1 − 1/2ⁿ) = 3069/512, so 1 − 1/2ⁿ = 3069/3072 = 1023/1024.\nStep 3: 1/2ⁿ = 1/1024, so 2ⁿ = 1024 = 2¹⁰.\nSo n = 10.",
      "clue": "Write Sₙ with r = 1/2, then solve for 2ⁿ.",
      "num": true,
      "graded": true,
@@ -223,7 +282,7 @@
     },
     {
      "kind": "mcq",
-     "text": "0.15 + 0.015 + 0.0015 + … (n terms) =",
+     "text": "Write the sum of n terms of the geometric series 0.15 + 0.015 + 0.0015 + …",
      "opts": [
       "(1/6)(1 − 0.1ⁿ)",
       "0.15(1 − 0.1ⁿ)",
@@ -231,7 +290,7 @@
       "1.5(1 − 0.1ⁿ)"
      ],
      "ans": "(1/6)(1 − 0.1ⁿ)",
-     "why": "r = 0.1. 0.15(1 − 0.1ⁿ)/0.9, and 0.15 ÷ 0.9 = 1/6.",
+     "why": "Step 1: r = 0.015 ÷ 0.15 = 0.1, and G₁ = 0.15.\nStep 2: Sₙ = 0.15(1 − 0.1ⁿ)/(1 − 0.1) = 0.15(1 − 0.1ⁿ)/0.9.\nStep 3: 0.15 ÷ 0.9 = 15/90 = 1/6.\nSo Sₙ = (1/6)(1 − 0.1ⁿ). (0.15(1 − 0.1ⁿ) forgets to divide by 1 − r.)",
      "clue": "r = 0.015 ÷ 0.15.",
      "graded": true,
      "level": 2,
@@ -241,9 +300,9 @@
     },
     {
      "kind": "tf",
-     "text": "For 5, 5, 5, 5, … the sum of 8 terms is 40.",
+     "text": "The case r = 1: true or false? For 5, 5, 5, 5, … the sum of 8 terms is 40.",
      "a": true,
-     "why": "r = 1, so Sₙ = nG₁ = 8 × 5 = 40.",
+     "why": "Step 1: 5 ÷ 5 = 1, so r = 1.\nStep 2: the formula with 1 − r would divide by 0, so we cannot use it.\nStep 3: every term is 5, so S₈ = 8 × 5 = 40.\nThe statement is true.",
      "clue": "The formula with 1 − r cannot be used when r = 1.",
      "graded": true,
      "level": 1,
@@ -253,11 +312,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A geometric sequence has G₁ = 2 and S₃ = 26 with r > 0. r = ___",
+     "ask": "Work backwards from the sum: a geometric sequence has G₁ = 2 and S₃ = 26 with r > 0. r = ___",
      "a": [
       "3"
      ],
-     "why": "2(1 + r + r²) = 26, so r² + r − 12 = 0, (r + 4)(r − 3) = 0. With r > 0, r = 3 (2 + 6 + 18 = 26).",
+     "why": "Step 1: S₃ = G₁ + G₁r + G₁r² = 2(1 + r + r²) = 26.\nStep 2: 1 + r + r² = 13, so r² + r − 12 = 0.\nStep 3: (r + 4)(r − 3) = 0, so r = −4 or r = 3.\nStep 4: r > 0, so r = 3.\nCheck: 2 + 6 + 18 = 26 ✓.",
      "clue": "S₃ = G₁(1 + r + r²).",
      "num": true,
      "graded": true,
@@ -275,11 +334,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "2 + 4 + 8 + 16 + 32 = ___",
+     "ask": "Sum a geometric series: 2 + 4 + 8 + 16 + 32 = ___",
      "a": [
       "62"
      ],
-     "why": "2(2⁵ − 1)/(2 − 1) = 62.",
+     "why": "Step 1: G₁ = 2, r = 2, n = 5.\nStep 2: S₅ = 2(2⁵ − 1)/(2 − 1) = 2 × 31.\nStep 3: = 62.\nCheck by adding: 6, 14, 30, 62 ✓.",
      "clue": "Add or use the formula.",
      "num": true,
      "graded": true,
@@ -290,11 +349,11 @@
     },
     {
      "kind": "blank",
-     "ask": "1 + 2/3 + 4/9 + 8/27 = ___",
+     "ask": "Sum a geometric series: 1 + 2/3 + 4/9 + 8/27 = ___",
      "a": [
       "65/27"
      ],
-     "why": "27/27 + 18/27 + 12/27 + 8/27.",
+     "why": "Step 1: use the denominator 27.\nStep 2: 27/27 + 18/27 + 12/27 + 8/27.\nStep 3: 27 + 18 + 12 + 8 = 65, so the sum is 65/27.",
      "clue": "Denominator 27.",
      "num": true,
      "graded": true,
@@ -305,11 +364,11 @@
     },
     {
      "kind": "blank",
-     "ask": "1 + 2/3 + 4/9 + 8/27 + 16/81 = ___",
+     "ask": "Sum a geometric series: 1 + 2/3 + 4/9 + 8/27 + 16/81 = ___",
      "a": [
       "211/81"
      ],
-     "why": "(81 + 54 + 36 + 24 + 16)/81.",
+     "why": "Step 1: use the denominator 81.\nStep 2: 81/81 + 54/81 + 36/81 + 24/81 + 16/81.\nStep 3: 81 + 54 + 36 + 24 + 16 = 211, so 211/81.\nCheck: (1 − (2/3)⁵)/(1/3) = 3(1 − 32/243) = 3 × 211/243 = 211/81 ✓.",
      "clue": "Denominator 81.",
      "num": true,
      "graded": true,
@@ -325,7 +384,7 @@
    "items": [
     {
      "kind": "mcq",
-     "text": "G₁ = 3, r = 2. Sₙ =",
+     "text": "Write the sum of n terms of a geometric series with G₁ = 3 and r = 2: Sₙ =",
      "opts": [
       "3(2ⁿ − 1)",
       "3(2ⁿ − 1)/2",
@@ -333,7 +392,7 @@
       "6ⁿ − 1"
      ],
      "ans": "3(2ⁿ − 1)",
-     "why": "r − 1 = 1.",
+     "why": "Step 1: Sₙ = G₁(rⁿ − 1)/(r − 1).\nStep 2: 3(2ⁿ − 1)/(2 − 1).\nStep 3: r − 1 = 1, so Sₙ = 3(2ⁿ − 1).",
      "clue": "Theorem 1.4.",
      "graded": true,
      "level": 1,
@@ -343,7 +402,7 @@
     },
     {
      "kind": "mcq",
-     "text": "G₁ = 1, r = 1/2. Sₙ =",
+     "text": "Write the sum of n terms of a geometric series with G₁ = 1 and r = 1/2: Sₙ =",
      "opts": [
       "2(1 − (1/2)ⁿ)",
       "(1 − (1/2)ⁿ)/2",
@@ -351,7 +410,7 @@
       "1 − (1/2)ⁿ"
      ],
      "ans": "2(1 − (1/2)ⁿ)",
-     "why": "Divide by 1 − 1/2 = 1/2, i.e. multiply by 2.",
+     "why": "Step 1: Sₙ = (1 − (1/2)ⁿ)/(1 − 1/2).\nStep 2: 1 − 1/2 = 1/2; dividing by 1/2 means × 2.\nStep 3: Sₙ = 2(1 − (1/2)ⁿ).\nCheck n = 2: 1 + 1/2 = 3/2 and 2(1 − 1/4) = 3/2 ✓.",
      "clue": "1 − r = 1/2.",
      "graded": true,
      "level": 2,
@@ -361,7 +420,7 @@
     },
     {
      "kind": "mcq",
-     "text": "1, 3, 9, 27, … Sₙ =",
+     "text": "Write the sum of n terms of the geometric series 1 + 3 + 9 + 27 + …: Sₙ =",
      "opts": [
       "(3ⁿ − 1)/2",
       "3ⁿ − 1",
@@ -369,7 +428,7 @@
       "3ⁿ/2"
      ],
      "ans": "(3ⁿ − 1)/2",
-     "why": "r = 3.",
+     "why": "Step 1: G₁ = 1, r = 3.\nStep 2: Sₙ = (3ⁿ − 1)/(3 − 1) = (3ⁿ − 1)/2.\nCheck n = 2: 1 + 3 = 4 and (9 − 1)/2 = 4 ✓.",
      "clue": "r − 1 = 2.",
      "graded": true,
      "level": 1,
@@ -384,7 +443,7 @@
    "items": [
     {
      "kind": "mcq",
-     "text": "First three terms sum to 9; terms 4 to 6 sum to −18. r =",
+     "text": "Use two partial sums: the first three terms sum to 9 and terms 4 to 6 sum to −18. r =",
      "opts": [
       "−∛2",
       "−2",
@@ -392,7 +451,7 @@
       "−1/2"
      ],
      "ans": "−∛2",
-     "why": "9r³ = −18, so r³ = −2 and r = −∛2.",
+     "why": "Step 1: G₁ + G₁r + G₁r² = 9.\nStep 2: terms 4 to 6: r³(G₁ + G₁r + G₁r²) = −18.\nStep 3: 9r³ = −18, so r³ = −2.\nStep 4: r = ∛(−2) = −∛2.\n(−2 is r³, not r.)",
      "clue": "Factor r³ out of the second sum.",
      "graded": true,
      "level": 3,
@@ -402,11 +461,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Terms of 3, 3/2, 3/4, … needed for the sum 3069/512: ___",
+     "ask": "Work backwards from the sum: terms of 3, 3/2, 3/4, … needed for the sum 3069/512: ___",
      "a": [
       "10"
      ],
-     "why": "2ⁿ = 1024.",
+     "why": "Step 1: Sₙ = 6(1 − 1/2ⁿ).\nStep 2: 6(1 − 1/2ⁿ) = 3069/512 gives 1/2ⁿ = 1/1024.\nStep 3: 2ⁿ = 1024 = 2¹⁰, so n = 10.",
      "clue": "Sₙ = 6(1 − 1/2ⁿ).",
      "num": true,
      "graded": true,
@@ -417,7 +476,7 @@
     },
     {
      "kind": "mcq",
-     "text": "0.15, 0.015, 0.0015, … n terms:",
+     "text": "Write the sum of n terms of the geometric series 0.15 + 0.015 + 0.0015 + …",
      "opts": [
       "(1 − 10⁻ⁿ)/6",
       "0.15(1 − 10⁻ⁿ)",
@@ -425,7 +484,7 @@
       "1.5(1 − 10⁻ⁿ)"
      ],
      "ans": "(1 − 10⁻ⁿ)/6",
-     "why": "G₁ = 0.15, r = 0.1.",
+     "why": "Step 1: G₁ = 0.15, r = 0.1.\nStep 2: Sₙ = 0.15(1 − 0.1ⁿ)/0.9.\nStep 3: 0.15/0.9 = 1/6 and 0.1ⁿ = 10⁻ⁿ.\nSo Sₙ = (1 − 10⁻ⁿ)/6.",
      "clue": "r = 0.1.",
      "graded": true,
      "level": 2,
@@ -435,7 +494,7 @@
     },
     {
      "kind": "mcq",
-     "text": "1, −a, a², −a³, … n terms (a ≠ −1):",
+     "text": "Write the sum of n terms of the geometric series 1 − a + a² − a³ + … (a ≠ −1)",
      "opts": [
       "(1 − (−a)ⁿ)/(1 + a)",
       "(1 − aⁿ)/(1 − a)",
@@ -443,7 +502,7 @@
       "(1 − (−a)ⁿ)/(1 − a)"
      ],
      "ans": "(1 − (−a)ⁿ)/(1 + a)",
-     "why": "r = −a, so 1 − r = 1 + a.",
+     "why": "Step 1: G₁ = 1 and r = −a ÷ 1 = −a.\nStep 2: Sₙ = (1 − rⁿ)/(1 − r) = (1 − (−a)ⁿ)/(1 − (−a)).\nStep 3: 1 − (−a) = 1 + a.\nSo Sₙ = (1 − (−a)ⁿ)/(1 + a). (1 − a in the bottom forgets the sign of r.)",
      "clue": "r = −a.",
      "graded": true,
      "level": 3,
@@ -453,7 +512,7 @@
     },
     {
      "kind": "mcq",
-     "text": "x³, x⁵, x⁷, … n terms (x ≠ ±1):",
+     "text": "Write the sum of n terms of the geometric series x³ + x⁵ + x⁷ + … (x ≠ ±1)",
      "opts": [
       "x³(1 − x²ⁿ)/(1 − x²)",
       "x³(1 − xⁿ)/(1 − x)",
@@ -461,7 +520,7 @@
       "(1 − x²ⁿ)/(1 − x²)"
      ],
      "ans": "x³(1 − x²ⁿ)/(1 − x²)",
-     "why": "r = x², so rⁿ = x²ⁿ.",
+     "why": "Step 1: G₁ = x³ and r = x⁵ ÷ x³ = x².\nStep 2: rⁿ = (x²)ⁿ = x²ⁿ.\nStep 3: Sₙ = x³(1 − x²ⁿ)/(1 − x²).\n(Using r = x gives the wrong powers.)",
      "clue": "r = x⁵ ÷ x³.",
      "graded": true,
      "level": 3,
@@ -475,11 +534,11 @@
  "test": [
   {
    "kind": "blank",
-   "ask": "G₁ = 1, r = 2. S₈ = ___",
+   "ask": "Sum a geometric series with G₁ = 1 and r = 2: S₈ = ___",
    "a": [
     "255"
    ],
-   "why": "2⁸ − 1.",
+   "why": "Sₙ = G₁(rⁿ − 1)/(r − 1).\nS₈ = (2⁸ − 1)/(2 − 1).\n2⁸ = 256, so S₈ = 255.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -489,11 +548,11 @@
   },
   {
    "kind": "blank",
-   "ask": "3 + 6 + 12 + 24 + 48 = ___",
+   "ask": "Sum a geometric series: 3 + 6 + 12 + 24 + 48 = ___",
    "a": [
     "93"
    ],
-   "why": "3(2⁵ − 1).",
+   "why": "G₁ = 3, r = 2, n = 5.\nS₅ = 3(2⁵ − 1)/1 = 3 × 31.\n= 93.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -503,12 +562,12 @@
   },
   {
    "kind": "blank",
-   "ask": "G₁ = 4, r = 1/2. S₄ = ___",
+   "ask": "Sum a geometric series with G₁ = 4 and r = 1/2: S₄ = ___",
    "a": [
     "15/2",
     "7.5"
    ],
-   "why": "4(1 − 1/16)/(1/2) = 8 × 15/16.",
+   "why": "S₄ = 4(1 − (1/2)⁴)/(1 − 1/2).\n= 4(15/16) ÷ (1/2) = 8 × 15/16.\n= 15/2 = 7.5.\nCheck: 4 + 2 + 1 + 0.5 = 7.5 ✓.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -518,11 +577,11 @@
   },
   {
    "kind": "blank",
-   "ask": "G₁ = 2, r = −3. S₄ = ___",
+   "ask": "Sum a geometric series with G₁ = 2 and r = −3: S₄ = ___",
    "a": [
     "-40"
    ],
-   "why": "2(1 − 81)/(1 + 3) = 2(−80)/4.",
+   "why": "S₄ = 2(1 − (−3)⁴)/(1 − (−3)).\n(−3)⁴ = 81, and 1 + 3 = 4.\n2(1 − 81)/4 = 2(−80)/4 = −40.\nCheck: 2 − 6 + 18 − 54 = −40 ✓.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -532,11 +591,11 @@
   },
   {
    "kind": "blank",
-   "ask": "The sum of the first 3 terms is 13 and of terms 4 to 6 is 351. r = ___",
+   "ask": "Use two partial sums: the first 3 terms sum to 13 and terms 4 to 6 sum to 351. r = ___",
    "a": [
     "3"
    ],
-   "why": "r³ = 351/13 = 27.",
+   "why": "Terms 4 to 6 = r³ × (terms 1 to 3).\n13r³ = 351, so r³ = 27.\nr = 3.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -578,7 +637,7 @@
     },
     {
      "kind": "mcq",
-     "text": "G₁ = 5, r = −2. G₄ = ?",
+     "text": "Find a term with Gₙ = G₁ rⁿ⁻¹: G₁ = 5, r = −2. G₄ = ?",
      "opts": [
       "−40",
       "40",
@@ -586,7 +645,7 @@
       "20"
      ],
      "ans": "−40",
-     "why": "5 × (−2)³ = 5 × (−8) = −40.",
+     "why": "Step 1: G₄ = G₁ r³ (the power is n − 1 = 3).\nStep 2: (−2)³ = −8 (odd power, negative).\nStep 3: 5 × (−8) = −40.\nCheck: 5, −10, 20, −40 ✓.",
      "clue": "The power is n − 1 = 3.",
      "graded": true,
      "level": 1,

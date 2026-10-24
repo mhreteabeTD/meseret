@@ -77,9 +77,10 @@
       "90",
       "100"
      ],
-     "after": "Each row has 14 more: 20, 34, 48, 62, 76. The 5th row has 76 trees. A list made by a rule like this is a sequence.",
+     "after": "Find the jump: 34 − 20 = 14 and 48 − 34 = 14.\nKeep adding 14: 48 + 14 = 62 (4th row), 62 + 14 = 76 (5th row).\nSo the 5th row has 76 trees. (62 is the 4th row, a common slip.)\nA list made by a rule like this is a sequence.",
      "ref": "Activity 1.1 Q1",
-     "id": "g12.maths.u1.s1-1.1"
+     "id": "g12.maths.u1.s1-1.1",
+     "best": "76"
     },
     {
      "kind": "read",
@@ -119,6 +120,32 @@
      ],
      "ref": "Definition 1.1",
      "id": "g12.maths.u1.s1-1.3"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Finite or infinite?",
+     "ask": "Tap each sequence. Does it have a last term?",
+     "items": [
+      [
+       "1, 2, 3, …, 10",
+       "Finite: the last term is 10. Domain 1, 2, …, 10."
+      ],
+      [
+       "2, 4, 6, 8, …",
+       "Infinite: the dots “…” mean it never stops. Domain ℕ."
+      ],
+      [
+       "Days of one week: 1, 2, …, 7",
+       "Finite: it ends at 7."
+      ],
+      [
+       "1, 1/2, 1/3, 1/4, …",
+       "Infinite: there is a term for every n."
+      ]
+     ],
+     "added": true,
+     "id": "g12.maths.u1.s1-1.40"
     },
     {
      "kind": "slider",
@@ -167,7 +194,7 @@
     },
     {
      "kind": "mcq",
-     "text": "For aₙ = 2n − 1, what is a₄?",
+     "text": "Find a term from the general term: for aₙ = 2n − 1, what is a₄?",
      "opts": [
       "7",
       "8",
@@ -175,7 +202,7 @@
       "3"
      ],
      "ans": "7",
-     "why": "a₄ = 2(4) − 1 = 8 − 1 = 7.",
+     "why": "Step 1: a₄ means put n = 4.\nStep 2: a₄ = 2(4) − 1.\nStep 3: 2 × 4 = 8, and 8 − 1 = 7.\nSo a₄ = 7. (9 is a₅; 8 forgets the − 1.)",
      "clue": "Put n = 4 into 2n − 1.",
      "graded": true,
      "level": 1,
@@ -229,13 +256,59 @@
      "id": "g12.maths.u1.s1-1.8"
     },
     {
+     "kind": "coord",
+     "step": "method",
+     "title": "Figure 1.1: the dots of aₙ = 2n + 1",
+     "ask": "Tap each dot. Read n across and aₙ up.",
+     "min": 0,
+     "max": 6,
+     "ymin": 0,
+     "ymax": 12,
+     "need": 3,
+     "points": [
+      {
+       "x": 1,
+       "y": 3,
+       "name": "a₁",
+       "info": "n = 1: 2(1) + 1 = 3."
+      },
+      {
+       "x": 2,
+       "y": 5,
+       "name": "a₂",
+       "info": "n = 2: 2(2) + 1 = 5."
+      },
+      {
+       "x": 3,
+       "y": 7,
+       "name": "a₃",
+       "info": "n = 3: 2(3) + 1 = 7."
+      },
+      {
+       "x": 4,
+       "y": 9,
+       "name": "a₄",
+       "info": "n = 4: 2(4) + 1 = 9."
+      },
+      {
+       "x": 5,
+       "y": 11,
+       "name": "a₅",
+       "info": "n = 5: 2(5) + 1 = 11. The dots are not joined."
+      }
+     ],
+     "ref": "Figure 1.1",
+     "added": true,
+     "id": "g12.maths.u1.s1-1.41"
+    },
+    {
      "kind": "blank",
-     "ask": "aₙ = n/(n + 1). a₃ = ___",
+     "ask": "Find the 3rd term of aₙ = n/(n + 1): a₃ = ___",
      "a": [
       "3/4",
       "0.75"
      ],
-     "why": "a₃ = 3/(3 + 1) = 3/4.",
+     "why": "Step 1: put n = 3 in the top and the bottom.\nStep 2: a₃ = 3/(3 + 1).\nStep 3: 3 + 1 = 4, so a₃ = 3/4.\nCheck: 3/4 = 0.75.",
      "clue": "Put n = 3 on top and in the bottom.",
      "num": true,
      "graded": true,
@@ -246,11 +319,11 @@
     },
     {
      "kind": "blank",
-     "ask": "aₙ = n³. a₅ = ___",
+     "ask": "Find the 5th term of aₙ = n³: a₅ = ___",
      "a": [
       "125"
      ],
-     "why": "a₅ = 5³ = 5 × 5 × 5 = 125.",
+     "why": "Step 1: put n = 5: a₅ = 5³.\nStep 2: 5³ = 5 × 5 × 5.\nStep 3: 5 × 5 = 25, and 25 × 5 = 125.\nSo a₅ = 125. (Trap: 5³ is not 5 × 3 = 15.)",
      "clue": "5³ means 5 × 5 × 5.",
      "num": true,
      "graded": true,
@@ -260,7 +333,7 @@
     },
     {
      "kind": "mcq",
-     "text": "aₙ = (−1)ⁿ. What are the first four terms?",
+     "text": "List the first four terms of the alternating sequence aₙ = (−1)ⁿ.",
      "opts": [
       "−1, 1, −1, 1",
       "1, −1, 1, −1",
@@ -268,7 +341,7 @@
       "1, 1, 1, 1"
      ],
      "ans": "−1, 1, −1, 1",
-     "why": "Odd powers of −1 give −1; even powers give 1.",
+     "why": "Step 1: n = 1: (−1)¹ = −1.\nStep 2: n = 2: (−1)² = (−1)(−1) = 1.\nStep 3: n = 3 gives −1 again; n = 4 gives 1.\nOdd power → −1, even power → 1.\nSo the terms are −1, 1, −1, 1. (1, −1, 1, −1 would start at n = 0.)",
      "clue": "Start with n = 1: (−1)¹ = −1.",
      "graded": true,
      "level": 2,
@@ -278,9 +351,9 @@
     },
     {
      "kind": "tf",
-     "text": "The dots of a sequence graph should be joined with a line.",
+     "text": "Graph of a sequence: true or false? The dots of a sequence graph should be joined with a line.",
      "a": false,
-     "why": "n is only 1, 2, 3, …, so there are no points in between.",
+     "why": "A sequence is only defined at n = 1, 2, 3, …\nThere is no term a₁.₅ between a₁ and a₂.\nSo the graph is separate dots, not a line.\nThe statement is false.",
      "clue": "Can n be 1.5?",
      "graded": true,
      "level": 1,
@@ -289,11 +362,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Bontu has 130 birr in month 1, 210 birr in month 2 and 290 birr in month 3. In month 7 she has ___ birr.",
+     "ask": "Find a later term from a pattern: Bontu has 130 birr in month 1, 210 birr in month 2 and 290 birr in month 3. In month 7 she has ___ birr.",
      "a": [
       "610"
      ],
-     "why": "She adds 80 birr a month: 290 → 370 → 450 → 530 → 610. Or a₇ = 130 + 6 × 80 = 610.",
+     "why": "Step 1: find the monthly increase: 210 − 130 = 80, 290 − 210 = 80.\nStep 2: month 7 is 6 months after month 1.\nStep 3: a₇ = 130 + 6 × 80 = 130 + 480 = 610.\nCheck by listing: 290, 370, 450, 530, 610.\nSo she has 610 birr. (Trap: 130 + 7 × 80 = 690 counts one jump too many.)",
      "clue": "Find how much is added each month.",
      "num": true,
      "graded": true,
@@ -304,7 +377,7 @@
     },
     {
      "kind": "mcq",
-     "text": "Which rule gives the sequence 2, 5, 10, 17, 26, …?",
+     "text": "Find the general term: which rule gives the sequence 2, 5, 10, 17, 26, …?",
      "opts": [
       "aₙ = n² + 1",
       "aₙ = 3n − 1",
@@ -312,7 +385,7 @@
       "aₙ = n² − 1"
      ],
      "ans": "aₙ = n² + 1",
-     "why": "Check n = 1, 2, 3: 1 + 1 = 2, 4 + 1 = 5, 9 + 1 = 10. The gaps 3, 5, 7, 9 grow, so it is not linear.",
+     "why": "Step 1: the gaps are 3, 5, 7, 9. They grow, so the rule is not linear like 3n − 1.\nStep 2: compare with the squares 1, 4, 9, 16, 25.\nStep 3: each term is one more than a square: aₙ = n² + 1.\nCheck n = 4: 16 + 1 = 17 ✓.\n(3n − 1 gives 2, 5, 8: it fails at n = 3.)",
      "clue": "The gaps between terms are not equal. Try squares.",
      "graded": true,
      "level": 3,
@@ -347,9 +420,10 @@
       "16",
       "10"
      ],
-     "after": "Each side is the sum of the two before it: 5 + 8 = 13. This is the Fibonacci pattern.",
+     "after": "Look at the sides: 1, 1, 2, 3, 5, 8.\nEach side is the sum of the two before it: 1 + 1 = 2, 1 + 2 = 3, 2 + 3 = 5, 3 + 5 = 8.\nSo the next side is 5 + 8 = 13.\nThis is the Fibonacci pattern.",
      "ref": "Activity 1.2",
-     "id": "g12.maths.u1.s1-1.15"
+     "id": "g12.maths.u1.s1-1.15",
+     "best": "13"
     },
     {
      "kind": "read",
@@ -422,6 +496,38 @@
      "id": "g12.maths.u1.s1-1.18"
     },
     {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Fibonacci and Mulatu side by side",
+     "ask": "Move n. Both use “add the two before”. Only the start differs.",
+     "vars": [
+      {
+       "k": "n",
+       "label": "n (term number)",
+       "min": 0,
+       "max": 15,
+       "step": 1,
+       "v": 0
+      }
+     ],
+     "formula": "n",
+     "outs": [
+      [
+       "Fibonacci Fₙ (F₀ = 1, F₁ = 1)",
+       "(()=>{let a=1,b=1;for(let i=2;i<=n;i++){const c=a+b;a=b;b=c}return n<1?a:b})()",
+       "{v}"
+      ],
+      [
+       "Mulatu Mₙ (M₀ = 4, M₁ = 1)",
+       "(()=>{let a=4,b=1;for(let i=2;i<=n;i++){const c=a+b;a=b;b=c}return n<1?a:b})()",
+       "{v}"
+      ]
+     ],
+     "note": "Same rule, different first terms, different sequence.",
+     "added": true,
+     "id": "g12.maths.u1.s1-1.42"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -439,7 +545,7 @@
     },
     {
      "kind": "mcq",
-     "text": "Fibonacci: 1, 1, 2, 3, 5, 8, 13, … What comes after 13?",
+     "text": "Use the Fibonacci rule (add the two terms before): 1, 1, 2, 3, 5, 8, 13, … What comes after 13?",
      "opts": [
       "21",
       "18",
@@ -447,7 +553,7 @@
       "20"
      ],
      "ans": "21",
-     "why": "8 + 13 = 21.",
+     "why": "Step 1: the rule is Fₙ = Fₙ₋₁ + Fₙ₋₂.\nStep 2: the two terms before the new one are 8 and 13.\nStep 3: 8 + 13 = 21.\nSo the next term is 21. (26 doubles 13; that is not the rule.)",
      "clue": "Add the two terms before it.",
      "graded": true,
      "level": 1,
@@ -471,11 +577,11 @@
     },
     {
      "kind": "blank",
-     "ask": "The 12th term of 1, 1, 2, 3, 5, 8, … is ___",
+     "ask": "Use the Fibonacci rule to find the 12th term of 1, 1, 2, 3, 5, 8, …: ___",
      "a": [
       "144"
      ],
-     "why": "13, 21, 34, 55, 89, 144: the 7th to 12th terms.",
+     "why": "Step 1: 8 is the 6th term. Keep adding the last two.\nStep 2: 5 + 8 = 13 (7th), 8 + 13 = 21 (8th), 13 + 21 = 34 (9th).\nStep 3: 21 + 34 = 55 (10th), 34 + 55 = 89 (11th), 55 + 89 = 144 (12th).\nSo the 12th term is 144.",
      "clue": "Keep adding the last two terms until you have 12 terms.",
      "num": true,
      "graded": true,
@@ -486,11 +592,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Mulatu sequence: M₈ = ___",
+     "ask": "Use the Mulatu rule Mₙ = Mₙ₋₁ + Mₙ₋₂ (M₀ = 4, M₁ = 1). Find M₈ = ___",
      "a": [
       "73"
      ],
-     "why": "M₈ = M₇ + M₆ = 45 + 28 = 73.",
+     "why": "Step 1: list the terms: 4, 1, 5, 6, 11, 17, 28, 45 (M₀ to M₇).\nStep 2: M₈ = M₇ + M₆.\nStep 3: 45 + 28 = 73.\nSo M₈ = 73.",
      "clue": "M₆ = 28 and M₇ = 45.",
      "num": true,
      "graded": true,
@@ -500,11 +606,11 @@
     },
     {
      "kind": "blank",
-     "ask": "1² + 1² + 2² + 3² + 5² + 8² = ___",
+     "ask": "Squares in the Fibonacci rectangle: add the areas 1² + 1² + 2² + 3² + 5² + 8² = ___",
      "a": [
       "104"
      ],
-     "why": "1 + 1 + 4 + 9 + 25 + 64 = 104 = 8 × 13: the area of the rectangle.",
+     "why": "Step 1: square each side: 1, 1, 4, 9, 25, 64.\nStep 2: add: 1 + 1 + 4 + 9 = 15; 15 + 25 = 40; 40 + 64 = 104.\nCheck: the squares fill an 8 × 13 rectangle, and 8 × 13 = 104 ✓.\nSo the sum is 104.",
      "clue": "Square each side, then add.",
      "num": true,
      "graded": true,
@@ -515,9 +621,9 @@
     },
     {
      "kind": "tf",
-     "text": "A recursive rule needs the first term or terms to be given.",
+     "text": "Recursion formulas: true or false? A recursive rule needs the first term or terms to be given.",
      "a": true,
-     "why": "Without a start, there is nothing to add.",
+     "why": "A recursion makes each term from the terms before it.\nTo find M₂ = M₁ + M₀ you must already know M₀ and M₁.\nWithout a start there is nothing to add.\nSo the statement is true.",
      "clue": "What is M₂ if you do not know M₀?",
      "graded": true,
      "level": 1,
@@ -526,11 +632,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A sequence has a₀ = 2, a₁ = 3 and aₙ = aₙ₋₁ + aₙ₋₂. The first term bigger than 50 is ___",
+     "ask": "Use the recursion a₀ = 2, a₁ = 3, aₙ = aₙ₋₁ + aₙ₋₂. The first term bigger than 50 is ___",
      "a": [
       "55"
      ],
-     "why": "2, 3, 5, 8, 13, 21, 34, 55. 34 < 50 < 55.",
+     "why": "Step 1: 2 + 3 = 5, 3 + 5 = 8, 5 + 8 = 13.\nStep 2: 8 + 13 = 21, 13 + 21 = 34.\nStep 3: 21 + 34 = 55.\nCheck: 34 < 50 but 55 > 50.\nSo the first term bigger than 50 is 55.",
      "clue": "List terms by adding the last two until you pass 50.",
      "num": true,
      "graded": true,
@@ -548,11 +654,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "aₙ = 2n. List: a₁, …, a₅ = 2, 4, 6, 8, ___",
+     "ask": "List the terms of aₙ = 2n: a₁, …, a₅ = 2, 4, 6, 8, ___",
      "a": [
       "10"
      ],
-     "why": "a₅ = 2(5) = 10.",
+     "why": "Step 1: the 5th term is a₅.\nStep 2: put n = 5: a₅ = 2(5).\nStep 3: 2 × 5 = 10.\nSo the list is 2, 4, 6, 8, 10.",
      "clue": "Put n = 5.",
      "num": true,
      "graded": true,
@@ -563,12 +669,12 @@
     },
     {
      "kind": "blank",
-     "ask": "aₙ = (1/2)ⁿ⁻¹. a₅ = ___",
+     "ask": "Find the 5th term of aₙ = (1/2)ⁿ⁻¹: a₅ = ___",
      "a": [
       "1/16",
       "0.0625"
      ],
-     "why": "a₅ = (1/2)⁴ = 1/16.",
+     "why": "Step 1: put n = 5: the power is n − 1 = 4.\nStep 2: a₅ = (1/2)⁴ = 1⁴/2⁴.\nStep 3: 2⁴ = 16, so a₅ = 1/16.\nCheck: 1/16 = 0.0625. (Trap: using power 5 gives 1/32.)",
      "clue": "The power is n − 1 = 4.",
      "num": true,
      "graded": true,
@@ -579,11 +685,11 @@
     },
     {
      "kind": "blank",
-     "ask": "aₙ = n/(n + 1). a₅ = ___",
+     "ask": "Find the 5th term of aₙ = n/(n + 1): a₅ = ___",
      "a": [
       "5/6"
      ],
-     "why": "a₅ = 5/(5 + 1) = 5/6.",
+     "why": "Step 1: put n = 5 in the top and the bottom.\nStep 2: a₅ = 5/(5 + 1).\nStep 3: 5 + 1 = 6, so a₅ = 5/6.",
      "clue": "Top n, bottom n + 1.",
      "num": true,
      "graded": true,
@@ -594,11 +700,11 @@
     },
     {
      "kind": "blank",
-     "ask": "aₙ = 3n − 1. The dots are (1, 2), (2, 5), (3, 8), (4, 11), (5, ___)",
+     "ask": "Graph of aₙ = 3n − 1: the dots are (1, 2), (2, 5), (3, 8), (4, 11), (5, ___)",
      "a": [
       "14"
      ],
-     "why": "a₅ = 3(5) − 1 = 14. The dots rise by 3 each step.",
+     "why": "Step 1: the dot for n = 5 is (5, a₅).\nStep 2: a₅ = 3(5) − 1 = 15 − 1 = 14.\nCheck: the dots rise by 3 each step: 11 + 3 = 14.\nSo the dot is (5, 14).",
      "clue": "Put n = 5.",
      "num": true,
      "graded": true,
@@ -609,7 +715,7 @@
     },
     {
      "kind": "mcq",
-     "text": "aₙ = 1/n. What happens to the dots as n grows?",
+     "text": "Graph of aₙ = 1/n: what happens to the dots as n grows?",
      "opts": [
       "They fall towards 0 but stay positive",
       "They rise without end",
@@ -617,7 +723,7 @@
       "They lie on a straight line"
      ],
      "ans": "They fall towards 0 but stay positive",
-     "why": "1, 1/2, 1/3, 1/4, 1/5: smaller and smaller, never 0.",
+     "why": "Step 1: a₁ = 1, a₂ = 1/2, a₃ = 1/3, a₄ = 1/4, a₅ = 1/5.\nStep 2: the bottom grows, so each term is smaller.\nStep 3: 1/n is always positive and never 0.\nSo the dots fall towards 0 but stay positive.\n(They are not on a line: the drops 1/2, 1/6, 1/12 are not equal.)",
      "clue": "Work out a₁ to a₅.",
      "graded": true,
      "level": 2,
@@ -627,11 +733,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Bontu has 130, 210 and 290 birr in the first three months. In month 4 she has ___ birr.",
+     "ask": "Find the next term: Bontu has 130, 210 and 290 birr in the first three months. In month 4 she has ___ birr.",
      "a": [
       "370"
      ],
-     "why": "290 + 80 = 370.",
+     "why": "Step 1: the increase is 210 − 130 = 80 each month.\nStep 2: check: 290 − 210 = 80 ✓.\nStep 3: month 4: 290 + 80 = 370.\nSo she has 370 birr.",
      "clue": "She adds the same amount every month.",
      "num": true,
      "graded": true,
@@ -647,11 +753,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "The 12th term of the Fibonacci sequence 1, 1, 2, 3, 5, 8, … is ___",
+     "ask": "Fibonacci rule: the 12th term of 1, 1, 2, 3, 5, 8, … is ___",
      "a": [
       "144"
      ],
-     "why": "13, 21, 34, 55, 89, 144.",
+     "why": "Step 1: 8 is the 6th term.\nStep 2: add the last two each time: 13, 21, 34 (7th to 9th).\nStep 3: 55, 89, 144 (10th to 12th).\nSo the 12th term is 144.",
      "clue": "Add the two terms before it.",
      "num": true,
      "graded": true,
@@ -662,7 +768,7 @@
     },
     {
      "kind": "mcq",
-     "text": "First eight terms of Mulatu's sequence:",
+     "text": "Use the Mulatu rule (M₀ = 4, M₁ = 1, add the two before). Which list gives the first eight terms?",
      "opts": [
       "4, 1, 5, 6, 11, 17, 28, 45",
       "1, 1, 2, 3, 5, 8, 13, 21",
@@ -670,7 +776,7 @@
       "4, 5, 9, 14, 23, 37, 60, 97"
      ],
      "ans": "4, 1, 5, 6, 11, 17, 28, 45",
-     "why": "M₀ = 4, M₁ = 1, then add the last two each time.",
+     "why": "Step 1: start with M₀ = 4 and M₁ = 1.\nStep 2: M₂ = 1 + 4 = 5, M₃ = 5 + 1 = 6, M₄ = 6 + 5 = 11.\nStep 3: M₅ = 17, M₆ = 28, M₇ = 45.\nSo: 4, 1, 5, 6, 11, 17, 28, 45.\n(4, 1, 3, 4, … subtracts; 1, 1, 2, … is Fibonacci.)",
      "clue": "Start with 4 and 1.",
      "graded": true,
      "level": 2,
@@ -684,7 +790,7 @@
  "test": [
   {
    "kind": "mcq",
-   "text": "For aₙ = 3n + 2, a₆ = ?",
+   "text": "Find a term from the general term: for aₙ = 3n + 2, what is a₆?",
    "opts": [
     "20",
     "18",
@@ -692,7 +798,7 @@
     "17"
    ],
    "ans": "20",
-   "why": "3(6) + 2 = 20.",
+   "why": "Put n = 6: a₆ = 3(6) + 2.\n3 × 6 = 18.\n18 + 2 = 20.\nSo a₆ = 20.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -701,11 +807,11 @@
   },
   {
    "kind": "blank",
-   "ask": "aₙ = (−2)ⁿ⁻¹. a₄ = ___",
+   "ask": "Find the 4th term of aₙ = (−2)ⁿ⁻¹: a₄ = ___",
    "a": [
     "-8"
    ],
-   "why": "(−2)³ = −8.",
+   "why": "Put n = 4: the power is 4 − 1 = 3.\n(−2)³ = (−2)(−2)(−2).\n(−2)(−2) = 4, and 4 × (−2) = −8.\nAn odd power of a negative is negative: a₄ = −8.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -715,9 +821,9 @@
   },
   {
    "kind": "tf",
-   "text": "An infinite sequence has a last term.",
+   "text": "Types of sequence: true or false? An infinite sequence has a last term.",
    "a": false,
-   "why": "Only a finite sequence has a last term.",
+   "why": "An infinite sequence goes on for all natural numbers n.\nIt has no last term.\nOnly a finite sequence has a last term.\nSo the statement is false.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -726,11 +832,11 @@
   },
   {
    "kind": "blank",
-   "ask": "a₀ = 1, a₁ = 4, aₙ = aₙ₋₁ + aₙ₋₂. a₄ = ___",
+   "ask": "Use the recursion a₀ = 1, a₁ = 4, aₙ = aₙ₋₁ + aₙ₋₂. Find a₄ = ___",
    "a": [
     "14"
    ],
-   "why": "1, 4, 5, 9, 14.",
+   "why": "a₂ = a₁ + a₀ = 4 + 1 = 5.\na₃ = a₂ + a₁ = 5 + 4 = 9.\na₄ = a₃ + a₂ = 9 + 5 = 14.\nSo a₄ = 14.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -740,7 +846,7 @@
   },
   {
    "kind": "mcq",
-   "text": "Which general term gives 1/2, 2/3, 3/4, 4/5, …?",
+   "text": "Find the general term: which rule gives 1/2, 2/3, 3/4, 4/5, …?",
    "opts": [
     "n/(n + 1)",
     "(n + 1)/n",
@@ -748,7 +854,7 @@
     "n/(n − 1)"
    ],
    "ans": "n/(n + 1)",
-   "why": "n = 1 gives 1/2; n = 2 gives 2/3.",
+   "why": "The top is the term number n: 1, 2, 3, 4.\nThe bottom is one more: n + 1.\nSo aₙ = n/(n + 1).\nCheck n = 3: 3/4 ✓. ((n + 1)/n gives 2, 3/2: upside down.)",
    "clue": "",
    "graded": true,
    "level": 3,
@@ -764,10 +870,6 @@
   {
    "kind": "note",
    "text": "Book counts Fibonacci from F₀, so the 12th term listed (144) is F₁₁. Lessons use \"12th term\" as the book's Exercise 1.2 does."
-  },
-  {
-   "kind": "note",
-   "text": "Engine: there is no 2-D dot-plot block yet. Sequence graphs (Figures 1.1, 1.4) are shown as tables of (n, aₙ) for now."
   }
  ],
  "review": {

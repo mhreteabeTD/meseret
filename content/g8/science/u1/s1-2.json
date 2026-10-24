@@ -59,7 +59,8 @@
      ],
      "after": "Start with a question, like \"Does fertiliser make teff grow taller?\" Observations lead to questions.",
      "added": true,
-     "id": "g8.science.u1.s1-2.1"
+     "id": "g8.science.u1.s1-2.1",
+     "best": "Ask a question she can test"
     },
     {
      "kind": "read",
@@ -125,10 +126,25 @@
      "id": "g8.science.u1.s1-2.4"
     },
     {
+     "kind": "steps",
+     "step": "method",
+     "title": "The scientific method on a teff farm",
+     "steps": [
+      "1 Ask: does fertiliser make teff grow taller?",
+      "2 Research: talk to the local agricultural extension worker. Read about fertiliser.",
+      "3 Hypothesis: teff with fertiliser grows taller than teff without it.",
+      "4 Test: use two plots with the same seed, soil, water and sowing day. Add fertiliser to one plot only.",
+      "5 Analyse: measure the plants in both plots each week. Compare the heights. Do they support the hypothesis?",
+      "6 Communicate: share the results with farmers and your class."
+     ],
+     "id": "g8.science.u1.s1-2.28",
+     "added": true
+    },
+    {
      "kind": "order",
      "step": "check",
      "graded": true,
-     "text": "Put the steps of the scientific method in order.",
+     "text": "Scientific method: put the six steps in order.",
      "items": [
       "Ask questions",
       "Do background research",
@@ -137,7 +153,7 @@
       "Analyse the results and draw a conclusion",
       "Communicate results"
      ],
-     "why": "These are the six steps in Figure 1.9.",
+     "why": "1 Ask a question about what you observe.\n2 Do background research.\n3 Make a hypothesis you can test.\n4 Test it with an experiment.\n5 Analyse the results and draw a conclusion.\n6 Communicate the results.",
      "clue": "It starts with a question and ends with sharing.",
      "level": 1,
      "ref": "Review IV Q6",
@@ -147,7 +163,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "What is a hypothesis?",
+     "text": "Key words: what is a hypothesis?",
      "opts": [
       "A tentative explanation that can be tested",
       "A proven law",
@@ -155,7 +171,7 @@
       "A measuring instrument"
      ],
      "ans": "A tentative explanation that can be tested",
-     "why": "A hypothesis is a tentative explanation for a set of observations.",
+     "why": "A hypothesis is a tentative (not yet proven) explanation.\nIt makes predictions you can test.\nAn experiment then supports it, or not.\nA proven law is not a hypothesis: it has already been tested many times.",
      "clue": "Is it already proven?",
      "level": 1,
      "ref": "p.17",
@@ -165,7 +181,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Your results do not support your hypothesis. What do you do?",
+     "text": "Scientific method: your results do not support your hypothesis. What do you do?",
      "opts": [
       "Make a new hypothesis and test again",
       "Change the results",
@@ -173,7 +189,7 @@
       "Report that the hypothesis was right"
      ],
      "ans": "Make a new hypothesis and test again",
-     "why": "If it did not happen, create a new hypothesis, return to step three and conduct a new experiment.",
+     "why": "Results that do not fit are still useful.\nThey tell you the hypothesis may be wrong.\nMake a new hypothesis.\nGo back to step 3 and test it with a new experiment.\nNever change the results.",
      "clue": "Look at the \"Try again\" arrow in Figure 1.9.",
      "level": 2,
      "ref": "p.18",
@@ -183,9 +199,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "Communicating results lets other scientists check your methods and results.",
+     "text": "Communicating results, true or false: it lets other scientists check your methods and results.",
      "a": true,
-     "why": "The book says this step allows others to verify your methods and results.",
+     "why": "Step 6 is to communicate your results.\nYou share your methods and results in writing or orally.\nOthers can repeat your experiment to check it.\nSo the statement is true.",
      "clue": "Read step 6.",
      "level": 1,
      "ref": "p.18",
@@ -195,7 +211,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Two schools test the same hypothesis and get different results. What does this mean?",
+     "text": "Checking results: two schools test the same hypothesis and get different results. What does this mean?",
      "opts": [
       "The hypothesis may not be supported; check the methods",
       "Both schools are wrong",
@@ -203,7 +219,7 @@
       "Science has failed"
      ],
      "ans": "The hypothesis may not be supported; check the methods",
-     "why": "If others get different results, they may not support the hypothesis. Scientists compare methods and look for problems.",
+     "why": "Science needs results that others can repeat.\nDifferent results mean the question is not settled.\nThe hypothesis may not be supported.\nScientists compare methods and look for mistakes.\nNo result wins just because it came first.",
      "clue": "What does step 6 say about other researchers?",
      "level": 3,
      "added": true,
@@ -237,7 +253,8 @@
      ],
      "after": "It goes out. The flame uses up the oxygen in the jar.",
      "ref": "Example 1.9",
-     "id": "g8.science.u1.s1-2.10"
+     "id": "g8.science.u1.s1-2.10",
+     "best": "It goes out after a short time"
     },
     {
      "kind": "steps",
@@ -282,7 +299,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Activity 1.7 a: you test if sunlight affects bean growth. What must you keep the same in both pots?",
+     "text": "Fair test (Activity 1.7 a): you test if sunlight affects bean growth. What must you keep the same in both pots?",
      "opts": [
       "Soil, water and pot size",
       "The amount of sunlight",
@@ -290,17 +307,60 @@
       "Only the pot colour"
      ],
      "ans": "Soil, water and pot size",
-     "why": "Only sunlight changes. Everything else stays the same, so the test is fair.",
+     "why": "The factor you test is sunlight.\nSo only sunlight is different between the pots.\nSoil, water and pot size must stay the same.\nThen any difference comes from sunlight.",
      "clue": "Which one factor are you testing?",
      "level": 1,
      "ref": "Activity 1.7 a",
      "id": "g8.science.u1.s1-2.14"
     },
     {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "level": 1,
+     "title": "Change or keep the same?",
+     "text": "Fair test (Activity 1.7 a): you test if sunlight affects bean growth. Sort each factor.",
+     "bins": [
+      "Change",
+      "Keep the same"
+     ],
+     "items": [
+      [
+       "Amount of sunlight",
+       "Change",
+       "This is the one factor you test."
+      ],
+      [
+       "Type of soil",
+       "Keep the same",
+       "Soil could also change growth."
+      ],
+      [
+       "Amount of water",
+       "Keep the same",
+       "Water could also change growth."
+      ],
+      [
+       "Pot size",
+       "Keep the same",
+       "A bigger pot could also change growth."
+      ],
+      [
+       "Kind of bean",
+       "Keep the same",
+       "Different beans grow differently."
+      ]
+     ],
+     "why": "You are testing sunlight, so only sunlight changes.\nSoil, water, pot size and the kind of bean all affect growth.\nSo they must stay the same in both pots.\nThen any difference comes from sunlight.",
+     "clue": "Which one factor is the experiment about?",
+     "id": "g8.science.u1.s1-2.29",
+     "added": true
+    },
+    {
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "In the candle experiment, why does the candle go out under the jar?",
+     "text": "Candle experiment: why does the candle go out under the jar?",
      "opts": [
       "The oxygen in the jar gets used up",
       "The jar is cold",
@@ -308,7 +368,7 @@
       "Light cannot enter"
      ],
      "ans": "The oxygen in the jar gets used up",
-     "why": "The candle takes oxygen from the air in the jar. When too little is left, the flame goes out.",
+     "why": "A flame needs oxygen from the air.\nThe jar traps only a little air.\nThe candle uses up the oxygen in it.\nWhen too little oxygen is left, the flame goes out.\nThe wax has not run out: the candle relights in fresh air.",
      "clue": "What does a flame need from the air?",
      "level": 1,
      "ref": "Example 1.9",
@@ -318,7 +378,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Lemlem tests beans: pot A in sun with water, pot B in the dark with no water. Pot A grows better. What is wrong?",
+     "text": "Fair test: Lemlem tests beans. Pot A is in the sun with water; pot B is in the dark with no water. Pot A grows better. What is wrong?",
      "opts": [
       "She changed two factors, so it is not a fair test",
       "Nothing is wrong",
@@ -326,7 +386,7 @@
       "Beans never grow in pots"
      ],
      "ans": "She changed two factors, so it is not a fair test",
-     "why": "Light AND water were different, so she cannot tell which one caused the difference.",
+     "why": "Count the differences between the pots.\nLight is different, and water is different: two factors.\nPot A may grow better because of light, or water, or both.\nLemlem cannot tell which.\nA fair test changes only one factor.",
      "clue": "How many things were different between the pots?",
      "level": 2,
      "added": true,
@@ -336,9 +396,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "After an experiment, you should repeat it a few times.",
+     "text": "Fair test, true or false: after an experiment, you should repeat it a few times.",
      "a": true,
-     "why": "The book says repeat it a few more times to make sure the results are accurate.",
+     "why": "One result could be a mistake or chance.\nRepeating the experiment checks it.\nIf the results agree, you can trust them more.\nThe book says repeat it a few times. So it is true.",
      "clue": "Read \"Keep it fair\".",
      "level": 1,
      "ref": "p.18",
@@ -348,7 +408,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Abel wants to know if salt makes water boil faster. Which plan is a fair test?",
+     "text": "Fair test: Abel wants to know if salt makes water boil faster. Which plan is a fair test?",
      "opts": [
       "Two same pots, same amount of water, same stove; add salt to one only",
       "One pot with salt on a big stove, one without on a small stove",
@@ -356,7 +416,7 @@
       "Boil salty water once and stop"
      ],
      "ans": "Two same pots, same amount of water, same stove; add salt to one only",
-     "why": "Only the salt changes. Pot, water amount and heat stay the same, so any difference comes from the salt.",
+     "why": "The factor to test is salt.\nIn the first plan only the salt changes.\nPot, amount of water and stove stay the same.\nSo any difference in boiling time comes from the salt.\nThe second plan also changes the stove, so it is not fair.",
      "clue": "Change one thing only.",
      "level": 3,
      "added": true,
@@ -373,7 +433,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "a) A bean plant kept in the dark for two weeks will most likely be",
+     "text": "Activity 1.7 a, predict: a bean plant kept in the dark for two weeks will most likely be",
      "opts": [
       "thin, pale and weak",
       "greener than one in the sun",
@@ -381,7 +441,7 @@
       "bigger"
      ],
      "ans": "thin, pale and weak",
-     "why": "Plants need sunlight to make food; in the dark they grow pale and weak.",
+     "why": "Green plants need light to make their food.\nIn the dark the plant cannot make enough food.\nIt grows thin and tall, looking for light.\nIts leaves turn pale.\nSo it is thin, pale and weak.",
      "clue": "What do plants need light for?",
      "level": 1,
      "ref": "a",
@@ -391,7 +451,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "b) Wire is coiled around a nail and joined to a battery. The nail",
+     "text": "Activity 1.7 b, predict: wire is coiled around a nail and joined to a battery. The nail",
      "opts": [
       "picks up pins: it acts like a magnet",
       "gets wet",
@@ -399,7 +459,7 @@
       "does nothing"
      ],
      "ans": "picks up pins: it acts like a magnet",
-     "why": "A current in the coil makes the nail an electromagnet.",
+     "why": "The battery sends a current through the coil.\nA current in a coil makes a magnetic field.\nThe iron nail inside becomes a magnet: an electromagnet.\nSo it picks up pins.",
      "clue": "What does current in a coil do?",
      "level": 2,
      "ref": "b",
@@ -409,7 +469,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "c) A leaf from the sun turns blue-black with iodine. This shows the leaf stores",
+     "text": "Activity 1.7 c, food test: a leaf from the sun turns blue-black with iodine. This shows the leaf stores",
      "opts": [
       "starch",
       "water",
@@ -417,7 +477,7 @@
       "oxygen"
      ],
      "ans": "starch",
-     "why": "Iodine turns blue-black with starch. Leaves store extra sugar as starch.",
+     "why": "Iodine is a test for starch.\nWith starch, brown iodine turns blue-black.\nA leaf in the sun makes sugar by photosynthesis.\nIt stores the extra sugar as starch.\nSo the leaf stores starch.",
      "clue": "What does iodine test for?",
      "level": 2,
      "ref": "c",
@@ -432,7 +492,7 @@
      "kind": "order",
      "step": "exercise",
      "graded": true,
-     "text": "Describe the components: put them in order.",
+     "text": "Exercise 1.13, scientific method: put its components in order.",
      "items": [
       "Ask questions",
       "Background research",
@@ -441,7 +501,7 @@
       "Analyse and conclude",
       "Communicate"
      ],
-     "why": "The six steps on pp. 17–18.",
+     "why": "1 Ask a question about what you observe.\n2 Do background research.\n3 Make a hypothesis you can test.\n4 Test it with an experiment.\n5 Analyse the results and draw a conclusion.\n6 Communicate the results.",
      "clue": "Start with a question.",
      "level": 1,
      "id": "g8.science.u1.s1-2.22"
@@ -454,7 +514,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "The first step of the scientific method is",
+   "text": "Scientific method: the first step is",
    "opts": [
     "ask questions",
     "communicate results",
@@ -462,7 +522,7 @@
     "test the hypothesis"
    ],
    "ans": "ask questions",
-   "why": "Figure 1.9.",
+   "why": "Science begins with an observation.\nThe observation leads to a question.\nSo the first step is to ask questions.\nResearch, hypothesis and testing come after.",
    "clue": "",
    "level": 1,
    "id": "g8.science.u1.s1-2.23"
@@ -471,7 +531,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "The last step is",
+   "text": "Scientific method: the last step is",
    "opts": [
     "communicate results",
     "ask questions",
@@ -479,7 +539,7 @@
     "make a hypothesis"
    ],
    "ans": "communicate results",
-   "why": "Figure 1.9.",
+   "why": "After testing, you analyse and conclude.\nThen you share your work with others.\nSo the last step is to communicate results.\nAsking questions is the first step.",
    "clue": "",
    "level": 1,
    "id": "g8.science.u1.s1-2.24"
@@ -488,7 +548,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "A hypothesis must be",
+   "text": "Hypothesis: a good hypothesis must be",
    "opts": [
     "based on scientific knowledge and logical",
     "always correct",
@@ -496,7 +556,7 @@
     "a final report"
    ],
    "ans": "based on scientific knowledge and logical",
-   "why": "p.17.",
+   "why": "A hypothesis is a tentative explanation.\nIt should be logical and based on scientific knowledge.\nIt does not have to be correct: a test may reject it.\nIt is not a measurement or a final report.",
    "clue": "",
    "level": 2,
    "id": "g8.science.u1.s1-2.25"
@@ -505,7 +565,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "In a fair test you change",
+   "text": "Fair test: in a fair test you change",
    "opts": [
     "only one factor",
     "every factor",
@@ -513,7 +573,7 @@
     "nothing at all"
    ],
    "ans": "only one factor",
-   "why": "p.18.",
+   "why": "You want to know what one factor does.\nSo change only that factor.\nKeep all the others the same.\nIf you change two, you cannot tell which caused the result.",
    "clue": "",
    "level": 1,
    "id": "g8.science.u1.s1-2.26"
@@ -522,7 +582,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "A candle under a jar goes out. This shows that burning needs",
+   "text": "Candle experiment: a candle under a jar goes out. This shows that burning needs",
    "opts": [
     "air (oxygen)",
     "light",
@@ -530,7 +590,7 @@
     "a jar"
    ],
    "ans": "air (oxygen)",
-   "why": "Example 1.9.",
+   "why": "In fresh air the candle keeps burning.\nUnder the jar it soon goes out.\nThe only change: the oxygen in the air runs low.\nSo burning needs air (oxygen).",
    "clue": "",
    "level": 2,
    "id": "g8.science.u1.s1-2.27"

@@ -124,6 +124,29 @@
      "id": "g7.maths.u2.s2-4.4"
     },
     {
+     "kind": "numline",
+     "step": "explore",
+     "title": "6 + (−6)",
+     "min": -7,
+     "max": 7,
+     "sub": 1,
+     "hops": [
+      {
+       "from": 0,
+       "by": 6
+      },
+      {
+       "from": 6,
+       "by": -6
+      }
+     ],
+     "ask": "Tap Hop twice. Where do opposites land?",
+     "after": "Start at 6, move 6 to the left. You land on 0.\nSo 6 + (−6) = 0.",
+     "ref": "Example 2",
+     "id": "g7.maths.u2.s2-4.53",
+     "added": true
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -152,8 +175,8 @@
        "label": "−3 + (−4)"
       }
      ],
-     "ask": "Where does −3 + (−4) land? Tap it.",
-     "why": "Start at −3. Move 4 to the left: −4, −5, −6, −7.",
+     "ask": "Add on the number line: where does −3 + (−4) land? Tap it.",
+     "why": "Start at the first addend, −3.\nThe second addend, −4, is negative: move 4 to the left.\n−4, −5, −6, −7.\nSo −3 + (−4) = −7.",
      "clue": "The second number is negative. Which way do you move?",
      "level": 1,
      "ref": "Activity 2.4.1 Q2 c",
@@ -169,7 +192,7 @@
       "-3"
      ],
      "num": true,
-     "why": "Start at −7. Move 4 right: −6, −5, −4, −3.",
+     "why": "Start at −7.\nThe second addend, 4, is positive: move 4 to the right.\n−6, −5, −4, −3.\nSo −7 + 4 = −3.",
      "clue": "Positive second addend: move right.",
      "level": 1,
      "ref": "Exercise 2.4.1 Q2 f",
@@ -189,7 +212,7 @@
       "0"
      ],
      "num": true,
-     "why": "−10 and 10 are opposites. Their sum is 0.",
+     "why": "−10 and 10 are opposite numbers.\nStart at −10 and move 10 to the right.\nYou land exactly on 0.\nThe sum of two opposite integers is 0.",
      "clue": "What do opposites add up to?",
      "level": 1,
      "ref": "Exercise 2.4.1 Q2 d",
@@ -210,7 +233,7 @@
       "+4"
      ],
      "num": true,
-     "why": "Moving 6 left must land on −2. So start 6 to the right of −2: −2 + 6 = 4. Check: 4 + (−6) = −2.",
+     "why": "Think on the number line: start at ___, move 6 to the left, land on −2.\nUndo the move: from −2 go 6 to the right.\n−2 + 6 = 4.\nCheck: 4 + (−6) = −2. ✓",
      "clue": "Undo the move: go 6 to the right from −2.",
      "level": 3,
      "input": "signed",
@@ -245,9 +268,32 @@
       "a loss of Birr 2",
       "a loss of Birr 32"
      ],
-     "after": "−15 + 17: the profit is bigger by 2, so he gained Birr 2.",
+     "after": "A loss is negative: −15. A profit is positive: +17.\n−15 + 17: the profit is bigger by 17 − 15 = 2.\nSo overall he has a profit of Birr 2.\nA loss of Birr 32 would mean two losses added: −15 + (−17).",
      "ref": "Activity 2.4.1 Q1",
-     "id": "g7.maths.u2.s2-4.10"
+     "id": "g7.maths.u2.s2-4.10",
+     "best": "a profit of Birr 2"
+    },
+    {
+     "kind": "numline",
+     "step": "explore",
+     "title": "−15 + 17",
+     "min": -16,
+     "max": 4,
+     "sub": 1,
+     "hops": [
+      {
+       "from": 0,
+       "by": -15
+      },
+      {
+       "from": -15,
+       "by": 17
+      }
+     ],
+     "ask": "Tap Hop twice: first the loss, then the profit.",
+     "after": "From −15, move 17 to the right. You pass 0 and land on 2.\nThe bigger move (17) wins, so the sign is +.\n17 − 15 = 2. So −15 + 17 = 2.",
+     "id": "g7.maths.u2.s2-4.54",
+     "added": true
     },
     {
      "kind": "read",
@@ -287,37 +333,34 @@
      "id": "g7.maths.u2.s2-4.13"
     },
     {
-     "kind": "read",
-     "step": "read",
+     "kind": "tap",
+     "step": "explore",
      "title": "Properties of addition",
-     "paras": [],
-     "table": [
+     "id": "g7.maths.u2.s2-4.14",
+     "ask": "Tap each property to see an example.",
+     "need": 5,
+     "items": [
       [
-       "Property",
-       "Example"
-      ],
-      [
-       "The sum of two integers is an integer",
-       "4 + (−6) = −2"
+       "Closure",
+       "The sum of two integers is an integer: 4 + (−6) = −2."
       ],
       [
        "Commutative: m + n = n + m",
-       "5 + (−3) = −3 + 5 = 2"
+       "5 + (−3) = 2 and −3 + 5 = 2."
       ],
       [
        "Associative: x + (y + z) = (x + y) + z",
-       "3 + (4 + (−5)) = (3 + 4) + (−5) = 2"
+       "3 + (4 + (−5)) = 3 + (−1) = 2. (3 + 4) + (−5) = 7 + (−5) = 2."
       ],
       [
        "Zero: x + 0 = x",
-       "−20 + 0 = −20"
+       "−20 + 0 = −20."
       ],
       [
        "Opposites: x + (−x) = 0",
-       "250 + (−250) = 0"
+       "250 + (−250) = 0."
       ]
-     ],
-     "id": "g7.maths.u2.s2-4.14"
+     ]
     },
     {
      "kind": "name",
@@ -345,7 +388,7 @@
       "+411"
      ],
      "num": true,
-     "why": "625 > 214 and 625 is positive. 625 − 214 = 411. So +411.",
+     "why": "The signs are different: +625 and −214.\nStep 1: the bigger magnitude is 625, and it is positive. So the sum is positive.\nStep 2: subtract the magnitudes: 625 − 214 = 411.\nSo 625 + (−214) = 411.",
      "clue": "Which magnitude is bigger? Take its sign.",
      "level": 1,
      "ref": "Example 3 b",
@@ -366,7 +409,7 @@
       "-91"
      ],
      "num": true,
-     "why": "325 > 234 and 325 is negative, so the sum is negative. 325 − 234 = 91. Answer −91.",
+     "why": "The signs are different: −325 and +234.\nStep 1: the bigger magnitude is 325, and it is negative. So the sum is negative.\nStep 2: subtract the magnitudes: 325 − 234 = 91.\nSo −325 + 234 = −91.",
      "clue": "Take the sign of the bigger magnitude.",
      "level": 1,
      "ref": "Exercise 2.4.1 Q3 e",
@@ -387,7 +430,7 @@
       "-30"
      ],
      "num": true,
-     "why": "Two negatives: add 20 + 10 = 30 and keep the minus sign. −30.",
+     "why": "Both addends are negative.\nStep 1: the sum of two negatives is negative.\nStep 2: add the magnitudes: 20 + 10 = 30.\nSo −20 + (−10) = −30.",
      "clue": "Both are negative.",
      "level": 1,
      "ref": "Exercise 2.4.1 Q3 i",
@@ -402,13 +445,13 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "You owe Birr 5. You borrow Birr 12 more. Your total debt as an integer is ___",
+     "ask": "Debt as integers: you owe Birr 5. You borrow Birr 12 more. Your total debt as an integer is ___",
      "a": [
       "−17",
       "-17"
      ],
      "num": true,
-     "why": "Debt is negative: −5 + (−12) = −(5 + 12) = −17.",
+     "why": "Owing money is negative: −5.\nBorrowing Birr 12 more adds another −12.\n−5 + (−12): both negative, so the sum is negative.\n5 + 12 = 17. Total debt: −17.",
      "clue": "Owing money is negative.",
      "level": 2,
      "ref": "Exercise 2.4.1 Q4",
@@ -437,11 +480,12 @@
        "Property of opposites"
       ]
      ],
-     "why": "Each rule has a name.",
+     "why": "m + n = n + m: the order changes. That is the commutative property.\nx + (y + z) = (x + y) + z: the brackets move. That is associative.\nx + 0 = x: adding 0 changes nothing. Property of zero.\nx + (−x) = 0: a number plus its opposite. Property of opposites.",
      "clue": "Order changes: commutative. Brackets move: associative.",
      "level": 2,
      "ref": "Properties of addition",
-     "id": "g7.maths.u2.s2-4.20"
+     "id": "g7.maths.u2.s2-4.20",
+     "text": "Properties of addition: match each rule with its name."
     },
     {
      "kind": "blank",
@@ -453,7 +497,7 @@
       "-400"
      ],
      "num": true,
-     "why": "First the two negatives: −560 + (−50) = −610. Then −610 + 210: 610 > 210 and 610 is negative. 610 − 210 = 400. Answer −400.",
+     "why": "Add two numbers at a time.\nStep 1: −560 + (−50): both negative, 560 + 50 = 610. So −610.\nStep 2: −610 + 210: different signs. 610 > 210 and 610 is negative.\nStep 3: 610 − 210 = 400. So the answer is −400.",
      "clue": "Add two numbers at a time.",
      "level": 3,
      "ref": "Exercise 2.4.1 Q3 c",
@@ -489,9 +533,10 @@
       "3 + (−6)",
       "6 − 3"
      ],
-     "after": "Subtracting 6 is the same as adding −6. So 3 − 6 = 3 + (−6) = −3.",
+     "after": "Subtracting 6 is the same as adding the opposite of 6, which is −6.\nSo 3 − 6 = 3 + (−6).\nOn the number line: start at 3, move 6 left, land on −3.\n3 + 6 = 9 and 6 − 3 = 3 give different answers.",
      "ref": "Activity 2.4.2 Q1",
-     "id": "g7.maths.u2.s2-4.22"
+     "id": "g7.maths.u2.s2-4.22",
+     "best": "3 + (−6)"
     },
     {
      "kind": "read",
@@ -502,6 +547,28 @@
       "For any integers a and b: a − b = a + (−b)."
      ],
      "id": "g7.maths.u2.s2-4.23"
+    },
+    {
+     "kind": "numline",
+     "step": "explore",
+     "title": "3 − 6 = 3 + (−6)",
+     "min": -5,
+     "max": 5,
+     "sub": 1,
+     "hops": [
+      {
+       "from": 0,
+       "by": 3
+      },
+      {
+       "from": 3,
+       "by": -6
+      }
+     ],
+     "ask": "Tap Hop twice. Subtracting 6 is a move of 6 to the left.",
+     "after": "Start at 3, move 6 to the left. You land on −3.\nSo 3 − 6 = 3 + (−6) = −3.",
+     "id": "g7.maths.u2.s2-4.55",
+     "added": true
     },
     {
      "kind": "steps",
@@ -549,7 +616,7 @@
       "+55"
      ],
      "num": true,
-     "why": "Subtracting −30 means adding 30: 25 + 30 = 55.",
+     "why": "Subtracting a number means adding its opposite.\nThe opposite of −30 is 30.\nSo 25 − (−30) = 25 + 30.\n25 + 30 = 55.",
      "clue": "Subtracting a negative is adding a positive.",
      "level": 1,
      "ref": "Example 2 a",
@@ -570,7 +637,7 @@
       "-3"
      ],
      "num": true,
-     "why": "4 − 7 = 4 + (−7). 7 > 4 and 7 is negative. 7 − 4 = 3. Answer −3.",
+     "why": "Change the subtraction into an addition: 4 − 7 = 4 + (−7).\nDifferent signs: 7 > 4 and 7 is negative, so the answer is negative.\n7 − 4 = 3.\nSo 4 − 7 = −3.",
      "clue": "Add the opposite of 7.",
      "level": 1,
      "ref": "Example 1 b",
@@ -591,7 +658,7 @@
       "-90"
      ],
      "num": true,
-     "why": "−75 − 15 = −75 + (−15) = −(75 + 15) = −90.",
+     "why": "Change to an addition: −75 − 15 = −75 + (−15).\nBoth are negative, so the sum is negative.\n75 + 15 = 90.\nSo −75 − 15 = −90.",
      "clue": "Add the opposite of 15.",
      "level": 1,
      "ref": "Exercise 2.4.2 Q2 c",
@@ -612,7 +679,7 @@
       "-789"
      ],
      "num": true,
-     "why": "−1789 + 1000. 1789 > 1000 and 1789 is negative. 1789 − 1000 = 789. Answer −789.",
+     "why": "Subtracting −1000 means adding 1000: −1789 + 1000.\nDifferent signs: 1789 > 1000 and 1789 is negative, so the answer is negative.\n1789 − 1000 = 789.\nSo −1789 − (−1000) = −789.",
      "clue": "Change − (−1000) into + 1000.",
      "level": 2,
      "ref": "Exercise 2.4.2 Q2 d",
@@ -627,13 +694,13 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "A cold night is −109 °F and a hot day is 109 °F. How many degrees warmer is the day? ___",
+     "ask": "Temperature difference: a cold night is −109 °F and a hot day is 109 °F. How many degrees warmer is the day? ___",
      "a": [
       "218",
       "+218"
      ],
      "num": true,
-     "why": "109 − (−109) = 109 + 109 = 218.",
+     "why": "Difference = higher − lower = 109 − (−109).\nSubtracting −109 means adding 109.\n109 + 109 = 218.\nSo the day is 218 °F warmer. (From −109 up to 0 is 109; from 0 up to 109 is 109 more.)",
      "clue": "Subtract the lower from the higher.",
      "level": 2,
      "ref": "Exercise 2.4.2 Q3",
@@ -644,13 +711,13 @@
      "kind": "blank",
      "step": "challenge",
      "graded": true,
-     "ask": "299 − 1251 − (−191) = ___",
+     "ask": "Subtract integers left to right: 299 − 1251 − (−191) = ___",
      "a": [
       "−761",
       "-761"
      ],
      "num": true,
-     "why": "Left to right. 299 − 1251 = 299 + (−1251) = −(1251 − 299) = −952. Then −952 − (−191) = −952 + 191 = −(952 − 191) = −761.",
+     "why": "Work left to right, two numbers at a time.\nStep 1: 299 − 1251 = 299 + (−1251). 1251 > 299, sign −. 1251 − 299 = 952. So −952.\nStep 2: −952 − (−191) = −952 + 191.\nStep 3: 952 > 191, sign −. 952 − 191 = 761.\nSo the answer is −761.",
      "clue": "Work left to right, two numbers at a time.",
      "level": 3,
      "ref": "Review Exercise Q10 f",
@@ -679,14 +746,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "3 °C below zero is written",
+     "text": "Write the temperature with a sign: 3 °C below zero is written",
      "opts": [
       "3",
       "−3",
       "+3"
      ],
      "ans": "−3",
-     "why": "Below zero gets a minus sign.",
+     "why": "Below zero means less than 0.\nNumbers less than 0 get a minus sign.\nSo 3 °C below zero is −3.",
      "clue": "Below zero means minus.",
      "level": 1
     }
@@ -701,12 +768,12 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "250 + (−250) = ___",
+     "ask": "Add opposite integers: 250 + (−250) = ___",
      "a": [
       "0"
      ],
      "num": true,
-     "why": "Opposites add to 0.",
+     "why": "250 and −250 are opposite numbers.\nThey are the same distance from 0, on different sides.\nThe sum of two opposites is 0.",
      "clue": "They are opposites.",
      "level": 1,
      "ref": "Q1 a",
@@ -716,13 +783,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "−3 + 7 = ___",
+     "ask": "Add on the number line: −3 + 7 = ___",
      "a": [
       "4",
       "+4"
      ],
      "num": true,
-     "why": "Start at −3, move 7 right: 4.",
+     "why": "Start at −3.\n7 is positive: move 7 to the right.\n−2, −1, 0, 1, 2, 3, 4.\nSo −3 + 7 = 4.",
      "clue": "Move right.",
      "level": 1,
      "ref": "Q2 a",
@@ -733,13 +800,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "−4 + (−5) = ___",
+     "ask": "Add on the number line: −4 + (−5) = ___",
      "a": [
       "−9",
       "-9"
      ],
      "num": true,
-     "why": "Start at −4, move 5 left: −9.",
+     "why": "Start at −4.\n−5 is negative: move 5 to the left.\n−5, −6, −7, −8, −9.\nSo −4 + (−5) = −9.",
      "clue": "Move left.",
      "level": 1,
      "ref": "Q2 b",
@@ -750,13 +817,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "23 + (−10) = ___",
+     "ask": "Add integers with different signs: 23 + (−10) = ___",
      "a": [
       "13",
       "+13"
      ],
      "num": true,
-     "why": "23 > 10, sign +. 23 − 10 = 13.",
+     "why": "Different signs.\nThe bigger magnitude is 23, and it is positive: the sum is positive.\n23 − 10 = 13.\nSo 23 + (−10) = 13.",
      "clue": "Take the sign of the bigger magnitude.",
      "level": 1,
      "ref": "Q3 a",
@@ -767,13 +834,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "−30 + 40 = ___",
+     "ask": "Add integers with different signs: −30 + 40 = ___",
      "a": [
       "10",
       "+10"
      ],
      "num": true,
-     "why": "40 > 30, sign +. 40 − 30 = 10.",
+     "why": "Different signs.\nThe bigger magnitude is 40, and it is positive: the sum is positive.\n40 − 30 = 10.\nSo −30 + 40 = 10.",
      "clue": "Take the sign of the bigger magnitude.",
      "level": 1,
      "ref": "Q3 b",
@@ -784,13 +851,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "−50 + (−45) + 62 = ___",
+     "ask": "Add three integers: −50 + (−45) + 62 = ___",
      "a": [
       "−33",
       "-33"
      ],
      "num": true,
-     "why": "−50 + (−45) = −95. −95 + 62 = −(95 − 62) = −33.",
+     "why": "Two at a time.\nStep 1: −50 + (−45): both negative, 50 + 45 = 95. So −95.\nStep 2: −95 + 62: 95 > 62 and 95 is negative, so the sum is negative.\nStep 3: 95 − 62 = 33. Answer −33.",
      "clue": "Two at a time.",
      "level": 2,
      "ref": "Q3 f",
@@ -801,13 +868,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "12 + (−23) = ___",
+     "ask": "Add integers with different signs: 12 + (−23) = ___",
      "a": [
       "−11",
       "-11"
      ],
      "num": true,
-     "why": "23 > 12, sign −. 23 − 12 = 11. Answer −11.",
+     "why": "Different signs.\nThe bigger magnitude is 23, and it is negative: the sum is negative.\n23 − 12 = 11.\nSo 12 + (−23) = −11.",
      "clue": "Take the sign of the bigger magnitude.",
      "level": 1,
      "ref": "Q3 g",
@@ -818,13 +885,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "2250 + (−457) = ___",
+     "ask": "Add integers with different signs: 2250 + (−457) = ___",
      "a": [
       "1793",
       "+1793"
      ],
      "num": true,
-     "why": "2250 > 457, sign +. 2250 − 457 = 1793.",
+     "why": "Different signs.\nThe bigger magnitude is 2250, and it is positive: the sum is positive.\n2250 − 457 = 1793.\nCheck: 1793 + 457 = 2250.",
      "clue": "Subtract the magnitudes.",
      "level": 2,
      "ref": "Q3 h",
@@ -835,13 +902,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "A plane climbs 2500 m, then descends 150 m. Its height is ___ m",
+     "ask": "Integers in real life: a plane climbs 2500 m, then descends 150 m. Its height is ___ m",
      "a": [
       "2350",
       "+2350"
      ],
      "num": true,
-     "why": "2500 + (−150) = 2350.",
+     "why": "Climbing is positive: +2500.\nDescending is negative: −150.\n2500 + (−150): 2500 is bigger and positive, so the answer is positive.\n2500 − 150 = 2350 m.",
      "clue": "Descending is negative.",
      "level": 1,
      "ref": "Q5",
@@ -857,14 +924,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Write 3 − (−10) as a sum.",
+     "text": "Subtraction as addition: write 3 − (−10) as a sum.",
      "opts": [
       "3 + 10",
       "3 + (−10)",
       "−3 + 10"
      ],
      "ans": "3 + 10",
-     "why": "Subtracting −10 means adding 10.",
+     "why": "a − b = a + (−b): add the opposite.\nThe opposite of −10 is 10.\nSo 3 − (−10) = 3 + 10.\n3 + (−10) keeps the wrong sign.",
      "clue": "Add the opposite.",
      "level": 1,
      "ref": "Q1 a",
@@ -874,14 +941,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Write 9 − 12 as a sum.",
+     "text": "Subtraction as addition: write 9 − 12 as a sum.",
      "opts": [
       "9 + 12",
       "9 + (−12)",
       "−9 + 12"
      ],
      "ans": "9 + (−12)",
-     "why": "Subtracting 12 means adding −12.",
+     "why": "a − b = a + (−b): add the opposite.\nThe opposite of 12 is −12.\nSo 9 − 12 = 9 + (−12).\n9 + 12 adds instead of subtracts.",
      "clue": "Add the opposite.",
      "level": 1,
      "ref": "Q1 c",
@@ -891,13 +958,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "0 − 3 = ___",
+     "ask": "Subtract integers: 0 − 3 = ___",
      "a": [
       "−3",
       "-3"
      ],
      "num": true,
-     "why": "0 + (−3) = −3.",
+     "why": "Add the opposite: 0 − 3 = 0 + (−3).\nAdding to 0 changes nothing.\nSo 0 − 3 = −3.",
      "clue": "Add the opposite.",
      "level": 1,
      "ref": "Q2 a",
@@ -908,13 +975,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "7 − (−8) = ___",
+     "ask": "Subtract a negative integer: 7 − (−8) = ___",
      "a": [
       "15",
       "+15"
      ],
      "num": true,
-     "why": "7 + 8 = 15.",
+     "why": "Subtracting −8 means adding its opposite, 8.\n7 − (−8) = 7 + 8.\n7 + 8 = 15.",
      "clue": "Subtracting a negative.",
      "level": 1,
      "ref": "Q2 b",
@@ -925,13 +992,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "465 − (−778) = ___",
+     "ask": "Subtract a negative integer: 465 − (−778) = ___",
      "a": [
       "1243",
       "+1243"
      ],
      "num": true,
-     "why": "465 + 778 = 1243.",
+     "why": "Subtracting −778 means adding 778.\n465 − (−778) = 465 + 778.\n465 + 778 = 1243.",
      "clue": "Subtracting a negative.",
      "level": 2,
      "ref": "Q2 e",
@@ -942,13 +1009,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "25 − 75 = ___",
+     "ask": "Subtract integers: 25 − 75 = ___",
      "a": [
       "−50",
       "-50"
      ],
      "num": true,
-     "why": "25 + (−75) = −(75 − 25) = −50.",
+     "why": "Add the opposite: 25 − 75 = 25 + (−75).\nDifferent signs: 75 > 25 and 75 is negative, so the answer is negative.\n75 − 25 = 50.\nSo 25 − 75 = −50.",
      "clue": "Add the opposite.",
      "level": 1,
      "ref": "Q2 f",
@@ -969,7 +1036,7 @@
     "-4"
    ],
    "num": true,
-   "why": "9 > 5, sign −. 9 − 5 = 4. Answer −4.",
+   "why": "Different signs: −9 and +5.\nThe bigger magnitude is 9, and it is negative: the sum is negative.\n9 − 5 = 4.\nSo −9 + 5 = −4.",
    "level": 1,
    "input": "signed",
    "clue": "",
@@ -989,7 +1056,7 @@
     "-76"
    ],
    "num": true,
-   "why": "Two negatives: −(36 + 40) = −76.",
+   "why": "Both addends are negative, so the sum is negative.\nAdd the magnitudes: 36 + 40 = 76.\nSo −36 + (−40) = −76.",
    "level": 1,
    "input": "signed",
    "clue": "",
@@ -1009,7 +1076,7 @@
     "+17"
    ],
    "num": true,
-   "why": "8 + 9 = 17.",
+   "why": "Subtracting −9 means adding 9.\n8 − (−9) = 8 + 9.\n8 + 9 = 17.",
    "level": 2,
    "input": "signed",
    "clue": "",
@@ -1029,7 +1096,7 @@
     "-373"
    ],
    "num": true,
-   "why": "−248 + (−125) = −(248 + 125) = −373.",
+   "why": "Add the opposite: −248 − 125 = −248 + (−125).\nBoth are negative, so the answer is negative.\n248 + 125 = 373.\nSo −248 − 125 = −373.",
    "level": 2,
    "input": "signed",
    "clue": "",
@@ -1043,13 +1110,13 @@
    "kind": "blank",
    "step": "test",
    "graded": true,
-   "ask": "A submarine is at −21 m. It moves up 6 m, then down 10 m. Its depth is now ___ m",
+   "ask": "Integers in real life: a submarine is at −21 m. It moves up 6 m, then down 10 m. Its depth is now ___ m",
    "a": [
     "−25",
     "-25"
    ],
    "num": true,
-   "why": "−21 + 6 = −15. −15 + (−10) = −25.",
+   "why": "Up is positive, down is negative.\nStep 1: −21 + 6: 21 > 6 and 21 is negative. 21 − 6 = 15. So −15.\nStep 2: −15 + (−10): both negative. 15 + 10 = 25. So −25.\nThe submarine is now at −25 m.",
    "level": 3,
    "input": "signed",
    "clue": "",

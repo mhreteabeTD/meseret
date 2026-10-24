@@ -63,10 +63,43 @@
       "It turns into water",
       "It disappears at once"
      ],
-     "after": "Greek thinkers argued about this 2400 years ago! Democritus said you reach atoms. Aristotle said you can cut forever.",
+     "after": "Greek thinkers argued about this 2400 years ago! Democritus said you reach tiny particles, atoms. Aristotle said you can cut forever. Today we know matter is made of atoms, so Democritus was closer.",
      "ref": "Activity 2.2",
      "added": true,
-     "id": "g8.science.u2.s2-1.1"
+     "id": "g8.science.u2.s2-1.1",
+     "best": "You reach tiny pieces that cannot be cut any more"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Activity 2.2: keep halving the chalk",
+     "vars": [
+      {
+       "k": "n",
+       "label": "Number of cuts in half",
+       "min": 0,
+       "max": 30,
+       "step": 1,
+       "v": 0
+      }
+     ],
+     "formula": "10/Math.pow(2,n)",
+     "outs": [
+      [
+       "Length of the piece",
+       "10/Math.pow(2,n)",
+       "{v} mm"
+      ],
+      [
+       "The same length in nanometres",
+       "10000000/Math.pow(2,n)",
+       "{v} nm"
+      ]
+     ],
+     "note": "Start with a 10 mm (1 cm) piece. 1 mm = 1 000 000 nm. An atom is about 0.1–0.5 nm wide. After about 25 cuts, the piece would be as small as one atom.",
+     "ref": "Activity 2.2",
+     "id": "g8.science.u2.s2-1.18",
+     "added": true
     },
     {
      "kind": "read",
@@ -131,6 +164,34 @@
      "id": "g8.science.u2.s2-1.4"
     },
     {
+     "kind": "venn",
+     "step": "explore",
+     "title": "Table 2.1 as a picture: two answers to one question",
+     "sets": [
+      [
+       "Democritus",
+       "Discreteness theory. There is a limit to breaking matter. Believed in atoms."
+      ],
+      [
+       "Aristotle",
+       "Continuous theory. Matter is infinitely divisible. Rejected atoms; matter is fire, earth, air and water."
+      ]
+     ],
+     "overlaps": [
+      [
+       [
+        0,
+        1
+       ],
+       "Both",
+       "Ancient Greek philosophers. Both asked: what is matter made of?"
+      ]
+     ],
+     "ref": "Table 2.1",
+     "id": "g8.science.u2.s2-1.19",
+     "added": true
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -158,7 +219,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Who first proposed the idea of atoms?",
+     "text": "Early ideas about matter: who first proposed the idea of atoms?",
      "opts": [
       "Democritus",
       "Aristotle",
@@ -166,7 +227,7 @@
       "Dalton"
      ],
      "ans": "Democritus",
-     "why": "Democritus named the tiny particles atomos, meaning uncuttable.",
+     "why": "Democritus said matter is made of tiny particles.\nHe called them atomos, which means uncuttable.\nAristotle rejected atoms.\nDalton came more than 2000 years later.\nSo the answer is Democritus.",
      "clue": "Who said matter is discrete?",
      "level": 1,
      "ref": "Review Q7",
@@ -176,7 +237,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "The idea that matter is continuous was proposed by",
+     "text": "Early ideas about matter: the idea that matter is continuous was proposed by",
      "opts": [
       "Aristotle",
       "Democritus",
@@ -184,7 +245,7 @@
       "None"
      ],
      "ans": "Aristotle",
-     "why": "Aristotle argued that the division of matter continues forever.",
+     "why": "Continuous means it can be divided forever.\nAristotle argued that division never stops.\nHe rejected the idea of atoms.\nDemocritus said the opposite: matter is discrete.\nSo the answer is Aristotle.",
      "clue": "Who rejected atoms?",
      "level": 1,
      "ref": "Review Q6",
@@ -194,7 +255,7 @@
      "kind": "sort",
      "step": "practise",
      "graded": true,
-     "text": "Sort each statement under the right theory.",
+     "text": "Two theories of matter: sort each statement under the right theory.",
      "bins": [
       "Discreteness theory",
       "Continuous theory"
@@ -221,7 +282,7 @@
        "Democritus believed in atoms."
       ]
      ],
-     "why": "From Table 2.1 and the text.",
+     "why": "Discreteness theory (Democritus): there is a limit to breaking matter, and atoms exist.\nContinuous theory (Aristotle): matter is infinitely divisible.\nAristotle also believed matter is fire, earth, air and water.",
      "clue": "Which thinker believed in atoms?",
      "level": 1,
      "ref": "Exercise 2.1",
@@ -231,13 +292,13 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "The Greek word atomos means ___",
+     "ask": "Word meaning: the Greek word atomos means ___",
      "a": [
       "uncuttable",
       "indivisible",
       "cannot be cut"
      ],
-     "why": "Democritus named the particles atomos, meaning uncuttable or indivisible.",
+     "why": "Democritus gave the tiny particles a name.\nAtomos means \"uncuttable\" or \"indivisible\".\nHe believed they were the smallest pieces of matter.\nSo the answer is uncuttable.",
      "clue": "It tells you what you cannot do to an atom.",
      "level": 1,
      "id": "g8.science.u2.s2-1.9"
@@ -246,7 +307,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Today we know atoms exist and are made of even smaller particles. Which old idea was closer to the truth?",
+     "text": "Then and now: today we know atoms exist and are made of even smaller particles. Which old idea was closer to the truth?",
      "opts": [
       "Democritus: matter is made of tiny particles",
       "Aristotle: matter divides forever",
@@ -254,7 +315,7 @@
       "Neither was close"
      ],
      "ans": "Democritus: matter is made of tiny particles",
-     "why": "Matter IS made of atoms, as Democritus said. But atoms can be split into protons, neutrons and electrons, so they are not truly \"uncuttable\".",
+     "why": "Matter is made of atoms, as Democritus said.\nSo matter does not divide forever: Aristotle was wrong there.\nBut atoms contain protons, neutrons and electrons.\nSo atoms are not truly uncuttable.\nDemocritus was closer, but not exactly right.",
      "clue": "Do atoms exist?",
      "level": 3,
      "added": true,
@@ -271,7 +332,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "How are the two theories alike?",
+     "text": "Exercise 2.1, comparing theories: how are the two theories alike?",
      "opts": [
       "Both are ancient Greek ideas about the structure of matter",
       "Both say matter is made of atoms",
@@ -279,7 +340,7 @@
       "Both say matter divides forever"
      ],
      "ans": "Both are ancient Greek ideas about the structure of matter",
-     "why": "They are different answers to the same question: what happens when matter is divided?",
+     "why": "Both come from ancient Greek philosophers.\nBoth try to answer one question: what is matter made of?\nThey give different answers about dividing matter.\nOnly the discreteness theory says atoms exist.",
      "clue": "Who proposed them, and about what?",
      "level": 1,
      "id": "g8.science.u2.s2-1.11"
@@ -288,7 +349,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "How are they different?",
+     "text": "Exercise 2.1, comparing theories: how are they different?",
      "opts": [
       "One has a limit to dividing (atoms); the other has no limit",
       "They are the same",
@@ -296,7 +357,7 @@
       "One was proposed in Ethiopia"
      ],
      "ans": "One has a limit to dividing (atoms); the other has no limit",
-     "why": "Discreteness: there is a limit, atoms exist. Continuous: infinitely divisible, no atoms.",
+     "why": "Discreteness theory: dividing matter has a limit; you reach atoms.\nContinuous theory: there is no limit and no atoms.\nSo one has a limit and the other has none.",
      "clue": "Look at Table 2.1.",
      "level": 1,
      "id": "g8.science.u2.s2-1.12"
@@ -309,7 +370,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "According to Democritus, matter is",
+   "text": "Democritus' theory: according to Democritus, matter is",
    "opts": [
     "discrete",
     "continuous",
@@ -317,7 +378,7 @@
     "not real"
    ],
    "ans": "discrete",
-   "why": "p.26.",
+   "why": "Democritus believed in atoms.\nAtoms are separate tiny particles.\nMatter made of separate particles is called discrete.\nSo his answer is discrete.",
    "clue": "",
    "level": 1,
    "id": "g8.science.u2.s2-1.13"
@@ -326,7 +387,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Aristotle believed matter was made of",
+   "text": "Aristotle's theory: Aristotle believed matter was made of",
    "opts": [
     "fire, earth, air and water",
     "atoms",
@@ -334,7 +395,7 @@
     "molecules"
    ],
    "ans": "fire, earth, air and water",
-   "why": "p.26.",
+   "why": "Aristotle rejected atoms.\nHe thought all matter was made of four things.\nThese were fire, earth, air and water.\nProtons and molecules were unknown in his time.",
    "clue": "",
    "level": 1,
    "id": "g8.science.u2.s2-1.14"
@@ -343,9 +404,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "The continuous theory rejected the idea of atoms.",
+   "text": "Continuous theory, true or false: it rejected the idea of atoms.",
    "a": true,
-   "why": "Table 2.1.",
+   "why": "The continuous theory says matter can be divided forever.\nIf it divides forever, there is no smallest particle.\nSo there can be no atoms.\nTable 2.1: it rejected the idea of atoms. True.",
    "clue": "",
    "level": 1,
    "id": "g8.science.u2.s2-1.15"
@@ -354,7 +415,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "\"There is a limit to which matter is broken\" belongs to",
+   "text": "Two theories of matter: \"There is a limit to which matter is broken\" belongs to",
    "opts": [
     "the discreteness theory",
     "the continuous theory",
@@ -362,7 +423,7 @@
     "neither theory"
    ],
    "ans": "the discreteness theory",
-   "why": "Table 2.1.",
+   "why": "A limit means you reach a smallest piece.\nThat smallest piece is the atom.\nThe theory with atoms is the discreteness theory.\nThe continuous theory says there is no limit.",
    "clue": "",
    "level": 2,
    "id": "g8.science.u2.s2-1.16"
@@ -371,7 +432,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which statement would Aristotle agree with?",
+   "text": "Aristotle's view: which statement would Aristotle agree with?",
    "opts": [
     "You can always cut a piece in half again",
     "Matter stops at atoms",
@@ -379,7 +440,7 @@
     "Matter has a smallest particle"
    ],
    "ans": "You can always cut a piece in half again",
-   "why": "Continuous theory.",
+   "why": "Aristotle followed the continuous theory.\nIt says matter can be divided forever.\nSo you can always cut a piece in half again.\nThe other options talk about atoms, which he rejected.",
    "clue": "",
    "level": 2,
    "id": "g8.science.u2.s2-1.17"

@@ -64,9 +64,10 @@
       "x = 2",
       "x = 0"
      ],
-     "after": "f(−1) = 3, f(1) = −1, f(2) = 0. The largest is at the endpoint x = −1.",
+     "after": "Work out f at the candidates.\nf(−1) = 1 + 2 = 3. f(0) = 0. f(1) = 1 − 2 = −1. f(2) = 4 − 4 = 0.\nThe largest value, 3, is at the endpoint x = −1.\nx = 1 is the bottom of the valley, the minimum.",
      "ref": "Example",
-     "id": "g12.maths.u2.s2-1-5-2.1"
+     "id": "g12.maths.u2.s2-1-5-2.1",
+     "best": "x = −1"
     },
     {
      "kind": "read",
@@ -93,6 +94,39 @@
      "id": "g12.maths.u2.s2-1-5-2.3"
     },
     {
+     "kind": "coord",
+     "step": "explore",
+     "title": "Candidates for f(x) = x² − 2x on [−1, 2]",
+     "min": -2,
+     "max": 3,
+     "ymin": -2,
+     "ymax": 4,
+     "ask": "Tap each candidate: the two endpoints and the critical number.",
+     "points": [
+      {
+       "x": -1,
+       "y": 3,
+       "name": "a",
+       "info": "Endpoint: f(−1) = 3. The largest: absolute maximum."
+      },
+      {
+       "x": 1,
+       "y": -1,
+       "name": "c",
+       "info": "Critical number (f′(1) = 0): f(1) = −1. The smallest: absolute minimum."
+      },
+      {
+       "x": 2,
+       "y": 0,
+       "name": "b",
+       "info": "Endpoint: f(2) = 0."
+      }
+     ],
+     "need": 3,
+     "added": true,
+     "id": "g12.maths.u2.s2-1-5-2.33"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -110,7 +144,7 @@
     },
     {
      "kind": "pick",
-     "text": "f(x) = x² + 2x + 3 on [−2, 2]. Absolute max and min values:",
+     "text": "Find the absolute maximum and minimum values of f(x) = x² + 2x + 3 on [−2, 2] (tap both):",
      "pool": [
       "11",
       "2",
@@ -121,7 +155,7 @@
       "11",
       "2"
      ],
-     "why": "Critical number −1: f(−2) = 3, f(−1) = 2, f(2) = 11.",
+     "why": "f′(x) = 2x + 2 = 0 gives x = −1, inside [−2, 2].\nCandidates: f(−2) = 4 − 4 + 3 = 3.\nf(−1) = 1 − 2 + 3 = 2.\nf(2) = 4 + 4 + 3 = 11.\nMaximum 11 (at x = 2), minimum 2 (at x = −1).",
      "clue": "Check both endpoints too.",
      "graded": true,
      "level": 1,
@@ -144,9 +178,9 @@
     },
     {
      "kind": "tf",
-     "text": "On a closed interval, the absolute maximum is always where f′ = 0.",
+     "text": "True or false: on a closed interval, the absolute maximum is always where f′ = 0.",
      "a": false,
-     "why": "It can be at an endpoint, like f(−1) = 3 for x² − 2x on [−1, 2].",
+     "why": "The maximum can be at an endpoint, where f′ need not be 0.\nExample: x² − 2x on [−1, 2] has its maximum f(−1) = 3 at an endpoint.\nThere f′(−1) = −4, not 0.\nSo the statement is false: always check the endpoints.",
      "clue": "Look at the example.",
      "graded": true,
      "level": 1,
@@ -154,12 +188,30 @@
      "id": "g12.maths.u2.s2-1-5-2.7"
     },
     {
+     "kind": "order",
+     "step": "practise",
+     "title": "Put the closed-interval method in order",
+     "items": [
+      "Find f′(x)",
+      "Solve f′(x) = 0 and find where f′ does not exist",
+      "Keep only critical numbers inside [a, b]",
+      "Evaluate f at those and at a and b",
+      "Pick the largest and the smallest"
+     ],
+     "why": "Start with the derivative.\nIts zeros (and undefined points) are the critical numbers.\nThrow away any outside [a, b].\nThen compare f at the critical numbers AND both endpoints.\nLargest = absolute max, smallest = absolute min.",
+     "clue": "You cannot find critical numbers before you have f′.",
+     "graded": true,
+     "level": 1,
+     "added": true,
+     "id": "g12.maths.u2.s2-1-5-2.34"
+    },
+    {
      "kind": "blank",
-     "ask": "f(x) = (x² − 2x + 4)/(x − 2) on [−3, 1]. Absolute maximum value = ___",
+     "ask": "Find the absolute maximum value of f(x) = (x² − 2x + 4)/(x − 2) on [−3, 1]: ___",
      "a": [
       "-2"
      ],
-     "why": "f′ = x(x − 4)/(x − 2)². In [−3, 1] only x = 0. f(−3) = −19/5, f(0) = −2, f(1) = −3.",
+     "why": "Quotient rule: f′ = ((2x − 2)(x − 2) − (x² − 2x + 4))/(x − 2)² = x(x − 4)/(x − 2)².\nCritical numbers 0 and 4. Only 0 is in [−3, 1].\nf(−3) = 19/(−5) = −19/5. f(0) = 4/(−2) = −2. f(1) = 3/(−1) = −3.\nThe largest is −2.\nTrap: −3 > −19/5, but −2 is larger still.",
      "clue": "Use the quotient rule; keep only critical numbers in the interval.",
      "num": true,
      "graded": true,
@@ -170,11 +222,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = 12x − x³ on [0, 3]. Absolute maximum value = ___",
+     "ask": "Find the absolute maximum value of f(x) = 12x − x³ on [0, 3]: ___",
      "a": [
       "16"
      ],
-     "why": "f′ = 12 − 3x² = 0 at x = 2. f(0) = 0, f(2) = 16, f(3) = 9.",
+     "why": "f′(x) = 12 − 3x² = 0 gives x² = 4, x = ±2.\nOnly x = 2 is in [0, 3].\nf(0) = 0. f(2) = 24 − 8 = 16. f(3) = 36 − 27 = 9.\nMaximum value: 16.",
      "clue": "x = −2 is outside the interval.",
      "num": true,
      "graded": true,
@@ -212,8 +264,9 @@
       "nothing special",
       "a jump"
      ],
-     "after": "Falling then rising: a valley. That is a relative minimum.",
-     "id": "g12.maths.u2.s2-1-5-2.10"
+     "after": "f′ < 0 on the left: the graph falls into c.\nf′ > 0 on the right: the graph rises out of c.\nFalling then rising makes a valley: a relative minimum.",
+     "id": "g12.maths.u2.s2-1-5-2.10",
+     "best": "a valley (minimum)"
     },
     {
      "kind": "read",
@@ -226,6 +279,32 @@
      ],
      "ref": "p.105",
      "id": "g12.maths.u2.s2-1-5-2.11"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Read the sign change at c",
+     "ask": "Tap each pattern of f′ around a critical number c.",
+     "items": [
+      [
+       "− then +",
+       "Falls, then rises: a valley. Relative minimum."
+      ],
+      [
+       "+ then −",
+       "Rises, then falls: a hill. Relative maximum."
+      ],
+      [
+       "+ then +",
+       "Rises on both sides (like x³ at 0): no extremum."
+      ],
+      [
+       "− then −",
+       "Falls on both sides: no extremum."
+      ]
+     ],
+     "added": true,
+     "id": "g12.maths.u2.s2-1-5-2.35"
     },
     {
      "kind": "name",
@@ -253,8 +332,50 @@
      "id": "g12.maths.u2.s2-1-5-2.13"
     },
     {
+     "kind": "coord",
+     "step": "explore",
+     "title": "Hill and valley: y = x³ − 3x²",
+     "min": -2,
+     "max": 4,
+     "ymin": -5,
+     "ymax": 2,
+     "ask": "f′(x) = 3x(x − 2). Tap the dots around each critical number.",
+     "points": [
+      {
+       "x": -1,
+       "y": -4,
+       "info": "f′(−1) = 9 > 0: rising."
+      },
+      {
+       "x": 0,
+       "y": 0,
+       "name": "max",
+       "info": "f′ goes + to − at 0: relative maximum f(0) = 0."
+      },
+      {
+       "x": 1,
+       "y": -2,
+       "info": "f′(1) = −3 < 0: falling."
+      },
+      {
+       "x": 2,
+       "y": -4,
+       "name": "min",
+       "info": "f′ goes − to + at 2: relative minimum f(2) = −4."
+      },
+      {
+       "x": 3,
+       "y": 0,
+       "info": "f′(3) = 9 > 0: rising again."
+      }
+     ],
+     "need": 3,
+     "added": true,
+     "id": "g12.maths.u2.s2-1-5-2.36"
+    },
+    {
      "kind": "mcq",
-     "text": "f(x) = (x − 1)²(x − 3)². At x = 2 there is",
+     "text": "Use the first derivative test: f(x) = (x − 1)²(x − 3)². At x = 2 there is",
      "opts": [
       "a relative maximum, value 1",
       "a relative minimum, value 1",
@@ -262,7 +383,7 @@
       "no extremum"
      ],
      "ans": "a relative maximum, value 1",
-     "why": "f′ = 4(x − 1)(x − 2)(x − 3) goes + to − at 2. f(2) = 1 × 1 = 1.",
+     "why": "f′ = 2(x − 1)(x − 3)² + 2(x − 1)²(x − 3) = 4(x − 1)(x − 2)(x − 3).\nJust left of 2 (x = 1.5): f′ > 0. Just right (x = 2.5): f′ < 0.\n+ to −: a relative maximum.\nValue: f(2) = (1)²(−1)² = 1.\nTrap: 0 is the minimum value, at x = 1 and x = 3.",
      "clue": "Sign of f′ just before and after 2.",
      "graded": true,
      "level": 1,
@@ -272,7 +393,7 @@
     },
     {
      "kind": "pick",
-     "text": "f(x) = 2x³ − 9x² − 24. Relative max and min values:",
+     "text": "Find the relative maximum and minimum values of f(x) = 2x³ − 9x² − 24 (tap both):",
      "pool": [
       "−24",
       "−51",
@@ -283,7 +404,7 @@
       "−24",
       "−51"
      ],
-     "why": "f′ = 6x(x − 3): max f(0) = −24, min f(3) = −51.",
+     "why": "f′(x) = 6x² − 18x = 6x(x − 3). Critical numbers 0 and 3.\nSigns: + before 0, − between, + after 3.\nAt 0, + to −: maximum f(0) = −24.\nAt 3, − to +: minimum f(3) = 54 − 81 − 24 = −51.",
      "clue": "Critical numbers 0 and 3.",
      "graded": true,
      "level": 2,
@@ -293,7 +414,7 @@
     },
     {
      "kind": "pick",
-     "text": "f(x) = (1/4)x³ − 3x. Relative max and min values:",
+     "text": "Find the relative maximum and minimum values of f(x) = (1/4)x³ − 3x (tap both):",
      "pool": [
       "4",
       "−4",
@@ -304,7 +425,7 @@
       "4",
       "−4"
      ],
-     "why": "f′ = (3/4)(x − 2)(x + 2): max f(−2) = 4, min f(2) = −4.",
+     "why": "f′(x) = (3/4)x² − 3 = (3/4)(x − 2)(x + 2).\nSigns: + before −2, − between, + after 2.\nMaximum at −2: f(−2) = −2 + 6 = 4.\nMinimum at 2: f(2) = 2 − 6 = −4.",
      "clue": "Critical numbers ±2.",
      "graded": true,
      "level": 2,
@@ -314,9 +435,9 @@
     },
     {
      "kind": "tf",
-     "text": "f(x) = x³ has a relative minimum at x = 0.",
+     "text": "True or false: f(x) = x³ has a relative minimum at x = 0.",
      "a": false,
-     "why": "f′ = 3x² is + on both sides: no sign change, so no extremum.",
+     "why": "f′(x) = 3x², so 0 is a critical number.\nBut 3x² > 0 on both sides of 0.\nf′ does not change sign, so there is no extremum.\nThe graph only flattens at 0. False.",
      "clue": "Does f′ change sign?",
      "graded": true,
      "level": 2,
@@ -338,11 +459,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = x³ + ax + b has a relative minimum 4 at x = 2. b = ___",
+     "ask": "Find the unknown constant: f(x) = x³ + ax + b has a relative minimum 4 at x = 2. b = ___",
      "a": [
       "20"
      ],
-     "why": "f′(2) = 12 + a = 0, a = −12. f(2) = 8 − 24 + b = 4, so b = 20.",
+     "why": "At a relative minimum, f′(2) = 0.\nf′(x) = 3x² + a, so 12 + a = 0 and a = −12.\nThe value is 4: f(2) = 8 + 2a + b = 8 − 24 + b = 4.\nb = 20.\nCheck: f′ = 3(x² − 4) goes − to + at 2, so it is a minimum. ✓",
      "clue": "Use f′(2) = 0 and f(2) = 4.",
      "num": true,
      "graded": true,
@@ -361,7 +482,7 @@
    "items": [
     {
      "kind": "pick",
-     "text": "x² + 2x + 3 on [−2, 2]: max and min",
+     "text": "Find the absolute max and min values of f(x) = x² + 2x + 3 on [−2, 2] (tap both):",
      "pool": [
       "11",
       "2",
@@ -372,7 +493,7 @@
       "11",
       "2"
      ],
-     "why": "f(2) = 11, f(−1) = 2.",
+     "why": "Critical number: 2x + 2 = 0, x = −1.\nf(−2) = 3, f(−1) = 2, f(2) = 11.\nMax 11, min 2.",
      "clue": "Endpoints and −1.",
      "graded": true,
      "level": 1,
@@ -382,7 +503,7 @@
     },
     {
      "kind": "pick",
-     "text": "x³ + 3x² − 9x + 5 on [−2, 2]: max and min",
+     "text": "Find the absolute max and min values of f(x) = x³ + 3x² − 9x + 5 on [−2, 2] (tap both):",
      "pool": [
       "27",
       "0",
@@ -393,7 +514,7 @@
       "27",
       "0"
      ],
-     "why": "f(−2) = 27, f(1) = 0.",
+     "why": "f′ = 3x² + 6x − 9 = 3(x + 3)(x − 1).\nx = −3 is outside [−2, 2]; keep x = 1.\nf(−2) = 27, f(1) = 0, f(2) = 7.\nMax 27, min 0.",
      "clue": "x = −3 is outside.",
      "graded": true,
      "level": 2,
@@ -403,7 +524,7 @@
     },
     {
      "kind": "pick",
-     "text": "3x⁴ − 26x³ − 60x² − 11 on [1, 5]: max and min",
+     "text": "Find the absolute max and min values of f(x) = 3x⁴ − 26x³ − 60x² − 11 on [1, 5] (tap both):",
      "pool": [
       "−94",
       "−2886",
@@ -414,7 +535,7 @@
       "−94",
       "−2886"
      ],
-     "why": "No critical number in [1, 5]: f(1) = −94, f(5) = −2886.",
+     "why": "f′ = 12x³ − 78x² − 120x = 6x(2x² − 13x − 20).\nIts zeros are 0, about −1.28 and about 7.78: none in [1, 5].\nSo only the endpoints count.\nf(1) = 3 − 26 − 60 − 11 = −94.\nf(5) = 1875 − 3250 − 1500 − 11 = −2886. Max −94, min −2886.",
      "clue": "Check the endpoints.",
      "graded": true,
      "level": 3,
@@ -424,7 +545,7 @@
     },
     {
      "kind": "pick",
-     "text": "(x² − 2x + 4)/(x − 2) on [−3, 1]: max and min",
+     "text": "Find the absolute max and min values of f(x) = (x² − 2x + 4)/(x − 2) on [−3, 1] (tap both):",
      "pool": [
       "−2",
       "−19/5",
@@ -435,7 +556,7 @@
       "−2",
       "−19/5"
      ],
-     "why": "f(0) = −2, f(−3) = −19/5.",
+     "why": "f′ = x(x − 4)/(x − 2)²: only x = 0 is in [−3, 1].\nf(−3) = −19/5, f(0) = −2, f(1) = −3.\nMax −2, min −19/5 (−3.8 is less than −3).",
      "clue": "Only 0 is inside.",
      "graded": true,
      "level": 3,
@@ -450,7 +571,7 @@
    "items": [
     {
      "kind": "pick",
-     "text": "2x³ − 9x² − 24: relative extreme values",
+     "text": "Find the relative extreme values of f(x) = 2x³ − 9x² − 24 (tap both):",
      "pool": [
       "−24",
       "−51",
@@ -461,7 +582,7 @@
       "−24",
       "−51"
      ],
-     "why": "Max −24, min −51.",
+     "why": "f′ = 6x(x − 3): + , − , +.\nMax f(0) = −24.\nMin f(3) = −51.",
      "clue": "f′ = 6x(x − 3).",
      "graded": true,
      "level": 2,
@@ -471,7 +592,7 @@
     },
     {
      "kind": "pick",
-     "text": "(1/4)x³ − 3x: relative extreme values",
+     "text": "Find the relative extreme values of f(x) = (1/4)x³ − 3x (tap both):",
      "pool": [
       "4",
       "−4",
@@ -482,7 +603,7 @@
       "4",
       "−4"
      ],
-     "why": "Max 4, min −4.",
+     "why": "f′ = (3/4)(x² − 4), zero at ±2.\nMax f(−2) = 4.\nMin f(2) = −4.",
      "clue": "f′ = (3/4)(x² − 4).",
      "graded": true,
      "level": 2,
@@ -492,7 +613,7 @@
     },
     {
      "kind": "pick",
-     "text": "(x² + x + 1)/(x² − x + 1): relative extreme values",
+     "text": "Find the relative extreme values of f(x) = (x² + x + 1)/(x² − x + 1) (tap both):",
      "pool": [
       "3",
       "1/3",
@@ -503,7 +624,7 @@
       "3",
       "1/3"
      ],
-     "why": "f′ = −2(x² − 1)/(x² − x + 1)²: min 1/3 at −1, max 3 at 1.",
+     "why": "Quotient rule: top of f′ = (2x + 1)(x² − x + 1) − (x² + x + 1)(2x − 1) = −2x² + 2.\nf′ = −2(x² − 1)/(x² − x + 1)²: zero at x = ±1.\nAt −1: − to +, minimum f(−1) = 1/3.\nAt 1: + to −, maximum f(1) = 3/1 = 3.",
      "clue": "Quotient rule.",
      "graded": true,
      "level": 3,
@@ -513,11 +634,11 @@
     },
     {
      "kind": "blank",
-     "ask": "x³ + ax + b has a relative minimum 4 at x = 2. a = ___",
+     "ask": "Find the unknown constant: x³ + ax + b has a relative minimum 4 at x = 2. a = ___",
      "a": [
       "-12"
      ],
-     "why": "12 + a = 0.",
+     "why": "At the minimum, f′(2) = 0.\nf′(x) = 3x² + a, so 3(4) + a = 0.\na = −12.",
      "clue": "f′(2) = 0.",
      "num": true,
      "graded": true,
@@ -532,7 +653,7 @@
  "test": [
   {
    "kind": "pick",
-   "text": "f(x) = x² − 4x on [0, 5]: max and min values",
+   "text": "Find the absolute max and min values of f(x) = x² − 4x on [0, 5] (tap both):",
    "pool": [
     "5",
     "−4",
@@ -543,7 +664,7 @@
     "5",
     "−4"
    ],
-   "why": "f(5) = 5, f(2) = −4.",
+   "why": "f′ = 2x − 4 = 0 at x = 2 (inside).\nf(0) = 0, f(2) = −4, f(5) = 25 − 20 = 5.\nMax 5, min −4.",
    "clue": "",
    "graded": true,
    "level": 2,
@@ -552,7 +673,7 @@
   },
   {
    "kind": "mcq",
-   "text": "f′ goes from + to − at c. Then f(c) is",
+   "text": "First derivative test: f′ goes from + to − at c. Then f(c) is",
    "opts": [
     "a relative maximum",
     "a relative minimum",
@@ -560,7 +681,7 @@
     "undefined"
    ],
    "ans": "a relative maximum",
-   "why": "test.",
+   "why": "+ before c: the graph rises to c.\n− after c: the graph falls away.\nRising then falling makes a hill: a relative maximum.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -569,11 +690,11 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = x² − 6x + 1. The relative minimum value = ___",
+   "ask": "Find the relative minimum value of f(x) = x² − 6x + 1: ___",
    "a": [
     "-8"
    ],
-   "why": "x = 3: 9 − 18 + 1.",
+   "why": "f′ = 2x − 6 = 0 at x = 3.\nf′ goes − to + at 3: a minimum.\nf(3) = 9 − 18 + 1 = −8.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -583,11 +704,11 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = −x² + 4x on [0, 3]. Absolute maximum value = ___",
+   "ask": "Find the absolute maximum value of f(x) = −x² + 4x on [0, 3]: ___",
    "a": [
     "4"
    ],
-   "why": "f(2) = 4.",
+   "why": "f′ = −2x + 4 = 0 at x = 2 (inside).\nf(0) = 0, f(2) = −4 + 8 = 4, f(3) = −9 + 12 = 3.\nMaximum 4.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -597,11 +718,11 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = x³ − 3x. Relative maximum value = ___",
+   "ask": "Find the relative maximum value of f(x) = x³ − 3x: ___",
    "a": [
     "2"
    ],
-   "why": "x = −1: −1 + 3.",
+   "why": "f′ = 3x² − 3 = 3(x − 1)(x + 1).\nAt x = −1, f′ goes + to −: a maximum.\nf(−1) = −1 + 3 = 2.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -645,7 +766,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f′(x) = x − 5. Where is f decreasing?",
+     "text": "Use the sign of f′: f′(x) = x − 5. Where is f decreasing?",
      "opts": [
       "x ≤ 5",
       "x ≥ 5",
@@ -653,7 +774,7 @@
       "x ≤ 0"
      ],
      "ans": "x ≤ 5",
-     "why": "f′ ≤ 0 when x ≤ 5.",
+     "why": "f is decreasing where f′(x) ≤ 0.\nx − 5 ≤ 0 gives x ≤ 5.\nCheck x = 0: f′(0) = −5 < 0. ✓",
      "clue": "Solve f′ ≤ 0.",
      "graded": true,
      "level": 1,

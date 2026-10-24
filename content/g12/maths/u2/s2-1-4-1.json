@@ -52,9 +52,10 @@
       "28",
       "h"
      ],
-     "after": "10. This number is called the derivative of f at 5, written f′(5).",
+     "after": "(f(5 + h) − f(5))/h = h + 10.\nAs h → 0, h + 10 → 10.\nThis number is the derivative of f at 5, written f′(5) = 10.\n28 is f(5), a y-value, not a gradient.",
      "ref": "Example b",
-     "id": "g12.maths.u2.s2-1-4-1.1"
+     "id": "g12.maths.u2.s2-1-4-1.1",
+     "best": "10"
     },
     {
      "kind": "read",
@@ -67,6 +68,41 @@
      ],
      "ref": "Definition 2.6",
      "id": "g12.maths.u2.s2-1-4-1.2"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "From both sides",
+     "ask": "f(x) = x² + 3 at a = 5. The quotient is h + 10. Tap each h.",
+     "items": [
+      [
+       "h = 1",
+       "1 + 10 = 11"
+      ],
+      [
+       "h = 0.1",
+       "10.1"
+      ],
+      [
+       "h = 0.01",
+       "10.01"
+      ],
+      [
+       "h = −0.1",
+       "9.9"
+      ],
+      [
+       "h = −0.01",
+       "9.99"
+      ],
+      [
+       "Both sides",
+       "From the right and from the left the values settle at 10. So f′(5) = 10 and f is differentiable at 5."
+      ]
+     ],
+     "need": 4,
+     "added": true,
+     "id": "g12.maths.u2.s2-1-4-1.21"
     },
     {
      "kind": "name",
@@ -86,11 +122,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = 5x − 3. f′(−2) = ___",
+     "ask": "Find the derivative of f(x) = 5x − 3 at x = −2: f′(−2) = ___",
      "a": [
       "5"
      ],
-     "why": "(5(−2 + h) − 3 − (−13))/h = 5h/h = 5.",
+     "why": "f(−2) = −10 − 3 = −13.\nf(−2 + h) = 5(−2 + h) − 3 = −13 + 5h.\nDifference: 5h. Divide by h: 5.\nThe limit as h → 0 is 5.\nA line's derivative is its slope, at every point.",
      "clue": "A straight line has the same gradient everywhere.",
      "num": true,
      "graded": true,
@@ -113,12 +149,51 @@
      "id": "g12.maths.u2.s2-1-4-1.5"
     },
     {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Quotient and derivative of x² + 3",
+     "vars": [
+      {
+       "k": "a",
+       "label": "Point a",
+       "min": -4,
+       "max": 4,
+       "step": 1,
+       "v": 2
+      },
+      {
+       "k": "h",
+       "label": "h",
+       "min": -1,
+       "max": 1,
+       "step": 0.01,
+       "v": 0.5
+      }
+     ],
+     "formula": "2 * a + h",
+     "outs": [
+      [
+       "(f(a + h) − f(a))/h",
+       "2 * a + h",
+       "{v}"
+      ],
+      [
+       "f′(a) (h → 0)",
+       "2 * a",
+       "{v}"
+      ]
+     ],
+     "note": "Move h towards 0 from either side. The quotient 2a + h settles at f′(a) = 2a.",
+     "added": true,
+     "id": "g12.maths.u2.s2-1-4-1.22"
+    },
+    {
      "kind": "blank",
-     "ask": "f(x) = 9x − 7. f′(2) = ___",
+     "ask": "Find the derivative of f(x) = 9x − 7 at x = 2: f′(2) = ___",
      "a": [
       "9"
      ],
-     "why": "9h/h = 9.",
+     "why": "f(2) = 18 − 7 = 11.\nf(2 + h) − f(2) = 9(2 + h) − 7 − 11 = 9h.\nDivide by h: 9.\nSo f′(2) = 9, the slope of the line.",
      "clue": "The slope of the line.",
      "num": true,
      "graded": true,
@@ -129,11 +204,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = x² − 1. f′(2) = ___",
+     "ask": "Find the derivative of f(x) = x² − 1 at x = 2: f′(2) = ___",
      "a": [
       "4"
      ],
-     "why": "(4h + h²)/h = 4 + h → 4.",
+     "why": "f(2 + h) = 4 + 4h + h² − 1 = 3 + 4h + h².\nf(2) = 3.\nDifference: 4h + h². Divide by h: 4 + h.\nAs h → 0: f′(2) = 4.",
      "clue": "(2 + h)² = 4 + 4h + h².",
      "num": true,
      "graded": true,
@@ -144,11 +219,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = x³ + 2x. f′(3) = ___",
+     "ask": "Find the derivative of f(x) = x³ + 2x at x = 3: f′(3) = ___",
      "a": [
       "29"
      ],
-     "why": "(29h + 9h² + h³)/h → 29.",
+     "why": "f(3) = 27 + 6 = 33.\nf(3 + h) = 27 + 27h + 9h² + h³ + 6 + 2h.\nDifference: 29h + 9h² + h³.\nDivide by h: 29 + 9h + h².\nAs h → 0: f′(3) = 29.",
      "clue": "(3 + h)³ = 27 + 27h + 9h² + h³.",
      "num": true,
      "graded": true,
@@ -159,7 +234,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = √(3x − 6). f′(3) =",
+     "text": "Find the derivative of f(x) = √(3x − 6) at x = 3: f′(3) =",
      "opts": [
       "√3/2",
       "3/2",
@@ -167,7 +242,7 @@
       "√3"
      ],
      "ans": "√3/2",
-     "why": "3/(√(3 + 3h) + √3) → 3/(2√3) = √3/2.",
+     "why": "f(3) = √3 and f(3 + h) = √(3 + 3h).\nMultiply by the conjugate: the top becomes (3 + 3h) − 3 = 3h.\nCancel h: 3/(√(3 + 3h) + √3).\nAs h → 0: 3/(2√3) = 3√3/6 = √3/2.\nTrap: 3/2 forgets the roots in the bottom.",
      "clue": "Rationalise the numerator.",
      "graded": true,
      "level": 3,
@@ -177,11 +252,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = 1/x². Using (f(x) − f(1))/(x − 1) = −(x + 1)/x², f′(1) = ___",
+     "ask": "Find f′(1) for f(x) = 1/x², using (f(x) − f(1))/(x − 1) = −(x + 1)/x²: f′(1) = ___",
      "a": [
       "-2"
      ],
-     "why": "Put x = 1: −(1 + 1)/1 = −2.",
+     "why": "The quotient is already simplified: no 0/0 is left.\nLet x approach 1: −(1 + 1)/1² = −2.\nSo f′(1) = −2. The curve falls at x = 1.",
      "clue": "Let x approach 1.",
      "num": true,
      "graded": true,
@@ -192,11 +267,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = x² + kx and f′(1) = 7. k = ___",
+     "ask": "Find the missing number: f(x) = x² + kx and f′(1) = 7. k = ___",
      "a": [
       "5"
      ],
-     "why": "((1 + h)² + k(1 + h) − 1 − k)/h = 2 + h + k → 2 + k = 7, so k = 5.",
+     "why": "f(1 + h) − f(1) = (1 + 2h + h²) + k + kh − 1 − k = 2h + h² + kh.\nDivide by h: 2 + h + k.\nAs h → 0: f′(1) = 2 + k.\n2 + k = 7, so k = 5.\nCheck: x² + 5x gives f′(1) = 2 + 5 = 7. ✓",
      "clue": "Find f′(1) in terms of k.",
      "num": true,
      "graded": true,
@@ -214,11 +289,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "f(x) = 9x − 7, a = 2: f′(2) = ___",
+     "ask": "Find the derivative of f(x) = 9x − 7 at a = 2: f′(2) = ___",
      "a": [
       "9"
      ],
-     "why": "9h/h.",
+     "why": "f(2 + h) − f(2) = 9h.\nDivide by h: 9.\nf′(2) = 9.",
      "clue": "Definition 2.6.",
      "num": true,
      "graded": true,
@@ -229,11 +304,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = x² − 1, a = 2: f′(2) = ___",
+     "ask": "Find the derivative of f(x) = x² − 1 at a = 2: f′(2) = ___",
      "a": [
       "4"
      ],
-     "why": "4 + h → 4.",
+     "why": "f(2 + h) − f(2) = 4h + h².\nDivide by h: 4 + h.\nAs h → 0: f′(2) = 4.",
      "clue": "Expand (2 + h)².",
      "num": true,
      "graded": true,
@@ -244,11 +319,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = x³ + 2x, a = 3: f′(3) = ___",
+     "ask": "Find the derivative of f(x) = x³ + 2x at a = 3: f′(3) = ___",
      "a": [
       "29"
      ],
-     "why": "29 + 9h + h² → 29.",
+     "why": "f(3 + h) − f(3) = 29h + 9h² + h³.\nDivide by h: 29 + 9h + h².\nAs h → 0: f′(3) = 29.",
      "clue": "Expand (3 + h)³.",
      "num": true,
      "graded": true,
@@ -259,7 +334,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = √(3x − 6), a = 3: f′(3) =",
+     "text": "Find the derivative of f(x) = √(3x − 6) at a = 3: f′(3) =",
      "opts": [
       "√3/2",
       "3/2",
@@ -267,7 +342,7 @@
       "√3"
      ],
      "ans": "√3/2",
-     "why": "3/(2√3).",
+     "why": "Rationalise: (√(3 + 3h) − √3)/h = 3/(√(3 + 3h) + √3).\nAs h → 0: 3/(2√3).\nMultiply top and bottom by √3: 3√3/6 = √3/2.",
      "clue": "Rationalise.",
      "graded": true,
      "level": 3,
@@ -281,11 +356,11 @@
  "test": [
   {
    "kind": "blank",
-   "ask": "f(x) = 4x + 1. f′(7) = ___",
+   "ask": "Find the derivative of f(x) = 4x + 1 at x = 7: f′(7) = ___",
    "a": [
     "4"
    ],
-   "why": "slope 4.",
+   "why": "f(7) = 29. f(7 + h) − f(7) = 4(7 + h) + 1 − 29 = 4h.\nDivide by h: 4.\nA line's derivative is its slope, 4, everywhere.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -295,11 +370,11 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = x² + 2. f′(3) = ___",
+   "ask": "Find the derivative of f(x) = x² + 2 at x = 3: f′(3) = ___",
    "a": [
     "6"
    ],
-   "why": "6 + h → 6.",
+   "why": "f(3 + h) = 9 + 6h + h² + 2 and f(3) = 11.\nDifference: 6h + h². Divide by h: 6 + h.\nAs h → 0: f′(3) = 6.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -309,11 +384,11 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = 2x². f′(−1) = ___",
+   "ask": "Find the derivative of f(x) = 2x² at x = −1: f′(−1) = ___",
    "a": [
     "-4"
    ],
-   "why": "(−4h + 2h²)/h → −4.",
+   "why": "f(−1 + h) = 2(1 − 2h + h²) = 2 − 4h + 2h².\nf(−1) = 2.\nDifference: −4h + 2h². Divide by h: −4 + 2h.\nAs h → 0: f′(−1) = −4.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -323,11 +398,11 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = √x. f′(9) = ___",
+   "ask": "Find the derivative of f(x) = √x at x = 9: f′(9) = ___",
    "a": [
     "1/6"
    ],
-   "why": "1/(3 + 3).",
+   "why": "(√(9 + h) − 3)/h. Multiply by √(9 + h) + 3.\nTop: (9 + h) − 9 = h. Cancel h: 1/(√(9 + h) + 3).\nAs h → 0: 1/(3 + 3) = 1/6.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -337,11 +412,11 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = x³. f′(−2) = ___",
+   "ask": "Find the derivative of f(x) = x³ at x = −2: f′(−2) = ___",
    "a": [
     "12"
    ],
-   "why": "3 × 4.",
+   "why": "(−2 + h)³ = −8 + 12h − 6h² + h³ and f(−2) = −8.\nDifference: 12h − 6h² + h³. Divide by h: 12 − 6h + h².\nAs h → 0: f′(−2) = 12.\nTrap: −12. The gradient 3a² is never negative.",
    "clue": "",
    "num": true,
    "graded": true,

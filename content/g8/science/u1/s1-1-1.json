@@ -53,7 +53,8 @@
      ],
      "after": "No. Her hand-span is shorter, so she counts more spans for the same desk. Body measures are not standard.",
      "added": true,
-     "id": "g8.science.u1.s1-1-1.1"
+     "id": "g8.science.u1.s1-1-1.1",
+     "best": "No, their hands are different sizes"
     },
     {
      "kind": "read",
@@ -103,6 +104,32 @@
      "id": "g8.science.u1.s1-1-1.3"
     },
     {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Activity 1.1: one desk, many hand-spans",
+     "vars": [
+      {
+       "k": "s",
+       "label": "Hand-span (cm)",
+       "min": 12,
+       "max": 24,
+       "step": 1,
+       "v": 20
+      }
+     ],
+     "formula": "120/s",
+     "outs": [
+      [
+       "Hand-spans across a 120 cm desk",
+       "120/s",
+       "{v} spans"
+      ]
+     ],
+     "note": "Move the slider from a child's span (about 12 cm) to an adult's (about 24 cm). The desk stays the same, but the count changes. A body unit is not standard.",
+     "id": "g8.science.u1.s1-1-1.28",
+     "added": true
+    },
+    {
      "kind": "read",
      "step": "read",
      "title": "Indigenous methods",
@@ -134,7 +161,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Which indigenous unit is measured from the elbow to the tip of the middle finger?",
+     "text": "Indigenous length units: which one is measured from the elbow to the tip of the middle finger?",
      "opts": [
       "Cubit",
       "Hand-span",
@@ -142,7 +169,7 @@
       "Pace"
      ],
      "ans": "Cubit",
-     "why": "A cubit is the distance from the tip of the elbow to the tip of the middle finger.",
+     "why": "A cubit runs along your forearm.\nIt starts at the tip of the elbow.\nIt ends at the tip of the middle finger.\nSo the answer is cubit.\nA hand-span is thumb tip to little-finger tip, not elbow to finger.",
      "clue": "Think of your forearm.",
      "level": 1,
      "ref": "p.3",
@@ -152,7 +179,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "In Activity 1.1 students measure a desk with hand-spans. Why do they get different results?",
+     "text": "Activity 1.1, body units: students measure a desk with hand-spans. Why do they get different results?",
      "opts": [
       "Their hands are different sizes, so the unit is not standard",
       "The desk changes size",
@@ -160,7 +187,7 @@
       "Hand-spans are always exact"
      ],
      "ans": "Their hands are different sizes, so the unit is not standard",
-     "why": "Body units differ from person to person. They are not an agreed standard.",
+     "why": "Each student uses their own hand as the unit.\nHands are different sizes.\nA small hand fits more times along the desk.\nSo the counts differ: a hand-span is not a standard unit.",
      "clue": "Is everyone's hand the same size?",
      "level": 1,
      "ref": "Activity 1.1",
@@ -170,7 +197,7 @@
      "kind": "order",
      "step": "practise",
      "graded": true,
-     "text": "Put these units in order, from shortest to longest.",
+     "text": "Indigenous length units: put them in order, from shortest to longest.",
      "items": [
       "Digit",
       "Hand-span",
@@ -178,7 +205,7 @@
       "Cubit",
       "Arm span"
      ],
-     "why": "Digit (about 2 cm) < hand-span (about 20 cm) < foot (about 25 cm) < cubit (about 45 cm) < arm span (about your height).",
+     "why": "Compare rough sizes for an adult.\nDigit: about 2 cm, one fingertip wide.\nHand-span: about 20 cm. Foot: about 25 cm.\nCubit: about 45 cm.\nArm span: about your height.\nSo: digit → hand-span → foot → cubit → arm span.",
      "clue": "Start with the width of one fingertip.",
      "level": 2,
      "ref": "Exercise 1.1",
@@ -188,9 +215,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "An arm span is also called a fathom.",
+     "text": "Indigenous length units, true or false: an arm span is also called a fathom.",
      "a": true,
-     "why": "The book says arm span is also known as fathom.",
+     "why": "Stretch both arms out wide.\nMeasure from one fingertip to the other.\nThis length is the arm span.\nThe book says it is also called a fathom. So it is true.",
      "clue": "Read the arm-span definition again.",
      "level": 1,
      "id": "g8.science.u1.s1-1-1.9"
@@ -199,7 +226,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "A tailor in Merkato measures cloth in cubits. A customer says, \"Your cubit is longer than mine!\" What is the best fix?",
+     "text": "Body units vs standard units: a tailor in Merkato measures cloth in cubits. A customer says, \"Your cubit is longer than mine!\" What is the best fix?",
      "opts": [
       "Use a metre tape, an agreed standard",
       "Use a hand-span instead",
@@ -207,7 +234,7 @@
       "Measure faster"
      ],
      "ans": "Use a metre tape, an agreed standard",
-     "why": "Any body unit changes from person to person. A metre tape is the same for everyone, so both people agree.",
+     "why": "A cubit depends on the tailor's own arm.\nThe customer's arm is a different length.\nSo the two cubits do not agree.\nA metre tape is the same for everyone.\nSo use a metre tape, an agreed standard.\nA hand-span would have the same problem.",
      "clue": "Which unit is the same for every person?",
      "level": 3,
      "added": true,
@@ -241,7 +268,8 @@
      ],
      "after": "From the shadow. It is long in the morning and late afternoon and almost gone at noon.",
      "added": true,
-     "id": "g8.science.u1.s1-1-1.11"
+     "id": "g8.science.u1.s1-1-1.11",
+     "best": "From the shadow of a tree"
     },
     {
      "kind": "read",
@@ -264,42 +292,80 @@
       "Time is the measure of the duration of an interval.",
       "The Sun's position changes, so a tree's shadow changes length.",
       "Volume is the space an object occupies.",
-      "In Addis Ababa markets, people measure volume with a jog, tassa, sini, birchiko or kubaya."
-     ],
-     "table": [
-      [
-       "Tool",
-       "What it is",
-       "Used for"
-      ],
-      [
-       "Jog",
-       "Plastic cup",
-       "Liquids"
-      ],
-      [
-       "Tassa",
-       "Can",
-       "Cereals, pulses, liquids, solids"
-      ],
-      [
-       "Sini",
-       "Small ceramic cup",
-       "Coffee, pulses, spices"
-      ],
-      [
-       "Birchiko",
-       "Glass",
-       "Pulses, liquids"
-      ],
-      [
-       "Kubaya",
-       "Mug",
-       "Cereals, pulses, liquids"
-      ]
+      "In Addis Ababa markets, people measure volume with a jog, tassa, sini, birchiko or kubaya. Tap each one below."
      ],
      "ref": "p.5–6",
      "id": "g8.science.u1.s1-1-1.13"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Market measures of volume",
+     "ask": "Tap each tool to see what it is and what it measures.",
+     "need": 5,
+     "items": [
+      [
+       "Jog",
+       "A plastic cup. Used for liquids."
+      ],
+      [
+       "Tassa",
+       "A can. Used for cereals, pulses, liquids and other solids."
+      ],
+      [
+       "Sini",
+       "A small ceramic cup. Used for coffee, pulses and spices."
+      ],
+      [
+       "Birchiko",
+       "A glass. Used for pulses and liquids."
+      ],
+      [
+       "Kubaya",
+       "A mug. Used for cereals, pulses and liquids."
+      ]
+     ],
+     "ref": "p.6",
+     "id": "g8.science.u1.s1-1-1.29"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Market units in kilograms",
+     "vars": [
+      {
+       "k": "q",
+       "label": "Quntals of grain",
+       "min": 0,
+       "max": 10,
+       "step": 1,
+       "v": 1
+      },
+      {
+       "k": "f",
+       "label": "Feresulas of coffee",
+       "min": 0,
+       "max": 10,
+       "step": 1,
+       "v": 1
+      }
+     ],
+     "formula": "100*q",
+     "outs": [
+      [
+       "Grain",
+       "100*q",
+       "{v} kg"
+      ],
+      [
+       "Coffee",
+       "17*f",
+       "{v} kg"
+      ]
+     ],
+     "note": "1 quntal = 100 kg. 1 feresula = 17 kg. Move the sliders to change the number of bags.",
+     "id": "g8.science.u1.s1-1-1.30",
+     "added": true
     },
     {
      "kind": "name",
@@ -317,7 +383,7 @@
      "kind": "match",
      "step": "check",
      "graded": true,
-     "text": "Match each indigenous unit with what it measures.",
+     "text": "Indigenous units: match each unit with what it measures.",
      "pairs": [
       [
        "Weqet",
@@ -336,7 +402,7 @@
        "Coffee, pulses and spices (volume)"
       ]
      ],
-     "why": "These are the uses given in the book.",
+     "why": "Weqet: a small unit for gold powder.\nQuntal: a bag for grain, 100 kg.\nFeresula: for pepper and coffee, 17 kg.\nSini: a small ceramic cup for coffee, pulses and spices.",
      "clue": "Two are for mass of farm goods, one for gold, one is a small cup.",
      "level": 1,
      "ref": "p.5–6",
@@ -347,11 +413,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "One quntal = ___ kg",
+     "ask": "Indigenous mass unit: one quntal = ___ kg",
      "a": [
       "100"
      ],
-     "why": "The book says a quntal is equal to a hundred kilograms.",
+     "why": "A quntal is a big bag for grain.\nThe book says 1 quntal = 100 kg.\nSo the answer is 100.",
      "clue": "It is a big bag of grain.",
      "level": 1,
      "ref": "p.5",
@@ -361,7 +427,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "When is a tree's shadow shortest?",
+     "text": "Telling time by shadow: when is a tree's shadow shortest?",
      "opts": [
       "At noon",
       "Early morning",
@@ -369,7 +435,7 @@
       "At night"
      ],
      "ans": "At noon",
-     "why": "At noon the Sun is overhead, so almost no shadow is seen.",
+     "why": "A shadow is long when the Sun is low.\nIn the morning and late afternoon the Sun is low.\nAt noon the Sun is high overhead.\nSo the shadow is shortest at noon.\nAt night there is no sunlight, so no shadow.",
      "clue": "Where is the Sun at midday?",
      "level": 1,
      "ref": "p.5",
@@ -379,7 +445,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "What is the main problem with measuring teff in a tassa?",
+     "text": "Indigenous volume: what is the main problem with measuring teff in a tassa?",
      "opts": [
       "Tassas are not all the same size",
       "Tassas are too heavy",
@@ -387,7 +453,7 @@
       "There is no problem"
      ],
      "ans": "Tassas are not all the same size",
-     "why": "One seller's can may be bigger than another's, and it can be heaped or levelled. It is not an agreed standard.",
+     "why": "A tassa is a can.\nCans are made in many sizes.\nOne seller's tassa may hold more than another's.\nThe teff can also be heaped or levelled.\nSo a tassa is not an agreed standard.",
      "clue": "Is every can made to the same size?",
      "level": 2,
      "ref": "Exercise 1.3 Q1",
@@ -397,7 +463,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "A farmer sells 3 quntals of wheat. A trader weighs them on a balance. How much should the balance show?",
+     "text": "Indigenous mass units: a farmer sells 3 quntals of wheat. A trader weighs them on a balance. How much should the balance show?",
      "opts": [
       "300 kg",
       "51 kg",
@@ -405,7 +471,7 @@
       "3 kg"
      ],
      "ans": "300 kg",
-     "why": "1 quntal = 100 kg, so 3 quntals = 3 × 100 = 300 kg.",
+     "why": "1 quntal = 100 kg.\nThe farmer has 3 quntals.\n3 × 100 = 300 kg.\nCheck: 51 kg is 3 feresulas (3 × 17), not 3 quntals.",
      "clue": "How many kilograms are in one quntal?",
      "level": 3,
      "added": true,
@@ -422,7 +488,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Which indigenous mass unit has a fixed value in kilograms?",
+     "text": "Indigenous mass units: which one has a fixed value in kilograms?",
      "opts": [
       "Feresula (17 kg)",
       "Weqet",
@@ -430,7 +496,7 @@
       "Kubaya"
      ],
      "ans": "Feresula (17 kg)",
-     "why": "The book gives feresula = 17 kg and quntal = 100 kg. Weqet has no stated value.",
+     "why": "Look for a unit with a number of kilograms.\nThe book says 1 feresula = 17 kg.\nWeqet is for gold, but the book gives it no kg value.\nHand-span measures length; kubaya measures volume.\nSo the answer is feresula.",
      "clue": "Look for a unit with a number of kg.",
      "level": 1,
      "id": "g8.science.u1.s1-1-1.20"
@@ -444,7 +510,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Which is a problem with indigenous volume measures?",
+     "text": "Indigenous volume measures: which is a problem with them?",
      "opts": [
       "The containers are not a standard size",
       "They are too accurate",
@@ -452,7 +518,7 @@
       "They are only used in labs"
      ],
      "ans": "The containers are not a standard size",
-     "why": "Cups, cans and mugs differ in size from seller to seller.",
+     "why": "Market volume tools are cups, cans and mugs.\nThey come in different sizes.\nSo \"one kubaya\" can hold different amounts.\nThe problem: they are not a standard size.",
      "clue": "Are all cups the same?",
      "level": 1,
      "ref": "Q1",
@@ -462,7 +528,7 @@
      "kind": "sort",
      "step": "exercise",
      "graded": true,
-     "text": "Sort these into pros and cons of indigenous measurement.",
+     "text": "Indigenous measurement: sort each point into a pro (a good thing) or a con (a problem).",
      "bins": [
       "Pro",
       "Con"
@@ -489,7 +555,7 @@
        "There is no fixed value."
       ]
      ],
-     "why": "Indigenous units are familiar and free but not standard.",
+     "why": "Pro: body parts and cups are free and always at hand.\nPro: everyone in the market understands them.\nCon: they change from person to person.\nCon: they have no fixed value, so they are hard to convert to SI units.",
      "clue": "Is it a good thing or a problem?",
      "level": 1,
      "ref": "Q2",
@@ -503,7 +569,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Measurement is comparing a quantity with",
+   "text": "Definition of measurement: measurement is comparing a quantity with",
    "opts": [
     "an agreed standard",
     "a guess",
@@ -511,7 +577,7 @@
     "a colour"
    ],
    "ans": "an agreed standard",
-   "why": "Definition on p.2.",
+   "why": "Measuring means finding the size of a quantity.\nWe compare it with a fixed amount that everyone agrees on.\nThis is an agreed standard.\nA guess or a friend's answer is not fixed.",
    "clue": "",
    "level": 1,
    "id": "g8.science.u1.s1-1-1.23"
@@ -520,7 +586,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "A digit is",
+   "text": "Indigenous length units: a digit is",
    "opts": [
     "the width of a fingertip",
     "the length of a foot",
@@ -528,7 +594,7 @@
     "fingertip to fingertip of both arms"
    ],
    "ans": "the width of a fingertip",
-   "why": "p.3.",
+   "why": "A digit is the smallest body unit.\nIt is the width of an adult man's fingertip.\nElbow to fingertip is a cubit.\nFingertip to fingertip of both arms is an arm span.",
    "clue": "",
    "level": 1,
    "id": "g8.science.u1.s1-1-1.24"
@@ -538,11 +604,11 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "One feresula = ___ kg",
+   "ask": "Indigenous mass unit: one feresula = ___ kg",
    "a": [
     "17"
    ],
-   "why": "p.5.",
+   "why": "A feresula is used for pepper and coffee.\nThe book gives 1 feresula = 17 kg.\nSo the answer is 17.",
    "clue": "",
    "level": 1,
    "id": "g8.science.u1.s1-1-1.25"
@@ -551,7 +617,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which tool measures volume in the market?",
+   "text": "Indigenous volume: which tool measures volume in the market?",
    "opts": [
     "Kubaya",
     "Weqet",
@@ -559,7 +625,7 @@
     "Cubit"
    ],
    "ans": "Kubaya",
-   "why": "A kubaya is a mug used for volume.",
+   "why": "A kubaya is a mug.\nIt holds cereals, pulses or liquids, so it measures volume.\nWeqet and quntal measure mass.\nA cubit measures length.",
    "clue": "",
    "level": 2,
    "id": "g8.science.u1.s1-1-1.26"
@@ -568,7 +634,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Why are body units not reliable?",
+   "text": "Body units: why are they not reliable?",
    "opts": [
     "They change from person to person",
     "They are too small",
@@ -576,7 +642,7 @@
     "They need batteries"
    ],
    "ans": "They change from person to person",
-   "why": "They have no agreed standard.",
+   "why": "Body units use a part of a person's body.\nEvery person's body is a different size.\nSo one person's cubit is not another's.\nThere is no agreed standard, so results change.",
    "clue": "",
    "level": 2,
    "id": "g8.science.u1.s1-1-1.27"

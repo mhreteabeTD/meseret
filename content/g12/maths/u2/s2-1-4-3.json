@@ -64,9 +64,10 @@
       "x³",
       "3x⁴"
      ],
-     "after": "4x³: bring the 4 down and lower the power by 1.",
+     "after": "Look at the pattern: the old power comes down in front.\nThen the power drops by 1.\nx⁴: bring 4 down, power 4 − 1 = 3. So (x⁴)′ = 4x³.",
      "ref": "Activity 2.7",
-     "id": "g12.maths.u2.s2-1-4-3.1"
+     "id": "g12.maths.u2.s2-1-4-3.1",
+     "best": "4x³"
     },
     {
      "kind": "read",
@@ -82,6 +83,37 @@
      "id": "g12.maths.u2.s2-1-4-3.2"
     },
     {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Rewrite as a power first",
+     "ask": "Tap each function. Rewrite it as a power of x, then use the rule.",
+     "items": [
+      [
+       "1/x⁷",
+       "= x⁻⁷. Derivative: −7x⁻⁸ = −7/x⁸."
+      ],
+      [
+       "√x",
+       "= x^(1/2). Derivative: (1/2)x^(−1/2) = 1/(2√x)."
+      ],
+      [
+       "x√x",
+       "= x^(3/2). Derivative: (3/2)x^(1/2) = (3/2)√x."
+      ],
+      [
+       "1/√x",
+       "= x^(−1/2). Derivative: (−1/2)x^(−3/2)."
+      ],
+      [
+       "5",
+       "A constant: no x changes it. Derivative: 0."
+      ]
+     ],
+     "need": 3,
+     "added": true,
+     "id": "g12.maths.u2.s2-1-4-3.64"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -95,7 +127,7 @@
     },
     {
      "kind": "mcq",
-     "text": "(x¹⁵)′ =",
+     "text": "Use the power rule: (x¹⁵)′ =",
      "opts": [
       "15x¹⁴",
       "15x¹⁵",
@@ -103,7 +135,7 @@
       "14x¹⁵"
      ],
      "ans": "15x¹⁴",
-     "why": "Bring 15 down; power 15 − 1 = 14.",
+     "why": "Power rule: (xⁿ)′ = n xⁿ⁻¹.\nBring 15 down in front.\nLower the power: 15 − 1 = 14.\n(x¹⁵)′ = 15x¹⁴.\nTrap: 15x¹⁵ forgets to lower the power.",
      "clue": "n xⁿ⁻¹.",
      "graded": true,
      "level": 1,
@@ -126,7 +158,7 @@
     },
     {
      "kind": "mcq",
-     "text": "(x⁻⁵)′ =",
+     "text": "Use the power rule with a negative power: (x⁻⁵)′ =",
      "opts": [
       "−5x⁻⁶",
       "−5x⁻⁴",
@@ -134,7 +166,7 @@
       "−4x⁻⁵"
      ],
      "ans": "−5x⁻⁶",
-     "why": "−5 − 1 = −6, not −4.",
+     "why": "n = −5: bring −5 down.\nLower the power by 1: −5 − 1 = −6.\n(x⁻⁵)′ = −5x⁻⁶.\nTrap: −5x⁻⁴ adds 1 instead of subtracting it.",
      "clue": "Subtract 1 from −5.",
      "graded": true,
      "level": 2,
@@ -143,8 +175,37 @@
      "id": "g12.maths.u2.s2-1-4-3.6"
     },
     {
+     "kind": "match",
+     "step": "practise",
+     "title": "Match each function with its derivative",
+     "pairs": [
+      [
+       "x⁵",
+       "5x⁴"
+      ],
+      [
+       "x⁻²",
+       "−2x⁻³"
+      ],
+      [
+       "√x",
+       "1/(2√x)"
+      ],
+      [
+       "1/x",
+       "−1/x²"
+      ]
+     ],
+     "why": "Power rule each time: bring n down, then lower the power by 1.\nx⁵ → 5x⁴. x⁻² → −2x⁻³.\n√x = x^(1/2) → (1/2)x^(−1/2) = 1/(2√x).\n1/x = x⁻¹ → −x⁻² = −1/x².",
+     "clue": "Rewrite roots and fractions as powers of x first.",
+     "graded": true,
+     "level": 1,
+     "added": true,
+     "id": "g12.maths.u2.s2-1-4-3.65"
+    },
+    {
      "kind": "mcq",
-     "text": "(4x⁻⁷)′ =",
+     "text": "Use the constant multiple and power rules: (4x⁻⁷)′ =",
      "opts": [
       "−28/x⁸",
       "−28/x⁶",
@@ -152,7 +213,7 @@
       "−7/x⁸"
      ],
      "ans": "−28/x⁸",
-     "why": "4(−7)x⁻⁸.",
+     "why": "Keep the constant 4. Bring −7 down: 4 × (−7) = −28.\nPower: −7 − 1 = −8.\n(4x⁻⁷)′ = −28x⁻⁸ = −28/x⁸.\nTrap: −28/x⁶ lowered −7 the wrong way.",
      "clue": "k × n, then n − 1.",
      "graded": true,
      "level": 2,
@@ -162,11 +223,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = x⁻⁹. f′(1) = ___",
+     "ask": "Differentiate, then evaluate: f(x) = x⁻⁹. f′(1) = ___",
      "a": [
       "-9"
      ],
-     "why": "f′(x) = −9x⁻¹⁰, and 1⁻¹⁰ = 1.",
+     "why": "f′(x) = −9x⁻¹⁰.\nPut x = 1: 1⁻¹⁰ = 1.\nf′(1) = −9 × 1 = −9.",
      "clue": "Differentiate first, then put x = 1.",
      "num": true,
      "graded": true,
@@ -177,7 +238,7 @@
     },
     {
      "kind": "mcq",
-     "text": "(−10x^(−2/5))′ =",
+     "text": "Use the power rule with a fractional power: (−10x^(−2/5))′ =",
      "opts": [
       "4x^(−7/5)",
       "−4x^(−7/5)",
@@ -185,7 +246,7 @@
       "25x^(−7/5)"
      ],
      "ans": "4x^(−7/5)",
-     "why": "−10 × (−2/5) = 4; −2/5 − 1 = −7/5.",
+     "why": "Multiply by the power: −10 × (−2/5) = 4.\nLower the power: −2/5 − 1 = −2/5 − 5/5 = −7/5.\nResult: 4x^(−7/5).\nTrap: −3/5 comes from adding 1 instead of subtracting it.",
      "clue": "Write 1 as 5/5.",
      "graded": true,
      "level": 3,
@@ -195,11 +256,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = x⁻⁶. f′(1/3) = ___",
+     "ask": "Evaluate a derivative at a fraction: f(x) = x⁻⁶. f′(1/3) = ___",
      "a": [
       "-13122"
      ],
-     "why": "f′(x) = −6x⁻⁷. (1/3)⁻⁷ = 3⁷ = 2187. −6 × 2187 = −13 122.",
+     "why": "f′(x) = −6x⁻⁷.\n(1/3)⁻⁷ = 3⁷ = 2187.\nf′(1/3) = −6 × 2187 = −13 122.",
      "clue": "A negative power of 1/3 is a power of 3.",
      "num": true,
      "graded": true,
@@ -238,9 +299,10 @@
       "Only at x = 0",
       "Only for constants"
      ],
-     "after": "Both give 3x² + 2x + 2. You may differentiate each term separately.",
+     "after": "f + g = x³ + x² + 2x, so (f + g)′ = 3x² + 2x + 2.\nf′ + g′ = 2x + (3x² + 2) = 3x² + 2x + 2.\nThey agree: you may differentiate term by term.",
      "ref": "Activity 2.8",
-     "id": "g12.maths.u2.s2-1-4-3.11"
+     "id": "g12.maths.u2.s2-1-4-3.11",
+     "best": "Yes, both are 3x² + 2x + 2"
     },
     {
      "kind": "read",
@@ -267,12 +329,26 @@
      "id": "g12.maths.u2.s2-1-4-3.13"
     },
     {
+     "kind": "steps",
+     "step": "method",
+     "title": "y = 4x³ − 5x² + 7x − 9, term by term",
+     "steps": [
+      "(4x³)′ = 4 × 3x² = 12x².",
+      "(−5x²)′ = −5 × 2x = −10x.",
+      "(7x)′ = 7.",
+      "(−9)′ = 0: a constant gives 0.",
+      "dy/dx = 12x² − 10x + 7."
+     ],
+     "added": true,
+     "id": "g12.maths.u2.s2-1-4-3.66"
+    },
+    {
      "kind": "blank",
-     "ask": "f(x) = x³ + 3x². f′(2) = ___",
+     "ask": "Use the sum rule, then evaluate: f(x) = x³ + 3x². f′(2) = ___",
      "a": [
       "24"
      ],
-     "why": "f′(x) = 3x² + 6x. 3(4) + 12 = 24.",
+     "why": "Term by term: (x³)′ = 3x² and (3x²)′ = 6x.\nf′(x) = 3x² + 6x.\nf′(2) = 3(4) + 6(2) = 12 + 12 = 24.\nTrap: f(2) = 20 is the value, not the derivative.",
      "clue": "Differentiate, then put x = 2.",
      "num": true,
      "graded": true,
@@ -282,8 +358,50 @@
      "id": "g12.maths.u2.s2-1-4-3.14"
     },
     {
+     "kind": "sort",
+     "step": "practise",
+     "title": "Which terms give 0 when differentiated?",
+     "bins": [
+      "Gives 0",
+      "Does not give 0"
+     ],
+     "items": [
+      [
+       "−9",
+       "Gives 0",
+       "A constant."
+      ],
+      [
+       "√3",
+       "Gives 0",
+       "√3 is a number, not √x."
+      ],
+      [
+       "π²",
+       "Gives 0",
+       "π² is a number."
+      ],
+      [
+       "7x",
+       "Does not give 0",
+       "(7x)′ = 7."
+      ],
+      [
+       "x²/2",
+       "Does not give 0",
+       "(x²/2)′ = x."
+      ]
+     ],
+     "why": "A term with no x is a constant; its derivative is 0.\n√3 and π² look complicated but are just numbers.\nAny term with x in it changes, so its derivative is not 0.",
+     "clue": "Does the term contain x?",
+     "graded": true,
+     "level": 1,
+     "added": true,
+     "id": "g12.maths.u2.s2-1-4-3.67"
+    },
+    {
      "kind": "mcq",
-     "text": "f(x) = x⁴ − 2x³ + 3x − 2. f′(x) =",
+     "text": "Differentiate the polynomial term by term: f(x) = x⁴ − 2x³ + 3x − 2. f′(x) =",
      "opts": [
       "4x³ − 6x² + 3",
       "4x³ − 6x² + 3x",
@@ -291,7 +409,7 @@
       "4x³ − 6x² + 1"
      ],
      "ans": "4x³ − 6x² + 3",
-     "why": "Term by term; the constant −2 gives 0.",
+     "why": "(x⁴)′ = 4x³.\n(−2x³)′ = −6x².\n(3x)′ = 3.\n(−2)′ = 0: a constant gives 0.\nf′(x) = 4x³ − 6x² + 3.\nTrap: 3x keeps the x; the derivative of 3x is 3.",
      "clue": "Do each term separately.",
      "graded": true,
      "level": 1,
@@ -301,11 +419,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = x⁴ − 3x² + 2. f′(3) = ___",
+     "ask": "Differentiate, then evaluate: f(x) = x⁴ − 3x² + 2. f′(3) = ___",
      "a": [
       "90"
      ],
-     "why": "f′(x) = 4x³ − 6x. 108 − 18 = 90.",
+     "why": "f′(x) = 4x³ − 6x (the 2 gives 0).\nf′(3) = 4(27) − 6(3).\n= 108 − 18 = 90.",
      "clue": "f′ first.",
      "num": true,
      "graded": true,
@@ -316,7 +434,7 @@
     },
     {
      "kind": "mcq",
-     "text": "(√3 x³)′ =",
+     "text": "Constant multiple rule: (√3 x³)′ =",
      "opts": [
       "3√3 x²",
       "√3 x²",
@@ -324,7 +442,7 @@
       "(3/2)√3 x²"
      ],
      "ans": "3√3 x²",
-     "why": "√3 is a constant: √3 × 3x².",
+     "why": "√3 is a number, a constant, so it stays.\n(x³)′ = 3x².\n(√3 x³)′ = √3 × 3x² = 3√3 x².\nTrap: do not differentiate √3 as if it were √x.",
      "clue": "Is √3 a variable?",
      "graded": true,
      "level": 2,
@@ -334,11 +452,11 @@
     },
     {
      "kind": "blank",
-     "ask": "y = 9/x³. dy/dx at x = 3 = ___",
+     "ask": "Rewrite, differentiate, evaluate: y = 9/x³. dy/dx at x = 3 = ___",
      "a": [
       "-1/3"
      ],
-     "why": "dy/dx = −27/x⁴ = −27/81 = −1/3.",
+     "why": "Rewrite: y = 9x⁻³.\ndy/dx = 9 × (−3)x⁻⁴ = −27/x⁴.\nAt x = 3: 3⁴ = 81.\n−27/81 = −1/3.",
      "clue": "Write y = 9x⁻³.",
      "num": true,
      "graded": true,
@@ -349,11 +467,11 @@
     },
     {
      "kind": "blank",
-     "ask": "y = x³ + (1/2)x² − 2/√x. dy/dx at x = 1 = ___",
+     "ask": "Rewrite each term, then evaluate: y = x³ + (1/2)x² − 2/√x. dy/dx at x = 1 = ___",
      "a": [
       "5"
      ],
-     "why": "dy/dx = 3x² + x + x^(−3/2) = 3 + 1 + 1 = 5.",
+     "why": "Rewrite: 2/√x = 2x^(−1/2).\n(x³)′ = 3x². ((1/2)x²)′ = x.\n(−2x^(−1/2))′ = −2 × (−1/2)x^(−3/2) = x^(−3/2).\ndy/dx = 3x² + x + x^(−3/2).\nAt x = 1: 3 + 1 + 1 = 5.",
      "clue": "Write 2/√x = 2x^(−1/2).",
      "num": true,
      "graded": true,
@@ -364,11 +482,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = ax² + 3x and f′(2) = 15. a = ___",
+     "ask": "Find the missing coefficient: f(x) = ax² + 3x and f′(2) = 15. a = ___",
      "a": [
       "3"
      ],
-     "why": "f′(x) = 2ax + 3. 4a + 3 = 15, so a = 3.",
+     "why": "Treat a as a constant: f′(x) = 2ax + 3.\nf′(2) = 4a + 3.\n4a + 3 = 15, so 4a = 12.\na = 3.\nCheck: f′(x) = 6x + 3, and 6(2) + 3 = 15. ✓",
      "clue": "Differentiate with a as a constant.",
      "num": true,
      "graded": true,
@@ -406,9 +524,10 @@
       "x²",
       "2"
      ],
-     "after": "f′g′ = 2x × 1 = 2x, not 3x². A product needs its own rule.",
+     "after": "f′ = 2x and g′ = 1, so f′ × g′ = 2x.\nBut (fg)′ = (x³)′ = 3x².\n2x ≠ 3x²: the derivative of a product is NOT the product of derivatives.\nA product needs its own rule.",
      "ref": "Activity 2.10",
-     "id": "g12.maths.u2.s2-1-4-3.21"
+     "id": "g12.maths.u2.s2-1-4-3.21",
+     "best": "2x"
     },
     {
      "kind": "read",
@@ -420,6 +539,42 @@
      "note": "First′ × second + first × second′.",
      "ref": "Theorem 2.4",
      "id": "g12.maths.u2.s2-1-4-3.22"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "title": "(fg)′ is not f′g′",
+     "vars": [
+      {
+       "k": "x",
+       "label": "x",
+       "min": -3,
+       "max": 3,
+       "step": 0.5,
+       "v": 2
+      }
+     ],
+     "formula": "3 * x * x",
+     "outs": [
+      [
+       "(fg)′ = (x³)′ = 3x²",
+       "3 * x * x",
+       "{v}"
+      ],
+      [
+       "f′g + fg′ = 2x · x + x² · 1",
+       "2 * x * x + x * x",
+       "{v}"
+      ],
+      [
+       "f′ × g′ = 2x × 1 (wrong)",
+       "2 * x",
+       "{v}"
+      ]
+     ],
+     "note": "f = x², g = x. The product rule always matches 3x². The product f′g′ does not.",
+     "added": true,
+     "id": "g12.maths.u2.s2-1-4-3.68"
     },
     {
      "kind": "name",
@@ -435,7 +590,7 @@
     },
     {
      "kind": "mcq",
-     "text": "g(x) = (x + 6)(x² + 4). g′(x) =",
+     "text": "Use the product rule: g(x) = (x + 6)(x² + 4). g′(x) =",
      "opts": [
       "3x² + 12x + 4",
       "2x",
@@ -443,7 +598,7 @@
       "x² + 12x + 4"
      ],
      "ans": "3x² + 12x + 4",
-     "why": "1 × (x² + 4) + (x + 6)(2x) = 3x² + 12x + 4.",
+     "why": "u = x + 6, u′ = 1. v = x² + 4, v′ = 2x.\nu′v = x² + 4.\nuv′ = (x + 6)(2x) = 2x² + 12x.\nAdd: 3x² + 12x + 4.\nTrap: 2x is only u′ × v′.",
      "clue": "Use f′g + fg′.",
      "graded": true,
      "level": 1,
@@ -466,7 +621,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = (x² − 2)(x³ + 4x). f′(x) =",
+     "text": "Use the product rule: f(x) = (x² − 2)(x³ + 4x). f′(x) =",
      "opts": [
       "5x⁴ + 6x² − 8",
       "5x⁴ + 2x² − 8",
@@ -474,7 +629,7 @@
       "5x⁴ + 6x² + 8"
      ],
      "ans": "5x⁴ + 6x² − 8",
-     "why": "2x(x³ + 4x) + (x² − 2)(3x² + 4) = 5x⁴ + 6x² − 8. (Expand to check: x⁵ + 2x³ − 8x.)",
+     "why": "u = x² − 2, u′ = 2x. v = x³ + 4x, v′ = 3x² + 4.\nu′v = 2x⁴ + 8x².\nuv′ = 3x⁴ + 4x² − 6x² − 8 = 3x⁴ − 2x² − 8.\nAdd: 5x⁴ + 6x² − 8.\nCheck by expanding: x⁵ + 2x³ − 8x has derivative 5x⁴ + 6x² − 8. ✓",
      "clue": "Find u′ and v′ first.",
      "graded": true,
      "level": 2,
@@ -484,11 +639,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = (3x − 1)(x² + 2). f′(1) = ___",
+     "ask": "Use the product rule, then evaluate: f(x) = (3x − 1)(x² + 2). f′(1) = ___",
      "a": [
       "13"
      ],
-     "why": "f′ = 3(x² + 2) + (3x − 1)(2x). At 1: 9 + 4 = 13.",
+     "why": "u = 3x − 1, u′ = 3. v = x² + 2, v′ = 2x.\nf′(x) = 3(x² + 2) + (3x − 1)(2x).\nAt x = 1: 3(3) + (2)(2).\n= 9 + 4 = 13.",
      "clue": "Use the rule, then x = 1.",
      "num": true,
      "graded": true,
@@ -499,7 +654,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = x(x² + √x). f′(x) =",
+     "text": "Differentiate the product (expand first): f(x) = x(x² + √x). f′(x) =",
      "opts": [
       "3x² + (3/2)√x",
       "3x² + √x",
@@ -507,7 +662,7 @@
       "3x² + 1/(2√x)"
      ],
      "ans": "3x² + (3/2)√x",
-     "why": "Expand: x³ + x^(3/2). Derivative 3x² + (3/2)x^(1/2).",
+     "why": "Expand: x · x² + x · x^(1/2) = x³ + x^(3/2).\n(x³)′ = 3x².\n(x^(3/2))′ = (3/2)x^(1/2) = (3/2)√x.\nf′(x) = 3x² + (3/2)√x.",
      "clue": "Expanding first is quicker here.",
      "graded": true,
      "level": 2,
@@ -517,11 +672,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = (x² + 1)(x² − 1). f′(2) = ___",
+     "ask": "Differentiate a product, then evaluate: f(x) = (x² + 1)(x² − 1). f′(2) = ___",
      "a": [
       "32"
      ],
-     "why": "Expand: x⁴ − 1, so f′ = 4x³ = 32. (Product rule gives 2x(x² − 1) + (x² + 1)2x = 4x³.)",
+     "why": "Quick way: expand, (x² + 1)(x² − 1) = x⁴ − 1.\nf′(x) = 4x³.\nf′(2) = 4 × 8 = 32.\nProduct rule check: 2x(x² − 1) + (x² + 1)(2x) = 4x³. ✓",
      "clue": "Either rule or expand.",
      "num": true,
      "graded": true,
@@ -559,8 +714,9 @@
       "The answer doubles",
       "It becomes 0"
      ],
-     "after": "Subtraction is not commutative: the sign flips. Keep f′g − fg′.",
-     "id": "g12.maths.u2.s2-1-4-3.30"
+     "after": "fg′ − f′g = −(f′g − fg′).\nSubtraction is not commutative, so the sign flips.\nAlways start the top with f′g: derivative of the TOP first.",
+     "id": "g12.maths.u2.s2-1-4-3.30",
+     "best": "The sign of the answer flips"
     },
     {
      "kind": "read",
@@ -572,6 +728,32 @@
      ],
      "ref": "Theorem 2.5",
      "id": "g12.maths.u2.s2-1-4-3.31"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Simplify or use the quotient rule?",
+     "ask": "Tap each function. Exam tip: simplify first when the bottom is one term.",
+     "items": [
+      [
+       "(x³ + 3x)/x²",
+       "One-term bottom: simplify to x + 3/x, then differentiate."
+      ],
+      [
+       "2x⁴/√x",
+       "Simplify to 2x^(7/2). Power rule gives 7x^(5/2)."
+      ],
+      [
+       "(2x³ + 3)/(x − 5)",
+       "Two-term bottom: use the quotient rule."
+      ],
+      [
+       "1/(x² + 1)",
+       "Top is 1: use (1/g)′ = −g′/g²."
+      ]
+     ],
+     "added": true,
+     "id": "g12.maths.u2.s2-1-4-3.69"
     },
     {
      "kind": "name",
@@ -587,7 +769,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = 1/(x² + 1). f′(x) =",
+     "text": "Use the reciprocal rule: f(x) = 1/(x² + 1). f′(x) =",
      "opts": [
       "−2x/(x² + 1)²",
       "2x/(x² + 1)²",
@@ -595,7 +777,7 @@
       "−2x/(x² + 1)"
      ],
      "ans": "−2x/(x² + 1)²",
-     "why": "(1/g)′ = −g′/g² with g′ = 2x.",
+     "why": "(1/g)′ = −g′/g².\ng = x² + 1, so g′ = 2x.\nf′(x) = −2x/(x² + 1)².\nTrap: forgetting to square the bottom gives −2x/(x² + 1).",
      "clue": "Square the bottom.",
      "graded": true,
      "level": 1,
@@ -618,7 +800,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = (2x³ + 3)/(x − 5). f′(x) =",
+     "text": "Use the quotient rule: f(x) = (2x³ + 3)/(x − 5). f′(x) =",
      "opts": [
       "(4x³ − 30x² − 3)/(x − 5)²",
       "(4x³ − 30x² + 3)/(x − 5)²",
@@ -626,7 +808,7 @@
       "(8x³ − 30x² − 3)/(x − 5)²"
      ],
      "ans": "(4x³ − 30x² − 3)/(x − 5)²",
-     "why": "6x²(x − 5) − (2x³ + 3) = 4x³ − 30x² − 3.",
+     "why": "Top f = 2x³ + 3, f′ = 6x². Bottom g = x − 5, g′ = 1.\nf′g − fg′ = 6x²(x − 5) − (2x³ + 3).\n= 6x³ − 30x² − 2x³ − 3 = 4x³ − 30x² − 3.\nf′(x) = (4x³ − 30x² − 3)/(x − 5)².\nTrap: +3 forgets that the minus sign covers all of 2x³ + 3.",
      "clue": "Expand 6x²(x − 5) carefully.",
      "graded": true,
      "level": 2,
@@ -636,11 +818,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = (x³ + 3x)/x². f′(1) = ___",
+     "ask": "Simplify, differentiate, evaluate: f(x) = (x³ + 3x)/x². f′(1) = ___",
      "a": [
       "-2"
      ],
-     "why": "f′(x) = 1 − 3/x². At 1: 1 − 3 = −2.",
+     "why": "Simplify: x³/x² + 3x/x² = x + 3/x = x + 3x⁻¹.\nf′(x) = 1 − 3x⁻² = 1 − 3/x².\nf′(1) = 1 − 3 = −2.",
      "clue": "Simplify first: x + 3/x.",
      "num": true,
      "graded": true,
@@ -651,7 +833,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = 2x⁴/√x. f′(x) =",
+     "text": "Simplify the power, then differentiate: f(x) = 2x⁴/√x. f′(x) =",
      "opts": [
       "7x^(5/2)",
       "8x³",
@@ -659,7 +841,7 @@
       "4x^(5/2)"
      ],
      "ans": "7x^(5/2)",
-     "why": "2x⁴/x^(1/2) = 2x^(7/2), so f′ = 7x^(5/2).",
+     "why": "√x = x^(1/2), so 2x⁴/x^(1/2) = 2x^(4 − 1/2) = 2x^(7/2).\nPower rule: 2 × (7/2) = 7.\nPower: 7/2 − 1 = 5/2.\nf′(x) = 7x^(5/2).",
      "clue": "Simplify the power first.",
      "graded": true,
      "level": 2,
@@ -669,11 +851,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = x/(x + 1). f′(1) = ___",
+     "ask": "Use the quotient rule, then evaluate: f(x) = x/(x + 1). f′(1) = ___",
      "a": [
       "1/4"
      ],
-     "why": "f′ = ((x + 1) − x)/(x + 1)² = 1/(x + 1)². At 1: 1/4.",
+     "why": "Top x, top′ = 1. Bottom x + 1, bottom′ = 1.\nf′(x) = (1 · (x + 1) − x · 1)/(x + 1)² = 1/(x + 1)².\nf′(1) = 1/2² = 1/4.",
      "clue": "Top′ = 1, bottom′ = 1.",
      "num": true,
      "graded": true,
@@ -691,7 +873,7 @@
    "items": [
     {
      "kind": "mcq",
-     "text": "f(x) = x⁸:",
+     "text": "Use the power rule: f(x) = x⁸, f′(x) =",
      "opts": [
       "8x⁷",
       "8x⁸",
@@ -699,7 +881,7 @@
       "7x⁸"
      ],
      "ans": "8x⁷",
-     "why": "Power rule.",
+     "why": "Bring 8 down.\nPower 8 − 1 = 7.\nf′(x) = 8x⁷.",
      "clue": "n xⁿ⁻¹.",
      "graded": true,
      "level": 1,
@@ -709,7 +891,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = 10x¹⁵:",
+     "text": "Constant multiple and power rule: f(x) = 10x¹⁵, f′(x) =",
      "opts": [
       "150x¹⁴",
       "15x¹⁴",
@@ -717,7 +899,7 @@
       "10x¹⁴"
      ],
      "ans": "150x¹⁴",
-     "why": "10 × 15.",
+     "why": "Keep 10, bring 15 down: 10 × 15 = 150.\nPower 15 − 1 = 14.\nf′(x) = 150x¹⁴.",
      "clue": "k × n.",
      "graded": true,
      "level": 1,
@@ -727,7 +909,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = 3x⁻²⁰:",
+     "text": "Power rule with a negative power: f(x) = 3x⁻²⁰, f′(x) =",
      "opts": [
       "−60/x²¹",
       "−60/x¹⁹",
@@ -735,7 +917,7 @@
       "−20/x²¹"
      ],
      "ans": "−60/x²¹",
-     "why": "3(−20)x⁻²¹.",
+     "why": "3 × (−20) = −60.\nPower −20 − 1 = −21.\nf′(x) = −60x⁻²¹ = −60/x²¹.\nTrap: x¹⁹ comes from adding 1.",
      "clue": "Power −21.",
      "graded": true,
      "level": 2,
@@ -745,7 +927,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = 4x^(−3/2):",
+     "text": "Power rule with a fractional power: f(x) = 4x^(−3/2), f′(x) =",
      "opts": [
       "−6x^(−5/2)",
       "−6x^(−1/2)",
@@ -753,7 +935,7 @@
       "−2x^(−5/2)"
      ],
      "ans": "−6x^(−5/2)",
-     "why": "4(−3/2) = −6; −3/2 − 1 = −5/2.",
+     "why": "4 × (−3/2) = −6.\nPower −3/2 − 1 = −3/2 − 2/2 = −5/2.\nf′(x) = −6x^(−5/2).",
      "clue": "1 = 2/2.",
      "graded": true,
      "level": 3,
@@ -763,11 +945,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = x⁻⁹. f′(1/3) = ___",
+     "ask": "Differentiate, then evaluate: f(x) = x⁻⁹. f′(1/3) = ___",
      "a": [
       "-531441"
      ],
-     "why": "−9 × 3¹⁰.",
+     "why": "f′(x) = −9x⁻¹⁰.\n(1/3)⁻¹⁰ = 3¹⁰ = 59 049.\nf′(1/3) = −9 × 59 049 = −531 441.",
      "clue": "(1/3)⁻¹⁰ = 3¹⁰.",
      "num": true,
      "graded": true,
@@ -783,11 +965,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "f(x) = x⁴ − 3x² + 2. f′(3) = ___",
+     "ask": "Differentiate, then evaluate: f(x) = x⁴ − 3x² + 2. f′(3) = ___",
      "a": [
       "90"
      ],
-     "why": "108 − 18.",
+     "why": "f′(x) = 4x³ − 6x.\nf′(3) = 4(27) − 6(3) = 108 − 18 = 90.",
      "clue": "Term by term.",
      "num": true,
      "graded": true,
@@ -798,7 +980,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = 5x⁴ + √x:",
+     "text": "Differentiate term by term: f(x) = 5x⁴ + √x, f′(x) =",
      "opts": [
       "20x³ + 1/(2√x)",
       "20x³ + √x/2",
@@ -806,7 +988,7 @@
       "20x³ + 2√x"
      ],
      "ans": "20x³ + 1/(2√x)",
-     "why": "√x = x^(1/2).",
+     "why": "(5x⁴)′ = 20x³.\n√x = x^(1/2), so (√x)′ = (1/2)x^(−1/2) = 1/(2√x).\nf′(x) = 20x³ + 1/(2√x).\nTrap: √x/2 keeps the power 1/2.",
      "clue": "Rewrite √x.",
      "graded": true,
      "level": 2,
@@ -816,7 +998,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = x + 1/x²:",
+     "text": "Differentiate term by term: f(x) = x + 1/x², f′(x) =",
      "opts": [
       "1 − 2/x³",
       "1 + 2/x³",
@@ -824,7 +1006,7 @@
       "1 − 1/x³"
      ],
      "ans": "1 − 2/x³",
-     "why": "1/x² = x⁻².",
+     "why": "(x)′ = 1.\n1/x² = x⁻², so its derivative is −2x⁻³ = −2/x³.\nf′(x) = 1 − 2/x³.",
      "clue": "Rewrite 1/x².",
      "graded": true,
      "level": 2,
@@ -834,7 +1016,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = (1/6)x⁶ − 2x − 4:",
+     "text": "Differentiate term by term: f(x) = (1/6)x⁶ − 2x − 4, f′(x) =",
      "opts": [
       "x⁵ − 2",
       "x⁵ − 2x",
@@ -842,7 +1024,7 @@
       "x⁵ − 6"
      ],
      "ans": "x⁵ − 2",
-     "why": "(1/6)(6x⁵) = x⁵.",
+     "why": "((1/6)x⁶)′ = (1/6)(6x⁵) = x⁵.\n(−2x)′ = −2.\n(−4)′ = 0.\nf′(x) = x⁵ − 2.",
      "clue": "Constant term → 0.",
      "graded": true,
      "level": 1,
@@ -852,7 +1034,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = x¹⁰ + 1/x + 6x^(5/3):",
+     "text": "Differentiate term by term: f(x) = x¹⁰ + 1/x + 6x^(5/3), f′(x) =",
      "opts": [
       "10x⁹ − 1/x² + 10x^(2/3)",
       "10x⁹ + 1/x² + 10x^(2/3)",
@@ -860,7 +1042,7 @@
       "10x⁹ − 1/x + 10x^(2/3)"
      ],
      "ans": "10x⁹ − 1/x² + 10x^(2/3)",
-     "why": "6 × 5/3 = 10.",
+     "why": "(x¹⁰)′ = 10x⁹.\n1/x = x⁻¹, derivative −x⁻² = −1/x².\n(6x^(5/3))′ = 6 × (5/3)x^(2/3) = 10x^(2/3).\nf′(x) = 10x⁹ − 1/x² + 10x^(2/3).",
      "clue": "Each term separately.",
      "graded": true,
      "level": 3,
@@ -875,7 +1057,7 @@
    "items": [
     {
      "kind": "mcq",
-     "text": "f(x) = (1/10)x¹⁰:",
+     "text": "Constant multiple rule: f(x) = (1/10)x¹⁰, f′(x) =",
      "opts": [
       "x⁹",
       "10x⁹",
@@ -883,7 +1065,7 @@
       "(1/10)x⁹"
      ],
      "ans": "x⁹",
-     "why": "(1/10)(10x⁹).",
+     "why": "(x¹⁰)′ = 10x⁹.\nMultiply by 1/10: (1/10)(10x⁹) = x⁹.",
      "clue": "Constant multiple.",
      "graded": true,
      "level": 1,
@@ -893,7 +1075,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = 3x^(4/3):",
+     "text": "Constant multiple rule: f(x) = 3x^(4/3), f′(x) =",
      "opts": [
       "4x^(1/3)",
       "4x^(4/3)",
@@ -901,7 +1083,7 @@
       "4x^(7/3)"
      ],
      "ans": "4x^(1/3)",
-     "why": "3 × 4/3 = 4.",
+     "why": "3 × 4/3 = 4.\nPower 4/3 − 1 = 1/3.\nf′(x) = 4x^(1/3).",
      "clue": "4/3 − 1 = 1/3.",
      "graded": true,
      "level": 2,
@@ -911,7 +1093,7 @@
     },
     {
      "kind": "pick",
-     "text": "y = 2√x. Values of dy/dx at x = 1 and x = 4:",
+     "text": "y = 2√x. Find dy/dx at x = 1 and at x = 4:",
      "pool": [
       "1",
       "1/2",
@@ -922,7 +1104,7 @@
       "1",
       "1/2"
      ],
-     "why": "dy/dx = 1/√x.",
+     "why": "dy/dx = 2 × (1/2)x^(−1/2) = 1/√x.\nAt x = 1: 1/√1 = 1.\nAt x = 4: 1/√4 = 1/2.",
      "clue": "(2√x)′ = 1/√x.",
      "graded": true,
      "level": 2,
@@ -937,7 +1119,7 @@
    "items": [
     {
      "kind": "mcq",
-     "text": "(2x + 1)(x² + x − 5):",
+     "text": "Use the product rule: f(x) = (2x + 1)(x² + x − 5), f′(x) =",
      "opts": [
       "6x² + 6x − 9",
       "6x² + 6x + 9",
@@ -945,7 +1127,7 @@
       "4x² + 4x + 1"
      ],
      "ans": "6x² + 6x − 9",
-     "why": "u′v + uv′.",
+     "why": "u′ = 2, v′ = 2x + 1.\nu′v = 2x² + 2x − 10.\nuv′ = (2x + 1)² = 4x² + 4x + 1.\nAdd: 6x² + 6x − 9.",
      "clue": "Product rule.",
      "graded": true,
      "level": 2,
@@ -955,7 +1137,7 @@
     },
     {
      "kind": "mcq",
-     "text": "(x² − 2)(x³ + 4x):",
+     "text": "Use the product rule: f(x) = (x² − 2)(x³ + 4x), f′(x) =",
      "opts": [
       "5x⁴ + 6x² − 8",
       "5x⁴ − 6x² − 8",
@@ -963,7 +1145,7 @@
       "5x⁴ + 8"
      ],
      "ans": "5x⁴ + 6x² − 8",
-     "why": "u′v + uv′.",
+     "why": "u′v = 2x(x³ + 4x) = 2x⁴ + 8x².\nuv′ = (x² − 2)(3x² + 4) = 3x⁴ − 2x² − 8.\nAdd: 5x⁴ + 6x² − 8.",
      "clue": "Product rule.",
      "graded": true,
      "level": 2,
@@ -973,7 +1155,7 @@
     },
     {
      "kind": "mcq",
-     "text": "(x + 2√x)(x² − 2):",
+     "text": "Use the product rule: f(x) = (x + 2√x)(x² − 2), f′(x) =",
      "opts": [
       "3x² + 5x√x − 2 − 2/√x",
       "3x² + 4x√x − 2",
@@ -981,7 +1163,7 @@
       "3x² + 5x√x + 2 − 2/√x"
      ],
      "ans": "3x² + 5x√x − 2 − 2/√x",
-     "why": "(1 + 1/√x)(x² − 2) + (x + 2√x)(2x).",
+     "why": "u = x + 2√x, u′ = 1 + 1/√x. v = x² − 2, v′ = 2x.\nu′v = x² − 2 + x√x − 2/√x (since x²/√x = x√x).\nuv′ = 2x² + 4x√x.\nAdd: 3x² + 5x√x − 2 − 2/√x.",
      "clue": "u′ = 1 + 1/√x.",
      "graded": true,
      "level": 3,
@@ -996,7 +1178,7 @@
    "items": [
     {
      "kind": "mcq",
-     "text": "1/(x² + 1):",
+     "text": "Use the reciprocal rule: f(x) = 1/(x² + 1), f′(x) =",
      "opts": [
       "−2x/(x² + 1)²",
       "2x/(x² + 1)²",
@@ -1004,7 +1186,7 @@
       "1/(2x)"
      ],
      "ans": "−2x/(x² + 1)²",
-     "why": "−g′/g².",
+     "why": "(1/g)′ = −g′/g² with g = x² + 1, g′ = 2x.\nf′(x) = −2x/(x² + 1)².",
      "clue": "Reciprocal rule.",
      "graded": true,
      "level": 1,
@@ -1014,7 +1196,7 @@
     },
     {
      "kind": "mcq",
-     "text": "(2x³ + 3)/(x − 5):",
+     "text": "Use the quotient rule: f(x) = (2x³ + 3)/(x − 5), f′(x) =",
      "opts": [
       "(4x³ − 30x² − 3)/(x − 5)²",
       "(4x³ − 30x² + 3)/(x − 5)²",
@@ -1022,7 +1204,7 @@
       "(2x³ − 3)/(x − 5)²"
      ],
      "ans": "(4x³ − 30x² − 3)/(x − 5)²",
-     "why": "Quotient rule.",
+     "why": "f′g − fg′ = 6x²(x − 5) − (2x³ + 3)(1).\n= 4x³ − 30x² − 3.\nDivide by (x − 5)².",
      "clue": "f′g − fg′.",
      "graded": true,
      "level": 2,
@@ -1032,7 +1214,7 @@
     },
     {
      "kind": "mcq",
-     "text": "(x³ + 3x)/x²:",
+     "text": "Simplify, then differentiate: f(x) = (x³ + 3x)/x², f′(x) =",
      "opts": [
       "1 − 3/x²",
       "1 + 3/x²",
@@ -1040,7 +1222,7 @@
       "1 − 3/x"
      ],
      "ans": "1 − 3/x²",
-     "why": "x + 3x⁻¹.",
+     "why": "Simplify: x + 3x⁻¹.\nDifferentiate: 1 − 3x⁻².\nf′(x) = 1 − 3/x².",
      "clue": "Simplify first.",
      "graded": true,
      "level": 2,
@@ -1050,7 +1232,7 @@
     },
     {
      "kind": "mcq",
-     "text": "2x⁴/√x:",
+     "text": "Simplify, then differentiate: f(x) = 2x⁴/√x, f′(x) =",
      "opts": [
       "7x^(5/2)",
       "8x³",
@@ -1058,7 +1240,7 @@
       "2x^(5/2)"
      ],
      "ans": "7x^(5/2)",
-     "why": "2x^(7/2) → 7x^(5/2).",
+     "why": "2x⁴/x^(1/2) = 2x^(7/2).\n2 × 7/2 = 7, power 5/2.\nf′(x) = 7x^(5/2).",
      "clue": "Simplify first.",
      "graded": true,
      "level": 2,
@@ -1072,7 +1254,7 @@
  "test": [
   {
    "kind": "mcq",
-   "text": "(x²⁴)′ =",
+   "text": "Use the power rule: (x²⁴)′ =",
    "opts": [
     "24x²³",
     "24x²⁴",
@@ -1080,7 +1262,7 @@
     "23x²⁴"
    ],
    "ans": "24x²³",
-   "why": "power rule.",
+   "why": "Bring 24 down.\nPower 24 − 1 = 23.\n(x²⁴)′ = 24x²³.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -1089,11 +1271,11 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = 2x³ − 5x. f′(2) = ___",
+   "ask": "Differentiate, then evaluate: f(x) = 2x³ − 5x. f′(2) = ___",
    "a": [
     "19"
    ],
-   "why": "24 − 5.",
+   "why": "f′(x) = 6x² − 5.\nf′(2) = 6(4) − 5 = 24 − 5 = 19.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -1103,12 +1285,12 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = 6√x. f′(4) = ___",
+   "ask": "Differentiate, then evaluate: f(x) = 6√x. f′(4) = ___",
    "a": [
     "3/2",
     "1.5"
    ],
-   "why": "3/√4.",
+   "why": "f(x) = 6x^(1/2), so f′(x) = 3x^(−1/2) = 3/√x.\nf′(4) = 3/2 = 1.5.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -1118,11 +1300,11 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = (x + 1)(x² − 3). f′(1) = ___",
+   "ask": "Use the product rule, then evaluate: f(x) = (x + 1)(x² − 3). f′(1) = ___",
    "a": [
     "2"
    ],
-   "why": "f′ = (x² − 3) + (x + 1)(2x). At 1: −2 + 4 = 2.",
+   "why": "f′(x) = 1 · (x² − 3) + (x + 1)(2x).\nAt x = 1: (1 − 3) + (2)(2).\n= −2 + 4 = 2.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -1132,11 +1314,11 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = (x + 3)/(x − 1). f′(2) = ___",
+   "ask": "Use the quotient rule, then evaluate: f(x) = (x + 3)/(x − 1). f′(2) = ___",
    "a": [
     "-4"
    ],
-   "why": "((x − 1) − (x + 3))/(x − 1)² = −4/(x − 1)². At 2: −4.",
+   "why": "Top′ = 1, bottom′ = 1.\nf′g − fg′ = (x − 1) − (x + 3) = −4.\nf′(x) = −4/(x − 1)².\nf′(2) = −4/1² = −4.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -1179,7 +1361,7 @@
     },
     {
      "kind": "mcq",
-     "text": "(x⁻²)′ = ?",
+     "text": "Use the power rule: (x⁻²)′ = ?",
      "opts": [
       "−2x⁻³",
       "−2x⁻¹",
@@ -1187,7 +1369,7 @@
       "−x⁻³"
      ],
      "ans": "−2x⁻³",
-     "why": "−2 − 1 = −3.",
+     "why": "Bring −2 down in front.\nLower the power by 1: −2 − 1 = −3.\n(x⁻²)′ = −2x⁻³.\nTrap: −2x⁻¹ adds 1 to the power.",
      "clue": "Subtract 1 from the power.",
      "graded": true,
      "level": 1,

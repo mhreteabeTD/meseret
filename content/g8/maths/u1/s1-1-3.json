@@ -59,9 +59,10 @@
       "0 and 0",
       "10 and 10"
      ],
-     "after": "Both are 5 units from 0. Distance has no direction, so it is never negative.",
+     "after": "From 0 to 5 is 5 steps to the right.\nFrom 0 to −5 is 5 steps to the left.\nBoth distances are 5. Distance has no direction, so it is never negative.\n(\"5 and −5\" mixes up the position −5 with its distance 5.)",
      "id": "g8.maths.u1.s1-1-3.1",
-     "ref": "Activity 1.1"
+     "ref": "Activity 1.1",
+     "best": "5 and 5"
     },
     {
      "kind": "numline",
@@ -96,24 +97,31 @@
      "step": "read",
      "title": "Absolute value",
      "paras": [
-      "The absolute value of a number is its distance from zero. Direction does not count.",
-      "If the absolute value is 5, the point is 5 units from zero."
-     ],
-     "table": [
-      [
-       "Definition 1.2",
-       "|x| ="
-      ],
-      [
-       "if x ≥ 0",
-       "x"
-      ],
-      [
-       "if x < 0",
-       "−x"
-      ]
+      "The absolute value of a number is its distance from zero.",
+      "Direction does not count.",
+      "If the absolute value is 5, the point is 5 units from zero.",
+      "Definition 1.2 has two cases. Tap each case below."
      ],
      "id": "g8.maths.u1.s1-1-3.3"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Definition 1.2: two cases",
+     "ask": "Tap each case.",
+     "need": 2,
+     "items": [
+      [
+       "If x ≥ 0: |x| = x",
+       "A positive number or 0 stays the same. |3/4| = 3/4 and |0| = 0."
+      ],
+      [
+       "If x < 0: |x| = −x",
+       "A negative number loses its minus sign. |−5| = −(−5) = 5."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-1-3.33",
+     "added": true
     },
     {
      "kind": "name",
@@ -132,7 +140,7 @@
      "step": "check",
      "graded": true,
      "needs": "math.integer-signs",
-     "text": "What is |−15|?",
+     "text": "Absolute value: what is |−15|?",
      "opts": [
       "15",
       "−15",
@@ -140,7 +148,7 @@
       "1/15"
      ],
      "ans": "15",
-     "why": "|−15| = −(−15) = 15.",
+     "why": "|x| is the distance of x from 0.\n−15 is 15 units left of 0.\n−15 < 0, so |−15| = −(−15) = 15.\nAnswer: 15. (A distance is never negative, so −15 is wrong.)",
      "clue": "Distance is never negative.",
      "id": "g8.maths.u1.s1-1-3.5",
      "ref": "Example 1.7",
@@ -167,11 +175,11 @@
       "t": "abs",
       "form": "in"
      },
-     "ask": "|8 − 3| = ___",
+     "ask": "Absolute value: work inside the bars first. |8 − 3| = ___",
      "a": [
       "5"
      ],
-     "why": "8 − 3 = 5 and 5 > 0.",
+     "why": "Work inside the bars: 8 − 3 = 5.\n5 ≥ 0, so |5| = 5.\nAnswer: 5.",
      "clue": "Work inside the bars first.",
      "id": "g8.maths.u1.s1-1-3.7",
      "level": 1
@@ -185,11 +193,11 @@
       "t": "abs",
       "form": "in"
      },
-     "ask": "|0 − 10| = ___",
+     "ask": "Absolute value: work inside the bars first. |0 − 10| = ___",
      "a": [
       "10"
      ],
-     "why": "0 − 10 = −10, and |−10| = 10.",
+     "why": "Work inside the bars: 0 − 10 = −10.\n−10 < 0, so |−10| = −(−10) = 10.\nAnswer: 10.",
      "clue": "Work inside the bars first.",
      "id": "g8.maths.u1.s1-1-3.8",
      "level": 1
@@ -203,13 +211,13 @@
       "t": "abs",
       "form": "sum"
      },
-     "ask": "|−13| − |−8| + |7| = ___",
+     "ask": "Absolute values: find each one, then calculate. |−13| − |−8| + |7| = ___",
      "a": [
       "12"
      ],
-     "why": "13 − 8 + 7 = 12.",
+     "why": "|−13| = 13.\n|−8| = 8.\n|7| = 7.\nNow calculate: 13 − 8 + 7 = 5 + 7 = 12.",
      "clue": "Find each absolute value first.",
-     "worked": "|−13| = 13, |−8| = 8, |7| = 7. Then 13 − 8 + 7 = 12.",
+     "worked": "|−13| = 13, |−8| = 8 and |7| = 7.\nReplace each one: 13 − 8 + 7.\n13 − 8 = 5, then 5 + 7 = 12.",
      "id": "g8.maths.u1.s1-1-3.9",
      "level": 2
     },
@@ -219,13 +227,13 @@
      "graded": true,
      "num": true,
      "needs": "math.integer-signs",
-     "ask": "If x = −5, then 5x − |x − 3| = ___",
+     "ask": "Evaluate with absolute value: if x = −5, then 5x − |x − 3| = ___",
      "a": [
       "-33"
      ],
-     "why": "5(−5) − |−8| = −25 − 8 = −33.",
+     "why": "Put x = −5: 5x = 5 × (−5) = −25.\nInside the bars: x − 3 = −5 − 3 = −8.\n|−8| = 8.\nSo 5x − |x − 3| = −25 − 8 = −33.",
      "clue": "Put −5 in for x. Work inside the bars first.",
-     "worked": "5x = 5 × (−5) = −25. x − 3 = −8, and |−8| = 8. So −25 − 8 = −33.",
+     "worked": "5x = 5 × (−5) = −25.\nx − 3 = −5 − 3 = −8, and |−8| = 8.\n−25 − 8 = −33.",
      "id": "g8.maths.u1.s1-1-3.10",
      "level": 2
     },
@@ -233,11 +241,11 @@
      "kind": "blank",
      "graded": true,
      "num": true,
-     "ask": "If x = −4 and y = 3, then |x| − |y| + |x + y| = ___",
+     "ask": "Evaluate with absolute value: if x = −4 and y = 3, then |x| − |y| + |x + y| = ___",
      "a": [
       "2"
      ],
-     "why": "|x| = |−4| = 4. |y| = |3| = 3. x + y = −4 + 3 = −1, so |x + y| = 1. Then 4 − 3 + 1 = 2.",
+     "why": "|x| = |−4| = 4.\n|y| = |3| = 3.\nx + y = −4 + 3 = −1, so |x + y| = 1.\nNow 4 − 3 + 1 = 2.\n(Careful: |x + y| is not |x| + |y|. Work inside first.)",
      "clue": "Put the numbers in. Work inside each pair of bars first.",
      "step": "challenge",
      "level": 3,
@@ -270,8 +278,9 @@
       "None",
       "Many"
      ],
-     "after": "Two: 8 to the right and −8 to the left.",
-     "id": "g8.maths.u1.s1-1-3.11"
+     "after": "Go 8 steps right from 0: you reach 8.\nGo 8 steps left from 0: you reach −8.\nSo two numbers are exactly 8 units from 0: 8 and −8.",
+     "id": "g8.maths.u1.s1-1-3.11",
+     "best": "2"
     },
     {
      "kind": "numline",
@@ -304,27 +313,34 @@
      "title": "Equations with absolute value",
      "paras": [
       "|x| = 8 means x is 8 units from 0.",
-      "The line has two such points. So x = 8 or x = −8."
-     ],
-     "table": [
-      [
-       "|x| = a",
-       "Number of solutions"
-      ],
-      [
-       "a > 0",
-       "Two: x = a and x = −a"
-      ],
-      [
-       "a = 0",
-       "One: x = 0"
-      ],
-      [
-       "a < 0",
-       "None"
-      ]
+      "The line has two such points.",
+      "So x = 8 or x = −8.",
+      "How many solutions does |x| = a have? Tap each case below."
      ],
      "id": "g8.maths.u1.s1-1-3.13"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Solutions of |x| = a",
+     "ask": "Tap each case.",
+     "need": 3,
+     "items": [
+      [
+       "a > 0: two solutions",
+       "x = a or x = −a. |x| = 8 gives x = 8 or x = −8."
+      ],
+      [
+       "a = 0: one solution",
+       "Only 0 is 0 units from 0. |x| = 0 gives x = 0."
+      ],
+      [
+       "a < 0: no solution",
+       "A distance is never negative. |x| = −3 has no solution."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-1-3.34",
+     "added": true
     },
     {
      "kind": "name",
@@ -346,7 +362,7 @@
      "kind": "sort",
      "step": "check",
      "graded": true,
-     "title": "How many solutions?",
+     "title": "Absolute value equations: how many solutions?",
      "bins": [
       "Two",
       "One",
@@ -379,7 +395,7 @@
        "−1/2 < 0."
       ]
      ],
-     "why": "Look at the sign of the number after the =.",
+     "why": "Look at the number after the =.\nPositive (13 and 3/5): two solutions, one on each side of 0.\nZero: one solution, x = 0.\nNegative (−6 and −1/2): no solution, because a distance is never negative.",
      "clue": "Can a distance be negative?",
      "id": "g8.maths.u1.s1-1-3.15",
      "ref": "Example 1.9",
@@ -392,7 +408,7 @@
      "gen": {
       "t": "abseq"
      },
-     "text": "Tap all solutions of |x| = 8.",
+     "text": "Solve the absolute value equation: tap all solutions of |x| = 8.",
      "pool": [
       "8",
       "−8",
@@ -404,7 +420,7 @@
       "8",
       "−8"
      ],
-     "why": "8 and −8 are both 8 units from 0.",
+     "why": "|x| = 8 means x is 8 units from 0.\n8 units right of 0 is 8.\n8 units left of 0 is −8.\nSolutions: x = 8 or x = −8. (16 and −16 are 16 units from 0.)",
      "clue": "There are two of them.",
      "id": "g8.maths.u1.s1-1-3.16",
      "level": 1
@@ -413,7 +429,7 @@
      "kind": "pick",
      "step": "practise",
      "graded": true,
-     "text": "Tap all numbers whose absolute value is 3.5.",
+     "text": "Absolute value: tap all numbers whose absolute value is 3.5.",
      "pool": [
       "3.5",
       "−3.5",
@@ -424,7 +440,7 @@
       "3.5",
       "−3.5"
      ],
-     "why": "|3.5| = |−3.5| = 3.5.",
+     "why": "We need numbers 3.5 units from 0.\nRight of 0: 3.5. Left of 0: −3.5.\nCheck: |3.5| = 3.5 and |−3.5| = 3.5.\n0 has |0| = 0 and 7 has |7| = 7, so they do not fit.",
      "clue": "One on each side of 0.",
      "id": "g8.maths.u1.s1-1-3.17",
      "ref": "Exercise 1.3 Q2 a",
@@ -437,7 +453,7 @@
      "gen": {
       "t": "abseq"
      },
-     "text": "Solve |x| = −6.",
+     "text": "Solve the absolute value equation: |x| = −6.",
      "opts": [
       "x = 6",
       "x = −6",
@@ -445,7 +461,7 @@
       "No solution"
      ],
      "ans": "No solution",
-     "why": "Absolute value is never negative.",
+     "why": "|x| is a distance, so |x| is never negative.\n−6 is negative.\nNo number has an absolute value of −6.\nSo there is no solution. (x = −6 is tempting, but |−6| = 6, not −6.)",
      "clue": "Is −6 a possible distance?",
      "id": "g8.maths.u1.s1-1-3.18",
      "level": 1
@@ -458,7 +474,7 @@
       "t": "abseq",
       "shift": true
      },
-     "text": "Tap all solutions of |x + 4| = 10.",
+     "text": "Solve the absolute value equation: tap all solutions of |x + 4| = 10.",
      "pool": [
       "6",
       "−6",
@@ -469,9 +485,9 @@
       "6",
       "−14"
      ],
-     "why": "x + 4 = 10 gives 6; x + 4 = −10 gives −14.",
+     "why": "The inside, x + 4, is 10 units from 0.\nSo x + 4 = 10 or x + 4 = −10.\nx + 4 = 10 gives x = 10 − 4 = 6.\nx + 4 = −10 gives x = −10 − 4 = −14.\nCheck: |6 + 4| = 10 and |−14 + 4| = |−10| = 10.",
      "clue": "x + 4 must be 10 or −10.",
-     "worked": "x + 4 = 10, so x = 6. Or x + 4 = −10, so x = −14.",
+     "worked": "x + 4 = 10, so x = 6.\nOr x + 4 = −10, so x = −14.\nCheck: |6 + 4| = |10| = 10 and |−14 + 4| = |−10| = 10.",
      "id": "g8.maths.u1.s1-1-3.19",
      "ref": "Challenge, Exercise 1.3 Q6 a",
      "level": 2
@@ -479,7 +495,7 @@
     {
      "kind": "pick",
      "graded": true,
-     "text": "Tap all solutions of |2x − 1| = 5.",
+     "text": "Solve the absolute value equation: tap all solutions of |2x − 1| = 5.",
      "pool": [
       "3",
       "−2",
@@ -490,7 +506,7 @@
       "3",
       "−2"
      ],
-     "why": "2x − 1 = 5 gives 2x = 6, so x = 3. Or 2x − 1 = −5 gives 2x = −4, so x = −2.",
+     "why": "The inside, 2x − 1, must be 5 or −5.\n2x − 1 = 5: 2x = 6, so x = 3.\n2x − 1 = −5: 2x = −4, so x = −2.\nCheck: |2 × 3 − 1| = |5| = 5 and |2 × (−2) − 1| = |−5| = 5.",
      "clue": "The inside, 2x − 1, must be 5 or −5. Solve both.",
      "step": "challenge",
      "level": 3,
@@ -508,7 +524,7 @@
      "kind": "match",
      "step": "exercise",
      "graded": true,
-     "title": "Match x with |x|",
+     "title": "Absolute value: match each x with |x|",
      "pairs": [
       [
        "−7",
@@ -527,7 +543,7 @@
        "2/3"
       ]
      ],
-     "why": "|x| is the distance from 0.",
+     "why": "|x| is the distance of x from 0.\n|−7| = 7 and |−2/3| = 2/3: negatives lose the minus sign.\n|3/5| = 3/5: positives stay the same.\n|0| = 0.",
      "clue": "Drop the minus sign.",
      "id": "g8.maths.u1.s1-1-3.20",
      "ref": "Q1",
@@ -537,7 +553,7 @@
      "kind": "pick",
      "step": "exercise",
      "graded": true,
-     "text": "All rational numbers with absolute value 4/7.",
+     "text": "Absolute value: tap all rational numbers with absolute value 4/7.",
      "pool": [
       "4/7",
       "−4/7",
@@ -548,7 +564,7 @@
       "4/7",
       "−4/7"
      ],
-     "why": "4/7 and −4/7 are both 4/7 from 0.",
+     "why": "We need numbers 4/7 units from 0.\nRight of 0: 4/7. Left of 0: −4/7.\n7/4 is a different number: |7/4| = 7/4.\nAnswer: 4/7 and −4/7.",
      "clue": "One on each side of 0.",
      "id": "g8.maths.u1.s1-1-3.21",
      "ref": "Q2 b",
@@ -559,11 +575,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "|−5| + |5| = ___",
+     "ask": "Absolute values: find each one, then add. |−5| + |5| = ___",
      "a": [
       "10"
      ],
-     "why": "5 + 5 = 10.",
+     "why": "|−5| = 5.\n|5| = 5.\n5 + 5 = 10.",
      "clue": "Find each absolute value.",
      "id": "g8.maths.u1.s1-1-3.22",
      "ref": "Q3 a",
@@ -574,11 +590,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "|−8 + 5| = ___",
+     "ask": "Absolute value: work inside the bars first. |−8 + 5| = ___",
      "a": [
       "3"
      ],
-     "why": "−8 + 5 = −3 and |−3| = 3.",
+     "why": "Inside the bars: −8 + 5 = −3.\n−3 < 0, so |−3| = 3.\nAnswer: 3. (|−8| + |5| = 13 is a different calculation.)",
      "clue": "Add inside the bars first.",
      "id": "g8.maths.u1.s1-1-3.23",
      "ref": "Q3 d",
@@ -589,11 +605,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "If x = 3, |x| − x + 9 = ___",
+     "ask": "Evaluate with absolute value: if x = 3, then |x| − x + 9 = ___",
      "a": [
       "9"
      ],
-     "why": "3 − 3 + 9 = 9.",
+     "why": "Put x = 3: |x| = |3| = 3.\nSo |x| − x + 9 = 3 − 3 + 9.\n3 − 3 = 0, and 0 + 9 = 9.",
      "clue": "Put 3 in for x.",
      "id": "g8.maths.u1.s1-1-3.24",
      "ref": "Q4 b",
@@ -603,7 +619,7 @@
      "kind": "pick",
      "step": "exercise",
      "graded": true,
-     "text": "Solve |x| = 3/5.",
+     "text": "Solve the absolute value equation: |x| = 3/5.",
      "pool": [
       "3/5",
       "−3/5",
@@ -614,7 +630,7 @@
       "3/5",
       "−3/5"
      ],
-     "why": "3/5 > 0, so two solutions.",
+     "why": "3/5 > 0, so there are two solutions.\nx is 3/5 units from 0.\nRight of 0: 3/5. Left of 0: −3/5.\nSolutions: x = 3/5 or x = −3/5.",
      "clue": "Two numbers, 3/5 from 0.",
      "id": "g8.maths.u1.s1-1-3.25",
      "ref": "Q5 b",
@@ -633,11 +649,11 @@
     "t": "abs",
     "level": 1
    },
-   "ask": "|−3 + 6| − |−3| = ___",
+   "ask": "Absolute values: work inside the bars first. |−3 + 6| − |−3| = ___",
    "a": [
     "0"
    ],
-   "why": "|3| − 3 = 0.",
+   "why": "Inside the first bars: −3 + 6 = 3, so |3| = 3.\n|−3| = 3.\n3 − 3 = 0.",
    "clue": "",
    "id": "g8.maths.u1.s1-1-3.26",
    "level": 1
@@ -650,14 +666,14 @@
     "t": "abseq",
     "level": 2
    },
-   "text": "How many solutions does |x| = −2 have?",
+   "text": "Absolute value equations: how many solutions does |x| = −2 have?",
    "opts": [
     "0",
     "1",
     "2"
    ],
    "ans": "0",
-   "why": "A distance is never negative.",
+   "why": "|x| is a distance, so it is never negative.\n−2 is negative.\nNo number is −2 units from 0.\nSo there are 0 solutions.",
    "clue": "",
    "id": "g8.maths.u1.s1-1-3.27",
    "level": 2
@@ -670,7 +686,7 @@
     "t": "abseq",
     "level": 3
    },
-   "text": "Tap all solutions of |x| = 7.",
+   "text": "Solve the absolute value equation: tap all solutions of |x| = 7.",
    "pool": [
     "7",
     "−7",
@@ -681,7 +697,7 @@
     "7",
     "−7"
    ],
-   "why": "7 and −7.",
+   "why": "x is 7 units from 0.\nRight of 0: 7. Left of 0: −7.\nSolutions: 7 and −7. (49 is 7 × 7, not a distance of 7.)",
    "clue": "",
    "id": "g8.maths.u1.s1-1-3.28",
    "level": 3
@@ -691,11 +707,11 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "|−7| + |3| − |−2| = ___",
+   "ask": "Absolute values: find each one, then calculate. |−7| + |3| − |−2| = ___",
    "a": [
     "8"
    ],
-   "why": "7 + 3 − 2 = 8.",
+   "why": "|−7| = 7, |3| = 3 and |−2| = 2.\n7 + 3 = 10.\n10 − 2 = 8.",
    "clue": "",
    "level": 1,
    "gen": {
@@ -709,11 +725,11 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "If x = −3, then |2x + 1| = ___",
+   "ask": "Evaluate with absolute value: if x = −3, then |2x + 1| = ___",
    "a": [
     "5"
    ],
-   "why": "2(−3) + 1 = −5, and |−5| = 5.",
+   "why": "2x = 2 × (−3) = −6.\n2x + 1 = −6 + 1 = −5.\n|−5| = 5.",
    "clue": "",
    "level": 3,
    "id": "g8.maths.u1.s1-1-3.32"

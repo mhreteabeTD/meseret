@@ -53,7 +53,8 @@
      ],
      "after": "They agree with each other (precise) but miss the target (not accurate).",
      "ref": "Exercise 1.9",
-     "id": "g8.science.u1.s1-1-5.1"
+     "id": "g8.science.u1.s1-1-5.1",
+     "best": "Precise but not accurate"
     },
     {
      "kind": "tap",
@@ -91,6 +92,30 @@
      "id": "g8.science.u1.s1-1-5.3"
     },
     {
+     "kind": "numline",
+     "step": "explore",
+     "title": "Example 1.8 on a number line",
+     "min": 0,
+     "max": 11,
+     "sub": 1,
+     "points": [
+      {
+       "v": "3.2",
+       "label": "readings",
+       "info": "Five readings: 3.1, 3.2, 3.25, 3.3 and 3.2 kg. They sit close together: precise."
+      },
+      {
+       "v": "10",
+       "label": "true 10 kg",
+       "info": "The known mass. The readings are about 7 kg away from it: not accurate."
+      }
+     ],
+     "ask": "Tap each point. Are the readings close to each other? Are they close to the true value?",
+     "ref": "Example 1.8",
+     "id": "g8.science.u1.s1-1-5.20",
+     "added": true
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -124,7 +149,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "The known mass is 10 kg. Five readings are 3.2, 3.1, 3.25, 3.3 and 3.2 kg. They are",
+     "text": "Accuracy and precision (Example 1.8): the known mass is 10 kg. Five readings are 3.2, 3.1, 3.25, 3.3 and 3.2 kg. They are",
      "opts": [
       "precise but not accurate",
       "accurate but not precise",
@@ -132,7 +157,7 @@
       "neither"
      ],
      "ans": "precise but not accurate",
-     "why": "The readings are close to each other but far from 10 kg.",
+     "why": "First compare the readings with each other.\nThey are all between 3.1 and 3.3 kg: close together, so precise.\nNow compare them with the known value, 10 kg.\nThey are about 7 kg too low, so not accurate.\nSo they are precise but not accurate.",
      "clue": "Compare the readings with each other, then with 10 kg.",
      "level": 1,
      "ref": "Example 1.8",
@@ -142,7 +167,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "g on Earth is 9.81 m/s². Students get 12.2, 12.3, 12.1 and 12.08 m/s². The results are",
+     "text": "Accuracy and precision: g on Earth is 9.81 m/s². Students get 12.2, 12.3, 12.1 and 12.08 m/s². The results are",
      "opts": [
       "precise but not accurate",
       "accurate and precise",
@@ -150,7 +175,7 @@
       "neither"
      ],
      "ans": "precise but not accurate",
-     "why": "The results are close to each other (precise) but all far from 9.81 (not accurate).",
+     "why": "Compare the results with each other.\nThey are all between 12.08 and 12.3: close together, so precise.\nCompare them with the true value, 9.81.\nThey are more than 2 m/s² too high, so not accurate.\nSo they are precise but not accurate.",
      "clue": "How far are they from 9.81?",
      "level": 2,
      "ref": "Review IV Q5",
@@ -160,9 +185,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "A measurement can be accurate but not precise.",
+     "text": "Accuracy and precision, true or false: a measurement can be accurate but not precise.",
      "a": true,
-     "why": "The book says you can be accurate but not precise: readings scattered around the true value.",
+     "why": "Accurate means close to the true value.\nPrecise means the readings agree with each other.\nReadings can be scattered (not precise) all around the true value.\nTheir average is then close to the true value (accurate).\nSo it is true.",
      "clue": "Read the end of Example 1.8.",
      "level": 1,
      "ref": "Example 1.8",
@@ -172,7 +197,47 @@
      "kind": "sort",
      "step": "practise",
      "graded": true,
-     "text": "Sort the definitions.",
+     "level": 2,
+     "title": "Four kinds of results",
+     "text": "Accuracy and precision: the true mass is 10 kg. Sort each set of readings.",
+     "bins": [
+      "Accurate and precise",
+      "Precise, not accurate",
+      "Accurate, not precise",
+      "Neither"
+     ],
+     "items": [
+      [
+       "9.9, 10.0, 10.1 kg",
+       "Accurate and precise",
+       "Close together and close to 10 kg."
+      ],
+      [
+       "7.1, 7.0, 7.2 kg",
+       "Precise, not accurate",
+       "Close together, but about 3 kg too low."
+      ],
+      [
+       "8, 12, 9, 11 kg",
+       "Accurate, not precise",
+       "Spread out, but the average is 40 ÷ 4 = 10 kg."
+      ],
+      [
+       "3, 6, 14 kg",
+       "Neither",
+       "Spread out, and the average (about 7.7 kg) is far from 10 kg."
+      ]
+     ],
+     "why": "First ask: are the readings close to each other? That is precision.\nThen ask: are they (or their average) close to 10 kg? That is accuracy.\n9.9, 10.0, 10.1: both.\n7.1, 7.0, 7.2: precise only.\n8, 12, 9, 11: average 10, so accurate only.\n3, 6, 14: neither.",
+     "clue": "Check the spread first, then the average.",
+     "id": "g8.science.u1.s1-1-5.21",
+     "added": true
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "text": "Accuracy or precision? Sort each description.",
      "bins": [
       "Accuracy",
       "Precision"
@@ -199,7 +264,7 @@
        "Grouped darts agree with each other."
       ]
      ],
-     "why": "Accuracy is about the target; precision is about agreement.",
+     "why": "Accuracy compares a measurement with the true value.\nSo \"close to the known value\" and \"hitting the bullseye\" are accuracy.\nPrecision compares readings with each other.\nSo \"repeated readings agree\" and \"darts grouped together\" are precision.",
      "clue": "Does it compare with the true value, or with other readings?",
      "level": 1,
      "id": "g8.science.u1.s1-1-5.9"
@@ -208,7 +273,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "A kitchen scale always reads 50 g too much, but it gives the same reading every time. Its readings are",
+     "text": "Accuracy and precision: a kitchen scale always reads 50 g too much, but it gives the same reading every time. Its readings are",
      "opts": [
       "precise but not accurate",
       "accurate but not precise",
@@ -216,7 +281,7 @@
       "neither"
      ],
      "ans": "precise but not accurate",
-     "why": "Same reading every time: precise. Always 50 g off the true value: not accurate.",
+     "why": "Same reading every time: the readings agree, so they are precise.\nAlways 50 g too much: they miss the true value, so they are not accurate.\nSo they are precise but not accurate.\nResetting the scale to zero would make it accurate too.",
      "clue": "Do the readings agree? Are they correct?",
      "level": 3,
      "added": true,
@@ -233,7 +298,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Which is the definition of a derived quantity?",
+     "text": "Key words review: which is the definition of a derived quantity?",
      "opts": [
       "It depends on one or more fundamental quantities",
       "It cannot be expressed by other quantities",
@@ -241,7 +306,7 @@
       "It has no unit"
      ],
      "ans": "It depends on one or more fundamental quantities",
-     "why": "p.8.",
+     "why": "Derived means \"built from\".\nA derived quantity is built from fundamental quantities, like area = length × width.\nA quantity that cannot be expressed by others is fundamental.\nSo: it depends on one or more fundamental quantities.",
      "clue": "Derived means built from others.",
      "level": 1,
      "ref": "Q1",
@@ -251,7 +316,7 @@
      "kind": "pick",
      "step": "exercise",
      "graded": true,
-     "text": "Which are indigenous methods of measurement used in Addis Ababa?",
+     "text": "Indigenous measurement: which of these are indigenous methods used in Addis Ababa?",
      "pool": [
       "Cubit",
       "Kilogram",
@@ -266,7 +331,7 @@
       "Jog",
       "Shadow of a tree"
      ],
-     "why": "Cubit (length), quntal (mass), jog (volume) and the shadow of a tree (time) are indigenous. Kilogram and metre are SI units.",
+     "why": "Indigenous methods are local and traditional.\nCubit (length) uses the arm.\nQuntal (mass) is a bag for grain.\nJog (volume) is a plastic cup; a tree's shadow tells the time.\nKilogram and metre are SI units, not indigenous.",
      "clue": "Which are local, traditional methods?",
      "level": 1,
      "ref": "Q2",
@@ -276,7 +341,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "What are prefixes?",
+     "text": "Key words review: what are prefixes?",
      "opts": [
       "A short way of writing very large or very small numbers",
       "Instruments for measuring",
@@ -284,7 +349,7 @@
       "Derived quantities"
      ],
      "ans": "A short way of writing very large or very small numbers",
-     "why": "p.9.",
+     "why": "Science uses very large and very small numbers.\nA prefix is a short way to write them in a unit.\nExample: kilo means 1000, so 5000 m = 5 km.\nInstruments, indigenous units and derived quantities are other ideas.",
      "clue": "Think of kilo and milli.",
      "level": 1,
      "ref": "Q3",
@@ -294,7 +359,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "The difference between accuracy and precision is",
+     "text": "Key words review: what is the difference between accuracy and precision?",
      "opts": [
       "Accuracy is closeness to the known value; precision is closeness of readings to each other",
       "They mean the same",
@@ -302,7 +367,7 @@
       "Accuracy needs a balance"
      ],
      "ans": "Accuracy is closeness to the known value; precision is closeness of readings to each other",
-     "why": "p.15.",
+     "why": "Accuracy: how close a measurement is to the known value.\nPrecision: how close repeated readings are to each other.\nThey are not the same: one is about the target, one about agreement.\nSo the first option is right.",
      "clue": "One is about the target, one about agreement.",
      "level": 1,
      "ref": "Q4",
@@ -316,7 +381,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Accuracy means",
+   "text": "Key words: accuracy means",
    "opts": [
     "closeness to the known value",
     "closeness of readings to each other",
@@ -324,7 +389,7 @@
     "measuring quickly"
    ],
    "ans": "closeness to the known value",
-   "why": "p.15.",
+   "why": "Accuracy compares a measurement with the true (known) value.\nThe closer it is, the more accurate.\nCloseness of readings to each other is precision.\nSo accuracy means closeness to the known value.",
    "clue": "",
    "level": 1,
    "id": "g8.science.u1.s1-1-5.15"
@@ -333,7 +398,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Precision means",
+   "text": "Key words: precision means",
    "opts": [
     "closeness of readings to each other",
     "closeness to the known value",
@@ -341,7 +406,7 @@
     "using a prefix"
    ],
    "ans": "closeness of readings to each other",
-   "why": "p.15.",
+   "why": "Precision compares repeated readings with each other.\nIf they agree closely, they are precise.\nCloseness to the known value is accuracy.\nSo precision means closeness of readings to each other.",
    "clue": "",
    "level": 1,
    "id": "g8.science.u1.s1-1-5.16"
@@ -350,7 +415,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Known value 5.0 g. Readings 4.9, 5.1, 5.0 g. These are",
+   "text": "Accuracy and precision: the known value is 5.0 g. Readings are 4.9, 5.1 and 5.0 g. These are",
    "opts": [
     "accurate and precise",
     "precise only",
@@ -358,7 +423,7 @@
     "neither"
    ],
    "ans": "accurate and precise",
-   "why": "Close to 5.0 and to each other.",
+   "why": "Compare with each other: 4.9 to 5.1, a spread of only 0.2 g. Precise.\nCompare with 5.0 g: each is within 0.1 g. Accurate.\nSo they are accurate and precise.",
    "clue": "",
    "level": 2,
    "id": "g8.science.u1.s1-1-5.17"
@@ -367,7 +432,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Known value 20 cm. Readings 15, 25, 18, 22 cm (average 20 cm). These are",
+   "text": "Accuracy and precision: the known value is 20 cm. Readings are 15, 25, 18 and 22 cm (average 20 cm). These are",
    "opts": [
     "accurate on average but not precise",
     "precise and accurate",
@@ -375,7 +440,7 @@
     "neither"
    ],
    "ans": "accurate on average but not precise",
-   "why": "They are spread out (not precise) but centred on 20 cm (accurate on average).",
+   "why": "Compare with each other: from 15 to 25 cm, a 10 cm spread. Not precise.\nAverage: (15 + 25 + 18 + 22) ÷ 4 = 80 ÷ 4 = 20 cm.\nThe average equals the known value: accurate on average.\nSo they are accurate on average but not precise.",
    "clue": "",
    "level": 3,
    "id": "g8.science.u1.s1-1-5.18"
@@ -384,9 +449,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "You can be very precise but inaccurate.",
+   "text": "Accuracy and precision, true or false: you can be very precise but inaccurate.",
    "a": true,
-   "why": "p.15.",
+   "why": "Precise: your readings agree with each other.\nInaccurate: they are far from the true value.\nExample: a scale that always reads 50 g too much.\nIts readings agree but are wrong. So it is true.",
    "clue": "",
    "level": 1,
    "id": "g8.science.u1.s1-1-5.19"

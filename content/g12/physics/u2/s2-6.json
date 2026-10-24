@@ -94,6 +94,62 @@
      "id": "g12.physics.u2.s2-6.2"
     },
     {
+     "kind": "tree",
+     "step": "explore",
+     "title": "Unit 2: motion in two dimensions",
+     "root": {
+      "label": "Two-dimensional motion",
+      "pic": "physics",
+      "info": "Motion along a curved path in a plane.",
+      "children": [
+       {
+        "label": "Projectile",
+        "info": "Gravity only. vₓ constant, v_y changes by g each second.",
+        "children": [
+         {
+          "label": "Horizontal launch",
+          "info": "t = √(2h/g), Δx = v₀t."
+         },
+         {
+          "label": "Launch at an angle",
+          "info": "R = v₀² sin2θ/g, H = v₀² sin²θ/(2g), T = 2v₀sinθ/g."
+         }
+        ]
+       },
+       {
+        "label": "Rotation",
+        "info": "Every point turns through the same angle.",
+        "children": [
+         {
+          "label": "Kinematics",
+          "info": "ω = Δθ/Δt, α = Δω/Δt, v = ωr, a = rα."
+         },
+         {
+          "label": "Dynamics",
+          "info": "τ = rF sinθ, I = Σmr², τ_net = Iα."
+         }
+        ]
+       },
+       {
+        "label": "Planetary motion",
+        "info": "Gravity is the centripetal force.",
+        "children": [
+         {
+          "label": "Kepler's laws",
+          "info": "Ellipses, equal areas, T²/R³ = K."
+         },
+         {
+          "label": "Newton's gravitation",
+          "info": "F = Gm₁m₂/r², g = GM/R²."
+         }
+        ]
+       }
+      ]
+     },
+     "id": "g12.physics.u2.s2-6.33",
+     "added": true
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key word",
@@ -130,20 +186,21 @@
        "universal gravitation"
       ]
      ],
-     "why": "Each formula belongs to one section of the unit.",
+     "why": "R = v₀² sin2θ/g: range of a projectile.\nv = ωr: tangential speed of a turning point.\nτ = Iα: Newton's second law for rotation.\nT²/R³ = K: Kepler's third law.\nF = Gm₁m₂/r²: universal gravitation.",
      "clue": "Look at the letters: θ for angles, G for gravitation.",
      "graded": true,
      "level": 1,
      "step": "check",
-     "id": "g12.physics.u2.s2-6.4"
+     "id": "g12.physics.u2.s2-6.4",
+     "text": "Unit 2 review: match each formula to the idea it describes."
     },
     {
      "kind": "blank",
-     "ask": "A football is kicked at 20 m/s at 30°. Its horizontal velocity is ≈ ___ m/s (1 decimal place)",
+     "ask": "Components of velocity: a football is kicked at 20 m/s at 30°. Its horizontal velocity is ≈ ___ m/s (1 decimal place)",
      "a": [
       "≈17.3"
      ],
-     "why": "vₓ = 20cos30° = 20 × 0.866 = 17.3 m/s; v_y = 10 m/s.",
+     "why": "Formula: vₓ = v₀cosθ.\nSubstitute: vₓ = 20 × cos30° = 20 × 0.866.\nResult: vₓ ≈ 17.3 m/s.\n(The vertical part is v₀sinθ = 20 × 0.5 = 10 m/s.)\nTrap: using sin gives 10 m/s, the vertical part.",
      "clue": "Use cos for the horizontal part.",
      "num": true,
      "graded": true,
@@ -154,11 +211,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A braked wheel has α = −5.60 rad/s². In 4.20 s it turns 62.4 rad. Its final angular speed is ≈ ___ rad/s (1 decimal place)",
+     "ask": "Braking wheel: α = −5.60 rad/s². In 4.20 s it turns 62.4 rad. Its final angular speed is ≈ ___ rad/s (1 decimal place)",
      "a": [
       "≈3.1"
      ],
-     "why": "Δθ = ωt − ½αt² gives ω = 62.4 ÷ 4.20 + ½(−5.60)(4.20) = 14.86 − 11.76 = 3.10 rad/s.",
+     "why": "Use Δθ = ω_f t − ½αt² (no ω₀ needed).\nRearrange: ω_f = Δθ/t + ½αt.\nSubstitute: ω_f = 62.4 ÷ 4.20 + ½ × (−5.60) × 4.20.\nω_f = 14.86 − 11.76 = 3.10 rad/s.\nCheck: ω₀ = 3.10 + 5.60 × 4.20 = 26.6 rad/s, and (26.6 + 3.1)/2 × 4.2 ≈ 62.4 rad ✓",
      "clue": "Find ω₀ first, or use Δθ = ω_f t − ½αt².",
      "num": true,
      "graded": true,
@@ -177,11 +234,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "A ball is thrown horizontally from the top of a 45 m building. It reaches the ground after ≈ ___ s (2 decimal places)",
+     "ask": "End of unit Q1 a, time of flight: a ball is thrown horizontally from the top of a 45 m building. It reaches the ground after ≈ ___ s (2 decimal places)",
      "a": [
       "≈3.03"
      ],
-     "why": "t = √(2 × 45 ÷ 9.8) = √9.18 = 3.03 s.",
+     "why": "Formula: t = √(2h/g).\nSubstitute: t = √(2 × 45 ÷ 9.8) = √9.18.\nResult: t ≈ 3.03 s.\nThe launch speed does not change the fall time.",
      "clue": "t = √(2h/g).",
      "num": true,
      "graded": true,
@@ -192,11 +249,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Same ball, launched at 20 m/s: it lands ≈ ___ m from the foot of the building (1 decimal place)",
+     "ask": "End of unit Q1 b, horizontal distance: same ball, launched at 20 m/s (t = 3.03 s). It lands ≈ ___ m from the foot of the building (1 decimal place)",
      "a": [
       "≈60.6"
      ],
-     "why": "Δx = 20 × 3.03 = 60.6 m.",
+     "why": "Formula: Δx = v₀t.\nSubstitute: Δx = 20 m/s × 3.03 s.\nResult: Δx ≈ 60.6 m.",
      "clue": "Δx = v₀t.",
      "num": true,
      "graded": true,
@@ -208,11 +265,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A football is kicked at 20 m/s at 30°. Time of flight ≈ ___ s (2 decimal places)",
+     "ask": "End of unit Q2 b, time of flight: a football is kicked at 20 m/s at 30° (g = 9.8 m/s²). Time of flight ≈ ___ s (2 decimal places)",
      "a": [
       "≈2.04"
      ],
-     "why": "T = 2 × 10 ÷ 9.8 = 2.04 s.",
+     "why": "Formula: T = 2v₀sinθ/g.\nv₀sinθ = 20 × 0.5 = 10 m/s.\nT = 2 × 10 ÷ 9.8.\nResult: T ≈ 2.04 s.",
      "clue": "T = 2v₀sinθ/g.",
      "num": true,
      "graded": true,
@@ -223,11 +280,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Same kick: range ≈ ___ m (1 decimal place)",
+     "ask": "End of unit Q2 c, range: same kick (20 m/s at 30°, g = 9.8 m/s²). Range ≈ ___ m (1 decimal place)",
      "a": [
       "≈35.3"
      ],
-     "why": "R = 400 × sin60°/9.8 = 35.3 m.",
+     "why": "Formula: R = v₀² sin2θ/g.\nsin60° = 0.866.\nR = 400 × 0.866 ÷ 9.8.\nResult: R ≈ 35.3 m.\nCheck: vₓT = 17.32 × 2.04 ≈ 35.3 m ✓",
      "clue": "R = v₀² sin2θ/g.",
      "num": true,
      "graded": true,
@@ -238,11 +295,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Same kick: horizontal displacement at t = 1.5 s ≈ ___ m (1 decimal place)",
+     "ask": "End of unit Q2 d, position in flight: same kick. Horizontal displacement at t = 1.5 s ≈ ___ m (1 decimal place)",
      "a": [
       "≈26.0"
      ],
-     "why": "x = 17.32 × 1.5 = 26.0 m (the ball is still in the air).",
+     "why": "Formula: x = vₓt.\nvₓ = 20cos30° = 17.32 m/s.\nx = 17.32 × 1.5 ≈ 26.0 m.\n1.5 s < 2.04 s, so the ball is still in the air.",
      "clue": "x = vₓt.",
      "num": true,
      "graded": true,
@@ -253,12 +310,12 @@
     },
     {
      "kind": "blank",
-     "ask": "A volcanic bomb leaves vent A at 35°; it lands 9.40 km away and 3.30 km lower. Launch speed ≈ ___ m/s (nearest whole number)",
+     "ask": "End of unit Q4, launch speed from landing point: a volcanic bomb leaves the vent at 35°; it lands 9.40 km away and 3.30 km lower. Launch speed ≈ ___ m/s (nearest whole number)",
      "a": [
       "≈256",
       "≈255"
      ],
-     "why": "v₀t = 9400/cos35° = 11 475 m. −3300 = 11 475 × sin35° − 4.9t² gives t = 44.9 s, v₀ = 11 475 ÷ 44.9 = 256 m/s.",
+     "why": "Horizontal: v₀cos35° t = 9400, so v₀t = 9400 ÷ 0.819 = 11 475 m.\nVertical (up +): −3300 = v₀t sin35° − 4.9t² = 6582 − 4.9t².\n4.9t² = 9882, so t² = 2017 and t ≈ 44.9 s.\nv₀ = 11 475 ÷ 44.9 ≈ 256 m/s.\nTrap: landing lower means Δy is negative.",
      "clue": "Write x and y equations; eliminate v₀t.",
      "num": true,
      "graded": true,
@@ -269,7 +326,7 @@
     },
     {
      "kind": "mcq",
-     "text": "A firefighter at distance d aims water at angle θᵢ with speed vᵢ. It hits the building at height h =",
+     "text": "End of unit Q5, height on a wall: a firefighter at distance d aims water at angle θᵢ with speed vᵢ. It hits the building at height h =",
      "opts": [
       "d tanθᵢ − gd²/(2vᵢ² cos²θᵢ)",
       "d tanθᵢ + gd²/(2vᵢ² cos²θᵢ)",
@@ -277,7 +334,7 @@
       "vᵢ² sin²θᵢ/(2g)"
      ],
      "ans": "d tanθᵢ − gd²/(2vᵢ² cos²θᵢ)",
-     "why": "t = d/(vᵢcosθᵢ); h = vᵢsinθᵢ t − ½gt².",
+     "why": "Horizontal: d = vᵢcosθᵢ t, so t = d/(vᵢcosθᵢ).\nVertical: h = vᵢsinθᵢ t − ½gt².\nSubstitute t: h = d tanθᵢ − gd²/(2vᵢ² cos²θᵢ).\nTrap: a + sign would mean gravity pushes the water up.",
      "clue": "Find t from the horizontal motion.",
      "graded": true,
      "level": 3,
@@ -287,11 +344,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A fan makes 1200 rev/min. A blade tip 0.15 m from the axis moves at ≈ ___ m/s (1 decimal place)",
+     "ask": "End of unit Q6, tip speed of a fan: 1200 rev/min, blade tip 0.15 m from the axis. Speed ≈ ___ m/s (1 decimal place)",
      "a": [
       "≈18.8"
      ],
-     "why": "20 rev/s × 2π × 0.15 = 18.8 m/s.",
+     "why": "Convert: 1200 rev/min ÷ 60 = 20 rev/s.\nω = 20 × 2π = 125.7 rad/s.\nv = ωr = 125.7 × 0.15.\nResult: v ≈ 18.8 m/s.",
      "clue": "Change to rev/s, then multiply by the circumference.",
      "num": true,
      "graded": true,
@@ -302,11 +359,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A car at 80 km/h with 40 cm wheels stops within 30 revolutions. |α| ≈ ___ rad/s² (2 decimal places)",
+     "ask": "End of unit Q7, braking wheels: a car at 80 km/h with 40 cm wheels stops within 30 revolutions. |α| ≈ ___ rad/s² (2 decimal places)",
      "a": [
       "≈8.19"
      ],
-     "why": "ω₀ = 22.2 ÷ 0.40 = 55.6 rad/s; Δθ = 188.5 rad; α = −55.6²/(2 × 188.5) = −8.19 rad/s².",
+     "why": "Convert: 80 km/h = 22.2 m/s; ω₀ = v/r = 22.2 ÷ 0.40 = 55.6 rad/s.\nConvert: Δθ = 30 × 2π = 188.5 rad.\nUse ω_f² = ω₀² + 2αΔθ with ω_f = 0.\nα = −55.6² ÷ (2 × 188.5) = −3086 ÷ 377 = −8.19 rad/s².\nSo |α| ≈ 8.19 rad/s².",
      "clue": "ω_f² = ω₀² + 2αΔθ with ω_f = 0.",
      "num": true,
      "graded": true,
@@ -317,11 +374,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A grindstone belt turns at 40 rad/s. In one minute it turns ___ rad",
+     "ask": "End of unit Q8, angle turned: a grindstone belt turns at 40 rad/s. In one minute it turns ___ rad",
      "a": [
       "2400"
      ],
-     "why": "Δθ = 40 × 60 = 2400 rad ≈ 382 rev.",
+     "why": "Constant ω: Δθ = ωt.\nΔθ = 40 rad/s × 60 s.\nResult: 2400 rad (≈ 382 rev).",
      "clue": "Δθ = ωt.",
      "num": true,
      "graded": true,
@@ -332,11 +389,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A cyclist's wheel (radius 0.50 m) makes 320 rotations. She travels ≈ ___ m (nearest metre)",
+     "ask": "End of unit Q9, distance rolled: a wheel of radius 0.50 m makes 320 rotations. She travels ≈ ___ m (nearest metre)",
      "a": [
       "≈1005"
      ],
-     "why": "320 × 2π × 0.50 = 1005 m.",
+     "why": "One turn rolls a distance 2πr = 2π × 0.50 = 3.14 m.\n320 turns: 320 × 3.14 m.\nResult: ≈ 1005 m.",
      "clue": "Distance per turn = 2πr.",
      "num": true,
      "graded": true,
@@ -364,7 +421,7 @@
       "D. the object has constant angular acceleration."
      ],
      "ans": "C. the net force and net torque are both zero.",
-     "why": "First condition (translational equilibrium): ΣF = 0, so no linear acceleration. Second condition (rotational equilibrium): Στ = 0 about any axis, so no angular acceleration. An object is in (full) equilibrium only when both hold: net force = 0 and net torque = 0. A constant non-zero net force (A) gives constant acceleration; B and D describe accelerating objects, so they are not in equilibrium.",
+     "why": "First condition: ΣF = 0, so no linear acceleration.\nSecond condition: Στ = 0, so no angular acceleration.\nEquilibrium needs both: answer C.\nA: a constant non-zero net force still accelerates the object.\nB and D describe accelerating objects, so they are not in equilibrium.",
      "clue": "",
      "graded": true,
      "level": 2,
@@ -382,7 +439,7 @@
       "D. 567 N"
      ],
      "ans": "D. 567 N",
-     "why": "Long side = 2.5 m, short side = 4.0 − 2.5 = 1.5 m. The seesaw's weight (20 × 10 = 200 N) acts at its centre, 2.0 m from the end, i.e. 2.5 − 2.0 = 0.5 m from the fulcrum on the long side. Torque on the long side: (30 × 10 N)(2.5 m) + (200 N)(0.5 m) = 750 + 100 = 850 N·m. Balance: W × 1.5 m = 850 N·m → W = 850 ÷ 1.5 ≈ 567 N. 750 N ignores the seesaw's own weight and uses the wrong arm; 850 N is the torque value, not a force; 433 N comes from wrong lever arms.",
+     "why": "Arms: long side 2.5 m, short side 4.0 − 2.5 = 1.5 m.\nThe seesaw's weight (200 N) acts at its centre: 2.5 − 2.0 = 0.5 m on the long side.\nLong-side torque: 300 N × 2.5 m + 200 N × 0.5 m = 750 + 100 = 850 N m.\nBalance: W × 1.5 m = 850 N m, so W ≈ 567 N.\nTrap: 750 N ignores the seesaw's own weight; 850 N is a torque, not a force.",
      "clue": "",
      "graded": true,
      "level": 3,
@@ -400,7 +457,7 @@
       "D. for the same time interval, a point closer to the axis turns through a smaller angle than a point farther from the axis."
      ],
      "ans": "A. a point closer to the axis has smaller linear speed than a point farther from the axis.",
-     "why": "In a rigid body every point has the same angular displacement θ and angular speed ω. Linear speed v = ωr, so v grows with distance r from the axis. So a point nearer the axis has smaller linear speed. B reverses v = ωr; C is wrong because arc length s = rθ depends on r; D is wrong because all points turn through the same angle.",
+     "why": "All points of a rigid body have the same θ and ω.\nLinear speed v = ωr grows with r.\nSo a point nearer the axis is slower: answer A.\nB reverses v = ωr; C is wrong because s = rθ depends on r.\nD is wrong: all points turn through the same angle.",
      "clue": "",
      "graded": true,
      "level": 2,
@@ -418,7 +475,7 @@
       "D. 0.2 N·m and 800 rad/s"
      ],
      "ans": "D. 0.2 N·m and 800 rad/s",
-     "why": "Tangential force at the rim: τ = F r = 2.0 N × 0.10 m = 0.20 N·m. Check: I = ½mr² = ½(0.1)(0.10)² = 5×10⁻⁴ kg·m², α = τ/I = 0.20 ÷ 5×10⁻⁴ = 400 rad/s² (agrees). Starting from rest: ω = ω₀ + αt = 0 + 400 × 2.0 = 800 rad/s. A uses t = 1 s; B and C use wrong torques (τ ≠ 0.1 or 0.5 N·m).",
+     "why": "Torque of a tangential force: τ = Fr = 2.0 × 0.10 = 0.20 N m.\nCheck: I = ½mr² = ½ × 0.1 × 0.10² = 5 × 10⁻⁴ kg m²; α = τ/I = 400 rad/s² ✓\nFrom rest: ω = αt = 400 × 2.0 = 800 rad/s.\nAnswer: D. Trap: A uses t = 1 s.",
      "clue": "",
      "graded": true,
      "level": 3,
@@ -436,7 +493,7 @@
       "D. Centripetal acceleration and centripetal force are constant in direction, but vary in magnitude."
      ],
      "ans": "C. For an object moving in a circular path, its centripetal force and centripetal acceleration are parallel and directed toward the center of the path.",
-     "why": "Centripetal acceleration a_c = v²/r points toward the centre. By Newton's 2nd law F_c = m a_c, so the force points the same way: both are along the radius, toward the centre. A is wrong (they are along the radius, perpendicular to the velocity); B describes an outward pull, which is wrong; D is wrong because their direction changes continuously while (in uniform motion) the magnitude is constant.",
+     "why": "Centripetal acceleration a_c = v²/r points to the centre.\nNewton's second law: F_c = ma_c, so the force points the same way.\nBoth lie along the radius toward the centre: answer C.\nA is wrong: they are along the radius (perpendicular to the velocity).\nB is wrong (outward); D is wrong: the direction keeps changing.",
      "clue": "",
      "graded": true,
      "level": 2,
@@ -454,7 +511,7 @@
       "D. for two interacting objects, the gravitational force exerted on a light object is less than the force on the heavy one."
      ],
      "ans": "A. the period of a satellite orbiting the Earth in a circular orbit increases as the radius of its orbit increases.",
-     "why": "For a circular orbit, gravity gives the centripetal force: GMm/r² = mv²/r → v = √(GM/r). Period T = 2πr/v = 2π√(r³/GM), so T² ∝ r³ (Kepler's third law): T increases as r increases. B is wrong: F ∝ 1/r² (inverse square). C is wrong: v = √(GM/r) does not contain m. D is wrong: by Newton's third law the forces on the two objects are equal in size.",
+     "why": "Gravity is the centripetal force: GMm/r² = mv²/r, so v = √(GM/r).\nPeriod: T = 2πr/v = 2π√(r³/GM), so T grows with r: answer A.\nB is wrong: F ∝ 1/r², not r².\nC is wrong: v does not contain the satellite's mass m.\nD is wrong: by Newton's third law both forces are equal.",
      "clue": "",
      "graded": true,
      "level": 2,
@@ -472,7 +529,7 @@
       "D. −5 rev/s²"
      ],
      "ans": "D. −5 rev/s²",
-     "why": "Given ω₀ = 20 rev/s, ω = 0, Δθ = 40 rev; time is not given, so use ω² = ω₀² + 2αΔθ. 0 = (20)² + 2α(40) → 80α = −400. α = −5 rev/s² (negative: the wheel is slowing down). C has the right size but the wrong sign; A and B come from wrong formulas (e.g. dividing ω₀ by Δθ).",
+     "why": "Given ω₀ = 20 rev/s, ω = 0, Δθ = 40 rev; no time is given.\nUse ω² = ω₀² + 2αΔθ: 0 = 20² + 2α × 40.\n80α = −400, so α = −5 rev/s² (slowing down).\nAnswer D. Trap: C has the right size but the wrong sign.",
      "clue": "",
      "graded": true,
      "level": 3,
@@ -490,7 +547,7 @@
       "D. For two satellites moving around the Earth at equal orbital radius, a heavier satellite has larger speed than a lighter one."
      ],
      "ans": "B. A satellite closer to the Earth is faster than a satellite farther from the Earth.",
-     "why": "Gravity provides the centripetal force: GMm/r² = mv²/r → v = √(GM/r). Smaller r → larger v, so a closer satellite is faster (B). A is wrong: Earth's mass M is larger than the Moon's, so at equal r the Earth satellite is faster. C is wrong: T = 2π√(r³/GM) is shorter for smaller r. D is wrong: v does not depend on the satellite's mass m.",
+     "why": "Orbit: v = √(GM/r), so smaller r gives larger v: answer B.\nA is wrong: Earth's M is larger, so its satellite is faster at the same r.\nC is wrong: T = 2π√(r³/GM) is shorter for smaller r.\nD is wrong: v does not depend on the satellite's mass.",
      "clue": "",
      "graded": true,
      "level": 2,
@@ -508,7 +565,7 @@
       "D. mθ"
      ],
      "ans": "A. τθ",
-     "why": "Linear work: W = F s, with s = rθ for a force applied tangentially at radius r. W = F rθ = (F r)θ = τθ (θ in radians). B mixes torque with a linear distance; C (Iθ) and D (mθ) do not have units of energy.",
+     "why": "Linear work: W = Fs.\nFor a tangential force at radius r: s = rθ.\nW = F × rθ = (Fr)θ = τθ (θ in radians): answer A.\nIθ and mθ do not have units of energy; τd mixes rotation with a straight distance.",
      "clue": "",
      "graded": true,
      "level": 2,
@@ -526,7 +583,7 @@
       "D. 105 kg·m²"
      ],
      "ans": "B. 165 kg·m²",
-     "why": "Parallel-axis theorem: I = I_cm + Md². Md² = 30 kg × (2 m)² = 120 kg·m². I = 45 + 120 = 165 kg·m². D uses d instead of d² (45 + 60); A is 2 × 45; C is 45 × 4 (squares the wrong quantity).",
+     "why": "Parallel-axis theorem: I = I_cm + Md².\nMd² = 30 kg × (2 m)² = 120 kg m².\nI = 45 + 120 = 165 kg m²: answer B.\nTrap: D uses d instead of d² (45 + 60 = 105).",
      "clue": "",
      "graded": true,
      "level": 3,
@@ -540,11 +597,11 @@
  "test": [
   {
    "kind": "blank",
-   "ask": "A stone falls from rest for 3 s. g = 10 m/s². It falls ___ m",
+   "ask": "Free fall: a stone falls from rest for 3 s (g = 10 m/s²). It falls ___ m",
    "a": [
     "45"
    ],
-   "why": "½ × 10 × 9.",
+   "why": "From rest: h = ½gt².\nh = ½ × 10 × 3² = 5 × 9.\nResult: 45 m.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -554,7 +611,7 @@
   },
   {
    "kind": "mcq",
-   "text": "The horizontal velocity of a projectile",
+   "text": "Projectile motion: the horizontal velocity of a projectile",
    "opts": [
     "stays constant",
     "increases",
@@ -562,7 +619,7 @@
     "is zero at the top"
    ],
    "ans": "stays constant",
-   "why": "No horizontal force.",
+   "why": "No horizontal force acts (no air resistance).\nSo the horizontal acceleration is zero.\nThe horizontal velocity stays constant.\nTrap: it is v_y, not vₓ, that is zero at the top.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -571,11 +628,11 @@
   },
   {
    "kind": "blank",
-   "ask": "A wheel of radius 0.5 m turns through 10 rad. A rim point moves ___ m",
+   "ask": "Arc length: a wheel of radius 0.5 m turns through 10 rad. A rim point moves ___ m",
    "a": [
     "5"
    ],
-   "why": "s = rθ.",
+   "why": "Formula: s = rθ (θ in radians).\ns = 0.5 × 10.\nResult: 5 m.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -585,11 +642,11 @@
   },
   {
    "kind": "blank",
-   "ask": "A torque of 20 N m acts on I = 5 kg m². α = ___ rad/s²",
+   "ask": "Torque and angular acceleration: a torque of 20 N m acts on I = 5 kg m². α = ___ rad/s²",
    "a": [
     "4"
    ],
-   "why": "20/5.",
+   "why": "Formula: α = τ/I.\nα = 20 ÷ 5.\nResult: 4 rad/s².",
    "clue": "",
    "num": true,
    "graded": true,
@@ -599,11 +656,11 @@
   },
   {
    "kind": "blank",
-   "ask": "A satellite's orbit radius is 9 times another's around the same planet. Its period is ___ times longer",
+   "ask": "Kepler's third law: a satellite's orbit radius is 9 times another's around the same planet. Its period is ___ times longer",
    "a": [
     "27"
    ],
-   "why": "9^(3/2).",
+   "why": "T ∝ r^(3/2).\n9^(3/2) = (√9)³ = 3³.\nResult: 27 times longer.",
    "clue": "",
    "num": true,
    "graded": true,

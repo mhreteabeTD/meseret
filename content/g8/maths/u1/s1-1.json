@@ -62,9 +62,10 @@
       "5 Birr",
       "22 Birr"
      ],
-     "after": "22 ÷ 5 = 22/5 = 4.40 Birr. That is 4 Birr and 40 cents. A number like 22/5 is a rational number.",
+     "after": "There are 3 + 2 = 5 pets.\n22 ÷ 5 = 4 remainder 2, so each pet gets 4 Birr and 2/5 of a Birr.\n2/5 of a Birr = 40 cents. So each pet gets 4 Birr 40 cents = 22/5 Birr.\nA number like 22/5 is a rational number.",
      "id": "g8.maths.u1.s1-1.1",
-     "ref": "Group work 1.1"
+     "ref": "Group work 1.1",
+     "best": "4 Birr 40 cents"
     },
     {
      "kind": "read",
@@ -77,27 +78,51 @@
      "id": "g8.maths.u1.s1-1.2"
     },
     {
-     "kind": "tap",
+     "kind": "sort",
      "step": "explore",
      "graded": false,
      "added": true,
-     "title": "Numbers you already know",
-     "need": 3,
+     "title": "Where does each number live?",
      "items": [
       [
-       "Natural numbers",
-       "Counting numbers: 1, 2, 3, … For example 7 is a natural number smaller than 10."
+       "7",
+       "Natural",
+       "7 is a counting number: 1, 2, 3, …, 7."
       ],
       [
-       "Whole numbers",
-       "0, 1, 2, 3, … The number 0 is whole but not natural."
+       "0",
+       "Whole (not natural)",
+       "Counting starts at 1, so 0 is whole but not natural."
       ],
       [
-       "Integers",
-       "…, −2, −1, 0, 1, 2, … The number −4 is an integer but not a whole number."
+       "−4",
+       "Integer (not whole)",
+       "−4 is negative. Whole numbers are never negative, but integers can be."
+      ],
+      [
+       "15",
+       "Natural",
+       "15 is a counting number."
+      ],
+      [
+       "−1",
+       "Integer (not whole)",
+       "−1 is a negative integer."
+      ],
+      [
+       "1",
+       "Natural",
+       "1 is the first counting number."
       ]
      ],
-     "id": "g8.maths.u1.s1-1.3"
+     "id": "g8.maths.u1.s1-1.3",
+     "text": "Put each number in the FIRST set it belongs to. Natural numbers come first, then whole numbers, then integers.",
+     "bins": [
+      "Natural",
+      "Whole (not natural)",
+      "Integer (not whole)"
+     ],
+     "why": "Natural numbers: 1, 2, 3, …\nWhole numbers: add 0, so 0, 1, 2, 3, …\nIntegers: add the negatives, so …, −2, −1, 0, 1, 2, …\nEach set holds the one before it. The rational numbers will hold them all."
     },
     {
      "kind": "name",
@@ -116,14 +141,14 @@
      "step": "check",
      "graded": true,
      "title": "Which set is biggest?",
-     "text": "Which of these sets includes the other two?",
+     "text": "Number sets: which of these sets includes the other two?",
      "opts": [
       "Natural numbers",
       "Whole numbers",
       "Integers"
      ],
      "ans": "Integers",
-     "why": "Every natural number is whole, and every whole number is an integer.",
+     "why": "Natural numbers are 1, 2, 3, …\nWhole numbers are the natural numbers plus 0.\nIntegers are the whole numbers plus the negatives −1, −2, …\nSo the integers include both other sets. Answer: Integers.",
      "clue": "Which set also has the negative numbers?",
      "id": "g8.maths.u1.s1-1.5",
      "level": 1
@@ -133,7 +158,7 @@
      "step": "practise",
      "graded": true,
      "title": "Spot the rational numbers",
-     "text": "Tap every number that is rational.",
+     "text": "Rational numbers: tap every number that can be written as a/b with b ≠ 0.",
      "pool": [
       "3/4",
       "−8/2",
@@ -147,7 +172,7 @@
       "0",
       "5"
      ],
-     "why": "3/4, −8/2, 0 = 0/1 and 5 = 5/1 are all a/b with b ≠ 0. 7/0 is not allowed.",
+     "why": "3/4 is already a/b with b = 4.\n−8/2 has b = 2, so it is rational (it equals −4).\n0 = 0/1 and 5 = 5/1.\n7/0 has b = 0. Dividing by 0 is not allowed, so it is not rational.",
      "clue": "Check the bottom number. It must not be 0.",
      "id": "g8.maths.u1.s1-1.6",
      "level": 1
@@ -156,9 +181,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "22/5 is a rational number.",
+     "text": "Rational numbers: true or false? 22/5 is a rational number.",
      "a": true,
-     "why": "22 and 5 are integers and 5 ≠ 0.",
+     "why": "A rational number is a/b with integers a, b and b ≠ 0.\nHere a = 22 and b = 5. Both are integers.\nb = 5 is not 0.\nSo 22/5 is rational: true.",
      "clue": "Are the top and bottom both integers?",
      "id": "g8.maths.u1.s1-1.7",
      "level": 1
@@ -169,23 +194,23 @@
      "graded": true,
      "num": true,
      "title": "Solomon's toys",
-     "ask": "22 Birr shared equally by 5 pets gives ___ Birr each.",
+     "ask": "Sharing money: 22 Birr shared equally by 5 pets gives ___ Birr each.",
      "a": [
       "22/5",
       "4.4",
       "4.40",
       "4 2/5"
      ],
-     "why": "22 ÷ 5 = 4.40 Birr.",
+     "why": "Share means divide: 22 ÷ 5.\n22 ÷ 5 = 4 remainder 2, so 22/5 = 4 2/5.\n2/5 = 0.40, so each pet gets 4.40 Birr.\nCheck: 5 × 4.40 = 22.",
      "clue": "Divide 22 by 5.",
-     "worked": "22 ÷ 5 = 4 remainder 2. So 22/5 = 4 2/5 = 4.40 Birr.",
+     "worked": "22 ÷ 5 = 4 remainder 2.\nSo 22/5 = 4 2/5.\n2/5 = 0.40, so 4 2/5 = 4.40.\nEach pet gets 4.40 Birr (4 Birr 40 cents).",
      "id": "g8.maths.u1.s1-1.8",
      "level": 2
     },
     {
      "kind": "pick",
      "graded": true,
-     "text": "Simplify first. Which of these are whole numbers?",
+     "text": "Number sets: simplify first. Which of these are whole numbers?",
      "pool": [
       "18/6",
       "7/3",
@@ -196,7 +221,7 @@
       "18/6",
       "0/9"
      ],
-     "why": "18/6 = 18 ÷ 6 = 3 and 0/9 = 0 ÷ 9 = 0 are whole numbers. 7/3 is not an integer. −12/4 = −3 is an integer but negative, so it is not whole.",
+     "why": "18/6 = 18 ÷ 6 = 3. 3 is whole.\n7/3 = 2 1/3. It is not an integer, so it is not whole.\n−12/4 = −3. It is an integer but negative, so it is not whole.\n0/9 = 0. 0 is whole.\nAnswer: 18/6 and 0/9.",
      "clue": "Divide the top by the bottom. Whole numbers are 0, 1, 2, …",
      "step": "challenge",
      "level": 3,
@@ -214,7 +239,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Which is a whole number that is not a natural number?",
+     "text": "Number sets: which number is whole but NOT natural?",
      "opts": [
       "0",
       "1",
@@ -222,7 +247,7 @@
       "10"
      ],
      "ans": "0",
-     "why": "0 is whole, but counting starts at 1.",
+     "why": "Natural numbers start at 1: 1, 2, 3, …\nWhole numbers add 0: 0, 1, 2, …\nSo 0 is the only whole number that is not natural.\n1 and 10 are natural; −1 is not whole at all.",
      "clue": "Natural numbers start at 1.",
      "id": "g8.maths.u1.s1-1.9",
      "level": 1
@@ -231,7 +256,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Which is an integer that is not a whole number?",
+     "text": "Number sets: which number is an integer but NOT a whole number?",
      "opts": [
       "−3",
       "0",
@@ -239,7 +264,7 @@
       "1/2"
      ],
      "ans": "−3",
-     "why": "Negative integers are not whole numbers.",
+     "why": "Whole numbers are 0, 1, 2, … They are never negative.\nIntegers also include −1, −2, −3, …\n−3 is an integer and it is negative, so it is not whole.\n0 and 3 are whole; 1/2 is not an integer.",
      "clue": "Whole numbers are never negative.",
      "id": "g8.maths.u1.s1-1.10",
      "level": 1
@@ -248,14 +273,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Which set of numbers includes the other two sets?",
+     "text": "Number sets: which set of numbers includes the other two sets?",
      "opts": [
       "Whole numbers",
       "Integers",
       "Natural numbers"
      ],
      "ans": "Integers",
-     "why": "Natural ⊂ whole ⊂ integers.",
+     "why": "Every natural number is a whole number.\nEvery whole number is an integer.\nSo ℕ ⊂ W ⊂ ℤ: the integers include the other two.\nAnswer: Integers.",
      "clue": "Which set is the largest?",
      "id": "g8.maths.u1.s1-1.11",
      "level": 1
@@ -265,14 +290,14 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Solomon has 22 Birr for 5 pets. Each pet gets ___ Birr.",
+     "ask": "Sharing money: Solomon has 22 Birr for 5 pets. Each pet gets ___ Birr.",
      "a": [
       "22/5",
       "4.40",
       "4.4",
       "4 2/5"
      ],
-     "why": "22/5 = 4.40 Birr = 4 Birr 40 cents.",
+     "why": "3 cats + 2 dogs = 5 pets.\n22 ÷ 5 = 4 remainder 2, so 22/5 = 4 2/5 Birr.\n2/5 Birr = 40 cents.\nEach pet gets 4.40 Birr (4 Birr 40 cents).",
      "clue": "3 cats + 2 dogs = 5 pets.",
      "id": "g8.maths.u1.s1-1.12",
      "level": 1
@@ -285,7 +310,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "A rational number can be written as a/b where a and b are integers and",
+   "text": "Definition of a rational number: a/b where a and b are integers and …",
    "opts": [
     "b ≠ 0",
     "a ≠ 0",
@@ -293,7 +318,7 @@
     "b > a"
    ],
    "ans": "b ≠ 0",
-   "why": "Dividing by 0 is not allowed.",
+   "why": "A rational number is a/b with a and b integers.\nThe bottom number b divides the top.\nDividing by 0 has no meaning, so b ≠ 0.\na can be 0 (0/5 = 0), and a can be bigger or smaller than b.",
    "clue": "",
    "id": "g8.maths.u1.s1-1.13",
    "level": 1
@@ -302,9 +327,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "−6 is a rational number.",
+   "text": "Rational numbers: true or false? −6 is a rational number.",
    "a": true,
-   "why": "−6 = −6/1.",
+   "why": "Any integer n can be written n/1.\n−6 = −6/1.\n−6 and 1 are integers and 1 ≠ 0.\nSo −6 is rational: true.",
    "clue": "",
    "id": "g8.maths.u1.s1-1.14",
    "level": 2
@@ -313,9 +338,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "5/0 is a rational number.",
+   "text": "Rational numbers: true or false? 5/0 is a rational number.",
    "a": false,
-   "why": "The denominator cannot be 0.",
+   "why": "A rational number needs a/b with b ≠ 0.\nHere b = 0.\nDividing by 0 is not allowed.\nSo 5/0 is not rational: false.",
    "clue": "",
    "id": "g8.maths.u1.s1-1.15",
    "level": 3
@@ -324,7 +349,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which number is NOT rational?",
+   "text": "Rational numbers: which number is NOT rational?",
    "opts": [
     "7/0",
     "0/7",
@@ -332,7 +357,7 @@
     "0.7"
    ],
    "ans": "7/0",
-   "why": "A denominator of 0 is not allowed.",
+   "why": "0/7 = 0, which is rational (7 ≠ 0).\n−7 = −7/1 and 0.7 = 7/10 are rational.\n7/0 has denominator 0, which is not allowed.\nSo 7/0 is not rational.",
    "clue": "",
    "level": 2,
    "id": "g8.maths.u1.s1-1.17"
@@ -342,13 +367,13 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "Three friends share 40 Birr equally. Each gets ___ Birr.",
+   "ask": "Sharing money: three friends share 40 Birr equally. Each gets ___ Birr.",
    "a": [
     "40/3",
     "13 1/3",
     "≈13.33"
    ],
-   "why": "40 ÷ 3 = 40/3 = 13 1/3 Birr.",
+   "why": "Share means divide: 40 ÷ 3.\n40 ÷ 3 = 13 remainder 1.\nSo 40/3 = 13 1/3 Birr (about 13.33 Birr).\nCheck: 3 × 13 1/3 = 39 + 1 = 40.",
    "clue": "",
    "level": 3,
    "id": "g8.maths.u1.s1-1.18"

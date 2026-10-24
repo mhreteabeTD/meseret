@@ -58,9 +58,10 @@
       "The door is lighter there",
       "It keeps the door closed"
      ],
-     "after": "A force far from the axis has a bigger turning effect: torque grows with r.",
+     "after": "A force far from the hinges has a bigger turning effect.\nTorque τ = rF sinθ grows with r.\nSo the same push turns the door more easily.",
      "added": true,
-     "id": "g12.physics.u2.s2-3.1"
+     "id": "g12.physics.u2.s2-3.1",
+     "best": "The same push turns the door more easily"
     },
     {
      "kind": "read",
@@ -110,8 +111,20 @@
       }
      ],
      "formula": "r*F*Math.sin(a*Math.PI/180)",
-     "out": "τ = {v} N m",
-     "id": "g12.physics.u2.s2-3.3"
+     "id": "g12.physics.u2.s2-3.3",
+     "outs": [
+      [
+       "Torque τ = rF sinθ",
+       "r*F*Math.sin(a*Math.PI/180)",
+       "{v} N m"
+      ],
+      [
+       "Lever arm r sinθ",
+       "r*Math.sin(a*Math.PI/180)",
+       "{v} m"
+      ]
+     ],
+     "note": "Largest at θ = 90°. Zero at 0° and 180°: the force points along the spanner."
     },
     {
      "kind": "name",
@@ -127,7 +140,7 @@
     },
     {
      "kind": "mcq",
-     "text": "A force is pushed straight along a rod toward its pivot (θ = 0°). The torque is",
+     "text": "Torque and angle: a force pushes straight along a rod toward its pivot (θ = 0°). The torque is",
      "opts": [
       "zero",
       "the largest possible",
@@ -135,7 +148,7 @@
       "equal to F"
      ],
      "ans": "zero",
-     "why": "sin0° = 0, so τ = 0. The force cannot turn the rod.",
+     "why": "Formula: τ = rF sinθ.\nθ = 0°, and sin0° = 0.\nSo τ = rF × 0 = 0.\nA push along the rod cannot turn it.",
      "clue": "What is sin0°?",
      "graded": true,
      "level": 1,
@@ -144,11 +157,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A 400 N force acts 5 m from a pivot at 30° to the beam. τ = ___ N m",
+     "ask": "Torque: a 400 N force acts 5 m from a pivot at 30° to the beam. τ = ___ N m",
      "a": [
       "1000"
      ],
-     "why": "τ = 5 × 400 × sin30° = 5 × 400 × 0.5 = 1000 N m.",
+     "why": "Formula: τ = rF sinθ.\nSubstitute: τ = 5 m × 400 N × sin30°.\nsin30° = 0.5, so τ = 2000 × 0.5.\nResult: τ = 1000 N m.\nTrap: using cos30° gives 1732 N m.",
      "clue": "Use sinθ with the angle between beam and force.",
      "num": true,
      "graded": true,
@@ -159,11 +172,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A 16 N force acts 4.0 m from O at 150° to r. τ = ___ N m",
+     "ask": "Torque at an obtuse angle: a 16 N force acts 4.0 m from O at 150° to r. τ = ___ N m",
      "a": [
       "32"
      ],
-     "why": "τ = 4 × 16 × sin150° = 4 × 16 × 0.5 = 32 N m (counterclockwise).",
+     "why": "Formula: τ = rF sinθ.\nsin150° = sin30° = 0.5.\nτ = 4.0 × 16 × 0.5 = 32 N m.\nIt turns counterclockwise, so it is +32 N m.",
      "clue": "sin150° = sin30°.",
      "num": true,
      "graded": true,
@@ -174,11 +187,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Three forces act on a rod pivoted at O: −26.0 N m (clockwise), +32 N m and +107.5 N m. τ_net = ___ N m (1 decimal place)",
+     "ask": "Net torque: three torques act on a rod pivoted at O: −26.0 N m (clockwise), +32 N m and +107.5 N m. τ_net = ___ N m (1 decimal place)",
      "a": [
       "≈113.5"
      ],
-     "why": "τ_net = −26.0 + 32 + 107.5 = 113.5 N m, counterclockwise.",
+     "why": "Counterclockwise is +, clockwise is −.\nτ_net = −26.0 + 32 + 107.5.\nResult: τ_net = 113.5 N m.\nPositive, so the net turning is counterclockwise.",
      "clue": "Add with signs.",
      "num": true,
      "graded": true,
@@ -189,11 +202,11 @@
     },
     {
      "kind": "blank",
-     "ask": "F₁ = 10 N at 3.0 m and 120° (clockwise), F₂ = 16 N at 4.0 m and 150°, F₃ = 19 N at 8.0 m and 45° (both counterclockwise). τ_net ≈ ___ N m (1 decimal place)",
+     "ask": "Net torque from three forces: F₁ = 10 N at 3.0 m and 120° (clockwise), F₂ = 16 N at 4.0 m and 150°, F₃ = 19 N at 8.0 m and 45° (both counterclockwise). τ_net ≈ ___ N m (1 decimal place)",
      "a": [
       "≈113.5"
      ],
-     "why": "τ₁ = −3 × 10 × 0.866 = −26.0; τ₂ = +32; τ₃ = 8 × 19 × 0.707 = +107.5. Sum: 113.5 N m.",
+     "why": "τ₁ = −3.0 × 10 × sin120° = −30 × 0.866 = −26.0 N m.\nτ₂ = +4.0 × 16 × sin150° = +32 N m.\nτ₃ = +8.0 × 19 × sin45° = 152 × 0.707 = +107.5 N m.\nSum: −26.0 + 32 + 107.5 = 113.5 N m.",
      "clue": "Work out each torque, give it a sign, then add.",
      "num": true,
      "graded": true,
@@ -230,9 +243,10 @@
       "Both the same",
       "Neither can spin"
      ],
-     "after": "Mass near the axis has small r, so small mr². Rod B resists rotation less.",
+     "after": "Moment of inertia I = Σmr².\nOn rod B the masses are near the axis: small r, small mr².\nSo rod B resists turning less and is easier to spin.",
      "added": true,
-     "id": "g12.physics.u2.s2-3.10"
+     "id": "g12.physics.u2.s2-3.10",
+     "best": "Rod B"
     },
     {
      "kind": "read",
@@ -250,6 +264,46 @@
      "id": "g12.physics.u2.s2-3.11"
     },
     {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Where the mass sits",
+     "ask": "Move the mass away from the axis. Watch I.",
+     "vars": [
+      {
+       "k": "m",
+       "label": "Mass m (kg)",
+       "min": 1,
+       "max": 10,
+       "step": 1,
+       "v": 2
+      },
+      {
+       "k": "r",
+       "label": "Distance r (m)",
+       "min": 0.5,
+       "max": 5,
+       "step": 0.5,
+       "v": 1
+      }
+     ],
+     "formula": "m*r*r",
+     "outs": [
+      [
+       "I = mr²",
+       "m*r*r",
+       "{v} kg m²"
+      ],
+      [
+       "If r were doubled: m(2r)²",
+       "4*m*r*r",
+       "{v} kg m²"
+      ]
+     ],
+     "note": "Doubling m doubles I. Doubling r makes I four times larger.",
+     "id": "g12.physics.u2.s2-3.31",
+     "added": true
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key word",
@@ -263,7 +317,7 @@
     },
     {
      "kind": "mcq",
-     "text": "The SI unit of moment of inertia is",
+     "text": "Units: the SI unit of moment of inertia is",
      "opts": [
       "kg m²",
       "kg m/s",
@@ -271,7 +325,7 @@
       "kg/m²"
      ],
      "ans": "kg m²",
-     "why": "I = mr²: kilograms times metres squared.",
+     "why": "Formula: I = mr².\nUnits: kg × m × m = kg m².\nTrap: N m is torque; kg m/s is momentum.",
      "clue": "Look at the formula I = mr².",
      "graded": true,
      "level": 1,
@@ -280,11 +334,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A 2 kg mass turns 0.5 m from the axis. I = ___ kg m²",
+     "ask": "Moment of inertia of a point mass: a 2 kg mass turns 0.5 m from the axis. I = ___ kg m²",
      "a": [
       "0.5"
      ],
-     "why": "I = 2 × 0.5² = 2 × 0.25 = 0.5 kg m².",
+     "why": "Formula: I = mr².\nSquare r first: 0.5² = 0.25 m².\nI = 2 kg × 0.25 m² = 0.5 kg m².\nTrap: 2 × 0.5 = 1 forgets to square r.",
      "clue": "Square r first.",
      "num": true,
      "graded": true,
@@ -295,11 +349,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Masses 4 kg, 2 kg and 3 kg sit 3 m, 2 m and 4 m from the axis. I = ___ kg m²",
+     "ask": "Moment of inertia of several masses: 4 kg, 2 kg and 3 kg sit 3 m, 2 m and 4 m from the axis. I = ___ kg m²",
      "a": [
       "92"
      ],
-     "why": "I = 4 × 9 + 2 × 4 + 3 × 16 = 36 + 8 + 48 = 92 kg m². (The book prints 164.)",
+     "why": "Formula: I = m₁r₁² + m₂r₂² + m₃r₃².\n4 × 3² = 36; 2 × 2² = 8; 3 × 4² = 48.\nI = 36 + 8 + 48 = 92 kg m².\n(The book prints 164; 92 is correct.)",
      "clue": "Square each distance.",
      "num": true,
      "graded": true,
@@ -310,9 +364,9 @@
     },
     {
      "kind": "tf",
-     "text": "Moving the same masses farther from the axis makes I larger.",
+     "text": "Moment of inertia, true or false: moving the same masses farther from the axis makes I larger.",
      "a": true,
-     "why": "I grows with r², so doubling r makes it four times larger.",
+     "why": "I = Σmr², and r is squared.\nLarger r gives larger r².\nDoubling r makes I four times larger.\nSo the statement is true.",
      "clue": "r is squared in I = mr².",
      "graded": true,
      "level": 1,
@@ -321,7 +375,7 @@
     },
     {
      "kind": "mcq",
-     "text": "Three masses m sit at the corners of an equilateral triangle of side L. I about an axis through one corner, perpendicular to the triangle, is",
+     "text": "Moment of inertia of a triangle of masses: three masses m at the corners of an equilateral triangle of side L. I about an axis through one corner, perpendicular to the triangle, is",
      "opts": [
       "2mL²",
       "3mL²",
@@ -329,7 +383,7 @@
       "3mL²/2"
      ],
      "ans": "2mL²",
-     "why": "The mass on the axis has r = 0. The other two are L away: I = mL² + mL² = 2mL².",
+     "why": "The mass on the axis has r = 0, so it adds 0.\nThe other two masses are each a side L away.\nI = mL² + mL² = 2mL².\nTrap: 3mL² counts the corner mass too.",
      "clue": "How far is the corner mass from the axis?",
      "graded": true,
      "level": 3,
@@ -379,8 +433,20 @@
       }
      ],
      "formula": "t/I",
-     "out": "α = {v} rad/s²",
-     "id": "g12.physics.u2.s2-3.18"
+     "id": "g12.physics.u2.s2-3.18",
+     "outs": [
+      [
+       "α = τ/I",
+       "t/I",
+       "{v} rad/s²"
+      ],
+      [
+       "ω after 2 s from rest = 2α",
+       "2*t/I",
+       "{v} rad/s"
+      ]
+     ],
+     "note": "Double τ: α doubles. Double I: α halves. Like F = ma."
     },
     {
      "kind": "read",
@@ -409,7 +475,7 @@
     },
     {
      "kind": "mcq",
-     "text": "In τ = Iα, which quantity plays the part of mass?",
+     "text": "Newton's second law for rotation: in τ = Iα, which quantity plays the part of mass?",
      "opts": [
       "Moment of inertia I",
       "Torque τ",
@@ -417,7 +483,7 @@
       "Radius r"
      ],
      "ans": "Moment of inertia I",
-     "why": "F = ma becomes τ = Iα: I replaces m.",
+     "why": "Linear: F = ma.\nRotation: τ = Iα.\nForce ↔ torque, acceleration ↔ angular acceleration.\nSo mass ↔ moment of inertia I.",
      "clue": "Match F = ma letter by letter.",
      "graded": true,
      "level": 1,
@@ -426,11 +492,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A torque of 36 N m gives a wheel α = 24 rad/s². I = ___ kg m²",
+     "ask": "Moment of inertia from τ = Iα: a torque of 36 N m gives a wheel α = 24 rad/s². I = ___ kg m²",
      "a": [
       "1.5"
      ],
-     "why": "I = τ/α = 36/24 = 1.5 kg m².",
+     "why": "Formula: τ = Iα, so I = τ/α.\nSubstitute: I = 36 N m ÷ 24 rad/s².\nResult: I = 1.5 kg m².",
      "clue": "Rearrange τ = Iα.",
      "num": true,
      "graded": true,
@@ -441,11 +507,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A motor gives 100 N m to a flywheel with I = 0.1 kg m². α = ___ rad/s²",
+     "ask": "Angular acceleration from τ = Iα: a motor gives 100 N m to a flywheel with I = 0.1 kg m². α = ___ rad/s²",
      "a": [
       "1000"
      ],
-     "why": "α = 100 ÷ 0.1 = 1000 rad/s².",
+     "why": "Formula: α = τ/I.\nSubstitute: α = 100 ÷ 0.1.\nResult: α = 1000 rad/s².\nTrap: 100 × 0.1 = 10 multiplies instead of dividing.",
      "clue": "α = τ/I.",
      "num": true,
      "graded": true,
@@ -456,11 +522,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Same flywheel: from rest it reaches 150 rad/s after ___ s",
+     "ask": "Time to reach a speed: same flywheel (α = 1000 rad/s², from rest). It reaches 150 rad/s after ___ s",
      "a": [
       "0.15"
      ],
-     "why": "t = 150/1000 = 0.15 s.",
+     "why": "Formula: ω_f = ω₀ + αt, with ω₀ = 0.\nt = ω_f/α = 150 ÷ 1000.\nResult: t = 0.15 s.",
      "clue": "Use ω_f = ω₀ + αt.",
      "num": true,
      "graded": true,
@@ -471,11 +537,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A disc (I = 2 kg m²) goes from 3 rad/s to 8 rad/s under a net torque of 50 N m. It takes ___ s",
+     "ask": "Torque and time: a disc (I = 2 kg m²) goes from 3 rad/s to 8 rad/s under a net torque of 50 N m. It takes ___ s",
      "a": [
       "0.2"
      ],
-     "why": "α = 50/2 = 25 rad/s². t = (8 − 3)/25 = 0.2 s.",
+     "why": "Step 1: α = τ/I = 50 ÷ 2 = 25 rad/s².\nStep 2: t = (ω_f − ω₀)/α = (8 − 3) ÷ 25.\nResult: t = 0.2 s.",
      "clue": "Find α, then the time.",
      "num": true,
      "graded": true,
@@ -492,11 +558,11 @@
  "test": [
   {
    "kind": "blank",
-   "ask": "A 10 N force acts 2 m from the axis, at 90° to r. τ = ___ N m",
+   "ask": "Torque: a 10 N force acts 2 m from the axis, at 90° to r. τ = ___ N m",
    "a": [
     "20"
    ],
-   "why": "2 × 10 × 1 = 20.",
+   "why": "Formula: τ = rF sinθ.\nsin90° = 1.\nτ = 2 × 10 × 1 = 20 N m.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -506,11 +572,11 @@
   },
   {
    "kind": "blank",
-   "ask": "A 40 N force acts 0.5 m from the axis, at 30° to r. τ = ___ N m",
+   "ask": "Torque: a 40 N force acts 0.5 m from the axis, at 30° to r. τ = ___ N m",
    "a": [
     "10"
    ],
-   "why": "0.5 × 40 × 0.5 = 10.",
+   "why": "Formula: τ = rF sinθ.\nτ = 0.5 × 40 × sin30° = 20 × 0.5.\nResult: 10 N m.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -520,11 +586,11 @@
   },
   {
    "kind": "blank",
-   "ask": "A 3 kg point mass turns 2 m from the axis. I = ___ kg m²",
+   "ask": "Moment of inertia: a 3 kg point mass turns 2 m from the axis. I = ___ kg m²",
    "a": [
     "12"
    ],
-   "why": "3 × 2² = 12.",
+   "why": "Formula: I = mr².\nI = 3 × 2² = 3 × 4.\nResult: 12 kg m².",
    "clue": "",
    "num": true,
    "graded": true,
@@ -534,11 +600,11 @@
   },
   {
    "kind": "blank",
-   "ask": "A net torque of 12 N m acts on a wheel with I = 4 kg m². α = ___ rad/s²",
+   "ask": "Angular acceleration: a net torque of 12 N m acts on a wheel with I = 4 kg m². α = ___ rad/s²",
    "a": [
     "3"
    ],
-   "why": "12/4 = 3.",
+   "why": "Formula: α = τ/I.\nα = 12 ÷ 4.\nResult: 3 rad/s².",
    "clue": "",
    "num": true,
    "graded": true,
@@ -548,11 +614,11 @@
   },
   {
    "kind": "blank",
-   "ask": "A wheel (I = 0.5 kg m²) goes from rest to 20 rad/s in 4 s. The net torque is ___ N m",
+   "ask": "Net torque: a wheel (I = 0.5 kg m²) goes from rest to 20 rad/s in 4 s. The net torque is ___ N m",
    "a": [
     "2.5"
    ],
-   "why": "α = 5 rad/s²; τ = 0.5 × 5 = 2.5.",
+   "why": "Step 1: α = Δω/Δt = 20 ÷ 4 = 5 rad/s².\nStep 2: τ = Iα = 0.5 × 5.\nResult: 2.5 N m.",
    "clue": "",
    "num": true,
    "graded": true,

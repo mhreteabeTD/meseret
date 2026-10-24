@@ -48,9 +48,42 @@
       "v′(7)",
       "v(0) × 7"
      ],
-     "after": "Distance is the integral of velocity: about 273.83 ft.",
+     "after": "Velocity is the rate of change of distance.\nThe area under a rate graph is the total change.\nSo distance = ∫ from 0 to 7 v(t) dt ≈ 273.83 ft.\nv(7) ≈ 0 is the speed at the end; v(0) × 7 pretends the car never slows.",
      "ref": "Example 3",
-     "id": "g12.maths.u2.s2-3-5.1"
+     "id": "g12.maths.u2.s2-3-5.1",
+     "best": "∫ from 0 to 7 v(t) dt"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "The braking car",
+     "ask": "v(t) = −1.197t² + 58.67 ft/s. Move the time t.",
+     "vars": [
+      {
+       "k": "t",
+       "label": "Time t (s)",
+       "min": 0,
+       "max": 7,
+       "step": 0.5,
+       "v": 0
+      }
+     ],
+     "formula": "-0.399*t*t*t + 58.67*t",
+     "outs": [
+      [
+       "Speed v(t)",
+       "-1.197*t*t + 58.67",
+       "{v} ft/s"
+      ],
+      [
+       "Distance so far s(t) = ∫ from 0 to t v",
+       "-0.399*t*t*t + 58.67*t",
+       "{v} ft"
+      ]
+     ],
+     "note": "The speed falls to about 0 at t = 7. The distance keeps growing, more slowly, to about 273.83 ft.",
+     "id": "g12.maths.u2.s2-3-5.17"
     },
     {
      "kind": "read",
@@ -77,7 +110,7 @@
     },
     {
      "kind": "mcq",
-     "text": "v(t) = 5t⁴ and s(0) = 9. s(t) =",
+     "text": "Position from velocity with an initial condition: v(t) = 5t⁴ and s(0) = 9. s(t) =",
      "opts": [
       "t⁵ + 9",
       "t⁵",
@@ -85,7 +118,7 @@
       "5t⁵ + 9"
      ],
      "ans": "t⁵ + 9",
-     "why": "s = ∫ 5t⁴ dt = t⁵ + C; s(0) = C = 9.",
+     "why": "s(t) = ∫ v(t) dt = ∫ 5t⁴ dt = 5 × t⁵/5 + C = t⁵ + C.\nUse s(0) = 9: 0 + C = 9, so C = 9.\ns(t) = t⁵ + 9.\nTrap: 20t³ is the derivative of v, not the integral.",
      "clue": "Integrate, then use s(0).",
      "graded": true,
      "level": 1,
@@ -108,12 +141,12 @@
     },
     {
      "kind": "blank",
-     "ask": "Airline: P′(x) = √x − 6 (hundreds of $). P(60) ≈ ___ hundred $",
+     "ask": "Total profit from marginal profit: an airline has P′(x) = √x − 6 (hundreds of $). P(60) ≈ ___ hundred $",
      "a": [
       "≈-50.16",
       "-50.16"
      ],
-     "why": "[(2/3)x^(3/2) − 6x] from 0 to 60 ≈ 309.84 − 360 = −50.16: a loss of about $5016.",
+     "why": "P(60) = ∫ from 0 to 60 (x^(1/2) − 6) dx.\nAnti-derivative: (2/3)x^(3/2) − 6x.\n(2/3)(60)^(3/2) = (2/3)(464.76) ≈ 309.84.\n6 × 60 = 360, so P(60) ≈ 309.84 − 360 = −50.16.\nNegative: a loss of about $5016.",
      "clue": "(2/3)(60)^(3/2) ≈ 309.84.",
      "num": true,
      "graded": true,
@@ -124,12 +157,12 @@
     },
     {
      "kind": "blank",
-     "ask": "P′(x) = x^(1/5) dollars per foot. Profit for a 250 ft well ≈ $ ___",
+     "ask": "Total profit from marginal profit: P′(x) = x^(1/5) dollars per foot drilled. The profit for a 250 ft well ≈ $ ___",
      "a": [
       "≈628.56",
       "628.56"
      ],
-     "why": "(5/6)(250)^(6/5) ≈ 628.56.",
+     "why": "Profit = ∫ from 0 to 250 x^(1/5) dx.\nNew power 1/5 + 1 = 6/5; divide by 6/5: (5/6)x^(6/5).\n250^(6/5) ≈ 754.27.\n(5/6)(754.27) ≈ 628.56 dollars.",
      "clue": "Anti-derivative (5/6)x^(6/5).",
      "num": true,
      "graded": true,
@@ -140,11 +173,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A tank fills at r(t) = 3t² litres per minute. Water added from t = 0 to t = 4 = ___ L",
+     "ask": "Total from a flow rate: a tank fills at r(t) = 3t² litres per minute. The water added from t = 0 to t = 4 is ___ L",
      "a": [
       "64"
      ],
-     "why": "[t³] from 0 to 4 = 64.",
+     "why": "Total = ∫ from 0 to 4 3t² dt.\nAnti-derivative: t³.\n4³ − 0³ = 64 L.",
      "clue": "Integrate the rate.",
      "num": true,
      "graded": true,
@@ -154,12 +187,45 @@
      "id": "g12.maths.u2.s2-3-5.8"
     },
     {
+     "kind": "match",
+     "step": "practise",
+     "added": true,
+     "graded": true,
+     "level": 1,
+     "text": "Integrate a rate to get a total: match each rate with the total it gives.",
+     "pairs": [
+      [
+       "velocity (m/s)",
+       "distance (m)"
+      ],
+      [
+       "marginal cost (birr per item)",
+       "total cost (birr)"
+      ],
+      [
+       "marginal profit P′(x)",
+       "profit P(x)"
+      ],
+      [
+       "flow rate (L/min)",
+       "volume of water (L)"
+      ],
+      [
+       "sales rate ($ per day)",
+       "total sales ($)"
+      ]
+     ],
+     "why": "Integrating a rate over an interval gives the total change.\nUnits: (input unit) × (rate unit). s × m/s = m; items × birr/item = birr.\nmin × L/min = L; days × $/day = $.",
+     "clue": "Multiply the units: what is left?",
+     "id": "g12.maths.u2.s2-3-5.18"
+    },
+    {
      "kind": "blank",
-     "ask": "v(t) = 6t + 2 m/s and s(0) = 5. s(3) = ___ m",
+     "ask": "Position from velocity: v(t) = 6t + 2 m/s and s(0) = 5 m. Find s(3) = ___ m",
      "a": [
       "38"
      ],
-     "why": "s = 3t² + 2t + 5. s(3) = 27 + 6 + 5 = 38.",
+     "why": "s(t) = ∫ (6t + 2) dt = 3t² + 2t + C.\ns(0) = 5 gives C = 5.\ns(3) = 27 + 6 + 5 = 38 m.\nTrap: 33 forgets the starting position 5.",
      "clue": "Integrate, then use s(0) = 5.",
      "num": true,
      "graded": true,
@@ -177,11 +243,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "P′(x) = x^(1/5). P(250) ≈ $ ___",
+     "ask": "Total profit from marginal profit: P′(x) = x^(1/5). P(250) ≈ $ ___",
      "a": [
       "≈628.56"
      ],
-     "why": "(5/6)250^(6/5).",
+     "why": "α + 1 = 6/5, so the anti-derivative is (5/6)x^(6/5).\nP(250) = (5/6)(250)^(6/5) − 0.\n≈ (5/6)(754.27) ≈ 628.56.",
      "clue": "α + 1 = 6/5.",
      "num": true,
      "graded": true,
@@ -192,7 +258,7 @@
     },
     {
      "kind": "mcq",
-     "text": "S′(t) = 20eᵗ $/day. Sales in the first 5 days:",
+     "text": "Total sales from a rate: S′(t) = 20eᵗ $ per day. Sales in the first 5 days:",
      "opts": [
       "20(e⁵ − 1) ≈ $2948",
       "20e⁵ ≈ $2968",
@@ -200,7 +266,7 @@
       "20(e⁵ − e)"
      ],
      "ans": "20(e⁵ − 1) ≈ $2948",
-     "why": "The anti-derivative of eᵗ is eᵗ.",
+     "why": "Total = ∫ from 0 to 5 20eᵗ dt.\nThe anti-derivative of eᵗ is eᵗ.\n20e⁵ − 20e⁰ = 20(e⁵ − 1).\n≈ 20(147.41) ≈ $2948.\nTrap: 20e⁵ forgets e⁰ = 1 at the lower limit.",
      "clue": "F(5) − F(0).",
      "graded": true,
      "level": 3,
@@ -214,11 +280,11 @@
  "test": [
   {
    "kind": "blank",
-   "ask": "Velocity 4t m/s. Distance from t = 0 to 5 = ___ m",
+   "ask": "Distance from velocity: v(t) = 4t m/s. The distance from t = 0 to t = 5 is ___ m",
    "a": [
     "50"
    ],
-   "why": "[2t²].",
+   "why": "Distance = ∫ from 0 to 5 4t dt.\nAnti-derivative: 2t².\n2(25) − 0 = 50 m.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -228,7 +294,7 @@
   },
   {
    "kind": "mcq",
-   "text": "s′(t) = 3t² and s(0) = 2. s(t) =",
+   "text": "Position from velocity with an initial condition: s′(t) = 3t² and s(0) = 2. s(t) =",
    "opts": [
     "t³ + 2",
     "t³",
@@ -236,7 +302,7 @@
     "3t³ + 2"
    ],
    "ans": "t³ + 2",
-   "why": "C = 2.",
+   "why": "s(t) = ∫ 3t² dt = t³ + C.\ns(0) = 2 gives C = 2.\ns(t) = t³ + 2.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -245,11 +311,11 @@
   },
   {
    "kind": "blank",
-   "ask": "Marginal cost C′(x) = 10 + 2x. Extra cost from x = 0 to 10 = ___",
+   "ask": "Total extra cost from marginal cost: C′(x) = 10 + 2x. The extra cost from x = 0 to x = 10 is ___",
    "a": [
     "200"
    ],
-   "why": "[10x + x²] = 100 + 100.",
+   "why": "Extra cost = ∫ from 0 to 10 (10 + 2x) dx.\nAnti-derivative: 10x + x².\n(100 + 100) − 0 = 200.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -259,11 +325,11 @@
   },
   {
    "kind": "blank",
-   "ask": "Rate 6√t litres per hour. Total from t = 0 to 4 = ___ L",
+   "ask": "Total from a flow rate: 6√t litres per hour. The total from t = 0 to t = 4 is ___ L",
    "a": [
     "32"
    ],
-   "why": "[4t^(3/2)] = 32.",
+   "why": "6√t = 6t^(1/2). Anti-derivative: 6 × t^(3/2)/(3/2) = 4t^(3/2).\nAt t = 4: 4 × 4^(3/2) = 4 × 8 = 32.\nAt t = 0: 0. Total 32 L.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -273,11 +339,11 @@
   },
   {
    "kind": "blank",
-   "ask": "v(t) = 2t − 1 and s(0) = 0. s(4) = ___",
+   "ask": "Position from velocity: v(t) = 2t − 1 and s(0) = 0. Find s(4) = ___",
    "a": [
     "12"
    ],
-   "why": "t² − t.",
+   "why": "s(t) = t² − t + C, and s(0) = 0 gives C = 0.\ns(4) = 16 − 4 = 12.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -315,7 +381,7 @@
     },
     {
      "kind": "mcq",
-     "text": "∫ from 1 to 2 3x² dx = ?",
+     "text": "Evaluate the definite integral: ∫ from 1 to 2 3x² dx = ?",
      "opts": [
       "7",
       "8",
@@ -323,7 +389,7 @@
       "3"
      ],
      "ans": "7",
-     "why": "[x³] = 8 − 1.",
+     "why": "Anti-derivative: F(x) = x³.\nF(2) = 8. F(1) = 1.\n8 − 1 = 7.\nTrap: 8 forgets to subtract F(1).",
      "clue": "F(2) − F(1).",
      "graded": true,
      "level": 1,

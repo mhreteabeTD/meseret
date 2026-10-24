@@ -52,9 +52,40 @@
       "10100",
       "4950"
      ],
-     "after": "5050. He paired 1 + 100, 2 + 99, … : each pair is 101.",
+     "after": "Pair the ends: 1 + 100 = 101, 2 + 99 = 101, …, 50 + 51 = 101.\n100 numbers make 50 pairs.\n50 × 101 = 5050.\n(10100 counts every number twice; 5000 forgets the extra 1 in each pair.)",
      "ref": "Historical note",
-     "id": "g12.maths.u1.s1-3-2.1"
+     "id": "g12.maths.u1.s1-3-2.1",
+     "best": "5050"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Gauss pairs the numbers",
+     "ask": "Tap each pair from 1 + 2 + … + 100.",
+     "items": [
+      [
+       "1 + 100",
+       "= 101. The smallest with the biggest."
+      ],
+      [
+       "2 + 99",
+       "= 101. One up, one down: the total stays 101."
+      ],
+      [
+       "3 + 98",
+       "= 101 again."
+      ],
+      [
+       "50 + 51",
+       "= 101. This is the last pair in the middle."
+      ],
+      [
+       "How many pairs?",
+       "100 numbers make 100 ÷ 2 = 50 pairs. 50 × 101 = 5050."
+      ]
+     ],
+     "added": true,
+     "id": "g12.maths.u1.s1-3-2.42"
     },
     {
      "kind": "people",
@@ -119,11 +150,11 @@
     },
     {
      "kind": "blank",
-     "ask": "1 + 2 + … + 40 = ___",
+     "ask": "Use Gauss's formula n(n + 1)/2: 1 + 2 + … + 40 = ___",
      "a": [
       "820"
      ],
-     "why": "(40/2)(41) = 20 × 41 = 820.",
+     "why": "Step 1: n = 40.\nStep 2: n(n + 1)/2 = 40 × 41/2.\nStep 3: halve 40 first: 20 × 41 = 820.\nSo the sum is 820.",
      "clue": "Use n(n + 1)/2.",
      "num": true,
      "graded": true,
@@ -134,11 +165,11 @@
     },
     {
      "kind": "blank",
-     "ask": "The sum of the first 150 natural numbers is ___",
+     "ask": "Use Gauss's formula n(n + 1)/2: the sum of the first 150 natural numbers is ___",
      "a": [
       "11325"
      ],
-     "why": "(150/2)(151) = 75 × 151 = 11 325.",
+     "why": "Step 1: n = 150, so n + 1 = 151.\nStep 2: 150 × 151/2 = 75 × 151.\nStep 3: 75 × 151 = 75 × 150 + 75 = 11 250 + 75 = 11 325.\nSo the sum is 11 325.",
      "clue": "n = 150.",
      "num": true,
      "graded": true,
@@ -149,11 +180,11 @@
     },
     {
      "kind": "blank",
-     "ask": "The sum of the first 99 natural numbers is ___",
+     "ask": "Use Gauss's formula n(n + 1)/2: the sum of the first 99 natural numbers is ___",
      "a": [
       "4950"
      ],
-     "why": "(99/2)(100) = 99 × 50 = 4950.",
+     "why": "Step 1: n = 99, so n + 1 = 100.\nStep 2: 99 × 100/2.\nStep 3: halve the even number: 99 × 50 = 4950.\nCheck: 5050 − 100 = 4950 ✓.",
      "clue": "Halve the 100, not the 99.",
      "num": true,
      "graded": true,
@@ -164,11 +195,11 @@
     },
     {
      "kind": "blank",
-     "ask": "1 + 2 + … + n = 3240. n = ___",
+     "ask": "Work backwards from the sum: 1 + 2 + … + n = 3240. n = ___",
      "a": [
       "80"
      ],
-     "why": "n(n + 1) = 6480. 80 × 81 = 6480, so n = 80 (n = −81 is rejected).",
+     "why": "Step 1: n(n + 1)/2 = 3240, so n(n + 1) = 6480.\nStep 2: n² + n − 6480 = 0.\nStep 3: √6480 ≈ 80.5, so try 80 × 81 = 6480 ✓.\nStep 4: (n − 80)(n + 81) = 0; n = −81 is not a natural number.\nSo n = 80.",
      "clue": "Double 3240 and look for two consecutive numbers with that product.",
      "num": true,
      "graded": true,
@@ -179,11 +210,11 @@
     },
     {
      "kind": "blank",
-     "ask": "51 + 52 + 53 + … + 100 = ___",
+     "ask": "Use Gauss's formula twice: 51 + 52 + 53 + … + 100 = ___",
      "a": [
       "3775"
      ],
-     "why": "(1 + … + 100) − (1 + … + 50) = 5050 − 1275 = 3775.",
+     "why": "Step 1: 1 + … + 100 = 100 × 101/2 = 5050.\nStep 2: 1 + … + 50 = 50 × 51/2 = 1275.\nStep 3: 5050 − 1275 = 3775.\nCheck: 50 terms, 50(51 + 100)/2 = 25 × 151 = 3775 ✓.",
      "clue": "Subtract the sum up to 50 from the sum up to 100.",
      "num": true,
      "graded": true,
@@ -221,9 +252,10 @@
       "950",
       "100"
      ],
-     "after": "5 + 95 = 100, 15 + 85 = 100, … Five pairs of 100 make 500.",
+     "after": "Pair the ends: 5 + 95 = 100, 15 + 85 = 100, 25 + 75 = 100, …\n10 terms make 5 pairs.\n5 × 100 = 500.\n(1000 counts each pair twice.)",
      "ref": "Activity 1.5",
-     "id": "g12.maths.u1.s1-3-2.11"
+     "id": "g12.maths.u1.s1-3-2.11",
+     "best": "500"
     },
     {
      "kind": "read",
@@ -236,6 +268,59 @@
      ],
      "ref": "Theorem 1.3",
      "id": "g12.maths.u1.s1-3-2.12"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Explore Sₙ = (n/2)[2A₁ + (n − 1)d]",
+     "ask": "Move A₁, d and n. See the last term and the sum.",
+     "vars": [
+      {
+       "k": "a",
+       "label": "A₁ (first term)",
+       "min": -10,
+       "max": 20,
+       "step": 1,
+       "v": 4
+      },
+      {
+       "k": "d",
+       "label": "d (common difference)",
+       "min": -5,
+       "max": 5,
+       "step": 1,
+       "v": 5
+      },
+      {
+       "k": "n",
+       "label": "n (number of terms)",
+       "min": 1,
+       "max": 50,
+       "step": 1,
+       "v": 40
+      }
+     ],
+     "formula": "n/2*(2*a+(n-1)*d)",
+     "outs": [
+      [
+       "Last term Aₙ = A₁ + (n − 1)d",
+       "a+(n-1)*d",
+       "{v}"
+      ],
+      [
+       "Sum Sₙ",
+       "n/2*(2*a+(n-1)*d)",
+       "{v}"
+      ],
+      [
+       "Check n(A₁ + Aₙ)/2",
+       "n*(a+a+(n-1)*d)/2",
+       "{v}"
+      ]
+     ],
+     "note": "Both forms always agree. A₁ = 4, d = 5, n = 40 gives 4060.",
+     "added": true,
+     "id": "g12.maths.u1.s1-3-2.43"
     },
     {
      "kind": "steps",
@@ -264,11 +349,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A₁ = 4, d = 5. S₄₀ = ___",
+     "ask": "Use Sₙ = (n/2)[2A₁ + (n − 1)d] with A₁ = 4 and d = 5: S₄₀ = ___",
      "a": [
       "4060"
      ],
-     "why": "(40/2)[2(4) + 39(5)] = 20(8 + 195) = 20 × 203 = 4060.",
+     "why": "Step 1: n = 40, so n/2 = 20 and n − 1 = 39.\nStep 2: 2A₁ = 8 and 39 × 5 = 195.\nStep 3: S₄₀ = 20(8 + 195) = 20 × 203.\nStep 4: 20 × 203 = 4060.\n(Trap: 40 × 5 instead of 39 × 5.)",
      "clue": "Use (n/2)[2A₁ + (n − 1)d].",
      "num": true,
      "graded": true,
@@ -291,11 +376,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A₁ = 30, d = −5, n = 12. S₁₂ = ___",
+     "ask": "Use Sₙ = (n/2)[2A₁ + (n − 1)d] with A₁ = 30, d = −5, n = 12: S₁₂ = ___",
      "a": [
       "30"
      ],
-     "why": "6[60 + 11(−5)] = 6(60 − 55) = 6 × 5 = 30.",
+     "why": "Step 1: n/2 = 6; 2A₁ = 60; (n − 1)d = 11 × (−5) = −55.\nStep 2: S₁₂ = 6(60 − 55).\nStep 3: 6 × 5 = 30.\nSo S₁₂ = 30. (The later terms are negative, so the sum is small.)",
      "clue": "11 × (−5) = −55.",
      "num": true,
      "graded": true,
@@ -306,11 +391,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A₁ = 40 and the last term A₂₆ = 0. S₂₆ = ___",
+     "ask": "Use Sₙ = n(A₁ + Aₙ)/2 with first term 40 and last term A₂₆ = 0: S₂₆ = ___",
      "a": [
       "520"
      ],
-     "why": "26(40 + 0)/2 = 13 × 40 = 520.",
+     "why": "Step 1: n = 26, A₁ = 40, A₂₆ = 0.\nStep 2: S₂₆ = 26(40 + 0)/2.\nStep 3: 13 × 40 = 520.\nSo S₂₆ = 520.",
      "clue": "Use the first and last terms.",
      "num": true,
      "graded": true,
@@ -334,11 +419,11 @@
     },
     {
      "kind": "blank",
-     "ask": "S₁₀ = 165 and A₁ = 3. A₁₀ = ___",
+     "ask": "Work backwards from the sum: S₁₀ = 165 and A₁ = 3. Find the last term A₁₀ = ___",
      "a": [
       "30"
      ],
-     "why": "165 = 10(3 + A₁₀)/2 = 5(3 + A₁₀), so 3 + A₁₀ = 33 and A₁₀ = 30.",
+     "why": "Step 1: Sₙ = n(A₁ + Aₙ)/2, so 165 = 10(3 + A₁₀)/2.\nStep 2: 10/2 = 5: 165 = 5(3 + A₁₀).\nStep 3: 165 ÷ 5 = 33, so 3 + A₁₀ = 33.\nStep 4: A₁₀ = 30.",
      "clue": "Divide 165 by 5.",
      "num": true,
      "graded": true,
@@ -349,11 +434,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A₃ = 5 and A₅ = 11. S₅ = ___",
+     "ask": "Find a sum from two terms: A₃ = 5 and A₅ = 11. S₅ = ___",
      "a": [
       "25"
      ],
-     "why": "d = 3, A₁ = −1. Terms −1, 2, 5, 8, 11 sum to 25.",
+     "why": "Step 1: term 3 to term 5 is 2 jumps: 2d = 6, d = 3.\nStep 2: A₁ = A₃ − 2d = 5 − 6 = −1.\nStep 3: S₅ = 5(A₁ + A₅)/2 = 5(−1 + 11)/2 = 5 × 5 = 25.\nCheck: −1 + 2 + 5 + 8 + 11 = 25 ✓.",
      "clue": "Find d from 2 jumps.",
      "num": true,
      "graded": true,
@@ -364,11 +449,11 @@
     },
     {
      "kind": "blank",
-     "ask": "The sum of the integers from 1 to 100 divisible by 10 is ___",
+     "ask": "Arithmetic series in a word problem: the sum of the integers from 1 to 100 divisible by 10 is ___",
      "a": [
       "550"
      ],
-     "why": "10, 20, …, 100: 10 terms. 10(10 + 100)/2 = 550.",
+     "why": "Step 1: the numbers are 10, 20, …, 100: an arithmetic sequence with d = 10.\nStep 2: count: 100 ÷ 10 = 10 terms.\nStep 3: S = 10(10 + 100)/2 = 5 × 110 = 550.",
      "clue": "How many multiples of 10 are there?",
      "num": true,
      "graded": true,
@@ -379,11 +464,11 @@
     },
     {
      "kind": "blank",
-     "ask": "The sum of the odd integers from 1 to 2001 is ___",
+     "ask": "Arithmetic series in a word problem: the sum of the odd integers from 1 to 2001 is ___",
      "a": [
       "1002001"
      ],
-     "why": "n = 1001 terms. S = 1001(1 + 2001)/2 = 1001 × 1001 = 1 002 001.",
+     "why": "Step 1: 1, 3, 5, …, 2001 has d = 2.\nStep 2: count: 1 + (n − 1)2 = 2001, so n − 1 = 1000 and n = 1001.\nStep 3: S = 1001(1 + 2001)/2 = 1001 × 1001.\nStep 4: 1001² = 1 002 001.\nCheck: the sum of the first n odd numbers is n² ✓.",
      "clue": "First find how many odd numbers there are: 1 + (n − 1)2 = 2001.",
      "num": true,
      "graded": true,
@@ -394,11 +479,11 @@
     },
     {
      "kind": "blank",
-     "ask": "The sum of the integers from 1 to 100 divisible by 2 or 5 is ___",
+     "ask": "Arithmetic series with overlap: the sum of the integers from 1 to 100 divisible by 2 or 5 is ___",
      "a": [
       "3050"
      ],
-     "why": "By 2: 2550. By 5: 1050. By both (10): 550. 2550 + 1050 − 550 = 3050.",
+     "why": "Step 1: multiples of 2: 2, …, 100 (50 terms): 50(2 + 100)/2 = 2550.\nStep 2: multiples of 5: 5, …, 100 (20 terms): 20(5 + 100)/2 = 1050.\nStep 3: multiples of 10 are in both lists: 550.\nStep 4: 2550 + 1050 − 550 = 3050.\n(Trap: 3600 counts the multiples of 10 twice.)",
      "clue": "Add the multiples of 2 and of 5, then take away the multiples of 10 counted twice.",
      "num": true,
      "graded": true,
@@ -416,11 +501,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "Sum of the first 30 natural numbers = ___",
+     "ask": "Use Gauss's formula n(n + 1)/2: the sum of the first 30 natural numbers = ___",
      "a": [
       "465"
      ],
-     "why": "15 × 31.",
+     "why": "Step 1: n = 30.\nStep 2: 30 × 31/2 = 15 × 31.\nStep 3: 15 × 31 = 465.",
      "clue": "n(n + 1)/2.",
      "num": true,
      "graded": true,
@@ -431,11 +516,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Sum of the first 99 natural numbers = ___",
+     "ask": "Use Gauss's formula n(n + 1)/2: the sum of the first 99 natural numbers = ___",
      "a": [
       "4950"
      ],
-     "why": "99 × 50.",
+     "why": "Step 1: 99 × 100/2.\nStep 2: 99 × 50 = 4950.",
      "clue": "n(n + 1)/2.",
      "num": true,
      "graded": true,
@@ -446,11 +531,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Sum of the first 200 natural numbers = ___",
+     "ask": "Use Gauss's formula n(n + 1)/2: the sum of the first 200 natural numbers = ___",
      "a": [
       "20100"
      ],
-     "why": "100 × 201.",
+     "why": "Step 1: 200 × 201/2.\nStep 2: 100 × 201 = 20 100.",
      "clue": "n(n + 1)/2.",
      "num": true,
      "graded": true,
@@ -461,11 +546,11 @@
     },
     {
      "kind": "blank",
-     "ask": "1 + 2 + … + n = 3240. n = ___",
+     "ask": "Work backwards from the sum: 1 + 2 + … + n = 3240. n = ___",
      "a": [
       "80"
      ],
-     "why": "80 × 81 = 6480.",
+     "why": "Step 1: n(n + 1) = 2 × 3240 = 6480.\nStep 2: two consecutive numbers with product 6480: 80 × 81 ✓.\nStep 3: n = 80 (n = −81 is rejected).",
      "clue": "n(n + 1) = 6480.",
      "num": true,
      "graded": true,
@@ -481,11 +566,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "A₁ = 2, last term A₁₀ = 21. S₁₀ = ___",
+     "ask": "Use Sₙ = n(A₁ + Aₙ)/2 with A₁ = 2 and last term A₁₀ = 21: S₁₀ = ___",
      "a": [
       "115"
      ],
-     "why": "5 × 23.",
+     "why": "Step 1: S₁₀ = 10(2 + 21)/2.\nStep 2: 10/2 = 5, and 2 + 21 = 23.\nStep 3: 5 × 23 = 115.",
      "clue": "n(A₁ + Aₙ)/2.",
      "num": true,
      "graded": true,
@@ -496,11 +581,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A₁ = 40, last term A₂₆ = 0. S₂₆ = ___",
+     "ask": "Use Sₙ = n(A₁ + Aₙ)/2 with A₁ = 40 and last term A₂₆ = 0: S₂₆ = ___",
      "a": [
       "520"
      ],
-     "why": "13 × 40.",
+     "why": "Step 1: S₂₆ = 26(40 + 0)/2.\nStep 2: 13 × 40 = 520.",
      "clue": "n(A₁ + Aₙ)/2.",
      "num": true,
      "graded": true,
@@ -511,11 +596,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A₁ = 2, d = 3, n = 10. S₁₀ = ___",
+     "ask": "Use Sₙ = (n/2)[2A₁ + (n − 1)d] with A₁ = 2, d = 3, n = 10: S₁₀ = ___",
      "a": [
       "155"
      ],
-     "why": "5(4 + 27).",
+     "why": "Step 1: n/2 = 5, 2A₁ = 4, (n − 1)d = 9 × 3 = 27.\nStep 2: S₁₀ = 5(4 + 27) = 5 × 31.\nStep 3: = 155.",
      "clue": "(n/2)[2A₁ + (n − 1)d].",
      "num": true,
      "graded": true,
@@ -526,11 +611,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A₁ = 30, d = −5, n = 12. S₁₂ = ___",
+     "ask": "Use Sₙ = (n/2)[2A₁ + (n − 1)d] with A₁ = 30, d = −5, n = 12: S₁₂ = ___",
      "a": [
       "30"
      ],
-     "why": "6(60 − 55).",
+     "why": "Step 1: n/2 = 6, 2A₁ = 60, (n − 1)d = 11 × (−5) = −55.\nStep 2: 6(60 − 55) = 6 × 5 = 30.",
      "clue": "(n − 1)d = −55.",
      "num": true,
      "graded": true,
@@ -546,11 +631,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "A₃ = 5, A₅ = 11. S₅ = ___",
+     "ask": "Find a sum from two terms: A₃ = 5 and A₅ = 11. S₅ = ___",
      "a": [
       "25"
      ],
-     "why": "d = 3, A₁ = −1.",
+     "why": "Step 1: 2d = 11 − 5 = 6, so d = 3.\nStep 2: A₁ = 5 − 6 = −1.\nStep 3: S₅ = 5(−1 + 11)/2 = 25.",
      "clue": "Find d first.",
      "num": true,
      "graded": true,
@@ -561,7 +646,7 @@
     },
     {
      "kind": "mcq",
-     "text": "S₈ = 120 and A₁ = 1. A₈ and Aₙ:",
+     "text": "Work backwards from the sum: S₈ = 120 and A₁ = 1. Find A₈ and the general term Aₙ.",
      "opts": [
       "29 and 4n − 3",
       "30 and 4n − 4",
@@ -569,7 +654,7 @@
       "15 and 2n − 1"
      ],
      "ans": "29 and 4n − 3",
-     "why": "120 = 4(1 + A₈), A₈ = 29; 7d = 28, d = 4.",
+     "why": "Step 1: 120 = 8(1 + A₈)/2 = 4(1 + A₈), so 1 + A₈ = 30 and A₈ = 29.\nStep 2: A₈ = A₁ + 7d: 29 = 1 + 7d, so d = 4.\nStep 3: Aₙ = 1 + 4(n − 1) = 4n − 3.\nCheck: 4(8) − 3 = 29 ✓.",
      "clue": "Use Sₙ = n(A₁ + Aₙ)/2.",
      "graded": true,
      "level": 2,
@@ -579,11 +664,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Sum of the integers from 1 to 100 divisible by 2 or 5 = ___",
+     "ask": "Arithmetic series with overlap: the sum of the integers from 1 to 100 divisible by 2 or 5 = ___",
      "a": [
       "3050"
      ],
-     "why": "2550 + 1050 − 550.",
+     "why": "Step 1: multiples of 2: 2550.\nStep 2: multiples of 5: 1050.\nStep 3: subtract the multiples of 10 (counted twice): 550.\nStep 4: 2550 + 1050 − 550 = 3050.",
      "clue": "Do not count multiples of 10 twice.",
      "num": true,
      "graded": true,
@@ -594,11 +679,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Sum of the odd integers from 1 to 2001 = ___",
+     "ask": "Arithmetic series in a word problem: the sum of the odd integers from 1 to 2001 = ___",
      "a": [
       "1002001"
      ],
-     "why": "1001².",
+     "why": "Step 1: 1 + (n − 1)2 = 2001 gives n = 1001 terms.\nStep 2: S = 1001(1 + 2001)/2 = 1001 × 1001.\nStep 3: = 1 002 001.",
      "clue": "1001 terms.",
      "num": true,
      "graded": true,
@@ -613,11 +698,11 @@
  "test": [
   {
    "kind": "blank",
-   "ask": "1 + 2 + … + 60 = ___",
+   "ask": "Use Gauss's formula n(n + 1)/2: 1 + 2 + … + 60 = ___",
    "a": [
     "1830"
    ],
-   "why": "30 × 61.",
+   "why": "n = 60.\n60 × 61/2 = 30 × 61.\n= 1830.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -627,11 +712,11 @@
   },
   {
    "kind": "blank",
-   "ask": "A₁ = 3, d = 4. S₁₀ = ___",
+   "ask": "Use Sₙ = (n/2)[2A₁ + (n − 1)d] with A₁ = 3 and d = 4: S₁₀ = ___",
    "a": [
     "210"
    ],
-   "why": "5(6 + 36).",
+   "why": "n/2 = 5, 2A₁ = 6, 9d = 36.\nS₁₀ = 5(6 + 36) = 5 × 42.\n= 210.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -641,11 +726,11 @@
   },
   {
    "kind": "blank",
-   "ask": "An arithmetic sequence has 20 terms, first term 7, last term 64. S₂₀ = ___",
+   "ask": "Use Sₙ = n(A₁ + Aₙ)/2: an arithmetic sequence has 20 terms, first term 7, last term 64. S₂₀ = ___",
    "a": [
     "710"
    ],
-   "why": "20 × 71/2.",
+   "why": "S₂₀ = 20(7 + 64)/2.\n20/2 = 10, and 7 + 64 = 71.\n10 × 71 = 710.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -655,11 +740,11 @@
   },
   {
    "kind": "blank",
-   "ask": "S₁₂ = 156 and A₁ = 2. A₁₂ = ___",
+   "ask": "Work backwards from the sum: S₁₂ = 156 and A₁ = 2. A₁₂ = ___",
    "a": [
     "24"
    ],
-   "why": "156 = 6(2 + A₁₂).",
+   "why": "156 = 12(2 + A₁₂)/2 = 6(2 + A₁₂).\n156 ÷ 6 = 26, so 2 + A₁₂ = 26.\nA₁₂ = 24.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -669,11 +754,11 @@
   },
   {
    "kind": "blank",
-   "ask": "Sum of the multiples of 3 from 3 to 99 = ___",
+   "ask": "Arithmetic series in a word problem: the sum of the multiples of 3 from 3 to 99 = ___",
    "a": [
     "1683"
    ],
-   "why": "33 terms; 33(3 + 99)/2.",
+   "why": "3, 6, …, 99: 99 ÷ 3 = 33 terms.\nS = 33(3 + 99)/2 = 33 × 51.\n= 1683.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -707,7 +792,7 @@
     },
     {
      "kind": "mcq",
-     "text": "A₁ = 7, d = −2. A₆ = ?",
+     "text": "Find a term with Aₙ = A₁ + (n − 1)d: A₁ = 7, d = −2. A₆ = ?",
      "opts": [
       "−3",
       "−5",
@@ -715,7 +800,7 @@
       "−1"
      ],
      "ans": "−3",
-     "why": "7 + 5(−2) = 7 − 10 = −3.",
+     "why": "Step 1: n = 6, so there are 5 jumps.\nStep 2: A₆ = 7 + 5(−2).\nStep 3: 7 − 10 = −3.\nCheck: 7, 5, 3, 1, −1, −3 ✓.",
      "clue": "There are 5 jumps of −2.",
      "graded": true,
      "level": 1,

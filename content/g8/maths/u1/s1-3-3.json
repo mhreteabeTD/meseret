@@ -67,8 +67,9 @@
       "3/4",
       "1/2"
      ],
-     "after": "Half of 3/4 is 3/8. Check it on the grid below.",
-     "id": "g8.maths.u1.s1-3-3.1"
+     "after": "Half of 3/4 means 1/2 × 3/4.\nMultiply the tops: 1 × 3 = 3. Multiply the bottoms: 2 × 4 = 8.\nSo half of 3/4 is 3/8. Check it on the grid below.\n(1/4 is too small: half of 3/4 is more than half of 2/4 = 1/4.)",
+     "id": "g8.maths.u1.s1-3-3.1",
+     "best": "3/8"
     },
     {
      "kind": "grid",
@@ -92,7 +93,8 @@
      "step": "read",
      "title": "Multiplying",
      "paras": [
-      "Multiply the numerator by the numerator. Multiply the denominator by the denominator.",
+      "Multiply the numerator by the numerator.",
+      "Multiply the denominator by the denominator.",
       "Then reduce the answer to its lowest terms."
      ],
      "id": "g8.maths.u1.s1-3-3.3"
@@ -136,11 +138,11 @@
      "step": "check",
      "graded": true,
      "num": true,
-     "ask": "5/7 × 8/11 = ___",
+     "ask": "Multiply fractions: 5/7 × 8/11 = ___",
      "a": [
       "40/77"
      ],
-     "why": "(5 × 8)/(7 × 11) = 40/77.",
+     "why": "Multiply the numerators: 5 × 8 = 40.\nMultiply the denominators: 7 × 11 = 77.\nSo the product is 40/77.\n40 = 2 × 2 × 2 × 5 and 77 = 7 × 11 share no factor, so it is in lowest terms.",
      "clue": "Multiply tops, then bottoms.",
      "gen": {
       "t": "op",
@@ -155,11 +157,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "5/8 × 3/4 = ___",
+     "ask": "Multiply fractions: 5/8 × 3/4 = ___",
      "a": [
       "15/32"
      ],
-     "why": "15/32.",
+     "why": "Multiply the numerators: 5 × 3 = 15.\nMultiply the denominators: 8 × 4 = 32.\nSo 5/8 × 3/4 = 15/32.\n15 and 32 share no factor, so it is in lowest terms.",
      "clue": "Multiply tops, then bottoms.",
      "gen": {
       "t": "op",
@@ -173,15 +175,15 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "3 2/5 × 2 4/7 = ___",
+     "ask": "Multiply mixed numbers: 3 2/5 × 2 4/7 = ___",
      "a": [
       "306/35",
       "8 26/35"
      ],
-     "why": "3 2/5 = (3 × 5 + 2)/5 = 17/5 and 2 4/7 = (2 × 7 + 4)/7 = 18/7. 17 × 18 = 306 and 5 × 7 = 35, so 306/35.",
+     "why": "Change to improper fractions: 3 2/5 = (3 × 5 + 2)/5 = 17/5.\n2 4/7 = (2 × 7 + 4)/7 = 18/7.\nMultiply: 17 × 18 = 306 and 5 × 7 = 35.\nSo the product is 306/35 = 8 26/35.",
      "clue": "Change the mixed numbers first.",
      "needs": "math.mixed-improper",
-     "worked": "3 2/5 = 17/5 and 2 4/7 = 18/7. 17 × 18 = 306 and 5 × 7 = 35.",
+     "worked": "3 2/5 = 17/5 and 2 4/7 = 18/7.\n17 × 18 = 306.\n5 × 7 = 35.\nSo 306/35 = 8 26/35 (35 × 8 = 280, 306 − 280 = 26).",
      "gen": {
       "t": "op",
       "op": "mul",
@@ -194,11 +196,11 @@
      "kind": "fracbar",
      "step": "practise",
      "graded": true,
-     "title": "(grid as a bar): 1/3 × 2/5",
+     "title": "Fraction of a fraction: 1/3 × 2/5",
      "parts": 15,
      "need": 2,
      "ask": "1/3 of 2/5 is how many fifteenths? Shade that many parts.",
-     "why": "1/3 × 2/5 = 2/15: 2 of 15 parts.",
+     "why": "1/3 × 2/5 = (1 × 2)/(3 × 5).\nTop: 1 × 2 = 2. Bottom: 3 × 5 = 15.\nSo 1/3 of 2/5 is 2/15.\nShade 2 of the 15 parts.",
      "clue": "Multiply the tops and the bottoms.",
      "id": "g8.maths.u1.s1-3-3.9",
      "ref": "Exercise 1.8 Q3",
@@ -208,11 +210,11 @@
      "kind": "blank",
      "graded": true,
      "num": true,
-     "ask": "3/4 of 2/3 of 36 = ___",
+     "ask": "\"Of\" means multiply: 3/4 of 2/3 of 36 = ___",
      "a": [
       "18"
      ],
-     "why": "First 2/3 of 36 = 2/3 × 36 = 72/3 = 24. Then 3/4 of 24 = 3/4 × 24 = 72/4 = 18.",
+     "why": "Start from the right: 2/3 of 36 = 2/3 × 36.\n36 ÷ 3 = 12, and 2 × 12 = 24.\nThen 3/4 of 24 = 3/4 × 24.\n24 ÷ 4 = 6, and 3 × 6 = 18.",
      "clue": "\"Of\" means multiply. Start from the right: 2/3 of 36.",
      "step": "challenge",
      "level": 3,
@@ -266,44 +268,52 @@
        "A factor is 0."
       ]
      ],
-     "id": "g8.maths.u1.s1-3-3.10"
+     "id": "g8.maths.u1.s1-3-3.10",
+     "text": "Predict, then sort: is each product positive, negative or zero?"
     },
     {
      "kind": "read",
      "step": "read",
      "title": "Table 1.1",
-     "table": [
-      [
-       "The two factors",
-       "The product",
-       "Example"
-      ],
-      [
-       "Both positive",
-       "Positive",
-       "2/3 × 5/11 = 10/33"
-      ],
-      [
-       "Both negative",
-       "Positive",
-       "(−5/4) × (−7/3) = 35/12"
-      ],
-      [
-       "Opposite signs",
-       "Negative",
-       "−3 × 5 = −15"
-      ],
-      [
-       "One or both 0",
-       "Zero",
-       "−7/9 × 0 = 0"
-      ]
-     ],
      "paras": [
-      "Different signs: decide the sign, multiply the absolute values, then put the sign in front."
+      "Different signs: decide the sign first.",
+      "Multiply the absolute values.",
+      "Then put the sign in front.",
+      "Tap each row of Table 1.1 below."
      ],
      "note": "An even number of negative factors gives a positive product. An odd number gives a negative product.",
      "id": "g8.maths.u1.s1-3-3.11"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Table 1.1: the sign of a product",
+     "ask": "Tap each row.",
+     "need": 4,
+     "items": [
+      [
+       "Both positive → positive",
+       "2/3 × 5/11 = 10/33"
+      ],
+      [
+       "Both negative → positive",
+       "(−5/4) × (−7/3) = 35/12"
+      ],
+      [
+       "Opposite signs → negative",
+       "−3 × 5 = −15"
+      ],
+      [
+       "One or both 0 → zero",
+       "−7/9 × 0 = 0"
+      ],
+      [
+       "Many factors",
+       "Even number of negatives → positive. Odd number → negative."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-3-3.39",
+     "added": true
     },
     {
      "kind": "steps",
@@ -335,14 +345,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "(−2/5) × (−7/3) is",
+     "text": "Sign rule for multiplication: (−2/5) × (−7/3) is",
      "opts": [
       "positive",
       "negative",
       "zero"
      ],
      "ans": "positive",
-     "why": "Two negatives give a positive: 14/15.",
+     "why": "Both factors are negative: the signs are the same.\nSame signs give a positive product.\nSize: (2 × 7)/(5 × 3) = 14/15.\nSo the product is +14/15: positive.",
      "clue": "Same signs or different?",
      "id": "g8.maths.u1.s1-3-3.14",
      "level": 1
@@ -352,11 +362,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "3/7 × (−3/4) = ___",
+     "ask": "Multiply fractions with different signs: 3/7 × (−3/4) = ___",
      "a": [
       "-9/28"
      ],
-     "why": "Different signs: −9/28.",
+     "why": "The signs are different, so the product is negative.\nMultiply the sizes: 3 × 3 = 9 and 7 × 4 = 28.\nSo 3/7 × 3/4 = 9/28.\nPut the sign in front: −9/28.",
      "clue": "Decide the sign first.",
      "input": "signed",
      "gen": {
@@ -372,11 +382,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "−8/7 × (−3/5) = ___",
+     "ask": "Multiply two negative fractions: −8/7 × (−3/5) = ___",
      "a": [
       "24/35"
      ],
-     "why": "Same signs: +24/35.",
+     "why": "Both are negative: same signs give +.\nMultiply the sizes: 8 × 3 = 24 and 7 × 5 = 35.\nSo the product is 24/35.\nAnswer: +24/35.",
      "clue": "Two negatives.",
      "input": "signed",
      "gen": {
@@ -392,23 +402,23 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "−2/3 × 5/4 × 3/2 = ___",
+     "ask": "Multiply three fractions: −2/3 × 5/4 × 3/2 = ___",
      "a": [
       "-5/4",
       "-1 1/4",
       "-1.25"
      ],
-     "why": "One negative factor, so the answer is negative. 2 × 5 × 3 = 30 and 3 × 4 × 2 = 24, so 30/24. GCF of 30 and 24 is 6: 30 ÷ 6 = 5 and 24 ÷ 6 = 4. Answer −5/4.",
+     "why": "Count the negative factors: 1 (odd), so the product is negative.\nMultiply the tops: 2 × 5 × 3 = 30. Multiply the bottoms: 3 × 4 × 2 = 24.\nSo the size is 30/24.\nThe GCF of 30 and 24 is 6: 30 ÷ 6 = 5 and 24 ÷ 6 = 4.\nAnswer: −5/4 = −1 1/4.",
      "clue": "Count the negative factors.",
      "input": "signed",
-     "worked": "1 negative (odd), so negative. 2 × 5 × 3 = 30 and 3 × 4 × 2 = 24. 30/24 = 5/4. Answer −5/4.",
+     "worked": "1 negative factor (odd), so the answer is negative.\n2 × 5 × 3 = 30 and 3 × 4 × 2 = 24.\n30/24 = 5/4 (divide by 6).\nAnswer −5/4.",
      "id": "g8.maths.u1.s1-3-3.17",
      "level": 2
     },
     {
      "kind": "mcq",
      "graded": true,
-     "text": "The product of 7 numbers is negative. How many of them can be negative?",
+     "text": "Sign rules: the product of 7 numbers is negative. How many of them can be negative?",
      "opts": [
       "1, 3, 5 or 7",
       "2, 4 or 6",
@@ -416,7 +426,7 @@
       "Any number"
      ],
      "ans": "1, 3, 5 or 7",
-     "why": "A product is negative when the number of negative factors is odd. Of 7 factors, 1, 3, 5 or 7 can be negative.",
+     "why": "Each pair of negatives multiplies to a positive.\nSo an even number of negatives gives +, and an odd number gives −.\nThe product is negative, so the count of negatives is odd.\nOf 7 factors: 1, 3, 5 or 7 can be negative.",
      "clue": "Even number of negatives → positive. Odd number → negative.",
      "step": "challenge",
      "level": 3,
@@ -447,44 +457,51 @@
       "About Birr 160",
       "About Birr 600"
      ],
-     "after": "35/9 × 162/4 = (35 × 162)/(9 × 4) = 5670/36. GCF of 5670 and 36 is 18: 5670 ÷ 18 = 315 and 36 ÷ 18 = 2. 315/2 = Birr 157.50.",
+     "after": "Estimate: 35/9 ≈ 4 m and 162/4 ≈ Birr 40 per metre. 4 × 40 = Birr 160.\nExact: 35/9 × 162/4 = (35 × 162)/(9 × 4) = 5670/36.\nThe GCF of 5670 and 36 is 18: 5670 ÷ 18 = 315 and 36 ÷ 18 = 2.\n315/2 = Birr 157.50, close to the estimate.",
      "id": "g8.maths.u1.s1-3-3.18",
-     "ref": "Example 1.29"
+     "ref": "Example 1.29",
+     "best": "About Birr 160"
     },
     {
      "kind": "read",
      "step": "read",
      "title": "Properties",
      "paras": [
-      "For any rational numbers a, b and c:"
+      "For any rational numbers a, b and c, five properties hold.",
+      "Tap each property below to see an example."
      ],
-     "table": [
-      [
-       "Property",
-       "Rule"
-      ],
+     "id": "g8.maths.u1.s1-3-3.19"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Properties of multiplication",
+     "ask": "Tap each property.",
+     "need": 5,
+     "items": [
       [
        "Commutative",
-       "a × b = b × a"
+       "a × b = b × a. 3/5 × 6/7 = 6/7 × 3/5 = 18/35."
       ],
       [
        "Associative",
-       "a × (b × c) = (a × b) × c"
+       "a × (b × c) = (a × b) × c. (1/2 × 2/3) × 3 = 1/2 × (2/3 × 3) = 1."
       ],
       [
        "Distributive",
-       "a × (b + c) = a × b + a × c"
+       "a × (b + c) = a × b + a × c. 1/2 × (4 + 6) = 2 + 3 = 5."
       ],
       [
        "Property of 0",
-       "a × 0 = 0"
+       "a × 0 = 0. (8/9 × 5/4) × 0 = 0."
       ],
       [
        "Property of 1",
-       "a × 1 = a"
+       "a × 1 = a. 2 3/5 × 1 = 2 3/5."
       ]
      ],
-     "id": "g8.maths.u1.s1-3-3.19"
+     "id": "g8.maths.u1.s1-3-3.40",
+     "added": true
     },
     {
      "kind": "steps",
@@ -518,7 +535,7 @@
      "kind": "match",
      "step": "check",
      "graded": true,
-     "title": "Match the property",
+     "title": "Properties of multiplication: match each line to its property",
      "pairs": [
       [
        "(8/9 × 5/4) × 0 = 0",
@@ -537,7 +554,7 @@
        "Distributive"
       ]
      ],
-     "why": "Each line shows one property.",
+     "why": "(8/9 × 5/4) × 0 = 0: anything times 0 is 0. Property of 0.\n2 3/5 × 1 = 2 3/5: times 1 changes nothing. Property of 1.\n3/5 × 6/7 = 6/7 × 3/5: the order is swapped. Commutative.\n2/5 × (3/7 + 4/3) = 2/5 × 3/7 + 2/5 × 4/3: the brackets are opened. Distributive.",
      "clue": "Look for 0, 1, swapped order, or brackets opened.",
      "id": "g8.maths.u1.s1-3-3.22",
      "level": 1
@@ -547,15 +564,15 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "A plane covers 1250 km per hour. In 23/6 hours it covers ___ km",
+     "ask": "Multiply in a word problem: a plane covers 1250 km per hour. In 23/6 hours it covers ___ km",
      "a": [
       "14375/3",
       "4791 2/3",
       "≈4791.67"
      ],
-     "why": "1250 × 23/6 = (1250 × 23)/6 = 28750/6. Divide top and bottom by 2: 14375/3 km ≈ 4791.67 km.",
+     "why": "Distance = speed × time = 1250 × 23/6.\n1250 × 23 = 28750, so 28750/6.\nDivide top and bottom by 2: 14375/3.\n14375 ÷ 3 = 4791 remainder 2, so 4791 2/3 ≈ 4791.67 km.",
      "clue": "Multiply 1250 by 23/6.",
-     "worked": "1250 × 23 = 28750. 28750/6 = 14375/3 ≈ 4791.67 km.",
+     "worked": "1250 × 23 = 28750.\n28750/6: divide top and bottom by 2 to get 14375/3.\n14375/3 = 4791 2/3 ≈ 4791.67 km.",
      "gen": {
       "t": "op",
       "op": "mul",
@@ -570,13 +587,13 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "−3(5x + 5) when x = 3/4: ___",
+     "ask": "Evaluate the expression: −3(5x + 5) when x = 3/4. Answer: ___",
      "a": [
       "-105/4",
       "-26 1/4",
       "-26.25"
      ],
-     "why": "5x = 5 × 3/4 = 15/4. 15/4 + 5 = 15/4 + 20/4 = 35/4. −3 × 35/4 = −105/4.",
+     "why": "Inside the bracket: 5x = 5 × 3/4 = 15/4.\n15/4 + 5 = 15/4 + 20/4 = 35/4.\nMultiply: −3 × 35/4 = −105/4.\n−105/4 = −26 1/4 = −26.25.",
      "clue": "Work inside the bracket first.",
      "id": "g8.maths.u1.s1-3-3.24",
      "ref": "Exercise 1.8 Q1 f",
@@ -590,7 +607,7 @@
      "a": [
       "7"
      ],
-     "why": "Take out the common factor 7/8: 7/8 × (13 − 5) = 7/8 × 8 = 56/8 = 7.",
+     "why": "Both parts have the factor 7/8.\nTake it out: 7/8 × (13 − 5).\n13 − 5 = 8.\n7/8 × 8 = 56/8 = 7.",
      "clue": "Both parts have 7/8. Take it out of the brackets.",
      "step": "challenge",
      "level": 3,
@@ -609,11 +626,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "5/8 × 3/4 = ___",
+     "ask": "Multiply fractions: 5/8 × 3/4 = ___",
      "a": [
       "15/32"
      ],
-     "why": "15/32.",
+     "why": "Multiply the tops: 5 × 3 = 15.\nMultiply the bottoms: 8 × 4 = 32.\nSo 15/32, already in lowest terms.",
      "clue": "Multiply tops and bottoms.",
      "id": "g8.maths.u1.s1-3-3.25",
      "ref": "Q1 a",
@@ -624,11 +641,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "3/7 × (−3/4) = ___",
+     "ask": "Multiply fractions with different signs: 3/7 × (−3/4) = ___",
      "a": [
       "-9/28"
      ],
-     "why": "−9/28.",
+     "why": "Different signs: the product is negative.\nSizes: 3 × 3 = 9 and 7 × 4 = 28.\nAnswer: −9/28.",
      "clue": "Different signs.",
      "id": "g8.maths.u1.s1-3-3.26",
      "ref": "Q1 b",
@@ -639,11 +656,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "−8/7 × (−3/5) = ___",
+     "ask": "Multiply two negative fractions: −8/7 × (−3/5) = ___",
      "a": [
       "24/35"
      ],
-     "why": "24/35.",
+     "why": "Two negatives: the product is positive.\nSizes: 8 × 3 = 24 and 7 × 5 = 35.\nAnswer: 24/35.",
      "clue": "Two negatives.",
      "id": "g8.maths.u1.s1-3-3.27",
      "ref": "Q1 c",
@@ -654,12 +671,12 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "2 3/5 × 4 2/3 = ___",
+     "ask": "Multiply mixed numbers: 2 3/5 × 4 2/3 = ___",
      "a": [
       "182/15",
       "12 2/15"
      ],
-     "why": "13/5 × 14/3 = 182/15.",
+     "why": "Change to improper fractions: 2 3/5 = 13/5 and 4 2/3 = 14/3.\nMultiply: 13 × 14 = 182 and 5 × 3 = 15.\nSo 182/15.\n182/15 = 12 2/15.",
      "clue": "Change to improper fractions.",
      "id": "g8.maths.u1.s1-3-3.28",
      "ref": "Q1 d",
@@ -670,12 +687,12 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "−2/3 × 5/4 × 3/2 = ___",
+     "ask": "Multiply three fractions: −2/3 × 5/4 × 3/2 = ___",
      "a": [
       "-5/4",
       "-1 1/4"
      ],
-     "why": "−30/24 = −5/4.",
+     "why": "One negative factor: the product is negative.\nTops: 2 × 5 × 3 = 30. Bottoms: 3 × 4 × 2 = 24.\n30/24: divide by 6 to get 5/4.\nAnswer: −5/4.",
      "clue": "One negative factor.",
      "id": "g8.maths.u1.s1-3-3.29",
      "ref": "Q1 e",
@@ -686,13 +703,13 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "1250 km per hour for 23/6 hours = ___ km",
+     "ask": "Multiply in a word problem: 1250 km per hour for 23/6 hours = ___ km",
      "a": [
       "14375/3",
       "4791 2/3",
       "≈4791.67"
      ],
-     "why": "1250 × 23/6.",
+     "why": "Distance = 1250 × 23/6.\n1250 × 23 = 28750, so 28750/6.\nDivide top and bottom by 2: 14375/3.\n14375/3 = 4791 2/3 ≈ 4791.67 km.",
      "clue": "Multiply.",
      "id": "g8.maths.u1.s1-3-3.30",
      "ref": "Q2",
@@ -707,11 +724,11 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "2/3 × 9/10 = ___",
+   "ask": "Multiply fractions and reduce: 2/3 × 9/10 = ___",
    "a": [
     "3/5"
    ],
-   "why": "18/30 = 3/5.",
+   "why": "Tops: 2 × 9 = 18. Bottoms: 3 × 10 = 30.\nSo 18/30.\nThe GCF of 18 and 30 is 6: 18 ÷ 6 = 3 and 30 ÷ 6 = 5.\nAnswer: 3/5.",
    "clue": "",
    "gen": {
     "t": "op",
@@ -726,12 +743,12 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "−4/5 × 15/8 = ___",
+   "ask": "Multiply fractions with different signs: −4/5 × 15/8 = ___",
    "a": [
     "-3/2",
     "-1 1/2"
    ],
-   "why": "−60/40.",
+   "why": "Different signs: the product is negative.\nSizes: 4 × 15 = 60 and 5 × 8 = 40.\n60/40: divide by 20 to get 3/2.\nAnswer: −3/2 = −1 1/2.",
    "clue": "",
    "gen": {
     "t": "op",
@@ -746,14 +763,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "The product of three negative numbers is",
+   "text": "Sign rules: the product of three negative numbers is",
    "opts": [
     "positive",
     "negative",
     "zero"
    ],
    "ans": "negative",
-   "why": "An odd number of negatives.",
+   "why": "Two negatives multiply to a positive.\nThat positive times the third negative is negative.\nThree is odd, so the product is negative.\nExample: (−1) × (−1) × (−1) = −1.",
    "clue": "",
    "id": "g8.maths.u1.s1-3-3.33",
    "level": 3
@@ -763,11 +780,11 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "−3/4 × (−8/9) = ___",
+   "ask": "Multiply two negative fractions: −3/4 × (−8/9) = ___",
    "a": [
     "2/3"
    ],
-   "why": "Same signs: 24/36 = 2/3.",
+   "why": "Same signs: the product is positive.\nSizes: 3 × 8 = 24 and 4 × 9 = 36.\n24/36: divide by 12 to get 2/3.\nAnswer: 2/3.",
    "clue": "",
    "level": 2,
    "gen": {
@@ -783,11 +800,11 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "1 1/2 × 2 2/3 = ___",
+   "ask": "Multiply mixed numbers: 1 1/2 × 2 2/3 = ___",
    "a": [
     "4"
    ],
-   "why": "3/2 × 8/3 = 24/6 = 4.",
+   "why": "Change: 1 1/2 = 3/2 and 2 2/3 = 8/3.\nMultiply: 3 × 8 = 24 and 2 × 3 = 6.\n24/6 = 4.\nAnswer: 4.",
    "clue": "",
    "level": 3,
    "gen": {

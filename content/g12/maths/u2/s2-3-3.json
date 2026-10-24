@@ -54,9 +54,55 @@
       "4/3",
       "5"
      ],
-     "after": "F(2) = 14/3, F(−1) = −4/3. 14/3 + 4/3 = 18/3 = 6: the exact area.",
+     "after": "F(2) = 8/3 + 2 = 14/3.\nF(−1) = −1/3 − 1 = −4/3.\nF(2) − F(−1) = 14/3 + 4/3 = 18/3 = 6.\nThis equals the exact area under y = x² + 1 on [−1, 2]: no rectangles needed.",
      "ref": "Example 1",
-     "id": "g12.maths.u2.s2-3-3.1"
+     "id": "g12.maths.u2.s2-3-3.1",
+     "best": "6"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "F(b) − F(a) for y = x² + 1",
+     "ask": "F(x) = x³/3 + x. Move the limits a and b.",
+     "vars": [
+      {
+       "k": "a",
+       "label": "Lower limit a",
+       "min": -3,
+       "max": 3,
+       "step": 1,
+       "v": -1
+      },
+      {
+       "k": "b",
+       "label": "Upper limit b",
+       "min": -3,
+       "max": 5,
+       "step": 1,
+       "v": 2
+      }
+     ],
+     "formula": "(b*b*b/3 + b) - (a*a*a/3 + a)",
+     "outs": [
+      [
+       "F(b)",
+       "b*b*b/3 + b",
+       "{v}"
+      ],
+      [
+       "F(a)",
+       "a*a*a/3 + a",
+       "{v}"
+      ],
+      [
+       "∫ from a to b = F(b) − F(a)",
+       "(b*b*b/3 + b) - (a*a*a/3 + a)",
+       "{v}"
+      ]
+     ],
+     "note": "a = −1, b = 2 gives 6. Try a = b: the integral is 0. Swap a and b: the sign changes.",
+     "id": "g12.maths.u2.s2-3-3.26"
     },
     {
      "kind": "read",
@@ -85,6 +131,32 @@
      "id": "g12.maths.u2.s2-3-3.3"
     },
     {
+     "kind": "tap",
+     "step": "explore",
+     "added": true,
+     "title": "The properties with numbers",
+     "ask": "Tap each property. All use f(x) = 2x, F(x) = x².",
+     "items": [
+      [
+       "∫ from a to a = 0",
+       "∫ from 3 to 3 2x dx = 9 − 9 = 0."
+      ],
+      [
+       "Split at c",
+       "∫ from 0 to 3 = ∫ from 0 to 1 + ∫ from 1 to 3: 9 = 1 + 8."
+      ],
+      [
+       "Swap the limits",
+       "∫ from 3 to 0 2x dx = 0 − 9 = −9 = −∫ from 0 to 3."
+      ],
+      [
+       "Constant out",
+       "∫ from 0 to 3 6x dx = 3 × ∫ from 0 to 3 2x dx = 3 × 9 = 27."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-3-3.27"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -102,11 +174,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∫ from 1 to 3 (3x² + 2x) dx = ___",
+     "ask": "Evaluate the definite integral with an anti-derivative: ∫ from 1 to 3 (3x² + 2x) dx = ___",
      "a": [
       "34"
      ],
-     "why": "F = x³ + x². F(3) − F(1) = 36 − 2 = 34.",
+     "why": "Anti-derivative: F(x) = x³ + x².\nF(3) = 27 + 9 = 36.\nF(1) = 1 + 1 = 2.\nF(3) − F(1) = 36 − 2 = 34.",
      "clue": "Anti-derivative first, then subtract.",
      "num": true,
      "graded": true,
@@ -130,11 +202,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∫ from 0 to 5 (x² + 1) dx = ___",
+     "ask": "Evaluate the definite integral: ∫ from 0 to 5 (x² + 1) dx = ___",
      "a": [
       "140/3"
      ],
-     "why": "F(5) = 125/3 + 5 = 140/3; F(0) = 0.",
+     "why": "Anti-derivative: F(x) = x³/3 + x.\nF(5) = 125/3 + 5 = 125/3 + 15/3 = 140/3.\nF(0) = 0.\nAnswer: 140/3 ≈ 46.67.",
      "clue": "F(x) = x³/3 + x.",
      "num": true,
      "graded": true,
@@ -145,12 +217,12 @@
     },
     {
      "kind": "blank",
-     "ask": "∫ from -1 to 0 (x³ − 3x + 1) dx = ___",
+     "ask": "Evaluate the definite integral: ∫ from −1 to 0 (x³ − 3x + 1) dx = ___",
      "a": [
       "9/4",
       "2.25"
      ],
-     "why": "F(−1) = 1/4 − 3/2 − 1 = −9/4. 0 − (−9/4) = 9/4.",
+     "why": "F(x) = x⁴/4 − 3x²/2 + x.\nF(0) = 0.\nF(−1) = 1/4 − 3/2 − 1 = 1/4 − 10/4 = −9/4.\nF(0) − F(−1) = 0 − (−9/4) = 9/4.\nTrap: subtracting a negative makes it positive.",
      "clue": "Careful: subtracting a negative.",
      "num": true,
      "graded": true,
@@ -161,12 +233,12 @@
     },
     {
      "kind": "blank",
-     "ask": "∫ from 1 to 4 (2x + 1/x²) dx = ___",
+     "ask": "Evaluate the definite integral: ∫ from 1 to 4 (2x + 1/x²) dx = ___",
      "a": [
       "63/4",
       "15.75"
      ],
-     "why": "F = x² − 1/x. F(4) − F(1) = 63/4 − 0.",
+     "why": "Write 1/x² = x⁻², so ∫ x⁻² dx = −x⁻¹ = −1/x.\nF(x) = x² − 1/x.\nF(4) = 16 − 1/4 = 63/4. F(1) = 1 − 1 = 0.\nAnswer: 63/4 = 15.75.",
      "clue": "Write 1/x² = x⁻².",
      "num": true,
      "graded": true,
@@ -177,11 +249,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∫ from -2 to 3 (−3x² + 4x − 5) dx = ___",
+     "ask": "Evaluate the definite integral: ∫ from −2 to 3 (−3x² + 4x − 5) dx = ___",
      "a": [
       "-50"
      ],
-     "why": "F = −x³ + 2x² − 5x. F(3) = −24, F(−2) = 26. −24 − 26 = −50.",
+     "why": "F(x) = −x³ + 2x² − 5x.\nF(3) = −27 + 18 − 15 = −24.\nF(−2) = −(−8) + 2(4) − 5(−2) = 8 + 8 + 10 = 26.\nF(3) − F(−2) = −24 − 26 = −50.\nTrap: −(−2)³ = +8, not −8.",
      "clue": "F(−2) = 8 + 8 + 10.",
      "num": true,
      "graded": true,
@@ -192,9 +264,9 @@
     },
     {
      "kind": "tf",
-     "text": "A power plant makes x³ kW on day x. The area under y = x³ on [0, 5] (156 1/4) is the total made in the first 5 days.",
+     "text": "True or false? A power plant makes x³ kW on day x. The area under y = x³ on [0, 5] (156 1/4) is the total made in the first 5 days.",
      "a": true,
-     "why": "Integrating a rate gives the total.",
+     "why": "y = x³ is a rate (kW on each day).\nThe area under a rate graph is the total amount.\n∫ from 0 to 5 x³ dx = [x⁴/4] = 625/4 = 156 1/4.\nTrue.",
      "clue": "What does area under a rate mean?",
      "graded": true,
      "level": 1,
@@ -204,11 +276,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∫ from 0 to k 3x² dx = 64. k = ___",
+     "ask": "Missing upper limit: ∫ from 0 to k 3x² dx = 64. Find k = ___",
      "a": [
       "4"
      ],
-     "why": "k³ = 64, so k = 4.",
+     "why": "Anti-derivative of 3x² is x³.\n∫ from 0 to k 3x² dx = k³ − 0 = k³.\nk³ = 64, so k = 4.\nCheck: 4³ = 64. ✓",
      "clue": "The anti-derivative of 3x² is x³.",
      "num": true,
      "graded": true,
@@ -226,11 +298,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "∫ from 0 to 5 (x² + 1) dx = ___",
+     "ask": "Evaluate the definite integral: ∫ from 0 to 5 (x² + 1) dx = ___",
      "a": [
       "140/3"
      ],
-     "why": "140/3.",
+     "why": "F(x) = x³/3 + x.\nF(5) − F(0) = (125/3 + 5) − 0 = 140/3.",
      "clue": "F(5) − F(0).",
      "num": true,
      "graded": true,
@@ -241,11 +313,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∫ from -2 to 2 (x² + 1) dx = ___",
+     "ask": "Evaluate the definite integral: ∫ from −2 to 2 (x² + 1) dx = ___",
      "a": [
       "28/3"
      ],
-     "why": "14/3 − (−14/3).",
+     "why": "F(x) = x³/3 + x.\nF(2) = 8/3 + 2 = 14/3. F(−2) = −8/3 − 2 = −14/3.\nF(2) − F(−2) = 14/3 + 14/3 = 28/3.\nShortcut: x² + 1 is symmetric, so double ∫ from 0 to 2.",
      "clue": "Or double ∫ from 0 to 2.",
      "num": true,
      "graded": true,
@@ -256,11 +328,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∫ from 1 to 3 (3x² + 2x) dx = ___",
+     "ask": "Evaluate the definite integral: ∫ from 1 to 3 (3x² + 2x) dx = ___",
      "a": [
       "34"
      ],
-     "why": "36 − 2.",
+     "why": "F(x) = x³ + x².\nF(3) − F(1) = 36 − 2 = 34.",
      "clue": "F = x³ + x².",
      "num": true,
      "graded": true,
@@ -271,12 +343,12 @@
     },
     {
      "kind": "blank",
-     "ask": "∫ from 4 to 15 (0.002x⁴ − 0.3x² + 4x − 7) dx = ___",
+     "ask": "Evaluate the definite integral: ∫ from 4 to 15 (0.002x⁴ − 0.3x² + 4x − 7) dx = ___",
      "a": [
       "313.2404",
       "≈313.24"
      ],
-     "why": "311.25 − (−1.9904).",
+     "why": "F(x) = 0.0004x⁵ − 0.1x³ + 2x² − 7x.\nF(15) = 303.75 − 337.5 + 450 − 105 = 311.25.\nF(4) = 0.4096 − 6.4 + 32 − 28 = −1.9904.\nF(15) − F(4) = 311.25 + 1.9904 = 313.2404.",
      "clue": "F = 0.0004x⁵ − 0.1x³ + 2x² − 7x.",
      "num": true,
      "graded": true,
@@ -292,11 +364,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "∫ from 1 to 3 x² dx = ___",
+     "ask": "Evaluate the definite integral: ∫ from 1 to 3 x² dx = ___",
      "a": [
       "26/3"
      ],
-     "why": "9 − 1/3.",
+     "why": "F(x) = x³/3.\nF(3) = 9. F(1) = 1/3.\n9 − 1/3 = 26/3.",
      "clue": "F = x³/3.",
      "num": true,
      "graded": true,
@@ -307,11 +379,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∫ from 0 to 2 (x² − 2x + 8) dx = ___",
+     "ask": "Evaluate the definite integral: ∫ from 0 to 2 (x² − 2x + 8) dx = ___",
      "a": [
       "44/3"
      ],
-     "why": "8/3 − 4 + 16.",
+     "why": "F(x) = x³/3 − x² + 8x.\nF(2) = 8/3 − 4 + 16 = 8/3 + 12 = 44/3.\nF(0) = 0, so the answer is 44/3.",
      "clue": "F(0) = 0.",
      "num": true,
      "graded": true,
@@ -322,11 +394,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∫ from -2 to 3 (−3x² + 4x − 5) dx = ___",
+     "ask": "Evaluate the definite integral: ∫ from −2 to 3 (−3x² + 4x − 5) dx = ___",
      "a": [
       "-50"
      ],
-     "why": "−24 − 26.",
+     "why": "F(x) = −x³ + 2x² − 5x.\nF(3) = −24 and F(−2) = 8 + 8 + 10 = 26.\n−24 − 26 = −50.",
      "clue": "Careful with F(−2).",
      "num": true,
      "graded": true,
@@ -337,11 +409,11 @@
     },
     {
      "kind": "blank",
-     "ask": "∫ from 1 to 4 (2x + 1/x²) dx = ___",
+     "ask": "Evaluate the definite integral: ∫ from 1 to 4 (2x + 1/x²) dx = ___",
      "a": [
       "63/4"
      ],
-     "why": "63/4 − 0.",
+     "why": "F(x) = x² − 1/x.\nF(4) = 63/4 and F(1) = 0.\nAnswer: 63/4.",
      "clue": "F = x² − 1/x.",
      "num": true,
      "graded": true,
@@ -356,11 +428,11 @@
  "test": [
   {
    "kind": "blank",
-   "ask": "∫ from 0 to 3 x² dx = ___",
+   "ask": "Evaluate the definite integral: ∫ from 0 to 3 x² dx = ___",
    "a": [
     "9"
    ],
-   "why": "27/3.",
+   "why": "F(x) = x³/3.\nF(3) − F(0) = 27/3 − 0 = 9.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -370,11 +442,11 @@
   },
   {
    "kind": "blank",
-   "ask": "∫ from 1 to 2 4x³ dx = ___",
+   "ask": "Evaluate the definite integral: ∫ from 1 to 2 4x³ dx = ___",
    "a": [
     "15"
    ],
-   "why": "16 − 1.",
+   "why": "F(x) = x⁴.\nF(2) − F(1) = 16 − 1 = 15.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -384,11 +456,11 @@
   },
   {
    "kind": "blank",
-   "ask": "∫ from -1 to 1 (3x² + 1) dx = ___",
+   "ask": "Evaluate the definite integral: ∫ from −1 to 1 (3x² + 1) dx = ___",
    "a": [
     "4"
    ],
-   "why": "[x³ + x] = 2 − (−2).",
+   "why": "F(x) = x³ + x.\nF(1) = 2. F(−1) = −1 − 1 = −2.\n2 − (−2) = 4.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -398,7 +470,7 @@
   },
   {
    "kind": "mcq",
-   "text": "∫ from 5 to 2 f(x) dx equals",
+   "text": "Property of definite integrals: ∫ from 5 to 2 f(x) dx equals",
    "opts": [
     "−∫ from 2 to 5 f(x) dx",
     "∫ from 2 to 5 f(x) dx",
@@ -406,7 +478,7 @@
     "2 × ∫ from 2 to 5 f(x) dx"
    ],
    "ans": "−∫ from 2 to 5 f(x) dx",
-   "why": "Reversing limits changes the sign.",
+   "why": "∫ from a to b f = F(b) − F(a).\n∫ from 5 to 2 f = F(2) − F(5) = −(F(5) − F(2)).\nSo reversing the limits changes the sign: −∫ from 2 to 5 f(x) dx.\n0 is only for equal limits, ∫ from a to a.",
    "clue": "",
    "graded": true,
    "level": 2,
@@ -415,11 +487,11 @@
   },
   {
    "kind": "blank",
-   "ask": "∫ from 0 to 2 (6x² − 2x) dx = ___",
+   "ask": "Evaluate the definite integral: ∫ from 0 to 2 (6x² − 2x) dx = ___",
    "a": [
     "12"
    ],
-   "why": "[2x³ − x²] = 16 − 4.",
+   "why": "F(x) = 2x³ − x².\nF(2) = 16 − 4 = 12. F(0) = 0.\nAnswer: 12.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -461,7 +533,7 @@
     },
     {
      "kind": "mcq",
-     "text": "∫ (2x + 3) dx = ?",
+     "text": "Integrate term by term: ∫ (2x + 3) dx = ?",
      "opts": [
       "x² + 3x + C",
       "2 + C",
@@ -469,7 +541,7 @@
       "2x² + 3x + C"
      ],
      "ans": "x² + 3x + C",
-     "why": "Term by term.",
+     "why": "∫ 2x dx = 2 × x²/2 = x².\n∫ 3 dx = 3x.\nAnswer: x² + 3x + C.\nCheck: (x² + 3x)′ = 2x + 3. ✓",
      "clue": "Check by differentiating.",
      "graded": true,
      "level": 1,

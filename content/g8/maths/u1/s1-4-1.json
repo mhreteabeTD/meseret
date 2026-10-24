@@ -47,16 +47,54 @@
       "1/2",
       "4/1"
      ],
-     "after": "Each friend gets one fourth: 1/4 of the cake.",
+     "after": "One cake is cut into 4 equal parts, one for each friend.\nEach friend gets 1 part of 4: 1/4 of the cake.\n1 ÷ 4 = 1/4. (4 and 4/1 would be four whole cakes each!)",
      "id": "g8.maths.u1.s1-4-1.1",
-     "ref": "Example 1.33"
+     "ref": "Example 1.33",
+     "best": "1/4"
+    },
+    {
+     "kind": "fracbar",
+     "step": "explore",
+     "title": "One cake, four friends",
+     "bars": [
+      {
+       "parts": 4,
+       "shade": [
+        {
+         "n": 1,
+         "color": "a",
+         "label": "Friend 1: 1/4"
+        },
+        {
+         "n": 1,
+         "color": "c",
+         "label": "Friend 2: 1/4"
+        },
+        {
+         "n": 1,
+         "color": "b",
+         "label": "Friend 3: 1/4"
+        },
+        {
+         "n": 1,
+         "color": "d",
+         "label": "Friend 4: 1/4"
+        }
+       ]
+      }
+     ],
+     "after": "The cake is cut into 4 equal parts.\nEach friend gets 1 part: 1 ÷ 4 = 1/4.\n4 × 1/4 = 1 whole cake.",
+     "ref": "Example 1.33",
+     "id": "g8.maths.u1.s1-4-1.20",
+     "added": true
     },
     {
      "kind": "read",
      "step": "read",
      "title": "1.4 Real life applications",
      "paras": [
-      "We use rational numbers for sharing, loans, savings, discounts, prices and budgets."
+      "We use rational numbers for sharing, loans and savings.",
+      "We also use them for discounts, prices and budgets."
      ],
      "id": "g8.maths.u1.s1-4-1.2"
     },
@@ -135,14 +173,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Why does each brother get an extra 1/15?",
+     "text": "Sharing the sugarcane: why does each brother get an extra 1/15?",
      "opts": [
       "1/5 split into 3 parts is 1/15",
       "1/3 of 1/3 is 1/15",
       "15 − 1 = 14"
      ],
      "ans": "1/5 split into 3 parts is 1/15",
-     "why": "1/5 ÷ 3 = 1/5 × 1/3 = 1/15.",
+     "why": "After each brother takes 1/5, one big piece (1/5) is left.\nIt is shared by 3 brothers: 1/5 ÷ 3.\n1/5 ÷ 3 = 1/5 × 1/3 = 1/15.\nSo each brother gets an extra 1/15.",
      "clue": "Look at the last big piece.",
      "id": "g8.maths.u1.s1-4-1.7",
      "level": 1
@@ -152,12 +190,12 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "Five friends share 2 injera equally. Each gets ___ injera.",
+     "ask": "Share by dividing: five friends share 2 injera equally. Each gets ___ injera.",
      "a": [
       "2/5",
       "0.4"
      ],
-     "why": "2 ÷ 5 = 2/5.",
+     "why": "Share means divide: 2 ÷ 5.\n2 ÷ 5 = 2/5.\nAs a decimal, 2/5 = 0.4.\nCheck: 5 × 2/5 = 10/5 = 2 injera.",
      "clue": "Divide 2 by 5.",
      "added": true,
      "id": "g8.maths.u1.s1-4-1.8",
@@ -168,12 +206,12 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "Three brothers share 3/4 kg of coffee equally. Each gets ___ kg.",
+     "ask": "Share a fraction: three brothers share 3/4 kg of coffee equally. Each gets ___ kg.",
      "a": [
       "1/4",
       "0.25"
      ],
-     "why": "3/4 ÷ 3 = 3/4 × 1/3 = 3/12. Divide top and bottom by 3: 1/4.",
+     "why": "Share means divide: 3/4 ÷ 3.\nDividing by 3 is multiplying by 1/3: 3/4 × 1/3 = 3/12.\nDivide top and bottom by 3: 1/4 kg.\nCheck: 3 × 1/4 = 3/4.",
      "clue": "Divide 3/4 by 3.",
      "added": true,
      "gen": {
@@ -187,13 +225,13 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "Eleni baked 32 cupcakes and iced 24. Fraction iced = ___",
+     "ask": "Fraction of a group: Eleni baked 32 cupcakes and iced 24. Fraction iced = ___",
      "a": [
       "3/4",
       "24/32",
       "0.75"
      ],
-     "why": "24/32: GCF of 24 and 32 is 8. 24 ÷ 8 = 3 and 32 ÷ 8 = 4, so 3/4.",
+     "why": "Fraction iced = iced ÷ total = 24/32.\nThe GCF of 24 and 32 is 8.\n24 ÷ 8 = 3 and 32 ÷ 8 = 4.\nSo 3/4 of the cupcakes are iced.",
      "clue": "Iced over total, then reduce.",
      "gen": {
       "t": "share"
@@ -206,12 +244,12 @@
      "kind": "blank",
      "graded": true,
      "num": true,
-     "ask": "Father takes 1/4 of a cake. Mother takes 1/3 of what is left. 2 children share the rest equally. Each child gets ___ of the cake.",
+     "ask": "Share in steps: father takes 1/4 of a cake. Mother takes 1/3 of what is left. 2 children share the rest equally. Each child gets ___ of the cake.",
      "a": [
       "1/4",
       "0.25"
      ],
-     "why": "After father: 1 − 1/4 = 3/4. Mother takes 1/3 of 3/4 = 3/12 = 1/4. Left: 3/4 − 1/4 = 2/4 = 1/2. Each child: 1/2 ÷ 2 = 1/4.",
+     "why": "After father: 1 − 1/4 = 3/4 is left.\nMother takes 1/3 of 3/4 = 1/3 × 3/4 = 3/12 = 1/4.\nLeft now: 3/4 − 1/4 = 2/4 = 1/2.\nEach child: 1/2 ÷ 2 = 1/2 × 1/2 = 1/4.\nCheck: 1/4 + 1/4 + 1/4 + 1/4 = 1 whole cake.",
      "clue": "Go step by step: what is left after each person?",
      "step": "challenge",
      "level": 3,
@@ -230,11 +268,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Six students share 4 loaves of bread equally. Each gets ___ loaf.",
+     "ask": "Share by dividing: six students share 4 loaves of bread equally. Each gets ___ loaf.",
      "a": [
       "2/3"
      ],
-     "why": "4 ÷ 6 = 4/6. Divide top and bottom by 2: 2/3.",
+     "why": "Share means divide: 4 ÷ 6 = 4/6.\nThe GCF of 4 and 6 is 2.\n4 ÷ 2 = 2 and 6 ÷ 2 = 3.\nEach student gets 2/3 of a loaf.",
      "clue": "Divide and reduce.",
      "added": true,
      "id": "g8.maths.u1.s1-4-1.11",
@@ -245,11 +283,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "A mother takes 1/4 of a cake. 3 children share the rest. Each child gets ___",
+     "ask": "Share what is left: a mother takes 1/4 of a cake. 3 children share the rest. Each child gets ___",
      "a": [
       "1/4"
      ],
-     "why": "3/4 ÷ 3 = 3/4 × 1/3 = 3/12. Divide top and bottom by 3: 1/4.",
+     "why": "Left after the mother: 1 − 1/4 = 3/4.\nShare by 3: 3/4 ÷ 3 = 3/4 × 1/3 = 3/12.\nDivide top and bottom by 3: 1/4.\nEach child gets 1/4 of the cake.",
      "clue": "Find what is left first.",
      "added": true,
      "id": "g8.maths.u1.s1-4-1.12",
@@ -260,11 +298,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Eleni iced 24 of 32 cupcakes. Fraction iced = ___",
+     "ask": "Fraction of a group: Eleni iced 24 of 32 cupcakes. Fraction iced = ___",
      "a": [
       "3/4"
      ],
-     "why": "24/32: GCF of 24 and 32 is 8. 24 ÷ 8 = 3 and 32 ÷ 8 = 4, so 3/4.",
+     "why": "Fraction iced = 24/32.\nThe GCF of 24 and 32 is 8.\n24 ÷ 8 = 3 and 32 ÷ 8 = 4.\nAnswer: 3/4.",
      "clue": "Reduce 24/32.",
      "id": "g8.maths.u1.s1-4-1.13",
      "level": 1
@@ -278,11 +316,11 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "A mother takes 1/3 of a sugarcane. 2 brothers share the rest. Each gets ___",
+   "ask": "Share what is left: a mother takes 1/3 of a sugarcane. 2 brothers share the rest. Each gets ___",
    "a": [
     "1/3"
    ],
-   "why": "2/3 ÷ 2.",
+   "why": "Left after the mother: 1 − 1/3 = 2/3.\nShare by 2: 2/3 ÷ 2 = 2/3 × 1/2 = 2/6.\nDivide top and bottom by 2: 1/3.\nEach brother gets 1/3.",
    "clue": "",
    "gen": {
     "t": "share",
@@ -296,11 +334,11 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "Eight friends share 3 pizzas. Each gets ___ pizza.",
+   "ask": "Share by dividing: eight friends share 3 pizzas. Each gets ___ pizza.",
    "a": [
     "3/8"
    ],
-   "why": "3 ÷ 8.",
+   "why": "Share means divide: 3 ÷ 8.\n3 ÷ 8 = 3/8.\nCheck: 8 × 3/8 = 24/8 = 3 pizzas.",
    "clue": "",
    "id": "g8.maths.u1.s1-4-1.15",
    "level": 2
@@ -310,12 +348,12 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "Four friends share 3 injera equally. Each gets ___ injera.",
+   "ask": "Share by dividing: four friends share 3 injera equally. Each gets ___ injera.",
    "a": [
     "3/4",
     "0.75"
    ],
-   "why": "3 ÷ 4 = 3/4.",
+   "why": "Share means divide: 3 ÷ 4.\n3 ÷ 4 = 3/4 = 0.75.\nCheck: 4 × 3/4 = 3 injera.",
    "clue": "",
    "level": 1,
    "id": "g8.maths.u1.s1-4-1.17"
@@ -325,11 +363,11 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "Mother takes 1/3 of a cake; 4 children share the rest. Each gets ___",
+   "ask": "Share what is left: mother takes 1/3 of a cake; 4 children share the rest. Each gets ___",
    "a": [
     "1/6"
    ],
-   "why": "2/3 ÷ 4 = 2/12 = 1/6.",
+   "why": "Left after the mother: 1 − 1/3 = 2/3.\nShare by 4: 2/3 ÷ 4 = 2/3 × 1/4 = 2/12.\nDivide top and bottom by 2: 1/6.",
    "clue": "",
    "level": 2,
    "gen": {
@@ -342,12 +380,12 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "Father takes 1/5, mother takes 1/4 of what is left, 3 children share the rest. Each child gets ___",
+   "ask": "Share in steps: father takes 1/5, mother takes 1/4 of what is left, 3 children share the rest. Each child gets ___",
    "a": [
     "1/5",
     "0.2"
    ],
-   "why": "Left after father: 4/5. Mother: 1/4 × 4/5 = 1/5. Left: 3/5. Each: 3/5 ÷ 3 = 1/5.",
+   "why": "After father: 1 − 1/5 = 4/5.\nMother: 1/4 of 4/5 = 1/4 × 4/5 = 4/20 = 1/5.\nLeft: 4/5 − 1/5 = 3/5.\nEach child: 3/5 ÷ 3 = 3/5 × 1/3 = 1/5.",
    "clue": "",
    "level": 3,
    "id": "g8.maths.u1.s1-4-1.19"

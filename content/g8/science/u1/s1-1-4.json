@@ -53,7 +53,8 @@
      ],
      "after": "A thermometer measures temperature. A healthy body is about 37°C.",
      "added": true,
-     "id": "g8.science.u1.s1-1-4.1"
+     "id": "g8.science.u1.s1-1-4.1",
+     "best": "Thermometer"
     },
     {
      "kind": "gallery",
@@ -105,6 +106,40 @@
      "id": "g8.science.u1.s1-1-4.4"
     },
     {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Zero error on a balance",
+     "vars": [
+      {
+       "k": "z",
+       "label": "Reading with nothing on it (kg)",
+       "min": 0,
+       "max": 0.5,
+       "step": 0.1,
+       "v": 0.3
+      },
+      {
+       "k": "r",
+       "label": "Reading with the load (kg)",
+       "min": 1,
+       "max": 5,
+       "step": 0.5,
+       "v": 3
+      }
+     ],
+     "formula": "r-z",
+     "outs": [
+      [
+       "Real mass = reading − empty reading",
+       "r-z",
+       "{v} kg"
+      ]
+     ],
+     "note": "If the empty balance does not read zero, every reading is wrong by the same amount. Set it to zero before you weigh.",
+     "id": "g8.science.u1.s1-1-4.19",
+     "added": true
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -124,7 +159,7 @@
      "kind": "match",
      "step": "check",
      "graded": true,
-     "text": "Match each quantity with an instrument.",
+     "text": "Measuring instruments: match each quantity with an instrument that measures it.",
      "pairs": [
       [
        "Mass",
@@ -143,7 +178,7 @@
        "Thermometer"
       ]
      ],
-     "why": "These are the instruments in Figures 1.4–1.7.",
+     "why": "Mass: a balance, like an electronic balance.\nLength: a ruler or tape; a vernier caliper for small lengths.\nTime: a stopwatch or a clock.\nTemperature: a thermometer.",
      "clue": "What do you use to weigh? to time a race?",
      "level": 1,
      "id": "g8.science.u1.s1-1-4.6"
@@ -152,7 +187,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "When you measure a pencil with a ruler, where must one end of the pencil be?",
+     "text": "Using a ruler: when you measure a pencil, where must one end of the pencil be?",
      "opts": [
       "Exactly at the zero mark",
       "At the 1 cm mark",
@@ -160,7 +195,7 @@
       "At the end of the ruler"
      ],
      "ans": "Exactly at the zero mark",
-     "why": "Place the zero mark exactly at one end and read the scale at the other end.",
+     "why": "A ruler counts from its zero mark.\nPut one end of the pencil exactly on zero.\nRead the scale at the other end.\nThat reading is the length.\nIf you start at the 1 cm mark, the reading is 1 cm too long.",
      "clue": "Where does the ruler start counting?",
      "level": 1,
      "ref": "p.13",
@@ -170,9 +205,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "You may put a laboratory thermometer in your mouth if it is clean.",
+     "text": "Thermometer safety, true or false: you may put a laboratory thermometer in your mouth if it is clean.",
      "a": false,
-     "why": "The book says: never put a laboratory thermometer into your mouth.",
+     "why": "A laboratory thermometer is used with chemicals and hot liquids.\nIt is made of thin glass and can break.\nThe book says never put it in your mouth.\nCleaning does not make it safe. So it is false.",
      "clue": "Read the safety note.",
      "level": 1,
      "ref": "p.15",
@@ -182,7 +217,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "What should a balance read before you put anything on it?",
+     "text": "Using a balance: what should it read before you put anything on it?",
      "opts": [
       "Zero",
       "1 kg",
@@ -190,17 +225,67 @@
       "Any number"
      ],
      "ans": "Zero",
-     "why": "Check that the balance reads zero with no load, or every reading will be wrong.",
+     "why": "With nothing on it, the mass is zero.\nSo the balance must read zero.\nIf it reads 0.2 kg, every reading will be 0.2 kg too high.\nAlso check that it stands on a level surface.",
      "clue": "Think of starting from nothing.",
      "level": 1,
      "ref": "p.11",
      "id": "g8.science.u1.s1-1-4.9"
     },
     {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "level": 1,
+     "title": "Which quantity?",
+     "text": "Measuring instruments: sort each instrument by the quantity it measures.",
+     "bins": [
+      "Mass",
+      "Length",
+      "Time",
+      "Temperature"
+     ],
+     "items": [
+      [
+       "Spring balance",
+       "Mass",
+       "A balance measures mass."
+      ],
+      [
+       "Measuring tape",
+       "Length",
+       "A tape measures length."
+      ],
+      [
+       "Stopwatch",
+       "Time",
+       "A stopwatch times an event."
+      ],
+      [
+       "Thermometer",
+       "Temperature",
+       "A thermometer measures how hot or cold."
+      ],
+      [
+       "Vernier caliper",
+       "Length",
+       "It measures small lengths precisely."
+      ],
+      [
+       "Electronic balance",
+       "Mass",
+       "It shows mass on a screen."
+      ]
+     ],
+     "why": "Balances (spring, electronic) measure mass.\nA measuring tape and a vernier caliper measure length.\nA stopwatch measures time.\nA thermometer measures temperature.",
+     "clue": "Ask: what does this tool tell you, how heavy, how long, how much time, or how hot?",
+     "id": "g8.science.u1.s1-1-4.20",
+     "added": true
+    },
+    {
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Two students measure their body temperature: 36.8°C and 38.5°C. What does this suggest?",
+     "text": "Reading body temperature: two students measure 36.8°C and 38.5°C. What does this suggest?",
      "opts": [
       "The second may have a fever",
       "Both are ill",
@@ -208,7 +293,7 @@
       "Both are normal"
      ],
      "ans": "The second may have a fever",
-     "why": "Normal body temperature is about 37°C. 38.5°C is clearly above it, which suggests fever.",
+     "why": "Normal body temperature is about 37°C.\n36.8°C is very close to 37°C: normal.\n38.5°C is 1.5°C above 37°C.\nThat is a sign of fever.\nSo the second student may have a fever.",
      "clue": "Compare each with 37°C.",
      "level": 2,
      "ref": "Activity 1.4",
@@ -218,7 +303,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Hirut weighs a bag of sugar on a balance that shows 0.2 kg with nothing on it. The bag reads 2.2 kg. What is the real mass?",
+     "text": "Zero error on a balance: Hirut's balance shows 0.2 kg with nothing on it. Her bag of sugar reads 2.2 kg. What is the real mass?",
      "opts": [
       "2.0 kg",
       "2.2 kg",
@@ -226,7 +311,7 @@
       "0.2 kg"
      ],
      "ans": "2.0 kg",
-     "why": "The balance started at 0.2 kg instead of zero, so every reading is 0.2 kg too high: 2.2 − 0.2 = 2.0 kg.",
+     "why": "With nothing on it, the balance shows 0.2 kg.\nSo every reading is 0.2 kg too high.\nReal mass = reading − 0.2 kg.\n2.2 − 0.2 = 2.0 kg.\n2.4 kg is wrong: you take away the extra, not add it.",
      "clue": "What did the balance read with no load?",
      "level": 3,
      "added": true,
@@ -244,11 +329,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "The standard body temperature is ___ °C",
+     "ask": "Activity 1.4, body temperature: the standard body temperature is ___ °C",
      "a": [
       "37"
      ],
-     "why": "The book gives 37°C as the standard body temperature.",
+     "why": "A healthy human body stays near one temperature.\nThe book gives it as 37°C.\nSo the answer is 37.",
      "clue": "Read Activity 1.4.",
      "level": 1,
      "ref": "Activity 1.4",
@@ -258,7 +343,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "How should you hold a thermometer when measuring warm water?",
+     "text": "Activity 1.5, using a thermometer: how should you hold it when measuring warm water?",
      "opts": [
       "At the top, bulb not touching the glass",
       "By the bulb",
@@ -266,7 +351,7 @@
       "Upside down"
      ],
      "ans": "At the top, bulb not touching the glass",
-     "why": "Holding the bulb would measure your hand, not the water.",
+     "why": "The bulb at the bottom senses the heat.\nHold the thermometer at the top, away from the bulb.\nKeep the bulb in the water, not touching the glass.\nIf you hold the bulb, you measure your hand.\nIf it touches the glass, you measure the glass.",
      "clue": "Which part senses the heat?",
      "level": 1,
      "ref": "Activity 1.5",
@@ -280,7 +365,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "A spring balance measures",
+   "text": "Instruments: what does a spring balance measure?",
    "opts": [
     "mass",
     "time",
@@ -288,7 +373,7 @@
     "length"
    ],
    "ans": "mass",
-   "why": "Fig 1.4.",
+   "why": "A spring balance is a kind of balance.\nBalances measure mass.\nSo a spring balance measures mass.\nTime needs a clock; temperature a thermometer; length a ruler.",
    "clue": "",
    "level": 1,
    "id": "g8.science.u1.s1-1-4.14"
@@ -297,7 +382,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "The SI unit of temperature is",
+   "text": "SI units: the SI unit of temperature is",
    "opts": [
     "kelvin",
     "degree Celsius",
@@ -305,7 +390,7 @@
     "metre"
    ],
    "ans": "kelvin",
-   "why": "p.14.",
+   "why": "Temperature is a fundamental quantity.\nIts SI unit is the kelvin (K).\nDegree Celsius and degree Fahrenheit are also used, but they are not SI units.\nSo the answer is kelvin.",
    "clue": "",
    "level": 1,
    "id": "g8.science.u1.s1-1-4.15"
@@ -314,7 +399,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which instrument measures small lengths very precisely?",
+   "text": "Instruments: which one measures small lengths very precisely?",
    "opts": [
     "Vernier caliper",
     "Stopwatch",
@@ -322,7 +407,7 @@
     "Thermometer"
    ],
    "ans": "Vernier caliper",
-   "why": "Fig 1.5.",
+   "why": "A vernier caliper has a fine extra scale.\nIt measures small lengths very precisely, like the width of a coin.\nA stopwatch measures time; a thermometer, temperature.\nA kubaya is a mug for volume.",
    "clue": "",
    "level": 2,
    "id": "g8.science.u1.s1-1-4.16"
@@ -331,9 +416,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "A balance should be on a level surface before measuring.",
+   "text": "Using a balance, true or false: it should be on a level surface before measuring.",
    "a": true,
-   "why": "p.11.",
+   "why": "A balance on a slope gives wrong readings.\nSo first place it on a level, flat surface.\nThen check that it reads zero.\nSo the statement is true.",
    "clue": "",
    "level": 1,
    "id": "g8.science.u1.s1-1-4.17"
@@ -342,7 +427,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "A balance reads 0.1 kg with nothing on it. A book reads 1.6 kg. The real mass is",
+   "text": "Zero error on a balance: it reads 0.1 kg with nothing on it. A book reads 1.6 kg. What is the real mass?",
    "opts": [
     "1.5 kg",
     "1.6 kg",
@@ -350,7 +435,7 @@
     "0.1 kg"
    ],
    "ans": "1.5 kg",
-   "why": "1.6 − 0.1 = 1.5 kg.",
+   "why": "Empty, the balance shows 0.1 kg instead of 0.\nSo every reading is 0.1 kg too high.\n1.6 − 0.1 = 1.5 kg.\nSo the book's real mass is 1.5 kg.",
    "clue": "",
    "level": 3,
    "id": "g8.science.u1.s1-1-4.18"

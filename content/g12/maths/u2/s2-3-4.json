@@ -48,9 +48,10 @@
       "0",
       "16/3"
      ],
-     "after": "−8/3. The region has the same size, but it is below the axis, so the integral is negative.",
+     "after": "−x² is the graph of x² flipped below the x-axis.\nThe region has the same size, 8/3.\nBelow the axis the heights are negative, so the integral is −8/3.\nThe area itself is still 8/3: area = −(integral) below the axis.",
      "ref": "Example 2",
-     "id": "g12.maths.u2.s2-3-4.1"
+     "id": "g12.maths.u2.s2-3-4.1",
+     "best": "−8/3"
     },
     {
      "kind": "read",
@@ -66,6 +67,47 @@
      "id": "g12.maths.u2.s2-3-4.2"
     },
     {
+     "kind": "coord",
+     "step": "explore",
+     "added": true,
+     "title": "y = x − 2 on [0, 4]",
+     "ask": "Tap the points. One triangle is below the axis, one above.",
+     "min": -1,
+     "max": 5,
+     "ymin": -3,
+     "ymax": 3,
+     "lines": [
+      {
+       "m": 1,
+       "b": -2,
+       "label": "y = x − 2",
+       "at": 4.5
+      },
+      {
+       "x": 4
+      }
+     ],
+     "points": [
+      {
+       "x": 0,
+       "y": -2,
+       "info": "Below the axis on [0, 2]: a triangle of area (1/2)(2)(2) = 2. It counts −2 in the integral."
+      },
+      {
+       "x": 2,
+       "y": 0,
+       "info": "The x-intercept. Split the region here."
+      },
+      {
+       "x": 4,
+       "y": 2,
+       "info": "Above the axis on [2, 4]: area 2, counts +2. The integral is −2 + 2 = 0, but the area is 2 + 2 = 4."
+      }
+     ],
+     "need": 3,
+     "id": "g12.maths.u2.s2-3-4.22"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -79,11 +121,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Area between f(x) = x² − 1 and the x-axis on [−1, 1] = ___",
+     "ask": "Area of a region below the x-axis: f(x) = x² − 1 on [−1, 1]. The area = ___",
      "a": [
       "4/3"
      ],
-     "why": "∫ from -1 to 1 (x² − 1) dx = −4/3, so the area is 4/3.",
+     "why": "On [−1, 1], x² − 1 ≤ 0: the graph is below the axis.\nF(x) = x³/3 − x.\n∫ = F(1) − F(−1) = (−2/3) − (2/3) = −4/3.\nArea = −(−4/3) = 4/3.\nTrap: an area is never negative.",
      "clue": "The graph is below the axis here.",
      "num": true,
      "graded": true,
@@ -107,11 +149,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Area enclosed by f(x) = x² − 4 and the x-axis = ___",
+     "ask": "Area enclosed by a curve and the x-axis: f(x) = x² − 4. The area = ___",
      "a": [
       "32/3"
      ],
-     "why": "∫ from -2 to 2 (x² − 4) dx = −32/3; area 32/3.",
+     "why": "x-intercepts: x² − 4 = 0 gives x = ±2.\nBetween them the graph is below the axis.\nF(x) = x³/3 − 4x. F(2) = 8/3 − 8 = −16/3, F(−2) = 16/3.\n∫ from −2 to 2 = −16/3 − 16/3 = −32/3.\nArea = 32/3.",
      "clue": "Intercepts at ±2.",
      "num": true,
      "graded": true,
@@ -122,11 +164,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Area enclosed by f(x) = x² − 2x and the x-axis = ___",
+     "ask": "Area enclosed by a curve and the x-axis: f(x) = x² − 2x. The area = ___",
      "a": [
       "4/3"
      ],
-     "why": "∫ from 0 to 2 (x² − 2x) dx = −4/3; area 4/3.",
+     "why": "x-intercepts: x(x − 2) = 0 gives x = 0 and x = 2.\nBetween them the graph is below the axis (f(1) = −1).\n∫ from 0 to 2 = [x³/3 − x²] = 8/3 − 4 = −4/3.\nArea = 4/3.",
      "clue": "Intercepts 0 and 2.",
      "num": true,
      "graded": true,
@@ -137,11 +179,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Area under f(x) = x² + 3 between x = −1 and x = 3 = ___",
+     "ask": "Area under a curve above the x-axis: f(x) = x² + 3 between x = −1 and x = 3. The area = ___",
      "a": [
       "64/3"
      ],
-     "why": "18 − (−10/3) = 64/3.",
+     "why": "x² + 3 ≥ 3 > 0, so no splitting is needed.\nF(x) = x³/3 + 3x.\nF(3) = 9 + 9 = 18. F(−1) = −1/3 − 3 = −10/3.\nArea = 18 + 10/3 = 64/3.",
      "clue": "x² + 3 is always positive.",
      "num": true,
      "graded": true,
@@ -151,8 +193,51 @@
      "id": "g12.maths.u2.s2-3-4.8"
     },
     {
+     "kind": "sort",
+     "step": "practise",
+     "added": true,
+     "graded": true,
+     "level": 2,
+     "text": "Sign of the definite integral: is each integral positive, negative or zero?",
+     "bins": [
+      "positive",
+      "negative",
+      "zero"
+     ],
+     "items": [
+      [
+       "∫ from 0 to 2 x² dx",
+       "positive",
+       "8/3: the region is above the axis."
+      ],
+      [
+       "∫ from 0 to 2 (−x²) dx",
+       "negative",
+       "−8/3: the region is below the axis."
+      ],
+      [
+       "∫ from −1 to 1 x dx",
+       "zero",
+       "[x²/2] = 1/2 − 1/2 = 0: equal parts cancel."
+      ],
+      [
+       "∫ from −1 to 1 (x² − 1) dx",
+       "negative",
+       "−4/3: below the axis on [−1, 1]."
+      ],
+      [
+       "∫ from 0 to 2 (x² − 1) dx",
+       "positive",
+       "2/3: more area above (4/3) than below (2/3)."
+      ]
+     ],
+     "why": "Above the axis counts +, below counts −.\nThe integral = (area above) − (area below).\nIf the two parts are equal, the integral is 0, but the area is not.",
+     "clue": "Sketch each graph. Where is it above, where below the x-axis?",
+     "id": "g12.maths.u2.s2-3-4.23"
+    },
+    {
      "kind": "mcq",
-     "text": "∫ from -1 to 2 (−x³ + 3x − 1) dx is",
+     "text": "Signed area: ∫ from −1 to 2 (−x³ + 3x − 1) dx is",
      "opts": [
       "−9/4",
       "9/4",
@@ -160,7 +245,7 @@
       "−3"
      ],
      "ans": "−9/4",
-     "why": "(−4 + 6 − 2) − (−1/4 + 3/2 + 1) = 0 − 9/4.",
+     "why": "F(x) = −x⁴/4 + 3x²/2 − x.\nF(2) = −4 + 6 − 2 = 0.\nF(−1) = −1/4 + 3/2 + 1 = 9/4.\n∫ = 0 − 9/4 = −9/4.\nNegative: more of the region is below the axis than above.\nTrap: 9/4 subtracts in the wrong order.",
      "clue": "More of this graph is below the axis.",
      "graded": true,
      "level": 2,
@@ -170,11 +255,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Area enclosed by f(x) = x(x + 2)(x − 1) and the x-axis = ___",
+     "ask": "Area enclosed by a cubic and the x-axis: f(x) = x(x + 2)(x − 1). The area = ___",
      "a": [
       "37/12"
      ],
-     "why": "Above on [−2, 0]: 8/3. Below on [0, 1]: 5/12. 8/3 + 5/12 = 37/12.",
+     "why": "Intercepts: x = −2, 0, 1. Expand: f = x³ + x² − 2x.\nF(x) = x⁴/4 + x³/3 − x².\nAbove on [−2, 0]: F(0) − F(−2) = 0 − (4 − 8/3 − 4) = 8/3.\nBelow on [0, 1]: F(1) − F(0) = 1/4 + 1/3 − 1 = −5/12, area 5/12.\nTotal area = 8/3 + 5/12 = 32/12 + 5/12 = 37/12.\nTrap: ∫ from −2 to 1 = 9/4 lets the parts cancel.",
      "clue": "Split at −2, 0 and 1. The integral alone (9/4) is not the area.",
      "num": true,
      "graded": true,
@@ -193,11 +278,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "x² − 4 and the x-axis: S = ___",
+     "ask": "Area enclosed by f(x) = x² − 4 and the x-axis: S = ___",
      "a": [
       "32/3"
      ],
-     "why": "−(−32/3).",
+     "why": "Intercepts ±2; the graph is below the axis between them.\n∫ from −2 to 2 (x² − 4) dx = −32/3.\nS = −(−32/3) = 32/3.",
      "clue": "Below the axis.",
      "num": true,
      "graded": true,
@@ -208,11 +293,11 @@
     },
     {
      "kind": "blank",
-     "ask": "−x² + 4 and the x-axis: S = ___",
+     "ask": "Area enclosed by f(x) = −x² + 4 and the x-axis: S = ___",
      "a": [
       "32/3"
      ],
-     "why": "16/3 − (−16/3).",
+     "why": "Intercepts ±2; the graph is above the axis between them.\nF(x) = −x³/3 + 4x. F(2) = 16/3, F(−2) = −16/3.\nS = 16/3 + 16/3 = 32/3.",
      "clue": "Above the axis.",
      "num": true,
      "graded": true,
@@ -223,11 +308,11 @@
     },
     {
      "kind": "blank",
-     "ask": "x² − 2x and the x-axis: S = ___",
+     "ask": "Area enclosed by f(x) = x² − 2x and the x-axis: S = ___",
      "a": [
       "4/3"
      ],
-     "why": "−(−4/3).",
+     "why": "Intercepts 0 and 2; below the axis between them.\n∫ from 0 to 2 = 8/3 − 4 = −4/3.\nS = 4/3.",
      "clue": "Below.",
      "num": true,
      "graded": true,
@@ -238,11 +323,11 @@
     },
     {
      "kind": "blank",
-     "ask": "−x² − 2x and the x-axis: S = ___",
+     "ask": "Area enclosed by f(x) = −x² − 2x and the x-axis: S = ___",
      "a": [
       "4/3"
      ],
-     "why": "0 − (−4/3).",
+     "why": "−x(x + 2) = 0 gives x = −2 and x = 0. Above the axis between them.\nF(x) = −x³/3 − x².\nF(0) = 0. F(−2) = 8/3 − 4 = −4/3.\nS = 0 − (−4/3) = 4/3.",
      "clue": "Intercepts −2 and 0.",
      "num": true,
      "graded": true,
@@ -253,11 +338,11 @@
     },
     {
      "kind": "blank",
-     "ask": "x², x = 0 to x = 4: S = ___",
+     "ask": "Area under f(x) = x² from x = 0 to x = 4: S = ___",
      "a": [
       "64/3"
      ],
-     "why": "64/3.",
+     "why": "x² ≥ 0, so the integral is the area.\nF(x) = x³/3.\nS = 64/3 − 0 = 64/3.",
      "clue": "x³/3.",
      "num": true,
      "graded": true,
@@ -268,11 +353,11 @@
     },
     {
      "kind": "blank",
-     "ask": "x(x + 2)(x − 1) and the x-axis: S = ___",
+     "ask": "Area enclosed by f(x) = x(x + 2)(x − 1) and the x-axis: S = ___",
      "a": [
       "37/12"
      ],
-     "why": "8/3 + 5/12.",
+     "why": "Split at the intercepts −2, 0, 1.\nAbove on [−2, 0]: 8/3.\nBelow on [0, 1]: 5/12.\nS = 8/3 + 5/12 = 37/12.",
      "clue": "Split at 0.",
      "num": true,
      "graded": true,
@@ -287,11 +372,11 @@
  "test": [
   {
    "kind": "blank",
-   "ask": "Area between y = −x² and the x-axis from 0 to 3 = ___",
+   "ask": "Area of a region below the x-axis: y = −x² from 0 to 3. The area = ___",
    "a": [
     "9"
    ],
-   "why": "−(−9).",
+   "why": "−x² ≤ 0: the region is below the axis.\n∫ from 0 to 3 (−x²) dx = −27/3 = −9.\nArea = −(−9) = 9.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -301,12 +386,12 @@
   },
   {
    "kind": "blank",
-   "ask": "∫ from 0 to 3 (x − 1) dx = ___",
+   "ask": "Signed area: ∫ from 0 to 3 (x − 1) dx = ___",
    "a": [
     "1.5",
     "3/2"
    ],
-   "why": "[x²/2 − x] = 1.5.",
+   "why": "F(x) = x²/2 − x.\nF(3) = 9/2 − 3 = 3/2. F(0) = 0.\n∫ = 3/2 = 1.5.\n(Below on [0, 1] counts −1/2, above on [1, 3] counts +2.)",
    "clue": "",
    "num": true,
    "graded": true,
@@ -316,12 +401,12 @@
   },
   {
    "kind": "blank",
-   "ask": "Area between y = x − 1 and the x-axis on [0, 3] = ___",
+   "ask": "Total area between y = x − 1 and the x-axis on [0, 3] = ___",
    "a": [
     "2.5",
     "5/2"
    ],
-   "why": "1/2 + 2.",
+   "why": "y = x − 1 crosses the axis at x = 1: split there.\nBelow on [0, 1]: triangle (1/2)(1)(1) = 1/2.\nAbove on [1, 3]: triangle (1/2)(2)(2) = 2.\nArea = 1/2 + 2 = 2.5.\nTrap: the integral (1.5) subtracts the part below.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -331,9 +416,9 @@
   },
   {
    "kind": "tf",
-   "text": "If f(x) < 0 on [a, b], the integral from a to b is negative.",
+   "text": "True or false? If f(x) < 0 on [a, b], the integral from a to b is negative.",
    "a": true,
-   "why": "Area below counts negative.",
+   "why": "Every height f(x) is negative.\nSo every Riemann term f(x)Δx is negative.\nTheir limit, the integral, is negative.\nTrue (the area is minus the integral).",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -346,7 +431,7 @@
    "a": [
     "4/3"
    ],
-   "why": "[x − x³/3] from −1 to 1.",
+   "why": "Intercepts: 1 − x² = 0 gives x = ±1. Above the axis between them.\nF(x) = x − x³/3.\nF(1) = 2/3. F(−1) = −2/3.\nArea = 2/3 + 2/3 = 4/3.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -384,7 +469,7 @@
     },
     {
      "kind": "mcq",
-     "text": "∫ from 1 to 2 3x² dx = ?",
+     "text": "Evaluate the definite integral: ∫ from 1 to 2 3x² dx = ?",
      "opts": [
       "7",
       "8",
@@ -392,7 +477,7 @@
       "3"
      ],
      "ans": "7",
-     "why": "[x³] = 8 − 1.",
+     "why": "Anti-derivative: F(x) = x³.\nF(2) = 8. F(1) = 1.\n8 − 1 = 7.\nTrap: 8 forgets to subtract F(1).",
      "clue": "F(2) − F(1).",
      "graded": true,
      "level": 1,

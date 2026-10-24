@@ -1,606 +1,679 @@
 {
-  "id": "g9.maths.u1.s1-2-1",
-  "book": {
-    "title": "Mathematics Grade 9 Student Textbook",
-    "grade": 9,
-    "subject": "maths",
-    "unit": 1,
-    "unit_title": "The Number System",
-    "section": "1.2.1",
-    "pages": "32–39"
+ "id": "g9.maths.u1.s1-2-1",
+ "book": {
+  "title": "Mathematics Grade 9 Student Textbook",
+  "grade": 9,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "The Number System",
+  "section": "1.2.1",
+  "pages": "32–39"
+ },
+ "title": "Rational numbers as decimals",
+ "competency": "Write rational numbers as terminating or repeating decimals, turn terminating decimals into fractions and locate rational numbers on the number line.",
+ "minutes": 10,
+ "keywords": [
+  {
+   "en": "Terminating decimal",
+   "am": "የሚያልቅ አስርዮሽ",
+   "def": "A decimal that ends, such as 0.6 or 2.375.",
+   "machine": true
   },
-  "title": "Rational numbers as decimals",
-  "competency": "Write rational numbers as terminating or repeating decimals, turn terminating decimals into fractions and locate rational numbers on the number line.",
-  "minutes": 10,
-  "keywords": [
-    {
-      "en": "Terminating decimal",
-      "am": "የሚያልቅ አስርዮሽ",
-      "def": "A decimal that ends, such as 0.6 or 2.375.",
-      "machine": true
-    },
-    {
-      "en": "Repeating decimal",
-      "am": "ተደጋጋሚ አስርዮሽ",
-      "def": "A decimal in which a block of digits repeats for ever, such as 0.333… or 0.2323…",
-      "machine": true
-    },
-    {
-      "en": "Bar notation",
-      "am": "የመስመር ምልክት",
-      "def": "A line over the repeating digits of a decimal: 0.3̅ means 0.333…",
-      "machine": true
-    },
-    {
-      "en": "Number line",
-      "am": "የቁጥር መስመር",
-      "def": "A line where every number has its own point. Numbers grow to the right.",
-      "machine": true
-    },
-    {
-      "en": "Rational number",
-      "am": "ምክንያታዊ ቁጥር",
-      "def": "A number that can be written a/b with integers a, b and b ≠ 0.",
-      "machine": true
-    }
-  ],
-  "ideas": [
-    {
-      "id": "math.decimals",
-      "name": "Terminating and repeating decimals",
-      "requires": [
-        "math.fractions"
-      ],
-      "explain": {
-        "en": {
-          "text": "Divide a by b to write a/b as a decimal. Either the division stops, giving a terminating decimal like 0.6. Or the digits repeat for ever, like 0.555…. A bar over the repeating digits shows this. A terminating decimal becomes a fraction over 10, 100 or 1000."
-        },
-        "am": {
-          "text": "a/bን በአስርዮሽ ለመጻፍ aን በb አካፍል። ወይ ማካፈሉ ይቆማል፤ እንደ 0.6 ያለ የሚያልቅ አስርዮሽ ይሰጣል። ወይ አሃዞቹ ለዘላለም ይደጋገማሉ፤ እንደ 0.555…። በሚደጋገሙት አሃዞች ላይ ያለ መስመር ይህንን ያሳያል። የሚያልቅ አስርዮሽ በ10፣ 100 ወይም 1000 ላይ ክፍልፋይ ይሆናል።",
-          "machine": true
-        }
-      },
-      "screens": [
-        {
-          "kind": "guess",
-          "step": "hook",
-          "title": "Will the division stop?",
-          "text": "Divide 3 by 5 on paper. Then divide 5 by 9.",
-          "ask": "Which division do you think ends?",
-          "opts": [
-            "3 ÷ 5 only",
-            "5 ÷ 9 only",
-            "Both end",
-            "Neither ends"
-          ],
-          "after": "Do both divisions, then read on.",
-          "ref": "Activity 1.10"
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Activity 1.10: the results",
-          "paras": [
-            "3/5 = 0.6 and 5/9 = 0.555…",
-            "−14/15 = −0.9333… and −2/7 = −0.285714285714…",
-            "Going back: 0.2 = 2/10 = 1/5 and 3.31 = 331/100."
-          ]
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Two things can happen",
-          "paras": [
-            "Any rational number a/b can be written as a decimal. Divide a by b.",
-            "The division may stop with remainder 0. Then it is a terminating decimal, such as 3/5 = 0.6.",
-            "Or the remainder never becomes 0 and the digits repeat. Then it is a repeating decimal, such as 5/9 = 0.555…",
-            "Bar notation. A bar over the repeating digits shows the repetition: 1/3 = 0.333… = 0.3̅ and 23/99 = 0.2323… = 0.2̅3̅."
-          ],
-          "note": "In long division, when a remainder comes back, the digits must repeat."
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "Name it",
-          "defs": [
-            [
-              "Terminating decimal",
-              "The division stops: 3/5 = 0.6."
-            ],
-            [
-              "Repeating decimal",
-              "A block of digits repeats for ever: 5/9 = 0.555…"
-            ],
-            [
-              "Bar notation",
-              "A bar over the repeating block: 0.555… = 0.5̅."
-            ]
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Which one ends?",
-          "text": "Which fraction gives a terminating decimal?",
-          "opts": [
-            "1/3",
-            "2/9",
-            "3/8",
-            "5/6"
-          ],
-          "ans": "3/8",
-          "why": "3/8 = 0.375. The division ends.",
-          "clue": "Divide each one. Which reaches remainder 0?"
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Why 1/7 repeats",
-          "text": "Why must the decimal for 1/7 repeat?",
-          "opts": [
-            "The remainders can only be 1 to 6, so one must come back",
-            "7 is an odd number",
-            "1 is smaller than 7",
-            "All fractions repeat"
-          ],
-          "ans": "The remainders can only be 1 to 6, so one must come back",
-          "why": "Once a remainder repeats, the same digits follow again.",
-          "clue": "Divide 1 by 7 and watch the remainders."
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Terminating decimals to fractions",
-          "paras": [
-            "A terminating decimal can be written as a fraction.",
-            "Its denominator is 10, 100, 1000, …",
-            "Use one zero for each digit after the decimal point."
-          ]
-        },
-        {
-          "kind": "steps",
-          "step": "method",
-          "text": "Count the digits after the point. Then simplify.",
-          "steps": [
-            "(a) 7.3 has one decimal digit. So 7.3 = 73/10.",
-            "(b) −0.18 has two decimal digits. So −0.18 = −18/100.",
-            "GCF(18, 100) = 2. Divide top and bottom by 2.",
-            "So −0.18 = −9/50."
-          ],
-          "needs": "math.fractions",
-          "ref": "Example 1"
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "title": "0.45 as a fraction",
-          "text": "Write 0.45 as a fraction in simplest form.",
-          "opts": [
-            "45/10",
-            "9/20",
-            "45/1000",
-            "4/5"
-          ],
-          "ans": "9/20",
-          "why": "0.45 = 45/100. Divide top and bottom by 5 to get 9/20.",
-          "clue": "Two decimal digits means a denominator of 100.",
-          "needs": "math.fractions"
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "title": "Bar notation",
-          "text": "Which is 5/6 in bar notation?",
-          "opts": [
-            "0.8̅3̅",
-            "0.83̅",
-            "0.8̅",
-            "0.83"
-          ],
-          "ans": "0.83̅",
-          "why": "5/6 = 0.8333… Only the 3 repeats, so the bar goes over the 3.",
-          "clue": "Divide 5 by 6. Which digit repeats?"
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "added": true,
-          "title": "Birr and santim",
-          "text": "Kebede pays 0.25 birr for a pencil eraser.",
-          "ask": "As a fraction in simplest form, that is ___ birr.",
-          "a": [
-            "1/4",
-            "¼",
-            "one quarter",
-            "a quarter"
-          ],
-          "why": "0.25 = 25/100 = 1/4.",
-          "clue": "Two digits after the point: put 25 over 100, then simplify.",
-          "worked": "0.25 has two decimal digits, so 0.25 = 25/100. GCF(25, 100) = 25. So 0.25 = 1/4.",
-          "needs": "math.fractions"
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "title": "Divide it out",
-          "ask": "3/8 = ___ as a decimal.",
-          "a": [
-            "0.375",
-            ".375"
-          ],
-          "why": "3 ÷ 8 = 0.375. It terminates.",
-          "clue": "Divide 3.000 by 8."
-        }
-      ]
-    },
-    {
-      "id": "math.rationals-on-number-line",
-      "name": "Rational numbers on the number line",
-      "explain": {
-        "en": {
-          "text": "Every rational number has a point on the number line. Integers are easy to mark. For a fraction, change it to a decimal first. For example, 4/3 = 1.333…, just past 1. And −5/2 = −2.5, halfway between −3 and −2."
-        },
-        "am": {
-          "text": "እያንዳንዱ ምክንያታዊ ቁጥር በቁጥር መስመር ላይ ነጥብ አለው። ኢንቲጀሮችን ማመልከት ቀላል ነው። ክፍልፋይን መጀመሪያ ወደ አስርዮሽ ቀይር። ለምሳሌ 4/3 = 1.333… ከ1 ትንሽ ያልፋል። −5/2 = −2.5 ደግሞ በ−3 እና በ−2 መሃል ነው።",
-          "machine": true
-        }
-      },
-      "screens": [
-        {
-          "kind": "guess",
-          "step": "hook",
-          "title": "Where does 4/3 sit?",
-          "text": "Picture a number line from −5 to 3.",
-          "ask": "Where do you think 4/3 goes?",
-          "opts": [
-            "Between 0 and 1",
-            "Between 1 and 2",
-            "Between 3 and 4",
-            "Between 4 and 5"
-          ],
-          "after": "Change 4/3 to a decimal to check."
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Rational numbers on the number line",
-          "paras": [
-            "Example. Locate −5, 3, 4/3 and −5/2.",
-            "Integers are easy. For fractions, change to decimals first.",
-            "4/3 = 1.3̅ and −5/2 = −2.5. Then mark each point (Figure 1.3)."
-          ]
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "Name it",
-          "defs": [
-            [
-              "Number line",
-              "A line where every number has a point. Every rational number has its place on it."
-            ]
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Between which integers?",
-          "text": "Between which two integers is −5/2?",
-          "opts": [
-            "−2 and −1",
-            "−3 and −2",
-            "2 and 3",
-            "−5 and −4"
-          ],
-          "ans": "−3 and −2",
-          "why": "−5/2 = −2.5, halfway between −3 and −2.",
-          "clue": "Change −5/2 to a decimal first."
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "title": "Which is further right?",
-          "text": "Which number is further to the right on the number line?",
-          "opts": [
-            "4/3",
-            "1.3",
-            "1.2",
-            "−5/2"
-          ],
-          "ans": "4/3",
-          "why": "4/3 = 1.333…, which is bigger than 1.3.",
-          "clue": "Write each one as a decimal and compare."
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "added": true,
-          "title": "Temperature in Debre Birhan",
-          "text": "One cold morning in Debre Birhan the temperature was −3/2 °C.",
-          "ask": "As a decimal, that is ___ °C.",
-          "a": [
-            "-1.5",
-            "−1.5"
-          ],
-          "why": "−3/2 = −1.5. It lies halfway between −2 and −1.",
-          "clue": "Divide 3 by 2, then keep the minus sign.",
-          "worked": "3 ÷ 2 = 1.5. Keep the sign: −3/2 = −1.5. On the line, it is halfway between −2 and −1."
-        }
-      ]
-    }
-  ],
-  "exercises": [
-    {
-      "book_name": "Exercise 1.11",
-      "items": [
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "1(a) Write 8/9 with bar notation.",
-          "opts": [
-            "0.8̅",
-            "0.89̅",
-            "0.8",
-            "0.9̅"
-          ],
-          "ans": "0.8̅",
-          "why": "8/9 = 0.888…",
-          "clue": "Divide 8 by 9."
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "1(c) Write 1/11 with bar notation.",
-          "opts": [
-            "0.1̅",
-            "0.0̅9̅",
-            "0.09",
-            "0.1̅1̅"
-          ],
-          "ans": "0.0̅9̅",
-          "why": "1/11 = 0.0909…",
-          "clue": "Divide 1 by 11. Which block repeats?"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "1(d) Write 14/9 with bar notation.",
-          "opts": [
-            "1.5̅",
-            "1.4̅",
-            "0.1̅4̅",
-            "1.55"
-          ],
-          "ans": "1.5̅",
-          "why": "14/9 = 1.555…",
-          "clue": "14/9 = 1 + 5/9."
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "2. 1/7 = 0.1̅4̅2̅8̅5̅7̅. Which is 3/7?",
-          "opts": [
-            "0.4̅2̅8̅5̅7̅1̅",
-            "0.3̅4̅2̅8̅5̅7̅",
-            "0.2̅8̅5̅7̅1̅4̅",
-            "0.4̅2̅8̅"
-          ],
-          "ans": "0.4̅2̅8̅5̅7̅1̅",
-          "why": "The sevenths use the same six digits 1, 4, 2, 8, 5, 7. They start at a different place.",
-          "clue": "3/7 is a bit less than 1/2. Which cycle starts near 0.43?"
-        }
-      ]
-    },
-    {
-      "book_name": "Exercise 1.12",
-      "items": [
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "(i)(c) 0.77 = ___",
-          "a": [
-            "77/100"
-          ],
-          "why": "Two decimal digits: denominator 100.",
-          "clue": "Count the digits after the point."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "(i)(d) −12.369 = ___",
-          "a": [
-            "-12369/1000",
-            "−12369/1000",
-            "−12 369/1000"
-          ],
-          "why": "Three decimal digits: denominator 1000.",
-          "clue": "Count the digits after the point."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "(ii)(a) 0.6 = ___ in simplest form",
-          "a": [
-            "3/5"
-          ],
-          "why": "0.6 = 6/10 = 3/5.",
-          "clue": "Put 6 over 10, then simplify."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "(ii)(b) 9.5 = ___ in simplest form",
-          "a": [
-            "19/2"
-          ],
-          "why": "9.5 = 95/10 = 19/2.",
-          "clue": "Put 95 over 10, then simplify."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "(ii)(c) −0.48 = ___ in simplest form",
-          "a": [
-            "-12/25",
-            "−12/25"
-          ],
-          "why": "−0.48 = −48/100 = −12/25.",
-          "clue": "GCF(48, 100) = 4."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "(ii)(d) −32.125 = ___ in simplest form",
-          "a": [
-            "-257/8",
-            "−257/8"
-          ],
-          "why": "−32.125 = −32125/1000 = −257/8.",
-          "clue": "0.125 = 1/8.",
-          "worked": "−32.125 = −32125/1000. GCF(32125, 1000) = 125. So it is −257/8."
-        }
-      ]
-    },
-    {
-      "book_name": "Exercise 1.13",
-      "items": [
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Where is 4/5 on the number line?",
-          "opts": [
-            "Just left of 1",
-            "Just right of 1",
-            "Halfway between 0 and 1",
-            "Between 4 and 5"
-          ],
-          "ans": "Just left of 1",
-          "why": "4/5 = 0.8.",
-          "clue": "Change 4/5 to a decimal."
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Where is 2⅓ on the number line?",
-          "opts": [
-            "A third of the way from 2 to 3",
-            "Halfway from 2 to 3",
-            "A third of the way from 0 to 1",
-            "Just left of 2"
-          ],
-          "ans": "A third of the way from 2 to 3",
-          "why": "2⅓ = 2.333…",
-          "clue": "Start at 2 and add ⅓."
-        }
-      ]
-    }
-  ],
-  "test": [
-    {
-      "kind": "mcq",
-      "step": "test",
-      "graded": true,
-      "text": "Which fraction gives a repeating decimal?",
-      "opts": [
-        "1/4",
-        "3/5",
-        "2/9",
-        "7/10"
-      ],
-      "ans": "2/9",
-      "why": "2/9 = 0.222… The others terminate.",
-      "clue": ""
-    },
-    {
-      "kind": "blank",
-      "step": "test",
-      "graded": true,
-      "ask": "−0.18 in simplest form is ___",
-      "a": [
-        "-9/50",
-        "−9/50"
-      ],
-      "why": "−18/100 = −9/50.",
-      "clue": ""
-    },
-    {
-      "kind": "tf",
-      "step": "test",
-      "graded": true,
-      "text": "0.4̅ = 0.444… lies a little left of halfway between 0 and 1.",
-      "a": true,
-      "why": "0.444… is less than 0.5.",
-      "clue": ""
-    }
-  ],
-  "notes": [
-    {
-      "kind": "note",
-      "text": "Exercise 1.11 Q1(b) (5/6 = 0.83̅) is used as a practise item. Q3 (what do you conclude) is open-ended and skipped. Exercise 1.13 asks to locate points; it is turned into two placement questions from the book's answers."
-    },
-    {
-      "kind": "note",
-      "text": "Exercise 1.12 (i)(a) and (i)(b) are left out to keep six items per exercise."
-    }
-  ],
-  "review": {
-    "status": "validated"
+  {
+   "en": "Repeating decimal",
+   "am": "ተደጋጋሚ አስርዮሽ",
+   "def": "A decimal in which a block of digits repeats for ever, such as 0.333… or 0.2323…",
+   "machine": true
   },
-  "version": 1,
-  "refreshers": {
-    "math.fractions": {
-      "name": "Simplest form",
-      "screens": [
-        {
-          "kind": "steps",
-          "step": "method",
-          "title": "Simplify 18/100",
-          "text": "Divide top and bottom by their GCF.",
-          "steps": [
-            "Factors of 18 that also divide 100: 1 and 2.",
-            "So GCF(18, 100) = 2.",
-            "18 ÷ 2 = 9 and 100 ÷ 2 = 50.",
-            "So 18/100 = 9/50. GCF(9, 50) = 1, so it is in simplest form."
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Your turn",
-          "text": "What is 25/100 in simplest form?",
-          "opts": [
-            "5/20",
-            "1/4",
-            "2/5",
-            "25/10"
-          ],
-          "ans": "1/4",
-          "why": "GCF(25, 100) = 25. 25 ÷ 25 = 1 and 100 ÷ 25 = 4.",
-          "clue": "Find the largest number that divides 25 and 100."
-        }
-      ]
-    }
+  {
+   "en": "Bar notation",
+   "am": "የመስመር ምልክት",
+   "def": "A line over the repeating digits of a decimal: 0.3̅ means 0.333…",
+   "machine": true
+  },
+  {
+   "en": "Number line",
+   "am": "የቁጥር መስመር",
+   "def": "A line where every number has its own point. Numbers grow to the right.",
+   "machine": true
+  },
+  {
+   "en": "Rational number",
+   "am": "ምክንያታዊ ቁጥር",
+   "def": "A number that can be written a/b with integers a, b and b ≠ 0.",
+   "machine": true
   }
+ ],
+ "ideas": [
+  {
+   "id": "math.decimals",
+   "name": "Terminating and repeating decimals",
+   "requires": [
+    "math.fractions"
+   ],
+   "explain": {
+    "en": {
+     "text": "Divide a by b to write a/b as a decimal. Either the division stops, giving a terminating decimal like 0.6. Or the digits repeat for ever, like 0.555…. A bar over the repeating digits shows this. A terminating decimal becomes a fraction over 10, 100 or 1000."
+    },
+    "am": {
+     "text": "a/bን በአስርዮሽ ለመጻፍ aን በb አካፍል። ወይ ማካፈሉ ይቆማል፤ እንደ 0.6 ያለ የሚያልቅ አስርዮሽ ይሰጣል። ወይ አሃዞቹ ለዘላለም ይደጋገማሉ፤ እንደ 0.555…። በሚደጋገሙት አሃዞች ላይ ያለ መስመር ይህንን ያሳያል። የሚያልቅ አስርዮሽ በ10፣ 100 ወይም 1000 ላይ ክፍልፋይ ይሆናል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Will the division stop?",
+     "text": "Divide 3 by 5 on paper. Then divide 5 by 9.",
+     "ask": "Which division do you think ends?",
+     "opts": [
+      "3 ÷ 5 only",
+      "5 ÷ 9 only",
+      "Both end",
+      "Neither ends"
+     ],
+     "after": "3 ÷ 5 = 0.6. The remainder becomes 0, so it ends.\n5 ÷ 9 = 0.555… The remainder is 5 every time, so the 5s never stop.\nDo both divisions, then read on.",
+     "ref": "Activity 1.10",
+     "best": "3 ÷ 5 only"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Activity 1.10: the results",
+     "paras": [
+      "3/5 = 0.6 and 5/9 = 0.555…",
+      "−14/15 = −0.9333… and −2/7 = −0.285714285714…",
+      "Going back: 0.2 = 2/10 = 1/5 and 3.31 = 331/100."
+     ]
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Two things can happen",
+     "paras": [
+      "Any rational number a/b can be written as a decimal. Divide a by b.",
+      "The division may stop with remainder 0. Then it is a terminating decimal, such as 3/5 = 0.6.",
+      "Or the remainder never becomes 0 and the digits repeat. Then it is a repeating decimal, such as 5/9 = 0.555…",
+      "Bar notation. A bar over the repeating digits shows the repetition: 1/3 = 0.333… = 0.3̅ and 23/99 = 0.2323… = 0.2̅3̅."
+     ],
+     "note": "In long division, when a remainder comes back, the digits must repeat."
+    },
+    {
+     "kind": "steps",
+     "step": "explore",
+     "title": "Watch the remainders: 1 ÷ 7",
+     "text": "Divide 1 by 7. Write each remainder.",
+     "steps": [
+      "10 ÷ 7 = 1, remainder 3. Digits so far: 0.1",
+      "30 ÷ 7 = 4, remainder 2. Digits: 0.14",
+      "20 ÷ 7 = 2, remainder 6. Digits: 0.142",
+      "60 ÷ 7 = 8, remainder 4. Digits: 0.1428",
+      "40 ÷ 7 = 5, remainder 5. Digits: 0.14285",
+      "50 ÷ 7 = 7, remainder 1. Digits: 0.142857",
+      "Remainder 1 is back. So the digits 142857 repeat: 1/7 = 0.1̅4̅2̅8̅5̅7̅."
+     ],
+     "added": true,
+     "id": "g9.maths.u1.s1-2-1.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Name it",
+     "defs": [
+      [
+       "Terminating decimal",
+       "The division stops: 3/5 = 0.6."
+      ],
+      [
+       "Repeating decimal",
+       "A block of digits repeats for ever: 5/9 = 0.555…"
+      ],
+      [
+       "Bar notation",
+       "A bar over the repeating block: 0.555… = 0.5̅."
+      ]
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Which one ends?",
+     "text": "Terminating decimals: which fraction gives a terminating decimal?",
+     "opts": [
+      "1/3",
+      "2/9",
+      "3/8",
+      "5/6"
+     ],
+     "ans": "3/8",
+     "why": "Divide each one.\n3 ÷ 8 = 0.375: the remainder reaches 0, so it ends.\n1/3 = 0.333…, 2/9 = 0.222…, 5/6 = 0.8333…: they repeat.\nSo 3/8 gives a terminating decimal.",
+     "clue": "Divide each one. Which reaches remainder 0?"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Why 1/7 repeats",
+     "text": "Repeating decimals: why must the decimal for 1/7 repeat?",
+     "opts": [
+      "The remainders can only be 1 to 6, so one must come back",
+      "7 is an odd number",
+      "1 is smaller than 7",
+      "All fractions repeat"
+     ],
+     "ans": "The remainders can only be 1 to 6, so one must come back",
+     "why": "When you divide by 7, each remainder is 0, 1, 2, 3, 4, 5 or 6.\nIt never reaches 0 for 1/7, so only 1 to 6 are possible.\nAfter at most 6 steps a remainder comes back.\nThen the same digits follow again: 1/7 = 0.142857142857…",
+     "clue": "Divide 1 by 7 and watch the remainders."
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Terminating decimals to fractions",
+     "paras": [
+      "A terminating decimal can be written as a fraction.",
+      "Its denominator is 10, 100, 1000, …",
+      "Use one zero for each digit after the decimal point."
+     ]
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "text": "Count the digits after the point. Then simplify.",
+     "steps": [
+      "(a) 7.3 has one decimal digit. So 7.3 = 73/10.",
+      "(b) −0.18 has two decimal digits. So −0.18 = −18/100.",
+      "GCF(18, 100) = 2. Divide top and bottom by 2.",
+      "So −0.18 = −9/50."
+     ],
+     "needs": "math.fractions",
+     "ref": "Example 1"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "0.45 as a fraction",
+     "text": "Decimal to fraction: write 0.45 as a fraction in simplest form.",
+     "opts": [
+      "45/10",
+      "9/20",
+      "45/1000",
+      "4/5"
+     ],
+     "ans": "9/20",
+     "why": "0.45 has two decimal digits, so the denominator is 100.\n0.45 = 45/100.\nGCF(45, 100) = 5.\n45 ÷ 5 = 9 and 100 ÷ 5 = 20. So 0.45 = 9/20.\n(45/10 = 4.5, which is ten times too big.)",
+     "clue": "Two decimal digits means a denominator of 100.",
+     "needs": "math.fractions"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "Bar notation",
+     "text": "Bar notation: which is 5/6 in bar notation?",
+     "opts": [
+      "0.8̅3̅",
+      "0.83̅",
+      "0.8̅",
+      "0.83"
+     ],
+     "ans": "0.83̅",
+     "why": "Divide: 5 ÷ 6 = 0.8333…\nThe 8 appears once. Only the 3 repeats.\nSo the bar goes over the 3 only: 0.83̅.\n(0.8̅3̅ would mean 0.838383…, which is wrong.)",
+     "clue": "Divide 5 by 6. Which digit repeats?"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "added": true,
+     "title": "Birr and santim",
+     "text": "Kebede pays 0.25 birr for a pencil eraser.",
+     "ask": "Decimal to fraction in simplest form: that is ___ birr.",
+     "a": [
+      "1/4",
+      "¼",
+      "one quarter",
+      "a quarter"
+     ],
+     "why": "0.25 has two decimal digits, so 0.25 = 25/100.\nGCF(25, 100) = 25.\n25 ÷ 25 = 1 and 100 ÷ 25 = 4.\nSo 0.25 birr = 1/4 birr (25 santim).",
+     "clue": "Two digits after the point: put 25 over 100, then simplify.",
+     "worked": "0.25 has two decimal digits, so 0.25 = 25/100. GCF(25, 100) = 25. So 0.25 = 1/4.",
+     "needs": "math.fractions"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "title": "Divide it out",
+     "ask": "Fraction to decimal: 3/8 = ___ as a decimal.",
+     "a": [
+      "0.375",
+      ".375"
+     ],
+     "why": "Divide 3.000 by 8.\n30 ÷ 8 = 3 r 6. 60 ÷ 8 = 7 r 4. 40 ÷ 8 = 5 r 0.\nThe remainder is 0, so the division stops.\nSo 3/8 = 0.375, a terminating decimal.",
+     "clue": "Divide 3.000 by 8."
+    }
+   ]
+  },
+  {
+   "id": "math.rationals-on-number-line",
+   "name": "Rational numbers on the number line",
+   "explain": {
+    "en": {
+     "text": "Every rational number has a point on the number line. Integers are easy to mark. For a fraction, change it to a decimal first. For example, 4/3 = 1.333…, just past 1. And −5/2 = −2.5, halfway between −3 and −2."
+    },
+    "am": {
+     "text": "እያንዳንዱ ምክንያታዊ ቁጥር በቁጥር መስመር ላይ ነጥብ አለው። ኢንቲጀሮችን ማመልከት ቀላል ነው። ክፍልፋይን መጀመሪያ ወደ አስርዮሽ ቀይር። ለምሳሌ 4/3 = 1.333… ከ1 ትንሽ ያልፋል። −5/2 = −2.5 ደግሞ በ−3 እና በ−2 መሃል ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Where does 4/3 sit?",
+     "text": "Picture a number line from −5 to 3.",
+     "ask": "Where do you think 4/3 goes?",
+     "opts": [
+      "Between 0 and 1",
+      "Between 1 and 2",
+      "Between 3 and 4",
+      "Between 4 and 5"
+     ],
+     "after": "4/3 = 1 + 1/3 = 1.333…\nThat is more than 1 and less than 2.\nSo 4/3 sits a third of the way from 1 to 2.",
+     "best": "Between 1 and 2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Rational numbers on the number line",
+     "paras": [
+      "Example. Locate −5, 3, 4/3 and −5/2.",
+      "Integers are easy. For fractions, change to decimals first.",
+      "4/3 = 1.3̅ and −5/2 = −2.5. Then mark each point (Figure 1.3)."
+     ]
+    },
+    {
+     "kind": "numline",
+     "step": "explore",
+     "title": "Figure 1.3: −5, 3, 4/3 and −5/2",
+     "ref": "Figure 1.3",
+     "min": -5,
+     "max": 3,
+     "sub": 2,
+     "points": [
+      {
+       "v": "-5",
+       "label": "−5",
+       "info": "is an integer: just count 5 left of 0."
+      },
+      {
+       "v": "-5/2",
+       "label": "−5/2",
+       "info": "= −2.5, halfway between −3 and −2."
+      },
+      {
+       "v": "4/3",
+       "label": "4/3",
+       "info": "= 1.333…, a third of the way from 1 to 2."
+      },
+      {
+       "v": "3",
+       "label": "3",
+       "info": "is an integer: 3 right of 0."
+      }
+     ],
+     "need": 3,
+     "ask": "Tap each point to see where it sits.",
+     "added": true,
+     "id": "g9.maths.u1.s1-2-1.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Name it",
+     "defs": [
+      [
+       "Number line",
+       "A line where every number has a point. Every rational number has its place on it."
+      ]
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Between which integers?",
+     "text": "Rational numbers on the number line: between which two integers is −5/2?",
+     "opts": [
+      "−2 and −1",
+      "−3 and −2",
+      "2 and 3",
+      "−5 and −4"
+     ],
+     "ans": "−3 and −2",
+     "why": "Change to a decimal: −5/2 = −2.5.\n−2.5 is less than −2 and more than −3.\nSo −5/2 lies halfway between −3 and −2.\n(−2 and −1 is a common slip: −2.5 is left of −2.)",
+     "clue": "Change −5/2 to a decimal first."
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "Which is further right?",
+     "text": "Comparing on the number line: which number is further to the right?",
+     "opts": [
+      "4/3",
+      "1.3",
+      "1.2",
+      "−5/2"
+     ],
+     "ans": "4/3",
+     "why": "Write each as a decimal: 4/3 = 1.333…, 1.3, 1.2, −5/2 = −2.5.\nFurther right means larger.\n1.333… > 1.3 > 1.2 > −2.5.\nSo 4/3 is furthest to the right.",
+     "clue": "Write each one as a decimal and compare."
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "added": true,
+     "title": "Temperature in Debre Birhan",
+     "text": "One cold morning in Debre Birhan the temperature was −3/2 °C.",
+     "ask": "Fraction to decimal: as a decimal, that is ___ °C.",
+     "a": [
+      "-1.5",
+      "−1.5"
+     ],
+     "why": "Divide: 3 ÷ 2 = 1.5.\nKeep the minus sign: −3/2 = −1.5.\nOn the number line, −1.5 is halfway between −2 and −1.\nSo the temperature is −1.5 °C.",
+     "clue": "Divide 3 by 2, then keep the minus sign.",
+     "worked": "3 ÷ 2 = 1.5. Keep the sign: −3/2 = −1.5. On the line, it is halfway between −2 and −1."
+    },
+    {
+     "kind": "numline",
+     "step": "practise",
+     "graded": true,
+     "min": -3,
+     "max": 3,
+     "sub": 2,
+     "targets": [
+      {
+       "v": "-3/2",
+       "label": "−3/2"
+      }
+     ],
+     "ask": "Rational numbers on the number line: tap where −3/2 goes.",
+     "why": "−3/2 = −1.5.\nIt is negative, so it is left of 0.\n−1.5 is between −2 and −1, exactly halfway.\nSo −3/2 sits on the half mark between −2 and −1.",
+     "clue": "Change −3/2 to a decimal first.",
+     "added": true,
+     "id": "g9.maths.u1.s1-2-1.1"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 1.11",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "1(a) Bar notation: write 8/9 with bar notation.",
+     "opts": [
+      "0.8̅",
+      "0.89̅",
+      "0.8",
+      "0.9̅"
+     ],
+     "ans": "0.8̅",
+     "why": "Divide 8 by 9: 80 ÷ 9 = 8 r 8, and the remainder 8 comes back each time.\nSo 8/9 = 0.888…\nOne digit, 8, repeats.\nSo 8/9 = 0.8̅.",
+     "clue": "Divide 8 by 9."
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "1(c) Bar notation: write 1/11 with bar notation.",
+     "opts": [
+      "0.1̅",
+      "0.0̅9̅",
+      "0.09",
+      "0.1̅1̅"
+     ],
+     "ans": "0.0̅9̅",
+     "why": "Divide 1 by 11: 10 ÷ 11 = 0 r 10, 100 ÷ 11 = 9 r 1.\nThe remainder 1 comes back, so the digits repeat.\n1/11 = 0.090909…\nThe block 09 repeats, so 1/11 = 0.0̅9̅.",
+     "clue": "Divide 1 by 11. Which block repeats?"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "1(d) Bar notation: write 14/9 with bar notation.",
+     "opts": [
+      "1.5̅",
+      "1.4̅",
+      "0.1̅4̅",
+      "1.55"
+     ],
+     "ans": "1.5̅",
+     "why": "14/9 = 1 + 5/9.\n5/9 = 0.555…\nSo 14/9 = 1.555…\nOnly the 5 repeats: 14/9 = 1.5̅.",
+     "clue": "14/9 = 1 + 5/9."
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "2. Bar notation: 1/7 = 0.1̅4̅2̅8̅5̅7̅. Which is 3/7?",
+     "opts": [
+      "0.4̅2̅8̅5̅7̅1̅",
+      "0.3̅4̅2̅8̅5̅7̅",
+      "0.2̅8̅5̅7̅1̅4̅",
+      "0.4̅2̅8̅"
+     ],
+     "ans": "0.4̅2̅8̅5̅7̅1̅",
+     "why": "3/7 = 3 × 1/7, and 3/7 ≈ 0.43.\nThe sevenths use the same six digits 1, 4, 2, 8, 5, 7 in a cycle.\nStart the cycle at 4: 0.428571…\nCheck: 3 ÷ 7 = 0.428571428571…\nSo 3/7 = 0.4̅2̅8̅5̅7̅1̅.",
+     "clue": "3/7 is a bit less than 1/2. Which cycle starts near 0.43?"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.12",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "(i)(c) Decimal to fraction: 0.77 = ___",
+     "a": [
+      "77/100"
+     ],
+     "why": "0.77 has two digits after the point.\nSo the denominator is 100.\n0.77 = 77/100.\nGCF(77, 100) = 1, so it is already in simplest form.",
+     "clue": "Count the digits after the point."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "(i)(d) Decimal to fraction: −12.369 = ___",
+     "a": [
+      "-12369/1000",
+      "−12369/1000",
+      "−12 369/1000"
+     ],
+     "why": "12.369 has three digits after the point.\nSo the denominator is 1000.\n12.369 = 12369/1000.\nKeep the sign: −12.369 = −12369/1000.",
+     "clue": "Count the digits after the point."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "(ii)(a) Decimal to fraction: 0.6 = ___ in simplest form",
+     "a": [
+      "3/5"
+     ],
+     "why": "One decimal digit, so 0.6 = 6/10.\nGCF(6, 10) = 2.\n6 ÷ 2 = 3 and 10 ÷ 2 = 5.\nSo 0.6 = 3/5.",
+     "clue": "Put 6 over 10, then simplify."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "(ii)(b) Decimal to fraction: 9.5 = ___ in simplest form",
+     "a": [
+      "19/2"
+     ],
+     "why": "One decimal digit, so 9.5 = 95/10.\nGCF(95, 10) = 5.\n95 ÷ 5 = 19 and 10 ÷ 5 = 2.\nSo 9.5 = 19/2.",
+     "clue": "Put 95 over 10, then simplify."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "(ii)(c) Decimal to fraction: −0.48 = ___ in simplest form",
+     "a": [
+      "-12/25",
+      "−12/25"
+     ],
+     "why": "Two decimal digits, so 0.48 = 48/100.\nGCF(48, 100) = 4.\n48 ÷ 4 = 12 and 100 ÷ 4 = 25.\nKeep the sign: −0.48 = −12/25.",
+     "clue": "GCF(48, 100) = 4."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "(ii)(d) Decimal to fraction: −32.125 = ___ in simplest form",
+     "a": [
+      "-257/8",
+      "−257/8"
+     ],
+     "why": "Three decimal digits, so 32.125 = 32125/1000.\nGCF(32125, 1000) = 125.\n32125 ÷ 125 = 257 and 1000 ÷ 125 = 8.\nKeep the sign: −32.125 = −257/8. Check: 257 ÷ 8 = 32.125.",
+     "clue": "0.125 = 1/8.",
+     "worked": "−32.125 = −32125/1000. GCF(32125, 1000) = 125. So it is −257/8."
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.13",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Locate on the number line: where is 4/5?",
+     "opts": [
+      "Just left of 1",
+      "Just right of 1",
+      "Halfway between 0 and 1",
+      "Between 4 and 5"
+     ],
+     "ans": "Just left of 1",
+     "why": "Change to a decimal: 4/5 = 0.8.\n0.8 is between 0 and 1.\nIt is only 0.2 less than 1.\nSo 4/5 is just left of 1.",
+     "clue": "Change 4/5 to a decimal."
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Locate on the number line: where is 2⅓?",
+     "opts": [
+      "A third of the way from 2 to 3",
+      "Halfway from 2 to 3",
+      "A third of the way from 0 to 1",
+      "Just left of 2"
+     ],
+     "ans": "A third of the way from 2 to 3",
+     "why": "2⅓ = 2 + 1/3 = 2.333…\nIt is between 2 and 3.\nSplit the gap from 2 to 3 into 3 equal parts.\n2⅓ is at the first mark: a third of the way from 2 to 3.",
+     "clue": "Start at 2 and add ⅓."
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Repeating decimals: which fraction gives a repeating decimal?",
+   "opts": [
+    "1/4",
+    "3/5",
+    "2/9",
+    "7/10"
+   ],
+   "ans": "2/9",
+   "why": "Divide each one.\n1/4 = 0.25, 3/5 = 0.6, 7/10 = 0.7: they end.\n2/9 = 0.222…: the remainder 2 keeps coming back.\nSo 2/9 gives a repeating decimal.",
+   "clue": ""
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "Decimal to fraction: −0.18 in simplest form is ___",
+   "a": [
+    "-9/50",
+    "−9/50"
+   ],
+   "why": "Two decimal digits: 0.18 = 18/100.\nGCF(18, 100) = 2.\n18 ÷ 2 = 9 and 100 ÷ 2 = 50.\nKeep the sign: −0.18 = −9/50.",
+   "clue": ""
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Number line: 0.4̅ = 0.444… lies a little left of halfway between 0 and 1.",
+   "a": true,
+   "why": "Halfway between 0 and 1 is 0.5.\n0.444… is less than 0.5.\nSo it lies a little left of halfway. True.",
+   "clue": ""
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "Exercise 1.11 Q1(b) (5/6 = 0.83̅) is used as a practise item. Q3 (what do you conclude) is open-ended and skipped. Exercise 1.13 asks to locate points; it is turned into two placement questions from the book's answers."
+  },
+  {
+   "kind": "note",
+   "text": "Exercise 1.12 (i)(a) and (i)(b) are left out to keep six items per exercise."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.fractions": {
+   "name": "Simplest form",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Simplify 18/100",
+     "text": "Divide top and bottom by their GCF.",
+     "steps": [
+      "Factors of 18 that also divide 100: 1 and 2.",
+      "So GCF(18, 100) = 2.",
+      "18 ÷ 2 = 9 and 100 ÷ 2 = 50.",
+      "So 18/100 = 9/50. GCF(9, 50) = 1, so it is in simplest form."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Your turn",
+     "text": "Simplest form: what is 25/100 in simplest form?",
+     "opts": [
+      "5/20",
+      "1/4",
+      "2/5",
+      "25/10"
+     ],
+     "ans": "1/4",
+     "why": "Find GCF(25, 100): 100 = 4 × 25, so the GCF is 25.\n25 ÷ 25 = 1 and 100 ÷ 25 = 4.\nSo 25/100 = 1/4.\n(5/20 equals 1/4, but it is not yet in simplest form.)",
+     "clue": "Find the largest number that divides 25 and 100."
+    }
+   ]
+  }
+ }
 }

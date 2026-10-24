@@ -54,8 +54,9 @@
       "everywhere",
       "nowhere"
      ],
-     "after": "For x < 0 the slope 2x is negative: downhill. For x > 0 it is positive: uphill.",
-     "id": "g12.maths.u2.s2-1-5-1.1"
+     "after": "The slope of x² is 2x.\nFor x < 0, 2x is negative: the graph goes downhill.\nFor x > 0, 2x is positive: uphill.\nAt x = 0 the slope is 0: the bottom of the valley.",
+     "id": "g12.maths.u2.s2-1-5-1.1",
+     "best": "x < 0"
     },
     {
      "kind": "read",
@@ -83,6 +84,46 @@
      "id": "g12.maths.u2.s2-1-5-1.3"
     },
     {
+     "kind": "coord",
+     "step": "explore",
+     "title": "Uphill, downhill: y = x³ − 3x²",
+     "min": -2,
+     "max": 4,
+     "ymin": -5,
+     "ymax": 2,
+     "ask": "The dots lie on y = x³ − 3x². Its slope is f′(x) = 3x² − 6x. Tap each dot.",
+     "points": [
+      {
+       "x": -1,
+       "y": -4,
+       "info": "f′(−1) = 3 + 6 = 9 > 0: uphill."
+      },
+      {
+       "x": 0,
+       "y": 0,
+       "info": "f′(0) = 0: flat. A critical number."
+      },
+      {
+       "x": 1,
+       "y": -2,
+       "info": "f′(1) = 3 − 6 = −3 < 0: downhill."
+      },
+      {
+       "x": 2,
+       "y": -4,
+       "info": "f′(2) = 12 − 12 = 0: flat. A critical number."
+      },
+      {
+       "x": 3,
+       "y": 0,
+       "info": "f′(3) = 27 − 18 = 9 > 0: uphill again."
+      }
+     ],
+     "need": 4,
+     "added": true,
+     "id": "g12.maths.u2.s2-1-5-1.26"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -100,7 +141,7 @@
     },
     {
      "kind": "pick",
-     "text": "f(x) = 4x³ − 5x² − 8x + 20. Critical numbers:",
+     "text": "Find the critical numbers of f(x) = 4x³ − 5x² − 8x + 20 (tap all):",
      "pool": [
       "−1/2",
       "4/3",
@@ -111,7 +152,7 @@
       "−1/2",
       "4/3"
      ],
-     "why": "f′ = 12x² − 10x − 8 = 2(2x + 1)(3x − 4) = 0.",
+     "why": "f′(x) = 12x² − 10x − 8.\nFactor: 2(6x² − 5x − 4) = 2(2x + 1)(3x − 4).\nf′ = 0 when 2x + 1 = 0 or 3x − 4 = 0.\nCritical numbers: x = −1/2 and x = 4/3.\nf′ exists everywhere, so there are no others.",
      "clue": "Factor f′(x).",
      "graded": true,
      "level": 1,
@@ -133,8 +174,34 @@
      "id": "g12.maths.u2.s2-1-5-1.6"
     },
     {
+     "kind": "tap",
+     "step": "method",
+     "title": "Sign chart: test one point per interval",
+     "ask": "f′(x) = 12x(x − 2)(x + 1). Tap each interval.",
+     "items": [
+      [
+       "x < −1",
+       "Test x = −2: 12(−2)(−4)(−1) = −96 < 0. Decreasing."
+      ],
+      [
+       "−1 < x < 0",
+       "Test x = −0.5: 12(−0.5)(−2.5)(0.5) = 7.5 > 0. Increasing."
+      ],
+      [
+       "0 < x < 2",
+       "Test x = 1: 12(1)(−1)(2) = −24 < 0. Decreasing."
+      ],
+      [
+       "x > 2",
+       "Test x = 3: 12(3)(1)(4) = 144 > 0. Increasing."
+      ]
+     ],
+     "added": true,
+     "id": "g12.maths.u2.s2-1-5-1.27"
+    },
+    {
      "kind": "pick",
-     "text": "f(x) = 2√x(6 − x). Critical numbers:",
+     "text": "Find the critical numbers of f(x) = 2√x(6 − x) (tap all):",
      "pool": [
       "0",
       "2",
@@ -145,7 +212,7 @@
       "0",
       "2"
      ],
-     "why": "f′ = 3(2 − x)/√x: zero at 2, undefined at 0 (0 is in the domain).",
+     "why": "Write f = 12x^(1/2) − 2x^(3/2).\nf′ = 6x^(−1/2) − 3x^(1/2) = (6 − 3x)/√x = 3(2 − x)/√x.\nf′ = 0 when x = 2.\nf′ does not exist at x = 0, and 0 is in the domain.\nCritical numbers: 0 and 2. (6 is a zero of f, not of f′.)",
      "clue": "Also look where f′ does not exist.",
      "graded": true,
      "level": 3,
@@ -155,7 +222,7 @@
     },
     {
      "kind": "pick",
-     "text": "f(x) = 2x³ + 9x² − 24x. Critical numbers:",
+     "text": "Find the critical numbers of f(x) = 2x³ + 9x² − 24x (tap all):",
      "pool": [
       "−4",
       "1",
@@ -166,7 +233,7 @@
       "−4",
       "1"
      ],
-     "why": "f′ = 6(x + 4)(x − 1).",
+     "why": "f′(x) = 6x² + 18x − 24.\nTake out 6: 6(x² + 3x − 4) = 6(x + 4)(x − 1).\nf′ = 0 at x = −4 and x = 1.\nTrap: −1 and 4 come from wrong signs in the factors.",
      "clue": "Factor out 6.",
      "graded": true,
      "level": 2,
@@ -176,7 +243,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = 2x² + 6x − 10 is increasing on",
+     "text": "Use the derivative test: f(x) = 2x² + 6x − 10 is increasing on",
      "opts": [
       "[−3/2, ∞)",
       "(−∞, −3/2]",
@@ -184,7 +251,7 @@
       "all real x"
      ],
      "ans": "[−3/2, ∞)",
-     "why": "f′ = 4x + 6 ≥ 0 when x ≥ −3/2.",
+     "why": "f′(x) = 4x + 6.\nIncreasing where f′(x) ≥ 0: 4x + 6 ≥ 0.\nx ≥ −6/4 = −3/2.\nSo f is increasing on [−3/2, ∞).",
      "clue": "Solve 4x + 6 ≥ 0.",
      "graded": true,
      "level": 1,
@@ -194,7 +261,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = −2x³ + 3x² + 12x + 6 is increasing on",
+     "text": "Use a sign chart: f(x) = −2x³ + 3x² + 12x + 6 is increasing on",
      "opts": [
       "[−1, 2]",
       "(−∞, −1]",
@@ -202,7 +269,7 @@
       "[−2, 1]"
      ],
      "ans": "[−1, 2]",
-     "why": "f′ = −6(x − 2)(x + 1) > 0 between −1 and 2.",
+     "why": "f′(x) = −6x² + 6x + 12 = −6(x² − x − 2) = −6(x − 2)(x + 1).\nCritical numbers: −1 and 2.\nTest x = 0: f′(0) = 12 > 0, so f rises on [−1, 2].\nTest x = 3: f′(3) = −24 < 0. Outside [−1, 2] f falls.\nIncreasing on [−1, 2].",
      "clue": "Test x = 0 in f′.",
      "graded": true,
      "level": 2,
@@ -212,7 +279,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = 2x²/(1 − x²). Which are critical numbers?",
+     "text": "Find the critical numbers of f(x) = 2x²/(1 − x²):",
      "opts": [
       "only 0",
       "0, 1 and −1",
@@ -220,7 +287,7 @@
       "none"
      ],
      "ans": "only 0",
-     "why": "f′ = 4x/(1 − x²)². ±1 are not in the domain.",
+     "why": "Quotient rule: f′ = (4x(1 − x²) + 4x³)/(1 − x²)² = 4x/(1 − x²)².\nf′ = 0 when x = 0.\nf′ is undefined at x = ±1, but f is also undefined there.\nA critical number must be in the domain, so ±1 do not count.\nOnly 0.",
      "clue": "Critical numbers must be in the domain.",
      "graded": true,
      "level": 3,
@@ -230,7 +297,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = x − 6√(x − 1) is decreasing on",
+     "text": "Find where f(x) = x − 6√(x − 1) is decreasing (domain x ≥ 1):",
      "opts": [
       "[1, 10]",
       "[10, ∞)",
@@ -238,7 +305,7 @@
       "[0, 10]"
      ],
      "ans": "[1, 10]",
-     "why": "f′ = 1 − 3/√(x − 1) < 0 when √(x − 1) < 3, i.e. x < 10.",
+     "why": "f′(x) = 1 − 6 · 1/(2√(x − 1)) = 1 − 3/√(x − 1).\nf′ = 0 when √(x − 1) = 3, so x − 1 = 9, x = 10.\nFor 1 < x < 10, √(x − 1) < 3, so f′ < 0: decreasing.\nFor x > 10, f′ > 0: increasing.\nDecreasing on [1, 10].",
      "clue": "Solve f′ = 0, remember x ≥ 1.",
      "graded": true,
      "level": 3,
@@ -256,7 +323,7 @@
    "items": [
     {
      "kind": "pick",
-     "text": "Zeros of x² − x − 12:",
+     "text": "Factor to find the zeros of x² − x − 12 (tap both):",
      "pool": [
       "−3",
       "4",
@@ -267,7 +334,7 @@
       "−3",
       "4"
      ],
-     "why": "(x − 4)(x + 3).",
+     "why": "Find two numbers with product −12 and sum −1: −4 and 3.\nx² − x − 12 = (x − 4)(x + 3).\nZeros: x = 4 and x = −3.",
      "clue": "Factor.",
      "graded": true,
      "level": 1,
@@ -277,7 +344,7 @@
     },
     {
      "kind": "mcq",
-     "text": "Solve 2x² + 3x − 2 ≥ 0:",
+     "text": "Solve the quadratic inequality 2x² + 3x − 2 ≥ 0:",
      "opts": [
       "x ≤ −2 or x ≥ 1/2",
       "−2 ≤ x ≤ 1/2",
@@ -285,7 +352,7 @@
       "x ≤ −2"
      ],
      "ans": "x ≤ −2 or x ≥ 1/2",
-     "why": "(2x − 1)(x + 2) ≥ 0.",
+     "why": "Factor: 2x² + 3x − 2 = (2x − 1)(x + 2).\nZeros: x = 1/2 and x = −2.\nThe parabola opens up, so it is ≥ 0 outside the zeros.\nAnswer: x ≤ −2 or x ≥ 1/2.\nCheck x = 0: −2 < 0, so 0 is not included. ✓",
      "clue": "Sign chart.",
      "graded": true,
      "level": 2,
@@ -295,7 +362,7 @@
     },
     {
      "kind": "mcq",
-     "text": "Solve x² + 3x − 4 < 0:",
+     "text": "Solve the quadratic inequality x² + 3x − 4 < 0:",
      "opts": [
       "−4 < x < 1",
       "x < −4 or x > 1",
@@ -303,7 +370,7 @@
       "x < 1"
      ],
      "ans": "−4 < x < 1",
-     "why": "(x + 4)(x − 1) < 0.",
+     "why": "Factor: (x + 4)(x − 1).\nZeros: −4 and 1.\nThe parabola opens up, so it is < 0 between the zeros.\nAnswer: −4 < x < 1. Check x = 0: −4 < 0. ✓",
      "clue": "Between the zeros.",
      "graded": true,
      "level": 2,
@@ -318,7 +385,7 @@
    "items": [
     {
      "kind": "pick",
-     "text": "x³ + 6x²: critical numbers",
+     "text": "Find the critical numbers of f(x) = x³ + 6x² (tap all):",
      "pool": [
       "−4",
       "0",
@@ -329,7 +396,7 @@
       "−4",
       "0"
      ],
-     "why": "3x(x + 4).",
+     "why": "f′(x) = 3x² + 12x = 3x(x + 4).\nf′ = 0 at x = 0 and x = −4.",
      "clue": "Factor f′.",
      "graded": true,
      "level": 1,
@@ -339,7 +406,7 @@
     },
     {
      "kind": "mcq",
-     "text": "2x²/(1 − x²): critical numbers",
+     "text": "Find the critical numbers of f(x) = 2x²/(1 − x²):",
      "opts": [
       "0",
       "0, ±1",
@@ -347,7 +414,7 @@
       "none"
      ],
      "ans": "0",
-     "why": "Domain excludes ±1.",
+     "why": "f′ = 4x/(1 − x²)², zero at x = 0.\nx = ±1 are not in the domain, so they are not critical numbers.\nAnswer: 0 only.",
      "clue": "Domain first.",
      "graded": true,
      "level": 3,
@@ -357,7 +424,7 @@
     },
     {
      "kind": "pick",
-     "text": "8x√(1 − x²): critical numbers",
+     "text": "Find the critical numbers of f(x) = 8x√(1 − x²) (tap all):",
      "pool": [
       "−1",
       "−√2/2",
@@ -370,7 +437,7 @@
       "√2/2",
       "1"
      ],
-     "why": "f′ = 8(1 − 2x²)/√(1 − x²): zero at ±√2/2, undefined at ±1.",
+     "why": "Domain: −1 ≤ x ≤ 1.\nProduct rule: f′ = 8√(1 − x²) − 8x²/√(1 − x²) = 8(1 − 2x²)/√(1 − x²).\nf′ = 0 when x² = 1/2: x = ±√2/2.\nf′ does not exist at x = ±1 (in the domain).\nAll four are critical numbers.",
      "clue": "Zeros and undefined points.",
      "graded": true,
      "level": 3,
@@ -380,7 +447,7 @@
     },
     {
      "kind": "mcq",
-     "text": "x³ + 6x² is decreasing on",
+     "text": "Use a sign chart: f(x) = x³ + 6x² is decreasing on",
      "opts": [
       "[−4, 0]",
       "(−∞, −4]",
@@ -388,7 +455,7 @@
       "[−6, 0]"
      ],
      "ans": "[−4, 0]",
-     "why": "f′ < 0 between −4 and 0.",
+     "why": "f′(x) = 3x(x + 4). Critical numbers −4 and 0.\nTest x = −1: 3(−1)(3) = −9 < 0.\nSo f′ < 0 between −4 and 0.\nDecreasing on [−4, 0].",
      "clue": "Sign chart.",
      "graded": true,
      "level": 2,
@@ -398,7 +465,7 @@
     },
     {
      "kind": "mcq",
-     "text": "(x + 3)²(x − 1)² is increasing on",
+     "text": "Use a sign chart: f(x) = (x + 3)²(x − 1)² is increasing on",
      "opts": [
       "[−3, −1] and [1, ∞)",
       "(−∞, −3] and [−1, 1]",
@@ -406,7 +473,7 @@
       "[1, ∞) only"
      ],
      "ans": "[−3, −1] and [1, ∞)",
-     "why": "f′ = 4(x + 3)(x + 1)(x − 1).",
+     "why": "f′ = 2(x + 3)(x − 1)² + 2(x + 3)²(x − 1) = 4(x + 3)(x + 1)(x − 1).\nCritical numbers: −3, −1, 1.\nSigns of f′: − on x < −3, + on (−3, −1), − on (−1, 1), + on x > 1.\nIncreasing on [−3, −1] and [1, ∞).",
      "clue": "Three critical numbers.",
      "graded": true,
      "level": 3,
@@ -420,7 +487,7 @@
  "test": [
   {
    "kind": "pick",
-   "text": "f(x) = x² − 6x. Critical number:",
+   "text": "Find the critical number of f(x) = x² − 6x:",
    "pool": [
     "3",
     "6",
@@ -430,7 +497,7 @@
    "a": [
     "3"
    ],
-   "why": "2x − 6 = 0.",
+   "why": "f′(x) = 2x − 6.\n2x − 6 = 0 gives x = 3.\nTrap: 0 and 6 are the zeros of f, not of f′.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -439,7 +506,7 @@
   },
   {
    "kind": "mcq",
-   "text": "f(x) = x³ − 3x is decreasing on",
+   "text": "Use the derivative test: f(x) = x³ − 3x is decreasing on",
    "opts": [
     "[−1, 1]",
     "(−∞, −1]",
@@ -447,7 +514,7 @@
     "[0, 3]"
    ],
    "ans": "[−1, 1]",
-   "why": "3(x² − 1) ≤ 0.",
+   "why": "f′(x) = 3x² − 3 = 3(x − 1)(x + 1).\nf′ ≤ 0 between the zeros −1 and 1.\nTest x = 0: f′(0) = −3 < 0. ✓\nDecreasing on [−1, 1].",
    "clue": "",
    "graded": true,
    "level": 2,
@@ -456,9 +523,9 @@
   },
   {
    "kind": "tf",
-   "text": "If f′(x) > 0 on an interval, f is increasing there.",
+   "text": "True or false: if f′(x) > 0 on an interval, f is increasing there.",
    "a": true,
-   "why": "Derivative test.",
+   "why": "f′(x) > 0 means every tangent slopes upward.\nSo the graph rises from left to right on the interval.\nThis is the derivative test. True.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -467,7 +534,7 @@
   },
   {
    "kind": "mcq",
-   "text": "f(x) = 5 − 2x is",
+   "text": "Increasing or decreasing? f(x) = 5 − 2x is",
    "opts": [
     "decreasing everywhere",
     "increasing everywhere",
@@ -475,7 +542,7 @@
     "increasing for x > 0"
    ],
    "ans": "decreasing everywhere",
-   "why": "f′ = −2.",
+   "why": "f′(x) = −2.\n−2 < 0 for every x.\nSo f is decreasing everywhere: a line with negative slope.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -484,7 +551,7 @@
   },
   {
    "kind": "pick",
-   "text": "f(x) = x³ − 12x. Critical numbers:",
+   "text": "Find the critical numbers of f(x) = x³ − 12x (tap all):",
    "pool": [
     "2",
     "−2",
@@ -495,7 +562,7 @@
     "2",
     "−2"
    ],
-   "why": "3x² − 12 = 0.",
+   "why": "f′(x) = 3x² − 12 = 3(x² − 4).\nf′ = 0 when x² = 4.\nx = 2 or x = −2.",
    "clue": "",
    "graded": true,
    "level": 2,
@@ -532,7 +599,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = 2x³ + 3x². f′(x) = ?",
+     "text": "Differentiate term by term: f(x) = 2x³ + 3x². f′(x) = ?",
      "opts": [
       "6x² + 6x",
       "6x² + 3x",
@@ -540,7 +607,7 @@
       "6x³ + 6x²"
      ],
      "ans": "6x² + 6x",
-     "why": "2 × 3x² + 3 × 2x.",
+     "why": "(2x³)′ = 2 × 3x² = 6x².\n(3x²)′ = 3 × 2x = 6x.\nf′(x) = 6x² + 6x.",
      "clue": "Each term separately.",
      "graded": true,
      "level": 1,

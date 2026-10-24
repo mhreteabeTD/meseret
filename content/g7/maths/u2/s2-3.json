@@ -71,9 +71,10 @@
       "Addis Ababa",
       "Adama"
      ],
-     "after": "−4 is the furthest left on the number line, so it is the lowest temperature.",
+     "after": "The coldest city has the lowest temperature.\n−4 °C is below zero. 4 °C and 10 °C are above zero.\nOn the number line −4 is furthest left, so it is the smallest.\nSo Debre Birhan was the coldest.",
      "ref": "Activity 2.3.1 Q1",
-     "id": "g7.maths.u2.s2-3.1"
+     "id": "g7.maths.u2.s2-3.1",
+     "best": "Debre Birhan"
     },
     {
      "kind": "numline",
@@ -159,7 +160,7 @@
       "="
      ],
      "ans": "<",
-     "why": "−4 is to the left of 0, so −4 < 0.",
+     "why": "Picture the number line.\n−4 is 4 steps to the left of 0.\nThe number further left is smaller.\nSo −4 < 0. Every negative integer is less than 0.",
      "clue": "Which one is further left?",
      "level": 1,
      "ref": "Example 2 a",
@@ -180,7 +181,7 @@
       "="
      ],
      "ans": "<",
-     "why": "Both are negative. −1200 is further from 0, so it is further left and smaller.",
+     "why": "Both numbers are negative.\nFor negatives, the one further from 0 is further left.\n−1200 is 1200 steps from 0; −74 is only 74 steps.\nSo −1200 is further left: −1200 < −74.\nCareful: 1200 > 74, but −1200 < −74.",
      "clue": "For negatives, further from 0 means smaller.",
      "level": 2,
      "ref": "Exercise 2.3.1 Q1 c",
@@ -201,7 +202,7 @@
       "="
      ],
      "ans": ">",
-     "why": "−341 is one step left of −340, so −340 > −341.",
+     "why": "Both numbers are negative.\n−340 is 340 steps from 0; −341 is 341 steps.\n−340 is closer to 0, so it is further right.\nSo −340 > −341.",
      "clue": "Which is closer to 0?",
      "level": 2,
      "ref": "Exercise 2.3.1 Q1 f",
@@ -212,10 +213,34 @@
      }
     },
     {
+     "kind": "numline",
+     "step": "practise",
+     "graded": true,
+     "min": -6,
+     "max": 2,
+     "sub": 1,
+     "targets": [
+      {
+       "v": "-4",
+       "label": "−4"
+      },
+      {
+       "v": "-1",
+       "label": "−1"
+      }
+     ],
+     "ask": "Compare on the number line: mark −4 and −1. The one further right is greater.",
+     "level": 1,
+     "why": "−4 is 4 steps left of 0. −1 is 1 step left of 0.\n−1 is further right than −4.\nSo −1 > −4, even though 4 > 1.",
+     "clue": "Negative numbers go to the left of 0. Count the steps from 0.",
+     "id": "g7.maths.u2.s2-3.49",
+     "added": true
+    },
+    {
      "kind": "pick",
      "step": "practise",
      "graded": true,
-     "text": "Tap every integer between −2 and 3.",
+     "text": "Integers between two numbers: tap every integer between −2 and 3.",
      "pool": [
       "−2",
       "−1",
@@ -230,7 +255,7 @@
       "1",
       "2"
      ],
-     "why": "Count from −2 to 3 and leave out the two ends: −1, 0, 1, 2.",
+     "why": "Count from −2 up to 3: −2, −1, 0, 1, 2, 3.\n\"Between\" leaves out the two ends, −2 and 3.\nSo the integers between are −1, 0, 1, 2.",
      "clue": "\"Between\" does not include the end numbers.",
      "level": 1,
      "ref": "Exercise 2.3.1 Q3 a",
@@ -240,7 +265,7 @@
      "kind": "pick",
      "step": "challenge",
      "graded": true,
-     "text": "If −5 > x and x is an integer, tap every possible value of x.",
+     "text": "Solve the inequality: if −5 > x and x is an integer, tap every possible value of x.",
      "pool": [
       "−4",
       "−5",
@@ -252,7 +277,7 @@
       "−6",
       "−9"
      ],
-     "why": "x must be less than −5, so left of −5: −6 and −9 work. −5 is not less than itself.",
+     "why": "−5 > x means x is less than −5.\nLess than −5 means to the left of −5 on the number line.\n−6 and −9 are to the left of −5, so they work.\n−5 is not less than itself. −4 and 0 are to the right.\nSo x can be −6 or −9.",
      "clue": "x is to the left of −5.",
      "level": 3,
      "ref": "Review Exercise Q7",
@@ -293,38 +318,40 @@
      "step": "read",
      "title": "Successor and predecessor",
      "paras": [
-      "The successor of an integer comes after it.",
-      "The predecessor of an integer comes before it."
-     ],
-     "table": [
-      [
-       "Number",
-       "Predecessor",
-       "Successor"
-      ],
-      [
-       "5",
-       "4",
-       "6"
-      ],
-      [
-       "0",
-       "−1",
-       "1"
-      ],
-      [
-       "−4",
-       "−5",
-       "−3"
-      ],
-      [
-       "−99",
-       "−100",
-       "−98"
-      ]
+      "The successor of an integer comes just after it: add 1.",
+      "The predecessor comes just before it: subtract 1.",
+      "Tap the numbers below to see both."
      ],
      "ref": "Examples 7–8",
      "id": "g7.maths.u2.s2-3.12"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Before and after",
+     "ask": "Tap each number.",
+     "need": 4,
+     "ref": "Examples 7–8",
+     "items": [
+      [
+       "5",
+       "Predecessor 5 − 1 = 4. Successor 5 + 1 = 6."
+      ],
+      [
+       "0",
+       "Predecessor 0 − 1 = −1. Successor 0 + 1 = 1."
+      ],
+      [
+       "−4",
+       "Predecessor −4 − 1 = −5. Successor −4 + 1 = −3."
+      ],
+      [
+       "−99",
+       "Predecessor −99 − 1 = −100. Successor −99 + 1 = −98."
+      ]
+     ],
+     "id": "g7.maths.u2.s2-3.50",
+     "added": true
     },
     {
      "kind": "name",
@@ -346,13 +373,13 @@
      "kind": "blank",
      "step": "check",
      "graded": true,
-     "ask": "The successor of −16 is ___",
+     "ask": "Successor: the successor of −16 is ___",
      "a": [
       "−15",
       "-15"
      ],
      "num": true,
-     "why": "−16 + 1 = −15. One step right.",
+     "why": "The successor comes just after: add 1.\n−16 + 1 = −15.\nOn the number line: one step right of −16 is −15.\nCareful: −17 is the step to the left, the predecessor.",
      "clue": "Add 1.",
      "level": 1,
      "ref": "Exercise 2.3.2 Q1 b",
@@ -363,13 +390,13 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "The predecessor of −77 is ___",
+     "ask": "Predecessor: the predecessor of −77 is ___",
      "a": [
       "−78",
       "-78"
      ],
      "num": true,
-     "why": "−77 − 1 = −78. One step left.",
+     "why": "The predecessor comes just before: subtract 1.\n−77 − 1 = −78.\nOn the number line: one step left of −77 is −78.",
      "clue": "Subtract 1. Move left.",
      "level": 1,
      "ref": "Exercise 2.3.2 Q2 b",
@@ -380,13 +407,13 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "The successor of −999 is ___",
+     "ask": "Successor: the successor of −999 is ___",
      "a": [
       "−998",
       "-998"
      ],
      "num": true,
-     "why": "−999 + 1 = −998, closer to 0.",
+     "why": "The successor is one step right: add 1.\n−999 + 1 = −998.\n−998 is closer to 0 than −999, so it is bigger. ✓",
      "clue": "Move one step right.",
      "level": 2,
      "ref": "Exercise 2.3.2 Q1 d",
@@ -397,13 +424,13 @@
      "kind": "blank",
      "step": "challenge",
      "graded": true,
-     "ask": "What is the predecessor of the successor of −50? ___",
+     "ask": "Successor and predecessor together: what is the predecessor of the successor of −50? ___",
      "a": [
       "−50",
       "-50"
      ],
      "num": true,
-     "why": "Successor of −50 is −49. Predecessor of −49 is −50. One step right, then one step left, brings you back.",
+     "why": "Do the inner part first.\nThe successor of −50 is −50 + 1 = −49.\nThe predecessor of −49 is −49 − 1 = −50.\nOne step right, then one step left, brings you back to −50.",
      "clue": "Do the inner part first.",
      "level": 3,
      "input": "signed",
@@ -430,9 +457,10 @@
       "−40",
       "−8"
      ],
-     "after": "−40 is further left on the number line, so it is smaller and comes first.",
+     "after": "Ascending order goes from the smallest to the largest.\nBoth numbers are negative.\n−40 is 40 steps from 0; −8 is only 8 steps.\n−40 is further left, so it is smaller and comes first.",
      "ref": "Example 9 b",
-     "id": "g7.maths.u2.s2-3.18"
+     "id": "g7.maths.u2.s2-3.18",
+     "best": "−40"
     },
     {
      "kind": "read",
@@ -457,6 +485,45 @@
      ],
      "ref": "Example 9 b",
      "id": "g7.maths.u2.s2-3.20"
+    },
+    {
+     "kind": "numline",
+     "step": "explore",
+     "title": "Read the line from left to right",
+     "min": -9,
+     "max": 4,
+     "sub": 1,
+     "points": [
+      {
+       "v": "-8",
+       "label": "−8",
+       "info": "Furthest left: the smallest. It comes first."
+      },
+      {
+       "v": "-5",
+       "label": "−5",
+       "info": "Right of −8, so −5 > −8."
+      },
+      {
+       "v": "-2",
+       "label": "−2",
+       "info": "Closest negative to 0 here."
+      },
+      {
+       "v": "0",
+       "label": "0",
+       "info": "Bigger than every negative."
+      },
+      {
+       "v": "3",
+       "label": "3",
+       "info": "Furthest right: the largest. It comes last."
+      }
+     ],
+     "ask": "Tap the points from left to right. That is ascending order.",
+     "need": 5,
+     "id": "g7.maths.u2.s2-3.51",
+     "added": true
     },
     {
      "kind": "name",
@@ -486,7 +553,7 @@
       "17",
       "71"
      ],
-     "why": "−78 < −24 < 0 < 17 < 71",
+     "why": "Negatives come first. The one furthest from 0 is the smallest.\n−78 is further from 0 than −24, so −78 comes first.\nThen 0, then the positives from small to big: 17, 71.\nSo −78 < −24 < 0 < 17 < 71.",
      "clue": "Negatives first, furthest from 0 first.",
      "level": 1,
      "ref": "Exercise 2.3.2 Q3 a",
@@ -510,7 +577,7 @@
       "−89",
       "−99"
      ],
-     "why": "69 > 59 > −9 > −89 > −99",
+     "why": "Descending means largest first.\nPositives first: 69, then 59.\nThen negatives, closest to 0 first: −9, then −89, then −99.\nSo 69 > 59 > −9 > −89 > −99.",
      "clue": "Largest first. For negatives, closest to 0 first.",
      "level": 1,
      "ref": "Exercise 2.3.2 Q4 a",
@@ -534,7 +601,7 @@
       "−157",
       "50"
      ],
-     "why": "−400 < −350 < −230 < −157 < 50",
+     "why": "Four numbers are negative; 50 is positive, so it goes last.\nFor negatives, the one furthest from 0 is the smallest.\n400 > 350 > 230 > 157, so −400 comes first, then −350, −230, −157.\nSo −400 < −350 < −230 < −157 < 50.",
      "clue": "The negative furthest from 0 is the smallest.",
      "level": 2,
      "ref": "Exercise 2.3.2 Q3 b",
@@ -550,7 +617,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Final scores: Abebe +2, Almaz 0, Hailu −5, Derartu +3. Who won?",
+     "text": "Compare scores: final scores are Abebe +2, Almaz 0, Hailu −5, Derartu +3. Who won?",
      "opts": [
       "Abebe",
       "Almaz",
@@ -558,7 +625,7 @@
       "Derartu"
      ],
      "ans": "Derartu",
-     "why": "+3 is the greatest score.",
+     "why": "The winner has the greatest score.\nOn the number line the greatest is furthest right.\nOrder: −5 < 0 < +2 < +3.\nSo Derartu (+3) won.",
      "clue": "Which number is furthest right?",
      "level": 2,
      "ref": "Exercise 2.3.2 Q5 b",
@@ -568,7 +635,7 @@
      "kind": "order",
      "step": "challenge",
      "graded": true,
-     "text": "Tap all nine in descending order.",
+     "text": "Order integers: tap all nine in descending order (largest first).",
      "items": [
       "101",
       "21",
@@ -580,7 +647,7 @@
       "−81",
       "−101"
      ],
-     "why": "101 > 21 > 1 > −1 > −5 > −51 > −69 > −81 > −101",
+     "why": "Descending: largest first.\nPositives from largest: 101, 21, 1.\nThen negatives from closest to 0: −1, −5, −51, −69, −81, −101.\nSo 101 > 21 > 1 > −1 > −5 > −51 > −69 > −81 > −101.",
      "clue": "Positives from largest; then negatives from closest to 0.",
      "level": 3,
      "ref": "Review Exercise Q8",
@@ -608,14 +675,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "3 °C below zero is written",
+     "text": "Write the temperature with a sign: 3 °C below zero is written",
      "opts": [
       "3",
       "−3",
       "+3"
      ],
      "ans": "−3",
-     "why": "Below zero gets a minus sign.",
+     "why": "Below zero means less than 0.\nNumbers less than 0 get a minus sign.\nSo 3 °C below zero is −3.",
      "clue": "Below zero means minus.",
      "level": 1
     }
@@ -630,14 +697,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Which sign is correct? −150 ? 0",
+     "text": "Compare integers: which sign is correct? −150 ? 0",
      "opts": [
       "<",
       ">",
       "="
      ],
      "ans": "<",
-     "why": "Every negative integer is less than 0.",
+     "why": "−150 is a negative integer.\nNegatives are to the left of 0.\nEvery negative integer is less than 0.\nSo −150 < 0.",
      "clue": "Negative or positive?",
      "level": 1,
      "ref": "Q1 a",
@@ -647,14 +714,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Which sign is correct? −34 ? 34",
+     "text": "Compare integers: which sign is correct? −34 ? 34",
      "opts": [
       "<",
       ">",
       "="
      ],
      "ans": "<",
-     "why": "A negative integer is less than any positive integer.",
+     "why": "−34 is left of 0 and 34 is right of 0.\nA negative integer is less than any positive integer.\nSo −34 < 34.",
      "clue": "Which side of 0?",
      "level": 1,
      "ref": "Q1 d",
@@ -664,14 +731,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Which sign is correct? −23 ? −23",
+     "text": "Compare integers: which sign is correct? −23 ? −23",
      "opts": [
       "<",
       ">",
       "="
      ],
      "ans": "=",
-     "why": "They are the same number.",
+     "why": "Both sides are the same number, −23.\nThey sit on the same point of the number line.\nSo −23 = −23.",
      "clue": "Look closely.",
      "level": 1,
      "ref": "Q1 g",
@@ -681,14 +748,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Which sign is correct? −120 ? −80",
+     "text": "Compare integers: which sign is correct? −120 ? −80",
      "opts": [
       "<",
       ">",
       "="
      ],
      "ans": "<",
-     "why": "−120 is further from 0, so it is smaller.",
+     "why": "Both numbers are negative.\n−120 is 120 steps from 0; −80 is 80 steps.\n−120 is further from 0, so it is further left and smaller.\nSo −120 < −80.",
      "clue": "For negatives, further from 0 is smaller.",
      "level": 2,
      "ref": "Q1 i",
@@ -698,13 +765,13 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Which number is to the right: −1005 or −105?",
+     "text": "Position on the number line: which number is to the right, −1005 or −105?",
      "opts": [
       "−1005",
       "−105"
      ],
      "ans": "−105",
-     "why": "−105 is closer to 0.",
+     "why": "Both numbers are negative.\n−105 is 105 steps from 0; −1005 is 1005 steps.\n−105 is closer to 0, so it is further right.\nSo −105 is to the right (and −105 > −1005).",
      "clue": "Closer to 0 means further right.",
      "level": 2,
      "ref": "Q2 d",
@@ -714,7 +781,7 @@
      "kind": "pick",
      "step": "exercise",
      "graded": true,
-     "text": "Tap every integer between −98 and −95.",
+     "text": "Integers between two numbers: tap every integer between −98 and −95.",
      "pool": [
       "−98",
       "−97",
@@ -725,7 +792,7 @@
       "−97",
       "−96"
      ],
-     "why": "Leave out the ends: −97 and −96.",
+     "why": "Count from −98 to −95: −98, −97, −96, −95.\nLeave out the two ends, −98 and −95.\nSo the integers between are −97 and −96.",
      "clue": "Between does not include the ends.",
      "level": 1,
      "ref": "Q3 c",
@@ -735,14 +802,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "How many integers lie between −10 and −9?",
+     "text": "Integers between two numbers: how many integers lie between −10 and −9?",
      "opts": [
       "None",
       "One",
       "Two"
      ],
      "ans": "None",
-     "why": "−10 and −9 are next to each other.",
+     "why": "−10 and −9 are next to each other: −10 + 1 = −9.\nThere is no whole step between them.\nSo no integer lies between −10 and −9.",
      "clue": "Is there a whole step between them?",
      "level": 1,
      "ref": "Q3 d",
@@ -752,14 +819,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "On a line the points are y, z, 0, m, x, n from left to right. Which is true?",
+     "text": "Reading a number line: the points are y, z, 0, m, x, n from left to right. Which is true?",
      "opts": [
       "z < x",
       "z > x",
       "m > x"
      ],
      "ans": "z < x",
-     "why": "z is left of x.",
+     "why": "On a number line, left is smaller.\nz is to the left of x, so z < x.\nz > x is wrong for the same reason.\nm is to the left of x, so m < x, not m > x.",
      "clue": "Left is smaller.",
      "level": 1,
      "ref": "Q4 a",
@@ -769,13 +836,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "What is the greatest negative integer? ___",
+     "ask": "Negative integers: what is the greatest negative integer? ___",
      "a": [
       "−1",
       "-1"
      ],
      "num": true,
-     "why": "−1 is the negative integer closest to 0.",
+     "why": "The negative integers are −1, −2, −3, …\nThe greatest one is furthest right, closest to 0.\nThat is −1.\nCareful: 0 is not negative.",
      "clue": "Which negative is furthest right?",
      "level": 1,
      "ref": "Q5 a",
@@ -786,14 +853,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "What is the greatest integer?",
+     "text": "Integers: what is the greatest integer?",
      "opts": [
       "1,000,000",
       "There is no greatest integer",
       "0"
      ],
      "ans": "There is no greatest integer",
-     "why": "You can always add 1.",
+     "why": "Take any integer, for example 1,000,000.\nAdd 1: 1,000,001 is bigger.\nThis works for every integer, so the line never ends.\nThere is no greatest integer.",
      "clue": "Does the line end?",
      "level": 1,
      "ref": "Q5 c",
@@ -808,13 +875,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "The successor of 20 is ___",
+     "ask": "Successor: the successor of 20 is ___",
      "a": [
       "21",
       "+21"
      ],
      "num": true,
-     "why": "20 + 1 = 21.",
+     "why": "The successor comes just after: add 1.\n20 + 1 = 21.",
      "clue": "Add 1.",
      "level": 1,
      "ref": "Q1 a",
@@ -824,13 +891,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "The successor of 999 is ___",
+     "ask": "Successor: the successor of 999 is ___",
      "a": [
       "1000",
       "+1000"
      ],
      "num": true,
-     "why": "999 + 1 = 1000.",
+     "why": "The successor comes just after: add 1.\n999 + 1 = 1000.",
      "clue": "Add 1.",
      "level": 1,
      "ref": "Q1 c",
@@ -840,13 +907,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "The predecessor of −999 is ___",
+     "ask": "Predecessor: the predecessor of −999 is ___",
      "a": [
       "−1000",
       "-1000"
      ],
      "num": true,
-     "why": "−999 − 1 = −1000.",
+     "why": "The predecessor comes just before: subtract 1.\n−999 − 1 = −1000.\nOne step left of −999 is −1000.",
      "clue": "Subtract 1.",
      "level": 1,
      "ref": "Q2 c",
@@ -857,13 +924,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "The predecessor of −1000 is ___",
+     "ask": "Predecessor: the predecessor of −1000 is ___",
      "a": [
       "−1001",
       "-1001"
      ],
      "num": true,
-     "why": "−1000 − 1 = −1001.",
+     "why": "The predecessor comes just before: subtract 1.\n−1000 − 1 = −1001.\nOne step left of −1000 is −1001.",
      "clue": "Subtract 1.",
      "level": 1,
      "ref": "Q2 d",
@@ -874,7 +941,7 @@
      "kind": "order",
      "step": "exercise",
      "graded": true,
-     "text": "Tap in descending order.",
+     "text": "Order integers: tap in descending order (largest first).",
      "items": [
       "400",
       "200",
@@ -882,7 +949,7 @@
       "−445",
       "−757"
      ],
-     "why": "400 > 200 > −300 > −445 > −757",
+     "why": "Descending: largest first.\nPositives first: 400, then 200.\nThen negatives from closest to 0: −300, −445, −757.\nSo 400 > 200 > −300 > −445 > −757.",
      "clue": "Largest first.",
      "level": 1,
      "ref": "Q4 b",
@@ -892,13 +959,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "Hailu lost 3 baskets, then lost 2 more. His final result is ___",
+     "ask": "Integers in a game: Hailu lost 3 baskets, then lost 2 more. His final result is ___",
      "a": [
       "−5",
       "-5"
      ],
      "num": true,
-     "why": "−3 + (−2) = −5.",
+     "why": "A loss is negative: −3, then −2.\nAdd them: −3 + (−2).\nTwo losses make a bigger loss: 3 + 2 = 5.\nSo his final result is −5.",
      "clue": "Loss is negative.",
      "level": 2,
      "ref": "Q5 a",
@@ -909,7 +976,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Final results: +2, 0, −5, +3. Who was the loser?",
+     "text": "Compare scores: final results are +2, 0, −5, +3. Who was the loser?",
      "opts": [
       "Abebe (+2)",
       "Almaz (0)",
@@ -917,7 +984,7 @@
       "Derartu (+3)"
      ],
      "ans": "Hailu (−5)",
-     "why": "−5 is the smallest.",
+     "why": "The loser has the smallest score.\nThe smallest is furthest left on the number line.\nOrder: −5 < 0 < +2 < +3.\nSo Hailu (−5) was the loser.",
      "clue": "Which is furthest left?",
      "level": 1,
      "ref": "Q5 c",
@@ -938,7 +1005,7 @@
     "="
    ],
    "ans": "<",
-   "why": "A negative integer is less than a positive integer.",
+   "why": "−8 is left of 0; 2 is right of 0.\nA negative integer is less than any positive integer.\nSo −8 < 2.",
    "level": 1,
    "clue": "",
    "id": "g7.maths.u2.s2-3.44",
@@ -951,13 +1018,13 @@
    "kind": "blank",
    "step": "test",
    "graded": true,
-   "ask": "The predecessor of 0 is ___",
+   "ask": "Predecessor: the predecessor of 0 is ___",
    "a": [
     "−1",
     "-1"
    ],
    "num": true,
-   "why": "0 − 1 = −1.",
+   "why": "The predecessor comes just before: subtract 1.\n0 − 1 = −1.\nOne step left of 0 is −1.",
    "level": 1,
    "input": "signed",
    "clue": "",
@@ -974,7 +1041,7 @@
     "="
    ],
    "ans": "<",
-   "why": "−250 is further from 0, so it is smaller.",
+   "why": "Both numbers are negative.\n−250 is 250 steps from 0; −180 is 180 steps.\n−250 is further from 0, so it is further left and smaller.\nSo −250 < −180.",
    "level": 2,
    "clue": "",
    "id": "g7.maths.u2.s2-3.46",
@@ -995,7 +1062,7 @@
     "3",
     "15"
    ],
-   "why": "−12 < −7 < 0 < 3 < 15",
+   "why": "Negatives first, furthest from 0 first: −12, then −7.\nThen 0.\nThen positives from small to big: 3, 15.\nSo −12 < −7 < 0 < 3 < 15.",
    "level": 2,
    "id": "g7.maths.u2.s2-3.47",
    "gen": {
@@ -1009,7 +1076,7 @@
    "kind": "pick",
    "step": "test",
    "graded": true,
-   "text": "Tap every integer between −4 and 1.",
+   "text": "Integers between two numbers: tap every integer between −4 and 1.",
    "pool": [
     "−4",
     "−3",
@@ -1024,7 +1091,7 @@
     "−1",
     "0"
    ],
-   "why": "Leave out the ends −4 and 1.",
+   "why": "Count from −4 to 1: −4, −3, −2, −1, 0, 1.\nLeave out the two ends, −4 and 1.\nSo the integers between are −3, −2, −1, 0.",
    "level": 3,
    "id": "g7.maths.u2.s2-3.48"
   }

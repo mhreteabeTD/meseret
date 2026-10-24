@@ -52,9 +52,10 @@
       "Sound echoes",
       "Nuclear decay"
      ],
-     "after": "A bridge must carry loads safely: forces, tension, stress and gravity.",
+     "after": "A bridge must carry its own weight and the traffic safely.\nEngineers balance forces, tension in the cables and gravity.\nSpectra, echoes and nuclear decay do not hold a bridge up.",
      "ref": "Figure 1.8",
-     "id": "g12.physics.u1.s1-2.1"
+     "id": "g12.physics.u1.s1-2.1",
+     "best": "Forces, tension and gravity"
     },
     {
      "kind": "read",
@@ -63,7 +64,7 @@
      "paras": [
       "Physics gives knowledge that engineers use: mechanics, thermodynamics, electromagnetism, optics and more.",
       "Engineering branches are governed by physical laws.",
-      "Ethiopia built the Axum obelisks and Lalibela churches long ago; modern physics made skyscrapers and suspension bridges possible."
+      "Ethiopia built the Axum obelisks and Lalibela churches long ago. Modern physics made skyscrapers and suspension bridges possible."
      ],
      "ref": "p.9–10, Figures 1.7–1.8",
      "id": "g12.physics.u1.s1-2.2"
@@ -99,6 +100,34 @@
      ],
      "ref": "p.10–11",
      "id": "g12.physics.u1.s1-2.3"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "graded": false,
+     "title": "Which physics does each engineer use?",
+     "text": "Tap each branch.",
+     "need": 4,
+     "items": [
+      [
+       "Civil",
+       "Forces, fluid pressure and gravity: bridges, roads, dams."
+      ],
+      [
+       "Mechanical",
+       "Mechanics, thermodynamics and aerodynamics: engines, cars, aircraft."
+      ],
+      [
+       "Electrical",
+       "Electromagnetism and thermodynamics: motors, circuits, power lines."
+      ],
+      [
+       "Chemical",
+       "Molecular physics and thermodynamics: plastics, paints, fuels."
+      ]
+     ],
+     "id": "g12.physics.u1.s1-2.17",
+     "added": true
     },
     {
      "kind": "read",
@@ -148,16 +177,17 @@
        "plastics, paints, fuels"
       ]
      ],
-     "why": "Each branch builds different things.",
+     "why": "Civil engineers build structures that carry loads: roads, bridges, dams.\nMechanical engineers build machines that move: engines, tractors, robots.\nElectrical engineers build motors, circuits and power lines.\nChemical engineers turn raw materials into plastics, paints and fuels.",
      "clue": "Think of what each engineer designs.",
      "graded": true,
      "level": 1,
      "step": "check",
-     "id": "g12.physics.u1.s1-2.6"
+     "id": "g12.physics.u1.s1-2.6",
+     "text": "Engineering branches: match each branch to what its engineers build."
     },
     {
      "kind": "mcq",
-     "text": "An electrical engineer designs a motor. The main physics needed is",
+     "text": "Physics behind a motor: an electrical engineer designs a motor. The main physics needed is",
      "opts": [
       "electromagnetism",
       "astronomy",
@@ -165,7 +195,7 @@
       "optics only"
      ],
      "ans": "electromagnetism",
-     "why": "Motors turn electrical energy into motion using magnetic forces.",
+     "why": "A motor turns electrical energy into motion.\nA current in a magnetic field feels a force.\nThat force spins the motor's coil.\nElectricity + magnetism = electromagnetism.\nAnswer: electromagnetism.",
      "clue": "Electricity + magnetism.",
      "graded": true,
      "level": 1,
@@ -174,9 +204,9 @@
     },
     {
      "kind": "tf",
-     "text": "Technology can lead to new physics.",
+     "text": "Technology and physics, true or false: technology can lead to new physics.",
      "a": true,
-     "why": "New instruments like X-ray machines and rockets give new observations.",
+     "why": "New instruments make new observations possible.\nX-ray machines let us see inside matter.\nRockets carry instruments into space to measure there.\nNew observations lead to new physics, so it is true.",
      "clue": "Brainstorming question 1.8.",
      "graded": true,
      "level": 1,
@@ -185,7 +215,7 @@
     },
     {
      "kind": "mcq",
-     "text": "A solar panel works by",
+     "text": "Physics in a solar panel: a solar panel works by",
      "opts": [
       "changing light into electricity",
       "storing heat in water",
@@ -193,7 +223,7 @@
       "burning fuel"
      ],
      "ans": "changing light into electricity",
-     "why": "The photovoltaic effect.",
+     "why": "A solar panel is made of photovoltaic cells.\nLight falling on the cell frees electrons.\nThe moving electrons are an electric current.\nThis is the photovoltaic effect: light → electricity.\nTrap: a solar water heater stores heat; a panel does not.",
      "clue": "Activity 1.3.",
      "graded": true,
      "level": 2,
@@ -203,7 +233,7 @@
     },
     {
      "kind": "mcq",
-     "text": "Galileo's telescope showed moons going round Jupiter. This is an example of",
+     "text": "Science and technology: Galileo's telescope showed moons going round Jupiter. This is an example of",
      "opts": [
       "technology leading to new physics",
       "physics leading to a bridge",
@@ -211,7 +241,7 @@
       "engineering without physics"
      ],
      "ans": "technology leading to new physics",
-     "why": "A new instrument revealed something no theory had seen.",
+     "why": "The telescope is a piece of technology.\nIt showed moons no one had seen before.\nThat new observation supported the Sun-centred model.\nSo the tool came first, and the new physics followed.\nAnswer: technology leading to new physics.",
      "clue": "Which came first: the tool or the discovery?",
      "graded": true,
      "level": 3,
@@ -248,13 +278,14 @@
        "thermodynamics"
       ]
      ],
-     "why": "Each product uses a physics principle.",
+     "why": "A mobile phone sends and receives electromagnetic (radio) waves.\nA water pump motor turns by electromagnetism.\nA solar panel uses the photovoltaic effect.\nA car engine turns heat from burning fuel into work: thermodynamics.",
      "clue": "What does each one use?",
      "graded": true,
      "level": 2,
      "step": "exercise",
      "ref": "(i)",
-     "id": "g12.physics.u1.s1-2.11"
+     "id": "g12.physics.u1.s1-2.11",
+     "text": "Activity 1.3: match each everyday technology to the physics it uses."
     }
    ]
   }
@@ -262,7 +293,7 @@
  "test": [
   {
    "kind": "mcq",
-   "text": "Civil engineering mainly uses",
+   "text": "Engineering branches: civil engineering mainly uses",
    "opts": [
     "forces and pressure",
     "spectra",
@@ -270,7 +301,7 @@
     "optics"
    ],
    "ans": "forces and pressure",
-   "why": "p.9.",
+   "why": "Civil engineers build bridges, roads and dams.\nThese must carry loads and hold back water.\nSo they need forces, fluid pressure and gravity.\nAnswer: forces and pressure.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -279,7 +310,7 @@
   },
   {
    "kind": "mcq",
-   "text": "Aerodynamics is used most in",
+   "text": "Engineering branches: aerodynamics is used most in",
    "opts": [
     "mechanical engineering",
     "chemical engineering",
@@ -287,7 +318,7 @@
     "geology"
    ],
    "ans": "mechanical engineering",
-   "why": "aircraft and cars.",
+   "why": "Aerodynamics is how air flows round moving bodies.\nMechanical engineers design cars and aircraft that move through air.\nSo aerodynamics belongs to mechanical engineering.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -296,9 +327,9 @@
   },
   {
    "kind": "tf",
-   "text": "Engineering branches are governed by physical laws.",
+   "text": "Physics and engineering, true or false: engineering branches are governed by physical laws.",
    "a": true,
-   "why": "p.9.",
+   "why": "Every machine and structure must obey the laws of physics.\nEngineers use mechanics, thermodynamics and electromagnetism to design.\nSo the statement is true.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -307,7 +338,7 @@
   },
   {
    "kind": "mcq",
-   "text": "Rocket technology lets scientists",
+   "text": "Technology generating new physics: rocket technology lets scientists",
    "opts": [
     "measure in space",
     "cure disease",
@@ -315,7 +346,7 @@
     "build dams"
    ],
    "ans": "measure in space",
-   "why": "p.12.",
+   "why": "Rockets carry instruments above the atmosphere.\nThere they can measure radiation and fields directly.\nSo rockets let scientists measure in space.",
    "clue": "",
    "graded": true,
    "level": 2,
@@ -324,7 +355,7 @@
   },
   {
    "kind": "mcq",
-   "text": "Physics, engineering and technology are shown as",
+   "text": "Figure 1.12: physics, engineering and technology are shown as",
    "opts": [
     "three interlocking gears",
     "three separate boxes",
@@ -332,7 +363,7 @@
     "a circle of arrows only"
    ],
    "ans": "three interlocking gears",
-   "why": "Figure 1.12.",
+   "why": "Each one drives the others, like gears turning together.\nPhysics gives laws; engineering uses them; technology gives new tools back.\nSo the book draws three interlocking gears.",
    "clue": "",
    "graded": true,
    "level": 2,

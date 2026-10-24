@@ -76,10 +76,11 @@
       "Hana",
       "It depends on their mass"
      ],
-     "after": "The whole ride is rigid, so every point turns through the same angle in the same time.",
+     "after": "The whole ride is rigid, so every point turns through the same angle in the same time.\nDawit's circle is bigger, but the angle is the same.\nRadius changes the distance moved, not the angle.",
      "ref": "p.41",
      "added": true,
-     "id": "g12.physics.u2.s2-2.1"
+     "id": "g12.physics.u2.s2-2.1",
+     "best": "The same angle"
     },
     {
      "kind": "read",
@@ -94,6 +95,38 @@
      ],
      "ref": "p.41–42",
      "id": "g12.physics.u2.s2-2.2"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Degrees, radians, turns",
+     "ask": "Turn the wheel. See the same angle in three units.",
+     "vars": [
+      {
+       "k": "d",
+       "label": "Angle (°)",
+       "min": 0,
+       "max": 720,
+       "step": 15,
+       "v": 90
+      }
+     ],
+     "formula": "d*Math.PI/180",
+     "outs": [
+      [
+       "Radians = degrees × π/180",
+       "d*Math.PI/180",
+       "{v} rad"
+      ],
+      [
+       "Revolutions = degrees ÷ 360",
+       "d/360",
+       "{v} rev"
+      ]
+     ],
+     "note": "360° = 2π rad ≈ 6.28 rad = 1 rev. Always use radians in s = rθ and v = ωr.",
+     "id": "g12.physics.u2.s2-2.38",
+     "added": true
     },
     {
      "kind": "read",
@@ -131,7 +164,7 @@
     },
     {
      "kind": "mcq",
-     "text": "Which can NOT be a unit of angular displacement?",
+     "text": "Units of angle: which can NOT be a unit of angular displacement?",
      "opts": [
       "rpm",
       "degree",
@@ -139,7 +172,7 @@
       "revolution"
      ],
      "ans": "rpm",
-     "why": "rpm (revolutions per minute) measures angular velocity, not an angle.",
+     "why": "Angular displacement is an angle.\nDegree, radian and revolution all measure angles.\nrpm means revolutions per minute: angle ÷ time.\nSo rpm measures angular velocity, not an angle.",
      "clue": "One of these has \"per minute\" in it.",
      "graded": true,
      "level": 1,
@@ -149,11 +182,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A wheel speeds up from 30 rad/s to 50 rad/s in 2 s. Its average angular acceleration is ___ rad/s²",
+     "ask": "Average angular acceleration: a wheel speeds up from 30 rad/s to 50 rad/s in 2 s. α = ___ rad/s²",
      "a": [
       "10"
      ],
-     "why": "α = (50 − 30)/2 = 10 rad/s².",
+     "why": "Formula: α = Δω/Δt.\nΔω = 50 − 30 = 20 rad/s.\nα = 20 rad/s ÷ 2 s = 10 rad/s².",
      "clue": "α = Δω/Δt.",
      "num": true,
      "graded": true,
@@ -164,11 +197,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Same wheel (constant α): its average angular velocity is ___ rad/s",
+     "ask": "Average angular velocity: same wheel (30 → 50 rad/s, constant α). ω_av = ___ rad/s",
      "a": [
       "40"
      ],
-     "why": "ω_av = (30 + 50)/2 = 40 rad/s. (The book's Example 2.5 asks for this but computes α.)",
+     "why": "With constant α, ω_av = (ω₀ + ω_f)/2.\nSubstitute: (30 + 50)/2 = 80/2.\nResult: 40 rad/s.\n(The book's Example 2.5 asks for this but computes α.)",
      "clue": "Average of start and end.",
      "num": true,
      "graded": true,
@@ -179,11 +212,11 @@
     },
     {
      "kind": "blank",
-     "ask": "The second hand of a clock has ω ≈ ___ rad/s (3 decimal places)",
+     "ask": "Angular velocity of a clock: the second hand has ω ≈ ___ rad/s (3 decimal places)",
      "a": [
       "≈0.105"
      ],
-     "why": "One turn (2π rad) in 60 s: 6.283 ÷ 60 = 0.105 rad/s.",
+     "why": "The second hand makes one turn in 60 s.\nOne turn = 2π rad = 6.283 rad.\nω = Δθ/Δt = 6.283 ÷ 60.\nResult: ω ≈ 0.105 rad/s.",
      "clue": "How long is one turn of the second hand?",
      "num": true,
      "graded": true,
@@ -194,7 +227,7 @@
     },
     {
      "kind": "mcq",
-     "text": "A wheel turns counterclockwise in the xy plane and is slowing down. α points along",
+     "text": "Direction of α (right-hand rule): a wheel turns counterclockwise in the xy plane and is slowing down. α points along",
      "opts": [
       "−z",
       "+z",
@@ -202,7 +235,7 @@
       "−y"
      ],
      "ans": "−z",
-     "why": "ω is along +z (right-hand rule); slowing down makes α opposite: −z.",
+     "why": "Curl right-hand fingers counterclockwise in the xy plane: the thumb points +z.\nSo ω is along +z.\nSlowing down means α is opposite to ω.\nSo α points along −z.",
      "clue": "Find ω first.",
      "graded": true,
      "level": 3,
@@ -212,11 +245,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A fan turns at 600 rpm. That is ≈ ___ rad/s (1 decimal place)",
+     "ask": "Changing rpm to rad/s: a fan turns at 600 rpm. That is ≈ ___ rad/s (1 decimal place)",
      "a": [
       "≈62.8"
      ],
-     "why": "600/60 = 10 rev/s; 10 × 2π = 62.8 rad/s.",
+     "why": "Step 1: rev/min → rev/s: 600 ÷ 60 = 10 rev/s.\nStep 2: rev → rad: 1 rev = 2π rad.\nω = 10 × 2π = 20π ≈ 62.8 rad/s.\nTrap: forgetting ÷60 gives 3770 rad/s.",
      "clue": "Divide by 60, then multiply by 2π.",
      "num": true,
      "graded": true,
@@ -274,9 +307,25 @@
       }
      ],
      "formula": "w*t + 0.5*a*t*t",
-     "out": "Δθ = {v} rad",
-     "note": "Divide by 2π (6.28) to get revolutions.",
-     "id": "g12.physics.u2.s2-2.11"
+     "note": "Make α negative: the wheel slows down. If ω_f goes below zero, the wheel has stopped and turned back.",
+     "id": "g12.physics.u2.s2-2.11",
+     "outs": [
+      [
+       "Δθ = ω₀t + ½αt²",
+       "w*t + 0.5*a*t*t",
+       "{v} rad"
+      ],
+      [
+       "Revolutions = Δθ/2π",
+       "(w*t + 0.5*a*t*t)/(2*Math.PI)",
+       "{v} rev"
+      ],
+      [
+       "ω_f = ω₀ + αt",
+       "w + a*t",
+       "{v} rad/s"
+      ]
+     ]
     },
     {
      "kind": "read",
@@ -343,21 +392,22 @@
        "ω_f = ω₀ + αt"
       ]
      ],
-     "why": "Replace s by θ, v by ω and a by α.",
+     "why": "Displacement s ↔ angle θ.\nVelocity v ↔ angular velocity ω.\nAcceleration a ↔ angular acceleration α.\nSo v_f = v₀ + at becomes ω_f = ω₀ + αt.",
      "clue": "Each linear letter has a Greek partner.",
      "graded": true,
      "level": 1,
      "step": "check",
      "ref": "p.44–45",
-     "id": "g12.physics.u2.s2-2.14"
+     "id": "g12.physics.u2.s2-2.14",
+     "text": "Linear and angular equations: match each linear quantity to its angular partner."
     },
     {
      "kind": "blank",
-     "ask": "A wheel starts at 10 rad/s with α = 2.5 rad/s². In 30 s it turns ___ rad",
+     "ask": "Angle turned with constant α: a wheel starts at 10 rad/s with α = 2.5 rad/s². In 30 s it turns ___ rad",
      "a": [
       "1425"
      ],
-     "why": "Δθ = 10 × 30 + ½ × 2.5 × 900 = 300 + 1125 = 1425 rad (≈ 227 rev).",
+     "why": "Formula: Δθ = ω₀t + ½αt².\nSubstitute: Δθ = 10 × 30 + ½ × 2.5 × 30².\n= 300 + ½ × 2.5 × 900 = 300 + 1125.\nResult: 1425 rad (≈ 227 rev).",
      "clue": "Δθ = ω₀t + ½αt².",
      "num": true,
      "graded": true,
@@ -368,11 +418,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Same wheel: at t = 20 s, ω = ___ rad/s",
+     "ask": "Final angular velocity: same wheel (10 rad/s, α = 2.5 rad/s²). At t = 20 s, ω = ___ rad/s",
      "a": [
       "60"
      ],
-     "why": "ω = 10 + 2.5 × 20 = 60 rad/s.",
+     "why": "Formula: ω_f = ω₀ + αt.\nSubstitute: ω_f = 10 + 2.5 × 20.\nResult: 10 + 50 = 60 rad/s.",
      "clue": "ω_f = ω₀ + αt.",
      "num": true,
      "graded": true,
@@ -383,11 +433,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A car wheel starts at 6 rad/s with α = 3 rad/s². After 100 rev, ω ≈ ___ rad/s (1 decimal place)",
+     "ask": "Angular velocity after a number of turns: a car wheel starts at 6 rad/s with α = 3 rad/s². After 100 rev, ω ≈ ___ rad/s (1 decimal place)",
      "a": [
       "≈61.7"
      ],
-     "why": "100 rev = 628 rad. ω² = 36 + 2 × 3 × 628 = 3804, ω = 61.7 rad/s.",
+     "why": "No time is given, so use ω_f² = ω₀² + 2αΔθ.\nConvert: Δθ = 100 × 2π = 628 rad.\nSubstitute: ω_f² = 6² + 2 × 3 × 628 = 36 + 3768 = 3804.\nω_f = √3804 ≈ 61.7 rad/s.\nTrap: do not square α (the book's slip), and do not use rev.",
      "clue": "Change rev to rad, then use ω_f² = ω₀² + 2αΔθ. Do not square α.",
      "num": true,
      "graded": true,
@@ -398,11 +448,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A wheel turning at 3 rad/s slows at 5 rad/s². It turns ___ rad before it stops",
+     "ask": "Stopping angle: a wheel turning at 3 rad/s slows at 5 rad/s². It turns ___ rad before it stops",
      "a": [
       "0.9"
      ],
-     "why": "0 = 9 − 2 × 5 × Δθ, so Δθ = 9/10 = 0.9 rad.",
+     "why": "Use ω_f² = ω₀² + 2αΔθ with ω_f = 0 and α = −5 rad/s².\n0 = 3² + 2(−5)Δθ = 9 − 10Δθ.\nΔθ = 9 ÷ 10 = 0.9 rad.\nTrap: using α = +5 gives a negative angle.",
      "clue": "Use ω_f² = ω₀² + 2αΔθ with α = −5.",
      "num": true,
      "graded": true,
@@ -413,11 +463,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A wheel goes from 200 rpm to 600 rpm in 8 s. α ≈ ___ rad/s² (2 decimal places)",
+     "ask": "Angular acceleration from rpm: a wheel goes from 200 rpm to 600 rpm in 8 s. α ≈ ___ rad/s² (2 decimal places)",
      "a": [
       "≈5.24"
      ],
-     "why": "Δω = 400 rpm = 400 × 2π/60 = 41.9 rad/s. α = 41.9 ÷ 8 = 5.24 rad/s². (It turns 53.3 rev.)",
+     "why": "Δω = 600 − 200 = 400 rpm.\nConvert: 400 × 2π ÷ 60 = 41.9 rad/s.\nFormula: α = Δω/Δt = 41.9 ÷ 8.\nResult: α ≈ 5.24 rad/s².\nTrap: 400 ÷ 8 = 50 is in rpm per second, not rad/s².",
      "clue": "Change rpm to rad/s first.",
      "num": true,
      "graded": true,
@@ -454,10 +504,11 @@
       "Both the same",
       "Neither moves"
      ],
-     "after": "Same angle each second, but Dawit's circle is bigger, so he covers more metres.",
+     "after": "Both turn through the same angle each second: the same ω.\nBut v = ωr, and Dawit is at a bigger r.\nSo Dawit covers more metres each second.",
      "ref": "Discussion question 2.7 Q3",
      "added": true,
-     "id": "g12.physics.u2.s2-2.20"
+     "id": "g12.physics.u2.s2-2.20",
+     "best": "Dawit"
     },
     {
      "kind": "read",
@@ -472,6 +523,46 @@
      ],
      "ref": "p.46–47, Figure 2.11",
      "id": "g12.physics.u2.s2-2.21"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Edge or centre?",
+     "ask": "Keep ω fixed and move outward. Watch the speed.",
+     "vars": [
+      {
+       "k": "w",
+       "label": "Angular velocity ω (rad/s)",
+       "min": 1,
+       "max": 20,
+       "step": 1,
+       "v": 2
+      },
+      {
+       "k": "r",
+       "label": "Distance from axis r (m)",
+       "min": 0.5,
+       "max": 5,
+       "step": 0.5,
+       "v": 1
+      }
+     ],
+     "formula": "w*r",
+     "outs": [
+      [
+       "Speed v = ωr",
+       "w*r",
+       "{v} m/s"
+      ],
+      [
+       "Arc in 1 s, s = rθ",
+       "w*r",
+       "{v} m"
+      ]
+     ],
+     "note": "Same ω for Hana and Dawit. Double r: double v.",
+     "id": "g12.physics.u2.s2-2.39",
+     "added": true
     },
     {
      "kind": "steps",
@@ -504,9 +595,9 @@
     },
     {
      "kind": "tf",
-     "text": "All points on a turning wheel have the same linear speed.",
+     "text": "Speed on a turning wheel, true or false: all points on a turning wheel have the same linear speed.",
      "a": false,
-     "why": "They share the same ω, but v = ωr grows with r.",
+     "why": "All points share the same ω.\nLinear speed is v = ωr.\nA point on the rim (big r) moves faster than one near the axle.\nSo the statement is false.",
      "clue": "Compare a point on the rim with one near the axle.",
      "graded": true,
      "level": 1,
@@ -516,11 +607,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A bicycle wheel (radius 40 cm) turns at 18 rad/s. The bicycle's speed is ___ m/s",
+     "ask": "Tangential speed: a bicycle wheel (radius 40 cm) turns at 18 rad/s. The bicycle's speed is ___ m/s",
      "a": [
       "7.2"
      ],
-     "why": "v = ωr = 18 × 0.4 = 7.2 m/s.",
+     "why": "Formula: v = ωr.\nConvert: r = 40 cm = 0.4 m.\nSubstitute: v = 18 rad/s × 0.4 m.\nResult: 7.2 m/s.\nTrap: using 40 cm gives 720, a unit error.",
      "clue": "Change cm to m.",
      "num": true,
      "graded": true,
@@ -531,11 +622,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A rope on a pulley of radius 50 cm lifts a bucket 20 m. The pulley turns ≈ ___ rev (2 decimal places)",
+     "ask": "Turns of a pulley: a rope on a pulley of radius 50 cm lifts a bucket 20 m. The pulley turns ≈ ___ rev (2 decimal places)",
      "a": [
       "≈6.37"
      ],
-     "why": "Δθ = 20 ÷ 0.5 = 40 rad = 40/2π = 6.37 rev. (The book prints 6.34.)",
+     "why": "Rope length = arc length: s = rΔθ.\nΔθ = s/r = 20 m ÷ 0.5 m = 40 rad.\nRevolutions = 40 ÷ 2π = 40 ÷ 6.283.\nResult: ≈ 6.37 rev. (The book prints 6.34.)",
      "clue": "Rope length = rΔθ.",
      "num": true,
      "graded": true,
@@ -546,11 +637,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A disc goes from rest to 20 rad/s in 4 s. A point 40 cm from the centre has tangential acceleration ___ m/s²",
+     "ask": "Tangential acceleration: a disc goes from rest to 20 rad/s in 4 s. A point 40 cm from the centre has a = ___ m/s²",
      "a": [
       "2"
      ],
-     "why": "α = 20/4 = 5 rad/s². a = 5 × 0.4 = 2 m/s². (At 20 cm: 1 m/s².)",
+     "why": "Step 1: α = Δω/Δt = 20 ÷ 4 = 5 rad/s².\nStep 2: a = rα = 0.4 m × 5 rad/s².\nResult: a = 2 m/s².\nCheck: at 20 cm it would be 1 m/s².",
      "clue": "Find α first, then a = rα.",
      "num": true,
      "graded": true,
@@ -561,11 +652,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A pulley of radius 20 cm lifts a bucket 10 m in 5 s. Its average angular velocity is ___ rad/s",
+     "ask": "Angular velocity of a pulley: radius 20 cm, lifts a bucket 10 m in 5 s. ω_av = ___ rad/s",
      "a": [
       "10"
      ],
-     "why": "Δθ = 10 ÷ 0.2 = 50 rad. ω = 50/5 = 10 rad/s.",
+     "why": "Δθ = s/r = 10 m ÷ 0.2 m = 50 rad.\nω = Δθ/Δt = 50 rad ÷ 5 s.\nResult: 10 rad/s.\nCheck: v = 10/5 = 2 m/s, and ωr = 10 × 0.2 = 2 m/s ✓",
      "clue": "Δθ = Δs/r.",
      "num": true,
      "graded": true,
@@ -576,11 +667,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A particle moves 2.50 m along a circle of radius 1.50 m. It turns ≈ ___ rad (2 decimal places)",
+     "ask": "Angle from arc length: a particle moves 2.50 m along a circle of radius 1.50 m. It turns ≈ ___ rad (2 decimal places)",
      "a": [
       "≈1.67"
      ],
-     "why": "θ = s/r = 2.50 ÷ 1.50 = 1.67 rad ≈ 95.5°.",
+     "why": "Formula: θ = s/r (θ in radians).\nSubstitute: θ = 2.50 m ÷ 1.50 m.\nResult: θ ≈ 1.67 rad (≈ 95.5°).",
      "clue": "θ = s/r.",
      "num": true,
      "graded": true,
@@ -591,11 +682,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A car speeds up from 20 m/s to 24 m/s in 5 s. Its wheels (radius 40 cm) have α = ___ rad/s²",
+     "ask": "Angular acceleration of car wheels: a car speeds up from 20 m/s to 24 m/s in 5 s. Its wheels (radius 40 cm) have α = ___ rad/s²",
      "a": [
       "2"
      ],
-     "why": "a = 4/5 = 0.8 m/s². α = 0.8 ÷ 0.4 = 2 rad/s².",
+     "why": "Linear acceleration of the rim: a = Δv/Δt = 4 ÷ 5 = 0.8 m/s².\nLink: a = rα, so α = a/r.\nα = 0.8 ÷ 0.4 = 2 rad/s².",
      "clue": "Find the linear acceleration of the rim first.",
      "num": true,
      "graded": true,
@@ -614,9 +705,9 @@
    "items": [
     {
      "kind": "tf",
-     "text": "When a wheel turns about a fixed axis, all points have the same angular speed.",
+     "text": "Exercise 2.2 Q1, true or false: when a wheel turns about a fixed axis, all points have the same angular speed.",
      "a": true,
-     "why": "The wheel is rigid, so every point turns through the same angle in the same time.",
+     "why": "The wheel is rigid.\nEvery point turns through the same angle in the same time.\nSo every point has the same ω.\n(Their linear speeds v = ωr differ.)",
      "clue": "Is the wheel rigid?",
      "graded": true,
      "level": 1,
@@ -626,11 +717,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A wheel goes from 200 rpm to 600 rpm in 8 s. It makes ≈ ___ revolutions in that time (1 decimal place)",
+     "ask": "Exercise 2.2 Q6 b, number of turns: a wheel goes from 200 rpm to 600 rpm in 8 s. It makes ≈ ___ revolutions (1 decimal place)",
      "a": [
       "≈53.3"
      ],
-     "why": "Average 400 rpm = 6.67 rev/s; 6.67 × 8 = 53.3 rev.",
+     "why": "With constant α, use the average rate.\nω_av = (200 + 600)/2 = 400 rpm = 400 ÷ 60 = 6.67 rev/s.\nTurns = ω_av × t = 6.67 × 8.\nResult: ≈ 53.3 rev.",
      "clue": "Use the average rate.",
      "num": true,
      "graded": true,
@@ -645,11 +736,11 @@
  "test": [
   {
    "kind": "blank",
-   "ask": "1 revolution = ___ rad (2 decimal places)",
+   "ask": "Units of angle: 1 revolution = ___ rad (2 decimal places)",
    "a": [
     "≈6.28"
    ],
-   "why": "2π = 6.28 rad.",
+   "why": "One full turn = 360° = 2π rad.\n2π = 2 × 3.1416 = 6.28 rad.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -659,11 +750,11 @@
   },
   {
    "kind": "blank",
-   "ask": "A wheel goes from rest to 12 rad/s in 4 s. α = ___ rad/s²",
+   "ask": "Angular acceleration: a wheel goes from rest to 12 rad/s in 4 s. α = ___ rad/s²",
    "a": [
     "3"
    ],
-   "why": "12/4 = 3.",
+   "why": "Formula: α = Δω/Δt.\nα = (12 − 0) ÷ 4.\nResult: 3 rad/s².",
    "clue": "",
    "num": true,
    "graded": true,
@@ -673,11 +764,11 @@
   },
   {
    "kind": "blank",
-   "ask": "ω₀ = 4 rad/s, α = 2 rad/s². In 5 s the wheel turns ___ rad",
+   "ask": "Angle turned: ω₀ = 4 rad/s, α = 2 rad/s². In 5 s the wheel turns ___ rad",
    "a": [
     "45"
    ],
-   "why": "4 × 5 + ½ × 2 × 25 = 45.",
+   "why": "Formula: Δθ = ω₀t + ½αt².\n= 4 × 5 + ½ × 2 × 5².\n= 20 + 25 = 45 rad.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -687,11 +778,11 @@
   },
   {
    "kind": "blank",
-   "ask": "A wheel of radius 0.3 m turns at 25 rad/s. A point on the rim moves at ___ m/s",
+   "ask": "Tangential speed: a wheel of radius 0.3 m turns at 25 rad/s. A point on the rim moves at ___ m/s",
    "a": [
     "7.5"
    ],
-   "why": "v = ωr = 7.5.",
+   "why": "Formula: v = ωr.\nv = 25 × 0.3.\nResult: 7.5 m/s.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -701,11 +792,11 @@
   },
   {
    "kind": "blank",
-   "ask": "A wheel at 8 rad/s slows at 2 rad/s². It turns ___ rad before stopping",
+   "ask": "Stopping angle: a wheel at 8 rad/s slows at 2 rad/s². It turns ___ rad before stopping",
    "a": [
     "16"
    ],
-   "why": "64/(2 × 2) = 16.",
+   "why": "Use ω_f² = ω₀² + 2αΔθ with ω_f = 0, α = −2.\n0 = 64 − 4Δθ.\nΔθ = 64 ÷ 4 = 16 rad.",
    "clue": "",
    "num": true,
    "graded": true,

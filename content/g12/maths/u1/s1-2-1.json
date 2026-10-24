@@ -64,9 +64,10 @@
       "7",
       "11"
      ],
-     "after": "7 − 3 = 4, 11 − 7 = 4, 15 − 11 = 4. The same jump each time.",
+     "after": "Subtract each term from the next: 7 − 3 = 4, 11 − 7 = 4, 15 − 11 = 4.\nThe same jump, 4, each time.\n(3 is the first term, not the jump.)",
      "ref": "Activity 1.3 a",
-     "id": "g12.maths.u1.s1-2-1.1"
+     "id": "g12.maths.u1.s1-2-1.1",
+     "best": "4"
     },
     {
      "kind": "tap",
@@ -90,6 +91,31 @@
       ]
      ],
      "id": "g12.maths.u1.s1-2-1.2"
+    },
+    {
+     "kind": "numline",
+     "step": "explore",
+     "title": "Hop along 3, 7, 11, 15",
+     "ask": "Tap ▶ to hop. Each hop adds the same number.",
+     "min": 0,
+     "max": 16,
+     "hops": [
+      {
+       "from": 3,
+       "by": 4
+      },
+      {
+       "from": 7,
+       "by": 4
+      },
+      {
+       "from": 11,
+       "by": 4
+      }
+     ],
+     "after": "Every hop is +4. The fixed jump is the common difference: d = 4.",
+     "added": true,
+     "id": "g12.maths.u1.s1-2-1.61"
     },
     {
      "kind": "read",
@@ -121,7 +147,7 @@
     },
     {
      "kind": "mcq",
-     "text": "2, 5, 8, 11, 14, … What is the common difference?",
+     "text": "Find the common difference d of the arithmetic sequence 2, 5, 8, 11, 14, …",
      "opts": [
       "3",
       "2",
@@ -129,7 +155,7 @@
       "−3"
      ],
      "ans": "3",
-     "why": "5 − 2 = 3, 8 − 5 = 3, …",
+     "why": "Step 1: d = next term − this term.\nStep 2: 5 − 2 = 3, 8 − 5 = 3, 11 − 8 = 3.\nStep 3: the gap is the same every time.\nSo d = 3. (−3 comes from subtracting the wrong way: 2 − 5.)",
      "clue": "Subtract a term from the next one.",
      "graded": true,
      "level": 1,
@@ -153,11 +179,11 @@
     },
     {
      "kind": "blank",
-     "ask": "9, 6, 3, 0, −3, … The 6th term is ___",
+     "ask": "Find the next term of the arithmetic sequence 9, 6, 3, 0, −3, …: the 6th term is ___",
      "a": [
       "-6"
      ],
-     "why": "d = 6 − 9 = −3. 6th term = −3 + (−3) = −6.",
+     "why": "Step 1: d = 6 − 9 = −3 (the terms go down).\nStep 2: the 5th term is −3.\nStep 3: 6th term = −3 + (−3) = −6.\nSo the 6th term is −6. (Trap: 0 means −3 − (−3), the wrong direction.)",
      "clue": "Find d first. It is negative.",
      "num": true,
      "graded": true,
@@ -168,11 +194,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A₁ = 2, d = −1/2. The 3rd term is ___",
+     "ask": "Build an arithmetic sequence from A₁ = 2 and d = −1/2: the 3rd term is ___",
      "a": [
       "1"
      ],
-     "why": "2 + (−1/2) = 3/2, then 3/2 + (−1/2) = 2/2 = 1.",
+     "why": "Step 1: A₂ = 2 + (−1/2) = 4/2 − 1/2 = 3/2.\nStep 2: A₃ = 3/2 + (−1/2) = 2/2.\nStep 3: 2/2 = 1.\nSo the 3rd term is 1. Check: A₁ + 2d = 2 − 1 = 1 ✓.",
      "clue": "Add −1/2 twice.",
      "num": true,
      "graded": true,
@@ -183,7 +209,7 @@
     },
     {
      "kind": "mcq",
-     "text": "Which is an arithmetic sequence?",
+     "text": "Spot the arithmetic sequence: which list has the same difference between every pair of terms?",
      "opts": [
       "10, 7, 4, 1, …",
       "1, 2, 4, 8, …",
@@ -191,7 +217,7 @@
       "1, 1, 2, 3, …"
      ],
      "ans": "10, 7, 4, 1, …",
-     "why": "10, 7, 4, 1 goes down by 3 each time. The others have changing gaps.",
+     "why": "Step 1: 10, 7, 4, 1: gaps −3, −3, −3. Constant, so arithmetic (d = −3).\nStep 2: 1, 2, 4, 8: gaps 1, 2, 4. They double: geometric, not arithmetic.\nStep 3: 1, 4, 9, 16: gaps 3, 5, 7. Squares, not arithmetic.\nStep 4: 1, 1, 2, 3: gaps 0, 1, 1. Fibonacci, not arithmetic.\nSo the answer is 10, 7, 4, 1, …",
      "clue": "Check if the gap stays the same.",
      "graded": true,
      "level": 1,
@@ -200,11 +226,11 @@
     },
     {
      "kind": "blank",
-     "ask": "An arithmetic sequence: 5, ___, 13, 17. The missing term is",
+     "ask": "Find the missing term in the arithmetic sequence 5, ___, 13, 17. The missing term is",
      "a": [
       "9"
      ],
-     "why": "From 13 to 17 the jump is 4. So 5 + 4 = 9, and 9 + 4 = 13.",
+     "why": "Step 1: 13 and 17 are next to each other, so d = 17 − 13 = 4.\nStep 2: the missing term is 5 + 4 = 9.\nCheck: 9 + 4 = 13 ✓.\nSo the missing term is 9. (Another way: it is the mean of 5 and 13.)",
      "clue": "Find the jump from 13 to 17.",
      "num": true,
      "graded": true,
@@ -240,8 +266,9 @@
       "32",
       "3"
      ],
-     "after": "From term 1 to term 31 there are 30 jumps. So A₃₁ = 1 + 30 × 3 = 91.",
-     "id": "g12.maths.u1.s1-2-1.11"
+     "after": "From term 1 to term 2 is 1 jump; to term 3 is 2 jumps.\nSo to term 31 there are 31 − 1 = 30 jumps.\nA₃₁ = 1 + 30 × 3 = 91.\n(31 jumps is the most common slip: it counts the terms, not the gaps.)",
+     "id": "g12.maths.u1.s1-2-1.11",
+     "best": "30"
     },
     {
      "kind": "read",
@@ -294,6 +321,51 @@
      "id": "g12.maths.u1.s1-2-1.13"
     },
     {
+     "kind": "coord",
+     "step": "explore",
+     "title": "The dots of 1, 4, 7, 10, 13",
+     "ask": "Tap the dots. Each step right, the dot rises by d = 3.",
+     "min": 0,
+     "max": 6,
+     "ymin": 0,
+     "ymax": 14,
+     "need": 3,
+     "points": [
+      {
+       "x": 1,
+       "y": 1,
+       "name": "A₁",
+       "info": "A₁ = 1."
+      },
+      {
+       "x": 2,
+       "y": 4,
+       "name": "A₂",
+       "info": "1 + 3 = 4: one jump."
+      },
+      {
+       "x": 3,
+       "y": 7,
+       "name": "A₃",
+       "info": "1 + 2(3) = 7: two jumps."
+      },
+      {
+       "x": 4,
+       "y": 10,
+       "name": "A₄",
+       "info": "1 + 3(3) = 10: three jumps."
+      },
+      {
+       "x": 5,
+       "y": 13,
+       "name": "A₅",
+       "info": "1 + 4(3) = 13: (n − 1) = 4 jumps. The dots lie on a line."
+      }
+     ],
+     "added": true,
+     "id": "g12.maths.u1.s1-2-1.62"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key word",
@@ -307,7 +379,7 @@
     },
     {
      "kind": "mcq",
-     "text": "A₁ = 5, d = 4. Which is the general term?",
+     "text": "Write the general term of an arithmetic sequence with A₁ = 5 and d = 4.",
      "opts": [
       "Aₙ = 4n + 1",
       "Aₙ = 5n + 4",
@@ -315,7 +387,7 @@
       "Aₙ = 5n − 1"
      ],
      "ans": "Aₙ = 4n + 1",
-     "why": "5 + (n − 1)(4) = 5 + 4n − 4 = 4n + 1.",
+     "why": "Step 1: use Aₙ = A₁ + (n − 1)d.\nStep 2: Aₙ = 5 + (n − 1)(4).\nStep 3: expand: 5 + 4n − 4.\nStep 4: collect: Aₙ = 4n + 1.\nCheck n = 1: 4 + 1 = 5 ✓. (4n + 5 forgets the − 4 from (n − 1).)",
      "clue": "Put the numbers into A₁ + (n − 1)d and expand.",
      "graded": true,
      "level": 1,
@@ -337,7 +409,7 @@
     },
     {
      "kind": "mcq",
-     "text": "A₁ = 10, d = −5. The general term is",
+     "text": "Write the general term of an arithmetic sequence with A₁ = 10 and d = −5.",
      "opts": [
       "Aₙ = 15 − 5n",
       "Aₙ = 10 − 5n",
@@ -345,7 +417,7 @@
       "Aₙ = 15 + 5n"
      ],
      "ans": "Aₙ = 15 − 5n",
-     "why": "10 + (n − 1)(−5) = 10 − 5n + 5 = 15 − 5n.",
+     "why": "Step 1: Aₙ = 10 + (n − 1)(−5).\nStep 2: (n − 1)(−5) = −5n + 5. Watch the sign: − × − = +.\nStep 3: Aₙ = 10 − 5n + 5 = 15 − 5n.\nCheck n = 1: 15 − 5 = 10 ✓. (10 − 5n gives A₁ = 5: wrong.)",
      "clue": "(n − 1)(−5) = −5n + 5.",
      "graded": true,
      "level": 2,
@@ -355,11 +427,11 @@
     },
     {
      "kind": "blank",
-     "ask": "10, 6, 2, −2, … The 10th term is ___",
+     "ask": "Use Aₙ = A₁ + (n − 1)d: the 10th term of 10, 6, 2, −2, … is ___",
      "a": [
       "-26"
      ],
-     "why": "d = −4. A₁₀ = 10 + 9(−4) = 10 − 36 = −26.",
+     "why": "Step 1: A₁ = 10 and d = 6 − 10 = −4.\nStep 2: A₁₀ = 10 + (10 − 1)(−4) = 10 + 9(−4).\nStep 3: 9 × (−4) = −36, so A₁₀ = 10 − 36 = −26.\nSo the 10th term is −26. (Trap: 10 jumps gives −30.)",
      "clue": "There are 9 jumps of −4.",
      "num": true,
      "graded": true,
@@ -370,11 +442,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A₁ = 7, d = 2. A₅₀ = ___",
+     "ask": "Use Aₙ = A₁ + (n − 1)d with A₁ = 7 and d = 2: A₅₀ = ___",
      "a": [
       "105"
      ],
-     "why": "A₅₀ = 7 + 49 × 2 = 7 + 98 = 105.",
+     "why": "Step 1: n = 50, so n − 1 = 49 jumps.\nStep 2: A₅₀ = 7 + 49 × 2.\nStep 3: 49 × 2 = 98, and 7 + 98 = 105.\nSo A₅₀ = 105. (7 + 50 × 2 = 107 is one jump too many.)",
      "clue": "n − 1 = 49.",
      "num": true,
      "graded": true,
@@ -385,9 +457,9 @@
     },
     {
      "kind": "tf",
-     "text": "In Aₙ = A₁ + (n − 1)d, the 20th term has 20 jumps of d.",
+     "text": "Counting jumps: true or false? In Aₙ = A₁ + (n − 1)d, the 20th term has 20 jumps of d.",
      "a": false,
-     "why": "Only 19 jumps: from term 1 to term 20.",
+     "why": "Term 1 has no jumps; term 2 has 1 jump; term 3 has 2.\nSo term n has n − 1 jumps.\nThe 20th term has 19 jumps: A₂₀ = A₁ + 19d.\nThe statement is false.",
      "clue": "Count the gaps between term 1 and term 3.",
      "graded": true,
      "level": 1,
@@ -397,11 +469,11 @@
     },
     {
      "kind": "blank",
-     "ask": "5, 8, 11, 14, … Which term is 50? Term number ___",
+     "ask": "Which term of 5, 8, 11, 14, … equals 50? Term number ___",
      "a": [
       "16"
      ],
-     "why": "Aₙ = 5 + (n − 1)3 = 3n + 2. 3n + 2 = 50 gives 3n = 48, n = 16.",
+     "why": "Step 1: A₁ = 5, d = 3.\nStep 2: Aₙ = 5 + (n − 1)3 = 3n + 2.\nStep 3: solve 3n + 2 = 50: 3n = 48, n = 16.\nCheck: 3(16) + 2 = 50 ✓.\nSo 50 is the 16th term. (n must be a whole number; if not, the number is not a term.)",
      "clue": "Write Aₙ as a rule in n, then solve Aₙ = 50.",
      "num": true,
      "graded": true,
@@ -439,8 +511,34 @@
       "9",
       "2"
      ],
-     "after": "From term 3 to term 6 there are 3 jumps. They change 10 into 1, a change of −9. So d = −9 ÷ 3 = −3.",
-     "id": "g12.maths.u1.s1-2-1.22"
+     "after": "From term 3 to term 6 there are 6 − 3 = 3 jumps.\nThe 3 jumps change 10 into 1: a change of 1 − 10 = −9.\nSo each jump is d = −9 ÷ 3 = −3.",
+     "id": "g12.maths.u1.s1-2-1.22",
+     "best": "3"
+    },
+    {
+     "kind": "numline",
+     "step": "explore",
+     "title": "From A₃ = 10 to A₆ = 1",
+     "ask": "Tap ▶ for each jump from term 3 to term 6.",
+     "min": 0,
+     "max": 11,
+     "hops": [
+      {
+       "from": 10,
+       "by": -3
+      },
+      {
+       "from": 7,
+       "by": -3
+      },
+      {
+       "from": 4,
+       "by": -3
+      }
+     ],
+     "after": "3 equal jumps change 10 into 1. So 3d = −9 and d = −3.",
+     "added": true,
+     "id": "g12.maths.u1.s1-2-1.63"
     },
     {
      "kind": "steps",
@@ -500,7 +598,7 @@
     },
     {
      "kind": "mcq",
-     "text": "A₄ = 15 and A₈ = 27. What is d?",
+     "text": "Find d from two terms: an arithmetic sequence has A₄ = 15 and A₈ = 27. What is d?",
      "opts": [
       "3",
       "12",
@@ -508,7 +606,7 @@
       "6"
      ],
      "ans": "3",
-     "why": "(A₁ + 7d) − (A₁ + 3d) = 27 − 15, so 4d = 12 and d = 3.",
+     "why": "Step 1: A₈ = A₁ + 7d and A₄ = A₁ + 3d.\nStep 2: subtract: (A₁ + 7d) − (A₁ + 3d) = 27 − 15.\nStep 3: 4d = 12, so d = 3.\nShort way: term 4 to term 8 is 4 jumps, and 27 − 15 = 12.\n(12 is 4d, not d.)",
      "clue": "Term 4 to term 8 is 4 jumps.",
      "graded": true,
      "level": 1,
@@ -519,7 +617,7 @@
     },
     {
      "kind": "mcq",
-     "text": "A₄ = 15 and A₈ = 27. The general term is",
+     "text": "Find the general term from two terms: an arithmetic sequence has A₄ = 15 and A₈ = 27.",
      "opts": [
       "Aₙ = 3n + 3",
       "Aₙ = 3n + 6",
@@ -527,7 +625,7 @@
       "Aₙ = 3n − 3"
      ],
      "ans": "Aₙ = 3n + 3",
-     "why": "d = 3, A₁ = 15 − 9 = 6. Aₙ = 6 + 3(n − 1) = 3n + 3.",
+     "why": "Step 1: 4 jumps make 27 − 15 = 12, so d = 3.\nStep 2: A₁ + 3d = 15, so A₁ = 15 − 9 = 6.\nStep 3: Aₙ = 6 + (n − 1)3 = 6 + 3n − 3 = 3n + 3.\nCheck: A₄ = 12 + 3 = 15 ✓ and A₈ = 24 + 3 = 27 ✓.",
      "clue": "Find A₁ from A₁ + 3d = 15.",
      "graded": true,
      "level": 2,
@@ -537,11 +635,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A₂ = 3 and A₅ = 24. A₁₁ = ___",
+     "ask": "Find a term from two given terms: an arithmetic sequence has A₂ = 3 and A₅ = 24. A₁₁ = ___",
      "a": [
       "66"
      ],
-     "why": "3d = 21, d = 7, A₁ = −4. Aₙ = 7n − 11, so A₁₁ = 77 − 11 = 66.",
+     "why": "Step 1: term 2 to term 5 is 3 jumps: 3d = 24 − 3 = 21, so d = 7.\nStep 2: A₁ = A₂ − d = 3 − 7 = −4.\nStep 3: Aₙ = −4 + 7(n − 1) = 7n − 11.\nStep 4: A₁₁ = 77 − 11 = 66.\nCheck: A₅ = 35 − 11 = 24 ✓.",
      "clue": "Find d from 3 jumps.",
      "num": true,
      "graded": true,
@@ -581,20 +679,21 @@
        "Difference 2 × 3ⁿ changes."
       ]
      ],
-     "why": "Linear rules pn + q are arithmetic; squares and powers are not.",
+     "why": "Step 1: 7n − 3: (7(n + 1) − 3) − (7n − 3) = 7. No n left: arithmetic.\nStep 2: 5n − 3: the difference is 5. Arithmetic.\nStep 3: n² + n + 1: the difference is 2n + 2. It changes with n: not arithmetic.\nStep 4: 3ⁿ: the difference is 3ⁿ⁺¹ − 3ⁿ = 2 × 3ⁿ. It changes: not arithmetic.\nRule: a linear rule pn + q is arithmetic with d = p.",
      "clue": "Work out aₙ₊₁ − aₙ.",
      "ref": "Exercise 1.5 Q3",
      "graded": true,
      "level": 2,
-     "id": "g12.maths.u1.s1-2-1.29"
+     "id": "g12.maths.u1.s1-2-1.29",
+     "text": "Sort each general term: is the sequence arithmetic? Work out aₙ₊₁ − aₙ."
     },
     {
      "kind": "blank",
-     "ask": "A₅ = 20 and A₁₀ = 0. d = ___",
+     "ask": "Find d from two terms: an arithmetic sequence has A₅ = 20 and A₁₀ = 0. d = ___",
      "a": [
       "-4"
      ],
-     "why": "5d = 0 − 20 = −20, so d = −4.",
+     "why": "Step 1: term 5 to term 10 is 10 − 5 = 5 jumps.\nStep 2: the change is 0 − 20 = −20.\nStep 3: 5d = −20, so d = −4.\nCheck: 20 − 4 − 4 − 4 − 4 − 4 = 0 ✓. (The terms fall, so d must be negative.)",
      "clue": "Term 5 to term 10 is 5 jumps.",
      "num": true,
      "graded": true,
@@ -605,11 +704,11 @@
     },
     {
      "kind": "blank",
-     "ask": "An arithmetic sequence has A₇ = 2A₃ and A₅ = 18. A₁ = ___",
+     "ask": "Use two conditions: an arithmetic sequence has A₇ = 2A₃ and A₅ = 18. A₁ = ___",
      "a": [
       "6"
      ],
-     "why": "A₁ + 6d = 2(A₁ + 2d) gives A₁ = 2d. A₁ + 4d = 18 gives 6d = 18, d = 3, A₁ = 6.",
+     "why": "Step 1: A₇ = A₁ + 6d and A₃ = A₁ + 2d.\nStep 2: A₁ + 6d = 2(A₁ + 2d) = 2A₁ + 4d, so A₁ = 2d.\nStep 3: A₅ = A₁ + 4d = 2d + 4d = 6d = 18, so d = 3.\nStep 4: A₁ = 2d = 6.\nCheck: A₃ = 12, A₇ = 24 = 2 × 12 ✓, A₅ = 18 ✓.",
      "clue": "Write both as A₁ + (k − 1)d. The first gives A₁ in terms of d.",
      "num": true,
      "graded": true,
@@ -645,9 +744,10 @@
       "7",
       "9"
      ],
-     "after": "x − 1 = 8 − x, so 2x = 9 and x = 9/2. It is halfway between 1 and 8.",
+     "after": "In an arithmetic sequence the jumps are equal: x − 1 = 8 − x.\nSo 2x = 9 and x = 9/2 = 4.5.\nIt is halfway between 1 and 8: (1 + 8)/2.\n(4 is close, but then the jumps 3 and 4 are not equal.)",
      "ref": "Example 1",
-     "id": "g12.maths.u1.s1-2-1.32"
+     "id": "g12.maths.u1.s1-2-1.32",
+     "best": "9/2"
     },
     {
      "kind": "read",
@@ -659,6 +759,40 @@
      ],
      "ref": "p.14",
      "id": "g12.maths.u1.s1-2-1.33"
+    },
+    {
+     "kind": "numline",
+     "step": "explore",
+     "title": "Four means between 4 and 29",
+     "ask": "Tap ▶. Five equal hops go from A₁ = 4 to A₆ = 29.",
+     "min": 0,
+     "max": 30,
+     "hops": [
+      {
+       "from": 4,
+       "by": 5
+      },
+      {
+       "from": 9,
+       "by": 5
+      },
+      {
+       "from": 14,
+       "by": 5
+      },
+      {
+       "from": 19,
+       "by": 5
+      },
+      {
+       "from": 24,
+       "by": 5
+      }
+     ],
+     "after": "5d = 29 − 4 = 25, so d = 5. The means are 9, 14, 19, 24.",
+     "ref": "Example 2",
+     "added": true,
+     "id": "g12.maths.u1.s1-2-1.64"
     },
     {
      "kind": "name",
@@ -674,7 +808,7 @@
     },
     {
      "kind": "mcq",
-     "text": "The arithmetic mean of 4 and 14 is",
+     "text": "Find the arithmetic mean of 4 and 14 (the number halfway between them).",
      "opts": [
       "9",
       "10",
@@ -682,7 +816,7 @@
       "5"
      ],
      "ans": "9",
-     "why": "(4 + 14)/2 = 18/2 = 9.",
+     "why": "Step 1: one arithmetic mean between a and b is (a + b)/2.\nStep 2: 4 + 14 = 18.\nStep 3: 18 ÷ 2 = 9.\nCheck: 4, 9, 14 has jumps 5 and 5 ✓. (18 is the sum, not the mean.)",
      "clue": "Add and halve.",
      "graded": true,
      "level": 1,
@@ -705,11 +839,11 @@
     },
     {
      "kind": "blank",
-     "ask": "3, x, 7 is arithmetic. x = ___",
+     "ask": "Find the arithmetic mean: 3, x, 7 is arithmetic. x = ___",
      "a": [
       "5"
      ],
-     "why": "x − 3 = 7 − x, so 2x = 10, x = 5.",
+     "why": "Step 1: equal jumps: x − 3 = 7 − x.\nStep 2: 2x = 10.\nStep 3: x = 5.\nCheck: 3, 5, 7 has d = 2 ✓.",
      "clue": "x is halfway.",
      "num": true,
      "graded": true,
@@ -728,7 +862,7 @@
       "7, 9, 11, 13"
      ],
      "ans": "6, 8, 10, 12",
-     "why": "There are 6 terms. 14 = 4 + 5d, so d = 2: 4, 6, 8, 10, 12, 14.",
+     "why": "Step 1: 4 means plus the 2 ends makes 6 terms: A₁ = 4, A₆ = 14.\nStep 2: A₆ = A₁ + 5d, so 14 = 4 + 5d.\nStep 3: 5d = 10, d = 2.\nStep 4: 4, 6, 8, 10, 12, 14. The means are 6, 8, 10, 12.\n(5, 7, 9, 11 do not start one jump after 4 with equal steps to 14.)",
      "clue": "Four means plus the two ends makes 6 terms.",
      "graded": true,
      "level": 2,
@@ -738,11 +872,11 @@
     },
     {
      "kind": "blank",
-     "ask": "1/12, 1/x, 1/6 is arithmetic. x = ___",
+     "ask": "Find the middle term of an arithmetic sequence: 1/12, 1/x, 1/6 is arithmetic. x = ___",
      "a": [
       "8"
      ],
-     "why": "2/x = 1/6 + 1/12 = 3/12 = 1/4, so x = 8.",
+     "why": "Step 1: the middle term is the mean of the ends: 1/x = (1/12 + 1/6)/2.\nStep 2: 1/6 = 2/12, so 1/12 + 2/12 = 3/12 = 1/4.\nStep 3: 1/x = (1/4)/2 = 1/8, so x = 8.\nCheck: 1/12, 1/8, 1/6 = 2/24, 3/24, 4/24 ✓ (d = 1/24).",
      "clue": "The middle term is the average of the ends.",
      "num": true,
      "graded": true,
@@ -757,7 +891,7 @@
      "a": [
       "9"
      ],
-     "why": "7 terms in all: 21 = −3 + 6d, d = 4. Terms −3, 1, 5, 9, 13, 17, 21. The 3rd mean is 9.",
+     "why": "Step 1: 5 means + 2 ends = 7 terms: A₁ = −3, A₇ = 21.\nStep 2: 21 = −3 + 6d, so 6d = 24 and d = 4.\nStep 3: the terms are −3, 1, 5, 9, 13, 17, 21.\nStep 4: the means are 1, 5, 9, 13, 17. The 3rd mean is 9.\n(Trap: 5 is the 3rd term, not the 3rd mean.)",
      "clue": "k means give k + 2 terms. Find d first.",
      "num": true,
      "graded": true,
@@ -775,7 +909,7 @@
    "items": [
     {
      "kind": "mcq",
-     "text": "3, 5, 7, 9, 11, … First term, third term, d and 6th term:",
+     "text": "For the arithmetic sequence 3, 5, 7, 9, 11, …, give the first term, the third term, d and the 6th term.",
      "opts": [
       "3, 7, 2, 13",
       "3, 5, 2, 12",
@@ -783,7 +917,7 @@
       "5, 9, 2, 13"
      ],
      "ans": "3, 7, 2, 13",
-     "why": "d = 5 − 3 = 2. 6th term = 11 + 2 = 13.",
+     "why": "Step 1: first term = 3; third term = 7.\nStep 2: d = 5 − 3 = 2.\nStep 3: 6th term = 5th term + d = 11 + 2 = 13.\nSo: 3, 7, 2, 13.",
      "clue": "The 6th term is the 5th term + d.",
      "graded": true,
      "level": 1,
@@ -793,11 +927,11 @@
     },
     {
      "kind": "blank",
-     "ask": "9, 6, 3, 0, −3, … 6th term = ___",
+     "ask": "Find the next term of the arithmetic sequence 9, 6, 3, 0, −3, …: 6th term = ___",
      "a": [
       "-6"
      ],
-     "why": "d = −3. −3 + (−3) = −6.",
+     "why": "Step 1: d = 6 − 9 = −3.\nStep 2: 6th term = 5th term + d = −3 + (−3).\nStep 3: −3 − 3 = −6.\nSo the 6th term is −6.",
      "clue": "d is negative.",
      "num": true,
      "graded": true,
@@ -808,11 +942,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A₁ = 1, d = 5. The 5th term is ___",
+     "ask": "Build an arithmetic sequence from A₁ = 1 and d = 5: the 5th term is ___",
      "a": [
       "21"
      ],
-     "why": "1, 6, 11, 16, 21.",
+     "why": "Step 1: A₅ = A₁ + 4d.\nStep 2: A₅ = 1 + 4 × 5 = 1 + 20 = 21.\nCheck by listing: 1, 6, 11, 16, 21 ✓.",
      "clue": "Add 5 four times.",
      "num": true,
      "graded": true,
@@ -823,11 +957,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A₁ = 2, d = −1/2. The 5th term is ___",
+     "ask": "Build an arithmetic sequence from A₁ = 2 and d = −1/2: the 5th term is ___",
      "a": [
       "0"
      ],
-     "why": "2, 3/2, 1, 1/2, 0.",
+     "why": "Step 1: A₅ = A₁ + 4d.\nStep 2: 4d = 4 × (−1/2) = −2.\nStep 3: A₅ = 2 − 2 = 0.\nCheck by listing: 2, 3/2, 1, 1/2, 0 ✓.",
      "clue": "Add −1/2 four times.",
      "num": true,
      "graded": true,
@@ -843,7 +977,7 @@
    "items": [
     {
      "kind": "mcq",
-     "text": "A₁ = 2, d = 3. Aₙ =",
+     "text": "Write the general term of an arithmetic sequence with A₁ = 2 and d = 3: Aₙ =",
      "opts": [
       "3n − 1",
       "2n + 3",
@@ -851,7 +985,7 @@
       "3n − 3"
      ],
      "ans": "3n − 1",
-     "why": "2 + 3(n − 1) = 3n − 1.",
+     "why": "Step 1: Aₙ = 2 + (n − 1)3.\nStep 2: expand: 2 + 3n − 3.\nStep 3: Aₙ = 3n − 1.\nCheck n = 1: 3 − 1 = 2 ✓. (3n + 2 gives A₁ = 5.)",
      "clue": "Expand 3(n − 1).",
      "graded": true,
      "level": 1,
@@ -861,7 +995,7 @@
     },
     {
      "kind": "mcq",
-     "text": "A₁ = 10, d = −5. Aₙ =",
+     "text": "Write the general term of an arithmetic sequence with A₁ = 10 and d = −5: Aₙ =",
      "opts": [
       "15 − 5n",
       "10 − 5n",
@@ -869,7 +1003,7 @@
       "5 − 5n"
      ],
      "ans": "15 − 5n",
-     "why": "10 − 5(n − 1) = 15 − 5n.",
+     "why": "Step 1: Aₙ = 10 + (n − 1)(−5).\nStep 2: (n − 1)(−5) = −5n + 5.\nStep 3: Aₙ = 15 − 5n.\nCheck n = 1: 15 − 5 = 10 ✓.",
      "clue": "−5(n − 1) = −5n + 5.",
      "graded": true,
      "level": 2,
@@ -879,11 +1013,11 @@
     },
     {
      "kind": "blank",
-     "ask": "10th term of 10, 6, 2, −2, … = ___",
+     "ask": "Use Aₙ = A₁ + (n − 1)d: the 10th term of 10, 6, 2, −2, … = ___",
      "a": [
       "-26"
      ],
-     "why": "10 + 9(−4) = −26.",
+     "why": "Step 1: A₁ = 10, d = −4.\nStep 2: A₁₀ = 10 + 9(−4).\nStep 3: 10 − 36 = −26.\nSo the 10th term is −26.",
      "clue": "9 jumps of −4.",
      "num": true,
      "graded": true,
@@ -899,7 +1033,7 @@
    "items": [
     {
      "kind": "mcq",
-     "text": "A₄ = 15, A₈ = 27. Aₙ =",
+     "text": "Find the general term from two terms: A₄ = 15 and A₈ = 27. Aₙ =",
      "opts": [
       "3n + 3",
       "3n + 6",
@@ -907,7 +1041,7 @@
       "3n"
      ],
      "ans": "3n + 3",
-     "why": "d = 3, A₁ = 6.",
+     "why": "Step 1: 4 jumps make 27 − 15 = 12, so d = 3.\nStep 2: A₁ = 15 − 3d = 15 − 9 = 6.\nStep 3: Aₙ = 6 + 3(n − 1) = 3n + 3.\nCheck: A₈ = 24 + 3 = 27 ✓.",
      "clue": "4 jumps make 12.",
      "graded": true,
      "level": 2,
@@ -917,7 +1051,7 @@
     },
     {
      "kind": "mcq",
-     "text": "A₅ = 20, A₁₀ = 0. Aₙ =",
+     "text": "Find the general term from two terms: A₅ = 20 and A₁₀ = 0. Aₙ =",
      "opts": [
       "40 − 4n",
       "36 − 4n",
@@ -925,7 +1059,7 @@
       "4n − 40"
      ],
      "ans": "40 − 4n",
-     "why": "d = −4, A₁ = 36. 36 − 4(n − 1) = 40 − 4n.",
+     "why": "Step 1: 5 jumps make 0 − 20 = −20, so d = −4.\nStep 2: A₁ = 20 − 4d = 20 + 16 = 36.\nStep 3: Aₙ = 36 − 4(n − 1) = 40 − 4n.\nCheck: A₁₀ = 40 − 40 = 0 ✓. (36 − 4n gives A₅ = 16.)",
      "clue": "5 jumps make −20.",
      "graded": true,
      "level": 2,
@@ -935,11 +1069,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A₂ = 3, A₅ = 24. A₁₁ = ___",
+     "ask": "Find a term from two given terms: A₂ = 3 and A₅ = 24. A₁₁ = ___",
      "a": [
       "66"
      ],
-     "why": "d = 7, Aₙ = 7n − 11, A₁₁ = 66.",
+     "why": "Step 1: 3 jumps make 24 − 3 = 21, so d = 7.\nStep 2: A₁ = 3 − 7 = −4, so Aₙ = 7n − 11.\nStep 3: A₁₁ = 77 − 11 = 66.\nShort way: A₁₁ = A₅ + 6d = 24 + 42 = 66 ✓.",
      "clue": "3 jumps make 21.",
      "num": true,
      "graded": true,
@@ -950,7 +1084,7 @@
     },
     {
      "kind": "pick",
-     "text": "Which general terms are arithmetic?",
+     "text": "Test each general term with aₙ₊₁ − aₙ. Which sequences are arithmetic?",
      "pool": [
       "7n − 3",
       "5n − 3",
@@ -961,7 +1095,7 @@
       "7n − 3",
       "5n − 3"
      ],
-     "why": "Only linear rules give a constant aₙ₊₁ − aₙ (7 and 5).",
+     "why": "Step 1: 7n − 3: difference 7, constant. Arithmetic.\nStep 2: 5n − 3: difference 5, constant. Arithmetic.\nStep 3: n² + n + 1: difference 2n + 2, it changes. Not arithmetic.\nStep 4: 3ⁿ: difference 2 × 3ⁿ, it changes. Not arithmetic.\nSo 7n − 3 and 5n − 3.",
      "clue": "Work out aₙ₊₁ − aₙ for each.",
      "graded": true,
      "level": 2,
@@ -976,11 +1110,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "3, x, 7 is arithmetic. x = ___",
+     "ask": "Find the arithmetic mean: 3, x, 7 is arithmetic. x = ___",
      "a": [
       "5"
      ],
-     "why": "x = (3 + 7)/2 = 5.",
+     "why": "Step 1: the middle term is halfway: x = (3 + 7)/2.\nStep 2: 3 + 7 = 10, and 10 ÷ 2 = 5.\nCheck: 3, 5, 7 has d = 2 ✓.",
      "clue": "Halfway.",
      "num": true,
      "graded": true,
@@ -991,11 +1125,11 @@
     },
     {
      "kind": "blank",
-     "ask": "1/12, 1/x, 1/6 is arithmetic. x = ___",
+     "ask": "Find the middle term of an arithmetic sequence: 1/12, 1/x, 1/6 is arithmetic. x = ___",
      "a": [
       "8"
      ],
-     "why": "2/x = 1/4, x = 8.",
+     "why": "Step 1: 2 × (1/x) = 1/12 + 1/6.\nStep 2: 1/12 + 2/12 = 3/12 = 1/4.\nStep 3: 2/x = 1/4, so x = 8.\nCheck: 1/12, 1/8, 1/6 = 2/24, 3/24, 4/24 ✓.",
      "clue": "Add the ends and halve.",
      "num": true,
      "graded": true,
@@ -1006,11 +1140,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Arithmetic mean of 4 and 14 = ___",
+     "ask": "Find the arithmetic mean of 4 and 14 = ___",
      "a": [
       "9"
      ],
-     "why": "(4 + 14)/2 = 9.",
+     "why": "Step 1: add the two numbers: 4 + 14 = 18.\nStep 2: halve: 18 ÷ 2 = 9.\nCheck: 4, 9, 14 has equal jumps of 5 ✓.",
      "clue": "Add and halve.",
      "num": true,
      "graded": true,
@@ -1029,7 +1163,7 @@
       "8, 10, 12, 14"
      ],
      "ans": "6, 8, 10, 12",
-     "why": "d = 2.",
+     "why": "Step 1: 4 means + 2 ends = 6 terms.\nStep 2: 14 = 4 + 5d, so d = 2.\nStep 3: 4, 6, 8, 10, 12, 14.\nThe means are 6, 8, 10, 12. (8, 10, 12, 14 includes the end 14.)",
      "clue": "6 terms in all.",
      "graded": true,
      "level": 2,
@@ -1043,11 +1177,11 @@
  "test": [
   {
    "kind": "blank",
-   "ask": "A₁ = 3, d = 4. A₂₀ = ___",
+   "ask": "Use Aₙ = A₁ + (n − 1)d with A₁ = 3 and d = 4: A₂₀ = ___",
    "a": [
     "79"
    ],
-   "why": "3 + 19 × 4 = 79.",
+   "why": "n − 1 = 19 jumps.\nA₂₀ = 3 + 19 × 4.\n19 × 4 = 76, and 3 + 76 = 79.\nSo A₂₀ = 79.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -1057,7 +1191,7 @@
   },
   {
    "kind": "mcq",
-   "text": "Common difference of 12, 9, 6, 3, …",
+   "text": "Find the common difference of the arithmetic sequence 12, 9, 6, 3, …",
    "opts": [
     "−3",
     "3",
@@ -1065,7 +1199,7 @@
     "12"
    ],
    "ans": "−3",
-   "why": "9 − 12 = −3.",
+   "why": "d = next term − this term.\n9 − 12 = −3, 6 − 9 = −3.\nThe terms fall, so d is negative.\nd = −3.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -1074,11 +1208,11 @@
   },
   {
    "kind": "blank",
-   "ask": "A₃ = 7 and A₇ = 19. d = ___",
+   "ask": "Find d from two terms: A₃ = 7 and A₇ = 19. d = ___",
    "a": [
     "3"
    ],
-   "why": "4d = 12.",
+   "why": "Term 3 to term 7 is 4 jumps.\nThe change is 19 − 7 = 12.\n4d = 12, so d = 3.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -1088,7 +1222,7 @@
   },
   {
    "kind": "mcq",
-   "text": "Which general term is NOT arithmetic?",
+   "text": "Which general term is NOT arithmetic? (Test aₙ₊₁ − aₙ.)",
    "opts": [
     "n² + 1",
     "4n − 9",
@@ -1096,7 +1230,7 @@
     "(n + 3)/2"
    ],
    "ans": "n² + 1",
-   "why": "Its difference 2n + 1 depends on n.",
+   "why": "n² + 1: (n + 1)² + 1 − (n² + 1) = 2n + 1. It depends on n: not arithmetic.\n4n − 9: difference 4. 2 − n: difference −1.\n(n + 3)/2: difference 1/2.\nSo n² + 1 is the one that is not arithmetic.",
    "clue": "",
    "graded": true,
    "level": 2,
@@ -1109,7 +1243,7 @@
    "a": [
     "10"
    ],
-   "why": "18 = 2 + 4d, d = 4: 2, 6, 10, 14, 18.",
+   "why": "3 means + 2 ends = 5 terms.\n18 = 2 + 4d, so d = 4.\nTerms: 2, 6, 10, 14, 18.\nThe middle mean is 10. (Check: (2 + 18)/2 = 10 ✓.)",
    "clue": "",
    "num": true,
    "graded": true,
@@ -1145,7 +1279,7 @@
     },
     {
      "kind": "mcq",
-     "text": "Solve x + 3y = 11 and x + y = 5. What is y?",
+     "text": "Solve two equations together: x + 3y = 11 and x + y = 5. What is y?",
      "opts": [
       "3",
       "2",
@@ -1153,7 +1287,7 @@
       "8"
      ],
      "ans": "3",
-     "why": "Subtract: 2y = 6, so y = 3 (and x = 2).",
+     "why": "Step 1: both equations have x once.\nStep 2: subtract: (x + 3y) − (x + y) = 11 − 5.\nStep 3: 2y = 6, so y = 3.\nStep 4: x + 3 = 5, so x = 2.\nCheck: 2 + 9 = 11 ✓.",
      "clue": "Subtract the equations so x disappears.",
      "graded": true,
      "level": 1,

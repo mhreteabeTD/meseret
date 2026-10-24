@@ -1,727 +1,840 @@
 {
-  "id": "g9.maths.u1.s1-4-4",
-  "book": {
-    "title": "Mathematics Grade 9 Student Textbook",
-    "grade": 9,
-    "subject": "maths",
-    "unit": 1,
-    "unit_title": "The Number System",
-    "section": "1.4.4"
+ "id": "g9.maths.u1.s1-4-4",
+ "book": {
+  "title": "Mathematics Grade 9 Student Textbook",
+  "grade": 9,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "The Number System",
+  "section": "1.4.4"
+ },
+ "title": "Limit of accuracy",
+ "competency": "Round numbers to a given accuracy and find the bounds of rounded values and of answers worked out from them.",
+ "minutes": 12,
+ "keywords": [
+  {
+   "en": "Rounding",
+   "am": "ማጠጋጋት",
+   "def": "Replacing a number by a simpler nearby value, such as 38,721 → 38,700 to the nearest hundred.",
+   "machine": true
   },
-  "title": "Limit of accuracy",
-  "competency": "Round numbers to a given accuracy and find the bounds of rounded values and of answers worked out from them.",
-  "minutes": 12,
-  "keywords": [
-    {
-      "en": "Rounding",
-      "am": "ማጠጋጋት",
-      "def": "Replacing a number by a simpler nearby value, such as 38,721 → 38,700 to the nearest hundred.",
-      "machine": true
-    },
-    {
-      "en": "Decimal place",
-      "am": "የአስርዮሽ ቦታ",
-      "def": "A digit after the decimal point. 3.17 is given to 2 decimal places (2 d.p.).",
-      "machine": true
-    },
-    {
-      "en": "Significant figures",
-      "am": "ጉልህ አሃዞች",
-      "def": "The digits of a number counted from the first non-zero digit. 0.0062 has 2 significant figures.",
-      "machine": true
-    },
-    {
-      "en": "Lower bound",
-      "am": "ዝቅተኛ ወሰን",
-      "def": "The smallest value a number could have had before it was rounded.",
-      "machine": true
-    },
-    {
-      "en": "Upper bound",
-      "am": "ከፍተኛ ወሰን",
-      "def": "The value just above the largest a number could have had before rounding. The number is always less than it.",
-      "machine": true
-    }
-  ],
-  "ideas": [
-    {
-      "id": "math.rounding",
-      "name": "Rounding, decimal places and significant figures",
-      "explain": {
-        "en": {
-          "text": "To round, find the rounding digit. Look at the digit to its right. If it is 0 to 4, keep the rounding digit. If it is 5 to 9, add 1. Decimal places count digits after the point. Significant figures count from the first non-zero digit."
-        },
-        "am": {
-          "text": "ለማጠጋጋት የማጠጋጊያውን አሃዝ ፈልግ። ከቀኙ ያለውን አሃዝ ተመልከት። 0 እስከ 4 ከሆነ አሃዙን አቆየው። 5 እስከ 9 ከሆነ 1 ጨምር። የአስርዮሽ ቦታዎች ከነጥቡ በኋላ ያሉ አሃዞች ናቸው። ጉልህ አሃዞች ከመጀመሪያው ዜሮ ያልሆነ አሃዝ ይቆጠራሉ።",
-          "machine": true
-        }
-      },
-      "screens": [
-        {
-          "kind": "guess",
-          "step": "hook",
-          "title": "A number in the news",
-          "text": "A radio report says a town has about 38,700 people. The exact count is 38,721.",
-          "ask": "Round 45,676 to the nearest 100. Take a guess.",
-          "opts": [
-            "45,600",
-            "45,680",
-            "45,700",
-            "46,000"
-          ],
-          "after": "It is 45,700. Read on to see the rule."
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Limit of accuracy",
-          "paras": [
-            "Measuring a child's temperature rarely gives an exact value. So does a dose of medicine, or the area of a field.",
-            "So we use approximations.",
-            "This part covers rounding, decimal places (d.p.), significant figures (s.f.) and accuracy."
-          ]
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Rounding whole numbers",
-          "paras": [
-            "First find the rounding digit. It is the tens digit when rounding to the nearest 10. It is the hundreds digit for the nearest 100, and so on.",
-            "Then look at the digit to its right.",
-            "If it is 0, 1, 2, 3 or 4: keep the rounding digit. All digits to its right become 0.",
-            "If it is 5, 6, 7, 8 or 9: add 1 to the rounding digit. All digits to its right become 0.",
-            "Example 1. A town has 38,721 people. To the nearest 100 this is 38,700. The digit after 7 is 2, so 7 stays.",
-            "To the nearest 1,000 it is 39,000. The digit after 8 is 7, so 8 becomes 9. To the nearest 10,000 it is 40,000.",
-            "The rounded numbers are less accurate but easier to use."
-          ],
-          "note": "Correction: the printed book gives 38,721 to the nearest 100 as \"36,700\" and calls it \"rounded up\". It is 38,700, and it is rounded down."
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "Name it",
-          "defs": [
-            [
-              "Rounding",
-              "Replacing a number by a simpler nearby value. 38,721 → 38,700 to the nearest hundred."
-            ]
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Nearest thousand",
-          "text": "Round 45,676 to the nearest 1,000.",
-          "opts": [
-            "45,000",
-            "45,700",
-            "46,000",
-            "50,000"
-          ],
-          "ans": "46,000",
-          "why": "The thousands digit is 5. The next digit is 6, so 5 becomes 6.",
-          "clue": "Find the thousands digit. Then look at the digit just to its right."
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Decimal places",
-          "paras": [
-            "To round to a number of decimal places, look at the next digit.",
-            "Example 2. (a) 10.673 to 1 d.p.: the second digit is 7 (5 or more). So round up: 10.7.",
-            "(b) 3.173 to 2 d.p.: the third digit is 3, so 3.17.",
-            "Rounding to 1 d.p. means to the nearest tenth. 2 d.p. means to the nearest hundredth."
-          ]
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Significant figures",
-          "paras": [
-            "In 43.25, the 4 is the most significant figure. It is worth 40.",
-            "The 5 is the least significant. It is worth 5 hundredths.",
-            "Count significant figures from the first non-zero digit.",
-            "Example. (a) 2.364 to 2 s.f. is 2.4. (b) 0.0062 to 1 s.f. is 0.006. The leading zeros are not significant."
-          ]
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "Two ways to state accuracy",
-          "defs": [
-            [
-              "Decimal place",
-              "A digit after the decimal point. 3.17 is given to 2 decimal places (2 d.p.)."
-            ],
-            [
-              "Significant figures",
-              "The digits counted from the first non-zero digit. 0.0062 has 2 significant figures."
-            ]
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Check your understanding",
-          "text": "Round 0.04086 to 2 significant figures.",
-          "opts": [
-            "0.04",
-            "0.041",
-            "0.0409",
-            "0.040"
-          ],
-          "ans": "0.041",
-          "why": "The first two significant figures are 4 and 0. The next digit is 8, so 0.0408… rounds to 0.041.",
-          "clue": "Start counting at the first non-zero digit, 4."
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "title": "Two decimal places",
-          "text": "This is from Activity 1.21.",
-          "ask": "8.426 to 2 d.p. is ___",
-          "a": [
-            "8.43"
-          ],
-          "why": "The third decimal digit is 6, so the 2 becomes 3: 8.43.",
-          "clue": "Look at the third digit after the point. Is it 5 or more?"
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "added": true,
-          "title": "Market takings",
-          "text": "Almaz sells teff in Adama market. This month she took 45,676 birr.",
-          "ask": "She tells her family the amount to 2 significant figures. What does she say?",
-          "opts": [
-            "45,000 birr",
-            "45,700 birr",
-            "46,000 birr",
-            "50,000 birr"
-          ],
-          "ans": "46,000 birr",
-          "why": "The first two significant figures are 4 and 5. The next digit is 6, so 45 becomes 46.",
-          "clue": "Count two digits from the left. Then look at the third.",
-          "worked": "The first two significant figures are 4 and 5. The third digit is 6, which is 5 or more. So 45 becomes 46, and the rest become 0: 46,000 birr."
-        },
-        {
-          "kind": "tf",
-          "step": "practise",
-          "graded": true,
-          "title": "True or false?",
-          "text": "28.79 written to 3 significant figures is 28.8.",
-          "a": true,
-          "why": "The first three figures are 2, 8 and 7. The next digit is 9, so 7 becomes 8.",
-          "clue": "Count three figures from the first non-zero digit, then look at the next one."
-        }
-      ]
-    },
-    {
-      "id": "math.bounds",
-      "name": "Upper and lower bounds",
-      "explain": {
-        "en": {
-          "text": "A rounded number hides its real value. The lower and upper bounds show the limits. Halve the accuracy. Subtract the half for the lower bound and add it for the upper bound. When we add, subtract or multiply rounded numbers, the answer is a range too."
-        },
-        "am": {
-          "text": "የተጠጋጋ ቁጥር እውነተኛ እሴቱን ይደብቃል። ዝቅተኛና ከፍተኛ ወሰኖች ገደቡን ያሳያሉ። ትክክለኛነቱን ግማሽ አድርግ። ለዝቅተኛው ወሰን ግማሹን ቀንስ፣ ለከፍተኛው ደግሞ ጨምር። የተጠጋጉ ቁጥሮችን ስንደምር፣ ስንቀንስ ወይም ስናባዛ መልሱም ክልል ይሆናል።",
-          "machine": true
-        }
-      },
-      "screens": [
-        {
-          "kind": "guess",
-          "step": "hook",
-          "title": "Which numbers give 3.5?",
-          "text": "Many numbers round to 3.5 to 1 d.p. Look at 3.42, 3.45, 3.49, 3.54 and 3.57.",
-          "ask": "What is the smallest of these that rounds to 3.5? Take a guess.",
-          "opts": [
-            "3.42",
-            "3.45",
-            "3.49",
-            "3.54"
-          ],
-          "after": "It is 3.45. The largest is 3.54. Read on to see why."
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Accuracy: upper and lower bounds",
-          "paras": [
-            "Definition 1.14. The lower and upper bounds are the limits of the values a number could have had before it was rounded.",
-            "1.5, 1.50 and 1.500 look the same. But they are written to different accuracies.",
-            "1.5 (to 1 d.p.) could be anything from 1.45 up to, but not including, 1.55 (Figure 1.9).",
-            "We write 1.45 ≤ x < 1.55.",
-            "1.45 is the lower bound and 1.55 the upper bound."
-          ],
-          "note": "Definition 1.14 says the bounds are \"the maximum and minimum values\". Strictly, the upper bound itself is not allowed: 1.55 rounds to 1.6, not 1.5. That is why the inequality uses < on the right."
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "The two limits",
-          "defs": [
-            [
-              "Lower bound",
-              "The smallest value a number could have had before it was rounded."
-            ],
-            [
-              "Upper bound",
-              "The value just above the largest it could have had. The number is always less than it."
-            ]
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Check your understanding",
-          "text": "A length is 8 cm to the nearest cm. Which is its lower bound?",
-          "opts": [
-            "7 cm",
-            "7.5 cm",
-            "7.9 cm",
-            "8.5 cm"
-          ],
-          "ans": "7.5 cm",
-          "why": "Half of 1 cm is 0.5 cm, and 8 − 0.5 = 7.5.",
-          "clue": "Halve the accuracy, then subtract."
-        },
-        {
-          "kind": "steps",
-          "step": "method",
-          "title": "Finding the bounds",
-          "text": "A tree weighs 872 kg to the nearest kg.",
-          "steps": [
-            "Find the place value of the accuracy. Here it is 1 kg.",
-            "Halve it: half of 1 is 0.5.",
-            "Lower bound: 872 − 0.5 = 871.5 kg.",
-            "Upper bound: 872 + 0.5 = 872.5 kg.",
-            "So 871.5 ≤ w < 872.5.",
-            "Example 2. 10.7 to 1 d.p.: half of 0.1 is 0.05. The bounds are 10.65 and 10.75."
-          ],
-          "ref": "Example 1"
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "title": "A lower bound",
-          "text": "A number is 12.6, correct to 1 d.p.",
-          "ask": "Its lower bound is ___",
-          "a": [
-            "12.55"
-          ],
-          "why": "Half of 0.1 is 0.05, and 12.6 − 0.05 = 12.55.",
-          "clue": "The accuracy is 0.1. Halve it first."
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Effect of operations on accuracy",
-          "paras": [
-            "Activity 1.23. a = 5 and b = 2, to the nearest whole number.",
-            "Lowest sum: lower + lower = 4.5 + 1.5 = 6. Highest: upper + upper = 5.5 + 2.5 = 8.",
-            "For a − b with a = 9 and b = 6: lowest is lower a − upper b = 8.5 − 6.5 = 2. Highest is upper a − lower b = 9.5 − 5.5 = 4.",
-            "When rounded numbers are added, subtracted or multiplied, the answer is a range."
-          ]
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Example 1: a rectangular farm",
-          "paras": [
-            "A rectangular farm is 12 m long and 6 m wide, to the nearest metre.",
-            "So 11.5 ≤ l < 12.5 and 5.5 ≤ w < 6.5.",
-            "(a) Sum: smallest 11.5 + 5.5 = 17.0 m. Largest 12.5 + 6.5 = 19.0 m.",
-            "(b) Area: smallest 11.5 × 5.5 = 63.25 m². Largest 12.5 × 6.5 = 81.25 m².",
-            "The largest area is found by multiplying the two upper bounds."
-          ],
-          "note": "Correction: Example 1(b) in the printed book says the upper bound of the area \"is obtained by adding the two upper bounds\" and calls it \"the maximum sum\". It is found by multiplying them, and it is the maximum area."
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Check your understanding",
-          "text": "For a − b, which combination gives the smallest possible answer?",
-          "opts": [
-            "Lower bound of a − upper bound of b",
-            "Lower bound of a − lower bound of b",
-            "Upper bound of a − upper bound of b",
-            "Upper bound of a − lower bound of b"
-          ],
-          "ans": "Lower bound of a − upper bound of b",
-          "why": "Start as small as possible and take away as much as possible.",
-          "clue": "Look at Activity 1.23, part 2."
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "added": true,
-          "title": "A teff field",
-          "text": "Abebe's teff field is 20 m long and 10 m wide, each to the nearest metre.",
-          "ask": "What is the upper bound of its area?",
-          "opts": [
-            "200 m²",
-            "209.75 m²",
-            "215.25 m²",
-            "231 m²"
-          ],
-          "ans": "215.25 m²",
-          "why": "The upper bounds are 20.5 m and 10.5 m, and 20.5 × 10.5 = 215.25.",
-          "clue": "Find the upper bound of each side first. Then use the right operation.",
-          "worked": "Half of 1 m is 0.5 m. Upper bounds: 20 + 0.5 = 20.5 m and 10 + 0.5 = 10.5 m. Multiply them: 20.5 × 10.5 = 215.25 m²."
-        },
-        {
-          "kind": "tf",
-          "step": "practise",
-          "graded": true,
-          "title": "True or false?",
-          "text": "To find the upper bound of an area, multiply the upper bounds of the length and width.",
-          "a": true,
-          "why": "The largest possible length times the largest possible width gives the largest area.",
-          "clue": "Think about the farm example. Which length and width make the biggest farm?"
-        }
-      ]
-    }
-  ],
-  "exercises": [
-    {
-      "book_name": "Exercise 1.31",
-      "items": [
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "35.946 to the nearest whole number is ___",
-          "a": [
-            "36",
-            "thirty-six"
-          ],
-          "why": "The digit after 5 is 9, so 35 becomes 36.",
-          "clue": "Look at the first digit after the point."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "45.1999 to the nearest whole number is ___",
-          "a": [
-            "45",
-            "forty-five"
-          ],
-          "why": "The digit after 5 is 1, so 45 stays.",
-          "clue": "Only the first digit after the point matters."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "7/8 to the nearest whole number is ___",
-          "a": [
-            "1",
-            "one"
-          ],
-          "why": "7/8 = 0.875, which rounds up to 1.",
-          "clue": "Write 7/8 as a decimal first."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "√5 to the nearest whole number is ___",
-          "a": [
-            "2",
-            "two"
-          ],
-          "why": "√5 = 2.236…, which rounds to 2.",
-          "clue": "√4 = 2 and √9 = 3. Is √5 nearer 2 or 3?"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Write 1.936 to 1 d.p. and to 2 d.p.",
-          "opts": [
-            "1.9 and 1.93",
-            "1.9 and 1.94",
-            "2.0 and 1.94",
-            "1.9 and 1.90"
-          ],
-          "ans": "1.9 and 1.94",
-          "why": "To 1 d.p. the next digit is 3, so 1.9. To 2 d.p. the next digit is 6, so 1.94.",
-          "clue": "Do each one separately. Look at the digit after the last one you keep."
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Write 12.998 to 1 d.p. and to 2 d.p.",
-          "opts": [
-            "12.9 and 12.99",
-            "13.0 and 13.00",
-            "13 and 13",
-            "12.10 and 13.00"
-          ],
-          "ans": "13.0 and 13.00",
-          "why": "Both round up through the 9s. The zeros show the accuracy: 13.0 and 13.00.",
-          "clue": "Rounding up a 9 makes a carry. Keep the right number of decimal places."
-        }
-      ]
-    },
-    {
-      "book_name": "Exercise 1.32",
-      "items": [
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "28,645 to 1 s.f. is ___",
-          "a": [
-            "30000",
-            "30,000",
-            "30 000"
-          ],
-          "why": "The first figure is 2. The next is 8, so 2 becomes 3: 30,000.",
-          "clue": "Keep one figure. Fill the other places with zeros."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "41,909 to 3 s.f. is ___",
-          "a": [
-            "41900",
-            "41,900",
-            "41 900"
-          ],
-          "why": "The first three figures are 4, 1, 9. The next is 0, so 41,900.",
-          "clue": "Keep three figures. Look at the fourth."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "4.5568 to 3 s.f. is ___",
-          "a": [
-            "4.56"
-          ],
-          "why": "The first three figures are 4, 5, 5. The next is 6, so 4.56.",
-          "clue": "Keep three figures. Look at the fourth."
-        }
-      ]
-    },
-    {
-      "book_name": "Exercise 1.33",
-      "items": [
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "A car's speed is 45 m/s to the nearest integer. Which inequality gives the range for v?",
-          "opts": [
-            "44 ≤ v < 46",
-            "44.5 ≤ v < 45.5",
-            "44.5 < v ≤ 45.5",
-            "44.9 ≤ v < 45.1"
-          ],
-          "ans": "44.5 ≤ v < 45.5",
-          "why": "Half of 1 is 0.5, so the bounds are 44.5 and 45.5. The upper bound is not included.",
-          "clue": "Halve the accuracy. Which end can v not equal?"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Find the bounds of 12.6, given to 1 d.p.",
-          "opts": [
-            "12.5 and 12.7",
-            "12.55 and 12.65",
-            "12.6 and 12.7",
-            "12.59 and 12.61"
-          ],
-          "ans": "12.55 and 12.65",
-          "why": "Half of 0.1 is 0.05: 12.6 − 0.05 and 12.6 + 0.05.",
-          "clue": "The accuracy is 0.1. Halve it."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "4.23 is given to 2 d.p. Its lower bound is ___",
-          "a": [
-            "4.225"
-          ],
-          "why": "Half of 0.01 is 0.005, and 4.23 − 0.005 = 4.225.",
-          "clue": "The accuracy is 0.01. Halve it."
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Write y = 21.36 as an inequality between its bounds.",
-          "opts": [
-            "21.35 ≤ y < 21.37",
-            "21.355 ≤ y < 21.365",
-            "21.3 ≤ y < 21.4",
-            "21.355 < y ≤ 21.365"
-          ],
-          "ans": "21.355 ≤ y < 21.365",
-          "why": "21.36 is to 2 d.p. Half of 0.01 is 0.005.",
-          "clue": "How many decimal places does 21.36 have?"
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "z = 154.134. Its upper bound is ___",
-          "a": [
-            "154.1345"
-          ],
-          "why": "It is to 3 d.p. Half of 0.001 is 0.0005, and 154.134 + 0.0005 = 154.1345.",
-          "clue": "Count the decimal places, then halve that accuracy."
-        }
-      ]
-    },
-    {
-      "book_name": "Exercise 1.34",
-      "items": [
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Each number is given to 1 d.p. Find the bounds of 5.4 + 6.2.",
-          "opts": [
-            "11.5 and 11.7",
-            "11.55 and 11.65",
-            "11.6 and 11.7",
-            "11.4 and 11.8"
-          ],
-          "ans": "11.5 and 11.7",
-          "why": "Lower: 5.35 + 6.15 = 11.5. Upper: 5.45 + 6.25 = 11.7.",
-          "clue": "Add the two lower bounds, then the two upper bounds."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "Each is to 1 d.p. The lower bound of 4.6 × 2.7 is ___",
-          "a": [
-            "12.0575"
-          ],
-          "why": "4.55 × 2.65 = 12.0575.",
-          "clue": "Multiply the two lower bounds."
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Each number is given to 1 d.p. Find the bounds of 14.3 − 5.7.",
-          "opts": [
-            "8.5 and 8.7",
-            "8.55 and 8.65",
-            "8.6 and 8.7",
-            "8.4 and 8.8"
-          ],
-          "ans": "8.5 and 8.7",
-          "why": "Lower: 14.25 − 5.75 = 8.5. Upper: 14.35 − 5.65 = 8.7.",
-          "clue": "For the smallest difference, take as much away as you can."
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Each number is to 1 d.p. Which gives the smallest value of 10.8 ÷ 3.1?",
-          "opts": [
-            "10.75 ÷ 3.15",
-            "10.75 ÷ 3.05",
-            "10.85 ÷ 3.15",
-            "10.85 ÷ 3.05"
-          ],
-          "ans": "10.75 ÷ 3.15",
-          "why": "Smallest = lower ÷ upper ≈ 3.413. Largest = upper ÷ lower ≈ 3.557.",
-          "clue": "A smaller top and a bigger bottom make a smaller answer."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "A school football field is 102.6 m by 49.5 m, each to 1 d.p. The lower bound of its area is ___ m².",
-          "a": [
-            "5071.0975",
-            "5,071.0975"
-          ],
-          "why": "102.55 × 49.45 = 5,071.0975 m². The upper bound is 102.65 × 49.55 = 5,086.3075 m².",
-          "clue": "Find each lower bound, then multiply."
-        }
-      ]
-    }
-  ],
-  "test": [
-    {
-      "kind": "blank",
-      "step": "test",
-      "graded": true,
-      "ask": "38,721 rounded to the nearest hundred is ___",
-      "a": [
-        "38700",
-        "38,700",
-        "38 700"
-      ],
-      "why": "The digit after the hundreds digit is 2, so 7 stays and the rest become 0.",
-      "clue": ""
-    },
-    {
-      "kind": "mcq",
-      "step": "test",
-      "graded": true,
-      "text": "A mass is 6.4 kg to 1 d.p. What are its bounds?",
-      "opts": [
-        "6.3 and 6.5",
-        "6.35 and 6.45",
-        "6.4 and 6.5",
-        "6.39 and 6.41"
-      ],
-      "ans": "6.35 and 6.45",
-      "why": "Half of 0.1 is 0.05: 6.4 − 0.05 and 6.4 + 0.05.",
-      "clue": ""
-    },
-    {
-      "kind": "tf",
-      "step": "test",
-      "graded": true,
-      "text": "0.0062 rounded to 1 significant figure is 0.01.",
-      "a": false,
-      "why": "Leading zeros are not significant. The first figure is 6, and the next is 2, so 0.006.",
-      "clue": ""
-    }
-  ],
-  "notes": [
-    {
-      "kind": "correction",
-      "text": "The printed book gives 38,721 to the nearest 100 as \"36,700\" and calls it \"rounded up\". It is 38,700, and it is rounded down."
-    },
-    {
-      "kind": "note",
-      "text": "Definition 1.14 says the bounds are \"the maximum and minimum values\". Strictly, the upper bound itself is not allowed: 1.55 rounds to 1.6, not 1.5. That is why the inequality uses < on the right."
-    },
-    {
-      "kind": "correction",
-      "text": "Example 1(b) in the printed book says the upper bound of the area \"is obtained by adding the two upper bounds\" and calls it \"the maximum sum\". It is found by multiplying them, and it is the maximum area."
-    },
-    {
-      "kind": "review",
-      "text": "The source gives pages only for the whole of Lesson 1.4 (pages 48–79), so book.pages is left out for this section."
-    }
-  ],
-  "review": {
-    "status": "validated"
+  {
+   "en": "Decimal place",
+   "am": "የአስርዮሽ ቦታ",
+   "def": "A digit after the decimal point. 3.17 is given to 2 decimal places (2 d.p.).",
+   "machine": true
   },
-  "version": 1
+  {
+   "en": "Significant figures",
+   "am": "ጉልህ አሃዞች",
+   "def": "The digits of a number counted from the first non-zero digit. 0.0062 has 2 significant figures.",
+   "machine": true
+  },
+  {
+   "en": "Lower bound",
+   "am": "ዝቅተኛ ወሰን",
+   "def": "The smallest value a number could have had before it was rounded.",
+   "machine": true
+  },
+  {
+   "en": "Upper bound",
+   "am": "ከፍተኛ ወሰን",
+   "def": "The value just above the largest a number could have had before rounding. The number is always less than it.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "math.rounding",
+   "name": "Rounding, decimal places and significant figures",
+   "explain": {
+    "en": {
+     "text": "To round, find the rounding digit. Look at the digit to its right. If it is 0 to 4, keep the rounding digit. If it is 5 to 9, add 1. Decimal places count digits after the point. Significant figures count from the first non-zero digit."
+    },
+    "am": {
+     "text": "ለማጠጋጋት የማጠጋጊያውን አሃዝ ፈልግ። ከቀኙ ያለውን አሃዝ ተመልከት። 0 እስከ 4 ከሆነ አሃዙን አቆየው። 5 እስከ 9 ከሆነ 1 ጨምር። የአስርዮሽ ቦታዎች ከነጥቡ በኋላ ያሉ አሃዞች ናቸው። ጉልህ አሃዞች ከመጀመሪያው ዜሮ ያልሆነ አሃዝ ይቆጠራሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "A number in the news",
+     "text": "A radio report says a town has about 38,700 people. The exact count is 38,721.",
+     "ask": "Round 45,676 to the nearest 100. Take a guess.",
+     "opts": [
+      "45,600",
+      "45,680",
+      "45,700",
+      "46,000"
+     ],
+     "after": "It is 45,700.\nThe hundreds digit is 6. The digit after it is 7, so 6 becomes 7.\nThe digits after it become 0. Read on to see the rule.",
+     "best": "45,700"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Limit of accuracy",
+     "paras": [
+      "Measuring a child's temperature rarely gives an exact value. So does a dose of medicine, or the area of a field.",
+      "So we use approximations.",
+      "This part covers rounding, decimal places (d.p.), significant figures (s.f.) and accuracy."
+     ]
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Rounding whole numbers",
+     "paras": [
+      "First find the rounding digit. It is the tens digit when rounding to the nearest 10. It is the hundreds digit for the nearest 100, and so on.",
+      "Then look at the digit to its right.",
+      "If it is 0, 1, 2, 3 or 4: keep the rounding digit. All digits to its right become 0.",
+      "If it is 5, 6, 7, 8 or 9: add 1 to the rounding digit. All digits to its right become 0.",
+      "Example 1. A town has 38,721 people. To the nearest 100 this is 38,700. The digit after 7 is 2, so 7 stays.",
+      "To the nearest 1,000 it is 39,000. The digit after 8 is 7, so 8 becomes 9. To the nearest 10,000 it is 40,000.",
+      "The rounded numbers are less accurate but easier to use."
+     ],
+     "note": "Correction: the printed book gives 38,721 to the nearest 100 as \"36,700\" and calls it \"rounded up\". It is 38,700, and it is rounded down."
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Round it yourself",
+     "vars": [
+      {
+       "k": "n",
+       "label": "Number",
+       "min": 45600,
+       "max": 45800,
+       "step": 1,
+       "v": 45676
+      }
+     ],
+     "formula": "Math.round(n/100)*100",
+     "outs": [
+      [
+       "Nearest 10",
+       "Math.round(n/10)*10",
+       "{v}"
+      ],
+      [
+       "Nearest 100",
+       "Math.round(n/100)*100",
+       "{v}"
+      ],
+      [
+       "Nearest 1,000",
+       "Math.round(n/1000)*1000",
+       "{v}"
+      ]
+     ],
+     "note": "Move the slider. Watch the nearest 100 jump from 45,700 to 45,800 at 45,750.",
+     "added": true
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Name it",
+     "defs": [
+      [
+       "Rounding",
+       "Replacing a number by a simpler nearby value. 38,721 → 38,700 to the nearest hundred."
+      ]
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Nearest thousand",
+     "text": "Rounding to the nearest 1,000: round 45,676.",
+     "opts": [
+      "45,000",
+      "45,700",
+      "46,000",
+      "50,000"
+     ],
+     "ans": "46,000",
+     "why": "The thousands digit is 5 (45,676).\nThe digit to its right is 6: that is 5 or more.\nSo 5 becomes 6, and the digits after it become 0.\n45,676 → 46,000.",
+     "clue": "Find the thousands digit. Then look at the digit just to its right."
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Decimal places",
+     "paras": [
+      "To round to a number of decimal places, look at the next digit.",
+      "Example 2. (a) 10.673 to 1 d.p.: the second digit is 7 (5 or more). So round up: 10.7.",
+      "(b) 3.173 to 2 d.p.: the third digit is 3, so 3.17.",
+      "Rounding to 1 d.p. means to the nearest tenth. 2 d.p. means to the nearest hundredth."
+     ]
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Significant figures",
+     "paras": [
+      "In 43.25, the 4 is the most significant figure. It is worth 40.",
+      "The 5 is the least significant. It is worth 5 hundredths.",
+      "Count significant figures from the first non-zero digit.",
+      "Example. (a) 2.364 to 2 s.f. is 2.4. (b) 0.0062 to 1 s.f. is 0.006. The leading zeros are not significant."
+     ]
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Round 0.0062 to 1 s.f.",
+     "text": "Leading zeros only hold places. Skip them.",
+     "steps": [
+      "0.0062: the zeros before 6 are not significant.",
+      "The first significant figure is 6.",
+      "To 1 s.f., look at the next digit: 2.",
+      "2 is less than 5, so 6 stays: 0.006."
+     ],
+     "added": true
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Two ways to state accuracy",
+     "defs": [
+      [
+       "Decimal place",
+       "A digit after the decimal point. 3.17 is given to 2 decimal places (2 d.p.)."
+      ],
+      [
+       "Significant figures",
+       "The digits counted from the first non-zero digit. 0.0062 has 2 significant figures."
+      ]
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Check your understanding",
+     "text": "Significant figures: round 0.04086 to 2 s.f.",
+     "opts": [
+      "0.04",
+      "0.041",
+      "0.0409",
+      "0.040"
+     ],
+     "ans": "0.041",
+     "why": "Skip the leading zeros: the first significant figure is 4.\nThe first two significant figures are 4 and 0: 0.040…\nThe next digit is 8, which is 5 or more, so 0 becomes 1.\nSo 0.04086 → 0.041. (0.04 has only 1 s.f.)",
+     "clue": "Start counting at the first non-zero digit, 4."
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "title": "Two decimal places",
+     "text": "This is from Activity 1.21.",
+     "ask": "Decimal places: 8.426 to 2 d.p. is ___",
+     "a": [
+      "8.43"
+     ],
+     "why": "Keep two decimal places: 8.42…\nLook at the third decimal digit: 6.\n6 is 5 or more, so 2 becomes 3.\nSo 8.426 → 8.43.",
+     "clue": "Look at the third digit after the point. Is it 5 or more?"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "added": true,
+     "title": "Market takings",
+     "text": "Almaz sells teff in Adama market. This month she took 45,676 birr.",
+     "ask": "Significant figures: what does she say, to 2 s.f.?",
+     "opts": [
+      "45,000 birr",
+      "45,700 birr",
+      "46,000 birr",
+      "50,000 birr"
+     ],
+     "ans": "46,000 birr",
+     "why": "The first two significant figures are 4 and 5: 45,…\nThe third digit is 6, which is 5 or more.\nSo 45 becomes 46, and the rest become 0.\nShe says 46,000 birr. 45,700 is to 3 s.f.",
+     "clue": "Count two digits from the left. Then look at the third.",
+     "worked": "The first two significant figures are 4 and 5. The third digit is 6, which is 5 or more. So 45 becomes 46, and the rest become 0: 46,000 birr."
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "title": "True or false?",
+     "text": "True or false? 28.79 written to 3 significant figures is 28.8.",
+     "a": true,
+     "why": "The first three significant figures are 2, 8, 7: 28.7…\nThe next digit is 9, which is 5 or more.\nSo 7 becomes 8: 28.8.\nTrue.",
+     "clue": "Count three figures from the first non-zero digit, then look at the next one."
+    }
+   ]
+  },
+  {
+   "id": "math.bounds",
+   "name": "Upper and lower bounds",
+   "explain": {
+    "en": {
+     "text": "A rounded number hides its real value. The lower and upper bounds show the limits. Halve the accuracy. Subtract the half for the lower bound and add it for the upper bound. When we add, subtract or multiply rounded numbers, the answer is a range too."
+    },
+    "am": {
+     "text": "የተጠጋጋ ቁጥር እውነተኛ እሴቱን ይደብቃል። ዝቅተኛና ከፍተኛ ወሰኖች ገደቡን ያሳያሉ። ትክክለኛነቱን ግማሽ አድርግ። ለዝቅተኛው ወሰን ግማሹን ቀንስ፣ ለከፍተኛው ደግሞ ጨምር። የተጠጋጉ ቁጥሮችን ስንደምር፣ ስንቀንስ ወይም ስናባዛ መልሱም ክልል ይሆናል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Which numbers give 3.5?",
+     "text": "Many numbers round to 3.5 to 1 d.p. Look at 3.42, 3.45, 3.49, 3.54 and 3.57.",
+     "ask": "What is the smallest of these that rounds to 3.5? Take a guess.",
+     "opts": [
+      "3.42",
+      "3.45",
+      "3.49",
+      "3.54"
+     ],
+     "after": "It is 3.45. 3.42 rounds down to 3.4.\n3.45 rounds up to 3.5, because the next digit is 5.\nThe largest here is 3.54. Read on to see why.",
+     "best": "3.45"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Which numbers round to 3.5?",
+     "vars": [
+      {
+       "k": "v",
+       "label": "Number",
+       "min": 3.4,
+       "max": 3.6,
+       "step": 0.01,
+       "v": 3.42
+      }
+     ],
+     "formula": "Math.round(Math.round(v*100)/10)/10",
+     "outs": [
+      [
+       "To 1 d.p.",
+       "Math.round(Math.round(v*100)/10)/10",
+       "{v}"
+      ]
+     ],
+     "note": "Move the slider. 3.45 is the first value that gives 3.5. At 3.55 it jumps to 3.6.",
+     "added": true
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Accuracy: upper and lower bounds",
+     "paras": [
+      "Definition 1.14. The lower and upper bounds are the limits of the values a number could have had before it was rounded.",
+      "1.5, 1.50 and 1.500 look the same. But they are written to different accuracies.",
+      "1.5 (to 1 d.p.) could be anything from 1.45 up to, but not including, 1.55 (Figure 1.9).",
+      "We write 1.45 ≤ x < 1.55.",
+      "1.45 is the lower bound and 1.55 the upper bound."
+     ],
+     "note": "Definition 1.14 says the bounds are \"the maximum and minimum values\". Strictly, the upper bound itself is not allowed: 1.55 rounds to 1.6, not 1.5. That is why the inequality uses < on the right."
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "The two limits",
+     "defs": [
+      [
+       "Lower bound",
+       "The smallest value a number could have had before it was rounded."
+      ],
+      [
+       "Upper bound",
+       "The value just above the largest it could have had. The number is always less than it."
+      ]
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Check your understanding",
+     "text": "Lower bound: a length is 8 cm to the nearest cm. Which is its lower bound?",
+     "opts": [
+      "7 cm",
+      "7.5 cm",
+      "7.9 cm",
+      "8.5 cm"
+     ],
+     "ans": "7.5 cm",
+     "why": "The accuracy is 1 cm.\nHalf of 1 cm is 0.5 cm.\nLower bound: 8 − 0.5 = 7.5 cm.\n7.9 cm is not the smallest: 7.6 cm also rounds to 8 cm.",
+     "clue": "Halve the accuracy, then subtract."
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Finding the bounds",
+     "text": "A tree weighs 872 kg to the nearest kg.",
+     "steps": [
+      "Find the place value of the accuracy. Here it is 1 kg.",
+      "Halve it: half of 1 is 0.5.",
+      "Lower bound: 872 − 0.5 = 871.5 kg.",
+      "Upper bound: 872 + 0.5 = 872.5 kg.",
+      "So 871.5 ≤ w < 872.5.",
+      "Example 2. 10.7 to 1 d.p.: half of 0.1 is 0.05. The bounds are 10.65 and 10.75."
+     ],
+     "ref": "Example 1"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "title": "A lower bound",
+     "text": "A number is 12.6, correct to 1 d.p.",
+     "ask": "Find the lower bound of 12.6 (1 d.p.): ___",
+     "a": [
+      "12.55"
+     ],
+     "why": "1 d.p. means the accuracy is 0.1.\nHalf of 0.1 is 0.05.\nLower bound: 12.6 − 0.05 = 12.55.",
+     "clue": "The accuracy is 0.1. Halve it first."
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Effect of operations on accuracy",
+     "paras": [
+      "Activity 1.23. a = 5 and b = 2, to the nearest whole number.",
+      "Lowest sum: lower + lower = 4.5 + 1.5 = 6. Highest: upper + upper = 5.5 + 2.5 = 8.",
+      "For a − b with a = 9 and b = 6: lowest is lower a − upper b = 8.5 − 6.5 = 2. Highest is upper a − lower b = 9.5 − 5.5 = 4.",
+      "When rounded numbers are added, subtracted or multiplied, the answer is a range."
+     ]
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Example 1: a rectangular farm",
+     "paras": [
+      "A rectangular farm is 12 m long and 6 m wide, to the nearest metre.",
+      "So 11.5 ≤ l < 12.5 and 5.5 ≤ w < 6.5.",
+      "(a) Sum: smallest 11.5 + 5.5 = 17.0 m. Largest 12.5 + 6.5 = 19.0 m.",
+      "(b) Area: smallest 11.5 × 5.5 = 63.25 m². Largest 12.5 × 6.5 = 81.25 m².",
+      "The largest area is found by multiplying the two upper bounds."
+     ],
+     "note": "Correction: Example 1(b) in the printed book says the upper bound of the area \"is obtained by adding the two upper bounds\" and calls it \"the maximum sum\". It is found by multiplying them, and it is the maximum area."
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "title": "The farm inside its bounds",
+     "vars": [
+      {
+       "k": "l",
+       "label": "Length (m)",
+       "min": 11.5,
+       "max": 12.5,
+       "step": 0.1,
+       "v": 12
+      },
+      {
+       "k": "w",
+       "label": "Width (m)",
+       "min": 5.5,
+       "max": 6.5,
+       "step": 0.1,
+       "v": 6
+      }
+     ],
+     "formula": "l*w",
+     "outs": [
+      [
+       "Length + width",
+       "l+w",
+       "{v} m"
+      ],
+      [
+       "Area",
+       "l*w",
+       "{v} m²"
+      ]
+     ],
+     "note": "Move both sliders. The smallest area is 11.5 × 5.5 = 63.25 m². The area gets close to 12.5 × 6.5 = 81.25 m² at the top.",
+     "added": true
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Check your understanding",
+     "text": "Bounds of a difference: for a − b, which combination gives the smallest possible answer?",
+     "opts": [
+      "Lower bound of a − upper bound of b",
+      "Lower bound of a − lower bound of b",
+      "Upper bound of a − upper bound of b",
+      "Upper bound of a − lower bound of b"
+     ],
+     "ans": "Lower bound of a − upper bound of b",
+     "why": "To make a − b small, start with the smallest a.\nThen take away the largest b.\nSo use: lower bound of a − upper bound of b.\nActivity 1.23: 8.5 − 6.5 = 2.",
+     "clue": "Look at Activity 1.23, part 2."
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "added": true,
+     "title": "A teff field",
+     "text": "Abebe's teff field is 20 m long and 10 m wide, each to the nearest metre.",
+     "ask": "Bounds of an area: what is the upper bound of its area?",
+     "opts": [
+      "200 m²",
+      "209.75 m²",
+      "215.25 m²",
+      "231 m²"
+     ],
+     "ans": "215.25 m²",
+     "why": "Half of 1 m is 0.5 m.\nUpper bounds: 20 + 0.5 = 20.5 m and 10 + 0.5 = 10.5 m.\nMultiply them: 20.5 × 10.5 = 215.25 m².\n231 m² adds a whole 1 m to each side: too much.",
+     "clue": "Find the upper bound of each side first. Then use the right operation.",
+     "worked": "Half of 1 m is 0.5 m. Upper bounds: 20 + 0.5 = 20.5 m and 10 + 0.5 = 10.5 m. Multiply them: 20.5 × 10.5 = 215.25 m²."
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "title": "True or false?",
+     "text": "True or false? To find the upper bound of an area, multiply the upper bounds of the length and width.",
+     "a": true,
+     "why": "The largest length and the largest width make the biggest rectangle.\nSo upper × upper gives the largest area.\nFarm: 12.5 × 6.5 = 81.25 m².\nTrue.",
+     "clue": "Think about the farm example. Which length and width make the biggest farm?"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 1.31",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Round to the nearest whole number: 35.946 → ___",
+     "a": [
+      "36",
+      "thirty-six"
+     ],
+     "why": "The units digit is 5 (35.946).\nThe digit after it is 9: 5 or more.\nSo 35 becomes 36.",
+     "clue": "Look at the first digit after the point."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Round to the nearest whole number: 45.1999 → ___",
+     "a": [
+      "45",
+      "forty-five"
+     ],
+     "why": "The units digit is 5 (45.1999).\nThe digit after it is 1: less than 5.\nSo 45 stays. The 9s further right do not matter.",
+     "clue": "Only the first digit after the point matters."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Round to the nearest whole number: 7/8 → ___",
+     "a": [
+      "1",
+      "one"
+     ],
+     "why": "7/8 = 7 ÷ 8 = 0.875.\nThe first digit after the point is 8: 5 or more.\nSo 0.875 rounds up to 1.",
+     "clue": "Write 7/8 as a decimal first."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Round to the nearest whole number: √5 → ___",
+     "a": [
+      "2",
+      "two"
+     ],
+     "why": "√5 = 2.236…\nThe first digit after the point is 2: less than 5.\nSo √5 rounds to 2.",
+     "clue": "√4 = 2 and √9 = 3. Is √5 nearer 2 or 3?"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Decimal places: write 1.936 to 1 d.p. and to 2 d.p.",
+     "opts": [
+      "1.9 and 1.93",
+      "1.9 and 1.94",
+      "2.0 and 1.94",
+      "1.9 and 1.90"
+     ],
+     "ans": "1.9 and 1.94",
+     "why": "1 d.p.: keep 1.9; the next digit is 3, so 1.9.\n2 d.p.: keep 1.93; the next digit is 6, so 3 becomes 4: 1.94.\n1.93 is wrong: it cuts off the 6 instead of rounding.",
+     "clue": "Do each one separately. Look at the digit after the last one you keep."
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Decimal places: write 12.998 to 1 d.p. and to 2 d.p.",
+     "opts": [
+      "12.9 and 12.99",
+      "13.0 and 13.00",
+      "13 and 13",
+      "12.10 and 13.00"
+     ],
+     "ans": "13.0 and 13.00",
+     "why": "1 d.p.: look at 12.9|98. The next digit is 9, so round up: 12.9 → 13.0.\n2 d.p.: look at 12.99|8. The next digit is 8, so round up: 12.99 → 13.00.\nKeep the zeros: they show the accuracy.\n\"13 and 13\" loses the decimal places.",
+     "clue": "Rounding up a 9 makes a carry. Keep the right number of decimal places."
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.32",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Significant figures: 28,645 to 1 s.f. is ___",
+     "a": [
+      "30000",
+      "30,000",
+      "30 000"
+     ],
+     "why": "The first significant figure is 2 (28,645).\nThe next digit is 8: 5 or more.\nSo 2 becomes 3, and the rest become 0.\n28,645 → 30,000.",
+     "clue": "Keep one figure. Fill the other places with zeros."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Significant figures: 41,909 to 3 s.f. is ___",
+     "a": [
+      "41900",
+      "41,900",
+      "41 900"
+     ],
+     "why": "The first three figures are 4, 1, 9: 419…\nThe fourth digit is 0: less than 5.\nSo keep 419 and fill with zeros: 41,900.",
+     "clue": "Keep three figures. Look at the fourth."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Significant figures: 4.5568 to 3 s.f. is ___",
+     "a": [
+      "4.56"
+     ],
+     "why": "The first three figures are 4, 5, 5: 4.55…\nThe fourth is 6: 5 or more.\nSo the last 5 becomes 6: 4.56.",
+     "clue": "Keep three figures. Look at the fourth."
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.33",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Bounds as an inequality: a car's speed is 45 m/s to the nearest integer. Which inequality gives the range for v?",
+     "opts": [
+      "44 ≤ v < 46",
+      "44.5 ≤ v < 45.5",
+      "44.5 < v ≤ 45.5",
+      "44.9 ≤ v < 45.1"
+     ],
+     "ans": "44.5 ≤ v < 45.5",
+     "why": "The accuracy is 1, and half of 1 is 0.5.\nLower bound: 45 − 0.5 = 44.5. v can equal it, so ≤.\nUpper bound: 45 + 0.5 = 45.5. v cannot equal it (45.5 rounds to 46), so <.\nSo 44.5 ≤ v < 45.5.",
+     "clue": "Halve the accuracy. Which end can v not equal?"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Bounds: find the bounds of 12.6, given to 1 d.p.",
+     "opts": [
+      "12.5 and 12.7",
+      "12.55 and 12.65",
+      "12.6 and 12.7",
+      "12.59 and 12.61"
+     ],
+     "ans": "12.55 and 12.65",
+     "why": "The accuracy is 0.1; half of it is 0.05.\nLower: 12.6 − 0.05 = 12.55.\nUpper: 12.6 + 0.05 = 12.65.",
+     "clue": "The accuracy is 0.1. Halve it."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Lower bound: 4.23 is given to 2 d.p. Its lower bound is ___",
+     "a": [
+      "4.225"
+     ],
+     "why": "2 d.p. means the accuracy is 0.01.\nHalf of 0.01 is 0.005.\n4.23 − 0.005 = 4.225.",
+     "clue": "The accuracy is 0.01. Halve it."
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Bounds as an inequality: write y = 21.36 as an inequality between its bounds.",
+     "opts": [
+      "21.35 ≤ y < 21.37",
+      "21.355 ≤ y < 21.365",
+      "21.3 ≤ y < 21.4",
+      "21.355 < y ≤ 21.365"
+     ],
+     "ans": "21.355 ≤ y < 21.365",
+     "why": "21.36 has 2 d.p., so the accuracy is 0.01.\nHalf of 0.01 is 0.005.\nLower: 21.36 − 0.005 = 21.355. Upper: 21.36 + 0.005 = 21.365.\nSo 21.355 ≤ y < 21.365.",
+     "clue": "How many decimal places does 21.36 have?"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Upper bound: z = 154.134. Its upper bound is ___",
+     "a": [
+      "154.1345"
+     ],
+     "why": "154.134 has 3 d.p., so the accuracy is 0.001.\nHalf of 0.001 is 0.0005.\n154.134 + 0.0005 = 154.1345.",
+     "clue": "Count the decimal places, then halve that accuracy."
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.34",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Bounds of a sum: each number is given to 1 d.p. Find the bounds of 5.4 + 6.2.",
+     "opts": [
+      "11.5 and 11.7",
+      "11.55 and 11.65",
+      "11.6 and 11.7",
+      "11.4 and 11.8"
+     ],
+     "ans": "11.5 and 11.7",
+     "why": "Bounds: 5.35 to 5.45, and 6.15 to 6.25.\nLower: 5.35 + 6.15 = 11.5.\nUpper: 5.45 + 6.25 = 11.7.\nSo the sum lies between 11.5 and 11.7.",
+     "clue": "Add the two lower bounds, then the two upper bounds."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Bounds of a product: each is to 1 d.p. The lower bound of 4.6 × 2.7 is ___",
+     "a": [
+      "12.0575"
+     ],
+     "why": "Lower bounds: 4.6 − 0.05 = 4.55 and 2.7 − 0.05 = 2.65.\nMultiply them: 4.55 × 2.65.\n4.55 × 2.65 = 12.0575.",
+     "clue": "Multiply the two lower bounds."
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Bounds of a difference: each number is given to 1 d.p. Find the bounds of 14.3 − 5.7.",
+     "opts": [
+      "8.5 and 8.7",
+      "8.55 and 8.65",
+      "8.6 and 8.7",
+      "8.4 and 8.8"
+     ],
+     "ans": "8.5 and 8.7",
+     "why": "Bounds: 14.25 to 14.35, and 5.65 to 5.75.\nLower: smallest − largest = 14.25 − 5.75 = 8.5.\nUpper: largest − smallest = 14.35 − 5.65 = 8.7.",
+     "clue": "For the smallest difference, take as much away as you can."
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Bounds of a quotient: each number is to 1 d.p. Which gives the smallest value of 10.8 ÷ 3.1?",
+     "opts": [
+      "10.75 ÷ 3.15",
+      "10.75 ÷ 3.05",
+      "10.85 ÷ 3.15",
+      "10.85 ÷ 3.05"
+     ],
+     "ans": "10.75 ÷ 3.15",
+     "why": "Bounds: 10.75 to 10.85, and 3.05 to 3.15.\nA smaller top and a bigger bottom make a smaller answer.\nSo use 10.75 ÷ 3.15 ≈ 3.413.\nThe largest is 10.85 ÷ 3.05 ≈ 3.557.",
+     "clue": "A smaller top and a bigger bottom make a smaller answer."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "A school football field is 102.6 m by 49.5 m, each to 1 d.p. Find the lower bound of its area: ___ m².",
+     "a": [
+      "5071.0975",
+      "5,071.0975"
+     ],
+     "why": "Lower bounds: 102.6 − 0.05 = 102.55 m and 49.5 − 0.05 = 49.45 m.\nMultiply: 102.55 × 49.45 = 5,071.0975 m².\nThe upper bound is 102.65 × 49.55 = 5,086.3075 m².",
+     "clue": "Find each lower bound, then multiply."
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "Rounding: 38,721 to the nearest hundred is ___",
+   "a": [
+    "38700",
+    "38,700",
+    "38 700"
+   ],
+   "why": "The hundreds digit is 7 (38,721).\nThe digit after it is 2: less than 5.\nSo 7 stays and the rest become 0: 38,700.\n(The book misprints it as 36,700.)",
+   "clue": ""
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Bounds: a mass is 6.4 kg to 1 d.p. What are its bounds?",
+   "opts": [
+    "6.3 and 6.5",
+    "6.35 and 6.45",
+    "6.4 and 6.5",
+    "6.39 and 6.41"
+   ],
+   "ans": "6.35 and 6.45",
+   "why": "The accuracy is 0.1; half of it is 0.05.\nLower: 6.4 − 0.05 = 6.35 kg.\nUpper: 6.4 + 0.05 = 6.45 kg.",
+   "clue": ""
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "True or false? 0.0062 rounded to 1 significant figure is 0.01.",
+   "a": false,
+   "why": "Leading zeros are not significant.\nThe first significant figure is 6 (0.0062).\nThe next digit is 2: less than 5, so 6 stays.\nSo it is 0.006, not 0.01: false.",
+   "clue": ""
+  }
+ ],
+ "notes": [
+  {
+   "kind": "correction",
+   "text": "The printed book gives 38,721 to the nearest 100 as \"36,700\" and calls it \"rounded up\". It is 38,700, and it is rounded down."
+  },
+  {
+   "kind": "note",
+   "text": "Definition 1.14 says the bounds are \"the maximum and minimum values\". Strictly, the upper bound itself is not allowed: 1.55 rounds to 1.6, not 1.5. That is why the inequality uses < on the right."
+  },
+  {
+   "kind": "correction",
+   "text": "Example 1(b) in the printed book says the upper bound of the area \"is obtained by adding the two upper bounds\" and calls it \"the maximum sum\". It is found by multiplying them, and it is the maximum area."
+  },
+  {
+   "kind": "review",
+   "text": "The source gives pages only for the whole of Lesson 1.4 (pages 48–79), so book.pages is left out for this section."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
 }

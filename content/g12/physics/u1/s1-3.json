@@ -58,9 +58,10 @@
       "A thermometer",
       "An ultrasound of the heart"
      ],
-     "after": "X-rays are blocked by bone, so a crack shows as a dark line in the white bone.",
+     "after": "Bone blocks X-rays much more than soft tissue does.\nSo bone looks white and a crack shows as a dark line.\nA stethoscope and a thermometer cannot see bone.",
      "ref": "p.14",
-     "id": "g12.physics.u1.s1-3.1"
+     "id": "g12.physics.u1.s1-3.1",
+     "best": "An X-ray picture"
     },
     {
      "kind": "read",
@@ -80,7 +81,7 @@
      "paras": [
       "X-rays are absorbed differently by different tissues, making a shadow picture.",
       "Bone (calcium) blocks X-rays and looks white; the air-filled lung looks dark.",
-      "A CT scan rotates the X-ray source and detectors round the patient and a computer builds many slice images."
+      "A CT scan rotates the X-ray source and detectors round the patient. A computer builds many slice images."
      ],
      "ref": "p.14, Figures 1.15–1.16",
      "id": "g12.physics.u1.s1-3.3"
@@ -104,7 +105,7 @@
      "paras": [
       "A stethoscope carries body sounds to the doctor's ears (Laennec, 1816).",
       "Ultrasound is sound above 20 kHz; medical scanners use 3.5–10 MHz.",
-      "Radiotherapy aims X-rays or gamma rays at a tumour from changing directions to spare healthy tissue."
+      "Radiotherapy aims X-rays or gamma rays at a tumour. The direction keeps changing to spare healthy tissue."
      ],
      "table": [
       [
@@ -130,6 +131,62 @@
      ],
      "ref": "p.15–16",
      "id": "g12.physics.u1.s1-3.5"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "graded": false,
+     "title": "Reading an ultrasound image",
+     "text": "Tap each term. Brightness = how many echoes come back.",
+     "need": 3,
+     "items": [
+      [
+       "Anechoic",
+       "Black. Fluid sends back no echoes."
+      ],
+      [
+       "Hypoechoic",
+       "Dark grey. Few echoes come back."
+      ],
+      [
+       "Hyperechoic",
+       "Bright. Many echoes come back."
+      ]
+     ],
+     "id": "g12.physics.u1.s1-3.21",
+     "added": true
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Ultrasound wavelength",
+     "ask": "Change the scanner frequency. Watch the wavelength in body tissue.",
+     "vars": [
+      {
+       "k": "f",
+       "label": "Frequency f (MHz)",
+       "min": 2,
+       "max": 10,
+       "step": 0.5,
+       "v": 3.5
+      }
+     ],
+     "formula": "1.54/f",
+     "outs": [
+      [
+       "Wavelength λ = v/f",
+       "1.54/f",
+       "{v} mm"
+      ],
+      [
+       "Frequency in hertz",
+       "f*1000000",
+       "{v} Hz"
+      ]
+     ],
+     "note": "Sound in soft tissue: v ≈ 1540 m/s. Higher f → shorter λ → finer detail.",
+     "id": "g12.physics.u1.s1-3.22",
+     "added": true
     },
     {
      "kind": "sort",
@@ -192,7 +249,7 @@
     },
     {
      "kind": "mcq",
-     "text": "On an X-ray picture, bone looks white because",
+     "text": "Reading an X-ray picture: on an X-ray, bone looks white because",
      "opts": [
       "calcium in bone blocks X-rays",
       "bone gives off light",
@@ -200,7 +257,7 @@
       "X-rays pass easily through bone"
      ],
      "ans": "calcium in bone blocks X-rays",
-     "why": "Bone absorbs X-rays strongly, so little reaches the film.",
+     "why": "Different tissues absorb X-rays by different amounts.\nBone contains calcium, which absorbs X-rays strongly.\nLittle radiation reaches the film behind bone, so it stays white.\nTrap: bone does not give off light.\nAnswer: calcium in bone blocks X-rays.",
      "clue": "What happens to X-rays in bone?",
      "graded": true,
      "level": 1,
@@ -210,7 +267,7 @@
     },
     {
      "kind": "mcq",
-     "text": "MRI images come from",
+     "text": "How MRI works: MRI images come from",
      "opts": [
       "hydrogen nuclei in a strong magnetic field",
       "X-rays",
@@ -218,7 +275,7 @@
       "gamma rays"
      ],
      "ans": "hydrogen nuclei in a strong magnetic field",
-     "why": "Protons align, are disturbed by a pulse and give energy back.",
+     "why": "The body is mostly water, so it has many hydrogen nuclei (protons).\nA strong magnet lines the protons up.\nA radio pulse disturbs them; they give energy back as they relax.\nDifferent tissues give back different amounts: that makes the image.\nMRI uses no X-rays.",
      "clue": "The body is mostly water.",
      "graded": true,
      "level": 1,
@@ -227,7 +284,7 @@
     },
     {
      "kind": "mcq",
-     "text": "Which frequency is in the medical ultrasound range?",
+     "text": "Ultrasound range: which frequency is used by medical ultrasound scanners?",
      "opts": [
       "5 MHz",
       "2 kHz",
@@ -235,7 +292,7 @@
       "500 Hz"
      ],
      "ans": "5 MHz",
-     "why": "Medical ultrasound uses 3.5–10 MHz.",
+     "why": "Ultrasound is sound above 20 kHz.\nMedical scanners use 3.5–10 MHz.\n5 MHz is inside that range.\n2 kHz, 15 Hz and 500 Hz are ordinary (or too low) sound.",
      "clue": "Ultrasound is above 20 kHz.",
      "graded": true,
      "level": 2,
@@ -245,7 +302,7 @@
     },
     {
      "kind": "mcq",
-     "text": "In an ultrasound image, a fluid-filled region looks",
+     "text": "Reading an ultrasound image: a fluid-filled region looks",
      "opts": [
       "black (anechoic)",
       "bright white (hyperechoic)",
@@ -253,7 +310,7 @@
       "red"
      ],
      "ans": "black (anechoic)",
-     "why": "Fluid sends back no echoes.",
+     "why": "The image is made from echoes.\nFluid sends back no echoes.\nNo echoes means no brightness: the region is black.\nThis is called anechoic (\"no echo\").",
      "clue": "No echoes → black.",
      "graded": true,
      "level": 2,
@@ -263,7 +320,7 @@
     },
     {
      "kind": "mcq",
-     "text": "A conventional X-ray and a CT scan differ because CT",
+     "text": "X-ray vs CT: a conventional X-ray and a CT scan differ because CT",
      "opts": [
       "rotates the source and detectors and uses a computer",
       "uses sound waves",
@@ -271,7 +328,7 @@
       "only images teeth"
      ],
      "ans": "rotates the source and detectors and uses a computer",
-     "why": "CT takes many images from different directions and builds slices.",
+     "why": "Both use X-rays.\nA normal X-ray takes one shadow picture from one side.\nCT rotates the source and detectors round the patient.\nA computer combines many views into slice images.\nTrap: CT still uses radiation.",
      "clue": "Both use X-rays.",
      "graded": true,
      "level": 1,
@@ -289,13 +346,15 @@
       "A coil detects the energy",
       "A computer makes the image"
      ],
-     "why": "Align → disturb → relax and emit → detect → image.",
+     "why": "1. A strong magnet lines up the protons.\n2. A radio pulse knocks them out of line.\n3. The protons relax back and give off energy.\n4. A coil detects that energy.\n5. A computer turns the signals into an image.",
      "clue": "What must happen first?",
      "graded": true,
      "level": 3,
      "step": "challenge",
      "added": true,
-     "id": "g12.physics.u1.s1-3.13"
+     "id": "g12.physics.u1.s1-3.13",
+     "text": "How MRI works: put the steps of making an MRI image in order.",
+     "worked": "Strong magnet aligns the protons → A radio pulse disturbs them → Protons return and give off energy → A coil detects the energy → A computer makes the image."
     }
    ]
   }
@@ -306,7 +365,7 @@
    "items": [
     {
      "kind": "mcq",
-     "text": "In MRI, what disturbs the lined-up protons?",
+     "text": "Discussion question 1.5, MRI: what disturbs the lined-up protons?",
      "opts": [
       "A short radio-frequency pulse",
       "An X-ray beam",
@@ -314,7 +373,7 @@
       "Heat"
      ],
      "ans": "A short radio-frequency pulse",
-     "why": "Then they relax and emit energy.",
+     "why": "After the magnet lines them up, a coil sends a short pulse.\nThe pulse is a radio-frequency wave.\nIt tips the protons out of line.\nThen they relax and give off energy for the image.",
      "clue": "Discussion question 1.5.",
      "graded": true,
      "level": 2,
@@ -324,7 +383,7 @@
     },
     {
      "kind": "mcq",
-     "text": "Radiotherapy changes the beam direction often in order to",
+     "text": "Radiotherapy: the beam direction is changed often in order to",
      "opts": [
       "spare healthy tissue",
       "make the image sharper",
@@ -332,7 +391,7 @@
       "save electricity"
      ],
      "ans": "spare healthy tissue",
-     "why": "The tumour always gets the dose; each healthy part gets a little.",
+     "why": "The beam always passes through the tumour.\nBy changing direction, it crosses different healthy tissue each time.\nSo the tumour gets the full dose.\nEach part of healthy tissue gets only a small dose.\nAnswer: to spare healthy tissue.",
      "clue": "p.16.",
      "graded": true,
      "level": 2,
@@ -346,7 +405,7 @@
  "test": [
   {
    "kind": "mcq",
-   "text": "X-rays were discovered by",
+   "text": "History of medical physics: X-rays were discovered by",
    "opts": [
     "Roentgen",
     "Newton",
@@ -354,7 +413,7 @@
     "Bloch"
    ],
    "ans": "Roentgen",
-   "why": "1895.",
+   "why": "Wilhelm Roentgen discovered X-rays in 1895.\nThis started medical physics.\nLaennec invented the stethoscope (1816).",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -363,7 +422,7 @@
   },
   {
    "kind": "mcq",
-   "text": "Ultrasound is sound above",
+   "text": "Key word: ultrasound is sound with frequency above",
    "opts": [
     "20 kHz",
     "20 Hz",
@@ -371,7 +430,7 @@
     "2 kHz"
    ],
    "ans": "20 kHz",
-   "why": "p.15.",
+   "why": "Humans hear up to about 20 kHz.\nSound above 20 kHz is ultrasound.\nTrap: 20 Hz is the lower limit of hearing.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -380,7 +439,7 @@
   },
   {
    "kind": "mcq",
-   "text": "A hyperechoic region looks",
+   "text": "Reading an ultrasound image: a hyperechoic region looks",
    "opts": [
     "bright",
     "black",
@@ -388,7 +447,7 @@
     "invisible"
    ],
    "ans": "bright",
-   "why": "many echoes.",
+   "why": "\"Hyper\" means many.\nMany echoes come back from it.\nMany echoes make a bright region.",
    "clue": "",
    "graded": true,
    "level": 2,
@@ -397,7 +456,7 @@
   },
   {
    "kind": "mcq",
-   "text": "Which is a therapeutic device?",
+   "text": "Diagnose or treat: which is a therapeutic device?",
    "opts": [
     "Radiotherapy machine",
     "Stethoscope",
@@ -405,7 +464,7 @@
     "Thermometer"
    ],
    "ans": "Radiotherapy machine",
-   "why": "it treats.",
+   "why": "Therapeutic devices treat disease.\nA radiotherapy machine destroys cancer cells.\nA stethoscope, MRI scanner and thermometer only find out what is wrong (diagnostic).",
    "clue": "",
    "graded": true,
    "level": 2,
@@ -414,7 +473,7 @@
   },
   {
    "kind": "mcq",
-   "text": "The air-filled lung on an X-ray looks",
+   "text": "Reading an X-ray picture: the air-filled lung looks",
    "opts": [
     "dark",
     "white",
@@ -422,7 +481,7 @@
     "the same as bone"
    ],
    "ans": "dark",
-   "why": "X-rays pass through air.",
+   "why": "Air absorbs almost no X-rays.\nMost X-rays pass through and reach the film.\nA strongly exposed film is dark.\nSo the lung looks dark; bone looks white.",
    "clue": "",
    "graded": true,
    "level": 1,

@@ -47,7 +47,8 @@
      ],
      "after": "99 km. \"Kilo\" means 1000, so 99 000 m = 99 km.",
      "added": true,
-     "id": "g8.science.u1.s1-1-3.1"
+     "id": "g8.science.u1.s1-1-3.1",
+     "best": "99 km"
     },
     {
      "kind": "read",
@@ -125,6 +126,42 @@
      "id": "g8.science.u1.s1-1-3.3"
     },
     {
+     "kind": "slider",
+     "step": "explore",
+     "title": "One length, three prefixes",
+     "vars": [
+      {
+       "k": "d",
+       "label": "Length in metres (m)",
+       "min": 0,
+       "max": 3000,
+       "step": 100,
+       "v": 1500
+      }
+     ],
+     "formula": "d/1000",
+     "outs": [
+      [
+       "In kilometres (kilo = 1000)",
+       "d/1000",
+       "{v} km"
+      ],
+      [
+       "In centimetres (centi = 0.01)",
+       "d*100",
+       "{v} cm"
+      ],
+      [
+       "In millimetres (milli = 0.001)",
+       "d*1000",
+       "{v} mm"
+      ]
+     ],
+     "note": "The length stays the same. A big unit (km) gives a small number; a small unit (mm) gives a big number.",
+     "id": "g8.science.u1.s1-1-3.34",
+     "added": true
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -140,7 +177,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "The prefix that means 1/1000 is",
+     "text": "Prefixes: which prefix means 1/1000?",
      "opts": [
       "milli",
       "kilo",
@@ -148,7 +185,7 @@
       "centi"
      ],
      "ans": "milli",
-     "why": "Milli = thousandth = 0.001 = 1/1000.",
+     "why": "1/1000 is one thousandth = 0.001.\nMilli means a thousandth: 1 mm = 0.001 m.\nKilo means a thousand (1000), not a thousandth.\nCenti is a hundredth (0.01); mega is a million.\nSo the answer is milli.",
      "clue": "Thousandth, not thousand.",
      "level": 1,
      "ref": "Review I Q5",
@@ -158,13 +195,13 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "The prefix for 0.01 is ___",
+     "ask": "Prefixes: the prefix for 0.01 (one hundredth) is ___",
      "a": [
       "centi",
       "c",
       "centi (c)"
      ],
-     "why": "Table 1.3: centi = hundredth = 0.01.",
+     "why": "0.01 = 1/100, one hundredth.\nTable 1.3: centi = hundredth.\nSo 1 cm = 0.01 m, and 100 cm = 1 m.\nThe answer is centi (c).",
      "clue": "A hundredth: 100 of them make a metre.",
      "level": 1,
      "ref": "Review II Q4",
@@ -174,7 +211,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "3500 m written with a prefix is",
+     "text": "Using prefixes: write 3500 m with a prefix.",
      "opts": [
       "3.5 km",
       "35 km",
@@ -182,7 +219,7 @@
       "350 cm"
      ],
      "ans": "3.5 km",
-     "why": "Kilo = 1000, so 3500 m ÷ 1000 = 3.5 km.",
+     "why": "Kilo means 1000, so 1 km = 1000 m.\nTo change m to km, divide by 1000.\n3500 ÷ 1000 = 3.5.\nSo 3500 m = 3.5 km.\n35 km would be 35 000 m: ten times too big.",
      "clue": "Divide by 1000 for kilo.",
      "level": 1,
      "ref": "Exercise 1.5 Q2 a",
@@ -192,7 +229,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "0.005 m written with a prefix is",
+     "text": "Using prefixes: write 0.005 m with a prefix.",
      "opts": [
       "5 mm",
       "5 km",
@@ -200,7 +237,7 @@
       "50 mm"
      ],
      "ans": "5 mm",
-     "why": "Milli = 0.001, so 0.005 m ÷ 0.001 = 5 mm.",
+     "why": "Milli means 0.001, so 1 mm = 0.001 m.\nHow many 0.001s are in 0.005?\n0.005 ÷ 0.001 = 5.\nSo 0.005 m = 5 mm.\n0.5 mm would be only 0.0005 m.",
      "clue": "How many thousandths are in 0.005?",
      "level": 2,
      "ref": "Review IV Q3",
@@ -210,7 +247,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "A tiny bacterium is 0.000002 m long. Which is the best way to write it?",
+     "text": "Choosing a prefix: a tiny bacterium is 0.000002 m long. Which is the best way to write it?",
      "opts": [
       "2 µm",
       "2 mm",
@@ -218,7 +255,7 @@
       "2 Mm"
      ],
      "ans": "2 µm",
-     "why": "Micro (µ) = 0.000001. 0.000002 ÷ 0.000001 = 2, so 2 µm.",
+     "why": "The number is very small: 0.000002 m.\nMicro (µ) means a millionth, 0.000001.\n0.000002 ÷ 0.000001 = 2.\nSo it is 2 µm.\n2 mm = 0.002 m: a thousand times too big.",
      "clue": "Which prefix means a millionth?",
      "level": 3,
      "added": true,
@@ -252,7 +289,8 @@
      ],
      "after": "More. A gram is small, so you need many of them: 2.5 × 1000 = 2500 g.",
      "added": true,
-     "id": "g8.science.u1.s1-1-3.10"
+     "id": "g8.science.u1.s1-1-3.10",
+     "best": "More: 2500 g"
     },
     {
      "kind": "read",
@@ -293,6 +331,64 @@
      "id": "g8.science.u1.s1-1-3.11"
     },
     {
+     "kind": "ladder",
+     "step": "explore",
+     "title": "Climb the unit ladder: 25 000 mm to km",
+     "units": [
+      "km",
+      "m",
+      "cm",
+      "mm"
+     ],
+     "factors": [
+      1000,
+      100,
+      10
+     ],
+     "from": "mm",
+     "to": "km",
+     "value": 25000,
+     "intro": "Going up to a bigger unit: divide. Tap ▶ for each step.",
+     "say": [
+      "25 000 mm ÷ 10 = 2500 cm.",
+      "2500 cm ÷ 100 = 25 m.",
+      "25 m ÷ 1000 = 0.025 km. Bigger unit, smaller number."
+     ],
+     "id": "g8.science.u1.s1-1-3.35",
+     "added": true
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Hours into minutes and seconds",
+     "vars": [
+      {
+       "k": "h",
+       "label": "Hours",
+       "min": 1,
+       "max": 12,
+       "step": 1,
+       "v": 1
+      }
+     ],
+     "formula": "h*60",
+     "outs": [
+      [
+       "Minutes (× 60)",
+       "h*60",
+       "{v} min"
+      ],
+      [
+       "Seconds (× 3600)",
+       "h*3600",
+       "{v} s"
+      ]
+     ],
+     "note": "1 hour = 60 min and 1 min = 60 s, so 1 hour = 60 × 60 = 3600 s.",
+     "id": "g8.science.u1.s1-1-3.36",
+     "added": true
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key word again",
@@ -322,12 +418,12 @@
      "step": "check",
      "graded": true,
      "num": true,
-     "ask": "Example 1.2: 6.5 kg = ___ g",
+     "ask": "Example 1.2, kilograms to grams: 6.5 kg = ___ g",
      "a": [
       "6500",
       "6 500"
      ],
-     "why": "kilo = 1000, so 6.5 × 1000 = 6500 g.",
+     "why": "1 kg = 1000 g.\nA gram is smaller, so you need more of them: multiply.\n6.5 × 1000 = 6500.\nSo 6.5 kg = 6500 g.",
      "clue": "Big unit to small unit: multiply.",
      "level": 1,
      "ref": "Example 1.2",
@@ -338,12 +434,12 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "500 g = ___ kg",
+     "ask": "Convert grams to kilograms: 500 g = ___ kg",
      "a": [
       "0.5",
       "1/2"
      ],
-     "why": "1 kg = 1000 g, so 500 ÷ 1000 = 0.5 kg.",
+     "why": "1 kg = 1000 g.\nA kilogram is bigger, so you get fewer: divide.\n500 ÷ 1000 = 0.5.\nSo 500 g = 0.5 kg, half a kilogram.",
      "clue": "Small to big: divide by 1000.",
      "level": 1,
      "ref": "Exercise 1.5 Q1 b",
@@ -354,14 +450,14 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "0.6 km = ___ cm",
+     "ask": "Convert kilometres to centimetres: 0.6 km = ___ cm",
      "a": [
       "60000",
       "60 000"
      ],
-     "why": "0.6 km = 0.6 × 1000 m = 600 m. 600 m = 600 × 100 cm = 60 000 cm.",
+     "why": "Step 1: km to m. 1 km = 1000 m.\n0.6 × 1000 = 600 m.\nStep 2: m to cm. 1 m = 100 cm.\n600 × 100 = 60 000 cm.\nSo 0.6 km = 60 000 cm.",
      "clue": "Two steps: km to m, then m to cm.",
-     "worked": "First km to m: 0.6 × 1000 = 600 m. Then m to cm: 600 × 100 = 60 000 cm.",
+     "worked": "Step 1, km to m: 0.6 × 1000 = 600 m.\nStep 2, m to cm: 600 × 100 = 60 000 cm.\nSo 0.6 km = 60 000 cm.",
      "level": 2,
      "ref": "Exercise 1.5 Q1 a",
      "id": "g8.science.u1.s1-1-3.16"
@@ -371,12 +467,12 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "0.5 hour = ___ s",
+     "ask": "Convert hours to seconds: 0.5 hour = ___ s",
      "a": [
       "1800",
       "1 800"
      ],
-     "why": "1 hour = 60 × 60 = 3600 s, so 0.5 × 3600 = 1800 s.",
+     "why": "1 hour = 60 min and 1 min = 60 s.\nSo 1 hour = 60 × 60 = 3600 s.\n0.5 × 3600 = 1800 s.\nCheck: half an hour is 30 min, and 30 × 60 = 1800 s.",
      "clue": "1 hour = 3600 seconds.",
      "level": 2,
      "ref": "Exercise 1.5 Q1 f",
@@ -387,12 +483,12 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "One day = ___ minutes",
+     "ask": "Convert days to minutes: one day = ___ minutes",
      "a": [
       "1440",
       "1 440"
      ],
-     "why": "1 day = 24 hours and 1 hour = 60 min, so 24 × 60 = 1440 min.",
+     "why": "1 day = 24 hours.\n1 hour = 60 minutes.\n24 × 60 = 1440.\nSo one day = 1440 minutes.",
      "clue": "Hours in a day × minutes in an hour.",
      "level": 1,
      "ref": "Exercise 1.8 a",
@@ -403,11 +499,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "1000 cm = ___ km",
+     "ask": "Convert centimetres to kilometres: 1000 cm = ___ km",
      "a": [
       "0.01"
      ],
-     "why": "1000 cm ÷ 100 = 10 m. 10 m ÷ 1000 = 0.01 km.",
+     "why": "Step 1: cm to m. 100 cm = 1 m.\n1000 ÷ 100 = 10 m.\nStep 2: m to km. 1000 m = 1 km.\n10 ÷ 1000 = 0.01 km.\nSo 1000 cm = 0.01 km.",
      "clue": "Go cm → m → km.",
      "level": 2,
      "ref": "Review IV Q4",
@@ -418,14 +514,14 @@
      "step": "challenge",
      "graded": true,
      "num": true,
-     "ask": "A runner in the Great Ethiopian Run covers 10 km in 30 minutes. That is ___ metres per second (to 1 decimal place)",
+     "ask": "Speed in metres per second: a runner in the Great Ethiopian Run covers 10 km in 30 minutes. That is ___ metres per second (to 1 decimal place)",
      "a": [
       "5.6",
       "5.56"
      ],
-     "why": "10 km = 10 000 m. 30 min = 30 × 60 = 1800 s. 10 000 ÷ 1800 ≈ 5.6 m/s.",
+     "why": "Change km to m: 10 × 1000 = 10 000 m.\nChange min to s: 30 × 60 = 1800 s.\nSpeed = distance ÷ time.\n10 000 ÷ 1800 = 5.55…\nTo 1 decimal place: 5.6 m/s.",
      "clue": "Change km to m and minutes to seconds first.",
-     "worked": "10 km = 10 × 1000 = 10 000 m. 30 min = 30 × 60 = 1800 s. Speed = 10 000 ÷ 1800 = 5.555…, about 5.6 m/s.",
+     "worked": "Step 1, km to m: 10 × 1000 = 10 000 m.\nStep 2, min to s: 30 × 60 = 1800 s.\nStep 3, speed = distance ÷ time = 10 000 ÷ 1800 = 5.555…\nTo 1 decimal place: about 5.6 m/s.",
      "level": 3,
      "added": true,
      "id": "g8.science.u1.s1-1-3.20"
@@ -442,12 +538,12 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "30 min = ___ hour",
+     "ask": "Convert minutes to hours: 30 min = ___ hour",
      "a": [
       "0.5",
       "1/2"
      ],
-     "why": "1 hour = 60 min, so 30 ÷ 60 = 1/2 = 0.5 hour.",
+     "why": "1 hour = 60 min.\nAn hour is bigger, so divide.\n30 ÷ 60 = 0.5.\nSo 30 min = 0.5 hour, half an hour.",
      "clue": "Divide by 60.",
      "level": 1,
      "ref": "Q1 c",
@@ -458,12 +554,12 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "50 m = ___ mm",
+     "ask": "Convert metres to millimetres: 50 m = ___ mm",
      "a": [
       "50000",
       "50 000"
      ],
-     "why": "1 m = 1000 mm, so 50 × 1000 = 50 000 mm.",
+     "why": "1 m = 1000 mm.\nA millimetre is smaller, so multiply.\n50 × 1000 = 50 000.\nSo 50 m = 50 000 mm.",
      "clue": "Multiply by 1000.",
      "level": 1,
      "ref": "Q1 d",
@@ -474,11 +570,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "0.25 kg = ___ g",
+     "ask": "Convert kilograms to grams: 0.25 kg = ___ g",
      "a": [
       "250"
      ],
-     "why": "0.25 × 1000 = 250 g.",
+     "why": "1 kg = 1000 g.\nMultiply: 0.25 × 1000 = 250.\nSo 0.25 kg = 250 g, a quarter of a kilogram.",
      "clue": "Multiply by 1000.",
      "level": 1,
      "ref": "Q1 e",
@@ -488,7 +584,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "0.0012 s with a prefix is",
+     "text": "Using prefixes: write 0.0012 s with a prefix.",
      "opts": [
       "1.2 ms",
       "12 ms",
@@ -496,7 +592,7 @@
       "0.12 ms"
      ],
      "ans": "1.2 ms",
-     "why": "milli = 0.001: 0.0012 ÷ 0.001 = 1.2 ms.",
+     "why": "Milli means 0.001: 1 ms = 0.001 s.\n0.0012 ÷ 0.001 = 1.2.\nSo 0.0012 s = 1.2 ms.\n12 ms would be 0.012 s: ten times too big.",
      "clue": "Divide by 0.001.",
      "level": 2,
      "ref": "Q2 b",
@@ -512,12 +608,12 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "2.5 kg = ___ g",
+     "ask": "Convert kilograms to grams: 2.5 kg = ___ g",
      "a": [
       "2500",
       "2 500"
      ],
-     "why": "2.5 × 1000 = 2500 g.",
+     "why": "1 kg = 1000 g.\nBig unit to small unit: multiply.\n2.5 × 1000 = 2500.\nSo 2.5 kg = 2500 g.",
      "clue": "kg to g: × 1000.",
      "level": 1,
      "ref": "Ex 1.6 a",
@@ -528,12 +624,12 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "200 g = ___ mg",
+     "ask": "Convert grams to milligrams: 200 g = ___ mg",
      "a": [
       "200000",
       "200 000"
      ],
-     "why": "1 g = 1000 mg, so 200 × 1000 = 200 000 mg.",
+     "why": "1 g = 1000 mg.\nBig unit to small unit: multiply.\n200 × 1000 = 200 000.\nSo 200 g = 200 000 mg.",
      "clue": "g to mg: × 1000.",
      "level": 1,
      "ref": "Ex 1.6 b",
@@ -544,11 +640,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "5500 m = ___ km",
+     "ask": "Convert metres to kilometres: 5500 m = ___ km",
      "a": [
       "5.5"
      ],
-     "why": "5500 ÷ 1000 = 5.5 km.",
+     "why": "1 km = 1000 m.\nA kilometre is bigger, so divide.\n5500 ÷ 1000 = 5.5.\nSo 5500 m = 5.5 km.",
      "clue": "m to km: ÷ 1000.",
      "level": 1,
      "ref": "Ex 1.7 b",
@@ -564,12 +660,12 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "One day = ___ seconds",
+     "ask": "Convert days to seconds: one day = ___ seconds",
      "a": [
       "86400",
       "86 400"
      ],
-     "why": "24 hours × 3600 s = 86 400 s.",
+     "why": "1 day = 24 hours.\n1 hour = 60 × 60 = 3600 s.\n24 × 3600 = 86 400.\nSo one day = 86 400 s.",
      "clue": "1 hour = 3600 s.",
      "level": 2,
      "ref": "b",
@@ -584,12 +680,12 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "8 m = ___ mm",
+   "ask": "Convert metres to millimetres: 8 m = ___ mm",
    "a": [
     "8000",
     "8 000"
    ],
-   "why": "8 × 1000.",
+   "why": "1 m = 1000 mm.\nBig unit to small unit: multiply.\n8 × 1000 = 8000.\nSo 8 m = 8000 mm.",
    "clue": "",
    "level": 1,
    "ref": "Ex 1.7 a",
@@ -599,7 +695,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "kilo means",
+   "text": "Prefixes: what does kilo mean?",
    "opts": [
     "1000",
     "0.001",
@@ -607,7 +703,7 @@
     "1 000 000"
    ],
    "ans": "1000",
-   "why": "Table 1.3.",
+   "why": "Kilo (k) means a thousand.\n1 km = 1000 m and 1 kg = 1000 g.\n0.001 is milli, and 1 000 000 is mega.\nSo kilo = 1000.",
    "clue": "",
    "level": 1,
    "id": "g8.science.u1.s1-1-3.30"
@@ -617,11 +713,11 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "1200 g = ___ kg",
+   "ask": "Convert grams to kilograms: 1200 g = ___ kg",
    "a": [
     "1.2"
    ],
-   "why": "1200 ÷ 1000.",
+   "why": "1 kg = 1000 g.\nSmall unit to big unit: divide.\n1200 ÷ 1000 = 1.2.\nSo 1200 g = 1.2 kg.",
    "clue": "",
    "level": 1,
    "ref": "Example 1.4",
@@ -632,12 +728,12 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "One million centimetres = ___ m",
+   "ask": "Convert centimetres to metres: one million centimetres = ___ m",
    "a": [
     "10000",
     "10 000"
    ],
-   "why": "1 000 000 ÷ 100.",
+   "why": "One million = 1 000 000.\n100 cm = 1 m, so divide by 100.\n1 000 000 ÷ 100 = 10 000.\nSo one million cm = 10 000 m.",
    "clue": "",
    "level": 2,
    "ref": "Review II Q3",
@@ -648,12 +744,12 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "2 hours = ___ s",
+   "ask": "Convert hours to seconds: 2 hours = ___ s",
    "a": [
     "7200",
     "7 200"
    ],
-   "why": "2 × 3600.",
+   "why": "1 hour = 60 × 60 = 3600 s.\n2 × 3600 = 7200.\nSo 2 hours = 7200 s.",
    "clue": "",
    "level": 3,
    "id": "g8.science.u1.s1-1-3.33"

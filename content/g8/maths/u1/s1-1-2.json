@@ -158,6 +158,21 @@
      "id": "g8.maths.u1.s1-1-2.4"
     },
     {
+     "kind": "steps",
+     "step": "explore",
+     "title": "Classify −13 step by step",
+     "steps": [
+      "Is −13 a counting number (1, 2, 3, …)? No, it is negative. So −13 ∉ ℕ.",
+      "Is it a whole number (0, 1, 2, …)? No, whole numbers are never negative. So −13 ∉ W.",
+      "Does it have a fraction part? No. So −13 is an integer: −13 ∈ ℤ.",
+      "ℤ sits inside ℚ, so −13 ∈ ℚ too.",
+      "Answer: −13 belongs to ℤ and ℚ."
+     ],
+     "ref": "Example 1.5",
+     "id": "g8.maths.u1.s1-1-2.21",
+     "added": true
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -181,13 +196,13 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Can a number be rational and whole, but not an integer?",
+     "text": "Number sets: can a number be rational and whole, but not an integer?",
      "opts": [
       "Yes",
       "No"
      ],
      "ans": "No",
-     "why": "Every whole number is an integer.",
+     "why": "Look at Figure 1.11: the W circle is inside the ℤ circle.\nSo every whole number is also an integer.\nA whole number that is not an integer cannot exist.\nAnswer: No.",
      "clue": "Look at Figure 1.11. Where is the W circle?",
      "id": "g8.maths.u1.s1-1-2.6",
      "ref": "Example 1.6",
@@ -197,7 +212,7 @@
      "kind": "sort",
      "step": "practise",
      "graded": true,
-     "title": "Classify",
+     "title": "Classify each number: which sets does it belong to?",
      "bins": [
       "Only ℚ",
       "ℤ and ℚ",
@@ -225,7 +240,7 @@
        "A natural number is in every set."
       ]
      ],
-     "why": "Find the smallest set, then add every set around it.",
+     "why": "Find the smallest set first, then add every set around it.\n−13 is a negative integer: ℤ and ℚ.\n1/7 and −5/76 are fractions that are not integers: only ℚ.\n10 is natural, so it is in ℕ, W, ℤ and ℚ.",
      "clue": "Is the number a fraction? Is it negative?",
      "id": "g8.maths.u1.s1-1-2.7",
      "ref": "Example 1.5",
@@ -235,14 +250,14 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Solomon says 0 belongs only to the rational numbers. What is his error?",
+     "text": "Classify 0: Solomon says 0 belongs only to the rational numbers. What is his error?",
      "opts": [
       "0 is also whole and an integer",
       "0 is not rational at all",
       "0 is a natural number only"
      ],
      "ans": "0 is also whole and an integer",
-     "why": "0 ∈ W, 0 ∈ ℤ and 0 ∈ ℚ.",
+     "why": "0 is not a counting number, so 0 ∉ ℕ.\nBut 0 is a whole number: 0 ∈ W.\nW is inside ℤ and ℚ, so 0 ∈ ℤ and 0 ∈ ℚ too.\nHis error: 0 is also whole and an integer.",
      "clue": "Is 0 in the whole numbers?",
      "id": "g8.maths.u1.s1-1-2.8",
      "ref": "Exercise 1.2 Q1",
@@ -252,9 +267,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "Every natural number is a whole number.",
+     "text": "Number sets: true or false? Every natural number is a whole number.",
      "a": true,
-     "why": "ℕ is inside W.",
+     "why": "Natural numbers: 1, 2, 3, …\nWhole numbers: 0, 1, 2, 3, …\nEvery natural number appears in the whole numbers.\nSo ℕ ⊂ W: true.",
      "clue": "Look at the circles.",
      "id": "g8.maths.u1.s1-1-2.9",
      "level": 1
@@ -263,9 +278,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "The number −3 2/7 belongs to the negative integers.",
+     "text": "Classify a mixed number: true or false? −3 2/7 belongs to the negative integers.",
      "a": false,
-     "why": "−3 2/7 has a fraction part, so it is not an integer. It is a negative rational number.",
+     "why": "Integers have no fraction part: …, −4, −3, −2, …\n−3 2/7 lies between −4 and −3.\nIt has the fraction part 2/7, so it is not an integer.\nIt is a negative rational number: false.",
      "clue": "Integers have no fraction part.",
      "id": "g8.maths.u1.s1-1-2.10",
      "level": 1
@@ -273,7 +288,7 @@
     {
      "kind": "pick",
      "graded": true,
-     "text": "Which numbers are in ℤ but NOT in W?",
+     "text": "Number sets: simplify first. Which numbers are in ℤ but NOT in W?",
      "pool": [
       "−6",
       "0",
@@ -285,7 +300,7 @@
       "−6",
       "−15/3"
      ],
-     "why": "−6 and −15/3 = −5 are negative integers: in ℤ, not in W. 0 and 12/4 = 3 are whole numbers. −1/2 is not an integer at all.",
+     "why": "Simplify: 12/4 = 3 and −15/3 = −5.\n0 and 3 are whole numbers, so they are in W.\n−1/2 is not an integer at all.\n−6 and −5 are negative integers: in ℤ but not in W.\nAnswer: −6 and −15/3.",
      "clue": "Simplify each one. Negative integers are in ℤ but not in W.",
      "step": "challenge",
      "level": 3,
@@ -303,14 +318,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Solomon says 0 belongs only to ℚ. Which is correct?",
+     "text": "Classify 0: Solomon says 0 belongs only to ℚ. Which is correct?",
      "opts": [
       "0 belongs to W, ℤ and ℚ",
       "0 belongs only to ℚ",
       "0 belongs only to ℕ"
      ],
      "ans": "0 belongs to W, ℤ and ℚ",
-     "why": "0 is whole, so it is also an integer and rational.",
+     "why": "0 is a whole number: 0 ∈ W.\nW sits inside ℤ, and ℤ sits inside ℚ.\nSo 0 ∈ W, 0 ∈ ℤ and 0 ∈ ℚ.\n0 is not natural, because counting starts at 1.",
      "clue": "Start with the whole numbers.",
      "id": "g8.maths.u1.s1-1-2.11",
      "ref": "Q1",
@@ -320,9 +335,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "The whole numbers and their opposites are called integers.",
+     "text": "Number sets: true or false? The whole numbers and their opposites are called integers.",
      "a": true,
-     "why": "That is the meaning of integers.",
+     "why": "Whole numbers: 0, 1, 2, 3, …\nTheir opposites: 0, −1, −2, −3, …\nTogether: …, −2, −1, 0, 1, 2, …\nThat is the set of integers ℤ: true.",
      "clue": "Think of …, −2, −1, 0, 1, 2, …",
      "id": "g8.maths.u1.s1-1-2.12",
      "ref": "Q2 a",
@@ -332,9 +347,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "Every natural number is a whole number.",
+     "text": "Number sets: true or false? Every natural number is a whole number.",
      "a": true,
-     "why": "ℕ ⊂ W.",
+     "why": "ℕ = {1, 2, 3, …}.\nW = {0, 1, 2, 3, …}.\nEvery element of ℕ is in W, so ℕ ⊂ W.\nTrue.",
      "clue": "Look at Figure 1.11.",
      "id": "g8.maths.u1.s1-1-2.13",
      "ref": "Q2 b",
@@ -344,9 +359,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "The number −3 2/7 belongs to the negative integers.",
+     "text": "Classify a mixed number: true or false? −3 2/7 belongs to the negative integers.",
      "a": false,
-     "why": "It has a fraction part, so it is rational, not an integer.",
+     "why": "−3 2/7 is between −4 and −3.\nIt has a fraction part, 2/7.\nIntegers have no fraction part.\nSo it is a rational number, not an integer: false.",
      "clue": "Integers have no fraction part.",
      "id": "g8.maths.u1.s1-1-2.14",
      "ref": "Q2 c",
@@ -364,7 +379,7 @@
     "t": "classify",
     "level": 1
    },
-   "text": "What is the smallest set that contains −7?",
+   "text": "Classify a number: what is the smallest set that contains −7?",
    "opts": [
     "ℕ",
     "W",
@@ -372,7 +387,7 @@
     "ℚ"
    ],
    "ans": "ℤ",
-   "why": "−7 is a negative integer.",
+   "why": "−7 is negative, so it is not in ℕ or W.\n−7 has no fraction part, so it is an integer.\nThe smallest set is ℤ.\n(It is also in ℚ, but ℚ is bigger than ℤ.)",
    "clue": "",
    "id": "g8.maths.u1.s1-1-2.15",
    "level": 1
@@ -385,7 +400,7 @@
     "t": "classify",
     "level": 2
    },
-   "text": "What is the smallest set that contains 2/3?",
+   "text": "Classify a number: what is the smallest set that contains 2/3?",
    "opts": [
     "ℕ",
     "W",
@@ -393,7 +408,7 @@
     "ℚ"
    ],
    "ans": "ℚ",
-   "why": "2/3 is not an integer.",
+   "why": "2/3 lies between 0 and 1.\nThere is no integer between 0 and 1, so 2/3 ∉ ℤ.\n2/3 is a/b with b ≠ 0, so 2/3 ∈ ℚ.\nThe smallest set is ℚ.",
    "clue": "",
    "id": "g8.maths.u1.s1-1-2.16",
    "level": 2
@@ -402,9 +417,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "Every integer is a rational number.",
+   "text": "Number sets: true or false? Every integer is a rational number.",
    "a": true,
-   "why": "Any integer n = n/1.",
+   "why": "Any integer n can be written n/1.\nFor example −4 = −4/1 and 0 = 0/1.\nThe bottom is 1, which is not 0.\nSo every integer is rational: true.",
    "clue": "",
    "id": "g8.maths.u1.s1-1-2.17",
    "level": 3
@@ -413,9 +428,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "Every whole number is a natural number.",
+   "text": "Number sets: true or false? Every whole number is a natural number.",
    "a": false,
-   "why": "0 is whole but not natural.",
+   "why": "0 is a whole number.\nNatural numbers start at 1, so 0 is not natural.\nOne example is enough to break the rule.\nSo the statement is false.",
    "clue": "",
    "level": 2,
    "id": "g8.maths.u1.s1-1-2.19"
@@ -424,7 +439,7 @@
    "kind": "pick",
    "step": "test",
    "graded": true,
-   "text": "Which are integers?",
+   "text": "Integers: simplify first. Which of these are integers?",
    "pool": [
     "−4",
     "3/2",
@@ -437,7 +452,7 @@
     "0",
     "10/2"
    ],
-   "why": "10/2 = 5. −4, 0 and 5 are integers; 3/2 and 2.5 are not.",
+   "why": "10/2 = 5, an integer.\n−4 and 0 are integers.\n3/2 = 1 1/2 and 2.5 have a fraction part.\nAnswer: −4, 0 and 10/2.",
    "clue": "",
    "level": 3,
    "id": "g8.maths.u1.s1-1-2.20"

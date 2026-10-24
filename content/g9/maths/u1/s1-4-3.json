@@ -1,1357 +1,1393 @@
 {
-  "id": "g9.maths.u1.s1-4-3",
-  "book": {
-    "title": "Mathematics Grade 9 Student Textbook",
-    "grade": 9,
-    "subject": "maths",
-    "unit": 1,
-    "unit_title": "The Number System",
-    "section": "1.4.3",
-    "pages": "48–79"
+ "id": "g9.maths.u1.s1-4-3",
+ "book": {
+  "title": "Mathematics Grade 9 Student Textbook",
+  "grade": 9,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "The Number System",
+  "section": "1.4.3",
+  "pages": "48–79"
+ },
+ "title": "Exponents and radicals",
+ "competency": "Use exponents, roots and the laws of exponents, simplify radicals, and apply the properties of real numbers.",
+ "minutes": 12,
+ "keywords": [
+  {
+   "en": "Exponent",
+   "am": "አርቢ",
+   "machine": true,
+   "def": "In aⁿ, the exponent n says how many times the base a is multiplied by itself. Also called the power."
   },
-  "title": "Exponents and radicals",
-  "competency": "Use exponents, roots and the laws of exponents, simplify radicals, and apply the properties of real numbers.",
-  "minutes": 12,
-  "keywords": [
-    {
-      "en": "Exponent",
-      "am": "አርቢ",
-      "machine": true,
-      "def": "In aⁿ, the exponent n says how many times the base a is multiplied by itself. Also called the power."
-    },
-    {
-      "en": "Base",
-      "am": "መሠረት",
-      "machine": true,
-      "def": "In aⁿ, the number a that is multiplied."
-    },
-    {
-      "en": "Square root",
-      "am": "ካሬ ሥር",
-      "machine": true,
-      "def": "If a² = b, then a is a square root of b."
-    },
-    {
-      "en": "Cube root",
-      "am": "ኩብ ሥር",
-      "machine": true,
-      "def": "If a³ = b, then a is a cube root of b."
-    },
-    {
-      "en": "nth root",
-      "am": "n-ኛ ሥር",
-      "machine": true,
-      "def": "If aⁿ = b, then a is an nth root of b."
-    },
-    {
-      "en": "Principal nth root",
-      "am": "ዋና n-ኛ ሥር",
-      "machine": true,
-      "def": "The real nth root ⁿ√b: positive when b > 0, negative when b < 0 and n is odd, 0 when b = 0."
-    },
-    {
-      "en": "Radical sign",
-      "am": "የሥር ምልክት",
-      "machine": true,
-      "def": "The symbol √ used for roots."
-    },
-    {
-      "en": "Index",
-      "am": "ጠቋሚ",
-      "machine": true,
-      "def": "The small number n in ⁿ√b. No index means square root."
-    },
-    {
-      "en": "Radicand",
-      "am": "ከሥር ምልክት በታች ያለ ቁጥር",
-      "machine": true,
-      "def": "The number under the radical sign: b in ⁿ√b."
-    },
-    {
-      "en": "Like radicals",
-      "am": "ተመሳሳይ ሥሮች",
-      "machine": true,
-      "def": "Radicals with the same index and the same radicand, such as 2√5 and 7√5. Only like radicals can be added."
-    },
-    {
-      "en": "Closed",
-      "am": "ዝግ",
-      "machine": true,
-      "def": "A set is closed under an operation if doing it to two members always gives a member of the set."
-    },
-    {
-      "en": "Additive inverse",
-      "am": "የመደመር ተቃራኒ",
-      "machine": true,
-      "def": "The number −a that gives 0 when added to a. Also called the opposite."
-    },
-    {
-      "en": "Multiplicative inverse",
-      "am": "የማባዛት ተገላቢጦሽ",
-      "machine": true,
-      "def": "The number 1/a that gives 1 when multiplied by a (a ≠ 0). Also called the reciprocal."
-    }
-  ],
-  "ideas": [
-    {
-      "id": "math.exponents",
-      "name": "Exponents",
-      "requires": [
-        "math.integer-multiplication"
-      ],
-      "explain": {
-        "en": {
-          "text": "aⁿ means a multiplied by itself n times. a is the base and n is the exponent. For a ≠ 0, a⁰ = 1 and a⁻ⁿ = 1/aⁿ. To multiply powers of the same base, add the exponents. To divide, subtract them."
-        },
-        "am": {
-          "text": "aⁿ ማለት a ራሱን n ጊዜ ሲባዛ ነው። a መሠረት፣ n አርቢ ነው። a ≠ 0 ሲሆን a⁰ = 1 እና a⁻ⁿ = 1/aⁿ ነው። ተመሳሳይ መሠረት ያላቸውን ስታባዛ አርቢዎቹን ደምር፤ ስታካፍል ቀንስ።",
-          "machine": true
-        }
-      },
-      "screens": [
-        {
-          "kind": "guess",
-          "step": "hook",
-          "text": "2⁴ = 16, 2³ = 8, 2² = 4, 2¹ = 2. Each time the power drops by 1, the value is halved.",
-          "ask": "Keep the pattern going. What is 2⁰?",
-          "opts": [
-            "0",
-            "1",
-            "2",
-            "It has no value"
-          ],
-          "after": "Halve 2 and you get 1. Halve again: 2⁻¹ = 1/2, 2⁻² = 1/4. Read on.",
-          "ref": "Activity 1.16"
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Exponents",
-          "paras": [
-            "Writing 14 × 14 × … × 14 twenty times takes time and space. Exponents make this short.",
-            "Definition 1.9: If a is a real number and n is a positive integer, then a × a × … × a (n times) = aⁿ.",
-            "Here a is the base and n is the exponent (power).",
-            "For instance, 2³ = 2 × 2 × 2 = 8; (−3)⁴ = 81; and −2³ = −(2 × 2 × 2) = −8.",
-            "Notice that (−3)⁴ and −3⁴ are different. The brackets decide what is raised to the power."
-          ]
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "Base and exponent",
-          "defs": [
-            [
-              "Base",
-              "In aⁿ, the number a that is multiplied by itself."
-            ],
-            [
-              "Exponent",
-              "In aⁿ, the number n that says how many times a is used. Also called the power."
-            ]
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Spot the base",
-          "text": "Look at 7⁵.",
-          "ask": "Which number is the base?",
-          "opts": [
-            "7",
-            "5",
-            "35",
-            "75"
-          ],
-          "ans": "7",
-          "why": "7⁵ = 7 × 7 × 7 × 7 × 7. The base 7 is the number multiplied.",
-          "clue": "The base is the big number; the exponent sits up high."
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Zero and negative exponents",
-          "paras": [
-            "Activity 1.16: moving right lowers the power by 1, so divide by 2 each time.",
-            "So 2⁻ⁿ = 1/2ⁿ. In the same way, a⁻ⁿ = 1/aⁿ for a ≠ 0.",
-            "Note 1. Zero exponent: if a ≠ 0, then a⁰ = 1.",
-            "Note 2. Negative exponent: if a ≠ 0 and n is a positive integer, then a⁻ⁿ = 1/aⁿ."
-          ],
-          "table": [
-            [
-              "2⁴",
-              "2³",
-              "2²",
-              "2¹",
-              "2⁰",
-              "2⁻¹",
-              "2⁻²",
-              "2⁻³",
-              "2⁻⁴"
-            ],
-            [
-              "16",
-              "8",
-              "4",
-              "2",
-              "1",
-              "1/2",
-              "1/4",
-              "1/8",
-              "1/16"
-            ]
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "title": "A negative exponent",
-          "text": "What is 5⁻²?",
-          "opts": [
-            "−25",
-            "−10",
-            "1/25",
-            "25"
-          ],
-          "ans": "1/25",
-          "why": "5⁻² = 1/5² = 1/25. A negative exponent means a reciprocal, not a negative number.",
-          "clue": "Use a⁻ⁿ = 1/aⁿ."
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "title": "Mind the brackets",
-          "text": "What is −3⁴?",
-          "opts": [
-            "81",
-            "−81",
-            "−12",
-            "12"
-          ],
-          "ans": "−81",
-          "why": "Without brackets only 3 is raised: −3⁴ = −(3 × 3 × 3 × 3) = −81.",
-          "clue": "Compare −2³ = −(2 × 2 × 2) in the reading.",
-          "needs": "math.integer-multiplication"
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Laws of exponents",
-          "paras": [
-            "Activity 1.17 compares pairs such as 2³ × 3³ and (2 × 3)³. Each pair is equal.",
-            "The pairs give these laws, for a, b real and m, n natural numbers."
-          ],
-          "table": [
-            [
-              "Law",
-              "Example"
-            ],
-            [
-              "aⁿ × aᵐ = aⁿ⁺ᵐ",
-              "2² × 2³ = 2⁵"
-            ],
-            [
-              "aⁿ ÷ aᵐ = aⁿ⁻ᵐ (a ≠ 0)",
-              "2⁵ ÷ 2³ = 2²"
-            ],
-            [
-              "(aⁿ)ᵐ = (aᵐ)ⁿ = aⁿᵐ",
-              "(3²)³ = 3⁶"
-            ],
-            [
-              "(a × b)ⁿ = aⁿ × bⁿ",
-              "(3 × 4)² = 3² × 4²"
-            ],
-            [
-              "aⁿ/bⁿ = (a/b)ⁿ (b ≠ 0)",
-              "8^(1/3)/27^(1/3) = (8/27)^(1/3)"
-            ]
-          ]
-        },
-        {
-          "kind": "steps",
-          "step": "method",
-          "text": "Simplify both sides of each pair and compare.",
-          "steps": [
-            "2³ × 3³ = 8 × 27 = 216, and (2 × 3)³ = 6³ = 216.",
-            "2⁵/2³ = 32/8 = 4, and 2⁵⁻³ = 2² = 4.",
-            "(3²)³ = 9³ = 729, and (3³)² = 27² = 729.",
-            "(3 × 4)² = 144, and 3² × 4² = 9 × 16 = 144.",
-            "2² × 2³ = 4 × 8 = 32, and 2²⁺³ = 2⁵ = 32."
-          ],
-          "ref": "Activity 1.17"
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "added": true,
-          "title": "Add the exponents",
-          "text": "Use aⁿ × aᵐ = aⁿ⁺ᵐ.",
-          "ask": "3⁴ × 3² = 3 to the power ___",
-          "a": [
-            "6",
-            "six"
-          ],
-          "why": "Same base, so add the exponents: 4 + 2 = 6.",
-          "clue": "Do you add or multiply the exponents when you multiply powers?"
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "added": true,
-          "title": "A school message",
-          "text": "A message starts with one student in a school in Hawassa. Each round, every student who has it sends it to 2 new students. After 5 rounds, 2⁵ new students get it in the last round.",
-          "ask": "2⁵ = ___ students",
-          "a": [
-            "32",
-            "thirty-two",
-            "thirty two"
-          ],
-          "why": "2⁵ = 2 × 2 × 2 × 2 × 2 = 32.",
-          "clue": "Multiply 2 by itself five times.",
-          "worked": "2 × 2 = 4, 4 × 2 = 8, 8 × 2 = 16, 16 × 2 = 32. So 2⁵ = 32."
-        }
-      ]
-    },
-    {
-      "id": "math.roots-radicals",
-      "name": "Roots and radicals",
-      "requires": [
-        "math.square-roots"
-      ],
-      "explain": {
-        "en": {
-          "text": "If aⁿ = b, then a is an nth root of b. The principal nth root ⁿ√b is the real one we use. Even roots of negative numbers are not real. b^(1/n) means ⁿ√b. Only like radicals, with the same index and radicand, can be added."
-        },
-        "am": {
-          "text": "aⁿ = b ከሆነ a የ b n-ኛ ሥር ነው። ዋናው n-ኛ ሥር ⁿ√b የምንጠቀምበት እውን ሥር ነው። የአሉታዊ ቁጥር ጥንድ ሥር እውን አይደለም። b^(1/n) ማለት ⁿ√b ነው። ተመሳሳይ ሥሮች ብቻ ይደመራሉ።",
-          "machine": true
-        }
-      },
-      "screens": [
-        {
-          "kind": "guess",
-          "step": "hook",
-          "added": true,
-          "title": "A square courtyard",
-          "text": "A square church courtyard in Lalibela has an area of 81 m².",
-          "ask": "How long is each side? Take a guess.",
-          "opts": [
-            "9 m",
-            "40.5 m",
-            "27 m",
-            "18 m"
-          ],
-          "after": "Finding the side undoes squaring. That is taking a root. Read on."
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Roots",
-          "paras": [
-            "Definitions 1.10 and 1.11: If a² = b, a is a square root of b. If a³ = b, a is a cube root of b.",
-            "If aⁿ = b, a is an nth root of b.",
-            "For n > 1, the principal nth root ⁿ√b is the positive nth root if b > 0.",
-            "It is the negative nth root if b < 0 and n is odd. It is 0 if b = 0."
-          ]
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "Kinds of roots",
-          "defs": [
-            [
-              "Square root",
-              "If a² = b, then a is a square root of b."
-            ],
-            [
-              "Cube root",
-              "If a³ = b, then a is a cube root of b."
-            ],
-            [
-              "nth root",
-              "If aⁿ = b, then a is an nth root of b."
-            ],
-            [
-              "Principal nth root",
-              "ⁿ√b: positive if b > 0; negative if b < 0 and n is odd; 0 if b = 0."
-            ]
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Real or not?",
-          "text": "Which root is NOT a real number?",
-          "opts": [
-            "∛(−8)",
-            "√(−9)",
-            "⁵√(−32)",
-            "√0"
-          ],
-          "ans": "√(−9)",
-          "why": "No real number squared gives −9. Odd roots of negatives are fine: ∛(−8) = −2.",
-          "clue": "Is the index even or odd?"
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Radical sign, index and radicand",
-          "paras": [
-            "In ⁿ√b, √ is the radical sign, n is the index and b is the radicand.",
-            "With no index written, √ means square root.",
-            "Definition 1.12: If n is a positive integer greater than 1, then b^(1/n) = ⁿ√b, whenever ⁿ√b is a real number."
-          ],
-          "note": "Correction: the printed Definition 1.12 says 'if b ∈ ℝ' with no condition. When n is even, b must not be negative: (−4)^(1/2) is not a real number."
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "Parts of a radical",
-          "defs": [
-            [
-              "Radical sign",
-              "The symbol √ used for roots."
-            ],
-            [
-              "Index",
-              "The small number n in ⁿ√b. No index means square root."
-            ],
-            [
-              "Radicand",
-              "The number under the radical sign: b in ⁿ√b."
-            ]
-          ]
-        },
-        {
-          "kind": "steps",
-          "step": "method",
-          "title": "Examples 1 and 2",
-          "text": "Finding roots, and writing roots as powers.",
-          "steps": [
-            "√9 = 3, since 3² = 9. √0.01 = 0.1.",
-            "⁴√81 = 3, since 3⁴ = 81.",
-            "⁵√−100,000 = −10, since (−10)⁵ = −100,000.",
-            "√3 = 3^(1/2) and ∛6 = 6^(1/3).",
-            "1/⁴√10 = 10^(−1/4)."
-          ]
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Laws for rational powers",
-          "paras": [
-            "The laws of exponents also work for powers 1/n and for rational powers a^(m/n) = (a^(1/n))^m.",
-            "Example 3: 7^(1/2) × 7^(3/2) = 7² = 49. (25 × 9)^(1/2) = 5 × 3 = 15. 3^(5/2) ÷ 3^(1/2) = 3² = 9.",
-            "(8/27)^(1/3) = 2/3, and 81^(1/4) = (3⁴)^(1/4) = 3.",
-            "Example 4: √50 = √25 × √2 = 5√2. 32^(1/4) ÷ 162^(1/4) = (16/81)^(1/4) = 2/3. ∛16 × ∛4 = ∛64 = 4. (8 + ∛27)^(1/3) = ∛11."
-          ],
-          "note": "Correction: in Example 4(b) the printed text says 'Both numbers 32 and 64 are multiples of 2', but the numbers in the question are 32 and 162."
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "title": "A rational power",
-          "text": "Simplify 4^(3/2).",
-          "opts": [
-            "6",
-            "8",
-            "12",
-            "64"
-          ],
-          "ans": "8",
-          "why": "4^(3/2) = (4^(1/2))³ = 2³ = 8.",
-          "clue": "Take the square root first, then cube.",
-          "needs": "math.square-roots"
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Adding and subtracting radicals",
-          "paras": [
-            "Activity 1.18: √2 − √2 = 0 and 4√2 − √2 = 3√2 are correct.",
-            "√16 − √4 = √12 is wrong: √16 − √4 = 4 − 2 = 2.",
-            "√2 + √3 = √5 is wrong: √2 + √3 ≈ 3.15 but √5 ≈ 2.24.",
-            "Definition 1.13: Radicals with the same index and the same radicand are like radicals. 2√5, −(2/3)√5 and √5 are like radicals. √2 and √3 are not; √3 and ∛3 are not."
-          ]
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "Like radicals",
-          "defs": [
-            [
-              "Like radicals",
-              "Radicals with the same index and the same radicand, such as 2√5 and √5."
-            ]
-          ]
-        },
-        {
-          "kind": "steps",
-          "step": "method",
-          "text": "Add or subtract like radicals as you collect like terms. Sometimes simplify first.",
-          "steps": [
-            "√3 + √12 = √3 + 2√3 = 3√3.",
-            "2√18 − √2 + √8: simplify each: 2√18 = 6√2 and √8 = 2√2.",
-            "6√2 − √2 + 2√2 = 7√2."
-          ],
-          "ref": "Example 1"
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "added": true,
-          "title": "Collect like radicals",
-          "ask": "√8 + √2 = ___",
-          "a": [
-            "3√2",
-            "3 √2",
-            "3sqrt2",
-            "3 sqrt 2",
-            "3root2"
-          ],
-          "why": "√8 = √4 × √2 = 2√2, and 2√2 + √2 = 3√2.",
-          "clue": "First write √8 as a number times √2.",
-          "needs": "math.square-roots"
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "added": true,
-          "title": "A field in Bishoftu",
-          "text": "A square field in Bishoftu has an area of 50 m². Its side is √50 m.",
-          "ask": "Which is √50 in simplest form?",
-          "opts": [
-            "5√2 m",
-            "25√2 m",
-            "2√5 m",
-            "10√5 m"
-          ],
-          "ans": "5√2 m",
-          "why": "√50 = √25 × √2 = 5√2.",
-          "clue": "Find the largest perfect square that divides 50.",
-          "worked": "50 = 25 × 2, and 25 is a perfect square. √50 = √25 × √2 = 5√2. So the side is 5√2 m ≈ 7.07 m.",
-          "needs": "math.square-roots"
-        }
-      ]
-    },
-    {
-      "id": "math.real-number-properties",
-      "name": "Operations and properties of real numbers",
-      "requires": [
-        "math.irrational-numbers"
-      ],
-      "explain": {
-        "en": {
-          "text": "ℝ is closed under addition, subtraction, multiplication and division by non-zero numbers. A rational plus an irrational is irrational. Every real number a has an additive inverse −a. Every non-zero a has a multiplicative inverse 1/a. Zero has no reciprocal."
-        },
-        "am": {
-          "text": "ℝ በመደመር፣ በመቀነስ፣ በማባዛትና ዜሮ ባልሆነ ቁጥር በማካፈል ዝግ ነው። ምክንያታዊ ሲደመር ኢ-ምክንያታዊ ኢ-ምክንያታዊ ይሆናል። እያንዳንዱ a የመደመር ተቃራኒ −a አለው። ዜሮ ያልሆነ a የማባዛት ተገላቢጦሽ 1/a አለው።",
-          "machine": true
-        }
-      },
-      "screens": [
-        {
-          "kind": "sort",
-          "step": "hook",
-          "graded": false,
-          "text": "Rational or irrational? Make your best guess for each result.",
-          "bins": [
-            "Rational",
-            "Irrational"
-          ],
-          "items": [
-            [
-              "π + 2",
-              "Irrational",
-              "Adding 2 does not stop π's decimal."
-            ],
-            [
-              "(1 − √3)(1 + √3)",
-              "Rational",
-              "It equals 1 − 3 = −2."
-            ],
-            [
-              "(22/7) × (22/7)",
-              "Rational",
-              "It equals 484/49."
-            ],
-            [
-              "√7(4 − √7)",
-              "Irrational",
-              "It equals 4√7 − 7."
-            ],
-            [
-              "0.2323… + 0.3232…",
-              "Rational",
-              "It equals 0.5555… = 5/9."
-            ],
-            [
-              "8/√2",
-              "Irrational",
-              "It equals 4√2."
-            ]
-          ],
-          "ref": "Activity 1.19"
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Operations on real numbers",
-          "paras": [
-            "The rational numbers obey the commutative, associative and distributive laws.",
-            "Adding, subtracting, multiplying or dividing (except by 0) two rational numbers always gives a rational number. ℚ is closed under these operations.",
-            "The irrational numbers obey the same laws. But the sum, difference, product or quotient of two irrationals is not always irrational.",
-            "Activity 1.19: √3 × √12 = 6 is rational. A rational and an irrational can never have a rational sum or difference. 2 ÷ √2 = √2 is irrational."
-          ]
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "Closed sets",
-          "defs": [
-            [
-              "Closed",
-              "A set is closed under an operation if the result is always in the set. ℚ is closed under +, −, × and ÷ (not by 0)."
-            ]
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Find the irrational one",
-          "text": "Which is irrational?",
-          "opts": [
-            "(1 − √3)(1 + √3)",
-            "√8 × √2",
-            "3 + √5",
-            "√12 ÷ √3"
-          ],
-          "ans": "3 + √5",
-          "why": "A rational number plus an irrational number is irrational. The others equal −2, 4 and 2.",
-          "clue": "Work out each one.",
-          "needs": "math.irrational-numbers"
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Conclusions",
-          "paras": [
-            "The sum or difference of a rational number and an irrational number is irrational.",
-            "The product or quotient of a non-zero rational number and an irrational number is irrational.",
-            "Because ℝ contains all the rational and irrational numbers, ℝ is closed under addition, subtraction, multiplication and division (except division by 0)."
-          ]
-        },
-        {
-          "kind": "steps",
-          "step": "method",
-          "title": "Examples 1 to 3",
-          "text": "Let x = 5√3 + 2√2 and y = √2 − 4√3.",
-          "steps": [
-            "x + y = (5 − 4)√3 + (2 + 1)√2 = √3 + 3√2.",
-            "x − y = 5√3 + 2√2 − √2 + 4√3 = 9√3 + √2.",
-            "3√3 × 2√2 = 6√6, and 5√2 × √2/5 = 2.",
-            "6√8 ÷ 3√2 = 2√4 = 4.",
-            "√3 ÷ (2√2 × 3√3) = √3/(6√6) = (1/6)√(3/6) = 1/(6√2)."
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "title": "Two irrationals",
-          "text": "What is √3 × √12?",
-          "opts": [
-            "6",
-            "√15",
-            "36",
-            "3√2"
-          ],
-          "ans": "6",
-          "why": "√3 × √12 = √36 = 6. Two irrationals can have a rational product.",
-          "clue": "Multiply under one root: √a × √b = √(ab)."
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Properties of addition and multiplication",
-          "paras": [
-            "Activity 1.20 asks for opposites and reciprocals. The opposite of √3 is −√3. The reciprocal of 3^(2/3) is 3^(−2/3).",
-            "These are the inverse properties in the table below."
-          ],
-          "table": [
-            [
-              "Property",
-              "Addition",
-              "Multiplication"
-            ],
-            [
-              "Closure",
-              "a + b ∈ ℝ",
-              "ab ∈ ℝ"
-            ],
-            [
-              "Commutative",
-              "a + b = b + a",
-              "ab = ba"
-            ],
-            [
-              "Associative",
-              "(a + b) + c = a + (b + c)",
-              "(ab)c = a(bc)"
-            ],
-            [
-              "Identity",
-              "a + 0 = 0 + a = a",
-              "a × 1 = 1 × a = a"
-            ],
-            [
-              "Inverse",
-              "a + (−a) = 0: −a is the additive inverse",
-              "a × (1/a) = 1 for a ≠ 0: 1/a is the multiplicative inverse (reciprocal)"
-            ],
-            [
-              "Distributive",
-              "a(b + c) = ab + ac",
-              "(b + c)a = ba + ca"
-            ]
-          ]
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "Inverses",
-          "defs": [
-            [
-              "Additive inverse",
-              "−a, because a + (−a) = 0. Also called the opposite."
-            ],
-            [
-              "Multiplicative inverse",
-              "1/a for a ≠ 0, because a × (1/a) = 1. Also called the reciprocal."
-            ]
-          ]
-        },
-        {
-          "kind": "steps",
-          "step": "method",
-          "text": "Additive and multiplicative inverses.",
-          "steps": [
-            "√2: additive inverse −√2, multiplicative inverse 1/√2.",
-            "3/4: additive inverse −3/4, multiplicative inverse 4/3.",
-            "0.5: additive inverse −0.5, multiplicative inverse 2, since 0.5 = 1/2."
-          ],
-          "ref": "Example 4"
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "title": "No reciprocal",
-          "text": "Which real number has no multiplicative inverse?",
-          "opts": [
-            "1",
-            "−1",
-            "0",
-            "√2"
-          ],
-          "ans": "0",
-          "why": "No number times 0 gives 1.",
-          "clue": "Try to find 1/0."
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "added": true,
-          "title": "Find the reciprocal",
-          "ask": "The multiplicative inverse of 0.25 is ___.",
-          "a": [
-            "4",
-            "four",
-            "4/1"
-          ],
-          "why": "0.25 = 1/4, and 1/4 × 4 = 1.",
-          "clue": "Write 0.25 as a fraction first."
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "added": true,
-          "title": "Shopping in Gondar",
-          "text": "Abel buys 3 notebooks at 12 birr and 3 pens at 8 birr in Gondar. He works out 3 × (12 + 8) = 60 birr instead of 3 × 12 + 3 × 8.",
-          "ask": "Which property lets him do this?",
-          "opts": [
-            "Distributive",
-            "Commutative",
-            "Associative",
-            "Identity"
-          ],
-          "ans": "Distributive",
-          "why": "a(b + c) = ab + ac with a = 3, b = 12, c = 8.",
-          "clue": "Look at the table row where × spreads over +.",
-          "worked": "3 × 12 + 3 × 8 = 36 + 24 = 60. 3 × (12 + 8) = 3 × 20 = 60. This is a(b + c) = ab + ac, the distributive property."
-        }
-      ]
-    }
-  ],
-  "exercises": [
-    {
-      "book_name": "Exercise 1.26",
-      "items": [
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "Write √5 in exponential form: ___",
-          "a": [
-            "5^(1/2)",
-            "5^1/2",
-            "5^0.5",
-            "5^(0.5)"
-          ],
-          "why": "b^(1/n) = ⁿ√b, and √ has index 2.",
-          "clue": "A square root is the power 1/2."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "Write ∛(3⁴) in exponential form: ___",
-          "a": [
-            "3^(4/3)",
-            "3^4/3"
-          ],
-          "why": "∛(3⁴) = (3⁴)^(1/3) = 3^(4/3).",
-          "clue": "A cube root is the power 1/3; then multiply exponents."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "(−27)^(1/3) = ___",
-          "a": [
-            "−3",
-            "-3"
-          ],
-          "why": "(−3)³ = −27. Odd roots of negatives are negative.",
-          "clue": "Which number cubed gives −27?"
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "32^(1/5) = ___",
-          "a": [
-            "2",
-            "two"
-          ],
-          "why": "2⁵ = 32.",
-          "clue": "Which number to the 5th power is 32?"
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "∛125 / √625 = ___",
-          "a": [
-            "1/5",
-            "0.2",
-            "5/25"
-          ],
-          "why": "∛125 = 5 and √625 = 25, so 5/25 = 1/5.",
-          "clue": "Find each root separately."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "√0.09 = ___",
-          "a": [
-            "0.3",
-            ".3",
-            "3/10"
-          ],
-          "why": "0.3² = 0.09.",
-          "clue": "Which decimal squared gives 0.09?"
-        }
-      ]
-    },
-    {
-      "book_name": "Exercise 1.27",
-      "items": [
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "√125 = ___",
-          "a": [
-            "5√5",
-            "5 √5",
-            "5sqrt5",
-            "5root5"
-          ],
-          "why": "√125 = √25 × √5 = 5√5.",
-          "clue": "Find a perfect square that divides 125."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "9^(1/3) ÷ 243^(1/3) = ___",
-          "a": [
-            "1/3",
-            "0.333…",
-            "one third"
-          ],
-          "why": "(9/243)^(1/3) = (1/27)^(1/3) = 1/3.",
-          "clue": "Use aⁿ/bⁿ = (a/b)ⁿ first."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "⁵√0.00032 = ___",
-          "a": [
-            "0.2",
-            ".2",
-            "1/5"
-          ],
-          "why": "0.2⁵ = 0.00032.",
-          "clue": "2⁵ = 32. Count the decimal places."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "2^(3/2) × √2 = ___",
-          "a": [
-            "4",
-            "four"
-          ],
-          "why": "2^(3/2) × 2^(1/2) = 2² = 4.",
-          "clue": "Write √2 as a power of 2, then add exponents."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "∛0.001 + ⁴√0.0081 = ___",
-          "a": [
-            "0.4",
-            ".4",
-            "2/5"
-          ],
-          "why": "∛0.001 = 0.1 and ⁴√0.0081 = 0.3; 0.1 + 0.3 = 0.4.",
-          "clue": "Find each root, then add."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "3^(1/4) × 27^(1/4) = ___",
-          "a": [
-            "3",
-            "three"
-          ],
-          "why": "(3 × 27)^(1/4) = 81^(1/4) = 3.",
-          "clue": "Use (a × b)ⁿ = aⁿ × bⁿ backwards."
-        }
-      ]
-    },
-    {
-      "book_name": "Exercise 1.28",
-      "items": [
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "√12 − √3 = ___",
-          "a": [
-            "√3",
-            "sqrt3",
-            "root3",
-            "1√3"
-          ],
-          "why": "√12 = 2√3, and 2√3 − √3 = √3.",
-          "clue": "Simplify √12 first."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "∛54 − ∛2 = ___",
-          "a": [
-            "2∛2",
-            "2 ∛2",
-            "2cbrt2"
-          ],
-          "why": "∛54 = ∛27 × ∛2 = 3∛2, and 3∛2 − ∛2 = 2∛2.",
-          "clue": "Find a perfect cube that divides 54."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "3∛27 − ∛125 + √169 = ___",
-          "a": [
-            "17",
-            "seventeen"
-          ],
-          "why": "9 − 5 + 13 = 17.",
-          "clue": "Each root is a whole number."
-        }
-      ]
-    },
-    {
-      "book_name": "Exercise 1.29",
-      "items": [
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "x = 4√2 + 7√5 and y = √2 − 3√5. Find x + y.",
-          "opts": [
-            "5√2 + 4√5",
-            "5√2 + 10√5",
-            "3√2 + 10√5",
-            "9√7"
-          ],
-          "ans": "5√2 + 4√5",
-          "why": "(4 + 1)√2 + (7 − 3)√5 = 5√2 + 4√5.",
-          "clue": "Collect the √2 terms and the √5 terms."
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "x = 4√2 + 7√5 and y = √2 − 3√5. Find x − y.",
-          "opts": [
-            "3√2 + 10√5",
-            "3√2 + 4√5",
-            "5√2 + 4√5",
-            "3√2 − 10√5"
-          ],
-          "ans": "3√2 + 10√5",
-          "why": "4√2 − √2 = 3√2 and 7√5 + 3√5 = 10√5.",
-          "clue": "Subtracting −3√5 adds 3√5."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "2√5 × 4√3 = ___",
-          "a": [
-            "8√15",
-            "8 √15",
-            "8sqrt15"
-          ],
-          "why": "2 × 4 = 8 and √5 × √3 = √15.",
-          "clue": "Multiply the numbers, then the roots."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "3√3 × √3/3 = ___",
-          "a": [
-            "3",
-            "three"
-          ],
-          "why": "3√3 × √3/3 = (3 × 3)/3 = 3.",
-          "clue": "√3 × √3 = 3."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "4√6 ÷ 2√2 = ___",
-          "a": [
-            "2√3",
-            "2 √3",
-            "2sqrt3"
-          ],
-          "why": "4 ÷ 2 = 2 and √6 ÷ √2 = √3.",
-          "clue": "Divide the numbers, then the roots."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "ask": "10√2 ÷ 5√18 = ___",
-          "a": [
-            "2/3",
-            "0.666…",
-            "0.67"
-          ],
-          "why": "5√18 = 15√2, so 10√2/(15√2) = 2/3.",
-          "clue": "Simplify √18 first."
-        }
-      ]
-    },
-    {
-      "book_name": "Exercise 1.30",
-      "items": [
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Find the additive and multiplicative inverse of −2/5.",
-          "opts": [
-            "2/5 and −5/2",
-            "−2/5 and 5/2",
-            "2/5 and 5/2",
-            "−5/2 and 2/5"
-          ],
-          "ans": "2/5 and −5/2",
-          "why": "−2/5 + 2/5 = 0 and −2/5 × (−5/2) = 1.",
-          "clue": "The reciprocal keeps the same sign."
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Find the additive and multiplicative inverse of 0.111… (0.1 repeating).",
-          "opts": [
-            "−1/9 and 9",
-            "−0.1 and 10",
-            "1/9 and −9",
-            "−1/9 and 1/9"
-          ],
-          "ans": "−1/9 and 9",
-          "why": "0.111… = 1/9, so the inverses are −1/9 and 9.",
-          "clue": "Change the repeating decimal to a fraction first.",
-          "needs": "math.irrational-numbers"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Name the property: √3(√3 − 2) = 3 − 2√3.",
-          "opts": [
-            "Distributive",
-            "Associative",
-            "Commutative",
-            "Identity"
-          ],
-          "ans": "Distributive",
-          "why": "√3 is multiplied over both terms in the bracket.",
-          "clue": "Which property spreads × over a bracket?"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Name the property: 5 + (−8 + 2) = (5 − 8) + 2.",
-          "opts": [
-            "Associative",
-            "Commutative",
-            "Distributive",
-            "Closure"
-          ],
-          "ans": "Associative",
-          "why": "Only the grouping changes; the order stays the same.",
-          "clue": "What moved: the order or the brackets?"
-        },
-        {
-          "kind": "tf",
-          "step": "exercise",
-          "graded": true,
-          "text": "Every real number has a multiplicative inverse.",
-          "a": false,
-          "why": "0 has none. Every other real number does.",
-          "clue": "Try to find the reciprocal of 0."
-        },
-        {
-          "kind": "tf",
-          "step": "exercise",
-          "graded": true,
-          "text": "The operation a ∗ b = 2a + b is commutative.",
-          "a": false,
-          "why": "1 ∗ 2 = 4 but 2 ∗ 1 = 5.",
-          "clue": "Try a = 1 and b = 2 both ways."
-        }
-      ]
-    }
-  ],
-  "test": [
-    {
-      "kind": "mcq",
-      "step": "test",
-      "graded": true,
-      "text": "What is 2⁻³?",
-      "opts": [
-        "1/8",
-        "−8",
-        "−6",
-        "8"
-      ],
-      "ans": "1/8",
-      "why": "2⁻³ = 1/2³ = 1/8.",
-      "clue": ""
-    },
-    {
-      "kind": "blank",
-      "step": "test",
-      "graded": true,
-      "ask": "2√18 − √2 + √8 = ___",
-      "a": [
-        "7√2",
-        "7 √2",
-        "7sqrt2"
-      ],
-      "why": "6√2 − √2 + 2√2 = 7√2.",
-      "clue": ""
-    },
-    {
-      "kind": "tf",
-      "step": "test",
-      "graded": true,
-      "text": "The sum of a rational number and an irrational number is always irrational.",
-      "a": true,
-      "why": "This is one of the book's conclusions in 1.4.3.",
-      "clue": ""
-    }
-  ],
-  "notes": [
-    {
-      "kind": "correction",
-      "text": "Definition 1.12: the printed text says 'if b ∈ ℝ' with no condition. When n is even, b must not be negative: (−4)^(1/2) is not a real number. The unit summary (item 11) adds the right condition."
-    },
-    {
-      "kind": "correction",
-      "text": "Example 4(b): the printed text says 'Both numbers 32 and 64 are multiples of 2', but the numbers in the question are 32 and 162."
-    },
-    {
-      "kind": "review",
-      "text": "Exercise 1.29 item 4(b), √145 − √232 + √261, does not simplify to a single radical: 145 = 5 × 29, 232 = 4 × 58 and 261 = 9 × 29. The answer is √145 − 2√58 + 3√29. The numbers may be a printing error. Teacher review needed. The item is left out of the exercise set here."
-    },
-    {
-      "kind": "note",
-      "text": "Exercises are capped at six items each. Left out: 1.26 1(b), 1(d), 1(e); 1.27 (e), (g), (h), (j); 1.29 2(c), 3(c), 4(a), 4(b); 1.30 1(a), 1(c), 2(c), 4(b). Activity 1.20 is summarised in a read block."
-    },
-    {
-      "kind": "note",
-      "text": "Order: in the book the laws of exponents (Activity 1.17 and the table) come after roots (Definitions 1.10–1.12). Here the laws table sits in the exponents idea, and the rational-power examples (Examples 3 and 4) stay in the roots idea."
-    },
-    {
-      "kind": "note",
-      "text": "Powers like b^(1/n) are written with ^ because the lesson text is plain; the book uses superscripts. Added examples: Hawassa message, Lalibela courtyard, Bishoftu field, Gondar shopping, √8 + √2, 3⁴ × 3², 7⁵ and 0.25 items."
-    }
-  ],
-  "review": {
-    "status": "validated"
+  {
+   "en": "Base",
+   "am": "መሠረት",
+   "machine": true,
+   "def": "In aⁿ, the number a that is multiplied."
   },
-  "version": 1,
-  "refreshers": {
-    "math.integer-multiplication": {
-      "name": "Multiplying negatives",
-      "screens": [
-        {
-          "kind": "steps",
-          "step": "method",
-          "title": "Sign rules",
-          "text": "Count the negative signs when you multiply.",
-          "steps": [
-            "(−3) × (−3) = 9: negative times negative is positive.",
-            "(−3) × (−3) × (−3) = −27: three negatives give a negative.",
-            "(−3)⁴ = 81: four negatives give a positive.",
-            "−3⁴ = −(3 × 3 × 3 × 3) = −81: only 3 is raised."
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Your turn",
-          "text": "What is (−2)³?",
-          "opts": [
-            "−8",
-            "8",
-            "−6",
-            "6"
-          ],
-          "ans": "−8",
-          "why": "(−2) × (−2) × (−2) = 4 × (−2) = −8.",
-          "clue": "An odd number of negatives gives a negative."
-        }
-      ]
-    },
-    "math.square-roots": {
-      "name": "Square roots",
-      "screens": [
-        {
-          "kind": "steps",
-          "step": "method",
-          "title": "Undo a square",
-          "text": "A square root undoes squaring.",
-          "steps": [
-            "√81 = 9, because 9² = 81.",
-            "√0.04 = 0.2, because 0.2² = 0.04.",
-            "√a × √b = √(ab). So √25 × √2 = √50.",
-            "So √50 = √25 × √2 = 5√2."
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Your turn",
-          "text": "What is √12 in simplest form?",
-          "opts": [
-            "2√3",
-            "3√2",
-            "4√3",
-            "6"
-          ],
-          "ans": "2√3",
-          "why": "12 = 4 × 3, so √12 = √4 × √3 = 2√3.",
-          "clue": "Find the largest perfect square that divides 12."
-        }
-      ]
-    },
-    "math.irrational-numbers": {
-      "name": "Irrational numbers",
-      "screens": [
-        {
-          "kind": "steps",
-          "step": "method",
-          "title": "Rational or irrational?",
-          "text": "Look at the decimal form of the number.",
-          "steps": [
-            "A rational number can be written a/b, with integers a, b and b ≠ 0.",
-            "Its decimal ends, like 0.75, or repeats, like 0.111… = 1/9.",
-            "An irrational decimal neither ends nor repeats.",
-            "Examples: √2 = 1.41421… and π = 3.14159… are irrational."
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Your turn",
-          "text": "Which number is irrational?",
-          "opts": [
-            "√5",
-            "0.25",
-            "√9",
-            "2/3"
-          ],
-          "ans": "√5",
-          "why": "√5 = 2.23606… never ends or repeats. √9 = 3 is rational.",
-          "clue": "Is the number under the root a perfect square?"
-        }
-      ]
-    }
+  {
+   "en": "Square root",
+   "am": "ካሬ ሥር",
+   "machine": true,
+   "def": "If a² = b, then a is a square root of b."
+  },
+  {
+   "en": "Cube root",
+   "am": "ኩብ ሥር",
+   "machine": true,
+   "def": "If a³ = b, then a is a cube root of b."
+  },
+  {
+   "en": "nth root",
+   "am": "n-ኛ ሥር",
+   "machine": true,
+   "def": "If aⁿ = b, then a is an nth root of b."
+  },
+  {
+   "en": "Principal nth root",
+   "am": "ዋና n-ኛ ሥር",
+   "machine": true,
+   "def": "The real nth root ⁿ√b: positive when b > 0, negative when b < 0 and n is odd, 0 when b = 0."
+  },
+  {
+   "en": "Radical sign",
+   "am": "የሥር ምልክት",
+   "machine": true,
+   "def": "The symbol √ used for roots."
+  },
+  {
+   "en": "Index",
+   "am": "ጠቋሚ",
+   "machine": true,
+   "def": "The small number n in ⁿ√b. No index means square root."
+  },
+  {
+   "en": "Radicand",
+   "am": "ከሥር ምልክት በታች ያለ ቁጥር",
+   "machine": true,
+   "def": "The number under the radical sign: b in ⁿ√b."
+  },
+  {
+   "en": "Like radicals",
+   "am": "ተመሳሳይ ሥሮች",
+   "machine": true,
+   "def": "Radicals with the same index and the same radicand, such as 2√5 and 7√5. Only like radicals can be added."
+  },
+  {
+   "en": "Closed",
+   "am": "ዝግ",
+   "machine": true,
+   "def": "A set is closed under an operation if doing it to two members always gives a member of the set."
+  },
+  {
+   "en": "Additive inverse",
+   "am": "የመደመር ተቃራኒ",
+   "machine": true,
+   "def": "The number −a that gives 0 when added to a. Also called the opposite."
+  },
+  {
+   "en": "Multiplicative inverse",
+   "am": "የማባዛት ተገላቢጦሽ",
+   "machine": true,
+   "def": "The number 1/a that gives 1 when multiplied by a (a ≠ 0). Also called the reciprocal."
   }
+ ],
+ "ideas": [
+  {
+   "id": "math.exponents",
+   "name": "Exponents",
+   "requires": [
+    "math.integer-multiplication"
+   ],
+   "explain": {
+    "en": {
+     "text": "aⁿ means a multiplied by itself n times. a is the base and n is the exponent. For a ≠ 0, a⁰ = 1 and a⁻ⁿ = 1/aⁿ. To multiply powers of the same base, add the exponents. To divide, subtract them."
+    },
+    "am": {
+     "text": "aⁿ ማለት a ራሱን n ጊዜ ሲባዛ ነው። a መሠረት፣ n አርቢ ነው። a ≠ 0 ሲሆን a⁰ = 1 እና a⁻ⁿ = 1/aⁿ ነው። ተመሳሳይ መሠረት ያላቸውን ስታባዛ አርቢዎቹን ደምር፤ ስታካፍል ቀንስ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "text": "2⁴ = 16, 2³ = 8, 2² = 4, 2¹ = 2. Each time the power drops by 1, the value is halved.",
+     "ask": "Keep the pattern going. What is 2⁰?",
+     "opts": [
+      "0",
+      "1",
+      "2",
+      "It has no value"
+     ],
+     "after": "Halve 2 and you get 1, so 2⁰ = 1.\n\"0\" is tempting, but halving never reaches 0.\nHalve again: 2⁻¹ = 1/2, 2⁻² = 1/4. Read on.",
+     "ref": "Activity 1.16",
+     "best": "1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Exponents",
+     "paras": [
+      "Writing 14 × 14 × … × 14 twenty times takes time and space. Exponents make this short.",
+      "Definition 1.9: If a is a real number and n is a positive integer, then a × a × … × a (n times) = aⁿ.",
+      "Here a is the base and n is the exponent (power).",
+      "For instance, 2³ = 2 × 2 × 2 = 8; (−3)⁴ = 81; and −2³ = −(2 × 2 × 2) = −8.",
+      "Notice that (−3)⁴ and −3⁴ are different. The brackets decide what is raised to the power."
+     ]
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Base and exponent",
+     "defs": [
+      [
+       "Base",
+       "In aⁿ, the number a that is multiplied by itself."
+      ],
+      [
+       "Exponent",
+       "In aⁿ, the number n that says how many times a is used. Also called the power."
+      ]
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Spot the base",
+     "text": "Look at 7⁵.",
+     "ask": "Base and exponent: which number is the base of 7⁵?",
+     "opts": [
+      "7",
+      "5",
+      "35",
+      "75"
+     ],
+     "ans": "7",
+     "why": "7⁵ = 7 × 7 × 7 × 7 × 7.\nThe base is the number being multiplied: 7.\nThe exponent 5 says how many 7s.\n35 and 75 only join the digits: they are not parts of 7⁵.",
+     "clue": "The base is the big number; the exponent sits up high."
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Zero and negative exponents",
+     "paras": [
+      "Activity 1.16: moving right lowers the power by 1, so divide by 2 each time.",
+      "So 2⁻ⁿ = 1/2ⁿ. In the same way, a⁻ⁿ = 1/aⁿ for a ≠ 0.",
+      "Note 1. Zero exponent: if a ≠ 0, then a⁰ = 1.",
+      "Note 2. Negative exponent: if a ≠ 0 and n is a positive integer, then a⁻ⁿ = 1/aⁿ."
+     ]
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Halve each time",
+     "ref": "Activity 1.16",
+     "text": "Move right: the power drops by 1, so divide by 2.",
+     "steps": [
+      "2⁴ = 16.",
+      "2³ = 16 ÷ 2 = 8.",
+      "2² = 8 ÷ 2 = 4, and 2¹ = 4 ÷ 2 = 2.",
+      "2⁰ = 2 ÷ 2 = 1.",
+      "2⁻¹ = 1 ÷ 2 = 1/2.",
+      "2⁻² = 1/4, 2⁻³ = 1/8, 2⁻⁴ = 1/16.",
+      "So 2⁻ⁿ = 1/2ⁿ."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "A negative exponent",
+     "text": "Negative exponent: what is 5⁻²?",
+     "opts": [
+      "−25",
+      "−10",
+      "1/25",
+      "25"
+     ],
+     "ans": "1/25",
+     "why": "Rule: a⁻ⁿ = 1/aⁿ.\n5⁻² = 1/5².\n5² = 25, so 5⁻² = 1/25.\n−25 is wrong: a negative exponent gives a reciprocal, not a negative number.",
+     "clue": "Use a⁻ⁿ = 1/aⁿ."
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "Mind the brackets",
+     "text": "Mind the brackets: what is −3⁴?",
+     "opts": [
+      "81",
+      "−81",
+      "−12",
+      "12"
+     ],
+     "ans": "−81",
+     "why": "Without brackets, only 3 is raised to the power 4.\n3⁴ = 3 × 3 × 3 × 3 = 81.\nThen put the minus in front: −81.\n81 would be (−3)⁴, with brackets.",
+     "clue": "Compare −2³ = −(2 × 2 × 2) in the reading.",
+     "needs": "math.integer-multiplication"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Laws of exponents",
+     "paras": [
+      "Activity 1.17 compares pairs such as 2³ × 3³ and (2 × 3)³. Each pair is equal.",
+      "The pairs give these laws, for a, b real and m, n natural numbers.",
+      "Tap each law below to see an example."
+     ]
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Laws of exponents",
+     "ref": "Activity 1.17",
+     "ask": "Tap each law to see an example.",
+     "need": 3,
+     "items": [
+      [
+       "aⁿ × aᵐ = aⁿ⁺ᵐ",
+       "Example: 2² × 2³ = 2⁵ = 32."
+      ],
+      [
+       "aⁿ ÷ aᵐ = aⁿ⁻ᵐ (a ≠ 0)",
+       "Example: 2⁵ ÷ 2³ = 2² = 4."
+      ],
+      [
+       "(aⁿ)ᵐ = (aᵐ)ⁿ = aⁿᵐ",
+       "Example: (3²)³ = 3⁶ = 729."
+      ],
+      [
+       "(a × b)ⁿ = aⁿ × bⁿ",
+       "Example: (3 × 4)² = 3² × 4² = 144."
+      ],
+      [
+       "aⁿ/bⁿ = (a/b)ⁿ (b ≠ 0)",
+       "Example: 8^(1/3)/27^(1/3) = (8/27)^(1/3) = 2/3."
+      ]
+     ]
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "text": "Simplify both sides of each pair and compare.",
+     "steps": [
+      "2³ × 3³ = 8 × 27 = 216, and (2 × 3)³ = 6³ = 216.",
+      "2⁵/2³ = 32/8 = 4, and 2⁵⁻³ = 2² = 4.",
+      "(3²)³ = 9³ = 729, and (3³)² = 27² = 729.",
+      "(3 × 4)² = 144, and 3² × 4² = 9 × 16 = 144.",
+      "2² × 2³ = 4 × 8 = 32, and 2²⁺³ = 2⁵ = 32."
+     ],
+     "ref": "Activity 1.17"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "added": true,
+     "title": "Add the exponents",
+     "text": "Use aⁿ × aᵐ = aⁿ⁺ᵐ.",
+     "ask": "Multiply powers with the same base: 3⁴ × 3² = 3 to the power ___",
+     "a": [
+      "6",
+      "six"
+     ],
+     "why": "Same base 3, so add the exponents.\n4 + 2 = 6.\nSo 3⁴ × 3² = 3⁶.\nCheck: 81 × 9 = 729 = 3⁶.",
+     "clue": "Do you add or multiply the exponents when you multiply powers?"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "added": true,
+     "title": "A school message",
+     "text": "A message starts with one student in a school in Hawassa. Each round, every student who has it sends it to 2 new students. After 5 rounds, 2⁵ new students get it in the last round.",
+     "ask": "Evaluate the power: 2⁵ = ___ students",
+     "a": [
+      "32",
+      "thirty-two",
+      "thirty two"
+     ],
+     "why": "2⁵ means five 2s multiplied.\n2 × 2 = 4, then 4 × 2 = 8.\n8 × 2 = 16, then 16 × 2 = 32.\nSo 32 students get it in round 5.",
+     "clue": "Multiply 2 by itself five times.",
+     "worked": "2⁵ = 2 × 2 × 2 × 2 × 2.\n2 × 2 = 4, 4 × 2 = 8, 8 × 2 = 16, 16 × 2 = 32.\nSo 2⁵ = 32."
+    }
+   ]
+  },
+  {
+   "id": "math.roots-radicals",
+   "name": "Roots and radicals",
+   "requires": [
+    "math.square-roots"
+   ],
+   "explain": {
+    "en": {
+     "text": "If aⁿ = b, then a is an nth root of b. The principal nth root ⁿ√b is the real one we use. Even roots of negative numbers are not real. b^(1/n) means ⁿ√b. Only like radicals, with the same index and radicand, can be added."
+    },
+    "am": {
+     "text": "aⁿ = b ከሆነ a የ b n-ኛ ሥር ነው። ዋናው n-ኛ ሥር ⁿ√b የምንጠቀምበት እውን ሥር ነው። የአሉታዊ ቁጥር ጥንድ ሥር እውን አይደለም። b^(1/n) ማለት ⁿ√b ነው። ተመሳሳይ ሥሮች ብቻ ይደመራሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "added": true,
+     "title": "A square courtyard",
+     "text": "A square church courtyard in Lalibela has an area of 81 m².",
+     "ask": "How long is each side? Take a guess.",
+     "opts": [
+      "9 m",
+      "40.5 m",
+      "27 m",
+      "18 m"
+     ],
+     "after": "9 × 9 = 81, so each side is 9 m.\n40.5 is 81 ÷ 2: that halves the area, it does not undo squaring.\nFinding the side undoes squaring. That is taking a root. Read on.",
+     "best": "9 m"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Find the side",
+     "pic": "square",
+     "vars": [
+      {
+       "k": "a",
+       "label": "Side (m)",
+       "min": 1,
+       "max": 12,
+       "step": 1,
+       "v": 5
+      }
+     ],
+     "formula": "a*a",
+     "outs": [
+      [
+       "Area",
+       "a*a",
+       "{v} m²"
+      ]
+     ],
+     "note": "Move the slider until the area is 81 m². The side is then √81 = 9 m.",
+     "added": true
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Roots",
+     "paras": [
+      "Definitions 1.10 and 1.11: If a² = b, a is a square root of b. If a³ = b, a is a cube root of b.",
+      "If aⁿ = b, a is an nth root of b.",
+      "For n > 1, the principal nth root ⁿ√b is the positive nth root if b > 0.",
+      "It is the negative nth root if b < 0 and n is odd. It is 0 if b = 0."
+     ]
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Kinds of roots",
+     "defs": [
+      [
+       "Square root",
+       "If a² = b, then a is a square root of b."
+      ],
+      [
+       "Cube root",
+       "If a³ = b, then a is a cube root of b."
+      ],
+      [
+       "nth root",
+       "If aⁿ = b, then a is an nth root of b."
+      ],
+      [
+       "Principal nth root",
+       "ⁿ√b: positive if b > 0; negative if b < 0 and n is odd; 0 if b = 0."
+      ]
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Real or not?",
+     "text": "Real roots: which root is NOT a real number?",
+     "opts": [
+      "∛(−8)",
+      "√(−9)",
+      "⁵√(−32)",
+      "√0"
+     ],
+     "ans": "√(−9)",
+     "why": "√(−9): no real number squared gives −9, because 3² = 9 and (−3)² = 9.\nOdd roots of negatives are real: ∛(−8) = −2 and ⁵√(−32) = −2.\n√0 = 0 is real.\nSo √(−9) is not a real number.",
+     "clue": "Is the index even or odd?"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Radical sign, index and radicand",
+     "paras": [
+      "In ⁿ√b, √ is the radical sign, n is the index and b is the radicand.",
+      "With no index written, √ means square root.",
+      "Definition 1.12: If n is a positive integer greater than 1, then b^(1/n) = ⁿ√b, whenever ⁿ√b is a real number."
+     ],
+     "note": "Correction: the printed Definition 1.12 says 'if b ∈ ℝ' with no condition. When n is even, b must not be negative: (−4)^(1/2) is not a real number."
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Parts of a radical",
+     "defs": [
+      [
+       "Radical sign",
+       "The symbol √ used for roots."
+      ],
+      [
+       "Index",
+       "The small number n in ⁿ√b. No index means square root."
+      ],
+      [
+       "Radicand",
+       "The number under the radical sign: b in ⁿ√b."
+      ]
+     ]
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Examples 1 and 2",
+     "text": "Finding roots, and writing roots as powers.",
+     "steps": [
+      "√9 = 3, since 3² = 9. √0.01 = 0.1.",
+      "⁴√81 = 3, since 3⁴ = 81.",
+      "⁵√−100,000 = −10, since (−10)⁵ = −100,000.",
+      "√3 = 3^(1/2) and ∛6 = 6^(1/3).",
+      "1/⁴√10 = 10^(−1/4)."
+     ]
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Laws for rational powers",
+     "paras": [
+      "The laws of exponents also work for powers 1/n and for rational powers a^(m/n) = (a^(1/n))^m.",
+      "Example 3: 7^(1/2) × 7^(3/2) = 7² = 49. (25 × 9)^(1/2) = 5 × 3 = 15. 3^(5/2) ÷ 3^(1/2) = 3² = 9.",
+      "(8/27)^(1/3) = 2/3, and 81^(1/4) = (3⁴)^(1/4) = 3.",
+      "Example 4: √50 = √25 × √2 = 5√2. 32^(1/4) ÷ 162^(1/4) = (16/81)^(1/4) = 2/3. ∛16 × ∛4 = ∛64 = 4. (8 + ∛27)^(1/3) = ∛11."
+     ],
+     "note": "Correction: in Example 4(b) the printed text says 'Both numbers 32 and 64 are multiples of 2', but the numbers in the question are 32 and 162."
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "A rational power",
+     "text": "Rational power: simplify 4^(3/2).",
+     "opts": [
+      "6",
+      "8",
+      "12",
+      "64"
+     ],
+     "ans": "8",
+     "why": "a^(m/n) = (a^(1/n))^m.\n4^(1/2) = √4 = 2.\n2³ = 8.\nSo 4^(3/2) = 8. 6 is a slip: it multiplies 4 × 3/2.",
+     "clue": "Take the square root first, then cube.",
+     "needs": "math.square-roots"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Adding and subtracting radicals",
+     "paras": [
+      "Activity 1.18: √2 − √2 = 0 and 4√2 − √2 = 3√2 are correct.",
+      "√16 − √4 = √12 is wrong: √16 − √4 = 4 − 2 = 2.",
+      "√2 + √3 = √5 is wrong: √2 + √3 ≈ 3.15 but √5 ≈ 2.24.",
+      "Definition 1.13: Radicals with the same index and the same radicand are like radicals. 2√5, −(2/3)√5 and √5 are like radicals. √2 and √3 are not; √3 and ∛3 are not."
+     ]
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Like radicals",
+     "defs": [
+      [
+       "Like radicals",
+       "Radicals with the same index and the same radicand, such as 2√5 and √5."
+      ]
+     ]
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "text": "Add or subtract like radicals as you collect like terms. Sometimes simplify first.",
+     "steps": [
+      "√3 + √12 = √3 + 2√3 = 3√3.",
+      "2√18 − √2 + √8: simplify each: 2√18 = 6√2 and √8 = 2√2.",
+      "6√2 − √2 + 2√2 = 7√2."
+     ],
+     "ref": "Example 1"
+    },
+    {
+     "kind": "factortree",
+     "step": "method",
+     "title": "Find the cube inside 54",
+     "ref": "Exercise 1.28",
+     "n": 54,
+     "intro": "Tap ▶. Look for three equal primes.",
+     "say": [
+      "54 = 2 × 27. 2 is prime, so it is a leaf.",
+      "27 = 3 × 9. 3 is prime.",
+      "9 = 3 × 3.",
+      "54 = 2 × 3 × 3 × 3. Three equal 3s make a cube: 3 × 3 × 3 = 27.\n∛54 = ∛27 × ∛2 = 3∛2."
+     ],
+     "added": true
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "added": true,
+     "title": "Collect like radicals",
+     "ask": "Simplify and collect like radicals: √8 + √2 = ___",
+     "a": [
+      "3√2",
+      "3 √2",
+      "3sqrt2",
+      "3 sqrt 2",
+      "3root2"
+     ],
+     "why": "√8 = √(4 × 2) = 2√2.\nNow 2√2 + √2 = (2 + 1)√2.\nSo √8 + √2 = 3√2.\n√10 is wrong: roots do not add under one sign.",
+     "clue": "First write √8 as a number times √2.",
+     "needs": "math.square-roots"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "added": true,
+     "title": "A field in Bishoftu",
+     "text": "A square field in Bishoftu has an area of 50 m². Its side is √50 m.",
+     "ask": "Simplify the root: which is √50 in simplest form?",
+     "opts": [
+      "5√2 m",
+      "25√2 m",
+      "2√5 m",
+      "10√5 m"
+     ],
+     "ans": "5√2 m",
+     "why": "Find the largest perfect square in 50: 25.\n50 = 25 × 2.\n√50 = √25 × √2 = 5√2.\nThe side is 5√2 m ≈ 7.07 m.",
+     "clue": "Find the largest perfect square that divides 50.",
+     "worked": "50 = 25 × 2, and 25 is a perfect square. √50 = √25 × √2 = 5√2. So the side is 5√2 m ≈ 7.07 m.",
+     "needs": "math.square-roots"
+    }
+   ]
+  },
+  {
+   "id": "math.real-number-properties",
+   "name": "Operations and properties of real numbers",
+   "requires": [
+    "math.irrational-numbers"
+   ],
+   "explain": {
+    "en": {
+     "text": "ℝ is closed under addition, subtraction, multiplication and division by non-zero numbers. A rational plus an irrational is irrational. Every real number a has an additive inverse −a. Every non-zero a has a multiplicative inverse 1/a. Zero has no reciprocal."
+    },
+    "am": {
+     "text": "ℝ በመደመር፣ በመቀነስ፣ በማባዛትና ዜሮ ባልሆነ ቁጥር በማካፈል ዝግ ነው። ምክንያታዊ ሲደመር ኢ-ምክንያታዊ ኢ-ምክንያታዊ ይሆናል። እያንዳንዱ a የመደመር ተቃራኒ −a አለው። ዜሮ ያልሆነ a የማባዛት ተገላቢጦሽ 1/a አለው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "graded": false,
+     "text": "Rational or irrational? Make your best guess for each result.",
+     "bins": [
+      "Rational",
+      "Irrational"
+     ],
+     "items": [
+      [
+       "π + 2",
+       "Irrational",
+       "Adding 2 does not stop π's decimal."
+      ],
+      [
+       "(1 − √3)(1 + √3)",
+       "Rational",
+       "It equals 1 − 3 = −2."
+      ],
+      [
+       "(22/7) × (22/7)",
+       "Rational",
+       "It equals 484/49."
+      ],
+      [
+       "√7(4 − √7)",
+       "Irrational",
+       "It equals 4√7 − 7."
+      ],
+      [
+       "0.2323… + 0.3232…",
+       "Rational",
+       "It equals 0.5555… = 5/9."
+      ],
+      [
+       "8/√2",
+       "Irrational",
+       "It equals 4√2."
+      ]
+     ],
+     "ref": "Activity 1.19"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Operations on real numbers",
+     "paras": [
+      "The rational numbers obey the commutative, associative and distributive laws.",
+      "Adding, subtracting, multiplying or dividing (except by 0) two rational numbers always gives a rational number. ℚ is closed under these operations.",
+      "The irrational numbers obey the same laws. But the sum, difference, product or quotient of two irrationals is not always irrational.",
+      "Activity 1.19: √3 × √12 = 6 is rational. A rational and an irrational can never have a rational sum or difference. 2 ÷ √2 = √2 is irrational."
+     ]
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Closed sets",
+     "defs": [
+      [
+       "Closed",
+       "A set is closed under an operation if the result is always in the set. ℚ is closed under +, −, × and ÷ (not by 0)."
+      ]
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Find the irrational one",
+     "text": "Rational or irrational: which result is irrational?",
+     "opts": [
+      "(1 − √3)(1 + √3)",
+      "√8 × √2",
+      "3 + √5",
+      "√12 ÷ √3"
+     ],
+     "ans": "3 + √5",
+     "why": "(1 − √3)(1 + √3) = 1 − 3 = −2: rational.\n√8 × √2 = √16 = 4: rational.\n√12 ÷ √3 = √4 = 2: rational.\n3 + √5: rational + irrational is irrational.",
+     "clue": "Work out each one.",
+     "needs": "math.irrational-numbers"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Conclusions",
+     "paras": [
+      "The sum or difference of a rational number and an irrational number is irrational.",
+      "The product or quotient of a non-zero rational number and an irrational number is irrational.",
+      "Because ℝ contains all the rational and irrational numbers, ℝ is closed under addition, subtraction, multiplication and division (except division by 0)."
+     ]
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Examples 1 to 3",
+     "text": "Let x = 5√3 + 2√2 and y = √2 − 4√3.",
+     "steps": [
+      "x + y = (5 − 4)√3 + (2 + 1)√2 = √3 + 3√2.",
+      "x − y = 5√3 + 2√2 − √2 + 4√3 = 9√3 + √2.",
+      "3√3 × 2√2 = 6√6, and 5√2 × √2/5 = 2.",
+      "6√8 ÷ 3√2 = 2√4 = 4.",
+      "√3 ÷ (2√2 × 3√3) = √3/(6√6) = (1/6)√(3/6) = 1/(6√2)."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "Two irrationals",
+     "text": "Product of two irrationals: what is √3 × √12?",
+     "opts": [
+      "6",
+      "√15",
+      "36",
+      "3√2"
+     ],
+     "ans": "6",
+     "why": "√3 × √12 = √(3 × 12) = √36.\n√36 = 6.\nSo two irrationals gave a rational product.\n√15 is a slip: it adds 3 + 12.",
+     "clue": "Multiply under one root: √a × √b = √(ab)."
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Properties of addition and multiplication",
+     "paras": [
+      "Activity 1.20 asks for opposites and reciprocals. The opposite of √3 is −√3. The reciprocal of 3^(2/3) is 3^(−2/3).",
+      "These are the inverse properties. Tap each property below."
+     ]
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Properties of addition and multiplication",
+     "ask": "Tap each property for ℝ.",
+     "need": 4,
+     "items": [
+      [
+       "Closure",
+       "a + b and ab are real numbers."
+      ],
+      [
+       "Commutative",
+       "a + b = b + a and ab = ba."
+      ],
+      [
+       "Associative",
+       "(a + b) + c = a + (b + c) and (ab)c = a(bc)."
+      ],
+      [
+       "Identity",
+       "a + 0 = 0 + a = a and a × 1 = 1 × a = a."
+      ],
+      [
+       "Inverse",
+       "a + (−a) = 0: −a is the additive inverse. a × (1/a) = 1 for a ≠ 0: 1/a is the reciprocal."
+      ],
+      [
+       "Distributive",
+       "a(b + c) = ab + ac and (b + c)a = ba + ca."
+      ]
+     ]
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Inverses",
+     "defs": [
+      [
+       "Additive inverse",
+       "−a, because a + (−a) = 0. Also called the opposite."
+      ],
+      [
+       "Multiplicative inverse",
+       "1/a for a ≠ 0, because a × (1/a) = 1. Also called the reciprocal."
+      ]
+     ]
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "text": "Additive and multiplicative inverses.",
+     "steps": [
+      "√2: additive inverse −√2, multiplicative inverse 1/√2.",
+      "3/4: additive inverse −3/4, multiplicative inverse 4/3.",
+      "0.5: additive inverse −0.5, multiplicative inverse 2, since 0.5 = 1/2."
+     ],
+     "ref": "Example 4"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "No reciprocal",
+     "text": "Multiplicative inverse: which real number has no multiplicative inverse?",
+     "opts": [
+      "1",
+      "−1",
+      "0",
+      "√2"
+     ],
+     "ans": "0",
+     "why": "The inverse of a is the number that makes a × (inverse) = 1.\n0 × anything = 0, never 1.\nSo 0 has no multiplicative inverse.\n1, −1 and √2 have inverses 1, −1 and 1/√2.",
+     "clue": "Try to find 1/0."
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "added": true,
+     "title": "Find the reciprocal",
+     "ask": "Find the reciprocal: the multiplicative inverse of 0.25 is ___.",
+     "a": [
+      "4",
+      "four",
+      "4/1"
+     ],
+     "why": "Write 0.25 as a fraction: 0.25 = 1/4.\nFlip it: the reciprocal of 1/4 is 4.\nCheck: 0.25 × 4 = 1.",
+     "clue": "Write 0.25 as a fraction first."
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "added": true,
+     "title": "Shopping in Gondar",
+     "text": "Abel buys 3 notebooks at 12 birr and 3 pens at 8 birr in Gondar. He works out 3 × (12 + 8) = 60 birr instead of 3 × 12 + 3 × 8.",
+     "ask": "Which property of real numbers lets him do this?",
+     "opts": [
+      "Distributive",
+      "Commutative",
+      "Associative",
+      "Identity"
+     ],
+     "ans": "Distributive",
+     "why": "He writes 3 × 12 + 3 × 8 as 3 × (12 + 8).\nThat is a(b + c) = ab + ac with a = 3, b = 12, c = 8.\nThis is the distributive property.\nBoth ways give 60 birr.",
+     "clue": "Look at the table row where × spreads over +.",
+     "worked": "3 × 12 + 3 × 8 = 36 + 24 = 60. 3 × (12 + 8) = 3 × 20 = 60. This is a(b + c) = ab + ac, the distributive property."
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 1.26",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Write the root as a power: √5 = ___",
+     "a": [
+      "5^(1/2)",
+      "5^1/2",
+      "5^0.5",
+      "5^(0.5)"
+     ],
+     "why": "A square root has index 2.\nb^(1/n) = ⁿ√b, so √5 = 5^(1/2).\nCheck: 5^(1/2) × 5^(1/2) = 5¹ = 5.",
+     "clue": "A square root is the power 1/2."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Write the root as a power: ∛(3⁴) = ___",
+     "a": [
+      "3^(4/3)",
+      "3^4/3"
+     ],
+     "why": "A cube root is the power 1/3.\n∛(3⁴) = (3⁴)^(1/3).\nMultiply the exponents: 4 × 1/3 = 4/3.\nSo ∛(3⁴) = 3^(4/3).",
+     "clue": "A cube root is the power 1/3; then multiply exponents."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Find the cube root: (−27)^(1/3) = ___",
+     "a": [
+      "−3",
+      "-3"
+     ],
+     "why": "(−27)^(1/3) means ∛(−27).\nWhich number cubed gives −27?\n(−3) × (−3) × (−3) = 9 × (−3) = −27.\nSo the answer is −3.",
+     "clue": "Which number cubed gives −27?"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Find the fifth root: 32^(1/5) = ___",
+     "a": [
+      "2",
+      "two"
+     ],
+     "why": "32^(1/5) means ⁵√32.\n2 × 2 × 2 × 2 × 2 = 32, so 2⁵ = 32.\nSo 32^(1/5) = 2.",
+     "clue": "Which number to the 5th power is 32?"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Find each root, then divide: ∛125 / √625 = ___",
+     "a": [
+      "1/5",
+      "0.2",
+      "5/25"
+     ],
+     "why": "∛125 = 5, because 5³ = 125.\n√625 = 25, because 25² = 625.\n5/25 = 1/5.",
+     "clue": "Find each root separately."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Square root of a decimal: √0.09 = ___",
+     "a": [
+      "0.3",
+      ".3",
+      "3/10"
+     ],
+     "why": "0.09 = 9/100.\n√9 = 3 and √100 = 10.\nSo √0.09 = 3/10 = 0.3.\nCheck: 0.3 × 0.3 = 0.09.",
+     "clue": "Which decimal squared gives 0.09?"
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.27",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Simplify the root: √125 = ___",
+     "a": [
+      "5√5",
+      "5 √5",
+      "5sqrt5",
+      "5root5"
+     ],
+     "why": "Largest perfect square in 125: 25.\n125 = 25 × 5.\n√125 = √25 × √5 = 5√5.",
+     "clue": "Find a perfect square that divides 125."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Use aⁿ/bⁿ = (a/b)ⁿ: 9^(1/3) ÷ 243^(1/3) = ___",
+     "a": [
+      "1/3",
+      "0.333…",
+      "one third"
+     ],
+     "why": "Same power 1/3, so divide inside: (9/243)^(1/3).\n243 = 9 × 27, so 9/243 = 1/27.\n∛(1/27) = 1/3, because 3³ = 27.\nSo the answer is 1/3.",
+     "clue": "Use aⁿ/bⁿ = (a/b)ⁿ first."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Fifth root of a decimal: ⁵√0.00032 = ___",
+     "a": [
+      "0.2",
+      ".2",
+      "1/5"
+     ],
+     "why": "0.00032 = 32/100000.\n⁵√32 = 2 and ⁵√100000 = 10.\nSo ⁵√0.00032 = 2/10 = 0.2.\nCheck: 0.2⁵ = 0.00032.",
+     "clue": "2⁵ = 32. Count the decimal places."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Add exponents with the same base: 2^(3/2) × √2 = ___",
+     "a": [
+      "4",
+      "four"
+     ],
+     "why": "√2 = 2^(1/2).\nSame base, so add exponents: 3/2 + 1/2 = 4/2 = 2.\n2² = 4.",
+     "clue": "Write √2 as a power of 2, then add exponents."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Find each root, then add: ∛0.001 + ⁴√0.0081 = ___",
+     "a": [
+      "0.4",
+      ".4",
+      "2/5"
+     ],
+     "why": "∛0.001 = 0.1, because 0.1³ = 0.001.\n⁴√0.0081 = 0.3, because 0.3⁴ = 0.0081.\n0.1 + 0.3 = 0.4.",
+     "clue": "Find each root, then add."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Use (a × b)ⁿ = aⁿ × bⁿ: 3^(1/4) × 27^(1/4) = ___",
+     "a": [
+      "3",
+      "three"
+     ],
+     "why": "Same power 1/4, so multiply inside: (3 × 27)^(1/4).\n3 × 27 = 81.\n81^(1/4) = 3, because 3⁴ = 81.",
+     "clue": "Use (a × b)ⁿ = aⁿ × bⁿ backwards."
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.28",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Simplify, then subtract like radicals: √12 − √3 = ___",
+     "a": [
+      "√3",
+      "sqrt3",
+      "root3",
+      "1√3"
+     ],
+     "why": "√12 = √(4 × 3) = 2√3.\n2√3 − √3 = (2 − 1)√3.\nSo √12 − √3 = √3.",
+     "clue": "Simplify √12 first."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Simplify, then subtract like radicals: ∛54 − ∛2 = ___",
+     "a": [
+      "2∛2",
+      "2 ∛2",
+      "2cbrt2"
+     ],
+     "why": "Find a perfect cube in 54: 27 = 3³.\n54 = 27 × 2, so ∛54 = 3∛2.\n3∛2 − ∛2 = 2∛2.",
+     "clue": "Find a perfect cube that divides 54."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Find each root, then combine: 3∛27 − ∛125 + √169 = ___",
+     "a": [
+      "17",
+      "seventeen"
+     ],
+     "why": "∛27 = 3, so 3∛27 = 9.\n∛125 = 5.\n√169 = 13.\n9 − 5 + 13 = 17.",
+     "clue": "Each root is a whole number."
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.29",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Add radical expressions: x = 4√2 + 7√5 and y = √2 − 3√5. Find x + y.",
+     "opts": [
+      "5√2 + 4√5",
+      "5√2 + 10√5",
+      "3√2 + 10√5",
+      "9√7"
+     ],
+     "ans": "5√2 + 4√5",
+     "why": "Collect the √2 terms: 4√2 + √2 = 5√2.\nCollect the √5 terms: 7√5 − 3√5 = 4√5.\nSo x + y = 5√2 + 4√5.\n9√7 is wrong: √2 and √5 are not like radicals.",
+     "clue": "Collect the √2 terms and the √5 terms."
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Subtract radical expressions: x = 4√2 + 7√5 and y = √2 − 3√5. Find x − y.",
+     "opts": [
+      "3√2 + 10√5",
+      "3√2 + 4√5",
+      "5√2 + 4√5",
+      "3√2 − 10√5"
+     ],
+     "ans": "3√2 + 10√5",
+     "why": "x − y = 4√2 + 7√5 − √2 + 3√5.\n√2 terms: 4√2 − √2 = 3√2.\n√5 terms: 7√5 + 3√5 = 10√5.\nSo x − y = 3√2 + 10√5.",
+     "clue": "Subtracting −3√5 adds 3√5."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Multiply radicals: 2√5 × 4√3 = ___",
+     "a": [
+      "8√15",
+      "8 √15",
+      "8sqrt15"
+     ],
+     "why": "Multiply the numbers: 2 × 4 = 8.\nMultiply the roots: √5 × √3 = √15.\nSo 2√5 × 4√3 = 8√15.",
+     "clue": "Multiply the numbers, then the roots."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Multiply radicals: 3√3 × √3/3 = ___",
+     "a": [
+      "3",
+      "three"
+     ],
+     "why": "√3 × √3 = 3.\nSo 3√3 × √3/3 = (3 × 3)/3.\n9/3 = 3.",
+     "clue": "√3 × √3 = 3."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Divide radicals: 4√6 ÷ 2√2 = ___",
+     "a": [
+      "2√3",
+      "2 √3",
+      "2sqrt3"
+     ],
+     "why": "Divide the numbers: 4 ÷ 2 = 2.\nDivide the roots: √6 ÷ √2 = √3.\nSo 4√6 ÷ 2√2 = 2√3.",
+     "clue": "Divide the numbers, then the roots."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Divide radicals: 10√2 ÷ 5√18 = ___",
+     "a": [
+      "2/3",
+      "0.666…",
+      "0.67"
+     ],
+     "why": "√18 = 3√2, so 5√18 = 15√2.\n10√2 ÷ 15√2: the √2 cancels.\n10/15 = 2/3.",
+     "clue": "Simplify √18 first."
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.30",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Inverses: find the additive and multiplicative inverse of −2/5.",
+     "opts": [
+      "2/5 and −5/2",
+      "−2/5 and 5/2",
+      "2/5 and 5/2",
+      "−5/2 and 2/5"
+     ],
+     "ans": "2/5 and −5/2",
+     "why": "Additive inverse: change the sign: 2/5. Check: −2/5 + 2/5 = 0.\nMultiplicative inverse: flip the fraction and keep the sign: −5/2.\nCheck: (−2/5) × (−5/2) = 10/10 = 1.",
+     "clue": "The reciprocal keeps the same sign."
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Inverses: find the additive and multiplicative inverse of 0.111… (0.1 repeating).",
+     "opts": [
+      "−1/9 and 9",
+      "−0.1 and 10",
+      "1/9 and −9",
+      "−1/9 and 1/9"
+     ],
+     "ans": "−1/9 and 9",
+     "why": "0.111… = 1/9.\nAdditive inverse: −1/9.\nMultiplicative inverse: flip 1/9 to get 9.\nCheck: 1/9 × 9 = 1.",
+     "clue": "Change the repeating decimal to a fraction first.",
+     "needs": "math.irrational-numbers"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Name the property of real numbers: √3(√3 − 2) = 3 − 2√3.",
+     "opts": [
+      "Distributive",
+      "Associative",
+      "Commutative",
+      "Identity"
+     ],
+     "ans": "Distributive",
+     "why": "√3 multiplies each term in the bracket.\n√3 × √3 = 3 and √3 × 2 = 2√3.\nThat is a(b − c) = ab − ac: the distributive property.",
+     "clue": "Which property spreads × over a bracket?"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Name the property of real numbers: 5 + (−8 + 2) = (5 − 8) + 2.",
+     "opts": [
+      "Associative",
+      "Commutative",
+      "Distributive",
+      "Closure"
+     ],
+     "ans": "Associative",
+     "why": "The numbers stay in the same order: 5, −8, 2.\nOnly the brackets move.\nChanging the grouping is the associative property.\nBoth sides equal −1.",
+     "clue": "What moved: the order or the brackets?"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "True or false? Every real number has a multiplicative inverse.",
+     "a": false,
+     "why": "0 × anything = 0, never 1.\nSo 0 has no reciprocal.\nEvery other real number a has 1/a.\nSo the statement is false.",
+     "clue": "Try to find the reciprocal of 0."
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "True or false? The operation a ∗ b = 2a + b is commutative.",
+     "a": false,
+     "why": "Commutative means a ∗ b = b ∗ a every time.\n1 ∗ 2 = 2 × 1 + 2 = 4.\n2 ∗ 1 = 2 × 2 + 1 = 5.\n4 ≠ 5, so it is not commutative: false.",
+     "clue": "Try a = 1 and b = 2 both ways."
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Negative exponent: what is 2⁻³?",
+   "opts": [
+    "1/8",
+    "−8",
+    "−6",
+    "8"
+   ],
+   "ans": "1/8",
+   "why": "a⁻ⁿ = 1/aⁿ.\n2⁻³ = 1/2³.\n2³ = 8, so 2⁻³ = 1/8.\n−8 is wrong: a negative exponent is not a negative number.",
+   "clue": ""
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "Simplify and collect like radicals: 2√18 − √2 + √8 = ___",
+   "a": [
+    "7√2",
+    "7 √2",
+    "7sqrt2"
+   ],
+   "why": "2√18 = 2 × 3√2 = 6√2.\n√8 = 2√2.\n6√2 − √2 + 2√2 = (6 − 1 + 2)√2 = 7√2.",
+   "clue": ""
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "True or false? The sum of a rational number and an irrational number is always irrational.",
+   "a": true,
+   "why": "Suppose r + x = q, with r and q rational and x irrational.\nThen x = q − r, which would be rational.\nThat is impossible, so the sum is irrational.\nTrue. Example: 3 + √5.",
+   "clue": ""
+  }
+ ],
+ "notes": [
+  {
+   "kind": "correction",
+   "text": "Definition 1.12: the printed text says 'if b ∈ ℝ' with no condition. When n is even, b must not be negative: (−4)^(1/2) is not a real number. The unit summary (item 11) adds the right condition."
+  },
+  {
+   "kind": "correction",
+   "text": "Example 4(b): the printed text says 'Both numbers 32 and 64 are multiples of 2', but the numbers in the question are 32 and 162."
+  },
+  {
+   "kind": "review",
+   "text": "Exercise 1.29 item 4(b), √145 − √232 + √261, does not simplify to a single radical: 145 = 5 × 29, 232 = 4 × 58 and 261 = 9 × 29. The answer is √145 − 2√58 + 3√29. The numbers may be a printing error. Teacher review needed. The item is left out of the exercise set here."
+  },
+  {
+   "kind": "note",
+   "text": "Exercises are capped at six items each. Left out: 1.26 1(b), 1(d), 1(e); 1.27 (e), (g), (h), (j); 1.29 2(c), 3(c), 4(a), 4(b); 1.30 1(a), 1(c), 2(c), 4(b). Activity 1.20 is summarised in a read block."
+  },
+  {
+   "kind": "note",
+   "text": "Order: in the book the laws of exponents (Activity 1.17 and the table) come after roots (Definitions 1.10–1.12). Here the laws table sits in the exponents idea, and the rational-power examples (Examples 3 and 4) stay in the roots idea."
+  },
+  {
+   "kind": "note",
+   "text": "Powers like b^(1/n) are written with ^ because the lesson text is plain; the book uses superscripts. Added examples: Hawassa message, Lalibela courtyard, Bishoftu field, Gondar shopping, √8 + √2, 3⁴ × 3², 7⁵ and 0.25 items."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.integer-multiplication": {
+   "name": "Multiplying negatives",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Sign rules",
+     "text": "Count the negative signs when you multiply.",
+     "steps": [
+      "(−3) × (−3) = 9: negative times negative is positive.",
+      "(−3) × (−3) × (−3) = −27: three negatives give a negative.",
+      "(−3)⁴ = 81: four negatives give a positive.",
+      "−3⁴ = −(3 × 3 × 3 × 3) = −81: only 3 is raised."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Your turn",
+     "text": "What is (−2)³?",
+     "opts": [
+      "−8",
+      "8",
+      "−6",
+      "6"
+     ],
+     "ans": "−8",
+     "why": "(−2) × (−2) = 4.\n4 × (−2) = −8.\nThree negatives give a negative.\n−6 is a slip: it multiplies −2 × 3.",
+     "clue": "An odd number of negatives gives a negative."
+    }
+   ]
+  },
+  "math.square-roots": {
+   "name": "Square roots",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Undo a square",
+     "text": "A square root undoes squaring.",
+     "steps": [
+      "√81 = 9, because 9² = 81.",
+      "√0.04 = 0.2, because 0.2² = 0.04.",
+      "√a × √b = √(ab). So √25 × √2 = √50.",
+      "So √50 = √25 × √2 = 5√2."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Your turn",
+     "text": "What is √12 in simplest form?",
+     "opts": [
+      "2√3",
+      "3√2",
+      "4√3",
+      "6"
+     ],
+     "ans": "2√3",
+     "why": "12 = 4 × 3, and 4 is a perfect square.\n√12 = √4 × √3 = 2√3.\n3√2 is √18, not √12.",
+     "clue": "Find the largest perfect square that divides 12."
+    }
+   ]
+  },
+  "math.irrational-numbers": {
+   "name": "Irrational numbers",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Rational or irrational?",
+     "text": "Look at the decimal form of the number.",
+     "steps": [
+      "A rational number can be written a/b, with integers a, b and b ≠ 0.",
+      "Its decimal ends, like 0.75, or repeats, like 0.111… = 1/9.",
+      "An irrational decimal neither ends nor repeats.",
+      "Examples: √2 = 1.41421… and π = 3.14159… are irrational."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Your turn",
+     "text": "Which number is irrational?",
+     "opts": [
+      "√5",
+      "0.25",
+      "√9",
+      "2/3"
+     ],
+     "ans": "√5",
+     "why": "0.25 and 2/3 are fractions: rational.\n√9 = 3: rational.\n5 is not a perfect square: √5 = 2.23606… never ends or repeats.\nSo √5 is irrational.",
+     "clue": "Is the number under the root a perfect square?"
+    }
+   ]
+  }
+ }
 }

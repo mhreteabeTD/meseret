@@ -58,9 +58,10 @@
       "always 0",
       "the length AB"
      ],
-     "after": "Slope of a secant = average rate of change. A tangent touches at one point.",
+     "after": "The secant through A and B has slope Δy/Δx.\nΔy/Δx from A to B is the average rate of change.\nA tangent touches the curve at one point only.",
      "ref": "Activity 2.3",
-     "id": "g12.maths.u2.s2-1-2.1"
+     "id": "g12.maths.u2.s2-1-2.1",
+     "best": "the average rate of change from A to B"
     },
     {
      "kind": "read",
@@ -86,6 +87,61 @@
      "id": "g12.maths.u2.s2-1-2.3"
     },
     {
+     "kind": "coord",
+     "step": "explore",
+     "title": "A secant of y = x² + 1",
+     "min": -2,
+     "max": 4,
+     "ymin": 0,
+     "ymax": 11,
+     "ask": "The dots lie on the curve y = x² + 1. Tap A and B: the line through them is a secant.",
+     "points": [
+      {
+       "x": -1,
+       "y": 2,
+       "name": "A",
+       "info": "f(−1) = 1 + 1 = 2."
+      },
+      {
+       "x": 0,
+       "y": 1,
+       "info": "f(0) = 1: on the curve, not on the secant."
+      },
+      {
+       "x": 1,
+       "y": 2,
+       "info": "f(1) = 2."
+      },
+      {
+       "x": 2,
+       "y": 5,
+       "info": "f(2) = 5."
+      },
+      {
+       "x": 3,
+       "y": 10,
+       "name": "B",
+       "info": "f(3) = 10. Secant AB: (10 − 2)/(3 − (−1)) = 8/4 = 2."
+      }
+     ],
+     "lines": [
+      {
+       "pts": [
+        [
+         -1,
+         2
+        ],
+        [
+         3,
+         10
+        ]
+       ]
+      }
+     ],
+     "added": true,
+     "id": "g12.maths.u2.s2-1-2.20"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -107,11 +163,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Slope of the line through (−3, −5) and (3, 11) = ___",
+     "ask": "Find the slope of the line through (−3, −5) and (3, 11): ___",
      "a": [
       "8/3"
      ],
-     "why": "(11 + 5)/(3 + 3) = 16/6 = 8/3.",
+     "why": "Δy = 11 − (−5) = 16.\nΔx = 3 − (−3) = 6.\nSlope = 16/6 = 8/3.\nTrap: 11 − 5 = 6 forgets that −(−5) = +5.",
      "clue": "Subtracting a negative adds.",
      "num": true,
      "graded": true,
@@ -133,13 +189,30 @@
      "id": "g12.maths.u2.s2-1-2.6"
     },
     {
+     "kind": "order",
+     "step": "practise",
+     "title": "Put the steps for a secant slope in order",
+     "items": [
+      "Write the two x-values a and b",
+      "Work out f(a) and f(b)",
+      "Subtract: f(b) − f(a)",
+      "Divide by b − a"
+     ],
+     "why": "First fix the interval [a, b].\nThen find the two y-values f(a) and f(b).\nSubtract them for Δy.\nDivide by Δx = b − a to get the slope.",
+     "clue": "You need the y-values before you can subtract them.",
+     "graded": true,
+     "level": 1,
+     "added": true,
+     "id": "g12.maths.u2.s2-1-2.21"
+    },
+    {
      "kind": "blank",
-     "ask": "(3, −5) and (−2, 9): slope = ___",
+     "ask": "Find the slope of the line through (3, −5) and (−2, 9): ___",
      "a": [
       "-14/5",
       "-2.8"
      ],
-     "why": "(9 + 5)/(−2 − 3) = 14/(−5).",
+     "why": "Δy = 9 − (−5) = 14.\nΔx = −2 − 3 = −5.\nSlope = 14/(−5) = −14/5 = −2.8.\nTrap: taking 9 − (−5) but 3 − (−2) mixes the order and gives +14/5.",
      "clue": "Keep the same order on top and bottom.",
      "num": true,
      "graded": true,
@@ -150,11 +223,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = x² + 1 on [−1, 3]: secant slope = ___",
+     "ask": "Find the secant slope of f(x) = x² + 1 on [−1, 3]: ___",
      "a": [
       "2"
      ],
-     "why": "(10 − 2)/4 = 2.",
+     "why": "f(3) = 9 + 1 = 10.\nf(−1) = 1 + 1 = 2.\nSlope = (10 − 2)/(3 − (−1)) = 8/4 = 2.",
      "clue": "f(3) = 10, f(−1) = 2.",
      "num": true,
      "graded": true,
@@ -165,11 +238,11 @@
     },
     {
      "kind": "blank",
-     "ask": "g(x) = x³ − 4x + 6 on [1, 2]: secant slope = ___",
+     "ask": "Find the secant slope of g(x) = x³ − 4x + 6 on [1, 2]: ___",
      "a": [
       "3"
      ],
-     "why": "(6 − 3)/1 = 3.",
+     "why": "g(2) = 8 − 8 + 6 = 6.\ng(1) = 1 − 4 + 6 = 3.\nSlope = (6 − 3)/(2 − 1) = 3.",
      "clue": "g(2) = 6, g(1) = 3.",
      "num": true,
      "graded": true,
@@ -180,11 +253,11 @@
     },
     {
      "kind": "blank",
-     "ask": "For f(x) = x², the secant slope on [a, b] is a + b. On [2, 7] it is ___",
+     "ask": "Use a pattern: for f(x) = x², the secant slope on [a, b] is a + b. Find the slope on [2, 7]: ___",
      "a": [
       "9"
      ],
-     "why": "(49 − 4)/(7 − 2) = 45/5 = 9 = 2 + 7.",
+     "why": "Why a + b: (b² − a²)/(b − a) = (b − a)(b + a)/(b − a) = a + b.\nOn [2, 7]: 2 + 7 = 9.\nCheck directly: (49 − 4)/(7 − 2) = 45/5 = 9. ✓",
      "clue": "(b² − a²)/(b − a) = a + b.",
      "num": true,
      "graded": true,
@@ -202,11 +275,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "(−3, −5) and (3, 11): ___",
+     "ask": "Find the slope of the line through (−3, −5) and (3, 11): ___",
      "a": [
       "8/3"
      ],
-     "why": "16/6.",
+     "why": "Δy = 11 − (−5) = 16.\nΔx = 3 − (−3) = 6.\nSlope = 16/6 = 8/3.",
      "clue": "Δy/Δx.",
      "num": true,
      "graded": true,
@@ -217,11 +290,11 @@
     },
     {
      "kind": "blank",
-     "ask": "(4, −9) and (5, −7): ___",
+     "ask": "Find the slope of the line through (4, −9) and (5, −7): ___",
      "a": [
       "2"
      ],
-     "why": "2/1.",
+     "why": "Δy = −7 − (−9) = 2.\nΔx = 5 − 4 = 1.\nSlope = 2/1 = 2.",
      "clue": "−7 − (−9) = 2.",
      "num": true,
      "graded": true,
@@ -232,11 +305,11 @@
     },
     {
      "kind": "blank",
-     "ask": "f(x) = x² + 1 on [−1, 3]: ___",
+     "ask": "Find the secant slope of f(x) = x² + 1 on [−1, 3]: ___",
      "a": [
       "2"
      ],
-     "why": "8/4.",
+     "why": "f(3) = 10 and f(−1) = 2.\nSlope = (10 − 2)/(3 + 1) = 8/4 = 2.",
      "clue": "Secant slope.",
      "num": true,
      "graded": true,
@@ -247,11 +320,11 @@
     },
     {
      "kind": "blank",
-     "ask": "g(x) = x³ − 4x + 6 on [1, 2]: ___",
+     "ask": "Find the secant slope of g(x) = x³ − 4x + 6 on [1, 2]: ___",
      "a": [
       "3"
      ],
-     "why": "3/1.",
+     "why": "g(2) = 6 and g(1) = 3.\nSlope = (6 − 3)/(2 − 1) = 3/1 = 3.",
      "clue": "Secant slope.",
      "num": true,
      "graded": true,
@@ -266,11 +339,11 @@
  "test": [
   {
    "kind": "blank",
-   "ask": "Slope through (0, 3) and (2, −1) = ___",
+   "ask": "Find the slope of the line through (0, 3) and (2, −1): ___",
    "a": [
     "-2"
    ],
-   "why": "−4/2.",
+   "why": "Δy = −1 − 3 = −4.\nΔx = 2 − 0 = 2.\nSlope = −4/2 = −2.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -280,11 +353,11 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = x² − x on [1, 3]: secant slope = ___",
+   "ask": "Find the secant slope of f(x) = x² − x on [1, 3]: ___",
    "a": [
     "3"
    ],
-   "why": "(6 − 0)/2.",
+   "why": "f(3) = 9 − 3 = 6.\nf(1) = 1 − 1 = 0.\nSlope = (6 − 0)/(3 − 1) = 6/2 = 3.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -294,9 +367,9 @@
   },
   {
    "kind": "tf",
-   "text": "The slope of a secant line equals the average rate of change.",
+   "text": "True or false: the slope of a secant line equals the average rate of change.",
    "a": true,
-   "why": "p.74.",
+   "why": "A secant goes through (a, f(a)) and (b, f(b)).\nIts slope is (f(b) − f(a))/(b − a).\nThat is the average rate of change on [a, b]. True.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -305,11 +378,11 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = x³ on [−1, 2]: secant slope = ___",
+   "ask": "Find the secant slope of f(x) = x³ on [−1, 2]: ___",
    "a": [
     "3"
    ],
-   "why": "(8 + 1)/3.",
+   "why": "f(2) = 8.\nf(−1) = (−1)³ = −1.\nSlope = (8 − (−1))/(2 − (−1)) = 9/3 = 3.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -319,12 +392,12 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = 1/x on [1, 4]: secant slope = ___",
+   "ask": "Find the secant slope of f(x) = 1/x on [1, 4]: ___",
    "a": [
     "-1/4",
     "-0.25"
    ],
-   "why": "(1/4 − 1)/3 = −1/4.",
+   "why": "f(4) = 1/4 and f(1) = 1.\nΔy = 1/4 − 1 = −3/4.\nΔx = 4 − 1 = 3.\nSlope = (−3/4) ÷ 3 = −1/4.",
    "clue": "",
    "num": true,
    "graded": true,

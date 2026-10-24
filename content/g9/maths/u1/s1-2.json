@@ -1,532 +1,669 @@
 {
-  "id": "g9.maths.u1.s1-2",
-  "book": {
-    "title": "Mathematics Grade 9 Student Textbook",
-    "grade": 9,
-    "subject": "maths",
-    "unit": 1,
-    "unit_title": "The Number System",
-    "section": "1.2",
-    "pages": "32–39"
+ "id": "g9.maths.u1.s1-2",
+ "book": {
+  "title": "Mathematics Grade 9 Student Textbook",
+  "grade": 9,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "The Number System",
+  "section": "1.2",
+  "pages": "32–39"
+ },
+ "title": "Rational numbers",
+ "competency": "Describe rational numbers, tell kinds of fractions apart and write fractions in simplest form.",
+ "minutes": 9,
+ "keywords": [
+  {
+   "en": "Rational number",
+   "am": "ምክንያታዊ ቁጥር",
+   "def": "A number that can be written a/b with integers a, b and b ≠ 0. The set is written ℚ.",
+   "machine": true
   },
-  "title": "Rational numbers",
-  "competency": "Describe rational numbers, tell kinds of fractions apart and write fractions in simplest form.",
-  "minutes": 9,
-  "keywords": [
-    {
-      "en": "Rational number",
-      "am": "ምክንያታዊ ቁጥር",
-      "def": "A number that can be written a/b with integers a, b and b ≠ 0. The set is written ℚ.",
-      "machine": true
-    },
-    {
-      "en": "Proper fraction",
-      "am": "ትክክለኛ ክፍልፋይ",
-      "def": "A fraction whose numerator is smaller than its denominator, such as 3/4.",
-      "machine": true
-    },
-    {
-      "en": "Improper fraction",
-      "am": "ትክክለኛ ያልሆነ ክፍልፋይ",
-      "def": "A fraction whose numerator is at least its denominator, such as 7/3.",
-      "machine": true
-    },
-    {
-      "en": "Mixed fraction",
-      "am": "ድብልቅ ክፍልፋይ",
-      "def": "A whole number with a proper fraction, such as 5¼.",
-      "machine": true
-    },
-    {
-      "en": "Simplest form",
-      "am": "ቀላሉ ቅርጽ",
-      "def": "a/b is in simplest form (lowest terms) when GCF(a, b) = 1.",
-      "machine": true
-    },
-    {
-      "en": "Relatively prime",
-      "am": "እርስ በርስ ብቸኛ",
-      "def": "Numbers whose GCF is 1, such as 8 and 15.",
-      "machine": true
-    }
-  ],
-  "ideas": [
-    {
-      "id": "math.rational-numbers",
-      "name": "Rational numbers",
-      "explain": {
-        "en": {
-          "text": "Dividing one integer by another does not always give an integer. So we use a bigger set. A rational number can be written a/b, where a and b are integers and b is not 0. Every integer is rational, because n = n/1."
-        },
-        "am": {
-          "text": "አንድን ኢንቲጀር በሌላ ማካፈል ሁልጊዜ ኢንቲጀር አይሰጥም። ስለዚህ ትልቅ ስብስብ እንጠቀማለን። ምክንያታዊ ቁጥር a/b ተብሎ ሊጻፍ ይችላል፤ a እና b ኢንቲጀሮች ሲሆኑ b ዜሮ አይደለም። እያንዳንዱ ኢንቲጀር ምክንያታዊ ነው፤ ምክንያቱም n = n/1 ነው።",
-          "machine": true
-        }
-      },
-      "screens": [
-        {
-          "kind": "guess",
-          "step": "hook",
-          "title": "Divide some integers",
-          "text": "Take the integers 7, −2, 6, 0 and −3. Try these four divisions: 6 ÷ (−3), 0 ÷ 7, 7 ÷ 6 and −2 ÷ 7.",
-          "ask": "How many of the four answers are integers? Take a guess.",
-          "opts": [
-            "None",
-            "Two",
-            "Three",
-            "All four"
-          ],
-          "after": "Read on to see which answers are integers.",
-          "ref": "Activity 1.9"
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Activity 1.9: what happens?",
-          "paras": [
-            "6 ÷ (−3) = −2 and 0 ÷ 7 = 0. Both answers are integers.",
-            "But 7 ÷ 6 = 7/6 and −2 ÷ 7 = −2/7. These are not integers.",
-            "Dividing integers does not always give an integer. So we need a bigger set: the rational numbers.",
-            "Division by 0 is not allowed."
-          ]
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Definition 1.5 · Rational numbers",
-          "paras": [
-            "A number that can be written as a/b is a rational number. Here a and b are integers and b ≠ 0.",
-            "The set of rational numbers is ℚ = {a/b : a, b ∈ ℤ and b ≠ 0}.",
-            "Example 1. 3/4, −13/10, −6 and 0 are rational.",
-            "−6 = −6/1 and 0 = 0/1. So every integer is rational. So is every natural number: ℕ ⊆ ℤ ⊆ ℚ."
-          ],
-          "note": "Figure 1.2: natural numbers sit inside the integers, which sit inside the rational numbers."
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "Name it",
-          "defs": [
-            [
-              "Rational number",
-              "A number a/b, where a and b are integers and b ≠ 0. The set is ℚ."
-            ]
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Spot the odd one",
-          "text": "Which number is NOT rational?",
-          "opts": [
-            "−6",
-            "0",
-            "5/0",
-            "13/4"
-          ],
-          "ans": "5/0",
-          "why": "The denominator can never be 0. 5/0 is not a number at all.",
-          "clue": "Read the condition on b in Definition 1.5."
-        },
-        {
-          "kind": "tf",
-          "step": "practise",
-          "graded": true,
-          "title": "True or false?",
-          "text": "Every natural number is also a rational number.",
-          "a": true,
-          "why": "ℕ ⊆ ℤ ⊆ ℚ. For example, 4 = 4/1.",
-          "clue": "Can you write 4 as a fraction with denominator 1?"
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "title": "Write an integer as a/b",
-          "ask": "−6 = −6/___",
-          "a": [
-            "1",
-            "one"
-          ],
-          "why": "Any integer n equals n/1.",
-          "clue": "Which number can you divide by and leave −6 unchanged?"
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "added": true,
-          "title": "Sharing injera",
-          "text": "Abebe shares 3 injera equally among 4 friends.",
-          "ask": "Each friend gets ___ of an injera.",
-          "a": [
-            "3/4",
-            "0.75",
-            "three quarters",
-            "three fourths",
-            "¾"
-          ],
-          "why": "3 ÷ 4 = 3/4. It is rational but not an integer.",
-          "clue": "Write the division 3 ÷ 4 as a fraction.",
-          "worked": "Each friend gets 3 ÷ 4 of an injera. As a fraction this is 3/4."
-        }
-      ]
-    },
-    {
-      "id": "math.fractions",
-      "name": "Kinds of fractions and simplest form",
-      "requires": [
-        "math.gcf"
-      ],
-      "explain": {
-        "en": {
-          "text": "In a proper fraction the top is smaller than the bottom, like 7/8. In an improper fraction the top is at least the bottom, like 7/3. A mixed fraction is a whole number with a proper fraction, like 5¼. A fraction is in simplest form when top and bottom have GCF 1."
-        },
-        "am": {
-          "text": "በትክክለኛ ክፍልፋይ ላዩ ከታቹ ያንሳል፤ ለምሳሌ 7/8። ትክክለኛ ባልሆነ ክፍልፋይ ላዩ ቢያንስ ከታቹ እኩል ነው፤ ለምሳሌ 7/3። ድብልቅ ክፍልፋይ ሙሉ ቁጥርና ትክክለኛ ክፍልፋይ ነው፤ ለምሳሌ 5¼። የላይና የታች ትልቁ የጋራ አካፋይ 1 ሲሆን ክፍልፋዩ በቀላሉ ቅርጽ ነው።",
-          "machine": true
-        }
-      },
-      "screens": [
-        {
-          "kind": "sort",
-          "step": "hook",
-          "graded": false,
-          "title": "Sort these fractions",
-          "text": "Before you read, sort by feel. Is the top smaller, or not? Is there a whole number in front?",
-          "bins": [
-            "Top smaller",
-            "Top not smaller",
-            "Whole number + fraction"
-          ],
-          "items": [
-            [
-              "7/8",
-              "Top smaller",
-              "7 < 8."
-            ],
-            [
-              "2/9",
-              "Top smaller",
-              "2 < 9."
-            ],
-            [
-              "7/3",
-              "Top not smaller",
-              "7 > 3."
-            ],
-            [
-              "6/1",
-              "Top not smaller",
-              "6 > 1. This is just 6."
-            ],
-            [
-              "5¼",
-              "Whole number + fraction",
-              "5 and ¼ together."
-            ]
-          ]
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Note: kinds of fractions",
-          "paras": [
-            "Let x = a/b be a fraction with a and b positive.",
-            "(i) If a < b, x is a proper fraction.",
-            "(ii) If a ≥ b, x is an improper fraction.",
-            "(iii) A whole number with a proper fraction, such as 5¼, is a mixed fraction.",
-            "Example 2. 7/8 and 2/9 are proper. 7/3 and 6 (= 6/1) are improper. 5¼ is mixed."
-          ],
-          "note": "The book states (i) and (ii) for any integers a and b. They are meant for positive numbers: by the book's rule, −5/2 would count as proper because −5 < 2."
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Simplest form",
-          "paras": [
-            "(iv) x = a/b is in simplest form (lowest terms) when GCF(a, b) = 1.",
-            "That is, a and b are relatively prime."
-          ]
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "Name it",
-          "defs": [
-            [
-              "Proper fraction",
-              "Numerator smaller than denominator, such as 7/8."
-            ],
-            [
-              "Improper fraction",
-              "Numerator at least the denominator, such as 7/3 or 6/1."
-            ],
-            [
-              "Mixed fraction",
-              "A whole number with a proper fraction, such as 5¼."
-            ],
-            [
-              "Simplest form",
-              "a/b with GCF(a, b) = 1. Also called lowest terms."
-            ],
-            [
-              "Relatively prime",
-              "Two numbers whose GCF is 1."
-            ]
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Which is improper?",
-          "text": "Which is an improper fraction?",
-          "opts": [
-            "3/7",
-            "11/4",
-            "2⅓",
-            "0.5"
-          ],
-          "ans": "11/4",
-          "why": "The numerator 11 is larger than the denominator 4.",
-          "clue": "Compare the top and bottom numbers."
-        },
-        {
-          "kind": "steps",
-          "step": "method",
-          "title": "Mixed to improper",
-          "text": "Change a mixed fraction to an improper fraction: l m/n = l + m/n = (l × n + m)/n.",
-          "steps": [
-            "Start with 3¼. Here l = 3, m = 1 and n = 4.",
-            "Multiply the whole number by the denominator: 3 × 4 = 12.",
-            "Add the numerator: 12 + 1 = 13.",
-            "Keep the denominator: 3¼ = 13/4."
-          ],
-          "ref": "Example 3"
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "title": "Simplest form?",
-          "text": "Is 18/24 in simplest form?",
-          "opts": [
-            "Yes",
-            "No, it simplifies to 3/4"
-          ],
-          "ans": "No, it simplifies to 3/4",
-          "why": "GCF(18, 24) = 6, so 18/24 = 3/4.",
-          "clue": "Find GCF(18, 24).",
-          "needs": "math.gcf"
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "title": "Mixed to improper",
-          "ask": "2⅓ = ___/3",
-          "a": [
-            "7",
-            "seven"
-          ],
-          "why": "2 × 3 + 1 = 7, so 2⅓ = 7/3.",
-          "clue": "Multiply the whole number by 3, then add the numerator."
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "added": true,
-          "title": "Coffee in the market",
-          "text": "Hirut buys 1¾ kg of coffee at Merkato.",
-          "ask": "As an improper fraction, she buys ___ kg.",
-          "a": [
-            "7/4",
-            "7 / 4"
-          ],
-          "why": "1 × 4 + 3 = 7, so 1¾ = 7/4.",
-          "clue": "Use (l × n + m)/n with l = 1, m = 3, n = 4.",
-          "worked": "l = 1, m = 3, n = 4. Then 1 × 4 + 3 = 7. So 1¾ kg = 7/4 kg."
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "title": "Lowest terms",
-          "ask": "35/45 in simplest form is ___",
-          "a": [
-            "7/9",
-            "7 / 9"
-          ],
-          "why": "GCF(35, 45) = 5. 35 ÷ 5 = 7 and 45 ÷ 5 = 9.",
-          "clue": "Divide top and bottom by GCF(35, 45).",
-          "needs": "math.gcf"
-        }
-      ]
-    }
-  ],
-  "exercises": [
-    {
-      "book_name": "Exercise 1.10",
-      "items": [
-        {
-          "kind": "tf",
-          "step": "exercise",
-          "graded": true,
-          "text": "(a) Every integer is a rational number.",
-          "a": true,
-          "why": "n = n/1.",
-          "clue": "Write 5 with denominator 1."
-        },
-        {
-          "kind": "tf",
-          "step": "exercise",
-          "graded": true,
-          "text": "(b) The simplest form of 35/45 is 9/7.",
-          "a": false,
-          "why": "35/45 = 7/9, not 9/7.",
-          "clue": "Divide top and bottom by 5."
-        },
-        {
-          "kind": "tf",
-          "step": "exercise",
-          "graded": true,
-          "text": "(c) For a, b, c, d ∈ ℤ with b ≠ 0 and d ≠ 0, a/b + c/d is a rational number.",
-          "a": true,
-          "why": "The sum is (ad + bc)/bd, and bd ≠ 0.",
-          "clue": "Add the fractions using denominator bd."
-        },
-        {
-          "kind": "tf",
-          "step": "exercise",
-          "graded": true,
-          "text": "(d) The simplest form of 5 2/4 is 11/2.",
-          "a": true,
-          "why": "5 2/4 = 22/4 = 11/2.",
-          "clue": "Change to an improper fraction first, then simplify."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "text": "3. Zebiba measures a table as 54 cm and 4 mm.",
-          "ask": "In centimetres, in lowest terms, this is ___ cm.",
-          "a": [
-            "272/5",
-            "54.4",
-            "54 2/5"
-          ],
-          "why": "54.4 cm = 544/10 cm = 272/5 cm.",
-          "clue": "4 mm = 0.4 cm."
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "text": "4. A rope 5⅓ m long is cut into 4 equal pieces.",
-          "ask": "Each piece is ___ m long.",
-          "a": [
-            "4/3",
-            "1⅓",
-            "1 1/3"
-          ],
-          "why": "5⅓ = 16/3, and 16/3 ÷ 4 = 4/3 m = 1⅓ m.",
-          "clue": "Change 5⅓ to an improper fraction first.",
-          "worked": "5⅓ = 16/3. Then 16/3 ÷ 4 = 16/12 = 4/3. So each piece is 1⅓ m."
-        }
-      ]
-    }
-  ],
-  "test": [
-    {
-      "kind": "mcq",
-      "step": "test",
-      "graded": true,
-      "text": "Which set contains all the others: ℕ, ℤ or ℚ?",
-      "opts": [
-        "ℕ",
-        "ℤ",
-        "ℚ"
-      ],
-      "ans": "ℚ",
-      "why": "ℕ ⊆ ℤ ⊆ ℚ.",
-      "clue": ""
-    },
-    {
-      "kind": "blank",
-      "step": "test",
-      "graded": true,
-      "ask": "3¼ as an improper fraction is ___",
-      "a": [
-        "13/4"
-      ],
-      "why": "3 × 4 + 1 = 13, so 13/4.",
-      "clue": ""
-    },
-    {
-      "kind": "tf",
-      "step": "test",
-      "graded": true,
-      "text": "8/15 is in simplest form.",
-      "a": true,
-      "why": "GCF(8, 15) = 1, so 8 and 15 are relatively prime.",
-      "clue": ""
-    }
-  ],
-  "notes": [
-    {
-      "kind": "correction",
-      "text": "Kinds of fractions: the book states (i) and (ii) for any integers a and b. They are meant for positive numerators and denominators: by the book's rule, −5/2 would count as proper because −5 < 2."
-    },
-    {
-      "kind": "correction",
-      "text": "Exercise 1.10 item (c) in the printed book does not say b ≠ 0 and d ≠ 0. Without that, a/b and c/d might not be numbers. The lesson adds the condition."
-    },
-    {
-      "kind": "note",
-      "text": "Exercise 1.10 Q2 (show that a product of rationals is rational) is a proof and is not turned into an item."
-    }
-  ],
-  "review": {
-    "status": "validated"
+  {
+   "en": "Proper fraction",
+   "am": "ትክክለኛ ክፍልፋይ",
+   "def": "A fraction whose numerator is smaller than its denominator, such as 3/4.",
+   "machine": true
   },
-  "version": 1,
-  "tool": "factors",
-  "refreshers": {
-    "math.gcf": {
-      "name": "Greatest common factor",
-      "screens": [
-        {
-          "kind": "steps",
-          "step": "method",
-          "title": "Find GCF(18, 24)",
-          "text": "The GCF is the largest number that divides both numbers.",
-          "steps": [
-            "Factors of 18: 1, 2, 3, 6, 9, 18.",
-            "Factors of 24: 1, 2, 3, 4, 6, 8, 12, 24.",
-            "Common factors: 1, 2, 3, 6.",
-            "The largest is 6. So GCF(18, 24) = 6."
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Your turn",
-          "text": "What is GCF(35, 45)?",
-          "opts": [
-            "3",
-            "5",
-            "7",
-            "15"
-          ],
-          "ans": "5",
-          "why": "35 = 5 × 7 and 45 = 5 × 9. They share only 5.",
-          "clue": "Which number divides both 35 and 45?"
-        }
-      ]
-    }
+  {
+   "en": "Improper fraction",
+   "am": "ትክክለኛ ያልሆነ ክፍልፋይ",
+   "def": "A fraction whose numerator is at least its denominator, such as 7/3.",
+   "machine": true
+  },
+  {
+   "en": "Mixed fraction",
+   "am": "ድብልቅ ክፍልፋይ",
+   "def": "A whole number with a proper fraction, such as 5¼.",
+   "machine": true
+  },
+  {
+   "en": "Simplest form",
+   "am": "ቀላሉ ቅርጽ",
+   "def": "a/b is in simplest form (lowest terms) when GCF(a, b) = 1.",
+   "machine": true
+  },
+  {
+   "en": "Relatively prime",
+   "am": "እርስ በርስ ብቸኛ",
+   "def": "Numbers whose GCF is 1, such as 8 and 15.",
+   "machine": true
   }
+ ],
+ "ideas": [
+  {
+   "id": "math.rational-numbers",
+   "name": "Rational numbers",
+   "explain": {
+    "en": {
+     "text": "Dividing one integer by another does not always give an integer. So we use a bigger set. A rational number can be written a/b, where a and b are integers and b is not 0. Every integer is rational, because n = n/1."
+    },
+    "am": {
+     "text": "አንድን ኢንቲጀር በሌላ ማካፈል ሁልጊዜ ኢንቲጀር አይሰጥም። ስለዚህ ትልቅ ስብስብ እንጠቀማለን። ምክንያታዊ ቁጥር a/b ተብሎ ሊጻፍ ይችላል፤ a እና b ኢንቲጀሮች ሲሆኑ b ዜሮ አይደለም። እያንዳንዱ ኢንቲጀር ምክንያታዊ ነው፤ ምክንያቱም n = n/1 ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Divide some integers",
+     "text": "Take the integers 7, −2, 6, 0 and −3. Try these four divisions: 6 ÷ (−3), 0 ÷ 7, 7 ÷ 6 and −2 ÷ 7.",
+     "ask": "How many of the four answers are integers? Take a guess.",
+     "opts": [
+      "None",
+      "Two",
+      "Three",
+      "All four"
+     ],
+     "after": "6 ÷ (−3) = −2: an integer.\n0 ÷ 7 = 0: an integer.\n7 ÷ 6 = 7/6 and −2 ÷ 7 = −2/7: not integers.\nSo two of the four answers are integers. Read on.",
+     "ref": "Activity 1.9",
+     "best": "Two"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Activity 1.9: what happens?",
+     "paras": [
+      "6 ÷ (−3) = −2 and 0 ÷ 7 = 0. Both answers are integers.",
+      "But 7 ÷ 6 = 7/6 and −2 ÷ 7 = −2/7. These are not integers.",
+      "Dividing integers does not always give an integer. So we need a bigger set: the rational numbers.",
+      "Division by 0 is not allowed."
+     ]
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Definition 1.5 · Rational numbers",
+     "paras": [
+      "A number that can be written as a/b is a rational number. Here a and b are integers and b ≠ 0.",
+      "The set of rational numbers is ℚ = {a/b : a, b ∈ ℤ and b ≠ 0}.",
+      "Example 1. 3/4, −13/10, −6 and 0 are rational.",
+      "−6 = −6/1 and 0 = 0/1. So every integer is rational. So is every natural number: ℕ ⊆ ℤ ⊆ ℚ."
+     ],
+     "note": "Figure 1.2: natural numbers sit inside the integers, which sit inside the rational numbers."
+    },
+    {
+     "kind": "nest",
+     "step": "explore",
+     "title": "Figure 1.2: ℕ ⊆ ℤ ⊆ ℚ",
+     "ref": "Figure 1.2",
+     "ask": "Tap a circle. Then tap each number.",
+     "rings": [
+      [
+       "ℚ",
+       "Rational numbers",
+       "Any a/b with a, b integers and b ≠ 0."
+      ],
+      [
+       "ℤ",
+       "Integers",
+       "…, −2, −1, 0, 1, 2, …"
+      ],
+      [
+       "ℕ",
+       "Natural numbers",
+       "1, 2, 3, …"
+      ]
+     ],
+     "numbers": [
+      [
+       "3/4",
+       0,
+       "A fraction that is not an integer."
+      ],
+      [
+       "−13/10",
+       0,
+       "A negative fraction. Still rational."
+      ],
+      [
+       "−6",
+       1,
+       "−6 = −6/1, an integer."
+      ],
+      [
+       "0",
+       1,
+       "0 = 0/1, an integer but not natural."
+      ],
+      [
+       "5",
+       2,
+       "5 = 5/1, a natural number, so it is in all three sets."
+      ]
+     ],
+     "need": 4,
+     "added": true,
+     "id": "g9.maths.u1.s1-2.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Name it",
+     "defs": [
+      [
+       "Rational number",
+       "A number a/b, where a and b are integers and b ≠ 0. The set is ℚ."
+      ]
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Spot the odd one",
+     "text": "Rational numbers: which number is NOT rational?",
+     "opts": [
+      "−6",
+      "0",
+      "5/0",
+      "13/4"
+     ],
+     "ans": "5/0",
+     "why": "A rational number is a/b with a, b integers and b ≠ 0.\n−6 = −6/1, 0 = 0/1 and 13/4 all fit.\n5/0 has denominator 0, which is not allowed.\nSo 5/0 is not a rational number (it is not a number at all).",
+     "clue": "Read the condition on b in Definition 1.5."
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "title": "True or false?",
+     "text": "Natural numbers and ℚ: every natural number is also a rational number.",
+     "a": true,
+     "why": "Take any natural number, for example 4.\nWrite it with denominator 1: 4 = 4/1.\n4 and 1 are integers and 1 ≠ 0.\nSo 4 is rational. This works for every n: ℕ ⊆ ℤ ⊆ ℚ. True.",
+     "clue": "Can you write 4 as a fraction with denominator 1?"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "title": "Write an integer as a/b",
+     "ask": "Write the integer as a/b: −6 = −6/___",
+     "a": [
+      "1",
+      "one"
+     ],
+     "why": "Dividing by 1 leaves a number unchanged.\nSo −6 ÷ 1 = −6.\nThat means −6 = −6/1.\nEvery integer n can be written as n/1.",
+     "clue": "Which number can you divide by and leave −6 unchanged?"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "added": true,
+     "title": "Sharing injera",
+     "text": "Abebe shares 3 injera equally among 4 friends.",
+     "ask": "Division as a fraction: each friend gets ___ of an injera.",
+     "a": [
+      "3/4",
+      "0.75",
+      "three quarters",
+      "three fourths",
+      "¾"
+     ],
+     "why": "Sharing means dividing: 3 ÷ 4.\nAs a fraction, 3 ÷ 4 = 3/4.\nCheck: 4 friends × 3/4 = 12/4 = 3 injera.\nSo each friend gets 3/4. It is rational, but not an integer.",
+     "clue": "Write the division 3 ÷ 4 as a fraction.",
+     "worked": "Each friend gets 3 ÷ 4 of an injera. As a fraction this is 3/4."
+    }
+   ]
+  },
+  {
+   "id": "math.fractions",
+   "name": "Kinds of fractions and simplest form",
+   "requires": [
+    "math.gcf"
+   ],
+   "explain": {
+    "en": {
+     "text": "In a proper fraction the top is smaller than the bottom, like 7/8. In an improper fraction the top is at least the bottom, like 7/3. A mixed fraction is a whole number with a proper fraction, like 5¼. A fraction is in simplest form when top and bottom have GCF 1."
+    },
+    "am": {
+     "text": "በትክክለኛ ክፍልፋይ ላዩ ከታቹ ያንሳል፤ ለምሳሌ 7/8። ትክክለኛ ባልሆነ ክፍልፋይ ላዩ ቢያንስ ከታቹ እኩል ነው፤ ለምሳሌ 7/3። ድብልቅ ክፍልፋይ ሙሉ ቁጥርና ትክክለኛ ክፍልፋይ ነው፤ ለምሳሌ 5¼። የላይና የታች ትልቁ የጋራ አካፋይ 1 ሲሆን ክፍልፋዩ በቀላሉ ቅርጽ ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "graded": false,
+     "title": "Sort these fractions",
+     "text": "Before you read, sort by feel. Is the top smaller, or not? Is there a whole number in front?",
+     "bins": [
+      "Top smaller",
+      "Top not smaller",
+      "Whole number + fraction"
+     ],
+     "items": [
+      [
+       "7/8",
+       "Top smaller",
+       "7 < 8."
+      ],
+      [
+       "2/9",
+       "Top smaller",
+       "2 < 9."
+      ],
+      [
+       "7/3",
+       "Top not smaller",
+       "7 > 3."
+      ],
+      [
+       "6/1",
+       "Top not smaller",
+       "6 > 1. This is just 6."
+      ],
+      [
+       "5¼",
+       "Whole number + fraction",
+       "5 and ¼ together."
+      ]
+     ],
+     "after": "Top smaller: 7/8 and 2/9.\nTop not smaller: 7/3 and 6/1.\nWhole number with a fraction: 5¼.\nRead on to learn the names of these kinds."
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Note: kinds of fractions",
+     "paras": [
+      "Let x = a/b be a fraction with a and b positive.",
+      "(i) If a < b, x is a proper fraction.",
+      "(ii) If a ≥ b, x is an improper fraction.",
+      "(iii) A whole number with a proper fraction, such as 5¼, is a mixed fraction.",
+      "Example 2. 7/8 and 2/9 are proper. 7/3 and 6 (= 6/1) are improper. 5¼ is mixed."
+     ],
+     "note": "The book states (i) and (ii) for any integers a and b. They are meant for positive numbers: by the book's rule, −5/2 would count as proper because −5 < 2."
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Simplest form",
+     "paras": [
+      "(iv) x = a/b is in simplest form (lowest terms) when GCF(a, b) = 1.",
+      "That is, a and b are relatively prime."
+     ]
+    },
+    {
+     "kind": "fracbar",
+     "step": "explore",
+     "title": "18/24 and 3/4 are the same size",
+     "bars": [
+      {
+       "parts": 24,
+       "shade": [
+        {
+         "n": 18,
+         "color": "a",
+         "label": "18/24"
+        }
+       ]
+      },
+      {
+       "parts": 4,
+       "shade": [
+        {
+         "n": 3,
+         "color": "b",
+         "label": "3/4"
+        }
+       ]
+      }
+     ],
+     "after": "Both bars shade the same length. GCF(18, 24) = 6, and 18/24 = (18 ÷ 6)/(24 ÷ 6) = 3/4.",
+     "added": true,
+     "id": "g9.maths.u1.s1-2.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Name it",
+     "defs": [
+      [
+       "Proper fraction",
+       "Numerator smaller than denominator, such as 7/8."
+      ],
+      [
+       "Improper fraction",
+       "Numerator at least the denominator, such as 7/3 or 6/1."
+      ],
+      [
+       "Mixed fraction",
+       "A whole number with a proper fraction, such as 5¼."
+      ],
+      [
+       "Simplest form",
+       "a/b with GCF(a, b) = 1. Also called lowest terms."
+      ],
+      [
+       "Relatively prime",
+       "Two numbers whose GCF is 1."
+      ]
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Which is improper?",
+     "text": "Kinds of fractions: which is an improper fraction?",
+     "opts": [
+      "3/7",
+      "11/4",
+      "2⅓",
+      "0.5"
+     ],
+     "ans": "11/4",
+     "why": "Improper means the numerator is at least the denominator.\n11/4: 11 > 4, so it is improper.\n3/7 is proper: 3 < 7.\n2⅓ is a mixed fraction, and 0.5 is a decimal.",
+     "clue": "Compare the top and bottom numbers."
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Mixed to improper",
+     "text": "Change a mixed fraction to an improper fraction: l m/n = l + m/n = (l × n + m)/n.",
+     "steps": [
+      "Start with 3¼. Here l = 3, m = 1 and n = 4.",
+      "Multiply the whole number by the denominator: 3 × 4 = 12.",
+      "Add the numerator: 12 + 1 = 13.",
+      "Keep the denominator: 3¼ = 13/4."
+     ],
+     "ref": "Example 3"
+    },
+    {
+     "kind": "fracbar",
+     "step": "method",
+     "title": "Example 3 in bars: 3¼ = 13/4",
+     "ref": "Example 3",
+     "bars": [
+      {
+       "parts": 4,
+       "shade": [
+        {
+         "n": 4,
+         "color": "a",
+         "label": "1 whole = 4/4"
+        }
+       ]
+      },
+      {
+       "parts": 4,
+       "shade": [
+        {
+         "n": 4,
+         "color": "b",
+         "label": "2 wholes = 8/4"
+        }
+       ]
+      },
+      {
+       "parts": 4,
+       "shade": [
+        {
+         "n": 4,
+         "color": "c",
+         "label": "3 wholes = 12/4"
+        }
+       ]
+      },
+      {
+       "parts": 4,
+       "shade": [
+        {
+         "n": 1,
+         "color": "d",
+         "label": "+ 1/4"
+        }
+       ]
+      }
+     ],
+     "after": "3 wholes are 12 quarters. Add 1 more quarter: 13 quarters. So 3¼ = 13/4.",
+     "added": true,
+     "id": "g9.maths.u1.s1-2.1"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "Simplest form?",
+     "text": "Simplest form: is 18/24 in simplest form?",
+     "opts": [
+      "Yes",
+      "No, it simplifies to 3/4"
+     ],
+     "ans": "No, it simplifies to 3/4",
+     "why": "18/24 is in simplest form only if GCF(18, 24) = 1.\nFactors of 18: 1, 2, 3, 6, 9, 18. Factors of 24: 1, 2, 3, 4, 6, 8, 12, 24.\nGCF(18, 24) = 6, not 1.\nDivide top and bottom by 6: 18/24 = 3/4.\nSo no: it simplifies to 3/4.",
+     "clue": "Find GCF(18, 24).",
+     "needs": "math.gcf"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "title": "Mixed to improper",
+     "ask": "Mixed to improper: 2⅓ = ___/3",
+     "a": [
+      "7",
+      "seven"
+     ],
+     "why": "Use (l × n + m)/n with l = 2, m = 1, n = 3.\nMultiply: 2 × 3 = 6.\nAdd the numerator: 6 + 1 = 7.\nSo 2⅓ = 7/3.",
+     "clue": "Multiply the whole number by 3, then add the numerator."
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "added": true,
+     "title": "Coffee in the market",
+     "text": "Hirut buys 1¾ kg of coffee at Merkato.",
+     "ask": "Mixed to improper fraction: she buys ___ kg.",
+     "a": [
+      "7/4",
+      "7 / 4"
+     ],
+     "why": "1¾ means l = 1, m = 3, n = 4.\n1 × 4 = 4 quarters in the whole.\n4 + 3 = 7 quarters.\nSo 1¾ kg = 7/4 kg.",
+     "clue": "Use (l × n + m)/n with l = 1, m = 3, n = 4.",
+     "worked": "l = 1, m = 3, n = 4. Then 1 × 4 + 3 = 7. So 1¾ kg = 7/4 kg."
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "title": "Lowest terms",
+     "ask": "Write in simplest form: 35/45 = ___",
+     "a": [
+      "7/9",
+      "7 / 9"
+     ],
+     "why": "Find GCF(35, 45): 35 = 5 × 7 and 45 = 5 × 9, so the GCF is 5.\nDivide the top: 35 ÷ 5 = 7.\nDivide the bottom: 45 ÷ 5 = 9.\nGCF(7, 9) = 1, so 35/45 = 7/9 is in simplest form.",
+     "clue": "Divide top and bottom by GCF(35, 45).",
+     "needs": "math.gcf"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 1.10",
+   "items": [
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "(a) Integers and rational numbers: every integer is a rational number.",
+     "a": true,
+     "why": "Any integer n can be written as n/1.\nn and 1 are integers, and 1 ≠ 0.\nSo n fits the definition a/b. Example: 5 = 5/1.\nTrue.",
+     "clue": "Write 5 with denominator 1."
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "(b) Simplest form: the simplest form of 35/45 is 9/7.",
+     "a": false,
+     "why": "GCF(35, 45) = 5.\n35 ÷ 5 = 7 and 45 ÷ 5 = 9.\nSo 35/45 = 7/9.\n9/7 has top and bottom swapped. False.",
+     "clue": "Divide top and bottom by 5."
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "(c) Adding rational numbers: for a, b, c, d ∈ ℤ with b ≠ 0 and d ≠ 0, a/b + c/d is a rational number.",
+     "a": true,
+     "why": "Use the common denominator bd: a/b + c/d = (ad + bc)/(bd).\nad + bc is an integer, and bd is an integer.\nb ≠ 0 and d ≠ 0, so bd ≠ 0.\nSo the sum has the form p/q with q ≠ 0. True.",
+     "clue": "Add the fractions using denominator bd."
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "(d) Mixed fractions: the simplest form of 5 2/4 is 11/2.",
+     "a": true,
+     "why": "Change to improper: 5 × 4 + 2 = 22, so 5 2/4 = 22/4.\nGCF(22, 4) = 2.\n22 ÷ 2 = 11 and 4 ÷ 2 = 2.\nSo 5 2/4 = 11/2. True.",
+     "clue": "Change to an improper fraction first, then simplify."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "text": "3. Zebiba measures a table as 54 cm and 4 mm.",
+     "ask": "Write the measurement as a fraction in lowest terms: ___ cm.",
+     "a": [
+      "272/5",
+      "54.4",
+      "54 2/5"
+     ],
+     "why": "1 cm = 10 mm, so 4 mm = 4/10 cm = 0.4 cm.\nSo the length is 54.4 cm = 544/10 cm.\nGCF(544, 10) = 2: 544 ÷ 2 = 272 and 10 ÷ 2 = 5.\nSo 54.4 cm = 272/5 cm (= 54 2/5 cm).",
+     "clue": "4 mm = 0.4 cm."
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "text": "4. A rope 5⅓ m long is cut into 4 equal pieces.",
+     "ask": "Divide a mixed fraction: each piece is ___ m long.",
+     "a": [
+      "4/3",
+      "1⅓",
+      "1 1/3"
+     ],
+     "why": "Change to improper: 5 × 3 + 1 = 16, so 5⅓ = 16/3.\nDivide by 4: 16/3 ÷ 4 = 16/12.\nSimplify by 4: 16/12 = 4/3.\nSo each piece is 4/3 m = 1⅓ m. Check: 4 × 4/3 = 16/3.",
+     "clue": "Change 5⅓ to an improper fraction first.",
+     "worked": "5⅓ = 16/3. Then 16/3 ÷ 4 = 16/12 = 4/3. So each piece is 1⅓ m."
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Sets of numbers: which set contains all the others: ℕ, ℤ or ℚ?",
+   "opts": [
+    "ℕ",
+    "ℤ",
+    "ℚ"
+   ],
+   "ans": "ℚ",
+   "why": "Every natural number is an integer: ℕ ⊆ ℤ.\nEvery integer n = n/1 is rational: ℤ ⊆ ℚ.\nSo ℕ ⊆ ℤ ⊆ ℚ.\nℚ contains the other two.",
+   "clue": ""
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "Mixed to improper: 3¼ as an improper fraction is ___",
+   "a": [
+    "13/4"
+   ],
+   "why": "Use (l × n + m)/n with l = 3, m = 1, n = 4.\n3 × 4 = 12.\n12 + 1 = 13.\nSo 3¼ = 13/4.",
+   "clue": ""
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Simplest form: 8/15 is in simplest form.",
+   "a": true,
+   "why": "8 = 2 × 2 × 2 and 15 = 3 × 5.\nThey share no prime, so GCF(8, 15) = 1.\n8 and 15 are relatively prime.\nSo 8/15 is in simplest form. True.",
+   "clue": ""
+  }
+ ],
+ "notes": [
+  {
+   "kind": "correction",
+   "text": "Kinds of fractions: the book states (i) and (ii) for any integers a and b. They are meant for positive numerators and denominators: by the book's rule, −5/2 would count as proper because −5 < 2."
+  },
+  {
+   "kind": "correction",
+   "text": "Exercise 1.10 item (c) in the printed book does not say b ≠ 0 and d ≠ 0. Without that, a/b and c/d might not be numbers. The lesson adds the condition."
+  },
+  {
+   "kind": "note",
+   "text": "Exercise 1.10 Q2 (show that a product of rationals is rational) is a proof and is not turned into an item."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "tool": "factors",
+ "refreshers": {
+  "math.gcf": {
+   "name": "Greatest common factor",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Find GCF(18, 24)",
+     "text": "The GCF is the largest number that divides both numbers.",
+     "steps": [
+      "Factors of 18: 1, 2, 3, 6, 9, 18.",
+      "Factors of 24: 1, 2, 3, 4, 6, 8, 12, 24.",
+      "Common factors: 1, 2, 3, 6.",
+      "The largest is 6. So GCF(18, 24) = 6."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Your turn",
+     "text": "Greatest common factor: what is GCF(35, 45)?",
+     "opts": [
+      "3",
+      "5",
+      "7",
+      "15"
+     ],
+     "ans": "5",
+     "why": "35 = 5 × 7.\n45 = 5 × 9 = 3 × 3 × 5.\nThe only shared prime is 5.\nSo GCF(35, 45) = 5.",
+     "clue": "Which number divides both 35 and 45?"
+    }
+   ]
+  }
+ }
 }

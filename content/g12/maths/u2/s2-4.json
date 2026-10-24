@@ -127,6 +127,40 @@
      "id": "g12.maths.u2.s2-4.2"
     },
     {
+     "kind": "tap",
+     "step": "explore",
+     "added": true,
+     "title": "The derivative rules with examples",
+     "ask": "Tap each rule.",
+     "items": [
+      [
+       "Power",
+       "(xⁿ)′ = n xⁿ⁻¹. (x⁹)′ = 9x⁸."
+      ],
+      [
+       "Product",
+       "(fg)′ = f′g + fg′. (x²(2x + 5))′ = 2x(2x + 5) + 2x² = 6x² + 10x."
+      ],
+      [
+       "Quotient",
+       "(f/g)′ = (f′g − fg′)/g². (x/(x + 1))′ = 1/(x + 1)²."
+      ],
+      [
+       "Chain",
+       "(f(g(x)))′ = f′(g(x)) g′(x). ((5x + 4)²¹)′ = 105(5x + 4)²⁰."
+      ],
+      [
+       "Tangent line",
+       "y = f′(a)(x − a) + f(a)."
+      ],
+      [
+       "Normal line",
+       "Slope −1/f′(a): perpendicular to the tangent."
+      ]
+     ],
+     "id": "g12.maths.u2.s2-4.31"
+    },
+    {
      "kind": "read",
      "step": "read",
      "title": "Summary: integrals",
@@ -179,20 +213,68 @@
        "normal slope"
       ]
      ],
-     "why": "Each is a key fact of the unit.",
+     "why": "f′ goes + to −: rising then falling, a hill → relative maximum.\nf′ goes − to +: falling then rising, a valley → relative minimum.\nf′(c) = 0 or undefined (c in the domain) → c is a critical number.\nF(b) − F(a) → the definite integral from a to b.\n−1/f′(a) → the slope of the normal (perpendicular to the tangent).",
      "clue": "Think back to each section.",
      "graded": true,
      "level": 1,
      "step": "check",
-     "id": "g12.maths.u2.s2-4.5"
+     "id": "g12.maths.u2.s2-4.5",
+     "text": "Unit 2 key facts: match each fact with its name."
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "added": true,
+     "graded": true,
+     "level": 1,
+     "text": "Derivative or integral? Sort each task by the tool it needs.",
+     "bins": [
+      "derivative",
+      "integral"
+     ],
+     "items": [
+      [
+       "slope of the tangent at x = 2",
+       "derivative",
+       "Slope = f′(2)."
+      ],
+      [
+       "area under y = x² on [0, 3]",
+       "integral",
+       "Area = ∫ from 0 to 3 x² dx."
+      ],
+      [
+       "velocity from position s(t)",
+       "derivative",
+       "v = ds/dt."
+      ],
+      [
+       "distance from velocity v(t)",
+       "integral",
+       "Distance = ∫ v dt."
+      ],
+      [
+       "marginal cost from C(x)",
+       "derivative",
+       "Marginal cost = C′(x)."
+      ],
+      [
+       "total cost from marginal cost C′(x)",
+       "integral",
+       "Total = ∫ C′(x) dx."
+      ]
+     ],
+     "why": "Derivatives go from a total to a rate (slope, velocity, marginal).\nIntegrals go from a rate back to a total (area, distance, total cost).\nThey undo each other: that is the Fundamental Theorem.",
+     "clue": "Are you going from a total to a rate, or from a rate to a total?",
+     "id": "g12.maths.u2.s2-4.32"
     },
     {
      "kind": "blank",
-     "ask": "f(x) = (x³ + 3x)/x². f′(2) = ___",
+     "ask": "Derivative at a point (simplify first): f(x) = (x³ + 3x)/x². f′(2) = ___",
      "a": [
       "1/4"
      ],
-     "why": "f = x + 3/x, f′ = 1 − 3/x² = 1 − 3/4.",
+     "why": "Divide each term by x²: f(x) = x + 3/x = x + 3x⁻¹.\nf′(x) = 1 − 3x⁻² = 1 − 3/x².\nf′(2) = 1 − 3/4 = 1/4.\nThe quotient rule gives the same, with more work.",
      "clue": "Simplify first.",
      "num": true,
      "graded": true,
@@ -203,11 +285,11 @@
     },
     {
      "kind": "blank",
-     "ask": "An object falls: y = 80 − 4.9t². Its velocity at t = 1 s = ___ m/s",
+     "ask": "Velocity of a falling object: height y = 80 − 4.9t² (m). Its velocity at t = 1 s is ___ m/s",
      "a": [
       "-9.8"
      ],
-     "why": "y′ = −9.8t.",
+     "why": "Velocity = dy/dt.\ndy/dt = 0 − 9.8t = −9.8t.\nAt t = 1: −9.8 m/s.\nThe minus sign means the height is falling.",
      "clue": "Velocity = dy/dt. Negative: falling.",
      "num": true,
      "graded": true,
@@ -218,11 +300,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A farmer has 240 m of fence for a field by a river (no fence on the river side). The largest area = ___ m²",
+     "ask": "Optimisation: a farmer has 240 m of fence for a field by a river (no fence on the river side). The largest area = ___ m²",
      "a": [
       "7200"
      ],
-     "why": "A = x(240 − 2x). A′ = 240 − 4x = 0: x = 60, area 60 × 120 = 7200.",
+     "why": "Let x = each side at right angles to the river; the far side is 240 − 2x.\nA = x(240 − 2x) = 240x − 2x².\nA′ = 240 − 4x = 0 gives x = 60.\nA′ goes + to −: a maximum.\nA = 60 × 120 = 7200 m².\nTrap: a square 80 × 80 = 6400 is not the best here.",
      "clue": "Two sides x and one side 240 − 2x.",
      "num": true,
      "graded": true,
@@ -241,11 +323,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "f(x) = 4√x/(2x + 1). f′(4) = ___",
+     "ask": "Quotient rule: f(x) = 4√x/(2x + 1). f′(4) = ___",
      "a": [
       "-7/81"
      ],
-     "why": "u = 4√x, u′ = 2/√x = 1 at 4; v = 9, v′ = 2, u = 8. (1 × 9 − 8 × 2)/81 = −7/81.",
+     "why": "u = 4√x, v = 2x + 1. u′ = 2/√x, v′ = 2.\nAt x = 4: u = 8, u′ = 1, v = 9, v′ = 2.\nf′ = (u′v − uv′)/v² = (1 × 9 − 8 × 2)/81.\nf′(4) = (9 − 16)/81 = −7/81.",
      "clue": "Quotient rule.",
      "num": true,
      "graded": true,
@@ -256,7 +338,7 @@
     },
     {
      "kind": "mcq",
-     "text": "y = 1/x. Slope of the secant from x = 3 to x = 3 + Δx:",
+     "text": "Slope of a secant: y = 1/x from x = 3 to x = 3 + Δx. The slope is",
      "opts": [
       "−1/(9 + 3Δx)",
       "−1/9",
@@ -264,7 +346,7 @@
       "−1/(3 + Δx)"
      ],
      "ans": "−1/(9 + 3Δx)",
-     "why": "(1/(3 + Δx) − 1/3)/Δx = −1/(3(3 + Δx)).",
+     "why": "Slope = (1/(3 + Δx) − 1/3)/Δx.\nCommon denominator: (3 − (3 + Δx))/(3(3 + Δx)) = −Δx/(3(3 + Δx)).\nDivide by Δx: −1/(3(3 + Δx)) = −1/(9 + 3Δx).\n−1/9 is the limit as Δx → 0 (the tangent slope), not the secant slope.",
      "clue": "Combine the fractions.",
      "graded": true,
      "level": 2,
@@ -274,11 +356,11 @@
     },
     {
      "kind": "blank",
-     "ask": "y = t². Average speed from t = 2 to t = 2.1 = ___ m/s",
+     "ask": "Average speed: distance y = t² (m). Average speed from t = 2 to t = 2.1 is ___ m/s",
      "a": [
       "4.1"
      ],
-     "why": "(4.41 − 4)/0.1 = 4.1.",
+     "why": "Average speed = (y(2.1) − y(2))/(2.1 − 2).\ny(2.1) = 4.41 and y(2) = 4.\n(4.41 − 4)/0.1 = 0.41/0.1 = 4.1 m/s.\nCheck: close to the instant speed y′(2) = 4.",
      "clue": "4 + Δt.",
      "num": true,
      "graded": true,
@@ -289,7 +371,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = x³(1 − 1/x)(x² − 1/x²). f′(x) =",
+     "text": "Differentiate (expand first): f(x) = x³(1 − 1/x)(x² − 1/x²). f′(x) =",
      "opts": [
       "5x⁴ − 4x³ − 1",
       "5x⁴ − 4x³ + 1",
@@ -297,7 +379,7 @@
       "3x² − 1"
      ],
      "ans": "5x⁴ − 4x³ − 1",
-     "why": "Expand: x⁵ − x⁴ − x + 1.",
+     "why": "x³(1 − 1/x) = x³ − x².\n(x³ − x²)(x² − 1/x²) = x⁵ − x − x⁴ + 1.\nSo f(x) = x⁵ − x⁴ − x + 1.\nf′(x) = 5x⁴ − 4x³ − 1.",
      "clue": "Multiply out first.",
      "graded": true,
      "level": 3,
@@ -307,7 +389,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = 6x⁵ − 50x³ − 120 is decreasing on",
+     "text": "Increasing and decreasing: f(x) = 6x⁵ − 50x³ − 120 is decreasing on",
      "opts": [
       "[−√5, √5]",
       "(−∞, −√5]",
@@ -315,7 +397,7 @@
       "[−5, 5]"
      ],
      "ans": "[−√5, √5]",
-     "why": "f′ = 30x²(x² − 5) ≤ 0 there.",
+     "why": "f′(x) = 30x⁴ − 150x² = 30x²(x² − 5).\n30x² ≥ 0 always, so the sign comes from x² − 5.\nx² − 5 ≤ 0 when −√5 ≤ x ≤ √5.\nSo f is decreasing on [−√5, √5].\nOn (−∞, −√5] and [√5, ∞) it is increasing.",
      "clue": "Factor f′.",
      "graded": true,
      "level": 3,
@@ -325,7 +407,7 @@
     },
     {
      "kind": "mcq",
-     "text": "2y = x² + 4. Where does y change 4 times as fast as x?",
+     "text": "Related rates: on the curve 2y = x² + 4, where does y change 4 times as fast as x?",
      "opts": [
       "(4, 10)",
       "(2, 4)",
@@ -333,7 +415,7 @@
       "(1, 2.5)"
      ],
      "ans": "(4, 10)",
-     "why": "dy/dt = x dx/dt = 4 dx/dt, so x = 4, y = 10.",
+     "why": "Differentiate with respect to t: 2 dy/dt = 2x dx/dt.\nSo dy/dt = x dx/dt.\nWe want dy/dt = 4 dx/dt, so x = 4.\ny = (16 + 4)/2 = 10. The point is (4, 10).",
      "clue": "Differentiate with respect to t.",
      "graded": true,
      "level": 2,
@@ -343,7 +425,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f(x) = x² + px + q has an extreme value f(1) = 3. p and q:",
+     "text": "Extreme value conditions: f(x) = x² + px + q has an extreme value f(1) = 3. Find p and q.",
      "opts": [
       "p = −2, q = 4",
       "p = 2, q = 0",
@@ -351,7 +433,7 @@
       "p = −1, q = 3"
      ],
      "ans": "p = −2, q = 4",
-     "why": "f′(1) = 2 + p = 0; 1 − 2 + q = 3.",
+     "why": "At an extreme value, f′(1) = 0.\nf′(x) = 2x + p, so 2 + p = 0 and p = −2.\nf(1) = 1 + p + q = 3, so 1 − 2 + q = 3 and q = 4.\nAnswer: p = −2, q = 4.",
      "clue": "f′(1) = 0 and f(1) = 3.",
      "graded": true,
      "level": 2,
@@ -361,12 +443,12 @@
     },
     {
      "kind": "blank",
-     "ask": "A 5 ft board slides down a wall. Bottom 4 ft from the wall, top moving down 2 ft/s. The bottom slides out at ___ ft/s",
+     "ask": "Related rates (sliding board): a 5 ft board slides down a wall. The bottom is 4 ft from the wall; the top moves down 2 ft/s. The bottom slides out at ___ ft/s",
      "a": [
       "1.5",
       "3/2"
      ],
-     "why": "x² + y² = 25, x = 4, y = 3: 2x x′ + 2y y′ = 0 → 4x′ = 3(2), x′ = 1.5.",
+     "why": "Pythagoras: x² + y² = 25. At x = 4, y = 3.\nDifferentiate: 2x dx/dt + 2y dy/dt = 0.\nThe top moves down, so dy/dt = −2.\n4 dx/dt + 3(−2) = 0, so dx/dt = 6/4 = 1.5 ft/s.",
      "clue": "Pythagoras, then differentiate.",
      "num": true,
      "graded": true,
@@ -377,11 +459,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A balloon radius grows 0.5 cm/s. At r = 4, the surface area grows ___π cm²/s",
+     "ask": "Related rates for a sphere: a balloon's radius grows 0.5 cm/s. At r = 4 cm, the surface area grows ___π cm²/s",
      "a": [
       "16"
      ],
-     "why": "S = 4πr², dS/dt = 8πr dr/dt = 8π(4)(0.5) = 16π.",
+     "why": "S = 4πr².\ndS/dt = 8πr dr/dt.\ndS/dt = 8π(4)(0.5) = 16π cm²/s.\nSo the blank is 16.",
      "clue": "S = 4πr².",
      "num": true,
      "graded": true,
@@ -392,11 +474,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A cyclist slows steadily from 30 km/h to 0 in 45 s. Distance covered = ___ m",
+     "ask": "Distance as an area: a cyclist slows steadily from 30 km/h to 0 in 45 s. The distance covered is ___ m",
      "a": [
       "187.5"
      ],
-     "why": "30 km/h = 25/3 m/s. Triangle (1/2)(45)(25/3) = 187.5.",
+     "why": "Change units first: 30 km/h = 30 000 m ÷ 3600 s = 25/3 m/s.\nThe v–t graph is a straight line from 25/3 down to 0: a triangle.\nArea = (1/2)(45)(25/3) = 187.5 m.\nTrap: mixing km/h with seconds gives a wrong number.",
      "clue": "Area under the v–t line.",
      "num": true,
      "graded": true,
@@ -407,11 +489,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Pollution rate N′(t) = 280t^(3/2) lb per month. Total in 16 months = ___ lb",
+     "ask": "Total from a rate: pollution N′(t) = 280t^(3/2) lb per month. The total in the first 16 months is ___ lb",
      "a": [
       "114688"
      ],
-     "why": "[112t^(5/2)] = 112 × 1024.",
+     "why": "Total = ∫ from 0 to 16 280t^(3/2) dt.\nNew power 5/2: 280 ÷ (5/2) = 112, so F(t) = 112t^(5/2).\n16^(5/2) = (√16)⁵ = 4⁵ = 1024.\n112 × 1024 = 114 688 lb.",
      "clue": "280 ÷ (5/2) = 112.",
      "num": true,
      "graded": true,
@@ -439,7 +521,7 @@
       "D. 50 and 2"
      ],
      "ans": "B. 20 and 5",
-     "why": "Let the numbers be x, y > 0 with xy = 100, so y = 100/x. S(x) = 2x + 8y = 2x + 800/x. S′(x) = 2 − 800/x² = 0 ⇒ x² = 400 ⇒ x = 20 (x > 0); y = 100/20 = 5. S″(x) = 1600/x³ > 0, so this is a minimum: S = 40 + 40 = 80. Check others: (25,4) gives 82, (50,2) gives 116; (1,99) has product 99, not 100.",
+     "why": "Let the numbers be x and y, with xy = 100, so y = 100/x.\nSum to minimise: S(x) = 2x + 8y = 2x + 800/x.\nS′(x) = 2 − 800/x² = 0 gives x² = 400, x = 20 (x > 0).\ny = 100/20 = 5. S″(x) = 1600/x³ > 0: a minimum, S = 80.\nCheck: (25, 4) gives 82, (50, 2) gives 116; (1, 99) has product 99, not 100.",
      "clue": "",
      "graded": true,
      "level": 2,
@@ -457,7 +539,7 @@
       "D. 108"
      ],
      "ans": "D. 108",
-     "why": "P′(x) = 72 − 36x = 0 ⇒ x = 2. P″(x) = −36 < 0, so x = 2 gives a maximum. P(2) = 36 + 144 − 72 = 108.",
+     "why": "P′(x) = 72 − 36x = 0 gives x = 2.\nP″(x) = −36 < 0, so x = 2 is a maximum.\nP(2) = 36 + 144 − 72 = 108.\nTrap: 2 is the best x, not the profit.",
      "clue": "",
      "graded": true,
      "level": 2,
@@ -475,7 +557,7 @@
       "D. l = 35 m, w = 25 m"
      ],
      "ans": "A. l = 30 m, w = 30 m",
-     "why": "2l + 2w = 120 ⇒ w = 60 − l. A(l) = l(60 − l) = 60l − l². A′(l) = 60 − 2l = 0 ⇒ l = 30, so w = 30; A″ = −2 < 0 (maximum). Areas: 30×30 = 900 > 35×25 = 875 > 40×20 = 800 > 50×10 = 500.",
+     "why": "2l + 2w = 120, so w = 60 − l.\nA(l) = l(60 − l) = 60l − l².\nA′(l) = 60 − 2l = 0 gives l = 30, so w = 30.\nA″ = −2 < 0: a maximum, A = 900 m².\nCheck: 35 × 25 = 875, 40 × 20 = 800, 50 × 10 = 500 are all smaller.",
      "clue": "",
      "graded": true,
      "level": 2,
@@ -493,7 +575,7 @@
       "D. 4"
      ],
      "ans": "A. 1",
-     "why": "f′(x) = −(1/2)x^(−3/2); g′(x) = −(1/2)x². f′(x) = g′(x) ⇒ x^(−3/2) = x² ⇒ x^(7/2) = 1. Domain of f is x > 0, so x = 1. Check: f′(1) = −1/2 = g′(1).",
+     "why": "f(x) = x^(−1/2), so f′(x) = −(1/2)x^(−3/2).\ng′(x) = −(1/2)x².\nSet f′ = g′: x^(−3/2) = x², so x^(7/2) = 1.\nf needs x > 0, so x = 1.\nCheck: f′(1) = −1/2 = g′(1).",
      "clue": "",
      "graded": true,
      "level": 2,
@@ -511,7 +593,7 @@
       "D. Instantaneous rate of change"
      ],
      "ans": "D. Instantaneous rate of change",
-     "why": "The mechanical (physical) meaning of f′(t) is the instantaneous rate of change, e.g. velocity = rate of change of position. B and C describe the geometric meaning (slope of the tangent line). A (area under a curve) is the meaning of a definite integral.",
+     "why": "Mechanical (physical) meaning: the instantaneous rate of change.\nExample: velocity is the rate of change of position.\nB and C are the geometric meaning: the slope of the tangent.\nA, the area under a curve, is the meaning of a definite integral.",
      "clue": "",
      "graded": true,
      "level": 2,
@@ -529,7 +611,7 @@
       "D. 6"
      ],
      "ans": "D. 6",
-     "why": "Chain rule: h′(x) = g′(f(3x + 1)) · f′(3x + 1) · 3. At x = 0: 3x + 1 = 1, so h′(0) = 3·g′(f(1))·f′(1). f(1) = 2 ⇒ g′(f(1)) = g′(2) = 1; f′(1) = 2. h′(0) = 3·1·2 = 6.",
+     "why": "Chain rule: h′(x) = g′(f(3x + 1)) × f′(3x + 1) × 3.\nAt x = 0: 3x + 1 = 1.\nh′(0) = g′(f(1)) × f′(1) × 3 = g′(2) × 2 × 3.\ng′(2) = 1, so h′(0) = 1 × 2 × 3 = 6.\nTrap: forgetting the inner × 3 gives 2.",
      "clue": "",
      "graded": true,
      "level": 2,
@@ -543,7 +625,7 @@
  "test": [
   {
    "kind": "mcq",
-   "text": "(x⁴ − 3x)′ =",
+   "text": "Differentiate term by term: (x⁴ − 3x)′ =",
    "opts": [
     "4x³ − 3",
     "4x³ − 3x",
@@ -551,7 +633,7 @@
     "4x⁴ − 3"
    ],
    "ans": "4x³ − 3",
-   "why": "term by term.",
+   "why": "(x⁴)′ = 4x³ (power rule).\n(3x)′ = 3.\nAnswer: 4x³ − 3.\nTrap: 4x³ − 3x forgets to differentiate 3x.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -560,11 +642,11 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = x³ − 3x². f′(1) = ___",
+   "ask": "Derivative at a point: f(x) = x³ − 3x². f′(1) = ___",
    "a": [
     "-3"
    ],
-   "why": "3 − 6.",
+   "why": "f′(x) = 3x² − 6x.\nf′(1) = 3 − 6 = −3.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -574,11 +656,11 @@
   },
   {
    "kind": "blank",
-   "ask": "∫ from 0 to 2 (3x² + 2x) dx = ___",
+   "ask": "Evaluate the definite integral: ∫ from 0 to 2 (3x² + 2x) dx = ___",
    "a": [
     "12"
    ],
-   "why": "[x³ + x²] = 8 + 4.",
+   "why": "F(x) = x³ + x².\nF(2) = 8 + 4 = 12. F(0) = 0.\nAnswer: 12.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -588,11 +670,11 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = x³ − 12x. The relative minimum value = ___",
+   "ask": "Relative minimum value: f(x) = x³ − 12x. The relative minimum value is ___",
    "a": [
     "-16"
    ],
-   "why": "x = 2: 8 − 24.",
+   "why": "f′(x) = 3x² − 12 = 0 gives x = ±2.\nf′ goes − to + at x = 2: a minimum.\nf(2) = 8 − 24 = −16.\nTrap: x = 2 is where it happens; the value is −16.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -602,11 +684,11 @@
   },
   {
    "kind": "blank",
-   "ask": "f(x) = (2x − 1)³. f′(1) = ___",
+   "ask": "Chain rule: f(x) = (2x − 1)³. f′(1) = ___",
    "a": [
     "6"
    ],
-   "why": "3(1)²(2).",
+   "why": "f′(x) = 3(2x − 1)² × 2 (outside, then inside).\nf′(1) = 3(1)²(2) = 6.\nTrap: 3 forgets the inner derivative 2.",
    "clue": "",
    "num": true,
    "graded": true,

@@ -55,9 +55,10 @@
       "Alemitu",
       "Munir"
      ],
-     "after": "Rahel: 3 1/4 = 3.25 is the largest difference.",
+     "after": "Change all to decimals: Rahel 3 1/4 = 3.25, Kassa −2.2, Alemitu 1.7, Munir −1 7/10 = −1.7.\nThe biggest number is 3.25.\nSo Rahel's plant grew the most.\nKassa and Munir have negative numbers: they grew less than average.",
      "id": "g8.maths.u1.s1-2-2.1",
-     "ref": "Exercise 1.5 Q3"
+     "ref": "Exercise 1.5 Q3",
+     "best": "Rahel"
     },
     {
      "kind": "read",
@@ -66,9 +67,43 @@
      "paras": [
       "Ordering means writing numbers in ascending or descending order.",
       "It is like ordering distances in miles and kilometres: use one unit first.",
-      "For fractions, use one common denominator or change them to decimals."
+      "For fractions, use one common denominator. Or change them to decimals."
      ],
      "id": "g8.maths.u1.s1-2-2.2"
+    },
+    {
+     "kind": "numline",
+     "step": "explore",
+     "title": "Samuel's plants on the number line",
+     "min": -3,
+     "max": 4,
+     "sub": 2,
+     "points": [
+      {
+       "v": "-2.2",
+       "label": "−2.2",
+       "info": "Kassa: 2.2 cm below the average. Furthest left, so the lowest."
+      },
+      {
+       "v": "-1.7",
+       "label": "−1.7",
+       "info": "Munir: −1 7/10 = −1.7 cm."
+      },
+      {
+       "v": "1.7",
+       "label": "1.7",
+       "info": "Alemitu: 1.7 cm above the average."
+      },
+      {
+       "v": "3.25",
+       "label": "3.25",
+       "info": "Rahel: 3 1/4 = 3.25 cm. Furthest right, so the highest."
+      }
+     ],
+     "need": 4,
+     "ask": "Tap the points from left to right. Left is smaller, so this is ascending order.",
+     "id": "g8.maths.u1.s1-2-2.20",
+     "added": true
     },
     {
      "kind": "name",
@@ -90,7 +125,7 @@
      "kind": "order",
      "step": "check",
      "graded": true,
-     "title": "Ascending",
+     "title": "Order the integers in ascending order (smallest first)",
      "items": [
       "−45",
       "−25",
@@ -98,7 +133,7 @@
       "28",
       "30"
      ],
-     "why": "−45 < −25 < 18 < 28 < 30.",
+     "why": "Negatives come first: −45 and −25.\n−45 has the bigger size, so it is further left: −45 < −25.\nThen the positives by size: 18 < 28 < 30.\nOrder: −45, −25, 18, 28, 30.",
      "clue": "Negatives first; the bigger negative size is smaller.",
      "id": "g8.maths.u1.s1-2-2.4",
      "ref": "Example 1.14 i a",
@@ -125,7 +160,7 @@
      "kind": "order",
      "step": "practise",
      "graded": true,
-     "title": "Decimals, ascending",
+     "title": "Order the decimals in ascending order (smallest first)",
      "items": [
       "1.5",
       "1.53",
@@ -133,7 +168,7 @@
       "2.5",
       "3.21"
      ],
-     "why": "1.5 < 1.53 < 2.05 < 2.5 < 3.21.",
+     "why": "Integer parts first: 1, 1, 2, 2, 3.\n1.5 = 1.50 and 1.53: hundredths 0 < 3, so 1.5 < 1.53.\n2.05 and 2.5 = 2.50: tenths 0 < 5, so 2.05 < 2.5.\n3.21 is the largest.\nOrder: 1.5, 1.53, 2.05, 2.5, 3.21.",
      "clue": "Compare place by place.",
      "gen": {
       "t": "order",
@@ -146,14 +181,14 @@
      "kind": "order",
      "step": "practise",
      "graded": true,
-     "title": "Descending",
+     "title": "Order the integers in descending order (largest first)",
      "items": [
       "45",
       "32",
       "−15",
       "−23"
      ],
-     "why": "45 > 32 > −15 > −23.",
+     "why": "Positives first, largest first: 45 > 32.\nThen the negatives.\n−15 has the smaller size, so it is closer to 0 and bigger: −15 > −23.\nOrder: 45, 32, −15, −23.",
      "clue": "Largest first.",
      "gen": {
       "t": "order",
@@ -166,14 +201,14 @@
      "kind": "order",
      "step": "practise",
      "graded": true,
-     "title": "Samuel's plants: lowest to highest",
+     "title": "Samuel's plants: order the differences from lowest to highest",
      "items": [
       "−2.2",
       "−1 7/10",
       "1.7",
       "3 1/4"
      ],
-     "why": "−2.2 < −1.7 < 1.7 < 3.25.",
+     "why": "Change to decimals: −1 7/10 = −1.7 and 3 1/4 = 3.25.\nNegatives first: −2.2 has the bigger size, so −2.2 < −1.7.\nThen positives: 1.7 < 3.25.\nOrder: −2.2, −1 7/10, 1.7, 3 1/4.",
      "clue": "Change them to decimals.",
      "gen": {
       "t": "order",
@@ -185,7 +220,7 @@
     {
      "kind": "order",
      "graded": true,
-     "title": "Ascending, smallest first",
+     "title": "Order the rational numbers in ascending order (smallest first)",
      "items": [
       "−1 1/2",
       "−1.05",
@@ -193,7 +228,7 @@
       "0.7",
       "5/7"
      ],
-     "why": "As decimals: −1.5 < −1.05 < −0.75 < 0.7 < 0.714… (5/7 = 5 ÷ 7 ≈ 0.714).",
+     "why": "Change to decimals: −1 1/2 = −1.5, −3/4 = −0.75, 5/7 = 5 ÷ 7 ≈ 0.714.\nNegatives: −1.5 < −1.05 < −0.75 (bigger size is further left).\nPositives: 0.7 < 0.714.\nOrder: −1 1/2, −1.05, −3/4, 0.7, 5/7.",
      "clue": "Change every number to a decimal. 5/7 is a little more than 0.7.",
      "step": "challenge",
      "level": 3,
@@ -211,7 +246,7 @@
      "kind": "order",
      "step": "exercise",
      "graded": true,
-     "title": "Ascending",
+     "title": "Order the decimals in ascending order (smallest first)",
      "items": [
       "−12.51",
       "5.24",
@@ -219,7 +254,7 @@
       "8.13",
       "12.42"
      ],
-     "why": "Negative first, then by integer part.",
+     "why": "The only negative, −12.51, comes first.\nThen compare integer parts: 5 < 6 < 8 < 12.\nOrder: −12.51, 5.24, 6.75, 8.13, 12.42.",
      "clue": "Smallest first.",
      "id": "g8.maths.u1.s1-2-2.9",
      "ref": "Q1 b",
@@ -229,7 +264,7 @@
      "kind": "order",
      "step": "exercise",
      "graded": true,
-     "title": "Ascending",
+     "title": "Order the fractions in ascending order (smallest first)",
      "items": [
       "−5 2/3",
       "3/25",
@@ -237,7 +272,7 @@
       "23/15",
       "11/7"
      ],
-     "why": "−5.67 < 0.12 < 0.44 < 1.53 < 1.57.",
+     "why": "Change to decimals:\n−5 2/3 ≈ −5.67, 3/25 = 0.12, 4/9 ≈ 0.44.\n23/15 ≈ 1.53 and 11/7 ≈ 1.57.\nOrder: −5 2/3, 3/25, 4/9, 23/15, 11/7.",
      "clue": "Change them to decimals.",
      "id": "g8.maths.u1.s1-2-2.10",
      "ref": "Q1 a",
@@ -247,14 +282,14 @@
      "kind": "order",
      "step": "exercise",
      "graded": true,
-     "title": "Descending",
+     "title": "Order the decimals in descending order (largest first)",
      "items": [
       "23.86",
       "15.02",
       "13.72",
       "13.05"
      ],
-     "why": "Largest first.",
+     "why": "Integer parts: 23 > 15 > 13 = 13.\n13.72 and 13.05: tenths 7 > 0, so 13.72 > 13.05.\nOrder: 23.86, 15.02, 13.72, 13.05.",
      "clue": "Compare integer parts, then tenths.",
      "id": "g8.maths.u1.s1-2-2.11",
      "ref": "Q2 a",
@@ -264,7 +299,7 @@
      "kind": "order",
      "step": "exercise",
      "graded": true,
-     "title": "Descending",
+     "title": "Order the numbers in descending order (largest first)",
      "items": [
       "4.23",
       "3 5/6",
@@ -272,7 +307,7 @@
       "18/5",
       "3.21"
      ],
-     "why": "4.23 > 3.83 > 3.75 > 3.6 > 3.21.",
+     "why": "Change to decimals: 3 5/6 ≈ 3.83 and 18/5 = 3.6.\nNow compare: 4.23, 3.83, 3.75, 3.6, 3.21.\nLargest first: 4.23 > 3.83 > 3.75 > 3.6 > 3.21.\nOrder: 4.23, 3 5/6, 3.75, 18/5, 3.21.",
      "clue": "Change them to decimals.",
      "id": "g8.maths.u1.s1-2-2.12",
      "ref": "Q2 c",
@@ -282,7 +317,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Whose plant grew the most?",
+     "text": "Compare the plants: whose plant grew the most? (Rahel 3 1/4, Kassa −2.2, Alemitu 1.7, Munir −1 7/10)",
      "opts": [
       "Rahel",
       "Kassa",
@@ -290,7 +325,7 @@
       "Munir"
      ],
      "ans": "Rahel",
-     "why": "3 1/4 is the largest difference.",
+     "why": "Change to decimals: 3.25, −2.2, 1.7 and −1.7.\nThe largest number is 3.25.\nThat is Rahel's.\nSo Rahel's plant grew the most.",
      "clue": "Look for the biggest number.",
      "id": "g8.maths.u1.s1-2-2.13",
      "ref": "Q3 a",
@@ -300,14 +335,14 @@
      "kind": "order",
      "step": "exercise",
      "graded": true,
-     "title": "Lowest to highest",
+     "title": "Samuel's plants: order the differences from lowest to highest",
      "items": [
       "−2.2",
       "−1 7/10",
       "1.7",
       "3 1/4"
      ],
-     "why": "−2.2 < −1.7 < 1.7 < 3.25.",
+     "why": "−1 7/10 = −1.7 and 3 1/4 = 3.25.\nNegatives first: −2.2 < −1.7.\nThen 1.7 < 3.25.\nOrder: −2.2, −1 7/10, 1.7, 3 1/4.",
      "clue": "Change them to decimals.",
      "id": "g8.maths.u1.s1-2-2.14",
      "ref": "Q3 b",
@@ -321,14 +356,14 @@
    "kind": "order",
    "step": "test",
    "graded": true,
-   "title": "Ascending",
+   "title": "Order the numbers in ascending order (smallest first)",
    "items": [
     "−1/2",
     "1/3",
     "0.5",
     "3/4"
    ],
-   "why": "−0.5 < 0.33 < 0.5 < 0.75.",
+   "why": "Change to decimals: −1/2 = −0.5, 1/3 ≈ 0.33, 3/4 = 0.75.\nThe negative comes first: −0.5.\nThen 0.33 < 0.5 < 0.75.\nOrder: −1/2, 1/3, 0.5, 3/4.",
    "clue": "",
    "gen": {
     "t": "order",
@@ -342,14 +377,14 @@
    "kind": "order",
    "step": "test",
    "graded": true,
-   "title": "Descending",
+   "title": "Order the numbers in descending order (largest first)",
    "items": [
     "2.5",
     "2 1/4",
     "−1",
     "−1.5"
    ],
-   "why": "2.5 > 2.25 > −1 > −1.5.",
+   "why": "Change to decimals: 2 1/4 = 2.25.\nPositives: 2.5 > 2.25.\nNegatives: −1 is closer to 0 than −1.5, so −1 > −1.5.\nOrder: 2.5, 2 1/4, −1, −1.5.",
    "clue": "",
    "gen": {
     "t": "order",
@@ -363,14 +398,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which is the smallest: 3/4, 0.7, 5/8?",
+   "text": "Compare fractions and decimals: which is the smallest: 3/4, 0.7, 5/8?",
    "opts": [
     "3/4",
     "0.7",
     "5/8"
    ],
    "ans": "5/8",
-   "why": "5/8 = 0.625.",
+   "why": "Change to decimals: 3/4 = 0.75 and 5/8 = 5 ÷ 8 = 0.625.\nCompare 0.75, 0.70 and 0.625.\nTenths: 7, 7 and 6.\nThe smallest is 0.625 = 5/8.",
    "clue": "",
    "id": "g8.maths.u1.s1-2-2.17",
    "level": 3
@@ -379,7 +414,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which list is in ascending order?",
+   "text": "Ascending order: which list goes from smallest to largest?",
    "opts": [
     "−2, −1.5, 0.5, 3/4",
     "3/4, 0.5, −1.5, −2",
@@ -387,7 +422,7 @@
     "0.5, 3/4, −2, −1.5"
    ],
    "ans": "−2, −1.5, 0.5, 3/4",
-   "why": "Smallest first: −2 < −1.5 < 0.5 < 0.75.",
+   "why": "Change to decimals: 3/4 = 0.75.\nNegatives first: −2 < −1.5 (−2 is further left).\nThen positives: 0.5 < 0.75.\nSo −2, −1.5, 0.5, 3/4 is ascending. (−1.5, −2, … puts −1.5 first, but −2 is smaller.)",
    "clue": "",
    "level": 1,
    "id": "g8.maths.u1.s1-2-2.19"

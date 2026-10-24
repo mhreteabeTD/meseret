@@ -86,9 +86,10 @@
       "−20",
       "−9"
      ],
-     "after": "Adding −5 four times gives −20. A positive times a negative is negative.",
+     "after": "Add −5 four times: −5 + (−5) = −10, then −15, then −20.\nSo 4 × (−5) = −20.\n20 has the wrong sign. −9 is −5 + (−4), an addition, not a product.\nA positive times a negative is negative.",
      "ref": "Example 2 a",
-     "id": "g7.maths.u2.s2-5.1"
+     "id": "g7.maths.u2.s2-5.1",
+     "best": "−20"
     },
     {
      "kind": "read",
@@ -101,6 +102,37 @@
      ],
      "ref": "Examples 1–2",
      "id": "g7.maths.u2.s2-5.2"
+    },
+    {
+     "kind": "numline",
+     "step": "explore",
+     "title": "4 × (−5) as hops",
+     "min": -20,
+     "max": 1,
+     "sub": 1,
+     "hops": [
+      {
+       "from": 0,
+       "by": -5
+      },
+      {
+       "from": -5,
+       "by": -5
+      },
+      {
+       "from": -10,
+       "by": -5
+      },
+      {
+       "from": -15,
+       "by": -5
+      }
+     ],
+     "ask": "Tap Hop four times. Each hop is −5.",
+     "after": "Four hops of −5 land on −20.\nSo 4 × (−5) = −20.",
+     "ref": "Example 2 a",
+     "id": "g7.maths.u2.s2-5.60",
+     "added": true
     },
     {
      "kind": "steps",
@@ -118,33 +150,26 @@
      "id": "g7.maths.u2.s2-5.3"
     },
     {
-     "kind": "read",
-     "step": "read",
+     "kind": "tap",
+     "step": "explore",
      "title": "Summary of products",
-     "paras": [],
-     "table": [
+     "id": "g7.maths.u2.s2-5.4",
+     "ask": "Tap each pair of signs.",
+     "need": 3,
+     "items": [
       [
-       "Two factors",
-       "Sign of product",
-       "Example"
+       "(+) × (+)",
+       "Positive. 3 × 5 = 15."
       ],
       [
-       "Both positive",
-       "Positive",
-       "3 × 5 = 15"
+       "(+) × (−) or (−) × (+)",
+       "Opposite signs: negative. −3 × 5 = −15."
       ],
       [
-       "Opposite signs",
-       "Negative",
-       "−3 × 5 = −15"
-      ],
-      [
-       "Both negative",
-       "Positive",
-       "−3 × (−5) = 15"
+       "(−) × (−)",
+       "Both negative: positive. −3 × (−5) = 15."
       ]
-     ],
-     "id": "g7.maths.u2.s2-5.4"
+     ]
     },
     {
      "kind": "name",
@@ -168,7 +193,7 @@
       "-91"
      ],
      "num": true,
-     "why": "Opposite signs, so negative. 7 × 13 = 91. Answer −91.",
+     "why": "Step 1: the sign. −7 and 13 have opposite signs, so the product is negative.\nStep 2: multiply the sizes: 7 × 13 = 91.\nSo −7 × 13 = −91.",
      "clue": "Decide the sign, then multiply the sizes.",
      "level": 1,
      "ref": "Exercise 2.5.1 Q1 c",
@@ -189,7 +214,7 @@
       "-400"
      ],
      "num": true,
-     "why": "Opposite signs: negative. 16 × 25 = 400. Answer −400.",
+     "why": "Step 1: the sign. 16 and −25 have opposite signs, so the product is negative.\nStep 2: multiply the sizes: 16 × 25 = 400.\nSo 16 × (−25) = −400.",
      "clue": "Opposite signs give −.",
      "level": 1,
      "ref": "Exercise 2.5.1 Q1 d",
@@ -210,7 +235,7 @@
       "+1751"
      ],
      "num": true,
-     "why": "Both negative: positive. 17 × 103 = 1700 + 51 = 1751.",
+     "why": "Step 1: the sign. Both factors are negative, so the product is positive.\nStep 2: 17 × 103 = 17 × 100 + 17 × 3 = 1700 + 51 = 1751.\nSo −17 × (−103) = 1751.",
      "clue": "Same signs give +.",
      "level": 2,
      "ref": "Exercise 2.5.1 Q1 e",
@@ -225,14 +250,14 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "−3 + (−3) + (−3) + (−3) + (−3) is the same as",
+     "text": "Repeated addition as a product: −3 + (−3) + (−3) + (−3) + (−3) is the same as",
      "opts": [
       "5 × (−3)",
       "3 × (−5)",
       "−3 × (−5)"
      ],
      "ans": "5 × (−3)",
-     "why": "−3 is added 5 times, so it is 5 × (−3) = −15.",
+     "why": "Count how many times −3 is added: 5 times.\nAdding a number 5 times is multiplying by 5.\nSo the sum is 5 × (−3) = −15.\n3 × (−5) also gives −15, but it means −5 added 3 times.",
      "clue": "How many times is −3 added?",
      "level": 1,
      "ref": "Activity 2.5.1 Q2",
@@ -248,7 +273,7 @@
       "-7"
      ],
      "num": true,
-     "why": "14 is positive, so both factors have the same sign. −2 is negative, so the missing number is negative. 14 ÷ 2 = 7. It is −7. Check: −2 × (−7) = 14.",
+     "why": "14 is positive, so both factors have the same sign.\n−2 is negative, so the missing factor is negative too.\nSize: 14 ÷ 2 = 7.\nSo the missing number is −7. Check: −2 × (−7) = 14. ✓",
      "clue": "Which sign makes the product positive?",
      "level": 3,
      "input": "signed",
@@ -279,48 +304,56 @@
       "Yes",
       "No"
      ],
-     "after": "Both are −63. Changing the order does not change a product.",
+     "after": "21 × (−3): opposite signs, so negative. 21 × 3 = 63. So −63.\n−3 × 21: opposite signs, so negative. Also −63.\nChanging the order does not change a product. This is the commutative property.",
      "ref": "Activity 2.5.2 b",
-     "id": "g7.maths.u2.s2-5.11"
+     "id": "g7.maths.u2.s2-5.11",
+     "best": "Yes"
     },
     {
-     "kind": "read",
-     "step": "read",
+     "kind": "tap",
+     "step": "explore",
      "title": "Properties of multiplication",
-     "paras": [],
-     "table": [
-      [
-       "Property",
-       "Rule",
-       "Example"
-      ],
+     "id": "g7.maths.u2.s2-5.12",
+     "ask": "Tap each property to see the rule and an example.",
+     "need": 5,
+     "items": [
       [
        "Commutative",
-       "a × b = b × a",
-       "−2 × 5 = 5 × (−2) = −10"
+       "a × b = b × a. −2 × 5 = 5 × (−2) = −10."
       ],
       [
        "Associative",
-       "a × (b × c) = (a × b) × c",
-       "−2 × (5 × 6) = (−2 × 5) × 6 = −60"
+       "a × (b × c) = (a × b) × c. −2 × (5 × 6) = (−2 × 5) × 6 = −60."
       ],
       [
        "Distributive",
-       "a × (b + c) = (a × b) + (a × c)",
-       "−6 × (5 + 3) = −30 + (−18) = −48"
+       "a × (b + c) = (a × b) + (a × c). −6 × (5 + 3) = −30 + (−18) = −48."
       ],
       [
        "Zero",
-       "a × 0 = 0",
-       "−122 × 0 = 0"
+       "a × 0 = 0. −122 × 0 = 0."
       ],
       [
        "One",
-       "a × 1 = a",
-       "1 × (−291) = −291"
+       "a × 1 = a. 1 × (−291) = −291."
       ]
+     ]
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Distributive property: −6 × (5 + 3)",
+     "ref": "Properties of multiplication",
+     "steps": [
+      "Way 1: bracket first. 5 + 3 = 8.",
+      "−6 × 8 = −48.",
+      "Way 2: share −6 out: (−6 × 5) + (−6 × 3).",
+      "−6 × 5 = −30 and −6 × 3 = −18.",
+      "−30 + (−18) = −48.",
+      "Both ways give −48."
      ],
-     "id": "g7.maths.u2.s2-5.12"
+     "id": "g7.maths.u2.s2-5.61",
+     "added": true
     },
     {
      "kind": "name",
@@ -346,14 +379,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Which property is 2 × (−3 + 54) = (2 × (−3)) + (2 × 54)?",
+     "text": "Properties of multiplication: which property is 2 × (−3 + 54) = (2 × (−3)) + (2 × 54)?",
      "opts": [
       "Commutative",
       "Associative",
       "Distributive"
      ],
      "ans": "Distributive",
-     "why": "It has the form a × (b + c) = (a × b) + (a × c).",
+     "why": "Look at the shape: a × (b + c) = (a × b) + (a × c).\nHere a = 2, b = −3 and c = 54.\nThe 2 is shared out over the bracket.\nThat is the distributive property. The order and the grouping did not change.",
      "clue": "Is a bracket being shared out?",
      "level": 1,
      "ref": "Exercise 2.5.2 Q1 a",
@@ -381,23 +414,24 @@
        "Property of zero"
       ]
      ],
-     "why": "Each statement shows one property.",
+     "why": "−525 × 955 = 955 × (−525): the order swapped. Commutative.\n2 × (−13 × 5) = (2 × (−13)) × 5: the brackets moved. Associative.\n5 × 1 = 5: times 1 changes nothing. Property of 1.\n0 × (−8) = 0: times 0 gives 0. Property of zero.",
      "clue": "Order swapped, brackets moved, times 1, or times 0?",
      "level": 1,
      "ref": "Exercise 2.5.2 Q1",
-     "id": "g7.maths.u2.s2-5.15"
+     "id": "g7.maths.u2.s2-5.15",
+     "text": "Properties of multiplication: match each statement with its property."
     },
     {
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "−6 × (5 + 2) = ___",
+     "ask": "Use the brackets or the distributive property: −6 × (5 + 2) = ___",
      "a": [
       "−42",
       "-42"
      ],
      "num": true,
-     "why": "5 + 2 = 7. −6 × 7 = −42. Or (−6 × 5) + (−6 × 2) = −30 + (−12) = −42.",
+     "why": "Way 1: bracket first. 5 + 2 = 7. Then −6 × 7 = −42.\nWay 2: share −6 out: (−6 × 5) + (−6 × 2).\n−30 + (−12) = −42.\nBoth ways give −42.",
      "clue": "Do the bracket first, or share −6 out.",
      "level": 1,
      "ref": "Exercise 2.5.2 Q2 c",
@@ -408,9 +442,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "−5 × (3 + 7) = (−5 × 3) + (−5 + 2)",
+     "text": "True or false? −5 × (3 + 7) = (−5 × 3) + (−5 + 2)",
      "a": false,
-     "why": "Left: −5 × 10 = −50. Right: −15 + (−3) = −18. They are not equal.",
+     "why": "Left side: 3 + 7 = 10, and −5 × 10 = −50.\nRight side: −5 × 3 = −15, and −5 + 2 = −3.\n−15 + (−3) = −18.\n−50 ≠ −18, so the statement is false.",
      "clue": "Work out both sides.",
      "level": 2,
      "ref": "Activity 2.5.2 d",
@@ -426,7 +460,7 @@
       "-500"
      ],
      "num": true,
-     "why": "(−5 × 98) + (−5 × 2) = −5 × (98 + 2) = −5 × 100 = −500.",
+     "why": "Both products share the factor −5.\nDistributive property backwards: (−5 × 98) + (−5 × 2) = −5 × (98 + 2).\n98 + 2 = 100.\n−5 × 100 = −500.",
      "clue": "Join the two products into −5 × (98 + 2).",
      "level": 3,
      "input": "signed",
@@ -454,9 +488,10 @@
       "Negative",
       "Zero"
      ],
-     "after": "Two negatives make +1. Times −1 again gives −1. Three negatives give a negative product.",
+     "after": "−1 × (−1) = +1: two negatives give a positive.\n+1 × (−1) = −1.\nSo −1 × (−1) × (−1) = −1.\nThree negatives, an odd number, give a negative product.",
      "ref": "Activity 2.5.3",
-     "id": "g7.maths.u2.s2-5.19"
+     "id": "g7.maths.u2.s2-5.19",
+     "best": "Negative"
     },
     {
      "kind": "read",
@@ -484,6 +519,41 @@
      "id": "g7.maths.u2.s2-5.21"
     },
     {
+     "kind": "sort",
+     "step": "explore",
+     "graded": false,
+     "title": "Count the negatives",
+     "bins": [
+      "Positive",
+      "Negative"
+     ],
+     "items": [
+      [
+       "−3 × 5",
+       "Negative",
+       "One negative factor: odd."
+      ],
+      [
+       "−2 × (−3)",
+       "Positive",
+       "Two negative factors: even. −2 × (−3) = 6."
+      ],
+      [
+       "−1 × 2 × (−3) × (−4)",
+       "Negative",
+       "Three negative factors: odd. The product is −24."
+      ],
+      [
+       "(−1) × (−1) × (−1) × (−1)",
+       "Positive",
+       "Four negative factors: even. The product is 1."
+      ]
+     ],
+     "after": "Even number of negative factors: positive. Odd number: negative.",
+     "id": "g7.maths.u2.s2-5.62",
+     "added": true
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -499,14 +569,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "What is the sign of (−125) × (−3) × (−52)?",
+     "text": "Sign of a product: what is the sign of (−125) × (−3) × (−52)?",
      "opts": [
       "Positive",
       "Negative",
       "Zero"
      ],
      "ans": "Negative",
-     "why": "Three negative factors: an odd number, so negative.",
+     "why": "Count the negative factors: −125, −3, −52. That is 3.\n3 is odd.\nAn odd number of negative factors gives a negative product.\nNo factor is 0, so the answer is not zero.",
      "clue": "Count the negative factors.",
      "level": 1,
      "ref": "Exercise 2.5.3 Q1 b",
@@ -516,13 +586,13 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "9 × (−3) × (−6) = ___",
+     "ask": "Multiply three integers: 9 × (−3) × (−6) = ___",
      "a": [
       "162",
       "+162"
      ],
      "num": true,
-     "why": "Two negatives, so positive. 9 × (−3) = −27. −27 × (−6) = 162.",
+     "why": "Count the negatives: 2, an even number. So the product is positive.\nMultiply two at a time: 9 × (−3) = −27.\n−27 × (−6) = 162.\nSo the product is 162.",
      "clue": "Multiply two at a time.",
      "level": 1,
      "ref": "Exercise 2.5.3 Q2 a",
@@ -533,13 +603,13 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "(−1) × (−2) × (−3) × (−4) × (−5) = ___",
+     "ask": "Multiply five integers: (−1) × (−2) × (−3) × (−4) × (−5) = ___",
      "a": [
       "−120",
       "-120"
      ],
      "num": true,
-     "why": "Five negatives: odd, so negative. 1 × 2 × 3 × 4 × 5 = 120. Answer −120.",
+     "why": "Count the negatives: 5, an odd number. So the product is negative.\nMultiply the sizes: 1 × 2 = 2, 2 × 3 = 6, 6 × 4 = 24, 24 × 5 = 120.\nSo the product is −120.",
      "clue": "Count the negatives first.",
      "level": 2,
      "ref": "Exercise 2.5.3 Q2 c",
@@ -550,12 +620,12 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "15625 × (−2) × 0 × (−15625) × 98 = ___",
+     "ask": "Look for a zero factor: 15625 × (−2) × 0 × (−15625) × 98 = ___",
      "a": [
       "0"
      ],
      "num": true,
-     "why": "One factor is 0, so the product is 0.",
+     "why": "One of the factors is 0.\nAny number times 0 is 0.\nSo the whole product is 0. No other working is needed.",
      "clue": "Look for a zero.",
      "level": 1,
      "ref": "Exercise 2.5.3 Q2 e",
@@ -565,14 +635,14 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "The book writes −5 × (−5) × 3 × (−8) = 600. Is that right?",
+     "text": "Spot the mistake: the book writes −5 × (−5) × 3 × (−8) = 600. Is that right?",
      "opts": [
       "Yes, 600",
       "No, it is −600",
       "No, it is 0"
      ],
      "ans": "No, it is −600",
-     "why": "There are three negative factors, an odd number, so the product is negative. −5 × (−5) = 25 and 3 × (−8) = −24. 25 × (−24) = −600.",
+     "why": "Count the negative factors: −5, −5, −8. That is 3, an odd number.\nSo the product must be negative.\n−5 × (−5) = 25. 3 × (−8) = −24.\n25 × (−24) = −600.\nSo 600 is wrong; the answer is −600.",
      "clue": "Count the negative factors.",
      "level": 3,
      "ref": "Example 2 b",
@@ -600,9 +670,10 @@
       "−4",
       "−45"
      ],
-     "after": "Check with a product: −4 × 9 = −36. So −36 ÷ 9 = −4.",
+     "after": "Division undoes multiplication. Ask: what times 9 gives −36?\n−4 × 9 = −36.\nSo −36 ÷ 9 = −4.\n4 has the wrong sign. −45 is −36 − 9, a subtraction.",
      "ref": "Activity 2.5.4",
-     "id": "g7.maths.u2.s2-5.28"
+     "id": "g7.maths.u2.s2-5.28",
+     "best": "−4"
     },
     {
      "kind": "read",
@@ -617,66 +688,56 @@
      "id": "g7.maths.u2.s2-5.29"
     },
     {
-     "kind": "read",
-     "step": "read",
+     "kind": "tap",
+     "step": "explore",
      "title": "Signs of a quotient",
-     "paras": [],
-     "table": [
+     "id": "g7.maths.u2.s2-5.30",
+     "ask": "Tap each pair of signs.",
+     "need": 3,
+     "items": [
       [
-       "Dividend and divisor",
-       "Sign of quotient",
-       "Example"
+       "(+) ÷ (+)",
+       "Positive. 15 ÷ 3 = 5."
       ],
       [
-       "Both positive",
-       "Positive",
-       "15 ÷ 3 = 5"
+       "(+) ÷ (−) or (−) ÷ (+)",
+       "Opposite signs: negative. 15 ÷ (−3) = −5."
       ],
       [
-       "Opposite signs",
-       "Negative",
-       "15 ÷ (−3) = −5"
-      ],
-      [
-       "Both negative",
-       "Positive",
-       "−15 ÷ (−3) = 5"
+       "(−) ÷ (−)",
+       "Both negative: positive. −15 ÷ (−3) = 5."
       ]
-     ],
-     "id": "g7.maths.u2.s2-5.30"
+     ]
     },
     {
-     "kind": "read",
-     "step": "read",
+     "kind": "tap",
+     "step": "explore",
      "title": "Properties of division",
-     "paras": [],
-     "table": [
+     "id": "g7.maths.u2.s2-5.31",
+     "ask": "Tap each card.",
+     "need": 5,
+     "items": [
       [
-       "Property",
-       "Example"
+       "Not always an integer",
+       "20 ÷ 8 = 2.5."
       ],
       [
-       "The quotient need not be an integer",
-       "20 ÷ 8 = 2.5"
+       "Divide by itself",
+       "A non-zero integer ÷ itself = 1. 20 ÷ 20 = 1."
       ],
       [
-       "A non-zero integer ÷ itself = 1",
-       "20 ÷ 20 = 1"
+       "Divide by zero",
+       "Not defined: a/0 has no answer."
       ],
       [
-       "Division by zero is not defined",
-       "a/0 is undefined"
+       "Zero divided",
+       "0 ÷ a non-zero integer = 0. 0 ÷ 20 = 0."
       ],
       [
-       "0 ÷ a non-zero integer = 0",
-       "0 ÷ 20 = 0"
-      ],
-      [
-       "An integer ÷ 1 = itself",
-       "20 ÷ 1 = 20"
+       "Divide by one",
+       "An integer ÷ 1 = itself. 20 ÷ 1 = 20."
       ]
-     ],
-     "id": "g7.maths.u2.s2-5.31"
+     ]
     },
     {
      "kind": "name",
@@ -708,7 +769,7 @@
       "-6"
      ],
      "num": true,
-     "why": "Different signs: negative. 24 ÷ 4 = 6. Check: −4 × (−6) = 24.",
+     "why": "Step 1: the sign. 24 and −4 have different signs, so the quotient is negative.\nStep 2: the sizes: 24 ÷ 4 = 6.\nSo 24 ÷ (−4) = −6.\nCheck: −4 × (−6) = 24. ✓",
      "clue": "Different signs give a negative quotient.",
      "level": 1,
      "ref": "Exercise 2.5.4 Q2 b",
@@ -729,7 +790,7 @@
       "-26"
      ],
      "num": true,
-     "why": "Different signs: negative. 130 ÷ 5 = 26. Answer −26.",
+     "why": "Step 1: the sign. −130 and 5 have different signs, so the quotient is negative.\nStep 2: the sizes: 130 ÷ 5 = 26.\nSo −130 ÷ 5 = −26. Check: 5 × (−26) = −130. ✓",
      "clue": "Decide the sign first.",
      "level": 1,
      "ref": "Exercise 2.5.4 Q3 a",
@@ -750,7 +811,7 @@
       "+8"
      ],
      "num": true,
-     "why": "Same signs: positive. 40 ÷ 5 = 8.",
+     "why": "Step 1: the sign. Both are negative, so the quotient is positive.\nStep 2: the sizes: 40 ÷ 5 = 8.\nSo −40 ÷ (−5) = 8. Check: −5 × 8 = −40. ✓",
      "clue": "Same signs give +.",
      "level": 1,
      "ref": "Exercise 2.5.4 Q2 c",
@@ -765,14 +826,14 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "768 ÷ 0 = ?",
+     "text": "Division by zero: 768 ÷ 0 = ?",
      "opts": [
       "0",
       "768",
       "Not defined"
      ],
      "ans": "Not defined",
-     "why": "No number times 0 gives 768. Division by zero is not defined.",
+     "why": "768 ÷ 0 = ? would mean ? × 0 = 768.\nBut any number times 0 is 0, never 768.\nSo there is no answer. Division by zero is not defined.\n0 is the answer to 0 ÷ 768, not to 768 ÷ 0.",
      "clue": "What times 0 gives 768?",
      "level": 1,
      "ref": "Exercise 2.5.4 Q3 e",
@@ -782,13 +843,13 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "−37 ÷ (−2) = ___",
+     "ask": "Divide integers (the answer can be a decimal): −37 ÷ (−2) = ___",
      "a": [
       "18.5",
       "+18.5"
      ],
      "num": true,
-     "why": "Same signs: positive. 37 ÷ 2 = 18 remainder 1, and 1 ÷ 2 = 0.5. So 18.5.",
+     "why": "Step 1: the sign. Both are negative, so the quotient is positive.\nStep 2: 37 ÷ 2 = 18 remainder 1.\nStep 3: 1 ÷ 2 = 0.5, so 37 ÷ 2 = 18.5.\nSo −37 ÷ (−2) = 18.5.",
      "clue": "The quotient can be a decimal.",
      "level": 2,
      "ref": "Exercise 2.5.4 Q5 b",
@@ -799,13 +860,13 @@
      "kind": "blank",
      "step": "challenge",
      "graded": true,
-     "ask": "Fill the blank: −1092 ÷ ___ = 14",
+     "ask": "Find the missing divisor: −1092 ÷ ___ = 14",
      "a": [
       "−78",
       "-78"
      ],
      "num": true,
-     "why": "−1092 = 14 × ?. 1092 ÷ 14 = 78. The quotient is positive, so dividend and divisor have the same sign. The divisor is −78. Check: −1092 ÷ (−78) = 14.",
+     "why": "Turn it into a product: −1092 = 14 × ___.\nThe quotient 14 is positive, so dividend and divisor have the same sign.\nThe dividend is negative, so the divisor is negative.\nSize: 1092 ÷ 14 = 78. So the divisor is −78.\nCheck: −1092 ÷ (−78) = 14. ✓",
      "clue": "Turn it into a product: −1092 = 14 × ?",
      "level": 3,
      "ref": "Exercise 2.5.4 Q4 b",
@@ -834,14 +895,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "−9 + 4 = ?",
+     "text": "Add integers with different signs: −9 + 4 = ?",
      "opts": [
       "−5",
       "5",
       "−13"
      ],
      "ans": "−5",
-     "why": "9 > 4, so the sign is −. 9 − 4 = 5. Answer −5.",
+     "why": "Different signs.\nThe bigger magnitude is 9, and it is negative: the sum is negative.\n9 − 4 = 5.\nSo −9 + 4 = −5.",
      "clue": "Which number has the bigger size?",
      "level": 1
     }
@@ -864,14 +925,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "−4 × 6 = ?",
+     "text": "Multiply integers: −4 × 6 = ?",
      "opts": [
       "24",
       "−24",
       "−10"
      ],
      "ans": "−24",
-     "why": "Different signs give −. 4 × 6 = 24. Answer −24.",
+     "why": "Different signs, so the product is negative.\n4 × 6 = 24.\nSo −4 × 6 = −24.",
      "clue": "Decide the sign first.",
      "level": 1
     }
@@ -886,13 +947,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "6 × 12 = ___",
+     "ask": "Multiply integers: 6 × 12 = ___",
      "a": [
       "72",
       "+72"
      ],
      "num": true,
-     "why": "Both positive: 72.",
+     "why": "Both factors are positive, so the product is positive.\n6 × 12 = 72.",
      "clue": "Same signs.",
      "level": 1,
      "ref": "Q1 a",
@@ -903,13 +964,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "13 × 15 = ___",
+     "ask": "Multiply integers: 13 × 15 = ___",
      "a": [
       "195",
       "+195"
      ],
      "num": true,
-     "why": "130 + 65 = 195.",
+     "why": "Both factors are positive, so the product is positive.\nSplit 15 into 10 + 5.\n13 × 10 = 130 and 13 × 5 = 65.\n130 + 65 = 195.",
      "clue": "Split 15 into 10 + 5.",
      "level": 1,
      "ref": "Q1 b",
@@ -920,13 +981,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "−170 × (−345) = ___",
+     "ask": "Multiply two negative integers: −170 × (−345) = ___",
      "a": [
       "58650",
       "+58650"
      ],
      "num": true,
-     "why": "Both negative: positive. 170 × 345 = 34500 + 24150 = 58650.",
+     "why": "Both factors are negative, so the product is positive.\nSplit 170 into 100 + 70.\n100 × 345 = 34500 and 70 × 345 = 24150.\n34500 + 24150 = 58650.",
      "clue": "Same signs give +.",
      "level": 2,
      "ref": "Q1 f",
@@ -942,14 +1003,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Name the property: 2 × (−13 × 5) = (2 × (−13)) × 5",
+     "text": "Properties of multiplication: name the property 2 × (−13 × 5) = (2 × (−13)) × 5",
      "opts": [
       "Commutative",
       "Associative",
       "Distributive"
      ],
      "ans": "Associative",
-     "why": "The brackets move; the order stays.",
+     "why": "The factors stay in the same order: 2, −13, 5.\nOnly the brackets move.\nThat is the associative property.\nCommutative would swap the order.",
      "clue": "What changed?",
      "level": 1,
      "ref": "Q1 c",
@@ -959,13 +1020,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "3 × (−2 × 3) = ___",
+     "ask": "Brackets first: 3 × (−2 × 3) = ___",
      "a": [
       "−18",
       "-18"
      ],
      "num": true,
-     "why": "−2 × 3 = −6; 3 × (−6) = −18.",
+     "why": "Step 1: the bracket: −2 × 3 = −6.\nStep 2: 3 × (−6): opposite signs, so negative.\n3 × 6 = 18. So the answer is −18.",
      "clue": "Bracket first.",
      "level": 1,
      "ref": "Q2 a",
@@ -976,13 +1037,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "−5 × (−3 + (−8)) = ___",
+     "ask": "Brackets first: −5 × (−3 + (−8)) = ___",
      "a": [
       "55",
       "+55"
      ],
      "num": true,
-     "why": "−3 + (−8) = −11. −5 × (−11) = 55.",
+     "why": "Step 1: the bracket: −3 + (−8) = −11.\nStep 2: −5 × (−11): both negative, so positive.\n5 × 11 = 55. So the answer is 55.",
      "clue": "Bracket first.",
      "level": 2,
      "ref": "Q2 d",
@@ -993,13 +1054,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "a = −6, b = −8, c = −12. a × (b × c) = ___",
+     "ask": "Substitute and multiply: a = −6, b = −8, c = −12. a × (b × c) = ___",
      "a": [
       "−576",
       "-576"
      ],
      "num": true,
-     "why": "b × c = −8 × (−12) = 96. a × 96 = −6 × 96 = −576.",
+     "why": "Step 1: b × c = −8 × (−12). Both negative, so positive: 96.\nStep 2: a × 96 = −6 × 96. Opposite signs, so negative.\n6 × 96 = 576. So the answer is −576.\nCheck: three negative factors, odd, so negative. ✓",
      "clue": "Bracket first.",
      "level": 2,
      "ref": "Q3",
@@ -1015,13 +1076,13 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Find the sign of 12 × (−50) × (−61).",
+     "text": "Sign of a product: find the sign of 12 × (−50) × (−61).",
      "opts": [
       "Positive",
       "Negative"
      ],
      "ans": "Positive",
-     "why": "Two negatives: even, so positive.",
+     "why": "Count the negative factors: −50 and −61. That is 2.\n2 is even.\nAn even number of negative factors gives a positive product.",
      "clue": "Count the negative factors.",
      "level": 1,
      "ref": "Q1 a",
@@ -1031,13 +1092,13 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Find the sign of 3 × (−6) × (−9) × (−12).",
+     "text": "Sign of a product: find the sign of 3 × (−6) × (−9) × (−12).",
      "opts": [
       "Positive",
       "Negative"
      ],
      "ans": "Negative",
-     "why": "Three negatives: odd, so negative.",
+     "why": "Count the negative factors: −6, −9, −12. That is 3.\n3 is odd.\nAn odd number of negative factors gives a negative product.",
      "clue": "Count the negative factors.",
      "level": 1,
      "ref": "Q1 d",
@@ -1047,13 +1108,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "(−12) × (−13) × (−5) = ___",
+     "ask": "Multiply three negative integers: (−12) × (−13) × (−5) = ___",
      "a": [
       "−780",
       "-780"
      ],
      "num": true,
-     "why": "−12 × (−13) = 156. 156 × (−5) = −780.",
+     "why": "Three negatives: odd, so the product is negative.\nTwo at a time: −12 × (−13) = 156.\n156 × (−5) = −780.\nSo the product is −780.",
      "clue": "Two at a time.",
      "level": 2,
      "ref": "Q2 b",
@@ -1069,14 +1130,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "In −96 ÷ 12 = −8, which number is the divisor?",
+     "text": "Parts of a division: in −96 ÷ 12 = −8, which number is the divisor?",
      "opts": [
       "−96",
       "12",
       "−8"
      ],
      "ans": "12",
-     "why": "The divisor is the number you divide by.",
+     "why": "The dividend is the number being divided: −96.\nThe divisor is the number you divide by: 12.\nThe quotient is the answer: −8.\nSo the divisor is 12.",
      "clue": "Which number comes after ÷?",
      "level": 1,
      "ref": "Q1 a",
@@ -1086,13 +1147,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "−2574 ÷ 33 = ___",
+     "ask": "Divide integers: −2574 ÷ 33 = ___",
      "a": [
       "−78",
       "-78"
      ],
      "num": true,
-     "why": "Different signs: negative. 2574 ÷ 33 = 78. Check 33 × 78 = 2574.",
+     "why": "Step 1: the sign. Different signs, so the quotient is negative.\nStep 2: 2574 ÷ 33. Try 33 × 78 = 2310 + 264 = 2574.\nSo 2574 ÷ 33 = 78.\nAnswer: −78.",
      "clue": "Decide the sign first.",
      "level": 2,
      "ref": "Q3 d",
@@ -1103,13 +1164,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "(−1048) ÷ (−1048) = ___",
+     "ask": "Divide a number by itself: (−1048) ÷ (−1048) = ___",
      "a": [
       "1",
       "+1"
      ],
      "num": true,
-     "why": "A non-zero integer divided by itself is 1.",
+     "why": "A non-zero integer divided by itself is 1.\nThe signs are the same, so the quotient is positive.\nSo (−1048) ÷ (−1048) = 1.",
      "clue": "Same number, same sign.",
      "level": 1,
      "ref": "Q3 c",
@@ -1120,14 +1181,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "0 ÷ 0 = ?",
+     "text": "Division by zero: 0 ÷ 0 = ?",
      "opts": [
       "0",
       "1",
       "Not defined"
      ],
      "ans": "Not defined",
-     "why": "Division by zero is not defined, even 0 ÷ 0.",
+     "why": "The divisor is 0.\nDivision by zero is not defined.\nThis is true even when the dividend is also 0.\nSo 0 ÷ 0 is not defined. It is not 0 and not 1.",
      "clue": "Look at the divisor.",
      "level": 2,
      "ref": "Q3 g",
@@ -1137,13 +1198,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "___ ÷ (−18) = 46",
+     "ask": "Find the missing dividend: ___ ÷ (−18) = 46",
      "a": [
       "−828",
       "-828"
      ],
      "num": true,
-     "why": "? = 46 × (−18) = −828.",
+     "why": "Multiply back: dividend = quotient × divisor.\n46 × (−18): opposite signs, so negative.\n46 × 18 = 460 + 368 = 828.\nSo the dividend is −828. Check: −828 ÷ (−18) = 46. ✓",
      "clue": "Multiply back.",
      "level": 2,
      "ref": "Q4 c",
@@ -1154,13 +1215,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "45 ÷ (−4) = ___",
+     "ask": "Divide integers (the answer can be a decimal): 45 ÷ (−4) = ___",
      "a": [
       "−11.25",
       "-11.25"
      ],
      "num": true,
-     "why": "Different signs: negative. 45 ÷ 4 = 11.25.",
+     "why": "Step 1: the sign. Different signs, so the quotient is negative.\nStep 2: 45 ÷ 4 = 11 remainder 1.\nStep 3: 1 ÷ 4 = 0.25, so 45 ÷ 4 = 11.25.\nAnswer: −11.25.",
      "clue": "The quotient can be a decimal.",
      "level": 1,
      "ref": "Q5 d",
@@ -1181,7 +1242,7 @@
     "+78"
    ],
    "num": true,
-   "why": "Same signs: positive. 6 × 13 = 78.",
+   "why": "Both factors are negative, so the product is positive.\n6 × 13 = 78.\nSo −6 × (−13) = 78.",
    "level": 1,
    "input": "signed",
    "clue": "",
@@ -1201,7 +1262,7 @@
     "-25"
    ],
    "num": true,
-   "why": "Different signs: negative. 175 ÷ 7 = 25.",
+   "why": "Different signs, so the quotient is negative.\n175 ÷ 7 = 25.\nSo 175 ÷ (−7) = −25. Check: −7 × (−25) = 175. ✓",
    "level": 1,
    "input": "signed",
    "clue": "",
@@ -1215,14 +1276,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which property is −2 × 5 = 5 × (−2)?",
+   "text": "Properties of multiplication: which property is −2 × 5 = 5 × (−2)?",
    "opts": [
     "Commutative",
     "Associative",
     "Distributive"
    ],
    "ans": "Commutative",
-   "why": "The order is swapped.",
+   "why": "The two factors swap places.\nNothing else changes.\nChanging the order is the commutative property.",
    "level": 2,
    "clue": "",
    "id": "g7.maths.u2.s2-5.57"
@@ -1231,13 +1292,13 @@
    "kind": "blank",
    "step": "test",
    "graded": true,
-   "ask": "−4 × 5 × (−3) × 1 = ___",
+   "ask": "Multiply four integers: −4 × 5 × (−3) × 1 = ___",
    "a": [
     "60",
     "+60"
    ],
    "num": true,
-   "why": "Two negatives: positive. 4 × 5 × 3 × 1 = 60.",
+   "why": "Count the negatives: −4 and −3. That is 2, even. So positive.\n−4 × 5 = −20.\n−20 × (−3) = 60.\n60 × 1 = 60.",
    "level": 2,
    "input": "signed",
    "clue": "",
@@ -1247,13 +1308,13 @@
    "kind": "blank",
    "step": "test",
    "graded": true,
-   "ask": "−150 ÷ (−20) = ___",
+   "ask": "Divide integers (the answer can be a decimal): −150 ÷ (−20) = ___",
    "a": [
     "7.5",
     "+7.5"
    ],
    "num": true,
-   "why": "Same signs: positive. 150 ÷ 20 = 7.5.",
+   "why": "Both are negative, so the quotient is positive.\n150 ÷ 20 = 7 remainder 10.\n10 ÷ 20 = 0.5, so 150 ÷ 20 = 7.5.\nAnswer: 7.5.",
    "level": 3,
    "input": "signed",
    "clue": "",

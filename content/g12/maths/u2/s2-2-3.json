@@ -48,9 +48,10 @@
       "always rises",
       "stays the same"
      ],
-     "after": "Fixed costs are shared over more miles, but depreciation grows with mileage². So there is a best mileage.",
+     "after": "Fixed costs (160 birr) are shared over more miles: 160/x falls.\nDepreciation 0.00001x² grows faster than x, so its share 0.00001x rises.\nFirst the falling part wins, then the rising part.\nSo there is a best mileage where the cost per mile is least.",
      "ref": "p.121",
-     "id": "g12.maths.u2.s2-2-3.1"
+     "id": "g12.maths.u2.s2-2-3.1",
+     "best": "first falls, then rises"
     },
     {
      "kind": "read",
@@ -98,11 +99,11 @@
     },
     {
      "kind": "blank",
-     "ask": "M′(x) = −160/x² + 0.00001 = 0. The best mileage x = ___ miles",
+     "ask": "Best mileage: M′(x) = −160/x² + 0.00001 = 0. The mileage with the least cost per mile is x = ___ miles",
      "a": [
       "4000"
      ],
-     "why": "x² = 16 000 000, x = ±4000. Mileage cannot be negative: 4000.",
+     "why": "Move the term: 0.00001 = 160/x².\nx² = 160 ÷ 0.00001 = 16 000 000.\nx = ±4000.\nMileage cannot be negative, so x = 4000 miles.\nCheck: M′ goes − to + at 4000, a minimum.",
      "clue": "Reject the negative root.",
      "num": true,
      "graded": true,
@@ -110,6 +111,38 @@
      "step": "check",
      "ref": "Example p.121",
      "id": "g12.maths.u2.s2-2-3.5"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "added": true,
+     "title": "Fence: try different shapes",
+     "ask": "Area 3200 ft². Sides x cost $1/ft (two of them), sides y cost $2/ft (two of them). Move x.",
+     "vars": [
+      {
+       "k": "x",
+       "label": "Side x (ft)",
+       "min": 20,
+       "max": 160,
+       "step": 5,
+       "v": 40
+      }
+     ],
+     "formula": "2*x + 12800/x",
+     "outs": [
+      [
+       "Side y = 3200/x",
+       "3200/x",
+       "{v} ft"
+      ],
+      [
+       "Cost C = 2x + 4y",
+       "2*x + 12800/x",
+       "$ {v}"
+      ]
+     ],
+     "note": "The cost is lowest at x = 80, y = 40: $320. A square (x ≈ 56.6) costs more, about $339.",
+     "id": "g12.maths.u2.s2-2-3.19"
     },
     {
      "kind": "steps",
@@ -125,12 +158,29 @@
      "id": "g12.maths.u2.s2-2-3.6"
     },
     {
+     "kind": "order",
+     "step": "practise",
+     "added": true,
+     "graded": true,
+     "level": 1,
+     "text": "Put the steps for solving an optimisation problem in order.",
+     "items": [
+      "Write the quantity to make largest or smallest",
+      "Use the constraint to write it with one variable",
+      "Differentiate and set the derivative to 0",
+      "Reject impossible roots and check the sign change"
+     ],
+     "why": "1. Say what to optimise: cost, area, volume.\n2. Use the given fact (area 3200, volume 128π) to remove one variable.\n3. Differentiate and solve f′(x) = 0.\n4. Throw away negative lengths, then check − to + (minimum) or + to − (maximum).",
+     "clue": "You need a function of ONE variable before you can differentiate.",
+     "id": "g12.maths.u2.s2-2-3.20"
+    },
+    {
      "kind": "blank",
-     "ask": "An open box with a square base has surface area 48. The base side for the largest volume is ___",
+     "ask": "Open box with a square base and surface area 48. The base side that gives the largest volume is ___",
      "a": [
       "4"
      ],
-     "why": "x² + 4xh = 48, V = 12x − x³/4. V′ = 12 − 3x²/4 = 0 gives x = 4 (height 2).",
+     "why": "Base x by x, height h, no top: area x² + 4xh = 48.\nSo h = (48 − x²)/(4x).\nV = x²h = (48x − x³)/4 = 12x − x³/4.\nV′ = 12 − 3x²/4 = 0 gives x² = 16, x = 4 (reject −4).\nThen h = 32/16 = 2. Answer: base side 4.",
      "clue": "No top: area = x² + 4xh.",
      "num": true,
      "graded": true,
@@ -141,11 +191,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A closed can holds 128π cm³. The radius that uses the least material is ___ cm",
+     "ask": "Closed can (cylinder) holding 128π cm³. The radius that uses the least material is ___ cm",
      "a": [
       "4"
      ],
-     "why": "S = 2πr² + 256π/r. S′ = 4πr − 256π/r² = 0 gives r³ = 64, r = 4 (height 8).",
+     "why": "Volume: πr²h = 128π, so h = 128/r².\nSurface: S = 2πr² + 2πrh = 2πr² + 256π/r.\nS′ = 4πr − 256π/r² = 0 gives r³ = 64.\nr = 4 cm (and h = 8 cm).\nCheck: S′ goes − to +, a minimum. Note: h = 2r.",
      "clue": "Include the top and bottom: 2πr².",
      "num": true,
      "graded": true,
@@ -156,9 +206,9 @@
     },
     {
      "kind": "tf",
-     "text": "In optimisation you keep every root of the derivative, even negative lengths.",
+     "text": "True or false? In optimisation you keep every root of the derivative, even negative lengths.",
      "a": false,
-     "why": "A length or a mileage cannot be negative; reject such roots.",
+     "why": "Roots of the derivative are only candidates.\nA length, a mileage or a number of items cannot be negative.\nSo x = −4000 miles is rejected.\nFalse: keep only roots that make sense in the problem.",
      "clue": "Is x = −4000 miles possible?",
      "graded": true,
      "level": 1,
@@ -167,11 +217,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Two positive numbers add to 20. Their product is largest when the smaller number is ___",
+     "ask": "Largest product: two positive numbers add to 20. Their product is largest when the smaller number is ___",
      "a": [
       "10"
      ],
-     "why": "P = x(20 − x), P′ = 20 − 2x = 0 at x = 10: both are 10.",
+     "why": "Let the numbers be x and 20 − x.\nProduct P = x(20 − x) = 20x − x².\nP′ = 20 − 2x = 0 gives x = 10.\nP′ goes + to −: a maximum. Both numbers are 10, product 100.\nSo the smaller number is 10 (they are equal).",
      "clue": "Write the product with one variable.",
      "num": true,
      "graded": true,
@@ -189,7 +239,7 @@
    "items": [
     {
      "kind": "pick",
-     "text": "3200 ft² fence: the dimensions of least cost",
+     "text": "Fencing 3200 ft²: two opposite sides cost $1/ft, the other two $2/ft. Pick the dimensions of least cost.",
      "pool": [
       "80 ft",
       "40 ft",
@@ -200,7 +250,7 @@
       "80 ft",
       "40 ft"
      ],
-     "why": "x = 80 ($1 sides), y = 40 ($2 sides).",
+     "why": "Area: xy = 3200, so y = 3200/x.\nCost: C = 2x(1) + 2y(2) = 2x + 12 800/x.\nC′ = 2 − 12 800/x² = 0 gives x² = 6400, x = 80.\ny = 3200/80 = 40.\nSo 80 ft for the $1 sides, 40 ft for the $2 sides (cost $320).\nTrap: 56.6 ft = √3200 is a square, best only if all sides cost the same.",
      "clue": "C = 2x + 12 800/x.",
      "graded": true,
      "level": 3,
@@ -210,11 +260,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Open box, area 48: the largest volume = ___",
+     "ask": "Open box with a square base, surface area 48: the largest volume is ___",
      "a": [
       "32"
      ],
-     "why": "4 × 4 × 2.",
+     "why": "V = 12x − x³/4 is largest at x = 4.\nThe height is h = (48 − 16)/16 = 2.\nV = 4 × 4 × 2 = 32.\nCheck: 12(4) − 64/4 = 48 − 16 = 32.",
      "clue": "V = 12x − x³/4.",
      "num": true,
      "graded": true,
@@ -225,11 +275,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Closed can, 128π cm³: the height for least material = ___ cm",
+     "ask": "Closed can holding 128π cm³: the height that uses the least material is ___ cm",
      "a": [
       "8"
      ],
-     "why": "h = 128/r² = 8.",
+     "why": "Least material at r = 4 cm.\nh = 128/r² = 128/16.\nh = 8 cm (the height equals the diameter).",
      "clue": "r = 4.",
      "num": true,
      "graded": true,
@@ -244,11 +294,11 @@
  "test": [
   {
    "kind": "blank",
-   "ask": "M(x) = 100/x + x/4 (x > 0). The best x = ___",
+   "ask": "Minimum of a cost function: M(x) = 100/x + x/4 for x > 0. M is least at x = ___",
    "a": [
     "20"
    ],
-   "why": "−100/x² + 1/4 = 0.",
+   "why": "M′(x) = −100/x² + 1/4.\nM′ = 0 gives x² = 400.\nx = 20 (reject −20, since x > 0).\nM′ goes − to +: a minimum, M(20) = 5 + 5 = 10.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -258,11 +308,11 @@
   },
   {
    "kind": "blank",
-   "ask": "A rectangle has perimeter 40 m. Its largest area = ___ m²",
+   "ask": "Largest area: a rectangle has perimeter 40 m. Its largest area is ___ m²",
    "a": [
     "100"
    ],
-   "why": "10 × 10.",
+   "why": "2l + 2w = 40, so w = 20 − l.\nA = l(20 − l) = 20l − l².\nA′ = 20 − 2l = 0 gives l = 10, w = 10.\nA = 10 × 10 = 100 m² (a square).",
    "clue": "",
    "num": true,
    "graded": true,
@@ -272,9 +322,9 @@
   },
   {
    "kind": "tf",
-   "text": "A cost function can have a minimum where its derivative is 0.",
+   "text": "True or false? A cost function can have a minimum where its derivative is 0.",
    "a": true,
-   "why": "with a − to + sign change.",
+   "why": "At a minimum the tangent is flat, so the derivative is 0.\nCheck the sign: − before and + after.\nExample: C(x) = x + 64/x has C′(8) = 0 and a minimum there.\nTrue.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -283,11 +333,11 @@
   },
   {
    "kind": "blank",
-   "ask": "x + y = 12, x, y > 0. The largest xy = ___",
+   "ask": "Largest product: x + y = 12 with x, y > 0. The largest value of xy is ___",
    "a": [
     "36"
    ],
-   "why": "6 × 6.",
+   "why": "y = 12 − x, so P = x(12 − x) = 12x − x².\nP′ = 12 − 2x = 0 gives x = 6.\ny = 6, so xy = 36.\nTrap: 6 is x, not the product.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -297,11 +347,11 @@
   },
   {
    "kind": "blank",
-   "ask": "C(x) = x + 64/x for x > 0. The least cost = ___",
+   "ask": "Least cost: C(x) = x + 64/x for x > 0. The least cost is ___",
    "a": [
     "16"
    ],
-   "why": "x = 8: 8 + 8.",
+   "why": "C′(x) = 1 − 64/x².\nC′ = 0 gives x² = 64, x = 8 (x > 0).\nC′ goes − to +: a minimum.\nC(8) = 8 + 64/8 = 8 + 8 = 16.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -340,7 +390,7 @@
     },
     {
      "kind": "mcq",
-     "text": "f′ goes − to + at c. f(c) is a",
+     "text": "First derivative test: f′ changes from − to + at c. Then f(c) is a",
      "opts": [
       "minimum",
       "maximum",
@@ -348,7 +398,7 @@
       "mistake"
      ],
      "ans": "minimum",
-     "why": "Falling then rising.",
+     "why": "f′ < 0 before c: the graph falls.\nf′ > 0 after c: the graph rises.\nFalling then rising makes a valley.\nSo f(c) is a relative minimum.",
      "clue": "Valley or hill?",
      "graded": true,
      "level": 1,

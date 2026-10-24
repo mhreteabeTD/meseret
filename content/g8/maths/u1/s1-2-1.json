@@ -75,15 +75,17 @@
       "Addis Ababa",
       "The same"
      ],
-     "after": "−2 is left of 8 on the number line, so −2 < 8. Debre Birhan was colder.",
-     "id": "g8.maths.u1.s1-2-1.1"
+     "after": "On the number line, −2 is left of 0 and 8 is right of 0.\nThe number further left is smaller: −2 < 8.\nA smaller temperature is colder.\nSo Debre Birhan was colder.",
+     "id": "g8.maths.u1.s1-2-1.1",
+     "best": "Debre Birhan"
     },
     {
      "kind": "read",
      "step": "read",
      "title": "Comparing decimals",
      "paras": [
-      "We compare numbers every day: wins and losses, temperatures, profit and loss.",
+      "We compare numbers every day.",
+      "Think of wins and losses, temperatures, profit and loss.",
       "A rational number a/b becomes a decimal when you divide a by b."
      ],
      "note": "Compare decimals place by place from the left: integer part, then tenths, then hundredths.",
@@ -99,6 +101,30 @@
      ],
      "id": "g8.maths.u1.s1-2-1.3",
      "ref": "Example 1.10"
+    },
+    {
+     "kind": "numline",
+     "step": "explore",
+     "title": "Example: 6.7 and 6.89 on the line",
+     "min": 6,
+     "max": 7,
+     "sub": 10,
+     "points": [
+      {
+       "v": "6.7",
+       "label": "6.7",
+       "info": "= 6.70. 7 tenths past 6."
+      },
+      {
+       "v": "6.89",
+       "label": "6.89",
+       "info": "8 tenths and 9 hundredths past 6. It is further right, so it is bigger."
+      }
+     ],
+     "need": 2,
+     "ask": "Tap both points. Which one is further right?",
+     "id": "g8.maths.u1.s1-2-1.38",
+     "added": true
     },
     {
      "kind": "name",
@@ -120,14 +146,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Which sign is correct? 6.7 ? 6.89",
+     "text": "Compare the decimals: which sign is correct? 6.7 ? 6.89",
      "opts": [
       "<",
       ">",
       "="
      ],
      "ans": "<",
-     "why": "Integers equal; tenths 7 < 8. So 6.7 < 6.89.",
+     "why": "Write both with two decimal places: 6.70 and 6.89.\nInteger parts: 6 = 6, equal.\nTenths: 7 < 8.\nSo 6.7 < 6.89. (6.89 has more digits, but that is not why it is bigger.)",
      "clue": "Compare the tenths.",
      "gen": {
       "t": "compare",
@@ -140,14 +166,14 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Which sign is correct? −3 ? −5",
+     "text": "Compare negative integers: which sign is correct? −3 ? −5",
      "opts": [
       "<",
       ">",
       "="
      ],
      "ans": ">",
-     "why": "−3 is to the right of −5.",
+     "why": "On the number line, −3 is 3 units left of 0 and −5 is 5 units left of 0.\n−5 is further left, so −5 is smaller.\nSo −3 > −5.\n(5 > 3, but for negatives the bigger size is the smaller number.)",
      "clue": "Which is closer to 0?",
      "id": "g8.maths.u1.s1-2-1.6",
      "ref": "Activity 1.2",
@@ -157,9 +183,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "6.53 < 6.053",
+     "text": "Compare the decimals: true or false? 6.53 < 6.053",
      "a": false,
-     "why": "Tenths: 5 > 0, so 6.53 > 6.053.",
+     "why": "Write both with three decimal places: 6.530 and 6.053.\nInteger parts: 6 = 6.\nTenths: 5 > 0.\nSo 6.53 > 6.053, and the statement is false.",
      "clue": "Compare the tenths digits.",
      "gen": {
       "t": "compare",
@@ -171,7 +197,7 @@
     {
      "kind": "mcq",
      "graded": true,
-     "text": "Which is the largest?",
+     "text": "Compare decimals: which number is the largest?",
      "opts": [
       "0.405",
       "0.45",
@@ -179,7 +205,7 @@
       "0.045"
      ],
      "ans": "0.45",
-     "why": "Compare place by place. Tenths: 4, 4, 4, 0. Hundredths: 0.405 has 0, 0.45 has 5, 0.4 has 0. So 0.45 is the largest.",
+     "why": "Write all with three decimal places: 0.405, 0.450, 0.400, 0.045.\nTenths: 4, 4, 4 and 0. So 0.045 is the smallest.\nHundredths of the others: 0, 5 and 0.\n0.450 has the most hundredths, so 0.45 is the largest.",
      "clue": "Write them all with three decimal places: 0.405, 0.450, 0.400, 0.045.",
      "step": "challenge",
      "level": 3,
@@ -216,7 +242,7 @@
         {
          "n": 3,
          "color": "a",
-         "label": "3/5"
+         "label": "3/5 (blue bar)"
         }
        ]
       },
@@ -225,13 +251,13 @@
        "shade": [
         {
          "n": 1,
-         "color": "b",
-         "label": "1/2"
+         "color": "c",
+         "label": "1/2 (orange bar)"
         }
        ]
       }
      ],
-     "after": "The 3/5 bar is a little longer. So 3/5 > 1/2.",
+     "after": "Both bars are the same whole.\nThe blue part (3/5) is a little longer than the orange part (1/2).\nSo 3/5 > 1/2. Below you will prove it with numbers.",
      "id": "g8.maths.u1.s1-2-1.8"
     },
     {
@@ -239,8 +265,8 @@
      "step": "read",
      "title": "Same denominator",
      "paras": [
-      "If the denominators are the same, the bigger numerator is the bigger number.",
-      "Example 1.11: 15/7 > 13/7 because 15 > 13."
+      "Same denominators: the bigger numerator is the bigger number.",
+      "Example 1.11: 15/7 > 13/7, because 15 > 13."
      ],
      "id": "g8.maths.u1.s1-2-1.9"
     },
@@ -255,6 +281,46 @@
      ],
      "note": "a/b = (a × m)/(b × m) for any non-zero integer m.",
      "id": "g8.maths.u1.s1-2-1.10"
+    },
+    {
+     "kind": "fracbar",
+     "step": "explore",
+     "title": "Equivalent fractions: 1/2 = 2/4 = 4/8",
+     "bars": [
+      {
+       "parts": 2,
+       "shade": [
+        {
+         "n": 1,
+         "color": "a",
+         "label": "1/2"
+        }
+       ]
+      },
+      {
+       "parts": 4,
+       "shade": [
+        {
+         "n": 2,
+         "color": "c",
+         "label": "2/4"
+        }
+       ]
+      },
+      {
+       "parts": 8,
+       "shade": [
+        {
+         "n": 4,
+         "color": "b",
+         "label": "4/8"
+        }
+       ]
+      }
+     ],
+     "after": "All three shaded parts are the same length.\n1/2 = (1 × 2)/(2 × 2) = 2/4 and 1/2 = (1 × 4)/(2 × 4) = 4/8.\nEquivalent fractions mark the same point on the number line.",
+     "id": "g8.maths.u1.s1-2-1.39",
+     "added": true
     },
     {
      "kind": "name",
@@ -294,14 +360,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Which sign is correct? 11/16 ? 7/8",
+     "text": "Compare fractions with different denominators: which sign is correct? 11/16 ? 7/8",
      "opts": [
       "<",
       ">",
       "="
      ],
      "ans": "<",
-     "why": "7/8 = 14/16, and 11 < 14.",
+     "why": "The LCM of 16 and 8 is 16.\n16 ÷ 8 = 2, so 7/8 = (7 × 2)/(8 × 2) = 14/16.\nNow compare 11/16 and 14/16: 11 < 14.\nSo 11/16 < 7/8.",
      "clue": "Write 7/8 with denominator 16.",
      "needs": "math.lcm",
      "gen": {
@@ -315,14 +381,14 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Which sign is correct? 5/7 ? 8/3",
+     "text": "Compare fractions by cross-multiplying: which sign is correct? 5/7 ? 8/3",
      "opts": [
       "<",
       ">",
       "="
      ],
      "ans": "<",
-     "why": "5 × 3 = 15 and 7 × 8 = 56. 15 < 56.",
+     "why": "Cross-multiply: 5 × 3 = 15 (left) and 7 × 8 = 56 (right).\n15 < 56.\nSo 5/7 < 8/3.\nCheck: 5/7 is less than 1, and 8/3 = 2 2/3 is more than 1.",
      "clue": "Cross-multiply.",
      "gen": {
       "t": "compare",
@@ -336,14 +402,14 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Which sign is correct? −12/7 ? 6/9",
+     "text": "Compare a negative and a positive fraction: which sign is correct? −12/7 ? 6/9",
      "opts": [
       "<",
       ">",
       "="
      ],
      "ans": "<",
-     "why": "A negative number is less than a positive number.",
+     "why": "−12/7 is negative: it is left of 0.\n6/9 is positive: it is right of 0.\nEvery negative number is less than every positive number.\nSo −12/7 < 6/9.",
      "clue": "Which one is negative?",
      "gen": {
       "t": "compare",
@@ -357,11 +423,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "3/5 = ___/10",
+     "ask": "Equivalent fractions: fill in the numerator. 3/5 = ___/10",
      "a": [
       "6"
      ],
-     "why": "5 × 2 = 10, so 3 × 2 = 6.",
+     "why": "5 × 2 = 10, so the bottom was multiplied by 2.\nMultiply the top by the same number: 3 × 2 = 6.\nSo 3/5 = 6/10.\nCheck: 6/10 = 0.6 and 3/5 = 0.6.",
      "clue": "What times 5 gives 10?",
      "needs": "math.lcm",
      "id": "g8.maths.u1.s1-2-1.16",
@@ -371,9 +437,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "12/8 = 10/15",
+     "text": "Equivalent fractions: true or false? 12/8 = 10/15",
      "a": false,
-     "why": "12 × 15 = 180 and 8 × 10 = 80. They are not equal.",
+     "why": "Cross-multiply: 12 × 15 = 180 and 8 × 10 = 80.\n180 ≠ 80, so they are not equal.\nAlso: 12/8 = 1 1/2 is more than 1, and 10/15 = 2/3 is less than 1.\nFalse.",
      "clue": "Cross-multiply.",
      "id": "g8.maths.u1.s1-2-1.17",
      "level": 1
@@ -381,14 +447,14 @@
     {
      "kind": "mcq",
      "graded": true,
-     "text": "Which sign is correct? −5/6 ? −7/9",
+     "text": "Compare negative fractions: which sign is correct? −5/6 ? −7/9",
      "opts": [
       "<",
       ">",
       "="
      ],
      "ans": "<",
-     "why": "LCM of 6 and 9 is 18. 5/6 = (5 × 3)/(6 × 3) = 15/18 and 7/9 = (7 × 2)/(9 × 2) = 14/18. So 5/6 is bigger. For negatives the bigger size is smaller: −5/6 < −7/9.",
+     "why": "First compare the sizes 5/6 and 7/9. The LCM of 6 and 9 is 18.\n5/6 = (5 × 3)/(6 × 3) = 15/18 and 7/9 = (7 × 2)/(9 × 2) = 14/18.\n15/18 > 14/18, so 5/6 has the bigger size.\nFor negatives, the bigger size is further left: −5/6 < −7/9.",
      "clue": "Compare the sizes first. With negatives, bigger size means smaller number.",
      "step": "challenge",
      "level": 3,
@@ -439,7 +505,7 @@
       }
      ],
      "need": 3,
-     "ask": "Tap the points from left to right.",
+     "ask": "Tap the points from left to right. Which one is smallest?",
      "id": "g8.maths.u1.s1-2-1.18",
      "ref": "Figure 1.13"
     },
@@ -448,31 +514,37 @@
      "step": "read",
      "title": "Comparing with the number line",
      "paras": [
-      "Of two numbers on the line, the one on the left is smaller."
-     ],
-     "table": [
-      [
-       "Fact",
-       "Example"
-      ],
-      [
-       "Every positive number is greater than 0.",
-       "1/2 > 0"
-      ],
-      [
-       "Every negative number is less than 0.",
-       "−1/2 < 0"
-      ],
-      [
-       "Positives are greater than negatives.",
-       "1/2 > −1"
-      ],
-      [
-       "Of two negatives, the bigger absolute value is smaller.",
-       "−45 < −23"
-      ]
+      "Of two numbers on the line, the one on the left is smaller.",
+      "Tap each fact below to see an example."
      ],
      "id": "g8.maths.u1.s1-2-1.19"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Four facts from the number line",
+     "ask": "Tap each fact.",
+     "need": 4,
+     "items": [
+      [
+       "Positive > 0",
+       "Every positive number is right of 0, so it is greater than 0. Example: 1/2 > 0."
+      ],
+      [
+       "Negative < 0",
+       "Every negative number is left of 0, so it is less than 0. Example: −1/2 < 0."
+      ],
+      [
+       "Positive > negative",
+       "Positives are right of every negative. Example: 1/2 > −1."
+      ],
+      [
+       "Two negatives",
+       "The bigger absolute value is further left, so it is smaller. Example: −45 < −23."
+      ]
+     ],
+     "id": "g8.maths.u1.s1-2-1.40",
+     "added": true
     },
     {
      "kind": "name",
@@ -490,13 +562,13 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Which is smaller, −45 or −23?",
+     "text": "Compare negative numbers: which is smaller, −45 or −23?",
      "opts": [
       "−45",
       "−23"
      ],
      "ans": "−45",
-     "why": "|−45| > |−23|, so −45 is further left.",
+     "why": "|−45| = 45 and |−23| = 23.\n−45 is further from 0 on the left side.\nThe number further left is smaller.\nSo −45 is smaller: −45 < −23.",
      "clue": "Which is further from 0?",
      "id": "g8.maths.u1.s1-2-1.21",
      "level": 1
@@ -505,13 +577,13 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Which is to the left on the number line?",
+     "text": "Compare on the number line: which is further to the left?",
      "opts": [
       "−1/3",
       "−1.5"
      ],
      "ans": "−1.5",
-     "why": "−1.5 < −1/3 because 1.5 > 1/3.",
+     "why": "Write both as decimals: −1/3 ≈ −0.33 and −1.5.\nIn size, 1.5 > 0.33.\nFor negatives, the bigger size is further left.\nSo −1.5 is further left.",
      "clue": "Which is further from 0?",
      "id": "g8.maths.u1.s1-2-1.22",
      "ref": "Exercise 1.4 Q3 e",
@@ -521,9 +593,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "|−3/5| < 3/5",
+     "text": "Absolute value and comparing: true or false? |−3/5| < 3/5",
      "a": false,
-     "why": "|−3/5| = 3/5. They are equal.",
+     "why": "Find the absolute value first: |−3/5| = 3/5.\nSo the statement says 3/5 < 3/5.\nA number is not less than itself; they are equal.\nFalse.",
      "clue": "Find |−3/5| first.",
      "id": "g8.maths.u1.s1-2-1.23",
      "level": 1
@@ -531,7 +603,7 @@
     {
      "kind": "mcq",
      "graded": true,
-     "text": "a is a negative number and b is a positive number. Which is ALWAYS true?",
+     "text": "Compare on the number line: a is a negative number and b is a positive number. Which is ALWAYS true?",
      "opts": [
       "a < b",
       "|a| < |b|",
@@ -539,7 +611,7 @@
       "b < a"
      ],
      "ans": "a < b",
-     "why": "Every negative number is left of 0 and every positive number is right of 0, so a < b. |a| < |b| is not always true: try a = −10 and b = 1.",
+     "why": "Every negative number is left of 0.\nEvery positive number is right of 0.\nSo a is always left of b: a < b.\n|a| < |b| is not always true: try a = −10 and b = 1, then |a| = 10 > 1.",
      "clue": "Think of the number line. Try some numbers.",
      "step": "challenge",
      "level": 3,
@@ -557,9 +629,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "−0.15 < 1.5",
+     "text": "Compare a negative and a positive decimal: true or false? −0.15 < 1.5",
      "a": true,
-     "why": "A negative is less than a positive.",
+     "why": "−0.15 is negative, so it is left of 0.\n1.5 is positive, so it is right of 0.\nA negative is always less than a positive.\nTrue.",
      "clue": "Which one is negative?",
      "id": "g8.maths.u1.s1-2-1.24",
      "ref": "Q1 a",
@@ -569,9 +641,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "23/5 > 32/5",
+     "text": "Compare fractions with the same denominator: true or false? 23/5 > 32/5",
      "a": false,
-     "why": "Same denominator: 23 < 32.",
+     "why": "The denominators are the same (5).\nSo compare the numerators: 23 and 32.\n23 < 32, so 23/5 < 32/5.\nThe statement is false.",
      "clue": "Compare the numerators.",
      "id": "g8.maths.u1.s1-2-1.25",
      "ref": "Q1 b",
@@ -581,9 +653,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "3 5/7 > 21/6",
+     "text": "Compare a mixed number and a fraction: true or false? 3 5/7 > 21/6",
      "a": true,
-     "why": "3 5/7 ≈ 3.71 and 21/6 = 3.5.",
+     "why": "3 5/7: 5 ÷ 7 ≈ 0.71, so 3 5/7 ≈ 3.71.\n21/6 = 21 ÷ 6 = 3.5.\n3.71 > 3.5.\nTrue.",
      "clue": "Change both to decimals.",
      "id": "g8.maths.u1.s1-2-1.26",
      "ref": "Q1 e",
@@ -593,9 +665,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "3 4/7 = 25/7",
+     "text": "Mixed and improper fractions: true or false? 3 4/7 = 25/7",
      "a": true,
-     "why": "3 × 7 + 4 = 25.",
+     "why": "Change 3 4/7 to an improper fraction.\n3 wholes = 3 × 7 = 21 sevenths.\n21 + 4 = 25 sevenths, so 3 4/7 = 25/7.\nTrue.",
      "clue": "Change the mixed number to an improper fraction.",
      "id": "g8.maths.u1.s1-2-1.27",
      "ref": "Q1 h",
@@ -605,14 +677,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Which sign is correct? −21/12 ? −28/16",
+     "text": "Compare negative fractions: which sign is correct? −21/12 ? −28/16",
      "opts": [
       "<",
       ">",
       "="
      ],
      "ans": "=",
-     "why": "Both equal −7/4.",
+     "why": "Simplify −21/12: divide top and bottom by 3: −7/4.\nSimplify −28/16: divide top and bottom by 4: −7/4.\nBoth equal −7/4.\nSo −21/12 = −28/16.",
      "clue": "Simplify both fractions.",
      "id": "g8.maths.u1.s1-2-1.28",
      "level": 1
@@ -621,14 +693,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Which sign is correct? 8/20 ? 0.35",
+     "text": "Compare a fraction and a decimal: which sign is correct? 8/20 ? 0.35",
      "opts": [
       "<",
       ">",
       "="
      ],
      "ans": ">",
-     "why": "8/20 = 0.4 and 0.4 > 0.35.",
+     "why": "Change 8/20 to a decimal: 8/20 = 4/10 = 0.4.\nCompare 0.40 and 0.35.\nTenths: 4 > 3.\nSo 8/20 > 0.35.",
      "clue": "Change 8/20 to a decimal.",
      "id": "g8.maths.u1.s1-2-1.29",
      "level": 1
@@ -641,14 +713,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which sign is correct? 3/4 ? 5/7",
+   "text": "Compare fractions: which sign is correct? 3/4 ? 5/7",
    "opts": [
     "<",
     ">",
     "="
    ],
    "ans": ">",
-   "why": "3 × 7 = 21 and 4 × 5 = 20.",
+   "why": "Cross-multiply: 3 × 7 = 21 and 4 × 5 = 20.\n21 > 20.\nSo 3/4 > 5/7.\nCheck: 3/4 = 0.75 and 5/7 ≈ 0.71.",
    "clue": "",
    "gen": {
     "t": "compare",
@@ -662,14 +734,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which sign is correct? 4.07 ? 4.7",
+   "text": "Compare the decimals: which sign is correct? 4.07 ? 4.7",
    "opts": [
     "<",
     ">",
     "="
    ],
    "ans": "<",
-   "why": "Tenths: 0 < 7.",
+   "why": "Write 4.7 as 4.70.\nInteger parts: 4 = 4.\nTenths: 0 < 7.\nSo 4.07 < 4.7.",
    "clue": "",
    "gen": {
     "t": "compare",
@@ -683,14 +755,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which sign is correct? −2/3 ? −3/4",
+   "text": "Compare negative fractions: which sign is correct? −2/3 ? −3/4",
    "opts": [
     "<",
     ">",
     "="
    ],
    "ans": ">",
-   "why": "|−2/3| < |−3/4|, so −2/3 is to the right.",
+   "why": "Compare the sizes: 2/3 = 8/12 and 3/4 = 9/12.\n2/3 is the smaller size.\nFor negatives, the smaller size is closer to 0, so it is bigger.\nSo −2/3 > −3/4.",
    "clue": "",
    "gen": {
     "t": "compare",
@@ -704,9 +776,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "−3/4 < −2/3",
+   "text": "Compare negative fractions: true or false? −3/4 < −2/3",
    "a": true,
-   "why": "3/4 = 9/12 is bigger than 2/3 = 8/12, so −3/4 is further left.",
+   "why": "LCM of 4 and 3 is 12: 3/4 = 9/12 and 2/3 = 8/12.\n3/4 has the bigger size.\nFor negatives, the bigger size is further left.\nSo −3/4 < −2/3: true.",
    "clue": "",
    "level": 2,
    "id": "g8.maths.u1.s1-2-1.36"
@@ -715,7 +787,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which is the largest?",
+   "text": "Compare negative numbers: which is the largest?",
    "opts": [
     "−0.3",
     "−1/4",
@@ -723,7 +795,7 @@
     "−2/5"
    ],
    "ans": "−1/4",
-   "why": "−1/4 = −0.25 is closest to 0, so it is the largest.",
+   "why": "Change all to decimals: −0.3, −1/4 = −0.25, −0.35, −2/5 = −0.4.\nAll are negative, so the largest is the one closest to 0.\nThe smallest size is 0.25.\nSo −1/4 is the largest.",
    "clue": "",
    "level": 3,
    "id": "g8.maths.u1.s1-2-1.37"

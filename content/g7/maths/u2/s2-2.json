@@ -65,9 +65,10 @@
       "−5 °C",
       "+5 °C"
      ],
-     "after": "Below zero gets a minus sign: −5 °C. Above zero gets a plus sign, or no sign.",
+     "after": "Below zero gets a minus sign: −5 °C.\nAbove zero gets a plus sign, or no sign: +5 °C or 5 °C.\nSo 5 °C and +5 °C both mean above zero. They are wrong here.",
      "ref": "Activity 2.2.1",
-     "id": "g7.maths.u2.s2-2.1"
+     "id": "g7.maths.u2.s2-2.1",
+     "best": "−5 °C"
     },
     {
      "kind": "read",
@@ -103,6 +104,36 @@
      "id": "g7.maths.u2.s2-2.2"
     },
     {
+     "kind": "numline",
+     "step": "explore",
+     "title": "Debre Birhan temperatures",
+     "min": -10,
+     "max": 15,
+     "sub": 1,
+     "points": [
+      {
+       "v": "15",
+       "label": "Mon +15 °C",
+       "info": "15 steps right of 0: 15 °C above zero."
+      },
+      {
+       "v": "-5",
+       "label": "Tue −5 °C",
+       "info": "5 steps left of 0: 5 °C below zero."
+      },
+      {
+       "v": "-10",
+       "label": "Wed −10 °C",
+       "info": "10 steps left of 0: the coldest day."
+      }
+     ],
+     "ask": "Tap each day. Which side of 0 is it on?",
+     "need": 3,
+     "ref": "Activity 2.2.1",
+     "id": "g7.maths.u2.s2-2.49",
+     "added": true
+    },
+    {
      "kind": "read",
      "step": "read",
      "title": "Note",
@@ -134,14 +165,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "6 °C below zero is written",
+     "text": "Write the temperature with a sign: 6 °C below zero is written",
      "opts": [
       "6 °C",
       "−6 °C",
       "+6 °C"
      ],
      "ans": "−6 °C",
-     "why": "Below zero gets a minus sign.",
+     "why": "Below zero means less than 0.\nNumbers less than 0 get a minus sign.\nSo 6 °C below zero is −6 °C.\n+6 °C and 6 °C mean 6 °C above zero.",
      "clue": "Below zero or above zero?",
      "level": 1,
      "ref": "Exercise 2.2.1 Q7 e",
@@ -151,13 +182,13 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "A loss of Birr 100 is written ___",
+     "ask": "Write the money with a sign: a loss of Birr 100 is written ___",
      "a": [
       "−100",
       "-100"
      ],
      "num": true,
-     "why": "A loss is a decrease, so it gets a minus sign: −100.",
+     "why": "A gain makes your money go up: plus sign.\nA loss makes your money go down: minus sign.\nSo a loss of Birr 100 is −100.",
      "clue": "Is a loss a gain or a decrease?",
      "level": 1,
      "ref": "Exercise 2.2.1 Q7 a",
@@ -168,7 +199,7 @@
      "kind": "sort",
      "step": "practise",
      "graded": true,
-     "title": "Plus or minus?",
+     "title": "Positive or negative? Sort each quantity.",
      "bins": [
       "Positive",
       "Negative"
@@ -200,7 +231,7 @@
        "+21"
       ]
      ],
-     "why": "Rise, forward, above and gain are positive. Loss and below are negative.",
+     "why": "Rise, forward, above zero and gain are positive.\nA rise of 10 °C = +10. 7 km forward = +7. 21 °C above zero = +21.\nBelow zero and loss are negative.\n6 °C below zero = −6. A loss of Birr 100 = −100.",
      "clue": "Is it more than zero or less than zero?",
      "level": 1,
      "ref": "Exercise 2.2.1 Q7",
@@ -210,14 +241,14 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Which day was the coldest: Monday +15 °C, Tuesday −5 °C or Wednesday −10 °C?",
+     "text": "Compare temperatures: which day was the coldest? Monday +15 °C, Tuesday −5 °C or Wednesday −10 °C?",
      "opts": [
       "Monday",
       "Tuesday",
       "Wednesday"
      ],
      "ans": "Wednesday",
-     "why": "−10 °C is furthest below zero.",
+     "why": "The coldest day has the lowest temperature.\n+15 °C is above zero, so Monday is warm.\n−5 °C is 5 below zero. −10 °C is 10 below zero.\n10 below zero is colder than 5 below zero.\nSo Wednesday (−10 °C) was the coldest.",
      "clue": "Which is furthest below zero?",
      "level": 2,
      "ref": "Activity 2.2.1 Q1 b",
@@ -227,13 +258,13 @@
      "kind": "blank",
      "step": "challenge",
      "graded": true,
-     "ask": "Ras Dashen is 4550 m above sea level. The Danakil Depression is 125 m below sea level. Write the Danakil height as an integer: ___ m",
+     "ask": "Heights as integers: Ras Dashen is 4550 m above sea level. The Danakil Depression is 125 m below sea level. Write the Danakil height as an integer: ___ m",
      "a": [
       "−125",
       "-125"
      ],
      "num": true,
-     "why": "Below sea level is negative, so −125 m. Ras Dashen is +4550 m.",
+     "why": "Sea level works like zero.\nAbove sea level is positive: Ras Dashen is +4550 m.\nBelow sea level is negative.\nSo the Danakil Depression is −125 m.",
      "clue": "Sea level is like zero.",
      "level": 3,
      "input": "signed",
@@ -263,8 +294,9 @@
       "Yes",
       "No"
      ],
-     "after": "2.5 has a decimal part. Integers have no fraction or decimal part.",
-     "id": "g7.maths.u2.s2-2.10"
+     "after": "2.5 = 2 + 0.5. It has a decimal part.\nIntegers are …, −2, −1, 0, 1, 2, … with no fraction or decimal part.\n2.5 lies between 2 and 3, so it is not an integer.",
+     "id": "g7.maths.u2.s2-2.10",
+     "best": "No"
     },
     {
      "kind": "read",
@@ -319,37 +351,34 @@
      "id": "g7.maths.u2.s2-2.12"
     },
     {
-     "kind": "read",
-     "step": "read",
-     "title": "Note",
-     "paras": [],
-     "table": [
+     "kind": "tap",
+     "step": "explore",
+     "title": "Facts about ℤ",
+     "id": "g7.maths.u2.s2-2.13",
+     "ask": "Tap each card.",
+     "need": 5,
+     "items": [
       [
-       "Fact",
-       "Example"
+       "Negative integers ℤ⁻",
+       "−1, −2, −3, … Read −4 as \"negative four\"."
       ],
       [
-       "Negative integers: ℤ⁻",
-       "−1, −2, −3, …"
+       "Positive integers ℤ⁺",
+       "1, 2, 3, … So ℤ⁺ = ℕ."
       ],
       [
-       "Positive integers: ℤ⁺ = ℕ",
-       "1, 2, 3, …"
+       "Zero",
+       "0 is neither positive nor negative."
       ],
       [
-       "Zero is neither positive nor negative",
-       "0"
-      ],
-      [
-       "Decimals and fractions are not integers",
-       "2.5, 3/4"
+       "Not integers",
+       "Decimals and fractions like 2.5 and 3/4 are not integers."
       ],
       [
        "ℕ ⊂ 𝕎 ⊂ ℤ",
-       "−4 is read \"negative four\""
+       "Every natural number is whole. Every whole number is an integer."
       ]
-     ],
-     "id": "g7.maths.u2.s2-2.13"
+     ]
     },
     {
      "kind": "numline",
@@ -399,9 +428,9 @@
      "kind": "tf",
      "step": "check",
      "graded": true,
-     "text": "0 ∈ ℤ⁺",
+     "text": "Positive integers: true or false? 0 ∈ ℤ⁺",
      "a": false,
-     "why": "Zero is neither positive nor negative.",
+     "why": "ℤ⁺ is the set of positive integers: {1, 2, 3, …}.\n0 is neither positive nor negative.\nSo 0 is not in ℤ⁺. False.\n0 is in ℤ and in 𝕎.",
      "clue": "Is 0 positive?",
      "level": 1,
      "ref": "Exercise 2.2.1 Q8 c",
@@ -411,7 +440,7 @@
      "kind": "pick",
      "step": "practise",
      "graded": true,
-     "text": "Tap every integer.",
+     "text": "Integers: tap every integer.",
      "pool": [
       "2 1/3",
       "0",
@@ -428,7 +457,7 @@
       "−294",
       "455"
      ],
-     "why": "Fractions and decimals are not integers. 0, 12, −294 and 455 are.",
+     "why": "An integer has no fraction or decimal part.\n0, 12, −294 and 455 have none, so they are integers.\n2 1/3 and 2/5 are fractions. 1.02 and 0.25 are decimals.\nSo they are not integers.",
      "clue": "Does it have a fraction or decimal part?",
      "level": 1,
      "ref": "Exercise 2.2.1 Q11",
@@ -447,8 +476,8 @@
        "label": "−2"
       }
      ],
-     "ask": "Tap where −2 goes.",
-     "why": "−2 is two steps to the left of 0.",
+     "ask": "Number line: tap where −2 goes.",
+     "why": "Negative numbers are to the left of 0.\n−2 is 2 steps from 0.\nStart at 0 and move 2 steps left: −1, then −2.",
      "clue": "Negative numbers are left of 0.",
      "level": 1,
      "ref": "Exercise 2.2.1 Q3",
@@ -458,13 +487,13 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "On a number line the marks go S, −15, −10, R, 0, 5. Each step is the same. R = ___",
+     "ask": "Missing mark: on a number line the marks go S, −15, −10, R, 0, 5. Each step is the same. R = ___",
      "a": [
       "−5",
       "-5"
      ],
      "num": true,
-     "why": "Each step is 5 (−15 to −10). R is one step after −10: −10 + 5 = −5.",
+     "why": "Step 1: find one step: from −15 to −10 is 5.\nStep 2: check: from 0 to 5 is also 5.\nStep 3: R comes one step after −10: −10 + 5 = −5.\nCheck: one more step from −5 gives 0. ✓",
      "clue": "Find the size of one step first.",
      "level": 2,
      "ref": "Exercise 2.2.1 Q2",
@@ -475,9 +504,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "ℤ⁺ ∪ ℤ⁻ = ℤ",
+     "text": "Sets of integers: true or false? ℤ⁺ ∪ ℤ⁻ = ℤ",
      "a": false,
-     "why": "ℤ⁺ ∪ ℤ⁻ misses 0, and 0 ∈ ℤ.",
+     "why": "ℤ⁺ = {1, 2, 3, …} and ℤ⁻ = {−1, −2, −3, …}.\nTheir union holds every positive and every negative integer.\nBut 0 is in neither set.\n0 ∈ ℤ, so the union is not all of ℤ. False.",
      "clue": "Which integer is neither positive nor negative?",
      "level": 2,
      "ref": "Exercise 2.2.1 Q8 k",
@@ -487,7 +516,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Which set is ℤ⁺ ∪ {0}?",
+     "text": "Sets of integers: which set is ℤ⁺ ∪ {0}?",
      "opts": [
       "ℕ",
       "𝕎",
@@ -495,7 +524,7 @@
       "ℤ⁻"
      ],
      "ans": "𝕎",
-     "why": "ℤ⁺ = {1, 2, 3, …}. Adding 0 gives {0, 1, 2, 3, …} = 𝕎.",
+     "why": "ℤ⁺ = {1, 2, 3, …}.\nAdd 0: {0, 1, 2, 3, …}.\nThat is the set of whole numbers 𝕎.\nℕ has no 0. ℤ also has the negatives.",
      "clue": "Write ℤ⁺ and add 0 to it.",
      "level": 3,
      "ref": "Exercise 2.2.1 Q8 l",
@@ -605,13 +634,13 @@
      "kind": "blank",
      "step": "check",
      "graded": true,
-     "ask": "The opposite of 70 is ___",
+     "ask": "Opposite numbers: the opposite of 70 is ___",
      "a": [
       "−70",
       "-70"
      ],
      "num": true,
-     "why": "Change the sign: 70 becomes −70.",
+     "why": "The opposite is the same distance from 0, on the other side.\n70 is 70 steps right of 0.\nSo its opposite is 70 steps left: −70.",
      "clue": "Same distance from 0, other side.",
      "level": 1,
      "ref": "Exercise 2.2.2 Q1 a",
@@ -619,16 +648,36 @@
      "id": "g7.maths.u2.s2-2.26"
     },
     {
+     "kind": "numline",
+     "step": "practise",
+     "graded": true,
+     "min": -5,
+     "max": 5,
+     "sub": 1,
+     "targets": [
+      {
+       "v": "3",
+       "label": "opposite of −3"
+      }
+     ],
+     "ask": "Opposites on the number line: tap the opposite of −3.",
+     "level": 1,
+     "why": "−3 is 3 steps to the left of 0.\nThe opposite is the same distance on the other side.\nSo go 3 steps to the right of 0: the opposite is 3.",
+     "clue": "How far is −3 from 0? Go the same distance the other way.",
+     "id": "g7.maths.u2.s2-2.50",
+     "added": true
+    },
+    {
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "The opposite of −23 is ___",
+     "ask": "Opposite numbers: the opposite of −23 is ___",
      "a": [
       "23",
       "+23"
      ],
      "num": true,
-     "why": "−(−23) = 23.",
+     "why": "−23 is 23 steps left of 0.\nIts opposite is 23 steps right of 0.\nSo −(−23) = 23.",
      "clue": "The opposite of a negative number is positive.",
      "level": 1,
      "ref": "Exercise 2.2.2 Q1 b",
@@ -639,14 +688,14 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "What is the opposite of a gain of Birr 120?",
+     "text": "Opposite quantities: what is the opposite of a gain of Birr 120?",
      "opts": [
       "A gain of Birr 120",
       "A loss of Birr 120",
       "Birr 0"
      ],
      "ans": "A loss of Birr 120",
-     "why": "Gain is +120, so its opposite is −120, a loss.",
+     "why": "A gain of Birr 120 is +120.\nThe opposite has the same size, other sign: −120.\n−120 is a loss of Birr 120.\nBirr 0 has a different size, so it is not the opposite.",
      "clue": "Opposite direction, same size.",
      "level": 1,
      "ref": "Exercise 2.2.2 Q2 a",
@@ -656,13 +705,13 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "Hawassa is 9 °C above zero. Bale has the opposite temperature. Bale = ___ °C",
+     "ask": "Opposite temperatures: Hawassa is 9 °C above zero. Bale has the opposite temperature. Bale = ___ °C",
      "a": [
       "−9",
       "-9"
      ],
      "num": true,
-     "why": "Hawassa is +9. Its opposite is −9.",
+     "why": "Hawassa is 9 °C above zero: +9.\nThe opposite has the same size, other sign.\nSo Bale is −9 °C (9 °C below zero).",
      "clue": "Change the sign.",
      "level": 2,
      "ref": "Exercise 2.2.2 Q3",
@@ -673,13 +722,13 @@
      "kind": "blank",
      "step": "challenge",
      "graded": true,
-     "ask": "−(−(−5)) = ___",
+     "ask": "Opposite of an opposite: work out −(−(−5)) = ___",
      "a": [
       "−5",
       "-5"
      ],
      "num": true,
-     "why": "Work from inside: −(−5) = 5. Then −(5) = −5.",
+     "why": "Work from the inside out.\n−(−5) is the opposite of −5, which is 5.\nThen −(5) is the opposite of 5, which is −5.\nThree minus signs give a negative answer: −5.",
      "clue": "Take the opposite three times, one at a time.",
      "level": 3,
      "input": "signed",
@@ -707,14 +756,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Which number is whole but not natural?",
+     "text": "Natural and whole numbers: which number is whole but not natural?",
      "opts": [
       "0",
       "1",
       "10"
      ],
      "ans": "0",
-     "why": "Whole numbers start at 0; natural numbers start at 1.",
+     "why": "Whole numbers: 0, 1, 2, 3, …\nNatural numbers: 1, 2, 3, …\n0 is in the first list only.\nSo 0 is whole but not natural.",
      "clue": "Which one is missing from {1, 2, 3, …}?",
      "level": 1
     }
@@ -729,13 +778,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "On a number line the marks go A, −7, B, −5, C, … in steps of 1. A = ___",
+     "ask": "Missing mark: on a number line the marks go A, −7, B, −5, C, … in steps of 1. A = ___",
      "a": [
       "−8",
       "-8"
      ],
      "num": true,
-     "why": "A is one step left of −7: −7 − 1 = −8.",
+     "why": "Each step is 1.\nA is one step to the left of −7.\nLeft means smaller: −7 − 1 = −8.\nSo A = −8 (and B = −6, C = −4).",
      "clue": "Left means smaller.",
      "level": 1,
      "ref": "Q1",
@@ -746,14 +795,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Write −3 in words.",
+     "text": "Reading integers: write −3 in words.",
      "opts": [
       "negative three",
       "positive three",
       "minus thirty"
      ],
      "ans": "negative three",
-     "why": "The minus sign is read \"negative\".",
+     "why": "The minus sign in front of a number is read \"negative\".\nSo −3 is read \"negative three\".\n\"Positive three\" is +3.",
      "clue": "How do we read the − sign?",
      "level": 1,
      "ref": "Q5 a",
@@ -763,13 +812,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "Write \"negative fifty-three\" as a numeral: ___",
+     "ask": "Writing integers: write \"negative fifty-three\" as a numeral: ___",
      "a": [
       "−53",
       "-53"
      ],
      "num": true,
-     "why": "Negative means the − sign: −53.",
+     "why": "\"Negative\" means a minus sign.\n\"Fifty-three\" is 53.\nSo the numeral is −53.",
      "clue": "\"Negative\" means minus.",
      "level": 1,
      "ref": "Q6 c",
@@ -780,13 +829,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "A rise of 10 °C is written ___",
+     "ask": "Write the change with a sign: a rise of 10 °C is written ___",
      "a": [
       "10",
       "+10"
      ],
      "num": true,
-     "why": "A rise is positive: +10.",
+     "why": "A rise means the temperature goes up.\nGoing up is positive.\nSo a rise of 10 °C is +10 (or just 10).",
      "clue": "Rise means up.",
      "level": 1,
      "ref": "Q7 b",
@@ -797,9 +846,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "−2 ∈ ℤ",
+     "text": "Integers: true or false? −2 ∈ ℤ",
      "a": true,
-     "why": "−2 is a negative integer.",
+     "why": "ℤ = {…, −3, −2, −1, 0, 1, 2, …}.\n−2 is in this list.\nIt is a negative integer. True.",
      "clue": "Is −2 a whole number or its negative?",
      "level": 1,
      "ref": "Q8 a",
@@ -809,9 +858,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "2.5 ∈ ℤ",
+     "text": "Integers: true or false? 2.5 ∈ ℤ",
      "a": false,
-     "why": "Decimals are not integers.",
+     "why": "2.5 has a decimal part: 2.5 = 2 + 0.5.\nIntegers have no decimal part.\nSo 2.5 is not in ℤ. False.",
      "clue": "Does 2.5 have a decimal part?",
      "level": 1,
      "ref": "Q8 b",
@@ -821,9 +870,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "ℕ = ℤ⁺",
+     "text": "Sets of numbers: true or false? ℕ = ℤ⁺",
      "a": true,
-     "why": "The positive integers are the natural numbers.",
+     "why": "ℕ = {1, 2, 3, …}.\nℤ⁺ = {1, 2, 3, …}, the positive integers.\nThe two lists are the same. True.",
      "clue": "List both sets.",
      "level": 1,
      "ref": "Q8 d",
@@ -833,9 +882,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "𝕎 ∪ ℕ = ℕ",
+     "text": "Sets of numbers: true or false? 𝕎 ∪ ℕ = ℕ",
      "a": false,
-     "why": "𝕎 ∪ ℕ = 𝕎; it contains 0, which is not in ℕ.",
+     "why": "𝕎 = {0, 1, 2, …} and ℕ = {1, 2, 3, …}.\nThe union has every number in either set: {0, 1, 2, …} = 𝕎.\n0 is in the union but not in ℕ.\nSo 𝕎 ∪ ℕ = 𝕎, not ℕ. False.",
      "clue": "Where is 0?",
      "level": 2,
      "ref": "Q8 j",
@@ -845,14 +894,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "What is the relationship between whole numbers, natural numbers and integers?",
+     "text": "Sets of numbers: what is the relationship between whole numbers, natural numbers and integers?",
      "opts": [
       "ℕ ⊂ 𝕎 ⊂ ℤ",
       "ℤ ⊂ 𝕎 ⊂ ℕ",
       "They share no numbers"
      ],
      "ans": "ℕ ⊂ 𝕎 ⊂ ℤ",
-     "why": "Every natural number is whole, and every whole number is an integer.",
+     "why": "Every natural number is a whole number: ℕ ⊂ 𝕎.\nEvery whole number is an integer: 𝕎 ⊂ ℤ.\nSo ℕ ⊂ 𝕎 ⊂ ℤ. ℤ is the biggest set.\nℤ ⊂ 𝕎 is wrong: −1 is in ℤ but not in 𝕎.",
      "clue": "Which set is the biggest?",
      "level": 1,
      "ref": "Q10",
@@ -867,13 +916,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "The opposite of −170 is ___",
+     "ask": "Opposite numbers: the opposite of −170 is ___",
      "a": [
       "170",
       "+170"
      ],
      "num": true,
-     "why": "−(−170) = 170.",
+     "why": "−170 is 170 steps left of 0.\nIts opposite is 170 steps right of 0.\nSo −(−170) = 170.",
      "clue": "Change the sign.",
      "level": 1,
      "ref": "Q1 c",
@@ -884,12 +933,12 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "The opposite of 0 is ___",
+     "ask": "Opposite numbers: the opposite of 0 is ___",
      "a": [
       "0"
      ],
      "num": true,
-     "why": "The opposite of zero is zero.",
+     "why": "0 is at distance 0 from itself.\nNo step left or right is needed.\nSo the opposite of 0 is 0.",
      "clue": "Zero is its own opposite.",
      "level": 1,
      "ref": "Q1 d",
@@ -899,14 +948,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "What is the opposite of 15 °C above zero?",
+     "text": "Opposite quantities: what is the opposite of 15 °C above zero?",
      "opts": [
       "15 °C below zero",
       "15 °C above zero",
       "0 °C"
      ],
      "ans": "15 °C below zero",
-     "why": "+15 becomes −15.",
+     "why": "15 °C above zero is +15.\nThe opposite has the same size, other sign: −15.\n−15 means 15 °C below zero.",
      "clue": "Same size, other side of 0.",
      "level": 1,
      "ref": "Q2 b",
@@ -916,14 +965,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "What is the opposite of a walk of 5 km backward?",
+     "text": "Opposite quantities: what is the opposite of a walk of 5 km backward?",
      "opts": [
       "A walk of 5 km forward",
       "A walk of 5 km backward",
       "Standing still"
      ],
      "ans": "A walk of 5 km forward",
-     "why": "−5 becomes +5.",
+     "why": "Backward is negative: −5.\nThe opposite is +5.\n+5 means a walk of 5 km forward.",
      "clue": "Backward is negative.",
      "level": 1,
      "ref": "Q2 c",
@@ -937,13 +986,13 @@
    "kind": "blank",
    "step": "test",
    "graded": true,
-   "ask": "5 °C below zero is written ___ °C",
+   "ask": "Write the temperature with a sign: 5 °C below zero is written ___ °C",
    "a": [
     "−5",
     "-5"
    ],
    "num": true,
-   "why": "Below zero gets a minus sign.",
+   "why": "Below zero means less than 0.\nNumbers less than 0 get a minus sign.\nSo 5 °C below zero is −5 °C.",
    "level": 1,
    "input": "signed",
    "clue": "",
@@ -953,7 +1002,7 @@
    "kind": "pick",
    "step": "test",
    "graded": true,
-   "text": "Tap every integer.",
+   "text": "Integers: tap every integer.",
    "pool": [
     "−7",
     "0.5",
@@ -966,7 +1015,7 @@
     "0",
     "12"
    ],
-   "why": "Fractions and decimals are not integers.",
+   "why": "An integer has no fraction or decimal part.\n−7, 0 and 12 are integers.\n0.5 is a decimal and 3/4 is a fraction.\nSo they are not integers.",
    "level": 1,
    "id": "g7.maths.u2.s2-2.45"
   },
@@ -974,13 +1023,13 @@
    "kind": "blank",
    "step": "test",
    "graded": true,
-   "ask": "The opposite of −48 is ___",
+   "ask": "Opposite numbers: the opposite of −48 is ___",
    "a": [
     "48",
     "+48"
    ],
    "num": true,
-   "why": "−(−48) = 48.",
+   "why": "−48 is 48 steps left of 0.\nIts opposite is 48 steps right of 0.\nSo −(−48) = 48.",
    "level": 2,
    "input": "signed",
    "clue": "",
@@ -990,9 +1039,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "Zero is a positive integer.",
+   "text": "Zero: true or false? Zero is a positive integer.",
    "a": false,
-   "why": "Zero is neither positive nor negative.",
+   "why": "Positive integers are 1, 2, 3, …\nNegative integers are −1, −2, −3, …\nZero is in neither list: it is neither positive nor negative.\nSo the statement is false.",
    "level": 2,
    "clue": "",
    "id": "g7.maths.u2.s2-2.47"
@@ -1001,14 +1050,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which statement is true?",
+   "text": "Sets of numbers: which statement is true?",
    "opts": [
     "ℤ ⊂ 𝕎",
     "𝕎 ⊂ ℤ",
     "ℕ = 𝕎"
    ],
    "ans": "𝕎 ⊂ ℤ",
-   "why": "Every whole number is an integer, but −1 is not whole.",
+   "why": "Every whole number 0, 1, 2, … is an integer. So 𝕎 ⊂ ℤ is true.\nℤ ⊂ 𝕎 is false: −1 is an integer but not whole.\nℕ = 𝕎 is false: 0 is whole but not natural.",
    "level": 3,
    "clue": "",
    "id": "g7.maths.u2.s2-2.48"

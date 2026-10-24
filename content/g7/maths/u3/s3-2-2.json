@@ -53,7 +53,8 @@
      ],
      "after": "Multiplying by 3 turns x/3 into x: x + 15 = 21, so x = 6.",
      "ref": "Activity 3.2.3 Q2 c",
-     "id": "g7.maths.u3.s3-2-2.1"
+     "id": "g7.maths.u3.s3-2-2.1",
+     "best": "3"
     },
     {
      "kind": "read",
@@ -82,6 +83,33 @@
      "ref": "Example 8 a",
      "needs": "math.lcm",
      "id": "g7.maths.u3.s3-2-2.3"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Why multiply by the LCM?",
+     "added": true,
+     "need": 3,
+     "ask": "(x + 2)/4 = 5/3. Tap each card to see what × 12 does.",
+     "items": [
+      [
+       "Why 12?",
+       "12 is the smallest number that both 4 and 3 divide."
+      ],
+      [
+       "12 × (x + 2)/4",
+       "12 ÷ 4 = 3, so it becomes 3(x + 2). No fraction is left."
+      ],
+      [
+       "12 × 5/3",
+       "12 ÷ 3 = 4, so it becomes 4 × 5 = 20."
+      ],
+      [
+       "The new equation",
+       "3(x + 2) = 20. Now solve it like Section 3.2.1."
+      ]
+     ],
+     "id": "g7.maths.u3.s3-2-2.32"
     },
     {
      "kind": "steps",
@@ -114,12 +142,12 @@
      "kind": "blank",
      "step": "check",
      "graded": true,
-     "ask": "x/2 = 5/2. x = ___",
+     "ask": "Solve the equation with fractions: x/2 = 5/2. x = ___",
      "a": [
       "5"
      ],
      "num": true,
-     "why": "Multiply both sides by 2: x = 5.",
+     "why": "Both sides have the denominator 2.\nMultiply both sides by 2: x = 5.\nCheck: 5/2 = 5/2.",
      "clue": "Multiply both sides by 2.",
      "level": 1,
      "ref": "Activity 3.2.3 Q2 a",
@@ -129,12 +157,12 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "3/4 = x/8. x = ___",
+     "ask": "Solve the equation with fractions: 3/4 = x/8. x = ___",
      "a": [
       "6"
      ],
      "num": true,
-     "why": "LCM is 8. 8 × 3/4 = 6 and 8 × x/8 = x. So x = 6.",
+     "why": "The LCM of 4 and 8 is 8.\nMultiply both sides by 8: 8 × 3/4 = 6 and 8 × x/8 = x.\nSo 6 = x.\nCheck: 6/8 = 3/4.",
      "clue": "Multiply both sides by 8.",
      "level": 1,
      "ref": "Activity 3.2.3 Q2 b",
@@ -144,14 +172,14 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "3/4 + x/2 = x/3. x = ___",
+     "ask": "Solve the equation with fractions: 3/4 + x/2 = x/3. x = ___",
      "a": [
       "−9/2",
       "−4.5",
       "−4 1/2"
      ],
      "num": true,
-     "why": "LCM of 4, 2, 3 is 12. 9 + 6x = 4x, so 2x = −9 and x = −9/2.",
+     "why": "The LCM of 4, 2 and 3 is 12.\nMultiply every term by 12: 9 + 6x = 4x.\nShift: 6x − 4x = −9, so 2x = −9.\nx = −9/2 = −4.5.\nCheck: 0.75 − 2.25 = −1.5 and −4.5 ÷ 3 = −1.5.",
      "clue": "Multiply every term by 12.",
      "level": 2,
      "ref": "Activity 3.2.3 Q2 d",
@@ -162,12 +190,12 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "(7/10)x + 3/2 = (3/5)x + 2. x = ___",
+     "ask": "Solve the equation with fractions: (7/10)x + 3/2 = (3/5)x + 2. x = ___",
      "a": [
       "5"
      ],
      "num": true,
-     "why": "LCM is 10. 7x + 15 = 6x + 20, so x = 5.",
+     "why": "The LCM of 10, 2 and 5 is 10.\nMultiply every term by 10: 7x + 15 = 6x + 20.\nShift: 7x − 6x = 20 − 15.\nx = 5.\nCheck: 3.5 + 1.5 = 5 and 3 + 2 = 5.",
      "clue": "Multiply every term by 10.",
      "level": 2,
      "ref": "Exercise 3.2.4 Q1 f",
@@ -177,12 +205,12 @@
      "kind": "blank",
      "step": "challenge",
      "graded": true,
-     "ask": "(x − 1)/2 + (x + 1)/3 = 4. x = ___",
+     "ask": "Solve the equation with fractions: (x − 1)/2 + (x + 1)/3 = 4. x = ___",
      "a": [
       "5"
      ],
      "num": true,
-     "why": "LCM is 6. 3(x − 1) + 2(x + 1) = 24. 3x − 3 + 2x + 2 = 24, so 5x − 1 = 24, 5x = 25, x = 5. Check: 2 + 2 = 4.",
+     "why": "The LCM of 2 and 3 is 6.\nMultiply every term by 6: 3(x − 1) + 2(x + 1) = 24.\nRemove brackets: 3x − 3 + 2x + 2 = 24.\n5x − 1 = 24, so 5x = 25 and x = 5.\nCheck: 4/2 + 6/3 = 2 + 2 = 4.",
      "clue": "Multiply every term by 6, then remove the brackets.",
      "level": 3,
      "added": true,
@@ -211,7 +239,8 @@
      ],
      "after": "Solve each: 2x = 12 gives x = 6, and −2x = −12 gives x = 6. Same solution.",
      "ref": "Example 9",
-     "id": "g7.maths.u3.s3-2-2.11"
+     "id": "g7.maths.u3.s3-2-2.11",
+     "best": "Yes, both give x = 6"
     },
     {
      "kind": "read",
@@ -224,6 +253,33 @@
      ],
      "ref": "Example 10",
      "id": "g7.maths.u3.s3-2-2.12"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Examples 9 and 10",
+     "ref": "Examples 9–10",
+     "need": 4,
+     "ask": "Tap each equation to see its solution.",
+     "items": [
+      [
+       "2x − 1 = 11",
+       "2x = 12, so x = 6."
+      ],
+      [
+       "x + 12 = 3x",
+       "12 = 2x, so x = 6. Same solution as 2x − 1 = 11: equivalent."
+      ],
+      [
+       "2(x − 5) = x + 6",
+       "2x − 10 = x + 6, so x = 16."
+      ],
+      [
+       "2x − 4 = 10",
+       "2x = 14, so x = 7. Not the same as x = 16: not equivalent."
+      ]
+     ],
+     "id": "g7.maths.u3.s3-2-2.33"
     },
     {
      "kind": "name",
@@ -241,9 +297,9 @@
      "kind": "tf",
      "step": "check",
      "graded": true,
-     "text": "x = 0 and 2x − 1 = −1 are equivalent equations.",
+     "text": "Equivalent equations: true or false? x = 0 and 2x − 1 = −1 are equivalent.",
      "a": true,
-     "why": "2x − 1 = −1 gives 2x = 0, so x = 0. Same solution.",
+     "why": "Solve 2x − 1 = −1: add 1, so 2x = 0.\nDivide by 2: x = 0.\nBoth equations give x = 0.\nSame solution, so they are equivalent. True.",
      "clue": "Solve the second equation.",
      "level": 1,
      "ref": "Exercise 3.2.4 Q2 a",
@@ -253,9 +309,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "2x − 6 = 2 and −x = −5 are equivalent equations.",
+     "text": "Equivalent equations: true or false? 2x − 6 = 2 and −x = −5 are equivalent.",
      "a": false,
-     "why": "The first gives x = 4. The second gives x = 5.",
+     "why": "2x − 6 = 2 gives 2x = 8, so x = 4.\n−x = −5 gives x = 5.\n4 and 5 are different solutions.\nSo they are not equivalent. False.",
      "clue": "Solve both and compare.",
      "level": 2,
      "ref": "Exercise 3.2.4 Q2 b",
@@ -265,14 +321,14 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Which equation is equivalent to x = 3?",
+     "text": "Equivalent equations: which equation is equivalent to x = 3?",
      "opts": [
       "2x = 6",
       "x + 3 = 0",
       "3x = 1"
      ],
      "ans": "2x = 6",
-     "why": "2x = 6 gives x = 3. x + 3 = 0 gives −3. 3x = 1 gives 1/3.",
+     "why": "Solve each choice.\n2x = 6 gives x = 3. Same!\nx + 3 = 0 gives x = −3.\n3x = 1 gives x = 1/3.\nOnly 2x = 6 is equivalent to x = 3.",
      "clue": "Solve each choice.",
      "level": 1,
      "added": true,
@@ -282,7 +338,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Which equation is equivalent to x/2 − 1 = 3?",
+     "text": "Equivalent equations: which equation is equivalent to x/2 − 1 = 3?",
      "opts": [
       "x − 2 = 6",
       "x − 1 = 6",
@@ -290,7 +346,7 @@
       "x/2 = 2"
      ],
      "ans": "x − 2 = 6",
-     "why": "x/2 − 1 = 3 gives x/2 = 4, so x = 8. x − 2 = 6 also gives x = 8. The others give 7, 4 and 4.",
+     "why": "Solve the given one: x/2 = 4, so x = 8.\nx − 2 = 6 gives x = 8. Same!\nx − 1 = 6 gives 7.\nx = 4 and x/2 = 2 both give 4.\nSo x − 2 = 6 is equivalent.",
      "clue": "Solve the given equation first, then each choice.",
      "level": 3,
      "added": true,
@@ -318,7 +374,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "What is the LCM of 3, 4 and 6?",
+     "text": "Find the LCM: what is the least common multiple of 3, 4 and 6?",
      "opts": [
       "12",
       "24",
@@ -326,7 +382,7 @@
       "6"
      ],
      "ans": "12",
-     "why": "12 = 3 × 4 = 4 × 3 = 6 × 2. No smaller number works.",
+     "why": "Multiples of 6: 6, 12, 18, …\n6 is not divided by 4.\n12 ÷ 3 = 4, 12 ÷ 4 = 3 and 12 ÷ 6 = 2.\nSo the LCM is 12. (24 and 72 are common multiples, but not the least.)",
      "clue": "List multiples of 6 and stop at the first one 3 and 4 divide.",
      "level": 1
     }
@@ -341,13 +397,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "5x/13 + 5x/26 = 1. x = ___",
+     "ask": "Solve the equation with fractions: 5x/13 + 5x/26 = 1. x = ___",
      "a": [
       "26/15",
       "1 11/15"
      ],
      "num": true,
-     "why": "LCM 26: 10x + 5x = 26, so 15x = 26 and x = 26/15.",
+     "why": "The LCM of 13 and 26 is 26.\nMultiply every term by 26: 10x + 5x = 26.\n15x = 26.\nx = 26/15 = 1 11/15.",
      "clue": "Multiply every term by 26.",
      "level": 2,
      "ref": "Q1 a",
@@ -357,13 +413,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "−3/5 + x/10 = −1/5 − x/5. x = ___",
+     "ask": "Solve the equation with fractions: −3/5 + x/10 = −1/5 − x/5. x = ___",
      "a": [
       "4/3",
       "1 1/3"
      ],
      "num": true,
-     "why": "LCM 10: −6 + x = −2 − 2x, so 3x = 4 and x = 4/3.",
+     "why": "The LCM of 5 and 10 is 10.\nMultiply every term by 10: −6 + x = −2 − 2x.\nShift: x + 2x = −2 + 6, so 3x = 4.\nx = 4/3 = 1 1/3.",
      "clue": "Multiply every term by 10.",
      "level": 2,
      "ref": "Q1 d",
@@ -373,14 +429,14 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "9w/7 − 6 = 5w/7 + 12. w = ___",
+     "ask": "Solve the equation with fractions: 9w/7 − 6 = 5w/7 + 12. w = ___",
      "a": [
       "63/2",
       "31.5",
       "31 1/2"
      ],
      "num": true,
-     "why": "Multiply by 7: 9w − 42 = 5w + 84, so 4w = 126 and w = 63/2.",
+     "why": "Multiply every term by 7: 9w − 42 = 5w + 84.\nShift: 9w − 5w = 84 + 42.\n4w = 126.\nw = 126/4 = 63/2 = 31.5.",
      "clue": "Multiply every term by 7.",
      "level": 2,
      "ref": "Q1 e",
@@ -390,12 +446,12 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "(7/10)x + 3/2 = (3/5)x + 2. x = ___",
+     "ask": "Solve the equation with fractions: (7/10)x + 3/2 = (3/5)x + 2. x = ___",
      "a": [
       "5"
      ],
      "num": true,
-     "why": "LCM 10: 7x + 15 = 6x + 20, so x = 5.",
+     "why": "The LCM of 10, 2 and 5 is 10.\nMultiply every term by 10: 7x + 15 = 6x + 20.\nShift: 7x − 6x = 20 − 15.\nx = 5.\nCheck: 3.5 + 1.5 = 5 and 3 + 2 = 5.",
      "clue": "Multiply every term by 10.",
      "level": 1,
      "ref": "Q1 f",
@@ -405,12 +461,12 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "(1/2)(4x + 6) = (1/3)(9x − 24). x = ___",
+     "ask": "Solve the equation with fractions: (1/2)(4x + 6) = (1/3)(9x − 24). x = ___",
      "a": [
       "11"
      ],
      "num": true,
-     "why": "2x + 3 = 3x − 8, so −x = −11 and x = 11.",
+     "why": "Left side: (1/2)(4x + 6) = 2x + 3.\nRight side: (1/3)(9x − 24) = 3x − 8.\nSo 2x + 3 = 3x − 8.\nShift: 2x − 3x = −8 − 3, so −x = −11.\nx = 11. Check: 25 = 25.",
      "clue": "Multiply out each bracket.",
      "level": 1,
      "ref": "Q1 g",
@@ -420,12 +476,12 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "(n + 1)/2 + (n + 2)/3 + (n + 4)/4 = 3. n = ___",
+     "ask": "Solve the equation with fractions: (n + 1)/2 + (n + 2)/3 + (n + 4)/4 = 3. n = ___",
      "a": [
       "10/13"
      ],
      "num": true,
-     "why": "LCM 12: 6(n + 1) + 4(n + 2) + 3(n + 4) = 36. 13n + 26 = 36, so n = 10/13.",
+     "why": "The LCM of 2, 3 and 4 is 12.\nMultiply by 12: 6(n + 1) + 4(n + 2) + 3(n + 4) = 36.\nRemove brackets: 6n + 6 + 4n + 8 + 3n + 12 = 36.\n13n + 26 = 36, so 13n = 10.\nn = 10/13.",
      "clue": "Multiply every term by 12.",
      "level": 3,
      "ref": "Q1 h",
@@ -435,12 +491,12 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "(1/3)(x + 6) − (1/2)(3x − 4) = 5. x = ___",
+     "ask": "Solve the equation with fractions: (1/3)(x + 6) − (1/2)(3x − 4) = 5. x = ___",
      "a": [
       "−6/7"
      ],
      "num": true,
-     "why": "LCM 6: 2(x + 6) − 3(3x − 4) = 30. −7x + 24 = 30, so x = −6/7.",
+     "why": "The LCM of 3 and 2 is 6.\nMultiply every term by 6: 2(x + 6) − 3(3x − 4) = 30.\nRemove brackets: 2x + 12 − 9x + 12 = 30.\n−7x + 24 = 30, so −7x = 6.\nx = −6/7.",
      "clue": "Multiply every term by 6.",
      "level": 3,
      "ref": "Q1 i",
@@ -450,13 +506,13 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Are 5x = 10 and 14 = 2x + 4 equivalent?",
+     "text": "Equivalent equations: are 5x = 10 and 14 = 2x + 4 equivalent?",
      "opts": [
       "Yes",
       "No"
      ],
      "ans": "No",
-     "why": "The first gives x = 2. The second gives x = 5.",
+     "why": "5x = 10 gives x = 2.\n14 = 2x + 4 gives 10 = 2x, so x = 5.\n2 and 5 are different.\nSo they are not equivalent. No.",
      "clue": "Solve both.",
      "level": 1,
      "ref": "Q2 c",
@@ -466,13 +522,13 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Are x = 0 and 324x + 55 = 55 equivalent?",
+     "text": "Equivalent equations: are x = 0 and 324x + 55 = 55 equivalent?",
      "opts": [
       "Yes",
       "No"
      ],
      "ans": "Yes",
-     "why": "324x = 0, so x = 0.",
+     "why": "Solve 324x + 55 = 55: subtract 55, so 324x = 0.\nDivide by 324: x = 0.\nBoth give x = 0.\nSo they are equivalent. Yes.",
      "clue": "Solve the second one.",
      "level": 1,
      "ref": "Q2 d",
@@ -491,7 +547,7 @@
     "6"
    ],
    "num": true,
-   "why": "x + 15 = 21, so x = 6.",
+   "why": "Multiply every term by 3: x + 15 = 21.\nShift 15: x = 21 − 15 = 6.\nCheck: 6/3 + 5 = 2 + 5 = 7.",
    "level": 1,
    "clue": "",
    "id": "g7.maths.u3.s3-2-2.27",
@@ -505,7 +561,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "To solve x/4 + 1/6 = 2, multiply every term by:",
+   "text": "Clear the fractions: to solve x/4 + 1/6 = 2, multiply every term by:",
    "opts": [
     "12",
     "24",
@@ -513,7 +569,7 @@
     "4"
    ],
    "ans": "12",
-   "why": "LCM of 4 and 6 is 12.",
+   "why": "The denominators are 4 and 6.\nMultiples of 4: 4, 8, 12, …\nMultiples of 6: 6, 12, …\nThe LCM is 12. (24 also works, but 12 is the least.)",
    "level": 1,
    "clue": "",
    "id": "g7.maths.u3.s3-2-2.28"
@@ -522,12 +578,12 @@
    "kind": "blank",
    "step": "test",
    "graded": true,
-   "ask": "(x + 1)/3 = 2. x = ___",
+   "ask": "Solve the equation with a fraction: (x + 1)/3 = 2. x = ___",
    "a": [
     "5"
    ],
    "num": true,
-   "why": "x + 1 = 6, so x = 5.",
+   "why": "Multiply both sides by 3: x + 1 = 6.\nShift +1: x = 5.\nCheck: (5 + 1)/3 = 6/3 = 2.",
    "level": 2,
    "clue": "",
    "id": "g7.maths.u3.s3-2-2.29"
@@ -536,9 +592,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "2(x − 5) = x + 6 and 2x − 4 = 10 are equivalent.",
+   "text": "Equivalent equations: true or false? 2(x − 5) = x + 6 and 2x − 4 = 10 are equivalent.",
    "a": false,
-   "why": "They give x = 16 and x = 7.",
+   "why": "2(x − 5) = x + 6: 2x − 10 = x + 6, so x = 16.\n2x − 4 = 10: 2x = 14, so x = 7.\n16 and 7 are different.\nNot equivalent. False.",
    "level": 2,
    "ref": "Example 10",
    "clue": "",
@@ -548,13 +604,13 @@
    "kind": "blank",
    "step": "test",
    "graded": true,
-   "ask": "(2x + 3)/3 + (x − 1)/2 + (x + 1)/4 = 8. x = ___",
+   "ask": "Solve the equation with fractions: (2x + 3)/3 + (x − 1)/2 + (x + 1)/4 = 8. x = ___",
    "a": [
     "87/17",
     "5 2/17"
    ],
    "num": true,
-   "why": "LCM 12: 4(2x + 3) + 6(x − 1) + 3(x + 1) = 96. 17x + 9 = 96, so x = 87/17.",
+   "why": "The LCM of 3, 2 and 4 is 12.\nMultiply by 12: 4(2x + 3) + 6(x − 1) + 3(x + 1) = 96.\nRemove brackets: 8x + 12 + 6x − 6 + 3x + 3 = 96.\n17x + 9 = 96, so 17x = 87.\nx = 87/17 = 5 2/17.",
    "level": 3,
    "ref": "Example 8 d",
    "clue": "",

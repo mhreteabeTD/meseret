@@ -78,36 +78,43 @@
      "step": "read",
      "title": "Summary for Unit 1",
      "paras": [
-      "1. A rational number can be written a/b, where a and b are integers and b ≠ 0. The set is ℚ.",
+      "1. A rational number can be written a/b. Here a and b are integers and b ≠ 0. The set is ℚ.",
       "2. Rational numbers can be shown on a number line.",
-      "3. |x| = x if x > 0, 0 if x = 0, and −x if x < 0."
+      "3. |x| = x if x > 0, 0 if x = 0, and −x if x < 0.",
+      "4. Three ways to compare: tap each one below."
      ],
-     "table": [
-      [
-       "Compare by",
-       "Example"
-      ],
+     "id": "g8.maths.u1.s1-5.2"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Three ways to compare",
+     "ask": "Tap each way.",
+     "need": 3,
+     "items": [
       [
        "Decimals",
-       "0.6 > 0.5"
+       "Compare place by place: 0.6 > 0.5."
       ],
       [
        "Same denominators",
-       "6/10 > 5/10"
+       "Compare the numerators: 6/10 > 5/10."
       ],
       [
        "Cross-product",
-       "3/5 > 1/2 since 6 > 5"
+       "3/5 ? 1/2: 3 × 2 = 6 and 5 × 1 = 5. 6 > 5, so 3/5 > 1/2."
       ]
      ],
-     "id": "g8.maths.u1.s1-5.2"
+     "id": "g8.maths.u1.s1-5.34",
+     "added": true
     },
     {
      "kind": "read",
      "step": "read",
      "title": "Sign rules",
      "paras": [
-      "5. Subtraction is adding the opposite. 6. A number plus its opposite is 0."
+      "5. Subtraction is adding the opposite.",
+      "6. A number plus its opposite is 0."
      ],
      "table": [
       [
@@ -153,7 +160,7 @@
      "kind": "match",
      "step": "check",
      "graded": true,
-     "title": "Match the rule",
+     "title": "Sign rules: match each rule to its result",
      "pairs": [
       [
        "negative + negative",
@@ -172,7 +179,7 @@
        "0"
       ]
      ],
-     "why": "These are the sign rules of the summary.",
+     "why": "Adding two negatives: the sizes add, the sign stays −. So negative.\nMultiplying two negatives: same signs give +. So positive.\nPositive ÷ negative: different signs give −. So negative.\na + (−a): a number plus its opposite is 0.",
      "clue": "Same signs multiply to +.",
      "id": "g8.maths.u1.s1-5.5",
      "level": 1
@@ -182,12 +189,12 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "3/4 + 9/7 + 2 = ___",
+     "ask": "Add fractions and a whole number: 3/4 + 9/7 + 2 = ___",
      "a": [
       "113/28",
       "4 1/28"
      ],
-     "why": "LCM of 4 and 7 is 28. 3/4 = (3 × 7)/(4 × 7) = 21/28; 9/7 = (9 × 4)/(7 × 4) = 36/28; 2 = 56/28. 21 + 36 + 56 = 113, so 113/28.",
+     "why": "LCM of 4 and 7 is 28.\n3/4 = (3 × 7)/(4 × 7) = 21/28 and 9/7 = (9 × 4)/(7 × 4) = 36/28.\n2 = 56/28.\n21 + 36 + 56 = 113, so 113/28 = 4 1/28.",
      "clue": "LCM of 4 and 7 is 28.",
      "gen": {
       "t": "op",
@@ -203,11 +210,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "2/7 − 3/8 = ___",
+     "ask": "Subtract fractions (the answer is negative): 2/7 − 3/8 = ___",
      "a": [
       "-5/56"
      ],
-     "why": "LCM of 7 and 8 is 56. 2/7 = (2 × 8)/(7 × 8) = 16/56 and 3/8 = (3 × 7)/(8 × 7) = 21/56. 16 − 21 = −5, so −5/56.",
+     "why": "LCM of 7 and 8 is 56.\n2/7 = (2 × 8)/(7 × 8) = 16/56.\n3/8 = (3 × 7)/(8 × 7) = 21/56.\n16 − 21 = −5, so −5/56.",
      "clue": "LCM of 7 and 8 is 56.",
      "input": "signed",
      "gen": {
@@ -224,11 +231,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "2 3/7 × 1/4 = ___",
+     "ask": "Multiply a mixed number by a fraction: 2 3/7 × 1/4 = ___",
      "a": [
       "17/28"
      ],
-     "why": "2 3/7 = (2 × 7 + 3)/7 = 17/7. 17/7 × 1/4 = (17 × 1)/(7 × 4) = 17/28.",
+     "why": "Change: 2 3/7 = (2 × 7 + 3)/7 = 17/7.\nMultiply the tops: 17 × 1 = 17.\nMultiply the bottoms: 7 × 4 = 28.\nAnswer: 17/28.",
      "clue": "Change 2 3/7 to 17/7.",
      "gen": {
       "t": "op",
@@ -244,11 +251,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "3/4 ÷ (−5/2) = ___",
+     "ask": "Divide by a negative fraction: 3/4 ÷ (−5/2) = ___",
      "a": [
       "-3/10"
      ],
-     "why": "Flip −5/2 to −2/5. 3/4 × (−2/5) = −6/20. Divide top and bottom by 2: −3/10.",
+     "why": "Different signs: the answer is negative.\nFlip −5/2 to −2/5: 3/4 × (−2/5) = −6/20.\nDivide top and bottom by 2: −3/10.",
      "clue": "Multiply by the reciprocal.",
      "input": "signed",
      "gen": {
@@ -263,14 +270,14 @@
     {
      "kind": "mcq",
      "graded": true,
-     "text": "Lidya says −2/3 ÷ 4/9 = −8/27. What went wrong?",
+     "text": "Spot the mistake: Lidya says −2/3 ÷ 4/9 = −8/27. What went wrong?",
      "opts": [
       "She multiplied instead of dividing. The answer is −3/2.",
       "Nothing. She is right.",
       "Only the sign is wrong. The answer is 8/27."
      ],
      "ans": "She multiplied instead of dividing. The answer is −3/2.",
-     "why": "−2/3 × 4/9 = −8/27 is a multiplication. To divide, flip 4/9 to 9/4: −2/3 × 9/4 = −18/12 = −3/2.",
+     "why": "−2/3 × 4/9 = −8/27, so Lidya multiplied.\nTo divide, flip the divisor: 4/9 → 9/4.\n−2/3 × 9/4 = −18/12.\nDivide by 6: −3/2. The sign − was right; the method was wrong.",
      "clue": "Work it out yourself: flip the divisor and multiply.",
      "step": "challenge",
      "level": 3,
@@ -288,9 +295,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "−5/3 > −8/11",
+     "text": "Compare negative fractions: true or false? −5/3 > −8/11",
      "a": false,
-     "why": "−5/3 ≈ −1.67 is left of −8/11 ≈ −0.73.",
+     "why": "−5/3 = −1 2/3 ≈ −1.67.\n−8/11 ≈ −0.73.\n−1.67 is further left than −0.73, so −5/3 < −8/11.\nThe statement is false.",
      "clue": "Which is further from 0?",
      "id": "g8.maths.u1.s1-5.10",
      "ref": "Q1 a",
@@ -300,9 +307,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "3 5/7 > 23/7 > 19/6",
+     "text": "Compare three numbers: true or false? 3 5/7 > 23/7 > 19/6",
      "a": true,
-     "why": "26/7 ≈ 3.71 > 3.29 > 3.17.",
+     "why": "3 5/7 = 26/7 ≈ 3.71.\n23/7 ≈ 3.29.\n19/6 ≈ 3.17.\n3.71 > 3.29 > 3.17, so the statement is true.",
      "clue": "Change to decimals.",
      "id": "g8.maths.u1.s1-5.11",
      "ref": "Q1 b",
@@ -312,7 +319,7 @@
      "kind": "pick",
      "step": "exercise",
      "graded": true,
-     "text": "Solve |x − 5| = 4.",
+     "text": "Solve the absolute value equation: |x − 5| = 4.",
      "pool": [
       "9",
       "1",
@@ -323,7 +330,7 @@
       "9",
       "1"
      ],
-     "why": "x − 5 = 4 or −4, so x = 9 or 1.",
+     "why": "The inside, x − 5, is 4 or −4.\nx − 5 = 4 gives x = 9.\nx − 5 = −4 gives x = 1.\nCheck: |9 − 5| = 4 and |1 − 5| = |−4| = 4.",
      "clue": "The inside is 4 or −4.",
      "id": "g8.maths.u1.s1-5.12",
      "ref": "Q2 b",
@@ -333,7 +340,7 @@
      "kind": "pick",
      "step": "exercise",
      "graded": true,
-     "text": "Solve |2x + 3| = 5.",
+     "text": "Solve the absolute value equation: |2x + 3| = 5.",
      "pool": [
       "1",
       "−4",
@@ -344,7 +351,7 @@
       "1",
       "−4"
      ],
-     "why": "2x + 3 = 5 gives 1; 2x + 3 = −5 gives −4.",
+     "why": "The inside, 2x + 3, is 5 or −5.\n2x + 3 = 5: 2x = 2, so x = 1.\n2x + 3 = −5: 2x = −8, so x = −4.\nCheck: |2 + 3| = 5 and |−8 + 3| = |−5| = 5.",
      "clue": "The inside is 5 or −5.",
      "id": "g8.maths.u1.s1-5.13",
      "ref": "Q2 c",
@@ -355,13 +362,13 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "If x = −8 and y = 4, (3|x − 5| − |4y|) / |x + y| = ___",
+     "ask": "Evaluate with absolute values: if x = −8 and y = 4, (3|x − 5| − |4y|) / |x + y| = ___",
      "a": [
       "23/4",
       "5 3/4",
       "5.75"
      ],
-     "why": "x − 5 = −13, so 3|x − 5| = 3 × 13 = 39. 4y = 16, so |4y| = 16. x + y = −4, so |x + y| = 4. (39 − 16)/4 = 23/4.",
+     "why": "x − 5 = −13, so 3|x − 5| = 3 × 13 = 39.\n4y = 16, so |4y| = 16.\nx + y = −4, so |x + y| = 4.\n(39 − 16)/4 = 23/4 = 5 3/4.",
      "clue": "|x − 5| = 13, |4y| = 16, |x + y| = 4.",
      "id": "g8.maths.u1.s1-5.14",
      "ref": "Q3",
@@ -372,12 +379,12 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "How long for Birr 500 to earn Birr 50 at 9.5%? ___ years",
+     "ask": "Find the time for simple interest: how long for Birr 500 to earn Birr 50 at 9.5%? ___ years",
      "a": [
       "≈1.05",
       "20/19"
      ],
-     "why": "50 ÷ 47.5 ≈ 1.05.",
+     "why": "T = I ÷ (P × R).\nP × R = 500 × 0.095 = 47.5.\nT = 50 ÷ 47.5 ≈ 1.05 years (exactly 20/19).",
      "clue": "T = I ÷ (P × R).",
      "id": "g8.maths.u1.s1-5.15",
      "ref": "Q10",
@@ -402,8 +409,8 @@
        "label": "−3/4"
       }
      ],
-     "ask": "Tap where −3/4 goes.",
-     "why": "Three quarters left of 0.",
+     "ask": "Place a negative fraction: tap where −3/4 goes.",
+     "why": "−3/4 is negative, so it is left of 0.\n3/4 is proper, so it is between −1 and 0.\nSplit 0 to −1 into 4 equal parts.\nCount 3 marks left of 0.",
      "clue": "",
      "gen": {
       "t": "place",
@@ -418,7 +425,7 @@
      "kind": "mcq",
      "step": "test",
      "graded": true,
-     "text": "Smallest set containing −7?",
+     "text": "Classify a number: what is the smallest set containing −7?",
      "opts": [
       "ℕ",
       "W",
@@ -426,7 +433,7 @@
       "ℚ"
      ],
      "ans": "ℤ",
-     "why": "A negative integer.",
+     "why": "−7 is negative, so it is not in ℕ or W.\nIt has no fraction part, so it is an integer.\nThe smallest set is ℤ.",
      "clue": "",
      "gen": {
       "t": "classify",
@@ -440,11 +447,11 @@
      "step": "test",
      "graded": true,
      "num": true,
-     "ask": "|−9 + 4| = ___",
+     "ask": "Absolute value: work inside the bars first. |−9 + 4| = ___",
      "a": [
       "5"
      ],
-     "why": "|−5| = 5.",
+     "why": "Inside the bars: −9 + 4 = −5.\n−5 < 0, so |−5| = 5.\nAnswer: 5.",
      "clue": "",
      "gen": {
       "t": "abs",
@@ -457,7 +464,7 @@
      "kind": "pick",
      "step": "test",
      "graded": true,
-     "text": "Tap all solutions of |x| = 6.",
+     "text": "Solve the absolute value equation: tap all solutions of |x| = 6.",
      "pool": [
       "6",
       "−6",
@@ -468,7 +475,7 @@
       "6",
       "−6"
      ],
-     "why": "6 and −6.",
+     "why": "x is 6 units from 0.\nRight of 0: 6. Left of 0: −6.\nSolutions: 6 and −6.",
      "clue": "",
      "gen": {
       "t": "abseq",
@@ -481,14 +488,14 @@
      "kind": "mcq",
      "step": "test",
      "graded": true,
-     "text": "Which sign is correct? 3/8 ? 2/5",
+     "text": "Compare fractions: which sign is correct? 3/8 ? 2/5",
      "opts": [
       "<",
       ">",
       "="
      ],
      "ans": "<",
-     "why": "15 < 16.",
+     "why": "Cross-multiply: 3 × 5 = 15 and 8 × 2 = 16.\n15 < 16.\nSo 3/8 < 2/5.",
      "clue": "",
      "gen": {
       "t": "compare",
@@ -501,14 +508,14 @@
      "kind": "order",
      "step": "test",
      "graded": true,
-     "title": "Ascending",
+     "title": "Order the numbers in ascending order (smallest first)",
      "items": [
       "−1.5",
       "−1/2",
       "2/3",
       "1.2"
      ],
-     "why": "Smallest first.",
+     "why": "Change to decimals: −1/2 = −0.5 and 2/3 ≈ 0.67.\nNegatives: −1.5 is further left than −0.5.\nPositives: 0.67 < 1.2.\nOrder: −1.5, −1/2, 2/3, 1.2.",
      "clue": "",
      "gen": {
       "t": "order",
@@ -522,11 +529,11 @@
      "step": "test",
      "graded": true,
      "num": true,
-     "ask": "−2/3 + 3/4 = ___",
+     "ask": "Add fractions with different signs: −2/3 + 3/4 = ___",
      "a": [
       "1/12"
      ],
-     "why": "−8/12 + 9/12.",
+     "why": "LCM of 3 and 4 is 12: −2/3 = −8/12 and 3/4 = 9/12.\nDifferent signs: 9 > 8, so the sign is +.\n9 − 8 = 1.\nAnswer: 1/12.",
      "clue": "",
      "gen": {
       "t": "op",
@@ -542,12 +549,12 @@
      "step": "test",
      "graded": true,
      "num": true,
-     "ask": "5/6 − (−1/3) = ___",
+     "ask": "Subtract a negative fraction: 5/6 − (−1/3) = ___",
      "a": [
       "7/6",
       "1 1/6"
      ],
-     "why": "5/6 + 2/6.",
+     "why": "Subtracting −1/3 means adding 1/3.\n1/3 = 2/6.\n5/6 + 2/6 = 7/6.\nAnswer: 7/6 = 1 1/6.",
      "clue": "",
      "gen": {
       "t": "op",
@@ -563,11 +570,11 @@
      "step": "test",
      "graded": true,
      "num": true,
-     "ask": "−3/5 × 10/9 = ___",
+     "ask": "Multiply fractions with different signs: −3/5 × 10/9 = ___",
      "a": [
       "-2/3"
      ],
-     "why": "−30/45.",
+     "why": "Different signs: the product is negative.\nSizes: 3 × 10 = 30 and 5 × 9 = 45.\n30/45: divide by 15 to get 2/3.\nAnswer: −2/3.",
      "clue": "",
      "gen": {
       "t": "op",
@@ -583,12 +590,12 @@
      "step": "test",
      "graded": true,
      "num": true,
-     "ask": "7/8 ÷ (−7/4) = ___",
+     "ask": "Divide fractions with different signs: 7/8 ÷ (−7/4) = ___",
      "a": [
       "-1/2",
       "-0.5"
      ],
-     "why": "7/8 × (−4/7).",
+     "why": "Different signs: the quotient is negative.\nFlip 7/4 to 4/7: 7/8 × 4/7 = 28/56.\n28/56 = 1/2.\nAnswer: −1/2.",
      "clue": "",
      "gen": {
       "t": "op",
@@ -604,11 +611,11 @@
      "step": "test",
      "graded": true,
      "num": true,
-     "ask": "Mother takes 1/5; 2 children share the rest. Each gets ___",
+     "ask": "Share what is left: mother takes 1/5; 2 children share the rest. Each gets ___",
      "a": [
       "2/5"
      ],
-     "why": "4/5 ÷ 2.",
+     "why": "Left after the mother: 1 − 1/5 = 4/5.\nShare by 2: 4/5 ÷ 2 = 4/5 × 1/2 = 4/10.\n4/10 = 2/5.",
      "clue": "",
      "gen": {
       "t": "share",
@@ -622,11 +629,11 @@
      "step": "test",
      "graded": true,
      "num": true,
-     "ask": "Birr 1500 at 8% for 2 years. Interest = Birr ___",
+     "ask": "Simple interest: Birr 1500 at 8% for 2 years. Interest = Birr ___",
      "a": [
       "240"
      ],
-     "why": "1500 × 0.08 × 2.",
+     "why": "P = 1500, R = 0.08, T = 2.\n1500 × 0.08 = 120.\n120 × 2 = 240.\nInterest = Birr 240.",
      "clue": "",
      "gen": {
       "t": "interest",
@@ -646,7 +653,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which is NOT a rational number?",
+   "text": "Rational numbers: which is NOT a rational number?",
    "opts": [
     "5/0",
     "0/5",
@@ -654,7 +661,7 @@
     "0.5"
    ],
    "ans": "5/0",
-   "why": "The denominator cannot be 0.",
+   "why": "0/5 = 0, −5 = −5/1 and 0.5 = 1/2 are rational.\n5/0 has denominator 0.\nDividing by 0 is not allowed.\nSo 5/0 is not rational.",
    "clue": "",
    "id": "g8.maths.u1.s1-5.28",
    "level": 1
@@ -663,9 +670,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "The sum of two opposite numbers is 0.",
+   "text": "Opposites: true or false? The sum of two opposite numbers is 0.",
    "a": true,
-   "why": "a + (−a) = 0.",
+   "why": "Opposites are a and −a.\na + (−a) = 0.\nExample: 3/4 + (−3/4) = 0.\nTrue.",
    "clue": "",
    "id": "g8.maths.u1.s1-5.29",
    "level": 2
@@ -675,11 +682,11 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "−1/2 × (−1/2) = ___",
+   "ask": "Multiply two negative fractions: −1/2 × (−1/2) = ___",
    "a": [
     "1/4"
    ],
-   "why": "Same signs give +.",
+   "why": "Same signs: the product is positive.\nSizes: 1 × 1 = 1 and 2 × 2 = 4.\nAnswer: 1/4.",
    "clue": "",
    "gen": {
     "t": "op",
@@ -694,7 +701,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which statement is false?",
+   "text": "Number sets: which statement is false?",
    "opts": [
     "Every integer is rational",
     "Every rational number is an integer",
@@ -702,7 +709,7 @@
     "−3/4 is rational"
    ],
    "ans": "Every rational number is an integer",
-   "why": "1/2 is rational but not an integer.",
+   "why": "Every integer n = n/1 is rational: true.\n0 is a whole number: true. −3/4 is rational: true.\nBut 1/2 is rational and not an integer.\nSo \"Every rational number is an integer\" is false.",
    "clue": "",
    "level": 2,
    "id": "g8.maths.u1.s1-5.32"
@@ -712,11 +719,11 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "(−2/3 + 1/2) × 6 = ___",
+   "ask": "Brackets first, then multiply: (−2/3 + 1/2) × 6 = ___",
    "a": [
     "-1"
    ],
-   "why": "−4/6 + 3/6 = −1/6. −1/6 × 6 = −1.",
+   "why": "Brackets first: LCM of 3 and 2 is 6.\n−2/3 + 1/2 = −4/6 + 3/6 = −1/6.\nThen −1/6 × 6 = −6/6 = −1.\nAnswer: −1.",
    "clue": "",
    "level": 3,
    "input": "signed",

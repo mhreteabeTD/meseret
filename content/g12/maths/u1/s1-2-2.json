@@ -58,9 +58,10 @@
       "Add 12",
       "Multiply by 2"
      ],
-     "after": "6 ÷ 2 = 3, 18 ÷ 6 = 3, 54 ÷ 18 = 3. We multiply by 3 each time.",
+     "after": "Try adding: 6 − 2 = 4 but 18 − 6 = 12. The gaps change, so it is not adding.\nTry dividing: 6 ÷ 2 = 3, 18 ÷ 6 = 3, 54 ÷ 18 = 3.\nThe same ratio each time: we multiply by 3.",
      "ref": "Activity 1.4 a",
-     "id": "g12.maths.u1.s1-2-2.1"
+     "id": "g12.maths.u1.s1-2-2.1",
+     "best": "Multiply by 3"
     },
     {
      "kind": "tap",
@@ -84,6 +85,57 @@
       ]
      ],
      "id": "g12.maths.u1.s1-2-2.2"
+    },
+    {
+     "kind": "fracbar",
+     "step": "explore",
+     "title": "Halving again and again",
+     "ask": "Tap ▶. Each bar is half of the bar above.",
+     "bars": [
+      {
+       "parts": 1,
+       "shade": [
+        {
+         "n": 1,
+         "color": "a",
+         "label": "1"
+        }
+       ]
+      },
+      {
+       "parts": 2,
+       "shade": [
+        {
+         "n": 1,
+         "color": "b",
+         "label": "1/2"
+        }
+       ]
+      },
+      {
+       "parts": 4,
+       "shade": [
+        {
+         "n": 1,
+         "color": "c",
+         "label": "1/4"
+        }
+       ]
+      },
+      {
+       "parts": 8,
+       "shade": [
+        {
+         "n": 1,
+         "color": "d",
+         "label": "1/8"
+        }
+       ]
+      }
+     ],
+     "after": "1, 1/2, 1/4, 1/8: each term is the one before × 1/2. The common ratio is r = 1/2.",
+     "added": true,
+     "id": "g12.maths.u1.s1-2-2.49"
     },
     {
      "kind": "read",
@@ -115,7 +167,7 @@
     },
     {
      "kind": "mcq",
-     "text": "3, 6, 12, 24, 48, … What is r?",
+     "text": "Find the common ratio r of the geometric sequence 3, 6, 12, 24, 48, …",
      "opts": [
       "2",
       "3",
@@ -123,7 +175,7 @@
       "1/2"
      ],
      "ans": "2",
-     "why": "6 ÷ 3 = 2, 12 ÷ 6 = 2.",
+     "why": "Step 1: r = next term ÷ this term.\nStep 2: 6 ÷ 3 = 2, 12 ÷ 6 = 2, 24 ÷ 12 = 2.\nStep 3: the ratio is the same every time.\nSo r = 2. (1/2 divides the wrong way: 3 ÷ 6.)",
      "clue": "Divide a term by the one before it.",
      "graded": true,
      "level": 1,
@@ -146,11 +198,11 @@
     },
     {
      "kind": "blank",
-     "ask": "3, 6, 12, 24, 48, … The 6th term is ___",
+     "ask": "Find the next term of the geometric sequence 3, 6, 12, 24, 48, …: the 6th term is ___",
      "a": [
       "96"
      ],
-     "why": "48 × 2 = 96.",
+     "why": "Step 1: r = 6 ÷ 3 = 2.\nStep 2: 6th term = 5th term × r.\nStep 3: 48 × 2 = 96.\nSo the 6th term is 96. (Trap: 48 + 24 = 72 adds the last gap instead of multiplying.)",
      "clue": "Multiply the 5th term by r.",
      "num": true,
      "graded": true,
@@ -161,11 +213,11 @@
     },
     {
      "kind": "blank",
-     "ask": "G₁ = 1, r = 3. G₅ = ___",
+     "ask": "Build a geometric sequence from G₁ = 1 and r = 3: G₅ = ___",
      "a": [
       "81"
      ],
-     "why": "1, 3, 9, 27, 81.",
+     "why": "Step 1: multiply by 3 each time: 1, 3, 9, 27, 81.\nStep 2: or use G₅ = G₁ r⁴ = 1 × 3⁴.\nStep 3: 3⁴ = 81.\nSo G₅ = 81.",
      "clue": "Multiply by 3 four times.",
      "num": true,
      "graded": true,
@@ -176,7 +228,7 @@
     },
     {
      "kind": "mcq",
-     "text": "Which is geometric?",
+     "text": "Spot the geometric sequence: which list has the same ratio between every pair of terms?",
      "opts": [
       "5, −10, 20, −40, …",
       "5, 10, 15, 20, …",
@@ -184,7 +236,7 @@
       "2, 3, 5, 8, …"
      ],
      "ans": "5, −10, 20, −40, …",
-     "why": "Each term × (−2). The others do not have a constant ratio.",
+     "why": "Step 1: 5, −10, 20, −40: −10 ÷ 5 = −2, 20 ÷ (−10) = −2, −40 ÷ 20 = −2. Constant ratio: geometric.\nStep 2: 5, 10, 15, 20: ratios 2, 1.5, … change (it is arithmetic, d = 5).\nStep 3: 1, 4, 9, 16 and 2, 3, 5, 8: ratios change.\nSo the answer is 5, −10, 20, −40, … (a negative r makes the signs flip).",
      "clue": "Divide neighbours. Is the answer always the same?",
      "graded": true,
      "level": 1,
@@ -227,20 +279,21 @@
        "d = 0 (also r = 1)"
       ]
      ],
-     "why": "Constant gap → arithmetic; constant ratio → geometric.",
+     "why": "Step 1: 4, 8, 16, 32: ratio 2 each time → geometric.\nStep 2: 4, 8, 12, 16: gap 4 each time → arithmetic.\nStep 3: 1, 4, 9, 16: gaps 3, 5, 7 and ratios 4, 2.25 change → neither.\nStep 4: 81, 27, 9, 3: ratio 1/3 → geometric.\nStep 5: 7, 7, 7, 7: gap 0 → arithmetic (it is also geometric with r = 1).",
      "clue": "Check the gaps and the ratios.",
      "added": true,
      "graded": true,
      "level": 2,
-     "id": "g12.maths.u1.s1-2-2.10"
+     "id": "g12.maths.u1.s1-2-2.10",
+     "text": "Sort each sequence: arithmetic, geometric or neither? Check the gaps and the ratios."
     },
     {
      "kind": "blank",
-     "ask": "A geometric sequence: 4, ___, 36, 108. The missing term is",
+     "ask": "Find the missing term in the geometric sequence 4, ___, 36, 108. The missing term is",
      "a": [
       "12"
      ],
-     "why": "108 ÷ 36 = 3, so r = 3. 4 × 3 = 12, and 12 × 3 = 36.",
+     "why": "Step 1: 36 and 108 are neighbours, so r = 108 ÷ 36 = 3.\nStep 2: the missing term is 4 × 3 = 12.\nCheck: 12 × 3 = 36 ✓.\nSo the missing term is 12. (20 is the arithmetic middle of 4 and 36, not the geometric one.)",
      "clue": "Find r from the last two terms.",
      "num": true,
      "graded": true,
@@ -278,8 +331,9 @@
       "2",
       "1"
      ],
-     "after": "2 × 3 × 3 × 3 = 54. Three times: G₄ = 2 × 3³.",
-     "id": "g12.maths.u1.s1-2-2.12"
+     "after": "G₂ = 2 × 3 (once), G₃ = 2 × 3 × 3 (twice), G₄ = 2 × 3 × 3 × 3 (three times).\nSo to reach term 4 you multiply 3 times: G₄ = 2 × 3³ = 54.\nTerm n needs n − 1 factors of r.",
+     "id": "g12.maths.u1.s1-2-2.12",
+     "best": "3"
     },
     {
      "kind": "read",
@@ -331,6 +385,51 @@
      "id": "g12.maths.u1.s1-2-2.14"
     },
     {
+     "kind": "coord",
+     "step": "explore",
+     "title": "The dots of Gₙ = 2ⁿ⁻¹",
+     "ask": "Tap the dots. Each step right, the height doubles.",
+     "min": 0,
+     "max": 6,
+     "ymin": 0,
+     "ymax": 16,
+     "need": 3,
+     "points": [
+      {
+       "x": 1,
+       "y": 1,
+       "name": "G₁",
+       "info": "2⁰ = 1."
+      },
+      {
+       "x": 2,
+       "y": 2,
+       "name": "G₂",
+       "info": "2¹ = 2."
+      },
+      {
+       "x": 3,
+       "y": 4,
+       "name": "G₃",
+       "info": "2² = 4."
+      },
+      {
+       "x": 4,
+       "y": 8,
+       "name": "G₄",
+       "info": "2³ = 8."
+      },
+      {
+       "x": 5,
+       "y": 16,
+       "name": "G₅",
+       "info": "2⁴ = 16. The dots curve upwards: not a line, unlike an arithmetic sequence."
+      }
+     ],
+     "added": true,
+     "id": "g12.maths.u1.s1-2-2.50"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key word",
@@ -344,7 +443,7 @@
     },
     {
      "kind": "mcq",
-     "text": "G₁ = 3, r = 2. Gₙ =",
+     "text": "Write the general term of a geometric sequence with G₁ = 3 and r = 2.",
      "opts": [
       "3 × 2ⁿ⁻¹",
       "2 × 3ⁿ⁻¹",
@@ -352,7 +451,7 @@
       "6ⁿ⁻¹"
      ],
      "ans": "3 × 2ⁿ⁻¹",
-     "why": "Gₙ = G₁ rⁿ⁻¹ = 3 × 2ⁿ⁻¹.",
+     "why": "Step 1: use Gₙ = G₁ rⁿ⁻¹.\nStep 2: put G₁ = 3 and r = 2: Gₙ = 3 × 2ⁿ⁻¹.\nCheck n = 2: 3 × 2 = 6 ✓.\n(Trap: 6ⁿ⁻¹ is wrong. 3 × 2ⁿ⁻¹ is not (3 × 2)ⁿ⁻¹.)",
      "clue": "Put G₁ and r into the formula.",
      "graded": true,
      "level": 1,
@@ -375,7 +474,7 @@
     },
     {
      "kind": "mcq",
-     "text": "The nth term of 1, −2, 4, −8, 16, … is",
+     "text": "Write the nth term of the geometric sequence 1, −2, 4, −8, 16, …",
      "opts": [
       "(−2)ⁿ⁻¹",
       "−2ⁿ⁻¹",
@@ -383,7 +482,7 @@
       "(−2)ⁿ"
      ],
      "ans": "(−2)ⁿ⁻¹",
-     "why": "G₁ = 1 and r = −2.",
+     "why": "Step 1: G₁ = 1 and r = −2 ÷ 1 = −2.\nStep 2: Gₙ = 1 × (−2)ⁿ⁻¹ = (−2)ⁿ⁻¹.\nCheck n = 2: (−2)¹ = −2 ✓; n = 3: (−2)² = 4 ✓.\n(−2ⁿ⁻¹ means −(2ⁿ⁻¹): always negative. Keep −2 in brackets.)",
      "clue": "r is negative. Keep it in brackets.",
      "graded": true,
      "level": 2,
@@ -394,12 +493,12 @@
     },
     {
      "kind": "blank",
-     "ask": "G₁ = −3, r = −1/2. G₅ = ___",
+     "ask": "Use Gₙ = G₁ rⁿ⁻¹ with G₁ = −3 and r = −1/2: G₅ = ___",
      "a": [
       "-3/16",
       "-0.1875"
      ],
-     "why": "(−1/2)⁴ = 1/16 (even power), so G₅ = −3 × 1/16 = −3/16.",
+     "why": "Step 1: G₅ = G₁ r⁴ = −3 × (−1/2)⁴.\nStep 2: (−1/2)⁴ = (−1)⁴/2⁴ = 1/16. An even power is positive.\nStep 3: −3 × 1/16 = −3/16.\nSo G₅ = −3/16. (Trap: +3/16 forgets that G₁ is negative.)",
      "clue": "Work out (−1/2)⁴ first. An even power is positive.",
      "num": true,
      "graded": true,
@@ -411,7 +510,7 @@
     },
     {
      "kind": "mcq",
-     "text": "The nth term of 27, 9, 3, 1, … is",
+     "text": "Write the nth term of the geometric sequence 27, 9, 3, 1, …",
      "opts": [
       "27(1/3)ⁿ⁻¹",
       "27 × 3ⁿ⁻¹",
@@ -419,7 +518,7 @@
       "27 − 6(n − 1)"
      ],
      "ans": "27(1/3)ⁿ⁻¹",
-     "why": "r = 9/27 = 1/3. Gₙ = 27(1/3)ⁿ⁻¹, also 3⁴⁻ⁿ.",
+     "why": "Step 1: r = 9 ÷ 27 = 1/3.\nStep 2: Gₙ = 27(1/3)ⁿ⁻¹.\nCheck n = 4: 27 × 1/27 = 1 ✓.\n(27 − 6(n − 1) is arithmetic: it fails at n = 3. 27 × 3ⁿ⁻¹ grows.)",
      "clue": "Find r = 9 ÷ 27.",
      "graded": true,
      "level": 1,
@@ -429,7 +528,7 @@
     },
     {
      "kind": "pick",
-     "text": "G₂ = 12 and G₆ = 192. Which values of r are possible?",
+     "text": "Find r from two terms: G₂ = 12 and G₆ = 192. Which values of r are possible?",
      "pool": [
       "2",
       "−2",
@@ -440,7 +539,7 @@
       "2",
       "−2"
      ],
-     "why": "G₆/G₂ = r⁴ = 16. Both 2⁴ and (−2)⁴ are 16.",
+     "why": "Step 1: G₆ = G₂ r⁴ (4 steps from term 2 to term 6).\nStep 2: r⁴ = 192 ÷ 12 = 16.\nStep 3: 2⁴ = 16 and (−2)⁴ = 16.\nSo r = 2 or r = −2. (16 is r⁴, not r; 4 gives 4⁴ = 256.)",
      "clue": "Divide G₆ by G₂. An even power has two roots.",
      "graded": true,
      "level": 3,
@@ -450,11 +549,11 @@
     },
     {
      "kind": "blank",
-     "ask": "G₂ = 12, G₆ = 192 and r > 0. G₁₁ = ___",
+     "ask": "Find a far term from two terms: G₂ = 12, G₆ = 192 and r > 0. G₁₁ = ___",
      "a": [
       "6144"
      ],
-     "why": "r = 2. G₁₁ = G₂ r⁹ = 12 × 512 = 6144.",
+     "why": "Step 1: r⁴ = 192 ÷ 12 = 16, and r > 0, so r = 2.\nStep 2: term 2 to term 11 is 9 steps: G₁₁ = G₂ r⁹.\nStep 3: 2⁹ = 512, and 12 × 512 = 6144.\nSo G₁₁ = 6144.",
      "clue": "From term 2 to term 11 is 9 steps.",
      "num": true,
      "graded": true,
@@ -465,11 +564,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A geometric sequence has G₃ = 18 and G₆ = −486. G₁ = ___",
+     "ask": "Find G₁ from two terms: a geometric sequence has G₃ = 18 and G₆ = −486. G₁ = ___",
      "a": [
       "2"
      ],
-     "why": "r³ = −486/18 = −27, so r = −3. G₁ = G₃/r² = 18/9 = 2.",
+     "why": "Step 1: G₆ = G₃ r³, so r³ = −486 ÷ 18 = −27.\nStep 2: an odd power has one real root: r = −3.\nStep 3: G₃ = G₁ r², so G₁ = 18 ÷ (−3)² = 18 ÷ 9 = 2.\nCheck: 2, −6, 18, −54, 162, −486 ✓.",
      "clue": "Divide to get r³. An odd power has one real root.",
      "num": true,
      "graded": true,
@@ -505,9 +604,10 @@
       "6",
       "16"
      ],
-     "after": "2, 4, 8 has ratio 2. Also 2, −4, 8 has ratio −2. So m = ±4.",
+     "after": "Geometric means equal ratios: m/2 = 8/m, so m² = 16.\n2, 4, 8 has ratio 2. Also 2, −4, 8 has ratio −2. So m = ±4.\n(5 is halfway: the arithmetic mean, not the geometric one.)",
      "ref": "Example 2",
-     "id": "g12.maths.u1.s1-2-2.24"
+     "id": "g12.maths.u1.s1-2-2.24",
+     "best": "4"
     },
     {
      "kind": "read",
@@ -520,6 +620,46 @@
      "note": "m = ±√(ab), with a, b, m ≠ 0.",
      "ref": "p.19",
      "id": "g12.maths.u1.s1-2-2.25"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Two kinds of mean",
+     "ask": "Move a and b. Compare the geometric mean with the arithmetic mean.",
+     "vars": [
+      {
+       "k": "a",
+       "label": "a",
+       "min": 1,
+       "max": 20,
+       "step": 1,
+       "v": 4
+      },
+      {
+       "k": "b",
+       "label": "b",
+       "min": 1,
+       "max": 50,
+       "step": 1,
+       "v": 9
+      }
+     ],
+     "formula": "Math.sqrt(a*b)",
+     "outs": [
+      [
+       "Geometric mean √(ab)",
+       "Math.sqrt(a*b)",
+       "{v}"
+      ],
+      [
+       "Arithmetic mean (a + b)/2",
+       "(a+b)/2",
+       "{v}"
+      ]
+     ],
+     "note": "For positive a and b, √(ab) is never bigger than (a + b)/2. They are equal only when a = b.",
+     "added": true,
+     "id": "g12.maths.u1.s1-2-2.51"
     },
     {
      "kind": "name",
@@ -535,7 +675,7 @@
     },
     {
      "kind": "mcq",
-     "text": "Geometric mean between 3 and 12:",
+     "text": "Find the geometric mean between 3 and 12.",
      "opts": [
       "±6",
       "7.5",
@@ -543,7 +683,7 @@
       "9"
      ],
      "ans": "±6",
-     "why": "m² = 3 × 12 = 36, so m = ±6.",
+     "why": "Step 1: 3, m, 12 has equal ratios: m/3 = 12/m.\nStep 2: m² = 3 × 12 = 36.\nStep 3: m = ±6.\nCheck: 3, 6, 12 (r = 2) and 3, −6, 12 (r = −2) ✓.\n(7.5 is the arithmetic mean; ±36 forgets the square root.)",
      "clue": "m² = ab.",
      "graded": true,
      "level": 1,
@@ -565,9 +705,9 @@
     },
     {
      "kind": "tf",
-     "text": "The geometric mean of 4 and 9 is 6.5.",
+     "text": "Arithmetic mean or geometric mean? True or false: the geometric mean of 4 and 9 is 6.5.",
      "a": false,
-     "why": "6.5 is the arithmetic mean. The geometric mean is ±√36 = ±6.",
+     "why": "Step 1: 6.5 = (4 + 9)/2 is the arithmetic mean.\nStep 2: the geometric mean uses m² = ab = 4 × 9 = 36.\nStep 3: m = ±√36 = ±6.\nSo the statement is false.",
      "clue": "Multiply, then take the square root.",
      "graded": true,
      "level": 1,
@@ -591,11 +731,11 @@
     },
     {
      "kind": "blank",
-     "ask": "x, 4x + 3, 7x + 6 are geometric, x ≠ 0. x = ___",
+     "ask": "Use equal ratios: x, 4x + 3, 7x + 6 are geometric, x ≠ 0. x = ___",
      "a": [
       "-1"
      ],
-     "why": "(4x + 3)² = x(7x + 6) gives 9x² + 18x + 9 = 0, so (x + 1)² = 0 and x = −1.",
+     "why": "Step 1: equal ratios: (4x + 3)/x = (7x + 6)/(4x + 3).\nStep 2: cross-multiply: (4x + 3)² = x(7x + 6).\nStep 3: 16x² + 24x + 9 = 7x² + 6x, so 9x² + 18x + 9 = 0.\nStep 4: divide by 9: x² + 2x + 1 = (x + 1)² = 0, so x = −1.\nCheck: −1, −1, −1 has r = 1 ✓.",
      "clue": "Equal ratios: (4x + 3)/x = (7x + 6)/(4x + 3).",
      "num": true,
      "graded": true,
@@ -606,11 +746,11 @@
     },
     {
      "kind": "blank",
-     "ask": "A positive geometric mean of 5 and 45 is ___",
+     "ask": "Find the positive geometric mean of 5 and 45: ___",
      "a": [
       "15"
      ],
-     "why": "√(5 × 45) = √225 = 15.",
+     "why": "Step 1: m² = 5 × 45 = 225.\nStep 2: m = √225 = 15 (positive root).\nCheck: 5, 15, 45 has ratio 3 ✓.\n(25 is the arithmetic mean.)",
      "clue": "m = √(ab).",
      "num": true,
      "graded": true,
@@ -621,11 +761,11 @@
     },
     {
      "kind": "blank",
-     "ask": "Three geometric terms have product 216 and sum 21. The middle term is ___",
+     "ask": "Three geometric terms have product 216 and sum 21. Find the middle term: ___",
      "a": [
       "6"
      ],
-     "why": "With a/r, a, ar the product is a³ = 216, so a = 6. (The terms are 3, 6, 12.)",
+     "why": "Step 1: write the terms as a/r, a, ar.\nStep 2: product: (a/r) × a × ar = a³ = 216, so a = 6.\nStep 3: sum: 6/r + 6 + 6r = 21 gives 2r² − 5r + 2 = 0, so r = 2 or 1/2.\nThe terms are 3, 6, 12, and the middle term is 6.",
      "clue": "Write the terms as a/r, a, ar.",
      "num": true,
      "graded": true,
@@ -643,11 +783,11 @@
    "items": [
     {
      "kind": "blank",
-     "ask": "1, 2, 4, 8, 16, … The 6th term is ___",
+     "ask": "Find the next term of the geometric sequence 1, 2, 4, 8, 16, …: the 6th term is ___",
      "a": [
       "32"
      ],
-     "why": "r = 2. 16 × 2 = 32.",
+     "why": "Step 1: r = 2 ÷ 1 = 2.\nStep 2: 6th term = 16 × 2 = 32.\nCheck: G₆ = 1 × 2⁵ = 32 ✓.",
      "clue": "Multiply by r.",
      "num": true,
      "graded": true,
@@ -658,7 +798,7 @@
     },
     {
      "kind": "mcq",
-     "text": "G₁ = 1, r = 3. Terms 2 to 5:",
+     "text": "Build a geometric sequence from G₁ = 1 and r = 3: which are terms 2 to 5?",
      "opts": [
       "3, 9, 27, 81",
       "4, 7, 10, 13",
@@ -666,7 +806,7 @@
       "3, 9, 18, 36"
      ],
      "ans": "3, 9, 27, 81",
-     "why": "Multiply by 3 each time.",
+     "why": "Step 1: multiply by r = 3 each time.\nStep 2: 1 × 3 = 3, 3 × 3 = 9, 9 × 3 = 27, 27 × 3 = 81.\nSo the terms are 3, 9, 27, 81.\n(4, 7, 10, 13 adds 3: that is arithmetic.)",
      "clue": "r is a ratio, not a difference.",
      "graded": true,
      "level": 1,
@@ -681,7 +821,7 @@
    "items": [
     {
      "kind": "mcq",
-     "text": "G₁ = 2, r = 5. Gₙ =",
+     "text": "Write the general term of a geometric sequence with G₁ = 2 and r = 5: Gₙ =",
      "opts": [
       "2 × 5ⁿ⁻¹",
       "5 × 2ⁿ⁻¹",
@@ -689,7 +829,7 @@
       "10ⁿ⁻¹"
      ],
      "ans": "2 × 5ⁿ⁻¹",
-     "why": "G₁ rⁿ⁻¹.",
+     "why": "Step 1: Gₙ = G₁ rⁿ⁻¹.\nStep 2: Gₙ = 2 × 5ⁿ⁻¹.\nCheck n = 1: 2 × 5⁰ = 2 ✓. (2 × 5ⁿ gives G₁ = 10.)",
      "clue": "Use the formula.",
      "graded": true,
      "level": 1,
@@ -699,7 +839,7 @@
     },
     {
      "kind": "mcq",
-     "text": "G₁ = 2, r = −2. Gₙ =",
+     "text": "Write the general term of a geometric sequence with G₁ = 2 and r = −2: Gₙ =",
      "opts": [
       "2(−2)ⁿ⁻¹",
       "−2(2)ⁿ⁻¹",
@@ -707,7 +847,7 @@
       "(−4)ⁿ⁻¹"
      ],
      "ans": "2(−2)ⁿ⁻¹",
-     "why": "G₁ rⁿ⁻¹ = 2(−2)ⁿ⁻¹.",
+     "why": "Step 1: Gₙ = G₁ rⁿ⁻¹ = 2(−2)ⁿ⁻¹.\nStep 2: keep −2 in brackets so the sign alternates.\nCheck: n = 1, 2, 3 gives 2, −4, 8 ✓.\n(−2(2)ⁿ⁻¹ is always negative.)",
      "clue": "Keep −2 in brackets.",
      "graded": true,
      "level": 2,
@@ -717,7 +857,7 @@
     },
     {
      "kind": "mcq",
-     "text": "3/2, 3/4, 3/8, 3/16, … Gₙ =",
+     "text": "Write the nth term of the geometric sequence 3/2, 3/4, 3/8, 3/16, …: Gₙ =",
      "opts": [
       "3/2ⁿ",
       "3/2ⁿ⁻¹",
@@ -725,7 +865,7 @@
       "3 × 2ⁿ"
      ],
      "ans": "3/2ⁿ",
-     "why": "r = 1/2. (3/2)(1/2)ⁿ⁻¹ = 3/2ⁿ.",
+     "why": "Step 1: r = (3/4) ÷ (3/2) = 1/2.\nStep 2: Gₙ = (3/2)(1/2)ⁿ⁻¹.\nStep 3: (3/2) × 1/2ⁿ⁻¹ = 3/(2 × 2ⁿ⁻¹) = 3/2ⁿ.\nCheck n = 2: 3/4 ✓. (3/2ⁿ⁻¹ gives G₁ = 3.)",
      "clue": "Find r first.",
      "graded": true,
      "level": 2,
@@ -735,11 +875,11 @@
     },
     {
      "kind": "blank",
-     "ask": "G₁ = −3, r = −1/2. G₅ = ___",
+     "ask": "Use Gₙ = G₁ rⁿ⁻¹ with G₁ = −3 and r = −1/2: G₅ = ___",
      "a": [
       "-3/16"
      ],
-     "why": "−3 × (−1/2)⁴ = −3/16.",
+     "why": "Step 1: G₅ = −3 × (−1/2)⁴.\nStep 2: (−1/2)⁴ = 1/16 (even power, positive).\nStep 3: −3 × 1/16 = −3/16.\nSo G₅ = −3/16.",
      "clue": "Even power.",
      "num": true,
      "graded": true,
@@ -755,7 +895,7 @@
    "items": [
     {
      "kind": "mcq",
-     "text": "Geometric mean between 3 and 12:",
+     "text": "Find the geometric mean between 3 and 12.",
      "opts": [
       "±6",
       "7.5",
@@ -763,7 +903,7 @@
       "36"
      ],
      "ans": "±6",
-     "why": "m² = 36.",
+     "why": "Step 1: m² = 3 × 12 = 36.\nStep 2: m = ±6.\nBoth work: 3, 6, 12 (r = 2) and 3, −6, 12 (r = −2).\n(\"6 only\" misses the negative root.)",
      "clue": "m² = ab.",
      "graded": true,
      "level": 1,
@@ -773,7 +913,7 @@
     },
     {
      "kind": "pick",
-     "text": "G₂ = 12 and G₆ = 192. Possible G₁₁:",
+     "text": "Use two terms to find a far term: G₂ = 12 and G₆ = 192. Which values of G₁₁ are possible?",
      "pool": [
       "6144",
       "−6144",
@@ -784,7 +924,7 @@
       "6144",
       "−6144"
      ],
-     "why": "r = ±2; G₁₁ = 12 × (±2)⁹ = ±6144.",
+     "why": "Step 1: r⁴ = 192 ÷ 12 = 16, so r = 2 or r = −2.\nStep 2: G₁₁ = G₂ r⁹ (9 steps).\nStep 3: 2⁹ = 512 and (−2)⁹ = −512 (odd power).\nStep 4: G₁₁ = 12 × 512 = 6144 or 12 × (−512) = −6144.",
      "clue": "r⁴ = 16.",
      "graded": true,
      "level": 3,
@@ -794,11 +934,11 @@
     },
     {
      "kind": "blank",
-     "ask": "x, 4x + 3, 7x + 6 are geometric. x = ___",
+     "ask": "Use equal ratios: x, 4x + 3, 7x + 6 are geometric. x = ___",
      "a": [
       "-1"
      ],
-     "why": "(x + 1)² = 0.",
+     "why": "Step 1: (4x + 3)² = x(7x + 6).\nStep 2: 16x² + 24x + 9 = 7x² + 6x.\nStep 3: 9x² + 18x + 9 = 0, so (x + 1)² = 0.\nSo x = −1.",
      "clue": "Equal ratios.",
      "num": true,
      "graded": true,
@@ -809,7 +949,7 @@
     },
     {
      "kind": "mcq",
-     "text": "Three geometric terms: sum 35, product 1000.",
+     "text": "Three geometric terms have sum 35 and product 1000. Which are they?",
      "opts": [
       "5, 10, 20",
       "10, 10, 15",
@@ -817,7 +957,7 @@
       "4, 10, 25"
      ],
      "ans": "5, 10, 20",
-     "why": "a = 10, r = 2.",
+     "why": "Step 1: write them as a/r, a, ar. Product a³ = 1000, so a = 10.\nStep 2: 10/r + 10 + 10r = 35, so 2r² − 5r + 2 = 0.\nStep 3: r = 2 or 1/2: the terms are 5, 10, 20 either way.\nCheck: 5 + 10 + 20 = 35 and 5 × 10 × 20 = 1000 ✓.\n(2, 10, 50: sum 62.)",
      "clue": "a/r, a, ar.",
      "graded": true,
      "level": 3,
@@ -831,11 +971,11 @@
  "test": [
   {
    "kind": "blank",
-   "ask": "G₁ = 4, r = 3. G₄ = ___",
+   "ask": "Use Gₙ = G₁ rⁿ⁻¹ with G₁ = 4 and r = 3: G₄ = ___",
    "a": [
     "108"
    ],
-   "why": "4 × 3³ = 108.",
+   "why": "G₄ = G₁ r³ = 4 × 3³.\n3³ = 27.\n4 × 27 = 108.\nSo G₄ = 108.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -845,7 +985,7 @@
   },
   {
    "kind": "mcq",
-   "text": "Common ratio of 48, −24, 12, −6, …",
+   "text": "Find the common ratio of the geometric sequence 48, −24, 12, −6, …",
    "opts": [
     "−1/2",
     "1/2",
@@ -853,7 +993,7 @@
     "−24"
    ],
    "ans": "−1/2",
-   "why": "−24 ÷ 48 = −1/2.",
+   "why": "r = next term ÷ this term.\n−24 ÷ 48 = −1/2, and 12 ÷ (−24) = −1/2.\nThe signs flip, so r is negative.\nr = −1/2.",
    "clue": "",
    "graded": true,
    "level": 1,
@@ -862,11 +1002,11 @@
   },
   {
    "kind": "blank",
-   "ask": "G₁ = 2 and G₄ = 54. r = ___",
+   "ask": "Find r from two terms: G₁ = 2 and G₄ = 54. r = ___",
    "a": [
     "3"
    ],
-   "why": "r³ = 27.",
+   "why": "G₄ = G₁ r³, so 2r³ = 54.\nr³ = 27.\nr = 3 (3 × 3 × 3 = 27).\nCheck: 2, 6, 18, 54 ✓.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -876,7 +1016,7 @@
   },
   {
    "kind": "mcq",
-   "text": "Geometric mean of 2 and 18:",
+   "text": "Find the geometric mean of 2 and 18.",
    "opts": [
     "±6",
     "10",
@@ -884,7 +1024,7 @@
     "9"
    ],
    "ans": "±6",
-   "why": "m² = 36.",
+   "why": "m² = 2 × 18 = 36.\nm = ±6.\nCheck: 2, 6, 18 has ratio 3 ✓.\n(10 is the arithmetic mean.)",
    "clue": "",
    "graded": true,
    "level": 2,
@@ -893,11 +1033,11 @@
   },
   {
    "kind": "blank",
-   "ask": "G₃ = 20 and G₅ = 80, r > 0. G₁ = ___",
+   "ask": "Find G₁ from two terms: G₃ = 20 and G₅ = 80, r > 0. G₁ = ___",
    "a": [
     "5"
    ],
-   "why": "r² = 4, r = 2, G₁ = 20/4 = 5.",
+   "why": "G₅ = G₃ r², so r² = 80 ÷ 20 = 4.\nr > 0, so r = 2.\nG₃ = G₁ r², so G₁ = 20 ÷ 4 = 5.\nCheck: 5, 10, 20, 40, 80 ✓.",
    "clue": "",
    "num": true,
    "graded": true,
@@ -932,7 +1072,7 @@
     },
     {
      "kind": "mcq",
-     "text": "(−3)⁴ = ?",
+     "text": "Power of a negative number: (−3)⁴ = ?",
      "opts": [
       "81",
       "−81",
@@ -940,7 +1080,7 @@
       "−12"
      ],
      "ans": "81",
-     "why": "(−3)(−3)(−3)(−3) = 81. Even power → positive.",
+     "why": "Step 1: (−3)⁴ = (−3)(−3)(−3)(−3).\nStep 2: (−3)(−3) = 9, and 9 × 9 = 81.\nStep 3: 4 minus signs pair up, so the result is positive.\nSo (−3)⁴ = 81. (−81 would be −3⁴ without brackets.)",
      "clue": "Count the minus signs.",
      "graded": true,
      "level": 1,

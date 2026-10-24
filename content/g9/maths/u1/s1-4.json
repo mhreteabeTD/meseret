@@ -1,617 +1,733 @@
 {
-  "id": "g9.maths.u1.s1-4",
-  "book": {
-    "title": "Mathematics Grade 9 Student Textbook",
-    "grade": 9,
-    "subject": "maths",
-    "unit": 1,
-    "unit_title": "The Number System",
-    "section": "1.4",
-    "pages": "48–79"
+ "id": "g9.maths.u1.s1-4",
+ "book": {
+  "title": "Mathematics Grade 9 Student Textbook",
+  "grade": 9,
+  "subject": "maths",
+  "unit": 1,
+  "unit_title": "The Number System",
+  "section": "1.4",
+  "pages": "48–79"
+ },
+ "title": "Real numbers",
+ "competency": "Define real numbers, compare them, and find real numbers between any two real numbers.",
+ "minutes": 10,
+ "keywords": [
+  {
+   "en": "Real number",
+   "am": "እውን ቁጥር",
+   "machine": true,
+   "def": "Any rational or irrational number. Every point on the number line is a real number. The set is written ℝ."
   },
-  "title": "Real numbers",
-  "competency": "Define real numbers, compare them, and find real numbers between any two real numbers.",
-  "minutes": 10,
-  "keywords": [
-    {
-      "en": "Real number",
-      "am": "እውን ቁጥር",
-      "machine": true,
-      "def": "Any rational or irrational number. Every point on the number line is a real number. The set is written ℝ."
-    },
-    {
-      "en": "Rational number",
-      "am": "ምክንያታዊ ቁጥር",
-      "machine": true,
-      "def": "A number that can be written a/b with integers a, b and b ≠ 0. The set is written ℚ."
-    },
-    {
-      "en": "Irrational number",
-      "am": "ኢ-ምክንያታዊ ቁጥር",
-      "machine": true,
-      "def": "A decimal that neither ends nor repeats, such as √2 or π. It cannot be written as a/b."
-    },
-    {
-      "en": "Trichotomy",
-      "am": "የሦስትዮሽ ሕግ",
-      "machine": true,
-      "def": "For real a and b, exactly one of a < b, a = b, a > b is true."
-    },
-    {
-      "en": "Transitive property",
-      "am": "የማስተላለፍ ባሕርይ",
-      "machine": true,
-      "def": "If a < b and b < c, then a < c."
-    }
-  ],
-  "ideas": [
-    {
-      "id": "math.real-numbers",
-      "name": "Real numbers",
-      "requires": [
-        "math.irrational-numbers"
-      ],
-      "explain": {
-        "en": {
-          "text": "A real number is either rational or irrational. Together they make the set ℝ. Every decimal is exactly one point on the number line. Every point on the line is exactly one decimal."
-        },
-        "am": {
-          "text": "እውን ቁጥር ምክንያታዊ ወይም ኢ-ምክንያታዊ ቁጥር ነው። ሁለቱ በአንድ ላይ ℝ የሚባለውን ስብስብ ይሠራሉ። እያንዳንዱ አስርዮሽ በቁጥር መስመር ላይ አንድ ነጥብ ነው።",
-          "machine": true
-        }
-      },
-      "screens": [
-        {
-          "kind": "guess",
-          "step": "hook",
-          "added": true,
-          "title": "Two lists, one set?",
-          "text": "Abebe lists 3/4, −2 and 0.5. Almaz lists √2 and π. Activity 1.14 asks about such lists.",
-          "ask": "Is there one set that holds both lists?",
-          "opts": [
-            "Yes, one set holds them all",
-            "No, they must stay apart",
-            "Only Abebe's list is a set",
-            "I am not sure"
-          ],
-          "after": "Read on. The book gives that set a name."
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Real numbers",
-          "paras": [
-            "Activity 1.14 asks: how are points on the number line and decimals related?",
-            "Every decimal, rational or irrational, is exactly one point on the number line. Every point is exactly one decimal.",
-            "Definition 1.7: A number is a real number if it is either rational or irrational.",
-            "The set of real numbers, ℝ, is the union of the rational and the irrational numbers: ℝ = {x : x is rational or x is irrational}."
-          ],
-          "note": "The real numbers are made of two non-overlapping parts: rational and irrational."
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "Real numbers",
-          "defs": [
-            [
-              "Real number",
-              "A number that is either rational or irrational. The set of all real numbers is written ℝ."
-            ]
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Which is true?",
-          "text": "Think about how ℝ is built.",
-          "opts": [
-            "Every real number is rational",
-            "Every irrational number is real",
-            "Some numbers are both rational and irrational",
-            "π is not a real number"
-          ],
-          "ans": "Every irrational number is real",
-          "why": "ℝ is the union of the rationals and the irrationals.",
-          "clue": "The two parts of ℝ do not overlap, and together they fill it."
-        },
-        {
-          "kind": "sort",
-          "step": "practise",
-          "graded": true,
-          "title": "Rational or irrational?",
-          "text": "Every one of these is a real number. Sort them into the two parts of ℝ.",
-          "bins": [
-            "Rational",
-            "Irrational"
-          ],
-          "items": [
-            [
-              "3/4",
-              "Rational",
-              "It is a fraction of two integers."
-            ],
-            [
-              "−7",
-              "Rational",
-              "−7 = −7/1."
-            ],
-            [
-              "0.333…",
-              "Rational",
-              "It repeats, so it equals 1/3."
-            ],
-            [
-              "√2",
-              "Irrational",
-              "Its decimal neither ends nor repeats."
-            ],
-            [
-              "π",
-              "Irrational",
-              "π = 3.14159… never ends or repeats."
-            ]
-          ],
-          "why": "Rational decimals end or repeat. Irrational decimals do neither.",
-          "clue": "Ask: does the decimal end or repeat?",
-          "needs": "math.irrational-numbers"
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "title": "Fill in the set",
-          "ask": "ℝ is the union of the rational numbers and the ___ numbers.",
-          "a": [
-            "irrational",
-            "irrationals"
-          ],
-          "why": "Definition 1.7: a real number is rational or irrational.",
-          "clue": "Which kind of number is not rational?"
-        },
-        {
-          "kind": "tf",
-          "step": "practise",
-          "graded": true,
-          "added": true,
-          "title": "A plot in Bahir Dar",
-          "text": "Hana has a square plot in Bahir Dar with area 2 m². Its side is √2 m. The side length is a real number.",
-          "a": true,
-          "why": "√2 is irrational, and every irrational number is real.",
-          "clue": "Is √2 rational or irrational? Both kinds belong to ℝ.",
-          "worked": "√2 = 1.41421… never ends or repeats, so it is irrational. Irrational numbers are real. So the side is a real number.",
-          "needs": "math.irrational-numbers"
-        }
-      ]
-    },
-    {
-      "id": "math.compare-reals",
-      "name": "Comparing real numbers",
-      "requires": [
-        "math.square-roots"
-      ],
-      "explain": {
-        "en": {
-          "text": "Each real number is one point on the number line, so any two can be compared. Exactly one of a < b, a = b, a > b is true. For non-negative numbers, compare the squares. Between any two real numbers there are infinitely many more."
-        },
-        "am": {
-          "text": "እያንዳንዱ እውን ቁጥር በቁጥር መስመር ላይ አንድ ነጥብ ነው። ስለዚህ ማንኛውንም ሁለት ቁጥሮች ማወዳደር እንችላለን። አሉታዊ ላልሆኑ ቁጥሮች ካሬያቸውን አወዳድር። በሁለት እውን ቁጥሮች መካከል ስፍር ቁጥር የሌላቸው ቁጥሮች አሉ።",
-          "machine": true
-        }
-      },
-      "screens": [
-        {
-          "kind": "guess",
-          "step": "hook",
-          "title": "Which is bigger?",
-          "text": "Look at √3/6 and 2/3. One has a root, one does not.",
-          "ask": "Which number is bigger? Take a guess.",
-          "opts": [
-            "√3/6",
-            "2/3",
-            "They are equal",
-            "They cannot be compared"
-          ],
-          "after": "The book compares them by squaring. Read on."
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Comparing real numbers",
-          "paras": [
-            "Each real number is one point on the number line. So any two real numbers can be compared.",
-            "Trichotomy: for real a and b, exactly one of a < b, a = b, a > b is true.",
-            "Transitive: if a < b and b < c, then a < c.",
-            "For non-negative a and b: if a² < b², then a < b."
-          ]
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "Two rules of order",
-          "defs": [
-            [
-              "Trichotomy",
-              "For real a and b, exactly one of a < b, a = b, a > b is true."
-            ],
-            [
-              "Transitive property",
-              "If a < b and b < c, then a < c."
-            ]
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Use the transitive rule",
-          "text": "You know that a < b and b < c.",
-          "ask": "What must be true?",
-          "opts": [
-            "a < c",
-            "a > c",
-            "a = c",
-            "Nothing can be said"
-          ],
-          "ans": "a < c",
-          "why": "The transitive property: a is left of b, and b is left of c.",
-          "clue": "Place a, b and c on a number line."
-        },
-        {
-          "kind": "steps",
-          "step": "method",
-          "text": "Four ways to compare real numbers.",
-          "steps": [
-            "(a) −8 is left of −2 on the number line, so −8 < −2.",
-            "(b) 5/8 = 0.625, and 0.625 < 0.8. So 5/8 < 0.8.",
-            "(c) √2/3 ≈ 0.4714, and 0.4714 > 0.34. So √2/3 > 0.34.",
-            "(d) Square both: (√3/6)² = 3/36 and (2/3)² = 4/9 = 16/36.",
-            "3/36 < 16/36, so √3/6 < 2/3."
-          ],
-          "ref": "Example 1"
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "title": "Compare by squaring",
-          "text": "Compare 3√2 and 2√3 by squaring.",
-          "opts": [
-            "3√2 > 2√3",
-            "3√2 < 2√3",
-            "They are equal"
-          ],
-          "ans": "3√2 > 2√3",
-          "why": "(3√2)² = 18 and (2√3)² = 12, and 18 > 12.",
-          "clue": "Square each: (a√b)² = a² × b.",
-          "worked": "(3√2)² = 9 × 2 = 18. (2√3)² = 4 × 3 = 12. Both numbers are positive and 18 > 12, so 3√2 > 2√3.",
-          "needs": "math.square-roots"
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Real numbers between two numbers",
-          "paras": [
-            "Is there a real number between 2 and 4.2? Take the average: (2 + 4.2)/2 = 3.1, and 2 < 3.1 < 4.2.",
-            "Averaging again gives 2.55, between 2 and 3.1. It also gives 3.65, between 3.1 and 4.2.",
-            "We can keep doing this for ever. So there are infinitely many real numbers between any two real numbers."
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "title": "Find one in between",
-          "text": "Which number is between 1/3 and 1/2?",
-          "opts": [
-            "5/12",
-            "1/4",
-            "2/3",
-            "1/6"
-          ],
-          "ans": "5/12",
-          "why": "The average is (1/3 + 1/2)/2 = (5/6)/2 = 5/12.",
-          "clue": "Take the average of the two numbers."
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "added": true,
-          "title": "Teff prices in Adama",
-          "text": "One shop in Adama sells a kilo of teff for 95 birr. Another sells it for 101 birr. A third shop charges the average of the two.",
-          "ask": "The third shop charges ___ birr.",
-          "a": [
-            "98",
-            "98 birr",
-            "ninety-eight",
-            "ninety eight"
-          ],
-          "why": "(95 + 101)/2 = 196/2 = 98, and 95 < 98 < 101.",
-          "clue": "Add the two prices, then divide by 2."
-        }
-      ]
-    }
-  ],
-  "exercises": [
-    {
-      "book_name": "Exercise 1.22",
-      "items": [
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Compare: 0.236 ☐ 0.256",
-          "opts": [
-            "<",
-            ">",
-            "="
-          ],
-          "ans": "<",
-          "why": "The hundredths digit 3 is less than 5.",
-          "clue": "Compare digit by digit from the left."
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Compare: −0.135 ☐ −0.1351",
-          "opts": [
-            "<",
-            ">",
-            "="
-          ],
-          "ans": ">",
-          "why": "0.135 < 0.1351, so −0.135 is to the right: −0.135 > −0.1351.",
-          "clue": "For negatives, the one closer to 0 is bigger."
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Compare: √5/2 ☐ 0.234",
-          "opts": [
-            "<",
-            ">",
-            "="
-          ],
-          "ans": ">",
-          "why": "√5/2 ≈ 1.118, which is more than 0.234.",
-          "clue": "√5 is a bit more than 2.",
-          "needs": "math.square-roots"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Compare: 22/7 ☐ π",
-          "opts": [
-            "<",
-            ">",
-            "="
-          ],
-          "ans": ">",
-          "why": "22/7 ≈ 3.1429 and π ≈ 3.1416.",
-          "clue": "Write both as decimals to 4 places."
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Compare: 6√5 ☐ 5√7",
-          "opts": [
-            "<",
-            ">",
-            "="
-          ],
-          "ans": ">",
-          "why": "(6√5)² = 180 and (5√7)² = 175. 180 > 175.",
-          "clue": "Square both numbers.",
-          "needs": "math.square-roots"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Compare: 2 + √3 ☐ 4",
-          "opts": [
-            "<",
-            ">",
-            "="
-          ],
-          "ans": "<",
-          "why": "2 + √3 ≈ 2 + 1.73 = 3.73, which is less than 4.",
-          "clue": "√3 is between 1 and 2."
-        }
-      ]
-    },
-    {
-      "book_name": "Exercise 1.23",
-      "items": [
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Which real number is between −0.24 and −0.246?",
-          "opts": [
-            "−0.245",
-            "−0.25",
-            "−0.2",
-            "−0.247"
-          ],
-          "ans": "−0.245",
-          "why": "−0.246 < −0.245 < −0.24. Another is −0.241.",
-          "clue": "Write −0.24 as −0.240 and look between."
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Which real number is between 3/5 and 2/7?",
-          "opts": [
-            "0.4",
-            "0.2",
-            "0.7",
-            "0.25"
-          ],
-          "ans": "0.4",
-          "why": "2/7 ≈ 0.286 and 3/5 = 0.6, so 0.4 and 0.5 both work.",
-          "clue": "Change both fractions to decimals."
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "Which real number is between √2 and √3?",
-          "opts": [
-            "1.5",
-            "1.3",
-            "1.8",
-            "2"
-          ],
-          "ans": "1.5",
-          "why": "√2 ≈ 1.414 and √3 ≈ 1.732, so 1.5 and 1.6 work.",
-          "clue": "Check by squaring: is the square between 2 and 3?",
-          "needs": "math.square-roots"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "text": "How many real numbers are there between two real numbers?",
-          "opts": [
-            "Infinitely many",
-            "None",
-            "Exactly one",
-            "Ten"
-          ],
-          "ans": "Infinitely many",
-          "why": "You can keep taking averages for ever.",
-          "clue": "Think about averaging again and again."
-        }
-      ]
-    }
-  ],
-  "test": [
-    {
-      "kind": "tf",
-      "step": "test",
-      "graded": true,
-      "text": "Some real numbers are neither rational nor irrational.",
-      "a": false,
-      "why": "By Definition 1.7, every real number is rational or irrational.",
-      "clue": ""
-    },
-    {
-      "kind": "mcq",
-      "step": "test",
-      "graded": true,
-      "text": "Compare √3/6 and 2/3.",
-      "opts": [
-        "√3/6 < 2/3",
-        "√3/6 > 2/3",
-        "√3/6 = 2/3"
-      ],
-      "ans": "√3/6 < 2/3",
-      "why": "Squares: 3/36 and 16/36.",
-      "clue": ""
-    },
-    {
-      "kind": "blank",
-      "step": "test",
-      "graded": true,
-      "ask": "The average of 2 and 4.2 is ___, a real number between them.",
-      "a": [
-        "3.1"
-      ],
-      "why": "(2 + 4.2)/2 = 6.2/2 = 3.1.",
-      "clue": ""
-    }
-  ],
-  "notes": [
-    {
-      "kind": "note",
-      "text": "The names Abebe, Almaz and Hana and the teff-price item are added examples; the facts come from section 1.4."
-    },
-    {
-      "kind": "note",
-      "text": "Exercise 1.22 has seven parts. Part (e), −7√145 ☐ √7 (answer <: a negative is less than a positive), is left out to keep six items."
-    },
-    {
-      "kind": "note",
-      "text": "The interactive real-number diagram from the source is not reproduced; its caption is kept as a read note."
-    }
-  ],
-  "review": {
-    "status": "validated"
+  {
+   "en": "Rational number",
+   "am": "ምክንያታዊ ቁጥር",
+   "machine": true,
+   "def": "A number that can be written a/b with integers a, b and b ≠ 0. The set is written ℚ."
   },
-  "version": 1,
-  "refreshers": {
-    "math.irrational-numbers": {
-      "name": "Irrational numbers",
-      "screens": [
-        {
-          "kind": "steps",
-          "step": "method",
-          "title": "Rational or irrational?",
-          "text": "Look at the decimal form of the number.",
-          "steps": [
-            "A rational number can be written a/b, with integers a, b and b ≠ 0.",
-            "Its decimal ends, like 0.75, or repeats, like 0.333…",
-            "An irrational decimal neither ends nor repeats.",
-            "Examples: √2 = 1.41421… and π = 3.14159… are irrational."
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Your turn",
-          "text": "Which number is irrational?",
-          "opts": [
-            "0.75",
-            "0.333…",
-            "√2",
-            "22/7"
-          ],
-          "ans": "√2",
-          "why": "√2 = 1.41421… never ends and never repeats.",
-          "clue": "Which decimal neither ends nor repeats?"
-        }
-      ]
-    },
-    "math.square-roots": {
-      "name": "Square roots",
-      "screens": [
-        {
-          "kind": "steps",
-          "step": "method",
-          "title": "Squares and square roots",
-          "text": "Squaring undoes a square root.",
-          "steps": [
-            "√9 = 3, because 3² = 9.",
-            "(√5)² = 5.",
-            "(a√b)² = a² × b. So (2√3)² = 4 × 3 = 12.",
-            "For 0 ≤ a < b, √a < √b. So 5 < 6 gives √5 < √6."
-          ]
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Your turn",
-          "text": "What is (3√2)²?",
-          "opts": [
-            "18",
-            "6",
-            "36",
-            "12"
-          ],
-          "ans": "18",
-          "why": "(3√2)² = 3² × 2 = 9 × 2 = 18.",
-          "clue": "Square the 3 and square the √2 separately."
-        }
-      ]
-    }
+  {
+   "en": "Irrational number",
+   "am": "ኢ-ምክንያታዊ ቁጥር",
+   "machine": true,
+   "def": "A decimal that neither ends nor repeats, such as √2 or π. It cannot be written as a/b."
+  },
+  {
+   "en": "Trichotomy",
+   "am": "የሦስትዮሽ ሕግ",
+   "machine": true,
+   "def": "For real a and b, exactly one of a < b, a = b, a > b is true."
+  },
+  {
+   "en": "Transitive property",
+   "am": "የማስተላለፍ ባሕርይ",
+   "machine": true,
+   "def": "If a < b and b < c, then a < c."
   }
+ ],
+ "ideas": [
+  {
+   "id": "math.real-numbers",
+   "name": "Real numbers",
+   "requires": [
+    "math.irrational-numbers"
+   ],
+   "explain": {
+    "en": {
+     "text": "A real number is either rational or irrational. Together they make the set ℝ. Every decimal is exactly one point on the number line. Every point on the line is exactly one decimal."
+    },
+    "am": {
+     "text": "እውን ቁጥር ምክንያታዊ ወይም ኢ-ምክንያታዊ ቁጥር ነው። ሁለቱ በአንድ ላይ ℝ የሚባለውን ስብስብ ይሠራሉ። እያንዳንዱ አስርዮሽ በቁጥር መስመር ላይ አንድ ነጥብ ነው።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "added": true,
+     "title": "Two lists, one set?",
+     "text": "Abebe lists 3/4, −2 and 0.5. Almaz lists √2 and π. Activity 1.14 asks about such lists.",
+     "ask": "Is there one set that holds both lists?",
+     "opts": [
+      "Yes, one set holds them all",
+      "No, they must stay apart",
+      "Only Abebe's list is a set",
+      "I am not sure"
+     ],
+     "after": "Yes. Every number in both lists is a real number.\nThe set of real numbers ℝ holds rationals and irrationals together.\nRead on for the book's definition.",
+     "best": "Yes, one set holds them all"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Real numbers",
+     "paras": [
+      "Activity 1.14 asks: how are points on the number line and decimals related?",
+      "Every decimal, rational or irrational, is exactly one point on the number line. Every point is exactly one decimal.",
+      "Definition 1.7: A number is a real number if it is either rational or irrational.",
+      "The set of real numbers, ℝ, is the union of the rational and the irrational numbers: ℝ = {x : x is rational or x is irrational}."
+     ],
+     "note": "The real numbers are made of two non-overlapping parts: rational and irrational."
+    },
+    {
+     "kind": "tree",
+     "step": "explore",
+     "title": "The family of real numbers",
+     "ask": "Tap each box to see what it holds.",
+     "root": {
+      "label": "Real numbers ℝ",
+      "info": "Every point on the number line. Rational or irrational.",
+      "children": [
+       {
+        "label": "Rational numbers ℚ",
+        "info": "a/b with integers a, b and b ≠ 0. Decimals end or repeat: 3/4 = 0.75, 0.5, 1/3 = 0.333…",
+        "children": [
+         {
+          "label": "Integers ℤ",
+          "info": "…, −2, −1, 0, 1, 2, … Abebe's −2 is here.",
+          "children": [
+           {
+            "label": "Whole numbers W",
+            "info": "0, 1, 2, 3, …",
+            "children": [
+             {
+              "label": "Natural numbers ℕ",
+              "info": "1, 2, 3, …"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "label": "Fractions and decimals",
+          "info": "3/4 and 0.5 from Abebe's list."
+         }
+        ]
+       },
+       {
+        "label": "Irrational numbers",
+        "info": "Decimals that never end and never repeat: √2 = 1.41421…, π = 3.14159… Almaz's list."
+       }
+      ]
+     },
+     "added": true
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Real numbers",
+     "defs": [
+      [
+       "Real number",
+       "A number that is either rational or irrational. The set of all real numbers is written ℝ."
+      ]
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Which is true?",
+     "text": "Real numbers: which statement is true?",
+     "opts": [
+      "Every real number is rational",
+      "Every irrational number is real",
+      "Some numbers are both rational and irrational",
+      "π is not a real number"
+     ],
+     "ans": "Every irrational number is real",
+     "why": "ℝ is made of two parts: the rationals and the irrationals.\nSo every irrational number is in ℝ: it is real.\n\"Every real number is rational\" is false: √2 is real but not rational.\nNo number is both, and π is real.",
+     "clue": "The two parts of ℝ do not overlap, and together they fill it."
+    },
+    {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "title": "Rational or irrational?",
+     "text": "Every one of these is a real number. Sort them into the two parts of ℝ.",
+     "bins": [
+      "Rational",
+      "Irrational"
+     ],
+     "items": [
+      [
+       "3/4",
+       "Rational",
+       "It is a fraction of two integers."
+      ],
+      [
+       "−7",
+       "Rational",
+       "−7 = −7/1."
+      ],
+      [
+       "0.333…",
+       "Rational",
+       "It repeats, so it equals 1/3."
+      ],
+      [
+       "√2",
+       "Irrational",
+       "Its decimal neither ends nor repeats."
+      ],
+      [
+       "π",
+       "Irrational",
+       "π = 3.14159… never ends or repeats."
+      ]
+     ],
+     "why": "A rational decimal ends or repeats: 3/4 = 0.75, −7 = −7/1, 0.333… = 1/3.\nAn irrational decimal never ends and never repeats: √2 = 1.41421…, π = 3.14159…\nBoth groups are real numbers.",
+     "clue": "Ask: does the decimal end or repeat?",
+     "needs": "math.irrational-numbers"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "title": "Fill in the set",
+     "ask": "Complete the definition: ℝ is the union of the rational numbers and the ___ numbers.",
+     "a": [
+      "irrational",
+      "irrationals"
+     ],
+     "why": "Definition 1.7: a real number is rational or irrational.\nSo ℝ = rationals ∪ irrationals.\nThe missing word is \"irrational\".",
+     "clue": "Which kind of number is not rational?"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "added": true,
+     "title": "A plot in Bahir Dar",
+     "text": "True or false? Hana has a square plot in Bahir Dar with area 2 m². Its side is √2 m. The side length is a real number.",
+     "a": true,
+     "why": "Side × side = 2, so the side is √2 m.\n√2 = 1.41421… never ends or repeats: it is irrational.\nEvery irrational number is real.\nSo the statement is true.",
+     "clue": "Is √2 rational or irrational? Both kinds belong to ℝ.",
+     "worked": "√2 = 1.41421… never ends or repeats, so it is irrational. Irrational numbers are real. So the side is a real number.",
+     "needs": "math.irrational-numbers"
+    }
+   ]
+  },
+  {
+   "id": "math.compare-reals",
+   "name": "Comparing real numbers",
+   "requires": [
+    "math.square-roots"
+   ],
+   "explain": {
+    "en": {
+     "text": "Each real number is one point on the number line, so any two can be compared. Exactly one of a < b, a = b, a > b is true. For non-negative numbers, compare the squares. Between any two real numbers there are infinitely many more."
+    },
+    "am": {
+     "text": "እያንዳንዱ እውን ቁጥር በቁጥር መስመር ላይ አንድ ነጥብ ነው። ስለዚህ ማንኛውንም ሁለት ቁጥሮች ማወዳደር እንችላለን። አሉታዊ ላልሆኑ ቁጥሮች ካሬያቸውን አወዳድር። በሁለት እውን ቁጥሮች መካከል ስፍር ቁጥር የሌላቸው ቁጥሮች አሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "title": "Which is bigger?",
+     "text": "Look at √3/6 and 2/3. One has a root, one does not.",
+     "ask": "Which number is bigger? Take a guess.",
+     "opts": [
+      "√3/6",
+      "2/3",
+      "They are equal",
+      "They cannot be compared"
+     ],
+     "after": "2/3 ≈ 0.667 and √3/6 ≈ 1.732 ÷ 6 ≈ 0.289.\nSo 2/3 is bigger.\nThe book shows a way without a calculator: square both. Read on.",
+     "best": "2/3"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Comparing real numbers",
+     "paras": [
+      "Each real number is one point on the number line. So any two real numbers can be compared.",
+      "Trichotomy: for real a and b, exactly one of a < b, a = b, a > b is true.",
+      "Transitive: if a < b and b < c, then a < c.",
+      "For non-negative a and b: if a² < b², then a < b."
+     ]
+    },
+    {
+     "kind": "numline",
+     "step": "explore",
+     "title": "Compare on the number line",
+     "min": 0,
+     "max": 1,
+     "sub": 4,
+     "ask": "Tap each point. The one further right is bigger.",
+     "need": 3,
+     "points": [
+      {
+       "v": "0.2887",
+       "label": "√3/6",
+       "info": "≈ 0.289. It is the smallest here: furthest left."
+      },
+      {
+       "v": "0.4714",
+       "label": "√2/3",
+       "info": "≈ 0.471. Bigger than 0.34, as in Example 1(c)."
+      },
+      {
+       "v": "2/3",
+       "label": "2/3",
+       "info": "≈ 0.667. Right of √3/6, so √3/6 < 2/3."
+      },
+      {
+       "v": "0.8",
+       "label": "0.8",
+       "info": "Example 1(b): 5/8 = 0.625, which is left of 0.8."
+      }
+     ],
+     "added": true
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Two rules of order",
+     "defs": [
+      [
+       "Trichotomy",
+       "For real a and b, exactly one of a < b, a = b, a > b is true."
+      ],
+      [
+       "Transitive property",
+       "If a < b and b < c, then a < c."
+      ]
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Use the transitive rule",
+     "text": "Transitive property: you know that a < b and b < c.",
+     "ask": "What must be true?",
+     "opts": [
+      "a < c",
+      "a > c",
+      "a = c",
+      "Nothing can be said"
+     ],
+     "ans": "a < c",
+     "why": "a < b: a is left of b on the number line.\nb < c: b is left of c.\nSo a is left of c: a < c.\nThis is the transitive property.",
+     "clue": "Place a, b and c on a number line."
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "text": "Four ways to compare real numbers.",
+     "steps": [
+      "(a) −8 is left of −2 on the number line, so −8 < −2.",
+      "(b) 5/8 = 0.625, and 0.625 < 0.8. So 5/8 < 0.8.",
+      "(c) √2/3 ≈ 0.4714, and 0.4714 > 0.34. So √2/3 > 0.34.",
+      "(d) Square both: (√3/6)² = 3/36 and (2/3)² = 4/9 = 16/36.",
+      "3/36 < 16/36, so √3/6 < 2/3."
+     ],
+     "ref": "Example 1"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "Compare by squaring",
+     "text": "Compare by squaring: which is true about 3√2 and 2√3?",
+     "opts": [
+      "3√2 > 2√3",
+      "3√2 < 2√3",
+      "They are equal"
+     ],
+     "ans": "3√2 > 2√3",
+     "why": "Both numbers are positive, so compare their squares.\n(3√2)² = 3² × 2 = 9 × 2 = 18.\n(2√3)² = 2² × 3 = 4 × 3 = 12.\n18 > 12, so 3√2 > 2√3.",
+     "clue": "Square each: (a√b)² = a² × b.",
+     "worked": "(3√2)² = 9 × 2 = 18. (2√3)² = 4 × 3 = 12. Both numbers are positive and 18 > 12, so 3√2 > 2√3.",
+     "needs": "math.square-roots"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Real numbers between two numbers",
+     "paras": [
+      "Is there a real number between 2 and 4.2? Take the average: (2 + 4.2)/2 = 3.1, and 2 < 3.1 < 4.2.",
+      "Averaging again gives 2.55, between 2 and 3.1. It also gives 3.65, between 3.1 and 4.2.",
+      "We can keep doing this for ever. So there are infinitely many real numbers between any two real numbers."
+     ]
+    },
+    {
+     "kind": "numline",
+     "step": "explore",
+     "title": "Halve the gap again and again",
+     "min": 1,
+     "max": 5,
+     "sub": 4,
+     "ask": "Tap the points. Each new one is an average of two others.",
+     "need": 3,
+     "points": [
+      {
+       "v": "2",
+       "label": "2",
+       "info": "One end."
+      },
+      {
+       "v": "2.55",
+       "label": "2.55",
+       "info": "= (2 + 3.1)/2. Between 2 and 3.1."
+      },
+      {
+       "v": "3.1",
+       "label": "3.1",
+       "info": "= (2 + 4.2)/2. The first average."
+      },
+      {
+       "v": "3.65",
+       "label": "3.65",
+       "info": "= (3.1 + 4.2)/2. Between 3.1 and 4.2."
+      },
+      {
+       "v": "4.2",
+       "label": "4.2",
+       "info": "The other end. We can keep averaging for ever."
+      }
+     ],
+     "added": true
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "Find one in between",
+     "text": "Find a number in between: which number is between 1/3 and 1/2?",
+     "opts": [
+      "5/12",
+      "1/4",
+      "2/3",
+      "1/6"
+     ],
+     "ans": "5/12",
+     "why": "Take the average: (1/3 + 1/2) ÷ 2.\n1/3 + 1/2 = 2/6 + 3/6 = 5/6.\n5/6 ÷ 2 = 5/12.\nCheck: 1/3 = 4/12 < 5/12 < 6/12 = 1/2.",
+     "clue": "Take the average of the two numbers."
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "added": true,
+     "title": "Teff prices in Adama",
+     "text": "One shop in Adama sells a kilo of teff for 95 birr. Another sells it for 101 birr. A third shop charges the average of the two.",
+     "ask": "Find the average price: the third shop charges ___ birr.",
+     "a": [
+      "98",
+      "98 birr",
+      "ninety-eight",
+      "ninety eight"
+     ],
+     "why": "Average = (95 + 101) ÷ 2.\n95 + 101 = 196.\n196 ÷ 2 = 98.\nCheck: 95 < 98 < 101. The price is 98 birr.",
+     "clue": "Add the two prices, then divide by 2."
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 1.22",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Compare the decimals: 0.236 ☐ 0.256",
+     "opts": [
+      "<",
+      ">",
+      "="
+     ],
+     "ans": "<",
+     "why": "Line up the digits: 0.236 and 0.256.\nTenths: 2 and 2, the same.\nHundredths: 3 < 5.\nSo 0.236 < 0.256.",
+     "clue": "Compare digit by digit from the left."
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Compare the negative decimals: −0.135 ☐ −0.1351",
+     "opts": [
+      "<",
+      ">",
+      "="
+     ],
+     "ans": ">",
+     "why": "First compare without signs: 0.1350 < 0.1351.\nSo −0.135 is closer to 0 than −0.1351.\nCloser to 0 means further right, so bigger.\nSo −0.135 > −0.1351.",
+     "clue": "For negatives, the one closer to 0 is bigger."
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Compare a root with a decimal: √5/2 ☐ 0.234",
+     "opts": [
+      "<",
+      ">",
+      "="
+     ],
+     "ans": ">",
+     "why": "√5 ≈ 2.236, because 2.236² ≈ 5.\n√5/2 ≈ 2.236 ÷ 2 = 1.118.\n1.118 > 0.234.\nSo √5/2 > 0.234.",
+     "clue": "√5 is a bit more than 2.",
+     "needs": "math.square-roots"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Compare a fraction with π: 22/7 ☐ π",
+     "opts": [
+      "<",
+      ">",
+      "="
+     ],
+     "ans": ">",
+     "why": "22 ÷ 7 = 3.142857…\nπ = 3.141592…\nThird decimal place: 2 > 1.\nSo 22/7 > π. 22/7 is only an estimate of π.",
+     "clue": "Write both as decimals to 4 places."
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Compare by squaring: 6√5 ☐ 5√7",
+     "opts": [
+      "<",
+      ">",
+      "="
+     ],
+     "ans": ">",
+     "why": "Both numbers are positive, so compare squares.\n(6√5)² = 36 × 5 = 180.\n(5√7)² = 25 × 7 = 175.\n180 > 175, so 6√5 > 5√7.",
+     "clue": "Square both numbers.",
+     "needs": "math.square-roots"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Compare a sum with a root: 2 + √3 ☐ 4",
+     "opts": [
+      "<",
+      ">",
+      "="
+     ],
+     "ans": "<",
+     "why": "√3 ≈ 1.732.\n2 + √3 ≈ 3.732, and 3.732 < 4.\nWithout a calculator: √3 < √4 = 2.\nSo 2 + √3 < 2 + 2 = 4.",
+     "clue": "√3 is between 1 and 2."
+    }
+   ]
+  },
+  {
+   "book_name": "Exercise 1.23",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Find a number in between: which real number is between −0.24 and −0.246?",
+     "opts": [
+      "−0.245",
+      "−0.25",
+      "−0.2",
+      "−0.247"
+     ],
+     "ans": "−0.245",
+     "why": "Write −0.24 as −0.240.\nWe need a number from −0.246 up to −0.240.\n−0.246 < −0.245 < −0.240, so −0.245 works.\n−0.25 and −0.247 are too far left; −0.2 is too far right.",
+     "clue": "Write −0.24 as −0.240 and look between."
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Find a number in between: which real number is between 3/5 and 2/7?",
+     "opts": [
+      "0.4",
+      "0.2",
+      "0.7",
+      "0.25"
+     ],
+     "ans": "0.4",
+     "why": "2/7 = 0.2857… and 3/5 = 0.6.\nWe need a number between 0.286 and 0.6.\n0.4 fits: 0.286 < 0.4 < 0.6.\n0.2 and 0.25 are too small; 0.7 is too big.",
+     "clue": "Change both fractions to decimals."
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Find a number in between: which real number is between √2 and √3?",
+     "opts": [
+      "1.5",
+      "1.3",
+      "1.8",
+      "2"
+     ],
+     "ans": "1.5",
+     "why": "√2 ≈ 1.414 and √3 ≈ 1.732.\nCheck 1.5 by squaring: 1.5² = 2.25.\n2 < 2.25 < 3, so √2 < 1.5 < √3.\n1.3² = 1.69 is too small; 1.8² = 3.24 and 2² = 4 are too big.",
+     "clue": "Check by squaring: is the square between 2 and 3?",
+     "needs": "math.square-roots"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "text": "Density of ℝ: how many real numbers are there between two different real numbers?",
+     "opts": [
+      "Infinitely many",
+      "None",
+      "Exactly one",
+      "Ten"
+     ],
+     "ans": "Infinitely many",
+     "why": "The average of two numbers lies between them.\nAverage again with either end: another number between.\nThis never stops.\nSo there are infinitely many.",
+     "clue": "Think about averaging again and again."
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "True or false? Some real numbers are neither rational nor irrational.",
+   "a": false,
+   "why": "Definition 1.7: a real number is rational or irrational.\nThere is no third kind.\nSo the statement is false.",
+   "clue": ""
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Compare by squaring: which is true about √3/6 and 2/3?",
+   "opts": [
+    "√3/6 < 2/3",
+    "√3/6 > 2/3",
+    "√3/6 = 2/3"
+   ],
+   "ans": "√3/6 < 2/3",
+   "why": "Both are positive, so compare their squares.\n(√3/6)² = 3/36.\n(2/3)² = 4/9 = 16/36.\n3/36 < 16/36, so √3/6 < 2/3.",
+   "clue": ""
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "Find a number in between: the average of 2 and 4.2 is ___.",
+   "a": [
+    "3.1"
+   ],
+   "why": "Add: 2 + 4.2 = 6.2.\nDivide by 2: 6.2 ÷ 2 = 3.1.\nCheck: 2 < 3.1 < 4.2.",
+   "clue": ""
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "The names Abebe, Almaz and Hana and the teff-price item are added examples; the facts come from section 1.4."
+  },
+  {
+   "kind": "note",
+   "text": "Exercise 1.22 has seven parts. Part (e), −7√145 ☐ √7 (answer <: a negative is less than a positive), is left out to keep six items."
+  },
+  {
+   "kind": "note",
+   "text": "The interactive real-number diagram from the source is not reproduced; its caption is kept as a read note."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1,
+ "refreshers": {
+  "math.irrational-numbers": {
+   "name": "Irrational numbers",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Rational or irrational?",
+     "text": "Look at the decimal form of the number.",
+     "steps": [
+      "A rational number can be written a/b, with integers a, b and b ≠ 0.",
+      "Its decimal ends, like 0.75, or repeats, like 0.333…",
+      "An irrational decimal neither ends nor repeats.",
+      "Examples: √2 = 1.41421… and π = 3.14159… are irrational."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Your turn",
+     "text": "Which number is irrational?",
+     "opts": [
+      "0.75",
+      "0.333…",
+      "√2",
+      "22/7"
+     ],
+     "ans": "√2",
+     "why": "0.75 ends and 0.333… repeats: both are rational.\n22/7 is a fraction of integers: rational.\n√2 = 1.41421… never ends and never repeats.\nSo √2 is irrational.",
+     "clue": "Which decimal neither ends nor repeats?"
+    }
+   ]
+  },
+  "math.square-roots": {
+   "name": "Square roots",
+   "screens": [
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Squares and square roots",
+     "text": "Squaring undoes a square root.",
+     "steps": [
+      "√9 = 3, because 3² = 9.",
+      "(√5)² = 5.",
+      "(a√b)² = a² × b. So (2√3)² = 4 × 3 = 12.",
+      "For 0 ≤ a < b, √a < √b. So 5 < 6 gives √5 < √6."
+     ]
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Your turn",
+     "text": "What is (3√2)²?",
+     "opts": [
+      "18",
+      "6",
+      "36",
+      "12"
+     ],
+     "ans": "18",
+     "why": "(3√2)² = 3² × (√2)².\n3² = 9 and (√2)² = 2.\n9 × 2 = 18.\n6 is a slip: it doubles instead of squaring.",
+     "clue": "Square the 3 and square the √2 separately."
+    }
+   ]
+  }
+ }
 }
