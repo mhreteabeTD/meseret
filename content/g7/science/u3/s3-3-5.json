@@ -40,9 +40,10 @@
       "The words",
       "The symbols"
      ],
-     "after": "Chemists write reactions with symbols and formulas. This is a chemical equation.",
+     "after": "\"2H₂ + O₂ → 2H₂O\" is much shorter than the words.\nChemists write reactions with symbols and formulas.\nThis is a chemical equation.",
      "added": true,
-     "id": "g7.science.u3.s3-3-5.1"
+     "id": "g7.science.u3.s3-3-5.1",
+     "best": "The symbols"
     },
     {
      "kind": "read",
@@ -53,6 +54,37 @@
       "It uses symbols and formulas."
      ],
      "id": "g7.science.u3.s3-3-5.2"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "From words to formulas",
+     "ask": "Tap each word to see its symbol or formula.",
+     "need": 3,
+     "items": [
+      [
+       "hydrogen",
+       "H₂. Hydrogen gas is diatomic: two atoms joined."
+      ],
+      [
+       "oxygen",
+       "O₂. Oxygen gas is diatomic too."
+      ],
+      [
+       "water",
+       "H₂O: two hydrogen atoms and one oxygen atom."
+      ],
+      [
+       "magnesium",
+       "Mg. A metal is written with its symbol only."
+      ],
+      [
+       "magnesium oxide",
+       "MgO. Valences 2 and 2 give Mg₂O₂, which simplifies to MgO."
+      ]
+     ],
+     "added": true,
+     "id": "g7.science.u3.s3-3-5.14"
     },
     {
      "kind": "steps",
@@ -66,6 +98,21 @@
       "Step 3, balanced: 2H₂ + O₂ → 2H₂O."
      ],
      "id": "g7.science.u3.s3-3-5.3"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Example: burning magnesium",
+     "steps": [
+      "Step 1, word equation: magnesium + oxygen → magnesium oxide.",
+      "Step 2, formulas: Mg + O₂ → MgO.",
+      "Count O: 2 on the left, 1 on the right. Put 2 before MgO.",
+      "Now Mg: 2 on the right. Put 2 before Mg.",
+      "Step 3, balanced: 2Mg + O₂ → 2MgO.",
+      "Check: Mg 2 = 2, O 2 = 2."
+     ],
+     "added": true,
+     "id": "g7.science.u3.s3-3-5.15"
     },
     {
      "kind": "name",
@@ -83,14 +130,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "What is the first step in writing a chemical equation?",
+     "text": "Writing equations: what is the first step in writing a chemical equation?",
      "opts": [
       "Balance it",
       "Write a word equation",
       "Find the LCM"
      ],
      "ans": "Write a word equation",
-     "why": "Step 1 is the word equation.",
+     "why": "We go from words to symbols.\nStep 1 is the word equation.\nStep 2 is the formulas. Step 3 is balancing.\nSo the first step is to write a word equation.\nBalancing comes last, after the formulas.",
      "clue": "Words before formulas.",
      "level": 1,
      "id": "g7.science.u3.s3-3-5.5"
@@ -105,23 +152,24 @@
       "Write the formula of each substance",
       "Balance the equation"
      ],
-     "why": "These are the three steps in order.",
+     "why": "Step 1: write the word equation.\nStep 2: write the formula of each substance.\nStep 3: balance the equation.\nYou cannot balance before you have formulas.",
      "clue": "Words, then formulas, then balance.",
      "level": 1,
-     "id": "g7.science.u3.s3-3-5.6"
+     "id": "g7.science.u3.s3-3-5.6",
+     "text": "Put the three steps for writing a chemical equation in order."
     },
     {
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Hydrogen + oxygen → water. Which line has the correct formulas (before balancing)?",
+     "text": "Step 2, formulas: hydrogen + oxygen → water. Which line has the correct formulas (before balancing)?",
      "opts": [
       "H + O → H₂O",
       "H₂ + O₂ → H₂O",
       "H₂ + O → HO"
      ],
      "ans": "H₂ + O₂ → H₂O",
-     "why": "Hydrogen and oxygen are diatomic: H₂ and O₂.",
+     "why": "Hydrogen and oxygen are diatomic gases.\nSo hydrogen is H₂ and oxygen is O₂.\nWater is H₂O.\nSo the line is H₂ + O₂ → H₂O.\n\"H + O\" forgets that the gases are diatomic.",
      "clue": "Use Table 3.3.",
      "level": 2,
      "id": "g7.science.u3.s3-3-5.7"
@@ -130,14 +178,14 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Why does 2H₂ + O₂ → 2H₂O have a 2 before H₂O?",
+     "text": "Balancing: why does 2H₂ + O₂ → 2H₂O have a 2 before H₂O?",
      "opts": [
       "To make 2 oxygen atoms on the right",
       "Because water is heavy",
       "To change water into H₄O₂"
      ],
      "ans": "To make 2 oxygen atoms on the right",
-     "why": "O₂ gives 2 O on the left. 2H₂O gives 2 O on the right. Coefficients balance atoms.",
+     "why": "Count O on the left: O₂ gives 2 oxygen atoms.\nH₂O has only 1 O, so the right needs 2H₂O.\n2H₂O gives 2 oxygen atoms on the right.\nCoefficients count molecules. They do not change water.\nH₄O₂ would be a different formula, which is not allowed.",
      "clue": "Count the oxygen atoms on each side.",
      "level": 3,
      "added": true,
@@ -152,14 +200,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "A chemical equation uses",
+   "text": "What does a chemical equation use to show a reaction?",
    "opts": [
     "symbols and formulas",
     "only words",
     "only numbers"
    ],
    "ans": "symbols and formulas",
-   "why": "Definition.",
+   "why": "A chemical equation is a short hand of a reaction.\nIt uses symbols for elements and formulas for compounds.\nA word equation uses only words.\nSo the answer is symbols and formulas.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u3.s3-3-5.9"
@@ -168,14 +216,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Step 3 of writing an equation is to",
+   "text": "Writing equations: what is step 3?",
    "opts": [
     "write words",
     "balance it",
     "draw it"
    ],
    "ans": "balance it",
-   "why": "Step 3: balance.",
+   "why": "Step 1: word equation.\nStep 2: formulas.\nStep 3: balance the equation.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u3.s3-3-5.10"
@@ -184,14 +232,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Oxygen gas is written as",
+   "text": "Formulas: how is oxygen gas written?",
    "opts": [
     "O",
     "O₂",
     "O₃"
    ],
    "ans": "O₂",
-   "why": "Diatomic.",
+   "why": "Oxygen gas is diatomic.\nTwo oxygen atoms join in one molecule.\nSo oxygen gas is written O₂.\nO is one atom; O₃ is ozone, not oxygen gas.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u3.s3-3-5.11"
@@ -200,14 +248,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Balanced equation for hydrogen + oxygen → water:",
+   "text": "Choose the balanced equation for hydrogen + oxygen → water.",
    "opts": [
     "H₂ + O₂ → H₂O",
     "2H₂ + O₂ → 2H₂O",
     "H₂ + O → H₂O₂"
    ],
    "ans": "2H₂ + O₂ → 2H₂O",
-   "why": "H 4 = 4, O 2 = 2.",
+   "why": "Start with H₂ + O₂ → H₂O.\nO: 2 on the left, 1 on the right. Put 2 before H₂O.\nH: now 4 on the right. Put 2 before H₂.\n2H₂ + O₂ → 2H₂O.\nCheck: H 4 = 4, O 2 = 2.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u3.s3-3-5.12"
@@ -216,14 +264,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Magnesium + oxygen → magnesium oxide. Which formulas are right?",
+   "text": "Step 2, formulas: magnesium + oxygen → magnesium oxide. Which formulas are right?",
    "opts": [
     "Mg + O₂ → MgO",
     "Mg + O → Mg₂O",
     "Mg₂ + O₂ → MgO₂"
    ],
    "ans": "Mg + O₂ → MgO",
-   "why": "Oxygen is O₂; magnesium oxide is MgO (2 and 2 simplify).",
+   "why": "Magnesium is a metal: Mg.\nOxygen gas is diatomic: O₂.\nMagnesium oxide: valences 2 and 2 give Mg₂O₂, which simplifies to MgO.\nSo the formulas are Mg + O₂ → MgO.\nMg₂ and MgO₂ are wrong formulas.",
    "level": 3,
    "clue": "",
    "id": "g7.science.u3.s3-3-5.13"

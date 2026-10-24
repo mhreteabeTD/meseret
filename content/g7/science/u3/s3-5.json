@@ -108,6 +108,58 @@
      "id": "g7.science.u3.s3-5.3"
     },
     {
+     "kind": "tree",
+     "step": "explore",
+     "title": "Unit 3 at a glance",
+     "root": {
+      "label": "Unit 3",
+      "info": "Elements, compounds and chemical reactions.",
+      "children": [
+       {
+        "label": "Elements",
+        "info": "Pure substances written with symbols, like Fe and Na. Some are diatomic, like O₂ and N₂.",
+        "children": [
+         {
+          "label": "Symbols",
+          "info": "A shorthand for an element: a capital letter, sometimes with a small letter (He, Cu)."
+         }
+        ]
+       },
+       {
+        "label": "Compounds",
+        "info": "Two or more elements chemically combined, like H₂O and NaCl.",
+        "children": [
+         {
+          "label": "Valence and formulas",
+          "info": "Valence is the combining power. Criss-cross the valences to write a formula: Fe(III) + Cl → FeCl₃."
+         }
+        ]
+       },
+       {
+        "label": "Chemical reactions",
+        "pic": "chemistry",
+        "info": "Reactants change into new substances called products.",
+        "children": [
+         {
+          "label": "Signs",
+          "info": "Colour change, gas given off, temperature change, precipitate."
+         },
+         {
+          "label": "Conservation of mass",
+          "info": "Matter is neither created nor destroyed."
+         },
+         {
+          "label": "Balancing",
+          "info": "Change coefficients only, by inspection or by the LCM method."
+         }
+        ]
+       }
+      ]
+     },
+     "added": true,
+     "id": "g7.science.u3.s3-5.19"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -153,18 +205,19 @@
        "Burning magnesium"
       ]
      ],
-     "why": "Each symbol or formula has one meaning.",
+     "why": "Na is the symbol of sodium (Natrium).\nNO₃⁻ is the nitrate ion, a polyatomic ion.\nCaCl₂ is calcium chloride.\n2Mg + O₂ → 2MgO is the burning of magnesium.",
      "clue": "Recall the symbols and names.",
      "level": 1,
-     "id": "g7.science.u3.s3-5.5"
+     "id": "g7.science.u3.s3-5.5",
+     "text": "Match each symbol, formula or equation to its meaning."
     },
     {
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "The formula and symbol of nitrogen are the same.",
+     "text": "Symbols and formulas: true or false? The formula and symbol of nitrogen are the same.",
      "a": false,
-     "why": "Symbol N, formula N₂.",
+     "why": "The symbol of nitrogen is N: one atom.\nNitrogen gas is diatomic, so its formula is N₂.\nN and N₂ are not the same.\nSo the statement is false.",
      "clue": "Is nitrogen diatomic?",
      "level": 1,
      "ref": "Review Exercise I 8",
@@ -174,7 +227,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "What is the chemical formula of iron (III) chloride?",
+     "text": "Writing formulas: what is the chemical formula of iron (III) chloride?",
      "opts": [
       "FeCl₂",
       "FeCl",
@@ -182,7 +235,7 @@
       "Fe₂Cl₃"
      ],
      "ans": "FeCl₃",
-     "why": "Fe = 3, Cl = 1: Fe₁Cl₃ → FeCl₃.",
+     "why": "Iron (III) means iron has valence 3.\nChlorine has valence 1.\nCriss-cross: Fe₁Cl₃.\nSo iron (III) chloride is FeCl₃.\nFeCl₂ is iron (II) chloride.",
      "clue": "(III) means valence 3.",
      "level": 2,
      "ref": "Review Exercise 15",
@@ -192,7 +245,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Balance: Aluminum + bromine → aluminum bromide",
+     "text": "Challenge, write and balance: aluminum + bromine → aluminum bromide",
      "opts": [
       "Al + Br₂ → AlBr₃",
       "2Al + 3Br₂ → 2AlBr₃",
@@ -200,7 +253,7 @@
       "2Al + Br₂ → 2AlBr"
      ],
      "ans": "2Al + 3Br₂ → 2AlBr₃",
-     "why": "AlBr₃ (Al 3, Br 1). Bromine is Br₂. Br: LCM of 2 and 3 is 6 → 3Br₂, 2AlBr₃; then 2Al. Check Al 2 = 2, Br 6 = 6.",
+     "why": "Formulas: Al (valence 3) and Br (valence 1) give AlBr₃. Bromine gas is Br₂.\nAl + Br₂ → AlBr₃.\nBr: 2 on the left, 3 on the right. LCM of 2 and 3 is 6.\nSo 3Br₂ and 2AlBr₃. Then Al: 2 on the right, so 2Al.\n2Al + 3Br₂ → 2AlBr₃. Check: Al 2 = 2, Br 6 = 6.",
      "clue": "Write formulas first; bromine is diatomic.",
      "level": 3,
      "ref": "Review Exercise 20 a",
@@ -218,9 +271,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "A compound is pure substance.",
+     "text": "Review Exercise 1, true or false: a compound is a pure substance.",
      "a": true,
-     "why": "Compounds are pure substances.",
+     "why": "A compound has a fixed make-up of elements.\nIts elements are chemically combined.\nSo a compound is a pure substance: True.",
      "clue": "Recall 3.2.1.",
      "level": 1,
      "ref": "1",
@@ -230,9 +283,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "In a chemical reaction atoms are neither created nor destroyed.",
+     "text": "Review Exercise 2, true or false: in a chemical reaction atoms are neither created nor destroyed.",
      "a": true,
-     "why": "Law of conservation of mass.",
+     "why": "Atoms only rearrange in a reaction.\nThey are never made and never lost.\nThis is the law of conservation of mass: True.",
      "clue": "Recall 3.3.3.",
      "level": 1,
      "ref": "2",
@@ -242,9 +295,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "O₂ and 2O have the same meaning.",
+     "text": "Review Exercise 3, true or false: O₂ and 2O have the same meaning.",
      "a": false,
-     "why": "O₂ is a molecule; 2O is two atoms.",
+     "why": "O₂ is one molecule: two oxygen atoms joined.\n2O is two separate oxygen atoms.\nThe subscript joins atoms. The coefficient counts separate units.\nSo they do not mean the same: False.",
      "clue": "Coefficient or subscript?",
      "level": 1,
      "ref": "3",
@@ -254,9 +307,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "The symbol of copper is Co.",
+     "text": "Review Exercise 4, true or false: the symbol of copper is Co.",
      "a": false,
-     "why": "Copper is Cu (Cuprum).",
+     "why": "Copper's symbol comes from its Latin name, Cuprum.\nSo copper is Cu.\nCo is the symbol of cobalt.\nThe statement is false.",
      "clue": "Latin name.",
      "level": 1,
      "ref": "4",
@@ -266,9 +319,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "Respiration is a chemical change.",
+     "text": "Review Exercise 6, true or false: respiration is a chemical change.",
      "a": true,
-     "why": "New substances form.",
+     "why": "Respiration: glucose + oxygen → carbon dioxide + water.\nThe products are new substances.\nSo respiration is a chemical change: True.",
      "clue": "Are new substances made?",
      "level": 1,
      "ref": "6",
@@ -278,7 +331,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "The Latin name of silver is",
+     "text": "Latin names: what is the Latin name of silver?",
      "opts": [
       "Argentum",
       "Kalium",
@@ -286,7 +339,7 @@
       "Cuprum"
      ],
      "ans": "Argentum",
-     "why": "Silver – Argentum – Ag.",
+     "why": "Silver's Latin name is Argentum, so its symbol is Ag.\nKalium is potassium (K).\nNatrium is sodium (Na).\nCuprum is copper (Cu).",
      "clue": "Table 3.2.",
      "level": 1,
      "ref": "11",
@@ -296,7 +349,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "All can exist as diatomic molecules EXCEPT",
+     "text": "Diatomic molecules: all of these can exist as diatomic molecules EXCEPT",
      "opts": [
       "Hydrogen",
       "Oxygen",
@@ -304,7 +357,7 @@
       "Chlorine"
      ],
      "ans": "Sodium",
-     "why": "Sodium is a metal, not diatomic.",
+     "why": "Hydrogen, oxygen and chlorine exist as H₂, O₂ and Cl₂.\nSodium is a metal.\nIt is written Na, not as a pair of atoms.\nSo sodium is the exception.",
      "clue": "Table 3.3.",
      "level": 1,
      "ref": "14",
@@ -314,7 +367,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "The chemical symbol for helium is",
+     "text": "Symbols: what is the chemical symbol for helium?",
      "opts": [
       "H",
       "Hl",
@@ -322,7 +375,7 @@
       "HE"
      ],
      "ans": "He",
-     "why": "Helium is He.",
+     "why": "A symbol starts with a capital letter.\nA second letter is always small.\nH is hydrogen, so helium needs two letters: He.\nHE has two capitals, which is never written.",
      "clue": "Capital then small.",
      "level": 1,
      "ref": "16",
@@ -354,24 +407,25 @@
        "Sn"
       ]
      ],
-     "why": "From Tables 3.1 and 3.2.",
+     "why": "Zinc is Zn. Phosphorus is P. Calcium is Ca.\nMercury is Hg, from its Latin name Hydrargyrum.\nTin is Sn, from its Latin name Stannum.",
      "clue": "Hydrargyrum, Stannum.",
      "level": 2,
      "ref": "18",
-     "id": "g7.science.u3.s3-5.17"
+     "id": "g7.science.u3.s3-5.17",
+     "text": "Review Exercise 18: match each element to its symbol."
     },
     {
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Balance: NH₃ + O₂ → NO + H₂O",
+     "text": "Review Exercise 19 b, balance: NH₃ + O₂ → NO + H₂O",
      "opts": [
       "4NH₃ + 5O₂ → 4NO + 6H₂O",
       "2NH₃ + O₂ → 2NO + 3H₂O",
       "NH₃ + O₂ → NO + H₂O"
      ],
      "ans": "4NH₃ + 5O₂ → 4NO + 6H₂O",
-     "why": "N 4 = 4, H 12 = 12, O 10 = 4 + 6.",
+     "why": "H: 3 in NH₃, 2 in H₂O. Use 2NH₃ and 3H₂O (6 H).\nN: 2 on the left, so 2NO.\nO: right 2 + 3 = 5, so 5/2 O₂. A half is not allowed.\nDouble everything: 4NH₃ + 5O₂ → 4NO + 6H₂O.\nCheck: N 4 = 4, H 12 = 12, O 10 = 4 + 6.",
      "clue": "Balance H, then N, then O; clear 5/2.",
      "level": 3,
      "ref": "19 b",

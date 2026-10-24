@@ -41,9 +41,10 @@
       "A gas is being made",
       "The water is boiling"
      ],
-     "after": "Bubbles mean a gas is given off. That is a sign of a chemical reaction.",
+     "after": "Bubbles mean a gas is given off. Here it is carbon dioxide.\nNo heat was added, so the water is not boiling.\nA new gas is a sign of a chemical reaction.",
      "added": true,
-     "id": "g7.science.u3.s3-3-2.1"
+     "id": "g7.science.u3.s3-3-2.1",
+     "best": "A gas is being made"
     },
     {
      "kind": "read",
@@ -100,6 +101,37 @@
      "id": "g7.science.u3.s3-3-2.6"
     },
     {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Four signs of a chemical reaction",
+     "ask": "Tap each sign to see the book's example.",
+     "need": 4,
+     "items": [
+      [
+       "Colour change",
+       "Black copper oxide and sulfuric acid give a blue copper sulfate solution.",
+       "beaker"
+      ],
+      [
+       "Gas given off",
+       "Magnesium in hydrochloric acid gives bubbles of hydrogen gas.",
+       "test-tube"
+      ],
+      [
+       "Temperature change",
+       "Potassium in water gives so much heat that the hydrogen burns.",
+       "thermometer"
+      ],
+      [
+       "Precipitate forms",
+       "Silver nitrate and sodium chloride solutions give a white solid, silver chloride.",
+       "flask"
+      ]
+     ],
+     "added": true,
+     "id": "g7.science.u3.s3-3-2.17"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -115,14 +147,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Black copper oxide and sulfuric acid make a blue solution. Which sign is this?",
+     "text": "Signs of a reaction: black copper oxide and sulfuric acid make a blue solution. Which sign is this?",
      "opts": [
       "Colour change",
       "Gas given off",
       "Precipitate"
      ],
      "ans": "Colour change",
-     "why": "Black solid → blue solution.",
+     "why": "Copper oxide is a black solid.\nAfter the reaction you see a blue solution, copper sulfate.\nBlack turned into blue.\nSo the sign is a colour change.\nNo bubbles and no solid formed, so it is not gas or precipitate.",
      "clue": "What did you see change?",
      "level": 1,
      "id": "g7.science.u3.s3-3-2.8"
@@ -150,16 +182,17 @@
        "Precipitate"
       ]
      ],
-     "why": "Each example shows one sign.",
+     "why": "Blue copper sulfate forming from black copper oxide: colour change.\nHydrogen bubbles from magnesium: gas given off.\nPotassium in water gets hot: temperature change.\nA white silver chloride solid from two solutions: precipitate.",
      "clue": "Look at the four signs.",
      "level": 1,
-     "id": "g7.science.u3.s3-3-2.9"
+     "id": "g7.science.u3.s3-3-2.9",
+     "text": "Match each book example to the sign of reaction it shows."
     },
     {
      "kind": "pick",
      "step": "practise",
      "graded": true,
-     "text": "Which are signs of a chemical reaction? Tap all.",
+     "text": "Signs of a reaction: which are signs of a chemical reaction? Tap all.",
      "pool": [
       "Colour change",
       "Bubbles of gas",
@@ -173,23 +206,66 @@
       "Change of temperature",
       "A solid forms"
      ],
-     "why": "The book lists four signs.",
+     "why": "The book lists four signs.\nThey are colour change, gas given off, temperature change and a precipitate (a solid forms).\nA moving container is not a change in the substances.\nSo it is not a sign.",
      "clue": "There are four signs.",
      "level": 2,
      "id": "g7.science.u3.s3-3-2.10"
     },
     {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "level": 2,
+     "title": "Sign of a reaction, or not?",
+     "text": "Sort each observation. Does it show a new substance forming?",
+     "bins": [
+      "Sign of a reaction",
+      "Not a sign"
+     ],
+     "items": [
+      [
+       "Vinegar on baking soda fizzes",
+       "Sign of a reaction",
+       "A new gas, carbon dioxide, is made."
+      ],
+      [
+       "Water bubbles as it boils",
+       "Not a sign",
+       "The bubbles are steam. It is still water."
+      ],
+      [
+       "Two clear solutions give a white solid",
+       "Sign of a reaction",
+       "A precipitate formed."
+      ],
+      [
+       "Sugar dissolves in tea",
+       "Not a sign",
+       "The sugar is still there. The tea tastes sweet."
+      ],
+      [
+       "A cut banana turns brown",
+       "Sign of a reaction",
+       "A colour change: new substances formed."
+      ]
+     ],
+     "why": "Ask: is a new substance formed?\nFizzing, a new solid, or a new colour show a reaction.\nBoiling water bubbles too, but the steam is still water.\nDissolved sugar is still sugar.\nSo boiling and dissolving are not signs.",
+     "clue": "Bubbles can come from boiling too. Was anything new made?",
+     "added": true,
+     "id": "g7.science.u3.s3-3-2.18"
+    },
+    {
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Hiwot leaves an iron nail outside. It turns reddish-brown. Which sign shows a reaction?",
+     "text": "Spot the sign: Hiwot leaves an iron nail outside. It turns reddish-brown. Which sign shows a reaction?",
      "opts": [
       "Gas given off",
       "Colour change",
       "Precipitate"
      ],
      "ans": "Colour change",
-     "why": "Grey iron changing to reddish-brown rust is a colour change: a new substance formed.",
+     "why": "Iron is grey. Rust is reddish-brown.\nHiwot saw the colour change.\nThe new colour shows a new substance, rust, formed.\nNo bubbles and no solid from two solutions, so not gas or precipitate.\nSo the sign is a colour change.",
      "clue": "What did she see?",
      "level": 3,
      "ref": "Activity 3.8",
@@ -205,14 +281,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "A solid formed when two solutions mix is a",
+   "text": "Which word names a solid formed when two solutions mix?",
    "opts": [
     "precipitate",
     "reactant",
     "gas"
    ],
    "ans": "precipitate",
-   "why": "Definition.",
+   "why": "Some reactions of two solutions make an insoluble solid.\nThat solid is called a precipitate.\nA reactant is a starting material, not the solid formed.\nSo the answer is precipitate.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u3.s3-3-2.12"
@@ -221,14 +297,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Magnesium in hydrochloric acid gives off",
+   "text": "Gas test: magnesium in hydrochloric acid gives off which gas?",
    "opts": [
     "oxygen",
     "hydrogen",
     "chlorine"
    ],
    "ans": "hydrogen",
-   "why": "Hydrogen bubbles.",
+   "why": "Magnesium + hydrochloric acid → magnesium chloride + hydrogen.\nThe gas in the bubbles is hydrogen.\nChlorine stays in magnesium chloride.\nSo the gas given off is hydrogen.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u3.s3-3-2.13"
@@ -237,9 +313,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "A temperature change can be a sign of a chemical reaction.",
+   "text": "True or false: a temperature change can be a sign of a chemical reaction.",
    "a": true,
-   "why": "Heat is taken in or given out.",
+   "why": "In some reactions heat is given out. In others heat is taken in.\nPotassium in water gets so hot the hydrogen burns.\nSo a temperature change is a sign: True.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u3.s3-3-2.14"
@@ -248,14 +324,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Silver nitrate + sodium chloride gives a white solid. It is",
+   "text": "Precipitates: silver nitrate + sodium chloride gives a white solid. Which substance is it?",
    "opts": [
     "silver chloride",
     "sodium nitrate",
     "silver nitrate"
    ],
    "ans": "silver chloride",
-   "why": "The precipitate is AgCl.",
+   "why": "Silver nitrate + sodium chloride → silver chloride + sodium nitrate.\nSodium nitrate stays dissolved.\nSilver chloride is insoluble, so it is the white solid.\nThe precipitate is silver chloride.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u3.s3-3-2.15"
@@ -264,14 +340,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which shows a chemical reaction AND a gas?",
+   "text": "Signs of a reaction: which shows a chemical reaction AND a gas given off?",
    "opts": [
     "Ice melting",
     "Baking soda fizzing with vinegar",
     "Salt dissolving"
    ],
    "ans": "Baking soda fizzing with vinegar",
-   "why": "Bubbles of a new gas form.",
+   "why": "Ice melting and salt dissolving make no new substance.\nThey are physical changes.\nBaking soda and vinegar fizz: a new gas forms.\nSo baking soda fizzing shows a reaction and a gas.",
    "level": 3,
    "clue": "",
    "id": "g7.science.u3.s3-3-2.16"

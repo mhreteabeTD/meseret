@@ -52,9 +52,10 @@
       "Yes",
       "No, he changed water into a new substance"
      ],
-     "after": "Changing a subscript changes the substance. H₂O₂ is not water. Only coefficients may change.",
+     "after": "Changing a subscript changes the substance.\nH₂O is water. H₂O₂ is hydrogen peroxide, a different substance.\nOnly coefficients may change: 2H₂ + O₂ → 2H₂O.",
      "added": true,
-     "id": "g7.science.u3.s3-3-6.1"
+     "id": "g7.science.u3.s3-3-6.1",
+     "best": "No, he changed water into a new substance"
     },
     {
      "kind": "read",
@@ -67,6 +68,33 @@
       "Changing subscripts changes the identity of substances."
      ],
      "id": "g7.science.u3.s3-3-6.2"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Coefficient or subscript? Look at 2H₂O",
+     "ask": "Tap each part of 2H₂O.",
+     "need": 3,
+     "items": [
+      [
+       "2 in front",
+       "The coefficient. It means two molecules of water. We may change it."
+      ],
+      [
+       "small ₂ after H",
+       "The subscript. Each water molecule has 2 H atoms. Never change it."
+      ],
+      [
+       "O",
+       "No subscript means 1 O atom in each molecule."
+      ],
+      [
+       "Count the atoms",
+       "H: 2 × 2 = 4 atoms. O: 2 × 1 = 2 atoms."
+      ]
+     ],
+     "added": true,
+     "id": "g7.science.u3.s3-3-6.30"
     },
     {
      "kind": "read",
@@ -111,9 +139,9 @@
      "kind": "tf",
      "step": "check",
      "graded": true,
-     "text": "When we balance an equation, we change the subscripts but not the coefficients.",
+     "text": "Balancing rule: true or false? When we balance an equation, we change the subscripts but not the coefficients.",
      "a": false,
-     "why": "We change coefficients, not subscripts.",
+     "why": "A subscript is part of the formula.\nChanging H₂O to H₂O₂ makes a different substance.\nSo we change only the coefficients.\nThe statement is false.",
      "clue": "What would changing H₂O to H₂O₂ do?",
      "level": 1,
      "ref": "Review Exercise I 5",
@@ -123,14 +151,14 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Balance: H₂ + I₂ → HI",
+     "text": "Balance by inspection: H₂ + I₂ → HI",
      "opts": [
       "H₂ + I₂ → 2HI",
       "H₂ + I₂ → H₂I₂",
       "2H₂ + I₂ → HI"
      ],
      "ans": "H₂ + I₂ → 2HI",
-     "why": "H: 2 on the left, so put 2 before HI. Then H 2 = 2 and I 2 = 2.",
+     "why": "Count H: 2 on the left, 1 in HI.\nPut 2 before HI: 2HI.\nNow H: 2 = 2 and I: 2 = 2.\nSo H₂ + I₂ → 2HI.\nH₂I₂ changes the subscripts, which is not allowed.",
      "clue": "Count H on each side.",
      "level": 1,
      "ref": "Exercise 3.6 Q1 b",
@@ -153,14 +181,14 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Balance: Ca + H₂O → Ca(OH)₂ + H₂",
+     "text": "Balance by inspection: Ca + H₂O → Ca(OH)₂ + H₂",
      "opts": [
       "Ca + H₂O → Ca(OH)₂ + H₂",
       "Ca + 2H₂O → Ca(OH)₂ + H₂",
       "2Ca + H₂O → Ca(OH)₂ + 2H₂"
      ],
      "ans": "Ca + 2H₂O → Ca(OH)₂ + H₂",
-     "why": "O: 2 on the right needs 2H₂O. Then H: 4 = 4.",
+     "why": "Ca: 1 on each side.\nO: left 1, right 2 in Ca(OH)₂. Put 2 before H₂O.\nH: left 2 × 2 = 4. Right 2 + 2 = 4.\nSo Ca + 2H₂O → Ca(OH)₂ + H₂.",
      "clue": "Start with oxygen.",
      "level": 2,
      "ref": "Exercise 3.6 Q1 d",
@@ -170,14 +198,14 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Balance: Fe₂O₃ + CO → Fe + CO₂",
+     "text": "Challenge, balance by inspection: Fe₂O₃ + CO → Fe + CO₂",
      "opts": [
       "Fe₂O₃ + CO → 2Fe + CO₂",
       "Fe₂O₃ + 3CO → 2Fe + 3CO₂",
       "Fe₂O₃ + 2CO → 2Fe + 2CO₂"
      ],
      "ans": "Fe₂O₃ + 3CO → 2Fe + 3CO₂",
-     "why": "Fe: 2Fe. CO and CO₂ need the same coefficient x. O: 3 + x = 2x, so x = 3. Check O: 3 + 3 = 6 = 3 × 2.",
+     "why": "Fe: 2 in Fe₂O₃, so put 2 before Fe.\nEach CO becomes one CO₂, so they get the same coefficient x.\nO: left 3 + x, right 2x. So 3 + x = 2x, and x = 3.\nFe₂O₃ + 3CO → 2Fe + 3CO₂.\nCheck: Fe 2 = 2, C 3 = 3, O 3 + 3 = 6 = 3 × 2.",
      "clue": "Count O on both sides with the same number before CO and CO₂.",
      "level": 3,
      "ref": "Exercise 3.6 Q1 e",
@@ -205,8 +233,32 @@
       "12",
       "24"
      ],
-     "after": "12 is the least common multiple (LCM) of 3, 4 and 6. The LCM method uses it.",
-     "id": "g7.science.u3.s3-3-6.11"
+     "after": "12 ÷ 3 = 4, 12 ÷ 4 = 3 and 12 ÷ 6 = 2.\n6 is not divisible by 4. 24 works, but it is not the smallest.\nSo 12 is the least common multiple (LCM). The LCM method uses it.",
+     "id": "g7.science.u3.s3-3-6.11",
+     "best": "12"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Total valence = atoms × valence",
+     "ask": "Al + O₂ → Al₂O₃. Al has valence 3, O has valence 2. Tap each formula.",
+     "need": 3,
+     "items": [
+      [
+       "Al",
+       "1 atom × valence 3 = 3."
+      ],
+      [
+       "O₂",
+       "2 atoms × valence 2 = 4."
+      ],
+      [
+       "Al₂O₃",
+       "2 Al atoms × valence 3 = 6. (Also 3 O atoms × 2 = 6.)"
+      ]
+     ],
+     "added": true,
+     "id": "g7.science.u3.s3-3-6.31"
     },
     {
      "kind": "steps",
@@ -238,7 +290,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "In the LCM method for Al + O₂ → Al₂O₃, the LCM of 3, 4 and 6 is",
+     "text": "LCM method: for Al + O₂ → Al₂O₃, find the LCM of the total valences 3, 4 and 6.",
      "opts": [
       "6",
       "12",
@@ -246,7 +298,7 @@
       "72"
      ],
      "ans": "12",
-     "why": "Multiples of 6: 6, 12. 12 is divisible by 3 and 4 too.",
+     "why": "Multiples of 6: 6, 12, 18 …\n6 is not divisible by 4.\n12 ÷ 3 = 4 and 12 ÷ 4 = 3.\nSo the LCM of 3, 4 and 6 is 12.\n72 is a common multiple, but not the least.",
      "clue": "List multiples of 6.",
      "level": 1,
      "id": "g7.science.u3.s3-3-6.14"
@@ -255,14 +307,14 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Balance: Fe + O₂ → Fe₂O₃ (Fe valence 3)",
+     "text": "Balance by the LCM method: Fe + O₂ → Fe₂O₃ (Fe valence 3)",
      "opts": [
       "2Fe + O₂ → Fe₂O₃",
       "4Fe + 3O₂ → 2Fe₂O₃",
       "3Fe + 4O₂ → 2Fe₂O₃"
      ],
      "ans": "4Fe + 3O₂ → 2Fe₂O₃",
-     "why": "Totals 3, 4, 6 → LCM 12 → 4, 3, 2. Check Fe 4 = 4, O 6 = 6.",
+     "why": "Total valences: Fe = 1 × 3 = 3; O₂ = 2 × 2 = 4; Fe₂O₃ = 2 × 3 = 6.\nLCM of 3, 4 and 6 is 12.\nDivide: 12 ÷ 3 = 4 (Fe); 12 ÷ 4 = 3 (O₂); 12 ÷ 6 = 2 (Fe₂O₃).\n4Fe + 3O₂ → 2Fe₂O₃.\nCheck: Fe 4 = 4, O 6 = 6.",
      "clue": "Same as the aluminum example.",
      "level": 2,
      "ref": "Exercise 3.6 Q2 a",
@@ -272,13 +324,13 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "In 4Al + 3O₂ → 2Al₂O₃ there are ___ oxygen atoms on each side.",
+     "ask": "Count the atoms: in 4Al + 3O₂ → 2Al₂O₃ there are ___ oxygen atoms on each side.",
      "a": [
       "6",
       "six"
      ],
      "num": true,
-     "why": "Left: 3 × 2 = 6. Right: 2 × 3 = 6.",
+     "why": "Atoms = coefficient × subscript.\nLeft: 3O₂ gives 3 × 2 = 6 oxygen atoms.\nRight: 2Al₂O₃ gives 2 × 3 = 6 oxygen atoms.\nSo there are 6 on each side.",
      "clue": "Coefficient × subscript.",
      "level": 1,
      "id": "g7.science.u3.s3-3-6.16"
@@ -287,14 +339,14 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Balance: Cu + H₂SO₄ → CuSO₄ + SO₂ + H₂O",
+     "text": "Challenge, balance: Cu + H₂SO₄ → CuSO₄ + SO₂ + H₂O",
      "opts": [
       "Cu + H₂SO₄ → CuSO₄ + SO₂ + H₂O",
       "Cu + 2H₂SO₄ → CuSO₄ + SO₂ + 2H₂O",
       "2Cu + 2H₂SO₄ → 2CuSO₄ + SO₂ + H₂O"
      ],
      "ans": "Cu + 2H₂SO₄ → CuSO₄ + SO₂ + 2H₂O",
-     "why": "S: 2 on the right → 2H₂SO₄. H: 4 → 2H₂O. O: left 8; right 4 + 2 + 2 = 8.",
+     "why": "Cu: 1 on each side.\nS: right has CuSO₄ and SO₂, so 2 S. Put 2 before H₂SO₄.\nH: left 2 × 2 = 4. Put 2 before H₂O.\nO: left 2 × 4 = 8; right 4 + 2 + 2 = 8.\nSo Cu + 2H₂SO₄ → CuSO₄ + SO₂ + 2H₂O.",
      "clue": "Balance S first, then H, then check O.",
      "level": 3,
      "ref": "Exercise 3.6 Q2 b",
@@ -319,7 +371,7 @@
       "CaCO₃ → 2CaO + CO₂"
      ],
      "ans": "It is already balanced",
-     "why": "Ca 1 = 1, C 1 = 1, O 3 = 1 + 2.",
+     "why": "Count each atom.\nCa: 1 = 1. C: 1 = 1.\nO: left 3; right 1 + 2 = 3.\nAll are equal, so it is already balanced.",
      "clue": "Count each atom.",
      "level": 1,
      "ref": "Q1 a",
@@ -329,14 +381,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "H₂ + I₂ → HI",
+     "text": "Balance by inspection: H₂ + I₂ → HI",
      "opts": [
       "H₂ + I₂ → 2HI",
       "H₂ + 2I₂ → HI",
       "2H₂ + I₂ → 2HI"
      ],
      "ans": "H₂ + I₂ → 2HI",
-     "why": "H 2 = 2, I 2 = 2.",
+     "why": "H: 2 on the left, 1 in HI. Put 2 before HI.\nThen H: 2 = 2 and I: 2 = 2.\nSo H₂ + I₂ → 2HI.",
      "clue": "Count H.",
      "level": 1,
      "ref": "Q1 b",
@@ -346,14 +398,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "C₂H₂ + O₂ → CO₂ + H₂O",
+     "text": "Balance by inspection: C₂H₂ + O₂ → CO₂ + H₂O",
      "opts": [
       "C₂H₂ + O₂ → 2CO₂ + H₂O",
       "2C₂H₂ + 5O₂ → 4CO₂ + 2H₂O",
       "C₂H₂ + 3O₂ → 2CO₂ + H₂O"
      ],
      "ans": "2C₂H₂ + 5O₂ → 4CO₂ + 2H₂O",
-     "why": "C 4 = 4, H 4 = 4, O 10 = 8 + 2.",
+     "why": "C: 2 in C₂H₂, so 2CO₂.\nH: 2 in C₂H₂, so 1 H₂O.\nO: right 2 × 2 + 1 = 5, so 5/2 O₂. A half is not allowed.\nDouble everything: 2C₂H₂ + 5O₂ → 4CO₂ + 2H₂O.\nCheck: C 4 = 4, H 4 = 4, O 10 = 8 + 2.",
      "clue": "Double everything to avoid 5/2.",
      "level": 3,
      "ref": "Q1 c",
@@ -363,13 +415,13 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Ca + H₂O → Ca(OH)₂ + H₂",
+     "text": "Balance by inspection: Ca + H₂O → Ca(OH)₂ + H₂",
      "opts": [
       "Ca + 2H₂O → Ca(OH)₂ + H₂",
       "Ca + H₂O → Ca(OH)₂ + 2H₂"
      ],
      "ans": "Ca + 2H₂O → Ca(OH)₂ + H₂",
-     "why": "O 2 = 2, H 4 = 4.",
+     "why": "Ca: 1 = 1.\nO: right has 2 in Ca(OH)₂. Put 2 before H₂O.\nH: left 4; right 2 + 2 = 4.\nSo Ca + 2H₂O → Ca(OH)₂ + H₂.",
      "clue": "Start with O.",
      "level": 2,
      "ref": "Q1 d",
@@ -379,13 +431,13 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Fe₂O₃ + CO → Fe + CO₂",
+     "text": "Balance by inspection: Fe₂O₃ + CO → Fe + CO₂",
      "opts": [
       "Fe₂O₃ + 3CO → 2Fe + 3CO₂",
       "Fe₂O₃ + CO → 2Fe + CO₂"
      ],
      "ans": "Fe₂O₃ + 3CO → 2Fe + 3CO₂",
-     "why": "Fe 2 = 2, C 3 = 3, O 6 = 6.",
+     "why": "Fe: put 2 before Fe.\nCO and CO₂ need the same coefficient: try 3.\nO: left 3 + 3 = 6; right 3 × 2 = 6.\nSo Fe₂O₃ + 3CO → 2Fe + 3CO₂.\nCheck: Fe 2 = 2, C 3 = 3, O 6 = 6.",
      "clue": "Same number before CO and CO₂.",
      "level": 3,
      "ref": "Q1 e",
@@ -395,13 +447,13 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Balance: Fe + O₂ → Fe₂O₃",
+     "text": "Balance by the LCM method: Fe + O₂ → Fe₂O₃",
      "opts": [
       "4Fe + 3O₂ → 2Fe₂O₃",
       "2Fe + 3O₂ → Fe₂O₃"
      ],
      "ans": "4Fe + 3O₂ → 2Fe₂O₃",
-     "why": "LCM 12 → 4, 3, 2.",
+     "why": "Total valences: Fe 1 × 3 = 3; O₂ 2 × 2 = 4; Fe₂O₃ 2 × 3 = 6.\nLCM of 3, 4 and 6 = 12.\nCoefficients: 12 ÷ 3 = 4, 12 ÷ 4 = 3, 12 ÷ 6 = 2.\n4Fe + 3O₂ → 2Fe₂O₃. Check: Fe 4 = 4, O 6 = 6.",
      "clue": "Use the LCM method.",
      "level": 2,
      "ref": "Q2 a",
@@ -417,7 +469,7 @@
       "Cu + H₂SO₄ → CuSO₄ + SO₂ + H₂O"
      ],
      "ans": "Cu + 2H₂SO₄ → CuSO₄ + SO₂ + 2H₂O",
-     "why": "S 2 = 2, H 4 = 4, O 8 = 8.",
+     "why": "S: 2 on the right (CuSO₄ and SO₂). Put 2 before H₂SO₄.\nH: 4 on the left. Put 2 before H₂O.\nO: left 8; right 4 + 2 + 2 = 8.\nCu: 1 = 1. Balanced.",
      "clue": "Balance S, then H.",
      "level": 3,
      "ref": "Q2 b",
@@ -431,9 +483,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "A balanced equation has equal numbers of each atom on both sides.",
+   "text": "True or false: a balanced equation has equal numbers of each kind of atom on both sides.",
    "a": true,
-   "why": "Definition.",
+   "why": "Balanced means the atoms are conserved.\nEach kind of atom has the same number on both sides.\nSo the statement is true.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u3.s3-3-6.25"
@@ -442,14 +494,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "To balance an equation we change the",
+   "text": "Balancing rule: to balance an equation we change the",
    "opts": [
     "subscripts",
     "coefficients",
     "symbols"
    ],
    "ans": "coefficients",
-   "why": "Never the subscripts.",
+   "why": "Subscripts are part of each formula.\nChanging them changes the substance.\nSo we change only the coefficients.\nSymbols name the elements and never change.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u3.s3-3-6.26"
@@ -458,14 +510,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Balance: N₂ + H₂ → NH₃",
+   "text": "Balance by inspection: N₂ + H₂ → NH₃",
    "opts": [
     "N₂ + H₂ → 2NH₃",
     "N₂ + 3H₂ → 2NH₃",
     "N₂ + 3H₂ → NH₃"
    ],
    "ans": "N₂ + 3H₂ → 2NH₃",
-   "why": "N 2 = 2, H 6 = 6.",
+   "why": "N: 2 on the left. Put 2 before NH₃.\nH: right 2 × 3 = 6. Put 3 before H₂.\nN₂ + 3H₂ → 2NH₃.\nCheck: N 2 = 2, H 6 = 6.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u3.s3-3-6.27"
@@ -474,14 +526,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Balance: Mg + O₂ → MgO",
+   "text": "Balance by inspection: Mg + O₂ → MgO",
    "opts": [
     "Mg + O₂ → 2MgO",
     "2Mg + O₂ → 2MgO",
     "Mg + O₂ → MgO₂"
    ],
    "ans": "2Mg + O₂ → 2MgO",
-   "why": "O: 2MgO; then Mg: 2Mg.",
+   "why": "O: 2 on the left, 1 in MgO. Put 2 before MgO.\nMg: now 2 on the right. Put 2 before Mg.\n2Mg + O₂ → 2MgO.\nCheck: Mg 2 = 2, O 2 = 2.\nMgO₂ changes a subscript, which is not allowed.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u3.s3-3-6.28"
@@ -490,14 +542,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Balance: Al(OH)₃ → Al₂O₃ + H₂O",
+   "text": "Balance by inspection: Al(OH)₃ → Al₂O₃ + H₂O",
    "opts": [
     "2Al(OH)₃ → Al₂O₃ + 3H₂O",
     "Al(OH)₃ → Al₂O₃ + H₂O",
     "2Al(OH)₃ → Al₂O₃ + 6H₂O"
    ],
    "ans": "2Al(OH)₃ → Al₂O₃ + 3H₂O",
-   "why": "Al 2 = 2; H 6 = 6; O 6 = 3 + 3.",
+   "why": "Al: 2 in Al₂O₃. Put 2 before Al(OH)₃.\nH: left 2 × 3 = 6. Put 3 before H₂O.\nO: left 2 × 3 = 6; right 3 + 3 = 6.\nSo 2Al(OH)₃ → Al₂O₃ + 3H₂O.",
    "level": 3,
    "clue": "",
    "id": "g7.science.u3.s3-3-6.29"

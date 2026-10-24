@@ -40,9 +40,10 @@
       "Yes, mass disappeared",
       "No, gases escaped into the air"
      ],
-     "after": "Burning makes gases that float away. If you caught them, the total mass would be the same.",
+     "after": "Burning makes carbon dioxide and water vapour. These gases float away.\nIf you caught them, the total mass would be the same.\nMass was not destroyed.",
      "ref": "Activity 3.9",
-     "id": "g7.science.u3.s3-3-3.1"
+     "id": "g7.science.u3.s3-3-3.1",
+     "best": "No, gases escaped into the air"
     },
     {
      "kind": "read",
@@ -53,6 +54,58 @@
       "The mass of the reactants is exactly equal to the mass of the products."
      ],
      "id": "g7.science.u3.s3-3-3.2"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Burn magnesium in a closed bottle",
+     "ask": "Choose how much magnesium burns. Compare the mass before and after.",
+     "vars": [
+      {
+       "k": "m",
+       "label": "Magnesium burnt (g)",
+       "min": 3,
+       "max": 48,
+       "step": 3,
+       "v": 24
+      }
+     ],
+     "formula": "m*5/3",
+     "outs": [
+      [
+       "Oxygen used",
+       "m*2/3",
+       "{v} g"
+      ],
+      [
+       "Mass before: magnesium + oxygen",
+       "m + m*2/3",
+       "{v} g"
+      ],
+      [
+       "Mass after: magnesium oxide",
+       "m*5/3",
+       "{v} g"
+      ]
+     ],
+     "note": "24 g of magnesium uses 16 g of oxygen. Before and after are always equal: mass is conserved.",
+     "added": true,
+     "id": "g7.science.u3.s3-3-3.13"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Why does burnt paper seem lighter?",
+     "steps": [
+      "Paper burns with oxygen from the air.",
+      "Products: ash, carbon dioxide and water vapour.",
+      "In open air the gases float away. The scale shows only the ash.",
+      "So the ash seems lighter than the paper.",
+      "In a closed jar the gases stay in.",
+      "Then the mass before and after is the same."
+     ],
+     "added": true,
+     "id": "g7.science.u3.s3-3-3.14"
     },
     {
      "kind": "name",
@@ -70,14 +123,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "What does the law of conservation of mass say?",
+     "text": "State the law: what does the law of conservation of mass say?",
      "opts": [
       "Mass is lost when things burn",
       "Matter is neither created nor destroyed in a reaction",
       "Products are always heavier"
      ],
      "ans": "Matter is neither created nor destroyed in a reaction",
-     "why": "That is the law.",
+     "why": "The law says matter is neither created nor destroyed.\nSo the mass of reactants equals the mass of products.\nBurning only seems to lose mass, when gases escape.\nProducts are not always heavier.",
      "clue": "Is matter made or lost?",
      "level": 1,
      "id": "g7.science.u3.s3-3-3.4"
@@ -86,9 +139,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "In a chemical reaction atoms are neither created nor destroyed.",
+     "text": "True or false: in a chemical reaction atoms are neither created nor destroyed.",
      "a": true,
-     "why": "This is the law of conservation of mass.",
+     "why": "Atoms only rearrange in a reaction.\nNo atom is made. No atom is lost.\nThis is the law of conservation of mass.\nSo the statement is true.",
      "clue": "Recall the law.",
      "level": 1,
      "ref": "Review Exercise I 2",
@@ -98,12 +151,12 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "10 g of reactants react completely. The products have a mass of ___ g.",
+     "ask": "Use the law: 10 g of reactants react completely. The products have a mass of ___ g.",
      "a": [
       "10"
      ],
      "num": true,
-     "why": "Mass of reactants = mass of products.",
+     "why": "Mass of reactants = mass of products.\nThe reactants are 10 g.\nSo the products are 10 g.",
      "clue": "Mass is not lost or gained.",
      "level": 2,
      "added": true,
@@ -113,12 +166,12 @@
      "kind": "blank",
      "step": "challenge",
      "graded": true,
-     "ask": "In a closed bottle, 24 g of magnesium burns with 16 g of oxygen. The magnesium oxide has a mass of ___ g.",
+     "ask": "Use the law: in a closed bottle, 24 g of magnesium burns with 16 g of oxygen. The magnesium oxide has a mass of ___ g.",
      "a": [
       "40"
      ],
      "num": true,
-     "why": "Reactants: 24 + 16 = 40 g. Mass is conserved, so the product is 40 g.",
+     "why": "The bottle is closed, so nothing escapes.\nMass of reactants: 24 g + 16 g = 40 g.\nMass is conserved.\nSo the magnesium oxide has a mass of 40 g.",
      "clue": "Add the masses of the reactants.",
      "level": 3,
      "added": true,
@@ -133,9 +186,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "Matter is created in a chemical reaction.",
+   "text": "True or false: matter is created in a chemical reaction.",
    "a": false,
-   "why": "Matter is neither created nor destroyed.",
+   "why": "The law of conservation of mass says matter is neither created nor destroyed.\nAtoms only rearrange.\nSo matter is not created: False.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u3.s3-3-3.8"
@@ -144,14 +197,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Mass of reactants ___ mass of products",
+   "text": "Complete the law: the mass of reactants ___ the mass of products.",
    "opts": [
     "is more than",
     "is equal to",
     "is less than"
    ],
    "ans": "is equal to",
-   "why": "The law of conservation of mass.",
+   "why": "Matter is neither created nor destroyed.\nSo no mass is gained or lost.\nMass of reactants is equal to mass of products.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u3.s3-3-3.9"
@@ -160,14 +213,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Burnt paper ash is lighter because",
+   "text": "Conservation of mass: burnt paper ash is lighter than the paper because",
    "opts": [
     "mass was destroyed",
     "gases escaped",
     "the paper was wet"
    ],
    "ans": "gases escaped",
-   "why": "Carbon dioxide and water vapour go into the air.",
+   "why": "Paper + oxygen → ash + carbon dioxide + water vapour.\nThe gases escape into the air.\nThe scale weighs only the ash.\nMass was not destroyed: gases escaped.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u3.s3-3-3.10"
@@ -176,12 +229,12 @@
    "kind": "blank",
    "step": "test",
    "graded": true,
-   "ask": "5 g of A reacts with 3 g of B. The products weigh ___ g.",
+   "ask": "Use the law: 5 g of A reacts with 3 g of B. The products weigh ___ g.",
    "a": [
     "8"
    ],
    "num": true,
-   "why": "5 + 3 = 8.",
+   "why": "Mass of reactants = 5 g + 3 g = 8 g.\nMass is conserved.\nSo the products weigh 8 g.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u3.s3-3-3.11"
@@ -190,12 +243,12 @@
    "kind": "blank",
    "step": "test",
    "graded": true,
-   "ask": "A reaction makes 18 g of water from 2 g of hydrogen and ___ g of oxygen.",
+   "ask": "Find the missing mass: a reaction makes 18 g of water from 2 g of hydrogen and ___ g of oxygen.",
    "a": [
     "16"
    ],
    "num": true,
-   "why": "18 − 2 = 16.",
+   "why": "Mass of products = mass of reactants.\n18 g = 2 g + oxygen.\nOxygen = 18 − 2 = 16 g.\nCheck: 2 + 16 = 18.",
    "level": 3,
    "clue": "",
    "id": "g7.science.u3.s3-3-3.12"

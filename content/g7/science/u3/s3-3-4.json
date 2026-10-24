@@ -41,9 +41,10 @@
       "A white powder",
       "Nothing at all"
      ],
-     "after": "A white powder, magnesium oxide, is left. It is a new substance.",
+     "after": "A white powder, magnesium oxide, is left.\nThe magnesium joined with oxygen from the air. It did not vanish.\nThe powder is a new substance.",
      "added": true,
-     "id": "g7.science.u3.s3-3-4.1"
+     "id": "g7.science.u3.s3-3-4.1",
+     "best": "A white powder"
     },
     {
      "kind": "read",
@@ -88,6 +89,56 @@
      "id": "g7.science.u3.s3-3-4.5"
     },
     {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Apparatus and safety",
+     "ask": "Tap each one before you start.",
+     "need": 4,
+     "items": [
+      [
+       "Burner",
+       "Gives the flame that lights the ribbon.",
+       "bunsen-burner"
+      ],
+      [
+       "Tongs",
+       "Hold the burning ribbon. Never use your hand.",
+       "tongs"
+      ],
+      [
+       "Do not look at it",
+       "Burning magnesium is extremely bright. It gives some ultraviolet light.",
+       "safety-glasses"
+      ],
+      [
+       "Very hot!",
+       "Do not touch it. Keep it away from things that burn.",
+       "flammable"
+      ]
+     ],
+     "added": true,
+     "id": "g7.science.u3.s3-3-4.16"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Before and after burning",
+     "ask": "Tap each to compare.",
+     "need": 2,
+     "items": [
+      [
+       "Magnesium ribbon (before)",
+       "A shiny metal. It bends. It burns with a very bright light."
+      ],
+      [
+       "White powder (after)",
+       "Magnesium oxide. Not shiny. It does not bend. It will not burn again."
+      ]
+     ],
+     "added": true,
+     "id": "g7.science.u3.s3-3-4.17"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -103,14 +154,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "What are the reactants when magnesium burns?",
+     "text": "Observation 1: what are the reactants when magnesium burns?",
      "opts": [
       "Magnesium and oxygen",
       "Magnesium oxide",
       "Magnesium and water"
      ],
      "ans": "Magnesium and oxygen",
-     "why": "Oxygen comes from the air: 2Mg + O₂ → 2MgO.",
+     "why": "Burning needs oxygen from the air.\nThe magnesium joins with this oxygen.\n2Mg + O₂ → 2MgO.\nSo the reactants are magnesium and oxygen.\nMagnesium oxide is the product, not a reactant.",
      "clue": "What in the air helps burning?",
      "level": 1,
      "ref": "Observation 1",
@@ -120,9 +171,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "The white powder is shiny and bends like the ribbon.",
+     "text": "True or false: the white powder is shiny and bends like the ribbon.",
      "a": false,
-     "why": "The powder is not shiny and does not bend. It is a new substance.",
+     "why": "The ribbon is shiny and bends.\nThe powder is white, not shiny, and does not bend.\nNew properties show a new substance.\nSo the statement is false.",
      "clue": "Compare the powder with the ribbon.",
      "level": 1,
      "ref": "Observation 2",
@@ -132,14 +183,14 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Did a chemical reaction occur?",
+     "text": "Observation 3: did a chemical reaction occur when the ribbon burned?",
      "opts": [
       "Yes: a new substance with new properties formed",
       "No: only the shape changed",
       "No: it just got hot"
      ],
      "ans": "Yes: a new substance with new properties formed",
-     "why": "White magnesium oxide formed, with heat and light.",
+     "why": "The product is a white powder, not a shiny ribbon.\nIt has new properties: it does not bend or burn.\nSo a new substance formed.\nYes, a chemical reaction occurred.\nHeat alone does not prove a reaction; the new substance does.",
      "clue": "Is the product the same as the ribbon?",
      "level": 2,
      "ref": "Observation 3",
@@ -149,14 +200,14 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Why must you not look straight at burning magnesium?",
+     "text": "Lab safety: why must you not look straight at burning magnesium?",
      "opts": [
       "It smells bad",
       "It is extremely bright and gives ultraviolet light",
       "It makes loud noise"
      ],
      "ans": "It is extremely bright and gives ultraviolet light",
-     "why": "The book warns: very bright light and some ultraviolet light.",
+     "why": "The Hazards box warns about the light.\nBurning magnesium is extremely bright.\nIt also gives some ultraviolet light.\nSo do not look straight at it.",
      "clue": "Read the Hazards box.",
      "level": 3,
      "added": true,
@@ -171,14 +222,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Burning magnesium gives a",
+   "text": "Experiment 3.1: what is left after magnesium burns?",
    "opts": [
     "white powder",
     "blue liquid",
     "black gas"
    ],
    "ans": "white powder",
-   "why": "Magnesium oxide.",
+   "why": "The ribbon joins with oxygen.\nThe product is magnesium oxide.\nIt is a white powder.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u3.s3-3-4.11"
@@ -187,14 +238,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "We hold the ribbon with",
+   "text": "Lab safety: what do we hold the burning ribbon with?",
    "opts": [
     "our fingers",
     "tongs",
     "paper"
    ],
    "ans": "tongs",
-   "why": "It is very hot.",
+   "why": "Burning magnesium is very hot.\nFingers or paper would burn.\nSo we hold the ribbon with tongs.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u3.s3-3-4.12"
@@ -203,14 +254,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "The product of burning magnesium is",
+   "text": "Name the product of burning magnesium.",
    "opts": [
     "magnesium oxide",
     "magnesium chloride",
     "oxygen"
    ],
    "ans": "magnesium oxide",
-   "why": "2Mg + O₂ → 2MgO.",
+   "why": "Magnesium + oxygen → magnesium oxide.\n2Mg + O₂ → 2MgO.\nNo chlorine is present, so not magnesium chloride.\nThe product is magnesium oxide.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u3.s3-3-4.13"
@@ -219,9 +270,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "Magnesium oxide burns again if heated.",
+   "text": "True or false: magnesium oxide burns again if heated.",
    "a": false,
-   "why": "It will not burn again.",
+   "why": "The book observes that the white powder will not burn again.\nThe magnesium has already joined with oxygen.\nSo the statement is false.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u3.s3-3-4.14"
@@ -230,14 +281,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which observation proves a NEW substance formed?",
+   "text": "Evidence: which observation proves a NEW substance formed?",
    "opts": [
     "The ribbon got hot",
     "The product is white and not shiny, unlike the ribbon",
     "The ribbon was 5 cm long"
    ],
    "ans": "The product is white and not shiny, unlike the ribbon",
-   "why": "New properties mean a new substance.",
+   "why": "A new substance has new properties.\nThe ribbon is shiny. The product is white and not shiny.\nGetting hot alone does not prove a new substance.\nThe length of the ribbon tells nothing about a change.\nSo the white, not shiny product is the proof.",
    "level": 3,
    "clue": "",
    "id": "g7.science.u3.s3-3-4.15"
