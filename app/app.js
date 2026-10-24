@@ -1935,6 +1935,18 @@ window.addEventListener('hashchange', route);
 window.addEventListener('online', () => {}); window.addEventListener('offline', () => toast(t('offline')));
 if ('serviceWorker' in navigator) { try { const had = !!navigator.serviceWorker.controller; navigator.serviceWorker.register('sw.js').then(r => r.update()).catch(() => {}); let once = false; navigator.serviceWorker.addEventListener('controllerchange', () => { if (had && !once) { once = true; location.reload(); } }); } catch (_) {} }
 route();
+/* auto-update: every deploy writes version.json (commit id). When the app comes back to the screen (and every 5 min) it checks;
+   a new version reloads by itself on calm screens, and shows a one-tap "Update" bar inside lessons and exams so no work is lost. */
+const Upd = { v: null, shown: false,
+  async check() { try { const j = await (await fetch('version.json?t=' + Date.now(), { cache: 'no-store' })).json(); if (!j || !j.v) return;
+      if (!Upd.v) { Upd.v = j.v; return; } if (j.v === Upd.v) return;
+      const busy = /^#(book|lesson|exercise|test|exam\/[^/]+\/sit|tour)/.test(location.hash) || !!document.querySelector('.sheet') || !tray.hidden;
+      if (!busy) { location.reload(); return; }
+      if (Upd.shown) return; Upd.shown = true; const b = document.createElement('button'); b.className = 'updbar'; b.textContent = '✨ ' + t('update_ready'); b.onclick = () => location.reload(); document.body.appendChild(b);
+    } catch (_) {} } };
+Upd.check(); setInterval(() => Upd.check(), 300000);
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') Upd.check(); });
+window.addEventListener('hashchange', () => { if (Upd.shown && !/^#(book|lesson|exercise|test|exam\/[^/]+\/sit)/.test(location.hash)) location.reload(); });
 Analytics.session(); setTimeout(() => { Feedback.flush(); Analytics.flush(true); }, 4000); setInterval(() => Analytics.flush(), 120000);
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') Analytics.flush(true); });
 })();

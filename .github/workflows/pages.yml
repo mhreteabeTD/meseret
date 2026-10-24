@@ -26,6 +26,7 @@ jobs:
           cp -r app/* dist/
           cp -r content dist/content
           cp app/index.html dist/404.html
+          echo "{\"v\":\"${GITHUB_SHA}\"}" > dist/version.json
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
