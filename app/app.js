@@ -391,17 +391,58 @@ function examResult(p, paper, r) {
 
 /* ---------- Welcome tour (owner feedback 2026-10-24). Content lives in tour.json so it can be edited without code;
    raising its "version" shows the tour again to everyone. ---------- */
+/* Tour pictures are real examples from the lessons (G8 Maths squares, fractions, the 2015 national exam), and three of them
+   can be tried right in the tour. Labels follow the app language; the maths is the same in both. */
+const TA = (en, am) => L({ en, am });
 const TOUR_ART = {
-  book: `<div class="ta-page"><div class="ta-eb">Unit 1 · 1.2</div><div class="ta-h"></div><div class="ta-l"></div><div class="ta-l s"></div><div class="ta-fig"><i></i><i></i><i></i><i class="on"></i><i></i></div><div class="ta-l"></div></div>`,
-  think: `<div class="ta-q"><div class="ta-bub">🤔 ?</div><div class="ta-ch"><span></span><span class="on">✓</span><span></span></div></div>`,
-  touch: `<div class="ta-touch"><div class="ta-sq">${'<i></i>'.repeat(9)}</div><div class="ta-sl"><i></i><b>👆</b></div><div class="ta-tree"><span>36</span><span>6</span><span>6</span></div></div>`,
-  answer: `<div class="ta-ans"><div class="ta-opt no">✗</div><div class="ta-clue">💡</div><div class="ta-tray"><b>✓</b><div class="ta-l"></div><div class="ta-l s"></div><div class="ta-l"></div></div></div>`,
-  levels: `<div class="ta-lv"><span>★</span><span>★★</span><span>★★★</span><b>↗</b></div>`,
-  reminder: `<div class="ta-rm"><div class="ta-l"></div><div class="ta-link">↩ ?</div><div class="ta-card"><div class="ta-l s"></div><div class="ta-l"></div></div></div>`,
-  test: `<div class="ta-test"><div class="ta-clock">⏱ 25:00</div><div class="ta-flag">🏁</div><div class="ta-bars"><i style="width:90%"></i><i style="width:55%"></i><i style="width:75%"></i></div></div>`,
-  exam: `<div class="ta-exam">${Array.from({ length: 15 }, (_, i) => `<i class="${i < 9 ? 'a' : ''} ${i === 11 ? 'f' : ''}">${i + 1}</i>`).join('')}</div>`,
-  review: `<div class="ta-rv"><span>🔁</span><span>🔥 7</span><span>⭐ 120</span></div>`,
-  feedback: `<div class="ta-fb"><span>💬</span><span>🚩</span><span>📲</span></div>`,
+  book: () => `<div class="tx-page"><div class="tx-eb">${TA('Grade 8 · Mathematics · Unit 2', 'ክፍል 8 · ሒሳብ · ምዕራፍ 2')}</div>
+    <div class="tx-h"><span class="tx-sec">2.1.1</span>${TA('Square of a rational number', 'የምክንያታዊ ቁጥር ካሬ')}</div>
+    <p class="tx-p">${TA('The square of a number is the number times itself.', 'የአንድ ቁጥር ካሬ ቁጥሩን በራሱ ማባዛት ነው።')}</p>
+    <div class="tx-def"><b>a² = a × a</b><span>3² = 3 × 3 = 9</span></div>
+    <div class="tx-tags"><span>📖 ${TA('Same as your book', 'እንደ መጽሐፍህ')}</span><span>🔢 2.1.1</span></div></div>`,
+  think: () => `<div class="tx-card"><div class="tx-chip">🤔 ${TA('Think first', 'መጀመሪያ አስብ')}</div>
+    <p class="tx-q">${TA('A square room is 4 m by 4 m. How many 1 m × 1 m tiles cover the floor?', 'ካሬ ክፍል 4 ሜ በ4 ሜ ነው። ስንት 1 ሜ × 1 ሜ ንጣፎች ወለሉን ይሸፍናሉ?')}</p>
+    <div class="tx-opts" id="txthink"><button data-v="8">8</button><button data-v="16">16</button><button data-v="12">12</button></div>
+    <div class="tx-out" id="txthinkout">👆 ${TA('Tap a guess. It is not graded.', 'ግምትህን ንካ። ውጤት አይያዝም።')}</div></div>`,
+  touch: () => `<div class="tx-card"><div class="tx-chip">🎚 ${TA('Try it: slide', 'ሞክር፦ አንሸራትት')}</div>
+    <div class="tx-grid" id="txgrid"></div>
+    <input type="range" min="1" max="6" value="3" id="txsl" aria-label="side">
+    <div class="tx-out big" id="txslout"></div></div>`,
+  answer: () => `<div class="tx-card"><p class="tx-q">${TA('Which is bigger: 3/5 or 1/2?', 'የትኛው ይበልጣል፦ 3/5 ወይስ 1/2?')}</p>
+    <div class="tx-step no">✗ ${TA('You chose 1/2', '1/2 መረጥክ')}</div>
+    <div class="tx-step clue">💡 ${TA('Clue: give both 10 equal parts.', 'ፍንጭ፦ ሁለቱንም 10 እኩል ክፍሎች አድርጋቸው።')}</div>
+    <div class="tx-step ok">✓ ${TA('Step by step:', 'ደረጃ በደረጃ፦')}<br>1) 3/5 = 6/10<br>2) 1/2 = 5/10<br>3) 6/10 > 5/10, ${TA('so 3/5 is bigger.', 'ስለዚህ 3/5 ይበልጣል።')}</div></div>`,
+  levels: () => `<div class="tx-card tx-lv">
+    <div><span class="tx-st">★</span><span>${TA('Basic', 'መሰረታዊ')}</span><b>4² = ?</b></div>
+    <div><span class="tx-st">★★</span><span>${TA('Standard', 'መደበኛ')}</span><b>(−3)² = ?</b></div>
+    <div><span class="tx-st">★★★</span><span>${TA('Challenge', 'ፈታኝ')}</span><b>${TA('A square garden is 49 m². How long is its fence?', 'ካሬ የአትክልት ቦታ 49 ሜ² ነው። አጥሩ ስንት ሜትር ነው?')}</b></div>
+    <div class="tx-out">↗ ${TA('2 right in a row: harder. 2 wrong: easier.', '2 በተከታታይ ትክክል፦ ይከብዳል። 2 ስህተት፦ ይቀላል።')}</div></div>`,
+  reminder: () => `<div class="tx-card"><p class="tx-q">${TA('Find the GCF of 12 and 18.', 'የ12 እና የ18ን ትልቁን የጋራ አካፋይ ፈልግ።')}</p>
+    <button class="tx-link" id="txrem">↩ ${TA('Need a reminder? Prime factors', 'ማስታወሻ ይፈልጋል? ቁጥርን በአካፋዮች መበተን')}</button>
+    <div class="tx-step ok" id="txremout" hidden>12 = 2 × 2 × 3<br>18 = 2 × 3 × 3<br>${TA('Shared: 2 × 3 = 6, so GCF = 6.', 'የጋራ፦ 2 × 3 = 6፤ ስለዚህ ትልቁ የጋራ አካፋይ = 6።')}</div></div>`,
+  test: () => `<div class="tx-card"><div class="tx-row"><b>🏁 ${TA('Unit 2 test', 'የምዕራፍ 2 ፈተና')}</b><span class="tx-clock">⏱ 25:00</span></div>
+    <div class="tx-res"><span>2.1 ${TA('Squares', 'ካሬ')}</span><b>5/5</b><i style="--w:100%"></i></div>
+    <div class="tx-res"><span>2.2 ${TA('Cubes', 'ኩብ')}</span><b>2/5</b><i class="lo" style="--w:40%"></i></div>
+    <div class="tx-res"><span>2.3 ${TA('Uses', 'አጠቃቀም')}</span><b>4/5</b><i style="--w:80%"></i></div>
+    <div class="tx-out">👉 ${TA('Practise 2.2 again', '2.2ን እንደገና ተለማመድ')}</div></div>`,
+  exam: () => `<div class="tx-card"><div class="tx-row"><b>${TA('National exam 2015 · Maths', 'ብሔራዊ ፈተና 2015 · ሒሳብ')}</b><span class="tx-clock">⏱ 2:14:05</span></div>
+    <p class="tx-q sm">12. ${TA('Question 12 of 63', 'ጥያቄ 12 ከ63')}</p>
+    <div class="tx-map">${Array.from({ length: 18 }, (_, i) => `<i class="${i < 11 ? 'a' : ''} ${i === 6 ? 'f' : ''} ${i === 11 ? 'c' : ''}">${i + 1}</i>`).join('')}</div>
+    <div class="tx-out">🖥 ${TA('Like the real computer exam', 'እንደ እውነተኛው የኮምፒውተር ፈተና')}</div></div>`,
+  review: () => `<div class="tx-card"><div class="tx-row"><span class="tx-pill">🔥 5 ${TA('days', 'ቀናት')}</span><span class="tx-pill">⭐ 120</span></div>
+    <div class="tx-step">🔁 ${TA('3 questions to review today', 'ዛሬ የሚከለሱ 3 ጥያቄዎች')}</div>
+    <div class="tx-step sm">${TA('You missed (−3)² on Monday. It comes back today.', 'ሰኞ (−3)²ን ተሳስተሃል። ዛሬ ተመልሶ ይመጣል።')}</div></div>`,
+  feedback: () => `<div class="tx-card"><div class="tx-bubble me">🚩 ${TA('Question 3: I think the answer is wrong.', 'ጥያቄ 3፦ መልሱ የተሳሳተ ይመስለኛል።')}</div>
+    <div class="tx-bubble">✓ ${TA('Thank you! We checked and fixed it.', 'እናመሰግናለን! አረጋግጠን አስተካክለነዋል።')}</div></div>`,
+};
+const TOUR_BIND = {
+  think(el) { const out = el.querySelector('#txthinkout'); el.querySelectorAll('#txthink button').forEach(b => b.onclick = () => {
+    el.querySelectorAll('#txthink button').forEach(x => x.setAttribute('aria-pressed', x === b)); const ok = b.dataset.v === '16';
+    out.className = 'tx-out ' + (ok ? 'ok' : 'no'); out.textContent = ok ? '✓ ' + TA('Good thinking! 4 rows × 4 tiles = 16.', 'ጥሩ አስተሳሰብ! 4 ረድፍ × 4 ንጣፍ = 16።') : '🤔 ' + TA('Not quite: 4 rows of 4 tiles = 16. That is 4².', 'ልክ አይደለም፦ 4 ረድፍ በ4 ንጣፍ = 16። ይህ 4² ነው።'); }); },
+  touch(el) { const sl = el.querySelector('#txsl'), g = el.querySelector('#txgrid'), out = el.querySelector('#txslout');
+    const draw = () => { const s = +sl.value; g.style.gridTemplateColumns = `repeat(${s}, 1fr)`; g.innerHTML = '<i></i>'.repeat(s * s); out.textContent = `${s}² = ${s} × ${s} = ${s * s}`; };
+    sl.oninput = draw; draw(); },
+  reminder(el) { const b = el.querySelector('#txrem'); b.onclick = () => { el.querySelector('#txremout').hidden = false; b.disabled = true; }; },
 };
 async function loadTour() { if (!S.tour) { try { S.tour = await (await fetch('tour.json')).json(); } catch (_) { S.tour = { version: 0, slides: [] }; } } return S.tour; }
 async function viewTour(from) {
@@ -410,12 +451,12 @@ async function viewTour(from) {
   let i = 0; const done = () => { store.set('tour', tour.version); location.hash = from === 'settings' ? 'settings' : 'home'; };
   const draw = () => { const s = sl[i], last = i === sl.length - 1;
     app.innerHTML = `<div class="tour"><div class="tour-top"><div class="tdots">${sl.map((_, k) => `<i class="${k === i ? 'on' : k < i ? 'past' : ''}"></i>`).join('')}</div><button class="btn link" id="tskip" style="width:auto">${t('skip')}</button></div>
-      <div class="tart h-${'gsyvc'[i % 5]}">${TOUR_ART[s.art] || ''}</div>
+      <div class="tart h-${'gsyvc'[i % 5]}">${TOUR_ART[s.art] ? TOUR_ART[s.art]() : ''}</div>
       <div class="tcopy"><div class="eyebrow">${i + 1} / ${sl.length}</div><h1 class="display">${esc(L(s.title))}</h1><p>${esc(L(s.text))}</p></div>
       <div class="tnav">${i ? `<button class="btn ghost" id="tprev" aria-label="${t('previous')}" style="width:64px">‹</button>` : ''}<button class="btn" id="tnext">${last ? t('tour_go') : t('next') + ' ›'}</button></div></div>`;
     $('#tskip').onclick = done; $('#tnext').onclick = () => { if (last) done(); else { i++; draw(); } };
-    const pv = $('#tprev'); if (pv) pv.onclick = () => { i--; draw(); }; };
-  let x0 = null; app.ontouchstart = e => { x0 = e.touches[0].clientX; };
+    const pv = $('#tprev'); if (pv) pv.onclick = () => { i--; draw(); }; if (TOUR_BIND[s.art]) TOUR_BIND[s.art](app.querySelector('.tart')); };
+  let x0 = null; app.ontouchstart = e => { x0 = e.target.closest('input,button') ? null : e.touches[0].clientX; };
   app.ontouchend = e => { if (x0 == null || !app.querySelector('.tour')) return; const dx = e.changedTouches[0].clientX - x0; x0 = null; if (dx < -50 && i < sl.length - 1) { i++; draw(); } else if (dx > 50 && i) { i--; draw(); } };
   draw();
 }
@@ -1918,7 +1959,7 @@ async function route() {
 /* ---------- fractions: any "3/5" in text is shown stacked like the book; textContent stays "3/5" so answers still compare ---------- */
 function fracify(root) {
   if (!root || !root.ownerDocument) return;
-  const skip = n => { const p = n.nodeType === 3 ? n.parentElement : n; return !p || !!p.closest('svg,script,style,textarea,input,.frac,.mixed,.fwrap,.nofrac,.stats,.xtp,.xcount,.pcard small,.count'); };
+  const skip = n => { const p = n.nodeType === 3 ? n.parentElement : n; return !p || !!p.closest('svg,script,style,textarea,input,.frac,.mixed,.fwrap,.nofrac,.stats,.xtp,.xcount,.pcard small,.count,.tx-res'); };
   const split = n => { const s = n.nodeValue, frag = document.createDocumentFragment(); let last = 0;
     // a mixed number "2 1/2" is drawn as one tight unit (2½); a plain "3/4" is drawn stacked. Hidden text keeps textContent = "2 1/2".
     s.replace(/(?<![\d.\/])([−-])?(?:(\d+) )?(\d+)\/(\d+)/g, (m, sg, w, a, b, i) => { frag.append(s.slice(last, i)); const fr = `<span class="frac"><span class="fn">${a}</span><span class="fs">/</span><span class="fd">${b}</span></span>`;
