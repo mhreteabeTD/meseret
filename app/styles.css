@@ -477,3 +477,49 @@ body:has(#tray:not([hidden])) .fbfab { bottom: calc(150px + env(safe-area-inset-
 .oddrow .oddk { font-size: 12px; font-weight: 800; color: var(--muted); width: 18px; }
 .oddrow b { margin-left: 4px; }
 .fgrp { display: inline-flex; align-items: center; gap: 3px; border: 2px dashed; border-radius: 22px; padding: 3px; }
+
+/* ---------- Home / subject / exams (UX rework 2026-10-24) ---------- */
+.h-g { --h: var(--accent); --hs: var(--accent-soft); --hd: var(--accent-deep); }
+.h-s { --h: var(--sky); --hs: var(--sky-soft); --hd: #1B57A8; }
+.h-y { --h: var(--sun); --hs: var(--sun-soft); --hd: var(--sun-ink); }
+.h-c { --h: var(--coral); --hs: var(--coral-soft); --hd: #A8411F; }
+.h-v { --h: var(--violet); --hs: var(--violet-soft); --hd: #5236C4; }
+.hhead { display: flex; align-items: center; gap: 10px; }
+.hhead h1 { font-size: 28px; margin: 0; }
+.gtabs { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 2px; }
+.gtabs button { flex: none; min-height: 44px; padding: 0 18px; border-radius: 99px; border: 2px solid var(--line); background: var(--surface); font: inherit; font-weight: 800; color: var(--muted); cursor: pointer; }
+.gtabs button[aria-selected="true"] { background: var(--fg); border-color: var(--fg); color: var(--bg); }
+.stats { display: flex; flex-wrap: wrap; gap: 8px; }
+.stats > * { display: inline-flex; gap: 5px; align-items: center; min-height: 36px; padding: 0 12px; border-radius: 99px; background: var(--surface); border: 2px solid var(--line); font-size: 14px; color: var(--fg); text-decoration: none; }
+.hero { display: grid; gap: 6px; padding: 18px; border-radius: 22px; text-decoration: none; color: #fff; background: linear-gradient(135deg, var(--accent) 0%, #0E7F8C 100%); box-shadow: 0 5px 0 var(--accent-deep); }
+.hero .eyebrow { color: #fff; opacity: .95; }
+.hero .ht { font-family: var(--display); font-weight: 700; font-size: 24px; line-height: 1.15; }
+.hero .hs { font-size: 15px; opacity: .92; }
+.btn.light { justify-self: start; margin-top: 6px; background: #fff; color: var(--accent-deep); box-shadow: 0 3px 0 rgba(0,0,0,.18); min-height: 46px; padding: 0 22px; display: inline-flex; align-items: center; border-radius: 14px; font-weight: 800; }
+.examcard { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: 18px; background: var(--sun-soft); border: 2px solid var(--sun-line); color: var(--fg); text-decoration: none; }
+.examcard .eico { font-size: 26px; }
+.examcard small { display: block; color: var(--muted); font-size: 13px; }
+h2.sec { font-size: 21px; margin: 6px 0 -2px; }
+.sgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.stile { display: grid; gap: 4px; align-content: start; padding: 14px; min-height: 132px; border-radius: 20px; text-decoration: none; color: var(--fg); background: var(--hs); border: 2px solid transparent; box-shadow: 0 3px 0 color-mix(in srgb, var(--h) 35%, transparent); }
+.stile:active { transform: translateY(2px); box-shadow: none; }
+.sico { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 14px; background: var(--h); color: #fff; font-weight: 800; font-size: 20px; }
+.sico.big { width: 58px; height: 58px; font-size: 26px; border-radius: 18px; }
+.sname { font-weight: 800; font-size: 16px; line-height: 1.2; margin-top: 6px; }
+.smeta { font-size: 12px; color: var(--muted); font-weight: 700; }
+.pbar { height: 8px; border-radius: 99px; background: color-mix(in srgb, var(--fg) 10%, transparent); overflow: hidden; margin-top: 4px; }
+.pbar i { display: block; height: 100%; border-radius: 99px; background: var(--h, var(--accent)); }
+.sband { display: flex; gap: 14px; align-items: center; padding: 16px; border-radius: 22px; background: var(--hs); }
+.sband .small { color: var(--muted); font-weight: 700; }
+.upath { display: grid; gap: 12px; position: relative; }
+.ucard { display: flex; gap: 14px; align-items: center; padding: 14px; border-radius: 20px; background: var(--surface); border: 2px solid var(--line); color: var(--fg); text-decoration: none; }
+.ucard.now { border-color: var(--h); box-shadow: 0 3px 0 var(--h); }
+.ucard.done .unum { background: var(--h); color: #fff; }
+.unum { flex: none; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: var(--hs); color: var(--hd); font-family: var(--display); font-weight: 700; font-size: 24px; }
+.ulabel { display: block; font-size: 12px; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+.utitle { display: block; font-weight: 800; font-size: 16px; line-height: 1.25; }
+.umeta { display: block; font-size: 13px; color: var(--muted); }
+.uarrow { font-size: 22px; color: var(--muted); }
+.icon.soft { background: var(--hs); color: var(--hd); }
+.homefoot { display: grid; gap: 12px; margin-top: 8px; }
+.lead { white-space: pre-line; }

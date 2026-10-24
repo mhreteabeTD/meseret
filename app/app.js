@@ -59,7 +59,7 @@ function toast(text) { const d = document.createElement('div'); d.className = 't
 function setNav(on) {
   nav.hidden = !on; if (!on) return;
   const items = [['home', 'learn', 'M4 11l8-7 8 7v9H4z'], ['review', 'review', 'M4 12a8 8 0 1 0 2.3-5.7M4 4v4h4'], ['exams', 'exams', 'M5 3h14v18H5zM9 8h6M9 12h6M9 16h3']];
-  const cur = location.hash.replace('#', '').split('/')[0] || 'home';
+  const cur = ({ subject: 'home', exam: 'exams' })[location.hash.replace('#', '').split('/')[0]] || location.hash.replace('#', '').split('/')[0] || 'home';
   navin.innerHTML = items.map(([r, k, d]) => `<a href="#${r}" class="${cur === r ? 'on' : ''}"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="${d}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>${t(k)}</a>`).join('');
 }
 function setTop(html) { top.hidden = !html; topin.innerHTML = html || ''; }
@@ -200,24 +200,73 @@ function dueReview() {
   return Object.keys(m).filter(k => m[k].due <= now);
 }
 
+/* ---------- Home, subject and exam views (UX rework 2026-10-24). Pattern: one clear "continue" action (Duolingo/Khan),
+   subjects as colour tiles (Khan/BYJU'S), units as a short path with progress (Khan course page), exams in their own place. ---------- */
+const SUBJ_ORDER = ['maths', 'english', 'science', 'physics', 'chemistry', 'biology', 'amharic', 'social', 'geography', 'history', 'citizenship', 'economics', 'it', 'cte', 'agriculture', 'hpe', 'pva'];
+const SUBJ_HUE = { maths: 'g', english: 's', science: 'v', physics: 'v', chemistry: 'c', biology: 'g', amharic: 'y', social: 'y', geography: 's', history: 'c', citizenship: 'c', economics: 'y', it: 's', cte: 'y', agriculture: 'g', hpe: 'c', pva: 'v' };
+const subjSort = (a, b) => (SUBJ_ORDER.indexOf(a) + 1 || 99) - (SUBJ_ORDER.indexOf(b) + 1 || 99);
+function homeGrade() { const g = store.get('homeg', null); return S.grades.includes(g) ? g : S.grades[S.grades.length - 1]; }
+function bookStats() { const bk = store.get('bk', {}); let pts = 0; Object.values(bk).forEach(b => pts += b.pts || 0); return { pts }; }
+function streakDays() { const d = new Set(store.get('days', [])); let n = 0; for (let i = 0; ; i++) { const k = new Date(Date.now() - i * DAY).toISOString().slice(0, 10); if (d.has(k)) n++; else if (i > 0) break; if (i > 400) break; } return n; }
+function chapterPct(c) { const lp = store.get('lp', {}), bk = store.get('bk', {})[c.id]; const ls = c.sections.filter(x => x.lesson); if (!ls.length) return 0;
+  const done = ls.filter(x => lp[x.lesson] && lp[x.lesson].done).length; if (done) return Math.round(done / ls.length * 100); return bk && bk.got ? Math.min(95, Object.keys(bk.got).length) : 0; }
+const progBar = (p, hue) => `<div class="pbar ${hue ? 'h-' + hue : ''}"><i style="width:${Math.max(0, Math.min(100, p))}%"></i></div>`;
+async function loadExams() { if (!S.exams) { try { S.exams = await (await fetch('exams/index.json')).json(); } catch (_) { S.exams = { papers: [] }; } } return S.exams; }
+
 async function viewHome() {
-  const idx = await loadIndex(); setTop(''); hideTray(); setNav(true);
-  const mine = idx.chapters.filter(c => S.grades.includes(c.grade)), others = [];
-  const last = store.get('last', null);
-  const due = dueReview();
-  const days = store.get('days', []); const week = []; for (let i = 6; i >= 0; i--) { const d = new Date(Date.now() - i * DAY).toISOString().slice(0, 10); week.push([['S', 'M', 'T', 'W', 'T', 'F', 'S'][new Date(d).getDay()], days.includes(d)]); }
-  const chapterCard = c => { const p = chapterProgress(c.id), sub = idx.subjects[c.subject] || {}; return `<a class="item" href="#${c.view === 'book' ? 'book' : 'chapter'}/${c.id}"><div class="icon" style="background:var(--accent-soft);color:var(--accent-deep)">${sub.icon || '•'}</div><div class="grow"><div class="t">${esc(L(sub))} · ${t('grade')} ${c.grade}</div><div class="s">${t('unit')} ${c.unit} · ${esc(L(c.title))}${p ? ` · ${t('lessons_read', { d: p.done, t: p.total })}` : ''}</div></div>${c.free ? `<span class="pill green">${t('free_chapter')}</span>` : ''}</a>`; };
-  app.innerHTML = `<div class="row"><div class="grow"><div class="small muted" style="font-weight:700">${t('grade')} ${S.grades.join(' · ')}</div><h1 class="display">${t('hello')}${S.name ? ', ' + esc(S.name) : ''}</h1></div><a class="iconbtn" href="#settings" aria-label="${t('settings')}">${svgIcon('M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM19 12l2-1-1-3-2 .3-1.5-1.5.3-2-3-1-1 2h-2l-1-2-3 1 .3 2L5.6 8.3 3.6 8l-1 3 2 1v2l-2 1 1 3 2-.3 1.5 1.5-.3 2 3 1 1-2h2l1 2 3-1-.3-2 1.5-1.5 2 .3 1-3-2-1z')}</a></div>
-  <div class="week">${week.map(([d, on]) => `<div>${d}<i class="${on ? 'on' : ''}"></i></div>`).join('')}</div>
-  ${!last ? Install.card(true) : ''}${last ? `<a class="card accent" href="#${last.route}"><span class="eyebrow">${t('continue')}</span><span class="display" style="font-size:22px">${esc(last.title)}</span><span class="small">${esc(last.sub || '')}</span></a>` : ''}
-  <a class="card" href="#review" style="text-decoration:none;color:inherit"><div class="row"><div class="icon" style="background:var(--sky-soft);color:var(--sky)">${svgIcon('M4 12a8 8 0 1 0 2.3-5.7M4 4v4h4')}</div><div class="grow"><div style="font-weight:800">${t('today_review')}</div><div class="small muted">${due.length ? t('review_sub', { n: due.length }) : t('review_empty')}</div></div></div></a>
-  <h2 class="display">${t('your_subjects')}</h2>
-  <div class="list">${mine.length ? mine.map(chapterCard).join('') : `<div class="item"><div class="s">${t('no_lessons_yet')}</div></div>`}</div>
-  ${others.length ? `<h2 class="display">${t('all_grades')}</h2><div class="list">${others.map(chapterCard).join('')}</div>` : ''}
-  <h2 class="display">${t('coming')}</h2><div class="list">${idx.coming.filter(c => S.grades.includes(c.grade)).map(c => `<div class="item"><div class="icon" style="background:var(--surface-2);color:var(--muted)">+</div><div class="grow"><div class="t muted">${esc(L(idx.subjects[c.subject] || { en: c.subject }))} · ${t('grade')} ${c.grade} · ${t('unit')} ${c.unit}</div><div class="s">${esc(L(c.title))}</div></div></div>`).join('')}</div>
-  ${last ? Install.card(true) : ''}
-  <button class="card fbcard" id="fbhome"><span class="instic">💬</span><span class="grow"><b>${t('fb_title')}</b><small class="muted">${t('fb_sub')}</small></span><span>›</span></button>`;
+  const [idx, ex] = await Promise.all([loadIndex(), loadExams()]); setTop(''); hideTray(); setNav(true);
+  const g = homeGrade(), mine = idx.chapters.filter(c => c.grade === g), last = store.get('last', null), due = dueReview();
+  const subjects = [...new Set(mine.map(c => c.subject))].sort(subjSort);
+  const streak = streakDays(), { pts } = bookStats();
+  // the one next step: last place, else Unit 1 of the first subject (maths first)
+  let hero;
+  if (last) hero = `<a class="hero" href="#${last.route}"><span class="eyebrow">▶ ${t('continue')}</span><span class="ht">${esc(last.title)}</span><span class="hs">${esc(last.sub || '')}</span><span class="btn light">${t('continue')} ›</span></a>`;
+  else { const c = mine.filter(x => x.unit === 1).sort((a, b) => subjSort(a.subject, b.subject))[0]; const sub = c && (idx.subjects[c.subject] || {});
+    hero = c ? `<a class="hero" href="#book/${c.id}"><span class="eyebrow">✨ ${t('start_here')}</span><span class="ht">${esc(L(sub))} · ${t('unit')} ${c.unit}</span><span class="hs">${esc(L(c.title))}</span><span class="btn light">${t('start')} ›</span></a>` : ''; }
+  const papers = (ex.papers || []).filter(p => p.grade === g);
+  const tile = s => { const sub = idx.subjects[s] || { en: s }, cs = mine.filter(c => c.subject === s), pct = Math.round(cs.reduce((a, c) => a + chapterPct(c), 0) / Math.max(1, cs.length)), hue = SUBJ_HUE[s] || 'g';
+    return `<a class="stile h-${hue}" href="#subject/${g}/${s}"><span class="sico">${sub.icon || '•'}</span><span class="sname">${esc(L(sub))}</span><span class="smeta">${t('units_n', { n: cs.length })}${pct ? ` · ${pct}%` : ''}</span>${progBar(pct)}</a>`; };
+  app.innerHTML = `<div class="hhead"><div class="grow"><h1 class="display">${t('hello')}${S.name ? ', ' + esc(S.name) : ''} 👋</h1></div><a class="iconbtn" href="#settings" aria-label="${t('settings')}">${svgIcon('M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM19 12l2-1-1-3-2 .3-1.5-1.5.3-2-3-1-1 2h-2l-1-2-3 1 .3 2L5.6 8.3 3.6 8l-1 3 2 1v2l-2 1 1 3 2-.3 1.5 1.5-.3 2 3 1 1-2h2l1 2 3-1-.3-2 1.5-1.5 2 .3 1-3-2-1z')}</a></div>
+  ${S.grades.length > 1 ? `<div class="gtabs" role="tablist">${S.grades.map(x => `<button role="tab" aria-selected="${x === g}" data-g="${x}">${t('grade')} ${x}</button>`).join('')}</div>` : `<div class="small muted" style="font-weight:800">${t('grade')} ${g}</div>`}
+  <div class="stats"><span>🔥 <b>${streak}</b> ${t(streak === 1 ? 'day' : 'days')}</span><span>⭐ <b>${pts}</b> ${t('stars')}</span>${due.length ? `<a href="#review">🔁 <b>${due.length}</b> ${t('to_review')}</a>` : ''}</div>
+  ${hero}
+  ${papers.length ? `<a class="examcard" href="#exam/${papers[0].id}"><span class="eico">📝</span><span class="grow"><b>${t('exam_prep')}</b><small>${esc(L(papers[0].title))} · ${t('q_n', { n: papers[0].count })} · ${papers[0].minutes} ${t('min')}</small></span><span>›</span></a>` : ''}
+  <h2 class="display sec">${t('your_subjects')}</h2>
+  ${subjects.length ? `<div class="sgrid">${subjects.map(tile).join('')}</div>` : `<div class="card"><p>${t('no_lessons_yet')}</p></div>`}
+  <div class="homefoot">${Install.card(true)}<button class="card fbcard" id="fbhome"><span class="instic">💬</span><span class="grow"><b>${t('fb_title')}</b><small class="muted">${t('fb_sub')}</small></span><span>›</span></button></div>`;
+  app.querySelectorAll('.gtabs [data-g]').forEach(b => b.onclick = () => { store.set('homeg', +b.dataset.g); viewHome(); });
   Install.bind(app); $('#fbhome').onclick = () => Feedback.open({});
+}
+
+async function viewSubject(grade, subject) {
+  const idx = await loadIndex(); setNav(true); hideTray(); grade = +grade;
+  const sub = idx.subjects[subject] || { en: subject }, hue = SUBJ_HUE[subject] || 'g', cs = idx.chapters.filter(c => c.grade === grade && c.subject === subject).sort((a, b) => a.unit - b.unit);
+  setTop(`<a class="iconbtn" href="#home" aria-label="back">${svgIcon(BACK)}</a><div class="grow"><div class="eyebrow">${t('grade')} ${grade}</div><div class="display" style="font-size:18px">${esc(L(sub))}</div></div>`);
+  const last = (store.get('last', {}) || {}).route || '';
+  app.innerHTML = `<div class="sband h-${hue}"><span class="sico big">${sub.icon || '•'}</span><div><div class="display" style="font-size:26px">${esc(L(sub))}</div><div class="small">${t('grade')} ${grade} · ${t('units_n', { n: cs.length })}</div></div></div>
+  <div class="upath">${cs.map((c, i) => { const p = chapterPct(c), secs = c.sections.filter(x => x.lesson), mins = secs.reduce((a, x) => a + (x.minutes || 10), 0), cur = last === 'book/' + c.id;
+    const state = p >= 100 ? 'done' : p > 0 || cur ? 'now' : '';
+    return `<a class="ucard ${state} h-${hue}" href="#book/${c.id}"><span class="unum">${p >= 100 ? '✓' : c.unit}</span><span class="grow"><span class="ulabel">${t('unit')} ${c.unit}${cur ? ` · <b>${t('continue')}</b>` : ''}</span><span class="utitle">${esc(L(c.title))}</span><span class="umeta">${t('sections_n', { n: secs.length })} · ~${mins} ${t('min')}</span>${progBar(p, hue)}</span><span class="uarrow">›</span></a>`; }).join('')}</div>`;
+}
+
+async function viewExam(id) {
+  setNav(false); hideTray();
+  const ex = await loadExams(), p = (ex.papers || []).find(x => x.id === id); if (!p) { location.hash = 'exams'; return; }
+  let paper; try { paper = await (await fetch('exams/' + p.file)).json(); } catch (_) { toast(t('offline')); return; }
+  const LET = 'ABCDEFG';
+  const screens = paper.items.map(q => { const opts = q.opts.map((o, i) => `${LET[i]}. ${o}`); const ai = LET.indexOf(q.answer);
+    return { kind: 'mcq', step: 'test', graded: true, id: `${p.id}.${q.n}`, level: q.level || 2, ref: `Q${q.n}`, _sec: (q.topics || [''])[0], _secTitle: (q.topics || [''])[0],
+      text: (q.figure ? '📐 ' + q.figure + '\n' : '') + q.text, opts, ans: opts[ai], why: q.why, clue: '' }; });
+  const best = store.get('exbest', {});
+  setTop(`<a class="iconbtn" href="#exams" aria-label="back">${svgIcon(BACK)}</a><div class="grow"><div class="eyebrow">${t('national_exams')}</div><div class="display" style="font-size:18px">${esc(L(p.title))}</div></div>`);
+  app.innerHTML = `<div class="sband h-s"><span class="sico big">📝</span><div><div class="display" style="font-size:22px">${esc(L(p.title))}</div><div class="small">${esc(L(p.sub || ''))}</div></div></div>
+  <div class="stats"><span>❓ <b>${screens.length}</b> ${t('questions')}</span><span>⏱ <b>${p.minutes}</b> ${t('min')}</span>${best[p.id] != null ? `<span>🏆 <b>${best[p.id]}/${screens.length}</b></span>` : ''}</div>
+  <div class="h-g" style="display:grid;gap:12px;margin:8px 0 16px"><button class="pcard" id="exprac"><span class="pi">🎯</span><span class="grow"><b>${t('exam_practice')}</b><small>${t('exam_practice_sub')}</small></span><span>›</span></button>
+  <button class="pcard" id="exreal"><span class="pi">🏁</span><span class="grow"><b>${t('exam_real', { m: p.minutes })}</b><small>${t('exam_real_sub')}</small></span><span>›</span></button></div>
+  <p class="small muted">${t('exam_source')} ${esc(paper.source_note || '')}</p>`;
+  const run = (mode) => runPlayer({ id: p.id, title: L(p.title), mode, minutes: mode === 'test' ? p.minutes : 0, label: t('exam_prep'), screens: screens.map(s => Object.assign({}, s, { step: mode === 'test' ? 'test' : 'exercise' })), backRoute: 'exam/' + p.id,
+    onDone: res => { if (mode !== 'test') return; const right = Object.values(res.firstTry).filter(Boolean).length; const b = store.get('exbest', {}); if (b[p.id] == null || right > b[p.id]) { b[p.id] = right; store.set('exbest', b); } } });
+  $('#exprac').onclick = () => run('book'); $('#exreal').onclick = () => run('test');
 }
 
 async function viewChapter(id) {
@@ -251,14 +300,15 @@ async function viewReview() {
 
 async function viewExams() {
   setNav(true); hideTray(); setTop('');
-  const idx = await loadIndex();
-  const rows = [];
-  for (const c of idx.chapters) {
-    rows.push(`<div class="item head book">${esc(L(idx.subjects[c.subject]))} · ${t('grade')} ${c.grade} · ${t('unit')} ${c.unit}</div>`);
-    for (const s of c.sections) if (s.lesson) { const ls = await loadLesson(s.lesson); (ls.exercises || []).forEach((ex, k) => rows.push(`<a class="item" href="#exercise/${encodeURIComponent(s.lesson)}/${k}"><div class="dot"></div><div class="grow"><div class="t">${esc(ex.book_name)}</div><div class="s">${s.n} · ${ex.items.length} · ${t('book_exercise')}</div></div></a>`)); if (ls.test && ls.test.length) rows.push(`<a class="item" href="#test/${encodeURIComponent(s.lesson)}"><div class="dot"></div><div class="grow"><div class="t">${t('unit_test')} · ${esc(ls.title)}</div><div class="s">${ls.test.length} · ${t('test_note')}</div></div></a>`); }
-    for (const s of c.sections) if (s.book) rows.push(`<a class="item" href="${c.classic}#${s.anchor}"><div class="dot"></div><div class="grow"><div class="t">${esc(s.title)}</div><div class="s">${t('read_in_chapter')}</div></div></a>`);
-  }
-  app.innerHTML = `<h1 class="display">${t('exams')}</h1><p class="muted">${t('exams_intro')}</p><div class="list">${rows.join('')}</div>`;
+  const [idx, ex] = await Promise.all([loadIndex(), loadExams()]); const g = homeGrade();
+  const best = store.get('exbest', {});
+  const papers = (ex.papers || []).filter(p => S.grades.includes(p.grade));
+  const chs = idx.chapters.filter(c => S.grades.includes(c.grade) && c.view === 'book').sort((a, b) => a.grade - b.grade || subjSort(a.subject, b.subject) || a.unit - b.unit);
+  app.innerHTML = `<h1 class="display">${t('exams')}</h1><p class="muted small">${t('exams_intro2')}</p>
+  <h2 class="display sec">${t('national_exams')}</h2>
+  ${papers.length ? papers.map(p => `<a class="examcard" href="#exam/${p.id}"><span class="eico">📝</span><span class="grow"><b>${esc(L(p.title))}</b><small>${t('grade')} ${p.grade} · ${t('q_n', { n: p.count })} · ${p.minutes} ${t('min')}${best[p.id] != null ? ` · ${t('best')} ${best[p.id]}/${p.count}` : ''}</small></span><span>›</span></a>`).join('') : `<div class="card"><p class="small muted">${t('no_papers')}</p></div>`}
+  <h2 class="display sec">${t('chapter_tests')}</h2>
+  <div class="list">${chs.map(c => { const sub = idx.subjects[c.subject] || {}; return `<a class="item" href="#book/${c.id}/test"><div class="icon h-${SUBJ_HUE[c.subject] || 'g'} soft">${sub.icon || '•'}</div><div class="grow"><div class="t">${esc(L(sub))} · ${t('grade')} ${c.grade} · ${t('unit')} ${c.unit}</div><div class="s">🏁 ${esc(L(c.title))}</div></div><span>›</span></a>`; }).join('')}</div>`;
 }
 
 async function viewSettings() {
@@ -1180,7 +1230,7 @@ function runPlayer(cfg) {
     const wb = $('#work'); wb.hidden = !WORK_TOOLS || !(s.graded || s.kind === 'guess' || s.kind === 'tiles');
     addSkip(); wb.onclick = () => workSheet({ key: `${cfg.id || cfg.title}:${k}`, lesson: cfg.id, item: k, tool: s.tool || cfg.tool, q: (s.ask || s.text || s.title || '').replace(/\n/g, ' ') });
     const pct = Math.round(pos / Math.max(1, order.length - 1) * 100);
-    setTop(`${cfg.backRoute ? `<a class="iconbtn" href="#${cfg.backRoute}" aria-label="close">${svgIcon(CLOSE)}</a>` : `<button class="iconbtn" id="rback" aria-label="back">${svgIcon(BACK)}</button>`}<span class="mode ${cfg.mode === 'review' || review ? 'review' : cfg.mode === 'book' || cfg.mode === 'test' ? 'book' : ''}">${cfg.mode === 'refresher' ? t('refresher') : cfg.mode === 'practice' ? t('step_practise') : review ? t('review') : cfg.mode === 'review' ? t('review') : cfg.mode === 'book' ? '📝 ' + t('book_exercise') : cfg.mode === 'test' ? (cfg.minutes ? '🏁' : '🏁 ' + t('unit_test')) : t('learn')}</span><div class="bar"><i style="width:${pct}%"></i></div><span class="count">${Math.min(pos + 1, order.length - 1)} / ${order.length - 1}</span>${cfg.minutes ? `<span class="clock" id="clock"></span>` : ''}<button class="iconbtn" id="rep" aria-label="${t('report')}">${svgIcon(FLAG)}</button>`);
+    setTop(`${cfg.backRoute ? `<a class="iconbtn" href="#${cfg.backRoute}" aria-label="close">${svgIcon(CLOSE)}</a>` : `<button class="iconbtn" id="rback" aria-label="back">${svgIcon(BACK)}</button>`}<span class="mode ${cfg.mode === 'review' || review ? 'review' : cfg.mode === 'book' || cfg.mode === 'test' ? 'book' : ''}">${cfg.mode === 'refresher' ? t('refresher') : cfg.mode === 'practice' ? t('step_practise') : review ? t('review') : cfg.mode === 'review' ? t('review') : cfg.mode === 'book' ? '📝 ' + (cfg.label || t('book_exercise')) : cfg.mode === 'test' ? (cfg.minutes ? '🏁' : '🏁 ' + t('unit_test')) : t('learn')}</span><div class="bar"><i style="width:${pct}%"></i></div><span class="count">${Math.min(pos + 1, order.length - 1)} / ${order.length - 1}</span>${cfg.minutes ? `<span class="clock" id="clock"></span>` : ''}<button class="iconbtn" id="rep" aria-label="${t('report')}">${svgIcon(FLAG)}</button>`);
     bindTop(k);
     window.scrollTo(0, 0); const h = cur.el.querySelector('h1'); if (h) h.focus({ preventScroll: true });
   }
@@ -1676,7 +1726,8 @@ async function viewBook(id, goItem) {
     const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { page.querySelectorAll('#secnav .chip').forEach(ch => ch.classList.toggle('on', ch.dataset.go === en.target.dataset.i)); const on = page.querySelector('#secnav .chip.on'); if (on) on.scrollIntoView({ block: 'nearest', inline: 'center' }); } }), { rootMargin: '-45% 0px -50% 0px' });
     page.querySelectorAll('.sec').forEach(s => io.observe(s));
   } catch (_) {}
-  if (goItem) { const el = page.querySelector(`[data-id="${CSS.escape(goItem)}"]`);
+  if (goItem === '__test') { const tryIt = n => { const b = [...page.querySelectorAll('button.pcard[data-a="ex"]')].find(x => x.textContent.includes('🏁')); if (b) { b.scrollIntoView({ block: 'center' }); b.click(); } else if (n < 80) { window.scrollTo(0, document.body.scrollHeight); setTimeout(() => tryIt(n + 1), 100); } else toast(t('item_missing')); }; setTimeout(() => tryIt(0), 200); }
+  else if (goItem) { const el = page.querySelector(`[data-id="${CSS.escape(goItem)}"]`);
     if (el) setTimeout(() => { el.scrollIntoView({ block: 'center' }); el.classList.add('flash'); setTimeout(() => el.classList.remove('flash'), 4000); }, 150);
     else { let found = null, li = -1; lessons.forEach((ls, i) => [...ls.ideas.flatMap(x => x.screens), ...(ls.exercises || []).flatMap(e => e.items), ...(ls.test || [])].forEach(sc => { if (sc.id === goItem) { found = sc; li = i; } }));
       if (found) { window.scrollTo(0, 0); setTimeout(() => runPlayer({ id: lessons[li].id, title: `${secs[li].n} · ${t('reported_q')}`, mode: 'book', screens: [Object.assign({}, found, { _from: goItem })], backRoute: 'book/' + id }), 200); }
@@ -1699,7 +1750,9 @@ async function route() {
     case 'setup': return viewSetup();
     case 'home': return viewHome();
     case 'chapter': return viewChapter(a);
-    case 'book': return viewBook(a, b === 'item' ? decodeURIComponent(c4 || '') : '');
+    case 'book': return viewBook(a, b === 'item' ? decodeURIComponent(c4 || '') : b === 'test' ? '__test' : '');
+    case 'subject': return viewSubject(a, b);
+    case 'exam': return viewExam(a);
     case 'lesson': return viewLesson(decodeURIComponent(a), 'learn');
     case 'exercise': return viewLesson(decodeURIComponent(a), 'book', +b || 0);
     case 'test': return viewLesson(decodeURIComponent(a), 'test');
