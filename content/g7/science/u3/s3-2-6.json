@@ -49,7 +49,8 @@
      ],
      "after": "The five atoms stay together and carry one charge. It is one polyatomic ion.",
      "added": true,
-     "id": "g7.science.u3.s3-2-6.1"
+     "id": "g7.science.u3.s3-2-6.1",
+     "best": "One ion made of a group of atoms"
     },
     {
      "kind": "read",
@@ -108,6 +109,65 @@
      "id": "g7.science.u3.s3-2-6.3"
     },
     {
+     "kind": "tree",
+     "step": "explore",
+     "title": "Table 3.6 as a tree",
+     "root": {
+      "label": "Polyatomic ions",
+      "info": "Charged groups of atoms. The number of charges is the valence.",
+      "children": [
+       {
+        "label": "Valence 1",
+        "info": "One charge.",
+        "children": [
+         {
+          "label": "NH₄⁺",
+          "info": "Ammonium."
+         },
+         {
+          "label": "OH⁻",
+          "info": "Hydroxide."
+         },
+         {
+          "label": "NO₃⁻, NO₂⁻",
+          "info": "Nitrate and nitrite."
+         },
+         {
+          "label": "HCO₃⁻, HSO₄⁻",
+          "info": "Hydrogen carbonate and hydrogen sulfate."
+         }
+        ]
+       },
+       {
+        "label": "Valence 2",
+        "info": "Two charges.",
+        "children": [
+         {
+          "label": "SO₄²⁻, SO₃²⁻",
+          "info": "Sulfate and sulfite."
+         },
+         {
+          "label": "CO₃²⁻",
+          "info": "Carbonate."
+         }
+        ]
+       },
+       {
+        "label": "Valence 3",
+        "info": "Three charges.",
+        "children": [
+         {
+          "label": "PO₄³⁻, PO₃³⁻",
+          "info": "Phosphate and phosphite."
+         }
+        ]
+       }
+      ]
+     },
+     "id": "g7.science.u3.s3-2-6.26",
+     "added": true
+    },
+    {
      "kind": "steps",
      "step": "method",
      "title": "Example: ammonium sulfate",
@@ -153,7 +213,7 @@
       "N₂⁻"
      ],
      "ans": "NO₃⁻",
-     "why": "Table 3.6: nitrate is NO₃⁻. NO₂⁻ is nitrite.",
+     "why": "Nitrate is in Table 3.6, valence 1.\nIt has one N and three O: NO₃.\nIts charge is 1−: NO₃⁻.\nNO₂⁻ has only two O: that is nitrite.",
      "clue": "Nitrate has three oxygens.",
      "level": 1,
      "ref": "Review Exercise 13",
@@ -186,16 +246,17 @@
        "Phosphate"
       ]
      ],
-     "why": "From Table 3.6.",
+     "why": "From Table 3.6:\nNH₄⁺ is ammonium. OH⁻ is hydroxide.\nSO₄²⁻ is sulfate. CO₃²⁻ is carbonate.\nPO₄³⁻ is phosphate.",
      "clue": "Look at Table 3.6.",
      "level": 1,
-     "id": "g7.science.u3.s3-2-6.8"
+     "id": "g7.science.u3.s3-2-6.8",
+     "text": "Match each polyatomic ion to its name."
     },
     {
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "What is the formula of calcium nitrate? (Ca = 2, NO₃ = 1)",
+     "text": "Write the formula of calcium nitrate (Ca = 2, NO₃ = 1).",
      "opts": [
       "CaNO₃",
       "Ca(NO₃)₂",
@@ -203,7 +264,7 @@
       "CaNO₆"
      ],
      "ans": "Ca(NO₃)₂",
-     "why": "Criss-cross: Ca₁(NO₃)₂. The 2 applies to the whole NO₃, so use brackets.",
+     "why": "Ions: Ca²⁺ and NO₃⁻. Valences: 2 and 1.\nCriss-cross: Ca takes 1, NO₃ takes 2.\nThe 2 multiplies the whole NO₃ group, so use brackets.\nAnswer: Ca(NO₃)₂.\nCaNO₆ is wrong: it breaks up the nitrate group.",
      "clue": "Brackets go around the whole ion.",
      "level": 2,
      "ref": "Exercise 3.4 Q1",
@@ -213,21 +274,69 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "NaHCO₃ is sodium hydrogen ___",
+     "ask": "Name NaHCO₃ (baking soda): sodium hydrogen ___",
      "a": [
       "carbonate"
      ],
-     "why": "HCO₃⁻ is hydrogen carbonate (baking soda).",
+     "why": "Na is sodium: it comes first.\nHCO₃⁻ is in Table 3.6, valence 1.\nIts name is hydrogen carbonate.\nAnswer: sodium hydrogen carbonate.",
      "clue": "Look at Table 3.6, valence 1.",
      "level": 1,
      "ref": "Exercise 3.4 Q2 C",
      "id": "g7.science.u3.s3-2-6.10"
     },
     {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "title": "Simple or polyatomic?",
+     "text": "Sort each ion: one atom, or a group of atoms?",
+     "bins": [
+      "Simple ion",
+      "Polyatomic ion"
+     ],
+     "items": [
+      [
+       "Cl⁻",
+       "Simple ion",
+       "One chlorine atom."
+      ],
+      [
+       "O²⁻",
+       "Simple ion",
+       "One oxygen atom."
+      ],
+      [
+       "Al³⁺",
+       "Simple ion",
+       "One aluminum atom."
+      ],
+      [
+       "NH₄⁺",
+       "Polyatomic ion",
+       "One N and four H."
+      ],
+      [
+       "OH⁻",
+       "Polyatomic ion",
+       "One O and one H."
+      ],
+      [
+       "SO₄²⁻",
+       "Polyatomic ion",
+       "One S and four O."
+      ]
+     ],
+     "why": "Count the atoms in each ion.\nCl⁻, O²⁻ and Al³⁺ each have one atom: simple ions.\nNH₄⁺ has 5 atoms, OH⁻ has 2, SO₄²⁻ has 5.\nA charged group of atoms is a polyatomic ion.",
+     "clue": "Does the ion have one symbol, or several?",
+     "level": 1,
+     "id": "g7.science.u3.s3-2-6.27",
+     "added": true
+    },
+    {
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Which elements are combined in ammonium sulfate, (NH₄)₂SO₄?",
+     "text": "List the elements: which elements are combined in ammonium sulfate, (NH₄)₂SO₄?",
      "opts": [
       "N, H, S, O",
       "N, S, O",
@@ -235,7 +344,7 @@
       "N, H, O"
      ],
      "ans": "N, H, S, O",
-     "why": "The symbols in (NH₄)₂SO₄ are N, H, S and O: four elements.",
+     "why": "List every symbol in (NH₄)₂SO₄.\nNH₄ gives N and H.\nSO₄ gives S and O.\nSo four elements: N, H, S, O.\n\"Ammonium\" is an ion, not an element.",
      "clue": "List every symbol in the formula.",
      "level": 3,
      "ref": "Exercise 3.4 Q4",
@@ -253,14 +362,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Formula of the compound of Na⁺ and nitrate",
+     "text": "Write the formula of the compound of Na⁺ and nitrate (NO₃⁻).",
      "opts": [
       "NaNO₃",
       "Na(NO₃)₂",
       "Na₂NO₃"
      ],
      "ans": "NaNO₃",
-     "why": "Both valences 1.",
+     "why": "Valences: Na 1, NO₃ 1.\nCriss-cross: Na₁(NO₃)₁.\nOmit the 1s; no brackets are needed.\nAnswer: NaNO₃.",
      "clue": "Criss-cross.",
      "level": 1,
      "ref": "Q1",
@@ -270,14 +379,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Formula of the compound of Ca²⁺ and sulfate",
+     "text": "Write the formula of the compound of Ca²⁺ and sulfate (SO₄²⁻).",
      "opts": [
       "Ca₂(SO₄)₂",
       "CaSO₄",
       "Ca(SO₄)₂"
      ],
      "ans": "CaSO₄",
-     "why": "Ca₂(SO₄)₂ simplifies to CaSO₄.",
+     "why": "Valences: Ca 2, SO₄ 2.\nCriss-cross: Ca₂(SO₄)₂.\nBoth are 2: divide by 2.\nAnswer: CaSO₄.",
      "clue": "Both valences 2.",
      "level": 2,
      "ref": "Q1",
@@ -287,14 +396,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Formula of the compound of Al³⁺ and sulfate",
+     "text": "Write the formula of the compound of Al³⁺ and sulfate (SO₄²⁻).",
      "opts": [
       "AlSO₄",
       "Al₂(SO₄)₃",
       "Al₃(SO₄)₂"
      ],
      "ans": "Al₂(SO₄)₃",
-     "why": "Al = 3, SO₄ = 2 → Al₂(SO₄)₃.",
+     "why": "Valences: Al 3, SO₄ 2.\nCriss-cross: Al takes 2, SO₄ takes 3.\nBrackets keep the SO₄ group together.\nAnswer: Al₂(SO₄)₃.\nCheck: 2 × 3 = 6 = 3 × 2.",
      "clue": "Criss-cross with brackets.",
      "level": 2,
      "ref": "Q1",
@@ -304,14 +413,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Formula of the compound of NH₄⁺ and phosphate",
+     "text": "Write the formula of the compound of NH₄⁺ and phosphate (PO₄³⁻).",
      "opts": [
       "NH₄PO₄",
       "(NH₄)₃PO₄",
       "NH₄(PO₄)₃"
      ],
      "ans": "(NH₄)₃PO₄",
-     "why": "NH₄ = 1, PO₄ = 3 → (NH₄)₃PO₄.",
+     "why": "Valences: NH₄ 1, PO₄ 3.\nCriss-cross: NH₄ takes 3, PO₄ takes 1.\nBrackets show that 3 multiplies the whole NH₄ group.\nAnswer: (NH₄)₃PO₄.\nCheck: 3 × 1 = 3 = 1 × 3.",
      "clue": "Criss-cross with brackets.",
      "level": 2,
      "ref": "Q1",
@@ -321,14 +430,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Formula of the compound of Ca²⁺ and phosphate",
+     "text": "Write the formula of the compound of Ca²⁺ and phosphate (PO₄³⁻).",
      "opts": [
       "CaPO₄",
       "Ca₃(PO₄)₂",
       "Ca₂(PO₄)₃"
      ],
      "ans": "Ca₃(PO₄)₂",
-     "why": "Ca = 2, PO₄ = 3 → Ca₃(PO₄)₂.",
+     "why": "Valences: Ca 2, PO₄ 3.\nCriss-cross: Ca takes 3, PO₄ takes 2.\nBrackets keep the PO₄ group together.\nAnswer: Ca₃(PO₄)₂.\nCheck: 3 × 2 = 6 = 2 × 3.",
      "clue": "Swap the valences.",
      "level": 3,
      "ref": "Q1",
@@ -338,11 +447,11 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "Name NH₄Cl: ammonium ___",
+     "ask": "Name the compound NH₄Cl: ammonium ___",
      "a": [
       "chloride"
      ],
-     "why": "Ammonium first, then chloride.",
+     "why": "NH₄⁺ is ammonium: it comes first.\nCl is chlorine, which becomes chloride.\nAnswer: ammonium chloride.",
      "clue": "Cl becomes chloride.",
      "level": 1,
      "ref": "Q2 A",
@@ -352,14 +461,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Name Cu(NO₃)₂.",
+     "text": "Name the compound Cu(NO₃)₂.",
      "opts": [
       "Copper nitrate (I)",
       "Copper (II) nitrate",
       "Copper (I) nitrate"
      ],
      "ans": "Copper (II) nitrate",
-     "why": "Two nitrates (1 each) = 2, so copper (II).",
+     "why": "Each nitrate (NO₃⁻) has valence 1.\nTwo nitrates give 2 × 1 = 2.\nOne Cu matches 2, so copper has valence 2: copper (II).\nAnswer: copper (II) nitrate.\nThe numeral goes right after the metal.",
      "clue": "Add up the nitrate charges.",
      "level": 2,
      "ref": "Q2 B",
@@ -369,14 +478,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Name FePO₄.",
+     "text": "Name the compound FePO₄.",
      "opts": [
       "Iron (II) phosphate",
       "Iron (III) phosphate",
       "Iron phosphide"
      ],
      "ans": "Iron (III) phosphate",
-     "why": "PO₄ has valence 3, so iron is (III).",
+     "why": "Phosphate (PO₄³⁻) has valence 3.\nOne Fe matches one PO₄, so iron has valence 3.\nAnswer: iron (III) phosphate.\nPhosphide is a single phosphorus atom, not PO₄.",
      "clue": "Phosphate has valence 3.",
      "level": 2,
      "ref": "Q2 D",
@@ -393,7 +502,7 @@
       "Mg, C, N"
      ],
      "ans": "Mg, C, O",
-     "why": "Symbols in MgCO₃: Mg, C, O.",
+     "why": "Mg is magnesium.\nCO₃ gives C (carbon) and O (oxygen).\nSo the three elements are Mg, C, O.\nCa is calcium, which is not in the formula.",
      "clue": "List the symbols.",
      "level": 1,
      "ref": "Q3",
@@ -407,14 +516,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "A polyatomic ion is",
+   "text": "What is a polyatomic ion?",
    "opts": [
     "a charged group of atoms",
     "a single neutral atom",
     "a metal"
    ],
    "ans": "a charged group of atoms",
-   "why": "Definition.",
+   "why": "Poly means many.\nA polyatomic ion is a group of atoms.\nThe group carries a positive or negative charge.\nAnswer: a charged group of atoms.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u3.s3-2-6.21"
@@ -423,14 +532,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "OH⁻ is called",
+   "text": "What is the name of the ion OH⁻?",
    "opts": [
     "hydroxide",
     "oxide",
     "hydrogen"
    ],
    "ans": "hydroxide",
-   "why": "Table 3.6.",
+   "why": "OH⁻ is in Table 3.6, valence 1.\nIt is one oxygen and one hydrogen with a 1− charge.\nIts name is hydroxide.\nOxide is O²⁻, a single atom.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u3.s3-2-6.22"
@@ -439,14 +548,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Valence of the sulfate ion SO₄²⁻?",
+   "text": "What is the valence of the sulfate ion SO₄²⁻?",
    "opts": [
     "1",
     "2",
     "4"
    ],
    "ans": "2",
-   "why": "Its charge is 2−.",
+   "why": "The charge on sulfate is 2−.\nThe valence equals the number of charges.\nAnswer: 2.\n4 is the number of O atoms, not the valence.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u3.s3-2-6.23"
@@ -455,14 +564,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Formula of ammonium chloride?",
+   "text": "Write the formula of ammonium chloride.",
    "opts": [
     "NH₄Cl",
     "(NH₄)₂Cl",
     "NH₄Cl₂"
    ],
    "ans": "NH₄Cl",
-   "why": "Both valences 1.",
+   "why": "Ions: NH₄⁺ and Cl⁻. Valences: 1 and 1.\nCriss-cross gives (NH₄)₁Cl₁.\nOmit the 1s: NH₄Cl.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u3.s3-2-6.24"
@@ -471,14 +580,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Formula of sodium carbonate (Na = 1, CO₃ = 2)?",
+   "text": "Write the formula of sodium carbonate (Na = 1, CO₃ = 2).",
    "opts": [
     "NaCO₃",
     "Na₂CO₃",
     "Na(CO₃)₂"
    ],
    "ans": "Na₂CO₃",
-   "why": "Na gets 2, CO₃ gets 1.",
+   "why": "Valences: Na 1, CO₃ 2.\nCriss-cross: Na takes 2, CO₃ takes 1.\nAnswer: Na₂CO₃.\nCheck: 2 × 1 = 2 = 1 × 2.",
    "level": 3,
    "clue": "",
    "id": "g7.science.u3.s3-2-6.25"

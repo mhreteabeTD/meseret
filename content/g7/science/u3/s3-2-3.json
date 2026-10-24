@@ -49,7 +49,8 @@
      ],
      "after": "Oxygen holds two hydrogens, so it has more combining power. This power is called valence.",
      "added": true,
-     "id": "g7.science.u3.s3-2-3.1"
+     "id": "g7.science.u3.s3-2-3.1",
+     "best": "Oxygen"
     },
     {
      "kind": "read",
@@ -74,6 +75,29 @@
       "The charge an ion carries equals its valence. Cl⁻, O²⁻ and Al³⁺ have valences 1, 2 and 3."
      ],
      "id": "g7.science.u3.s3-2-3.3"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Charge and valence",
+     "ask": "Tap each ion: the number of charges is its valence.",
+     "need": 3,
+     "items": [
+      [
+       "Cl⁻",
+       "Charge 1−: one charge. Valence 1."
+      ],
+      [
+       "O²⁻",
+       "Charge 2−: two charges. Valence 2."
+      ],
+      [
+       "Al³⁺",
+       "Charge 3+: three charges. Valence 3."
+      ]
+     ],
+     "id": "g7.science.u3.s3-2-3.16",
+     "added": true
     },
     {
      "kind": "read",
@@ -103,6 +127,61 @@
      "id": "g7.science.u3.s3-2-3.4"
     },
     {
+     "kind": "tree",
+     "step": "explore",
+     "title": "Table 3.4 as a tree",
+     "root": {
+      "label": "Valence",
+      "info": "The combining power of an element.",
+      "children": [
+       {
+        "label": "Valence 1",
+        "info": "Combining power 1.",
+        "children": [
+         {
+          "label": "Li, Na, K, Cu(I), Ag",
+          "info": "Metals with valence 1: lithium, sodium, potassium, copper(I), silver."
+         },
+         {
+          "label": "Cl, Br, I, F",
+          "info": "Non-metals with valence 1: chlorine, bromine, iodine, fluorine."
+         }
+        ]
+       },
+       {
+        "label": "Valence 2",
+        "info": "Combining power 2.",
+        "children": [
+         {
+          "label": "Mg, Ca, Fe(II), Zn, Pb(II)",
+          "info": "Metals with valence 2: magnesium, calcium, iron(II), zinc, lead(II)."
+         },
+         {
+          "label": "O, S",
+          "info": "Non-metals with valence 2: oxygen, sulfur."
+         }
+        ]
+       },
+       {
+        "label": "Valence 3",
+        "info": "Combining power 3.",
+        "children": [
+         {
+          "label": "Al, Fe(III)",
+          "info": "Metals with valence 3: aluminum, iron(III)."
+         },
+         {
+          "label": "N",
+          "info": "Non-metal with valence 3: nitrogen."
+         }
+        ]
+       }
+      ]
+     },
+     "id": "g7.science.u3.s3-2-3.17",
+     "added": true
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -122,14 +201,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "What is the valence of oxygen?",
+     "text": "Use Table 3.4: what is the valence of oxygen?",
      "opts": [
       "1",
       "2",
       "3"
      ],
      "ans": "2",
-     "why": "Table 3.4 puts oxygen in the valence 2 column.",
+     "why": "Find oxygen (O) in the non-metal row of Table 3.4.\nIt is in the valence 2 column, with sulfur.\nIts ion O²⁻ also has 2 charges.\nAnswer: 2.",
      "clue": "Look at the non-metal row of Table 3.4.",
      "level": 1,
      "ref": "Table 3.4",
@@ -149,38 +228,39 @@
       [
        "Na",
        "Valence 1",
-       ""
+       "Table 3.4: a metal with valence 1."
       ],
       [
        "Cl",
        "Valence 1",
-       ""
+       "Table 3.4: a non-metal with valence 1."
       ],
       [
        "Mg",
        "Valence 2",
-       ""
+       "Table 3.4: a metal with valence 2."
       ],
       [
        "O",
        "Valence 2",
-       ""
+       "Table 3.4: a non-metal with valence 2."
       ],
       [
        "Al",
        "Valence 3",
-       ""
+       "Table 3.4: a metal with valence 3."
       ],
       [
        "N",
        "Valence 3",
-       ""
+       "Table 3.4: a non-metal with valence 3."
       ]
      ],
-     "why": "From Table 3.4.",
+     "why": "Valence 1: Na (metal) and Cl (non-metal).\nValence 2: Mg (metal) and O (non-metal).\nValence 3: Al (metal) and N (non-metal).\nEach goes by its column in Table 3.4.",
      "clue": "Use Table 3.4.",
      "level": 1,
-     "id": "g7.science.u3.s3-2-3.7"
+     "id": "g7.science.u3.s3-2-3.7",
+     "text": "Sort each element by its valence (Table 3.4)."
     },
     {
      "kind": "mcq",
@@ -194,7 +274,7 @@
       "5"
      ],
      "ans": "3",
-     "why": "Al is in the valence 3 column; Al³⁺ carries 3 charges.",
+     "why": "Find Al in Table 3.4: it is in the valence 3 column.\nIts ion is Al³⁺, with 3 charges.\nThe number of charges equals the valence.\nAnswer: 3.",
      "clue": "Look at the charge on Al³⁺.",
      "level": 2,
      "ref": "Exercise 3.3 Q4",
@@ -204,9 +284,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "Iron has only one valence number.",
+     "text": "True or false: iron has only one valence number.",
      "a": false,
-     "why": "Iron has valence 2, iron(II), and valence 3, iron(III).",
+     "why": "Table 3.4 lists iron twice.\nFe(II) has valence 2. Fe(III) has valence 3.\nSo iron has two valence numbers.\nThe statement is false.",
      "clue": "Look for iron in Table 3.4.",
      "level": 1,
      "id": "g7.science.u3.s3-2-3.9"
@@ -223,7 +303,7 @@
       "0"
      ],
      "ans": "2",
-     "why": "The valence equals the number of charges, not the sign. 2− means valence 2, like O²⁻.",
+     "why": "The valence equals the number of charges.\nThe sign (+ or −) is not part of the valence.\n2− has two charges, so the valence is 2.\nExample: O²⁻ has valence 2.\n−2 is wrong: a valence is a plain number.",
      "clue": "Count the charges; ignore + or −.",
      "level": 3,
      "added": true,
@@ -238,14 +318,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "The combining power of an element is its",
+   "text": "What is the combining power of an element called?",
    "opts": [
     "symbol",
     "valence",
     "formula"
    ],
    "ans": "valence",
-   "why": "That is the definition.",
+   "why": "Each element in a compound has a combining power.\nThis power is called valence.\nA symbol is a short name; a formula shows a whole substance.\nAnswer: valence.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u3.s3-2-3.11"
@@ -254,14 +334,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Valence of sodium (Na)?",
+   "text": "Use Table 3.4: what is the valence of sodium (Na)?",
    "opts": [
     "1",
     "2",
     "3"
    ],
    "ans": "1",
-   "why": "Table 3.4.",
+   "why": "Find Na in the metal row of Table 3.4.\nIt is in the valence 1 column, with Li and K.\nAnswer: 1.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u3.s3-2-3.12"
@@ -277,7 +357,7 @@
     "Oxygen"
    ],
    "ans": "Iron",
-   "why": "Iron (II) and iron (III).",
+   "why": "Sodium has valence 1 only. Oxygen has valence 2 only.\nIron appears as Fe(II) and Fe(III).\nSo iron has valence 2 and valence 3.\nAnswer: iron.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u3.s3-2-3.13"
@@ -286,14 +366,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Valence of nitrogen in Table 3.4?",
+   "text": "Use Table 3.4: what is the valence of nitrogen?",
    "opts": [
     "1",
     "2",
     "3"
    ],
    "ans": "3",
-   "why": "Nitrogen is in the valence 3 column.",
+   "why": "Find N in the non-metal row of Table 3.4.\nIt is in the valence 3 column.\nAnswer: 3.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u3.s3-2-3.14"
@@ -302,7 +382,7 @@
    "kind": "pick",
    "step": "test",
    "graded": true,
-   "text": "Tap every element with valence 2.",
+   "text": "Tap every element with valence 2 (Table 3.4).",
    "pool": [
     "Ca",
     "K",
@@ -316,7 +396,7 @@
     "Zn",
     "S"
    ],
-   "why": "Ca, Zn and S have valence 2. K and Br have 1; Al has 3.",
+   "why": "Valence 2 metals: Mg, Ca, Fe(II), Zn, Pb(II).\nValence 2 non-metals: O, S.\nSo Ca, Zn and S have valence 2.\nK and Br have valence 1. Al has valence 3.",
    "level": 3,
    "id": "g7.science.u3.s3-2-3.15"
   }

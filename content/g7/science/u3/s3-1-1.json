@@ -41,9 +41,10 @@
       "No, gold is already as simple as it gets",
       "Only with water"
      ],
-     "after": "Gold is made of only one kind of atom. It cannot be broken into simpler substances. It is an element.",
+     "after": "Cooking, mixing or burning cannot split gold.\nGold is made of only one kind of atom.\nIt cannot be broken into simpler substances. It is an element.",
      "added": true,
-     "id": "g7.science.u3.s3-1-1.1"
+     "id": "g7.science.u3.s3-1-1.1",
+     "best": "No, gold is already as simple as it gets"
     },
     {
      "kind": "read",
@@ -77,6 +78,71 @@
       "Others are hydrogen, nitrogen, gold, silver, copper, sulfur and chlorine."
      ],
      "id": "g7.science.u3.s3-1-1.4"
+    },
+    {
+     "kind": "tree",
+     "step": "explore",
+     "title": "Common elements: metals and non-metals",
+     "root": {
+      "label": "Common elements",
+      "info": "Each one is made of only one kind of atom.",
+      "children": [
+       {
+        "label": "Metals",
+        "info": "Usually shiny solids.",
+        "children": [
+         {
+          "label": "Iron",
+          "info": "A metal used for tools, nails and roofing sheets."
+         },
+         {
+          "label": "Aluminum",
+          "info": "A light metal used for cooking pots."
+         },
+         {
+          "label": "Copper",
+          "info": "A metal used in electric wires."
+         },
+         {
+          "label": "Gold, silver",
+          "info": "Shiny metals used for jewellery."
+         },
+         {
+          "label": "Ca, Na, K, Mg",
+          "info": "Calcium, sodium, potassium and magnesium are metals too."
+         }
+        ]
+       },
+       {
+        "label": "Non-metals",
+        "info": "Usually gases or dull solids.",
+        "children": [
+         {
+          "label": "Oxygen",
+          "info": "A non-metal gas we breathe."
+         },
+         {
+          "label": "Hydrogen",
+          "info": "A non-metal gas. It is the lightest gas."
+         },
+         {
+          "label": "Nitrogen",
+          "info": "A non-metal gas. Most of the air is nitrogen."
+         },
+         {
+          "label": "Sulfur",
+          "info": "A yellow non-metal solid."
+         },
+         {
+          "label": "Chlorine",
+          "info": "A non-metal gas used to clean drinking water."
+         }
+        ]
+       }
+      ]
+     },
+     "id": "g7.science.u3.s3-1-1.17",
+     "added": true
     },
     {
      "kind": "tap",
@@ -120,14 +186,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "ask": "What is an element?",
+     "ask": "Which sentence defines an element?",
      "opts": [
       "A pure substance that cannot be broken down by ordinary chemical means",
       "Any mixture of two substances",
       "A substance made of many kinds of atoms"
      ],
      "ans": "A pure substance that cannot be broken down by ordinary chemical means",
-     "why": "That is the book's definition. An element has only one kind of atom.",
+     "why": "An element is a pure substance.\nOrdinary chemical means cannot break it into simpler substances.\nIt is made of only one kind of atom.\n\"A mixture of two substances\" is not pure, so it is not an element.\nAnswer: a pure substance that cannot be broken down by ordinary chemical means.",
      "clue": "Which choice says \"cannot be broken down\"?",
      "level": 1,
      "ref": "Activity 3.1 Q1",
@@ -137,12 +203,12 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "There are ___ known elements.",
+     "ask": "How many elements are known? There are ___ known elements.",
      "a": [
       "118"
      ],
      "num": true,
-     "why": "The book says there are 118 known elements.",
+     "why": "Scientists know 118 elements.\nOf these, 92 occur naturally.\nThe other 118 − 92 = 26 do not occur naturally.\nAnswer: 118.",
      "clue": "It is more than 100.",
      "level": 1,
      "id": "g7.science.u3.s3-1-1.8"
@@ -151,12 +217,12 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "Out of 118 elements, ___ occur naturally.",
+     "ask": "Of the 118 known elements, how many occur naturally? ___ occur naturally.",
      "a": [
       "92"
      ],
      "num": true,
-     "why": "92 out of 118 elements are naturally occurring.",
+     "why": "There are 118 known elements.\n92 of them occur naturally.\nCheck: 118 − 92 = 26 do not occur naturally.\nAnswer: 92.",
      "clue": "It is less than 100.",
      "level": 2,
      "id": "g7.science.u3.s3-1-1.9"
@@ -202,24 +268,25 @@
        "A gas."
       ]
      ],
-     "why": "Metals: iron, copper, gold. Non-metals: oxygen, sulfur, chlorine.",
+     "why": "Metals are usually shiny solids.\nIron, copper and gold are shiny metals.\nOxygen and chlorine are gases, so they are non-metals.\nSulfur is a dull yellow solid: a non-metal.\nMetals: iron, copper, gold. Non-metals: oxygen, sulfur, chlorine.",
      "clue": "Metals are usually shiny solids.",
      "level": 1,
      "ref": "Activity 3.1 Q2",
-     "id": "g7.science.u3.s3-1-1.10"
+     "id": "g7.science.u3.s3-1-1.10",
+     "text": "Sort these common elements: is each one a metal or a non-metal?"
     },
     {
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Water can be split into hydrogen and oxygen. What does this tell you?",
+     "text": "Use the definition of an element. Water can be split into hydrogen and oxygen. What does this tell you about water?",
      "opts": [
       "Water is an element",
       "Water is not an element",
       "Hydrogen is a compound"
      ],
      "ans": "Water is not an element",
-     "why": "An element cannot be broken into simpler substances. Water can, so water is not an element. It is a compound.",
+     "why": "An element cannot be broken into simpler substances.\nWater can be split into hydrogen and oxygen.\nSo water is not an element.\nIt is a compound of two elements.\n\"Hydrogen is a compound\" is wrong: hydrogen is an element.",
      "clue": "Check the definition: can an element be broken down?",
      "level": 3,
      "added": true,
@@ -234,14 +301,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "An element is made of",
+   "text": "What is an element made of? An element is made of",
    "opts": [
     "only one kind of atom",
     "two kinds of atoms",
     "any mixture"
    ],
    "ans": "only one kind of atom",
-   "why": "That is the definition.",
+   "why": "An element is a pure substance.\nIt has only one kind of atom.\nTwo kinds of atoms joined would make a compound.\nAnswer: only one kind of atom.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u3.s3-1-1.12"
@@ -250,9 +317,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "Gold is an element.",
+   "text": "True or false: gold is an element.",
    "a": true,
-   "why": "Gold is one of the common elements.",
+   "why": "Gold cannot be broken into simpler substances.\nIt has only one kind of atom.\nThe book lists gold among the common elements.\nSo the statement is true.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u3.s3-1-1.13"
@@ -261,12 +328,12 @@
    "kind": "blank",
    "step": "test",
    "graded": true,
-   "ask": "There are ___ known elements.",
+   "ask": "How many elements are known? There are ___ known elements.",
    "a": [
     "118"
    ],
    "num": true,
-   "why": "118 known elements.",
+   "why": "The book says there are 118 known elements.\n92 of them occur naturally.\nAnswer: 118.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u3.s3-1-1.14"
@@ -275,7 +342,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which is NOT an element?",
+   "text": "Which substance is NOT an element?",
    "opts": [
     "Iron",
     "Oxygen",
@@ -283,7 +350,7 @@
     "Copper"
    ],
    "ans": "Water",
-   "why": "Water is a compound of hydrogen and oxygen.",
+   "why": "Iron, oxygen and copper each have one kind of atom.\nWater is made of hydrogen and oxygen.\nSo water can be broken down: it is a compound.\nAnswer: water.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u3.s3-1-1.15"
@@ -292,7 +359,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "How many of the known elements are NOT naturally occurring?",
+   "text": "Of 118 known elements, 92 occur naturally. How many do NOT occur naturally?",
    "opts": [
     "26",
     "92",
@@ -300,7 +367,7 @@
     "10"
    ],
    "ans": "26",
-   "why": "118 − 92 = 26.",
+   "why": "Known elements: 118.\nNaturally occurring: 92.\nNot naturally occurring: 118 − 92 = 26.\nCheck: 92 + 26 = 118.\nAnswer: 26.",
    "level": 3,
    "clue": "",
    "id": "g7.science.u3.s3-1-1.16"

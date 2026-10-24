@@ -49,7 +49,8 @@
      ],
      "after": "Calcium can hold two chlorines. The formula is CaCl₂. The criss-cross method shows this.",
      "ref": "Example b",
-     "id": "g7.science.u3.s3-2-4.1"
+     "id": "g7.science.u3.s3-2-4.1",
+     "best": "2"
     },
     {
      "kind": "read",
@@ -119,7 +120,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "What is the formula of sodium chloride? (Na = 1, Cl = 1)",
+     "text": "Use criss-cross to write the formula of sodium chloride (Na = 1, Cl = 1).",
      "opts": [
       "NaCl",
       "Na₂Cl",
@@ -127,7 +128,7 @@
       "Na₂Cl₂"
      ],
      "ans": "NaCl",
-     "why": "Criss-cross gives Na₁Cl₁. Omit the 1s: NaCl.",
+     "why": "Symbols: Na and Cl.\nValences: Na 1, Cl 1.\nCriss-cross: Na₁Cl₁.\nOmit the 1s: NaCl.\nNa₂Cl is wrong: neither valence is 2.",
      "clue": "Both valences are 1.",
      "level": 1,
      "ref": "Exercise 3.3 Q1 C",
@@ -149,7 +150,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "What is the formula of aluminum oxide? (Al = 3, O = 2)",
+     "text": "Use criss-cross to write the formula of aluminum oxide (Al = 3, O = 2).",
      "opts": [
       "AlO",
       "Al₃O₂",
@@ -157,7 +158,7 @@
       "Al₂O"
      ],
      "ans": "Al₂O₃",
-     "why": "Criss-cross: Al gets O's 2, O gets Al's 3.",
+     "why": "Symbols: Al and O.\nValences: Al 3, O 2.\nCriss-cross: Al takes O's 2, O takes Al's 3 → Al₂O₃.\nCheck: 2 × 3 = 6 and 3 × 2 = 6. Balanced.\nAl₃O₂ is wrong: it keeps each valence under its own symbol.",
      "clue": "Each valence moves below the OTHER symbol.",
      "level": 2,
      "ref": "Exercise 3.3 Q1 D",
@@ -167,7 +168,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "What is the formula of magnesium nitride? (Mg = 2, N = 3)",
+     "text": "Use criss-cross to write the formula of magnesium nitride (Mg = 2, N = 3).",
      "opts": [
       "MgN",
       "Mg₂N₃",
@@ -175,11 +176,29 @@
       "Mg₃N"
      ],
      "ans": "Mg₃N₂",
-     "why": "Mg gets N's 3, N gets Mg's 2: Mg₃N₂. Check: 3 × 2 = 6 = 2 × 3.",
+     "why": "Symbols: Mg and N.\nValences: Mg 2, N 3.\nCriss-cross: Mg takes N's 3, N takes Mg's 2 → Mg₃N₂.\nCheck: 3 × 2 = 6 and 2 × 3 = 6. Balanced.\nAnswer: Mg₃N₂.",
      "clue": "Swap the valences.",
      "level": 2,
      "ref": "Exercise 3.3 Q1 B",
      "id": "g7.science.u3.s3-2-4.9"
+    },
+    {
+     "kind": "order",
+     "step": "practise",
+     "graded": true,
+     "title": "Criss-cross steps in order",
+     "text": "Put the steps for writing a binary formula in order.",
+     "items": [
+      "Write the symbols of the two elements",
+      "Write the valence above each symbol",
+      "Criss-cross: write each valence below the other symbol",
+      "Omit any 1 and simplify equal subscripts"
+     ],
+     "why": "Step i: write the symbols, for example Ca and Cl.\nStep ii: write the valences above: Ca 2, Cl 1.\nStep iii: criss-cross them below: Ca₁Cl₂.\nLast: omit the 1 (and divide equal subscripts): CaCl₂.",
+     "clue": "You need the symbols before you can write anything above them.",
+     "level": 1,
+     "id": "g7.science.u3.s3-2-4.27",
+     "added": true
     },
     {
      "kind": "steps",
@@ -194,10 +213,58 @@
      "id": "g7.science.u3.s3-2-4.10"
     },
     {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "title": "Simplify or keep?",
+     "text": "After criss-cross, does each formula need simplifying?",
+     "bins": [
+      "Divide the subscripts",
+      "Keep as it is"
+     ],
+     "items": [
+      [
+       "Ca₂S₂",
+       "Divide the subscripts",
+       "Both are 2: CaS."
+      ],
+      [
+       "Zn₂O₂",
+       "Divide the subscripts",
+       "Both are 2: ZnO."
+      ],
+      [
+       "Pb₂O₂",
+       "Divide the subscripts",
+       "Both are 2: PbO."
+      ],
+      [
+       "CaCl₂",
+       "Keep as it is",
+       "The subscripts 1 and 2 cannot be divided."
+      ],
+      [
+       "Na₂O",
+       "Keep as it is",
+       "The subscripts 2 and 1 cannot be divided."
+      ],
+      [
+       "K₂S",
+       "Keep as it is",
+       "The subscripts 2 and 1 cannot be divided."
+      ]
+     ],
+     "why": "When both subscripts are the same, divide both by that number.\nCa₂S₂ → CaS, Zn₂O₂ → ZnO, Pb₂O₂ → PbO.\nCaCl₂, Na₂O and K₂S have a hidden 1.\nThey are already in simplest form.",
+     "clue": "Look for formulas whose two subscripts are equal.",
+     "level": 2,
+     "id": "g7.science.u3.s3-2-4.28",
+     "added": true
+    },
+    {
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Aluminum (3) and nitrogen (3) form aluminum nitride. What is its formula?",
+     "text": "Aluminum (valence 3) and nitrogen (valence 3) form aluminum nitride. Use criss-cross: what is its formula?",
      "opts": [
       "Al₃N₃",
       "AlN",
@@ -205,7 +272,7 @@
       "AlN₃"
      ],
      "ans": "AlN",
-     "why": "Criss-cross gives Al₃N₃. Divide both by 3: AlN.",
+     "why": "Symbols: Al and N. Valences: 3 and 3.\nCriss-cross: Al₃N₃.\nBoth subscripts are 3, so divide both by 3.\nAl₁N₁ → AlN.\nAl₃N₃ is not simplified, so it is wrong.",
      "clue": "Simplify when the subscripts can be divided.",
      "level": 3,
      "added": true,
@@ -230,7 +297,7 @@
       "Cu₂O₂"
      ],
      "ans": "CuO",
-     "why": "Cu = 2, O = 2. Cu₂O₂ simplifies to CuO.",
+     "why": "Copper (II) means Cu has valence 2. O has valence 2.\nCriss-cross: Cu₂O₂.\nBoth subscripts are 2: divide by 2.\nAnswer: CuO.",
      "clue": "Simplify equal subscripts.",
      "level": 2,
      "ref": "Q1 A",
@@ -240,14 +307,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Magnesium nitride",
+     "text": "Write the chemical formula for magnesium nitride.",
      "opts": [
       "Mg₃N₂",
       "Mg₂N₃",
       "MgN"
      ],
      "ans": "Mg₃N₂",
-     "why": "Mg = 2, N = 3. Criss-cross: Mg₃N₂.",
+     "why": "Symbols: Mg and N.\nValences: Mg 2, N 3.\nCriss-cross: Mg takes N's 3, N takes Mg's 2 → Mg₃N₂.\nCheck: 3 × 2 = 6 and 2 × 3 = 6. Balanced.\nAnswer: Mg₃N₂.",
      "clue": "Swap the valences.",
      "level": 1,
      "ref": "Q1 B",
@@ -257,14 +324,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Sodium chloride",
+     "text": "Write the chemical formula for sodium chloride.",
      "opts": [
       "NaCl",
       "Na₂Cl",
       "NaCl₂"
      ],
      "ans": "NaCl",
-     "why": "Both valences are 1.",
+     "why": "Symbols: Na and Cl.\nValences: Na 1, Cl 1.\nCriss-cross: Na₁Cl₁.\nOmit the 1s: NaCl.\nNa₂Cl is wrong: neither valence is 2.",
      "clue": "Omit the 1s.",
      "level": 1,
      "ref": "Q1 C",
@@ -274,14 +341,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Aluminum oxide",
+     "text": "Write the chemical formula for aluminum oxide.",
      "opts": [
       "Al₂O₃",
       "Al₃O₂",
       "AlO"
      ],
      "ans": "Al₂O₃",
-     "why": "Al = 3, O = 2.",
+     "why": "Symbols: Al and O.\nValences: Al 3, O 2.\nCriss-cross: Al takes O's 2, O takes Al's 3 → Al₂O₃.\nCheck: 2 × 3 = 6 and 3 × 2 = 6. Balanced.\nAl₃O₂ is wrong: it keeps each valence under its own symbol.",
      "clue": "Swap the valences.",
      "level": 1,
      "ref": "Q1 D",
@@ -291,14 +358,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Iron (III) oxide",
+     "text": "Write the chemical formula for iron (III) oxide.",
      "opts": [
       "FeO",
       "Fe₃O₂",
       "Fe₂O₃"
      ],
      "ans": "Fe₂O₃",
-     "why": "Fe = 3, O = 2. Criss-cross: Fe₂O₃.",
+     "why": "(III) means iron has valence 3. O has valence 2.\nCriss-cross: Fe takes 2, O takes 3 → Fe₂O₃.\nCheck: 2 × 3 = 6 = 3 × 2.\nFeO would be iron (II) oxide.\nAnswer: Fe₂O₃.",
      "clue": "(III) means valence 3.",
      "level": 2,
      "ref": "Q1 E",
@@ -308,14 +375,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Iron (II) bromide",
+     "text": "Write the chemical formula for iron (II) bromide.",
      "opts": [
       "FeBr₂",
       "Fe₂Br",
       "FeBr"
      ],
      "ans": "FeBr₂",
-     "why": "Fe = 2, Br = 1. Fe₁Br₂ → FeBr₂.",
+     "why": "(II) means iron has valence 2. Br has valence 1.\nCriss-cross: Fe₁Br₂.\nOmit the 1: FeBr₂.\nCheck: 1 × 2 = 2 = 2 × 1.",
      "clue": "(II) means valence 2.",
      "level": 2,
      "ref": "Q1 F",
@@ -325,14 +392,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Silver oxide",
+     "text": "Write the chemical formula for silver oxide.",
      "opts": [
       "AgO",
       "Ag₂O",
       "AgO₂"
      ],
      "ans": "Ag₂O",
-     "why": "Ag = 1, O = 2. Ag₂O₁ → Ag₂O.",
+     "why": "Ag has valence 1. O has valence 2.\nCriss-cross: Ag takes 2, O takes 1 → Ag₂O₁.\nOmit the 1: Ag₂O.\nCheck: 2 × 1 = 2 = 1 × 2.",
      "clue": "Swap the valences.",
      "level": 1,
      "ref": "Q1 G",
@@ -342,14 +409,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Calcium fluoride",
+     "text": "Write the chemical formula for calcium fluoride.",
      "opts": [
       "CaF",
       "Ca₂F",
       "CaF₂"
      ],
      "ans": "CaF₂",
-     "why": "Ca = 2, F = 1. Ca₁F₂ → CaF₂.",
+     "why": "Ca has valence 2. F has valence 1.\nCriss-cross: Ca₁F₂.\nOmit the 1: CaF₂.\nCheck: 1 × 2 = 2 = 2 × 1.",
      "clue": "Swap the valences.",
      "level": 1,
      "ref": "Q1 H",
@@ -367,7 +434,7 @@
       "AlN"
      ],
      "ans": "AlN",
-     "why": "Al₃N₃ simplifies to AlN.",
+     "why": "Symbols: Al and N. Valences: 3 and 3.\nCriss-cross: Al₃N₃.\nBoth subscripts are 3, so divide both by 3.\nAl₁N₁ → AlN.\nAl₃N₃ is not simplified, so it is wrong.",
      "clue": "Both valences are 3.",
      "level": 2,
      "ref": "Q3",
@@ -377,7 +444,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "How many valence numbers does aluminium have? (What is its valence?)",
+     "text": "What is the valence of aluminium? (The book asks how many valence numbers it has.)",
      "opts": [
       "1",
       "2",
@@ -385,7 +452,7 @@
       "5"
      ],
      "ans": "3",
-     "why": "Aluminium has valence 3.",
+     "why": "Table 3.4 gives aluminium one valence: 3.\nIts ion is Al³⁺, with 3 charges.\nAnswer: 3.",
      "clue": "Look at Al³⁺.",
      "level": 1,
      "ref": "Q4",
@@ -399,14 +466,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Formula of potassium iodide (K = 1, I = 1)?",
+   "text": "Use criss-cross to write the formula of potassium iodide (K = 1, I = 1).",
    "opts": [
     "KI",
     "K₂I",
     "KI₂"
    ],
    "ans": "KI",
-   "why": "Criss-cross gives K₁I₁ → KI.",
+   "why": "Symbols: K and I. Valences: 1 and 1.\nCriss-cross: K₁I₁.\nOmit the 1s: KI.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u3.s3-2-4.22"
@@ -415,14 +482,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Formula of calcium chloride (Ca = 2, Cl = 1)?",
+   "text": "Use criss-cross to write the formula of calcium chloride (Ca = 2, Cl = 1).",
    "opts": [
     "CaCl",
     "CaCl₂",
     "Ca₂Cl"
    ],
    "ans": "CaCl₂",
-   "why": "Ca₁Cl₂ → CaCl₂.",
+   "why": "Symbols: Ca and Cl. Valences: 2 and 1.\nCriss-cross: Ca takes 1, Cl takes 2 → Ca₁Cl₂.\nOmit the 1: CaCl₂.\nCheck: 1 × 2 = 2 = 2 × 1.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u3.s3-2-4.23"
@@ -431,14 +498,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Formula of sodium oxide (Na = 1, O = 2)?",
+   "text": "Use criss-cross to write the formula of sodium oxide (Na = 1, O = 2).",
    "opts": [
     "NaO",
     "Na₂O",
     "NaO₂"
    ],
    "ans": "Na₂O",
-   "why": "Na gets 2, O gets 1 → Na₂O.",
+   "why": "Symbols: Na and O. Valences: 1 and 2.\nCriss-cross: Na takes 2, O takes 1 → Na₂O₁.\nOmit the 1: Na₂O.\nCheck: 2 × 1 = 2 = 1 × 2.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u3.s3-2-4.24"
@@ -447,14 +514,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Formula of magnesium oxide (Mg = 2, O = 2)?",
+   "text": "Use criss-cross to write the formula of magnesium oxide (Mg = 2, O = 2).",
    "opts": [
     "Mg₂O₂",
     "MgO",
     "MgO₂"
    ],
    "ans": "MgO",
-   "why": "Mg₂O₂ simplifies to MgO.",
+   "why": "Symbols: Mg and O. Valences: 2 and 2.\nCriss-cross: Mg₂O₂.\nBoth subscripts are 2: divide by 2.\nAnswer: MgO.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u3.s3-2-4.25"
@@ -463,14 +530,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Formula of calcium nitride (Ca = 2, N = 3)?",
+   "text": "Use criss-cross to write the formula of calcium nitride (Ca = 2, N = 3).",
    "opts": [
     "Ca₂N₃",
     "Ca₃N₂",
     "CaN"
    ],
    "ans": "Ca₃N₂",
-   "why": "Ca gets 3, N gets 2. Check: 3 × 2 = 6 = 2 × 3.",
+   "why": "Symbols: Ca and N. Valences: 2 and 3.\nCriss-cross: Ca takes 3, N takes 2 → Ca₃N₂.\nCheck: 3 × 2 = 6 = 2 × 3.\nCa₂N₃ is wrong: the valences were not swapped.",
    "level": 3,
    "clue": "",
    "id": "g7.science.u3.s3-2-4.26"

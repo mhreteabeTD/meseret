@@ -59,9 +59,10 @@
       "Two O atoms joined (O₂)",
       "Three O atoms"
      ],
-     "after": "Oxygen gas is made of molecules of two atoms: O₂.",
+     "after": "Oxygen gas is made of molecules of two atoms: O₂.\nOxygen is one of the diatomic elements in Table 3.3.",
      "added": true,
-     "id": "g7.science.u3.s3-2-2.1"
+     "id": "g7.science.u3.s3-2-2.1",
+     "best": "Two O atoms joined (O₂)"
     },
     {
      "kind": "read",
@@ -138,6 +139,61 @@
      "id": "g7.science.u3.s3-2-2.4"
     },
     {
+     "kind": "tree",
+     "step": "explore",
+     "title": "How elements exist",
+     "root": {
+      "label": "Element molecules",
+      "info": "The formula shows how many atoms are in one molecule.",
+      "children": [
+       {
+        "label": "Single atoms",
+        "info": "Monoatomic. Noble gases. The formula is the same as the symbol.",
+        "children": [
+         {
+          "label": "He, Ne, Ar",
+          "info": "Helium, neon and argon. Krypton, xenon and radon are single atoms too."
+         }
+        ]
+       },
+       {
+        "label": "Two atoms",
+        "info": "Diatomic. Seven non-metals from Table 3.3.",
+        "children": [
+         {
+          "label": "H₂, N₂, O₂",
+          "info": "Hydrogen, nitrogen, oxygen."
+         },
+         {
+          "label": "F₂, Cl₂, Br₂, I₂",
+          "info": "Fluorine, chlorine, bromine, iodine."
+         }
+        ]
+       },
+       {
+        "label": "More than two",
+        "info": "Some molecules have more than two atoms.",
+        "children": [
+         {
+          "label": "O₃",
+          "info": "Ozone: three oxygen atoms."
+         },
+         {
+          "label": "P₄",
+          "info": "Phosphorus: four atoms."
+         },
+         {
+          "label": "S₈",
+          "info": "Sulfur: eight atoms."
+         }
+        ]
+       }
+      ]
+     },
+     "id": "g7.science.u3.s3-2-2.25",
+     "added": true
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -161,7 +217,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "What is the formula of a nitrogen molecule?",
+     "text": "Which formula shows a nitrogen molecule?",
      "opts": [
       "N",
       "N₂",
@@ -169,7 +225,7 @@
       "Ni"
      ],
      "ans": "N₂",
-     "why": "Nitrogen is diatomic: N₂.",
+     "why": "Nitrogen is a diatomic element (Table 3.3).\nIts molecule has two N atoms.\nWrite the 2 as a subscript: N₂.\nN alone is one atom; Ni is a different element.\nAnswer: N₂.",
      "clue": "Look at Table 3.3.",
      "level": 1,
      "ref": "Table 3.3",
@@ -217,16 +273,17 @@
        "Sulfur."
       ]
      ],
-     "why": "Noble gases are single atoms. Seven non-metals are diatomic.",
+     "why": "Read the subscript: it counts the atoms.\nHe and Ne have no subscript: noble gases, single atoms.\nCl₂ and O₂ have the subscript 2: diatomic.\nO₃ (ozone) has 3 and S₈ (sulfur) has 8: more than two atoms.",
      "clue": "Count the atoms from the subscript.",
      "level": 2,
-     "id": "g7.science.u3.s3-2-2.7"
+     "id": "g7.science.u3.s3-2-2.7",
+     "text": "Sort each formula by the number of atoms in one molecule."
     },
     {
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "For which element are the atom and molecule formulas different?",
+     "text": "For which element are the atom formula and the molecule formula different?",
      "opts": [
       "Helium",
       "Argon",
@@ -234,7 +291,7 @@
       "Neon"
      ],
      "ans": "Nitrogen",
-     "why": "Nitrogen atom is N, the molecule is N₂. Noble gases are single atoms.",
+     "why": "Helium, argon and neon are noble gases.\nThey exist as single atoms, so atom and molecule formulas are the same.\nNitrogen is diatomic.\nIts atom is N, but its molecule is N₂.\nAnswer: nitrogen.",
      "clue": "Which one is diatomic?",
      "level": 2,
      "ref": "Exercise 3.2 Q2",
@@ -244,7 +301,7 @@
      "kind": "pick",
      "step": "challenge",
      "graded": true,
-     "text": "Tap every element whose formula is the SAME as its symbol.",
+     "text": "Tap every element whose molecule formula is the SAME as its symbol.",
      "pool": [
       "He",
       "H",
@@ -258,7 +315,7 @@
       "Ar",
       "Ne"
      ],
-     "why": "Noble gases (He, Ar, Ne) exist as single atoms. H, Br and O are diatomic: H₂, Br₂, O₂.",
+     "why": "A formula equals the symbol only for single atoms.\nNoble gases exist as single atoms: He, Ar, Ne.\nH, Br and O are diatomic.\nTheir formulas are H₂, Br₂ and O₂, not the bare symbol.",
      "clue": "Which are noble gases?",
      "level": 3,
      "added": true,
@@ -285,8 +342,9 @@
       "There are 2 hydrogen atoms",
       "There are 2 oxygen atoms"
      ],
-     "after": "The 2 belongs to H. There are two hydrogen atoms and one oxygen atom.",
-     "id": "g7.science.u3.s3-2-2.10"
+     "after": "The 2 is a subscript. It belongs to H, just before it.\nSo there are two hydrogen atoms and one oxygen atom.",
+     "id": "g7.science.u3.s3-2-2.10",
+     "best": "There are 2 hydrogen atoms"
     },
     {
      "kind": "read",
@@ -313,6 +371,33 @@
      "id": "g7.science.u3.s3-2-2.12"
     },
     {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Read the formula",
+     "ask": "Tap each formula to count its atoms.",
+     "need": 3,
+     "items": [
+      [
+       "NaCl",
+       "Sodium chloride: 1 sodium, 1 chlorine. 2 atoms."
+      ],
+      [
+       "CaO",
+       "Calcium oxide: 1 calcium, 1 oxygen. 2 atoms."
+      ],
+      [
+       "FeS",
+       "Iron sulfide: 1 iron, 1 sulfur. 2 atoms."
+      ],
+      [
+       "MgCl₂",
+       "Magnesium chloride: 1 magnesium, 2 chlorine. 3 atoms."
+      ]
+     ],
+     "id": "g7.science.u3.s3-2-2.26",
+     "added": true
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -328,13 +413,13 @@
      "kind": "blank",
      "step": "check",
      "graded": true,
-     "ask": "In CO₂ there is one carbon atom and ___ oxygen atoms.",
+     "ask": "Read the formula CO₂: one carbon atom and ___ oxygen atoms.",
      "a": [
       "2",
       "two"
      ],
      "num": true,
-     "why": "The subscript 2 after O means 2 oxygen atoms.",
+     "why": "C has no subscript: 1 carbon atom.\nO has the subscript 2: 2 oxygen atoms.\nAnswer: 2.",
      "clue": "Look at the number after O.",
      "level": 1,
      "id": "g7.science.u3.s3-2-2.14"
@@ -343,14 +428,14 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "How many atoms of each element are in CaCO₃?",
+     "text": "Count the atoms of each element in CaCO₃ (calcium carbonate).",
      "opts": [
       "Ca 1, C 1, O 3",
       "Ca 1, C 3, O 1",
       "Ca 3, C 1, O 1"
      ],
      "ans": "Ca 1, C 1, O 3",
-     "why": "Only O has a subscript, 3. Ca and C have none, so 1 each.",
+     "why": "Ca has no subscript: 1 calcium atom.\nC has no subscript: 1 carbon atom.\nO has the subscript 3: 3 oxygen atoms.\nAnswer: Ca 1, C 1, O 3.",
      "clue": "A symbol with no subscript has 1 atom.",
      "level": 1,
      "id": "g7.science.u3.s3-2-2.15"
@@ -359,12 +444,12 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "In C₁₂H₂₂O₁₁ (sugar) there are ___ hydrogen atoms.",
+     "ask": "Read the sugar formula C₁₂H₂₂O₁₁: there are ___ hydrogen atoms.",
      "a": [
       "22"
      ],
      "num": true,
-     "why": "The subscript after H is 22.",
+     "why": "Each subscript belongs to the symbol just before it.\nC₁₂: 12 carbon. H₂₂: 22 hydrogen. O₁₁: 11 oxygen.\nAnswer: 22 hydrogen atoms.",
      "clue": "Find the number just after H.",
      "level": 2,
      "added": true,
@@ -374,13 +459,13 @@
      "kind": "blank",
      "step": "challenge",
      "graded": true,
-     "ask": "One molecule of H₂SO₄ has ___ atoms in total.",
+     "ask": "Count all the atoms in one molecule of H₂SO₄: ___ atoms in total.",
      "a": [
       "7",
       "seven"
      ],
      "num": true,
-     "why": "H: 2, S: 1, O: 4. Total 2 + 1 + 4 = 7 atoms.",
+     "why": "H₂: 2 hydrogen atoms.\nS: 1 sulfur atom.\nO₄: 4 oxygen atoms.\nTotal: 2 + 1 + 4 = 7.\nAnswer: 7.",
      "clue": "Count each element, then add.",
      "level": 3,
      "added": true,
@@ -397,7 +482,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Elements exist as diatomic and polyatomic molecules except",
+     "text": "Elements exist as diatomic and polyatomic molecules except which one?",
      "opts": [
       "phosphorus",
       "nitrogen",
@@ -405,7 +490,7 @@
       "neon"
      ],
      "ans": "neon",
-     "why": "Neon is a noble gas. It exists as single atoms.",
+     "why": "Phosphorus is polyatomic: P₄.\nNitrogen (N₂) and oxygen (O₂) are diatomic.\nNeon is a noble gas.\nIt exists as single atoms: Ne.\nAnswer: neon.",
      "clue": "Which one is a noble gas?",
      "level": 1,
      "ref": "Q1",
@@ -415,7 +500,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "For which do the atom and molecule have different formulas?",
+     "text": "For which element do the atom and the molecule have different formulas?",
      "opts": [
       "Helium",
       "Argon",
@@ -423,7 +508,7 @@
       "Neon"
      ],
      "ans": "Nitrogen",
-     "why": "N atom, N₂ molecule.",
+     "why": "Helium, argon and neon are noble gases.\nThey exist as single atoms, so atom and molecule formulas are the same.\nNitrogen is diatomic.\nIts atom is N, but its molecule is N₂.\nAnswer: nitrogen.",
      "clue": "Which is diatomic?",
      "level": 1,
      "ref": "Q2",
@@ -437,7 +522,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "The formula of hydrogen gas is",
+   "text": "What is the formula of hydrogen gas?",
    "opts": [
     "H",
     "H₂",
@@ -445,7 +530,7 @@
     "H₃"
    ],
    "ans": "H₂",
-   "why": "Hydrogen is diatomic.",
+   "why": "Hydrogen is diatomic (Table 3.3).\nIts molecule has two H atoms: H₂.\nHe is helium, a different element.\nAnswer: H₂.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u3.s3-2-2.20"
@@ -454,9 +539,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "The formula of helium is the same as its symbol, He.",
+   "text": "True or false: the formula of helium is the same as its symbol, He.",
    "a": true,
-   "why": "Noble gases are single atoms.",
+   "why": "Helium is a noble gas.\nNoble gases exist as single atoms.\nSo its formula is just its symbol: He.\nThe statement is true.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u3.s3-2-2.21"
@@ -465,13 +550,13 @@
    "kind": "blank",
    "step": "test",
    "graded": true,
-   "ask": "In H₂O there are ___ hydrogen atoms.",
+   "ask": "Read the formula H₂O: there are ___ hydrogen atoms.",
    "a": [
     "2",
     "two"
    ],
    "num": true,
-   "why": "The subscript after H is 2.",
+   "why": "The subscript 2 follows H.\nSo there are 2 hydrogen atoms.\nO has no subscript: 1 oxygen atom.\nAnswer: 2.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u3.s3-2-2.22"
@@ -488,7 +573,7 @@
     "Fluorine"
    ],
    "ans": "Argon",
-   "why": "Argon is a noble gas: Ar.",
+   "why": "Chlorine (Cl₂), iodine (I₂) and fluorine (F₂) are diatomic (Table 3.3).\nArgon is a noble gas.\nIt exists as single atoms: Ar.\nAnswer: argon.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u3.s3-2-2.23"
@@ -497,13 +582,13 @@
    "kind": "blank",
    "step": "test",
    "graded": true,
-   "ask": "NaHCO₃ has ___ atoms in one formula unit.",
+   "ask": "Count all the atoms in one formula unit of NaHCO₃ (baking soda): ___ atoms.",
    "a": [
     "6",
     "six"
    ],
    "num": true,
-   "why": "Na 1 + H 1 + C 1 + O 3 = 6.",
+   "why": "Na: 1 atom. H: 1 atom. C: 1 atom.\nO₃: 3 atoms.\nTotal: 1 + 1 + 1 + 3 = 6.\nAnswer: 6.",
    "level": 3,
    "clue": "",
    "id": "g7.science.u3.s3-2-2.24"

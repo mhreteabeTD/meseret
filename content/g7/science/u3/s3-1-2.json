@@ -40,9 +40,10 @@
       "Yes",
       "No, each element needs its own symbol"
      ],
-     "after": "No two elements can share a symbol. Carbon is C. Calcium gets two letters: Ca.",
+     "after": "No. Each element needs its own symbol, or symbols would mix up.\nCarbon is C. Calcium gets two letters: Ca.",
      "ref": "Activity 3.2 Q2",
-     "id": "g7.science.u3.s3-1-2.1"
+     "id": "g7.science.u3.s3-1-2.1",
+     "best": "No, each element needs its own symbol"
     },
     {
      "kind": "read",
@@ -77,6 +78,20 @@
       "In the same way hydrogen is H and helium is He."
      ],
      "id": "g7.science.u3.s3-1-2.4"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "Writing the symbol of calcium",
+     "steps": [
+      "Start with the first letter of the name: C.",
+      "Is C already used? Yes, carbon is C.",
+      "Add another letter from the name: a.",
+      "Write the first letter capital, the second small.",
+      "Calcium is Ca."
+     ],
+     "id": "g7.science.u3.s3-1-2.26",
+     "added": true
     },
     {
      "kind": "read",
@@ -219,6 +234,69 @@
      "id": "g7.science.u3.s3-1-2.6"
     },
     {
+     "kind": "tree",
+     "step": "explore",
+     "title": "Three kinds of symbols",
+     "root": {
+      "label": "Element symbols",
+      "info": "Each element has its own symbol. No two share one.",
+      "children": [
+       {
+        "label": "One capital letter",
+        "info": "The first letter of the name.",
+        "children": [
+         {
+          "label": "H, C, N, O",
+          "info": "Hydrogen, carbon, nitrogen, oxygen."
+         },
+         {
+          "label": "B, F, P, S, I",
+          "info": "Boron, fluorine, phosphorus, sulfur, iodine."
+         }
+        ]
+       },
+       {
+        "label": "Capital + small",
+        "info": "The first letter plus another letter of the name.",
+        "children": [
+         {
+          "label": "He, Li, Be, Ne",
+          "info": "Helium, lithium, beryllium, neon."
+         },
+         {
+          "label": "Mg, Al, Si, Cl",
+          "info": "Magnesium, aluminum, silicon, chlorine."
+         },
+         {
+          "label": "Ar, Ca, Zn, Br",
+          "info": "Argon, calcium, zinc, bromine."
+         }
+        ]
+       },
+       {
+        "label": "From Latin",
+        "info": "The letters come from the Latin name, not the English one.",
+        "children": [
+         {
+          "label": "Na, K, Fe",
+          "info": "Sodium (Natrium), potassium (Kalium), iron (Ferrum)."
+         },
+         {
+          "label": "Cu, Ag, Au",
+          "info": "Copper (Cuprum), silver (Argentum), gold (Aurum)."
+         },
+         {
+          "label": "Pb, Sn, Hg",
+          "info": "Lead (Plumbum), tin (Stannum), mercury (Hydrargyrum)."
+         }
+        ]
+       }
+      ]
+     },
+     "id": "g7.science.u3.s3-1-2.27",
+     "added": true
+    },
+    {
      "kind": "tap",
      "step": "explore",
      "title": "Symbols that do not match the English name",
@@ -264,7 +342,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Which is the correct chemical symbol for silicon?",
+     "text": "Choose the correct chemical symbol for silicon.",
      "opts": [
       "S",
       "Si",
@@ -272,7 +350,7 @@
       "Sl"
      ],
      "ans": "Si",
-     "why": "Silicon is Si: capital S, small i. S alone is sulfur.",
+     "why": "Silicon starts with S, but S alone is sulfur.\nSo silicon takes a second letter: i.\nThe first letter is capital, the second is small.\nAnswer: Si.\n\"SI\" is wrong: the second letter must be small.",
      "clue": "The second letter is always small.",
      "level": 1,
      "ref": "Exercise 3.1 Q4",
@@ -305,17 +383,18 @@
        "Silver"
       ]
      ],
-     "why": "These symbols come from Latin names (Table 3.2).",
+     "why": "These symbols come from Latin names (Table 3.2).\nNa is from Natrium = sodium. K is from Kalium = potassium.\nFe is from Ferrum = iron. Cu is from Cuprum = copper.\nAg is from Argentum = silver.",
      "clue": "Think of the Latin names: Natrium, Kalium, Ferrum, Cuprum, Argentum.",
      "level": 2,
      "ref": "Table 3.2",
-     "id": "g7.science.u3.s3-1-2.10"
+     "id": "g7.science.u3.s3-1-2.10",
+     "text": "Match each symbol to its element. These symbols come from Latin names."
     },
     {
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Which symbol is written correctly?",
+     "text": "Which symbol for chlorine is written correctly?",
      "opts": [
       "CL",
       "cl",
@@ -323,7 +402,7 @@
       "cL"
      ],
      "ans": "Cl",
-     "why": "The first letter is capital and the second is small: Cl for chlorine.",
+     "why": "Chlorine has a two-letter symbol: C and l.\nThe first letter is always a capital: C.\nThe second letter is always small: l.\nAnswer: Cl.\nCL, cl and cL break the capital-then-small rule.",
      "clue": "Capital first, small second.",
      "level": 1,
      "id": "g7.science.u3.s3-1-2.11"
@@ -332,11 +411,11 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "The symbol of calcium is ___",
+     "ask": "Write the chemical symbol of calcium: ___",
      "a": [
       "Ca"
      ],
-     "why": "Carbon took C, so calcium is Ca.",
+     "why": "Calcium starts with C.\nBut carbon already uses C.\nSo calcium adds its second letter, a, written small.\nAnswer: Ca.",
      "clue": "Two letters: C and a small letter.",
      "level": 1,
      "ref": "Table 3.1",
@@ -346,7 +425,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Ayele says the symbol of copper is Co, because copper starts with \"Co\". What is wrong?",
+     "text": "Spot the mistake. Ayele says the symbol of copper is Co, because copper starts with \"Co\". What is wrong?",
      "opts": [
       "Nothing, Co is right",
       "Copper is Cu, from the Latin Cuprum",
@@ -354,7 +433,7 @@
       "Copper is CO"
      ],
      "ans": "Copper is Cu, from the Latin Cuprum",
-     "why": "Copper's symbol comes from its Latin name Cuprum, so it is Cu. (Co is cobalt, another element.)",
+     "why": "Copper's symbol does not come from its English name.\nIt comes from the Latin name Cuprum.\nCapital C, small u: Cu.\nSo Ayele is wrong: copper is Cu.\nCo is the symbol of a different element, cobalt.",
      "clue": "Look at Table 3.2.",
      "level": 3,
      "added": true,
@@ -371,9 +450,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "Ca is the symbol of sodium.",
+     "text": "True or false: Ca is the symbol of sodium.",
      "a": false,
-     "why": "Ca is calcium. Sodium is Na.",
+     "why": "Ca is the symbol of calcium (Table 3.1).\nSodium comes from the Latin Natrium.\nSo sodium is Na.\nThe statement is false.",
      "clue": "Look at Tables 3.1 and 3.2.",
      "level": 1,
      "ref": "I 1",
@@ -383,9 +462,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "Water is not an element.",
+     "text": "True or false: water is not an element.",
      "a": true,
-     "why": "Water is a compound of hydrogen and oxygen.",
+     "why": "An element cannot be broken into simpler substances.\nWater can be split into hydrogen and oxygen.\nSo water is a compound, not an element.\nThe statement is true.",
      "clue": "Can water be broken down?",
      "level": 1,
      "ref": "I 2",
@@ -395,9 +474,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "Elements are pure substances.",
+     "text": "True or false: elements are pure substances.",
      "a": true,
-     "why": "An element is a pure substance.",
+     "why": "An element has only one kind of atom.\nNothing else is mixed in.\nSo an element is a pure substance.\nThe statement is true.",
      "clue": "Recall the definition.",
      "level": 1,
      "ref": "I 3",
@@ -407,7 +486,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Which is the correct chemical symbol for silicon?",
+     "text": "Choose the correct chemical symbol for silicon.",
      "opts": [
       "S",
       "Si",
@@ -415,7 +494,7 @@
       "Sl"
      ],
      "ans": "Si",
-     "why": "Silicon is Si.",
+     "why": "Silicon starts with S, but S alone is sulfur.\nSo silicon takes a second letter: i.\nThe first letter is capital, the second is small.\nAnswer: Si.\n\"SI\" is wrong: the second letter must be small.",
      "clue": "The second letter is small.",
      "level": 1,
      "ref": "4",
@@ -425,7 +504,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "\"C\" stands for",
+     "text": "Which element does the symbol \"C\" stand for?",
      "opts": [
       "calcium",
       "chlorine",
@@ -433,7 +512,7 @@
       "copper"
      ],
      "ans": "carbon",
-     "why": "C is carbon. Calcium is Ca, chlorine Cl, copper Cu.",
+     "why": "A one-letter symbol is the first letter of the name.\nCarbon got the single letter C.\nCalcium is Ca, chlorine is Cl, copper is Cu (Cuprum).\nAnswer: carbon.",
      "clue": "Which one got the single letter?",
      "level": 1,
      "ref": "5",
@@ -469,11 +548,12 @@
        "Au"
       ]
      ],
-     "why": "From Tables 3.1 and 3.2.",
+     "why": "Potassium → K, from the Latin Kalium.\nIodine → I. Boron → B.\nHelium → He, because H is hydrogen.\nChlorine → Cl, because C is carbon.\nGold → Au, from the Latin Aurum.",
      "clue": "Some symbols come from Latin names.",
      "level": 2,
      "ref": "III",
-     "id": "g7.science.u3.s3-1-2.19"
+     "id": "g7.science.u3.s3-1-2.19",
+     "text": "Match each element to its chemical symbol."
     },
     {
      "kind": "match",
@@ -501,11 +581,12 @@
        "Ag"
       ]
      ],
-     "why": "From Tables 3.1 and 3.2.",
+     "why": "Calcium → Ca, because C is carbon.\nCopper → Cu, from the Latin Cuprum.\nHydrogen → H. Lithium → Li.\nSilver → Ag, from the Latin Argentum.",
      "clue": "Cuprum, Argentum…",
      "level": 2,
      "ref": "III",
-     "id": "g7.science.u3.s3-1-2.20"
+     "id": "g7.science.u3.s3-1-2.20",
+     "text": "Match each element to its chemical symbol."
     }
    ]
   }
@@ -515,7 +596,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "What is the symbol of oxygen?",
+   "text": "What is the chemical symbol of oxygen?",
    "opts": [
     "Ox",
     "O",
@@ -523,7 +604,7 @@
     "Og"
    ],
    "ans": "O",
-   "why": "Oxygen is O.",
+   "why": "Oxygen has a one-letter symbol: its first letter.\nA one-letter symbol is always a capital.\nSo oxygen is O, not o or Ox.\nAnswer: O.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u3.s3-1-2.21"
@@ -532,7 +613,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Fe is the symbol of",
+   "text": "Which element has the symbol Fe?",
    "opts": [
     "fluorine",
     "iron",
@@ -540,7 +621,7 @@
     "phosphorus"
    ],
    "ans": "iron",
-   "why": "Fe comes from the Latin Ferrum.",
+   "why": "Fe does not match an English name.\nIt comes from the Latin Ferrum.\nFerrum means iron.\nAnswer: iron. (Fluorine is F, lead is Pb, phosphorus is P.)",
    "level": 1,
    "clue": "",
    "id": "g7.science.u3.s3-1-2.22"
@@ -549,9 +630,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "A two-letter symbol is written with both letters in capitals.",
+   "text": "True or false: a two-letter symbol is written with both letters in capitals.",
    "a": false,
-   "why": "The first letter is capital and the second is small.",
+   "why": "In a two-letter symbol, the first letter is capital.\nThe second letter is small.\nExample: Mg, not MG.\nThe statement is false.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u3.s3-1-2.23"
@@ -560,7 +641,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "The Latin name of lead is Plumbum. Its symbol is",
+   "text": "The Latin name of lead is Plumbum. What is the chemical symbol of lead?",
    "opts": [
     "Le",
     "Pb",
@@ -568,7 +649,7 @@
     "L"
    ],
    "ans": "Pb",
-   "why": "Lead is Pb.",
+   "why": "Lead's symbol comes from its Latin name, Plumbum.\nTake P, then another letter of the name: b.\nCapital first, small second: Pb.\nAnswer: Pb.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u3.s3-1-2.24"
@@ -577,14 +658,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Helium cannot use H because",
+   "text": "Why can helium not use the symbol H?",
    "opts": [
     "H is hydrogen",
     "helium is a metal",
     "H is too short"
    ],
    "ans": "H is hydrogen",
-   "why": "No two elements can share a symbol. Hydrogen took H, so helium is He.",
+   "why": "No two elements can share a symbol.\nHydrogen already uses H.\nSo helium adds a second letter: He.\nAnswer: H is hydrogen.",
    "level": 3,
    "clue": "",
    "id": "g7.science.u3.s3-1-2.25"

@@ -40,9 +40,10 @@
       "Yes",
       "No"
      ],
-     "after": "Salt has two elements chemically combined. A substance like this is a compound.",
+     "after": "Salt can be broken into sodium and chlorine, so it is not an element.\nIt has two elements chemically combined.\nA substance like this is a compound.",
      "ref": "Activity 3.3",
-     "id": "g7.science.u3.s3-2-1.1"
+     "id": "g7.science.u3.s3-2-1.1",
+     "best": "No"
     },
     {
      "kind": "read",
@@ -66,6 +67,68 @@
      "id": "g7.science.u3.s3-2-1.3"
     },
     {
+     "kind": "tap",
+     "step": "explore",
+     "title": "What is each compound made of?",
+     "ask": "Tap each compound to see its elements.",
+     "need": 4,
+     "items": [
+      [
+       "Sodium chloride",
+       "Sodium + chlorine. This is table salt."
+      ],
+      [
+       "Iron sulfide",
+       "Iron + sulfur."
+      ],
+      [
+       "Carbon dioxide",
+       "Carbon + oxygen. We breathe it out."
+      ],
+      [
+       "Sugar",
+       "Carbon + hydrogen + oxygen."
+      ],
+      [
+       "Calcium carbonate",
+       "Calcium + carbon + oxygen. Limestone is made of it."
+      ],
+      [
+       "Calcium oxide",
+       "Calcium + oxygen. It is called quicklime."
+      ]
+     ],
+     "id": "g7.science.u3.s3-2-1.16",
+     "added": true
+    },
+    {
+     "kind": "venn",
+     "step": "explore",
+     "title": "Elements and compounds: what do they share?",
+     "sets": [
+      [
+       "Element",
+       "One kind of atom. Cannot be broken down by ordinary chemical means. Example: gold."
+      ],
+      [
+       "Compound",
+       "Two or more elements chemically combined. Can be broken into its elements. Example: water."
+      ]
+     ],
+     "overlaps": [
+      [
+       [
+        0,
+        1
+       ],
+       "Both",
+       "Both are pure substances. Each has its own name and symbol or formula."
+      ]
+     ],
+     "id": "g7.science.u3.s3-2-1.15",
+     "added": true
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -81,14 +144,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "ask": "What is a compound?",
+     "ask": "Which sentence defines a compound?",
      "opts": [
       "A pure substance of two or more elements chemically combined",
       "A pure substance with one kind of atom",
       "Two substances mixed but not joined"
      ],
      "ans": "A pure substance of two or more elements chemically combined",
-     "why": "That is the book's definition.",
+     "why": "A compound is a pure substance.\nIt has two or more elements.\nThe elements are chemically combined (joined).\n\"One kind of atom\" describes an element.\n\"Mixed but not joined\" describes a mixture.",
      "clue": "How many elements are in a compound?",
      "level": 1,
      "ref": "Activity 3.3 Q1",
@@ -130,23 +193,24 @@
        "One kind of atom."
       ]
      ],
-     "why": "Compounds have two or more elements combined.",
+     "why": "Count the kinds of element in each substance.\nGold and oxygen: one kind of atom each → elements.\nSodium chloride: sodium + chlorine → compound.\nWater: hydrogen + oxygen → compound.\nCarbon dioxide: carbon + oxygen → compound.",
      "clue": "Count the kinds of element.",
      "level": 1,
      "ref": "Activity 3.3 Q2",
-     "id": "g7.science.u3.s3-2-1.6"
+     "id": "g7.science.u3.s3-2-1.6",
+     "text": "Sort each substance: element or compound?"
     },
     {
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "A water molecule has two hydrogen atoms and ___ oxygen atom.",
+     "ask": "Count the atoms in a water molecule: two hydrogen atoms and ___ oxygen atom.",
      "a": [
       "one",
       "1"
      ],
      "num": true,
-     "why": "H₂O: two H and one O.",
+     "why": "Water's formula is H₂O.\nThe 2 after H means two hydrogen atoms.\nO has no number, so there is one oxygen atom.\nAnswer: one.",
      "clue": "Look at the book sentence about water.",
      "level": 1,
      "id": "g7.science.u3.s3-2-1.7"
@@ -155,9 +219,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "A compound is a pure substance.",
+     "text": "True or false: a compound is a pure substance.",
      "a": true,
-     "why": "A compound is a pure substance of two or more elements.",
+     "why": "A compound is made of two or more elements.\nThe elements are chemically combined.\nThe book calls a compound a pure substance.\nThe statement is true.",
      "clue": "Read the definition again.",
      "level": 2,
      "ref": "Review Exercise I 1",
@@ -167,14 +231,14 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Calcium oxide is made from calcium and oxygen. Which statement is right?",
+     "text": "Calcium oxide is made from calcium and oxygen. Which statement about it is right?",
      "opts": [
       "It is an element because it is pure",
       "It is a compound: two elements chemically combined",
       "It is a mixture of two gases"
      ],
      "ans": "It is a compound: two elements chemically combined",
-     "why": "Pure substances can be elements or compounds. Calcium oxide has two elements joined, so it is a compound.",
+     "why": "Calcium oxide is pure, but pure does not always mean element.\nIt has two elements: calcium and oxygen.\nThey are chemically combined.\nSo calcium oxide is a compound.\nIt is not a mixture of gases: calcium is a metal.",
      "clue": "Pure does not always mean element.",
      "level": 3,
      "added": true,
@@ -189,7 +253,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which is a compound?",
+   "text": "Which of these substances is a compound?",
    "opts": [
     "Gold",
     "Water",
@@ -197,7 +261,7 @@
     "Iron"
    ],
    "ans": "Water",
-   "why": "Water is hydrogen and oxygen combined.",
+   "why": "Gold, oxygen and iron each have one kind of atom: elements.\nWater has hydrogen and oxygen combined.\nAnswer: water.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u3.s3-2-1.10"
@@ -206,9 +270,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "A compound has only one kind of atom.",
+   "text": "True or false: a compound has only one kind of atom.",
    "a": false,
-   "why": "A compound has two or more elements.",
+   "why": "A compound has two or more elements.\nSo it has two or more kinds of atom.\nOnly an element has one kind of atom.\nThe statement is false.",
    "level": 1,
    "clue": "",
    "id": "g7.science.u3.s3-2-1.11"
@@ -217,14 +281,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Water is a compound of",
+   "text": "Which elements make up water? Water is a compound of",
    "opts": [
     "hydrogen and oxygen",
     "carbon and oxygen",
     "sodium and chlorine"
    ],
    "ans": "hydrogen and oxygen",
-   "why": "H₂O.",
+   "why": "Water's formula is H₂O.\nH is hydrogen; O is oxygen.\nCarbon and oxygen make carbon dioxide instead.\nAnswer: hydrogen and oxygen.",
    "level": 2,
    "clue": "",
    "id": "g7.science.u3.s3-2-1.12"
@@ -233,7 +297,7 @@
    "kind": "pick",
    "step": "test",
    "graded": true,
-   "text": "Tap every compound.",
+   "text": "Tap every substance that is a compound.",
    "pool": [
     "Sugar",
     "Iron sulfide",
@@ -246,7 +310,7 @@
     "Iron sulfide",
     "Calcium carbonate"
    ],
-   "why": "Silver and nitrogen are elements.",
+   "why": "Sugar: carbon, hydrogen and oxygen → compound.\nIron sulfide: iron and sulfur → compound.\nCalcium carbonate: calcium, carbon and oxygen → compound.\nSilver and nitrogen have one kind of atom → elements.",
    "level": 2,
    "id": "g7.science.u3.s3-2-1.13"
   },
@@ -254,14 +318,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Iron sulfide can be broken down into iron and sulfur. So iron sulfide is",
+   "text": "Iron sulfide can be broken down into iron and sulfur. What kind of substance is iron sulfide?",
    "opts": [
     "an element",
     "a compound",
     "a symbol"
    ],
    "ans": "a compound",
-   "why": "It is made of two elements combined.",
+   "why": "Iron sulfide breaks down into two elements.\nAn element cannot be broken down.\nSo iron sulfide is two elements chemically combined.\nAnswer: a compound.",
    "level": 3,
    "clue": "",
    "id": "g7.science.u3.s3-2-1.14"
