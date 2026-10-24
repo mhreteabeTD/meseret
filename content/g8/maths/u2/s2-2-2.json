@@ -11,7 +11,7 @@
  },
  "title": "Cube root of a rational number",
  "competency": "Calculate the cube root of perfect cubes.",
- "minutes": 10,
+ "minutes": 12,
  "keywords": [
   {
    "en": "Cube root",
@@ -44,10 +44,10 @@
    "name": "Cube roots",
    "explain": {
     "en": {
-     "text": "A cube root undoes cubing. ∛27 = 3 because 3 × 3 × 3 = 27. Every rational number has exactly one cube root, and the cube root of a negative number is negative: ∛(−343) = −7. In exponent form ∛a = a^(1/3)."
+     "text": "A cube root undoes cubing. ∛27 = 3 because 3 × 3 × 3 = 27. To find one, share the prime factors into three equal groups. Every rational number has exactly one cube root, and the cube root of a negative number is negative: ∛(−343) = −7. In exponent form ∛a = a^(1/3)."
     },
     "am": {
-     "text": "ኪዩብ ሥር ማኪዩብን ይቀለብሳል። ∛27 = 3 ምክንያቱም 3 × 3 × 3 = 27። የአሉታዊ ቁጥር ኪዩብ ሥር አሉታዊ ነው።",
+     "text": "ኪዩብ ሥር ማኪዩብን ይቀለብሳል። ∛27 = 3 ምክንያቱም 3 × 3 × 3 = 27። ፍጹም ቁጥሮቹን በሦስት እኩል ቡድን አካፍል።",
      "machine": true
     }
    },
@@ -65,6 +65,7 @@
      ],
      "after": "2 m, because 2 × 2 × 2 = 8. Finding the edge from the volume is taking the cube root.",
      "added": true,
+     "best": "2 m",
      "id": "g8.maths.u2.s2-2-2.1"
     },
     {
@@ -91,6 +92,24 @@
       "Definition 2.6: The cube root of a number is one of the three identical factors whose product is the number.",
       "2 × 2 × 2 = 8, so 2 is the cube root of 8.",
       "3³ = 27, so 3 = ∛27. Read it \"the cube root of 27\"."
+     ],
+     "table": [
+      [
+       "Cubing →",
+       "← Cube root"
+      ],
+      [
+       "2³ = 8",
+       "∛8 = 2"
+      ],
+      [
+       "3³ = 27",
+       "∛27 = 3"
+      ],
+      [
+       "(−7)³ = −343",
+       "∛(−343) = −7"
+      ]
      ],
      "ref": "Definition 2.6",
      "id": "g8.maths.u2.s2-2-2.3"
@@ -129,24 +148,32 @@
      "id": "g8.maths.u2.s2-2-2.5"
     },
     {
+     "kind": "factortree",
+     "step": "method",
+     "title": "∛1728: share the primes into three equal groups",
+     "n": 1728,
+     "root": 3,
+     "ref": "Exercise 2.7 Q4 d",
+     "id": "g8.maths.u2.s2-2-2.25"
+    },
+    {
      "kind": "steps",
      "step": "method",
-     "title": "Find ∛(−1728)",
+     "title": "Now ∛(−1728)",
      "steps": [
-      "Look for three equal factors of 1728.",
-      "12 × 12 = 144, and 144 × 12 = 1728. So 1728 = 12³.",
+      "The tree shows 1728 = 12 × 12 × 12.",
       "For a negative number, use a negative factor: (−12) × (−12) × (−12).",
       "(−12) × (−12) = 144, and 144 × (−12) = −1728.",
       "So ∛(−1728) = −12."
      ],
      "ref": "Exercise 2.7 Q4 d",
-     "id": "g8.maths.u2.s2-2-2.6"
+     "id": "g8.maths.u2.s2-2-2.26"
     },
     {
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "∛343 = ?",
+     "text": "Find the cube root: ∛343 = ?",
      "opts": [
       "7",
       "−7",
@@ -154,7 +181,7 @@
       "114"
      ],
      "ans": "7",
-     "why": "7 × 7 × 7 = 49 × 7 = 343.",
+     "why": "Ask: which number used three times gives 343?\n7 × 7 = 49, and 49 × 7 = 343.\nSo ∛343 = 7. (49 is 7², and 114 is about 343 ÷ 3.)",
      "clue": "Which number used three times gives 343?",
      "level": 1,
      "ref": "Activity 2.6 Q2 c",
@@ -165,26 +192,40 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "∛512 = ___",
+     "ask": "Find the cube root: ∛512 = ___",
      "a": [
       "8"
      ],
-     "why": "8 × 8 × 8 = 64 × 8 = 512.",
+     "why": "8 × 8 = 64.\n64 × 8 = 512.\nSo ∛512 = 8.",
      "clue": "Try numbers near 8.",
      "level": 1,
      "ref": "Activity 2.6 Q2 a",
      "id": "g8.maths.u2.s2-2-2.8"
     },
     {
+     "kind": "factortree",
+     "step": "practise",
+     "graded": true,
+     "level": 2,
+     "n": 216,
+     "root": 3,
+     "ans": "6",
+     "title": "Grow the tree for 216, then type ∛216.",
+     "ref": "Exercise 2.7 Q4 a",
+     "why": "Tree: 216 = 2 × 108, 108 = 2 × 54, 54 = 2 × 27, 27 = 3 × 9, 9 = 3 × 3.\nPrimes: 2 × 2 × 2 × 3 × 3 × 3.\nThree equal groups: (2 × 3) × (2 × 3) × (2 × 3) = 6 × 6 × 6.\nSo ∛216 = 6.",
+     "clue": "Look at the three equal groups. Multiply the numbers in one group.",
+     "id": "g8.maths.u2.s2-2-2.27"
+    },
+    {
      "kind": "blank",
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "∛(−343) = ___",
+     "ask": "Cube root of a negative number: ∛(−343) = ___",
      "a": [
       "-7"
      ],
-     "why": "(−7) × (−7) × (−7) = 49 × (−7) = −343.",
+     "why": "The cube root of a negative number is negative.\n(−7) × (−7) = 49, and 49 × (−7) = −343.\nSo ∛(−343) = −7.",
      "clue": "The cube root of a negative number is negative.",
      "input": "signed",
      "level": 2,
@@ -195,7 +236,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Another name for 4^(1/3) is",
+     "text": "Exponent form: another name for 4^(1/3) is",
      "opts": [
       "∛4",
       "√4",
@@ -203,7 +244,7 @@
       "4/3"
      ],
      "ans": "∛4",
-     "why": "In exponent form ∛a = a^(1/3), so 4^(1/3) = ∛4.",
+     "why": "The power 1/3 means a cube root: a^(1/3) = ∛a.\nSo 4^(1/3) = ∛4.\n√4 would be 4^(1/2).",
      "clue": "The power 1/3 means a cube root.",
      "level": 1,
      "ref": "Exercise 2.7 Q1",
@@ -221,7 +262,7 @@
       "2"
      ],
      "ans": "3",
-     "why": "In ∛a the small number 3 is the index and a is the radicand.",
+     "why": "In ∛a, the small 3 is the index.\nThe number under the sign (10) is the radicand.",
      "clue": "The index is the small number on the radical sign.",
      "level": 1,
      "added": true,
@@ -232,11 +273,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "∛(8/27) = ___",
+     "ask": "Cube root of a fraction: ∛(8/27) = ___",
      "a": [
       "2/3"
      ],
-     "why": "(2/3)³ = 8/27, so ∛(8/27) = 2/3.",
+     "why": "∛8 = 2 (2 × 2 × 2 = 8).\n∛27 = 3 (3 × 3 × 3 = 27).\nSo ∛(8/27) = 2/3.",
      "clue": "Take the cube root of the top and of the bottom.",
      "level": 2,
      "added": true,
@@ -247,11 +288,11 @@
      "step": "challenge",
      "graded": true,
      "num": true,
-     "ask": "∛x = −0.3. Then x = ___",
+     "ask": "Undo the cube root: ∛x = −0.3. Then x = ___",
      "a": [
       "-0.027"
      ],
-     "why": "Cubing undoes the cube root: x = (−0.3)³ = (−0.3) × (−0.3) × (−0.3) = 0.09 × (−0.3) = −0.027.",
+     "why": "Cubing undoes the cube root: x = (−0.3)³.\n(−0.3) × (−0.3) = 0.09.\n0.09 × (−0.3) = −0.027.\nCheck: ∛(−0.027) = −0.3. ✓",
      "clue": "Cube both sides. Keep the sign.",
      "input": "signed",
      "level": 3,
@@ -273,7 +314,7 @@
      "a": [
       "1/3"
      ],
-     "why": "∛a = a^(1/3), so ∛10 = 10^(1/3).",
+     "why": "∛a = a^(1/3).\nSo ∛10 = 10^(1/3).",
      "clue": "Cube root means the power 1/3.",
      "level": 1,
      "ref": "Q2 a",
@@ -297,7 +338,7 @@
       "64",
       "216"
      ],
-     "why": "8 = 2³, 64 = 4³, 216 = 6³. 3, 9 and 400 are not cubes.",
+     "why": "8 = 2³, 64 = 4³, 216 = 6³.\n3 and 9 lie between 1³ and 3³; 400 lies between 7³ = 343 and 8³ = 512.",
      "clue": "List 1³, 2³, … 9³ and compare.",
      "level": 1,
      "ref": "Q3",
@@ -308,11 +349,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "∛216 = ___",
+     "ask": "Find the cube root: ∛216 = ___",
      "a": [
       "6"
      ],
-     "why": "6 × 6 × 6 = 216.",
+     "why": "6 × 6 = 36, 36 × 6 = 216.\nSo ∛216 = 6.",
      "clue": "Try 6.",
      "level": 1,
      "ref": "Q4 a",
@@ -323,11 +364,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "∛1000 = ___",
+     "ask": "Find the cube root: ∛1000 = ___",
      "a": [
       "10"
      ],
-     "why": "10 × 10 × 10 = 1000.",
+     "why": "10 × 10 × 10 = 1000.\nSo ∛1000 = 10.",
      "clue": "Count the zeros.",
      "level": 1,
      "ref": "Q4 c",
@@ -338,11 +379,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "∛(−1728) = ___",
+     "ask": "Find the cube root: ∛(−1728) = ___",
      "a": [
       "-12"
      ],
-     "why": "(−12) × (−12) × (−12) = −1728.",
+     "why": "12 × 12 = 144, 144 × 12 = 1728.\nNegative number → negative root: ∛(−1728) = −12.",
      "clue": "12 × 12 = 144.",
      "input": "signed",
      "level": 2,
@@ -354,11 +395,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "∛0 = ___",
+     "ask": "Find the cube root: ∛0 = ___",
      "a": [
       "0"
      ],
-     "why": "0 × 0 × 0 = 0.",
+     "why": "0 × 0 × 0 = 0.\nSo ∛0 = 0.",
      "clue": "What times itself three times is 0?",
      "level": 1,
      "ref": "Q4 e",
@@ -373,7 +414,7 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "∛27 = ___",
+   "ask": "Find the cube root: ∛27 = ___",
    "a": [
     "3"
    ],
@@ -387,7 +428,7 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "∛(−8) = ___",
+   "ask": "Find the cube root: ∛(−8) = ___",
    "a": [
     "-2"
    ],
@@ -402,11 +443,11 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "∛1331 = ___",
+   "ask": "Find the cube root: ∛1331 = ___",
    "a": [
     "11"
    ],
-   "why": "11 × 11 × 11 = 1331.",
+   "why": "11 × 11 = 121, 121 × 11 = 1331.",
    "clue": "",
    "level": 2,
    "id": "g8.maths.u2.s2-2-2.22"
@@ -423,7 +464,7 @@
     "∛a = a³"
    ],
    "ans": "Every rational number has exactly one cube root",
-   "why": "Note v on p.60.",
+   "why": "Note v on p.60.\n∛8 = 2 only; (−2)³ = −8, not 8.",
    "clue": "",
    "level": 2,
    "id": "g8.maths.u2.s2-2-2.23"
@@ -433,18 +474,23 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "∛(64/125) = ___",
+   "ask": "Cube root of a fraction: ∛(64/125) = ___",
    "a": [
     "4/5",
     "0.8"
    ],
-   "why": "(4/5)³ = 64/125.",
+   "why": "∛64 = 4 and ∛125 = 5.\nSo 4/5.",
    "clue": "",
    "level": 3,
    "id": "g8.maths.u2.s2-2-2.24"
   }
  ],
- "notes": [],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "v2 (2026-10-24): factor trees with three equal groups for cube roots (owner feedback)."
+  }
+ ],
  "review": {
   "status": "validated"
  },

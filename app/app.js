@@ -26,7 +26,7 @@ async function loadLang(l) {
 /* Lesson language: the words INSIDE a lesson (Quick check, pop-ups, prompts, Practise) follow the lesson's own
    language ("lang" on the lesson), not the UI language. Page chrome (back, timer, settings) keeps the UI language. */
 let LL = null;
-const LESSON_KEYS = new Set(['ladder_tap', 'continue', 'check', 'not_yet', 'try_again', 'true', 'false', 'tap_explore', 'next_step', 'skipped_note', 'skip', 'quick_check', 'answer_is', 'worked_example', 'undo', 'order_hint', 'match_hint', 'pick_size', 'guess_note', 'step_hook', 'step_explore', 'step_notice', 'step_check', 'step_practise', 'step_name', 'show_answer', 'section_done', 'practise_n', 'practise_sub', 'replay_note', 'replay_n', 'show_worked', 'retry', 'first_try', 'spot_on', 'right_idea', 'correct', 'your_guess', 'your_answer', 'wrong_pick', 'not_quite_guess', 'lock_guess', 'includes', 'activity', 'spelling_note', 'num_note', 'signed_note', 'v_retry', 'v_ok', 'v_answer', 'need_reminder', 'offer_refresher', 'yes_reminder', 'no_continue', 'refresher', 'book_exercise', 'unit_test', 'fresh_test', 'test_note', 'all_done', 'in_a_row', 'back_to_question', 'back_to_book', 'back_lesson', 'start_again', 'missing_pick', 'sign', 'remove', 'learned', 'comes_back', 'try_more', 'next_section', 'nl_place', 'nl_opposites', 'nl_move1', 'nl_move', 'nl_hop', 'nl_between', 'one_whole', 'row_w', 'layer_w', 'cells_w', 'cubes_w', 'whole_w', 'half_w', 'cell_hint', 'count_total', 'tr_btn_back', 'tile_answer', 'co_place', 'co_hint', 'co_info']);
+const LESSON_KEYS = new Set(['ladder_tap', 'continue', 'check', 'not_yet', 'try_again', 'true', 'false', 'tap_explore', 'next_step', 'skipped_note', 'skip', 'quick_check', 'answer_is', 'worked_example', 'undo', 'order_hint', 'match_hint', 'pick_size', 'guess_note', 'step_hook', 'step_explore', 'step_notice', 'step_check', 'step_practise', 'step_name', 'show_answer', 'section_done', 'practise_n', 'practise_sub', 'replay_note', 'replay_n', 'show_worked', 'retry', 'first_try', 'spot_on', 'right_idea', 'correct', 'your_guess', 'your_answer', 'wrong_pick', 'not_quite_guess', 'lock_guess', 'includes', 'activity', 'spelling_note', 'num_note', 'signed_note', 'v_retry', 'v_ok', 'v_answer', 'need_reminder', 'offer_refresher', 'yes_reminder', 'no_continue', 'refresher', 'book_exercise', 'unit_test', 'fresh_test', 'test_note', 'all_done', 'in_a_row', 'back_to_question', 'back_to_book', 'back_lesson', 'start_again', 'missing_pick', 'sign', 'remove', 'learned', 'comes_back', 'try_more', 'next_section', 'nl_place', 'nl_opposites', 'nl_move1', 'nl_move', 'nl_hop', 'nl_between', 'one_whole', 'row_w', 'layer_w', 'cells_w', 'cubes_w', 'whole_w', 'half_w', 'cell_hint', 'count_total', 'tr_btn_back', 'tile_answer', 'co_place', 'co_hint', 'co_info', 'guess_good', 'guess_not', 'open_table', 'table_title', 'close', 'sq_row', 'sq_col', 'sq_hit', 'sq_find', 'sq_near', 'sq_left', 'sq_up', 'sq_root', 'sq_how', 'sq_exact', 'sq_tap', 'sq_rowhere', 'ft_split', 'ft_all', 'ft_group2', 'ft_group3', 'ft_uneven', 'ft_root', 'ft_noroot', 'ft_start', 'od_first', 'od_layer', 'od_start', 'oc_row', 'oc_start']);
 const t = (k, v = {}) => { const src = LL && LESSON_KEYS.has(k) && S.i18n[LL] && S.i18n[LL][k]; return (src || T[k] || k).replace(/\{(\w+)\}/g, (_, n) => v[n] != null ? v[n] : ''); };
 async function loadDict(l) { if (l && !S.i18n[l]) { try { S.i18n[l] = await (await fetch(`i18n/${l}.json`)).json(); } catch (_) { S.i18n[l] = {}; } } }
 // switch the lesson language on/off (also tags the app container so the Ethiopic type rules apply)
@@ -821,7 +821,7 @@ function makeR(env) {
   const R = {
     guess(s) { const f = s.figure || {}; const el = div(head(s) + (f.type === 'board' ? `<div class="fig">${boardSVG(f.w, f.h, 0)}</div>` : '') + `<p class="ask">${esc(s.ask || '')}</p><div class="opts row2" role="radiogroup">${s.opts.map(o => `<button class="opt center" role="radio" aria-checked="false">${esc(o)}</button>`).join('')}</div><p class="small muted">${t('guess_note')}</p>`);
       let pick = null; el.querySelector('.opts').addEventListener('click', e => { const b = e.target.closest('.opt'); if (!b || env.phase() !== 'answer') return; pick = b; el.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-checked', x === b)); env.update(); });
-      return { el, label: t('lock_guess'), ready: () => !!pick, check() { env.state.guess = pick.textContent; el.querySelectorAll('.opt').forEach(x => x.disabled = true); return { ok: null, title: t('your_guess', { g: env.state.guess }), body: s.after }; } }; },
+      return { el, label: t('lock_guess'), ready: () => !!pick, check() { env.state.guess = pick.textContent; el.querySelectorAll('.opt').forEach(x => x.disabled = true); const best = s.best == null ? null : [].concat(s.best).map(String), good = best && best.includes(env.state.guess); return { ok: null, title: best ? (good ? '✓ ' + t('guess_good') : t('guess_not')) : t('your_guess', { g: env.state.guess }), body: s.after }; } }; },
     tiles(s) { const f = s.figure || { w: 50, h: 20 }; const el = div(head(s) + `<div class="fig"><div class="board">${boardSVG(f.w, f.h, 0)}</div><div class="sizes" role="group">${s.sizes.map(z => `<button class="size" aria-pressed="false" data-s="${z}">${z} cm</button>`).join('')}</div><div class="result" aria-live="polite"><strong>${t('pick_size')}</strong>${t('try_more', { n: s.need })}</div></div>`);
       const tried = new Set(), res = el.querySelector('.result');
       el.querySelector('.sizes').addEventListener('click', e => { const b = e.target.closest('.size'); if (!b) return; const z = +b.dataset.s, fit = f.w % z === 0 && f.h % z === 0; tried.add(z); b.classList.add(fit ? 'fit' : 'gap'); el.querySelectorAll('.size').forEach(x => x.setAttribute('aria-pressed', x === b)); el.querySelector('.board').innerHTML = boardSVG(f.w, f.h, z); const left = Math.max(0, s.need - tried.size); res.innerHTML = (fit ? `<strong>${t('fits', { s: z, x: f.w / z, y: f.h / z, n: (f.w / z) * (f.h / z) })}</strong>${t('fits_why', { s: z, a: f.w, b: f.h })}` : `<strong>${t('gap', { s: z })}</strong>${t('gap_why', { s: z, n: f.w % z ? f.w : f.h })}`) + (left ? ' ' + t('try_more', { n: left }) : ''); env.update(); });
@@ -945,10 +945,15 @@ function makeR(env) {
       draw();
       return { el, label: t('continue'), ready: () => seen.size >= Math.min(s.need || 3, nums.length + rings.length) };
     },
-    slider(s) { // explore a formula with sliders (I = PRT). Not graded.
-      const vars = s.vars, f = new Function(...vars.map(v => v.k), `return (${s.formula});`); let moved = false;
-      const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="fig sld">${vars.map((v, i) => `<label class="sl"><span>${esc(v.label)}</span><b id="sv${i}">${v.v}</b><input type="range" min="${v.min}" max="${v.max}" step="${v.step || 1}" value="${v.v}" data-i="${i}"></label>`).join('')}<div class="sout" aria-live="polite"></div>${s.note ? `<p class="small muted">${esc(s.note)}</p>` : ''}</div>`);
-      const calc = () => { const vals = vars.map((v, i) => +el.querySelector(`input[data-i="${i}"]`).value); vars.forEach((_, i) => el.querySelector('#sv' + i).textContent = vals[i]); const out = f(...vals); el.querySelector('.sout').textContent = (s.out || '{v}').replace('{v}', (Math.round(out * 100) / 100).toLocaleString('en-US')); };
+    slider(s) { // explore a formula with sliders (I = PRT). Not graded. Optional "outs": [[label, formula, "{v} unit"], …] shows several results; "pic": "square" | "cube" draws the shape with the first slider as its side.
+      const vars = s.vars, mk = fm => new Function(...vars.map(v => v.k), `return (${fm});`), outs = s.outs ? s.outs.map(o => [o[0], mk(o[1]), o[2] || '{v}']) : [['', mk(s.formula), s.out || '{v}']]; let moved = false;
+      const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="fig sld">${s.pic ? '<svg class="slpic" viewBox="0 0 340 170" role="img" aria-label="shape"></svg>' : ''}${vars.map((v, i) => `<label class="sl"><span>${esc(v.label)}</span><b id="sv${i}">${v.v}</b><input type="range" min="${v.min}" max="${v.max}" step="${v.step || 1}" value="${v.v}" data-i="${i}"></label>`).join('')}<div class="sout${outs.length > 1 ? ' multi' : ''}" aria-live="polite"></div>${s.note ? `<p class="small muted">${esc(s.note)}</p>` : ''}</div>`);
+      const nf2 = x => (Math.round(x * 100) / 100).toLocaleString('en-US'), v0 = vars[0];
+      const shape = a => { const svg = el.querySelector('.slpic'); if (!svg) return; const fr = (a - v0.min) / Math.max(1e-9, v0.max - v0.min), side = 60 + fr * 90, lab = `${nf2(a)}`;
+        if (s.pic === 'cube') { const d = side * .45, x = 170 - (side + d) / 2, y = 160 - 4; svg.innerHTML = `<polygon points="${x},${y} ${x + side},${y} ${x + side},${y - side} ${x},${y - side}" style="fill:var(--sky)" fill-opacity=".8" stroke="var(--fg)"/><polygon points="${x},${y - side} ${x + side},${y - side} ${x + side + d},${y - side - d} ${x + d},${y - side - d}" style="fill:var(--sky)" fill-opacity=".45" stroke="var(--fg)"/><polygon points="${x + side},${y} ${x + side + d},${y - d} ${x + side + d},${y - side - d} ${x + side},${y - side}" style="fill:var(--sky)" fill-opacity=".6" stroke="var(--fg)"/><text x="${x + side / 2}" y="${y + 0}" dy="-6" text-anchor="middle" font-size="13" font-weight="800" style="fill:var(--fg)">${lab}</text>`; }
+        else { const x = 170 - side / 2, y = 160 - side; svg.innerHTML = `<rect x="${x}" y="${y}" width="${side}" height="${side}" rx="4" style="fill:var(--accent)" fill-opacity=".35" stroke="var(--fg)" stroke-width="1.5"/><text x="${170}" y="${y - 6}" text-anchor="middle" font-size="13" font-weight="800" style="fill:var(--fg)">${lab}</text><text x="${x - 6}" y="${y + side / 2 + 4}" text-anchor="end" font-size="13" font-weight="800" style="fill:var(--fg)">${lab}</text>`; } };
+      const calc = () => { const vals = vars.map((v, i) => +el.querySelector(`input[data-i="${i}"]`).value); vars.forEach((_, i) => el.querySelector('#sv' + i).textContent = vals[i]);
+        el.querySelector('.sout').innerHTML = outs.map(([lab, f, fmt]) => `<div>${lab ? `<span>${esc(lab)}</span>` : ''}<b>${esc(fmt.replace('{v}', nf2(f(...vals))))}</b></div>`).join(''); shape(vals[0]); };
       el.querySelectorAll('input').forEach(inp => inp.addEventListener('input', () => { moved = true; calc(); env.update(); }));
       calc();
       return { el, label: t('continue'), ready: () => moved };
@@ -1035,6 +1040,104 @@ function makeR(env) {
         check: mode !== 'place' ? undefined : () => { tries++; const bad = fails(); marks = tgs.map((_, k) => bad.includes(k) ? 'no' : 'ok'); if (!bad.length) { draw(); tip.textContent = ''; return { ok: true, body: s.why }; } if (tries >= 2) reveal = true; draw(); const g = tgs[bad[0]];
           return { ok: false, body: `${s.clue ? s.clue + ' ' : ''}${tries < 2 ? t('co_hint', { x: fmt(g.x), y: fmt(g.y) }) : ''}`.trim() }; },
         retry() { prompt(); } };
+    },
+    sqtable(s) { // table of squares, like the book's "The Function y = x²": rows x = from…to (step 0.1), columns 0–9 give the third digit.
+      // mode "explore": tap a cell, its row and column light up; "find": ▶ walks row → column → cell for s.x (Example 2.7);
+      // "reverse": ▶ finds s.value inside the table, then reads its row and column back = the square root (Example 2.12).
+      // graded (s.graded + s.ans): the student taps the cell; right when that cell's x equals s.ans.
+      const from = Math.round((s.from != null ? s.from : 1) * 10), to = Math.round((s.to != null ? s.to : from / 10 + .9) * 10), rows = []; for (let r = from; r <= to; r++) rows.push(r);
+      const xOf = (r, c) => (r * 10 + c) / 100, f4 = v => Number(v).toPrecision(4), sqv = (r, c) => f4(xOf(r, c) * xOf(r, c)), fx = (r, c) => xOf(r, c).toFixed(2), C10 = [...Array(10).keys()];
+      let tr = null, tc = null;
+      if (s.mode === 'reverse' && s.value != null) { let best = 1e9; rows.forEach(r => C10.forEach(c => { const d = Math.abs(+sqv(r, c) - s.value); if (d < best - 1e-9) { best = d; tr = r; tc = c; } })); }
+      else if (s.x != null) { const v = Math.round(s.x * 100); tr = Math.floor(v / 10); tc = v % 10; }
+      const mode = s.graded ? 'pick' : (s.mode || 'explore'), say = s.say || [], nSteps = mode === 'find' ? 3 : mode === 'reverse' ? 4 : 0;
+      let k = 0, picked = null, taps = 0; const hiRow = s.row != null ? Math.round(s.row * 10) : null;
+      const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="fig sqt"><div class="sqscroll"><table class="sqtab"><thead><tr><th class="sqx">x</th>${C10.map(c => `<th data-c="${c}">${c}</th>`).join('')}</tr></thead><tbody>${rows.map(r => `<tr data-r="${r}"><th class="sqx">${(r / 10).toFixed(1)}</th>${C10.map(c => `<td data-r="${r}" data-c="${c}"><button class="sqc" data-r="${r}" data-c="${c}" aria-label="${fx(r, c)}²">${sqv(r, c)}</button></td>`).join('')}</tr>`).join('')}</tbody></table></div><p class="small gp"></p><div class="sout" aria-live="polite" hidden></div>${nSteps ? `<button class="inner" id="gnx">▶ ${t('next_step')}</button>` : ''}</div>`);
+      const tab = el.querySelector('table'), sc = el.querySelector('.sqscroll'), tip = el.querySelector('.gp'), out = el.querySelector('.sout'), nx = el.querySelector('#gnx');
+      const paint = (r, c, how) => { // how: {row: up to column, col: down to row, hit}
+        tab.querySelectorAll('.hrow,.hcol,.hit,.hhead').forEach(x => x.classList.remove('hrow', 'hcol', 'hit', 'hhead'));
+        if (r == null) return; const tr_ = tab.querySelector(`tbody tr[data-r="${r}"]`);
+        if (how.row != null && tr_) { tr_.querySelector('th').classList.add('hhead'); tr_.querySelectorAll('td').forEach(td => { if (+td.dataset.c <= how.row) td.classList.add('hrow'); }); }
+        if (how.col != null && c != null) { tab.querySelector(`thead th[data-c="${c}"]`).classList.add('hhead'); tab.querySelectorAll(`td[data-c="${c}"]`).forEach(td => { if (+td.dataset.r <= how.col) td.classList.add('hcol'); }); }
+        if (how.hit && c != null) { const td = tab.querySelector(`td[data-r="${r}"][data-c="${c}"]`); td.classList.add('hit'); const b = td.querySelector('button'); b.classList.remove('pop'); void b.offsetWidth; b.classList.add('pop'); }
+        const cell = c != null ? tab.querySelector(`td[data-r="${r}"][data-c="${c}"]`) : tr_ && tr_.querySelector('td'); if (cell) { const L = cell.offsetLeft - sc.clientWidth / 2 + cell.offsetWidth / 2; sc.scrollTo({ left: Math.max(0, L), behavior: 'smooth' }); } };
+      const show = txt => { out.hidden = !txt; out.textContent = txt || ''; };
+      const draw = () => {
+        if (mode === 'find') { const R_ = (tr / 10).toFixed(1), x = fx(tr, tc), v = sqv(tr, tc);
+          const lines = [t('sq_row', { r: R_ }), t('sq_col', { c: tc }), t('sq_hit', { v, x })];
+          if (k === 0) paint(null); else if (k === 1) paint(tr, tc, { row: 9 }); else if (k === 2) paint(tr, tc, { row: 9, col: tr }); else paint(tr, tc, { row: tc, col: tr, hit: true });
+          tip.textContent = k ? (say[k - 1] || lines[k - 1]) : (s.intro || ''); show(k >= 3 ? `(${x})² ≈ ${v}` : ''); }
+        else if (mode === 'reverse') { const v = sqv(tr, tc), x = fx(tr, tc), R_ = (tr / 10).toFixed(1), val = s.value != null ? f4(s.value) : v;
+          const lines = [t('sq_find', { v: val }) + (+v !== +s.value ? ' ' + t('sq_near', { v }) : ''), t('sq_left', { r: R_ }), t('sq_up', { c: tc }), t('sq_root', { v: val, x })];
+          if (k === 0) paint(null); else if (k === 1) paint(tr, tc, { hit: true }); else if (k === 2) paint(tr, tc, { row: tc, hit: true }); else paint(tr, tc, { row: tc, col: tr, hit: true });
+          tip.textContent = k ? (say[k - 1] || lines[k - 1]) : (s.intro || ''); show(k >= 4 ? `√${val} ≈ ${x}` : ''); }
+        if (nx) nx.disabled = k >= nSteps; };
+      if (nx) nx.onclick = () => { if (k < nSteps) k++; draw(); env.update(); };
+      tab.addEventListener('click', e => { const b = e.target.closest('.sqc'); if (!b || nSteps) return; const r = +b.dataset.r, c = +b.dataset.c;
+        if (mode === 'pick') { if (env.phase() !== 'answer') return; picked = [r, c]; paint(r, c, { row: c, col: r, hit: true }); env.update(); return; }
+        taps++; paint(r, c, { row: c, col: r, hit: true }); const x = fx(r, c), e2 = Math.round(xOf(r, c) ** 2 * 1e6) / 1e6;
+        tip.textContent = t('sq_how', { r: (r / 10).toFixed(1), c, x }); show(`(${x})² ≈ ${sqv(r, c)}` + (String(e2) !== sqv(r, c) ? `  ·  ${t('sq_exact')} ${e2}` : '')); env.update(); });
+      draw(); if (hiRow != null && mode === 'explore') { paint(hiRow, null, { row: 9 }); tip.textContent = t('sq_rowhere', { r: (hiRow / 10).toFixed(1) }); }
+      else if (!nSteps && mode === 'explore') tip.textContent = s.intro || t('sq_tap');
+      if (mode === 'pick') return { el, label: t('check'), ready: () => !!picked,
+        check() { const ok = picked && picked[0] * 10 + picked[1] === Math.round(s.ans * 100); return ok ? { ok: true, body: s.why || '' } : { ok: false, body: s.clue || '' }; },
+        retry() { picked = null; paint(null); } };
+      return { el, label: t('continue'), ready: () => nSteps ? k >= nSteps : taps >= 1 || hiRow != null };
+    },
+    factortree(s) { // prime factor tree that grows one split at a time, then (root 2 or 3) puts the primes into equal groups → square or cube root
+      const n = s.n, ps = primes(n), root = s.root || 0, chain = []; let rest = n; ps.forEach((p, i) => { if (i < ps.length - 1) { chain.push([rest, p]); rest /= p; } });
+      const ns = chain.length, cnt = {}; ps.forEach(p => cnt[p] = (cnt[p] || 0) + 1); const even = root && Object.values(cnt).every(c => c % root === 0);
+      const groups = root ? Array.from({ length: root }, () => []) : []; if (even) { const seen = {}; ps.forEach(p => { const i = (seen[p] = (seen[p] || 0) + 1) - 1; groups[i % root].push(p); }); }
+      const g1 = groups.length && groups[0].length ? groups[0].reduce((a, b) => a * b, 1) : 0, sym = root === 3 ? '∛' : '√';
+      const extra = root ? 3 : 1, total = ns + extra, say = s.say || []; let k = 0; const graded = s.graded && s.ans != null;
+      const dx = Math.min(34, 230 / Math.max(1, ns)), dy = Math.min(48, 280 / Math.max(1, ns)), x0 = 70, y0 = 24, H = Math.round(y0 + ns * dy + 26);
+      const GC = ['var(--sky)', 'var(--coral)', 'var(--accent)'];
+      const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="fig grd ftree"><svg viewBox="0 0 340 ${H}" role="img" aria-label="${esc(s.title || 'factor tree of ' + n)}"></svg><div class="fchips" aria-live="polite"></div><p class="small gp"></p><button class="inner" id="gnx">▶ ${t('next_step')}</button></div>`);
+      const svg = el.querySelector('svg'), chips = el.querySelector('.fchips'), tip = el.querySelector('.gp'), nx = el.querySelector('#gnx'), ci = graded ? countInput(el, s) : null;
+      const node = (x, y, v, prime, col) => prime ? `<circle cx="${x}" cy="${y}" r="15" style="fill:${col || 'var(--sun-soft)'};stroke:var(--fg)" stroke-width="1.5"/><text x="${x}" y="${y + 5}" text-anchor="middle" font-size="14" font-weight="800" style="fill:var(--fg)">${v}</text>`
+        : `<rect x="${x - 22}" y="${y - 13}" width="44" height="26" rx="8" style="fill:var(--surface-2);stroke:var(--fg)" stroke-width="1.5"/><text x="${x}" y="${y + 5}" text-anchor="middle" font-size="14" font-weight="800" style="fill:var(--fg)">${v}</text>`;
+      const groupOf = (() => { const seen = {}; return ps.map(p => { const i = (seen[p] = (seen[p] || 0) + 1) - 1; return root && even ? i % root : -1; }); })();
+      const draw = () => { const shown = Math.min(k, ns), grouped = k >= ns + 2 && root && even; let g = '';
+        for (let i = 0; i < shown; i++) { const x = x0 + i * dx, y = y0 + i * dy; g += `<line x1="${x}" y1="${y + 12}" x2="${x - 26}" y2="${y + dy - 14}" style="stroke:var(--muted)" stroke-width="2"/><line x1="${x}" y1="${y + 12}" x2="${x + dx}" y2="${y + dy - 13}" style="stroke:var(--muted)" stroke-width="2"/>`; }
+        for (let i = 0; i <= shown; i++) { const x = x0 + i * dx, y = y0 + i * dy, isLast = i === ns, v = isLast ? ps[ps.length - 1] : chain[i][0];
+          g += node(x, y, v, isLast, isLast && grouped ? GC[groupOf[ps.length - 1]] : null); }
+        for (let i = 0; i < shown; i++) g += node(x0 + i * dx - 26, y0 + (i + 1) * dy, chain[i][1], true, grouped ? GC[groupOf[i]] : null);
+        svg.innerHTML = g;
+        const lines = chain.map(([v, p]) => t('ft_split', { v, p, q: v / p }));
+        lines.push(t('ft_all', { n, f: ps.join(' × ') }));
+        if (root) { lines.push(even ? t(root === 3 ? 'ft_group3' : 'ft_group2', { g: groups.map(gr => '(' + gr.join(' × ') + ')').join(' × '), e: Array(root).fill(g1).join(' × ') }) : t('ft_uneven', { n }));
+          lines.push(even ? t('ft_root', { s: sym, n, r: g1 }) : t('ft_noroot', { s: sym, n })); }
+        tip.textContent = k ? (say[k - 1] || lines[k - 1] || '') : (s.intro || t('ft_start', { n }));
+        const chip = (p, c) => `<span class="fchip" style="${c ? `background:${c}` : ''}">${p}</span>`;
+        chips.innerHTML = k <= ns ? '' : !grouped ? ps.map(p => chip(p)).join('<i>×</i>') : groups.map((gr, gi) => `<span class="fgrp" style="border-color:${GC[gi]}">${gr.map(p => chip(p, GC[gi])).join('<i>×</i>')}</span>`).join('<i>×</i>') + (k >= ns + 3 ? `<b> = ${Array(root).fill(g1).join(' × ')}</b>` : '');
+        nx.disabled = k >= total; if (k >= total && ci) ci.show(); };
+      nx.onclick = () => { if (k < total) k++; draw(); env.update(); };
+      draw();
+      return Object.assign({ el }, graded ? gradedResult(s, ci, () => k >= total) : { label: t('continue'), ready: () => k >= total });
+    },
+    oddsquare(s) { // odd-number patterns. mode "square" (default): an n × n square built from L-shaped layers, 1 + 3 + 5 + … = n².
+      // mode "cube": row k holds the next k odd numbers; their middle (average) is k², so the row adds up to k × k² = k³.
+      const n = s.n, cube = s.mode === 'cube', say = s.say || []; let k = 0; const graded = s.graded && s.ans != null;
+      const COL = ['var(--sky)', 'var(--sun)', 'var(--coral)', 'var(--accent)', 'var(--violet)'];
+      const el = div(head(s) + (s.ask ? `<p class="ask">${esc(s.ask)}</p>` : '') + `<div class="fig grd odd">${cube ? '<div class="oddrows"></div>' : `<svg viewBox="0 0 340 ${Math.min(260, 26 * n + 20)}" role="img" aria-label="${esc(s.title || 'odd numbers make a square')}"></svg>`}<p class="cnt" aria-live="polite"></p><p class="small gp"></p><button class="inner" id="gnx">▶ ${t('next_step')}</button></div>`);
+      const svg = el.querySelector('svg'), rowsEl = el.querySelector('.oddrows'), cnt = el.querySelector('.cnt'), tip = el.querySelector('.gp'), nx = el.querySelector('#gnx'), ci = graded ? countInput(el, s) : null;
+      const odd = i => 2 * i - 1;
+      const draw = () => {
+        if (!cube) { const u = Math.min(26, 240 / n), ox = (340 - u * n) / 2, oy = 10; let g = '';
+          for (let j = 0; j < n; j++) for (let i = 0; i < n; i++) { const L = Math.max(i, j) + 1; const on = L <= k; g += `<rect x="${ox + i * u}" y="${oy + (n - 1 - j) * u}" width="${u - 2}" height="${u - 2}" rx="3" style="fill:${on ? COL[(L - 1) % 5] : 'var(--surface-2)'};stroke:var(--line)" fill-opacity="${on ? .85 : 1}"/>`; }
+          svg.innerHTML = g; const terms = Array.from({ length: k }, (_, i) => odd(i + 1));
+          cnt.textContent = k ? `${terms.join(' + ')} = ${k * k} = ${k}²` : '';
+          tip.textContent = k ? (say[k - 1] || t(k === 1 ? 'od_first' : 'od_layer', { k, o: odd(k), s: k * k })) : (s.intro || t('od_start')); }
+        else { let html = '', start = 1;
+          for (let r = 1; r <= k; r++) { const nums = Array.from({ length: r }, (_, i) => start + 2 * i); start += 2 * r;
+            html += `<div class="oddrow"><span class="oddk">${r}</span>${nums.map(x => `<span class="fchip" style="background:${COL[(r - 1) % 5]}">${x}</span>`).join('<i>+</i>')}<b>= ${r ** 3} = ${r}³</b></div>`; }
+          rowsEl.innerHTML = html; const r = k, first = r * r - r + 1;
+          cnt.textContent = '';
+          tip.textContent = k ? (say[k - 1] || t('oc_row', { k: r, f: first, m: r * r, s: r ** 3 })) : (s.intro || t('oc_start')); }
+        nx.disabled = k >= n; if (k >= n && ci) ci.show(); };
+      nx.onclick = () => { if (k < n) k++; draw(); env.update(); };
+      draw();
+      return Object.assign({ el }, graded ? gradedResult(s, ci, () => k >= n) : { label: t('continue'), ready: () => k >= n });
     },
   };
   const explainCard = s => { const ex = s._explain || env.explain; if (!ex) return ''; const txt = (ex[S.lang] && ex[S.lang].text) || (ex.en && ex.en.text) || ''; return txt ? `<div class="explain"><button class="play" id="ex-play" aria-label="${t('explain_me')}"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l12 7-12 7z" fill="#fff"/></svg></button><div class="grow"><div style="font-weight:800">${t('explain_me')}</div><div class="small muted" id="ex-text">${esc(txt)}</div></div></div>` : ''; };
@@ -1382,7 +1485,7 @@ const Blocks = {
   name(s, ctx) { return h('keys', s.defs.map(d => { const k = ctx.kws.find(x => [x.en, x.am].some(v => v && v.toLowerCase() === d[0].toLowerCase())), mk = kwMain(k, d[0], ctx.main); return `<div class="kcard"><div class="kt">📘 ${esc(mk[0])}${mk[1] ? ` <span class="kam" lang="${ctx.main === 'am' ? 'en' : 'am'}">${esc(mk[1])}</span>` : ''}</div>${Text(d[1], null, 'div', 'kd')}</div>`; }).join('')); },
   guess(s, ctx) {
     const el = h('quiz think', `<div class="ql">🤔 ${t('step_hook')}</div>${Text(s.ask || s.text || '', null, 'p', 'qq')}${s.ask && s.text ? Text(s.text, null, 'p', 'small qctx') : ''}<div class="qo">${s.opts.map(o => `<button class="qb">${esc(o)}</button>`).join('')}</div><p class="qf" hidden data-text></p>`);
-    el.querySelector('.qo').onclick = e => { const b = e.target.closest('.qb'); if (!b || el.dataset.done) return; el.dataset.done = 1; b.classList.add('pick', 'pop'); el.querySelectorAll('.qb').forEach(x => x.disabled = true); const f = el.querySelector('.qf'); f.hidden = !s.after; f.textContent = s.after || ''; ctx.complete(s); };
+    el.querySelector('.qo').onclick = e => { const b = e.target.closest('.qb'); if (!b || el.dataset.done) return; el.dataset.done = 1; b.classList.add('pick', 'pop'); el.querySelectorAll('.qb').forEach(x => x.disabled = true); const f = el.querySelector('.qf'); const best = s.best == null ? null : [].concat(s.best).map(String), good = best && best.includes(b.textContent); if (best) { b.classList.add(good ? 'ok' : 'meh'); if (!good) el.querySelectorAll('.qb').forEach(x => { if (best.includes(x.textContent)) x.classList.add('ok'); }); } f.className = 'qf' + (best ? (good ? ' ok' : ' no') : ''); f.hidden = !s.after && !best; f.textContent = (best ? (good ? '✓ ' + t('guess_good') + ' ' : t('guess_not') + ' ') : '') + (s.after || ''); if (best && good) Fx.verdict('ok'); ctx.complete(s); };
     if (ctx.isDone(s)) { el.dataset.done = 1; el.querySelectorAll('.qb').forEach(x => x.disabled = true); }
     return el;
   },
@@ -1479,8 +1582,13 @@ function renderBlock(s, ctx) {
   if (ql && s.step === 'challenge') { ql.innerHTML = `🏆 ${esc(t('challenge'))}`; el.classList.add('chal'); }
   if (ql && s.level && s.graded) ql.insertAdjacentHTML('beforeend', levelTag(s));
   if (s.ref && ql) ql.insertAdjacentHTML('beforeend', `<span class="ref">📖 ${esc(s.ref)}</span>`);
+  if (s.sqref) { const b = document.createElement('button'); b.className = 'btn ghost small sqlink'; b.textContent = '📊 ' + t('open_table') + (s.sqref.row != null ? ` · ${t('row_w')} ${Number(s.sqref.row).toFixed(1)}` : ''); b.onclick = () => sqSheet(s.sqref); (ql ? ql.parentElement : el).insertBefore(b, ql ? ql.nextSibling : el.firstChild); }
   return el;
 }
+
+// the table of squares in a bottom sheet, opened from a "📊 Open the table" button; the row named in sqref lights up
+function sqSheet(ref) { sheet(`<div id="sqsh"></div><button class="btn" id="sqclose">${esc(t('close'))}</button>`); const env = { phase: () => 'answer', state: {}, explain: null, enter() {}, update() {} };
+  const r = makeR(env).R.sqtable(Object.assign({ mode: 'explore', title: t('table_title') }, ref)); $('#sqsh').appendChild(r.el); $('#sqclose').onclick = () => sheet(''); }
 
 async function loadPictures() { if (window.PICS) return; await new Promise(r => { const sc = document.createElement('script'); sc.src = 'pictures.js'; sc.onload = sc.onerror = r; document.head.appendChild(sc); }); }
 

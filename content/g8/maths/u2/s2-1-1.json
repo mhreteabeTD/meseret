@@ -11,7 +11,7 @@
  },
  "title": "Square of a rational number",
  "competency": "Calculate the square of a number.",
- "minutes": 14,
+ "minutes": 15,
  "keywords": [
   {
    "en": "Squaring",
@@ -66,8 +66,9 @@
       "12",
       "4"
      ],
-     "after": "4 rows of 4 tiles: 4 × 4 = 16 tiles. 4 × 4 is called \"4 squared\".",
+     "after": "4 rows of 4 tiles: 4 × 4 = 16 tiles. 4 × 4 is called \"4 squared\", written 4².",
      "added": true,
+     "best": "16",
      "id": "g8.maths.u2.s2-1-1.1"
     },
     {
@@ -86,19 +87,6 @@
       "Three rows of 3: 3 × 3 = 9 small squares. 9 = 3²."
      ],
      "id": "g8.maths.u2.s2-1-1.2"
-    },
-    {
-     "kind": "read",
-     "step": "read",
-     "title": "Introduction",
-     "paras": [
-      "In earlier grades you learnt multiplication.",
-      "Now you use it for special products: squares and cubes.",
-      "An advert may say a flat is 625 square metres.",
-      "Square roots tell you this is 25 m × 25 m. That gives a better idea of its size."
-     ],
-     "ref": "p.42",
-     "id": "g8.maths.u2.s2-1-1.3"
     },
     {
      "kind": "read",
@@ -138,6 +126,38 @@
      ],
      "ref": "Definition 2.1",
      "id": "g8.maths.u2.s2-1-1.4"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "title": "a² is not 2a",
+     "pic": "square",
+     "added": true,
+     "vars": [
+      {
+       "k": "a",
+       "label": "Side a",
+       "min": 1,
+       "max": 12,
+       "step": 1,
+       "v": 3
+      }
+     ],
+     "formula": "a*a",
+     "outs": [
+      [
+       "a² = a × a (area of the square)",
+       "a*a",
+       "{v}"
+      ],
+      [
+       "2a = a + a",
+       "2*a",
+       "{v}"
+      ]
+     ],
+     "note": "Move the slider. a² grows much faster than 2a. They are equal only when a = 2 (or a = 0).",
+     "id": "g8.maths.u2.s2-1-1.50"
     },
     {
      "kind": "read",
@@ -187,7 +207,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "What is 6²?",
+     "text": "Square the whole number: 6² = ?",
      "opts": [
       "12",
       "36",
@@ -195,7 +215,7 @@
       "8"
      ],
      "ans": "36",
-     "why": "6² = 6 × 6 = 36.",
+     "why": "6² means 6 × 6 (six multiplied by itself).\n6 × 6 = 36.\n12 is 6 × 2, which is 2 × 6, not 6².",
      "clue": "6² means 6 × 6, not 6 × 2.",
      "level": 1,
      "id": "g8.maths.u2.s2-1-1.8"
@@ -205,11 +225,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "(−20)² = ___",
+     "ask": "Square the negative number: (−20)² = ___",
      "a": [
       "400"
      ],
-     "why": "(−20) × (−20) = 400. Negative × negative is positive.",
+     "why": "Step 1: (−20)² means (−20) × (−20).\nStep 2: sign: negative × negative = positive.\nStep 3: size: 20 × 20 = 400.\nSo (−20)² = +400.",
      "clue": "Multiply −20 by itself. What sign do two negatives give?",
      "level": 1,
      "ref": "Exercise 2.1 Q2 b",
@@ -220,15 +240,14 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "(3 1/4)² = ___",
+     "ask": "Square the mixed number: (3 1/4)² = ___",
      "a": [
       "169/16",
       "10 9/16",
       "10.5625"
      ],
-     "why": "3 1/4 = (3 × 4 + 1)/4 = 13/4. (13/4)² = (13 × 13)/(4 × 4) = 169/16 = 10 9/16.",
+     "why": "Step 1: change to an improper fraction: 3 1/4 = (3 × 4 + 1)/4 = 13/4.\nStep 2: square the top: 13 × 13 = 169.\nStep 3: square the bottom: 4 × 4 = 16.\nSo (13/4)² = 169/16.\nStep 4: 169 ÷ 16 = 10 remainder 9, so 169/16 = 10 9/16.\nCareful: (3 1/4)² is NOT 9 1/16. You must square the whole number 13/4.",
      "clue": "First change 3 1/4 to an improper fraction.",
-     "worked": "Change the mixed number: 3 1/4 = (3 × 4 + 1)/4 = 13/4. Square top and bottom: 13 × 13 = 169 and 4 × 4 = 16. So 169/16. 169 ÷ 16 = 10 remainder 9, so 10 9/16.",
      "level": 2,
      "ref": "Exercise 2.1 Q2 c",
      "needs": "math.multiply-rationals",
@@ -239,11 +258,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "(0.03)² = ___",
+     "ask": "Square the decimal: (0.03)² = ___",
      "a": [
       "0.0009"
      ],
-     "why": "3 × 3 = 9. 0.03 has 2 decimal places, so the square has 2 + 2 = 4: 0.0009.",
+     "why": "Step 1: ignore the point: 3 × 3 = 9.\nStep 2: count decimal places: 0.03 has 2, so 0.03 × 0.03 has 2 + 2 = 4.\nStep 3: write 9 with 4 decimal places: 0.0009.\nCheck: 3/100 × 3/100 = 9/10000 = 0.0009.",
      "clue": "Count the decimal places: 2 + 2.",
      "level": 2,
      "ref": "Exercise 2.1 Q2 e",
@@ -253,9 +272,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "8² = 8 × 2",
+     "text": "True or false? 8² = 8 × 2",
      "a": false,
-     "why": "8² = 8 × 8 = 64, but 8 × 2 = 16.",
+     "why": "8² means 8 × 8 = 64.\n8 × 2 = 16.\n64 ≠ 16, so the statement is false. a² is not the same as 2a.",
      "clue": "Squaring means multiplying a number by itself.",
      "level": 1,
      "ref": "Exercise 2.1 Q1 b",
@@ -266,11 +285,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "A square has sides of 9 cm. Area = ___ cm²",
+     "ask": "Area of a square = side × side. A square has sides of 9 cm. Area = ___ cm²",
      "a": [
       "81"
      ],
-     "why": "9 × 9 = 81 cm².",
+     "why": "The area of a square is side × side = side².\n9 × 9 = 81.\nSo the area is 81 cm² (square centimetres).",
      "clue": "Area of a square = side × side.",
      "gen": {
       "t": "area",
@@ -285,7 +304,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Which one is equal to 3600?",
+     "text": "Brackets matter! Which one is equal to 3600?",
      "opts": [
       "(−60)²",
       "−60²",
@@ -293,7 +312,7 @@
       "−3600"
      ],
      "ans": "(−60)²",
-     "why": "(−60)² = (−60) × (−60) = 3600. But −60² means −(60 × 60) = −3600.",
+     "why": "(−60)² squares −60: (−60) × (−60) = +3600.\n−60² squares only 60, then puts a minus in front: −(60 × 60) = −3600.\n60 × 2 = 120.\nSo only (−60)² equals 3600.",
      "clue": "Brackets matter. Which one squares the −60?",
      "level": 2,
      "ref": "Exercise 2.1 Q1 d",
@@ -303,7 +322,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Kebede says (2/3)² = 4/6. What went wrong?",
+     "text": "Spot the mistake. Kebede says (2/3)² = 4/6. What went wrong?",
      "opts": [
       "He squared the top only. The answer is 4/9.",
       "Nothing. He is right.",
@@ -311,7 +330,7 @@
       "The answer is 2/9."
      ],
      "ans": "He squared the top only. The answer is 4/9.",
-     "why": "(2/3)² = (2 × 2)/(3 × 3) = 4/9. Both the top and the bottom are squared.",
+     "why": "(2/3)² = 2/3 × 2/3.\nTops: 2 × 2 = 4. Bottoms: 3 × 3 = 9.\nSo (2/3)² = 4/9.\nKebede wrote 6 on the bottom: he did 3 × 2 instead of 3 × 3.",
      "clue": "Square the top AND the bottom.",
      "level": 3,
      "added": true,
@@ -324,7 +343,7 @@
    "name": "Perfect squares and patterns",
    "explain": {
     "en": {
-     "text": "A perfect square is a number you get by squaring a rational number: 1, 4, 9, 16, 1/25, 0.04. Adding the first n odd numbers always gives n². The square of an even number is even; the square of an odd number is odd."
+     "text": "A perfect square is a number you get by squaring a rational number: 1, 4, 9, 16, 1/25, 0.04. Adding the first n odd numbers always gives n²: 1 + 3 + 5 + … + (2n − 1) = n². The square of an even number is even; the square of an odd number is odd."
     },
     "am": {
      "text": "ፍጹም ካሬ ምክንያታዊ ቁጥርን በማካሬ የሚገኝ ቁጥር ነው፤ ለምሳሌ 1፣ 4፣ 9፣ 16። የመጀመሪያዎቹ n ጎዶሎ ቁጥሮች ድምር n² ነው።",
@@ -343,40 +362,57 @@
       "25",
       "12"
      ],
-     "after": "16. Look: 1, 4, 9, 16 are 1², 2², 3², 4². The sums of odd numbers are squares!",
+     "after": "16. Look: 1, 4, 9, 16 are 1², 2², 3², 4². The sums of odd numbers are squares! Build it below.",
      "ref": "Group work 2.1",
+     "best": "16",
      "id": "g8.maths.u2.s2-1-1.16"
     },
     {
-     "kind": "tap",
+     "kind": "oddsquare",
      "step": "explore",
-     "title": "The odd-number pattern",
-     "ask": "Tap each sum to see the square.",
-     "need": 5,
-     "items": [
+     "title": "Odd numbers build squares",
+     "n": 6,
+     "ref": "Group work 2.1",
+     "id": "g8.maths.u2.s2-1-1.51"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Why it works",
+     "paras": [
+      "Each new odd number wraps an L shape around the square.",
+      "To grow an n × n square into (n + 1) × (n + 1), you add an L of 2n + 1 squares: the next odd number.",
+      "So the first n odd numbers always fill an n × n square."
+     ],
+     "table": [
+      [
+       "How many odd numbers",
+       "Sum",
+       "Square"
+      ],
       [
        "1",
-       "1 = 1². One odd number."
+       "1",
+       "1²"
       ],
       [
-       "1 + 3",
-       "4 = 2². Two odd numbers."
+       "2",
+       "1 + 3 = 4",
+       "2²"
       ],
       [
-       "1 + 3 + 5",
-       "9 = 3². Three odd numbers."
+       "3",
+       "1 + 3 + 5 = 9",
+       "3²"
       ],
       [
-       "1 + 3 + 5 + 7",
-       "16 = 4². Four odd numbers."
-      ],
-      [
-       "1 + 3 + 5 + … + 19",
-       "100 = 10². Ten odd numbers."
+       "n",
+       "1 + 3 + 5 + … + (2n − 1)",
+       "n²"
       ]
      ],
-     "ref": "Group work 2.1",
-     "id": "g8.maths.u2.s2-1-1.17"
+     "note": "The n-th odd number is 2n − 1. For n = 10 it is 19, and 1 + 3 + … + 19 = 10² = 100.",
+     "id": "g8.maths.u2.s2-1-1.52"
     },
     {
      "kind": "read",
@@ -385,8 +421,7 @@
      "paras": [
       "Definition 2.2: A rational number x is a perfect square if x = m² for some rational m.",
       "1² = 1, 2² = 4, 3² = 9, 4² = 16, (1/5)² = 1/25, (1/6)² = 1/36.",
-      "So 1, 4, 9, 16, 1/25 and 1/36 are perfect squares.",
-      "The sum of the first n odd natural numbers is n²."
+      "So 1, 4, 9, 16, 1/25 and 1/36 are perfect squares."
      ],
      "note": "The square of a rational number is rational. 0² = 0.",
      "ref": "Example 2.4",
@@ -408,7 +443,7 @@
      "kind": "pick",
      "step": "check",
      "graded": true,
-     "text": "Which of these are perfect squares?",
+     "text": "Perfect squares: which of these can be written as a number × itself?",
      "pool": [
       "4",
       "12",
@@ -423,7 +458,7 @@
       "0.04",
       "1/4"
      ],
-     "why": "4 = 2², 16 = 4², 0.04 = (0.2)², 1/4 = (1/2)². 12 and 18 lie between squares (9 < 12 < 16 < 18 < 25).",
+     "why": "4 = 2 × 2, 16 = 4 × 4, 0.04 = 0.2 × 0.2, 1/4 = 1/2 × 1/2.\n12 is between 3² = 9 and 4² = 16, so no whole number squared gives 12.\n18 is between 4² = 16 and 5² = 25, so it is not a perfect square either.",
      "clue": "Can you write each as something × itself?",
      "level": 1,
      "ref": "Exercise 2.1 Q3",
@@ -434,11 +469,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "The sum of the first 15 odd numbers = ___",
+     "ask": "Use the odd-number pattern: the sum of the first 15 odd numbers = ___",
      "a": [
       "225"
      ],
-     "why": "The sum of the first n odd numbers is n². 15² = 15 × 15 = 225.",
+     "why": "Rule: the first n odd numbers add up to n².\nHere n = 15, so the sum is 15² = 15 × 15 = 225.\nCheck: the 15th odd number is 2 × 15 − 1 = 29, and 1 + 3 + … + 29 = 225.",
      "clue": "Use the pattern: first n odd numbers add up to n².",
      "level": 1,
      "ref": "Group work 2.1 a",
@@ -448,7 +483,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Is 201 a perfect square?",
+     "text": "Is 201 a perfect square? Compare it with the squares near it.",
      "opts": [
       "Yes, 201 = 14²",
       "No, it lies between 14² and 15²",
@@ -456,7 +491,7 @@
       "No, because it is odd"
      ],
      "ans": "No, it lies between 14² and 15²",
-     "why": "14² = 196 and 15² = 225. 196 < 201 < 225, so no whole number squared gives 201.",
+     "why": "14² = 196 and 15² = 225.\n196 < 201 < 225, so 201 is between two squares next to each other.\nNo whole number squared gives 201.\nBeing odd does not decide it: 225 is odd and is a perfect square.",
      "clue": "Find the squares just below and just above 201.",
      "level": 2,
      "ref": "Exercise 2.1 Q4 b",
@@ -467,13 +502,12 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "(38)² − (37)² = ___",
+     "ask": "Difference of consecutive squares: (38)² − (37)² = ___",
      "a": [
       "75"
      ],
-     "why": "38² = 1444 and 37² = 1369. 1444 − 1369 = 75. Notice 75 = 38 + 37.",
+     "why": "Step 1: 38² = 38 × 38 = 1444.\nStep 2: 37² = 37 × 37 = 1369.\nStep 3: 1444 − 1369 = 75.\nPattern: the answer is 38 + 37 = 75. In general (n + 1)² − n² = 2n + 1.",
      "clue": "Square each number first, then subtract.",
-     "worked": "38 × 38 = 1444. 37 × 37 = 1369. 1444 − 1369 = 75. It equals 38 + 37.",
      "level": 2,
      "ref": "Exercise 2.1 Q7 a",
      "id": "g8.maths.u2.s2-1-1.23"
@@ -482,9 +516,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "The square of an even number is always even.",
+     "text": "True or false? The square of an even number is always even.",
      "a": true,
-     "why": "Even × even = even, for example 14² = 196 and 20² = 400.",
+     "why": "An even number is 2 × something, e.g. 14 = 2 × 7.\nIts square is 2 × 2 × 7 × 7, which still has the factor 2.\nSo it is even: 14² = 196, 20² = 400.",
      "clue": "Try 2², 4², 6².",
      "level": 1,
      "ref": "Exercise 2.1 Q5",
@@ -502,7 +536,7 @@
       "400"
      ],
      "ans": "529",
-     "why": "529 = 23 × 23, and 23 is odd. 196 = 14², 484 = 22², 400 = 20² are squares of even numbers.",
+     "why": "529 = 23 × 23, and 23 is odd.\n196 = 14², 484 = 22², 400 = 20²: all squares of even numbers.\nQuick test: an odd number squared is odd, and 529 is the only odd choice.",
      "clue": "An odd number squared is odd.",
      "level": 1,
      "ref": "Exercise 2.1 Q6",
@@ -517,7 +551,7 @@
      "a": [
       "20"
      ],
-     "why": "The first n odd numbers add up to n². n² = 400 and 20 × 20 = 400, so n = 20.",
+     "why": "The first n odd numbers add up to n².\nSo n² = 400.\nWhich number times itself is 400? 20 × 20 = 400.\nSo Abel added 20 odd numbers (the last one is 2 × 20 − 1 = 39).",
      "clue": "Which number squared gives 400?",
      "level": 3,
      "added": true,
@@ -545,7 +579,7 @@
      "kind": "guess",
      "step": "hook",
      "title": "Quick guess",
-     "ask": "Is (4.3)² closer to 16 or to 25?",
+     "ask": "Without working it out: is (4.3)² closer to 16 or to 25?",
      "opts": [
       "Closer to 16",
       "Closer to 25",
@@ -554,6 +588,7 @@
      ],
      "after": "4.3 is close to 4, and 4² = 16. Exactly, (4.3)² = 18.49, which is near 16.",
      "added": true,
+     "best": "Closer to 16",
      "id": "g8.maths.u2.s2-1-1.27"
     },
     {
@@ -620,7 +655,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "(4.2)² is about",
+     "text": "Estimate by rounding to a whole number first: (4.2)² is about",
      "opts": [
       "16",
       "25",
@@ -628,7 +663,7 @@
       "17.64 exactly"
      ],
      "ans": "16",
-     "why": "4.2 ≈ 4 because 2 < 5. 4² = 16.",
+     "why": "Step 1: round 4.2. The digit after the point is 2, and 2 < 5, so round down: 4.\nStep 2: square: 4² = 16.\n17.64 is the exact value, not an estimate.",
      "clue": "Round 4.2 to a whole number first.",
      "level": 1,
      "ref": "Exercise 2.2 Q2 a",
@@ -640,11 +675,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "(−8.7)² ≈ ___",
+     "ask": "Estimate by rounding: (−8.7)² ≈ ___",
      "a": [
       "81"
      ],
-     "why": "−8.7 ≈ −9 because 7 ≥ 5. (−9)² = 81.",
+     "why": "Step 1: round −8.7: the digit 7 is 5 or more, so −8.7 ≈ −9.\nStep 2: square: (−9) × (−9) = 81.\nTwo negatives make a positive. Exactly, (−8.7)² = 75.69.",
      "clue": "Round to −9, then square. Two negatives make a positive.",
      "level": 2,
      "ref": "Exercise 2.2 Q2 c",
@@ -655,9 +690,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "(9.9)² = 100",
+     "text": "True or false? (9.9)² = 100",
      "a": false,
-     "why": "(9.9)² = 9.9 × 9.9 = 98.01. It is only about 100.",
+     "why": "(9.9)² = 9.9 × 9.9 = 98.01.\nRounding 9.9 to 10 gives (9.9)² ≈ 100, but \"about\" is not \"equal\".\nSo the statement is false.",
      "clue": "Is \"about\" the same as \"equal\"?",
      "level": 1,
      "ref": "Exercise 2.2 Q1 c",
@@ -667,9 +702,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "10² > (10.05)² > 11²",
+     "text": "True or false? 10² > (10.05)² > 11²",
      "a": false,
-     "why": "10² = 100, (10.05)² = 101.0025, 11² = 121. So 10² < (10.05)² < 11².",
+     "why": "10² = 100.\n(10.05)² = 10.05 × 10.05 = 101.0025.\n11² = 121.\nSo 100 < 101.0025 < 121: the signs point the other way. False.",
      "clue": "Work out each value and compare.",
      "level": 2,
      "ref": "Exercise 2.2 Q1 b",
@@ -687,7 +722,7 @@
       "She should round to 7"
      ],
      "ans": "She rounded 6.4 down to 6",
-     "why": "6.4 ≈ 6 because 4 < 5. Since 6 is less than 6.4, 6² = 36 is less than the exact 40.96.",
+     "why": "6.4 ≈ 6, because the digit 4 is less than 5.\n6 is smaller than 6.4, so 6² = 36 is smaller than 6.4² = 40.96.\nRounding down always gives an estimate below the exact square.",
      "clue": "Is 6 bigger or smaller than 6.4?",
      "level": 3,
      "added": true,
@@ -704,9 +739,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "(−30)² = 900",
+     "text": "True or false? (−30)² = 900",
      "a": true,
-     "why": "(−30) × (−30) = 900. Negative × negative is positive.",
+     "why": "(−30)² = (−30) × (−30).\nNegative × negative = positive; 30 × 30 = 900.\nSo (−30)² = 900. True.",
      "clue": "Multiply −30 by itself.",
      "level": 1,
      "ref": "Q1 e",
@@ -717,11 +752,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "x = 4.5. x² = ___",
+     "ask": "Find x² when x = 4.5: x² = ___",
      "a": [
       "20.25"
      ],
-     "why": "45 × 45 = 2025. Two decimal places: 4.5 × 4.5 = 20.25.",
+     "why": "4.5² = 4.5 × 4.5.\nWithout the points: 45 × 45 = 2025.\n4.5 has 1 decimal place, so the product has 1 + 1 = 2: 20.25.",
      "clue": "Multiply 4.5 × 4.5.",
      "level": 1,
      "ref": "Q2 f",
@@ -732,13 +767,13 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "x = −5/4. x² = ___",
+     "ask": "Find x² when x = −5/4: x² = ___",
      "a": [
       "25/16",
       "1 9/16",
       "1.5625"
      ],
-     "why": "(−5/4) × (−5/4) = 25/16 = 1 9/16.",
+     "why": "(−5/4)² = (−5/4) × (−5/4).\nSign: negative × negative = positive.\nTops: 5 × 5 = 25. Bottoms: 4 × 4 = 16.\nSo x² = 25/16 = 1 9/16.",
      "clue": "Square the top and the bottom. The sign becomes +.",
      "level": 1,
      "ref": "Q2 d",
@@ -749,11 +784,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "x = 12/4. x² = ___",
+     "ask": "Find x² when x = 12/4: x² = ___",
      "a": [
       "9"
      ],
-     "why": "Simplify first: GCF of 12 and 4 is 4, so 12/4 = 3. 3² = 9.",
+     "why": "Simplify first: GCF of 12 and 4 is 4, so 12/4 = 3.\nThen 3² = 3 × 3 = 9.\nOr: (12/4)² = 144/16 = 9.",
      "clue": "Simplify 12/4 first.",
      "level": 1,
      "ref": "Q2 g",
@@ -763,7 +798,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Is 324 a square number?",
+     "text": "Use prime factors: is 324 a square number?",
      "opts": [
       "Yes, 324 = 18²",
       "No",
@@ -771,7 +806,7 @@
       "Yes, 324 = 162²"
      ],
      "ans": "Yes, 324 = 18²",
-     "why": "324 = 2 × 2 × 3 × 3 × 3 × 3 = (2 × 3 × 3) × (2 × 3 × 3) = 18 × 18.",
+     "why": "324 = 2 × 2 × 3 × 3 × 3 × 3.\nMake two equal groups: (2 × 3 × 3) × (2 × 3 × 3) = 18 × 18.\nSo 324 = 18², a square number.",
      "clue": "Try 18 × 18.",
      "level": 1,
      "ref": "Q4 c",
@@ -782,11 +817,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "64 = 1 + 3 + 5 + 7 + 9 + 11 + 13 + ___",
+     "ask": "Write 64 as the sum of the first eight odd numbers: 1 + 3 + 5 + 7 + 9 + 11 + 13 + ___",
      "a": [
       "15"
      ],
-     "why": "64 = 8², so it is the sum of the first eight odd numbers. The eighth odd number is 15.",
+     "why": "64 = 8², so it is the sum of the first 8 odd numbers.\nThe 8th odd number is 2 × 8 − 1 = 15.\nCheck: 1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 = 64.",
      "clue": "List the first eight odd numbers.",
      "level": 1,
      "ref": "Q8",
@@ -801,9 +836,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "0² = 2",
+     "text": "True or false? 0² = 2",
      "a": false,
-     "why": "0² = 0 × 0 = 0.",
+     "why": "0² = 0 × 0 = 0.\nZero times anything is zero, so 0² is 0, not 2.",
      "clue": "Multiply 0 by itself.",
      "level": 1,
      "ref": "Q1 a",
@@ -814,11 +849,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "x = 10.8. x² ≈ ___",
+     "ask": "Estimate x² by rounding to a whole number. x = 10.8, so x² ≈ ___",
      "a": [
       "121"
      ],
-     "why": "10.8 ≈ 11 because 8 ≥ 5. 11² = 121.",
+     "why": "10.8 → the digit 8 is 5 or more → round up to 11.\n11² = 121.\nSo x² ≈ 121 (exactly 116.64).",
      "clue": "Round to the nearest whole number first.",
      "level": 1,
      "ref": "Q2 b",
@@ -829,11 +864,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "x = 1.06, rounded to one decimal place. x² ≈ ___",
+     "ask": "Estimate x² by rounding to one decimal place. x = 1.06, so x² ≈ ___",
      "a": [
       "1.21"
      ],
-     "why": "1.06 ≈ 1.1 because 6 ≥ 5. (1.1)² = 1.21.",
+     "why": "1.06 → the digit after the first decimal is 6, so round up to 1.1.\n(1.1)² = 1.1 × 1.1 = 1.21.\nSo x² ≈ 1.21 (exactly 1.1236).",
      "clue": "Round 1.06 to 1.1, then square.",
      "level": 2,
      "ref": "Q2 d",
@@ -848,11 +883,11 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "(−7)² = ___",
+   "ask": "Square the number: (−7)² = ___",
    "a": [
     "49"
    ],
-   "why": "(−7) × (−7) = 49.",
+   "why": "(−7) × (−7) = 49.\nTwo negatives give a positive.",
    "clue": "",
    "gen": {
     "t": "area",
@@ -867,12 +902,12 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "(2/5)² = ___",
+   "ask": "Square the fraction: (2/5)² = ___",
    "a": [
     "4/25",
     "0.16"
    ],
-   "why": "(2 × 2)/(5 × 5) = 4/25.",
+   "why": "Tops: 2 × 2 = 4.\nBottoms: 5 × 5 = 25.\nSo (2/5)² = 4/25.",
    "clue": "",
    "level": 1,
    "id": "g8.maths.u2.s2-1-1.46"
@@ -889,7 +924,7 @@
     "1/8"
    ],
    "ans": "0.09",
-   "why": "0.09 = 0.3 × 0.3 = (0.3)².",
+   "why": "0.09 = 0.3 × 0.3 = (0.3)².\n50, 20 and 1/8 cannot be written as a rational number times itself.",
    "clue": "",
    "level": 2,
    "id": "g8.maths.u2.s2-1-1.47"
@@ -899,11 +934,11 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "The sum of the first 12 odd numbers = ___",
+   "ask": "Use the odd-number pattern: the sum of the first 12 odd numbers = ___",
    "a": [
     "144"
    ],
-   "why": "12² = 144.",
+   "why": "First n odd numbers add up to n².\n12² = 144.",
    "clue": "",
    "level": 2,
    "id": "g8.maths.u2.s2-1-1.48"
@@ -913,13 +948,13 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "(1 1/2)² = ___",
+   "ask": "Square the mixed number: (1 1/2)² = ___",
    "a": [
     "9/4",
     "2 1/4",
     "2.25"
    ],
-   "why": "1 1/2 = 3/2. (3/2)² = 9/4 = 2 1/4.",
+   "why": "1 1/2 = 3/2.\n(3/2)² = 9/4.\n9/4 = 2 1/4.",
    "clue": "",
    "level": 3,
    "id": "g8.maths.u2.s2-1-1.49"
@@ -932,7 +967,7 @@
   },
   {
    "kind": "review",
-   "text": "Page 45 note says \"a² ≠ 2a for any rational number a\". This fails for a = 0 and a = 2; the book means \"in general\". The lesson says \"do not mix up a² with 2a\"."
+   "text": "Page 45 note says \"a² ≠ 2a for any rational number a\". This fails for a = 0 and a = 2; the book means \"in general\". The slider shows this."
   },
   {
    "kind": "review",
@@ -940,7 +975,7 @@
   },
   {
    "kind": "note",
-   "text": "Generated practise uses the \"area\" generator (square of a whole number as the area of a square). A dedicated squares / square-roots / cubes generator would need an engine session."
+   "text": "v2 (2026-10-24): odd-number square builder, a² vs 2a slider, step-by-step explanations (owner feedback)."
   }
  ],
  "review": {
@@ -968,7 +1003,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "What is 3/5 × 3/5?",
+     "text": "Multiply the fractions: 3/5 × 3/5 = ?",
      "opts": [
       "9/25",
       "6/10",
@@ -976,7 +1011,7 @@
       "6/25"
      ],
      "ans": "9/25",
-     "why": "Top: 3 × 3 = 9. Bottom: 5 × 5 = 25. So 9/25.",
+     "why": "Step 1: multiply the tops: 3 × 3 = 9.\nStep 2: multiply the bottoms: 5 × 5 = 25.\nSo 3/5 × 3/5 = 9/25.",
      "clue": "Multiply the tops, then the bottoms."
     }
    ]
@@ -1006,7 +1041,7 @@
       "12"
      ],
      "ans": "11",
-     "why": "The next digit is 8. 8 is 5 or more, so round up to 11.",
+     "why": "Look at the digit after the point: 8.\n8 is 5 or more, so round up.\n10.8 → 11.",
      "clue": "Is the digit after the point less than 5?"
     }
    ]

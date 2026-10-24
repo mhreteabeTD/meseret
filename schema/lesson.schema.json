@@ -1,907 +1,939 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://meseret.et/schema/lesson.schema.json",
-  "title": "Meseret lesson (one textbook section)",
-  "type": "object",
-  "required": [
-    "id",
-    "book",
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://meseret.et/schema/lesson.schema.json",
+ "title": "Meseret lesson (one textbook section)",
+ "type": "object",
+ "required": [
+  "id",
+  "book",
+  "title",
+  "ideas",
+  "version"
+ ],
+ "additionalProperties": false,
+ "properties": {
+  "id": {
+   "type": "string",
+   "pattern": "^g(kg|[0-9]{1,2})\\.[a-z-]+\\.u[0-9]+\\.s[0-9]+(-[0-9]+)*$"
+  },
+  "book": {
+   "type": "object",
+   "required": [
     "title",
-    "ideas",
-    "version"
-  ],
-  "additionalProperties": false,
-  "properties": {
-    "id": {
-      "type": "string",
-      "pattern": "^g(kg|[0-9]{1,2})\\.[a-z-]+\\.u[0-9]+\\.s[0-9]+(-[0-9]+)*$"
-    },
-    "book": {
-      "type": "object",
-      "required": [
-        "title",
-        "unit",
-        "section"
-      ],
-      "properties": {
-        "title": {
-          "type": "string"
-        },
-        "grade": {
-          "type": "integer"
-        },
-        "subject": {
-          "type": "string"
-        },
-        "unit": {
-          "type": "integer"
-        },
-        "unit_title": {
-          "type": "string"
-        },
-        "section": {
-          "type": "string"
-        },
-        "pages": {
-          "type": "string"
-        },
-        "publisher": {
-          "type": "string"
-        },
-        "year": {
-          "type": "integer"
-        }
-      }
-    },
+    "unit",
+    "section"
+   ],
+   "properties": {
     "title": {
+     "type": "string"
+    },
+    "grade": {
+     "type": "integer"
+    },
+    "subject": {
+     "type": "string"
+    },
+    "unit": {
+     "type": "integer"
+    },
+    "unit_title": {
+     "type": "string"
+    },
+    "section": {
+     "type": "string"
+    },
+    "pages": {
+     "type": "string"
+    },
+    "publisher": {
+     "type": "string"
+    },
+    "year": {
+     "type": "integer"
+    }
+   }
+  },
+  "title": {
+   "type": "string"
+  },
+  "competency": {
+   "type": "string"
+  },
+  "minutes": {
+   "type": "integer"
+  },
+  "keywords": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "en",
+     "def"
+    ],
+    "properties": {
+     "en": {
       "type": "string"
-    },
-    "competency": {
+     },
+     "am": {
       "type": "string"
-    },
-    "minutes": {
-      "type": "integer"
-    },
-    "keywords": {
+     },
+     "om": {
+      "type": "string"
+     },
+     "def": {
+      "type": "string"
+     },
+     "machine": {
+      "type": "boolean"
+     }
+    }
+   }
+  },
+  "ideas": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "name",
+     "screens"
+    ],
+    "additionalProperties": false,
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[a-z]+(\\.[a-z0-9-]+)+$"
+     },
+     "name": {
+      "type": "string"
+     },
+     "requires": {
       "type": "array",
       "items": {
-        "type": "object",
-        "required": [
-          "en",
-          "def"
-        ],
-        "properties": {
-          "en": {
-            "type": "string"
-          },
-          "am": {
-            "type": "string"
-          },
-          "om": {
-            "type": "string"
-          },
-          "def": {
-            "type": "string"
-          },
-          "machine": {
-            "type": "boolean"
-          }
-        }
+       "type": "string"
       }
-    },
-    "ideas": {
+     },
+     "explain": {
+      "type": "object",
+      "properties": {
+       "en": {
+        "$ref": "#/$defs/explain"
+       },
+       "am": {
+        "$ref": "#/$defs/explain"
+       },
+       "om": {
+        "$ref": "#/$defs/explain"
+       }
+      }
+     },
+     "video": {
+      "type": "object",
+      "required": [
+       "yt",
+       "lang",
+       "seconds"
+      ],
+      "properties": {
+       "yt": {
+        "type": "string"
+       },
+       "lang": {
+        "type": "string"
+       },
+       "seconds": {
+        "type": "integer"
+       },
+       "title": {
+        "type": "string"
+       },
+       "mb": {
+        "type": "number"
+       }
+      }
+     },
+     "screens": {
       "type": "array",
       "minItems": 1,
       "items": {
-        "type": "object",
-        "required": [
-          "id",
-          "name",
-          "screens"
-        ],
-        "additionalProperties": false,
-        "properties": {
-          "id": {
-            "type": "string",
-            "pattern": "^[a-z]+(\\.[a-z0-9-]+)+$"
-          },
-          "name": {
-            "type": "string"
-          },
-          "requires": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "explain": {
-            "type": "object",
-            "properties": {
-              "en": {
-                "$ref": "#/$defs/explain"
-              },
-              "am": {
-                "$ref": "#/$defs/explain"
-              },
-              "om": {
-                "$ref": "#/$defs/explain"
-              }
-            }
-          },
-          "video": {
-            "type": "object",
-            "required": [
-              "yt",
-              "lang",
-              "seconds"
-            ],
-            "properties": {
-              "yt": {
-                "type": "string"
-              },
-              "lang": {
-                "type": "string"
-              },
-              "seconds": {
-                "type": "integer"
-              },
-              "title": {
-                "type": "string"
-              },
-              "mb": {
-                "type": "number"
-              }
-            }
-          },
-          "screens": {
-            "type": "array",
-            "minItems": 1,
-            "items": {
-              "$ref": "#/$defs/screen"
-            }
-          },
-          "tool": {
-            "type": "string"
-          }
-        }
+       "$ref": "#/$defs/screen"
       }
-    },
-    "exercises": {
+     },
+     "tool": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "exercises": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "book_name",
+     "items"
+    ],
+    "properties": {
+     "book_name": {
+      "type": "string"
+     },
+     "page": {
+      "type": "integer"
+     },
+     "items": {
       "type": "array",
       "items": {
-        "type": "object",
-        "required": [
-          "book_name",
-          "items"
-        ],
-        "properties": {
-          "book_name": {
-            "type": "string"
-          },
-          "page": {
-            "type": "integer"
-          },
-          "items": {
-            "type": "array",
-            "items": {
-              "$ref": "#/$defs/screen"
-            }
-          },
-          "test": {
-            "type": "boolean",
-            "description": "a test with fresh generated questions every time, no clues"
-          },
-          "chapter_test": {
-            "type": "boolean",
-            "description": "a timed chapter test built from every section's test bank plus these items; no clues"
-          },
-          "count": {
-            "type": "integer"
-          },
-          "minutes": {
-            "type": "integer"
-          }
-        }
+       "$ref": "#/$defs/screen"
       }
+     },
+     "test": {
+      "type": "boolean",
+      "description": "a test with fresh generated questions every time, no clues"
+     },
+     "chapter_test": {
+      "type": "boolean",
+      "description": "a timed chapter test built from every section's test bank plus these items; no clues"
+     },
+     "count": {
+      "type": "integer"
+     },
+     "minutes": {
+      "type": "integer"
+     }
+    }
+   }
+  },
+  "test": {
+   "type": "array",
+   "items": {
+    "$ref": "#/$defs/screen"
+   }
+  },
+  "notes": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "kind",
+     "text"
+    ],
+    "properties": {
+     "kind": {
+      "enum": [
+       "correction",
+       "note",
+       "review",
+       "missing"
+      ]
+     },
+     "text": {
+      "type": "string"
+     },
+     "source": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "review": {
+   "type": "object",
+   "properties": {
+    "status": {
+     "enum": [
+      "draft",
+      "validated",
+      "reviewed",
+      "published"
+     ]
     },
-    "test": {
+    "by": {
+     "type": "string"
+    },
+    "date": {
+     "type": "string"
+    },
+    "minutes": {
+     "type": "integer"
+    }
+   }
+  },
+  "version": {
+   "type": "integer",
+   "minimum": 1
+  },
+  "tool": {
+   "type": "string",
+   "enum": [
+    "factors"
+   ]
+  },
+  "refreshers": {
+   "type": "object",
+   "additionalProperties": {
+    "type": "object",
+    "required": [
+     "name",
+     "screens"
+    ],
+    "properties": {
+     "name": {
+      "type": "string"
+     },
+     "screens": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "$ref": "#/$defs/screen"
+      }
+     }
+    }
+   }
+  },
+  "lang": {
+   "enum": [
+    "am",
+    "en",
+    "om"
+   ],
+   "description": "Language of the lesson text. Grades 1-6 follow the book (am); Grades 7-12 are en."
+  },
+  "main": {
+   "enum": [
+    "am",
+    "en",
+    "om"
+   ],
+   "description": "Which key-word term is shown first: am for Grades 1-6 (Amharic main, English gloss)."
+  }
+ },
+ "$defs": {
+  "explain": {
+   "type": "object",
+   "required": [
+    "text"
+   ],
+   "properties": {
+    "text": {
+     "type": "string"
+    },
+    "audio": {
+     "type": "string"
+    },
+    "seconds": {
+     "type": "integer"
+    },
+    "machine": {
+     "type": "boolean"
+    }
+   }
+  },
+  "screen": {
+   "type": "object",
+   "required": [
+    "kind",
+    "step"
+   ],
+   "properties": {
+    "kind": {
+     "enum": [
+      "guess",
+      "tiles",
+      "sort",
+      "tap",
+      "steps",
+      "name",
+      "mcq",
+      "tf",
+      "blank",
+      "pick",
+      "match",
+      "order",
+      "read",
+      "picture",
+      "gallery",
+      "people",
+      "reveal",
+      "tree",
+      "venn",
+      "numline",
+      "fracbar",
+      "grid",
+      "nest",
+      "slider",
+      "cubes",
+      "ladder",
+      "figure",
+      "coord",
+      "sqtable",
+      "factortree",
+      "oddsquare"
+     ]
+    },
+    "step": {
+     "enum": [
+      "hook",
+      "explore",
+      "notice",
+      "name",
+      "method",
+      "check",
+      "practise",
+      "exercise",
+      "test",
+      "read",
+      "challenge"
+     ]
+    },
+    "id": {
+     "type": "string"
+    },
+    "graded": {
+     "type": "boolean"
+    },
+    "added": {
+     "type": "boolean"
+    },
+    "title": {
+     "type": "string"
+    },
+    "text": {
+     "type": "string"
+    },
+    "ask": {
+     "type": "string"
+    },
+    "opts": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "ans": {
+     "type": "string"
+    },
+    "a": {},
+    "why": {
+     "description": "Explanation shown after an answer. Write it step by step; a newline starts a new line.",
+     "type": "string"
+    },
+    "clue": {
+     "type": "string"
+    },
+    "worked": {
+     "type": "string"
+    },
+    "after": {
+     "type": "string"
+    },
+    "defs": {
+     "type": "array",
+     "items": {
       "type": "array",
       "items": {
-        "$ref": "#/$defs/screen"
-      }
+       "type": "string"
+      },
+      "minItems": 2,
+      "maxItems": 2
+     }
     },
-    "notes": {
+    "steps": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "bins": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "items": {
+     "type": "array"
+    },
+    "pairs": {
+     "type": "array",
+     "items": {
       "type": "array",
-      "items": {
-        "type": "object",
-        "required": [
-          "kind",
-          "text"
-        ],
-        "properties": {
-          "kind": {
-            "enum": [
-              "correction",
-              "note",
-              "review",
-              "missing"
-            ]
-          },
-          "text": {
-            "type": "string"
-          },
-          "source": {
-            "type": "string"
-          }
-        }
-      }
+      "minItems": 2,
+      "maxItems": 2
+     }
     },
-    "review": {
-      "type": "object",
-      "properties": {
-        "status": {
-          "enum": [
-            "draft",
-            "validated",
-            "reviewed",
-            "published"
-          ]
-        },
-        "by": {
-          "type": "string"
-        },
-        "date": {
-          "type": "string"
-        },
-        "minutes": {
-          "type": "integer"
-        }
-      }
+    "figure": {
+     "type": "object"
     },
-    "version": {
-      "type": "integer",
-      "minimum": 1
+    "sizes": {
+     "type": "array",
+     "items": {
+      "type": "number"
+     }
+    },
+    "need": {
+     "type": "integer"
+    },
+    "pool": {
+     "type": "array"
+    },
+    "needs": {
+     "type": "string"
     },
     "tool": {
-      "type": "string",
-      "enum": [
-        "factors"
-      ]
+     "type": "string"
     },
-    "refreshers": {
-      "type": "object",
-      "additionalProperties": {
-        "type": "object",
-        "required": [
-          "name",
-          "screens"
-        ],
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "screens": {
-            "type": "array",
-            "minItems": 1,
-            "items": {
-              "$ref": "#/$defs/screen"
-            }
-          }
-        }
+    "paras": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     },
+     "description": "read: paragraphs of book text, in order"
+    },
+    "table": {
+     "type": "array",
+     "items": {
+      "type": "array",
+      "items": {
+       "type": "string"
       }
+     },
+     "description": "read: a book table; first row is the header"
     },
-    "lang": {
-      "enum": [
-        "am",
-        "en",
-        "om"
-      ],
-      "description": "Language of the lesson text. Grades 1-6 follow the book (am); Grades 7-12 are en."
+    "note": {
+     "type": "string",
+     "description": "read: a small side note under the text"
     },
-    "main": {
-      "enum": [
-        "am",
-        "en",
-        "om"
-      ],
-      "description": "Which key-word term is shown first: am for Grades 1-6 (Amharic main, English gloss)."
-    }
-  },
-  "$defs": {
-    "explain": {
+    "pic": {
+     "type": "string",
+     "description": "picture: id of a drawing in app/pictures.js"
+    },
+    "caption": {
+     "type": "string"
+    },
+    "people": {
+     "type": "array",
+     "description": "people: [{name, years?, from?, did, img?}] img is an https Wikimedia Commons Special:FilePath URL",
+     "items": {
       "type": "object",
       "required": [
-        "text"
+       "name",
+       "did"
       ],
       "properties": {
-        "text": {
-          "type": "string"
-        },
-        "audio": {
-          "type": "string"
-        },
-        "seconds": {
-          "type": "integer"
-        },
-        "machine": {
-          "type": "boolean"
-        }
+       "name": {
+        "type": "string"
+       },
+       "years": {
+        "type": "string"
+       },
+       "from": {
+        "type": "string"
+       },
+       "did": {
+        "type": "string"
+       },
+       "img": {
+        "type": "string"
+       }
       }
+     }
     },
-    "screen": {
-      "type": "object",
-      "required": [
-        "kind",
-        "step"
-      ],
-      "properties": {
-        "kind": {
-          "enum": [
-            "guess",
-            "tiles",
-            "sort",
-            "tap",
-            "steps",
-            "name",
-            "mcq",
-            "tf",
-            "blank",
-            "pick",
-            "match",
-            "order",
-            "read",
-            "picture",
-            "gallery",
-            "people",
-            "reveal",
-            "tree",
-            "venn",
-            "numline",
-            "fracbar",
-            "grid",
-            "nest",
-            "slider",
-            "cubes",
-            "ladder",
-            "figure",
-            "coord"
-          ]
-        },
-        "step": {
-          "enum": [
-            "hook",
-            "explore",
-            "notice",
-            "name",
-            "method",
-            "check",
-            "practise",
-            "exercise",
-            "test",
-            "read",
-            "challenge"
-          ]
-        },
-        "id": {
-          "type": "string"
-        },
-        "graded": {
-          "type": "boolean"
-        },
-        "added": {
-          "type": "boolean"
-        },
-        "title": {
-          "type": "string"
-        },
-        "text": {
-          "type": "string"
-        },
-        "ask": {
-          "type": "string"
-        },
-        "opts": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "ans": {
-          "type": "string"
-        },
-        "a": {},
-        "why": {
-          "type": "string"
-        },
-        "clue": {
-          "type": "string"
-        },
-        "worked": {
-          "type": "string"
-        },
-        "after": {
-          "type": "string"
-        },
-        "defs": {
-          "type": "array",
-          "items": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "minItems": 2,
-            "maxItems": 2
-          }
-        },
-        "steps": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "bins": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "items": {
-          "type": "array"
-        },
-        "pairs": {
-          "type": "array",
-          "items": {
-            "type": "array",
-            "minItems": 2,
-            "maxItems": 2
-          }
-        },
-        "figure": {
-          "type": "object"
-        },
-        "sizes": {
-          "type": "array",
-          "items": {
-            "type": "number"
-          }
-        },
-        "need": {
-          "type": "integer"
-        },
-        "pool": {
-          "type": "array"
-        },
-        "needs": {
-          "type": "string"
-        },
-        "tool": {
-          "type": "string"
-        },
-        "paras": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "read: paragraphs of book text, in order"
-        },
-        "table": {
-          "type": "array",
-          "items": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "description": "read: a book table; first row is the header"
-        },
-        "note": {
-          "type": "string",
-          "description": "read: a small side note under the text"
-        },
-        "pic": {
-          "type": "string",
-          "description": "picture: id of a drawing in app/pictures.js"
-        },
-        "caption": {
-          "type": "string"
-        },
-        "people": {
-          "type": "array",
-          "description": "people: [{name, years?, from?, did, img?}] img is an https Wikimedia Commons Special:FilePath URL",
-          "items": {
-            "type": "object",
-            "required": [
-              "name",
-              "did"
-            ],
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "years": {
-                "type": "string"
-              },
-              "from": {
-                "type": "string"
-              },
-              "did": {
-                "type": "string"
-              },
-              "img": {
-                "type": "string"
-              }
-            }
-          }
-        },
-        "answer": {
-          "type": "string",
-          "description": "reveal: the answer shown when the student taps Show answer"
-        },
-        "root": {
-          "type": "object",
-          "description": "tree: {label, info, pic?, children:[...]}"
-        },
-        "sets": {
-          "type": "array",
-          "description": "venn: [[label, info], ...] 2 or 3 sets"
-        },
-        "overlaps": {
-          "type": "array",
-          "description": "venn: [[[i, j], label, info], ...]"
-        },
-        "min": {
-          "type": "number",
-          "description": "numline: left end"
-        },
-        "max": {
-          "type": "number",
-          "description": "numline: right end"
-        },
-        "sub": {
-          "type": "integer",
-          "description": "numline: marks per unit; taps snap to them"
-        },
-        "points": {
-          "type": "array",
-          "description": "numline show: [{v:'-3/2', label?, info?}] tap to explore; coord show: [{x, y, name?, info?}]"
-        },
-        "targets": {
-          "type": "array",
-          "description": "numline place (graded): [{v:'2/5', label?}] the student taps where each goes; coord place (graded): [{x, y, name?, label?}] the student taps each grid point"
-        },
-        "hops": {
-          "type": "array",
-          "description": "numline hop: [{from:6, by:-3}] arrows played one by one"
-        },
-        "opposites": {
-          "type": "boolean",
-          "description": "numline: draw a bracket joining each point to its opposite"
-        },
-        "distance": {
-          "type": "boolean",
-          "description": "numline: tapping a point draws its distance from 0"
-        },
-        "num": {
-          "type": "boolean",
-          "description": "blank: compare as numbers (3/8 = 6/16 = 0.375); an accepted answer starting with ≈ allows rounding"
-        },
-        "bars": {
-          "type": "array",
-          "description": "fracbar: [{parts, shade:[{n, color:a|b|c|d, label}], mark:{n,label}}]"
-        },
-        "parts": {
-          "type": "integer"
-        },
-        "shade": {
-          "type": "array"
-        },
-        "mark": {
-          "type": "object"
-        },
-        "cols": {
-          "type": "integer",
-          "description": "grid area model"
-        },
-        "rows": {
-          "type": "integer"
-        },
-        "shadeCols": {
-          "type": "integer"
-        },
-        "shadeRows": {
-          "type": "integer"
-        },
-        "mode": {
-          "type": "string",
-          "description": "grid: 'groups' (division model), 'tile' (cover a rectangle row by row), 'shape' (count whole/half squares under a shape)"
-        },
-        "wholes": {
-          "type": "integer"
-        },
-        "d": {
-          "type": "integer"
-        },
-        "part": {
-          "type": "integer"
-        },
-        "group": {
-          "type": "integer"
-        },
-        "say": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "grid: one line per ▶ step"
-        },
-        "rings": {
-          "type": "array",
-          "description": "nest: [[symbol, name, info]] outer to inner"
-        },
-        "numbers": {
-          "type": "array",
-          "description": "nest: [[label, innermost ring index, note]]"
-        },
-        "vars": {
-          "type": "array",
-          "description": "slider: [{k,label,min,max,step,v}]"
-        },
-        "formula": {
-          "type": "string"
-        },
-        "out": {
-          "type": "string"
-        },
-        "input": {
-          "enum": [
-            "signed"
-          ],
-          "description": "blank: ask for the sign first, then the size"
-        },
-        "gen": {
-          "type": "object",
-          "description": "generator {t, ...options}: replays and tests use fresh numbers (app.js Gen)"
-        },
-        "intro": {
-          "type": "string",
-          "description": "grid: text shown before the first ▶ step"
-        },
-        "ref": {
-          "type": "string",
-          "description": "book reference shown as a small label (Example 1.31, Exercise 1.6 Q2); never part of the question"
-        },
-        "w": {
-          "type": "integer"
-        },
-        "h": {
-          "type": "integer"
-        },
-        "l": {
-          "type": "integer"
-        },
-        "unit": {
-          "type": "string"
-        },
-        "big": {
-          "type": "boolean"
-        },
-        "perUnit": {
-          "type": "string"
-        },
-        "poly": {
-          "type": "array",
-          "items": {
-            "type": "array",
-            "items": {
-              "type": "number"
-            }
-          }
-        },
-        "ellipse": {
-          "type": "array",
-          "items": {
-            "type": "number"
-          }
-        },
-        "estimate": {
-          "type": "boolean"
-        },
-        "tol": {
-          "type": "number"
-        },
-        "cube": {
-          "type": "boolean"
-        },
-        "layers": {
-          "type": "array",
-          "items": {
-            "type": "array",
-            "items": {
-              "type": "integer"
-            }
-          }
-        },
-        "level": {
-          "enum": [
-            1,
-            2,
-            3
-          ],
-          "description": "difficulty: 1 ★ basic (book level), 2 ★★ standard, 3 ★★★ challenge"
-        },
-        "ymin": {
-          "type": "number",
-          "description": "coord: bottom of the grid (min/max are the x range)"
-        },
-        "ymax": {
-          "type": "number",
-          "description": "coord: top of the grid"
-        },
-        "lines": {
-          "type": "array",
-          "description": "coord: lines to draw: [{m, b, label?}] for y = mx + b, [{x: k}] vertical, or [{pts: [[x1,y1],[x2,y2]], segment?}]"
-        },
-        "quadrants": {
-          "type": "boolean",
-          "description": "coord: label the four quadrants I–IV"
-        }
-      },
-      "allOf": [
-        {
-          "if": {
-            "properties": {
-              "kind": {
-                "const": "mcq"
-              }
-            }
-          },
-          "then": {
-            "required": [
-              "opts",
-              "ans",
-              "why",
-              "clue"
-            ]
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "kind": {
-                "const": "tf"
-              }
-            }
-          },
-          "then": {
-            "required": [
-              "text",
-              "a",
-              "why",
-              "clue"
-            ]
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "kind": {
-                "const": "blank"
-              }
-            }
-          },
-          "then": {
-            "required": [
-              "ask",
-              "a",
-              "why",
-              "clue"
-            ]
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "kind": {
-                "const": "sort"
-              }
-            }
-          },
-          "then": {
-            "required": [
-              "bins",
-              "items"
-            ]
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "kind": {
-                "const": "match"
-              }
-            }
-          },
-          "then": {
-            "required": [
-              "pairs",
-              "why"
-            ]
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "kind": {
-                "const": "order"
-              }
-            }
-          },
-          "then": {
-            "required": [
-              "items",
-              "why"
-            ]
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "kind": {
-                "const": "name"
-              }
-            }
-          },
-          "then": {
-            "required": [
-              "defs"
-            ]
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "kind": {
-                "const": "steps"
-              }
-            }
-          },
-          "then": {
-            "required": [
-              "steps"
-            ]
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "kind": {
-                "const": "tap"
-              }
-            }
-          },
-          "then": {
-            "required": [
-              "items"
-            ]
-          }
-        },
-        {
-          "if": {
-            "properties": {
-              "kind": {
-                "const": "pick"
-              }
-            }
-          },
-          "then": {
-            "required": [
-              "pool",
-              "a",
-              "why"
-            ]
-          }
-        }
-      ]
+    "answer": {
+     "type": "string",
+     "description": "reveal: the answer shown when the student taps Show answer"
+    },
+    "root": {
+     "type": "object",
+     "description": "tree: {label, info, pic?, children:[...]}"
+    },
+    "sets": {
+     "type": "array",
+     "description": "venn: [[label, info], ...] 2 or 3 sets"
+    },
+    "overlaps": {
+     "type": "array",
+     "description": "venn: [[[i, j], label, info], ...]"
+    },
+    "min": {
+     "type": "number",
+     "description": "numline: left end"
+    },
+    "max": {
+     "type": "number",
+     "description": "numline: right end"
+    },
+    "sub": {
+     "type": "integer",
+     "description": "numline: marks per unit; taps snap to them"
+    },
+    "points": {
+     "type": "array",
+     "description": "numline show: [{v:'-3/2', label?, info?}] tap to explore; coord show: [{x, y, name?, info?}]"
+    },
+    "targets": {
+     "type": "array",
+     "description": "numline place (graded): [{v:'2/5', label?}] the student taps where each goes; coord place (graded): [{x, y, name?, label?}] the student taps each grid point"
+    },
+    "hops": {
+     "type": "array",
+     "description": "numline hop: [{from:6, by:-3}] arrows played one by one"
+    },
+    "opposites": {
+     "type": "boolean",
+     "description": "numline: draw a bracket joining each point to its opposite"
+    },
+    "distance": {
+     "type": "boolean",
+     "description": "numline: tapping a point draws its distance from 0"
+    },
+    "num": {
+     "type": "boolean",
+     "description": "blank: compare as numbers (3/8 = 6/16 = 0.375); an accepted answer starting with ≈ allows rounding"
+    },
+    "bars": {
+     "type": "array",
+     "description": "fracbar: [{parts, shade:[{n, color:a|b|c|d, label}], mark:{n,label}}]"
+    },
+    "parts": {
+     "type": "integer"
+    },
+    "shade": {
+     "type": "array"
+    },
+    "mark": {
+     "type": "object"
+    },
+    "cols": {
+     "type": "integer",
+     "description": "grid area model"
+    },
+    "rows": {
+     "type": "integer"
+    },
+    "shadeCols": {
+     "type": "integer"
+    },
+    "shadeRows": {
+     "type": "integer"
+    },
+    "mode": {
+     "type": "string",
+     "description": "grid: 'groups' (division model), 'tile' (cover a rectangle row by row), 'shape' (count whole/half squares under a shape)"
+    },
+    "wholes": {
+     "type": "integer"
+    },
+    "d": {
+     "type": "integer"
+    },
+    "part": {
+     "type": "integer"
+    },
+    "group": {
+     "type": "integer"
+    },
+    "say": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     },
+     "description": "grid: one line per ▶ step"
+    },
+    "rings": {
+     "type": "array",
+     "description": "nest: [[symbol, name, info]] outer to inner"
+    },
+    "numbers": {
+     "type": "array",
+     "description": "nest: [[label, innermost ring index, note]]"
+    },
+    "vars": {
+     "type": "array",
+     "description": "slider: [{k,label,min,max,step,v}]"
+    },
+    "formula": {
+     "type": "string"
+    },
+    "out": {
+     "type": "string"
+    },
+    "input": {
+     "enum": [
+      "signed"
+     ],
+     "description": "blank: ask for the sign first, then the size"
+    },
+    "gen": {
+     "type": "object",
+     "description": "generator {t, ...options}: replays and tests use fresh numbers (app.js Gen)"
+    },
+    "intro": {
+     "type": "string",
+     "description": "grid: text shown before the first ▶ step"
+    },
+    "ref": {
+     "type": "string",
+     "description": "book reference shown as a small label (Example 1.31, Exercise 1.6 Q2); never part of the question"
+    },
+    "w": {
+     "type": "integer"
+    },
+    "h": {
+     "type": "integer"
+    },
+    "l": {
+     "type": "integer"
+    },
+    "unit": {
+     "type": "string"
+    },
+    "big": {
+     "type": "boolean"
+    },
+    "perUnit": {
+     "type": "string"
+    },
+    "poly": {
+     "type": "array",
+     "items": {
+      "type": "array",
+      "items": {
+       "type": "number"
+      }
+     }
+    },
+    "ellipse": {
+     "type": "array",
+     "items": {
+      "type": "number"
+     }
+    },
+    "estimate": {
+     "type": "boolean"
+    },
+    "tol": {
+     "type": "number"
+    },
+    "cube": {
+     "type": "boolean"
+    },
+    "layers": {
+     "type": "array",
+     "items": {
+      "type": "array",
+      "items": {
+       "type": "integer"
+      }
+     }
+    },
+    "level": {
+     "enum": [
+      1,
+      2,
+      3
+     ],
+     "description": "difficulty: 1 ★ basic (book level), 2 ★★ standard, 3 ★★★ challenge"
+    },
+    "ymin": {
+     "type": "number",
+     "description": "coord: bottom of the grid (min/max are the x range)"
+    },
+    "ymax": {
+     "type": "number",
+     "description": "coord: top of the grid"
+    },
+    "lines": {
+     "type": "array",
+     "description": "coord: lines to draw: [{m, b, label?}] for y = mx + b, [{x: k}] vertical, or [{pts: [[x1,y1],[x2,y2]], segment?}]"
+    },
+    "quadrants": {
+     "type": "boolean",
+     "description": "coord: label the four quadrants I–IV"
+    },
+    "best": {
+     "description": "guess: the good guess(es); the student is told whether their guess was good (not graded)"
+    },
+    "sqref": {
+     "type": "object",
+     "description": "show a 'Open the table' button: {from, to, row} of the table of squares"
+    },
+    "from": {
+     "type": "number"
+    },
+    "to": {
+     "type": "number"
+    },
+    "x": {
+     "type": "number"
+    },
+    "value": {
+     "type": "number"
+    },
+    "row": {
+     "type": "number"
+    },
+    "n": {
+     "type": "integer"
+    },
+    "outs": {
+     "type": "array"
     }
+   },
+   "allOf": [
+    {
+     "if": {
+      "properties": {
+       "kind": {
+        "const": "mcq"
+       }
+      }
+     },
+     "then": {
+      "required": [
+       "opts",
+       "ans",
+       "why",
+       "clue"
+      ]
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "kind": {
+        "const": "tf"
+       }
+      }
+     },
+     "then": {
+      "required": [
+       "text",
+       "a",
+       "why",
+       "clue"
+      ]
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "kind": {
+        "const": "blank"
+       }
+      }
+     },
+     "then": {
+      "required": [
+       "ask",
+       "a",
+       "why",
+       "clue"
+      ]
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "kind": {
+        "const": "sort"
+       }
+      }
+     },
+     "then": {
+      "required": [
+       "bins",
+       "items"
+      ]
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "kind": {
+        "const": "match"
+       }
+      }
+     },
+     "then": {
+      "required": [
+       "pairs",
+       "why"
+      ]
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "kind": {
+        "const": "order"
+       }
+      }
+     },
+     "then": {
+      "required": [
+       "items",
+       "why"
+      ]
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "kind": {
+        "const": "name"
+       }
+      }
+     },
+     "then": {
+      "required": [
+       "defs"
+      ]
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "kind": {
+        "const": "steps"
+       }
+      }
+     },
+     "then": {
+      "required": [
+       "steps"
+      ]
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "kind": {
+        "const": "tap"
+       }
+      }
+     },
+     "then": {
+      "required": [
+       "items"
+      ]
+     }
+    },
+    {
+     "if": {
+      "properties": {
+       "kind": {
+        "const": "pick"
+       }
+      }
+     },
+     "then": {
+      "required": [
+       "pool",
+       "a",
+       "why"
+      ]
+     }
+    }
+   ]
   }
+ }
 }

@@ -11,7 +11,7 @@
  },
  "title": "Use of table values and scientific calculator to find squares",
  "competency": "Find the square of a decimal using a table of squares and a calculator.",
- "minutes": 12,
+ "minutes": 14,
  "keywords": [
   {
    "en": "Scientific notation",
@@ -51,8 +51,9 @@
       "0.45 × 1000",
       "450 × 1"
      ],
-     "after": "450 = 4.5 × 100 = 4.5 × 10². This way of writing is called scientific notation.",
+     "after": "450 = 4.5 × 100 = 4.5 × 10². This way of writing is called scientific notation. (45 × 10 is also 450, but 45 is not between 1 and 10.)",
      "ref": "Activity 2.2 Q2 a",
+     "best": "4.5 × 10²",
      "id": "g8.maths.u2.s2-1-2.1"
     },
     {
@@ -65,8 +66,34 @@
       "Big number: move the point left, n is positive. 450 = 4.5 × 10².",
       "Small number: move the point right, n is negative. 0.0045 = 4.5 × 10⁻³."
      ],
-     "note": "Activity 2.2 asks you to define it in your own words. This is one good definition.",
-     "added": true,
+     "table": [
+      [
+       "Number",
+       "Move the point",
+       "Scientific notation"
+      ],
+      [
+       "450",
+       "2 places left",
+       "4.5 × 10²"
+      ],
+      [
+       "84.3",
+       "1 place left",
+       "8.43 × 10¹"
+      ],
+      [
+       "0.256",
+       "1 place right",
+       "2.56 × 10⁻¹"
+      ],
+      [
+       "0.0045",
+       "3 places right",
+       "4.5 × 10⁻³"
+      ]
+     ],
+     "note": "Count how many places the point moves. That count is n.",
      "id": "g8.maths.u2.s2-1-2.2"
     },
     {
@@ -85,7 +112,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "0.0045 in scientific notation is",
+     "text": "Write the small number 0.0045 in scientific notation (a number from 1 to 10, times a power of 10).",
      "opts": [
       "4.5 × 10⁻³",
       "4.5 × 10³",
@@ -93,7 +120,7 @@
       "0.45 × 10⁻²"
      ],
      "ans": "4.5 × 10⁻³",
-     "why": "Move the point 3 places right to get 4.5. Moving right gives a negative power: 10⁻³.",
+     "why": "Step 1: move the point right until you get a number from 1 to 10: 0.0045 → 4.5.\nStep 2: count the moves: 3 places.\nStep 3: moving right means the number was small, so the power is negative: 10⁻³.\nSo 0.0045 = 4.5 × 10⁻³. (45 × 10⁻⁴ has the right value, but 45 is not between 1 and 10.)",
      "clue": "How many places must the point move to get a number between 1 and 10?",
      "level": 1,
      "ref": "Activity 2.2 Q2 b",
@@ -104,11 +131,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "84.3 = ___ × 10¹",
+     "ask": "Scientific notation: write 84.3 as a number from 1 to 10 times 10. 84.3 = ___ × 10¹",
      "a": [
       "8.43"
      ],
-     "why": "Move the point 1 place left: 84.3 = 8.43 × 10.",
+     "why": "Step 1: we need a number from 1 to 10, so move the point 1 place left: 84.3 → 8.43.\nStep 2: 1 move left means × 10¹.\nCheck: 8.43 × 10 = 84.3.\nSo 84.3 = 8.43 × 10¹.",
      "clue": "The first number must be between 1 and 10.",
      "level": 1,
      "ref": "Activity 2.2 Q2 c",
@@ -118,7 +145,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "0.256 in scientific notation is",
+     "text": "Scientific notation for a number less than 1: 0.256 = ?",
      "opts": [
       "2.56 × 10⁻¹",
       "2.56 × 10¹",
@@ -126,7 +153,7 @@
       "256 × 10⁻³"
      ],
      "ans": "2.56 × 10⁻¹",
-     "why": "Move the point 1 place right: 0.256 = 2.56 ÷ 10 = 2.56 × 10⁻¹.",
+     "why": "0.256 is less than 1, so the power of 10 is negative.\nMove the point 1 place right: 0.256 → 2.56.\n1 move right → 10⁻¹.\nSo 0.256 = 2.56 × 10⁻¹. (25.6 and 256 are not between 1 and 10.)",
      "clue": "Is the number bigger or smaller than 1?",
      "level": 1,
      "ref": "Activity 2.2 Q2 d",
@@ -136,7 +163,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Which one is NOT in scientific notation?",
+     "text": "Spot the mistake: which one is NOT written in scientific notation?",
      "opts": [
       "12.5 × 10³",
       "3.2 × 10⁴",
@@ -144,7 +171,7 @@
       "1.05 × 10"
      ],
      "ans": "12.5 × 10³",
-     "why": "12.5 is not between 1 and 10. Correct form: 1.25 × 10⁴.",
+     "why": "Scientific notation needs the first number from 1 up to (not including) 10.\n12.5 is bigger than 10, so 12.5 × 10³ is not in scientific notation.\nCorrect form: 12.5 × 10³ = 1.25 × 10⁴.",
      "clue": "Check the first number: is it at least 1 and less than 10?",
      "level": 3,
      "added": true,
@@ -176,8 +203,9 @@
       "Adding 3.24 + 3.24",
       "Rounding to 3"
      ],
-     "after": "The book has a table of squares at the end. It gives the square quickly.",
+     "after": "The book has a table of squares at the end. It gives the square quickly and closely.",
      "added": true,
+     "best": "A table of squares",
      "id": "g8.maths.u2.s2-1-2.8"
     },
     {
@@ -187,80 +215,33 @@
      "paras": [
       "Squaring decimals by hand is slow.",
       "A table of squares is printed at the end of the book.",
-      "The first column, x, lists 1.0 to 9.9.",
-      "The other columns are headed by the digits 0 to 9."
+      "The first column, x, lists 1.0 to 9.9. The top row gives the third digit, 0 to 9."
      ],
      "ref": "p.49",
      "id": "g8.maths.u2.s2-1-2.9"
     },
     {
-     "kind": "steps",
+     "kind": "sqtable",
      "step": "explore",
-     "title": "Find (3.24)² from the table",
-     "steps": [
-      "Step i: find the row that starts with 3.2.",
-      "Step ii: move right along that row to the column headed 4.",
-      "Step iii: read the number where the row and column meet: 10.50.",
-      "So (3.24)² ≈ 10.50. (Exactly, 3.24 × 3.24 = 10.4976.)"
-     ],
+     "mode": "find",
+     "from": 3.0,
+     "to": 3.9,
+     "title": "Example 2.7: find (3.24)² in the table",
+     "x": 3.24,
      "ref": "Example 2.7",
-     "id": "g8.maths.u2.s2-1-2.10"
+     "intro": "Watch how to read the table. Tap ▶ for each step.",
+     "id": "g8.maths.u2.s2-1-2.39"
     },
     {
-     "kind": "read",
-     "step": "read",
-     "title": "Row 3.2 of the table",
-     "paras": [
-      "Here is the whole row 3.2. Each column gives the third digit."
-     ],
-     "table": [
-      [
-       "Row 3.2, column",
-       "Table value"
-      ],
-      [
-       "0",
-       "10.24"
-      ],
-      [
-       "1",
-       "10.30"
-      ],
-      [
-       "2",
-       "10.37"
-      ],
-      [
-       "3",
-       "10.43"
-      ],
-      [
-       "4",
-       "10.50"
-      ],
-      [
-       "5",
-       "10.56"
-      ],
-      [
-       "6",
-       "10.63"
-      ],
-      [
-       "7",
-       "10.69"
-      ],
-      [
-       "8",
-       "10.76"
-      ],
-      [
-       "9",
-       "10.82"
-      ]
-     ],
-     "note": "Table values are rounded to 4 figures.",
-     "id": "g8.maths.u2.s2-1-2.11"
+     "kind": "sqtable",
+     "step": "explore",
+     "mode": "explore",
+     "from": 3.0,
+     "to": 3.9,
+     "title": "Your turn: tap any number",
+     "intro": "Tap a number. The table shows which row and column it comes from.",
+     "added": true,
+     "id": "g8.maths.u2.s2-1-2.40"
     },
     {
      "kind": "name",
@@ -291,7 +272,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Use row 3.2 above. (3.27)² ≈ ?",
+     "text": "Read the table of squares: (3.27)² ≈ ?",
      "opts": [
       "10.69",
       "10.50",
@@ -299,29 +280,55 @@
       "10.82"
      ],
      "ans": "10.69",
-     "why": "Row 3.2, column 7 gives 10.69. (Exactly 3.27 × 3.27 = 10.6929.)",
-     "clue": "Find the column headed 7 in row 3.2.",
+     "why": "3.27 → the first two digits are 3.2, so use row 3.2.\nThe third digit is 7, so use column 7.\nRow 3.2 and column 7 meet at 10.69.\nCheck: 3.27 × 3.27 = 10.6929 ≈ 10.69.",
+     "clue": "Open the table: row 3.2, then column 7.",
      "level": 1,
      "added": true,
+     "sqref": {
+      "from": 3.0,
+      "to": 3.9,
+      "row": 3.2
+     },
      "id": "g8.maths.u2.s2-1-2.14"
+    },
+    {
+     "kind": "sqtable",
+     "step": "practise",
+     "mode": "pick",
+     "from": 3.0,
+     "to": 3.9,
+     "title": "Find (3.29)² in the table",
+     "graded": true,
+     "level": 1,
+     "ans": 3.29,
+     "added": true,
+     "ask": "Tap the cell that gives (3.29)².",
+     "why": "3.29 → row 3.2 (first two digits).\nThird digit 9 → column 9.\nThey meet at 10.82, so (3.29)² ≈ 10.82.",
+     "clue": "First find row 3.2. Then move right to column 9.",
+     "id": "g8.maths.u2.s2-1-2.41"
     },
     {
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "(3.22)² = 10.30",
+     "text": "True or false? (3.22)² = 10.30",
      "a": false,
-     "why": "Row 3.2, column 2 gives 10.37. Exactly, 3.22 × 3.22 = 10.3684.",
-     "clue": "Look at column 2 of row 3.2.",
+     "why": "3.22 → row 3.2, column 2.\nThe table gives 10.37.\nExactly, 3.22 × 3.22 = 10.3684.\nSo 10.30 is wrong. False.",
+     "clue": "Open the table: row 3.2, column 2.",
      "level": 1,
      "ref": "Exercise 2.3 Q1 a",
+     "sqref": {
+      "from": 3.0,
+      "to": 3.9,
+      "row": 3.2
+     },
      "id": "g8.maths.u2.s2-1-2.15"
     },
     {
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "To find (5.29)², which row and column do you use?",
+     "text": "Which row and column of the table give (5.29)²?",
      "opts": [
       "Row 5.2, column 9",
       "Row 5.9, column 2",
@@ -329,7 +336,7 @@
       "Row 5.0, column 29"
      ],
      "ans": "Row 5.2, column 9",
-     "why": "The first two digits (5.2) give the row. The third digit (9) gives the column.",
+     "why": "The row is the first two digits: 5.2.\nThe column is the third digit: 9.\nSo use row 5.2, column 9.",
      "clue": "Which digits make the row?",
      "level": 1,
      "ref": "Activity 2.2 Q3 d",
@@ -340,11 +347,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "Calculator: (8.95)² = ___",
+     "ask": "Use a calculator, or multiply by hand: (8.95)² = ___",
      "a": [
       "80.1025"
      ],
-     "why": "895 × 895 = 801025. There are 2 + 2 = 4 decimal places: 80.1025.",
+     "why": "8.95 × 8.95: without the points, 895 × 895 = 801 025.\n8.95 has 2 decimal places, so the product has 2 + 2 = 4.\nSo (8.95)² = 80.1025 (exact).",
      "clue": "Multiply 8.95 × 8.95 and count decimal places.",
      "level": 2,
      "ref": "Exercise 2.3 Q4 c",
@@ -362,7 +369,7 @@
       "The table is always wrong"
      ],
      "ans": "The calculator is exact; the table is rounded; the rough value is a quick check",
-     "why": "8.95 ≈ 9 gives 81 (rough). The table gives 80.10 (4 figures). The calculator gives the exact 80.1025.",
+     "why": "Rough: 8.95 ≈ 9, and 9² = 81. Fast, but only close.\nTable: 80.10, rounded to 4 figures. Very close.\nCalculator: 80.1025, every digit. Exact.",
      "clue": "Which method uses all the digits?",
      "level": 3,
      "ref": "Exercise 2.3 Q4",
@@ -397,6 +404,7 @@
      ],
      "after": "30² = 30 × 30 = 900. Ten times the number gives a hundred times the square.",
      "added": true,
+     "best": "900",
      "id": "g8.maths.u2.s2-1-2.19"
     },
     {
@@ -405,9 +413,36 @@
      "title": "Numbers outside 1 to 10",
      "paras": [
       "The table only lists 1.0 to 9.9.",
-      "For other numbers, use powers of 10.",
+      "For other numbers, use scientific notation.",
       "(35.2)² = (3.52 × 10)² = (3.52)² × 10² = 12.39 × 100 = 1239.",
       "(0.365)² = (3.65)² × (10⁻¹)² = 13.32 × 0.01 = 0.1332."
+     ],
+     "table": [
+      [
+       "x",
+       "x²",
+       "The point moved"
+      ],
+      [
+       "3.67",
+       "13.47",
+       "—"
+      ],
+      [
+       "36.7",
+       "1347",
+       "1 place in x → 2 places in x²"
+      ],
+      [
+       "367",
+       "134 700",
+       "2 places in x → 4 places in x²"
+      ],
+      [
+       "0.367",
+       "0.1347",
+       "1 place left → 2 places left"
+      ]
      ],
      "ref": "p.50",
      "id": "g8.maths.u2.s2-1-2.20"
@@ -441,7 +476,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "If (3.67)² = 13.47, then (0.367)² = ?",
+     "text": "Moving the point: if (3.67)² = 13.47, then (0.367)² = ?",
      "opts": [
       "0.1347",
       "1.347",
@@ -449,7 +484,7 @@
       "0.01347"
      ],
      "ans": "0.1347",
-     "why": "0.367 = 3.67 × 10⁻¹. Square: 13.47 × 10⁻² = 13.47 × 0.01 = 0.1347.",
+     "why": "Step 1: write 0.367 in scientific notation: 3.67 × 10⁻¹.\nStep 2: square both parts: (3.67)² × (10⁻¹)² = 13.47 × 10⁻².\nStep 3: × 10⁻² means move the point 2 places left: 0.1347.",
      "clue": "The point moves 1 place left in x, so 2 places left in x².",
      "level": 1,
      "ref": "Exercise 2.3 Q2 c",
@@ -460,12 +495,12 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "If (3.67)² = 13.47, then (367)² ≈ ___",
+     "ask": "Moving the point: if (3.67)² = 13.47, then (367)² ≈ ___",
      "a": [
       "134700",
       "134 700"
      ],
-     "why": "367 = 3.67 × 100, so (367)² = 13.47 × 10000 = 134 700.",
+     "why": "367 = 3.67 × 10² (point moved 2 places).\nSquare: 13.47 × (10²)² = 13.47 × 10⁴.\n× 10⁴ moves the point 4 places right: 134 700.\nExactly, 367² = 134 689; 13.47 was rounded.",
      "clue": "367 = 3.67 × 10². Square the 10² too.",
      "level": 2,
      "ref": "Exercise 2.3 Q2 b",
@@ -475,7 +510,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "If (8.435)² = x, then (84.35)² = ?",
+     "text": "Moving the point with a letter: if (8.435)² = x, then (84.35)² = ?",
      "opts": [
       "100x",
       "10x",
@@ -483,7 +518,7 @@
       "1000x"
      ],
      "ans": "100x",
-     "why": "84.35 = 8.435 × 10, so (84.35)² = x × 10² = 100x.",
+     "why": "84.35 = 8.435 × 10.\nSquare: (8.435)² × 10² = x × 100.\nSo (84.35)² = 100x.",
      "clue": "Moving the point 1 place multiplies the square by 10².",
      "level": 2,
      "ref": "Exercise 2.3 Q3 a",
@@ -493,7 +528,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "If (8.435)² = x, then (0.8435)² = ?",
+     "text": "Moving the point with a letter: if (8.435)² = x, then (0.8435)² = ?",
      "opts": [
       "x/100",
       "10x",
@@ -501,7 +536,7 @@
       "100x"
      ],
      "ans": "x/100",
-     "why": "0.8435 = 8.435 × 10⁻¹, so (0.8435)² = x × 10⁻² = x/100.",
+     "why": "0.8435 = 8.435 × 10⁻¹.\nSquare: x × (10⁻¹)² = x × 10⁻² = x/100.\nThe number got smaller, so the square gets smaller too.",
      "clue": "The point moves left, so the square gets smaller.",
      "level": 2,
      "ref": "Exercise 2.3 Q3 b",
@@ -515,10 +550,9 @@
      "ask": "(7.43)² ≈ 55.20. Then (0.0743)² ≈ ___",
      "a": [
       "0.005520",
-      "0.00552",
-      "0.005520"
+      "0.00552"
      ],
-     "why": "0.0743 = 7.43 × 10⁻². Square: 55.20 × 10⁻⁴ = 0.005520.",
+     "why": "0.0743 = 7.43 × 10⁻² (the point moved 2 places left).\nSquare: 55.20 × (10⁻²)² = 55.20 × 10⁻⁴.\n× 10⁻⁴ moves the point 4 places left: 0.005520.",
      "clue": "The point moved 2 places, so it moves 4 places in the square.",
      "level": 3,
      "added": true,
@@ -535,21 +569,26 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "(3.56)² = 30.91",
+     "text": "Check with a rough estimate. True or false? (3.56)² = 30.91",
      "a": false,
-     "why": "(3.56)² = 12.6736 ≈ 12.67. Rough check: 3.56 ≈ 4 and 4² = 16, far from 30.91.",
+     "why": "Rough check: 3.56 ≈ 4 and 4² = 16. 30.91 is far too big.\nTable: row 3.5, column 6 gives 12.67.\nSo the statement is false.",
      "clue": "Do a rough check first.",
      "level": 1,
      "ref": "Q1 b",
+     "sqref": {
+      "from": 3.0,
+      "to": 3.9,
+      "row": 3.5
+     },
      "id": "g8.maths.u2.s2-1-2.28"
     },
     {
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "(9.9)² = (9.801)²",
+     "text": "True or false? (9.9)² = (9.801)²",
      "a": false,
-     "why": "9.9 and 9.801 are different numbers, so their squares are different. (9.9)² = 98.01.",
+     "why": "9.9 and 9.801 are different numbers.\nDifferent numbers have different squares: (9.9)² = 98.01, (9.801)² ≈ 96.06.\nFalse.",
      "clue": "Are the two numbers being squared the same?",
      "level": 1,
      "ref": "Q1 c",
@@ -564,7 +603,7 @@
      "a": [
       "1347"
      ],
-     "why": "36.7 = 3.67 × 10, so (36.7)² = 13.47 × 100 = 1347.",
+     "why": "36.7 = 3.67 × 10.\n(36.7)² = 13.47 × 10² = 13.47 × 100 = 1347.",
      "clue": "Multiply by 10².",
      "level": 1,
      "ref": "Q2 a",
@@ -579,7 +618,7 @@
      "a": [
       "0.1347"
      ],
-     "why": "0.367 = 3.67 × 10⁻¹, so (0.367)² = 13.47 × 0.01 = 0.1347.",
+     "why": "0.367 = 3.67 × 10⁻¹.\n(0.367)² = 13.47 × 10⁻² = 0.1347.",
      "clue": "Multiply by 10⁻².",
      "level": 1,
      "ref": "Q2 c",
@@ -590,11 +629,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Rough method: (8.95)² ≈ ___",
+     "ask": "Rough method (round first): (8.95)² ≈ ___",
      "a": [
       "81"
      ],
-     "why": "8.95 ≈ 9, and 9² = 81.",
+     "why": "8.95 → the digit 9 is 5 or more → round up to 9.\n9² = 81.",
      "clue": "Round 8.95 to a whole number.",
      "level": 1,
      "ref": "Q4 a",
@@ -605,15 +644,20 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "Table: (8.95)² ≈ ___",
+     "ask": "Table method: (8.95)² ≈ ___",
      "a": [
       "80.10",
       "80.1"
      ],
-     "why": "Row 8.9, column 5 gives 80.10.",
+     "why": "8.95 → row 8.9, column 5.\nThe table gives 80.10.",
      "clue": "Row 8.9, column 5.",
      "level": 1,
      "ref": "Q4 b",
+     "sqref": {
+      "from": 8.0,
+      "to": 8.9,
+      "row": 8.9
+     },
      "id": "g8.maths.u2.s2-1-2.33"
     }
    ]
@@ -624,7 +668,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "4.5 × 10² written as an ordinary number is",
+   "text": "Write 4.5 × 10² as an ordinary number.",
    "opts": [
     "450",
     "45",
@@ -632,7 +676,7 @@
     "0.045"
    ],
    "ans": "450",
-   "why": "4.5 × 100 = 450.",
+   "why": "10² = 100.\n4.5 × 100 = 450.",
    "clue": "",
    "level": 1,
    "id": "g8.maths.u2.s2-1-2.34"
@@ -649,7 +693,7 @@
     "Row 7.0, column 64"
    ],
    "ans": "Row 7.6, column 4",
-   "why": "First two digits give the row; the third gives the column.",
+   "why": "First two digits → row 7.6.\nThird digit → column 4.",
    "clue": "",
    "level": 1,
    "id": "g8.maths.u2.s2-1-2.35"
@@ -659,11 +703,11 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "(0.5)² = ___",
+   "ask": "Square the decimal: (0.5)² = ___",
    "a": [
     "0.25"
    ],
-   "why": "0.5 × 0.5 = 0.25.",
+   "why": "5 × 5 = 25.\n1 + 1 = 2 decimal places: 0.25.",
    "clue": "",
    "level": 1,
    "id": "g8.maths.u2.s2-1-2.36"
@@ -680,7 +724,7 @@
     "342"
    ],
    "ans": "1170",
-   "why": "34.2 = 3.42 × 10, so the square is 11.70 × 100 = 1170.",
+   "why": "34.2 = 3.42 × 10.\nSquare: 11.70 × 100 = 1170.",
    "clue": "",
    "level": 2,
    "id": "g8.maths.u2.s2-1-2.37"
@@ -697,7 +741,7 @@
     "0.0003025"
    ],
    "ans": "0.003025",
-   "why": "0.055 = 5.5 × 10⁻², so the square is 30.25 × 10⁻⁴ = 0.003025.",
+   "why": "0.055 = 5.5 × 10⁻².\nSquare: 30.25 × 10⁻⁴ = 0.003025.",
    "clue": "",
    "level": 3,
    "id": "g8.maths.u2.s2-1-2.38"
@@ -706,7 +750,7 @@
  "notes": [
   {
    "kind": "note",
-   "text": "The full table of squares is in the book (pp. 243–245). The lesson shows row 3.2 only, computed exactly and rounded to 4 figures like the book."
+   "text": "The book's full table of squares is on pp. 243–245. The app draws the rows it needs (computed exactly, rounded to 4 figures like the book)."
   },
   {
    "kind": "review",
@@ -714,7 +758,7 @@
   },
   {
    "kind": "note",
-   "text": "Activity 2.2 Q1 asks students to define scientific notation in their own words; the lesson gives one definition marked added."
+   "text": "v2 (2026-10-24): interactive table of squares, \"Open the table\" links, descriptive questions, step-by-step explanations (owner feedback)."
   }
  ],
  "review": {

@@ -66,6 +66,13 @@ for (const file of files) {
       else if (g.kind === 'coord' && g.targets.some(p => p.x < g.min || p.x > g.max || p.y < g.ymin || p.y > g.ymax)) bad('coord target off the grid');
       else if (g.kind === 'pick' && !g.a.length) bad('pick has no answer');
       else if (g.kind === 'numline' && g.targets.some(x => { const q = Q.parse(x.v); return !q || Q.val(q) < g.min || Q.val(q) > g.max; })) bad('target off the line'); } }
+    if (s.kind === 'sqtable' && s.graded && s.ans == null) errs.push(`${where}: graded sqtable needs ans (the x of the cell to tap)`);
+    if (s.kind === 'sqtable' && s.mode === 'find' && s.x == null) errs.push(`${where}: sqtable find needs x`);
+    if (s.kind === 'sqtable' && s.mode === 'reverse' && s.value == null) errs.push(`${where}: sqtable reverse needs value`);
+    if (s.kind === 'sqtable' && (s.x != null || s.ans != null) && [s.x, s.ans].filter(z => z != null).some(z => z < (s.from ?? 1) || z >= (s.to ?? (s.from ?? 1) + .9) + .1)) errs.push(`${where}: sqtable x/ans is outside the rows shown`);
+    if (s.kind === 'factortree' && !(Number.isInteger(s.n) && s.n >= 4 && s.n <= 100000)) errs.push(`${where}: factortree n must be a whole number 4–100000`);
+    if (s.kind === 'oddsquare' && !(Number.isInteger(s.n) && s.n >= 1 && s.n <= 10)) errs.push(`${where}: oddsquare n must be 1–10`);
+    if (s.kind === 'guess' && s.best != null && ![].concat(s.best).every(b => (s.opts || []).includes(b))) errs.push(`${where}: guess best is not one of the options`);
     if (s.step === 'challenge' && !s.graded) errs.push(`${where}: a challenge must be graded`);
     if (s.step === 'test' && s.clue) errs.push(`${where}: test items must not carry a clue`);
   };

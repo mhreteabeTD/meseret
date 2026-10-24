@@ -11,7 +11,7 @@
  },
  "title": "Cube of a rational number",
  "competency": "Calculate the cube of a number.",
- "minutes": 14,
+ "minutes": 15,
  "keywords": [
   {
    "en": "Cube number",
@@ -59,6 +59,7 @@
      ],
      "after": "3 × 3 = 9 in one layer, and 3 layers: 9 × 3 = 27. This is 3 cubed, 3³.",
      "added": true,
+     "best": "27",
      "id": "g8.maths.u2.s2-2-1.1"
     },
     {
@@ -92,23 +93,55 @@
       ],
       [
        "1 × 1 × 1",
-       "1"
+       "1 = 1³"
       ],
       [
        "2 × 2 × 2",
-       "8"
+       "8 = 2³"
       ],
       [
        "3 × 3 × 3",
-       "27"
+       "27 = 3³"
       ],
       [
        "4 × 4 × 4",
-       "64"
+       "64 = 4³"
       ]
      ],
      "ref": "Definition 2.4",
      "id": "g8.maths.u2.s2-2-1.3"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Square or cube?",
+     "pic": "cube",
+     "added": true,
+     "vars": [
+      {
+       "k": "a",
+       "label": "Side a",
+       "min": 1,
+       "max": 10,
+       "step": 1,
+       "v": 2
+      }
+     ],
+     "formula": "a*a*a",
+     "outs": [
+      [
+       "a² (one face)",
+       "a*a",
+       "{v}"
+      ],
+      [
+       "a³ (whole cube)",
+       "a*a*a",
+       "{v}"
+      ]
+     ],
+     "note": "Move the slider. The cube grows much faster than the square: 10² = 100 but 10³ = 1000.",
+     "id": "g8.maths.u2.s2-2-1.36"
     },
     {
      "kind": "name",
@@ -141,7 +174,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "What is 2³?",
+     "text": "Cube the number: 2³ = ?",
      "opts": [
       "6",
       "8",
@@ -149,7 +182,7 @@
       "5"
      ],
      "ans": "8",
-     "why": "2³ = 2 × 2 × 2 = 4 × 2 = 8.",
+     "why": "2³ means 2 × 2 × 2 (three 2s).\n2 × 2 = 4, then 4 × 2 = 8.\n6 is 2 × 3: that is a common slip.",
      "clue": "2³ means 2 × 2 × 2, not 2 × 3.",
      "level": 1,
      "ref": "Exercise 2.6 Q1 a",
@@ -160,11 +193,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "(−1/4)³ = ___",
+     "ask": "Cube the negative fraction: (−1/4)³ = ___",
      "a": [
       "-1/64"
      ],
-     "why": "(−1/4) × (−1/4) = 1/16. Then 1/16 × (−1/4) = −1/64.",
+     "why": "Sign: three negative factors → negative.\nTops: 1 × 1 × 1 = 1. Bottoms: 4 × 4 × 4 = 64.\nSo (−1/4)³ = −1/64.",
      "clue": "Three negative factors: the answer is negative.",
      "input": "signed",
      "level": 2,
@@ -176,12 +209,12 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "(0.5)³ = ___",
+     "ask": "Cube the decimal: (0.5)³ = ___",
      "a": [
       "0.125",
       "1/8"
      ],
-     "why": "0.5 × 0.5 = 0.25. Then 0.25 × 0.5 = 0.125.",
+     "why": "0.5 × 0.5 = 0.25.\n0.25 × 0.5 = 0.125.\nOr with fractions: (1/2)³ = 1/8 = 0.125.",
      "clue": "Multiply two at a time.",
      "level": 1,
      "ref": "Activity 2.5 Q1 d",
@@ -192,11 +225,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "A cube has sides of 4 cm. Volume = ___ cm³",
+     "ask": "Volume of a cube = side × side × side. A cube has sides of 4 cm. Volume = ___ cm³",
      "a": [
       "64"
      ],
-     "why": "4 × 4 = 16; 16 × 4 = 64 cm³.",
+     "why": "Volume = 4 × 4 × 4.\n4 × 4 = 16, then 16 × 4 = 64.\nSo the volume is 64 cm³.",
      "clue": "Volume of a cube = side × side × side.",
      "gen": {
       "t": "volume",
@@ -211,9 +244,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "(3/4)³ = 27/16",
+     "text": "True or false? (3/4)³ = 27/16",
      "a": false,
-     "why": "(3/4)³ = (3 × 3 × 3)/(4 × 4 × 4) = 27/64.",
+     "why": "(3/4)³ = (3 × 3 × 3)/(4 × 4 × 4).\nTop: 27. Bottom: 64.\nSo (3/4)³ = 27/64, not 27/16. False: the bottom was squared, not cubed.",
      "clue": "Cube the bottom too.",
      "level": 1,
      "ref": "Exercise 2.6 Q1 d",
@@ -223,9 +256,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "−20³ = −400",
+     "text": "True or false? −20³ = −400",
      "a": false,
-     "why": "−20³ = −(20 × 20 × 20) = −8000.",
+     "why": "−20³ means −(20 × 20 × 20).\n20 × 20 = 400, and 400 × 20 = 8000.\nSo −20³ = −8000. False: −400 is only −20².",
      "clue": "Multiply 20 three times, not two.",
      "level": 2,
      "ref": "Exercise 2.6 Q1 b",
@@ -236,12 +269,12 @@
      "step": "challenge",
      "graded": true,
      "num": true,
-     "ask": "(___)³ = −1/8",
+     "ask": "Missing number: (___)³ = −1/8",
      "a": [
       "-1/2",
       "-0.5"
      ],
-     "why": "(−1/2)³ = (−1 × −1 × −1)/(2 × 2 × 2) = −1/8.",
+     "why": "The answer is negative, so the number is negative (three negatives give a negative).\n1 × 1 × 1 = 1 and 2 × 2 × 2 = 8.\nSo (−1/2)³ = −1/8.",
      "clue": "Which fraction times itself three times gives −1/8? Think about the sign.",
      "input": "signed",
      "level": 3,
@@ -258,10 +291,10 @@
    ],
    "explain": {
     "en": {
-     "text": "A perfect cube is a number you get by cubing a rational number: 1, 8, 27, −64, 1/8. Adding odd numbers in groups of 1, 2, 3, … gives the cubes 1³, 2³, 3³, … To estimate a cube, round first, then cube."
+     "text": "A perfect cube is a number you get by cubing a rational number: 1, 8, 27, −64, 1/8. Odd numbers in groups of 1, 2, 3, … add up to 1³, 2³, 3³, …: group n has n odd numbers, its middle number is n², so its sum is n × n² = n³. To estimate a cube, round first, then cube."
     },
     "am": {
-     "text": "ፍጹም ኪዩብ ምክንያታዊ ቁጥርን በማኪዩብ የሚገኝ ቁጥር ነው፤ ለምሳሌ 1፣ 8፣ 27፣ −64። ኪዩብን ለመገመት መጀመሪያ አጠጋጋ።",
+     "text": "ፍጹም ኪዩብ ምክንያታዊ ቁጥርን በማኪዩብ የሚገኝ ቁጥር ነው። ቡድን n n ጎዶሎ ቁጥሮች አሉት፤ መካከለኛው n² ነው፤ ድምሩ n³ ነው።",
      "machine": true
     }
    },
@@ -277,40 +310,70 @@
       "49",
       "81"
      ],
-     "after": "64 = 4³. Each group of odd numbers adds up to a cube!",
+     "after": "64 = 4³. Each group of odd numbers adds up to a cube! Build the groups below.",
      "ref": "Group work 2.2",
+     "best": "64",
      "id": "g8.maths.u2.s2-2-1.13"
     },
     {
-     "kind": "tap",
+     "kind": "oddsquare",
      "step": "explore",
-     "title": "The odd-number cube pattern",
-     "ask": "Tap each group to see its cube.",
-     "need": 5,
-     "items": [
+     "mode": "cube",
+     "title": "Odd numbers in groups make cubes",
+     "n": 6,
+     "ref": "Group work 2.2",
+     "id": "g8.maths.u2.s2-2-1.37"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "The general pattern",
+     "paras": [
+      "Group n has n odd numbers.",
+      "The numbers are evenly spaced, so their average is the middle number.",
+      "The middle number of group n is n × n = n².",
+      "So the sum of group n is n × n² = n³."
+     ],
+     "table": [
+      [
+       "Group n",
+       "Odd numbers",
+       "Middle",
+       "Sum"
+      ],
       [
        "1",
-       "1 = 1³"
+       "1",
+       "1",
+       "1 × 1 = 1³"
       ],
       [
+       "2",
        "3 + 5",
-       "8 = 2³"
+       "4",
+       "2 × 4 = 2³"
       ],
       [
+       "3",
        "7 + 9 + 11",
-       "27 = 3³"
+       "9",
+       "3 × 9 = 3³"
       ],
       [
+       "4",
        "13 + 15 + 17 + 19",
-       "64 = 4³"
+       "16",
+       "4 × 16 = 4³"
       ],
       [
-       "21 + 23 + 25 + 27 + 29",
-       "125 = 5³"
+       "n",
+       "n numbers, starting at n² − n + 1",
+       "n²",
+       "n × n² = n³"
       ]
      ],
-     "ref": "Group work 2.2",
-     "id": "g8.maths.u2.s2-2-1.14"
+     "note": "The first number of group n is n² − n + 1. For n = 8: 64 − 8 + 1 = 57.",
+     "id": "g8.maths.u2.s2-2-1.38"
     },
     {
      "kind": "read",
@@ -321,20 +384,9 @@
       "A perfect cube is a product of three identical factors.",
       "1 = 1³, 27 = 3³, 125 = 5³, 1/8 = (1/2)³, −64 = (−4)³, 216 = 6³."
      ],
+     "note": "To estimate a cube, round first: 3.2 ≈ 3, so (3.2)³ ≈ 27 (Example 2.16).",
      "ref": "Example 2.17",
      "id": "g8.maths.u2.s2-2-1.15"
-    },
-    {
-     "kind": "read",
-     "step": "read",
-     "title": "Estimating a cube",
-     "paras": [
-      "Round the number first, then cube it.",
-      "3.2 ≈ 3, so (3.2)³ ≈ 27.",
-      "10.57 ≈ 11, so (10.57)³ ≈ 1331."
-     ],
-     "ref": "Example 2.16",
-     "id": "g8.maths.u2.s2-2-1.16"
     },
     {
      "kind": "name",
@@ -352,7 +404,7 @@
      "kind": "pick",
      "step": "check",
      "graded": true,
-     "text": "Which are perfect cubes?",
+     "text": "Perfect cubes: which can be written as a number × itself × itself?",
      "pool": [
       "8",
       "42",
@@ -367,7 +419,7 @@
       "−125",
       "27/64"
      ],
-     "why": "8 = 2³, 64 = 4³, −125 = (−5)³, 27/64 = (3/4)³. 42 and 100 are not cubes.",
+     "why": "8 = 2 × 2 × 2, 64 = 4 × 4 × 4, −125 = (−5) × (−5) × (−5), 27/64 = (3/4)³.\n42 is between 3³ = 27 and 4³ = 64.\n100 is between 4³ = 64 and 5³ = 125.\nSo 42 and 100 are not perfect cubes.",
      "clue": "Can each be written as something × itself × itself?",
      "level": 1,
      "ref": "Exercise 2.6 Q4",
@@ -377,7 +429,7 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "Is 144 a perfect cube?",
+     "text": "Is 144 a perfect cube? Compare it with the cubes near it.",
      "opts": [
       "No: 5³ = 125 < 144 < 216 = 6³",
       "Yes: 144 = 12³",
@@ -385,7 +437,7 @@
       "No: it is odd"
      ],
      "ans": "No: 5³ = 125 < 144 < 216 = 6³",
-     "why": "144 lies between 125 and 216, so no whole number cubed gives 144. (144 = 12² is a square, not a cube.)",
+     "why": "5³ = 125 and 6³ = 216.\n144 is between them, so no whole number cubed gives 144.\n144 = 12², so it is a square, not a cube. (12³ = 1728.)",
      "clue": "Find the cubes just below and above 144.",
      "level": 1,
      "ref": "Exercise 2.6 Q4 e",
@@ -396,11 +448,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "(4.98)³ ≈ ___",
+     "ask": "Estimate by rounding to a whole number: (4.98)³ ≈ ___",
      "a": [
       "125"
      ],
-     "why": "4.98 ≈ 5 because 9 ≥ 5. 5³ = 125.",
+     "why": "4.98 → the digit 9 is 5 or more → round up to 5.\n5³ = 5 × 5 × 5 = 125.\nSo (4.98)³ ≈ 125 (exactly 123.505992).",
      "clue": "Round to a whole number, then cube.",
      "level": 1,
      "ref": "Exercise 2.6 Q3 b",
@@ -412,11 +464,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "1³ + 2³ + 3³ + 4³ = ___",
+     "ask": "Add the first four cubes: 1³ + 2³ + 3³ + 4³ = ___",
      "a": [
       "100"
      ],
-     "why": "1 + 8 + 27 + 64 = 100.",
+     "why": "1³ = 1, 2³ = 8, 3³ = 27, 4³ = 64.\n1 + 8 + 27 + 64 = 100.\nNotice: 100 = 10² and 1 + 2 + 3 + 4 = 10.",
      "clue": "Work out each cube, then add.",
      "level": 2,
      "ref": "Exercise 2.6 Q5",
@@ -427,12 +479,12 @@
      "step": "challenge",
      "graded": true,
      "num": true,
-     "ask": "The next eight odd numbers after 55 add up to ___",
+     "ask": "Use the pattern: the next eight odd numbers after 55 add up to ___",
      "a": [
       "512"
      ],
-     "why": "They are 57, 59, 61, 63, 65, 67, 69, 71. 57 + 71 = 59 + 69 = 61 + 67 = 63 + 65 = 128. 4 × 128 = 512 = 8³.",
-     "clue": "Follow the pattern: the next group gives the next cube.",
+     "why": "They form group 8, so the sum is 8³.\nCheck the start: group 8 begins at 8² − 8 + 1 = 57.\nThe numbers are 57, 59, 61, 63, 65, 67, 69, 71. Their middle is 64 = 8².\nSum = 8 × 64 = 512 = 8³.",
+     "clue": "Group 8 has 8 numbers and its middle is 8².",
      "level": 3,
      "ref": "Group work 2.2",
      "added": true,
@@ -450,11 +502,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "x = −4. x³ = ___",
+     "ask": "Find x³ when x = −4: x³ = ___",
      "a": [
       "-64"
      ],
-     "why": "(−4) × (−4) = 16. 16 × (−4) = −64.",
+     "why": "(−4) × (−4) = 16.\n16 × (−4) = −64.\nThree negatives give a negative.",
      "clue": "Three negative factors.",
      "input": "signed",
      "level": 1,
@@ -473,7 +525,7 @@
       "60"
      ],
      "ans": "729",
-     "why": "729 = 9 × 9 × 9 = 9³. 121 = 11² is a square.",
+     "why": "729 = 9 × 9 × 9 = 9³.\n121 = 11² is a square, not a cube.\n2700 and 60 lie between cubes.",
      "clue": "Try 9 × 9 × 9.",
      "level": 1,
      "ref": "Q2",
@@ -488,9 +540,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "8³ = 64 × 8",
+     "text": "True or false? 8³ = 64 × 8",
      "a": true,
-     "why": "8³ = 8 × 8 × 8 = (8 × 8) × 8 = 64 × 8.",
+     "why": "8³ = 8 × 8 × 8.\nGroup the first two: (8 × 8) × 8 = 64 × 8 = 512.\nTrue.",
      "clue": "Group the first two 8s.",
      "level": 1,
      "ref": "Q1 c",
@@ -500,9 +552,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "(−3)³ = −27",
+     "text": "True or false? (−3)³ = −27",
      "a": true,
-     "why": "(−3) × (−3) = 9. 9 × (−3) = −27.",
+     "why": "(−3) × (−3) = 9.\n9 × (−3) = −27.\nTrue.",
      "clue": "Three negatives give a negative.",
      "level": 1,
      "ref": "Q1 e",
@@ -513,11 +565,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "x = 3/4. x³ = ___",
+     "ask": "Find x³ when x = 3/4: x³ = ___",
      "a": [
       "27/64"
      ],
-     "why": "(3 × 3 × 3)/(4 × 4 × 4) = 27/64.",
+     "why": "Top: 3 × 3 × 3 = 27.\nBottom: 4 × 4 × 4 = 64.\nSo x³ = 27/64.",
      "clue": "Cube the top and the bottom.",
      "level": 1,
      "ref": "Q2 d",
@@ -528,11 +580,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "x = −1/2. x³ = ___",
+     "ask": "Find x³ when x = −1/2: x³ = ___",
      "a": [
       "-1/8"
      ],
-     "why": "(−1/2) × (−1/2) = 1/4. 1/4 × (−1/2) = −1/8.",
+     "why": "(−1/2) × (−1/2) = 1/4.\n1/4 × (−1/2) = −1/8.",
      "clue": "The answer is negative.",
      "input": "signed",
      "level": 1,
@@ -544,11 +596,11 @@
      "step": "exercise",
      "graded": true,
      "num": true,
-     "ask": "x = −3.45. x³ ≈ ___",
+     "ask": "Estimate x³ by rounding: x = −3.45, so x³ ≈ ___",
      "a": [
       "-27"
      ],
-     "why": "−3.45 ≈ −3 because 4 < 5. (−3)³ = −27.",
+     "why": "−3.45 → the digit 4 is less than 5 → round to −3.\n(−3)³ = −27.",
      "clue": "Round to −3 first.",
      "input": "signed",
      "level": 2,
@@ -567,7 +619,7 @@
       "Yes: 216 = 36³"
      ],
      "ans": "Yes: 216 = 6³",
-     "why": "6 × 6 × 6 = 36 × 6 = 216.",
+     "why": "6 × 6 = 36.\n36 × 6 = 216.\nSo 216 = 6³.",
      "clue": "Try 6 × 6 × 6.",
      "level": 1,
      "ref": "Q4 f",
@@ -582,11 +634,11 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "5³ = ___",
+   "ask": "Cube the number: 5³ = ___",
    "a": [
     "125"
    ],
-   "why": "5 × 5 × 5 = 125.",
+   "why": "5 × 5 = 25.\n25 × 5 = 125.",
    "clue": "",
    "gen": {
     "t": "volume",
@@ -601,11 +653,11 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "(−2/3)³ = ___",
+   "ask": "Cube the fraction: (−2/3)³ = ___",
    "a": [
     "-8/27"
    ],
-   "why": "(−2 × −2 × −2)/(3 × 3 × 3) = −8/27.",
+   "why": "Sign: negative.\nTop 2 × 2 × 2 = 8, bottom 3 × 3 × 3 = 27.\nSo −8/27.",
    "clue": "",
    "input": "signed",
    "level": 2,
@@ -623,7 +675,7 @@
     "900"
    ],
    "ans": "1000",
-   "why": "1000 = 10³.",
+   "why": "1000 = 10 × 10 × 10 = 10³.",
    "clue": "",
    "level": 1,
    "id": "g8.maths.u2.s2-2-1.33"
@@ -633,11 +685,11 @@
    "step": "test",
    "graded": true,
    "num": true,
-   "ask": "(0.2)³ = ___",
+   "ask": "Cube the decimal: (0.2)³ = ___",
    "a": [
     "0.008"
    ],
-   "why": "0.2 × 0.2 = 0.04; 0.04 × 0.2 = 0.008.",
+   "why": "0.2 × 0.2 = 0.04.\n0.04 × 0.2 = 0.008.",
    "clue": "",
    "level": 2,
    "id": "g8.maths.u2.s2-2-1.34"
@@ -646,7 +698,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "(2.9)³ is about",
+   "text": "Estimate: (2.9)³ is about",
    "opts": [
     "27",
     "8",
@@ -654,7 +706,7 @@
     "81"
    ],
    "ans": "27",
-   "why": "2.9 ≈ 3 and 3³ = 27.",
+   "why": "2.9 ≈ 3.\n3³ = 27.",
    "clue": "",
    "level": 1,
    "id": "g8.maths.u2.s2-2-1.35"
@@ -671,7 +723,7 @@
   },
   {
    "kind": "note",
-   "text": "Engine: the \"volume\" generator's English \"why\" text uses the Amharic \"፤\" as a separator (e.g. \"4 × 4 = 16፤ 16 × 4 = 64\"). Fix in an engine session."
+   "text": "v2 (2026-10-24): odd-number cube groups with the general rule (middle = n², sum = n³), square-vs-cube slider (owner feedback)."
   }
  ],
  "review": {
@@ -704,7 +756,7 @@
       "12"
      ],
      "ans": "11",
-     "why": "The next digit is 8. 8 is 5 or more, so round up to 11.",
+     "why": "Look at the digit after the point: 8.\n8 is 5 or more, so round up.\n10.8 → 11.",
      "clue": "Is the digit after the point less than 5?"
     }
    ]

@@ -11,7 +11,7 @@
  },
  "title": "Applications of squares, square roots, cubes and cube roots",
  "competency": "Solve real-life problems using squares, square roots, cubes and cube roots.",
- "minutes": 12,
+ "minutes": 14,
  "keywords": [
   {
    "en": "Surface area",
@@ -56,23 +56,8 @@
      ],
      "after": "20 m, because 20 × 20 = 400. The side is √400.",
      "ref": "Example 2.19",
+     "best": "20 m",
      "id": "g8.maths.u2.s2-3.1"
-    },
-    {
-     "kind": "cubes",
-     "step": "explore",
-     "title": "A cube with 6 faces",
-     "cube": true,
-     "l": 2,
-     "unit": "cubes",
-     "added": true,
-     "intro": "A cube has 6 equal square faces. Its volume is side × side × side.",
-     "say": [
-      "One row: 2 cubes.",
-      "One layer: 2 × 2 = 4 cubes.",
-      "Two layers: 4 × 2 = 8 = 2³. The volume is 8 unit cubes; each face is 2 × 2 = 4 square units, and 6 faces give 24."
-     ],
-     "id": "g8.maths.u2.s2-3.2"
     },
     {
      "kind": "read",
@@ -82,30 +67,108 @@
       "Squares and square roots are used in carpentry, engineering, building design and technology.",
       "A cube root finds the side of a solid when you know its volume."
      ],
-     "table": [
-      [
-       "Shape",
-       "Formula",
-       "Back again"
-      ],
-      [
-       "Square",
-       "Area = s²",
-       "s = √Area"
-      ],
-      [
-       "Cube",
-       "Volume = s³",
-       "s = ∛Volume"
-      ],
-      [
-       "Cube",
-       "Surface area = 6 × s²",
-       ""
-      ]
-     ],
      "ref": "p.61",
      "id": "g8.maths.u2.s2-3.3"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "title": "Five formulas",
+     "ask": "Tap each card: one formula and how to go back.",
+     "need": 5,
+     "items": [
+      [
+       "Square: area",
+       "Area = side × side = s². A side of 5 m gives 25 m²."
+      ],
+      [
+       "Square: back to the side",
+       "Side = √Area. An area of 400 m² gives a side of √400 = 20 m."
+      ],
+      [
+       "Cube: volume",
+       "Volume = s × s × s = s³. A side of 8 cm gives 512 cm³."
+      ],
+      [
+       "Cube: back to the side",
+       "Side = ∛Volume. A volume of 512 cm³ gives ∛512 = 8 cm."
+      ],
+      [
+       "Cube: surface area",
+       "A cube has 6 equal square faces. Surface area = 6 × s². A side of 6 cm gives 6 × 36 = 216 cm²."
+      ]
+     ],
+     "added": true,
+     "id": "g8.maths.u2.s2-3.24"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Grow a square patio",
+     "pic": "square",
+     "added": true,
+     "vars": [
+      {
+       "k": "s",
+       "label": "Side (m)",
+       "min": 1,
+       "max": 30,
+       "step": 1,
+       "v": 20
+      }
+     ],
+     "formula": "s*s",
+     "outs": [
+      [
+       "Area = s²",
+       "s*s",
+       "{v} m²"
+      ],
+      [
+       "Concrete edge = 4s",
+       "4*s",
+       "{v} m"
+      ]
+     ],
+     "note": "At s = 20 the area is 400 m²: the patio of Example 2.19.",
+     "id": "g8.maths.u2.s2-3.25"
+    },
+    {
+     "kind": "slider",
+     "step": "explore",
+     "title": "Grow a cube",
+     "pic": "cube",
+     "added": true,
+     "vars": [
+      {
+       "k": "s",
+       "label": "Side (cm)",
+       "min": 1,
+       "max": 12,
+       "step": 1,
+       "v": 6
+      }
+     ],
+     "formula": "s*s*s",
+     "outs": [
+      [
+       "One face = s²",
+       "s*s",
+       "{v} cm²"
+      ],
+      [
+       "Surface area = 6 × s²",
+       "6*s*s",
+       "{v} cm²"
+      ],
+      [
+       "Volume = s³",
+       "s*s*s",
+       "{v} cm³"
+      ]
+     ],
+     "note": "At s = 6 the surface area and the volume are both 216 (Activity 2.7). Try s = 4: 96 and 64.",
+     "id": "g8.maths.u2.s2-3.26"
     },
     {
      "kind": "name",
@@ -141,11 +204,11 @@
      "step": "check",
      "graded": true,
      "num": true,
-     "ask": "The side of a cube is 8 cm. Volume = ___ cm³",
+     "ask": "Volume of a cube = side³. The side is 8 cm. Volume = ___ cm³",
      "a": [
       "512"
      ],
-     "why": "V = 8³ = 8 × 8 × 8 = 64 × 8 = 512 cm³.",
+     "why": "V = 8³ = 8 × 8 × 8.\n8 × 8 = 64, and 64 × 8 = 512.\nSo V = 512 cm³.",
      "clue": "Volume = side³.",
      "level": 1,
      "ref": "Example 2.19 (second)",
@@ -156,13 +219,12 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "1225 students stand in a square: rows = students in each row. Students in each row = ___",
+     "ask": "1225 students stand in a square: the number of rows equals the number in each row. Students in each row = ___",
      "a": [
       "35"
      ],
-     "why": "x × x = 1225, so x = √1225. 1225 = 5 × 5 × 7 × 7 = 35 × 35. So 35.",
+     "why": "Let x be the number in each row. There are x rows, so x × x = 1225.\nSo x = √1225.\nPrime factors: 1225 = 5 × 5 × 7 × 7 = (5 × 7) × (5 × 7) = 35 × 35.\nSo there are 35 students in each row.",
      "clue": "The number of rows times itself is 1225.",
-     "worked": "Let x be the number in each row. Then x × x = 1225. 1225 ÷ 5 = 245, 245 ÷ 5 = 49, 49 = 7 × 7. So 1225 = (5 × 7) × (5 × 7) = 35 × 35. x = 35.",
      "level": 2,
      "ref": "Exercise 2.8 Q1",
      "needs": "math.square-root",
@@ -177,7 +239,7 @@
      "a": [
       "8"
      ],
-     "why": "√64 = 8, because 8 × 8 = 64.",
+     "why": "Side = √Area = √64.\n8 × 8 = 64.\nSo each wall is 8 m long.",
      "clue": "Side = √area.",
      "level": 1,
      "ref": "Exercise 2.8 Q3",
@@ -193,7 +255,7 @@
      "a": [
       "5"
      ],
-     "why": "∛125 = 5, because 5 × 5 × 5 = 125.",
+     "why": "Edge = ∛Volume = ∛125.\n5 × 5 × 5 = 125.\nSo each edge is 5 cm.",
      "clue": "Edge = ∛volume.",
      "level": 1,
      "added": true,
@@ -204,11 +266,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "A cube has sides of 4 cm. Surface area = ___ cm²",
+     "ask": "Surface area of a cube = 6 × side². The side is 4 cm. Surface area = ___ cm²",
      "a": [
       "96"
      ],
-     "why": "One face: 4 × 4 = 16 cm². Six faces: 6 × 16 = 96 cm².",
+     "why": "One face: 4 × 4 = 16 cm².\nA cube has 6 faces: 6 × 16 = 96 cm².",
      "clue": "Surface area = 6 × side².",
      "level": 2,
      "ref": "Review Exercise Q16 a",
@@ -219,11 +281,11 @@
      "step": "practise",
      "graded": true,
      "num": true,
-     "ask": "A square has sides of 6 cm. Area = ___ cm²",
+     "ask": "Area of a square = side². The side is 6 cm. Area = ___ cm²",
      "a": [
       "36"
      ],
-     "why": "6 × 6 = 36 cm².",
+     "why": "6 × 6 = 36.\nSo the area is 36 cm².",
      "clue": "Area = side × side.",
      "gen": {
       "t": "area",
@@ -243,9 +305,8 @@
      "a": [
       "4"
      ],
-     "why": "New area: (x + 1)(x + 3) = x² + 4x + 3. So x² + 4x + 3 = x² + 19. Then 4x + 3 = 19, 4x = 16, x = 4. Check: 5 × 7 = 35 and 35 − 16 = 19.",
+     "why": "Let x be the side now. Area now: x².\nNew sides: x + 1 and x + 3. New area: (x + 1)(x + 3) = x² + 3x + x + 3 = x² + 4x + 3.\nIt is 19 more: x² + 4x + 3 = x² + 19.\nTake x² from both sides: 4x + 3 = 19, so 4x = 16 and x = 4.\nCheck: 4 × 4 = 16 and 5 × 7 = 35; 35 − 16 = 19. ✓",
      "clue": "Write the new area as (x + 1)(x + 3) and compare it with x² + 19.",
-     "worked": "Let x be the side now. Area now: x². New sides: x + 1 and x + 3. New area: (x + 1)(x + 3) = x² + 3x + x + 3 = x² + 4x + 3. It is 19 more: x² + 4x + 3 = x² + 19. Take x² from both sides: 4x + 3 = 19. 4x = 16. x = 4 m.",
      "level": 3,
      "ref": "Exercise 2.8 Q2",
      "added": true,
@@ -267,7 +328,7 @@
      "a": [
       "216"
      ],
-     "why": "One face 6 × 6 = 36 cm². Six faces: 6 × 36 = 216 cm².",
+     "why": "One face 6 × 6 = 36 cm².\nSix faces: 6 × 36 = 216 cm².",
      "clue": "A cube has 6 faces.",
      "level": 1,
      "ref": "Q1 a",
@@ -317,7 +378,7 @@
      "a": [
       "35"
      ],
-     "why": "√1225 = 35, because 35 × 35 = 1225.",
+     "why": "x × x = 1225.\n√1225 = 35, because 35 × 35 = 1225.",
      "clue": "Find √1225.",
      "level": 2,
      "ref": "Q1",
@@ -332,7 +393,7 @@
      "a": [
       "4"
      ],
-     "why": "(x + 1)(x + 3) = x² + 19 gives 4x + 3 = 19, so x = 4.",
+     "why": "(x + 1)(x + 3) = x² + 19.\nx² + 4x + 3 = x² + 19 → 4x = 16 → x = 4.",
      "clue": "Expand (x + 1)(x + 3).",
      "level": 3,
      "ref": "Q2",
@@ -347,7 +408,7 @@
      "a": [
       "8"
      ],
-     "why": "√64 = 8.",
+     "why": "Side = √64 = 8, because 8 × 8 = 64.",
      "clue": "Side = √area.",
      "level": 1,
      "ref": "Q3",
@@ -399,7 +460,7 @@
    "a": [
     "150"
    ],
-   "why": "6 × 5 × 5 = 150.",
+   "why": "One face: 25 cm².\n6 × 25 = 150 cm².",
    "clue": "",
    "level": 2,
    "id": "g8.maths.u2.s2-3.21"
@@ -437,6 +498,10 @@
   {
    "kind": "review",
    "text": "The book numbers two examples \"Example 2.19\"; the second (cube volume from side 8 cm) should be Example 2.20."
+  },
+  {
+   "kind": "note",
+   "text": "v2 (2026-10-24): the formula table became tap cards and two growing-shape sliders (owner feedback)."
   }
  ],
  "review": {
@@ -461,7 +526,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "√36 = ?",
+     "text": "Find the square root: √36 = ?",
      "opts": [
       "6",
       "18",
@@ -469,7 +534,7 @@
       "9"
      ],
      "ans": "6",
-     "why": "6 × 6 = 36.",
+     "why": "A square root asks: which number times itself gives 36?\n6 × 6 = 36.\nSo √36 = 6. (18 is 36 ÷ 2, not the root.)",
      "clue": "Which number times itself is 36?"
     }
    ]

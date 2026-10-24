@@ -447,3 +447,33 @@ body:has(#tray:not([hidden])) .fbfab { bottom: calc(150px + env(safe-area-inset-
 .cmpbox { display: inline-block; min-width: 1.6em; height: 1.4em; line-height: 1.3em; vertical-align: -0.25em; margin: 0 .15em; border: 2px dashed var(--accent-line); border-radius: 8px; background: var(--surface, #fff); text-align: center; font-weight: 800; color: var(--accent-deep); }
 .cmpbox.on { border-style: solid; border-color: var(--accent); }
 .nw { white-space: nowrap; }
+
+/* explanations: one step per line */
+.qf, #msg span, .gp, .ginfo { white-space: pre-line; }
+.qb.meh { outline: 2px dashed var(--sun); }
+/* table of squares (sqtable) */
+.sqt .sqscroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 12px; border: 1px solid var(--line); max-height: 360px; overflow-y: auto; }
+.sqtab { border-collapse: separate; border-spacing: 0; font-variant-numeric: tabular-nums; font-size: 14px; }
+.sqtab th { position: sticky; top: 0; background: var(--surface-2); padding: 6px; font-weight: 800; z-index: 1; min-width: 46px; }
+.sqtab th.sqx { left: 0; z-index: 2; background: var(--surface-2); }
+.sqtab tbody th.sqx { position: sticky; left: 0; z-index: 1; }
+.sqtab td { padding: 0; border-top: 1px solid var(--line); }
+.sqtab .sqc { min-width: 54px; min-height: 44px; border: 0; background: transparent; font: inherit; color: var(--fg); padding: 0 6px; cursor: pointer; transition: background .25s; }
+.sqtab td.hrow .sqc, .sqtab td.hcol .sqc { background: var(--sky-soft, var(--hs)); }
+.sqtab td.hit .sqc { background: var(--sun); color: var(--sun-ink, var(--fg)); font-weight: 800; border-radius: 8px; }
+.sqtab th.hhead { background: var(--sky); color: #fff; }
+.sout.multi { display: grid; gap: 6px; font-size: 18px; }
+.sout.multi div { display: flex; justify-content: space-between; gap: 10px; }
+.sout.multi span { font-weight: 700; color: var(--fg); }
+.slpic { max-height: 170px; }
+.sqlink { margin: 4px 0 6px; }
+/* factor tree and odd-number patterns */
+.fchips { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; justify-content: center; font-weight: 800; }
+.fchips:empty { display: none; }
+.fchip { display: inline-grid; place-items: center; min-width: 34px; height: 34px; border-radius: 17px; background: var(--sun-soft); padding: 0 8px; font-weight: 800; color: var(--fg); }
+.fchips i, .oddrow i { font-style: normal; opacity: .6; }
+.oddrows { display: grid; gap: 8px; }
+.oddrow { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+.oddrow .oddk { font-size: 12px; font-weight: 800; color: var(--muted); width: 18px; }
+.oddrow b { margin-left: 4px; }
+.fgrp { display: inline-flex; align-items: center; gap: 3px; border: 2px dashed; border-radius: 22px; padding: 3px; }
