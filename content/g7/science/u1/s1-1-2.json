@@ -1,594 +1,599 @@
 {
-  "id": "g7.science.u1.s1-1-2",
-  "book": {
-    "title": "General Science Grade 7 Student Textbook",
-    "grade": 7,
-    "subject": "science",
-    "unit": 1,
-    "unit_title": "Basic Concepts of Science",
-    "pages": "2–11",
-    "section": "1.1.2"
+ "id": "g7.science.u1.s1-1-2",
+ "book": {
+  "title": "General Science Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "science",
+  "unit": 1,
+  "unit_title": "Basic Concepts of Science",
+  "pages": "2–11",
+  "section": "1.1.2"
+ },
+ "title": "Branches of science",
+ "competency": "Describe the main branches of science and explain how the natural sciences overlap.",
+ "minutes": 9,
+ "keywords": [
+  {
+   "en": "Natural science",
+   "am": "የተፈጥሮ ሳይንስ",
+   "def": "The study of nature and natural laws. Its main branches are biology, chemistry and physics.",
+   "machine": true
   },
-  "title": "Branches of science",
-  "competency": "Describe the main branches of science and explain how the natural sciences overlap.",
-  "minutes": 9,
-  "keywords": [
-    {
-      "en": "Natural science",
-      "am": "የተፈጥሮ ሳይንስ",
-      "def": "The study of nature and natural laws. Its main branches are biology, chemistry and physics.",
-      "machine": true
-    },
-    {
-      "en": "Social science",
-      "am": "ማህበራዊ ሳይንስ",
-      "def": "The other major category of science. It studies people and human society.",
-      "machine": true
-    },
-    {
-      "en": "Biology",
-      "am": "ሥነ ሕይወት",
-      "def": "The branch of natural science that studies living things.",
-      "machine": true
-    },
-    {
-      "en": "Chemistry",
-      "am": "ኬሚስትሪ",
-      "def": "The branch of natural science about the properties, make-up, structure and changes of substances.",
-      "machine": true
-    },
-    {
-      "en": "Physics",
-      "am": "ፊዚክስ",
-      "def": "The branch of natural science that studies matter, energy and how they interact.",
-      "machine": true
-    },
-    {
-      "en": "Biophysics",
-      "am": "ባዮፊዚክስ",
-      "def": "Biology and physics combined: the study of physical processes in living things, from molecules to whole organisms.",
-      "machine": true
-    },
-    {
-      "en": "Biochemistry",
-      "am": "ባዮኬሚስትሪ",
-      "def": "Biology and chemistry combined: the study of chemical processes and reactions in living things.",
-      "machine": true
-    },
-    {
-      "en": "Physical chemistry",
-      "am": "ፊዚካል ኬሚስትሪ",
-      "def": "Chemistry and physics combined: the study of the properties of materials and how they interact.",
-      "machine": true
-    }
-  ],
-  "ideas": [
-    {
-      "id": "sci.branches-of-science",
-      "name": "Branches of science",
-      "explain": {
-        "en": {
-          "text": "Science has two major categories: natural science and social science. Natural science studies nature and natural laws. Its three branches are biology, which studies living things, chemistry, which studies substances, and physics, which studies matter and energy."
-        },
-        "am": {
-          "text": "ሳይንስ ሁለት ዋና ዋና ክፍሎች አሉት፤ የተፈጥሮ ሳይንስና ማህበራዊ ሳይንስ። የተፈጥሮ ሳይንስ ተፈጥሮንና የተፈጥሮ ሕጎችን ያጠናል። ሦስቱ ቅርንጫፎቹ ሥነ ሕይወት፣ ኬሚስትሪና ፊዚክስ ናቸው። ሥነ ሕይወት ሕያዋንን፣ ኬሚስትሪ ንጥረ ነገሮችን፣ ፊዚክስ ቁስና ኃይልን ያጠናሉ።",
-          "machine": true
-        }
-      },
-      "screens": [
-        {
-          "kind": "sort",
-          "step": "hook",
-          "graded": false,
-          "added": true,
-          "title": "Sort the questions",
-          "text": "Before you read, sort these questions. What is each one about?",
-          "bins": [
-            "Living things",
-            "Substances",
-            "Matter and energy"
-          ],
-          "items": [
-            [
-              "How does a maize plant grow?",
-              "Living things",
-              "A plant is alive."
-            ],
-            [
-              "Why does an iron sheet roof rust?",
-              "Substances",
-              "Rusting changes one substance into another."
-            ],
-            [
-              "Why does a ball roll faster down a steep hill?",
-              "Matter and energy",
-              "It is about motion and energy."
-            ],
-            [
-              "How does a cow digest grass?",
-              "Living things",
-              "A cow is alive."
-            ],
-            [
-              "What is table salt made of?",
-              "Substances",
-              "It is about the make-up of a substance."
-            ],
-            [
-              "How does sunlight warm a tin roof?",
-              "Matter and energy",
-              "It is about energy moving."
-            ]
-          ],
-          "id": "g7.science.u1.s1-1-2.1"
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Two major categories",
-          "paras": [
-            "Science has two major categories: natural science and social science.",
-            "Natural science studies nature and natural laws. It includes chemistry, biology and physics."
-          ],
-          "id": "g7.science.u1.s1-1-2.2"
-        },
-        {
-          "kind": "tree",
-          "step": "explore",
-          "title": "The branches of science",
-          "root": {
-            "label": "Science",
-            "info": "A systematic way of gaining knowledge about the world.",
-            "children": [
-              {
-                "label": "Natural science",
-                "info": "Studies nature and natural laws.",
-                "children": [
-                  {
-                    "label": "Biology",
-                    "pic": "biology",
-                    "info": "Studies living things."
-                  },
-                  {
-                    "label": "Chemistry",
-                    "pic": "chemistry",
-                    "info": "Studies the properties, make-up, structure and changes of substances."
-                  },
-                  {
-                    "label": "Physics",
-                    "pic": "physics",
-                    "info": "Studies matter and energy and how they interact."
-                  }
-                ]
-              },
-              {
-                "label": "Social science",
-                "pic": "social-science",
-                "info": "Studies people and human society."
-              }
-            ]
-          },
-          "id": "g7.science.u1.s1-1-2.24",
-          "ref": "Figure 1.1"
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "Name the branches",
-          "defs": [
-            [
-              "Natural science",
-              "The study of nature and natural laws."
-            ],
-            [
-              "Social science",
-              "The other major category. It studies people and human society."
-            ],
-            [
-              "Biology",
-              "The study of living things."
-            ],
-            [
-              "Chemistry",
-              "The study of the properties, make-up, structure and changes of substances."
-            ],
-            [
-              "Physics",
-              "The study of matter and energy and how they interact."
-            ]
-          ],
-          "id": "g7.science.u1.s1-1-2.4"
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Two categories",
-          "text": "Science has two major categories.",
-          "opts": [
-            "Biology and chemistry",
-            "Physics and technology",
-            "Indigenous science and ethics",
-            "Natural science and social science"
-          ],
-          "ans": "Natural science and social science",
-          "why": "Natural science and social science are the two major categories.",
-          "clue": "Look at the first split under \"Science\" in Figure 1.1.",
-          "ask": "Which pair is correct?",
-          "id": "g7.science.u1.s1-1-2.5"
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "title": "Chaltu's garden",
-          "text": "Chaltu studies how a maize plant grows in her school garden in Adama.",
-          "opts": [
-            "Chemistry",
-            "Physics",
-            "Social science",
-            "Biology"
-          ],
-          "ans": "Biology",
-          "why": "A plant is a living thing, and biology studies living things.",
-          "clue": "Which branch studies living things?",
-          "ask": "Which branch of natural science is this?",
-          "id": "g7.science.u1.s1-1-2.6"
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "title": "Matter and energy",
-          "ask": "The branch that studies matter, energy and how they interact is ___.",
-          "a": [
-            "physics",
-            "phisics",
-            "physic"
-          ],
-          "why": "That is the definition of physics.",
-          "clue": "Look at the three branches again.",
-          "id": "g7.science.u1.s1-1-2.7"
-        },
-        {
-          "kind": "tf",
-          "step": "practise",
-          "graded": true,
-          "title": "True or false?",
-          "text": "Chemistry deals with the properties, make-up, structure and changes of substances.",
-          "a": true,
-          "why": "That is how the book describes chemistry.",
-          "clue": "Which branch is about substances?",
-          "id": "g7.science.u1.s1-1-2.8"
-        }
-      ]
-    },
-    {
-      "id": "sci.overlapping-sciences",
-      "name": "How the natural sciences overlap",
-      "explain": {
-        "en": {
-          "text": "There is no clear border line between biology, chemistry and physics. Their knowledge overlaps. Biophysics joins biology and physics. Biochemistry joins biology and chemistry. Physical chemistry joins chemistry and physics."
-        },
-        "am": {
-          "text": "በሥነ ሕይወት፣ በኬሚስትሪና በፊዚክስ መካከል ግልጽ ድንበር የለም። እውቀታቸው ይደራረባል። ባዮፊዚክስ ሥነ ሕይወትንና ፊዚክስን ያጣምራል። ባዮኬሚስትሪ ሥነ ሕይወትንና ኬሚስትሪን ያጣምራል። ፊዚካል ኬሚስትሪ ኬሚስትሪንና ፊዚክስን ያጣምራል።",
-          "machine": true
-        }
-      },
-      "screens": [
-        {
-          "kind": "guess",
-          "step": "hook",
-          "added": true,
-          "title": "Two subjects at once?",
-          "text": "A doctor at Black Lion Hospital studies the tiny electric signals that make the heart beat.",
-          "ask": "Which subject does she need?",
-          "opts": [
-            "Only biology",
-            "Only physics",
-            "Both biology and physics",
-            "Neither of them"
-          ],
-          "after": "She needs both. The heart is alive, and electricity is physics. Sciences overlap.",
-          "id": "g7.science.u1.s1-1-2.9"
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "No clear border line",
-          "paras": [
-            "There is no clear border line between the natural sciences. Their knowledge overlaps.",
-            "Chemistry and physics together are studied as physical science (physical chemistry). It studies the properties of materials and how they interact."
-          ],
-          "id": "g7.science.u1.s1-1-2.10"
-        },
-        {
-          "kind": "venn",
-          "step": "explore",
-          "title": "Where two sciences overlap, a new field is born.",
-          "sets": [
-            [
-              "Biology",
-              "Studies living things."
-            ],
-            [
-              "Chemistry",
-              "Studies the properties, make-up, structure and changes of substances."
-            ],
-            [
-              "Physics",
-              "Studies matter and energy and how they interact."
-            ]
-          ],
-          "overlaps": [
-            [
-              [
-                0,
-                1
-              ],
-              "Biochemistry",
-              "Joins biology and chemistry. It explores the chemical reactions inside living things."
-            ],
-            [
-              [
-                1,
-                2
-              ],
-              "Physical chemistry",
-              "Joins chemistry and physics. It studies the properties of materials and how they interact."
-            ],
-            [
-              [
-                0,
-                2
-              ],
-              "Biophysics",
-              "Joins biology and physics. It studies life's physical processes, from molecules to cells."
-            ]
-          ],
-          "id": "g7.science.u1.s1-1-2.25",
-          "ref": "Figure 1.2"
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Fields that join two sciences",
-          "paras": [
-            "Biophysics joins biology and physics. It studies life's physical processes, from molecules to cells, tissues and organisms.",
-            "Biochemistry joins biology and chemistry. It explores the chemical reactions inside living things."
-          ],
-          "id": "g7.science.u1.s1-1-2.11"
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "Name the joined fields",
-          "defs": [
-            [
-              "Biophysics",
-              "Biology + physics: physical processes in living things."
-            ],
-            [
-              "Biochemistry",
-              "Biology + chemistry: chemical processes and reactions in living things."
-            ],
-            [
-              "Physical chemistry",
-              "Chemistry + physics: the properties of materials and how they interact."
-            ]
-          ],
-          "id": "g7.science.u1.s1-1-2.12"
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Why they overlap",
-          "text": "Why do the branches of natural science overlap?",
-          "opts": [
-            "They are all the same subject",
-            "Only physics is a real science",
-            "Scientists cannot decide which is which",
-            "There is no clear border line between them"
-          ],
-          "ans": "There is no clear border line between them",
-          "why": "Their knowledge overlaps, so new fields combine two of them.",
-          "clue": "Read the first sentence of \"No clear border line\".",
-          "id": "g7.science.u1.s1-1-2.13"
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "title": "Inside a cell",
-          "text": "Studying the physical processes inside living cells belongs to:",
-          "opts": [
-            "Biochemistry",
-            "Physical chemistry",
-            "Social science",
-            "Biophysics"
-          ],
-          "ans": "Biophysics",
-          "why": "Biophysics = biology + physics: physical processes in living things.",
-          "clue": "Which two circles does it join: living things and what else?",
-          "id": "g7.science.u1.s1-1-2.14"
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "title": "Name the partner",
-          "ask": "Biochemistry combines biology and ___.",
-          "a": [
-            "chemistry",
-            "chemestry",
-            "chemisty"
-          ],
-          "why": "Bio- means life; the rest of the word tells you the second science.",
-          "clue": "Look at the second part of the word \"biochemistry\".",
-          "id": "g7.science.u1.s1-1-2.15"
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "title": "Digesting injera",
-          "text": "Dawit studies the chemical reactions that break down injera in the stomach.",
-          "opts": [
-            "Biophysics",
-            "Physical chemistry",
-            "Biochemistry",
-            "Physics"
-          ],
-          "ans": "Biochemistry",
-          "why": "Chemical reactions inside a living body belong to biochemistry.",
-          "clue": "Is it physical or chemical? Is it in a living thing?",
-          "ask": "Which field is this?",
-          "added": true,
-          "worked": "The stomach is part of a living thing: biology. Breaking down food is a chemical reaction: chemistry. Biology + chemistry = biochemistry.",
-          "id": "g7.science.u1.s1-1-2.16"
-        }
-      ]
-    }
-  ],
-  "exercises": [
-    {
-      "book_name": "Exercise 1.1",
-      "items": [
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "title": "1. What is science?",
-          "ask": "Science is a systematic method of gaining knowledge, based on observation and ___.",
-          "a": [
-            "evidence",
-            "evidences"
-          ],
-          "why": "Science is a systematic method of gaining knowledge about the physical and natural world and human society, based on observation and evidence.",
-          "clue": "What do scientists collect to support an idea?",
-          "id": "g7.science.u1.s1-1-2.17"
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "title": "2. Three branches",
-          "ask": "The three branches of natural science are biology, chemistry and ___.",
-          "a": [
-            "physics",
-            "phisics"
-          ],
-          "why": "Biology, chemistry and physics.",
-          "clue": "Which branch studies matter and energy?",
-          "id": "g7.science.u1.s1-1-2.18"
-        },
-        {
-          "kind": "blank",
-          "step": "exercise",
-          "graded": true,
-          "title": "3. Matter and energy",
-          "ask": "The field of science that studies matter and energy is ___.",
-          "a": [
-            "physics",
-            "phisics"
-          ],
-          "why": "Physics.",
-          "clue": "It is one of the three branches of natural science.",
-          "id": "g7.science.u1.s1-1-2.19"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "title": "4. Biophysics or biochemistry?",
-          "text": "What is the difference between biophysics and biochemistry?",
-          "opts": [
-            "Biophysics studies physical processes in living things; biochemistry studies chemical processes in living things",
-            "Biophysics studies rocks; biochemistry studies stars",
-            "Biophysics studies chemical reactions; biochemistry studies energy only",
-            "There is no difference"
-          ],
-          "ans": "Biophysics studies physical processes in living things; biochemistry studies chemical processes in living things",
-          "why": "Biophysics = biology + physics. Biochemistry = biology + chemistry.",
-          "clue": "Look at the second part of each word.",
-          "id": "g7.science.u1.s1-1-2.20"
-        }
-      ]
-    }
-  ],
-  "test": [
-    {
-      "kind": "tf",
-      "step": "test",
-      "graded": true,
-      "text": "Biology, physics and chemistry do not share any common areas of study.",
-      "a": false,
-      "why": "There is no clear border line between them. Their knowledge overlaps.",
-      "clue": "",
-      "id": "g7.science.u1.s1-1-2.21"
-    },
-    {
-      "kind": "mcq",
-      "step": "test",
-      "graded": true,
-      "text": "A student studies the chemical reactions that happen inside the human body. Which field is this?",
-      "opts": [
-        "Biochemistry",
-        "Biophysics",
-        "Physical chemistry",
-        "Social science"
-      ],
-      "ans": "Biochemistry",
-      "why": "Biochemistry combines biology and chemistry: chemical processes in living things.",
-      "clue": "",
-      "id": "g7.science.u1.s1-1-2.22"
-    },
-    {
-      "kind": "mcq",
-      "step": "test",
-      "graded": true,
-      "text": "The study of living things is the concern of:",
-      "opts": [
-        "Chemistry",
-        "Physics",
-        "Social science",
-        "Biology"
-      ],
-      "ans": "Biology",
-      "why": "Biology studies living things.",
-      "clue": "",
-      "id": "g7.science.u1.s1-1-2.23"
-    }
-  ],
-  "notes": [
-    {
-      "kind": "correction",
-      "text": "Spelling slips in the printed book are corrected: \"Biopysics\" is biophysics, \"boarder\" is border."
-    },
-    {
-      "kind": "note",
-      "text": "The book gives no examples of social sciences. History, geography and economics are named in a side note only as common examples."
-    },
-    {
-      "kind": "note",
-      "text": "Exercise 1.1 is short-answer in the book. Questions 1–3 are turned into fill-in blanks and question 4 into a multiple choice, using the answers given in the source."
-    },
-    {
-      "kind": "note",
-      "text": "Figure 1.1 shows the branches as a tree. Social science studies people and human society. The book gives no examples; history, geography and economics are common ones."
-    },
-    {
-      "kind": "note",
-      "text": "Figure 1.2 is a Venn diagram of three circles: biology, physics and chemistry. Where two circles overlap, a new field is born. Spelling slips in the printed book are corrected here: \"Biopysics\" is biophysics, \"boarder\" is border."
-    },
-    {
-      "kind": "note",
-      "text": "Visual-first pass: read blocks shortened (no facts dropped) and drawings from app/pictures.js added."
-    }
-  ],
-  "review": {
-    "status": "validated"
+  {
+   "en": "Social science",
+   "am": "ማህበራዊ ሳይንስ",
+   "def": "The other major category of science. It studies people and human society.",
+   "machine": true
   },
-  "version": 1
+  {
+   "en": "Biology",
+   "am": "ሥነ ሕይወት",
+   "def": "The branch of natural science that studies living things.",
+   "machine": true
+  },
+  {
+   "en": "Chemistry",
+   "am": "ኬሚስትሪ",
+   "def": "The branch of natural science about the properties, make-up, structure and changes of substances.",
+   "machine": true
+  },
+  {
+   "en": "Physics",
+   "am": "ፊዚክስ",
+   "def": "The branch of natural science that studies matter, energy and how they interact.",
+   "machine": true
+  },
+  {
+   "en": "Biophysics",
+   "am": "ባዮፊዚክስ",
+   "def": "Biology and physics combined: the study of physical processes in living things, from molecules to whole organisms.",
+   "machine": true
+  },
+  {
+   "en": "Biochemistry",
+   "am": "ባዮኬሚስትሪ",
+   "def": "Biology and chemistry combined: the study of chemical processes and reactions in living things.",
+   "machine": true
+  },
+  {
+   "en": "Physical chemistry",
+   "am": "ፊዚካል ኬሚስትሪ",
+   "def": "Chemistry and physics combined: the study of the properties of materials and how they interact.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "sci.branches-of-science",
+   "name": "Branches of science",
+   "explain": {
+    "en": {
+     "text": "Science has two major categories: natural science and social science. Natural science studies nature and natural laws. Its three branches are biology, which studies living things, chemistry, which studies substances, and physics, which studies matter and energy."
+    },
+    "am": {
+     "text": "ሳይንስ ሁለት ዋና ዋና ክፍሎች አሉት፤ የተፈጥሮ ሳይንስና ማህበራዊ ሳይንስ። የተፈጥሮ ሳይንስ ተፈጥሮንና የተፈጥሮ ሕጎችን ያጠናል። ሦስቱ ቅርንጫፎቹ ሥነ ሕይወት፣ ኬሚስትሪና ፊዚክስ ናቸው። ሥነ ሕይወት ሕያዋንን፣ ኬሚስትሪ ንጥረ ነገሮችን፣ ፊዚክስ ቁስና ኃይልን ያጠናሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "sort",
+     "step": "hook",
+     "graded": false,
+     "added": true,
+     "title": "Sort the questions",
+     "text": "Before you read, sort these questions. What is each one about?",
+     "bins": [
+      "Living things",
+      "Substances",
+      "Matter and energy"
+     ],
+     "items": [
+      [
+       "How does a maize plant grow?",
+       "Living things",
+       "A plant is alive."
+      ],
+      [
+       "Why does an iron sheet roof rust?",
+       "Substances",
+       "Rusting changes one substance into another."
+      ],
+      [
+       "Why does a ball roll faster down a steep hill?",
+       "Matter and energy",
+       "It is about motion and energy."
+      ],
+      [
+       "How does a cow digest grass?",
+       "Living things",
+       "A cow is alive."
+      ],
+      [
+       "What is table salt made of?",
+       "Substances",
+       "It is about the make-up of a substance."
+      ],
+      [
+       "How does sunlight warm a tin roof?",
+       "Matter and energy",
+       "It is about energy moving."
+      ]
+     ],
+     "id": "g7.science.u1.s1-1-2.1"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Two major categories",
+     "paras": [
+      "Science has two major categories: natural science and social science.",
+      "Natural science studies nature and natural laws. It includes chemistry, biology and physics."
+     ],
+     "id": "g7.science.u1.s1-1-2.2"
+    },
+    {
+     "kind": "tree",
+     "step": "explore",
+     "title": "The branches of science",
+     "root": {
+      "label": "Science",
+      "info": "A systematic way of gaining knowledge about the world.",
+      "children": [
+       {
+        "label": "Natural science",
+        "info": "Studies nature and natural laws.",
+        "children": [
+         {
+          "label": "Biology",
+          "pic": "biology",
+          "info": "Studies living things."
+         },
+         {
+          "label": "Chemistry",
+          "pic": "chemistry",
+          "info": "Studies the properties, make-up, structure and changes of substances."
+         },
+         {
+          "label": "Physics",
+          "pic": "physics",
+          "info": "Studies matter and energy and how they interact."
+         }
+        ]
+       },
+       {
+        "label": "Social science",
+        "pic": "social-science",
+        "info": "Studies people and human society."
+       }
+      ]
+     },
+     "id": "g7.science.u1.s1-1-2.24",
+     "ref": "Figure 1.1"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Name the branches",
+     "defs": [
+      [
+       "Natural science",
+       "The study of nature and natural laws."
+      ],
+      [
+       "Social science",
+       "The other major category. It studies people and human society."
+      ],
+      [
+       "Biology",
+       "The study of living things."
+      ],
+      [
+       "Chemistry",
+       "The study of the properties, make-up, structure and changes of substances."
+      ],
+      [
+       "Physics",
+       "The study of matter and energy and how they interact."
+      ]
+     ],
+     "id": "g7.science.u1.s1-1-2.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Two categories",
+     "text": "Science has two major categories.",
+     "opts": [
+      "Biology and chemistry",
+      "Physics and technology",
+      "Indigenous science and ethics",
+      "Natural science and social science"
+     ],
+     "ans": "Natural science and social science",
+     "why": "Step 1: look at the first split under \"Science\" in Figure 1.1.\nStep 2: one side is natural science: nature and natural laws.\nStep 3: the other side is social science: people and society.\nSo the pair is natural science and social science.\nBiology and chemistry are both inside natural science, so they are not the two categories.",
+     "clue": "Look at the first split under \"Science\" in Figure 1.1.",
+     "ask": "Which pair names the two major categories of science?",
+     "id": "g7.science.u1.s1-1-2.5"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "Chaltu's garden",
+     "text": "Chaltu studies how a maize plant grows in her school garden in Adama.",
+     "opts": [
+      "Chemistry",
+      "Physics",
+      "Social science",
+      "Biology"
+     ],
+     "ans": "Biology",
+     "why": "Step 1: what is Chaltu studying? A maize plant.\nStep 2: a maize plant is a living thing.\nStep 3: the branch that studies living things is biology.\nSo the answer is biology.",
+     "clue": "Which branch studies living things?",
+     "ask": "Which branch of natural science is this study of a growing plant?",
+     "id": "g7.science.u1.s1-1-2.6"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "title": "Matter and energy",
+     "ask": "Name the branch: the branch of natural science that studies matter, energy and how they interact is ___.",
+     "a": [
+      "physics",
+      "phisics",
+      "physic"
+     ],
+     "why": "Natural science has three branches: biology, chemistry and physics.\nBiology studies living things.\nChemistry studies substances and their changes.\nPhysics studies matter, energy and how they interact.\nSo the answer is physics.",
+     "clue": "Look at the three branches again.",
+     "id": "g7.science.u1.s1-1-2.7"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "title": "True or false?",
+     "text": "What chemistry studies: chemistry deals with the properties, make-up, structure and changes of substances.",
+     "a": true,
+     "why": "The book describes chemistry as the study of substances.\nIt looks at their properties, make-up (composition), structure and changes.\nThe statement says the same thing.\nSo it is true. Rusting iron is a chemistry example.",
+     "clue": "Which branch is about substances?",
+     "id": "g7.science.u1.s1-1-2.8"
+    }
+   ]
+  },
+  {
+   "id": "sci.overlapping-sciences",
+   "name": "How the natural sciences overlap",
+   "explain": {
+    "en": {
+     "text": "There is no clear border line between biology, chemistry and physics. Their knowledge overlaps. Biophysics joins biology and physics. Biochemistry joins biology and chemistry. Physical chemistry joins chemistry and physics."
+    },
+    "am": {
+     "text": "በሥነ ሕይወት፣ በኬሚስትሪና በፊዚክስ መካከል ግልጽ ድንበር የለም። እውቀታቸው ይደራረባል። ባዮፊዚክስ ሥነ ሕይወትንና ፊዚክስን ያጣምራል። ባዮኬሚስትሪ ሥነ ሕይወትንና ኬሚስትሪን ያጣምራል። ፊዚካል ኬሚስትሪ ኬሚስትሪንና ፊዚክስን ያጣምራል።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "added": true,
+     "title": "Two subjects at once?",
+     "text": "A doctor at Black Lion Hospital studies the tiny electric signals that make the heart beat.",
+     "ask": "Which subject does she need?",
+     "opts": [
+      "Only biology",
+      "Only physics",
+      "Both biology and physics",
+      "Neither of them"
+     ],
+     "after": "The heart is a living organ, so she needs biology.\nThe signals are electricity, so she needs physics.\nOne question can need two sciences at once.\nThe sciences overlap. Read on.",
+     "id": "g7.science.u1.s1-1-2.9",
+     "best": "Both biology and physics"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "No clear border line",
+     "paras": [
+      "There is no clear border line between the natural sciences. Their knowledge overlaps.",
+      "Chemistry and physics together are studied as physical science (physical chemistry). It studies the properties of materials and how they interact."
+     ],
+     "id": "g7.science.u1.s1-1-2.10"
+    },
+    {
+     "kind": "venn",
+     "step": "explore",
+     "title": "Where two sciences overlap, a new field is born.",
+     "sets": [
+      [
+       "Biology",
+       "Studies living things."
+      ],
+      [
+       "Chemistry",
+       "Studies the properties, make-up, structure and changes of substances."
+      ],
+      [
+       "Physics",
+       "Studies matter and energy and how they interact."
+      ]
+     ],
+     "overlaps": [
+      [
+       [
+        0,
+        1
+       ],
+       "Biochemistry",
+       "Joins biology and chemistry. It explores the chemical reactions inside living things."
+      ],
+      [
+       [
+        1,
+        2
+       ],
+       "Physical chemistry",
+       "Joins chemistry and physics. It studies the properties of materials and how they interact."
+      ],
+      [
+       [
+        0,
+        2
+       ],
+       "Biophysics",
+       "Joins biology and physics. It studies life's physical processes, from molecules to cells."
+      ]
+     ],
+     "id": "g7.science.u1.s1-1-2.25",
+     "ref": "Figure 1.2"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Fields that join two sciences",
+     "paras": [
+      "Biophysics joins biology and physics. It studies life's physical processes, from molecules to cells, tissues and organisms.",
+      "Biochemistry joins biology and chemistry. It explores the chemical reactions inside living things."
+     ],
+     "id": "g7.science.u1.s1-1-2.11"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Name the joined fields",
+     "defs": [
+      [
+       "Biophysics",
+       "Biology + physics: physical processes in living things."
+      ],
+      [
+       "Biochemistry",
+       "Biology + chemistry: chemical processes and reactions in living things."
+      ],
+      [
+       "Physical chemistry",
+       "Chemistry + physics: the properties of materials and how they interact."
+      ]
+     ],
+     "id": "g7.science.u1.s1-1-2.12"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Why they overlap",
+     "text": "Why do the branches of natural science overlap?",
+     "opts": [
+      "They are all the same subject",
+      "Only physics is a real science",
+      "Scientists cannot decide which is which",
+      "There is no clear border line between them"
+     ],
+     "ans": "There is no clear border line between them",
+     "why": "Step 1: the book says there is no clear border line between the natural sciences.\nStep 2: their knowledge overlaps.\nStep 3: that is why joined fields like biochemistry exist.\nSo the answer is: there is no clear border line between them.\nThey are not the same subject: each has its own focus.",
+     "clue": "Read the first sentence of \"No clear border line\".",
+     "id": "g7.science.u1.s1-1-2.13"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "Inside a cell",
+     "text": "Joined fields: studying the physical processes inside living cells belongs to which field?",
+     "opts": [
+      "Biochemistry",
+      "Physical chemistry",
+      "Social science",
+      "Biophysics"
+     ],
+     "ans": "Biophysics",
+     "why": "Step 1: inside living cells → living things → biology.\nStep 2: physical processes → physics.\nStep 3: biology + physics = biophysics.\nSo the answer is biophysics.\nBiochemistry is tempting, but it is about chemical reactions, not physical processes.",
+     "clue": "Which two circles does it join: living things and what else?",
+     "id": "g7.science.u1.s1-1-2.14"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "title": "Name the partner",
+     "ask": "Joined fields: biochemistry combines biology and ___.",
+     "a": [
+      "chemistry",
+      "chemestry",
+      "chemisty"
+     ],
+     "why": "Split the word: bio + chemistry.\nBio- means life, so the first part is biology.\nThe second part is chemistry.\nSo biochemistry = biology + chemistry.",
+     "clue": "Look at the second part of the word \"biochemistry\".",
+     "id": "g7.science.u1.s1-1-2.15"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "Digesting injera",
+     "text": "Dawit studies the chemical reactions that break down injera in the stomach.",
+     "opts": [
+      "Biophysics",
+      "Physical chemistry",
+      "Biochemistry",
+      "Physics"
+     ],
+     "ans": "Biochemistry",
+     "why": "Step 1: the stomach is part of a living body → biology.\nStep 2: breaking down food is a chemical reaction → chemistry.\nStep 3: biology + chemistry = biochemistry.\nSo the answer is biochemistry.\nBiophysics would be about physical processes, not chemical reactions.",
+     "clue": "Is it physical or chemical? Is it in a living thing?",
+     "ask": "Which joined field studies how injera is broken down in the stomach?",
+     "added": true,
+     "worked": "Step 1: the stomach is part of a living thing: biology.\nStep 2: breaking down food is a chemical reaction: chemistry.\nStep 3: biology + chemistry = biochemistry.\nSo the field is biochemistry.",
+     "id": "g7.science.u1.s1-1-2.16"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 1.1",
+   "items": [
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "title": "1. What is science?",
+     "ask": "Definition of science: science is a systematic method of gaining knowledge, based on observation and ___.",
+     "a": [
+      "evidence",
+      "evidences"
+     ],
+     "why": "Recall the definition from 1.1.1.\nScience is a systematic method of gaining knowledge.\nIt studies the physical and natural world and human society.\nIt is based on observation and evidence.\nSo the missing word is evidence.",
+     "clue": "What do scientists collect to support an idea?",
+     "id": "g7.science.u1.s1-1-2.17"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "title": "2. Three branches",
+     "ask": "Branches of natural science: the three branches are biology, chemistry and ___.",
+     "a": [
+      "physics",
+      "phisics"
+     ],
+     "why": "Natural science has three branches.\nBiology studies living things. Chemistry studies substances.\nThe third studies matter and energy: physics.\nSo the answer is physics.",
+     "clue": "Which branch studies matter and energy?",
+     "id": "g7.science.u1.s1-1-2.18"
+    },
+    {
+     "kind": "blank",
+     "step": "exercise",
+     "graded": true,
+     "title": "3. Matter and energy",
+     "ask": "Name the field: the field of science that studies matter and energy is ___.",
+     "a": [
+      "physics",
+      "phisics"
+     ],
+     "why": "Think of the three branches of natural science.\nBiology → living things. Chemistry → substances.\nPhysics → matter, energy and how they interact.\nSo the answer is physics.",
+     "clue": "It is one of the three branches of natural science.",
+     "id": "g7.science.u1.s1-1-2.19"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "title": "4. Biophysics or biochemistry?",
+     "text": "What is the difference between biophysics and biochemistry?",
+     "opts": [
+      "Biophysics studies physical processes in living things; biochemistry studies chemical processes in living things",
+      "Biophysics studies rocks; biochemistry studies stars",
+      "Biophysics studies chemical reactions; biochemistry studies energy only",
+      "There is no difference"
+     ],
+     "ans": "Biophysics studies physical processes in living things; biochemistry studies chemical processes in living things",
+     "why": "Step 1: biophysics = bio + physics: physical processes in living things.\nStep 2: biochemistry = bio + chemistry: chemical processes in living things.\nStep 3: both study living things. The difference is physical or chemical.\nSo the first option is correct.\n\"There is no difference\" is wrong: the second half of each word is different.",
+     "clue": "Look at the second part of each word.",
+     "id": "g7.science.u1.s1-1-2.20"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Overlap of sciences: biology, physics and chemistry do not share any common areas of study.",
+   "a": false,
+   "why": "The book says there is no clear border line between the natural sciences.\nTheir knowledge overlaps.\nExamples: biochemistry, biophysics and physical chemistry join two sciences.\nSo they do share areas, and the statement is false.",
+   "clue": "",
+   "id": "g7.science.u1.s1-1-2.21"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "A student studies the chemical reactions that happen inside the human body. Which field is this?",
+   "opts": [
+    "Biochemistry",
+    "Biophysics",
+    "Physical chemistry",
+    "Social science"
+   ],
+   "ans": "Biochemistry",
+   "why": "Step 1: inside the human body → living thing → biology.\nStep 2: chemical reactions → chemistry.\nStep 3: biology + chemistry = biochemistry.\nSo the answer is biochemistry.",
+   "clue": "",
+   "id": "g7.science.u1.s1-1-2.22"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Which branch of science is concerned with the study of living things?",
+   "opts": [
+    "Chemistry",
+    "Physics",
+    "Social science",
+    "Biology"
+   ],
+   "ans": "Biology",
+   "why": "Biology studies living things.\nChemistry studies substances; physics studies matter and energy.\nBio- means life.\nSo the answer is biology.",
+   "clue": "",
+   "id": "g7.science.u1.s1-1-2.23"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "correction",
+   "text": "Spelling slips in the printed book are corrected: \"Biopysics\" is biophysics, \"boarder\" is border."
+  },
+  {
+   "kind": "note",
+   "text": "The book gives no examples of social sciences. History, geography and economics are named in a side note only as common examples."
+  },
+  {
+   "kind": "note",
+   "text": "Exercise 1.1 is short-answer in the book. Questions 1–3 are turned into fill-in blanks and question 4 into a multiple choice, using the answers given in the source."
+  },
+  {
+   "kind": "note",
+   "text": "Figure 1.1 shows the branches as a tree. Social science studies people and human society. The book gives no examples; history, geography and economics are common ones."
+  },
+  {
+   "kind": "note",
+   "text": "Figure 1.2 is a Venn diagram of three circles: biology, physics and chemistry. Where two circles overlap, a new field is born. Spelling slips in the printed book are corrected here: \"Biopysics\" is biophysics, \"boarder\" is border."
+  },
+  {
+   "kind": "note",
+   "text": "Visual-first pass: read blocks shortened (no facts dropped) and drawings from app/pictures.js added."
+  },
+  {
+   "kind": "note",
+   "text": "Rule 14/15 upgrade (2026-10-24): step-by-step why on every graded item, best on guess hooks, and added interactive blocks (marked added)."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
 }

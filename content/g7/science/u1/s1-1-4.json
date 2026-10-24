@@ -1,610 +1,630 @@
 {
-  "id": "g7.science.u1.s1-1-4",
-  "book": {
-    "title": "General Science Grade 7 Student Textbook",
-    "grade": 7,
-    "subject": "science",
-    "unit": 1,
-    "unit_title": "Basic Concepts of Science",
-    "pages": "2–11",
-    "section": "1.1.4"
+ "id": "g7.science.u1.s1-1-4",
+ "book": {
+  "title": "General Science Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "science",
+  "unit": 1,
+  "unit_title": "Basic Concepts of Science",
+  "pages": "2–11",
+  "section": "1.1.4"
+ },
+ "title": "Scientists and ethical discipline",
+ "competency": "Appreciate the work of world and Ethiopian scientists and explain why ethics matter in science.",
+ "minutes": 11,
+ "keywords": [
+  {
+   "en": "Scientist",
+   "am": "ሳይንቲስት",
+   "def": "Someone who gathers evidence in an orderly way, makes hypotheses, tests them, and shares what is learned.",
+   "machine": true
   },
-  "title": "Scientists and ethical discipline",
-  "competency": "Appreciate the work of world and Ethiopian scientists and explain why ethics matter in science.",
-  "minutes": 11,
-  "keywords": [
-    {
-      "en": "Scientist",
-      "am": "ሳይንቲስት",
-      "def": "Someone who gathers evidence in an orderly way, makes hypotheses, tests them, and shares what is learned.",
-      "machine": true
-    },
-    {
-      "en": "Ethics",
-      "am": "ሥነ ምግባር",
-      "def": "The principles of right and wrong that guide how scientists behave, such as honesty and responsibility.",
-      "machine": true
-    },
-    {
-      "en": "Molluscicide",
-      "am": "ቀንድ አውጣ ገዳይ",
-      "def": "A substance that kills snails. Endod berries are a strong, cheap and safe molluscicide.",
-      "machine": true
-    }
-  ],
-  "ideas": [
-    {
-      "id": "sci.famous-scientists",
-      "name": "Famous scientists",
-      "explain": {
-        "en": {
-          "text": "A scientist gathers evidence in an orderly way, tests ideas and shares knowledge. World scientists include Newton, Curie, Faraday and Einstein. Ethiopian scientists include Dr. Aklilu Lemma, who found that endod kills the snails that spread bilharzia, and Dr. Gebisa Ejeta, known for sorghum."
-        },
-        "am": {
-          "text": "ሳይንቲስት ማስረጃን በሥርዓት ይሰበስባል፣ ሐሳቦችን ይፈትሻል፣ እውቀትንም ያካፍላል። የዓለም ሳይንቲስቶች ኒውተን፣ ኩሪ፣ ፋራዴይና አንስታይን ናቸው። ከኢትዮጵያ ሳይንቲስቶች ዶ/ር አክሊሉ ለማ እንዶድ ቢልሃርዝያን የሚያስተላልፉ ቀንድ አውጣዎችን እንደሚገድል አግኝተዋል፤ ዶ/ር ገቢሳ እጀታ በማሽላ ሥራቸው ይታወቃሉ።",
-          "machine": true
-        }
-      },
-      "screens": [
-        {
-          "kind": "guess",
-          "step": "hook",
-          "added": true,
-          "title": "A plant against disease",
-          "text": "Bilharzia is a disease spread by a tiny worm. The worm lives part of its life in water snails.",
-          "ask": "How could a plant help stop bilharzia?",
-          "opts": [
-            "By killing the snails",
-            "By making people taller",
-            "By cleaning the air",
-            "By making rain fall"
-          ],
-          "after": "An Ethiopian scientist found such a plant: endod. Read on.",
-          "id": "g7.science.u1.s1-1-4.1"
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "What is a scientist?",
-          "paras": [
-            "A scientist systematically gathers and uses research and evidence.",
-            "A scientist makes hypotheses and tests them. The aim is to gain and share understanding and knowledge."
-          ],
-          "id": "g7.science.u1.s1-1-4.2"
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "Name it",
-          "defs": [
-            [
-              "Scientist",
-              "Someone who gathers evidence in an orderly way, makes hypotheses, tests them, and shares what is learned."
-            ],
-            [
-              "Molluscicide",
-              "A substance that kills snails."
-            ]
-          ],
-          "id": "g7.science.u1.s1-1-4.3"
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "What scientists do",
-          "text": "Which of these is the work of a scientist?",
-          "opts": [
-            "Guessing and never checking",
-            "Gathering evidence, testing hypotheses and sharing knowledge",
-            "Keeping results secret forever",
-            "Only reading old books"
-          ],
-          "ans": "Gathering evidence, testing hypotheses and sharing knowledge",
-          "why": "A scientist gathers evidence, tests hypotheses and shares understanding.",
-          "clue": "Read \"What is a scientist?\" again.",
-          "id": "g7.science.u1.s1-1-4.4"
-        },
-        {
-          "kind": "people",
-          "title": "World scientists",
-          "people": [
-            {
-              "name": "Marie Curie",
-              "years": "1867–1934",
-              "from": "Poland / France",
-              "did": "Discovered the elements polonium and radium. Won Nobel Prizes in 1903 and 1911.",
-              "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Marie_Curie_c1920.jpg?width=240"
-            },
-            {
-              "name": "Isaac Newton",
-              "years": "1643–1727",
-              "from": "England",
-              "did": "Discovered the laws of motion and the law of gravity.",
-              "img": "https://commons.wikimedia.org/wiki/Special:FilePath/GodfreyKneller-IsaacNewton-1689.jpg?width=240"
-            },
-            {
-              "name": "Michael Faraday",
-              "years": "1791–1867",
-              "from": "England",
-              "did": "Made electricity from magnetism. Built the first dynamo.",
-              "img": "https://commons.wikimedia.org/wiki/Special:FilePath/M_Faraday_Th_Phillips_oil_1842.jpg?width=240"
-            },
-            {
-              "name": "Albert Einstein",
-              "years": "1879–1955",
-              "from": "Germany / USA",
-              "did": "Developed the theory of special relativity.",
-              "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Albert_Einstein_Head.jpg?width=240"
-            }
-          ],
-          "id": "g7.science.u1.s1-1-4.5",
-          "step": "read"
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "title": "Motion and gravity",
-          "text": "Which scientist discovered the laws of motion and the law of gravity?",
-          "opts": [
-            "Albert Einstein",
-            "Isaac Newton",
-            "Michael Faraday",
-            "Marie Curie"
-          ],
-          "ans": "Isaac Newton",
-          "why": "Newton (1643–1727) discovered the laws of motion and gravity.",
-          "clue": "Find Isaac Newton in \"World scientists\".",
-          "id": "g7.science.u1.s1-1-4.6"
-        },
-        {
-          "kind": "people",
-          "title": "Ethiopian scientists",
-          "people": [
-            {
-              "name": "Dr. Aklilu Lemma",
-              "years": "1935–1997",
-              "from": "Ethiopia",
-              "did": "Found a natural treatment for schistosomiasis (bilharzia, snail fever) in 1964.",
-              "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Portrait-aklilu-lemma-11.jpg?width=240"
-            },
-            {
-              "name": "Prof. Yalemtsehay Mekonnen",
-              "years": "born 30 May 1955",
-              "from": "Asela, Ethiopia",
-              "did": "Studies human physiology, pesticides and health, and plants as medicine. First female professor of Addis Ababa University.",
-              "img": "https://portal.aasciences.app/storage/fellowsmembers/05122022072621Yalemtsehay%20Mekonnen_Photo_0.jpg"
-            },
-            {
-              "name": "Dr. Tewolde Berhan Gebre Egziabher",
-              "from": "Ethiopia",
-              "did": "Worked to protect biodiversity and communities' rights to their genetic resources.",
-              "img": "https://grain.org/system/articles/logos/000/006/967/larger/Tewolde_Berhan_Gebre_Egziabher.jpg"
-            },
-            {
-              "name": "Dr. Gebisa Ejeta",
-              "years": "born 1950",
-              "from": "Ethiopia / Purdue University, USA",
-              "did": "Plant breeder and geneticist. Won the 2009 World Food Prize for hybrid sorghum for Africa.",
-              "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Gebisa_Ejeta_%2826420838105%29.jpg?width=240"
-            }
-          ],
-          "id": "g7.science.u1.s1-1-4.7",
-          "step": "read"
-        },
-        {
-          "kind": "read",
-          "title": "How endod helps",
-          "paras": [
-            "Endod berries are used for soap and shampoo in many parts of Africa.",
-            "They are a strong, cheap and safe molluscicide (snail killer). This stops the parasitic worm spreading."
-          ],
-          "step": "read",
-          "id": "g7.science.u1.s1-1-4.27"
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "title": "How endod helps",
-          "text": "Dr. Aklilu Lemma's endod discovery helps prevent bilharzia.",
-          "opts": [
-            "It makes people stronger",
-            "It cleans the air",
-            "It makes rain fall",
-            "Endod berries kill the snails that spread the disease"
-          ],
-          "ans": "Endod berries kill the snails that spread the disease",
-          "why": "The berries are a molluscicide: they kill snails, so the parasitic worm cannot spread.",
-          "clue": "What does a molluscicide kill? (Bilharzia is also called snail fever.)",
-          "ask": "How?",
-          "id": "g7.science.u1.s1-1-4.8"
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "title": "Protecting biodiversity",
-          "text": "Which Ethiopian scientist worked to protect biodiversity and communities' rights to their genetic resources?",
-          "opts": [
-            "Dr. Gebisa Ejeta",
-            "Dr. Aklilu Lemma",
-            "Prof. Yalemtsehay Mekonnen",
-            "Dr. Tewolde Berhan Gebre Egziabher"
-          ],
-          "ans": "Dr. Tewolde Berhan Gebre Egziabher",
-          "why": "That is the work of Dr. Tewolde Berhan Gebre Egziabher.",
-          "clue": "Compare the Ethiopian scientists in the reading.",
-          "id": "g7.science.u1.s1-1-4.9"
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "title": "A prize for food",
-          "ask": "Dr. Gebisa Ejeta won the World Food Prize in 2009 for his work on ___.",
-          "a": [
-            "sorghum",
-            "mashila",
-            "sorgum",
-            "sorghum (mashila)"
-          ],
-          "why": "He is a plant breeder known for sorghum.",
-          "clue": "It is a grain crop. In Amharic it is called mashila.",
-          "worked": "The reading says he won the World Food Prize in 2009 for his contributions to sorghum. He helped develop hybrid sorghum for Africa. So the answer is sorghum.",
-          "id": "g7.science.u1.s1-1-4.10"
-        }
-      ]
-    },
-    {
-      "id": "sci.ethics-in-science",
-      "name": "Ethical principles in science",
-      "explain": {
-        "en": {
-          "text": "Ethics are the principles of right and wrong that guide scientists. They keep science honest, careful and fair, so results can be trusted. Scientific codes address honesty, responsibility, objectivity, openness, competence, legality, non-discrimination and carefulness."
-        },
-        "am": {
-          "text": "ሥነ ምግባር ሳይንቲስቶችን የሚመሩ የትክክልና የስሕተት መርሆዎች ናቸው። ሳይንስን ታማኝ፣ ጥንቁቅና ፍትሐዊ ያደርጋሉ፤ ውጤቶችም እንዲታመኑ ያደርጋሉ። ሳይንሳዊ ደንቦች ታማኝነትን፣ ኃላፊነትን፣ ገለልተኝነትን፣ ግልጽነትን፣ ብቃትን፣ ሕጋዊነትን፣ አለማዳላትንና ጥንቃቄን ይመለከታሉ።",
-          "machine": true
-        }
-      },
-      "screens": [
-        {
-          "kind": "guess",
-          "step": "hook",
-          "added": true,
-          "title": "A different result",
-          "text": "Your group in the school lab got a result that is different from the book.",
-          "ask": "What should you write in your report?",
-          "opts": [
-            "What you really measured",
-            "The book's answer",
-            "Nothing at all",
-            "Your friend's result"
-          ],
-          "after": "Honest scientists report what they really found. Read on.",
-          "id": "g7.science.u1.s1-1-4.11"
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "Ethical principles in science",
-          "paras": [
-            "Ethics are an essential part of science. Like science, ethics must be consistent and justified.",
-            "We must judge what is right or wrong, good or bad. Scientific codes address these principles: honesty, responsibility, objectivity, openness, competence, legality, non-discrimination, carefulness."
-          ],
-          "id": "g7.science.u1.s1-1-4.12"
-        },
-        {
-          "kind": "tap",
-          "step": "explore",
-          "graded": false,
-          "added": true,
-          "title": "The eight ethical principles",
-          "ask": "Tap each principle to see what it means at school.",
-          "need": 4,
-          "items": [
-            [
-              "Honesty",
-              "Tell the truth about your methods and results. At school: Write the readings you really measured."
-            ],
-            [
-              "Responsibility",
-              "Take care for your work and how it affects people and the environment. At school: Clean up and dispose of waste properly."
-            ],
-            [
-              "Objectivity",
-              "Judge by the evidence, not by what you wish were true. At school: Report a result even if it shows your idea was wrong."
-            ],
-            [
-              "Openness",
-              "Share your methods and results and listen to others. At school: Let classmates check your experiment."
-            ],
-            [
-              "Competence",
-              "Know how to do the work well and keep learning. At school: Learn how to use an apparatus before you use it."
-            ],
-            [
-              "Legality",
-              "Follow the rules and laws that apply to your work. At school: Follow the lab rules."
-            ],
-            [
-              "Non-discrimination",
-              "Treat everyone fairly. At school: Every member of the group gets a turn."
-            ],
-            [
-              "Carefulness",
-              "Work carefully and check your work to avoid mistakes. At school: Measure twice and record neatly."
-            ]
-          ],
-          "id": "g7.science.u1.s1-1-4.13"
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "Name it",
-          "defs": [
-            [
-              "Ethics",
-              "The principles of right and wrong that guide how scientists behave, such as honesty and responsibility."
-            ]
-          ],
-          "id": "g7.science.u1.s1-1-4.14"
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Sharing methods",
-          "text": "A scientist shares her methods so that others can repeat her experiment.",
-          "opts": [
-            "Competence",
-            "Openness",
-            "Legality",
-            "Carefulness"
-          ],
-          "ans": "Openness",
-          "why": "Openness means sharing methods and results and listening to others.",
-          "clue": "Find the principle about sharing in the table.",
-          "ask": "Which principle is this?",
-          "id": "g7.science.u1.s1-1-4.15"
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "title": "Double-checking",
-          "text": "A student double-checks every reading before writing it down.",
-          "opts": [
-            "Legality",
-            "Openness",
-            "Carefulness",
-            "Non-discrimination"
-          ],
-          "ans": "Carefulness",
-          "why": "Carefulness means working with care and checking to avoid mistakes.",
-          "clue": "Which principle is about avoiding mistakes?",
-          "ask": "Which principle is this?",
-          "id": "g7.science.u1.s1-1-4.16"
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "title": "Changing the results",
-          "text": "Selam's measurements do not match the book. She changes her numbers so they match.",
-          "opts": [
-            "Honesty",
-            "Legality",
-            "Competence",
-            "Non-discrimination"
-          ],
-          "ans": "Honesty",
-          "why": "Honesty means reporting what really happened, even if it differs from the book.",
-          "clue": "Which principle is about telling the truth?",
-          "ask": "Which ethical principle is she breaking?",
-          "added": true,
-          "worked": "Selam wrote numbers she did not really measure. Honesty means telling the truth about your results. So she breaks the principle of honesty.",
-          "id": "g7.science.u1.s1-1-4.17"
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "title": "Evidence first",
-          "ask": "Judging by the evidence, not by what you wish were true, is called ___.",
-          "a": [
-            "objectivity",
-            "objectivety",
-            "being objective"
-          ],
-          "why": "Objectivity means judging by the evidence.",
-          "clue": "Look at the third row of the table.",
-          "added": true,
-          "id": "g7.science.u1.s1-1-4.18"
-        }
-      ]
-    }
-  ],
-  "exercises": [
-    {
-      "book_name": "Exercise 1.2",
-      "items": [
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "title": "1.",
-          "text": "The natural science disciplines are:",
-          "opts": [
-            "All of the above",
-            "interacting",
-            "interrelated",
-            "overlapping"
-          ],
-          "ans": "All of the above",
-          "why": "They interact, are interrelated and overlap.",
-          "clue": "Is only one of these words true?",
-          "id": "g7.science.u1.s1-1-4.19"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "title": "2.",
-          "text": "The branches of natural science that study the composition of compounds and the processes in organisms are:",
-          "opts": [
-            "Biology and Geology",
-            "Chemistry and Biology",
-            "Physics and Geology",
-            "Biology and Physics"
-          ],
-          "ans": "Chemistry and Biology",
-          "why": "Chemistry studies composition; biology studies living organisms.",
-          "clue": "Which branch studies substances? Which studies living things?",
-          "id": "g7.science.u1.s1-1-4.20"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "title": "3.",
-          "text": "Which is true about science?",
-          "opts": [
-            "All are correct",
-            "It is the study of the physical and natural world",
-            "It comes from the Latin word \"scientia\", meaning knowledge",
-            "It is a system of gaining knowledge using the scientific method"
-          ],
-          "ans": "All are correct",
-          "why": "All three statements are true.",
-          "clue": "Check each statement against section 1.1.1.",
-          "id": "g7.science.u1.s1-1-4.21"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "title": "4.",
-          "text": "Which is true about indigenous knowledge?",
-          "opts": [
-            "It is based on the scientific method",
-            "It is knowledge derived from western countries",
-            "It has a universal view and is commonly recognised as western science",
-            "It incorporates local people's knowledge"
-          ],
-          "ans": "It incorporates local people's knowledge",
-          "why": "Indigenous science brings in local people's knowledge.",
-          "clue": "Who builds indigenous knowledge?",
-          "id": "g7.science.u1.s1-1-4.22"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "title": "5.",
-          "text": "Which world-famous scientist discovered the law of motion and gravity?",
-          "opts": [
-            "Marie Curie",
-            "Albert Einstein",
-            "Isaac Newton",
-            "Michael Faraday"
-          ],
-          "ans": "Isaac Newton",
-          "why": "Isaac Newton.",
-          "clue": "Look back at \"World scientists\" in this section.",
-          "id": "g7.science.u1.s1-1-4.23"
-        }
-      ]
-    }
-  ],
-  "test": [
-    {
-      "kind": "mcq",
-      "step": "test",
-      "graded": true,
-      "text": "Who discovered a natural treatment for bilharzia (schistosomiasis) in 1964?",
-      "opts": [
-        "Dr. Aklilu Lemma",
-        "Dr. Gebisa Ejeta",
-        "Marie Curie",
-        "Isaac Newton"
-      ],
-      "ans": "Dr. Aklilu Lemma",
-      "why": "He found that endod berries kill the snails that spread the disease.",
-      "clue": "",
-      "id": "g7.science.u1.s1-1-4.24"
-    },
-    {
-      "kind": "blank",
-      "step": "test",
-      "graded": true,
-      "ask": "Michael Faraday discovered how to make electricity from ___.",
-      "a": [
-        "magnetism",
-        "magnets",
-        "a magnet"
-      ],
-      "why": "Faraday made electricity from magnetism and built the first dynamo.",
-      "clue": "",
-      "id": "g7.science.u1.s1-1-4.25"
-    },
-    {
-      "kind": "tf",
-      "step": "test",
-      "graded": true,
-      "text": "Ethics help keep scientific work honest, careful and fair, so results can be trusted.",
-      "a": true,
-      "why": "Ethics keep science honest, careful and fair.",
-      "clue": "",
-      "id": "g7.science.u1.s1-1-4.26"
-    }
-  ],
-  "notes": [
-    {
-      "kind": "correction",
-      "text": "Marie Curie won two Nobel Prizes: Physics in 1903 (shared) and Chemistry in 1911. The 1911 prize was for polonium and radium."
-    },
-    {
-      "kind": "review",
-      "text": "Details about Prof. Yalemtsehay Mekonnen (born in Asela on 30 May 1955; first female professor of Addis Ababa University) are kept as printed in the book and need teacher review."
-    },
-    {
-      "kind": "missing",
-      "text": "The unit summary names Engineer Kitew Ejigu as a famous Ethiopian scientist, but the supplied pages give no details about him."
-    },
-    {
-      "kind": "note",
-      "text": "The book only lists the names of the ethical principles. The meanings and school examples are added (marked \"added\")."
-    },
-    {
-      "kind": "note",
-      "text": "Details about Prof. Yalemtsehay Mekonnen (birth date and \"first female professor\") are as printed in the book and need teacher review. The unit summary also names Engineer Kitew Ejigu, but the pages give no details about him."
-    },
-    {
-      "kind": "note",
-      "text": "The book only lists the names of the principles. The meanings and school examples are added to help."
-    },
-    {
-      "kind": "note",
-      "text": "Visual-first pass: read blocks shortened (no facts dropped) and drawings from app/pictures.js added. Portraits are Wikimedia Commons files (public domain or freely licensed). No verified Commons portrait was found for Dr. Aklilu Lemma, Prof. Yalemtsehay Mekonnen or Dr. Tewolde Berhan Gebre Egziabher; the app shows initials."
-    },
-    {
-      "kind": "review",
-      "text": "Photo of Dr. Aklilu Lemma from Wikimedia Commons, File:Portrait-aklilu-lemma-11.jpg. Check identity and permission."
-    },
-    {
-      "kind": "review",
-      "text": "Photo of Prof. Yalemtsehay Mekonnen from African Academy of Sciences fellow page (aasciences.africa/fellows/Yalemtsehay-Mekonnen). Check identity and permission."
-    },
-    {
-      "kind": "review",
-      "text": "Photo of Dr. Tewolde Berhan Gebre Egziabher from GRAIN article \"Rest well, Tewolde\" (photo credit: Right Livelihood). Check identity and permission."
-    }
-  ],
-  "review": {
-    "status": "validated"
+  {
+   "en": "Ethics",
+   "am": "ሥነ ምግባር",
+   "def": "The principles of right and wrong that guide how scientists behave, such as honesty and responsibility.",
+   "machine": true
   },
-  "version": 1
+  {
+   "en": "Molluscicide",
+   "am": "ቀንድ አውጣ ገዳይ",
+   "def": "A substance that kills snails. Endod berries are a strong, cheap and safe molluscicide.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "sci.famous-scientists",
+   "name": "Famous scientists",
+   "explain": {
+    "en": {
+     "text": "A scientist gathers evidence in an orderly way, tests ideas and shares knowledge. World scientists include Newton, Curie, Faraday and Einstein. Ethiopian scientists include Dr. Aklilu Lemma, who found that endod kills the snails that spread bilharzia, and Dr. Gebisa Ejeta, known for sorghum."
+    },
+    "am": {
+     "text": "ሳይንቲስት ማስረጃን በሥርዓት ይሰበስባል፣ ሐሳቦችን ይፈትሻል፣ እውቀትንም ያካፍላል። የዓለም ሳይንቲስቶች ኒውተን፣ ኩሪ፣ ፋራዴይና አንስታይን ናቸው። ከኢትዮጵያ ሳይንቲስቶች ዶ/ር አክሊሉ ለማ እንዶድ ቢልሃርዝያን የሚያስተላልፉ ቀንድ አውጣዎችን እንደሚገድል አግኝተዋል፤ ዶ/ር ገቢሳ እጀታ በማሽላ ሥራቸው ይታወቃሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "added": true,
+     "title": "A plant against disease",
+     "text": "Bilharzia is a disease spread by a tiny worm. The worm lives part of its life in water snails.",
+     "ask": "How could a plant help stop bilharzia?",
+     "opts": [
+      "By killing the snails",
+      "By making people taller",
+      "By cleaning the air",
+      "By making rain fall"
+     ],
+     "after": "The worm needs water snails for part of its life.\nIf the snails die, the worm cannot grow and spread.\nSo a plant that kills snails can stop bilharzia.\nAn Ethiopian scientist found such a plant: endod. Read on.",
+     "id": "g7.science.u1.s1-1-4.1",
+     "best": "By killing the snails"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "What is a scientist?",
+     "paras": [
+      "A scientist systematically gathers and uses research and evidence.",
+      "A scientist makes hypotheses and tests them. The aim is to gain and share understanding and knowledge."
+     ],
+     "id": "g7.science.u1.s1-1-4.2"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Name it",
+     "defs": [
+      [
+       "Scientist",
+       "Someone who gathers evidence in an orderly way, makes hypotheses, tests them, and shares what is learned."
+      ],
+      [
+       "Molluscicide",
+       "A substance that kills snails."
+      ]
+     ],
+     "id": "g7.science.u1.s1-1-4.3"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "What scientists do",
+     "text": "What scientists do: which of these is the work of a scientist?",
+     "opts": [
+      "Guessing and never checking",
+      "Gathering evidence, testing hypotheses and sharing knowledge",
+      "Keeping results secret forever",
+      "Only reading old books"
+     ],
+     "ans": "Gathering evidence, testing hypotheses and sharing knowledge",
+     "why": "Step 1: a scientist gathers research and evidence in an orderly way.\nStep 2: a scientist makes hypotheses and tests them.\nStep 3: the aim is to gain and share knowledge.\nSo the answer is gathering evidence, testing hypotheses and sharing knowledge.\n\"Keeping results secret\" is wrong: scientists share what they learn.",
+     "clue": "Read \"What is a scientist?\" again.",
+     "id": "g7.science.u1.s1-1-4.4"
+    },
+    {
+     "kind": "people",
+     "title": "World scientists",
+     "people": [
+      {
+       "name": "Marie Curie",
+       "years": "1867–1934",
+       "from": "Poland / France",
+       "did": "Discovered the elements polonium and radium. Won Nobel Prizes in 1903 and 1911.",
+       "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Marie_Curie_c1920.jpg?width=240"
+      },
+      {
+       "name": "Isaac Newton",
+       "years": "1643–1727",
+       "from": "England",
+       "did": "Discovered the laws of motion and the law of gravity.",
+       "img": "https://commons.wikimedia.org/wiki/Special:FilePath/GodfreyKneller-IsaacNewton-1689.jpg?width=240"
+      },
+      {
+       "name": "Michael Faraday",
+       "years": "1791–1867",
+       "from": "England",
+       "did": "Made electricity from magnetism. Built the first dynamo.",
+       "img": "https://commons.wikimedia.org/wiki/Special:FilePath/M_Faraday_Th_Phillips_oil_1842.jpg?width=240"
+      },
+      {
+       "name": "Albert Einstein",
+       "years": "1879–1955",
+       "from": "Germany / USA",
+       "did": "Developed the theory of special relativity.",
+       "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Albert_Einstein_Head.jpg?width=240"
+      }
+     ],
+     "id": "g7.science.u1.s1-1-4.5",
+     "step": "read"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "Motion and gravity",
+     "text": "World scientists: which scientist discovered the laws of motion and the law of gravity?",
+     "opts": [
+      "Albert Einstein",
+      "Isaac Newton",
+      "Michael Faraday",
+      "Marie Curie"
+     ],
+     "ans": "Isaac Newton",
+     "why": "Look at \"World scientists\".\nIsaac Newton (1643–1727) of England discovered the laws of motion and gravity.\nEinstein developed special relativity. Faraday made electricity from magnetism. Curie discovered polonium and radium.\nSo the answer is Isaac Newton.",
+     "clue": "Find Isaac Newton in \"World scientists\".",
+     "id": "g7.science.u1.s1-1-4.6"
+    },
+    {
+     "kind": "people",
+     "title": "Ethiopian scientists",
+     "people": [
+      {
+       "name": "Dr. Aklilu Lemma",
+       "years": "1935–1997",
+       "from": "Ethiopia",
+       "did": "Found a natural treatment for schistosomiasis (bilharzia, snail fever) in 1964.",
+       "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Portrait-aklilu-lemma-11.jpg?width=240"
+      },
+      {
+       "name": "Prof. Yalemtsehay Mekonnen",
+       "years": "born 30 May 1955",
+       "from": "Asela, Ethiopia",
+       "did": "Studies human physiology, pesticides and health, and plants as medicine. First female professor of Addis Ababa University.",
+       "img": "https://portal.aasciences.app/storage/fellowsmembers/05122022072621Yalemtsehay%20Mekonnen_Photo_0.jpg"
+      },
+      {
+       "name": "Dr. Tewolde Berhan Gebre Egziabher",
+       "from": "Ethiopia",
+       "did": "Worked to protect biodiversity and communities' rights to their genetic resources.",
+       "img": "https://grain.org/system/articles/logos/000/006/967/larger/Tewolde_Berhan_Gebre_Egziabher.jpg"
+      },
+      {
+       "name": "Dr. Gebisa Ejeta",
+       "years": "born 1950",
+       "from": "Ethiopia / Purdue University, USA",
+       "did": "Plant breeder and geneticist. Won the 2009 World Food Prize for hybrid sorghum for Africa.",
+       "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Gebisa_Ejeta_%2826420838105%29.jpg?width=240"
+      }
+     ],
+     "id": "g7.science.u1.s1-1-4.7",
+     "step": "read"
+    },
+    {
+     "kind": "read",
+     "title": "How endod helps",
+     "paras": [
+      "Endod berries are used for soap and shampoo in many parts of Africa.",
+      "They are a strong, cheap and safe molluscicide (snail killer). This stops the parasitic worm spreading."
+     ],
+     "step": "read",
+     "id": "g7.science.u1.s1-1-4.27"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "How endod stops bilharzia",
+     "steps": [
+      "The bilharzia worm lives part of its life in water snails.",
+      "From the snails, the worm gets into people who touch the water.",
+      "Dr. Aklilu Lemma found that endod berries kill these snails.",
+      "No snails means the worm cannot complete its life.",
+      "So the disease stops spreading. Endod is strong, cheap and safe."
+     ],
+     "id": "g7.science.u1.s1-1-4.28",
+     "added": true
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "How endod helps",
+     "text": "Dr. Aklilu Lemma's endod discovery helps prevent bilharzia.",
+     "opts": [
+      "It makes people stronger",
+      "It cleans the air",
+      "It makes rain fall",
+      "Endod berries kill the snails that spread the disease"
+     ],
+     "ans": "Endod berries kill the snails that spread the disease",
+     "why": "Step 1: the bilharzia worm lives part of its life in water snails.\nStep 2: endod berries are a molluscicide: they kill snails.\nStep 3: with no snails, the worm cannot spread.\nSo endod berries kill the snails that spread the disease.",
+     "clue": "What does a molluscicide kill? (Bilharzia is also called snail fever.)",
+     "ask": "How does the endod discovery help prevent bilharzia?",
+     "id": "g7.science.u1.s1-1-4.8"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "Protecting biodiversity",
+     "text": "Ethiopian scientists: who worked to protect biodiversity and communities' rights to their genetic resources?",
+     "opts": [
+      "Dr. Gebisa Ejeta",
+      "Dr. Aklilu Lemma",
+      "Prof. Yalemtsehay Mekonnen",
+      "Dr. Tewolde Berhan Gebre Egziabher"
+     ],
+     "ans": "Dr. Tewolde Berhan Gebre Egziabher",
+     "why": "Compare the Ethiopian scientists.\nDr. Aklilu Lemma → endod against bilharzia.\nDr. Gebisa Ejeta → sorghum, World Food Prize.\nProf. Yalemtsehay Mekonnen → physiology and plants as medicine.\nDr. Tewolde Berhan Gebre Egziabher → biodiversity and communities' rights.\nSo the answer is Dr. Tewolde Berhan Gebre Egziabher.",
+     "clue": "Compare the Ethiopian scientists in the reading.",
+     "id": "g7.science.u1.s1-1-4.9"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "title": "A prize for food",
+     "ask": "Ethiopian scientists: Dr. Gebisa Ejeta won the World Food Prize in 2009 for his work on ___.",
+     "a": [
+      "sorghum",
+      "mashila",
+      "sorgum",
+      "sorghum (mashila)"
+     ],
+     "why": "Dr. Gebisa Ejeta is a plant breeder and geneticist.\nHe won the 2009 World Food Prize.\nIt was for hybrid sorghum for Africa.\nSo the answer is sorghum (mashila).",
+     "clue": "It is a grain crop. In Amharic it is called mashila.",
+     "worked": "Step 1: the reading says Dr. Gebisa Ejeta is a plant breeder.\nStep 2: he won the World Food Prize in 2009.\nStep 3: the prize was for hybrid sorghum for Africa.\nSo the answer is sorghum (mashila in Amharic).",
+     "id": "g7.science.u1.s1-1-4.10"
+    }
+   ]
+  },
+  {
+   "id": "sci.ethics-in-science",
+   "name": "Ethical principles in science",
+   "explain": {
+    "en": {
+     "text": "Ethics are the principles of right and wrong that guide scientists. They keep science honest, careful and fair, so results can be trusted. Scientific codes address honesty, responsibility, objectivity, openness, competence, legality, non-discrimination and carefulness."
+    },
+    "am": {
+     "text": "ሥነ ምግባር ሳይንቲስቶችን የሚመሩ የትክክልና የስሕተት መርሆዎች ናቸው። ሳይንስን ታማኝ፣ ጥንቁቅና ፍትሐዊ ያደርጋሉ፤ ውጤቶችም እንዲታመኑ ያደርጋሉ። ሳይንሳዊ ደንቦች ታማኝነትን፣ ኃላፊነትን፣ ገለልተኝነትን፣ ግልጽነትን፣ ብቃትን፣ ሕጋዊነትን፣ አለማዳላትንና ጥንቃቄን ይመለከታሉ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "added": true,
+     "title": "A different result",
+     "text": "Your group in the school lab got a result that is different from the book.",
+     "ask": "What should you write in your report?",
+     "opts": [
+      "What you really measured",
+      "The book's answer",
+      "Nothing at all",
+      "Your friend's result"
+     ],
+     "after": "Honest scientists write what they really measured.\nA different result can teach something: maybe a mistake, maybe something new.\nCopying the book's answer hides the truth.\nRead on about ethics in science.",
+     "id": "g7.science.u1.s1-1-4.11",
+     "best": "What you really measured"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "Ethical principles in science",
+     "paras": [
+      "Ethics are an essential part of science. Like science, ethics must be consistent and justified.",
+      "We must judge what is right or wrong, good or bad. Scientific codes address these principles: honesty, responsibility, objectivity, openness, competence, legality, non-discrimination, carefulness."
+     ],
+     "id": "g7.science.u1.s1-1-4.12"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "graded": false,
+     "added": true,
+     "title": "The eight ethical principles",
+     "ask": "Tap each principle to see what it means at school.",
+     "need": 4,
+     "items": [
+      [
+       "Honesty",
+       "Tell the truth about your methods and results. At school: Write the readings you really measured."
+      ],
+      [
+       "Responsibility",
+       "Take care for your work and how it affects people and the environment. At school: Clean up and dispose of waste properly."
+      ],
+      [
+       "Objectivity",
+       "Judge by the evidence, not by what you wish were true. At school: Report a result even if it shows your idea was wrong."
+      ],
+      [
+       "Openness",
+       "Share your methods and results and listen to others. At school: Let classmates check your experiment."
+      ],
+      [
+       "Competence",
+       "Know how to do the work well and keep learning. At school: Learn how to use an apparatus before you use it."
+      ],
+      [
+       "Legality",
+       "Follow the rules and laws that apply to your work. At school: Follow the lab rules."
+      ],
+      [
+       "Non-discrimination",
+       "Treat everyone fairly. At school: Every member of the group gets a turn."
+      ],
+      [
+       "Carefulness",
+       "Work carefully and check your work to avoid mistakes. At school: Measure twice and record neatly."
+      ]
+     ],
+     "id": "g7.science.u1.s1-1-4.13"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Name it",
+     "defs": [
+      [
+       "Ethics",
+       "The principles of right and wrong that guide how scientists behave, such as honesty and responsibility."
+      ]
+     ],
+     "id": "g7.science.u1.s1-1-4.14"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Sharing methods",
+     "text": "A scientist shares her methods so that others can repeat her experiment.",
+     "opts": [
+      "Competence",
+      "Openness",
+      "Legality",
+      "Carefulness"
+     ],
+     "ans": "Openness",
+     "why": "Step 1: what does she do? She shares her methods.\nStep 2: openness means sharing methods and results and listening to others.\nStep 3: then others can repeat and check her experiment.\nSo the answer is openness.\nCarefulness is about checking your own work, not sharing it.",
+     "clue": "Find the principle about sharing in the table.",
+     "ask": "Ethical principles: which principle is shown by sharing methods so others can repeat the work?",
+     "id": "g7.science.u1.s1-1-4.15"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "Double-checking",
+     "text": "A student double-checks every reading before writing it down.",
+     "opts": [
+      "Legality",
+      "Openness",
+      "Carefulness",
+      "Non-discrimination"
+     ],
+     "ans": "Carefulness",
+     "why": "Step 1: the student checks each reading twice.\nStep 2: that avoids mistakes.\nStep 3: carefulness means working carefully and checking to avoid mistakes.\nSo the answer is carefulness.",
+     "clue": "Which principle is about avoiding mistakes?",
+     "ask": "Ethical principles: which principle is shown by double-checking every reading?",
+     "id": "g7.science.u1.s1-1-4.16"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "Changing the results",
+     "text": "Selam's measurements do not match the book. She changes her numbers so they match.",
+     "opts": [
+      "Honesty",
+      "Legality",
+      "Competence",
+      "Non-discrimination"
+     ],
+     "ans": "Honesty",
+     "why": "Step 1: Selam's real numbers differ from the book.\nStep 2: she writes numbers she did not measure.\nStep 3: honesty means telling the truth about methods and results.\nSo she breaks honesty.\nThe right thing: report the real numbers and discuss why they differ.",
+     "clue": "Which principle is about telling the truth?",
+     "ask": "Which ethical principle is she breaking?",
+     "added": true,
+     "worked": "Step 1: Selam wrote numbers she did not really measure.\nStep 2: honesty means telling the truth about your results.\nStep 3: a different result is allowed; a false result is not.\nSo she breaks the principle of honesty.",
+     "id": "g7.science.u1.s1-1-4.17"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "title": "Evidence first",
+     "ask": "Ethical principles: judging by the evidence, not by what you wish were true, is called ___.",
+     "a": [
+      "objectivity",
+      "objectivety",
+      "being objective"
+     ],
+     "why": "Think of the eight principles.\nOne is about evidence, not wishes.\nIt means you report a result even if it shows your idea was wrong.\nThat principle is objectivity.",
+     "clue": "Look at the third row of the table.",
+     "added": true,
+     "id": "g7.science.u1.s1-1-4.18"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 1.2",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "title": "1.",
+     "text": "The natural science disciplines are:",
+     "opts": [
+      "All of the above",
+      "interacting",
+      "interrelated",
+      "overlapping"
+     ],
+     "ans": "All of the above",
+     "why": "Interacting: the sciences work together.\nInterrelated: their ideas are linked.\nOverlapping: there is no clear border line between them.\nAll three words are true.\nSo the answer is \"All of the above\".",
+     "clue": "Is only one of these words true?",
+     "id": "g7.science.u1.s1-1-4.19"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "title": "2.",
+     "text": "The branches of natural science that study the composition of compounds and the processes in organisms are:",
+     "opts": [
+      "Biology and Geology",
+      "Chemistry and Biology",
+      "Physics and Geology",
+      "Biology and Physics"
+     ],
+     "ans": "Chemistry and Biology",
+     "why": "Step 1: composition of compounds is about substances → chemistry.\nStep 2: processes in organisms are about living things → biology.\nSo the answer is chemistry and biology.\nGeology studies the earth, so options with geology are wrong.",
+     "clue": "Which branch studies substances? Which studies living things?",
+     "id": "g7.science.u1.s1-1-4.20"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "title": "3.",
+     "text": "Which is true about science?",
+     "opts": [
+      "All are correct",
+      "It is the study of the physical and natural world",
+      "It comes from the Latin word \"scientia\", meaning knowledge",
+      "It is a system of gaining knowledge using the scientific method"
+     ],
+     "ans": "All are correct",
+     "why": "Check each statement against 1.1.1.\n\"Study of the physical and natural world\": true.\n\"From the Latin scientia, meaning knowledge\": true.\n\"A system of gaining knowledge using the scientific method\": true.\nAll three are true, so the answer is \"All are correct\".",
+     "clue": "Check each statement against section 1.1.1.",
+     "id": "g7.science.u1.s1-1-4.21"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "title": "4.",
+     "text": "Which is true about indigenous knowledge?",
+     "opts": [
+      "It is based on the scientific method",
+      "It is knowledge derived from western countries",
+      "It has a universal view and is commonly recognised as western science",
+      "It incorporates local people's knowledge"
+     ],
+     "ans": "It incorporates local people's knowledge",
+     "why": "Step 1: indigenous knowledge is built by local people from long experience.\nStep 2: so it incorporates local people's knowledge.\nStep 3: the scientific method and \"western science\" describe conventional science.\nSo the answer is: it incorporates local people's knowledge.",
+     "clue": "Who builds indigenous knowledge?",
+     "id": "g7.science.u1.s1-1-4.22"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "title": "5.",
+     "text": "Which world-famous scientist discovered the law of motion and gravity?",
+     "opts": [
+      "Marie Curie",
+      "Albert Einstein",
+      "Isaac Newton",
+      "Michael Faraday"
+     ],
+     "ans": "Isaac Newton",
+     "why": "Isaac Newton (1643–1727, England) discovered the laws of motion and the law of gravity.\nEinstein: special relativity. Faraday: electricity from magnetism. Curie: polonium and radium.\nSo the answer is Isaac Newton.",
+     "clue": "Look back at \"World scientists\" in this section.",
+     "id": "g7.science.u1.s1-1-4.23"
+    }
+   ]
+  }
+ ],
+ "test": [
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Who discovered a natural treatment for bilharzia (schistosomiasis) in 1964?",
+   "opts": [
+    "Dr. Aklilu Lemma",
+    "Dr. Gebisa Ejeta",
+    "Marie Curie",
+    "Isaac Newton"
+   ],
+   "ans": "Dr. Aklilu Lemma",
+   "why": "Dr. Aklilu Lemma found a natural treatment for bilharzia in 1964.\nHe found that endod berries kill the snails that spread the disease.\nDr. Gebisa Ejeta worked on sorghum, not bilharzia.\nSo the answer is Dr. Aklilu Lemma.",
+   "clue": "",
+   "id": "g7.science.u1.s1-1-4.24"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "World scientists: Michael Faraday discovered how to make electricity from ___.",
+   "a": [
+    "magnetism",
+    "magnets",
+    "a magnet"
+   ],
+   "why": "Look at Michael Faraday in \"World scientists\".\nHe made electricity from magnetism.\nHe built the first dynamo, a machine that does this.\nSo the answer is magnetism.",
+   "clue": "",
+   "id": "g7.science.u1.s1-1-4.25"
+  },
+  {
+   "kind": "tf",
+   "step": "test",
+   "graded": true,
+   "text": "Why ethics matter: ethics help keep scientific work honest, careful and fair, so results can be trusted.",
+   "a": true,
+   "why": "Ethics are principles of right and wrong in science.\nThey include honesty, carefulness and non-discrimination (fairness).\nWhen work is honest and careful, others can trust the results.\nSo the statement is true.",
+   "clue": "",
+   "id": "g7.science.u1.s1-1-4.26"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "correction",
+   "text": "Marie Curie won two Nobel Prizes: Physics in 1903 (shared) and Chemistry in 1911. The 1911 prize was for polonium and radium."
+  },
+  {
+   "kind": "review",
+   "text": "Details about Prof. Yalemtsehay Mekonnen (born in Asela on 30 May 1955; first female professor of Addis Ababa University) are kept as printed in the book and need teacher review."
+  },
+  {
+   "kind": "missing",
+   "text": "The unit summary names Engineer Kitew Ejigu as a famous Ethiopian scientist, but the supplied pages give no details about him."
+  },
+  {
+   "kind": "note",
+   "text": "The book only lists the names of the ethical principles. The meanings and school examples are added (marked \"added\")."
+  },
+  {
+   "kind": "note",
+   "text": "Details about Prof. Yalemtsehay Mekonnen (birth date and \"first female professor\") are as printed in the book and need teacher review. The unit summary also names Engineer Kitew Ejigu, but the pages give no details about him."
+  },
+  {
+   "kind": "note",
+   "text": "The book only lists the names of the principles. The meanings and school examples are added to help."
+  },
+  {
+   "kind": "note",
+   "text": "Visual-first pass: read blocks shortened (no facts dropped) and drawings from app/pictures.js added. Portraits are Wikimedia Commons files (public domain or freely licensed). No verified Commons portrait was found for Dr. Aklilu Lemma, Prof. Yalemtsehay Mekonnen or Dr. Tewolde Berhan Gebre Egziabher; the app shows initials."
+  },
+  {
+   "kind": "review",
+   "text": "Photo of Dr. Aklilu Lemma from Wikimedia Commons, File:Portrait-aklilu-lemma-11.jpg. Check identity and permission."
+  },
+  {
+   "kind": "review",
+   "text": "Photo of Prof. Yalemtsehay Mekonnen from African Academy of Sciences fellow page (aasciences.africa/fellows/Yalemtsehay-Mekonnen). Check identity and permission."
+  },
+  {
+   "kind": "review",
+   "text": "Photo of Dr. Tewolde Berhan Gebre Egziabher from GRAIN article \"Rest well, Tewolde\" (photo credit: Right Livelihood). Check identity and permission."
+  },
+  {
+   "kind": "note",
+   "text": "Rule 14/15 upgrade (2026-10-24): step-by-step why on every graded item, best on guess hooks, and added interactive blocks (marked added)."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
 }

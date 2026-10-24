@@ -1,676 +1,737 @@
 {
-  "id": "g7.science.u1.s1-2-4",
-  "book": {
-    "title": "General Science Grade 7 Student Textbook",
-    "grade": 7,
-    "subject": "science",
-    "unit": 1,
-    "unit_title": "Basic Concepts of Science",
-    "section": "1.2.4",
-    "pages": "12–16"
+ "id": "g7.science.u1.s1-2-4",
+ "book": {
+  "title": "General Science Grade 7 Student Textbook",
+  "grade": 7,
+  "subject": "science",
+  "unit": 1,
+  "unit_title": "Basic Concepts of Science",
+  "section": "1.2.4",
+  "pages": "12–16"
+ },
+ "title": "Writing a laboratory report",
+ "competency": "Write a clear laboratory report with its parts in the right order.",
+ "minutes": 9,
+ "keywords": [
+  {
+   "en": "Laboratory",
+   "am": "ቤተ ሙከራ",
+   "def": "A place where science experiments are done. It builds observation skills, skill with apparatus and independent thinking.",
+   "machine": true
   },
-  "title": "Writing a laboratory report",
-  "competency": "Write a clear laboratory report with its parts in the right order.",
-  "minutes": 9,
-  "keywords": [
-    {
-      "en": "Laboratory",
-      "am": "ቤተ ሙከራ",
-      "def": "A place where science experiments are done. It builds observation skills, skill with apparatus and independent thinking.",
-      "machine": true
-    },
-    {
-      "en": "Laboratory report",
-      "am": "የቤተ ሙከራ ሪፖርት",
-      "def": "A written account of the results of an experiment, written precisely and clearly.",
-      "machine": true
-    },
-    {
-      "en": "Objective",
-      "am": "ዓላማ",
-      "def": "What you want to find out or show in an experiment.",
-      "machine": true
-    },
-    {
-      "en": "Procedure",
-      "am": "የአሠራር ቅደም ተከተል",
-      "def": "The steps you followed, in order.",
-      "machine": true
-    },
-    {
-      "en": "Observation",
-      "am": "ምልከታ",
-      "def": "What you saw and measured while you worked.",
-      "machine": true
-    },
-    {
-      "en": "Conclusion",
-      "am": "መደምደሚያ",
-      "def": "A short answer to your objective.",
-      "machine": true
-    }
-  ],
-  "ideas": [
-    {
-      "id": "sci.lab-report",
-      "name": "What a laboratory report is",
-      "explain": {
-        "en": {
-          "text": "The laboratory is where science experiments are done. It builds your observation, your skill with apparatus and your independent thinking. A laboratory report is a written account of the results of an experiment. Write it precisely and clearly, with good grammar and punctuation."
-        },
-        "am": {
-          "text": "ቤተ ሙከራ የሳይንስ ሙከራዎች የሚደረጉበት ቦታ ነው። የቤተ ሙከራ ሪፖርት የሙከራ ውጤቶች የጽሑፍ መግለጫ ነው። በትክክል፣ በግልጽ እና በጥሩ ሰዋስው መጻፍ አለበት።",
-          "machine": true
-        }
-      },
-      "screens": [
-        {
-          "kind": "guess",
-          "step": "hook",
-          "added": true,
-          "title": "A friend was absent",
-          "text": "Your class in Bahir Dar tested which cloth dries fastest. Your friend Liya was absent that day.",
-          "ask": "What is the best way for Liya to learn what you did and found?",
-          "opts": [
-            "Read a clear written report of the experiment",
-            "Guess the answer",
-            "Look at the empty beakers",
-            "Wait for next year"
-          ],
-          "after": "Scientists write reports for this reason. Read on.",
-          "id": "g7.science.u1.s1-2-4.1"
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "1.2.4 Writing a laboratory report",
-          "paras": [
-            "The laboratory is the place where science experiments are done.",
-            "It builds your power of observation and skill with apparatus. It also builds independent thinking."
-          ],
-          "id": "g7.science.u1.s1-2-4.2"
-        },
-        {
-          "kind": "picture",
-          "pic": "lab-report",
-          "caption": "A lab report tells what you did and found.",
-          "step": "read",
-          "id": "g7.science.u1.s1-2-4.34"
-        },
-        {
-          "kind": "read",
-          "step": "read",
-          "title": "What a report must be",
-          "paras": [
-            "A laboratory report is a written account of the results of an experiment.",
-            "It should be written precisely and clearly, with good grammar and punctuation."
-          ],
-          "id": "g7.science.u1.s1-2-4.3"
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "The lab and the report",
-          "defs": [
-            [
-              "Laboratory",
-              "The place where science experiments are done."
-            ],
-            [
-              "Laboratory report",
-              "A written account of the results of an experiment, written precisely and clearly."
-            ]
-          ],
-          "id": "g7.science.u1.s1-2-4.4"
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "What is a report?",
-          "ask": "What is a laboratory report?",
-          "opts": [
-            "A list of laboratory rules",
-            "A drawing of the apparatus",
-            "A teacher's marks for the class",
-            "A written account of the results of an experiment, written clearly"
-          ],
-          "ans": "A written account of the results of an experiment, written clearly",
-          "why": "It explains what you did, what you learnt and what the results mean.",
-          "clue": "Read the first sentence of \"What a report must be\".",
-          "id": "g7.science.u1.s1-2-4.5"
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "title": "Finish the definition",
-          "ask": "A laboratory report is a written account of the ___ of an experiment.",
-          "a": [
-            "results",
-            "result"
-          ],
-          "why": "A report is a written account of the results of an experiment.",
-          "clue": "What does an experiment give you at the end?",
-          "id": "g7.science.u1.s1-2-4.6"
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "title": "Fix the report",
-          "text": "Kebede wrote his report in a hurry. It has no full stops and many unclear words.",
-          "ask": "What should he fix?",
-          "opts": [
-            "Nothing, results are all that matter",
-            "Write it precisely and clearly, with good grammar and punctuation",
-            "Make it longer with more pictures",
-            "Copy a friend's report"
-          ],
-          "ans": "Write it precisely and clearly, with good grammar and punctuation",
-          "why": "A report should be written precisely and clearly, with good grammar and punctuation.",
-          "clue": "How does the book say a report should be written?",
-          "id": "g7.science.u1.s1-2-4.7"
-        },
-        {
-          "kind": "tf",
-          "step": "practise",
-          "graded": true,
-          "title": "True or false?",
-          "text": "Lab work helps students build independent thinking.",
-          "a": true,
-          "why": "The lab builds observation, skill with apparatus and independent thinking.",
-          "clue": "Read the first paragraph of 1.2.4. What three things does the lab build?",
-          "worked": "The book says the lab builds three things: power of observation, skill with apparatus and independent thinking. So it is true.",
-          "id": "g7.science.u1.s1-2-4.8"
-        }
-      ]
-    },
-    {
-      "id": "sci.lab-report.parts",
-      "name": "Parts of a laboratory report, in order",
-      "explain": {
-        "en": {
-          "text": "Every report has the same parts, in order. Date, title, objective, theory, materials, chemicals, procedure, observation, result, discussion, conclusion. First you say what you planned. Then what you did and saw. Last, what it means."
-        },
-        "am": {
-          "text": "እያንዳንዱ ሪፖርት በቅደም ተከተል ተመሳሳይ ክፍሎች አሉት። ቀን፣ ርዕስ፣ ዓላማ፣ ንድፈ ሐሳብ፣ ቁሳቁሶች፣ ኬሚካሎች፣ የአሠራር ቅደም ተከተል፣ ምልከታ፣ ውጤት፣ ውይይት፣ መደምደሚያ።",
-          "machine": true
-        }
-      },
-      "screens": [
-        {
-          "kind": "guess",
-          "step": "hook",
-          "added": true,
-          "title": "What comes first?",
-          "text": "You are about to write your first lab report.",
-          "ask": "Which part do you think comes first?",
-          "opts": [
-            "Conclusion",
-            "Date",
-            "Observation",
-            "Result"
-          ],
-          "after": "Read the list of parts to check.",
-          "id": "g7.science.u1.s1-2-4.9"
-        },
-        {
-          "kind": "tap",
-          "step": "explore",
-          "graded": false,
-          "title": "The parts of a report",
-          "ask": "Every report has these parts, in this order. Tap each part.",
-          "need": 5,
-          "items": [
-            [
-              "1 Date",
-              "The day you did the experiment."
-            ],
-            [
-              "2 Title",
-              "A short name for the experiment."
-            ],
-            [
-              "3 Objective",
-              "What you want to find out or show."
-            ],
-            [
-              "4 Theory",
-              "The science ideas behind the experiment."
-            ],
-            [
-              "5 Materials",
-              "The apparatus and equipment you used."
-            ],
-            [
-              "6 Chemicals",
-              "The chemicals you used."
-            ],
-            [
-              "7 Procedure",
-              "The steps you followed, in order."
-            ],
-            [
-              "8 Observation",
-              "What you saw and measured while you worked."
-            ],
-            [
-              "9 Result",
-              "The outcome of the experiment, such as a table of readings."
-            ],
-            [
-              "10 Discussion",
-              "What the results mean and why they came out that way."
-            ],
-            [
-              "11 Conclusion",
-              "A short answer to your objective."
-            ]
-          ],
-          "id": "g7.science.u1.s1-2-4.10"
-        },
-        {
-          "kind": "name",
-          "step": "name",
-          "title": "Key parts",
-          "defs": [
-            [
-              "Objective",
-              "What you want to find out or show."
-            ],
-            [
-              "Procedure",
-              "The steps you followed, in order."
-            ],
-            [
-              "Observation",
-              "What you saw and measured while you worked."
-            ],
-            [
-              "Conclusion",
-              "A short answer to your objective."
-            ]
-          ],
-          "id": "g7.science.u1.s1-2-4.11"
-        },
-        {
-          "kind": "mcq",
-          "step": "check",
-          "graded": true,
-          "title": "Where do readings go?",
-          "ask": "In which part of a report do you write what you saw and measured?",
-          "opts": [
-            "Theory",
-            "Observation",
-            "Title",
-            "Objective"
-          ],
-          "ans": "Observation",
-          "why": "Observations are what you saw and measured during the experiment.",
-          "clue": "Look at the \"What it holds\" column of the table.",
-          "id": "g7.science.u1.s1-2-4.12"
-        },
-        {
-          "kind": "order",
-          "step": "practise",
-          "graded": true,
-          "title": "Put the parts in order",
-          "text": "Put these parts of a laboratory report in order.",
-          "items": [
-            "Date",
-            "Title",
-            "Objective",
-            "Materials",
-            "Procedure",
-            "Observation",
-            "Result",
-            "Conclusion"
-          ],
-          "why": "A report goes from what you planned, to what you did and saw, to what you decided.",
-          "clue": "Start with when and what. End with your answer to the objective.",
-          "worked": "Date → Title → Objective → Materials → Procedure → Observation → Result → Conclusion.",
-          "id": "g7.science.u1.s1-2-4.13"
-        },
-        {
-          "kind": "blank",
-          "step": "practise",
-          "graded": true,
-          "title": "The last part",
-          "ask": "The part that gives a short answer to your objective is the ___.",
-          "a": [
-            "conclusion"
-          ],
-          "why": "The conclusion is a short answer to your objective. It comes last.",
-          "clue": "It is the last of the eleven parts.",
-          "id": "g7.science.u1.s1-2-4.14"
-        },
-        {
-          "kind": "mcq",
-          "step": "practise",
-          "graded": true,
-          "title": "Liya's list",
-          "text": "Liya writes: \"beaker, thermometer, Bunsen burner, tongs\".",
-          "ask": "Which part of her report is this?",
-          "opts": [
-            "Materials",
-            "Conclusion",
-            "Discussion",
-            "Objective"
-          ],
-          "ans": "Materials",
-          "why": "The materials part lists the apparatus and equipment you used.",
-          "clue": "Which part lists apparatus and equipment?",
-          "id": "g7.science.u1.s1-2-4.15"
-        }
-      ]
-    }
-  ],
-  "exercises": [
-    {
-      "book_name": "Exercise 1.3",
-      "items": [
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "ask": "1. Which one is NOT allowed in a science laboratory?",
-          "opts": [
-            "Knowing the hazards of the materials being used",
-            "Reading the labels on reagent bottles carefully",
-            "Not using laboratory glassware for eating or drinking",
-            "Wearing any type of clothes and shoes"
-          ],
-          "ans": "Wearing any type of clothes and shoes",
-          "why": "You must dress properly for the lab.",
-          "clue": "Three of these are good habits. Which one breaks a rule about dress?",
-          "id": "g7.science.u1.s1-2-4.16"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "ask": "2. Which laboratory tool is used for approximate measurement of the volume of liquids?",
-          "opts": [
-            "Dropper",
-            "Measuring cylinder",
-            "Test tube",
-            "Thermometer"
-          ],
-          "ans": "Measuring cylinder",
-          "why": "A measuring (graduated) cylinder has a volume scale.",
-          "clue": "Which tool has a millilitre (ml) scale?",
-          "id": "g7.science.u1.s1-2-4.17"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "ask": "3. Which laboratory equipment is classed as measuring equipment?",
-          "opts": [
-            "Bunsen burner",
-            "Tongs",
-            "Stand and clamp",
-            "Triple-beam balance"
-          ],
-          "ans": "Triple-beam balance",
-          "why": "A balance measures mass.",
-          "clue": "Which one gives you a number, like a mass?",
-          "id": "g7.science.u1.s1-2-4.18"
-        }
-      ]
-    },
-    {
-      "book_name": "Unit 1 Review exercise",
-      "items": [
-        {
-          "kind": "tf",
-          "step": "exercise",
-          "graded": true,
-          "text": "Part I, 1. Natural science is the study of nature and natural laws.",
-          "a": true,
-          "why": "That is the definition.",
-          "clue": "Recall the definition of natural science in 1.1.2.",
-          "id": "g7.science.u1.s1-2-4.19"
-        },
-        {
-          "kind": "tf",
-          "step": "exercise",
-          "graded": true,
-          "text": "Part I, 2. Biology, physics and chemistry do not share common areas of study.",
-          "a": false,
-          "why": "Their knowledge overlaps.",
-          "clue": "Think of biochemistry and biophysics.",
-          "id": "g7.science.u1.s1-2-4.20"
-        },
-        {
-          "kind": "tf",
-          "step": "exercise",
-          "graded": true,
-          "text": "Part I, 3. Technology makes life easier or more pleasant and work more productive.",
-          "a": true,
-          "why": "That is its purpose.",
-          "clue": "Recall what technology is for, from 1.1.3.",
-          "id": "g7.science.u1.s1-2-4.21"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "ask": "Part II, 1. The study of living things is the concern of:",
-          "opts": [
-            "Chemistry",
-            "Physics",
-            "Geology",
-            "Biology"
-          ],
-          "ans": "Biology",
-          "why": "Biology studies living things.",
-          "clue": "\"Bio\" means life.",
-          "id": "g7.science.u1.s1-2-4.22"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "ask": "Part II, 2. Which branch of natural science studies the nature of matter, energy and their interaction?",
-          "opts": [
-            "Geology",
-            "Physics",
-            "Chemistry",
-            "Biology"
-          ],
-          "ans": "Physics",
-          "why": "That is physics.",
-          "clue": "Recall the three branches of natural science.",
-          "id": "g7.science.u1.s1-2-4.23"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "ask": "Part II, 3. Which famous Ethiopian scientist discovered a natural treatment for schistosomiasis (bilharzia)?",
-          "opts": [
-            "Dr. Aklilu Lemma",
-            "Eng. Kitew Ejigu",
-            "Dr. Gebisa Ejeta",
-            "Prof. Yalemtsehay Mekonnen"
-          ],
-          "ans": "Dr. Aklilu Lemma",
-          "why": "Dr. Aklilu Lemma, with the endod plant.",
-          "clue": "Think of the endod plant.",
-          "id": "g7.science.u1.s1-2-4.24"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "ask": "Part II, 4. Which of these is NOT a laboratory safety rule?",
-          "opts": [
-            "Light the match before you turn on the gas of a Bunsen burner",
-            "You should add water to acid",
-            "You should tie back loose hair",
-            "Do not suck solution into a pipette by mouth"
-          ],
-          "ans": "You should add water to acid",
-          "why": "Acid must be added to water, never water to acid.",
-          "clue": "Remember AW! Not WA!",
-          "id": "g7.science.u1.s1-2-4.25"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "ask": "Part II, 5. Which is a branch of knowledge and the systematic study of the universe, based on facts, observation and experiments?",
-          "opts": [
-            "Theory",
-            "Natural law",
-            "Dogma",
-            "Science"
-          ],
-          "ans": "Science",
-          "why": "That describes science.",
-          "clue": "Recall 1.1.1.",
-          "id": "g7.science.u1.s1-2-4.26"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "ask": "Part III, 1. Biochemistry is a combination of:",
-          "opts": [
-            "Biology and Physics",
-            "Geology and Physics",
-            "Chemistry and Physics",
-            "Biology and Chemistry"
-          ],
-          "ans": "Biology and Chemistry",
-          "why": "Bio + chemistry.",
-          "clue": "Split the word into two parts.",
-          "id": "g7.science.u1.s1-2-4.27"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "ask": "Part III, 2. Physical chemistry is a combination of:",
-          "opts": [
-            "Geology and Physics",
-            "Chemistry and Physics",
-            "Biology and Chemistry",
-            "Biology and Physics"
-          ],
-          "ans": "Chemistry and Physics",
-          "why": "Chemistry + physics.",
-          "clue": "Read each word in the name.",
-          "id": "g7.science.u1.s1-2-4.28"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "ask": "Part III, 3. Biophysics is a combination of:",
-          "opts": [
-            "Chemistry and Physics",
-            "Biology and Physics",
-            "Geology and Physics",
-            "Biology and Chemistry"
-          ],
-          "ans": "Biology and Physics",
-          "why": "Bio + physics.",
-          "clue": "Split the word into two parts.",
-          "id": "g7.science.u1.s1-2-4.29"
-        },
-        {
-          "kind": "mcq",
-          "step": "exercise",
-          "graded": true,
-          "ask": "Part III, 4. Geophysics is a combination of:",
-          "opts": [
-            "Biology and Chemistry",
-            "Geology and Physics",
-            "Chemistry and Physics",
-            "Biology and Physics"
-          ],
-          "ans": "Geology and Physics",
-          "why": "Geo (earth) + physics.",
-          "clue": "\"Geo\" means earth.",
-          "id": "g7.science.u1.s1-2-4.30"
-        }
-      ]
-    }
-  ],
-  "test": [
-    {
-      "kind": "order",
-      "step": "test",
-      "graded": true,
-      "text": "Put these parts of a laboratory report in order.",
-      "items": [
-        "Title",
-        "Objective",
-        "Procedure",
-        "Observation",
-        "Conclusion"
-      ],
-      "why": "A report goes from what you planned, to what you did and saw, to what you decided.",
-      "clue": "",
-      "id": "g7.science.u1.s1-2-4.31"
-    },
-    {
-      "kind": "blank",
-      "step": "test",
-      "graded": true,
-      "ask": "A laboratory report explains what you did, what you learnt and what the ___ mean.",
-      "a": [
-        "results",
-        "result"
-      ],
-      "why": "A report ends by explaining what the results show.",
-      "clue": "",
-      "id": "g7.science.u1.s1-2-4.32"
-    },
-    {
-      "kind": "mcq",
-      "step": "test",
-      "graded": true,
-      "text": "In which part do you list the steps you followed?",
-      "opts": [
-        "Procedure",
-        "Title",
-        "Conclusion",
-        "Date"
-      ],
-      "ans": "Procedure",
-      "why": "The procedure is the steps you followed, in order.",
-      "clue": "",
-      "id": "g7.science.u1.s1-2-4.33"
-    }
-  ],
-  "notes": [
-    {
-      "kind": "note",
-      "text": "The book lists only the names of the eleven report parts. The short description of each part is added to help."
-    },
-    {
-      "kind": "note",
-      "text": "The \"Unit 1 Review exercise\" entry holds Review exercise Parts I–III (book pages 16–19). Parts IV (fill in the blanks) and V (short answers) are not included. Part III is a matching task in the book, kept here as one multiple-choice item per field, as in the source."
-    },
-    {
-      "kind": "review",
-      "text": "Exercise 1.3 Q2 asks for \"approximate\" volume and the book answer is the measuring cylinder, while the 1.2.1 correction says a beaker gives approximate volume and a cylinder a more accurate one. The book answer is kept; teacher to check the wording."
-    },
-    {
-      "kind": "note",
-      "text": "The book lists only the names of the parts. The short descriptions are added to help you."
-    },
-    {
-      "kind": "note",
-      "text": "Visual-first pass: read blocks shortened (no facts dropped) and drawings from app/pictures.js added."
-    }
-  ],
-  "review": {
-    "status": "validated"
+  {
+   "en": "Laboratory report",
+   "am": "የቤተ ሙከራ ሪፖርት",
+   "def": "A written account of the results of an experiment, written precisely and clearly.",
+   "machine": true
   },
-  "version": 1
+  {
+   "en": "Objective",
+   "am": "ዓላማ",
+   "def": "What you want to find out or show in an experiment.",
+   "machine": true
+  },
+  {
+   "en": "Procedure",
+   "am": "የአሠራር ቅደም ተከተል",
+   "def": "The steps you followed, in order.",
+   "machine": true
+  },
+  {
+   "en": "Observation",
+   "am": "ምልከታ",
+   "def": "What you saw and measured while you worked.",
+   "machine": true
+  },
+  {
+   "en": "Conclusion",
+   "am": "መደምደሚያ",
+   "def": "A short answer to your objective.",
+   "machine": true
+  }
+ ],
+ "ideas": [
+  {
+   "id": "sci.lab-report",
+   "name": "What a laboratory report is",
+   "explain": {
+    "en": {
+     "text": "The laboratory is where science experiments are done. It builds your observation, your skill with apparatus and your independent thinking. A laboratory report is a written account of the results of an experiment. Write it precisely and clearly, with good grammar and punctuation."
+    },
+    "am": {
+     "text": "ቤተ ሙከራ የሳይንስ ሙከራዎች የሚደረጉበት ቦታ ነው። የቤተ ሙከራ ሪፖርት የሙከራ ውጤቶች የጽሑፍ መግለጫ ነው። በትክክል፣ በግልጽ እና በጥሩ ሰዋስው መጻፍ አለበት።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "added": true,
+     "title": "A friend was absent",
+     "text": "Your class in Bahir Dar tested which cloth dries fastest. Your friend Liya was absent that day.",
+     "ask": "What is the best way for Liya to learn what you did and found?",
+     "opts": [
+      "Read a clear written report of the experiment",
+      "Guess the answer",
+      "Look at the empty beakers",
+      "Wait for next year"
+     ],
+     "after": "Liya was not there to see the test.\nA clear written report tells her what you did, saw and found.\nGuessing or looking at empty beakers tells her nothing.\nScientists write reports for this reason. Read on.",
+     "id": "g7.science.u1.s1-2-4.1",
+     "best": "Read a clear written report of the experiment"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "1.2.4 Writing a laboratory report",
+     "paras": [
+      "The laboratory is the place where science experiments are done.",
+      "It builds your power of observation and skill with apparatus. It also builds independent thinking."
+     ],
+     "id": "g7.science.u1.s1-2-4.2"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "graded": false,
+     "title": "What lab work builds",
+     "ask": "Tap each card to see what the laboratory builds in you.",
+     "need": 3,
+     "items": [
+      [
+       "Power of observation",
+       "You learn to watch closely and notice small changes.",
+       "observe"
+      ],
+      [
+       "Skill with apparatus",
+       "You learn to use tools like the balance and the microscope.",
+       "microscope"
+      ],
+      [
+       "Independent thinking",
+       "You plan, test and decide for yourself.",
+       "lab-report"
+      ]
+     ],
+     "id": "g7.science.u1.s1-2-4.35",
+     "added": true
+    },
+    {
+     "kind": "picture",
+     "pic": "lab-report",
+     "caption": "A lab report tells what you did and found.",
+     "step": "read",
+     "id": "g7.science.u1.s1-2-4.34"
+    },
+    {
+     "kind": "read",
+     "step": "read",
+     "title": "What a report must be",
+     "paras": [
+      "A laboratory report is a written account of the results of an experiment.",
+      "It should be written precisely and clearly, with good grammar and punctuation."
+     ],
+     "id": "g7.science.u1.s1-2-4.3"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "The lab and the report",
+     "defs": [
+      [
+       "Laboratory",
+       "The place where science experiments are done."
+      ],
+      [
+       "Laboratory report",
+       "A written account of the results of an experiment, written precisely and clearly."
+      ]
+     ],
+     "id": "g7.science.u1.s1-2-4.4"
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "What is a report?",
+     "ask": "What is a laboratory report?",
+     "opts": [
+      "A list of laboratory rules",
+      "A drawing of the apparatus",
+      "A teacher's marks for the class",
+      "A written account of the results of an experiment, written clearly"
+     ],
+     "ans": "A written account of the results of an experiment, written clearly",
+     "why": "Step 1: the book says a lab report is a written account of an experiment's results.\nStep 2: it must be written precisely and clearly.\nStep 3: it explains what you did, what you learnt and what the results mean.\nSo the answer is the last option.\nA list of rules or a drawing alone is not a report.",
+     "clue": "Read the first sentence of \"What a report must be\".",
+     "id": "g7.science.u1.s1-2-4.5"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "title": "Finish the definition",
+     "ask": "Definition: a laboratory report is a written account of the ___ of an experiment.",
+     "a": [
+      "results",
+      "result"
+     ],
+     "why": "An experiment ends with results.\nA lab report is a written account of those results.\nSo the missing word is results.",
+     "clue": "What does an experiment give you at the end?",
+     "id": "g7.science.u1.s1-2-4.6"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "Fix the report",
+     "text": "Kebede wrote his report in a hurry. It has no full stops and many unclear words.",
+     "ask": "What should he fix?",
+     "opts": [
+      "Nothing, results are all that matter",
+      "Write it precisely and clearly, with good grammar and punctuation",
+      "Make it longer with more pictures",
+      "Copy a friend's report"
+     ],
+     "ans": "Write it precisely and clearly, with good grammar and punctuation",
+     "why": "Step 1: Kebede's report has no full stops and unclear words.\nStep 2: the book says a report must be precise and clear.\nStep 3: it also needs good grammar and punctuation.\nSo he should rewrite it precisely and clearly.\nCopying a friend breaks honesty; more pictures do not fix unclear words.",
+     "clue": "How does the book say a report should be written?",
+     "id": "g7.science.u1.s1-2-4.7"
+    },
+    {
+     "kind": "tf",
+     "step": "practise",
+     "graded": true,
+     "title": "True or false?",
+     "text": "What lab work builds: lab work helps students build independent thinking.",
+     "a": true,
+     "why": "The book says lab work builds three things.\n1: power of observation.\n2: skill with apparatus.\n3: independent thinking.\nIndependent thinking is in the list, so the statement is true.",
+     "clue": "Read the first paragraph of 1.2.4. What three things does the lab build?",
+     "worked": "Step 1: the book lists what the lab builds.\nStep 2: power of observation, skill with apparatus and independent thinking.\nStep 3: independent thinking is in the list.\nSo the statement is true.",
+     "id": "g7.science.u1.s1-2-4.8"
+    }
+   ]
+  },
+  {
+   "id": "sci.lab-report.parts",
+   "name": "Parts of a laboratory report, in order",
+   "explain": {
+    "en": {
+     "text": "Every report has the same parts, in order. Date, title, objective, theory, materials, chemicals, procedure, observation, result, discussion, conclusion. First you say what you planned. Then what you did and saw. Last, what it means."
+    },
+    "am": {
+     "text": "እያንዳንዱ ሪፖርት በቅደም ተከተል ተመሳሳይ ክፍሎች አሉት። ቀን፣ ርዕስ፣ ዓላማ፣ ንድፈ ሐሳብ፣ ቁሳቁሶች፣ ኬሚካሎች፣ የአሠራር ቅደም ተከተል፣ ምልከታ፣ ውጤት፣ ውይይት፣ መደምደሚያ።",
+     "machine": true
+    }
+   },
+   "screens": [
+    {
+     "kind": "guess",
+     "step": "hook",
+     "added": true,
+     "title": "What comes first?",
+     "text": "You are about to write your first lab report.",
+     "ask": "Which part do you think comes first?",
+     "opts": [
+      "Conclusion",
+      "Date",
+      "Observation",
+      "Result"
+     ],
+     "after": "A report starts with when you did the experiment: the date.\nThen comes the title, then the objective.\nObservation, result and conclusion come later, after you do the work.\nRead the list of parts to check.",
+     "id": "g7.science.u1.s1-2-4.9",
+     "best": "Date"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "graded": false,
+     "title": "The parts of a report",
+     "ask": "Every report has these parts, in this order. Tap each part.",
+     "need": 5,
+     "items": [
+      [
+       "1 Date",
+       "The day you did the experiment."
+      ],
+      [
+       "2 Title",
+       "A short name for the experiment."
+      ],
+      [
+       "3 Objective",
+       "What you want to find out or show."
+      ],
+      [
+       "4 Theory",
+       "The science ideas behind the experiment."
+      ],
+      [
+       "5 Materials",
+       "The apparatus and equipment you used."
+      ],
+      [
+       "6 Chemicals",
+       "The chemicals you used."
+      ],
+      [
+       "7 Procedure",
+       "The steps you followed, in order."
+      ],
+      [
+       "8 Observation",
+       "What you saw and measured while you worked."
+      ],
+      [
+       "9 Result",
+       "The outcome of the experiment, such as a table of readings."
+      ],
+      [
+       "10 Discussion",
+       "What the results mean and why they came out that way."
+      ],
+      [
+       "11 Conclusion",
+       "A short answer to your objective."
+      ]
+     ],
+     "id": "g7.science.u1.s1-2-4.10"
+    },
+    {
+     "kind": "name",
+     "step": "name",
+     "title": "Key parts",
+     "defs": [
+      [
+       "Objective",
+       "What you want to find out or show."
+      ],
+      [
+       "Procedure",
+       "The steps you followed, in order."
+      ],
+      [
+       "Observation",
+       "What you saw and measured while you worked."
+      ],
+      [
+       "Conclusion",
+       "A short answer to your objective."
+      ]
+     ],
+     "id": "g7.science.u1.s1-2-4.11"
+    },
+    {
+     "kind": "steps",
+     "step": "method",
+     "title": "A sample report: which cloth dries fastest?",
+     "steps": [
+      "Date: the day you did the test.",
+      "Title: Which cloth dries fastest?",
+      "Objective: to find which of three cloths dries fastest in the sun.",
+      "Materials: three cloths of the same size, a bucket of water, a clock.",
+      "Procedure: wet each cloth, squeeze it, hang all three in the sun, check every 10 minutes.",
+      "Observation and result: write the time each cloth became dry, in a table.",
+      "Conclusion: name the cloth that dried first. That answers the objective."
+     ],
+     "id": "g7.science.u1.s1-2-4.36",
+     "added": true
+    },
+    {
+     "kind": "mcq",
+     "step": "check",
+     "graded": true,
+     "title": "Where do readings go?",
+     "ask": "In which part of a report do you write what you saw and measured?",
+     "opts": [
+      "Theory",
+      "Observation",
+      "Title",
+      "Objective"
+     ],
+     "ans": "Observation",
+     "why": "Step 1: what you saw and measured happens while you work.\nStep 2: the part for that is the observation.\nStep 3: the objective is what you want to find; the theory is the science behind it.\nSo the answer is observation.",
+     "clue": "Look at the \"What it holds\" column of the table.",
+     "id": "g7.science.u1.s1-2-4.12"
+    },
+    {
+     "kind": "order",
+     "step": "practise",
+     "graded": true,
+     "title": "Put the parts in order",
+     "text": "Put these parts of a laboratory report in order.",
+     "items": [
+      "Date",
+      "Title",
+      "Objective",
+      "Materials",
+      "Procedure",
+      "Observation",
+      "Result",
+      "Conclusion"
+     ],
+     "why": "Step 1: start with when and what: Date, then Title.\nStep 2: then the plan: Objective, then Materials.\nStep 3: then what you did and saw: Procedure, then Observation.\nStep 4: then the outcome: Result.\nStep 5: end with your answer: Conclusion.",
+     "clue": "Start with when and what. End with your answer to the objective.",
+     "worked": "Date → Title → Objective → Materials → Procedure → Observation → Result → Conclusion.\nPlan first, then do and see, then decide.",
+     "id": "g7.science.u1.s1-2-4.13"
+    },
+    {
+     "kind": "blank",
+     "step": "practise",
+     "graded": true,
+     "title": "The last part",
+     "ask": "Parts of a report: the part that gives a short answer to your objective is the ___.",
+     "a": [
+      "conclusion"
+     ],
+     "why": "The objective asks what you want to find out.\nAt the end you answer it in a few words.\nThat last part is the conclusion.\nSo the answer is conclusion.",
+     "clue": "It is the last of the eleven parts.",
+     "id": "g7.science.u1.s1-2-4.14"
+    },
+    {
+     "kind": "mcq",
+     "step": "practise",
+     "graded": true,
+     "title": "Liya's list",
+     "text": "Liya writes: \"beaker, thermometer, Bunsen burner, tongs\".",
+     "ask": "Which part of her report is this?",
+     "opts": [
+      "Materials",
+      "Conclusion",
+      "Discussion",
+      "Objective"
+     ],
+     "ans": "Materials",
+     "why": "Step 1: Liya's list is beaker, thermometer, Bunsen burner, tongs.\nStep 2: these are all apparatus and equipment.\nStep 3: the part that lists apparatus is materials.\nSo the answer is materials.\nThe objective would say what she wants to find out, not list tools.",
+     "clue": "Which part lists apparatus and equipment?",
+     "id": "g7.science.u1.s1-2-4.15"
+    }
+   ]
+  }
+ ],
+ "exercises": [
+  {
+   "book_name": "Exercise 1.3",
+   "items": [
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "ask": "1. Which one is NOT allowed in a science laboratory?",
+     "opts": [
+      "Knowing the hazards of the materials being used",
+      "Reading the labels on reagent bottles carefully",
+      "Not using laboratory glassware for eating or drinking",
+      "Wearing any type of clothes and shoes"
+     ],
+     "ans": "Wearing any type of clothes and shoes",
+     "why": "Step 1: check each option.\nKnowing hazards, reading labels and not eating from glassware are all good rules.\nStep 2: the rules say dress properly: goggles, gloves, shoes and lab coat.\nStep 3: so wearing any clothes and shoes is NOT allowed.\nThat is the answer.",
+     "clue": "Three of these are good habits. Which one breaks a rule about dress?",
+     "id": "g7.science.u1.s1-2-4.16"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "ask": "2. Which laboratory tool is used for approximate measurement of the volume of liquids?",
+     "opts": [
+      "Dropper",
+      "Measuring cylinder",
+      "Test tube",
+      "Thermometer"
+     ],
+     "ans": "Measuring cylinder",
+     "why": "Step 1: the question asks about measuring the volume of liquids.\nStep 2: of the options, only the measuring cylinder has a volume (ml) scale.\nStep 3: a dropper adds drops, a test tube holds liquid, a thermometer measures temperature.\nSo the book's answer is the measuring cylinder.\nNote: in 1.2.1 a beaker gives approximate volume; a cylinder gives a more accurate one.",
+     "clue": "Which tool has a millilitre (ml) scale?",
+     "id": "g7.science.u1.s1-2-4.17"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "ask": "3. Which laboratory equipment is classed as measuring equipment?",
+     "opts": [
+      "Bunsen burner",
+      "Tongs",
+      "Stand and clamp",
+      "Triple-beam balance"
+     ],
+     "ans": "Triple-beam balance",
+     "why": "Step 1: measuring equipment gives you a number.\nStep 2: a triple-beam balance gives the mass of an object.\nStep 3: a Bunsen burner heats; tongs carry; a stand and clamp hold.\nSo the answer is the triple-beam balance.",
+     "clue": "Which one gives you a number, like a mass?",
+     "id": "g7.science.u1.s1-2-4.18"
+    }
+   ]
+  },
+  {
+   "book_name": "Unit 1 Review exercise",
+   "items": [
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Part I, 1. Natural science is the study of nature and natural laws.",
+     "a": true,
+     "why": "Recall 1.1.2.\nNatural science studies nature and natural laws.\nIt includes biology, chemistry and physics.\nSo the statement is true.",
+     "clue": "Recall the definition of natural science in 1.1.2.",
+     "id": "g7.science.u1.s1-2-4.19"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Part I, 2. Biology, physics and chemistry do not share common areas of study.",
+     "a": false,
+     "why": "There is no clear border line between the natural sciences.\nTheir knowledge overlaps.\nBiochemistry and biophysics show this: each joins two sciences.\nSo they do share areas, and the statement is false.",
+     "clue": "Think of biochemistry and biophysics.",
+     "id": "g7.science.u1.s1-2-4.20"
+    },
+    {
+     "kind": "tf",
+     "step": "exercise",
+     "graded": true,
+     "text": "Part I, 3. Technology makes life easier or more pleasant and work more productive.",
+     "a": true,
+     "why": "Recall 1.1.3.\nTechnology uses scientific knowledge to help people.\nIt makes life easier and work more productive.\nSo the statement is true.",
+     "clue": "Recall what technology is for, from 1.1.3.",
+     "id": "g7.science.u1.s1-2-4.21"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Part II, 1. The study of living things is the concern of:",
+     "opts": [
+      "Chemistry",
+      "Physics",
+      "Geology",
+      "Biology"
+     ],
+     "ans": "Biology",
+     "why": "Bio- means life.\nBiology is the study of living things.\nChemistry studies substances, physics matter and energy, geology the earth.\nSo the answer is biology.",
+     "clue": "\"Bio\" means life.",
+     "id": "g7.science.u1.s1-2-4.22"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Part II, 2. Which branch of natural science studies the nature of matter, energy and their interaction?",
+     "opts": [
+      "Geology",
+      "Physics",
+      "Chemistry",
+      "Biology"
+     ],
+     "ans": "Physics",
+     "why": "Natural science has three branches.\nBiology → living things. Chemistry → substances.\nPhysics → matter, energy and their interaction.\nSo the answer is physics.",
+     "clue": "Recall the three branches of natural science.",
+     "id": "g7.science.u1.s1-2-4.23"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Part II, 3. Which famous Ethiopian scientist discovered a natural treatment for schistosomiasis (bilharzia)?",
+     "opts": [
+      "Dr. Aklilu Lemma",
+      "Eng. Kitew Ejigu",
+      "Dr. Gebisa Ejeta",
+      "Prof. Yalemtsehay Mekonnen"
+     ],
+     "ans": "Dr. Aklilu Lemma",
+     "why": "Dr. Aklilu Lemma found a natural treatment for bilharzia in 1964.\nHe used endod berries, which kill the snails that spread the disease.\nDr. Gebisa Ejeta worked on sorghum; Prof. Yalemtsehay Mekonnen on physiology and medicinal plants.\nSo the answer is Dr. Aklilu Lemma.",
+     "clue": "Think of the endod plant.",
+     "id": "g7.science.u1.s1-2-4.24"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Part II, 4. Which of these is NOT a laboratory safety rule?",
+     "opts": [
+      "Light the match before you turn on the gas of a Bunsen burner",
+      "You should add water to acid",
+      "You should tie back loose hair",
+      "Do not suck solution into a pipette by mouth"
+     ],
+     "ans": "You should add water to acid",
+     "why": "Step 1: the question asks which is NOT a safety rule.\nStep 2: the rule is \"AW! Not WA!\": add acid to water.\nStep 3: so \"You should add water to acid\" is wrong.\nThe other three are real safety rules.\nSo the answer is \"You should add water to acid\".",
+     "clue": "Remember AW! Not WA!",
+     "id": "g7.science.u1.s1-2-4.25"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Part II, 5. Which is a branch of knowledge and the systematic study of the universe, based on facts, observation and experiments?",
+     "opts": [
+      "Theory",
+      "Natural law",
+      "Dogma",
+      "Science"
+     ],
+     "ans": "Science",
+     "why": "Recall 1.1.1.\nScience is the systematic study of the world.\nIt is based on facts, observation and experiments.\nA theory is only one part of science; dogma is belief that is never tested.\nSo the answer is science.",
+     "clue": "Recall 1.1.1.",
+     "id": "g7.science.u1.s1-2-4.26"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Part III, 1. Biochemistry is a combination of:",
+     "opts": [
+      "Biology and Physics",
+      "Geology and Physics",
+      "Chemistry and Physics",
+      "Biology and Chemistry"
+     ],
+     "ans": "Biology and Chemistry",
+     "why": "Split the word: bio + chemistry.\nBio- means life → biology.\nThe rest is chemistry.\nSo biochemistry = biology and chemistry.",
+     "clue": "Split the word into two parts.",
+     "id": "g7.science.u1.s1-2-4.27"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Part III, 2. Physical chemistry is a combination of:",
+     "opts": [
+      "Geology and Physics",
+      "Chemistry and Physics",
+      "Biology and Chemistry",
+      "Biology and Physics"
+     ],
+     "ans": "Chemistry and Physics",
+     "why": "Read each word in the name.\nPhysical → physics.\nChemistry → chemistry.\nSo physical chemistry = chemistry and physics.",
+     "clue": "Read each word in the name.",
+     "id": "g7.science.u1.s1-2-4.28"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Part III, 3. Biophysics is a combination of:",
+     "opts": [
+      "Chemistry and Physics",
+      "Biology and Physics",
+      "Geology and Physics",
+      "Biology and Chemistry"
+     ],
+     "ans": "Biology and Physics",
+     "why": "Split the word: bio + physics.\nBio- means life → biology.\nThe rest is physics.\nSo biophysics = biology and physics.",
+     "clue": "Split the word into two parts.",
+     "id": "g7.science.u1.s1-2-4.29"
+    },
+    {
+     "kind": "mcq",
+     "step": "exercise",
+     "graded": true,
+     "ask": "Part III, 4. Geophysics is a combination of:",
+     "opts": [
+      "Biology and Chemistry",
+      "Geology and Physics",
+      "Chemistry and Physics",
+      "Biology and Physics"
+     ],
+     "ans": "Geology and Physics",
+     "why": "Split the word: geo + physics.\nGeo- means earth → geology.\nThe rest is physics.\nSo geophysics = geology and physics.",
+     "clue": "\"Geo\" means earth.",
+     "id": "g7.science.u1.s1-2-4.30"
+    }
+   ]
+  },
+  {
+   "book_name": "Chapter test",
+   "test": true,
+   "chapter_test": true,
+   "count": 20,
+   "minutes": 25,
+   "items": []
+  }
+ ],
+ "test": [
+  {
+   "kind": "order",
+   "step": "test",
+   "graded": true,
+   "text": "Put these parts of a laboratory report in order.",
+   "items": [
+    "Title",
+    "Objective",
+    "Procedure",
+    "Observation",
+    "Conclusion"
+   ],
+   "why": "Step 1: Title first: what the experiment is.\nStep 2: Objective: what you want to find out.\nStep 3: Procedure: the steps you followed.\nStep 4: Observation: what you saw and measured.\nStep 5: Conclusion: a short answer to the objective.",
+   "clue": "",
+   "id": "g7.science.u1.s1-2-4.31"
+  },
+  {
+   "kind": "blank",
+   "step": "test",
+   "graded": true,
+   "ask": "Purpose of a report: a laboratory report explains what you did, what you learnt and what the ___ mean.",
+   "a": [
+    "results",
+    "result"
+   ],
+   "why": "A report tells three things.\nWhat you did, and what you learnt.\nAnd what the results of the experiment mean.\nSo the missing word is results.",
+   "clue": "",
+   "id": "g7.science.u1.s1-2-4.32"
+  },
+  {
+   "kind": "mcq",
+   "step": "test",
+   "graded": true,
+   "text": "Parts of a report: in which part do you list the steps you followed?",
+   "opts": [
+    "Procedure",
+    "Title",
+    "Conclusion",
+    "Date"
+   ],
+   "ans": "Procedure",
+   "why": "The procedure is the steps you followed, in order.\nThe title names the experiment; the date says when.\nThe conclusion answers the objective.\nSo the answer is procedure.",
+   "clue": "",
+   "id": "g7.science.u1.s1-2-4.33"
+  }
+ ],
+ "notes": [
+  {
+   "kind": "note",
+   "text": "The book lists only the names of the eleven report parts. The short description of each part is added to help."
+  },
+  {
+   "kind": "note",
+   "text": "The \"Unit 1 Review exercise\" entry holds Review exercise Parts I–III (book pages 16–19). Parts IV (fill in the blanks) and V (short answers) are not included. Part III is a matching task in the book, kept here as one multiple-choice item per field, as in the source."
+  },
+  {
+   "kind": "review",
+   "text": "Exercise 1.3 Q2 asks for \"approximate\" volume and the book answer is the measuring cylinder, while the 1.2.1 correction says a beaker gives approximate volume and a cylinder a more accurate one. The book answer is kept; teacher to check the wording."
+  },
+  {
+   "kind": "note",
+   "text": "The book lists only the names of the parts. The short descriptions are added to help you."
+  },
+  {
+   "kind": "note",
+   "text": "Visual-first pass: read blocks shortened (no facts dropped) and drawings from app/pictures.js added."
+  },
+  {
+   "kind": "note",
+   "text": "Rule 14/15 upgrade (2026-10-24): step-by-step why on every graded item, best on guess hooks, and added interactive blocks (marked added)."
+  },
+  {
+   "kind": "note",
+   "text": "Timed chapter test added (rule 13): 20 questions, 25 minutes, drawn from every section's test items."
+  }
+ ],
+ "review": {
+  "status": "validated"
+ },
+ "version": 1
 }
