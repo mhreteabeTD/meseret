@@ -50,9 +50,10 @@
       "Abel and Dawit",
       "Nobody"
      ],
-     "after": "Only Bethel is in both. The members in both sets form the intersection.",
+     "after": "Football: Abel, Bethel, Chala.\nDrama: Bethel, Dawit.\nOnly Bethel is in both lists.\nThe members in both sets form the intersection.",
      "added": true,
-     "id": "g7.maths.u1.s1-3-2.1"
+     "id": "g7.maths.u1.s1-3-2.1",
+     "best": "Bethel"
     },
     {
      "kind": "read",
@@ -106,29 +107,60 @@
      "id": "g7.maths.u1.s1-3-2.4"
     },
     {
+     "kind": "venn",
+     "step": "explore",
+     "added": true,
+     "title": "Union or intersection? A = {2, 4, 6, 8}, B = {3, 6, 9}",
+     "sets": [
+      [
+       "A",
+       "Circle A: 2, 4, 8 and the middle 6. A = {2, 4, 6, 8}."
+      ],
+      [
+       "B",
+       "Circle B: 3, 9 and the middle 6. B = {3, 6, 9}."
+      ]
+     ],
+     "overlaps": [
+      [
+       [
+        0,
+        1
+       ],
+       "A ∩ B",
+       "Only the middle: A ∩ B = {6}. The union is both circles: A ∪ B = {2, 3, 4, 6, 8, 9}."
+      ]
+     ],
+     "id": "g7.maths.u1.s1-3-2.33"
+    },
+    {
      "kind": "read",
      "step": "read",
      "title": "More examples",
-     "paras": [],
-     "table": [
-      [
-       "A",
-       "B",
-       "A ∩ B"
-      ],
-      [
-       "{a, e, i, o}",
-       "{a, e, i}",
-       "{a, e, i}"
-      ],
-      [
-       "{4, 7, 9}",
-       "{a, e, i}",
-       "{ } (nothing shared)"
-      ]
+     "paras": [
+      "Two more examples from the book."
      ],
      "ref": "Examples 4–5",
      "id": "g7.maths.u1.s1-3-2.5"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "added": true,
+     "ref": "Examples 4–5",
+     "need": 2,
+     "title": "Find A ∩ B: tap each example.",
+     "items": [
+      [
+       "A = {a, e, i, o}, B = {a, e, i}",
+       "a, e and i are in both; o is only in A. A ∩ B = {a, e, i} = B."
+      ],
+      [
+       "A = {4, 7, 9}, B = {a, e, i}",
+       "Nothing is shared. A ∩ B = { }, the empty set."
+      ]
+     ],
+     "id": "g7.maths.u1.s1-3-2.32"
     },
     {
      "kind": "name",
@@ -159,7 +191,7 @@
       "4",
       "6"
      ],
-     "why": "Only 4 and 6 are in both sets.",
+     "why": "Check each element of A in B = {4, 6, 8, 10}.\n3 ∉ B, 4 ∈ B, 5 ∉ B, 6 ∈ B.\nKeep only the ones in both: 4 and 6.\nA ∩ B = {4, 6}.\n8 and 10 are only in B, so leave them.",
      "clue": "Keep only the elements in both sets.",
      "level": 1,
      "ref": "Example 3",
@@ -173,14 +205,14 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "A = {4, 7, 9} and B = {a, e, i}. A ∩ B = ?",
+     "text": "Find the intersection: A = {4, 7, 9} and B = {a, e, i}. A ∩ B = ?",
      "opts": [
       "{4, 7, 9, a, e, i}",
       "{ }",
       "{4, a}"
      ],
      "ans": "{ }",
-     "why": "No element is in both sets, so the intersection is empty.",
+     "why": "A holds numbers; B holds letters.\nCheck 4, 7, 9 in B: none is there.\nNothing is shared.\nA ∩ B = { }, the empty set.\n{4, 7, 9, a, e, i} would be the union, not the intersection.",
      "clue": "Is any element shared?",
      "level": 1,
      "ref": "Example 5",
@@ -190,14 +222,14 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "A = {1, 3, 4, 6} and B = {1, 4, 3}. A ∩ B = ?",
+     "text": "Find the intersection: A = {1, 3, 4, 6} and B = {1, 4, 3}. A ∩ B = ?",
      "opts": [
       "{1, 3, 4}",
       "{1, 3, 4, 6}",
       "{6}"
      ],
      "ans": "{1, 3, 4}",
-     "why": "1, 3 and 4 are in both; 6 is only in A.",
+     "why": "Check each element of A in B.\n1 ∈ B, 3 ∈ B, 4 ∈ B.\n6 ∉ B.\nA ∩ B = {1, 3, 4}.",
      "clue": "Check each element of A.",
      "level": 1,
      "ref": "Exercise 1.3.1 Q1 a",
@@ -207,7 +239,7 @@
      "kind": "sort",
      "step": "practise",
      "graded": true,
-     "title": "A = {2, 5, 7}, B = {5, 7, 9}: where does each go?",
+     "title": "Place each number: A = {2, 5, 7}, B = {5, 7, 9}",
      "bins": [
       "Only in A",
       "In A ∩ B",
@@ -235,7 +267,7 @@
        "9 ∈ B, 9 ∉ A."
       ]
      ],
-     "why": "A = {2, 5, 7} and B = {5, 7, 9}: 5 and 7 are shared.",
+     "why": "Check each number in A and in B.\n2 is in A only.\n5 and 7 are in both: they go in A ∩ B.\n9 is in B only.\nSo A ∩ B = {5, 7}.",
      "clue": "Check each number in both sets.",
      "level": 2,
      "added": true,
@@ -245,14 +277,14 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "If A ⊂ B, then A ∩ B = ?",
+     "text": "Intersection of a subset: if A ⊂ B, then A ∩ B = ?",
      "opts": [
       "A",
       "B",
       "{ }"
      ],
      "ans": "A",
-     "why": "Every element of A is also in B, so the shared elements are exactly A.",
+     "why": "A ⊂ B: every element of A is also in B.\nSo all of A is shared with B.\nB's extra elements are not in A, so they are left out.\nA ∩ B = A.",
      "clue": "Draw A inside B. What part is in both?",
      "level": 2,
      "ref": "Exercise 1.3.1 Q4 a",
@@ -262,7 +294,7 @@
      "kind": "pick",
      "step": "challenge",
      "graded": true,
-     "text": "A = {1, 2, 3, 4, 5, 6} is a set of numbers. E = the even numbers in A. M = {3, 6, 9}. Tap every element of E ∩ M.",
+     "text": "Two steps: A = {1, 2, 3, 4, 5, 6}. E = the even numbers in A. M = {3, 6, 9}. Tap every element of E ∩ M.",
      "pool": [
       "2",
       "3",
@@ -273,7 +305,7 @@
      "a": [
       "6"
      ],
-     "why": "E = {2, 4, 6}. The only one also in M is 6. E ∩ M = {6}.",
+     "why": "First find E: the even numbers in A are 2, 4, 6.\nSo E = {2, 4, 6}.\nCheck each in M = {3, 6, 9}: 2 ∉ M, 4 ∉ M, 6 ∈ M.\nE ∩ M = {6}.\n3 and 9 are in M, but they are not even.",
      "clue": "Write E first. Then keep what is also in M.",
      "level": 3,
      "added": true,
@@ -300,14 +332,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "A = {3, 4, 5}. Which is true?",
+     "text": "Element or not: A = {3, 4, 5}. Which statement is true?",
      "opts": [
       "4 ∉ A",
       "8 ∈ A",
       "5 ∈ A"
      ],
      "ans": "5 ∈ A",
-     "why": "5 is listed in A.",
+     "why": "A = {3, 4, 5}: look between the braces.\n4 and 5 are listed, so 4 ∉ A is false.\n8 is not listed, so 8 ∈ A is false.\n5 is listed, so 5 ∈ A is true.",
      "clue": "Look between the braces.",
      "level": 1
     }
@@ -322,7 +354,7 @@
      "kind": "pick",
      "step": "exercise",
      "graded": true,
-     "text": "A = {1, 3, 4, 6}, B = {1, 4, 3}, C = { }, D = {1, 2, 3, 4, 5, 6}. A ∩ B: tap every element.",
+     "text": "A = {1, 3, 4, 6}, B = {1, 4, 3}, C = { }, D = {1, 2, 3, 4, 5, 6}. Find A ∩ B: tap every element.",
      "pool": [
       "1",
       "2",
@@ -335,7 +367,7 @@
       "3",
       "4"
      ],
-     "why": "6 ∉ B, so A ∩ B = {1, 3, 4}.",
+     "why": "Check each element of A in B = {1, 4, 3}.\n1, 3 and 4 are in B.\n6 ∉ B.\nA ∩ B = {1, 3, 4}.",
      "clue": "Check each element of A in B.",
      "level": 1,
      "ref": "Q1 a",
@@ -345,14 +377,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "A = {1, 3, 4, 6}, B = {1, 4, 3}, C = { }, D = {1, 2, 3, 4, 5, 6}. A ∩ C = ?",
+     "text": "A = {1, 3, 4, 6}, B = {1, 4, 3}, C = { }, D = {1, 2, 3, 4, 5, 6}. Find A ∩ C.",
      "opts": [
       "{ }",
       "{1, 3, 4, 6}",
       "{0}"
      ],
      "ans": "{ }",
-     "why": "C has no element, so nothing is shared.",
+     "why": "C = { } has no element.\nSo nothing can be in both A and C.\nA ∩ C = { }.",
      "clue": "What is in C?",
      "level": 1,
      "ref": "Q1 b",
@@ -362,7 +394,7 @@
      "kind": "pick",
      "step": "exercise",
      "graded": true,
-     "text": "A = {1, 3, 4, 6}, B = {1, 4, 3}, C = { }, D = {1, 2, 3, 4, 5, 6}. A ∩ D: tap every element.",
+     "text": "A = {1, 3, 4, 6}, B = {1, 4, 3}, C = { }, D = {1, 2, 3, 4, 5, 6}. Find A ∩ D: tap every element.",
      "pool": [
       "1",
       "2",
@@ -377,7 +409,7 @@
       "4",
       "6"
      ],
-     "why": "Every element of A is in D, so A ∩ D = A.",
+     "why": "Check each element of A in D.\n1, 3, 4 and 6 are all in D.\nSo A ∩ D = A = {1, 3, 4, 6}.\n2 and 5 are only in D.",
      "clue": "Check each element of A in D.",
      "level": 1,
      "ref": "Q1 c",
@@ -387,7 +419,7 @@
      "kind": "pick",
      "step": "exercise",
      "graded": true,
-     "text": "A = {1, 3, 4, 6}, B = {1, 4, 3}, C = { }, D = {1, 2, 3, 4, 5, 6}. A ∪ B: tap every element.",
+     "text": "A = {1, 3, 4, 6}, B = {1, 4, 3}, C = { }, D = {1, 2, 3, 4, 5, 6}. Find A ∪ B: tap every element.",
      "pool": [
       "1",
       "2",
@@ -401,7 +433,7 @@
       "4",
       "6"
      ],
-     "why": "B adds nothing new, so A ∪ B = A = {1, 3, 4, 6}.",
+     "why": "Write A: 1, 3, 4, 6.\nB = {1, 4, 3}: all already written.\nB adds nothing new.\nA ∪ B = {1, 3, 4, 6}.",
      "clue": "List A, then add new elements of B.",
      "level": 1,
      "ref": "Q1 d",
@@ -411,14 +443,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "A = {1, 3, 4, 6}, B = {1, 4, 3}, C = { }, D = {1, 2, 3, 4, 5, 6}. C ∪ B = ?",
+     "text": "A = {1, 3, 4, 6}, B = {1, 4, 3}, C = { }, D = {1, 2, 3, 4, 5, 6}. Find C ∪ B.",
      "opts": [
       "{ }",
       "{1, 3, 4}",
       "{1, 2, 3, 4, 5, 6}"
      ],
      "ans": "{1, 3, 4}",
-     "why": "C adds nothing, so C ∪ B = B.",
+     "why": "C = { } has no element.\nIt adds nothing to B.\nC ∪ B = B = {1, 3, 4}.",
      "clue": "The empty set adds no element.",
      "level": 1,
      "ref": "Q1 e",
@@ -428,14 +460,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "A = {1, 3, 4, 6}, B = {1, 4, 3}, C = { }, D = {1, 2, 3, 4, 5, 6}. B ∪ D = ?",
+     "text": "A = {1, 3, 4, 6}, B = {1, 4, 3}, C = { }, D = {1, 2, 3, 4, 5, 6}. Find B ∪ D.",
      "opts": [
       "{1, 3, 4}",
       "{1, 2, 3, 4, 5, 6}",
       "{2, 5, 6}"
      ],
      "ans": "{1, 2, 3, 4, 5, 6}",
-     "why": "B is inside D, so B ∪ D = D.",
+     "why": "Write D: 1, 2, 3, 4, 5, 6.\nB = {1, 4, 3}: all already in D.\nSo B adds nothing.\nB ∪ D = D = {1, 2, 3, 4, 5, 6}.",
      "clue": "Does B add anything new to D?",
      "level": 1,
      "ref": "Q1 f",
@@ -445,7 +477,7 @@
      "kind": "pick",
      "step": "exercise",
      "graded": true,
-     "text": "A = {1, 3, 4, 6}, B = {1, 4, 3}, C = { }, D = {1, 2, 3, 4, 5, 6}. (A ∩ B) ∪ C: tap every element.",
+     "text": "A = {1, 3, 4, 6}, B = {1, 4, 3}, C = { }, D = {1, 2, 3, 4, 5, 6}. Find (A ∩ B) ∪ C: tap every element.",
      "pool": [
       "1",
       "3",
@@ -457,7 +489,7 @@
       "3",
       "4"
      ],
-     "why": "A ∩ B = {1, 3, 4}. Adding C (empty) changes nothing.",
+     "why": "Bracket first: A ∩ B = {1, 3, 4}.\nThen join with C = { }.\nThe empty set adds nothing.\n(A ∩ B) ∪ C = {1, 3, 4}.",
      "clue": "Do the bracket first.",
      "level": 2,
      "ref": "Q1 g",
@@ -467,7 +499,7 @@
      "kind": "pick",
      "step": "exercise",
      "graded": true,
-     "text": "A = {1, 3, 4, 6}, B = {1, 4, 3}, C = { }, D = {1, 2, 3, 4, 5, 6}. (B ∪ C) ∩ D: tap every element.",
+     "text": "A = {1, 3, 4, 6}, B = {1, 4, 3}, C = { }, D = {1, 2, 3, 4, 5, 6}. Find (B ∪ C) ∩ D: tap every element.",
      "pool": [
       "1",
       "2",
@@ -480,7 +512,7 @@
       "3",
       "4"
      ],
-     "why": "B ∪ C = {1, 3, 4}. All three are in D.",
+     "why": "Bracket first: B ∪ C = {1, 3, 4} ∪ { } = {1, 3, 4}.\nThen keep what is also in D.\n1, 3 and 4 are all in D.\n(B ∪ C) ∩ D = {1, 3, 4}.",
      "clue": "Do the bracket first.",
      "level": 2,
      "ref": "Q1 h",
@@ -490,7 +522,7 @@
      "kind": "pick",
      "step": "exercise",
      "graded": true,
-     "text": "A = {1, 3, 4, 6}, B = {1, 4, 3}, C = { }, D = {1, 2, 3, 4, 5, 6}. (A ∩ B) ∪ (B ∩ D): tap every element.",
+     "text": "A = {1, 3, 4, 6}, B = {1, 4, 3}, C = { }, D = {1, 2, 3, 4, 5, 6}. Find (A ∩ B) ∪ (B ∩ D): tap every element.",
      "pool": [
       "1",
       "3",
@@ -502,7 +534,7 @@
       "3",
       "4"
      ],
-     "why": "A ∩ B = {1, 3, 4} and B ∩ D = {1, 3, 4}. Their union is {1, 3, 4}.",
+     "why": "First bracket: A ∩ B = {1, 3, 4}.\nSecond bracket: B ∩ D = {1, 3, 4}, since B ⊆ D.\nJoin them: {1, 3, 4} ∪ {1, 3, 4}.\nThe answer is {1, 3, 4}. 6 is not in B, so it is left out.",
      "clue": "Work out each bracket first.",
      "level": 3,
      "ref": "Q1 i",
@@ -512,7 +544,7 @@
      "kind": "pick",
      "step": "exercise",
      "graded": true,
-     "text": "Venn diagram: 5 and 7 only in A; 2 in the middle; 3 and 1 only in B. tap every element of set A.",
+     "text": "Venn diagram: 5 and 7 only in A; 2 in the middle; 3 and 1 only in B. Read the diagram: tap every element of set A.",
      "pool": [
       "1",
       "2",
@@ -525,7 +557,7 @@
       "5",
       "7"
      ],
-     "why": "A is everything inside circle A: 5, 7 and the shared 2.",
+     "why": "Set A is everything inside circle A.\nThat is the part only in A: 5 and 7.\nPlus the middle part, which is inside A too: 2.\nA = {2, 5, 7}.",
      "clue": "Include the middle part.",
      "level": 1,
      "ref": "Q2 a",
@@ -535,7 +567,7 @@
      "kind": "pick",
      "step": "exercise",
      "graded": true,
-     "text": "Venn diagram: 5 and 7 only in A; 2 in the middle; 3 and 1 only in B. tap every element of set B.",
+     "text": "Venn diagram: 5 and 7 only in A; 2 in the middle; 3 and 1 only in B. Read the diagram: tap every element of set B.",
      "pool": [
       "1",
       "2",
@@ -548,7 +580,7 @@
       "2",
       "3"
      ],
-     "why": "B is everything inside circle B: 3, 1 and the shared 2.",
+     "why": "Set B is everything inside circle B.\nThe part only in B: 3 and 1.\nPlus the middle part: 2.\nB = {1, 2, 3}.",
      "clue": "Include the middle part.",
      "level": 1,
      "ref": "Q2 b",
@@ -558,14 +590,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Venn diagram: 5 and 7 only in A; 2 in the middle; 3 and 1 only in B. A ∩ B = ?",
+     "text": "Venn diagram: 5 and 7 only in A; 2 in the middle; 3 and 1 only in B. Read the diagram: A ∩ B = ?",
      "opts": [
       "{2}",
       "{1, 2, 3, 5, 7}",
       "{5, 7}"
      ],
      "ans": "{2}",
-     "why": "Only 2 is in the middle part.",
+     "why": "A ∩ B is the part inside both circles.\nThat is the middle part.\nOnly 2 is there.\nA ∩ B = {2}. {5, 7} is the part only in A.",
      "clue": "Which part is in both circles?",
      "level": 1,
      "ref": "Q2 c",
@@ -575,7 +607,7 @@
      "kind": "pick",
      "step": "exercise",
      "graded": true,
-     "text": "Venn diagram: 5 and 7 only in A; 2 in the middle; 3 and 1 only in B. tap every element of A ∪ B.",
+     "text": "Venn diagram: 5 and 7 only in A; 2 in the middle; 3 and 1 only in B. Read the diagram: tap every element of A ∪ B.",
      "pool": [
       "1",
       "2",
@@ -591,7 +623,7 @@
       "5",
       "7"
      ],
-     "why": "Everything in either circle: {1, 2, 3, 5, 7}.",
+     "why": "A ∪ B is everything inside either circle.\nOnly A: 5, 7. Middle: 2. Only B: 3, 1.\nA ∪ B = {1, 2, 3, 5, 7}.\n9 is not in the diagram.",
      "clue": "Take all of both circles.",
      "level": 1,
      "ref": "Q2 d",
@@ -601,14 +633,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "If A ⊂ B, then A ∪ B = ?",
+     "text": "Union of a subset: if A ⊂ B, then A ∪ B = ?",
      "opts": [
       "A",
       "B",
       "{ }"
      ],
      "ans": "B",
-     "why": "A adds nothing new to B.",
+     "why": "A ⊂ B: circle A is inside circle B.\nEvery element of A is already in B.\nSo A adds nothing to B.\nA ∪ B = B.",
      "clue": "Draw A inside B.",
      "level": 1,
      "ref": "Q4 b",
@@ -622,7 +654,7 @@
    "kind": "pick",
    "step": "test",
    "graded": true,
-   "text": "A = {2, 4, 6, 8} and B = {4, 8, 12}. Tap every element of A ∩ B.",
+   "text": "Find the intersection: A = {2, 4, 6, 8} and B = {4, 8, 12}. Tap every element of A ∩ B.",
    "pool": [
     "2",
     "4",
@@ -634,7 +666,7 @@
     "4",
     "8"
    ],
-   "why": "Only 4 and 8 are in both.",
+   "why": "Check each element of A in B = {4, 8, 12}.\n2 ∉ B, 4 ∈ B, 6 ∉ B, 8 ∈ B.\nA ∩ B = {4, 8}.\n12 is only in B.",
    "level": 1,
    "id": "g7.maths.u1.s1-3-2.27",
    "gen": {
@@ -646,7 +678,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "A = {a, b} and B = {c, d}. A ∩ B = ?",
+   "text": "Find the intersection: A = {a, b} and B = {c, d}. A ∩ B = ?",
    "opts": [
     "{ }",
     "{a, b, c, d}",
@@ -654,7 +686,7 @@
     "{d}"
    ],
    "ans": "{ }",
-   "why": "Nothing is shared.",
+   "why": "Check a and b in B = {c, d}.\nNeither is there.\nNothing is shared, so A ∩ B = { }.\n{a, b, c, d} is A ∪ B, not A ∩ B.",
    "level": 1,
    "ref": "Review Exercise II Q4",
    "clue": "",
@@ -664,14 +696,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "If A ⊆ B, which is always true?",
+   "text": "Intersection of a subset: if A ⊆ B, which is always true?",
    "opts": [
     "A ∩ B = B",
     "A ∩ B = A",
     "A ∪ B = A"
    ],
    "ans": "A ∩ B = A",
-   "why": "All of A is shared with B.",
+   "why": "A ⊆ B: every element of A is in B.\nSo all of A is shared: A ∩ B = A.\nA ∩ B = B fails when B has extra elements.\nA ∪ B = A also fails then; in fact A ∪ B = B.",
    "level": 2,
    "ref": "Review Exercise II Q3",
    "clue": "",
@@ -681,13 +713,13 @@
    "kind": "blank",
    "step": "test",
    "graded": true,
-   "ask": "A = {1, 2, 3, 4} and B = {3, 4, 5}. A ∩ B has ___ elements.",
+   "ask": "Count the intersection: A = {1, 2, 3, 4} and B = {3, 4, 5}. A ∩ B has ___ elements.",
    "a": [
     "2",
     "two"
    ],
    "num": true,
-   "why": "A ∩ B = {3, 4}.",
+   "why": "Check each element of A in B.\n1 ∉ B, 2 ∉ B, 3 ∈ B, 4 ∈ B.\nA ∩ B = {3, 4}.\nIt has 2 elements.",
    "level": 2,
    "clue": "",
    "id": "g7.maths.u1.s1-3-2.30"
@@ -696,13 +728,13 @@
    "kind": "blank",
    "step": "test",
    "graded": true,
-   "ask": "A = {1, 2, 3} and B = {2, 3, 4}. (A ∩ B) ∪ {5} has ___ elements.",
+   "ask": "Two steps: A = {1, 2, 3} and B = {2, 3, 4}. (A ∩ B) ∪ {5} has ___ elements.",
    "a": [
     "3",
     "three"
    ],
    "num": true,
-   "why": "A ∩ B = {2, 3}. Add 5: {2, 3, 5}.",
+   "why": "Bracket first: A ∩ B = {2, 3}.\nJoin with {5}: {2, 3} ∪ {5} = {2, 3, 5}.\nCount: 3 elements.",
    "level": 3,
    "clue": "",
    "id": "g7.maths.u1.s1-3-2.31"

@@ -59,9 +59,10 @@
       "No, \"tall\" is not clear",
       "Only if the class is small"
      ],
-     "after": "People disagree about who is tall. There is no clear rule, so it is not a set. A set needs a clear rule.",
+     "after": "People disagree about who is tall.\nIs 1.55 m tall? Is 1.60 m? There is no clear rule.\nSo \"the tall students\" is not a set.\nA set needs a clear yes-or-no rule.",
      "ref": "Activity 1.1.1 Q2",
-     "id": "g7.maths.u1.s1-1.1"
+     "id": "g7.maths.u1.s1-1.1",
+     "best": "No, \"tall\" is not clear"
     },
     {
      "kind": "read",
@@ -113,6 +114,22 @@
      "id": "g7.maths.u1.s1-1.4"
     },
     {
+     "kind": "steps",
+     "step": "method",
+     "title": "The yes-or-no test",
+     "added": true,
+     "steps": [
+      "Collection: months that start with \"J\".",
+      "January? Yes. February? No. March? No.",
+      "Every month gets a clear yes or no.",
+      "So it is well-defined: {January, June, July} is a set.",
+      "Now try: the tall students in your class.",
+      "Is Abebe tall? Some say yes, some say no.",
+      "No clear answer, so it is not a set."
+     ],
+     "id": "g7.maths.u1.s1-1.43"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -132,14 +149,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Which collection is a set?",
+     "text": "Well-defined: which collection is a set?",
      "opts": [
       "The intelligent students in your class",
       "The months of the year that start with \"J\"",
       "The best footballers in Addis Ababa"
      ],
      "ans": "The months of the year that start with \"J\"",
-     "why": "For every month we can clearly say yes or no. \"Intelligent\" and \"best\" are not clear.",
+     "why": "A set needs a clear yes-or-no rule.\n\"Intelligent\" is an opinion. People disagree.\n\"Best footballers\" is also an opinion.\nFor each month we can say yes or no: January, June, July.\nSo the months that start with \"J\" form a set.",
      "clue": "Which one has a clear yes/no rule?",
      "level": 1,
      "ref": "Exercise 1.1.1 Q2",
@@ -149,7 +166,7 @@
      "kind": "sort",
      "step": "practise",
      "graded": true,
-     "title": "Sort the collections",
+     "title": "Sort the collections: set or not a set?",
      "bins": [
       "Set",
       "Not a set"
@@ -186,7 +203,7 @@
        "\"Tall\" is not clear."
       ]
      ],
-     "why": "A set needs a clear rule for belonging.",
+     "why": "Ask one question: is there a clear rule?\nWhole numbers less than 4, vowels and regions can be listed.\n\"Beautiful\", \"talented\" and \"tall\" are opinions.\nOpinions are not well-defined, so those are not sets.",
      "clue": "Ask: could two people disagree about it?",
      "level": 1,
      "added": true,
@@ -196,11 +213,11 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "The set of vowels in the English alphabet is A = {a, e, ___, o, u}.",
+     "ask": "Complete the set of vowels: A = {a, e, ___, o, u}.",
      "a": [
       "i"
      ],
-     "why": "The vowels are a, e, i, o, u.",
+     "why": "The English vowels are a, e, i, o, u.\nThe set shows a, e, o and u.\nThe missing vowel is i.",
      "clue": "Which vowel comes between e and o?",
      "level": 1,
      "ref": "Definition 1.1",
@@ -210,14 +227,14 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Hana says: \"The set of large numbers is a set.\" Is she right?",
+     "text": "Is it well-defined? Hana says: \"The set of large numbers is a set.\" Is she right?",
      "opts": [
       "Yes, large numbers are clear",
       "No, \"large\" is not well-defined",
       "Yes, but only for whole numbers"
      ],
      "ans": "No, \"large\" is not well-defined",
-     "why": "Is 100 large? Is 1,000? People disagree, so there is no clear rule. \"Numbers greater than 100\" would be a set.",
+     "why": "Is 100 large? Is 1,000? People disagree.\nSo \"large\" gives no clear rule.\nNo: it is not well-defined, so it is not a set.\nA fix: \"numbers greater than 100\" is a set.\n\"Only whole numbers\" does not help; \"large\" is still unclear.",
      "clue": "Could two people disagree about which numbers are large?",
      "level": 3,
      "added": true,
@@ -243,8 +260,9 @@
       "Yes",
       "No"
      ],
-     "after": "3 is not listed between the braces. So 3 is not an element of N.",
-     "id": "g7.maths.u1.s1-1.10"
+     "after": "Look between the braces: 2, 4, 6, 8, 10.\n3 is not listed.\nSo 3 is not an element of N.",
+     "id": "g7.maths.u1.s1-1.10",
+     "best": "No"
     },
     {
      "kind": "read",
@@ -289,7 +307,7 @@
      "graded": true,
      "text": "N = {2, 4, 6, 8, 10}. True or false: 8 ∈ N.",
      "a": true,
-     "why": "8 is listed in N.",
+     "why": "N = {2, 4, 6, 8, 10}.\nLook for 8 between the braces.\n8 is listed, so 8 ∈ N.\nThe statement is true.",
      "clue": "Look between the braces.",
      "level": 1,
      "id": "g7.maths.u1.s1-1.14",
@@ -302,9 +320,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "0 ∈ {0.5, 1.2, 4, 10}",
+     "text": "Element or not? True or false: 0 ∈ {0.5, 1.2, 4, 10}",
      "a": false,
-     "why": "0 is not listed. 0.5 is a different number.",
+     "why": "The elements are 0.5, 1.2, 4 and 10.\n0.5 starts with 0, but it is not the number 0.\n0 itself is not listed.\nSo 0 ∉ the set. The statement is false.",
      "clue": "Is 0 itself in the list?",
      "level": 1,
      "ref": "Exercise 1.1.1 Q1 a",
@@ -314,9 +332,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "10 ∈ {0, 2, 4, …}",
+     "text": "Continue the pattern. True or false: 10 ∈ {0, 2, 4, …}",
      "a": true,
-     "why": "The dots continue the pattern: 0, 2, 4, 6, 8, 10, … So 10 is in the set.",
+     "why": "The dots mean the pattern goes on.\nAdd 2 each time: 0, 2, 4, 6, 8, 10, …\n10 is reached.\nSo 10 ∈ the set. True.",
      "clue": "Continue the pattern: add 2 each time.",
      "level": 2,
      "ref": "Exercise 1.1.1 Q1 b",
@@ -326,7 +344,7 @@
      "kind": "pick",
      "step": "practise",
      "graded": true,
-     "text": "A = {1, 3, 5, 7, 9}. Tap every number that is ∉ A.",
+     "text": "Not an element: A = {1, 3, 5, 7, 9}. Tap every number that is ∉ A.",
      "pool": [
       "1",
       "2",
@@ -340,19 +358,61 @@
       "6",
       "10"
      ],
-     "why": "2, 6 and 10 are not listed in A.",
+     "why": "∉ means \"is not an element of\".\nA holds 1, 3, 5, 7, 9.\n1, 5 and 9 are in A, so they are ∈ A.\n2, 6 and 10 are not listed.\nSo 2 ∉ A, 6 ∉ A and 10 ∉ A.",
      "clue": "∉ means \"is not an element of\".",
      "level": 1,
      "added": true,
      "id": "g7.maths.u1.s1-1.17"
     },
     {
+     "kind": "sort",
+     "step": "practise",
+     "graded": true,
+     "added": true,
+     "title": "N = {2, 4, 6, 8, 10}: sort each number, ∈ N or ∉ N?",
+     "bins": [
+      "∈ N",
+      "∉ N"
+     ],
+     "items": [
+      [
+       "4",
+       "∈ N",
+       "4 is listed in N."
+      ],
+      [
+       "10",
+       "∈ N",
+       "10 is the last element."
+      ],
+      [
+       "5",
+       "∉ N",
+       "5 is odd; N lists only even numbers."
+      ],
+      [
+       "12",
+       "∉ N",
+       "N stops at 10."
+      ],
+      [
+       "0",
+       "∉ N",
+       "0 is not listed."
+      ]
+     ],
+     "why": "N lists 2, 4, 6, 8 and 10 only.\nListed: 4 and 10, so 4 ∈ N and 10 ∈ N.\nNot listed: 0, 5 and 12.\nSo 0 ∉ N, 5 ∉ N and 12 ∉ N.",
+     "clue": "Look between the braces for each number.",
+     "level": 1,
+     "id": "g7.maths.u1.s1-1.44"
+    },
+    {
      "kind": "tf",
      "step": "challenge",
      "graded": true,
-     "text": "8 ∉ {1, 3, 5, …}",
+     "text": "Continue the pattern. True or false: 8 ∉ {1, 3, 5, …}",
      "a": true,
-     "why": "The set continues 1, 3, 5, 7, 9, … (odd numbers). 8 is even, so 8 is not in it. \"8 ∉\" is true.",
+     "why": "The pattern adds 2: 1, 3, 5, 7, 9, …\nThese are the odd numbers.\nIt jumps from 7 to 9. It never reaches 8.\n8 is even, so 8 is not an element.\n\"8 ∉\" says exactly that. True.",
      "clue": "Continue the pattern. Is 8 ever reached?",
      "level": 3,
      "ref": "Exercise 1.1.1 Q1 d",
@@ -383,9 +443,10 @@
       "One",
       "None"
      ],
-     "after": "Nobody in your class is 100. The list is empty. We call it the empty set.",
+     "after": "Nobody in a Grade 7 class is 100 years old.\nSo the list has no names at all.\nA set with no element is the empty set.",
      "ref": "Activity 1.1.1 Q5",
-     "id": "g7.maths.u1.s1-1.19"
+     "id": "g7.maths.u1.s1-1.19",
+     "best": "None"
     },
     {
      "kind": "read",
@@ -408,30 +469,35 @@
       "A set with no element is called the empty set.",
       "We use { } or ∅ for the empty set."
      ],
-     "table": [
-      [
-       "Set",
-       "Empty?"
-      ],
+     "ref": "Example 4",
+     "id": "g7.maths.u1.s1-1.21"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "added": true,
+     "title": "Empty or not? Tap each set.",
+     "need": 4,
+     "ref": "Example 4",
+     "items": [
       [
        "Natural numbers less than 1",
-       "Yes"
+       "Empty. Natural numbers start at 1."
       ],
       [
        "Cats that can fly",
-       "Yes"
+       "Empty. No cat can fly."
       ],
       [
        "Whole numbers between 4 and 5",
-       "Yes"
+       "Empty. After 4 comes 5; nothing between."
       ],
       [
        "Rivers in Ethiopia",
-       "No: Abay, Baro, …"
+       "Not empty: Abay, Baro, Awash, …"
       ]
      ],
-     "ref": "Example 4",
-     "id": "g7.maths.u1.s1-1.21"
+     "id": "g7.maths.u1.s1-1.45"
     },
     {
      "kind": "name",
@@ -449,14 +515,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Which set is the empty set?",
+     "text": "Empty set: which set has no element?",
      "opts": [
       "The set of rivers in Ethiopia",
       "The set of whole numbers between 4 and 5",
       "The set of whole numbers less than 4"
      ],
      "ans": "The set of whole numbers between 4 and 5",
-     "why": "After 4 the next whole number is 5. Nothing is between them.",
+     "why": "Count the whole numbers between 4 and 5.\nAfter 4 the next whole number is 5.\nNothing lies between them, so the set is empty.\nRivers of Ethiopia: Abay, Baro, … not empty.\nWhole numbers less than 4: 0, 1, 2, 3. Not empty.",
      "clue": "Is there a whole number between 4 and 5?",
      "level": 1,
      "ref": "Example 4",
@@ -466,13 +532,13 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "A = {2, 2, 2, 2} has ___ element(s).",
+     "ask": "Count the elements: A = {2, 2, 2, 2} has ___ element(s).",
      "a": [
       "1",
       "one"
      ],
      "num": true,
-     "why": "Repeated elements count once. A = {2}.",
+     "why": "A repeated element counts only once.\nThe only different number is 2.\nSo A = {2}.\nA has 1 element.",
      "clue": "How many different numbers are listed?",
      "level": 1,
      "ref": "Exercise 1.1.1 Q3 a",
@@ -486,13 +552,13 @@
      "kind": "blank",
      "step": "practise",
      "graded": true,
-     "ask": "D = the set of whole numbers less than 6. D has ___ elements.",
+     "ask": "Count the elements: D = the set of whole numbers less than 6. D has ___ elements.",
      "a": [
       "6",
       "six"
      ],
      "num": true,
-     "why": "D = {0, 1, 2, 3, 4, 5}. That is 6 elements.",
+     "why": "Whole numbers start at 0.\nThose less than 6: 0, 1, 2, 3, 4, 5.\nCount them: 6 numbers.\nD has 6 elements. (Not 5: do not forget 0.)",
      "clue": "Whole numbers start at 0.",
      "level": 2,
      "ref": "Exercise 1.1.1 Q3 d",
@@ -503,7 +569,7 @@
      "kind": "sort",
      "step": "practise",
      "graded": true,
-     "title": "Empty or not?",
+     "title": "Sort: empty set or not?",
      "bins": [
       "Empty",
       "Not empty"
@@ -530,7 +596,7 @@
        "January, June, July."
       ]
      ],
-     "why": "An empty set has no element at all.",
+     "why": "A set is empty if you cannot name one element.\nNatural numbers start at 1, so none is less than 1: empty.\nNo Grade 7 student is 30: empty.\nTrees in Addis Ababa and months with \"J\" have elements: not empty.",
      "clue": "Can you name even one element?",
      "level": 1,
      "ref": "Exercise 1.1.1 Q4",
@@ -540,7 +606,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "Which of these is NOT the empty set?",
+     "text": "Spot the non-empty set: which of these is NOT the empty set?",
      "opts": [
       "{ }",
       "∅",
@@ -548,7 +614,7 @@
       "Natural numbers between 20 and 21"
      ],
      "ans": "{0}",
-     "why": "{0} has one element, the number 0. So it is not empty. { } and ∅ are empty, and no natural number lies between 20 and 21.",
+     "why": "{ } and ∅ are two ways to write the empty set.\nNo natural number lies between 20 and 21: empty.\n{0} has one element: the number 0.\nSo {0} is not empty. It looks like \"nothing\", but 0 is an element.",
      "clue": "Count the elements inside the braces.",
      "level": 3,
      "needs": "math.whole-natural",
@@ -576,14 +642,14 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "How many whole numbers are less than 3?",
+     "text": "Whole numbers: how many whole numbers are less than 3?",
      "opts": [
       "2",
       "3",
       "4"
      ],
      "ans": "3",
-     "why": "They are 0, 1 and 2.",
+     "why": "Whole numbers start at 0.\nThose less than 3: 0, 1, 2.\nThat is 3 numbers.",
      "clue": "Whole numbers start at 0.",
      "level": 1
     }
@@ -598,9 +664,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "0 ∈ {0.5, 1.2, 4, 10}",
+     "text": "Exercise: true or false? 0 ∈ {0.5, 1.2, 4, 10}",
      "a": false,
-     "why": "0 is not listed in the set.",
+     "why": "The elements are 0.5, 1.2, 4 and 10.\n0.5 is not the same as 0.\n0 is not listed, so 0 ∉ the set.\nFalse.",
      "clue": "Look for 0 itself.",
      "level": 1,
      "ref": "Q1 a",
@@ -610,9 +676,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "10 ∈ {0, 2, 4, …}",
+     "text": "Exercise: true or false? 10 ∈ {0, 2, 4, …}",
      "a": true,
-     "why": "The pattern 0, 2, 4, 6, 8, 10 reaches 10.",
+     "why": "The pattern adds 2 each time.\n0, 2, 4, 6, 8, 10, …\n10 is in the pattern.\nTrue.",
      "clue": "Continue the pattern.",
      "level": 1,
      "ref": "Q1 b",
@@ -622,9 +688,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "1 ∉ {1, 2, 5, 7}",
+     "text": "Exercise: true or false? 1 ∉ {1, 2, 5, 7}",
      "a": false,
-     "why": "1 is in the set, so \"1 ∉\" is false.",
+     "why": "∉ says \"1 is not an element\".\nBut 1 is the first element listed.\nSo 1 ∈ the set.\nThe statement is false.",
      "clue": "Is 1 listed?",
      "level": 1,
      "ref": "Q1 c",
@@ -634,9 +700,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "8 ∉ {1, 3, 5, …}",
+     "text": "Exercise: true or false? 8 ∉ {1, 3, 5, …}",
      "a": true,
-     "why": "The set is the odd numbers. 8 is even.",
+     "why": "The pattern is 1, 3, 5, 7, 9, …: odd numbers.\n8 is even, so it never appears.\nSo 8 ∉ the set.\nTrue.",
      "clue": "Continue the pattern.",
      "level": 2,
      "ref": "Q1 d",
@@ -652,7 +718,7 @@
       "Not a set"
      ],
      "ans": "Not a set",
-     "why": "\"Intelligent\" is not well-defined.",
+     "why": "A set needs a clear rule.\nWho is \"intelligent\"? People disagree.\nSo the collection is not well-defined.\nIt is not a set.",
      "clue": "Is there a clear rule?",
      "level": 1,
      "ref": "Q2 a",
@@ -668,7 +734,7 @@
       "Not a set"
      ],
      "ans": "Set",
-     "why": "It is {January, June, July}.",
+     "why": "Check each month: does it start with J?\nJanuary, June and July do. The rest do not.\nThe rule is clear: {January, June, July}.\nSo it is a set.",
      "clue": "Is there a clear rule?",
      "level": 1,
      "ref": "Q2 b",
@@ -684,7 +750,7 @@
       "Not a set"
      ],
      "ans": "Set (the empty set)",
-     "why": "The rule is clear, but nothing fits it. So it is the empty set.",
+     "why": "The rule is clear: a natural number between 20 and 21.\nAfter 20 the next natural number is 21.\nNo number fits the rule.\nA clear rule with no members is the empty set.\nSo it is a set: the empty set.",
      "clue": "A clear rule with no members still gives a set.",
      "level": 2,
      "ref": "Q2 c",
@@ -694,14 +760,14 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "C = { } has ___ elements.",
+     "ask": "Count the elements: C = { } has ___ elements.",
      "a": [
       "0",
       "zero",
       "no"
      ],
      "num": true,
-     "why": "{ } is the empty set.",
+     "why": "Look between the braces.\nNothing is there.\n{ } is the empty set.\nC has 0 elements.",
      "clue": "What is inside the braces?",
      "level": 1,
      "ref": "Q3 b",
@@ -711,13 +777,13 @@
      "kind": "blank",
      "step": "exercise",
      "graded": true,
-     "ask": "B = {a, b} has ___ elements.",
+     "ask": "Count the elements: B = {a, b} has ___ elements.",
      "a": [
       "2",
       "two"
      ],
      "num": true,
-     "why": "a and b are two different elements.",
+     "why": "The elements are a and b.\nThey are different letters.\nB has 2 elements.",
      "clue": "Count the letters.",
      "level": 1,
      "ref": "Q3 c",
@@ -727,13 +793,13 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "M = the set of students in your class whose age is 30 years. Is M empty?",
+     "text": "Empty or not? M = the set of students in your class whose age is 30 years.",
      "opts": [
       "Empty",
       "Not empty"
      ],
      "ans": "Empty",
-     "why": "No Grade 7 student is 30 years old.",
+     "why": "Grade 7 students are about 12 to 14 years old.\nNobody in the class is 30.\nSo M has no element.\nM is the empty set.",
      "clue": "Can you name one member?",
      "level": 1,
      "ref": "Q4 b",
@@ -747,14 +813,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which collection is a set?",
+   "text": "Well-defined: which collection is a set?",
    "opts": [
     "The kind people in your town",
     "The whole numbers less than 5",
     "The best singers in Ethiopia"
    ],
    "ans": "The whole numbers less than 5",
-   "why": "It is {0, 1, 2, 3, 4}. The other rules are not clear.",
+   "why": "A set needs a clear yes-or-no rule.\n\"Kind\" and \"best\" are opinions.\nWhole numbers less than 5 are clear: 0, 1, 2, 3, 4.\nSo the whole numbers less than 5 form a set.",
    "level": 1,
    "clue": "",
    "id": "g7.maths.u1.s1-1.38"
@@ -765,7 +831,7 @@
    "graded": true,
    "text": "A = {a, e, i, o, u}. True or false: b ∈ A.",
    "a": false,
-   "why": "b is not a vowel, so b ∉ A.",
+   "why": "A = {a, e, i, o, u}, the vowels.\nb is not a vowel.\nb is not listed in A, so b ∉ A.\nThe statement is false.",
    "level": 1,
    "clue": "",
    "id": "g7.maths.u1.s1-1.39",
@@ -778,13 +844,13 @@
    "kind": "blank",
    "step": "test",
    "graded": true,
-   "ask": "{3, 3, 7, 7, 7} has ___ elements.",
+   "ask": "Count the elements: {3, 3, 7, 7, 7} has ___ elements.",
    "a": [
     "2",
     "two"
    ],
    "num": true,
-   "why": "The different elements are 3 and 7.",
+   "why": "Repeated elements count only once.\nThe different elements are 3 and 7.\nSo the set is {3, 7}.\nIt has 2 elements.",
    "level": 2,
    "clue": "",
    "id": "g7.maths.u1.s1-1.40",
@@ -797,14 +863,14 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which set is empty?",
+   "text": "Empty set: which set has no element?",
    "opts": [
     "{0}",
     "Whole numbers less than 0",
     "Even numbers less than 3"
    ],
    "ans": "Whole numbers less than 0",
-   "why": "Whole numbers start at 0, so none is less than 0. {0} has one element; even numbers less than 3 are 0 and 2.",
+   "why": "Whole numbers start at 0.\nNo whole number is less than 0: this set is empty.\n{0} has one element, the number 0.\nEven numbers less than 3 are 0 and 2: not empty.",
    "level": 2,
    "clue": "",
    "id": "g7.maths.u1.s1-1.41"
@@ -813,13 +879,13 @@
    "kind": "blank",
    "step": "test",
    "graded": true,
-   "ask": "E = the set of natural numbers less than 10 that are even. E has ___ elements.",
+   "ask": "Count the elements: E = the set of even natural numbers less than 10. E has ___ elements.",
    "a": [
     "4",
     "four"
    ],
    "num": true,
-   "why": "E = {2, 4, 6, 8}. Natural numbers start at 1, so 0 is not included.",
+   "why": "Natural numbers start at 1, so 0 is not included.\nEven ones less than 10: 2, 4, 6, 8.\nCount them: 4.\nE = {2, 4, 6, 8} has 4 elements.",
    "level": 3,
    "clue": "",
    "id": "g7.maths.u1.s1-1.42"

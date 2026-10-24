@@ -64,9 +64,10 @@
       "Yes",
       "No, the order is different"
      ],
-     "after": "They have exactly the same elements. Order does not matter in a set. So A = B.",
+     "after": "Both sets hold p, q, r and s.\nOnly the order is different.\nOrder does not matter in a set.\nSo A and B are the same set: A = B.",
      "ref": "Example 1",
-     "id": "g7.maths.u1.s1-2.1"
+     "id": "g7.maths.u1.s1-2.1",
+     "best": "Yes"
     },
     {
      "kind": "read",
@@ -75,26 +76,31 @@
      "paras": [
       "Definition 1.2: Two non-empty sets A and B are equal if they have exactly the same elements. We write A = B."
      ],
-     "table": [
-      [
-       "Sets",
-       "Equal?"
-      ],
+     "ref": "Examples 1–3",
+     "id": "g7.maths.u1.s1-2.2"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "added": true,
+     "ref": "Examples 1–3",
+     "need": 3,
+     "title": "Equal or not? Tap each pair.",
+     "items": [
       [
        "A = {p, q, r, s}, B = {q, r, p, s}",
-       "Yes: same elements"
+       "Equal: same elements, different order. A = B."
       ],
       [
        "C = {1, 1, 2, 2, 3}, D = {1, 2, 3}",
-       "Yes: repeats do not count"
+       "Equal: repeats do not count. C = D."
       ],
       [
        "E = {u, v, x}, F = {x, u, 3}",
-       "No: v ∉ F and 3 ∉ E"
+       "Not equal: v ∉ F and 3 ∉ E."
       ]
      ],
-     "ref": "Examples 1–3",
-     "id": "g7.maths.u1.s1-2.2"
+     "id": "g7.maths.u1.s1-2.51"
     },
     {
      "kind": "name",
@@ -112,9 +118,9 @@
      "kind": "tf",
      "step": "check",
      "graded": true,
-     "text": "{2, a, 4} = {a, 2, 4}",
+     "text": "Equal sets? True or false: {2, a, 4} = {a, 2, 4}",
      "a": true,
-     "why": "Both sets have exactly 2, a and 4.",
+     "why": "First set: 2, a, 4.\nSecond set: a, 2, 4.\nEvery element is in both sets; only the order changed.\nSo the sets are equal. True.",
      "clue": "Check each element. Does order matter?",
      "level": 1,
      "ref": "Exercise 1.2.1 Q1 c",
@@ -124,9 +130,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "{m, a, c} = {a, m, d}",
+     "text": "Equal sets? True or false: {m, a, c} = {a, m, d}",
      "a": false,
-     "why": "c is only in the first set and d only in the second.",
+     "why": "m and a are in both sets.\nc is in the first set only.\nd is in the second set only.\nNot exactly the same elements, so not equal. False.",
      "clue": "Is every element in both sets?",
      "level": 1,
      "ref": "Exercise 1.2.1 Q1 i",
@@ -136,9 +142,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "{5, 5, 6} = {6, 5}",
+     "text": "Equal sets? True or false: {5, 5, 6} = {6, 5}",
      "a": true,
-     "why": "Repeats do not count. Both sets are {5, 6}.",
+     "why": "Repeats count once: {5, 5, 6} = {5, 6}.\nThe second set is {6, 5} = {5, 6}.\nSame elements, so the sets are equal.\nTrue.",
      "clue": "Remove the repeated element first.",
      "level": 2,
      "added": true,
@@ -148,13 +154,13 @@
      "kind": "blank",
      "step": "challenge",
      "graded": true,
-     "ask": "{4, x, 9} = {9, 7, 4}. So x = ___",
+     "ask": "Find the missing element: {4, x, 9} = {9, 7, 4}. So x = ___",
      "a": [
       "7",
       "seven"
      ],
      "num": true,
-     "why": "Equal sets have exactly the same elements. 4 and 9 are in both, so x must be 7.",
+     "why": "Equal sets have exactly the same elements.\nThe second set holds 9, 7 and 4.\n4 and 9 already appear in the first set.\nThe only element still missing is 7.\nSo x = 7. Check: {4, 7, 9} = {9, 7, 4}.",
      "clue": "Which element of the second set is missing from the first?",
      "level": 3,
      "added": true,
@@ -181,9 +187,10 @@
       "The same number of elements",
       "The same elements"
      ],
-     "after": "Both have 3 elements. Sets like this are called equivalent.",
+     "after": "{5, 7, 9} has 3 elements.\n{x, y, z} also has 3 elements.\nNo element is shared, but the count is the same.\nSets with the same count are called equivalent.",
      "ref": "Exercise 1.2.1 Q1 f",
-     "id": "g7.maths.u1.s1-2.8"
+     "id": "g7.maths.u1.s1-2.8",
+     "best": "The same number of elements"
     },
     {
      "kind": "read",
@@ -192,31 +199,32 @@
      "paras": [
       "Definition 1.3: Sets A and B are equivalent, written A ↔ B, if they have an equal number of elements."
      ],
-     "table": [
-      [
-       "Sets",
-       "Count",
-       "Equivalent?"
-      ],
-      [
-       "E = {u, v, x}, F = {x, u, 3}",
-       "3 and 3",
-       "Yes"
-      ],
-      [
-       "A = {p, q, r, s}, B = {q, r, p}",
-       "4 and 3",
-       "No"
-      ],
-      [
-       "C = {1, 2, 3}, D = {3, 2, 1}",
-       "3 and 3",
-       "Yes"
-      ]
-     ],
      "note": "All equal sets are equivalent, but not all equivalent sets are equal.",
      "ref": "Examples 4–6",
      "id": "g7.maths.u1.s1-2.9"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "added": true,
+     "ref": "Examples 4–6",
+     "need": 3,
+     "title": "Count, then decide: equivalent or not? Tap each pair.",
+     "items": [
+      [
+       "E = {u, v, x}, F = {x, u, 3}",
+       "3 and 3 elements: E ↔ F. Equivalent, but not equal."
+      ],
+      [
+       "A = {p, q, r, s}, B = {q, r, p}",
+       "4 and 3 elements: not equivalent."
+      ],
+      [
+       "C = {1, 2, 3}, D = {3, 2, 1}",
+       "3 and 3 elements: C ↔ D. They are also equal."
+      ]
+     ],
+     "id": "g7.maths.u1.s1-2.52"
     },
     {
      "kind": "name",
@@ -234,7 +242,7 @@
      "kind": "mcq",
      "step": "check",
      "graded": true,
-     "text": "Which set is equivalent to {a, 3}?",
+     "text": "Equivalent sets: which set is equivalent to {a, 3}?",
      "opts": [
       "{ }",
       "{2, 3}",
@@ -242,7 +250,7 @@
       "{3}"
      ],
      "ans": "{2, 3}",
-     "why": "{a, 3} has 2 elements. Only {2, 3} also has 2.",
+     "why": "Count the elements of {a, 3}: a and 3, so 2.\nCount each option: { } has 0, {2, 3} has 2.\n{a} has 1 and {3} has 1.\nOnly {2, 3} has 2 elements.\nSo {2, 3} ↔ {a, 3}. The elements need not match.",
      "clue": "Count the elements in {a, 3} first.",
      "level": 1,
      "ref": "Review Exercise II Q2",
@@ -252,9 +260,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "{5, 7, 9} ↔ {x, y, z}",
+     "text": "Equivalent sets? True or false: {5, 7, 9} ↔ {x, y, z}",
      "a": true,
-     "why": "Each set has 3 elements.",
+     "why": "{5, 7, 9} has 3 elements.\n{x, y, z} has 3 elements.\nSame number of elements, so the sets are equivalent.\nTrue.",
      "clue": "Count both sets.",
      "level": 1,
      "ref": "Exercise 1.2.1 Q1 f",
@@ -264,9 +272,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "All equivalent sets are equal sets.",
+     "text": "Equal or equivalent? True or false: all equivalent sets are equal sets.",
      "a": false,
-     "why": "{1, 2} ↔ {a, b}, but they do not have the same elements.",
+     "why": "Try {1, 2} and {a, b}.\nBoth have 2 elements, so {1, 2} ↔ {a, b}.\nBut their elements are different, so they are not equal.\nOne example is enough. False.",
      "clue": "Think of {1, 2} and {a, b}.",
      "level": 2,
      "ref": "Review Exercise I a",
@@ -304,7 +312,7 @@
        "Same elements."
       ]
      ],
-     "why": "Equal: same elements. Equivalent: same number of elements.",
+     "why": "Step 1: count both sets. Same count means equivalent.\nStep 2: compare the elements. Same elements means equal.\n{1, 2, 3} and {3, 1, 2}; {p, q} and {q, p}: equal and equivalent.\n{1, 2, 3} and {a, b, c}: 3 and 3, different elements: equivalent only.\n{1, 2} and {1, 2, 3}: 2 and 3 elements: neither.",
      "clue": "First count, then compare the elements.",
      "level": 2,
      "added": true,
@@ -314,7 +322,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "A = the whole numbers less than 4. Which set is equivalent to A but NOT equal to A?",
+     "text": "Equivalent but not equal: A = the whole numbers less than 4. Which set is equivalent to A but NOT equal to A?",
      "opts": [
       "{0, 1, 2, 3}",
       "{1, 2, 3, 4}",
@@ -322,7 +330,7 @@
       "{3, 2, 1, 0}"
      ],
      "ans": "{1, 2, 3, 4}",
-     "why": "A = {0, 1, 2, 3} has 4 elements. {1, 2, 3, 4} also has 4, but its elements differ. {0, 1, 2, 3} and {3, 2, 1, 0} are equal to A.",
+     "why": "Whole numbers start at 0: A = {0, 1, 2, 3}.\nA has 4 elements.\n{0, 1, 2, 3} and {3, 2, 1, 0} are equal to A.\n{0, 1, 2} has only 3 elements.\n{1, 2, 3, 4} has 4 elements, but 4 ∉ A.\nSo {1, 2, 3, 4} is equivalent to A, not equal.",
      "clue": "Write A first. Then look for 4 elements that are not the same.",
      "level": 3,
      "added": true,
@@ -348,9 +356,10 @@
       "Yes",
       "No"
      ],
-     "after": "2, 3 and 5 are all in B. So A is inside B. We say A is a subset of B.",
+     "after": "Check each element of A in B.\n2 ∈ B, 3 ∈ B, 5 ∈ B.\nSo every element of A is in B.\nWe say A is a subset of B.",
      "ref": "Example 7",
-     "id": "g7.maths.u1.s1-2.16"
+     "id": "g7.maths.u1.s1-2.16",
+     "best": "Yes"
     },
     {
      "kind": "nest",
@@ -431,6 +440,35 @@
      "id": "g7.maths.u1.s1-2.20"
     },
     {
+     "kind": "tree",
+     "step": "explore",
+     "added": true,
+     "title": "All subsets of {a, b, c}, by size",
+     "root": {
+      "label": "{a, b, c}",
+      "info": "Sort its subsets by how many elements they keep. 1 + 3 + 3 + 1 = 8 subsets.",
+      "children": [
+       {
+        "label": "0 elements",
+        "info": "{ }: the empty set. 1 subset."
+       },
+       {
+        "label": "1 element",
+        "info": "{a}, {b}, {c}. 3 subsets."
+       },
+       {
+        "label": "2 elements",
+        "info": "{a, b}, {a, c}, {b, c}. 3 subsets."
+       },
+       {
+        "label": "3 elements",
+        "info": "{a, b, c}: the set itself. 1 subset."
+       }
+      ]
+     },
+     "id": "g7.maths.u1.s1-2.53"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -446,9 +484,9 @@
      "kind": "tf",
      "step": "check",
      "graded": true,
-     "text": "{2, 6, 8} ⊆ {6, 8}",
+     "text": "Subset? True or false: {2, 6, 8} ⊆ {6, 8}",
      "a": false,
-     "why": "2 is in the first set but not in {6, 8}.",
+     "why": "Check each element of {2, 6, 8} in {6, 8}.\n6 ∈ {6, 8} and 8 ∈ {6, 8}.\nBut 2 ∉ {6, 8}.\nOne missing element is enough. False.",
      "clue": "Check every element of the first set.",
      "level": 1,
      "ref": "Exercise 1.2.1 Q1 b",
@@ -458,9 +496,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "∅ ⊆ {2}",
+     "text": "Subset? True or false: ∅ ⊆ {2}",
      "a": true,
-     "why": "The empty set is a subset of any set.",
+     "why": "∅ has no element.\nSo no element of ∅ is missing from {2}.\nThe empty set is a subset of every set.\nTrue.",
      "clue": "Read the Note.",
      "level": 1,
      "ref": "Exercise 1.2.1 Q1 h",
@@ -470,7 +508,7 @@
      "kind": "pick",
      "step": "practise",
      "graded": true,
-     "text": "A = {0, b}. Tap every subset of A.",
+     "text": "List the subsets: A = {0, b}. Tap every subset of A.",
      "pool": [
       "{ }",
       "{0}",
@@ -485,7 +523,7 @@
       "{b}",
       "{0, b}"
      ],
-     "why": "Subsets: { }, {0}, {b} and {0, b}. 1 is not in A.",
+     "why": "Size 0: { }.\nSize 1: {0} and {b}.\nSize 2: {0, b}, the set itself.\nSo A has 4 subsets.\n{1} and {0, 1} are not subsets: 1 ∉ A.",
      "clue": "Use no element, one element, then both.",
      "level": 2,
      "ref": "Exercise 1.2.1 Q2",
@@ -501,7 +539,7 @@
       "eight"
      ],
      "num": true,
-     "why": "None: { }. One: {a}, {b}, {c}. Two: {a, b}, {a, c}, {b, c}. Three: {a, b, c}. 1 + 3 + 3 + 1 = 8.",
+     "why": "List the subsets by size.\n0 elements: { }. That is 1.\n1 element: {a}, {b}, {c}. That is 3.\n2 elements: {a, b}, {a, c}, {b, c}. That is 3.\n3 elements: {a, b, c}. That is 1.\n1 + 3 + 3 + 1 = 8 subsets.",
      "clue": "List them by size: 0, 1, 2 and 3 elements.",
      "level": 3,
      "added": true,
@@ -531,9 +569,10 @@
       "Yes",
       "No"
      ],
-     "after": "A set is a subset of itself, but never a proper subset of itself. A proper subset must leave something out.",
+     "after": "{a, c} is a subset of itself.\nA proper subset must leave out at least one element.\n{a, c} leaves nothing out of {a, c}.\nSo {a, c} is not a proper subset of itself.",
      "ref": "Example 12",
-     "id": "g7.maths.u1.s1-2.26"
+     "id": "g7.maths.u1.s1-2.26",
+     "best": "No"
     },
     {
      "kind": "read",
@@ -608,6 +647,33 @@
      "id": "g7.maths.u1.s1-2.30"
     },
     {
+     "kind": "venn",
+     "step": "explore",
+     "added": true,
+     "title": "Not inside: A = {1, 2, 3}, B = {3, 4}",
+     "sets": [
+      [
+       "A",
+       "Only in A: 1 and 2. So A ⊄ B."
+      ],
+      [
+       "B",
+       "Only in B: 4. So B ⊄ A."
+      ]
+     ],
+     "overlaps": [
+      [
+       [
+        0,
+        1
+       ],
+       "In both",
+       "Only 3 is in both. The circles overlap; neither is inside the other."
+      ]
+     ],
+     "id": "g7.maths.u1.s1-2.54"
+    },
+    {
      "kind": "name",
      "step": "name",
      "title": "Key words",
@@ -627,9 +693,9 @@
      "kind": "tf",
      "step": "check",
      "graded": true,
-     "text": "{7, 4} ⊂ {7, 4, 5, 6}",
+     "text": "Proper subset? True or false: {7, 4} ⊂ {7, 4, 5, 6}",
      "a": true,
-     "why": "7 and 4 are in the bigger set, and 5 and 6 are extra.",
+     "why": "7 and 4 are both in {7, 4, 5, 6}, so {7, 4} ⊆ it.\nThe bigger set has extra elements: 5 and 6.\nSubset plus something extra means proper subset.\nTrue.",
      "clue": "Is A inside B, with something left over?",
      "level": 1,
      "ref": "Exercise 1.2.1 Q1 e",
@@ -639,9 +705,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "{a, b, c} ⊂ {c, a, b}",
+     "text": "Proper subset? True or false: {a, b, c} ⊂ {c, a, b}",
      "a": false,
-     "why": "The two sets are equal. A set is not a proper subset of itself.",
+     "why": "Both sets hold a, b and c.\nSo the sets are equal.\nThe second set has no extra element.\nA set is not a proper subset of itself. False.\nNote: {a, b, c} ⊆ {c, a, b} is true.",
      "clue": "Does the second set have any extra element?",
      "level": 2,
      "ref": "Exercise 1.2.1 Q1 d",
@@ -651,7 +717,7 @@
      "kind": "pick",
      "step": "practise",
      "graded": true,
-     "text": "B = {m, 2}. Tap every proper subset of B.",
+     "text": "List the proper subsets: B = {m, 2}. Tap every proper subset of B.",
      "pool": [
       "{ }",
       "{m}",
@@ -664,7 +730,7 @@
       "{m}",
       "{2}"
      ],
-     "why": "Subsets are { }, {m}, {2}, {m, 2}. Remove B itself.",
+     "why": "All subsets of B: { }, {m}, {2}, {m, 2}.\nA proper subset must leave something out.\n{m, 2} is B itself, so remove it.\nProper subsets: { }, {m}, {2}.\n{m, 2, 0} is not even a subset: 0 ∉ B.",
      "clue": "Proper subsets leave out at least one element.",
      "level": 2,
      "ref": "Exercise 1.2.1 Q3",
@@ -674,14 +740,14 @@
      "kind": "mcq",
      "step": "practise",
      "graded": true,
-     "text": "M = {0, 4, 6, 8} and N = {6, 8}. Which Venn diagram is right?",
+     "text": "Choose the Venn diagram: M = {0, 4, 6, 8} and N = {6, 8}. Which Venn diagram is right?",
      "opts": [
       "Circle N inside circle M",
       "Circle M inside circle N",
       "Two circles that do not touch"
      ],
      "ans": "Circle N inside circle M",
-     "why": "6 and 8 are in M, so N ⊂ M. N goes inside M; 0 and 4 sit in M outside N.",
+     "why": "Check N in M: 6 ∈ M and 8 ∈ M.\nSo N ⊆ M, and M has extra 0 and 4. N ⊂ M.\nA proper subset is drawn inside the bigger circle.\nSo circle N goes inside circle M.\n0 and 4 sit in M, outside N.",
      "clue": "Is every element of N in M?",
      "level": 1,
      "ref": "Exercise 1.2.1 Q4",
@@ -691,7 +757,7 @@
      "kind": "mcq",
      "step": "challenge",
      "graded": true,
-     "text": "A ⊆ B and B ⊆ A. What must be true?",
+     "text": "Subsets both ways: A ⊆ B and B ⊆ A. What must be true?",
      "opts": [
       "A ⊂ B",
       "A = B",
@@ -699,7 +765,7 @@
       "A ↔ B is false"
      ],
      "ans": "A = B",
-     "why": "Every element of A is in B and every element of B is in A. So they have exactly the same elements: A = B.",
+     "why": "A ⊆ B: every element of A is in B.\nB ⊆ A: every element of B is in A.\nSo neither set has an extra element.\nThey have exactly the same elements: A = B.\nA ⊂ B is wrong: B has nothing extra.",
      "clue": "If each set is inside the other, what can you say?",
      "level": 3,
      "added": true,
@@ -716,9 +782,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "{1, 4, 3} ⊆ {3, 4, 1}",
+     "text": "Exercise: subset? True or false: {1, 4, 3} ⊆ {3, 4, 1}",
      "a": true,
-     "why": "Every element of the first set is in the second.",
+     "why": "Check each element: 1, 4, 3.\nAll three are in {3, 4, 1}.\nSo the first set is a subset of the second.\nTrue. (The sets are in fact equal.)",
      "clue": "Check each element.",
      "level": 1,
      "ref": "Q1 a",
@@ -728,9 +794,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "{2, 6, 8} ⊆ {6, 8}",
+     "text": "Exercise: subset? True or false: {2, 6, 8} ⊆ {6, 8}",
      "a": false,
-     "why": "2 ∉ {6, 8}.",
+     "why": "6 and 8 are in {6, 8}.\n2 is not: 2 ∉ {6, 8}.\nEvery element must be in the second set.\nFalse.",
      "clue": "Check each element.",
      "level": 1,
      "ref": "Q1 b",
@@ -740,9 +806,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "{a, b, c} ⊂ {c, a, b}",
+     "text": "Exercise: proper subset? True or false: {a, b, c} ⊂ {c, a, b}",
      "a": false,
-     "why": "They are equal sets. A set is not a proper subset of itself.",
+     "why": "Both sets hold a, b, c, so they are equal.\nThe second set has no extra element.\nA set is not a proper subset of itself.\nFalse.",
      "clue": "Is anything extra?",
      "level": 2,
      "ref": "Q1 d",
@@ -752,9 +818,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "{ } ⊂ {3, 4}",
+     "text": "Exercise: proper subset? True or false: { } ⊂ {3, 4}",
      "a": true,
-     "why": "The empty set is a proper subset of any non-empty set.",
+     "why": "{ } is a subset of every set.\n{3, 4} has extra elements: 3 and 4.\nSo { } is a proper subset of {3, 4}.\nTrue.",
      "clue": "Read Note 1 on proper subsets.",
      "level": 1,
      "ref": "Q1 g",
@@ -764,7 +830,7 @@
      "kind": "pick",
      "step": "exercise",
      "graded": true,
-     "text": "Let A = {0, b}. List all subsets of A.",
+     "text": "Exercise: let A = {0, b}. Tap every subset of A.",
      "pool": [
       "{ }",
       "{0}",
@@ -778,7 +844,7 @@
       "{b}",
       "{0, b}"
      ],
-     "why": "The subsets are { }, {0}, {b} and {0, b}.",
+     "why": "Size 0: { }.\nSize 1: {0} and {b}.\nSize 2: {0, b}.\n{0, 1} is not a subset: 1 ∉ A.\nSo A has 4 subsets.",
      "clue": "Include the empty set and A itself.",
      "level": 2,
      "ref": "Q2",
@@ -788,14 +854,14 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "E = {a, x, m, 4} and F = {a, 4, 8, 9}. Which Venn diagram fits?",
+     "text": "Exercise: choose the Venn diagram. E = {a, x, m, 4} and F = {a, 4, 8, 9}. Which Venn diagram fits?",
      "opts": [
       "Two overlapping circles: a and 4 in the middle",
       "Circle E inside circle F",
       "Two circles that do not touch"
      ],
      "ans": "Two overlapping circles: a and 4 in the middle",
-     "why": "a and 4 are in both. x, m are only in E; 8, 9 only in F.",
+     "why": "Find the shared elements: a and 4.\nOnly in E: x and m.\nOnly in F: 8 and 9.\nSomething shared, but neither set is inside the other.\nSo two overlapping circles, with a and 4 in the middle.",
      "clue": "Which elements are in both sets?",
      "level": 2,
      "ref": "Q5",
@@ -805,9 +871,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "All equal sets are equivalent.",
+     "text": "Exercise: true or false? All equal sets are equivalent.",
      "a": true,
-     "why": "Equal sets have the same elements, so the same number of elements.",
+     "why": "Equal sets have exactly the same elements.\nSo they have the same number of elements.\nSame number means equivalent.\nTrue.",
      "clue": "Same elements means the same count.",
      "level": 1,
      "ref": "Q6 a",
@@ -817,9 +883,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "A set is a proper subset of itself.",
+     "text": "Exercise: true or false? A set is a proper subset of itself.",
      "a": false,
-     "why": "No set is a proper subset of itself.",
+     "why": "A proper subset leaves out at least one element.\nA leaves nothing out of A.\nSo A ⊆ A, but A ⊄ A as a proper subset.\nFalse.",
      "clue": "Read Note 2 on proper subsets.",
      "level": 1,
      "ref": "Q6 c",
@@ -829,9 +895,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "If A = B, then A ⊆ B.",
+     "text": "Exercise: true or false? If A = B, then A ⊆ B.",
      "a": true,
-     "why": "Every element of A is in B.",
+     "why": "A = B means they have the same elements.\nSo every element of A is in B.\nThat is the meaning of A ⊆ B.\nTrue.",
      "clue": "Any set is a subset of itself.",
      "level": 1,
      "ref": "Q6 d",
@@ -845,9 +911,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "{1, 2, 3} = {3, 2, 1}",
+   "text": "Equal sets? True or false: {1, 2, 3} = {3, 2, 1}",
    "a": true,
-   "why": "Same elements; order does not matter.",
+   "why": "Both sets hold 1, 2 and 3.\nOnly the order is different.\nOrder does not matter in a set.\nTrue.",
    "level": 1,
    "clue": "",
    "id": "g7.maths.u1.s1-2.46"
@@ -856,7 +922,7 @@
    "kind": "mcq",
    "step": "test",
    "graded": true,
-   "text": "Which set is equivalent to {p, q, r}?",
+   "text": "Equivalent sets: which set is equivalent to {p, q, r}?",
    "opts": [
     "{1, 2}",
     "{4, 5, 6}",
@@ -864,7 +930,7 @@
     "{ }"
    ],
    "ans": "{4, 5, 6}",
-   "why": "Both have 3 elements.",
+   "why": "{p, q, r} has 3 elements.\n{1, 2} has 2, {p, q} has 2, { } has 0.\n{4, 5, 6} has 3.\nSo {4, 5, 6} ↔ {p, q, r}.",
    "level": 1,
    "clue": "",
    "id": "g7.maths.u1.s1-2.47"
@@ -873,9 +939,9 @@
    "kind": "tf",
    "step": "test",
    "graded": true,
-   "text": "{3, 5} ⊆ {1, 3, 5, 7}",
+   "text": "Subset? True or false: {3, 5} ⊆ {1, 3, 5, 7}",
    "a": true,
-   "why": "3 and 5 are both in the second set.",
+   "why": "3 ∈ {1, 3, 5, 7}.\n5 ∈ {1, 3, 5, 7}.\nEvery element of {3, 5} is in the second set.\nTrue.",
    "level": 2,
    "clue": "",
    "id": "g7.maths.u1.s1-2.48"
@@ -884,7 +950,7 @@
    "kind": "pick",
    "step": "test",
    "graded": true,
-   "text": "Tap every proper subset of {x, y}.",
+   "text": "Proper subsets: tap every proper subset of {x, y}.",
    "pool": [
     "{ }",
     "{x}",
@@ -896,7 +962,7 @@
     "{x}",
     "{y}"
    ],
-   "why": "{x, y} itself is not a proper subset.",
+   "why": "All subsets: { }, {x}, {y}, {x, y}.\n{x, y} is the set itself.\nA set is not a proper subset of itself.\nProper subsets: { }, {x}, {y}.",
    "level": 2,
    "id": "g7.maths.u1.s1-2.49"
   },
@@ -910,7 +976,7 @@
     "seven"
    ],
    "num": true,
-   "why": "It has 8 subsets; leave out the set itself: 8 − 1 = 7.",
+   "why": "Subsets of {1, 2, 3} by size: 1 + 3 + 3 + 1 = 8.\nThe set itself, {1, 2, 3}, is not proper.\n8 − 1 = 7 proper subsets.",
    "level": 3,
    "clue": "",
    "id": "g7.maths.u1.s1-2.50",

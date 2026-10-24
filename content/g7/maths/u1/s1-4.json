@@ -91,33 +91,94 @@
       "A set with no element is the empty set.",
       "Two sets are equal if they have exactly the same elements."
      ],
-     "table": [
-      [
-       "Symbol",
-       "Meaning"
-      ],
+     "id": "g7.maths.u1.s1-4.2"
+    },
+    {
+     "kind": "tap",
+     "step": "explore",
+     "added": true,
+     "need": 6,
+     "title": "The symbols of Unit 1: tap each one.",
+     "items": [
       [
        "a ∈ A",
-       "a is an element of A"
+       "a is an element of A."
       ],
       [
        "A ⊆ B",
-       "every element of A is in B"
+       "A is a subset of B: every element of A is in B."
       ],
       [
        "A ⊂ B",
-       "A ⊆ B and B has more elements"
+       "A is a proper subset of B: A ⊆ B and B has more elements."
       ],
       [
        "A ∪ B",
-       "elements in A or B or both"
+       "A union B: elements in A or B or both."
       ],
       [
        "A ∩ B",
-       "elements in both A and B"
+       "A intersection B: elements in both A and B."
+      ],
+      [
+       "∅ or { }",
+       "The empty set: no element."
       ]
      ],
-     "id": "g7.maths.u1.s1-4.2"
+     "id": "g7.maths.u1.s1-4.18"
+    },
+    {
+     "kind": "tree",
+     "step": "explore",
+     "added": true,
+     "title": "Unit 1 at a glance",
+     "root": {
+      "label": "Sets",
+      "info": "A set is a collection of well-defined objects.",
+      "children": [
+       {
+        "label": "Elements",
+        "info": "a ∈ A or a ∉ A. A set with no element is the empty set, ∅."
+       },
+       {
+        "label": "Relations",
+        "info": "Two sets can be equal, equivalent, or one a subset of the other.",
+        "children": [
+         {
+          "label": "A = B",
+          "info": "Equal: exactly the same elements."
+         },
+         {
+          "label": "A ↔ B",
+          "info": "Equivalent: the same number of elements."
+         },
+         {
+          "label": "A ⊆ B",
+          "info": "Subset: every element of A is in B."
+         },
+         {
+          "label": "A ⊂ B",
+          "info": "Proper subset: A ⊆ B and B has more."
+         }
+        ]
+       },
+       {
+        "label": "Operations",
+        "info": "Make a new set from two sets.",
+        "children": [
+         {
+          "label": "A ∪ B",
+          "info": "Union: in A or B or both."
+         },
+         {
+          "label": "A ∩ B",
+          "info": "Intersection: in both A and B."
+         }
+        ]
+       }
+      ]
+     },
+     "id": "g7.maths.u1.s1-4.19"
     },
     {
      "kind": "name",
@@ -169,18 +230,19 @@
        "the empty set"
       ]
      ],
-     "why": "Each symbol has one meaning.",
+     "why": "∪ (union) joins: elements in A or B or both.\n∩ (intersection) keeps the shared part: in both A and B.\n⊆ (subset): every element of A is in B.\n↔ (equivalent): same number of elements.\n∅ is the empty set: no element.",
      "clue": "Union joins, intersection keeps the shared part.",
      "level": 1,
-     "id": "g7.maths.u1.s1-4.4"
+     "id": "g7.maths.u1.s1-4.4",
+     "title": "Match each symbol to its meaning"
     },
     {
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "A set is a subset of itself.",
+     "text": "Subsets: true or false? A set is a subset of itself.",
      "a": true,
-     "why": "Any set is a subset of itself: A ⊆ A.",
+     "why": "A ⊆ B means every element of A is in B.\nEvery element of A is, of course, in A.\nSo A ⊆ A for any set A.\nTrue.",
      "clue": "Read the Note on subsets.",
      "level": 1,
      "ref": "Review Exercise I b",
@@ -190,9 +252,9 @@
      "kind": "tf",
      "step": "practise",
      "graded": true,
-     "text": "{m, n, o} ⊆ {m, n}",
+     "text": "Subset? True or false: {m, n, o} ⊆ {m, n}",
      "a": false,
-     "why": "o is not in {m, n}.",
+     "why": "Check each element of {m, n, o}.\nm and n are in {m, n}.\no ∉ {m, n}.\nOne missing element is enough. False.",
      "clue": "Is every element of the first set in the second?",
      "level": 1,
      "ref": "Review Exercise I c",
@@ -202,7 +264,7 @@
      "kind": "pick",
      "step": "practise",
      "graded": true,
-     "text": "A = {1, 2, 3, 4} and B = {2, 4, 6}. Tap every element of A ∩ B.",
+     "text": "Find the intersection: A = {1, 2, 3, 4} and B = {2, 4, 6}. Tap every element of A ∩ B.",
      "pool": [
       "1",
       "2",
@@ -214,7 +276,7 @@
       "2",
       "4"
      ],
-     "why": "2 and 4 are in both.",
+     "why": "Check each element of A in B = {2, 4, 6}.\n1 ∉ B, 2 ∈ B, 3 ∉ B, 4 ∈ B.\nA ∩ B = {2, 4}.\n6 is only in B.",
      "clue": "Keep only shared elements.",
      "level": 2,
      "added": true,
@@ -228,12 +290,12 @@
      "kind": "blank",
      "step": "challenge",
      "graded": true,
-     "ask": "A = {1, 2, 3, 4, 5}, B = {4, 5, 6}, C = {5, 6, 7}. (A ∩ B) ∩ C = {___}",
+     "ask": "Two steps: A = {1, 2, 3, 4, 5}, B = {4, 5, 6}, C = {5, 6, 7}. (A ∩ B) ∩ C = {___}",
      "a": [
       "5"
      ],
      "num": true,
-     "why": "A ∩ B = {4, 5}. Then {4, 5} ∩ {5, 6, 7} = {5}.",
+     "why": "Bracket first: A ∩ B = {4, 5}.\nThen keep what is also in C = {5, 6, 7}.\n4 ∉ C, 5 ∈ C.\n(A ∩ B) ∩ C = {5}.",
      "clue": "Do the bracket first, then intersect with C.",
      "level": 3,
      "added": true,
@@ -250,9 +312,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "All equivalent sets are equal sets.",
+     "text": "Review: true or false? All equivalent sets are equal sets.",
      "a": false,
-     "why": "{1, 2} ↔ {a, b}, but they are not equal.",
+     "why": "Try {1, 2} and {a, b}.\nBoth have 2 elements, so they are equivalent.\nTheir elements differ, so they are not equal.\nFalse.",
      "clue": "Equivalent only needs the same count.",
      "level": 1,
      "ref": "I a",
@@ -262,9 +324,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "A set is a subset of itself.",
+     "text": "Review: true or false? A set is a subset of itself.",
      "a": true,
-     "why": "A ⊆ A for any set A.",
+     "why": "Every element of A is in A.\nSo A ⊆ A.\nTrue. (But A is not a proper subset of itself.)",
      "clue": "Read the Note on subsets.",
      "level": 1,
      "ref": "I b",
@@ -274,9 +336,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "{m, n, o} ⊆ {m, n}",
+     "text": "Review: subset? True or false: {m, n, o} ⊆ {m, n}",
      "a": false,
-     "why": "o ∉ {m, n}.",
+     "why": "m ∈ {m, n} and n ∈ {m, n}.\no ∉ {m, n}.\nNot every element is in the second set.\nFalse.",
      "clue": "Check each element.",
      "level": 1,
      "ref": "I c",
@@ -286,9 +348,9 @@
      "kind": "tf",
      "step": "exercise",
      "graded": true,
-     "text": "2 ∈ {0, 4, 12}",
+     "text": "Review: element? True or false: 2 ∈ {0, 4, 12}",
      "a": false,
-     "why": "2 is not listed.",
+     "why": "The elements are 0, 4 and 12.\n2 is not listed.\nSo 2 ∉ the set.\nFalse.",
      "clue": "Look between the braces.",
      "level": 1,
      "ref": "I d",
@@ -298,7 +360,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Which one is NOT a proper subset of {e, f}?",
+     "text": "Proper subsets: which one is NOT a proper subset of {e, f}?",
      "opts": [
       "{ }",
       "{e}",
@@ -306,7 +368,7 @@
       "{e, f}"
      ],
      "ans": "{e, f}",
-     "why": "A set is not a proper subset of itself.",
+     "why": "Proper subsets leave out at least one element.\n{ } leaves out both, {e} leaves out f, {f} leaves out e.\n{e, f} leaves out nothing: it is the set itself.\nSo {e, f} is not a proper subset of {e, f}.",
      "clue": "Which one leaves nothing out?",
      "level": 1,
      "ref": "II 1",
@@ -316,7 +378,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Which one is equivalent to the set {a, 3}?",
+     "text": "Equivalent sets: which one is equivalent to the set {a, 3}?",
      "opts": [
       "{ }",
       "{2, 3}",
@@ -324,7 +386,7 @@
       "{3}"
      ],
      "ans": "{2, 3}",
-     "why": "{a, 3} and {2, 3} both have 2 elements.",
+     "why": "{a, 3} has 2 elements.\n{ } has 0; {a} and {3} have 1.\n{2, 3} has 2.\nSo {2, 3} ↔ {a, 3}.",
      "clue": "Count the elements.",
      "level": 1,
      "ref": "II 2",
@@ -334,7 +396,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "If A ⊆ B, which one is necessarily true?",
+     "text": "Subsets and intersection: if A ⊆ B, which one is necessarily true?",
      "opts": [
       "A ∩ B = B",
       "A ∩ B = A",
@@ -342,7 +404,7 @@
       "A ⊂ B"
      ],
      "ans": "A ∩ B = A",
-     "why": "All of A is shared with B. A ⊂ B fails when A = B.",
+     "why": "A ⊆ B: every element of A is in B.\nSo the shared part is all of A: A ∩ B = A.\nA ∩ B = B and A ∪ B = A fail when B has extra elements.\nA ⊂ B fails when A = B.",
      "clue": "Draw A inside B.",
      "level": 2,
      "ref": "II 3",
@@ -352,7 +414,7 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "If A = {a, b} and B = {c, d}, then A ∩ B is:",
+     "text": "Find the intersection: if A = {a, b} and B = {c, d}, then A ∩ B is:",
      "opts": [
       "{ }",
       "{a, b, c, d}",
@@ -360,7 +422,7 @@
       "{d}"
      ],
      "ans": "{ }",
-     "why": "No element is shared. {a, b, c, d} is A ∪ B.",
+     "why": "Check a and b in B = {c, d}.\nNeither is there.\nA ∩ B = { }.\n{a, b, c, d} is A ∪ B, a tempting wrong choice.",
      "clue": "Is anything in both sets?",
      "level": 1,
      "ref": "II 4",
@@ -370,13 +432,13 @@
      "kind": "mcq",
      "step": "exercise",
      "graded": true,
-     "text": "Which Venn diagram shows E ⊂ F?",
+     "text": "Venn diagrams: which diagram shows E ⊂ F?",
      "opts": [
       "Circle E inside circle F",
       "Circle F inside circle E"
      ],
      "ans": "Circle E inside circle F",
-     "why": "E ⊂ F: every element of E is in F, so E is the inner circle.",
+     "why": "E ⊂ F: every element of E is in F.\nF also has extra elements.\nSo E is the smaller set, drawn inside.\nCircle E inside circle F.",
      "clue": "The smaller set goes inside.",
      "level": 1,
      "ref": "II 5",
